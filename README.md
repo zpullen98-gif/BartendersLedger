@@ -46,7 +46,19 @@ After changing any file: bump the `?v=` query on the changed assets in `index.ht
 `CACHE` in `sw.js`. That version string is the entire update mechanism — installed copies show a
 "new edition is pressed" toast and refresh on tap.
 
-## Credits & licence
+## Status
 
-Written as a personal study project. The drink specs, history notes and curriculum text are original
-work. Fonts are bundled under the SIL Open Font Licence 1.1 — see [fonts/NOTICE.md](fonts/NOTICE.md).
+Private and in active development. Not published, not indexed, not open source.
+
+## Licence
+
+**© 2026 Zach Pullen. All rights reserved.** See [COPYRIGHT.md](COPYRIGHT.md). The specs, history
+essays, curriculum and quiz bank are original work and are not openly licensed. Bundled fonts are
+under the SIL Open Font Licence 1.1, which permits commercial use — see [fonts/NOTICE.md](fonts/NOTICE.md).
+
+## For collaborators
+
+Clone it, run `py serve.py 8631`, and open http://localhost:8631. There is no install step and no
+build — the repo *is* the artifact. Read [CLAUDE.md](CLAUDE.md) first: it documents the script load
+order (which matters — the files share one global scope), the cache-busting discipline for deploys,
+and the data shapes you must not rename without a migration.

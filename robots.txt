@@ -1,0 +1,4 @@
+# Not ready to be public. Keep this out of search indexes.
+# Remove this file (and the noindex meta in index.html) when the work goes live.
+User-agent: *
+Disallow: /
