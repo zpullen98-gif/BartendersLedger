@@ -25,14 +25,46 @@ function renderHome(){
     ['producers','The Producers','Benchmark houses across nine categories — how they actually make it, and why it matters.'],
     ['na','Zero Proof','85 spirit-free drinks across nine families, the pantry behind them, and the ethics of sober service.'],
     ['shots','The Shot Board','75 calls, a round-batching builder, the layering density drill, and the service craft.'],
-    ['flashcards','Flashcards','Four drill modes across every cocktail, shot, and zero-proof drink in the ledger.'],
+    ['service','Behind the Stick','Beer and draught, wine service, the legal floor, the register, conflict and glassware — the half of the job that is not a cocktail.'],
+    ['flashcards','Flashcards',FC_MODES.length+' drill modes across every cocktail, shot, and zero-proof drink in the ledger.'],
     ['quiz','Quiz Rounds','Families, blind tickets, bar knowledge, and real-service scenarios.'],
     ['riffs','Riff Builder','Improvise on the templates — the difference between knowing 50 drinks and 500.'],
-    ['practice','Practice & Tasting','Physical drills, structured tasting scorecards, and twelve guided comparative flights.'],
-    ['tools','Bar Tools','Batching, shelf inventory, strength estimates, pour costing, and unit conversion.'],
+    ['practice','Practice & Tasting','Nine timed drills, the Ticket Rail sequencing test, tasting scorecards, and twelve guided flights.'],
+    ['tools','Bar Tools','Batching, shelf inventory with the 86 drill, strength estimates, pour costing, unit conversion, and your backups.'],
     ['notes','Study Notes','Spirits, technique, syrups, hospitality, sober service, and history.'],
   ].map(([k,t,d]) => '<button class="panel click p4" data-act="go" data-tab="'+k+'">'
     + '<div class="bold brass2">'+t+'</div><div class="small dim mt1 lh">'+d+'</div></button>').join('');
+  /* First run: a stats panel of zeros, eight 0% bars and three empty donuts is
+     a terrible first impression. Until there's anything to report, say what the
+     ledger is and point at the one button that starts everything. */
+  const fresh = !studied && !quizzes.length && !tastings && !drillLogs;
+  if(fresh){
+    return '<div class="col">'
+      + sessionPanelHTML()
+      + '<div class="panel p5 col" style="gap:12px">'
+      + '<div class="eyebrow">Start here</div>'
+      + '<div class="small dim lh" style="max-width:520px">This is a working bartender’s study ledger, not a recipe app. '
+      + 'It holds '+COCKTAILS.length+' cocktails with the history behind each one, '+SHOTS.length+' shots, '+NA_DRINKS.length+' zero-proof drinks, '
+      + PREPS.length+' prep sheets and a full behind-the-bar curriculum — and it drills you on all of it, offline, forever.</div>'
+      + '<div class="small dim lh" style="max-width:520px"><span class="brass2">Pour tonight’s session</span> above is the whole routine: '
+      + 'a handful of cards in canon order, a ten-question round, then a drill you do with your hands. '
+      + 'Ten minutes. Come back tomorrow and it deals what you’re about to forget.</div>'
+      + '<div class="tiny dim lh" style="max-width:520px">Everything lives in this browser — no account, no server. '
+      + 'Back it up now and then from Tools → My Data.</div>'
+      + '</div>'
+      + '<div class="panel p4 col-sm">'
+      + '<div class="eyebrow">Or just look around</div>'
+      + '<div class="row" style="gap:6px">'
+      + '<button class="chip brass" data-act="go" data-tab="families">The eight families</button>'
+      + '<button class="chip" data-act="go" data-tab="library">The library</button>'
+      + '<button class="chip" data-act="go" data-tab="service">Behind the stick</button>'
+      + '<button class="chip" data-act="go" data-tab="practice">The drills</button>'
+      + '<button class="chip" data-search="1">Search anything</button></div>'
+      + '<div class="tiny dim mt1">Press <span class="font-tix brass2">/</span> anywhere to search all '
+      + (COCKTAILS.length+SHOTS.length+NA_DRINKS.length+PREPS.length+PRODUCERS.length)+' entries.</div>'
+      + '</div>'
+      + '<div class="card-grid">'+cards+'</div></div>';
+  }
   return '<div class="col">'
     + sessionPanelHTML()
     + '<div class="panel p5"><div class="eyebrow mb2">Your standing at the bar</div>'
@@ -54,6 +86,7 @@ function renderHome(){
     + '<span class="chip">'+PREPS.length+' prep sheets</span>'
     + '<span class="chip">'+PRODUCERS.length+' producers</span>'
     + '<span class="chip">'+FLIGHTS.length+' tasting flights</span>'
+    + '<span class="chip">'+SERVICE_STUDY.reduce((n,x)=>n+x.rows.length,0)+' service lessons</span>'
     + '<span class="chip">'+KNOWLEDGE.length+' quiz questions</span></div>'
     + (tastings ? '<div class="tiny dim mt2">'+tastings+' tasting note'+(tastings===1?'':'s')+' logged'
         + (drillLogs ? ' · '+drillLogs+' practice result'+(drillLogs===1?'':'s')+' recorded' : '')+'</div>'
@@ -229,14 +262,23 @@ function fcPool(){
     return true;
   });
 }
+/* Take AT MOST ONE line per donor, and try the drink's own family first.
+   Pushing every line of one donor meant five decoys came from ~1.8 drinks, so
+   the task became "spot the foreign spec" instead of discriminating between the
+   neighbours a learner actually confuses (Manhattan / Rob Roy / Boulevardier). */
 function decoyLines(c, n){
-  const out=[];
-  const same = allDrinks().filter(function(x){ return x.src===c.src; });
-  shuffle(same.length>6 ? same : allDrinks()).forEach(function(x){
-    if(x.name===c.name) return;
-    x.spec.forEach(function(l){ if(!c.spec.includes(l) && out.indexOf(l)<0) out.push(l); });
+  const out = [];
+  const all = allDrinks();
+  const same = all.filter(x => x.src === c.src);
+  const base = (same.length > 6 ? same : all).filter(x => x.name !== c.name);
+  const kin = base.filter(x => x.group && c.group && x.group === c.group);
+  const donors = shuffle(kin).concat(shuffle(base.filter(x => kin.indexOf(x) < 0)));
+  donors.forEach(function(x){
+    if(out.length >= n) return;
+    const usable = x.spec.filter(l => !c.spec.includes(l) && out.indexOf(l) < 0);
+    if(usable.length) out.push(usable[Math.floor(Math.random()*usable.length)]);
   });
-  return out.slice(0,n);
+  return out.slice(0, n);
 }
 function prepCard(){
   const fc=state.fc;
@@ -252,7 +294,17 @@ function prepCard(){
   }
   if(fc.mode==='cloze'){
     fc.clozeIdx = Math.floor(Math.random()*c.spec.length);
-    fc.opts = shuffle([c.spec[fc.clozeIdx], ...decoyLines(c,3)]);
+    const ans = c.spec[fc.clozeIdx];
+    /* the blanked line's own role and unit shouldn't give it away — a decoy in
+       ounces against a "2 dashes" answer is answerable without knowing the drink */
+    const role = classifyLine(ans);
+    const unit = (ans.match(/\b(oz|dash|dashes|drops?|barspoon|part|leaves|sprig|cube|splash|top)\b/i)||[''])[0].toLowerCase();
+    const wide = decoyLines(c, 40).filter(l => l !== ans);
+    let picked = wide.filter(l => classifyLine(l) === role
+      && (!unit || new RegExp('\\b'+unit.replace(/es$/,'(es)?')+'\\b','i').test(l)));
+    if(picked.length < 3) picked = wide.filter(l => classifyLine(l) === role);
+    if(picked.length < 3) picked = wide;
+    fc.opts = shuffle([ans, ...sample(picked, 3)]);
   }
   if(fc.mode==='service'){
     const pool = allDrinks();
@@ -572,11 +624,36 @@ function qMethod(c){
     explain: c.name+' — '+c.method+'. Shake anything cloudy; stir anything all-spirit.' };
 }
 
-function buildRound(mode){
+/* Draw n authored questions spread across the topics, so a mixed round
+   actually visits the bank instead of the same corner of it. */
+function spreadKnowledge(n){
+  const picked = [], used = new Set();
+  const take = (pool) => {
+    const fresh = pool.filter(k => !used.has(k));
+    if(!fresh.length) return;
+    const k = sample(fresh, 1)[0];
+    used.add(k); picked.push(qKnowledge(k));
+  };
+  ['service','beerwine','craft'].forEach(t => { if(picked.length < n) take(knowledgeByTopic(t)); });
+  while(picked.length < n) {
+    const before = picked.length;
+    take(KNOWLEDGE);
+    if(picked.length === before) break;      /* bank exhausted */
+  }
+  return picked;
+}
+
+function buildRound(mode, pool){
   mode = mode || 'mixed';
+  /* the session passes the deck it just drilled, so the quiz reinforces
+     tonight's drinks rather than quizzing tier 9 at a tier 2 learner */
+  const drinkPool = (pool && pool.length >= 8)
+    ? COCKTAILS.filter(c => pool.some(d => d.src === 'Cocktails' && d.name === c.name))
+    : COCKTAILS;
+  const cocktails = drinkPool.length >= 8 ? drinkPool : COCKTAILS;
   const qs = [];
   if(mode === 'tickets'){
-    sample(COCKTAILS,7).forEach(c => qs.push(qCocktailTicket(c)));
+    sample(cocktails,7).forEach(c => qs.push(qCocktailTicket(c)));
     for(let i=0;i<3;i++) qs.push(qBlindOther());
     return shuffle(qs);
   }
@@ -584,19 +661,20 @@ function buildRound(mode){
     sample(knowledgeByTopic(mode),10).forEach(k => qs.push(qKnowledge(k)));
     return shuffle(qs);
   }
-  /* mixed: families, blind tickets, service details, and knowledge —
-     with at least one service question guaranteed every round */
-  const famPool = COCKTAILS.filter(c => FAMILIES[c.family]);
-  sample(famPool,2).forEach(c => qs.push(qFamily(c)));
-  sample(COCKTAILS,3).forEach(c => qs.push(qCocktailTicket(c)));
+  /* mixed: six generated items, four drawn from the authored bank with a
+     deliberate topic spread. Previously only two were authored, so weeks of
+     study could pass without meeting most of the 185 questions. */
+  /* ONE sample partitioned across every drink question, so the same cocktail
+     can't turn up as a blind ticket and a glass question in the same round */
+  const picks = sample(cocktails, 5);
+  const fam = picks.find(c => FAMILIES[c.family]);
+  if(fam) qs.push(qFamily(fam));
+  picks.filter(c => c !== fam).slice(0,2).forEach(c => qs.push(qCocktailTicket(c)));
+  const rest2 = picks.filter(c => c !== fam).slice(2);
+  if(rest2[0]) qs.push(qGlass(rest2[0]));
+  if(rest2[1]) qs.push(qMethod(rest2[1]));
   qs.push(qBlindOther());
-  const svc = sample(COCKTAILS,2);
-  qs.push(qGlass(svc[0]));
-  qs.push(qMethod(svc[1]));
-  const service = knowledgeByTopic('service');
-  if(service !== KNOWLEDGE) qs.push(qKnowledge(sample(service,1)[0]));
-  const rest = sample(KNOWLEDGE, 10 - qs.length);
-  rest.forEach(k => qs.push(qKnowledge(k)));
+  spreadKnowledge(10 - qs.length).forEach(q => qs.push(q));
   return shuffle(qs).slice(0,10);
 }
 function renderQuiz(){

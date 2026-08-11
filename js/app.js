@@ -172,6 +172,7 @@ document.addEventListener('keydown', e => {
 });
 
 document.getElementById('view').addEventListener('click', e => {
+  if(e.target.closest('[data-search]')){ openSearch(); return; }
   const el = e.target.closest('[data-act]'); if(!el) return;
   const act = el.dataset.act;
   const _tn = document.getElementById('tst-notes'); if(_tn) state.tast.notes = _tn.value;
@@ -246,7 +247,8 @@ document.getElementById('view').addEventListener('click', e => {
   else if(act==='sess-quiz'){
     state.sess.step = 'quiz';
     state.tab = 'quiz';
-    Object.assign(state.quiz, { stage:'run', mode:'mixed', round:buildRound('mixed'), idx:0, picked:null, score:0, missedQ:[], replay:false });
+    /* quiz the deck you just drilled, not the whole 365-drink canon */
+    Object.assign(state.quiz, { stage:'run', mode:'mixed', round:buildRound('mixed', state.fc.deck), idx:0, picked:null, score:0, missedQ:[], replay:false });
   }
   else if(act==='sess-resume'){
     const st = state.sess.step;
