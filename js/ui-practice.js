@@ -140,18 +140,24 @@ function renderTastingForm(){
 /* Three tickets up is not three times one ticket. Build order is derivable from
    data already on every cocktail: method, carbonation, egg, and glassware. */
 const RAIL_STAGES = [
-  { rank:0, test:c => /egg|cream/i.test(c.spec.join(' ')),
-    why:'Egg and cream take the longest — dry shake it first while everything else waits.' },
-  { rank:1, test:c => /stir/i.test(c.method),
+  /* rank 0 is the dry-shake station, so it must key off the METHOD, not the word
+     "cream" in a spec — coconut cream and a cream float are not dry-shaken */
+  { rank:0, test:c => /dry shake/i.test(c.method) || (/\begg\b/i.test(c.spec.join(' ')) && /shake/i.test(c.method)),
+    why:'Egg takes the longest — dry shake it first while everything else waits.' },
+  /* anchored: "Build over ice, stir" is a built drink, not a stirred one */
+  { rank:1, test:c => /^\s*stir/i.test(c.method),
     why:'Stirred goes into the mixing glass early. It chills and dilutes while your hands are elsewhere.' },
-  { rank:2, test:c => /shake/i.test(c.method),
+  /* affirmative shake verb only — Bloody Mary's "never shake" must not match */
+  { rank:2, test:c => /^\s*(dry\s+|whip\s+|hard\s+)?shake|,\s*shake/i.test(c.method),
     why:'Shaken next — and if two drinks share a tin size, they share a shake.' },
   { rank:3, test:c => /soda|tonic|ginger beer|cola|champagne|prosecco|sparkling|beer/i.test(c.spec.join(' ')) || /build/i.test(c.method),
     why:'Carbonated and built go last. Every second a highball waits, it goes flatter.' },
 ];
 function railStage(c){
   for(const s of RAIL_STAGES) if(s.test(c)) return s;
-  return { rank:2, why:'Shaken or thrown — belongs in the middle of the rail.' };
+  /* rolled, thrown, muddled — hand-built but not shaken. Don't tell the learner
+     to shake something whose own method says never to. */
+  return { rank:2, why:'Rolled or hand-built — sits mid-rail, after the stirred and before anything carbonated.' };
 }
 function railDeal(){
   const pool = COCKTAILS.filter(c => c.tier <= 6);
@@ -222,7 +228,7 @@ function renderPractice(){
     const recent = log.slice(-8).reverse().map((e,idx) => {
       const realIdx = log.length-1-idx;
       const open = p.noteOpen===realIdx;
-      return '<div class="panel"><button class="drink-head" data-act="tst-open" data-i="'+realIdx+'">'
+      return '<div class="panel"><button class="drink-head" aria-expanded="'+(open?'true':'false')+'" data-act="tst-open" data-i="'+realIdx+'">'
         + '<span class="bold">'+esc(e.label||'(unnamed)')+'</span><span class="chip">'+esc(e.cat)+'</span>'
         + '<span class="tiny dim push">'+esc(e.date)+'</span>'
         + '<span class="plusminus">'+(open?'−':'+')+'</span></button>'
@@ -258,7 +264,7 @@ function renderPractice(){
         + '<div style="max-width:440px"><div class="eyebrow mb1">The lesson</div><div class="small dim lh">'+esc(f.lesson)+'</div></div>'
         + '<a class="btn btn-ghost tiny" href="'+ytSearch(f.name+' '+f.cat+' tasting comparison')+'" target="_blank" rel="noopener noreferrer">▶ Search related tastings</a>'
         + '</div>' : '';
-      return '<div class="panel"><button class="drink-head" data-act="pr-flight" data-i="'+i+'">'
+      return '<div class="panel"><button class="drink-head" aria-expanded="'+(open?'true':'false')+'" data-act="pr-flight" data-i="'+i+'">'
         + '<span class="bold">'+esc(f.name)+'</span><span class="chip brass">'+esc(f.cat)+'</span>'
         + '<span class="plusminus">'+(open?'−':'+')+'</span></button>'+body
         + (open ? '' : '<div class="tiny dim lh" style="padding:0 16px 12px">'+esc(f.teaches)+'</div>')+'</div>';
@@ -271,7 +277,7 @@ function renderPractice(){
     const rows = TASTE_METHOD.map(([t,txt]) => {
       const open = p.methodOpen===t;
       return '<div class="panel" style="padding:0 16px">'
-        + '<button class="accordion-btn'+(open?' open':'')+'" data-act="pr-method" data-t="'+esc(t)+'">'
+        + '<button class="accordion-btn'+(open?' open':'')+'" aria-expanded="'+(open?'true':'false')+'" data-act="pr-method" data-t="'+esc(t)+'">'
         + '<span>'+esc(t)+'</span><span style="color:var(--brass)">'+(open?'−':'+')+'</span></button>'
         + (open ? '<div class="accordion-body"><div class="small dim lh">'+esc(txt)+'</div></div>' : '')+'</div>';
     }).join('');

@@ -82,7 +82,7 @@ function renderFamilies(){
       + '<div class="row">'+chips+'</div>'
       + '<div class="row">'+categoryVideoHTML(name,'family')+'</div></div>' : '';
     return '<div class="panel" style="padding:0 16px">'
-      + '<button class="accordion-btn'+(isOpen?' open':'')+'" data-act="fam-open" data-fam="'+esc(name)+'">'
+      + '<button class="accordion-btn'+(isOpen?' open':'')+'" aria-expanded="'+(isOpen?'true':'false')+'" data-act="fam-open" data-fam="'+esc(name)+'">'
       + '<span>'+esc(name)+' <span class="font-tix tiny" style="color:var(--brass); margin-left:6px">'+esc(f.formula)+'</span></span>'
       + '<span style="color:var(--brass)">'+(isOpen?'−':'+')+'</span></button>' + body + '</div>';
   }).join('');
@@ -111,7 +111,7 @@ function libListHTML(){
     const tip = BALANCE_TIPS[c.family] ? '<div class="tiny dim lh" style="max-width:400px"><span class="brass2 bold">Balance notes · </span>'+esc(BALANCE_TIPS[c.family])+'</div>' : '';
     const vd = { src:'Cocktails', name:c.name, group:c.family, tier:c.tier };
     const body = isOpen ? '<div class="drink-body">'+ticketHTML(c)+story+tip+videoRowHTML(vd)+'</div>' : '';
-    return '<div class="panel"><button class="drink-head" data-act="lib-toggle" data-i="'+i+'">'
+    return '<div class="panel"><button class="drink-head" aria-expanded="'+(isOpen?'true':'false')+'" data-act="lib-toggle" data-i="'+i+'"'+(isOpen?' data-open="1"':'')+'>'
       + glassIcon(c.glass)
       + '<span class="bold">'+esc(c.name)+'</span>'
       + '<span class="chip">'+esc(c.spirit)+'</span>'
@@ -177,7 +177,43 @@ function groupsFor(src){
   return [];
 }
 
-function isMastered(name){ const s=progress.cards[name]; return !!(s && s.r>=3 && s.r>s.w); }
+/* Mastery has to be able to lapse. Without the recency term a card answered
+   three times in week one reads "mastered" forever, and the home screen ends
+   up reporting 100% while hundreds of cards sit silently overdue. */
+/* Collapse the free-text glass and method prose into the handful of categories
+   the question actually asks about, so grading matches the prompt. */
+function svcGlassKey(g){
+  const s = String(g || '').toLowerCase();
+  if(/coupe|nick/.test(s)) return 'Coupe or Nick & Nora';
+  if(/martini|cocktail glass/.test(s)) return 'Martini glass';
+  if(/flute/.test(s)) return 'Flute';
+  if(/wine|goblet|balloon|copa/.test(s)) return 'Wine glass';
+  if(/hurricane|tiki|pearl diver|footed/.test(s)) return 'Tiki or hurricane';
+  if(/mug|copper|toddy|irish coffee/.test(s)) return 'Mug';
+  if(/julep|tin cup/.test(s)) return 'Julep tin';
+  if(/shot|shooter|cordial/.test(s)) return 'Shot glass';
+  if(/collins|highball|tall|pint|pilsner|zombie/.test(s)) return 'Collins or highball';
+  if(/rocks|old.fashioned|double|lowball/.test(s)) return 'Rocks glass';
+  return 'Other';
+}
+function svcMethodKey(m){
+  const s = String(m || '').toLowerCase();
+  if(/dry shake/.test(s)) return 'Dry shake, then shake';
+  if(/^\s*stir/.test(s)) return 'Stirred';
+  if(/blend/.test(s)) return 'Blended';
+  if(/swizzle/.test(s)) return 'Swizzled';
+  if(/roll/.test(s)) return 'Rolled';
+  if(/muddle/.test(s)) return 'Muddled, then built';
+  if(/shake/.test(s)) return 'Shaken';
+  if(/build|layer|float/.test(s)) return 'Built in the glass';
+  return 'Other';
+}
+
+function isMastered(name){
+  const s = progress.cards[name];
+  if(!(s && s.r>=3 && s.r>s.w)) return false;
+  return s.due === undefined || s.due > Date.now();
+}
 function weakScore(name){ const s=progress.cards[name]; return s ? (s.w*2 - s.r + Math.random()*0.5) : (1 + Math.random()*0.5); }
 function fcPool(){
   const f = state.fc;
@@ -209,7 +245,9 @@ function prepCard(){
   fc.flipped=false; fc.checked=false; fc.picked=null; fc.lastOk=null;
   if(fc.mode==='build'){
     const decoys = decoyLines(c, Math.min(5, 3 + Math.floor(Math.random()*3)));
-    fc.pool = shuffle([...c.spec.map(l=>({l,ok:true})), ...decoys.map(l=>({l,ok:false}))]);
+    /* a line marked optional is defensible either way — building a Martini
+       without the orange bitters is not a miss */
+    fc.pool = shuffle([...c.spec.map(l=>({l,ok:true,opt:/optional/i.test(l)})), ...decoys.map(l=>({l,ok:false}))]);
     fc.sel = [];
   }
   if(fc.mode==='cloze'){
@@ -218,13 +256,27 @@ function prepCard(){
   }
   if(fc.mode==='service'){
     const pool = allDrinks();
-    const fields = ['glass','garnish','method'].filter(f => c[f]);
-    const opts = {};
+    /* Grade the CATEGORY, not the prose. There are ~100 distinct glass strings
+       and ~260 method strings across the deck, so sampling raw text offered
+       "Coupe" against a correct answer of "Coupe or Nick & Nora" and scored it
+       a miss — which then went into the scheduler as a lapse. */
+    const fields = ['glass','garnish','method']
+      .filter(f => c[f] && c[f] !== '—' && !(f==='glass' && c.src==='Shots'));
+    const opts = {}, keyed = {};
     fields.forEach(f => {
-      const others = [...new Set(pool.map(x => x[f]).filter(v => v && v !== c[f]))];
-      opts[f] = shuffle([c[f], ...sample(others, 3)]);
+      if(f === 'garnish'){                       /* free text — no clean categories */
+        const others = [...new Set(pool.map(x => x[f]).filter(v => v && v !== '—' && v !== c[f]))];
+        opts[f] = shuffle([c[f], ...sample(others, 3)]);
+        keyed[f] = null;
+        return;
+      }
+      const keyOf = f === 'glass' ? svcGlassKey : svcMethodKey;
+      const mine = keyOf(c[f]);
+      const others = [...new Set(pool.map(x => x[f]).filter(Boolean).map(keyOf))].filter(k => k !== mine);
+      opts[f] = shuffle([mine, ...sample(others, 3)]);
+      keyed[f] = keyOf;
     });
-    fc.svc = { fields, opts, picked:{} };
+    fc.svc = { fields, opts, keyed, picked:{} };
   }
 }
 function recordCard(ok){
@@ -319,7 +371,7 @@ function renderFlashcards(){
       const rec = s ? '<span class="font-tix tiny" style="color:#7fbf95">✓'+s.r+'</span> <span class="font-tix tiny" style="color:var(--oxblood)">✗'+s.w+'</span>' : '<span class="tiny dim">unseen</span>';
       const badge = isMastered(key) ? '<span class="chip brass">Mastered</span>' : '';
       const srcChip = o.d.src==='Cocktails' ? '' : '<span class="chip">'+esc(o.d.src)+'</span>';
-      return '<div class="panel"><button class="drink-head" data-act="fc-board-open" data-i="'+o.i+'">'
+      return '<div class="panel"><button class="drink-head" aria-expanded="'+(open?'true':'false')+'" data-act="fc-board-open" data-i="'+o.i+'">'
         + '<span class="bold">'+esc(o.d.name)+'</span>'+srcChip+badge+'<span class="push">'+rec+'</span>'
         + '<span class="plusminus">'+(open?'−':'+')+'</span></button>'
         + (open ? '<div class="drink-body">'+cardTicket(o.d)+videoRowHTML(o.d)+'</div>' : '') + '</div>';
@@ -404,7 +456,7 @@ function renderFlashcards(){
     return '<div class="col">'+head+'<div class="panel p5 col">'
       + '<div><div class="eyebrow mb1">Assemble the ticket</div>'
       + '<div class="bold">Select every line that belongs in a <span class="brass2">'+esc(c.name)+'</span>.</div>'
-      + '<div class="tiny dim mt1">'+c.spec.length+' lines belong. The rest are decoys from other drinks.</div></div>'
+      + '<div class="tiny dim mt1">Select every line that belongs — the count is part of the question. Optional lines are up to you.</div></div>'
       + '<div class="col-sm">'+lines+'</div>'+after+'</div></div>';
   }
 
@@ -432,10 +484,11 @@ function renderFlashcards(){
     const allPicked = s.fields.every(f => s.picked[f] !== undefined);
     const blocks = s.fields.map(f => {
       const label = f==='glass' ? 'Which glass?' : f==='garnish' ? 'What garnish?' : 'Shaken, stirred, or built?';
+      const right = s.keyed && s.keyed[f] ? s.keyed[f](c[f]) : c[f];
       const rows = s.opts[f].map((o,i) => {
         let cls = 'opt-btn';
         if(allPicked){
-          if(o === c[f]) cls += ' correct';
+          if(o === right) cls += ' correct';
           else if(s.picked[f] === i) cls += ' wrong';
         } else if(s.picked[f] === i) cls += ' picked';
         return '<button class="'+cls+'" data-act="fc-svc-pick" data-f="'+f+'" data-i="'+i+'"'
@@ -579,7 +632,10 @@ function renderQuiz(){
       ? '<div class="panel p4 col-sm" style="width:100%"><div class="eyebrow mb1">Where the round got away from you</div>'
         + z.missedQ.map(q => '<div class="small lh" style="border-bottom:1px solid var(--felt-3);padding:8px 0">'
           + '<span class="dim">'+esc(q.prompt)+(q.ticket? ' ['+esc(q.ticket.name)+']':'')+'</span><br>'
-          + '<span class="brass2">→ '+esc(q.answer)+'</span></div>').join('')
+          + '<span class="brass2">→ '+esc(q.answer)+'</span>'
+          /* the explanation is the whole point of reviewing a miss */
+          + (q.explain ? '<br><span class="tiny dim">'+esc(q.explain)+'</span>' : '')
+          + '</div>').join('')
         + '</div>' : '';
     return '<div class="col" style="align-items:center">'
       + '<div class="ticket"><div class="ticket-inner tc">'
@@ -637,7 +693,7 @@ function glossaryHTML(){
   const body = isOpen ? '<div class="accordion-body"><div class="gloss-grid">' + GLOSSARY.map(g =>
     '<div><div class="small bold brass2">'+esc(g.term)+'</div><div class="small dim lh">'+esc(g.def)+'</div></div>').join('') + '</div></div>' : '';
   return '<div class="panel" style="padding:0 16px">'
-    + '<button class="accordion-btn'+(isOpen?' open':'')+'" data-act="note-open" data-t="__glossary">'
+    + '<button class="accordion-btn'+(isOpen?' open':'')+'" aria-expanded="'+(isOpen?'true':'false')+'" data-act="note-open" data-t="__glossary">'
     + '<span>Glossary of the Craft <span class="tiny dim">· '+GLOSSARY.length+' terms</span></span><span style="color:var(--brass)">'+(isOpen?'−':'+')+'</span></button>'+body+'</div>';
 }
 function renderNotes(){
@@ -646,7 +702,7 @@ function renderNotes(){
     const body = isOpen ? '<div class="accordion-body">' + sec.rows.map(([h,p]) =>
       '<div><div class="small bold brass2">'+esc(h)+'</div><div class="small dim lh">'+esc(p)+'</div></div>').join('') + '</div>' : '';
     return '<div class="panel" style="padding:0 16px">'
-      + '<button class="accordion-btn'+(isOpen?' open':'')+'" data-act="note-open" data-t="'+esc(sec.title)+'">'
+      + '<button class="accordion-btn'+(isOpen?' open':'')+'" aria-expanded="'+(isOpen?'true':'false')+'" data-act="note-open" data-t="'+esc(sec.title)+'">'
       + '<span>'+esc(sec.title)+'</span><span style="color:var(--brass)">'+(isOpen?'−':'+')+'</span></button>'+body+'</div>';
   }).join('') + platesHTML() + glossaryHTML() + '</div>';
 }

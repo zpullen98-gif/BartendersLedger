@@ -1,7 +1,31 @@
 /* ---------------- RENDER & EVENTS ---------------- */
 let prTick = null;   /* the practice-drill stopwatch interval */
 const TABS = [['home','Ledger'],['families','Families'],['library','Library'],['shots','Shots'],['na','Zero Proof'],['service','Behind the Stick'],['prep','Prep'],['producers','Producers'],['notes','Notes'],['flashcards','Flashcards'],['quiz','Quiz'],['practice','Practice'],['riffs','Riffs'],['tools','Tools']];
+/* Announce something to assistive tech. The region is outside #view so it
+   survives the innerHTML swap below. */
+function say(msg){
+  const el = document.getElementById('live');
+  if(!el || !msg) return;
+  el.textContent = '';                 /* force a change even if the text repeats */
+  setTimeout(() => { el.textContent = msg; }, 30);
+}
+
+/* Every control carries a unique data-act/data-i/data-tab signature, so we can
+   find "the same button" again after the DOM is rebuilt. Without this, render()
+   destroys the focused element and the next Tab restarts from the masthead —
+   which on a 365-row library is hundreds of presses. */
+function focusSignature(el){
+  if(!el || el === document.body) return null;
+  const d = el.dataset || {};
+  if(!d.act && !d.tab && !d.cluster) return null;
+  return ['act','tab','cluster','i','k','d','s','m','c','f','v','t','id','n']
+    .filter(k => d[k] !== undefined)
+    .map(k => '[data-' + k + '="' + String(d[k]).replace(/"/g, '\\"') + '"]')
+    .join('');
+}
+
 function render(){
+  const sig = focusSignature(document.activeElement);
   renderNav();
   syncRoute();
   const view = document.getElementById('view');
@@ -9,6 +33,15 @@ function render(){
     shots:renderShots, na:renderNA, service:renderService, producers:renderProducers, prep:renderPrep,
     flashcards:renderFlashcards, quiz:renderQuiz, riffs:renderRiffs,
     practice:renderPractice, tools:renderTools, notes:renderNotes})[state.tab]();
+  if(sig){
+    let back = null;
+    try{ back = document.querySelector(sig); }catch(e){}
+    if(back && back.focus) back.focus();
+    else view.focus();                 /* the control is gone — land in the view, not at the top */
+  }
+  /* bring whatever the user just opened into sight */
+  const opened = document.querySelector('[data-open="1"]');
+  if(opened && opened.scrollIntoView) opened.scrollIntoView({ block:'center' });
   const tc = document.getElementById('tst-cat');
   if(tc) tc.addEventListener('change', e => {
     state.tast.cat = e.target.value; state.tast.nose = []; render();
@@ -105,8 +138,9 @@ document.addEventListener('keydown', e => {
     else if(e.key === 'ArrowDown'){ search.sel++; renderSearch(); e.preventDefault(); }
     else if(e.key === 'ArrowUp'){ search.sel = Math.max(0, search.sel-1); renderSearch(); e.preventDefault(); }
     else if(e.key === 'Enter'){
-      const sel = document.querySelector('.search-row.sel');
-      if(sel) gotoHash(sel.dataset.hash);
+      /* if the user tabbed to a row, honour THAT row — not the arrow highlight */
+      const row = (e.target.closest && e.target.closest('.search-row')) || document.querySelector('.search-row.sel');
+      if(row) gotoHash(row.dataset.hash);
       e.preventDefault();
     }
     return;
@@ -178,6 +212,7 @@ document.getElementById('view').addEventListener('click', e => {
     prepCard(); }
   else if(act==='fc-flip'){ fc.flipped = true; }
   else if(act==='fc-grade'){
+    say(el.dataset.ok==='1' ? 'Marked correct.' : 'Marked missed.');
     recordCard(el.dataset.ok==='1');
     fc.idx++; prepCard(); }
   else if(act==='fc-toggle-line'){
@@ -185,8 +220,9 @@ document.getElementById('view').addEventListener('click', e => {
       if(p>=0) fc.sel.splice(p,1); else fc.sel.push(i); } }
   else if(act==='fc-check'){
     if(!fc.checked && fc.sel.length){
-      const correctIdx = fc.pool.map((p,i)=>p.ok?i:-1).filter(i=>i>=0);
-      const ok = correctIdx.length===fc.sel.length && correctIdx.every(i=>fc.sel.includes(i));
+      const required = fc.pool.map((p,i)=>(p.ok && !p.opt)?i:-1).filter(i=>i>=0);
+      const decoys   = fc.pool.map((p,i)=>p.ok?-1:i).filter(i=>i>=0);
+      const ok = required.every(i=>fc.sel.includes(i)) && !decoys.some(i=>fc.sel.includes(i));
       recordCard(ok); fc.lastOk = ok; fc.checked = true; } }
   else if(act==='fc-cloze-pick'){
     if(fc.picked===null){
@@ -199,8 +235,9 @@ document.getElementById('view').addEventListener('click', e => {
       s.picked[el.dataset.f] = Number(el.dataset.i);
       if(s.fields.every(f => s.picked[f] !== undefined)){
         const c = fc.deck[fc.idx];
-        const ok = s.fields.every(f => s.opts[f][s.picked[f]] === c[f]);
+        const ok = s.fields.every(f => s.opts[f][s.picked[f]] === (s.keyed && s.keyed[f] ? s.keyed[f](c[f]) : c[f]));
         recordCard(ok); fc.lastOk = ok;
+        say(ok ? 'All three correct.' : 'Not clean — check the reveal.');
       }
     } }
   else if(act==='fc-next'){ fc.idx++; prepCard(); }
@@ -209,9 +246,14 @@ document.getElementById('view').addEventListener('click', e => {
   else if(act==='sess-quiz'){
     state.sess.step = 'quiz';
     state.tab = 'quiz';
-    Object.assign(state.quiz, { stage:'run', round:buildRound(), idx:0, picked:null, score:0, missedQ:[] });
+    Object.assign(state.quiz, { stage:'run', mode:'mixed', round:buildRound('mixed'), idx:0, picked:null, score:0, missedQ:[], replay:false });
   }
+  else if(act==='sess-resume'){
+    const st = state.sess.step;
+    state.tab = st==='cards' ? 'flashcards' : st==='quiz' ? 'quiz' : 'practice';
+    if(st==='drill') state.practice.view = 'drills'; }
   else if(act==='sess-drill'){
+    say('Quiz done. Last step: the drill.');
     state.sess.step = 'drill';
     state.quiz.stage = 'setup';
     state.tab = 'practice';
@@ -233,22 +275,31 @@ document.getElementById('view').addEventListener('click', e => {
     state.tab = 'home';
   }
   else if(act==='quiz-mode'){ z.mode = el.dataset.m; }
-  else if(act==='quiz-start'){ Object.assign(z, { stage:'run', round:buildRound(z.mode), idx:0, picked:null, score:0, missedQ:[] }); }
+  else if(act==='quiz-start'){ Object.assign(z, { stage:'run', round:buildRound(z.mode), idx:0, picked:null, score:0, missedQ:[], replay:false }); }
   else if(act==='quiz-pick'){
     if(z.picked!==null) return;
     z.picked = Number(el.dataset.i);
     const q = z.round[z.idx];
-    if(q.options[z.picked]===q.answer) z.score++;
-    else z.missedQ.push(q); }
+    const right = q.options[z.picked]===q.answer;
+    if(right) z.score++;
+    else z.missedQ.push(q);
+    say((right ? 'Correct. ' : 'Not quite. The answer is ' + q.answer + '. ') + (q.explain||'')); }
   else if(act==='quiz-next'){
     if(z.idx+1 >= z.round.length){
-      progress.quizzes = [...(progress.quizzes||[]), { date:new Date().toLocaleDateString(), ts:Date.now(), score:z.score, total:z.round.length, mode:z.mode||'mixed' }].slice(-20);
+      /* replays re-ask only the questions you already missed, so logging them
+         as ordinary rounds inflates the dashboard trend most for the learner
+         who is struggling most */
+      progress.quizzes = [...(progress.quizzes||[]), { date:new Date().toLocaleDateString(), ts:Date.now(),
+        score:z.score, total:z.round.length, mode:z.mode||'mixed', replay: !!z.replay }].slice(-20);
       saveProgress();
+      /* cards + quiz banks the night even if the drill never happens — without
+         this, closing the tab here loses the streak entirely */
+      if(state.sess && state.sess.active && state.sess.step==='quiz') recordSessionComplete(false);
       z.stage = 'done';
     } else { z.idx++; z.picked = null; } }
   else if(act==='quiz-replay'){
     if(z.missedQ.length){
-      Object.assign(z, { stage:'run', round:shuffle(z.missedQ), idx:0, picked:null, score:0, missedQ:[] });
+      Object.assign(z, { stage:'run', round:shuffle(z.missedQ), idx:0, picked:null, score:0, missedQ:[], replay:true });
     } }
   else if(act==='riff-frame'){ state.riff.frame = RIFFS[Number(el.dataset.f)]; state.riff.critique = false; dealRiff(); }
   else if(act==='riff-deal'){ state.riff.critique = false; dealRiff(); }

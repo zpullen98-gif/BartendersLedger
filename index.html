@@ -15,8 +15,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Ledger">
-<link rel="stylesheet" href="css/ledger.css?v=6">
-<link rel="stylesheet" href="css/print.css?v=6" media="print">
+<link rel="stylesheet" href="css/ledger.css?v=8">
+<link rel="stylesheet" href="css/print.css?v=8" media="print">
 </head>
 <body>
 <div class="wrap">
@@ -26,23 +26,26 @@
     <div class="rules"></div>
   </header>
   <nav class="tabs" id="tabs"></nav>
-  <main id="view"></main>
+  <main id="view" tabindex="-1"></main>
   <footer class="foot">Master the templates · respect the ingredients · jigger honestly · take care of your guests</footer>
 </div>
 <nav id="bnav" aria-label="Main"></nav>
 <div id="sheet"></div>
 <div id="search-ol"></div>
-<script src="js/data-core.js?v=6"></script>
-<script src="js/engine.js?v=6"></script>
-<script src="js/data-questions.js?v=6"></script>
-<script src="js/data-lore.js?v=6"></script>
-<script src="js/data-service.js?v=6"></script>
-<script src="js/srs.js?v=6"></script>
-<script src="js/ui-study.js?v=6"></script>
-<script src="js/ui-practice.js?v=6"></script>
-<script src="js/ui-reference.js?v=6"></script>
-<script src="js/ui-prep.js?v=6"></script>
-<script src="js/ui-new.js?v=6"></script>
-<script src="js/app.js?v=6"></script>
+<!-- lives OUTSIDE #view: render() replaces that subtree wholesale, which would
+     destroy the region before a screen reader ever observed the change -->
+<div id="live" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+<script src="js/data-core.js?v=8"></script>
+<script src="js/engine.js?v=8"></script>
+<script src="js/data-questions.js?v=8"></script>
+<script src="js/data-lore.js?v=8"></script>
+<script src="js/data-service.js?v=8"></script>
+<script src="js/srs.js?v=8"></script>
+<script src="js/ui-study.js?v=8"></script>
+<script src="js/ui-practice.js?v=8"></script>
+<script src="js/ui-reference.js?v=8"></script>
+<script src="js/ui-prep.js?v=8"></script>
+<script src="js/ui-new.js?v=8"></script>
+<script src="js/app.js?v=8"></script>
 </body>
 </html>

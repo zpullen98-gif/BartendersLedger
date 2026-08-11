@@ -229,7 +229,7 @@ function renderService(){
   const rows = sec.rows.map((r,i) => {
     const open = s.rowOpen === i;
     return '<div class="panel" style="padding:0 16px">'
-      + '<button class="accordion-btn'+(open?' open':'')+'" data-act="svc-row" data-i="'+i+'">'
+      + '<button class="accordion-btn'+(open?' open':'')+'" aria-expanded="'+(open?'true':'false')+'" data-act="svc-row" data-i="'+i+'">'
       + '<span>'+esc(r[0])+'</span><span style="color:var(--brass)">'+(open?'−':'+')+'</span></button>'
       + (open ? '<div class="accordion-body"><div class="small dim lh">'+esc(r[1])+'</div></div>' : '')+'</div>';
   }).join('');
@@ -239,7 +239,7 @@ function renderService(){
     ? cats.map(cat => {
         const items = refs.filter(x => x.cat === cat).map(x => {
           const open = s.refOpen === x.name;
-          return '<div class="panel"><button class="drink-head" data-act="svc-ref" data-n="'+esc(x.name)+'">'
+          return '<div class="panel"><button class="drink-head" aria-expanded="'+(open?'true':'false')+'" data-act="svc-ref" data-n="'+esc(x.name)+'">'
             + '<span class="bold">'+esc(x.name)+'</span>'
             + '<span class="plusminus">'+(open?'−':'+')+'</span></button>'
             + (open ? '<div class="drink-body">'+serviceTicketHTML(x)+'</div>' : '')+'</div>';
@@ -299,7 +299,7 @@ function platesHTML(){
   const body = isOpen
     ? '<div class="accordion-body"><div class="plate-grid">'+PLATES.map(plateFigure).join('')+'</div></div>' : '';
   return '<div class="panel" style="padding:0 16px">'
-    + '<button class="accordion-btn'+(isOpen?' open':'')+'" data-act="note-open" data-t="__plates">'
+    + '<button class="accordion-btn'+(isOpen?' open':'')+'" aria-expanded="'+(isOpen?'true':'false')+'" data-act="note-open" data-t="__plates">'
     + '<span>Technique Plates <span class="tiny dim">· '+PLATES.length+' figures</span></span>'
     + '<span style="color:var(--brass)">'+(isOpen?'−':'+')+'</span></button>'+body+'</div>';
 }
@@ -308,8 +308,12 @@ function platesHTML(){
 /* Deals due reviews + a few new cards, then a quiz round, then prescribes a
    drill. Completing cards + quiz stamps the night and feeds the streak. */
 
+/* setDate walks the local calendar, which is DST-aware. Subtracting a fixed
+   86,400,000 ms is not: on the two transition days a year it lands on the
+   wrong date and silently resets the streak. */
 function dateKey(offsetDays){
-  const d = new Date(Date.now() - (offsetDays || 0) * 86400000);
+  const d = new Date();
+  if(offsetDays) d.setDate(d.getDate() - offsetDays);
   return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
 }
 function sessionDoneToday(){ return (progress.streakData || {}).last === dateKey(0); }
@@ -353,14 +357,22 @@ function sessionDeckParts(){
     if(s && s.due !== undefined && s.due <= Date.now()) due.push(d);
     else if(!s) fresh.push(d);
   });
-  const dueDeck = due.sort((a,b) => weakScore(cardKey(b)) - weakScore(cardKey(a))).slice(0, 20);
+  /* oldest debt first, weakness only as a tiebreak — sorting by weakness alone
+     let a healthy-but-overdue card sit behind the same hard cards every night */
+  const dueAll = due.length;
+  const dueDeck = due.sort((a,b) => {
+    const sa = progress.cards[cardKey(a)], sb = progress.cards[cardKey(b)];
+    return (sa.due - sb.due) || (weakScore(cardKey(b)) - weakScore(cardKey(a)));
+  }).slice(0, 20);
   /* new cards come from the lowest tier that still has unseen cocktails,
      so the canon is learned in order; shots/NA join once cocktails run dry */
   let pool = [];
   for(let t = 1; t <= 12 && !pool.length; t++) pool = fresh.filter(d => d.src === 'Cocktails' && d.tier === t);
   if(!pool.length) pool = fresh;
-  const newDeck = shuffle(pool).slice(0, dueDeck.length ? 5 : 8);
-  return { dueDeck, newDeck };
+  /* stop pouring new cards into a deep hole — dig out first */
+  const newCount = dueAll > 50 ? 0 : (dueDeck.length ? 5 : 8);
+  const newDeck = shuffle(pool).slice(0, newCount);
+  return { dueDeck, newDeck, dueAll };
 }
 
 function startSession(){
@@ -384,6 +396,16 @@ function streakChipsHTML(){
 
 function sessionPanelHTML(){
   const drill = tonightDrill();
+  /* a session is running — offer to resume it. The old panel showed the same
+     brass "Pour tonight's session" button, which silently threw away the run. */
+  if(state.sess && state.sess.active && !sessionDoneToday()){
+    const where = state.sess.step==='cards' ? 'the cards' : state.sess.step==='quiz' ? 'the quiz round' : esc(drill.name);
+    return '<div class="panel p5 col" style="gap:10px;border-color:var(--brass)">'
+      + '<div class="row between"><div class="eyebrow">Tonight’s session · in progress</div>'+streakChipsHTML()+'</div>'
+      + '<div class="small dim lh">You are partway through — currently on '+where+'.</div>'
+      + '<div class="row"><button class="btn btn-brass" data-act="sess-resume">Back to '+where+'</button>'
+      + '<button class="btn btn-ghost" data-act="sess-end">Abandon tonight</button></div></div>';
+  }
   if(sessionDoneToday()){
     const handsTonight = handsDoneToday();
     return '<div class="panel p5 col" style="gap:10px">'
@@ -395,10 +417,14 @@ function sessionPanelHTML(){
           + '<div class="row"><button class="btn btn-ghost tiny" data-act="sess-hands">Take it to the practice room →</button></div>')
       + '</div>';
   }
-  const { dueDeck, newDeck } = sessionDeckParts();
+  const { dueDeck, newDeck, dueAll } = sessionDeckParts();
   const parts = [];
-  if(dueDeck.length) parts.push(dueDeck.length + ' review' + (dueDeck.length===1?'':'s') + ' due');
+  /* say the true size of the backlog, not just tonight's slice of it */
+  if(dueDeck.length) parts.push(dueAll > dueDeck.length
+    ? dueDeck.length + ' of ' + dueAll + ' reviews due'
+    : dueDeck.length + ' review' + (dueDeck.length===1?'':'s') + ' due');
   if(newDeck.length) parts.push(newDeck.length + ' new card' + (newDeck.length===1?'':'s'));
+  else if(dueAll > 50) parts.push('no new cards until the backlog clears');
   parts.push('a 10-question quiz round');
   parts.push('then <span class="brass2">'+esc(drill.name)+'</span> with your hands');
   return '<div class="panel p5 col" style="gap:10px">'
@@ -659,7 +685,9 @@ function dashboardHTML(){
     + '<div class="tiny dim mt1">'+esc(src)+'</div></div>';
   }).join('');
 
-  const quizzes = progress.quizzes || [];
+  /* replays only re-ask what you already missed, so they would read as a
+     spike exactly when you were struggling — keep them out of the trend */
+  const quizzes = (progress.quizzes || []).filter(q => !q.replay);
   const qVals = quizzes.slice(-20).map(q => Math.round(q.score / (q.total || 10) * 100));
   const quizBlock = qVals.length >= 2
     ? svgSpark(qVals, 220, 44, 100) + '<div class="tiny dim">last '+qVals.length+' rounds · best '+Math.max(...qVals)+'%</div>'

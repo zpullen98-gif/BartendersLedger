@@ -251,6 +251,11 @@ details.story[open] summary{ margin-bottom:6px; }
   font-size:1rem; box-shadow:inset 0 0 0 2px var(--oxblood-2), 0 1px 3px rgba(0,0,0,0.3);
   transform:rotate(-8deg); }
 
+
+/* visually hidden but still reachable by screen readers and focus */
+.sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0 0 0 0); clip-path:inset(50%); white-space:nowrap; border:0; }
+
 *:focus-visible{ outline:2px solid var(--brass-2); outline-offset:2px; }
 
 @media (max-width: 639px){

@@ -62,11 +62,16 @@ const idxOf = (name) => COCKTAILS.findIndex(c => c.name === name);
 /* ---------------- BALANCE ENGINE (the DeGroff correction) ---------------- */
 function classifyLine(l){
   const s = l.toLowerCase();
-  if(/bitters|rinse|drops|flower water|dash/.test(s)) return 'aromatic';
-  if(/champagne|prosecco|sparkling|\bsoda\b|tonic|ginger beer|ginger ale|cola|hot coffee|hot water|tomato/.test(s)) return 'long';
+  /* aromatics are dashes and rinses — but a measured pour of bitters is a base
+     spirit (the Trinidad Sour is 1.5 oz of Angostura), so check volume first */
+  if(/bitters|rinse|drops|flower water|dash/.test(s) && lineOz(l) === 0) return 'aromatic';
+  /* non-spirit bulk: mixers, beer, dairy and juices that lengthen rather than sour */
+  if(/champagne|prosecco|sparkling|\bsoda\b|tonic|ginger beer|ginger ale|\bcola\b|hot coffee|hot water|tomato|clamato|\bmilk\b|half-and-half|lager|\bstout\b|\bbeer\b|apple juice|lemonade|coconut water|grape juice|orange juice/.test(s)) return 'long';
   if(/egg|whipped cream/.test(s)) return 'texture';
   if(/vermouth|lillet|cocchi|dubonnet|punt e mes|\bsherry\b|\bport\b|campari|aperol|\bamaro\b|averna|montenegro|nonino|cynar|fernet|suze|amer picon|aperitivo/.test(s)) return 'modifier';
-  if(/simple|sugar|honey|orgeat|agave|syrup|cura|cointreau|liqueur|maraschino|chartreuse|cacao|dictine|violette|mûre|falernum|grenadine|cordial|coconut/.test(s)) return 'sweet';
+  /* sweet: syrups AND the liqueur shelf. These patterns mirror the SHELF table
+     below — when you add one there, add it here or the two disagree. */
+  if(/simple|sugar|honey|orgeat|agave|syrup|cura|cointreau|liqueur|maraschino|chartreuse|cacao|dictine|violette|mûre|falernum|grenadine|cordial|coconut|amaretto|triple sec|grand marnier|drambuie|crème de|creme de|cassis|schnapps|st-?germain|cherry heering|galliano|frangelico|limoncello|advocaat|chambord|midori|kahl|baileys|irish cream|sambuca|licor 43|velvet falernum|allspice dram|pimm/.test(s)) return 'sweet';
   if(/\bcream\b/.test(s)) return 'texture';
   if(/juice|lemon|lime|grapefruit|cranberry|pineapple|espresso/.test(s)) return 'sour';
   return 'strong';
@@ -76,6 +81,15 @@ function lineOz(l){
   while((m = re.exec(l))){
     const tok = m[1];
     t += tok.includes('/') ? (Number(tok.split('/')[0]) / Number(tok.split('/')[1])) : parseFloat(tok);
+  }
+  /* "1/2 oz each: vodka, gin, rum, tequila, triple sec" is five half-ounces,
+     not one — otherwise a Long Island reads as half an ounce of spirit */
+  if(/\boz each\b/i.test(l)){
+    const list = l.split(/:/)[1];
+    if(list){
+      const n = list.split(',').filter(x => x.trim()).length;
+      if(n > 1) t *= n;
+    }
   }
   return t;
 }
@@ -99,9 +113,11 @@ function balanceOf(c){
   });
   // Liqueur- and wine-based drinks (Aperol Spritz, Midori Sour, Mimosa) have no
   // conventional base spirit. Promote their largest sweet — or failing that,
-  // largest long — component into the strong column so the read isn't misleading.
+  // largest modifier — into the strong column so the read isn't misleading.
+  // A 'long' line is never promoted: a mixer is not a base, and promoting one
+  // made a Michelada read as 12 oz of spirit.
   if(b.strong === 0){
-    ['sweet','modifier','long'].some(function(key){
+    ['sweet','modifier'].some(function(key){
       const cand = lines.filter(function(x){ return x.k===key && x.oz>0; })
                         .sort(function(a,z){ return z.oz-a.oz; })[0];
       if(cand){ b[key] -= cand.oz; b.strong += cand.oz; return true; }

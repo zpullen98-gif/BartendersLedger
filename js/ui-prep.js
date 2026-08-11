@@ -173,7 +173,7 @@ const PREPS = [
   // ===== JUICE & GARNISH =====
   { name:"The Juice Program", cat:"Juice & Garnish", ratio:"See yields below", yield:"Lemon ≈ 1–1.25 oz · Lime ≈ 0.75–1 oz · Orange ≈ 2–3 oz · Grapefruit ≈ 5–6 oz",
     steps:["Juice fresh every day; twice daily for lime if you're busy.","Roll the fruit firmly under your palm before juicing and use room-temperature fruit — both increase yield noticeably.","Strain juice through a fine mesh to remove pulp and seeds unless a spec wants the texture.","Label every container with the juice and the time it was pressed."],
-    keeps:"Lime: peaks around 2–4 hours after pressing, declines noticeably after 8, unusable by 24. Lemon: more forgiving, good for a day. Orange and grapefruit: oxidize fast, press to order where possible.",
+    keeps:"Lime: peaks around 2–4 hours after pressing, declines noticeably after 8, unusable by 24. Lemon: more forgiving, good for about two days refrigerated. Orange and grapefruit: oxidize fast, press to order where possible.",
     uses:"Everything. Fresh citrus is the single largest quality variable in any cocktail program.",
     note:"Lime juice genuinely improves for the first few hours and then falls off a cliff. If your Daiquiris taste different at 6pm and midnight, this is why." },
   { name:"Cutting Garnishes", cat:"Juice & Garnish", ratio:"Cut fresh every shift — no exceptions", yield:"1 lemon ≈ 8 wheels or 6 twists · 1 lime ≈ 8 wedges",
@@ -279,7 +279,7 @@ function renderPrep(){
       const open = p.listOpen===t;
       const li = items.map(x => '<li class="small dim lh" style="margin-bottom:6px">'+esc(x)+'</li>').join('');
       return '<div class="panel" style="padding:0 16px">'
-        + '<button class="accordion-btn'+(open?' open':'')+'" data-act="prep-list" data-t="'+esc(t)+'">'
+        + '<button class="accordion-btn'+(open?' open':'')+'" aria-expanded="'+(open?'true':'false')+'" data-act="prep-list" data-t="'+esc(t)+'">'
         + '<span>'+esc(t)+'</span><span style="color:var(--brass)">'+(open?'−':'+')+'</span></button>'
         + (open ? '<div class="accordion-body"><ul style="padding-left:18px;margin:0">'+li+'</ul></div>' : '')+'</div>';
     }).join('');
@@ -290,7 +290,7 @@ function renderPrep(){
     const rows = PREP_SAFETY.map(([t,txt]) => {
       const open = p.safeOpen===t;
       return '<div class="panel" style="padding:0 16px">'
-        + '<button class="accordion-btn'+(open?' open':'')+'" data-act="prep-safe" data-t="'+esc(t)+'">'
+        + '<button class="accordion-btn'+(open?' open':'')+'" aria-expanded="'+(open?'true':'false')+'" data-act="prep-safe" data-t="'+esc(t)+'">'
         + '<span>'+esc(t)+'</span><span style="color:var(--brass)">'+(open?'−':'+')+'</span></button>'
         + (open ? '<div class="accordion-body"><div class="small dim lh">'+esc(txt)+'</div></div>' : '')+'</div>';
     }).join('');
@@ -314,7 +314,7 @@ function renderPrep(){
       + '<div style="max-width:440px"><div class="eyebrow mb1">Why it matters</div><div class="small dim lh">'+esc(x.note)+'</div></div>'
       + prepVideoHTML(x)
       + '</div>' : '';
-    return '<div class="panel"><button class="drink-head" data-act="prep-open" data-i="'+i+'">'
+    return '<div class="panel"><button class="drink-head" aria-expanded="'+(open?'true':'false')+'" data-act="prep-open" data-i="'+i+'"'+(open?' data-open="1"':'')+'>'
       + '<span class="bold">'+esc(x.name)+'</span>'
       + '<span class="plusminus">'+(open?'−':'+')+'</span></button>'+body+'</div>';
   }).join('');

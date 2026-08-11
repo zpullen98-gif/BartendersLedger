@@ -84,7 +84,7 @@ const SHOTS = [
 
   // BOMBS & BOILERMAKERS (+2)
   { name:"Dr Pepper Shot", cat:"Bombs & Boilermakers", spec:["3/4 oz amaretto","1/4 oz 151 rum (shot)","1/2 glass lager"], method:"Drop the shot into the beer, drink fast", note:"Tastes remarkably like the soda. No Dr Pepper involved at any point." },
-  { name:"Bomb Pop", cat:"Bombs & Boilermakers", spec:["1/2 oz vodka","1/2 oz blue curaçao","1/2 oz grenadine (shot)","1/2 glass lemon-lime soda or energy drink"], method:"Layer the shot, then drop", note:"Red, white, and blue in the shot glass before it goes in — the layering is the whole appeal." },
+  { name:"Bomb Pop", cat:"Bombs & Boilermakers", spec:["1/2 oz grenadine","1/2 oz vodka","1/2 oz blue curaçao","1/2 glass lemon-lime soda or energy drink"], method:"Layer bottom-up by density — grenadine, vodka, curaçao — then drop", note:"Red, white, and blue in the shot glass before it goes in — the layering is the whole appeal." },
 
   // INDUSTRY HANDSHAKES (+2)
   { name:"Salt & Lime Tequila", cat:"Industry Handshakes", spec:["1.5 oz blanco tequila","lime wedge","pinch of salt"], method:"Salt on the hand, lick, shoot, bite the lime", note:"The ritual most guests expect — and the one most Mexican bartenders would gently steer you away from. Salt and lime exist to mask a rough spirit; with good tequila, offer sangrita or a simple sip instead." },
@@ -304,7 +304,7 @@ function renderShots(){
     const svc = SHOT_SERVICE.map(([t,p]) => {
       const open = sh.svc===t;
       return '<div class="panel" style="padding:0 16px">'
-        + '<button class="accordion-btn'+(open?' open':'')+'" data-act="shots-svc" data-t="'+esc(t)+'">'
+        + '<button class="accordion-btn'+(open?' open':'')+'" aria-expanded="'+(open?'true':'false')+'" data-act="shots-svc" data-t="'+esc(t)+'">'
         + '<span>'+esc(t)+'</span><span style="color:var(--brass)">'+(open?'−':'+')+'</span></button>'
         + (open ? '<div class="accordion-body"><div class="small dim lh">'+esc(p)+'</div></div>' : '')+'</div>';
     }).join('');
@@ -322,7 +322,7 @@ function renderShots(){
     const v = SHOT_VARIANTS[s.name];
     const varHTML = (open && v) ? '<div class="tiny dim lh" style="max-width:400px"><span class="brass2 bold">House variations · </span>'+esc(v)+'</div>' : '';
     const badge = v ? '<span class="chip brass">Varies</span>' : '';
-    return '<div class="panel"><button class="drink-head" data-act="shots-toggle" data-i="'+i+'">'
+    return '<div class="panel"><button class="drink-head" aria-expanded="'+(open?'true':'false')+'" data-act="shots-toggle" data-i="'+i+'"'+(open?' data-open="1"':'')+'>'
       + '<span class="bold">'+esc(s.name)+'</span><span class="chip">'+esc(s.cat)+'</span>'+badge
       + '<span class="plusminus">'+(open?'−':'+')+'</span></button>'
       + (open ? '<div class="drink-body">'+shotTicketHTML(s)+varHTML+videoRowHTML({src:'Shots',name:s.name,group:s.cat,tier:null})+'</div>' : '')+'</div>';
@@ -524,7 +524,7 @@ function renderNA(){
     const rows = NA_PANTRY.map(([t,p]) => {
       const open = n.pOpen===t;
       return '<div class="panel" style="padding:0 16px">'
-        + '<button class="accordion-btn'+(open?' open':'')+'" data-act="na-pantry" data-t="'+esc(t)+'">'
+        + '<button class="accordion-btn'+(open?' open':'')+'" aria-expanded="'+(open?'true':'false')+'" data-act="na-pantry" data-t="'+esc(t)+'">'
         + '<span>'+esc(t)+'</span><span style="color:var(--brass)">'+(open?'−':'+')+'</span></button>'
         + (open ? '<div class="accordion-body"><div class="small dim lh">'+esc(p)+'</div>'
             + '<div class="row"><a class="btn btn-ghost tiny" href="'+ytSearch(t.split('(')[0].trim()+' bartender how to make'+scopeSuffix())+'" target="_blank" rel="noopener noreferrer">▶ Watch it made</a></div></div>' : '')+'</div>';
@@ -536,7 +536,7 @@ function renderNA(){
     const rows = NA_THEORY.map(([t,p]) => {
       const open = n.tOpen===t;
       return '<div class="panel" style="padding:0 16px">'
-        + '<button class="accordion-btn'+(open?' open':'')+'" data-act="na-theory" data-t="'+esc(t)+'">'
+        + '<button class="accordion-btn'+(open?' open':'')+'" aria-expanded="'+(open?'true':'false')+'" data-act="na-theory" data-t="'+esc(t)+'">'
         + '<span>'+esc(t)+'</span><span style="color:var(--brass)">'+(open?'−':'+')+'</span></button>'
         + (open ? '<div class="accordion-body"><div class="small dim lh">'+esc(p)+'</div></div>' : '')+'</div>';
     }).join('');
@@ -547,7 +547,7 @@ function renderNA(){
     const rows = NA_SERVICE.map(([t,p]) => {
       const open = n.sOpen===t;
       return '<div class="panel" style="padding:0 16px">'
-        + '<button class="accordion-btn'+(open?' open':'')+'" data-act="na-service" data-t="'+esc(t)+'">'
+        + '<button class="accordion-btn'+(open?' open':'')+'" aria-expanded="'+(open?'true':'false')+'" data-act="na-service" data-t="'+esc(t)+'">'
         + '<span>'+esc(t)+'</span><span style="color:var(--brass)">'+(open?'−':'+')+'</span></button>'
         + (open ? '<div class="accordion-body"><div class="small dim lh">'+esc(p)+'</div></div>' : '')+'</div>';
     }).join('');
@@ -559,7 +559,7 @@ function renderNA(){
   const list = NA_DRINKS.map((d,i)=>({d,i})).filter(({d}) => n.cat==='All' || d.cat===n.cat);
   const rows = list.map(({d,i}) => {
     const open = n.open===i;
-    return '<div class="panel"><button class="drink-head" data-act="na-toggle" data-i="'+i+'">'
+    return '<div class="panel"><button class="drink-head" aria-expanded="'+(open?'true':'false')+'" data-act="na-toggle" data-i="'+i+'"'+(open?' data-open="1"':'')+'>'
       + glassIcon(d.glass)
       + '<span class="bold">'+esc(d.name)+'</span><span class="chip">'+esc(d.cat)+'</span>'
       + '<span class="plusminus">'+(open?'−':'+')+'</span></button>'
@@ -713,7 +713,7 @@ function renderProducers(){
   const primer = (p.cat!=='All' && PRIMERS[p.cat]) ? PRIMERS[p.cat].map(([t,txt]) => {
     const open = p.primerOpen===t;
     return '<div class="panel" style="padding:0 16px">'
-      + '<button class="accordion-btn'+(open?' open':'')+'" data-act="prod-primer" data-t="'+esc(t)+'">'
+      + '<button class="accordion-btn'+(open?' open':'')+'" aria-expanded="'+(open?'true':'false')+'" data-act="prod-primer" data-t="'+esc(t)+'">'
       + '<span>'+esc(t)+'</span><span style="color:var(--brass)">'+(open?'−':'+')+'</span></button>'
       + (open ? '<div class="accordion-body"><div class="small dim lh">'+esc(txt)+'</div></div>' : '')+'</div>';
   }).join('') : '';
@@ -728,7 +728,7 @@ function renderProducers(){
       + '<div style="max-width:440px"><div class="eyebrow mb1">Behind the bar</div><div class="small dim lh">'+esc(x.bar)+'</div></div>'
       + '<a class="btn btn-ghost tiny" href="'+ytSearch(producerQuery(x)+scopeSuffix())+'" target="_blank" rel="noopener noreferrer">▶ Watch the distillery</a>'
       + '</div>' : '';
-    return '<div class="panel"><button class="drink-head" data-act="prod-open" data-i="'+i+'">'
+    return '<div class="panel"><button class="drink-head" aria-expanded="'+(open?'true':'false')+'" data-act="prod-open" data-i="'+i+'"'+(open?' data-open="1"':'')+'>'
       + '<span class="bold">'+esc(x.name)+'</span><span class="chip">'+esc(x.where.split(',')[0])+'</span>'
       + '<span class="chip brass">'+esc(x.est)+'</span>'
       + '<span class="plusminus">'+(open?'−':'+')+'</span></button>'+body+'</div>';
