@@ -32,20 +32,25 @@ The route below is free *and* actually private. Paying would buy strictly less.
 
 ## Phase 2 — Push
 
-From `C:\Users\zpull\BartendersLedger`, with your real username:
+Machine setup (identity + `credential.helper manager`) is already done and shared with the other
+repos on this machine. Nothing to configure. From `C:\Users\zpull\BartendersLedger`:
 
 ```bash
-git remote add origin https://github.com/YOUR-USERNAME/BartendersLedger.git
+git remote add origin https://github.com/zpullen98-gif/BartendersLedger.git
 ```
 
 ```bash
 git push -u origin main
 ```
 
-A browser window opens for GitHub sign-in (Git Credential Manager is already installed and
-configured — no `gh` CLI, no personal access token). Authorise it once; it's remembered after that.
+**Note the branch: `main`, not `master`.** WorldTable used `master`; this repo was initialised on
+`main`. Using the wrong one creates a second branch and Pages/Pages-equivalents watch the wrong one.
+Confirm any time with `git branch --show-current`.
 
-Expect ~2 MB to upload. Refresh the GitHub page and you should see 34 files.
+A browser window may open for Git Credential Manager — click Authorize. It may not appear at all if
+you're already signed in. No `gh` CLI, no personal access token.
+
+Expect ~2 MB to upload. Refresh GitHub and you should see 35 files.
 
 ## Phase 3 — Invite your collaborator
 
@@ -53,6 +58,21 @@ Repo → **Settings** → **Collaborators** → **Add people** → their GitHub 
 
 Private repos have unlimited free collaborators. They'll get an email invite; once accepted they can
 clone, push, and open pull requests. Point them at [README.md](README.md) and [CLAUDE.md](CLAUDE.md).
+
+## What does *not* carry over from the WorldTable playbook
+
+WorldTable's GitHub Pages checklist cost real time. **None of it applies here**, and it's worth
+knowing why so nobody re-fights it:
+
+| WorldTable trap | Status here |
+|---|---|
+| `.nojekyll` — Jekyll ignores `_app/`, `_next/` folders, 404-ing every script | **Not applicable.** No build step, no underscore-prefixed paths anywhere (verified against the file list). `.nojekyll` is committed anyway as free insurance. |
+| Base path — a project site lives at `/REPO/`, so absolute URLs break | **Not applicable.** Every path in this app is relative and the manifest uses `"start_url": "./"`. Verified by serving the app from a subdirectory: the service worker scoped correctly and nothing 404'd. |
+| `BASE_PATH=/APP npm run build` mangled by Windows/MSYS | **Not applicable.** There is no build command at all. |
+| Pages source → GitHub Actions | **Not used** — see below. |
+
+The one thing that *does* carry over unchanged is the push procedure, plus the empty-repo warning in
+Phase 1 — that snag is identical on every repo.
 
 ## Phase 4 — Cloudflare Pages
 
