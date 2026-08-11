@@ -292,6 +292,7 @@ function eightySixReport(key, pool){
   ready.forEach(d => (needsIt(d) ? lost : survivors).push(d));
   return {
     stillReady: survivors.length,
+    lostCount: lost.length,          /* the true figure — `lost` below is capped for display */
     lost: lost.slice(0, 14).map(d => {
       /* closest survivor = most shared ingredients, with family and base as bonuses */
       const mine = flat(d);
@@ -302,7 +303,18 @@ function eightySixReport(key, pool){
         if(s.spirit && s.spirit === d.spirit) score += 1;
         if(score > bestScore){ bestScore = score; best = s; }
       });
-      return { name:d.name, family:famOf(d)||'—', spirit:d.spirit||'—', sub: best ? best.name : null };
+      /* say what actually matched — the old copy asserted "same family, same base"
+         on every row, which was false about a third of the time */
+      let why = null;
+      if(best){
+        const bits = [];
+        if(famOf(best) && famOf(best) === famOf(d)) bits.push('same family');
+        if(best.spirit && best.spirit === d.spirit) bits.push('same base');
+        const shared = flat(best).filter(x => mine.indexOf(x) >= 0).length;
+        if(!bits.length && shared) bits.push(shared + ' shared ingredient' + (shared===1?'':'s'));
+        why = bits.join(', ') || null;
+      }
+      return { name:d.name, family:famOf(d)||'—', spirit:d.spirit||'—', sub: best ? best.name : null, why:why };
     }),
   };
 }

@@ -267,4 +267,27 @@ details.story[open] summary{ margin-bottom:6px; }
   .opt-btn{ padding:13px 14px; min-height:46px; }
 }
 
+
+.opt-mark{ font-weight:700; }
+
+/* Windows High Contrast strips every background, and this design system signals
+   state with nothing but colour swaps — so without this block the correct
+   answer, the owned shelf bottles and the active tab all vanish. */
+@media (forced-colors: active){
+  .opt-btn.correct, .opt-btn.wrong,
+  button.chip.on, .tab-btn.active, .cl-btn.active,
+  .sheet-btn.active, .bnav-btn.active{
+    outline:2px solid CanvasText; outline-offset:-2px;
+  }
+  .btn-brass, .btn-ox{ border:1px solid CanvasText; }
+  .ticket{ border:1px solid CanvasText; }
+}
+
+@media (max-width: 639px){
+  /* the primary in-view navigation was a ~32px target while every other
+     control already had a 44px minimum */
+  .tab-btn{ min-height:44px; padding:11px 12px; }
+}
+button.chip{ min-height:26px; }
+
 @media (prefers-reduced-motion: reduce){ *{ transition:none !important; animation:none !important; } }

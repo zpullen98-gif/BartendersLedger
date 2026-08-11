@@ -1,5 +1,5 @@
 /* ---------------- RENDER & EVENTS ---------------- */
-let prTick = null;   /* the practice-drill stopwatch interval */
+const prTicks = {};  /* one stopwatch interval per drill id */
 const TABS = [['home','Ledger'],['families','Families'],['library','Library'],['shots','Shots'],['na','Zero Proof'],['service','Behind the Stick'],['prep','Prep'],['producers','Producers'],['notes','Notes'],['flashcards','Flashcards'],['quiz','Quiz'],['practice','Practice'],['riffs','Riffs'],['tools','Tools']];
 /* Announce something to assistive tech. The region is outside #view so it
    survives the innerHTML swap below. */
@@ -186,6 +186,14 @@ document.getElementById('view').addEventListener('click', e => {
   else if(act==='lib-print'){ state.lib.print = true; }
   else if(act==='lib-print-go'){ window.print(); return; }
   else if(act==='lib-print-close'){ state.lib.print = false; }
+  else if(act==='fc-drill-weak'){
+    const key = el.dataset.k;
+    const card = allDrinks().filter(d => cardKey(d) === key);
+    if(card.length){
+      state.tab = 'flashcards';
+      Object.assign(fc, { stage:'run', mode:'name2spec', deck:card, idx:0, right:0, wrong:0, missed:[] });
+      prepCard();
+    } }
   else if(act==='fc-src'){
     fc.src = el.dataset.s; fc.family = 'All'; fc.spirit = 'All';
     if(fc.src!=='Cocktails' && fc.src!=='All') fc.tier = 'All'; }
@@ -277,6 +285,7 @@ document.getElementById('view').addEventListener('click', e => {
     state.tab = 'home';
   }
   else if(act==='quiz-mode'){ z.mode = el.dataset.m; }
+  else if(act==='quiz-quit'){ z.stage='setup'; if(state.sess) state.sess.active=false; }
   else if(act==='quiz-start'){ Object.assign(z, { stage:'run', round:buildRound(z.mode), idx:0, picked:null, score:0, missedQ:[], replay:false }); }
   else if(act==='quiz-pick'){
     if(z.picked!==null) return;
@@ -336,6 +345,7 @@ document.getElementById('view').addEventListener('click', e => {
     if(progress.tastings && progress.tastings[i]){ progress.tastings.splice(i,1); saveProgress(); }
     state.practice.noteOpen = null; }
   else if(act==='rail-deal'){ state.practice.rail = { deck: railDeal(), revealed:false }; }
+  else if(act==='rail-called'){ if(state.practice.rail) state.practice.rail.called = el.dataset.ok==='1'; }
   else if(act==='rail-reveal'){ if(state.practice.rail) state.practice.rail.revealed = true; }
   else if(act==='pr-deal'){
     const id = el.dataset.id;
@@ -363,7 +373,7 @@ document.getElementById('view').addEventListener('click', e => {
       delete t[id];
       const input = document.getElementById('pr-in-'+id);
       if(input) input.value = secs;
-      if(prTick){ clearInterval(prTick); prTick = null; }
+      if(prTicks[id]){ clearInterval(prTicks[id]); delete prTicks[id]; }
       el.textContent = 'Start';
       const disp = document.getElementById('pr-timer-'+id);
       if(disp) disp.classList.remove('running');
@@ -372,10 +382,10 @@ document.getElementById('view').addEventListener('click', e => {
     t[id] = Date.now();
     el.textContent = '0.0 — Stop';
     el.classList.add('running');
-    if(prTick) clearInterval(prTick);
-    prTick = setInterval(() => {
+    if(prTicks[id]) clearInterval(prTicks[id]);
+    prTicks[id] = setInterval(() => {
       const btn = document.getElementById('pr-timer-'+id);
-      if(!btn || !state.practice.timers[id]){ clearInterval(prTick); prTick=null; return; }
+      if(!btn || !state.practice.timers[id]){ clearInterval(prTicks[id]); delete prTicks[id]; return; }
       btn.textContent = ((Date.now()-state.practice.timers[id])/1000).toFixed(1) + ' — Stop';
     }, 100);
     return; }
@@ -386,7 +396,11 @@ document.getElementById('view').addEventListener('click', e => {
     if(isNaN(v)) return;
     if(!progress.practice) progress.practice = {};
     const arr = progress.practice[id] || [];
-    arr.push({ d:new Date().toLocaleDateString(), ts:Date.now(), v:v });
+    const entry = { d:new Date().toLocaleDateString(), ts:Date.now(), v:v };
+    if(id === 'rail' && state.practice.rail && state.practice.rail.called !== undefined){
+      entry.ok = state.practice.rail.called;
+    }
+    arr.push(entry);
     progress.practice[id] = arr.slice(-20);
     saveProgress();
     /* a logged drill is what upgrades tonight from recitation to hands */

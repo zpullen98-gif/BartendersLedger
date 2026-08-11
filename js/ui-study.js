@@ -9,6 +9,17 @@ function renderHome(){
   const best = full.length ? Math.max(...full.map(q=>q.score)) : null;
   const tastings = (progress.tastings || []).length;
   const drillLogs = Object.values(progress.practice || {}).reduce(function(n,a){ return n + (a?a.length:0); }, 0);
+  /* volume is flattering and useless — what needs action is what is overdue and
+     what keeps collapsing, so surface both */
+  const overdue = (typeof srsDueKeys === 'function') ? srsDueKeys().length : 0;
+  const weakest = Object.keys(progress.cards || {})
+    .map(function(k){ const s2 = progress.cards[k];
+      return { k:k, score:(s2.w||0)*2 + (s2.lapses||0)*1.5 - (s2.r||0) }; })
+    .filter(function(x){ return x.score > 0; })
+    .sort(function(a,b){ return b.score - a.score; })
+    .slice(0,5)
+    .map(function(x){ return '<button class="chip" data-act="fc-drill-weak" data-k="'+esc(x.k)+'">'+esc(x.k)+'</button>'; })
+    .join(' ');
   const famBars = Object.keys(FAMILIES).map(f => {
     const mem = COCKTAILS.filter(c => c.family===f);
     const m = mem.filter(function(c){ return isMastered(c.name); }).length;
@@ -71,10 +82,13 @@ function renderHome(){
     + '<div class="stat-grid">'
     + '<div><div class="stat-num">'+mastered+'<span class="small dim">/'+totalCards+'</span></div><div class="tiny dim mt1">specs mastered</div></div>'
     + '<div><div class="stat-num">'+studied+'</div><div class="tiny dim mt1">cards drilled</div></div>'
-    + '<div><div class="stat-num">'+(best===null?'—':best+'/10')+'</div><div class="tiny dim mt1">best quiz round</div></div>'
+    + '<div><div class="stat-num"'+(overdue?' style="color:var(--oxblood)"':'')+'>'+overdue+'</div><div class="tiny dim mt1">reviews overdue</div></div>'
     + '</div>'
     + '<div class="eyebrow mt3 mb2">Mastery by family</div>'
     + '<div class="col-sm" style="gap:6px">'+famBars+'</div>'
+    + (weakest ? '<div class="eyebrow mt3 mb1">Where you are weakest</div>'
+        + '<div class="small dim lh mb2">The five cards costing you the most. Tap one to drill just these.</div>'
+        + '<div class="row" style="gap:6px">'+weakest+'</div>' : '')
     + '</div>'
     + dashboardHTML()
     + '<div class="panel p5">'
@@ -257,7 +271,7 @@ function fcPool(){
     if(f.spirit!=='All'){ if(d.src!=='Cocktails' || d.spirit!==f.spirit) return false; }
     const key = cardKey(d);
     if(f.special==='unmastered' && isMastered(key)) return false;
-    if(f.special==='trouble'){ const s=progress.cards[key]; if(!(s && s.w>0 && s.w>=s.r)) return false; }
+    if(f.special==='trouble'){ const s=progress.cards[key]; if(!(s && s.w>0 && (s.w >= s.r*0.5 || (s.lapses||0) >= 2))) return false; }
     if(f.special==='due'){ const s=progress.cards[key]; if(!(s && s.due !== undefined && s.due <= Date.now())) return false; }
     return true;
   });
@@ -723,23 +737,29 @@ function renderQuiz(){
       + '<div class="row center">'
       + sessionQuizDoneHTML()
       + (z.missedQ.length ? '<button class="btn btn-ox" data-act="quiz-replay">Replay the misses ('+z.missedQ.length+')</button>' : '')
-      + (state.sess && state.sess.active ? '' : '<button class="btn btn-brass" data-act="quiz-start">Deal another round</button>')
+      /* only suppress Deal another while the SESSION is actually on its quiz step —
+         suppressing on `active` alone left this screen with zero buttons */
+      + (state.sess && state.sess.active && state.sess.step==='quiz' ? '' : '<button class="btn btn-brass" data-act="quiz-start">Deal another round</button>')
       + '</div></div>';
   }
   const q = z.round[z.idx];
   const answered = z.picked !== null;
   const opts = q.options.map((opt,i) => {
-    let cls = 'opt-btn';
-    if(answered && opt===q.answer) cls += ' correct';
-    else if(answered && i===z.picked) cls += ' wrong';
-    return '<button class="'+cls+'" data-act="quiz-pick" data-i="'+i+'"'+(answered?' disabled':'')+'>'+esc(opt)+'</button>';
+    let cls = 'opt-btn', mark = '', sr = '';
+    /* dark green vs dark red is the ONLY signal for a deuteranopic user, and no
+       signal at all in forced-colors mode — carry it in text and a glyph too */
+    if(answered && opt===q.answer){ cls += ' correct'; mark = '<span aria-hidden="true" class="opt-mark">✓</span> '; sr = '<span class="sr-only">Correct answer: </span>'; }
+    else if(answered && i===z.picked){ cls += ' wrong'; mark = '<span aria-hidden="true" class="opt-mark">✗</span> '; sr = '<span class="sr-only">Your answer, incorrect: </span>'; }
+    return '<button class="'+cls+'" data-act="quiz-pick" data-i="'+i+'"'+(answered?' disabled':'')+'>'+mark+sr+esc(opt)+'</button>';
   }).join('');
   const after = answered
     ? '<div class="explain"><span class="brass2 bold">'+(q.options[z.picked]===q.answer?'Correct. ':'Not quite. ')+'</span>'+esc(q.explain)+'</div>'
       + '<button class="btn btn-brass self-end" data-act="quiz-next">'+(z.idx+1>=z.round.length?'Close out the round':'Next question')+'</button>'
     : '';
   return '<div class="col">'
-    + '<div class="row between tiny dim"><span>Question '+(z.idx+1)+' of '+z.round.length+'</span><span>Score: '+z.score+'</span></div>'
+    + '<div class="row between tiny dim"><span>Question '+(z.idx+1)+' of '+z.round.length+'</span>'
+    + '<span>Score: '+z.score+'</span>'
+    + '<button class="chip" data-act="quiz-quit">Quit round</button></div>'
     + '<div class="panel p5 col"><div class="bold lh">'+esc(q.prompt)+'</div>'
     + (q.ticket ? (q.ticketType==='shot' ? shotTicketHTML(q.ticket,true) : q.ticketType==='na' ? naTicketHTML(q.ticket,true) : ticketHTML(q.ticket,true)) : '')
     + '<div class="col-sm">'+opts+'</div>'+after+'</div></div>';

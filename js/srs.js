@@ -36,6 +36,9 @@ function scheduleCard(rec, ok, now){
     rec.reps = 0;
     rec.ivl = 0;
     rec.ef = Math.max(1.3, rec.ef - 0.2);
+    /* count the resets — without this a card that has collapsed a dozen times
+       looks identical to a fresh one the moment it wins twice */
+    rec.lapses = (rec.lapses || 0) + 1;
   }
   rec.due = rec.ivl === 0 ? now : srsDueAt(rec.ivl, now);
   rec.last = now;

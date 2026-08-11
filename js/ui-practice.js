@@ -200,13 +200,24 @@ function railHTML(){
     : '';
   const log = (progress.practice && progress.practice.rail) || [];
   const hist = log.slice(-5).reverse().map(e =>
-    '<div class="hist-row"><span>'+esc(e.d)+'</span><span class="font-tix brass2">'+e.v+' sec</span></div>').join('');
+    '<div class="hist-row"><span>'+esc(e.d)+(e.ok===false?' <span style="color:var(--oxblood)">wrong order</span>':e.ok?' <span class="brass2">order right</span>':'')
+    + '</span><span class="font-tix brass2">'+e.v+' sec</span></div>').join('');
   return '<div class="col" style="align-items:center">'
     + ticket
     + '<div class="row center" style="gap:10px">'
     + '<button class="btn btn-ghost" data-act="pr-timer" data-id="rail" id="pr-timer-rail">Start</button>'
     + '<input class="input" type="number" step="any" inputmode="decimal" id="pr-in-rail" placeholder="seconds" style="max-width:130px">'
-    + '<button class="btn btn-brass" data-act="pr-log" data-id="rail">Log</button></div>'
+    /* speed alone measures nothing — you can be fast in the wrong order forever.
+       The log stays shut until you have checked the order and said how you did. */
+    + (r.revealed
+        ? '<button class="btn btn-brass" data-act="pr-log" data-id="rail"'+(r.called===undefined?' disabled':'')+'>Log</button>'
+        : '<button class="btn btn-brass" disabled title="Check your order first">Log</button>')
+    + '</div>'
+    + (r.revealed
+        ? '<div class="row center" style="gap:10px">'
+          + '<button class="btn'+(r.called===true?' btn-brass':' btn-ghost')+'" data-act="rail-called" data-ok="1">I called it right</button>'
+          + '<button class="btn'+(r.called===false?' btn-ox':' btn-ghost')+'" data-act="rail-called" data-ok="0">I got it wrong</button></div>'
+        : '')
     + '<div class="row center" style="gap:10px">'
     + (r.revealed ? '' : '<button class="btn btn-ox" data-act="rail-reveal">Check my order</button>')
     + '<button class="btn btn-ghost" data-act="rail-deal">Deal another</button></div>'
@@ -598,9 +609,12 @@ function renderTools(){
     }).join('');
     /* 86 mode: the same engine, pointed at triage instead of shopping */
     const dead = t.eightySix ? eightySixReport(t.eightySix, pool) : null;
-    const modeChips = '<button class="chip'+(t.eightySix?'':' on')+'" data-act="shelf-mode" data-m="stock">Stocking</button> '
-      + '<button class="chip'+(t.eightySix?' on':'')+'" data-act="shelf-mode" data-m="86">86 drill</button>';
-    if(t.eightySix !== null && t.eightySix !== undefined){
+    /* '' means "86 mode, nothing picked yet" — truthiness would read that as OFF
+       and render Stocking as active while the 86 panel is on screen */
+    const in86 = t.eightySix !== null && t.eightySix !== undefined;
+    const modeChips = '<button class="chip'+(in86?'':' on')+'" data-act="shelf-mode" data-m="stock">Stocking</button> '
+      + '<button class="chip'+(in86?' on':'')+'" data-act="shelf-mode" data-m="86">86 drill</button>';
+    if(in86){
       const owned = t.shelf.map(function(k){
         return '<button class="chip'+(t.eightySix===k?' on':'')+'" data-act="shelf-86" data-k="'+k+'">'+esc(shelfLabel(k))+'</button>';
       }).join(' ');
@@ -608,20 +622,22 @@ function renderTools(){
         + '<div class="row between"><div class="eyebrow">86 drill</div><div class="row" style="gap:6px">'+modeChips+'</div></div>'
         + '<div class="small dim lh">The guest is standing there and the bottle is empty. Tap what just died and the ledger shows you what died with it — and the closest thing you can still pour. Answer out loud before you read the substitutes.</div>'
         + (t.shelf.length ? '<div class="row" style="gap:6px">'+owned+'</div>'
-            : '<div class="tiny dim">Stock a shelf first — switch to Stocking and tap what you own.</div>')
+            : '<div class="row"><button class="btn btn-ghost tiny" data-act="shelf-mode" data-m="stock">Stock a shelf first →</button></div>')
         + '</div>'
         + (dead ? '<div class="panel p5 col" style="gap:12px">'
             + '<div class="eyebrow">'+esc(shelfLabel(t.eightySix))+' is 86\'d</div>'
-            + '<div class="small lh">'+(dead.lost.length
-                ? '<span class="brass2 bold">'+dead.lost.length+' drink'+(dead.lost.length===1?'':'s')+' just died.</span>'
+            + '<div class="small lh">'+(dead.lostCount
+                ? '<span class="brass2 bold">'+dead.lostCount+' drink'+(dead.lostCount===1?'':'s')+' just died.</span>'
+                  + (dead.lostCount > dead.lost.length ? ' <span class="tiny dim">Showing the first '+dead.lost.length+'.</span>' : '')
                 : '<span class="brass2 bold">Nothing on your shelf depended on it.</span>')+'</div>'
             + (dead.lost.length ? '<div class="col-sm">'+dead.lost.map(function(x){
                 return '<div class="panel p3 col-sm" style="gap:4px"><div class="row between">'
                   + '<span class="bold small">'+esc(x.name)+'</span>'
                   + '<span class="tiny dim">'+esc(x.family)+' · '+esc(x.spirit)+'</span></div>'
                   + '<div class="tiny dim">'+(x.sub
-                    ? 'Closest survivor: <span class="brass2">'+esc(x.sub)+'</span> — same family, same base.'
-                    : 'No survivor in the same family on this shelf. Go to the riff builder and make something.')+'</div></div>';
+                    ? 'Closest survivor: <span class="brass2">'+esc(x.sub)+'</span>'
+                      + (x.why ? ' — '+esc(x.why)+'.' : '.')
+                    : 'Nothing close on this shelf. Take it to the riff builder and improvise.')+'</div></div>';
               }).join('')+'</div>' : '')
             + '<div class="tiny dim lh">'+dead.stillReady+' drinks still pour without it.</div>'
             + '</div>' : ''));

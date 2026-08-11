@@ -346,7 +346,13 @@ function recordSessionComplete(withHands){
   return s;
 }
 function tonightDrill(){
-  return DRILLS[Math.floor(Date.now() / 86400000) % DRILLS.length];
+  /* skip hidden entries (the Ticket Rail lives in its own view, so naming it
+     here sent you to a drills list that didn't contain it), and rotate on the
+     LOCAL calendar day so the prescribed drill doesn't change mid-evening */
+  const pool = DRILLS.filter(d => !d.hidden);
+  const n = new Date();
+  const day = Math.floor(Date.UTC(n.getFullYear(), n.getMonth(), n.getDate()) / 86400000);
+  return pool[day % pool.length];
 }
 
 function sessionDeckParts(){
