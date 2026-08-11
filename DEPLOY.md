@@ -1,18 +1,38 @@
 # Deploying — private, with one collaborator
 
-The repo is committed and ready. Everything below is a one-time setup; after that, deploying is
-`git push`.
+Everything below is one-time setup. After it, shipping a change is `git push`.
 
-Two accounts are involved and **both auth steps are yours** — no credentials are stored in this repo.
+## Don't pay for GitHub Pro for this
+
+GitHub Pro ($4/mo) lets you *publish* Pages from a private repo, but **the published site is still
+public to anyone with the URL.** Restricting who can view a Pages site requires GitHub Enterprise
+Cloud, not Pro. From GitHub's docs:
+
+> "To publish a GitHub Pages site privately, your organization must use GitHub Enterprise Cloud."
+
+The route below is free *and* actually private. Paying would buy strictly less.
+
+| | Private repo | Private *site* | Cost |
+|---|---|---|---|
+| GitHub free + Pages | yes | **no — site is public** | $0 |
+| GitHub Pro + Pages | yes | **no — site is public** | $4/mo |
+| GitHub free + Cloudflare Pages + Access | yes | **yes — login gated** | $0 |
 
 ---
 
-## 1. Private GitHub repo (free, unlimited collaborators)
+## Phase 1 — Private GitHub repo
 
-Create an **empty private repo** at https://github.com/new — name it `BartendersLedger`, set
-**Private**, and do *not* add a README, .gitignore or licence (this repo already has them).
+1. Sign in at https://github.com (create an account if needed).
+2. Go to https://github.com/new.
+3. **Repository name:** `BartendersLedger`
+4. **Visibility:** **Private** ← the important one.
+5. Leave *every* initialise checkbox **unticked** — no README, no .gitignore, no licence. This repo
+   already has all three, and ticking them creates a conflicting first commit you'd have to merge.
+6. **Create repository.** You'll land on an empty-repo page showing setup commands. Ignore them; use ours.
 
-Then, from `C:\Users\zpull\BartendersLedger`:
+## Phase 2 — Push
+
+From `C:\Users\zpull\BartendersLedger`, with your real username:
 
 ```bash
 git remote add origin https://github.com/YOUR-USERNAME/BartendersLedger.git
@@ -22,62 +42,88 @@ git remote add origin https://github.com/YOUR-USERNAME/BartendersLedger.git
 git push -u origin main
 ```
 
-Git Credential Manager is already installed and configured, so that push opens a browser window to
-sign in to GitHub. No `gh` CLI or personal access token needed.
+A browser window opens for GitHub sign-in (Git Credential Manager is already installed and
+configured — no `gh` CLI, no personal access token). Authorise it once; it's remembered after that.
 
-**Invite your collaborator:** repo → Settings → Collaborators → Add people. They get full read/write
-on a private repo at no cost to either of you.
+Expect ~2 MB to upload. Refresh the GitHub page and you should see 34 files.
 
----
+## Phase 3 — Invite your collaborator
 
-## 2. Cloudflare Pages for the hosted app (free)
+Repo → **Settings** → **Collaborators** → **Add people** → their GitHub username or email.
 
-GitHub Pages will *not* serve a private repo without a paid plan. Cloudflare Pages will.
+Private repos have unlimited free collaborators. They'll get an email invite; once accepted they can
+clone, push, and open pull requests. Point them at [README.md](README.md) and [CLAUDE.md](CLAUDE.md).
 
-1. Sign up at https://dash.cloudflare.com (free).
-2. **Workers & Pages → Create → Pages → Connect to Git**, authorise GitHub, pick `BartendersLedger`.
-3. Build settings — this matters, and the defaults are wrong for a no-build project:
+## Phase 4 — Cloudflare Pages
+
+1. Sign up at https://dash.cloudflare.com (free, no card for this).
+2. **Compute (Workers & Pages)** in the sidebar → **Create** → **Pages** tab → **Connect to Git**.
+   (Cloudflare renames this section periodically; look for Workers & Pages.)
+3. Authorise Cloudflare's GitHub app. Choose **Only select repositories** and pick
+   `BartendersLedger` — don't grant access to everything.
+4. Select the repo → **Begin setup**.
+5. **Build settings — the defaults are wrong for this project:**
    - **Framework preset:** `None`
-   - **Build command:** *leave completely empty*
+   - **Build command:** **completely empty** (delete anything prefilled)
    - **Build output directory:** `/`
-4. Deploy. You get `https://bartendersledger.pages.dev` (or similar) over HTTPS.
 
-Every `git push` to `main` redeploys automatically.
+   There is no build step. If you let Cloudflare guess, it runs a build that doesn't exist and fails.
+6. **Save and Deploy.** It takes under a minute and gives you
+   `https://bartendersledger.pages.dev` (or similar) on HTTPS.
 
-### Lock it to just the two of you
+Every push to `main` now redeploys automatically.
 
-Cloudflare Access is free for up to 50 users and puts a login in front of the whole site:
+## Phase 5 — Lock it to the two of you
 
-**Zero Trust → Access → Applications → Add an application → Self-hosted**, point it at your
-`.pages.dev` domain, and add a policy of type *Allow* with **Emails** → your address and your
-collaborator's. Anyone else gets a login wall instead of the app.
+Without this, anyone with the URL can read the whole app. Cloudflare Zero Trust's free tier covers
+small teams (you'll see the plan and its user allowance during setup — it is generous and this
+use is two people).
 
-> Do this **before** you install it on a phone. Once Access is on, the install still works — you
-> sign in once and the session persists.
+1. Dashboard → **Zero Trust** → complete the one-time team-name setup if prompted.
+2. **Access** → **Applications** → **Add an application** → **Self-hosted**.
+3. **Application domain:** your `bartendersledger.pages.dev` host.
+4. Add a policy:
+   - **Action:** `Allow`
+   - **Include** → selector **Emails** → your address, and your collaborator's.
 
----
+   > ⚠️ **Do not** build the Include rule from *Login Methods → One-time PIN*. That reads as "anyone
+   > with any email that can receive a PIN," which is the whole internet. Cloudflare's own docs flag
+   > this as the classic misconfiguration. The Include rule must list the **specific email addresses**.
+   > One-time PIN is fine as the *authentication method*; it must not be the *inclusion rule*.
+5. Save. Visit the URL in a private window — you should get a login wall, not the app.
 
-## 3. Install on your phone
+**Do this before installing on a phone**, so there's never a window where the URL is open.
 
-Open the URL in mobile Safari or Chrome, sign in through the Access gate, then **Share → Add to Home
-Screen** (iOS) or the install prompt (Android). It runs standalone and fully offline after first load.
+## Phase 6 — Install on your phone
 
----
+1. Open the URL in Safari (iOS) or Chrome (Android).
+2. Sign in at the Access gate — enter your email, get a one-time code, paste it. The session persists.
+3. **iOS:** Share → *Add to Home Screen*. **Android:** the install prompt, or menu → *Install app*.
+4. Launch from the home screen. It runs standalone and fully offline after the first load.
 
-## Shipping a change after this
+## Shipping a change
 
 1. Edit files.
-2. Bump `?v=N` on the changed assets in `index.html` **and** bump `CACHE` in `sw.js` (currently `ledger-v6`).
-3. `git push`.
+2. Bump `?v=N` on the changed assets in `index.html` **and** bump `CACHE` in `sw.js`
+   (currently `ledger-v6`).
+3. `git push`
 
-Installed copies show the *"A new edition is pressed"* toast and update when tapped. Skipping step 2
-means nobody ever sees the change — that version string is the entire update mechanism.
+Installed copies show the *"A new edition is pressed"* toast and update when tapped. **Skipping
+step 2 means nobody ever sees the change** — that version string is the entire update mechanism.
 
----
-
-## When you're ready to go public
+## Going public later
 
 - Delete `robots.txt` and the `noindex` meta in `index.html` (both are commented as such).
-- Revisit [COPYRIGHT.md](COPYRIGHT.md) — it is currently all-rights-reserved, which is the right
-  posture for a commercial plan but means nobody may reuse the work.
 - Remove the Cloudflare Access policy.
+- Revisit [COPYRIGHT.md](COPYRIGHT.md) — currently all-rights-reserved, correct for a commercial
+  plan, but it means nobody may reuse the work.
+
+## If something breaks
+
+| Symptom | Cause |
+|---|---|
+| Cloudflare build fails | A build command is set. It must be empty, output `/`. |
+| Site loads but is blank | Check the deploy log for a 404 on `js/data-core.js` — output dir should be `/`, not `dist`. |
+| Push rejected, "fetch first" | You ticked an initialise box in Phase 1. `git pull --rebase origin main` then push. |
+| Changes don't appear on phone | You skipped the `?v=` / `CACHE` bump. |
+| Everyone can see the app | Your Access Include rule is a login method, not an email list. See Phase 5. |
