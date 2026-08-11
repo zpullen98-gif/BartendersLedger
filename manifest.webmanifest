@@ -1,0 +1,16 @@
+{
+  "name": "The Bartender's Ledger",
+  "short_name": "Ledger",
+  "description": "Interactive bartending study guide — the fifty classics, shots, zero-proof, prep, flashcards and drills.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "launch_handler": { "client_mode": "navigate-existing" },
+  "background_color": "#14312a",
+  "theme_color": "#14312a",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

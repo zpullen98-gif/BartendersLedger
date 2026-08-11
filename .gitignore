@@ -1,0 +1,9 @@
+# nothing here is generated — the repo IS the deployable artifact.
+# keep it that way: no build step, no node_modules, no dist.
+
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+.vscode/
+.idea/
