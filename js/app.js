@@ -505,7 +505,11 @@ document.getElementById('view').addEventListener('click', e => {
 let swWantReload = false;
 if('serviceWorker' in navigator){
   if(location.search.includes('nosw')){
-    navigator.serviceWorker.getRegistrations().then(rs => rs.forEach(r => r.unregister()));
+    /* getRegistration() (singular) returns only the registration whose scope covers
+       this page. getRegistrations() returns EVERY registration on the origin, and on
+       zpullen98-gif.github.io that is every other app of ours — one ?nosw visit here
+       would have unregistered the Codex, First Light and Calendar For Life too. */
+    navigator.serviceWorker.getRegistration().then(r => { if(r) r.unregister(); });
   } else {
     window.addEventListener('load', async () => {
       try{

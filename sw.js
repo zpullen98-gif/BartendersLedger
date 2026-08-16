@@ -1,6 +1,6 @@
 /* The Bartender's Ledger — service worker.
    Bump CACHE on every deploy; that string is the whole update mechanism. */
-const CACHE = 'ledger-v12';
+const CACHE = 'ledger-v13';
 
 const ASSETS = [
   './',
@@ -40,7 +40,12 @@ self.addEventListener('install', e => {
 self.addEventListener('activate', e => {
   e.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k))))
+      /* Cache Storage is per-ORIGIN, not per-scope. On zpullen98-gif.github.io every
+         project page can see every other project's caches, so deleting everything
+         that is not ours would wipe the offline shells of The Sommelier's Codex,
+         First Light and Calendar For Life. Only ever reap our own prefix. */
+      .then(keys => Promise.all(
+        keys.filter(k => k.startsWith('ledger-') && k !== CACHE).map(k => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
