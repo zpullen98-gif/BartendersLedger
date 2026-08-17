@@ -35,6 +35,7 @@ const state = {
   prod:{ cat:'All', open:null, primerOpen:null },
   practice:{ view:'drills', flightOpen:null, methodOpen:null, noteOpen:null, subjects:{}, timers:{}, rail:null },
   tast:{ cat:'Whiskey', label:'', appearance:null, nose:[], palate:{}, finish:null, notes:'' },
+  mybar:{ form:null, editing:null, open:null },
   na:{ view:'list', cat:'All', open:null, pOpen:null, tOpen:null, sOpen:null, drill:false, order:[], idx:0, revealed:false },
   shots:{ view:'board', cat:'All', open:null, svc:null, drill:false, order:[], idx:0, revealed:false,
           rDrink:0, rCount:6, lay:null },

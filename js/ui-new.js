@@ -1,7 +1,7 @@
 /* ---------------- NAVIGATION, ROUTER & SEARCH (Phase 2) ---------------- */
 
 const NAV_CLUSTERS = [
-  ['ledger', 'Ledger', ['home']],
+  ['ledger', 'Ledger', ['home','mybar']],
   ['study', 'Study Hall', ['flashcards','quiz','practice','riffs']],
   ['reference', 'Reference', ['library','families','shots','na','service','prep','producers','notes']],
   ['toolkit', 'Tools', ['tools']],
@@ -56,6 +56,7 @@ function renderNav(){
 function slugify(s){ return String(s).toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
 
 const ROUTE_SOURCES = {
+  mybar:     { arr: () => progress.bar || [], name: x => x.name },
   library:   { arr: () => COCKTAILS,  name: x => x.name },
   shots:     { arr: () => SHOTS,      name: x => x.name },
   na:        { arr: () => NA_DRINKS,  name: x => x.name },
@@ -85,6 +86,7 @@ function applyRoute(){
     else if(tab==='producers') Object.assign(state.prod, { cat:'All', open:i });
     else if(tab==='notes')   state.noteOpen = STUDY[i].title;
     else if(tab==='service') Object.assign(state.svc, { dom: SERVICE_STUDY[i].key, rowOpen:null, refOpen:null });
+    else if(tab==='mybar')   state.mybar.open = (progress.bar||[])[i] ? progress.bar[i].id : null;
   } else {
     /* slugless or unresolved slug: clear the tab's open item so syncRoute
        doesn't resurrect a previously-open drink into the shared URL */
@@ -107,6 +109,10 @@ function currentRoute(){
   else if(t==='producers' && state.prod.open!=null && PRODUCERS[state.prod.open]) slug = slugify(PRODUCERS[state.prod.open].name);
   else if(t==='notes' && state.noteOpen && state.noteOpen !== '__glossary' && state.noteOpen !== '__plates') slug = slugify(state.noteOpen);
   else if(t==='service' && state.svc.dom) slug = slugify(state.svc.dom);
+  else if(t==='mybar' && state.mybar.open){
+    const b = (progress.bar||[]).find(x => x.id === state.mybar.open);
+    if(b) slug = slugify(b.name);
+  }
   return '#/' + t + (slug ? '/' + slug : '');
 }
 
@@ -121,6 +127,8 @@ function buildSearchIndex(){
   const ix = [];
   COCKTAILS.forEach(c => ix.push({ t:c.name, s:c.family+' · '+c.spirit+' · Tier '+c.tier,
     body:(c.spec.join(' ')+' '+c.method+' '+c.garnish).toLowerCase(), h:'#/library/'+slugify(c.name) }));
+  (progress.bar||[]).forEach(b => ix.push({ t:b.name, s:'My Bar · '+(b.family||''),
+    body:((b.spec||[]).join(' ')+' '+(b.method||'')+' '+(b.note||'')).toLowerCase(), h:'#/mybar/'+slugify(b.name) }));
   SHOTS.forEach(s => ix.push({ t:s.name, s:'Shot · '+s.cat,
     body:(s.spec||[]).join(' ').toLowerCase(), h:'#/shots/'+slugify(s.name) }));
   NA_DRINKS.forEach(d => ix.push({ t:d.name, s:'Zero proof · '+d.cat,
@@ -370,9 +378,11 @@ function sessionDeckParts(){
     const sa = progress.cards[cardKey(a)], sb = progress.cards[cardKey(b)];
     return (sa.due - sb.due) || (weakScore(cardKey(b)) - weakScore(cardKey(a)));
   }).slice(0, 20);
-  /* new cards come from the lowest tier that still has unseen cocktails,
-     so the canon is learned in order; shots/NA join once cocktails run dry */
-  let pool = [];
+  /* the venue's own list outranks the canon: a fresh My Bar card is the drink
+     someone will actually order tonight, so it deals first. After that, new
+     cards come from the lowest tier that still has unseen cocktails, so the
+     canon is learned in order; shots/NA join once cocktails run dry */
+  let pool = fresh.filter(d => d.src === 'My Bar');
   for(let t = 1; t <= 12 && !pool.length; t++) pool = fresh.filter(d => d.src === 'Cocktails' && d.tier === t);
   if(!pool.length) pool = fresh;
   /* stop pouring new cards into a deep hole — dig out first */
@@ -584,6 +594,18 @@ function dataImport(file){
         progress.practice[id] = mine.sort(byTs).slice(-20);
       });
       if(Array.isArray(p.shelf) && !(progress.shelf || []).length) progress.shelf = p.shelf;
+      /* the additive-only rule in person: every store the merge does not name
+         is silently dropped, so My Bar gets an explicit clause — union by id
+         (name as the fallback for hand-edited files), newer edit wins */
+      if(Array.isArray(p.bar)){
+        progress.bar = progress.bar || [];
+        p.bar.forEach(b => {
+          if(!b || !b.name) return;
+          const i = progress.bar.findIndex(x => (b.id && x.id === b.id) || x.name === b.name);
+          if(i < 0) progress.bar.push(b);
+          else if((b.ts || 0) > (progress.bar[i].ts || 0)) progress.bar[i] = b;
+        });
+      }
     } else {
       if(!confirm('REPLACE everything in this browser with the backup?\nYour current records here will be gone for good.')){ status('Left everything as it was.'); return; }
       progress = p;
@@ -593,8 +615,10 @@ function dataImport(file){
     if(!progress.practice) progress.practice = {};
     if(!progress.tastings) progress.tastings = [];
     if(!progress.vidPrefs) progress.vidPrefs = { channel:'auto', longform:false };
+    if(!progress.bar) progress.bar = [];
     srsMigrate(progress.cards);
     state.tools.shelf = Array.isArray(progress.shelf) ? progress.shelf.slice() : [];
+    barChanged();
     saveProgress();
     render();
     const el = document.getElementById('data-import-status');
@@ -678,7 +702,7 @@ function svgBars(values, labels, w, h){
 
 function dashboardHTML(){
   const all = allDrinks();
-  const donuts = DECK_SOURCES.map(src => {
+  const donuts = deckSources().map(src => {
     const pool = all.filter(d => d.src === src);
     const m = pool.filter(d => isMastered(cardKey(d))).length;
     const seen = pool.filter(d => !isMastered(cardKey(d)) && progress.cards[cardKey(d)]).length;

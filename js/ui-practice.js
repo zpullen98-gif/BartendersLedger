@@ -159,6 +159,16 @@ function railStage(c){
      to shake something whose own method says never to. */
   return { rank:2, why:'Rolled or hand-built — sits mid-rail, after the stirred and before anything carbonated.' };
 }
+/* Deck entries are {src,name} PAIRS, not bare names. A bare name resolved
+   against COCKTAILS, so a house drink called Margarita would have graded
+   against the canon spec — the exact wrong answer for the person drilling
+   their own menu. */
+function railResolve(e){
+  if(!e) return null;
+  const name = e.name !== undefined ? e.name : e;   /* tolerate a pre-pair deck */
+  if(e.src === 'My Bar') return (progress.bar||[]).find(b => b.name === name) || null;
+  return COCKTAILS.find(c => c.name === name) || null;
+}
 function railDeal(){
   const pool = COCKTAILS.filter(c => c.tier <= 6);
   const picks = [];
@@ -172,7 +182,16 @@ function railDeal(){
     if(!extra) break;
     picks.push(extra);
   }
-  return shuffle(picks).slice(0, 4).map(c => c.name);   /* called in random order, as they would be */
+  let deck = shuffle(picks).slice(0, 4).map(c => ({ src:'Cocktails', name:c.name }));
+  /* one ticket from the venue's own menu rides every rail once a list exists —
+     the order skill matters most on the drinks you will actually be fired */
+  const bar = (progress.bar||[]).filter(b => (b.spec||[]).length && b.method);
+  if(bar.length && deck.length){
+    const b = sample(bar, 1)[0];
+    deck[Math.floor(Math.random()*deck.length)] = { src:'My Bar', name:b.name };
+    deck = shuffle(deck);
+  }
+  return deck;   /* called in random order, as they would be */
 }
 function railHTML(){
   const r = state.practice.rail || {};
@@ -184,7 +203,7 @@ function railHTML(){
       + 'Deal the rail, start the clock, build all four for real, then check your order against the answer.</div>'
       + '<button class="btn btn-brass" data-act="rail-deal">Deal a rail</button></div>';
   }
-  const drinks = names.map(n => COCKTAILS.find(c => c.name === n)).filter(Boolean);
+  const drinks = names.map(railResolve).filter(Boolean);
   const ticket = '<div class="ticket"><div class="ticket-inner">'
     + '<div class="tc"><div class="tix-label">Table 12 · all day</div></div><div class="tix-rule"></div>'
     + drinks.map((c,i) => '<div class="spec-line"><span>'+(i+1)+'</span><span class="bold">'+esc(c.name.toUpperCase())+'</span></div>').join('')

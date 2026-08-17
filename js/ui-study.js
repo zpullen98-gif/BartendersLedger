@@ -192,13 +192,20 @@ function renderLibrary(){
 
 /* ---------------- FLASHCARDS ---------------- */
 /* ---- unified deck: cocktails + shots + zero-proof all drillable ---- */
-const DECK_SOURCES = ['Cocktails','Shots','Zero Proof'];
+const DECK_SOURCES = ['Cocktails','My Bar','Shots','Zero Proof'];
+/* 'My Bar' earns its chips only once something is on the list — an empty
+   source is zero-noise everywhere it would appear */
+function deckSources(){ return DECK_SOURCES.filter(s => s !== 'My Bar' || (progress.bar||[]).length); }
 function allDrinks(){
   if(allDrinks._c) return allDrinks._c;
   const out = [];
   COCKTAILS.forEach(function(c){
     out.push({ src:'Cocktails', name:c.name, spec:c.spec, method:c.method, glass:c.glass,
       garnish:c.garnish, note:c.note, group:c.family, spirit:c.spirit, tier:c.tier, ref:c });
+  });
+  (progress.bar||[]).forEach(function(b){
+    out.push({ src:'My Bar', name:b.name, spec:b.spec, method:b.method, glass:b.glass,
+      garnish:b.garnish, note:b.note, group:b.family, spirit:b.spirit, tier:null, ref:b });
   });
   SHOTS.forEach(function(s){
     out.push({ src:'Shots', name:s.name, spec:s.spec, method:s.method, glass:'Shot glass',
@@ -213,12 +220,13 @@ function allDrinks(){
 }
 function cardKey(d){ return d.src==='Cocktails' ? d.name : d.src+' · '+d.name; }
 function cardTicket(d, hideName){
-  if(d.src==='Cocktails') return ticketHTML(d.ref, hideName);
+  if(d.src==='Cocktails' || d.src==='My Bar') return ticketHTML(d.ref, hideName);
   if(d.src==='Shots') return shotTicketHTML(d.ref, hideName);
   return naTicketHTML(d.ref, hideName);
 }
 function groupsFor(src){
   if(src==='Cocktails') return Object.keys(FAMILIES);
+  if(src==='My Bar') return [...new Set((progress.bar||[]).map(b => b.family).filter(Boolean))];
   if(src==='Shots') return SHOT_CATS;
   if(src==='Zero Proof') return NA_CATS;
   return [];
@@ -381,7 +389,7 @@ function renderFlashcards(){
 
   /* -------- setup -------- */
   if(fc.stage==='setup'){
-    const srcChips = ['All'].concat(DECK_SOURCES).map(function(s){
+    const srcChips = ['All'].concat(deckSources()).map(function(s){
       const n = allDrinks().filter(function(d){ return s==='All' || d.src===s; }).length;
       return '<button class="chip'+(fc.src===s?' on':'')+'" data-act="fc-src" data-s="'+esc(s)+'">'+(s==='All'?'Everything':esc(s))+' <span class="font-tix">'+n+'</span></button>';
     }).join(' ');
@@ -427,7 +435,7 @@ function renderFlashcards(){
     const shown = all.map(function(d,i){ return {d:d,i:i}; })
       .filter(function(o){ return fc.boardSrc==='All' || o.d.src===fc.boardSrc; })
       .sort(function(a,b){ return a.d.name.localeCompare(b.d.name); });
-    const srcChips = ['All'].concat(DECK_SOURCES).map(function(s){
+    const srcChips = ['All'].concat(deckSources()).map(function(s){
       return '<button class="chip'+(fc.boardSrc===s?' on':'')+'" data-act="fc-board-src" data-s="'+esc(s)+'">'+(s==='All'?'All':esc(s))+'</button>';
     }).join(' ');
     const rows = shown.map(function(o){
@@ -581,6 +589,7 @@ function renderFlashcards(){
 /* ---- quiz rounds: mixed, or a single domain drilled deliberately ---- */
 const QUIZ_MODES = [
   ['mixed','Mixed round','Families, blind tickets and bar knowledge — the shape of a shift.'],
+  ['mybar','My bar','Your own menu — name, glass and spec, straight off your list.'],
   ['service','Service & law','Guests, pacing, refusal, the register and the legal floor.'],
   ['beerwine','Beer & wine','Draught, bottle, varietal and glassware — the high-volume half.'],
   ['craft','Spirits & craft','Technique, production, ingredients and the balance behind the specs.'],
@@ -666,6 +675,16 @@ function buildRound(mode, pool){
     : COCKTAILS;
   const cocktails = drinkPool.length >= 8 ? drinkPool : COCKTAILS;
   const qs = [];
+  if(mode === 'mybar'){
+    /* the whole round off the venue's own list: up to three question shapes
+       per drink, sliced to ten. The setup chip guards the <4-drink case. */
+    shuffle((progress.bar||[]).slice()).forEach(b => {
+      qs.push(qMyBarTicket(b));
+      if(b.glass && b.glass !== '—') qs.push(qMyBarGlass(b));
+      if((b.spec||[]).length) qs.push(qMyBarSpecLine(b));
+    });
+    return shuffle(qs).slice(0,10);
+  }
   if(mode === 'tickets'){
     sample(cocktails,7).forEach(c => qs.push(qCocktailTicket(c)));
     for(let i=0;i<3;i++) qs.push(qBlindOther());
@@ -688,19 +707,30 @@ function buildRound(mode, pool){
   if(rest2[0]) qs.push(qGlass(rest2[0]));
   if(rest2[1]) qs.push(qMethod(rest2[1]));
   qs.push(qBlindOther());
+  /* one question from the venue's own list rides every mixed round — and so
+     rides Tonight's Session, whose quiz step deals a mixed round over the
+     deck it just drilled */
+  const bar = (pool || allDrinks()).filter(d => d.src === 'My Bar');
+  if(bar.length) qs.push(qMyBarTicket(sample(bar,1)[0].ref));
   spreadKnowledge(10 - qs.length).forEach(q => qs.push(q));
   return shuffle(qs).slice(0,10);
 }
 function renderQuiz(){
   const z = state.quiz;
   if(z.stage==='setup'){
+    const barN = (progress.bar||[]).length;
+    /* the mode can outlive the list that justified it — drinks deleted below
+       the floor drop the round back to mixed rather than dealing a thin one */
+    if(z.mode==='mybar' && barN < 4) z.mode = 'mixed';
     const mode = z.mode || 'mixed';
     const hist = (progress.quizzes||[]).slice(-5).reverse()
       .map(h => '<div class="hist-row"><span>'+esc(h.date)+(h.mode&&h.mode!=='mixed'?' · '+esc(h.mode):'')+'</span><span class="font-tix brass2">'+h.score+'/'+(h.total||10)+'</span></div>').join('');
-    const chips = QUIZ_MODES.map(([k,l]) =>
-      '<button class="chip'+(mode===k?' on':'')+'" data-act="quiz-mode" data-m="'+k+'">'+esc(l)+'</button>').join(' ');
+    const chips = QUIZ_MODES.map(([k,l]) => {
+      if(k==='mybar' && barN < 4) return '<button class="chip" disabled title="Add four drinks to My Bar and this round opens">'+esc(l)+' <span class="font-tix">'+barN+'/4</span></button>';
+      return '<button class="chip'+(mode===k?' on':'')+'" data-act="quiz-mode" data-m="'+k+'">'+esc(l)+'</button>';
+    }).join(' ');
     const blurb = (QUIZ_MODES.find(([k]) => k===mode) || QUIZ_MODES[0])[2];
-    const pool = mode==='mixed' || mode==='tickets' ? null : knowledgeByTopic(mode);
+    const pool = mode==='mixed' || mode==='tickets' || mode==='mybar' ? null : knowledgeByTopic(mode);
     const thin = pool && pool === KNOWLEDGE
       ? '<div class="tiny dim">Nothing written for this domain yet — you\'ll get a mixed pool until there is.</div>' : '';
     return '<div class="col">'
@@ -761,7 +791,7 @@ function renderQuiz(){
     + '<span>Score: '+z.score+'</span>'
     + '<button class="chip" data-act="quiz-quit">Quit round</button></div>'
     + '<div class="panel p5 col"><div class="bold lh">'+esc(q.prompt)+'</div>'
-    + (q.ticket ? (q.ticketType==='shot' ? shotTicketHTML(q.ticket,true) : q.ticketType==='na' ? naTicketHTML(q.ticket,true) : ticketHTML(q.ticket,true)) : '')
+    + (q.ticket ? (q.ticketType==='shot' ? shotTicketHTML(q.ticket,true) : q.ticketType==='na' ? naTicketHTML(q.ticket,true) : q.ticketType==='mybar' ? ticketHTML(q.ticket,true) : ticketHTML(q.ticket,true)) : '')
     + '<div class="col-sm">'+opts+'</div>'+after+'</div></div>';
 }
 

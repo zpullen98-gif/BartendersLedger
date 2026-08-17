@@ -1,6 +1,6 @@
 /* ---------------- RENDER & EVENTS ---------------- */
 const prTicks = {};  /* one stopwatch interval per drill id */
-const TABS = [['home','Ledger'],['families','Families'],['library','Library'],['shots','Shots'],['na','Zero Proof'],['service','Behind the Stick'],['prep','Prep'],['producers','Producers'],['notes','Notes'],['flashcards','Flashcards'],['quiz','Quiz'],['practice','Practice'],['riffs','Riffs'],['tools','Tools']];
+const TABS = [['home','Ledger'],['mybar','My Bar'],['families','Families'],['library','Library'],['shots','Shots'],['na','Zero Proof'],['service','Behind the Stick'],['prep','Prep'],['producers','Producers'],['notes','Notes'],['flashcards','Flashcards'],['quiz','Quiz'],['practice','Practice'],['riffs','Riffs'],['tools','Tools']];
 /* Announce something to assistive tech. The region is outside #view so it
    survives the innerHTML swap below. */
 function say(msg){
@@ -29,7 +29,7 @@ function render(){
   renderNav();
   syncRoute();
   const view = document.getElementById('view');
-  view.innerHTML = ({home:renderHome, families:renderFamilies, library:renderLibrary,
+  view.innerHTML = ({home:renderHome, mybar:renderMyBar, families:renderFamilies, library:renderLibrary,
     shots:renderShots, na:renderNA, service:renderService, producers:renderProducers, prep:renderPrep,
     flashcards:renderFlashcards, quiz:renderQuiz, riffs:renderRiffs,
     practice:renderPractice, tools:renderTools, notes:renderNotes})[state.tab]();
@@ -177,6 +177,9 @@ document.getElementById('view').addEventListener('click', e => {
   const act = el.dataset.act;
   const _tn = document.getElementById('tst-notes'); if(_tn) state.tast.notes = _tn.value;
   const _tl = document.getElementById('tst-label'); if(_tl) state.tast.label = _tl.value;
+  /* same rule for the My Bar form: render() destroys the inputs, so any act
+     that repaints mid-edit must read them back into state first */
+  if(state.mybar && state.mybar.form) captureBarForm();
   const fc = state.fc, z = state.quiz;
   if(act==='go'){ state.tab = el.dataset.tab; }
   else if(act==='fam-open'){ state.famOpen = state.famOpen===el.dataset.fam ? null : el.dataset.fam; }
@@ -479,6 +482,38 @@ document.getElementById('view').addEventListener('click', e => {
   else if(act==='vid-len'){
     if(!progress.vidPrefs) progress.vidPrefs = {};
     progress.vidPrefs.longform = el.dataset.v==='long'; saveProgress(); }
+  else if(act==='mybar-new'){ state.mybar.form = blankBarForm(); state.mybar.editing = null; }
+  else if(act==='mybar-cancel'){ state.mybar.form = null; state.mybar.editing = null; }
+  else if(act==='mybar-edit'){
+    const b = (progress.bar||[]).find(x => x.id===el.dataset.id);
+    if(b){ state.mybar.form = { name:b.name, spec:b.spec.slice(), method:b.method||'', glass:b.glass==='—'?'':b.glass, garnish:b.garnish==='—'?'':b.garnish, note:b.note||'', family:b.family||'Other', spirit:b.spirit||'Other', price:b.price||'' };
+      state.mybar.editing = b.id; } }
+  else if(act==='mybar-del'){
+    const b = (progress.bar||[]).find(x => x.id===el.dataset.id);
+    if(b && confirm('Remove "'+b.name+'" from My Bar? Its practice record goes with it.')){
+      progress.bar = progress.bar.filter(x => x.id!==b.id);
+      if(state.mybar.open===b.id) state.mybar.open = null;
+      barChanged(); saveProgress(); say('Removed from My Bar.');
+    } }
+  else if(act==='mybar-add-line'){ state.mybar.form.spec.push(''); }
+  else if(act==='mybar-del-line'){
+    state.mybar.form.spec.splice(Number(el.dataset.i), 1);
+    if(!state.mybar.form.spec.length) state.mybar.form.spec.push(''); }
+  else if(act==='mybar-open'){ state.mybar.open = state.mybar.open===el.dataset.id ? null : el.dataset.id; }
+  else if(act==='mybar-save'){
+    const f = state.mybar.form;
+    const spec = f.spec.map(s => s.trim()).filter(Boolean);
+    if(!f.name.trim() || !spec.length){ say('A drink needs a name and at least one spec line.'); }
+    else {
+      const rec = { id: state.mybar.editing || mintBarId(), name:f.name.trim(), spec:spec,
+        method:f.method.trim(), glass:f.glass.trim()||'—', garnish:f.garnish.trim()||'—',
+        note:f.note.trim(), family:f.family, spirit:f.spirit, price:f.price.trim(), ts:Date.now() };
+      if(!progress.bar) progress.bar = [];
+      const i = progress.bar.findIndex(x => x.id===rec.id);
+      if(i < 0) progress.bar.push(rec); else progress.bar[i] = rec;
+      state.mybar.form = null; state.mybar.editing = null; state.mybar.open = rec.id;
+      barChanged(); saveProgress(); say('Saved to My Bar.');
+    } }
   else if(act==='note-open'){ state.noteOpen = state.noteOpen===el.dataset.t ? null : el.dataset.t; }
   else if(act==='svc-dom'){ state.svc.dom = el.dataset.d; state.svc.rowOpen = null; state.svc.refOpen = null; }
   else if(act==='svc-row'){ const i=Number(el.dataset.i); state.svc.rowOpen = state.svc.rowOpen===i ? null : i; }
@@ -493,6 +528,7 @@ document.getElementById('view').addEventListener('click', e => {
   if(!progress.practice) progress.practice = {};
   if(!progress.tastings) progress.tastings = [];
   if(!progress.vidPrefs) progress.vidPrefs = { channel:'auto', longform:false };
+  if(!progress.bar) progress.bar = [];
   if(Array.isArray(progress.shelf)) state.tools.shelf = progress.shelf.slice();
   srsMigrate(progress.cards);
   applyRoute();
