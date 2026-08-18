@@ -336,6 +336,10 @@ function prepCard(){
        a miss — which then went into the scheduler as a lapse. */
     const fields = ['glass','garnish','method']
       .filter(f => c[f] && c[f] !== '—' && !(f==='glass' && c.src==='Shots'));
+    /* A My Bar drink saved as name+spec only has nothing to ask here; a
+       zero-question card would render an instant 'Not clean.' and record
+       nothing. Skip it — the deck end check above is the recursion floor. */
+    if(!fields.length){ fc.idx++; return prepCard(); }
     const opts = {}, keyed = {};
     fields.forEach(f => {
       if(f === 'garnish'){                       /* free text — no clean categories */

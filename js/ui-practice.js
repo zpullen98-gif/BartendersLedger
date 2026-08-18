@@ -184,8 +184,11 @@ function railDeal(){
   }
   let deck = shuffle(picks).slice(0, 4).map(c => ({ src:'Cocktails', name:c.name }));
   /* one ticket from the venue's own menu rides every rail once a list exists —
-     the order skill matters most on the drinks you will actually be fired */
-  const bar = (progress.bar||[]).filter(b => (b.spec||[]).length && b.method);
+     the order skill matters most on the drinks you will actually be fired.
+     No method requirement: railStage's default rank places a method-less
+     drink mid-rail, the honest answer for a spec-only entry — requiring it
+     silently broke the tab's "one of yours on the rail" promise. */
+  const bar = (progress.bar||[]).filter(b => (b.spec||[]).length);
   if(bar.length && deck.length){
     const b = sample(bar, 1)[0];
     deck[Math.floor(Math.random()*deck.length)] = { src:'My Bar', name:b.name };

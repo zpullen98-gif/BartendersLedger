@@ -492,6 +492,10 @@ document.getElementById('view').addEventListener('click', e => {
     const b = (progress.bar||[]).find(x => x.id===el.dataset.id);
     if(b && confirm('Remove "'+b.name+'" from My Bar? Its practice record goes with it.')){
       progress.bar = progress.bar.filter(x => x.id!==b.id);
+      /* the confirm promises the record goes too — keep the promise, or the
+         orphaned key haunts the weakest list, the due counter and every
+         backup as a phantom that can never be reviewed */
+      delete progress.cards['My Bar · '+b.name];
       if(state.mybar.open===b.id) state.mybar.open = null;
       barChanged(); saveProgress(); say('Removed from My Bar.');
     } }
@@ -503,13 +507,25 @@ document.getElementById('view').addEventListener('click', e => {
   else if(act==='mybar-save'){
     const f = state.mybar.form;
     const spec = f.spec.map(s => s.trim()).filter(Boolean);
+    const clash = (progress.bar||[]).find(x =>
+      x.name.toLowerCase() === f.name.trim().toLowerCase() && x.id !== state.mybar.editing);
     if(!f.name.trim() || !spec.length){ say('A drink needs a name and at least one spec line.'); }
+    /* the name IS the identity everywhere downstream — the SRS key, the rail
+       lookup, the search slug, the import merge — so two drinks cannot share
+       one, or they share one practice record and one rail answer too */
+    else if(clash){ say('"'+clash.name+'" is already on the list. Rename one of them.'); }
     else {
       const rec = { id: state.mybar.editing || mintBarId(), name:f.name.trim(), spec:spec,
         method:f.method.trim(), glass:f.glass.trim()||'—', garnish:f.garnish.trim()||'—',
         note:f.note.trim(), family:f.family, spirit:f.spirit, price:f.price.trim(), ts:Date.now() };
       if(!progress.bar) progress.bar = [];
       const i = progress.bar.findIndex(x => x.id===rec.id);
+      /* a rename must carry the practice record to the new key, not abandon
+         it — the SRS keys by name, the drink's history is the drink's */
+      if(i >= 0 && progress.bar[i].name !== rec.name){
+        const old = 'My Bar · '+progress.bar[i].name;
+        if(progress.cards[old]){ progress.cards['My Bar · '+rec.name] = progress.cards[old]; delete progress.cards[old]; }
+      }
       if(i < 0) progress.bar.push(rec); else progress.bar[i] = rec;
       state.mybar.form = null; state.mybar.editing = null; state.mybar.open = rec.id;
       barChanged(); saveProgress(); say('Saved to My Bar.');
