@@ -200,4 +200,44 @@ STUDY.push({ title:"The Sober Service: NA & Low-ABV", rows:[
   ["Menu placement","List spirit-free drinks on the main menu with real names — not a 'mocktail' ghetto at the bottom. Meehan-school thinking: the menu tells guests who belongs at your bar."],
 ]});
 
-
+/* ---------------- THE REPAIR TABLE: balance diagnosis ----------------
+   One grammar, twelve ways: taste -> what moved -> where the fix lives.
+   Answers deliberately reuse the family standards' own words. */
+KNOWLEDGE.push(
+  { q:"REPAIR — The daiquiri comes back 'too tart.' The spec was followed. What moved, and what fixes the remake?", topic:"craft",
+    options:["More rum — proof carries sweetness","Raise the sweet a quarter ounce — today's limes are sharper than yesterday's","Shake it longer so dilution softens the acid","Double-strain it harder"],
+    a:1, explain:"Citrus is a crop, not a constant. When the ratio was right and the drink is still sharp, the fruit changed — raise the sweet to meet it, and taste your citrus at the start of every shift so the well learns before the guest does." },
+  { q:"REPAIR — Same daiquiri, but it tastes dull and flat rather than sharp. Ratio checks out. Diagnosis?", topic:"craft",
+    options:["Not enough sugar","The juice is old — day-old lime reads dull, and no ratio fixes it","The rum is too light","It needs more ice"],
+    a:1, explain:"The Sour standard's own mark: the citrus tastes cut today. Dull-with-correct-ratio is the signature of tired juice — the fix is the prep list, not the spec." },
+  { q:"REPAIR — A shaken sour arrives thin and watery. What happened?", topic:"craft",
+    options:["Too much citrus","Over-dilution — wet, small, or tired ice, or a shake that ran long","The syrup was too thin","It needed egg white"],
+    a:1, explain:"Thin is a dilution fault, not a recipe fault. Fresh cold ice and a hard 10\u201312 second shake chill fully before the melt takes over; small wet cubes get there slower and water it on the way." },
+  { q:"REPAIR — The stirred drink drinks HOT — raw spirit burn up front. The spec was right. Fix?", topic:"craft",
+    options:["Add a splash of water and serve it","Keep stirring — it left the mixing glass early, before the water got in","Shake it instead next time","Use a bigger pour of vermouth"],
+    a:1, explain:"Dilution is an ingredient, and a stirred drink earns it slowly — stir until the vessel frosts and the burn rounds off. A drink that leaves early arrives raw." },
+  { q:"REPAIR — A Martini pours hazy. Nothing changed in the spec. Where did the haze come from?", topic:"craft",
+    options:["Bad gin","It was shaken, or the ice was wet — a stirred drink pours bright as glass","Vermouth always clouds it","The glass was too cold"],
+    a:1, explain:"The Spirit & Vermouth standard: stirred members pour bright. Haze where none belongs means aeration got in — shaken by habit, or ice carrying surface melt." },
+  { q:"REPAIR — The egg-white sour's head is gone before it reaches the table. What was skipped?", topic:"craft",
+    options:["The double strain","The dry shake — foam built without ice sets dense; foam built with ice dies in a minute","More egg white next time","A sugar rim"],
+    a:1, explain:"Where egg builds the head, the dry shake comes first. Protein needs the warm shake to build structure before the ice tightens it — skip it and the head slides to the rim and vanishes." },
+  { q:"REPAIR — The highball lands flat. Bottle was fresh. Name the killers in order.", topic:"craft",
+    options:["Cheap soda, always","Warm glass, warm mixer, hard stir — the gas never had a chance","Too much ice crowding the bubbles","The spirit was too heavy"],
+    a:1, explain:"Carbonation dies to heat and agitation. Cold glass, cold bottle, full column of ice, one lift of the spoon — the family's whole point is the lift, and every one of those protects it." },
+  { q:"REPAIR — An Old Fashioned finishes as syrup in the last sip. Diagnosis?", topic:"craft",
+    options:["Too much bitters","The sugar never fully dissolved and the stir stopped early","Wrong glass","The cube was too large"],
+    a:1, explain:"The sweetness has to arrive dissolved. Grit or a syrup floor means the build was rushed — stir until the drink has taken both the sugar and the water it owes." },
+  { q:"REPAIR — The tiki drink tastes washed out by the time the garnish is on. It was shaken hard and poured over crushed. What went wrong?", topic:"craft",
+    options:["Not enough rum","It diluted twice — a full shake AND crushed ice. Whip-shake it and let the glass finish the job","The juices were too fresh","Crushed ice is a mistake in tiki"],
+    a:1, explain:"Tiki designs its dilution into the crushed ice. A whip shake just wakes and mixes it; the full shake first means the loudest drink in the book arrives as juice." },
+  { q:"REPAIR — The Manhattan tastes dusty and flat. Rye is fine, bitters fresh. The quiet culprit?", topic:"craft",
+    options:["The cherry","Dead vermouth — it is wine, it has been open on a warm shelf for weeks","Not enough stirring","The wrong whiskey entirely"],
+    a:1, explain:"A drink on tired vermouth tastes dusty, and no stir saves it. Refrigerate it, date the bottle when it opens, and pour it like the wine it is." },
+  { q:"REPAIR — A guest finds the amaro cocktail 'too bitter' but wants to like it. Which lever actually counters bitterness?", topic:"craft",
+    options:["More dilution","Sweetness — sugar rounds bitter where water only thins it","More citrus","A bigger ice cube"],
+    a:1, explain:"Levers pair: sweet counters bitter, sweet catches sour, dilution tames proof. Thinning a bitter drink just makes it weak AND bitter — round it instead, a quarter ounce at a time." },
+  { q:"REPAIR — Espresso-and-liqueur drink reads as dessert, not a cocktail. The fix at the well?", topic:"craft",
+    options:["Add more espresso","Measure the liqueur like the spirit — the sweetness must frame the proof, not bury it","Shake it less","Serve it warmer"],
+    a:1, explain:"The Duo & Trio standard: two or three ingredients leave nowhere to hide, and a quarter ounce of liqueur over is the whole difference between a grown-up drink and a milkshake." }
+);
