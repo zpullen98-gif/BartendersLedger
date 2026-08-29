@@ -583,6 +583,110 @@ function pourHTML(){
     + '</div></div>';
 }
 
+/* ---------------- THE SPILL LOG ---------------- */
+/* The training version of the register section's spill/waste key. Its creed,
+   quoted from this app's own service pages: "Waste rung honestly all night is
+   a rounding error. Waste never rung at all is why a variance report starts
+   to look like a crime scene." The reasons are the section's own list —
+   remake, spill & breakage, comp, foam & line — and there is NO THEFT KEY on
+   purpose: the same pages put theft LAST in the order of suspicion, and it is
+   what the variance says after honest logging, never a button you press. */
+const SPILL_REASONS = [
+  ['remake',  'Remake / mis-build'],
+  ['spill',   'Spill & breakage'],
+  ['comp',    'Comped'],
+  ['foam',    'Foam & line'],
+];
+
+function spillHTML(){
+  const t = state.tools;
+  const reason = t.spillReason || 'remake';
+  const now = Date.now(), week = now - 7*864e5;
+  const log = (progress.spills || []);
+  const recent = log.filter(e => e.ts >= week);
+  const byReason = SPILL_REASONS.map(([k, label]) => {
+    const xs = recent.filter(e => e.reason === k);
+    return { k, label, n: xs.length, cost: xs.reduce((s2,e) => s2 + (Number(e.cost)||0), 0) };
+  }).filter(r => r.n);
+  const total = recent.reduce((s2,e) => s2 + (Number(e.cost)||0), 0);
+  const chips = SPILL_REASONS.map(([k, label]) =>
+    '<button class="chip'+(reason===k?' on':'')+'" data-act="spill-reason" data-r="'+k+'" aria-pressed="'+(reason===k)+'">'+label+'</button>').join(' ');
+  const rows = log.slice(-12).reverse().map(e =>
+    '<div class="hist-row"><span>'+esc(e.d)+' · '+esc(e.what)+' <span class="tiny dim">'+esc((SPILL_REASONS.find(x=>x[0]===e.reason)||['',''])[1])+'</span></span>'
+    + '<span class="font-tix brass2">'+(Number(e.cost) ? '$'+Number(e.cost).toFixed(2) : '—')
+    + ' <button class="chip" data-act="spill-del" data-ts="'+e.ts+'" title="Remove — a mis-tap is a typo, not history">✕</button></span></div>').join('');
+  const rollup = byReason.length
+    ? '<div class="col-sm" style="gap:4px"><div class="eyebrow">The last seven days'+(total ? ' · $'+total.toFixed(2) : '')+'</div>'
+      + byReason.map(r => '<div class="hist-row"><span>'+r.label+'</span><span class="font-tix brass2">'+r.n+(r.cost?' · $'+r.cost.toFixed(2):'')+'</span></div>').join('')
+      + '</div>'
+    : '';
+  return '<div class="col" style="align-items:center"><div class="panel p5 col" style="gap:12px;max-width:540px;width:100%">'
+    + '<div class="eyebrow">The spill log</div>'
+    + '<div class="small dim lh">The register pages put it plainly: waste rung honestly all night is a rounding error — '
+    + 'waste never rung at all is why a variance report starts to look like a crime scene. This is the habit, drilled: '
+    + 'log the remake, the break, the comp, the foam, at the moment it happens.</div>'
+    + '<div class="row" style="gap:6px;flex-wrap:wrap">'+chips+'</div>'
+    + '<div class="row" style="gap:8px;flex-wrap:wrap">'
+    + '<input class="input" id="spill-what" placeholder="What — House Daiquiri, pint of hazy" style="flex:2;min-width:170px">'
+    + '<input class="input" type="number" step="any" inputmode="decimal" id="spill-cost" placeholder="est. $ (optional)" style="flex:1;min-width:110px">'
+    + '<button class="btn btn-brass" data-act="spill-log">Log it</button></div>'
+    + rollup
+    + (rows ? '<div class="col-sm" style="gap:4px"><div class="eyebrow">Entry by entry</div>'+rows+'</div>' : '')
+    + '<div class="tiny dim lh">No theft key, on purpose. The same pages put theft LAST in the order of suspicion — '
+    + 'over-pour, unrung drinks, unlogged comps and remakes, spillage and breakage first. Theft is what the variance '
+    + 'says after honest logging, never a button.</div>'
+    + '</div></div>';
+}
+
+/* ---------------- THE OPEN BOTTLE BOARD ---------------- */
+/* Every window below is this app's OWN stated number, citable to its page:
+   vermouth "refrigerate it, date the bottle, replace it monthly"; citrus
+   "taste your citrus daily"; simple syrup "Fridge, ~1 month"; open wine
+   "sparkling lasts one to two days, light whites and rosé two to three, big
+   whites and reds three to four." The board is the dating habit those pages
+   assign, done for you: log the open, and the age does the arithmetic. */
+const BOTTLE_KINDS = [
+  ['vermouth',  'Vermouth / fortified', 30, 'replace it monthly — it is wine'],
+  ['citrus',    'Citrus juice',          1, 'taste your citrus daily'],
+  ['syrup',     'Syrup',                30, 'fridge, about a month'],
+  ['sparkling', 'Sparkling wine',        2, 'one to two days under a proper stopper'],
+  ['white',     'Light white / rosé',    3, 'two to three days, corked and cold'],
+  ['red',       'Red / big white',       4, 'three to four days'],
+];
+
+function obHTML(){
+  const now = Date.now();
+  const list = (progress.openBottles || []).slice().sort((a,b) => {
+    const ka = BOTTLE_KINDS.find(k=>k[0]===a.kind), kb = BOTTLE_KINDS.find(k=>k[0]===b.kind);
+    const ra = (now-a.at)/(864e5*(ka?ka[2]:30)), rb = (now-b.at)/(864e5*(kb?kb[2]:30));
+    return rb - ra;   /* most urgent first */
+  });
+  const kindOpts = BOTTLE_KINDS.map(k => '<option value="'+k[0]+'">'+k[1]+'</option>').join('');
+  const rows = list.map(b => {
+    const kind = BOTTLE_KINDS.find(k => k[0] === b.kind) || BOTTLE_KINDS[0];
+    const days = Math.floor((now - b.at) / 864e5);
+    const share = days / kind[2];
+    const verdict = share >= 1 ? ['replace it', 'oxblood'] : share >= 0.75 ? ['turning', 'brass'] : ['fresh', 'brass2'];
+    return '<div class="hist-row"><span>'+esc(b.name)+' <span class="tiny dim">'+esc(kind[1])+'</span></span>'
+      + '<span class="font-tix"><span style="color:var(--'+verdict[1]+')">'
+      + (days === 0 ? 'opened today' : days + (days===1?' day':' days'))+' — '+verdict[0]+'</span>'
+      + ' <button class="chip" data-act="ob-del" data-id="'+esc(b.id)+'">✕</button></span></div>';
+  }).join('');
+  return '<div class="col" style="align-items:center"><div class="panel p5 col" style="gap:12px;max-width:540px;width:100%">'
+    + '<div class="eyebrow">The open bottle board</div>'
+    + '<div class="small dim lh">The pages of this ledger keep saying it: date the bottle. This board is that habit — '
+    + 'log the open, and the age does the arithmetic against the app\u2019s own windows: vermouth a month, citrus a day, '
+    + 'syrup a month, open wine one to four days by its weight.</div>'
+    + '<div class="row" style="gap:8px;flex-wrap:wrap">'
+    + '<input class="input" id="ob-name" placeholder="Dolin dry, lime juice, rich demerara" style="flex:2;min-width:160px">'
+    + '<select class="input" id="ob-kind" style="flex:1;min-width:150px">'+kindOpts+'</select>'
+    + '<input class="input" type="number" min="0" max="365" id="ob-days" placeholder="days ago (0)" style="max-width:120px">'
+    + '<button class="btn btn-brass" data-act="ob-add">Date it</button></div>'
+    + (rows ? '<div class="col-sm" style="gap:4px">'+rows+'</div>'
+            : '<div class="tiny dim">Nothing dated yet. Start with the vermouth — a Manhattan on tired vermouth is a dead Manhattan.</div>')
+    + '</div></div>';
+}
+
 /* ---- pour cost / pricing ---- */
 /** The venue's own price as a number, or null. Free text like the menu writes it. */
 function parseMenuPrice(raw){
@@ -702,7 +806,7 @@ function strengthHTML(){
 
 function renderTools(){
   const t = state.tools;
-  const nav = [['batch','Batching'],['shelf','My Shelf'],['strength','Strength'],['cost','Pour Cost'],['convert','Convert'],['data','My Data']]
+  const nav = [['batch','Batching'],['shelf','My Shelf'],['dates','Open Bottles'],['strength','Strength'],['cost','Pour Cost'],['spills','Spill Log'],['convert','Convert'],['data','My Data']]
     .map(function(o){ return '<button class="tab-btn'+(t.view===o[0]?' active':'')+'" data-act="tool-view" data-v="'+o[0]+'">'+o[1]+'</button>'; }).join('');
   const wrap = function(inner){ return '<div class="col"><nav class="tabs" style="margin-bottom:4px">'+nav+'</nav>'+inner+'</div>'; };
   const drinkSel = function(id){
@@ -711,6 +815,8 @@ function renderTools(){
   };
 
   if(t.view==='data') return wrap(dataToolHTML());
+  if(t.view==='spills') return wrap(spillHTML());
+  if(t.view==='dates') return wrap(obHTML());
   if(t.view==='convert') return wrap(convertHTML());
   if(t.view==='cost'){
     const bar = progress.bar || [];

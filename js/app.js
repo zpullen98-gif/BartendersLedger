@@ -352,6 +352,40 @@ document.getElementById('view').addEventListener('click', e => {
   else if(act==='rail-deal'){ state.practice.rail = { deck: railDeal(), revealed:false }; }
   else if(act==='pour-target'){ state.practice.pourTarget = Number(el.dataset.t) || 1.5; }
   else if(act==='cost-src'){ state.tools.costSrc = el.dataset.s; }
+  else if(act==='spill-reason'){ state.tools.spillReason = el.dataset.r; }
+  else if(act==='spill-log'){
+    const what = (document.getElementById('spill-what')||{}).value || '';
+    const costRaw = (document.getElementById('spill-cost')||{}).value;
+    const cost = parseFloat(costRaw);
+    if(what.trim()){
+      if(!progress.spills) progress.spills = [];
+      progress.spills.push({ ts:Date.now(), d:new Date().toLocaleDateString(),
+        what:what.trim(), reason:state.tools.spillReason || 'remake',
+        ...(isFinite(cost) && cost > 0 ? { cost:cost } : {}) });
+      progress.spills = progress.spills.slice(-200);
+      saveProgress();
+    }
+  }
+  else if(act==='spill-del'){
+    progress.spills = (progress.spills||[]).filter(e => e.ts !== Number(el.dataset.ts));
+    saveProgress();
+  }
+  else if(act==='ob-add'){
+    const name = (document.getElementById('ob-name')||{}).value || '';
+    const kind = (document.getElementById('ob-kind')||{}).value || 'vermouth';
+    const daysAgo = Math.max(0, Math.min(365, Number((document.getElementById('ob-days')||{}).value) || 0));
+    if(name.trim()){
+      if(!progress.openBottles) progress.openBottles = [];
+      let id = 'ob-'; while(id.length < 10) id += Math.floor(Math.random()*36).toString(36);
+      progress.openBottles.push({ id:id, name:name.trim(), kind:kind, at:Date.now() - daysAgo*864e5 });
+      progress.openBottles = progress.openBottles.slice(-60);
+      saveProgress();
+    }
+  }
+  else if(act==='ob-del'){
+    progress.openBottles = (progress.openBottles||[]).filter(b => b.id !== el.dataset.id);
+    saveProgress();
+  }
   else if(act==='cost-use-bottle'){
     const bk = (progress.bottles||[]).find(x => x.name === el.dataset.name);
     if(bk){ state.tools.bottlePrice = bk.price; state.tools.bottleMl = bk.sizeMl; }

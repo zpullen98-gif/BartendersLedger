@@ -610,6 +610,20 @@ function dataImport(file){
          would discard every price change the losing device recorded, which is
          the one thing the book exists to keep. Same conclusion the World
          Table's item book reached, ported with its reasoning. */
+      /* spills and open bottles: union by ts/id — the additive-only rule,
+         paid in the same commit that minted the fields. */
+      if(Array.isArray(p.spills)){
+        progress.spills = progress.spills || [];
+        const seen = new Set(progress.spills.map(x => x.ts));
+        p.spills.forEach(x => { if(x && x.ts && !seen.has(x.ts)) progress.spills.push(x); });
+        progress.spills = progress.spills.sort((a,b) => (a.ts||0)-(b.ts||0)).slice(-200);
+      }
+      if(Array.isArray(p.openBottles)){
+        progress.openBottles = progress.openBottles || [];
+        const seen = new Set(progress.openBottles.map(x => x.id));
+        p.openBottles.forEach(x => { if(x && x.id && !seen.has(x.id)) progress.openBottles.push(x); });
+        progress.openBottles = progress.openBottles.slice(-60);
+      }
       if(Array.isArray(p.bottles)){
         progress.bottles = progress.bottles || [];
         p.bottles.forEach(tb => {
@@ -648,6 +662,8 @@ function dataImport(file){
     if(!progress.bar) progress.bar = [];
     if(!progress.pours) progress.pours = [];
     if(!progress.bottles) progress.bottles = [];
+    if(!progress.spills) progress.spills = [];
+    if(!progress.openBottles) progress.openBottles = [];
     srsMigrate(progress.cards);
     state.tools.shelf = Array.isArray(progress.shelf) ? progress.shelf.slice() : [];
     barChanged();
