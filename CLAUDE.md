@@ -38,8 +38,11 @@ and a fault per family, every cocktail's family resolves, no mark names a
 specific drink, forked-method marks carry a condition word) plus the closures:
 LORE↔COCKTAILS both ways, unique slugs per routed collection (through the app's
 own `slugify`, extracted from ui-new.js at run time), SHELF preset ids resolve,
-and `sw.js` ASSETS agrees with index.html both directions. Run it after any
-data or asset edit; every check has been proven able to fail.
+`sw.js` ASSETS agrees with index.html both directions (including fonts
+referenced from CSS, icons from HTML, and manifest icons), and a commit that
+changes any cached asset after the last sw.js change without bumping CACHE
+fails the build. Run it after any data or asset edit; every check has been
+proven able to fail.
 
 ## Update discipline (deploying a change)
 
@@ -66,8 +69,12 @@ data or asset edit; every check has been proven able to fail.
 - **Wing sync**: the OutsideOfTime wing (`OutsideOfTime/ledger/`) diverges deliberately
   (OOT.profiles `KEY()` in engine/app, TILE_BANDS home in ui-study, nav re-clustering in
   ui-new). Sync = three-way `git merge-file -p wing base new` per file with base = the
-  last synced upstream commit (currently `2d71f34`); lineage-check both inheritances;
-  bump wing `?v=`/CACHE past the WING's own numbers (wing CACHE is at ledger-v41).
+  last synced upstream commit (currently `ff3569e`); lineage-check both inheritances;
+  bump wing `?v=`/CACHE past the WING's own numbers (wing CACHE is at ledger-v42).
+- **Shared helpers with mirror rules**: `specUnits()` in engine.js splits 'oz each:'
+  lines — balanceOf and estimateABV both read through it; `strengthBand()` in
+  engine.js is the one served-ABV scale (the Tools panel and the Dealer's Choice
+  quiz both use it — never fork a second scale).
 - **Adding drinks**: LORE is keyed by exact `name`. Router slugs come from `slugify(name)`.
 - **Quiz questions** carry an optional `topic` (`service` | `beerwine` | `craft`). Legacy entries
   have none: `topicOf()` sends anything starting "SCENARIO —" to `service`, everything else to `craft`.
