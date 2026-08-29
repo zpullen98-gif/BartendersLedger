@@ -23,14 +23,14 @@ const PREPS = [
     keeps:"2 months refrigerated.",
     uses:"Any spirit-forward classic where you want silk — Sazeracs, Old Fashioneds, and 19th-century recipes that originally called for it.",
     note:"Gum arabic is an emulsifier that adds viscosity without sweetness. It's what made pre-Prohibition cocktails feel rounder than ours, and it's the most underused prep on this list." },
-  { name:"Honey Syrup (3:1)", cat:"Syrups", ratio:"3 parts honey : 1 part hot water, by weight", yield:"≈ 20 oz from 1 lb honey",
+  { name:"Honey Syrup (3:1)", cat:"Syrups", ratio:"3 parts honey : 1 part hot water, by weight", yield:"≈ 16 oz from 1 lb honey",
     steps:["Warm the water — not boiling, which dulls honey's aromatics.","Stir honey into the water until fully incorporated.","Cool and bottle."],
     keeps:"1 month refrigerated.",
     uses:"Bee's Knees, Gold Rush, Penicillin, Airmail.",
     note:"Straight honey will not incorporate into a cold drink — it seizes and sinks. Always cut it. Vary the honey (orange blossom, buckwheat, wildflower) and the drink changes noticeably." },
   { name:"Ginger Syrup", cat:"Syrups", ratio:"1 part fresh ginger juice : 1 part sugar, by weight", yield:"≈ 16 oz from 8 oz ginger juice",
     steps:["Juice fresh ginger root — a centrifugal juicer is ideal; otherwise grate and squeeze through cloth.","Stir in an equal weight of sugar until dissolved. Do not heat: heat kills the fresh burn that makes this worth making.","Let the sediment settle, then decant off the top for a cleaner syrup, or leave it for more bite."],
-    keeps:"2 weeks refrigerated — this one has the shortest life on the list.",
+    keeps:"2 weeks refrigerated — it's raw juice with no heat step, so nothing pasteurized it; smell it before every service.",
     uses:"Penicillin, mules, Kentucky Buck, Gin Gin Mule, and house ginger beer.",
     note:"The difference between fresh ginger syrup and the bottled stuff is the difference between a Penicillin and a disappointment." },
   { name:"Cinnamon Syrup", cat:"Syrups", ratio:"2:1 rich syrup + 4–5 cinnamon sticks per quart", yield:"≈ 32 oz",
@@ -267,7 +267,7 @@ const PREP_SAFETY = [
 function renderPrep(){
   const p = state.prep;
   const nav = PREP_CATS.concat(['Technique Videos','The Prep List','Storage & Safety']).map(c =>
-    '<button class="tab-btn'+(p.cat===c?' active':'')+'" data-act="prep-cat" data-c="'+esc(c)+'">'+esc(c)+'</button>').join('');
+    '<button class="tab-btn'+(p.cat===c?' active':'')+'"'+(p.cat===c?' aria-current="true"':'')+' data-act="prep-cat" data-c="'+esc(c)+'">'+esc(c)+'</button>').join('');
   const wrap = (inner) => '<div class="col"><nav class="tabs" style="margin-bottom:4px">'+nav+'</nav>'+inner+'</div>';
 
   if(p.cat==='Technique Videos'){

@@ -38,9 +38,9 @@ function renderHome(){
     ['shots','The Shot Board','75 calls, a round-batching builder, the layering density drill, and the service craft.'],
     ['service','Behind the Stick','Beer and draught, wine service, the legal floor, the register, conflict and glassware — the half of the job that is not a cocktail.'],
     ['flashcards','Flashcards',FC_MODES.length+' drill modes across every cocktail, shot, and zero-proof drink in the ledger.'],
-    ['quiz','Quiz Rounds','Families, blind tickets, bar knowledge, and real-service scenarios.'],
+    ['quiz','Quiz Rounds','Families, blind tickets, bar knowledge, real-service scenarios, and the dealer\'s-choice call.'],
     ['riffs','Riff Builder','Improvise on the templates — the difference between knowing 50 drinks and 500.'],
-    ['practice','Practice & Tasting','Nine hands-on drills, the Ticket Rail sequencing test, the free-pour bench, tasting scorecards, and twelve guided flights.'],
+    ['practice','Practice & Tasting','Nine hands-on drills, the Ticket Rail, the Hold-the-Round memory test, the free-pour bench, tasting scorecards, and twelve guided flights.'],
     ['tools','Bar Tools','Batching, shelf inventory with the 86 drill, strength estimates, pour costing with the bottle book, the spill log, open-bottle dating, unit conversion, and your backups.'],
     ['notes','Study Notes','Spirits, technique, syrups, hospitality, sober service, and history.'],
   ].map(([k,t,d]) => '<button class="panel click p4" data-act="go" data-tab="'+k+'">'
@@ -66,7 +66,7 @@ function renderHome(){
       + '<div class="panel p4 col-sm">'
       + '<div class="eyebrow">Or just look around</div>'
       + '<div class="row" style="gap:6px">'
-      + '<button class="chip brass" data-act="go" data-tab="families">The eight families</button>'
+      + '<button class="chip brass" data-act="go" data-tab="families">The '+Object.keys(FAMILIES).length+' families</button>'
       + '<button class="chip" data-act="go" data-tab="library">The library</button>'
       + '<button class="chip" data-act="go" data-tab="service">Behind the stick</button>'
       + '<button class="chip" data-act="go" data-tab="practice">The drills</button>'
@@ -185,9 +185,9 @@ function renderLibrary(){
   }
   const fams = ['All', ...Object.keys(FAMILIES)];
   const famChips = fams.map(f => '<button class="chip'+(state.lib.fam===f?' on':'')+'" aria-pressed="'+(state.lib.fam===f?'true':'false')+'" data-act="lib-fam" data-fam="'+esc(f)+'">'+esc(f)+'</button>').join(' ');
-  const tierSel = '<select class="input" id="lib-tier" style="max-width:340px;flex:1">'+tierOptions(state.lib.tier)+'</select>';
+  const tierSel = '<select class="input" id="lib-tier" aria-label="Filter by tier" style="max-width:340px;flex:1">'+tierOptions(state.lib.tier)+'</select>';
   return '<div class="col">'
-    + '<input class="input" id="lib-search" placeholder="Search by name, spirit, or ingredient…" value="'+esc(state.lib.q)+'">'
+    + '<input class="input" id="lib-search" aria-label="Search the library" placeholder="Search by name, spirit, or ingredient…" value="'+esc(state.lib.q)+'">'
     + '<div class="row">'+famChips+'</div>'
     + '<div class="row">'+tierSel
     + '<button class="chip" data-act="lib-print" title="Print the currently filtered specs as ticket cards">🖶 Print cards</button>'
@@ -276,7 +276,10 @@ function isMastered(name){
   if(!(s && s.r>=3 && s.r>s.w)) return false;
   return s.due === undefined || s.due > Date.now();
 }
-function weakScore(name){ const s=progress.cards[name]; return s ? (s.w*2 - s.r + Math.random()*0.5) : (1 + Math.random()*0.5); }
+/* lapses weigh in, mirroring the home screen's weakness list — a card that
+   keeps collapsing accumulates r on every relearn cycle and w*2-r alone
+   buries exactly the cards this ordering exists to surface */
+function weakScore(name){ const s=progress.cards[name]; return s ? (s.w*2 + (s.lapses||0)*1.5 - s.r + Math.random()*0.5) : (1 + Math.random()*0.5); }
 function fcPool(){
   const f = state.fc;
   return allDrinks().filter(function(d){
@@ -408,7 +411,7 @@ function renderFlashcards(){
       return '<button class="chip'+(fc.src===s?' on':'')+'" aria-pressed="'+(fc.src===s?'true':'false')+'" data-act="fc-src" data-s="'+esc(s)+'">'+(s==='All'?'Everything':esc(s))+' <span class="font-tix">'+n+'</span></button>';
     }).join(' ');
     const isCocktail = fc.src==='Cocktails' || fc.src==='All';
-    const tierSel = isCocktail ? '<select class="input" id="fc-tier" style="max-width:380px">'+tierOptions(fc.tier)+'</select>' : '';
+    const tierSel = isCocktail ? '<select class="input" id="fc-tier" aria-label="Filter by tier" style="max-width:380px">'+tierOptions(fc.tier)+'</select>' : '';
     const groupList = fc.src==='All' ? [].concat(Object.keys(FAMILIES), SHOT_CATS, NA_CATS) : groupsFor(fc.src);
     const groupLabel = fc.src==='Shots' ? 'All shot categories' : fc.src==='Zero Proof' ? 'All zero-proof families' : 'All families';
     const fams = ['All'].concat(groupList);
@@ -430,8 +433,8 @@ function renderFlashcards(){
       + '<div class="eyebrow">Build your deck</div>'
       + '<div class="row">'+srcChips+'</div>'
       + (tierSel ? '<div class="row">'+tierSel+'</div>' : '')
-      + '<div class="row" style="gap:10px"><select class="input" id="fc-family" style="flex:1;min-width:150px">'+famOpts+'</select>'
-      + (isCocktail ? '<select class="input" id="fc-spirit" style="flex:1;min-width:150px">'+spOpts+'</select>' : '')+'</div>'
+      + '<div class="row" style="gap:10px"><select class="input" id="fc-family" aria-label="Filter by '+(fc.src==='Shots'?'shot category':fc.src==='Zero Proof'?'zero-proof family':'family')+'" style="flex:1;min-width:150px">'+famOpts+'</select>'
+      + (isCocktail ? '<select class="input" id="fc-spirit" aria-label="Filter by base spirit" style="flex:1;min-width:150px">'+spOpts+'</select>' : '')+'</div>'
       + '<div class="row">'+specials
       + '<button class="chip'+(fc.smart?' on':'')+'" aria-pressed="'+(fc.smart?'true':'false')+'" data-act="fc-smart" title="Orders the deck so your weakest and unseen cards come first">'+(fc.smart?'✓ ':'')+'Weakest first</button></div>'
       + '<div class="tiny dim">'+pool.length+' cards in this deck · '+masteredIn+' already mastered'+(pool.length? '' : ' — loosen a filter to deal')+'</div>'
@@ -439,7 +442,7 @@ function renderFlashcards(){
       + '<div class="col-sm">'+modeBtns+'</div>'
       + '</div>'
       + '<div class="row center"><button class="btn btn-ghost" data-act="fc-board">Mastery board →</button></div>'
-      + '<div class="tiny dim lh" style="padding:0 4px">Every drink in the ledger is drillable — all '+COCKTAILS.length+' cocktails, '+SHOTS.length+' shots, and '+NA_DRINKS.length+' zero-proof drinks, '+allDrinks().length+' cards in total. Path to mastery: run <span class="brass2">Name → Spec</span> until clean, prove it in <span class="brass2">Assemble the Ticket</span>, then keep <span class="brass2">Trouble cards</span> + <span class="brass2">Weakest first</span> in rotation. Three honest wins with a winning record masters a card.</div>'
+      + '<div class="tiny dim lh" style="padding:0 4px">Every drink in the ledger is drillable — all '+COCKTAILS.length+' cocktails, '+SHOTS.length+' shots, '+((progress.bar||[]).length ? NA_DRINKS.length+' zero-proof drinks, and your '+progress.bar.length+' My Bar drink'+(progress.bar.length===1?'':'s') : 'and '+NA_DRINKS.length+' zero-proof drinks')+', '+allDrinks().length+' cards in total. Path to mastery: run <span class="brass2">Name → Spec</span> until clean, prove it in <span class="brass2">Assemble the Ticket</span>, then keep <span class="brass2">Trouble cards</span> + <span class="brass2">Weakest first</span> in rotation. Three honest wins with a winning record masters a card.</div>'
       + '</div>';
   }
 
@@ -538,7 +541,7 @@ function renderFlashcards(){
       let mark = '', sr = '';
       if(fc.checked && selected && p.ok){ mark='<span aria-hidden="true" class="opt-mark">✓</span> '; sr='<span class="sr-only">Correct, kept: </span>'; }
       else if(fc.checked && selected && !p.ok){ mark='<span aria-hidden="true" class="opt-mark">✗</span> '; sr='<span class="sr-only">Decoy you picked: </span>'; }
-      return '<button class="'+cls+' font-tix" data-act="fc-toggle-line" data-i="'+i+'"'+(fc.checked?' disabled':'')+'>'+mark+sr+esc(p.l)+tag+'</button>';
+      return '<button class="'+cls+' font-tix" data-act="fc-toggle-line" data-i="'+i+'" aria-pressed="'+(selected?'true':'false')+'"'+(fc.checked?' disabled':'')+'>'+mark+sr+esc(p.l)+tag+'</button>';
     }).join('');
     const after = fc.checked
       ? '<div class="explain"><span class="brass2 bold">'+(fc.lastOk?'Clean build. ':'Not quite. ')+'</span>'
@@ -586,7 +589,7 @@ function renderFlashcards(){
           if(o === right){ cls += ' correct'; mark='<span aria-hidden="true" class="opt-mark">✓</span> '; sr='<span class="sr-only">Correct answer: </span>'; }
           else if(s.picked[f] === i){ cls += ' wrong'; mark='<span aria-hidden="true" class="opt-mark">✗</span> '; sr='<span class="sr-only">Your answer, incorrect: </span>'; }
         } else if(s.picked[f] === i) cls += ' picked';
-        return '<button class="'+cls+'" data-act="fc-svc-pick" data-f="'+f+'" data-i="'+i+'"'
+        return '<button class="'+cls+'" data-act="fc-svc-pick" data-f="'+f+'" data-i="'+i+'" aria-pressed="'+(s.picked[f]===i?'true':'false')+'"'
           + (allPicked?' disabled':'')+'>'+mark+sr+esc(o)+'</button>';
       }).join('');
       return '<div><div class="eyebrow mb1">'+label+'</div><div class="col-sm">'+rows+'</div></div>';
@@ -615,7 +618,70 @@ const QUIZ_MODES = [
   ['beerwine','Beer & wine','Draught, bottle, varietal and glassware — the high-volume half.'],
   ['craft','Spirits & craft','Technique, production, ingredients and the balance behind the specs.'],
   ['tickets','Blind tickets','Ten blind tickets. Read the spec, call the drink.'],
+  ['dealer','Dealer\'s choice','A guest who knows what they like but not what it\'s called. Read the ask, make the call.'],
 ];
+
+/* ---- DEALER'S CHOICE: constraints-to-drink, computed from the live data ----
+   The most common real interaction is not "make a Boulevardier", it is
+   "something with mezcal, not too sweet." Every axis here is derived from the
+   spec by the same engines the Tools tab uses (estimateABV, balanceOf,
+   strengthBand), so the answer key can never drift from the book — the same
+   emitted-and-gated discipline the copy counts follow. */
+function dealerAxes(c){
+  const e = estimateABV(c, 25);
+  if(!e) return null;   /* parts/counts specs have no computable strength */
+  const bal = balanceOf(c);
+  /* liqueur/aperitivo bases: balanceOf promotes the sweet base into strong,
+     so the remaining sweet column understates the drink — a Midori Sour is
+     not 'on the dry side'. No lean claim where the base carries the sugar. */
+  const lean = /liqueur|aperitivo|amaro|sparkling/i.test(c.spirit || '') ? null
+    : Math.abs(bal.sweet - bal.sour) >= 0.25
+    ? (bal.sweet > bal.sour ? 'sweet' : 'dry') : null;
+  return { spirit: c.spirit, band: strengthBand(e.abvServed).key, lean: lean, fam: c.family, abv: e.abvServed };
+}
+let DEALER_POOL = null;
+function dealerPool(){
+  if(!DEALER_POOL) DEALER_POOL = COCKTAILS.map(c => ({ c: c, ax: dealerAxes(c) })).filter(x => x.ax);
+  return DEALER_POOL;
+}
+const DEALER_BAND_PHRASE = {
+  'very strong':'strong enough to sip slow', 'spirit-forward':'spirit-forward',
+  'moderate':'middling strength', 'sessionable':'easy-drinking', 'light':'light on the alcohol',
+};
+function qDealer(cands, used){
+  const fresh = cands.filter(x => !used.has(x.c.name));
+  const pick = sample(fresh.length ? fresh : cands, 1)[0];
+  used.add(pick.c.name);
+  const A = pick.ax;
+  const axes = { spirit: A.spirit, band: A.band };
+  if(A.lean) axes.lean = A.lean; else axes.fam = A.fam;
+  const satisfies = ax => ax.spirit === axes.spirit && ax.band === axes.band
+    && (axes.lean === undefined || ax.lean === axes.lean)
+    && (axes.fam === undefined || ax.fam === axes.fam);
+  const missCount = ax => (ax.spirit !== axes.spirit ? 1 : 0) + (ax.band !== axes.band ? 1 : 0)
+    + (axes.lean !== undefined && ax.lean !== axes.lean ? 1 : 0)
+    + (axes.fam !== undefined && ax.fam !== axes.fam ? 1 : 0);
+  /* the hard invariant: no distractor may satisfy EVERY axis — a second
+     valid answer is the failure mode, an imperfect near-miss is not */
+  const others = cands.filter(x => x.c.name !== pick.c.name && !satisfies(x.ax));
+  const oneOff = shuffle(others.filter(x => missCount(x.ax) === 1));
+  const rest = shuffle(others.filter(x => missCount(x.ax) > 1));
+  const distractors = oneOff.concat(rest).slice(0, 3);
+  const bandPhrase = DEALER_BAND_PHRASE[axes.band] || axes.band;
+  const leanPhrase = axes.lean === 'sweet' ? 'a touch sweet' : axes.lean === 'dry' ? 'on the dry side, not sweet' : null;
+  const famPhrase = axes.fam ? 'built like ' + (/^[AEIOU]/.test(axes.fam) ? 'an ' : 'a ') + axes.fam : null;
+  const prompt = 'Guest: “Something with ' + axes.spirit.toLowerCase() + ', ' + bandPhrase
+    + (leanPhrase ? ', ' + leanPhrase : '') + (famPhrase ? ' — ' + famPhrase.toLowerCase() : '') + '.” Your call?';
+  const missWhy = x => x.ax.spirit !== axes.spirit ? 'wrong spirit (' + x.ax.spirit.toLowerCase() + ')'
+    : x.ax.band !== axes.band ? (DEALER_BAND_PHRASE[x.ax.band] || x.ax.band) + ' where the guest asked ' + bandPhrase
+    : (axes.lean !== undefined && x.ax.lean !== axes.lean) ? (x.ax.lean ? 'leans ' + x.ax.lean : 'leans neither way')
+    : 'a different build (' + x.ax.fam + ')';
+  const explain = pick.c.name + ' fits every ask — ' + axes.spirit.toLowerCase() + ', ' + bandPhrase
+    + (leanPhrase ? ', ' + leanPhrase : '') + '. '
+    + distractors.map(x => x.c.name + ': ' + missWhy(x) + '.').join(' ')
+    + ' All computed from the specs — the sheet cannot drift from the book.';
+  return { prompt: prompt, options: shuffle([pick.c.name].concat(distractors.map(x => x.c.name))), answer: pick.c.name, explain: explain };
+}
 /* legacy entries carry no topic — the authored SCENARIO ones are service
    questions and must land in the service pool, not default to craft */
 const topicOf = (k) => k.topic || (/^\s*SCENARIO/i.test(k.q || '') ? 'service' : 'craft');
@@ -717,6 +783,12 @@ function buildRound(mode, pool){
     sample(cocktails,7).forEach(c => qs.push(qCocktailTicket(c)));
     for(let i=0;i<3;i++) qs.push(qBlindOther());
     return shuffle(qs);
+  }
+  if(mode === 'dealer'){
+    const cands = dealerPool();
+    const used = new Set();
+    for(let i = 0; i < 10; i++) qs.push(qDealer(cands, used));
+    return qs;
   }
   if(mode !== 'mixed'){
     sample(knowledgeByTopic(mode),10).forEach(k => qs.push(qKnowledge(k)));

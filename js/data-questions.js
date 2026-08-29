@@ -71,12 +71,12 @@ KNOWLEDGE.push(
     a:1, explain:"Ask. Shot names drift by region and by bar, and the same name gets three builds in three towns. Guessing from the name or reaching for your house version end the same way — a guest holding something they didn't order, and your liquor paying for the lesson." },
   { q:"Which is the true 'bartender's handshake'?",
     options:["A Jägerbomb dropped into Red Bull","A chilled shot of Fernet-Branca","A sugar-rimmed Lemon Drop shot","A Kamikaze, equal parts and shaken"],
-    a:1, explain:"Freezer-cold Fernet is the industry's calling card — in San Francisco it comes with a ginger beer back by custom." },
+    a:1, explain:"Freezer-cold Fernet is the industry's calling card — in San Francisco it comes with a ginger beer back by custom. The Daiquiri borrows the same nickname as a skills test — the drink bartenders order to probe each other's balance — but the handshake you are actually poured is Fernet." },
   { q:"Why must an Irish Slammer (cream liqueur + stout) be drunk immediately?",
     options:["The dropped shot kills the stout's carbonation on contact","The cream curdles in the stout within about a minute","The shot glass warms the stout within a few seconds","The layers mix and the drink loses its striped look"],
     a:1, explain:"Acid in the stout curdles the cream inside a minute, and curdled is a texture nobody drinks through. The dropped shot does knock the head down, but flat is a disappointment and curdled is a send-back. Serve it last in the round and tell the table to go now." },
   { q:"How should a round of shots factor into your responsible-service count?", topic:"service",
-    options:["Shots are only 1 oz, so count two of them as a single drink","Count each as a full drink — a Three Wise Men counts as a double","Count them only once the guest starts showing visible signs","Shots don't count — pacing only applies to drinks sipped over time"],
+    options:["Shots are only 1 oz, so count two of them as a single drink","Count each as a full drink — a 1.5 oz shot at 40% is one whole standard drink","Count them only once the guest starts showing visible signs","Shots don't count — pacing only applies to drinks sipped over time"],
     a:1, explain:"A 1 1/2 oz shot at 40% is 0.6 oz of ethanol — one full standard drink, the same as a 12 oz beer at 5%, and a Three Wise Men is several whiskeys in one glass. 'Only 1 oz, count two as one' is exactly the math that over-serves a table: small ounces, full alcohol, and none of the pacing a sipped drink gives you. Jigger it — a shot isn't a standardized measure and your glass may not be what the label says." },
   { q:"The Chocolate Cake shot famously contains no chocolate. What creates the illusion?",
     options:["Several dashes of chocolate mole bitters stirred in cold","Citron vodka and Frangelico, chased by a sugared lemon wedge","Heavy cream shaken with cocoa powder and rimmed in sugar","Crème de cacao floated over cream for a soft cocoa note"],
@@ -188,7 +188,7 @@ STUDY.push({ title:"Where to Go Deeper", rows:[
   ["The Families tab","Regan's eight templates plus Punch and Hot, each with its formula, core lesson, and every member in the collection. Start here if you're learning; return here when a drink surprises you."],
   ["The Prep tab","37 prep sheets with ratios by weight, yields, and shelf lives, plus opening and closing checklists and the food-safety rules that keep you employed."],
   ["The Producers tab","66 benchmark houses across nine categories, each with a production primer explaining how the spirit is actually made and why the house matters."],
-  ["The Practice tab","Five physical drills, structured tasting scorecards with a 93-term aroma vocabulary, and twelve comparative flights built to teach one specific lesson each."],
+  ["The Practice tab","A bench of physical drills, structured tasting scorecards with a 93-term aroma vocabulary, and twelve comparative flights built to teach one specific lesson each."],
   ["The Tools tab","Batch any spec to any size with pre-dilution math, and see what your current shelf can actually pour tonight."],
 ]});
 

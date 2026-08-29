@@ -17,7 +17,10 @@ function say(msg){
 function focusSignature(el){
   if(!el || el === document.body) return null;
   const d = el.dataset || {};
-  if(!d.act && !d.tab && !d.cluster) return null;
+  /* selects and inputs have no data-act but do have stable ids — without
+     this, every filter change dropped focus to <body> and arrow-browsing a
+     select was impossible */
+  if(!d.act && !d.tab && !d.cluster) return el.id ? '#' + (window.CSS && CSS.escape ? CSS.escape(el.id) : el.id) : null;
   return ['act','tab','cluster','i','k','d','s','m','c','f','v','t','id','n']
     .filter(k => d[k] !== undefined)
     .map(k => '[data-' + k + '="' + String(d[k]).replace(/"/g, '\\"') + '"]')
@@ -49,6 +52,10 @@ function render(){
   if(opened && opened.scrollIntoView) opened.scrollIntoView({ block:'center' });
   const tc = document.getElementById('tst-cat');
   if(tc) tc.addEventListener('change', e => {
+    /* snapshot the typed fields BEFORE the render eats them — the click
+       handler's capture never runs for a select's change event */
+    const l = document.getElementById('tst-label'); if(l) state.tast.label = l.value;
+    const n = document.getElementById('tst-notes'); if(n) state.tast.notes = n.value;
     state.tast.cat = e.target.value; state.tast.nose = []; render();
   });
   /* Targeted repaints, the batch-out pattern: a render() per keystroke
@@ -166,7 +173,14 @@ document.addEventListener('keydown', e => {
   if(e.key === 'Escape' && state.sheet){ state.sheet = null; render(); return; }
   const click = sel => { const b = document.querySelector(sel); if(b){ b.click(); e.preventDefault(); return true; } return false; };
   if(state.tab==='flashcards' && state.fc.stage==='run'){
-    if(e.key === ' ') { click('[data-act="fc-flip"]') || click('[data-act="fc-next"]'); e.preventDefault(); return; }
+    if(e.key === ' ') {
+      /* a focused button owns its own Space — the global flip was hijacking
+         grade/pick/toggle activations and dead-ending cloze and service */
+      const a = document.activeElement;
+      if(a && a.closest && a.closest('button')) return;
+      click('[data-act="fc-flip"]') || click('[data-act="fc-next"]');
+      e.preventDefault(); return;
+    }
     if(e.key === 'ArrowRight'){ if(click('[data-act="fc-grade"][data-ok="1"]')) return; }
     if(e.key === 'ArrowLeft'){ if(click('[data-act="fc-grade"][data-ok="0"]')) return; }
   }
@@ -176,7 +190,12 @@ document.addEventListener('keydown', e => {
       const b = opts[Number(e.key)-1]; if(b) b.click();
       e.preventDefault(); return;
     }
-    if(e.key === 'Enter' || e.key === ' '){ click('[data-act="quiz-next"]'); e.preventDefault(); }
+    if(e.key === 'Enter' || e.key === ' '){
+      const a = document.activeElement;
+      if(a && a.closest && a.closest('button')) return;   /* native activation wins */
+      click('[data-act="quiz-next"]');
+      e.preventDefault();
+    }
     return;
   }
   if(/^[1-4]$/.test(e.key)){
@@ -201,8 +220,8 @@ document.getElementById('view').addEventListener('click', e => {
     /* optional deep links, so "Quiz your list" opens the quiz ON the list
        instead of leaving the promise at the tab door */
     if(el.dataset.view) state.practice.view = el.dataset.view;
-    if(el.dataset.mode) state.quiz.mode = el.dataset.mode;
-    if(el.dataset.src){ state.fc.src = el.dataset.src; state.fc.family='All'; state.fc.spirit='All'; state.fc.tier='All'; }
+    if(el.dataset.mode){ state.quiz.mode = el.dataset.mode; state.quiz.stage = 'setup'; }
+    if(el.dataset.src){ state.fc.src = el.dataset.src; state.fc.family='All'; state.fc.spirit='All'; state.fc.tier='All'; state.fc.stage = 'setup'; }
   }
   else if(act==='fam-open'){ state.famOpen = state.famOpen===el.dataset.fam ? null : el.dataset.fam; }
   else if(act==='fam-goto'){ state.lib = { q:'', fam:el.dataset.fam, tier:'All', open:null }; state.tab='library'; }
@@ -370,6 +389,40 @@ document.getElementById('view').addEventListener('click', e => {
     if(progress.tastings && progress.tastings[i]){ progress.tastings.splice(i,1); saveProgress(); }
     state.practice.noteOpen = null; }
   else if(act==='rail-deal'){ state.practice.rail = { deck: railDeal(), revealed:false }; }
+  else if(act==='hold-deal'){
+    const band = state.practice.holdBand || 8;
+    const h = holdDeal(band);
+    state.practice.hold = h;
+    setTimeout(() => holdFlip(h.nonce), band * 1000);
+  }
+  else if(act==='hold-band'){ state.practice.holdBand = Number(el.dataset.b) || 8;
+    if(state.practice.hold && state.practice.hold.phase !== 'show'){ /* applies to the next deal */ } }
+  else if(act==='hold-got'){ if(state.practice.hold){ state.practice.hold.phase = 'recall'; } }
+  else if(act==='hold-pick'){
+    const h = state.practice.hold;
+    if(h && h.phase === 'recall'){
+      const n = el.dataset.n; h.picks = h.picks || [];
+      const i = h.picks.indexOf(n);
+      if(i >= 0){ h.picks.splice(i, 1); if(h.modPick === n) h.modPick = null; }
+      else if(h.picks.length < 4) h.picks.push(n);
+    } }
+  else if(act==='hold-mod'){ const h = state.practice.hold; if(h) h.modPick = el.dataset.n; }
+  else if(act==='hold-check'){
+    const h = state.practice.hold;
+    if(h && h.phase === 'recall' && (h.picks||[]).length === 4 && (!h.mod || h.modPick)){
+      const dealt = h.deck.map(e => e.name);
+      let v = h.picks.filter(n => dealt.indexOf(n) >= 0).length;
+      const of = h.mod ? 5 : 4;
+      if(h.mod && h.modPick === h.mod.drink) v += 1;
+      h.phase = 'done';
+      h.scored = { v: v, of: of };
+      if(!progress.practice) progress.practice = {};
+      const arr = progress.practice.hold || [];
+      arr.push({ d:new Date().toLocaleDateString(), ts:Date.now(), v:v, of:of });
+      progress.practice.hold = arr.slice(-20);
+      saveProgress();
+      say(v + ' of ' + of + ' held.');
+    } }
   else if(act==='pour-target'){ state.practice.pourTarget = Number(el.dataset.t) || 1.5; }
   else if(act==='cost-src'){ state.tools.costSrc = el.dataset.s; }
   else if(act==='spill-reason'){ state.tools.spillReason = el.dataset.r; }
@@ -501,6 +554,7 @@ document.getElementById('view').addEventListener('click', e => {
       delete t[id];
       const input = document.getElementById('pr-in-'+id);
       if(input) input.value = secs;
+      (state.practice.drillIn = state.practice.drillIn || {})[id] = String(secs);
       if(prTicks[id]){ clearInterval(prTicks[id]); delete prTicks[id]; }
       el.textContent = 'Start';
       const disp = document.getElementById('pr-timer-'+id);
@@ -533,12 +587,18 @@ document.getElementById('view').addEventListener('click', e => {
     }
     arr.push(entry);
     progress.practice[id] = arr.slice(-20);
+    if(state.practice.drillIn) delete state.practice.drillIn[id];
     saveProgress();
-    /* a logged drill is what upgrades tonight from recitation to hands */
-    if(state.sess && state.sess.active && state.sess.step==='drill'){
-      recordSessionComplete(true, state.sess && state.sess.night);
+    /* a logged drill is what upgrades tonight from recitation to hands —
+       whether you took the session's own door or walked in through the nav */
+    const sessDrillReady = state.sess && state.sess.active &&
+      (state.sess.step==='drill' || (state.sess.step==='quiz' && state.quiz.stage==='done'));
+    if(sessDrillReady){
+      recordSessionComplete(true, state.sess.night);
       state.sess.active = false;
       state.tab = 'home';
+    } else if(sessionDoneToday() && !handsDoneToday()){
+      recordSessionComplete(true, (progress.streakData||{}).last);
     } }
   else if(act==='tool-view'){ state.tools.view = el.dataset.v; }
   else if(act==='data-export'){ dataExport(); return; }
@@ -685,6 +745,12 @@ function captureLiveInputs(){
   grab('ob-days',    state.tools, 'obDays');
   grab('pour-oz',    state.practice, 'pourOz');
   grab('cost-bottle-name', state.tools, 'bottleName');
+  /* every drill result field, by prefix — on the Ticket Rail an intervening
+     act (revealing the order) is REQUIRED between typing and logging, so the
+     render in between ate the seconds every single time */
+  document.querySelectorAll('input[id^="pr-in-"]').forEach(el2 => {
+    (state.practice.drillIn = state.practice.drillIn || {})[el2.id.slice(6)] = el2.value;
+  });
 }
 
 (async () => {
@@ -724,13 +790,22 @@ if('serviceWorker' in navigator){
       try{
         const reg = await navigator.serviceWorker.register('sw.js');
         /* an update that reached "waiting" on a previous visit */
-        if(reg.waiting && navigator.serviceWorker.controller) showUpdateToast(reg.waiting);
+        if(reg.waiting && navigator.serviceWorker.controller) showUpdateToast(reg.waiting, reg);
+        /* A hash-routed SPA performs no navigations, so the browser never
+           re-fetches sw.js on its own — a bar tablet that stays open all week
+           would never see another update. Every return to the app checks, and
+           an hourly tick covers the always-visible kiosk. Both stay silent
+           offline. */
+        document.addEventListener('visibilitychange', () => {
+          if(document.visibilityState === 'visible') reg.update().catch(() => {});
+        });
+        setInterval(() => reg.update().catch(() => {}), 60 * 60 * 1000);
         reg.addEventListener('updatefound', () => {
           const nw = reg.installing;
           if(!nw) return;
           nw.addEventListener('statechange', () => {
             if(nw.state === 'installed' && navigator.serviceWorker.controller){
-              showUpdateToast(nw);
+              showUpdateToast(nw, reg);
             }
           });
         });
@@ -746,12 +821,19 @@ if('serviceWorker' in navigator){
   }
 }
 
-function showUpdateToast(worker){
+function showUpdateToast(worker, reg){
   if(document.getElementById('sw-toast')) return;
   const t = document.createElement('button');
   t.id = 'sw-toast';
   t.className = 'sw-toast';
   t.innerHTML = '<span class="font-display">A new edition is pressed</span><span class="tiny dim"> — tap to refresh</span>';
-  t.addEventListener('click', () => { swWantReload = true; worker.postMessage('SKIP_WAITING'); });
+  /* resolve the target at CLICK time: if a second deploy landed while the
+     toast sat there, the captured worker is already redundant and a message
+     to it does nothing — reg.waiting is always the live one */
+  t.addEventListener('click', () => {
+    swWantReload = true;
+    const w = (reg && reg.waiting) || worker;
+    try{ w.postMessage('SKIP_WAITING'); }catch(e){}
+  });
   document.body.appendChild(t);
 }

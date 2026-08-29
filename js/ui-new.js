@@ -45,7 +45,7 @@ function renderNav(){
       const tabs = NAV_CLUSTERS.find(([ck]) => ck===state.sheet)[2];
       sh.innerHTML = '<div class="sheet-back" data-sheet-close="1"></div><div class="sheet-panel" role="dialog" aria-modal="true" aria-label="More sections">'
         + '<div class="eyebrow tc mb2">'+NAV_CLUSTERS.find(([ck])=>ck===state.sheet)[1]+'</div>'
-        + tabs.map(k => '<button class="sheet-btn'+(state.tab===k?' active':'')+'" data-tab="'+k+'">'+TAB_LABEL[k]+'</button>').join('')
+        + tabs.map(k => '<button class="sheet-btn'+(state.tab===k?' active':'')+'"'+(state.tab===k?' aria-current="page"':'')+' data-tab="'+k+'">'+TAB_LABEL[k]+'</button>').join('')
         + '</div>';
       sh.classList.add('open');
     } else { sh.innerHTML=''; sh.classList.remove('open'); }
@@ -239,7 +239,7 @@ function renderService(){
   const DOM_LABEL = { beer:'Beer & Draught', wine:'Wine', law:'Law & Refusal',
     register:'The Register', conflict:'Conflict & Safety', glassware:'Glassware' };
   const chips = SERVICE_STUDY.map(x =>
-    '<button class="tab-btn'+(s.dom===x.key?' active':'')+'" data-act="svc-dom" data-d="'+x.key+'">'
+    '<button class="tab-btn'+(s.dom===x.key?' active':'')+'"'+(s.dom===x.key?' aria-current="true"':'')+' data-act="svc-dom" data-d="'+x.key+'">'
     + esc(DOM_LABEL[x.key] || x.title)+'</button>').join('');
   const rows = sec.rows.map((r,i) => {
     const open = s.rowOpen === i;
@@ -355,7 +355,14 @@ function recordSessionComplete(withHands, night){
      One sitting is one night, dated by when it began. */
   const today = night || dateKey(0);
   if(s.last !== today){
-    if(s.last === dateKey(1)) s.n = s.n + 1;
+    /* "the night before" is computed from the STAMPED night, not the clock —
+       a session straddling midnight stamps yesterday, and dateKey(1) would be
+       the day before that, breaking a live streak at the moment it was kept */
+    const parts = today.split('-').map(Number);
+    const prev = new Date(parts[0], parts[1] - 1, parts[2]);
+    prev.setDate(prev.getDate() - 1);
+    const prevKey = prev.getFullYear() + '-' + String(prev.getMonth() + 1).padStart(2, '0') + '-' + String(prev.getDate()).padStart(2, '0');
+    if(s.last === prevKey) s.n = s.n + 1;
     else { s.n = 1; s.hands = 0; }   /* streak broken — the hands count restarts with it */
     s.last = today;
   }
@@ -584,6 +591,23 @@ function dataImport(file){
       const parsed = JSON.parse(reader.result);
       p = parsed && parsed.app === 'bartenders-ledger' ? parsed.progress : parsed;
       if(!p || typeof p !== 'object' || typeof p.cards !== 'object') throw new Error('bad shape');
+      /* sanitize EVERY store before either path touches it — the oldest merge
+         clauses call .forEach on these, and a hand-edited or truncated backup
+         with a string where an array belongs crashed mid-merge, leaving a
+         half-merged progress in memory */
+      ['quizzes','tastings','shelf','pours','spills','openBottles','bottles','bar'].forEach(k => {
+        if(p[k] !== undefined && !Array.isArray(p[k])) p[k] = [];
+      });
+      ['cards','practice','vidPrefs'].forEach(k => {
+        if(p[k] !== undefined && (!p[k] || typeof p[k] !== 'object' || Array.isArray(p[k]))) p[k] = {};
+      });
+      if(p.cards) Object.keys(p.cards).forEach(k => {
+        const v = p.cards[k];
+        if(!v || typeof v !== 'object' || Array.isArray(v)) delete p.cards[k];
+      });
+      if(p.practice) Object.keys(p.practice).forEach(k => {
+        if(!Array.isArray(p.practice[k])) delete p.practice[k];
+      });
     }catch(e){ status('That file isn\'t a ledger backup.'); return; }
     const theirs = Object.keys(p.cards || {}).length;
     const merge = confirm('Backup found: ' + theirs + ' card records.\n\nOK = MERGE into your current records (keeps the better of each).\nCancel = choose Replace instead.');
@@ -682,18 +706,46 @@ function dataImport(file){
          stays unnamed on purpose — a preference is device-local. */
       if(p.streakData && p.streakData.last){
         const mineS = progress.streakData;
-        if(!mineS || !mineS.last || p.streakData.last > mineS.last ||
-           (p.streakData.last === mineS.last && (p.streakData.n||0) > (mineS.n||0))){
-          progress.streakData = p.streakData;
+        if(!mineS || !mineS.last){ progress.streakData = p.streakData; }
+        else {
+          /* {n, last} guarantees contiguity, so two records are date SPANS.
+             When the spans touch or overlap they are one unbroken streak —
+             winner-take-all was zeroing the old device's 200 nights the
+             moment the new device stamped one newer night. */
+          const T = p.streakData, M = mineS;
+          const parseK = (k) => { const q = k.split('-').map(Number); return new Date(q[0], q[1] - 1, q[2]); };
+          const keyOf = (d) => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+          const addDays = (k, n) => { const d = parseK(k); d.setDate(d.getDate() + n); return keyOf(d); };
+          const nT = Math.max(1, +T.n || 1), nM = Math.max(1, +M.n || 1);
+          const startT = addDays(T.last, -(nT - 1)), startM = addDays(M.last, -(nM - 1));
+          if(startT <= addDays(M.last, 1) && startM <= addDays(T.last, 1)){
+            const last = T.last > M.last ? T.last : M.last;
+            const start = startT < startM ? startT : startM;
+            const nights = Math.round((parseK(last) - parseK(start)) / 86400000) + 1;
+            const lastHands = ((T.lastHands || '') > (M.lastHands || '')) ? T.lastHands : M.lastHands;
+            progress.streakData = { last: last, n: nights, hands: Math.max(T.hands || 0, M.hands || 0), lastHands: lastHands || null };
+          } else if(T.last > M.last || (T.last === M.last && nT > nM)){
+            progress.streakData = T;
+          }
         }
       }
       if(Array.isArray(p.bar)){
         progress.bar = progress.bar || [];
         p.bar.forEach(b => {
           if(!b || !b.name) return;
-          const i = progress.bar.findIndex(x => (b.id && x.id === b.id) || x.name === b.name);
+          /* case-insensitive, matching mybar-save's own uniqueness rule — and
+             when the kept record's name differs in case, its card record rides
+             along to the new key instead of stranding */
+          const i = progress.bar.findIndex(x => (b.id && x.id === b.id) || x.name.toLowerCase() === b.name.toLowerCase());
           if(i < 0) progress.bar.push(b);
-          else if((b.ts || 0) > (progress.bar[i].ts || 0)) progress.bar[i] = b;
+          else if((b.ts || 0) > (progress.bar[i].ts || 0)){
+            const oldKey = 'My Bar · ' + progress.bar[i].name, newKey = 'My Bar · ' + b.name;
+            if(oldKey !== newKey && progress.cards && progress.cards[oldKey] && !progress.cards[newKey]){
+              progress.cards[newKey] = progress.cards[oldKey];
+              delete progress.cards[oldKey];
+            }
+            progress.bar[i] = b;
+          }
         });
       }
     } else {
@@ -711,6 +763,14 @@ function dataImport(file){
     if(!progress.spills) progress.spills = [];
     if(!progress.openBottles) progress.openBottles = [];
     srsMigrate(progress.cards);
+    /* a backup can carry card records for My Bar drinks renamed or deleted
+       since — unreviewable by construction, but they inflate the overdue
+       count forever. The rename/delete paths already keep cards consistent;
+       imports now do too. */
+    const barNames = new Set((progress.bar || []).map(b => 'My Bar · ' + b.name));
+    Object.keys(progress.cards || {}).forEach(k => {
+      if(k.indexOf('My Bar · ') === 0 && !barNames.has(k)) delete progress.cards[k];
+    });
     state.tools.shelf = Array.isArray(progress.shelf) ? progress.shelf.slice() : [];
     barChanged();
     saveProgress();

@@ -84,7 +84,7 @@ const SHOTS = [
 
   // BOMBS & BOILERMAKERS (+2)
   { name:"Dr Pepper Shot", cat:"Bombs & Boilermakers", spec:["3/4 oz amaretto","1/4 oz 151 rum (shot)","1/2 glass lager"], method:"Drop the shot into the beer, drink fast", note:"Tastes remarkably like the soda. No Dr Pepper involved at any point." },
-  { name:"Bomb Pop", cat:"Bombs & Boilermakers", spec:["1/2 oz grenadine","1/2 oz vodka","1/2 oz blue curaçao","1/2 glass lemon-lime soda or energy drink"], method:"Layer bottom-up by density — grenadine, vodka, curaçao — then drop", note:"Red, white, and blue in the shot glass before it goes in — the layering is the whole appeal." },
+  { name:"Bomb Pop", cat:"Bombs & Boilermakers", spec:["1/2 oz grenadine","1/2 oz blue curaçao","1/2 oz vodka","1/2 glass lemon-lime soda or energy drink"], method:"Layer bottom-up by density — grenadine, curaçao, vodka — then drop", note:"All three Bomb Pop colors in the glass — the bands stack red, blue, white by density, since vodka floats on everything (see the ladder). The layering is the whole appeal." },
 
   // INDUSTRY HANDSHAKES (+2)
   { name:"Salt & Lime Tequila", cat:"Industry Handshakes", spec:["1.5 oz blanco tequila","lime wedge","pinch of salt"], method:"Salt on the hand, lick, shoot, bite the lime", note:"The ritual most guests expect — and the one most Mexican bartenders would gently steer you away from. Salt and lime exist to mask a rough spirit; with good tequila, offer sangrita or a simple sip instead." },
@@ -93,7 +93,7 @@ const SHOTS = [
   // FLAMING & NOVELTY (new category, 5)
   { name:"Flaming Dr Pepper", cat:"Flaming & Novelty", spec:["3/4 oz amaretto","1/4 oz 151 rum floated on top","1/2 glass lager"], method:"Float the 151, ignite, EXTINGUISH, then drop into the beer", note:"Always blow out the flame before dropping. Never hand a guest a lit glass, never pour from a bottle near flame, and keep a wet towel within reach." },
   { name:"Flaming Sambuca", cat:"Flaming & Novelty", spec:["1.5 oz sambuca","3 coffee beans"], method:"Ignite briefly to toast the beans, extinguish, let the glass cool before serving", note:"The flame toasts the beans and warms the anise oils. The glass gets genuinely hot — cool it and warn the guest." },
-  { name:"Flaming Lamborghini", cat:"Flaming & Novelty", spec:["1 oz coffee liqueur","1 oz sambuca","1/2 oz blue curaçao","1/2 oz Irish cream"], method:"Ignite the sambuca layer, pour the remaining two liqueurs in as it burns, drink through a straw", note:"Pure 1980s theater. High risk, high tip. Many bars have banned it outright — know your house rules and your insurance." },
+  { name:"Flaming Lamborghini", cat:"Flaming & Novelty", spec:["1 oz coffee liqueur","1 oz sambuca","1/2 oz blue curaçao","1/2 oz Irish cream"], method:"Layer the coffee liqueur and sambuca, ignite the sambuca for the show, extinguish completely, then pour in the curaçao and Irish cream and serve with a straw", note:"Pure 1980s theater. The traditional serve — pouring into the burning glass while the guest drinks — breaks both fire rules in this book: never pour near open flame, never hand a guest a lit glass. The show ends before the glass crosses the bar. Many bars have banned it outright — know your house rules and your insurance." },
   { name:"Cement Mixer", cat:"Flaming & Novelty", spec:["3/4 oz Irish cream","1/4 oz lime juice"], method:"Cream first, lime second — swish in the mouth before swallowing", note:"The acid curdles the cream on the tongue. A gag shot, not a drink — never serve it to someone who didn't order it knowingly." },
   { name:"Blue Blazer Shot", cat:"Flaming & Novelty", spec:["1.5 oz cask-strength scotch","1.5 oz boiling water","1 tsp demerara sugar"], method:"Ignite and pour the flaming liquid between two metal mugs, then serve", note:"Jerry Thomas's 1862 showpiece, scaled down. Practice with cold water dozens of times before you ever strike a match." },
 ];
@@ -105,7 +105,7 @@ const SHOT_SERVICE = [
   ["Naming diplomacy","Shot recipes vary wildly bar to bar — if a guest calls a shot you don't know, the professional move is a friendly 'how do you like that made?' They'll happily tell you, and you'll learn your neighborhood's dialect. Some legacy shot names are crude or genuinely offensive; use the renamed versions (Irish Slammer, not the old name) and translate gently when guests use the originals. You set the tone of your bar."],
   ["Flaming shots & fire safety","If your bar allows them at all: never pour from a bottle anywhere near an open flame — the bottle can flash back. Extinguish every flame before the glass reaches a guest, never hand over a lit glass, keep a wet bar towel and a lid within arm's reach, tie back hair and roll sleeves, and check that nothing above the bar is flammable. Flamed glass stays hot far longer than it looks; cool it before serving. Many venues and insurers ban flaming service outright — know your house rule before a guest asks."],
   ["Know your shot glass","A 'pony' is 1 oz, a standard shot is 1.5 oz, a double is 2 oz, and 'cheater' glasses have thick false bottoms that hold well under an ounce while looking full. Know exactly what your house glass holds — it determines your pour cost, your responsible-service count, and whether a guest feels cheated. When batching a round, measure to the glass you're actually using, not the one in your head."],
-  ["Responsible shot service","Shots are the fastest route to over-service: they bypass the natural pacing of a sipped drink. Count a round against each guest like a full drink (a Three Wise Men is a double), keep water on the bar, and slow the train early — 'let me get some waters going with these.' Never stack a second round in front of a visibly intoxicated guest, and remember the birthday crowd's enthusiasm is not your legal defense. Your right to refuse is also your duty."],
+  ["Responsible shot service","Shots are the fastest route to over-service: they bypass the natural pacing of a sipped drink. Count a round against each guest like a full drink (count the two-ounce Four Horsemen as a double; a Three Wise Men is one full drink), keep water on the bar, and slow the train early — 'let me get some waters going with these.' Never stack a second round in front of a visibly intoxicated guest, and remember the birthday crowd's enthusiasm is not your legal defense. Your right to refuse is also your duty."],
 ];
 
 function shotTicketHTML(s, hideName){
@@ -214,7 +214,7 @@ function shotRoundHTML(){
 function renderShots(){
   const sh = state.shots;
   const nav = [['board','The Board'],['round','Round Builder'],['layer','Layer Drill'],['service','Service Craft']]
-    .map(([k,l]) => '<button class="tab-btn'+(sh.view===k?' active':'')+'" data-act="shots-view" data-v="'+k+'">'+l+'</button>').join('');
+    .map(([k,l]) => '<button class="tab-btn'+(sh.view===k?' active':'')+'"'+(sh.view===k?' aria-current="true"':'')+' data-act="shots-view" data-v="'+k+'">'+l+'</button>').join('');
   const wrap = (inner) => '<div class="col"><nav class="tabs" style="margin-bottom:4px">'+nav+'</nav>'+inner+'</div>';
 
   /* ---- shot-call drill (overlays the board) ---- */
@@ -424,7 +424,7 @@ const NA_DRINKS = [
   { name:"Egg Cream", cat:"Soda Fountain", spec:["1 oz chocolate syrup (Fox's U-Bet, traditionally)","2 oz whole milk","6 oz cold seltzer"], method:"Milk and syrup in the glass, then blast the seltzer in hard to build the foam head", glass:"Tall soda glass", garnish:"None", why:"Contains neither egg nor cream. Brooklyn's greatest drink, and a lesson in how carbonation creates texture." },
   { name:"Cherry Phosphate", cat:"Soda Fountain", spec:["3/4 oz cherry syrup","1/4 tsp acid phosphate (or 1/4 oz lemon juice)","6 oz cold seltzer"], method:"Build, stir once gently", glass:"Soda glass", garnish:"Brandied cherry", why:"Acid phosphate gives a clean mineral tartness citrus can't — the original soda-fountain sour, and a genuinely useful modern tool." },
   { name:"Italian Soda", cat:"Soda Fountain", spec:["1 oz flavored syrup (raspberry, hazelnut, orgeat)","5 oz cold soda water","1 oz cream float (for a 'French' soda)"], method:"Build over ice, float cream last if requested", glass:"Collins", garnish:"Match the syrup", why:"The template that lets a bar make thirty NA drinks from one syrup rack." },
-  { name:"Classic Lime Rickey", cat:"Soda Fountain", spec:["3/4 oz lime juice + the spent shell","3/4 oz raspberry or lime syrup","5 oz cold seltzer"], method:"Build over ice, drop the shell in", glass:"Highball", garnish:"The lime shell", why:"The 1880s Washington DC original was gin-based; the soda-fountain version outlived it." },
+  { name:"Classic Lime Rickey", cat:"Soda Fountain", spec:["3/4 oz lime juice + the spent shell","3/4 oz raspberry or lime syrup","5 oz cold seltzer"], method:"Build over ice, drop the shell in", glass:"Highball", garnish:"The lime shell", why:"The 1880s Washington DC original was built on bourbon; gin took over the spec, and the soda fountain kept a zero-proof version of its own." },
   { name:"Root Beer Float", cat:"Soda Fountain", spec:["8 oz cold root beer","2 scoops vanilla ice cream"], method:"Ice cream first, pour root beer slowly down the side to control the foam", glass:"Tall soda glass or mug", garnish:"Straw and a long spoon — both", why:"Pouring technique is the entire skill. Too fast and you get a foam volcano and an unhappy guest." },
   { name:"Creamsicle", cat:"Soda Fountain", spec:["3 oz orange juice","2 oz whole milk or cream","1/2 oz vanilla syrup","2 oz soda water"], method:"Shake the first three hard, strain over ice, top with soda", glass:"Collins", garnish:"Orange wheel", why:"Acid and dairy shaken fast emulsify instead of curdling — shake hard and serve immediately." },
 
@@ -502,7 +502,7 @@ function naTicketHTML(d, hideName){
 function renderNA(){
   const n = state.na;
   const nav = [['list','The List'],['pantry','The Pantry'],['theory','Theory'],['service','Service']]
-    .map(([k,l]) => '<button class="tab-btn'+(n.view===k?' active':'')+'" data-act="na-view" data-v="'+k+'">'+l+'</button>').join('');
+    .map(([k,l]) => '<button class="tab-btn'+(n.view===k?' active':'')+'"'+(n.view===k?' aria-current="true"':'')+' data-act="na-view" data-v="'+k+'">'+l+'</button>').join('');
   const wrap = (inner) => '<div class="col"><nav class="tabs" style="margin-bottom:4px">'+nav+'</nav>'+inner+'</div>';
 
   if(n.drill){
@@ -708,7 +708,7 @@ const PRODUCERS = [
 function renderProducers(){
   const p = state.prod;
   const nav = ['All'].concat(PROD_CATS).map(c =>
-    '<button class="tab-btn'+(p.cat===c?' active':'')+'" data-act="prod-cat" data-c="'+esc(c)+'">'+esc(c)+'</button>').join('');
+    '<button class="tab-btn'+(p.cat===c?' active':'')+'"'+(p.cat===c?' aria-current="true"':'')+' data-act="prod-cat" data-c="'+esc(c)+'">'+esc(c)+'</button>').join('');
   const list = PRODUCERS.map((x,i)=>({x,i})).filter(({x}) => p.cat==='All' || x.cat===p.cat);
   const primer = (p.cat!=='All' && PRIMERS[p.cat]) ? PRIMERS[p.cat].map(([t,txt]) => {
     const open = p.primerOpen===t;

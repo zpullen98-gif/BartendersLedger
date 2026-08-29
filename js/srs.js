@@ -24,6 +24,15 @@ function srsDueAt(days, now){
 function scheduleCard(rec, ok, now){
   now = now || Date.now();
   if(rec.ef === undefined){ rec.ef = 2.5; rec.ivl = 0; rec.reps = 0; }
+  /* The setup copy prescribes running one deck through several modes in an
+     evening. Without this guard each mode's win advanced the schedule — a
+     card seen tonight jumped 1 → 3 → 8 → 20 days on a single sitting with
+     zero evidence of retention across a night's sleep. A same-day re-win is
+     recorded (r/w tallies still move) but the calendar does not. */
+  if(ok && rec.last && rec.due > now && new Date(rec.last).toDateString() === new Date(now).toDateString()){
+    rec.last = now;
+    return rec;
+  }
   if(ok){
     rec.reps = (rec.reps || 0) + 1;
     let ivl = rec.reps === 1 ? 1 : rec.reps === 2 ? 3 : Math.round((rec.ivl || 1) * rec.ef);
@@ -72,9 +81,13 @@ function srsDueKeys(now){
 function srsForecast(days, now){
   now = now || Date.now();
   const out = new Array(days).fill(0);
+  /* midnight-to-midnight, or a card due tomorrow at 00:00 sits in the 'Now'
+     bar all day and every bar shows the following day's cards */
+  const t0 = new Date(now); t0.setHours(0, 0, 0, 0);
   Object.values(progress.cards || {}).forEach(s => {
     if(!s || s.due === undefined) return;
-    const d = Math.max(0, Math.floor((s.due - now) / SRS_DAY));
+    const td = new Date(s.due); td.setHours(0, 0, 0, 0);
+    const d = Math.max(0, Math.round((td.getTime() - t0.getTime()) / SRS_DAY));
     if(d < days) out[d]++;
   });
   return out;

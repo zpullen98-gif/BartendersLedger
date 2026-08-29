@@ -196,6 +196,122 @@ function railDeal(){
   }
   return deck;   /* called in random order, as they would be */
 }
+/* ---- HOLD THE ROUND: the order arrives by voice, not by ticket ----
+   The rail trains sequencing with all four tickets visible; this trains the
+   step before it — holding a called order in your head while your hands are
+   mid-build. The call shows for a chosen window, disappears, and you re-tap
+   the round from a decoy-laced list, then pin the mod to the drink that
+   carried it. Score is private and banded like everything else here. */
+const HOLD_MODS = [
+  { label:'no salt',            test:c => /salt/i.test((c.glass||'')+' '+(c.spec||[]).join(' ')+' '+(c.garnish||'')) },
+  { label:'up, not on the rocks', test:c => /rocks/i.test(c.glass||'') },
+  { label:'on the rocks, not up', test:c => /coupe|nick & nora|\bup\b/i.test(c.glass||'') },
+  { label:'rye, not bourbon',   test:c => /bourbon/i.test((c.spec||[]).join(' ')) },
+  { label:'tall, topped with soda', test:c => /shake/i.test(c.method||'') },
+];
+function holdDeal(band){
+  const deck = railDeal();
+  const drinks = deck.map(railResolve).filter(Boolean);
+  /* decoys: two same-family donors per dealt drink; a My Bar deal draws its
+     decoys from the rest of the house list */
+  const dealt = new Set(drinks.map(c => c.name));
+  const decoys = [];
+  deck.forEach(e => {
+    const c = railResolve(e);
+    if(!c) return;
+    const donors = e.src === 'My Bar'
+      ? (progress.bar||[]).filter(b => !dealt.has(b.name))
+      : COCKTAILS.filter(x => x.family === c.family && !dealt.has(x.name));
+    sample(donors, 2).forEach(d => { if(!decoys.some(x => x === d.name)) decoys.push(d.name); });
+  });
+  /* one applicable mod, pinned to the drink that can actually carry it */
+  const pairs = [];
+  drinks.forEach(c => HOLD_MODS.forEach(m => { if(m.test(c)) pairs.push({ mod:m.label, drink:c.name }); }));
+  const chosen = pairs.length ? sample(pairs, 1)[0] : null;
+  return {
+    deck: deck, decoys: decoys, mod: chosen,
+    phase: 'show', until: Date.now() + band * 1000, band: band,
+    nonce: Math.random().toString(36).slice(2),
+    picks: [], modPick: null, scored: null,
+  };
+}
+function holdFlip(nonce){
+  const h = state.practice.hold;
+  if(!h || h.nonce !== nonce || h.phase !== 'show') return;
+  h.phase = 'recall';
+  /* render only when the view is actually on screen — a background render
+     would eat whatever the user is typing elsewhere */
+  if(state.tab === 'practice' && state.practice.view === 'hold') render();
+}
+function holdCallText(h){
+  const drinks = h.deck.map(railResolve).filter(Boolean);
+  return drinks.map(c => c.name + (h.mod && h.mod.drink === c.name ? ' — ' + h.mod.label : '')).join(', ');
+}
+function holdHTML(){
+  const h = state.practice.hold;
+  const band = (state.practice.holdBand || 8);
+  const log = (progress.practice && progress.practice.hold) || [];
+  const hist = log.slice(-5).reverse().map(e =>
+    '<div class="hist-row"><span>'+esc(e.d)+'</span><span class="font-tix brass2">'+e.v+' of '+(e.of||5)+'</span></div>').join('');
+  const bandChips = [8,6,4].map(b =>
+    '<button class="chip'+(band===b?' on':'')+'" aria-pressed="'+(band===b?'true':'false')+'" data-act="hold-band" data-b="'+b+'">'+b+' seconds</button>').join(' ');
+  if(!h){
+    return '<div class="panel p5 col tc" style="align-items:center;gap:12px">'
+      + '<h2 class="eyebrow">Hold the round</h2>'
+      + '<div class="small dim lh" style="max-width:460px">A server calls four drinks over the rail while your hands are mid-build and nothing has printed yet. '
+      + 'The call shows for a few seconds, then it is gone — re-tap the round from memory, mods and all. '
+      + 'This is the skill a trail evaluator hears first.</div>'
+      + '<div class="row center" style="gap:6px;flex-wrap:wrap">'+bandChips+'</div>'
+      + '<button class="btn btn-brass" data-act="hold-deal">Take the call</button>'
+      + (hist ? '<div class="col-sm" style="width:100%;max-width:420px"><div class="eyebrow mb1">Recent rounds</div>'+hist+'</div>' : '')
+      + '</div>';
+  }
+  if(h.phase === 'show' && Date.now() > h.until) h.phase = 'recall';   /* lazily flip if the timer fired off-view */
+  if(h.phase === 'show'){
+    return '<div class="panel p5 col tc" style="align-items:center;gap:12px">'
+      + '<h2 class="eyebrow">The call</h2>'
+      + '<div class="bold lh" style="max-width:460px;font-size:1.05rem">“'+esc(holdCallText(h))+'”</div>'
+      + '<div class="tiny dim">Hold it. The ticket disappears in '+h.band+' seconds — or tap when you have it.</div>'
+      + '<button class="btn btn-ghost" data-act="hold-got">Got it</button></div>';
+  }
+  const all = h.deck.map(e => e.name).concat(h.decoys);
+  if(!h.order){ h.order = shuffle(all.slice()); }   /* stable across re-renders */
+  if(h.phase === 'recall'){
+    const picks = h.picks || [];
+    const options = h.order.map(n =>
+      '<button class="chip'+(picks.indexOf(n)>=0?' on':'')+'" aria-pressed="'+(picks.indexOf(n)>=0?'true':'false')+'" data-act="hold-pick" data-n="'+esc(n)+'">'+esc(n)+'</button>').join(' ');
+    const modRow = (h.mod && picks.length === 4)
+      ? '<div class="small dim">Which one carried “'+esc(h.mod.label)+'”?</div><div class="row center" style="gap:6px;flex-wrap:wrap">'
+        + picks.map(n => '<button class="chip'+(h.modPick===n?' on':'')+'" aria-pressed="'+(h.modPick===n?'true':'false')+'" data-act="hold-mod" data-n="'+esc(n)+'">'+esc(n)+'</button>').join(' ')+'</div>'
+      : '';
+    const ready = picks.length === 4 && (!h.mod || h.modPick);
+    return '<div class="panel p5 col tc" style="align-items:center;gap:12px">'
+      + '<h2 class="eyebrow">Call it back</h2>'
+      + '<div class="small dim">Tap the four drinks the server called ('+picks.length+' of 4).</div>'
+      + '<div class="row center" style="gap:6px;flex-wrap:wrap;max-width:520px">'+options+'</div>'
+      + modRow
+      + '<button class="btn btn-brass" data-act="hold-check"'+(ready?'':' disabled')+'>Check the round</button></div>';
+  }
+  /* done */
+  const drinks = h.deck.map(e => e.name);
+  const rows = drinks.map(n => {
+    const got = (h.picks||[]).indexOf(n) >= 0;
+    return '<div class="small lh"><span aria-hidden="true" class="opt-mark">'+(got?'✓':'✗')+'</span> '
+      + '<span class="sr-only">'+(got?'Held: ':'Dropped: ')+'</span>'+esc(n)
+      + (h.mod && h.mod.drink === n ? ' <span class="tiny dim">— '+esc(h.mod.label)+(h.modPick===n?' ✓':' (mod went to '+esc(h.modPick||'nobody')+')')+'</span>' : '')
+      + '</div>';
+  }).join('');
+  return '<div class="panel p5 col tc" style="align-items:center;gap:12px">'
+    + '<h2 class="eyebrow">The verdict</h2>'
+    + '<div class="bold" style="font-size:1.2rem">'+h.scored.v+' of '+h.scored.of+'</div>'
+    + '<div class="col-sm tc" style="align-items:center">'+rows+'</div>'
+    + '<div class="tiny dim lh" style="max-width:440px">'+(h.scored.v >= h.scored.of ? 'Clean hold. Shrink the window and take another.' : 'The fix is the echo: repeat the call back to the server, out loud, before your hands move. It looks careful because it is.')+'</div>'
+    + '<div class="row center" style="gap:6px;flex-wrap:wrap">'+bandChips+'</div>'
+    + '<button class="btn btn-brass" data-act="hold-deal">Take another call</button>'
+    + (hist ? '<div class="col-sm" style="width:100%;max-width:420px"><div class="eyebrow mb1">Recent rounds</div>'+hist+'</div>' : '')
+    + '</div>';
+}
+
 function railHTML(){
   const r = state.practice.rail || {};
   const names = r.deck || [];
@@ -251,7 +367,7 @@ function railHTML(){
     + ticket
     + '<div class="row center" style="gap:10px">'
     + '<button class="btn btn-ghost" data-act="pr-timer" data-id="rail" id="pr-timer-rail">Start</button>'
-    + '<input class="input" type="number" step="any" inputmode="decimal" id="pr-in-rail" placeholder="seconds" style="max-width:130px">'
+    + '<input class="input" type="number" step="any" inputmode="decimal" id="pr-in-rail" placeholder="seconds" aria-label="Rail time in seconds" value="'+esc((state.practice.drillIn||{}).rail||'')+'" style="max-width:130px">'
     /* speed alone measures nothing — you can be fast in the wrong order forever.
        The log stays shut until you have checked the order and said how you did. */
     + (r.revealed
@@ -273,11 +389,12 @@ function railHTML(){
 
 function renderPractice(){
   const p = state.practice;
-  const nav = [['drills','Drills'],['rail','Ticket Rail'],['pour','Free Pour'],['tasting','Tasting Room'],['flights','Flights'],['method','How to Taste']]
+  const nav = [['drills','Drills'],['rail','Ticket Rail'],['hold','Hold the Round'],['pour','Free Pour'],['tasting','Tasting Room'],['flights','Flights'],['method','How to Taste']]
     .map(([k,l]) => '<button class="tab-btn'+(p.view===k?' active':'')+'" data-act="pr-view" data-v="'+k+'">'+l+'</button>').join('');
   const wrap = (inner) => '<div class="col"><nav class="tabs" style="margin-bottom:4px">'+nav+'</nav>'+inner+'</div>';
 
   if(p.view==='rail') return wrap(railHTML());
+  if(p.view==='hold') return wrap(holdHTML());
   if(p.view==='pour') return wrap(pourHTML());
 
   if(p.view==='tasting'){
@@ -370,7 +487,7 @@ function renderPractice(){
       + '<div class="small dim lh">'+esc(d.desc)+'</div>'
       + subjHTML
       + '<div class="row" style="gap:10px">'+timerHTML
-      + '<input class="input" type="number" step="any" inputmode="decimal" id="pr-in-'+d.id+'" placeholder="'+esc(d.unit)+'" style="max-width:150px">'
+      + '<input class="input" type="number" step="any" inputmode="decimal" id="pr-in-'+d.id+'" placeholder="'+esc(d.unit)+'" aria-label="'+esc(d.name)+' result ('+esc(d.unit)+')" value="'+esc((state.practice.drillIn||{})[d.id]||'')+'" style="max-width:150px">'
       + '<button class="btn btn-brass" data-act="pr-log" data-id="'+d.id+'">Log result</button></div>'
       + (rows ? '<div>'+rows+'</div>' : '')+'</div>';
   }).join('');
@@ -488,8 +605,13 @@ function batchOutHTML(){
 }
 /* ---- ABV / dilution estimator ---- */
 const ABV_TABLE = [
+  /* zero row FIRST: ginger beer was matching /gin/, sparkling lemonade was
+     matching /sparkling/ — a Mule read as 4.3 standard drinks, and this table
+     is the number behind the responsible-service teaching */
+  [/ginger beer|ginger ale|ginger syrup|honey-ginger|lemonade/i, 0],
+  [/irish cream|baileys|amarula|rumchata/i, 0.17],
   [/overproof|151|cask.strength/i, 0.62],[/absinthe/i,0.62],[/chartreuse/i,0.52],
-  [/fernet/i,0.39],[/rye|bourbon|whisk|scotch|irish/i,0.45],[/gin/i,0.44],
+  [/fernet/i,0.39],[/rye|bourbon|whisk|scotch|irish/i,0.45],[/\bgin\b/i,0.44],
   [/vodka|tequila|mezcal|rum|cacha|pisco|cognac|brandy|calvados|applejack|soju|shochu/i,0.40],
   [/cointreau|curaçao|curacao|triple sec|grand marnier|maraschino|dictine|falernum|allspice/i,0.35],
   [/amaro|averna|nonino|montenegro|suze|licor 43|drambuie|amaretto|frangelico|sambuca|schnapps|liqueur|cassis|violette|menthe|cacao|heering|elder|st-germain/i,0.25],
@@ -504,10 +626,12 @@ function lineABV(l){
 function estimateABV(c, dilutionPct){
   let alc=0, vol=0;
   (c.spec||[]).forEach(function(l){
-    const oz = lineOz(l);
-    if(!oz) return;
-    vol += oz;
-    alc += oz * lineABV(l);
+    /* per-item, so a Long Island's five spirits are priced as five spirits */
+    specUnits(l).forEach(function(u){
+      if(!u.oz) return;
+      vol += u.oz;
+      alc += u.oz * lineABV(u.text);
+    });
   });
   if(!vol) return null;
   const withWater = vol * (1 + dilutionPct/100);
@@ -844,7 +968,9 @@ function costHTML(){
 function strengthHTML(){
   const t = state.tools;
   const c = toolDrink();
-  const dil = Number(t.dilPct)||25;
+  /* Number(x)||25 turned the neat chip's honest 0 back into 25 */
+  const raw = Number(t.dilPct);
+  const dil = Number.isFinite(raw) ? raw : 25;
   const e = estimateABV(c, dil);
   const chips = [0,15,20,25,30,35].map(function(d){
     return '<button class="chip'+(dil===d?' on':'')+'" aria-pressed="'+(dil===d?'true':'false')+'" data-act="dil-pct" data-v="'+d+'">'+(d===0?'neat':d+'%')+'</button>';
@@ -852,11 +978,7 @@ function strengthHTML(){
   let body;
   if(!e){ body = '<div class="small dim">This spec is written in parts or counts rather than ounces, so it cannot be estimated.</div>'; }
   else {
-    const band = e.abvServed>=30 ? 'Very strong — a sipping drink, and one you pace a guest on.'
-      : e.abvServed>=22 ? 'Spirit-forward. Standard for a stirred classic served up.'
-      : e.abvServed>=14 ? 'Moderate — a sour or a short highball.'
-      : e.abvServed>=8 ? 'Sessionable. This is the strength most long drinks land at.'
-      : 'Low-ABV. Aperitivo territory — you can serve two.';
+    const band = strengthBand(e.abvServed).line;
     body = '<div class="ticket"><div class="ticket-inner">'
       + '<div class="tc"><div class="tix-label">Strength estimate</div><div class="tix-name">'+esc(c.name.toUpperCase())+'</div></div>'
       + '<div class="tix-rule"></div>'
@@ -878,7 +1000,7 @@ function strengthHTML(){
 function renderTools(){
   const t = state.tools;
   const nav = [['batch','Batching'],['shelf','My Shelf'],['dates','Open Bottles'],['strength','Strength'],['cost','Pour Cost'],['spills','Spill Log'],['convert','Convert'],['data','My Data']]
-    .map(function(o){ return '<button class="tab-btn'+(t.view===o[0]?' active':'')+'" data-act="tool-view" data-v="'+o[0]+'">'+o[1]+'</button>'; }).join('');
+    .map(function(o){ return '<button class="tab-btn'+(t.view===o[0]?' active':'')+'"'+(t.view===o[0]?' aria-current="true"':'')+' data-act="tool-view" data-v="'+o[0]+'">'+o[1]+'</button>'; }).join('');
   const wrap = function(inner){ return '<div class="col"><nav class="tabs" style="margin-bottom:4px">'+nav+'</nav>'+inner+'</div>'; };
   const drinkSel = function(id){
     const opts = COCKTAILS.map(function(c,i){ return '<option value="'+i+'"'+(t.drink===i?' selected':'')+'>'+esc(c.name)+'</option>'; }).join('');

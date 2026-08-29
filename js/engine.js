@@ -129,7 +129,7 @@ function classifyLine(l){
   if(/vermouth|lillet|cocchi|dubonnet|punt e mes|\bsherry\b|\bport\b|campari|aperol|\bamaro\b|averna|montenegro|nonino|cynar|fernet|suze|amer picon|aperitivo/.test(s)) return 'modifier';
   /* sweet: syrups AND the liqueur shelf. These patterns mirror the SHELF table
      below — when you add one there, add it here or the two disagree. */
-  if(/simple|sugar|honey|orgeat|agave|syrup|cura|cointreau|liqueur|maraschino|chartreuse|cacao|dictine|violette|mûre|falernum|grenadine|cordial|coconut|amaretto|triple sec|grand marnier|drambuie|crème de|creme de|cassis|schnapps|st-?germain|cherry heering|galliano|frangelico|limoncello|advocaat|chambord|midori|kahl|baileys|irish cream|sambuca|licor 43|velvet falernum|allspice dram|pimm/.test(s)) return 'sweet';
+  if(/simple|sugar|honey|orgeat|agave|syrup|cura|cointreau|liqueur|midori|maraschino|chartreuse|cacao|dictine|violette|mûre|falernum|grenadine|cordial|coconut|amaretto|triple sec|grand marnier|drambuie|crème de|creme de|cassis|schnapps|st-?germain|cherry heering|galliano|frangelico|limoncello|advocaat|chambord|midori|kahl|baileys|irish cream|sambuca|licor 43|velvet falernum|allspice dram|pimm/.test(s)) return 'sweet';
   if(/\bcream\b/.test(s)) return 'texture';
   if(/juice|lemon|lime|grapefruit|cranberry|pineapple|espresso/.test(s)) return 'sour';
   return 'strong';
@@ -159,15 +159,29 @@ function ozNice(x){
   if(!sym && whole === 0) return String(Math.round(x*100)/100);
   return whole + sym;
 }
+/* Splits "1/2 oz each: gin, sweet vermouth, dry vermouth, orange juice" into
+   per-item units so each ingredient is classified on its own. lineOz already
+   multiplied these lines; classifyLine did not split them, so the whole
+   two-ounce block landed in whichever bucket the first regex tripped — a
+   Satan's Whiskers costed its vermouth and juice as gin. */
+function specUnits(l){
+  if(!/\boz each\b/i.test(l)) return [{ text:l, oz:lineOz(l) }];
+  const m = l.match(/(\d+\/\d+|\d+(?:\.\d+)?)\s*oz/);
+  const per = m ? (m[1].includes('/') ? Number(m[1].split('/')[0]) / Number(m[1].split('/')[1]) : parseFloat(m[1])) : 0;
+  const list = l.split(/:/)[1];
+  const items = list ? list.split(',').map(x => x.trim()).filter(Boolean) : [];
+  return items.length ? items.map(x => ({ text:x, oz:per })) : [{ text:l, oz:lineOz(l) }];
+}
 function balanceOf(c){
   const b = { strong:0, sweet:0, sour:0, long:0, modifier:0 };
   const lines = [];
   c.spec.forEach(l => {
-    const k = classifyLine(l);
-    if(k === 'aromatic' || k === 'texture') return;
-    const oz = lineOz(l);
-    b[k] += oz;
-    lines.push({ k:k, oz:oz });
+    specUnits(l).forEach(u => {
+      const k = classifyLine(u.text);
+      if(k === 'aromatic' || k === 'texture') return;
+      b[k] += u.oz;
+      lines.push({ k:k, oz:u.oz });
+    });
   });
   // Liqueur- and wine-based drinks (Aperol Spritz, Midori Sour, Mimosa) have no
   // conventional base spirit. Promote their largest sweet — or failing that,
@@ -273,14 +287,26 @@ const DRILLS = [
   /* hidden: run from its own Ticket Rail view, but charted with the rest */
   { id:'rail', name:'Ticket Rail', unit:'seconds', dir:'low', hidden:true,
     desc:'A full rail of tickets, built in the right order, against the clock.' },
+  { id:'hold', name:'Hold the Round', hidden:true, unit:'correct of 5', dir:'high',
+    desc:'A server calls a round while your hands are full. Hold it, then prove you held it.' },
   { id:'strain', name:'Double-Strain Discipline', unit:'sec, flecks-free', dir:'low',
     desc:'A Gin Basil Smash or any herb-shaken sour, double-strained into a chilled coupe. The clock runs from tin-open to glass-down, and the run only counts if the surface is clean — one green fleck and it is a failed attempt, not a slow one.' },
 ];
 
+/* Served-strength bands, shared by the Tools strength panel and the
+   Dealer's Choice quiz — one scale, so the two can never disagree. */
+function strengthBand(abvServed){
+  return abvServed >= 30 ? { key:'very strong', line:'Very strong — a sipping drink, and one you pace a guest on.' }
+    : abvServed >= 22 ? { key:'spirit-forward', line:'Spirit-forward. Standard for a stirred classic served up.' }
+    : abvServed >= 14 ? { key:'moderate', line:'Moderate — a sour or a short highball.' }
+    : abvServed >= 8 ? { key:'sessionable', line:'Sessionable. This is the strength most long drinks land at.' }
+    : { key:'light', line:'Low-ABV. Aperitivo territory — you can serve two.' };
+}
+
 /* ---------------- SHELF KEYWORDS (inventory mode) ---------------- */
 const SHELF = [
-  ['gin','Gin',/\bgin\b/i],['vodka','Vodka',/vodka/i],['wrum','White rum',/white rum/i],['arum','Aged/dark rum',/(aged|dark) rum/i],
-  ['bourbon','Bourbon',/bourbon/i],['rye','Rye',/\brye\b/i],['scotch','Scotch',/scotch/i],['irish','Irish whiskey',/irish whiskey/i],
+  ['gin','Gin',/\bgin\b/i],['vodka','Vodka',/vodka/i],['wrum','White rum',/white rum/i],['arum','Aged/dark rum',/(?<!151 )(?<!overproof )(aged|dark|gold|añejo|demerara|jamaican|barbados|blackstrap|puerto rican)[\w' ]{0,12}\brum\b/i],['crum','Coconut rum',/coconut rum/i],
+  ['bourbon','Bourbon',/bourbon/i],['rye','Rye',/\brye\b/i],['scotch','Scotch',/\bscotch\b/i],['irish','Irish whiskey',/irish whiskey/i],
   ['teq','Tequila',/tequila/i],['cognac','Cognac',/cognac/i],['pisco','Pisco',/pisco/i],['cachaca','Cachaça',/cacha/i],
   ['sherry','Sherry',/sherry/i],['champ','Sparkling wine',/champagne|prosecco|cava|sparkling wine|sparkling lemonade/i],
   ['sv','Sweet vermouth',/sweet vermouth|punt e mes/i],['dv','Dry vermouth',/dry vermouth|blanc vermouth/i],['lillet','Lillet blanc',/lillet/i],
@@ -293,7 +319,7 @@ const SHELF = [
   ['pine','Pineapple juice',/pineapple/i],['cran','Cranberry juice',/cranberry/i],['tomato','Tomato juice',/tomato|clamato/i],
   ['simple','Simple/sugar',/simple|sugar/i],['honey','Honey',/honey/i],['orgeat','Orgeat',/orgeat/i],
   ['rasp','Raspberry syrup',/raspberry/i],['gren','Grenadine',/grenadine/i],
-  ['mint','Fresh mint',/mint/i],['egg','Eggs',/\begg\b/i],['cream','Cream',/(?<!coconut )\bcream\b/i],['coco','Coconut cream',/coconut/i],
+  ['mint','Fresh mint',/\bmint\b/i],['egg','Eggs',/\begg\b/i],['cream','Cream',/(?<!coconut )(?<!irish )(?<!ice )(?<!amarula )\bcream\b/i],['coco','Coconut cream',/coconut(?! rum)/i],
   ['soda','Soda water',/\bsoda\b/i],['tonic','Tonic',/tonic/i],['gb','Ginger beer',/ginger beer/i],
   /* 'ginger' itself: the Zero-proof station preset referenced this id and no
      row defined it — the preset silently stocked one item fewer than it

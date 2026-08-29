@@ -168,6 +168,64 @@ for (const [label, arr, key] of [
 	}
 }
 
+// ---- fonts and icons are cached too, not just js/css --------------------------
+{
+	const { existsSync } = await import('node:fs');
+	const index = read('../index.html');
+	const sw = read('../sw.js');
+	const assetsSrc = sw.match(/const ASSETS = \u005b[\s\S]*?\u005d;/);
+	if (assetsSrc) {
+		const assets = new Set([...assetsSrc[0].matchAll(/'\.\/([^']+)'/g)].map((m) => m[1]));
+		// icons and fonts referenced from index.html
+		for (const m of index.matchAll(/(?:src|href)="((?:icons|fonts)\/[^"?]+)/g)) {
+			if (!assets.has(m[1])) problems.push(`index.html references ${m[1]} but sw.js ASSETS does not cache it`);
+		}
+		// fonts referenced from inside cached css (quote-agnostic url())
+		for (const f of assets) {
+			if (!f.endsWith('.css')) continue;
+			const css = read('../' + f);
+			for (const m of css.matchAll(/url\(\s*["']?\.\.\/((?:fonts|icons|img)\/[^"')?]+)/g)) {
+				if (!assets.has(m[1])) problems.push(`${f} references ${m[1]} but sw.js ASSETS does not cache it`);
+			}
+		}
+		// manifest icons
+		try {
+			const man = JSON.parse(read('../manifest.webmanifest'));
+			for (const ic of man.icons || []) {
+				const src = String(ic.src).replace(/^\.\//, '').split('?')[0];
+				if (!assets.has(src)) problems.push(`manifest icon ${src} is not in sw.js ASSETS`);
+			}
+		} catch (e) { problems.push('manifest.webmanifest does not parse: ' + e.message); }
+	}
+}
+
+// ---- a committed content change demands a CACHE bump ---------------------------
+// The anchor is the last commit that touched sw.js (bumps live there). Any
+// cached asset committed since, with the CACHE line unchanged, is a deploy
+// that installed clients will never receive. Working-tree edits are exempt —
+// the bump belongs in the same commit as the change, and this fires the run
+// after you forget. Skipped cleanly where git is unavailable.
+try {
+	const { execSync } = await import('node:child_process');
+	const repo = new URL('..', import.meta.url);
+	const run = (cmd) => execSync(cmd, { cwd: repo, encoding: 'utf8' }).trim();
+	const bumpCommit = run('git log -n 1 --format=%H -- sw.js');
+	if (bumpCommit) {
+		const cacheNow = read('../sw.js').match(/const CACHE = '([^']+)'/)?.[1];
+		const cacheThen = run(`git show ${bumpCommit}:sw.js`).match(/const CACHE = '([^']+)'/)?.[1];
+		if (cacheNow && cacheNow === cacheThen) {
+			const sw = read('../sw.js');
+			const assetsSrc = sw.match(/const ASSETS = \u005b[\s\S]*?\u005d;/);
+			const assets = assetsSrc ? [...assetsSrc[0].matchAll(/'\.\/([^']+)'/g)].map((m) => m[1]).filter((f) => f !== 'index.html') : [];
+			const changed = run(`git diff --name-only ${bumpCommit} HEAD`).split('\n').filter(Boolean);
+			const stale = changed.filter((f) => assets.includes(f) || f === 'index.html');
+			if (stale.length) {
+				problems.push(`committed since the last sw.js change but CACHE is still "${cacheNow}": ${stale.join(', ')} — installed clients will never receive this`);
+			}
+		}
+	}
+} catch (e) { /* no git here — the closure checks above still hold the line */ }
+
 if (problems.length) {
 	for (const p of problems) console.error('  ✗ ' + p);
 	console.error(`\n${problems.length} problem(s).`);
