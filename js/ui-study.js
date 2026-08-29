@@ -30,7 +30,7 @@ function renderHome(){
       + '<span class="tiny font-tix" style="color:var(--brass-2);width:38px;text-align:right">'+m+'/'+mem.length+'</span></div>';
   }).join('');
   const cards = [
-    ['families','The Families','Eight templates unlock the whole canon. Start here — this is Regan\'s map.'],
+    ['families','The Families',FAMILIES ? Object.keys(FAMILIES).length+' templates unlock the whole canon — each with the marks that say a pour went right. Start here; this is Regan\'s map.' : ''],
     ['library','The Library','All '+COCKTAILS.length+' specs — one for every day of the year — on ledger tickets with balance breakdowns.'],
     ['prep','The Prep Room','Syrups, infusions, cordials, juice and garnish specs, plus opening and closing checklists.'],
     ['producers','The Producers','Benchmark houses across nine categories — how they actually make it, and why it matters.'],
@@ -40,8 +40,8 @@ function renderHome(){
     ['flashcards','Flashcards',FC_MODES.length+' drill modes across every cocktail, shot, and zero-proof drink in the ledger.'],
     ['quiz','Quiz Rounds','Families, blind tickets, bar knowledge, and real-service scenarios.'],
     ['riffs','Riff Builder','Improvise on the templates — the difference between knowing 50 drinks and 500.'],
-    ['practice','Practice & Tasting','Nine timed drills, the Ticket Rail sequencing test, tasting scorecards, and twelve guided flights.'],
-    ['tools','Bar Tools','Batching, shelf inventory with the 86 drill, strength estimates, pour costing, unit conversion, and your backups.'],
+    ['practice','Practice & Tasting','Nine hands-on drills, the Ticket Rail sequencing test, the free-pour bench, tasting scorecards, and twelve guided flights.'],
+    ['tools','Bar Tools','Batching, shelf inventory with the 86 drill, strength estimates, pour costing with the bottle book, the spill log, open-bottle dating, unit conversion, and your backups.'],
     ['notes','Study Notes','Spirits, technique, syrups, hospitality, sober service, and history.'],
   ].map(([k,t,d]) => '<button class="panel click p4" data-act="go" data-tab="'+k+'">'
     + '<div class="bold brass2">'+t+'</div><div class="small dim mt1 lh">'+d+'</div></button>').join('');
@@ -72,7 +72,7 @@ function renderHome(){
       + '<button class="chip" data-act="go" data-tab="practice">The drills</button>'
       + '<button class="chip" data-search="1">Search anything</button></div>'
       + '<div class="tiny dim mt1">Press <span class="font-tix brass2">/</span> anywhere to search all '
-      + (COCKTAILS.length+SHOTS.length+NA_DRINKS.length+PREPS.length+PRODUCERS.length)+' entries.</div>'
+      + ((SEARCH_INDEX || (SEARCH_INDEX = buildSearchIndex())).length)+' entries.</div>'
       + '</div>'
       + '<div class="card-grid">'+cards+'</div></div>';
   }
@@ -82,7 +82,7 @@ function renderHome(){
     + '<div class="stat-grid">'
     + '<div><div class="stat-num">'+mastered+'<span class="small dim">/'+totalCards+'</span></div><div class="tiny dim mt1">specs mastered</div></div>'
     + '<div><div class="stat-num">'+studied+'</div><div class="tiny dim mt1">cards drilled</div></div>'
-    + '<div><div class="stat-num"'+(overdue?' style="color:var(--oxblood)"':'')+'>'+overdue+'</div><div class="tiny dim mt1">reviews overdue</div></div>'
+    + '<div><div class="stat-num"'+(overdue?' style="color:var(--oxblood-text)"':'')+'>'+overdue+'</div><div class="tiny dim mt1">reviews overdue</div></div>'
     + '</div>'
     + '<div class="eyebrow mt3 mb2">Mastery by family</div>'
     + '<div class="col-sm" style="gap:6px">'+famBars+'</div>'
@@ -184,7 +184,7 @@ function renderLibrary(){
       + '</div>';
   }
   const fams = ['All', ...Object.keys(FAMILIES)];
-  const famChips = fams.map(f => '<button class="chip'+(state.lib.fam===f?' on':'')+'" data-act="lib-fam" data-fam="'+esc(f)+'">'+esc(f)+'</button>').join(' ');
+  const famChips = fams.map(f => '<button class="chip'+(state.lib.fam===f?' on':'')+'" aria-pressed="'+(state.lib.fam===f?'true':'false')+'" data-act="lib-fam" data-fam="'+esc(f)+'">'+esc(f)+'</button>').join(' ');
   const tierSel = '<select class="input" id="lib-tier" style="max-width:340px;flex:1">'+tierOptions(state.lib.tier)+'</select>';
   return '<div class="col">'
     + '<input class="input" id="lib-search" placeholder="Search by name, spirit, or ingredient…" value="'+esc(state.lib.q)+'">'
@@ -259,7 +259,9 @@ function svcGlassKey(g){
 function svcMethodKey(m){
   const s = String(m || '').toLowerCase();
   if(/dry shake/.test(s)) return 'Dry shake, then shake';
-  if(/^\s*stir/.test(s)) return 'Stirred';
+  /* "Stir the marmalade loose FIRST, then shake" is a shaken drink. The
+     anchored stir only wins when no sequential shake follows it. */
+  if(/^\s*stir\b/.test(s) && !/then shake|and shake/.test(s)) return 'Stirred';
   if(/blend/.test(s)) return 'Blended';
   if(/swizzle/.test(s)) return 'Swizzled';
   if(/roll/.test(s)) return 'Rolled';
@@ -302,7 +304,10 @@ function decoyLines(c, n){
   const donors = shuffle(kin).concat(shuffle(base.filter(x => kin.indexOf(x) < 0)));
   donors.forEach(function(x){
     if(out.length >= n) return;
-    const usable = x.spec.filter(l => !c.spec.includes(l) && out.indexOf(l) < 0);
+    /* No optional-tagged donors: Assemble-the-Ticket's own copy says
+       "optional lines are up to you", and a foreign "(optional)" decoy
+       failed the build for including something it had just called free. */
+    const usable = x.spec.filter(l => !/optional/i.test(l) && !c.spec.includes(l) && out.indexOf(l) < 0);
     if(usable.length) out.push(usable[Math.floor(Math.random()*usable.length)]);
   });
   return out.slice(0, n);
@@ -400,7 +405,7 @@ function renderFlashcards(){
   if(fc.stage==='setup'){
     const srcChips = ['All'].concat(deckSources()).map(function(s){
       const n = allDrinks().filter(function(d){ return s==='All' || d.src===s; }).length;
-      return '<button class="chip'+(fc.src===s?' on':'')+'" data-act="fc-src" data-s="'+esc(s)+'">'+(s==='All'?'Everything':esc(s))+' <span class="font-tix">'+n+'</span></button>';
+      return '<button class="chip'+(fc.src===s?' on':'')+'" aria-pressed="'+(fc.src===s?'true':'false')+'" data-act="fc-src" data-s="'+esc(s)+'">'+(s==='All'?'Everything':esc(s))+' <span class="font-tix">'+n+'</span></button>';
     }).join(' ');
     const isCocktail = fc.src==='Cocktails' || fc.src==='All';
     const tierSel = isCocktail ? '<select class="input" id="fc-tier" style="max-width:380px">'+tierOptions(fc.tier)+'</select>' : '';
@@ -414,7 +419,7 @@ function renderFlashcards(){
        so the chip promises exactly what the deck will deal */
     const dueN = (function(){ const s = fc.special; fc.special = 'due'; const n = fcPool().length; fc.special = s; return n; })();
     const specials = [['All','Full deck'],['unmastered','Unmastered only'],['trouble','Trouble cards'],['due','Due for review'+(dueN?' · '+dueN:'')]]
-      .map(([k,l]) => '<button class="chip'+(fc.special===k?' on':'')+'" data-act="fc-special" data-s="'+k+'">'+l+'</button>').join(' ');
+      .map(([k,l]) => '<button class="chip'+(fc.special===k?' on':'')+'" aria-pressed="'+(fc.special===k?'true':'false')+'" data-act="fc-special" data-s="'+k+'">'+l+'</button>').join(' ');
     const pool = fcPool();
     const masteredIn = pool.filter(function(d){ return isMastered(cardKey(d)); }).length;
     const modeBtns = FC_MODES.map(([m,t,d],i) =>
@@ -428,7 +433,7 @@ function renderFlashcards(){
       + '<div class="row" style="gap:10px"><select class="input" id="fc-family" style="flex:1;min-width:150px">'+famOpts+'</select>'
       + (isCocktail ? '<select class="input" id="fc-spirit" style="flex:1;min-width:150px">'+spOpts+'</select>' : '')+'</div>'
       + '<div class="row">'+specials
-      + '<button class="chip'+(fc.smart?' on':'')+'" data-act="fc-smart" title="Orders the deck so your weakest and unseen cards come first">'+(fc.smart?'✓ ':'')+'Weakest first</button></div>'
+      + '<button class="chip'+(fc.smart?' on':'')+'" aria-pressed="'+(fc.smart?'true':'false')+'" data-act="fc-smart" title="Orders the deck so your weakest and unseen cards come first">'+(fc.smart?'✓ ':'')+'Weakest first</button></div>'
       + '<div class="tiny dim">'+pool.length+' cards in this deck · '+masteredIn+' already mastered'+(pool.length? '' : ' — loosen a filter to deal')+'</div>'
       + '<div class="eyebrow" style="margin-top:4px">Choose your drill</div>'
       + '<div class="col-sm">'+modeBtns+'</div>'
@@ -445,13 +450,13 @@ function renderFlashcards(){
       .filter(function(o){ return fc.boardSrc==='All' || o.d.src===fc.boardSrc; })
       .sort(function(a,b){ return a.d.name.localeCompare(b.d.name); });
     const srcChips = ['All'].concat(deckSources()).map(function(s){
-      return '<button class="chip'+(fc.boardSrc===s?' on':'')+'" data-act="fc-board-src" data-s="'+esc(s)+'">'+(s==='All'?'All':esc(s))+'</button>';
+      return '<button class="chip'+(fc.boardSrc===s?' on':'')+'" aria-pressed="'+(fc.boardSrc===s?'true':'false')+'" data-act="fc-board-src" data-s="'+esc(s)+'">'+(s==='All'?'All':esc(s))+'</button>';
     }).join(' ');
     const rows = shown.map(function(o){
       const key = cardKey(o.d);
       const s = progress.cards[key];
       const open = fc.boardOpen===o.i;
-      const rec = s ? '<span class="font-tix tiny" style="color:#7fbf95">✓'+s.r+'</span> <span class="font-tix tiny" style="color:var(--oxblood)">✗'+s.w+'</span>' : '<span class="tiny dim">unseen</span>';
+      const rec = s ? '<span class="font-tix tiny" style="color:#7fbf95">✓'+s.r+'</span> <span class="font-tix tiny" style="color:var(--oxblood-text)">✗'+s.w+'</span>' : '<span class="tiny dim">unseen</span>';
       const badge = isMastered(key) ? '<span class="chip brass">Mastered</span>' : '';
       const srcChip = o.d.src==='Cocktails' ? '' : '<span class="chip">'+esc(o.d.src)+'</span>';
       return '<div class="panel"><button class="drink-head" aria-expanded="'+(open?'true':'false')+'" data-act="fc-board-open" data-i="'+o.i+'">'
@@ -528,7 +533,12 @@ function renderFlashcards(){
         else if(p.ok && !selected) cls+=' missedline';
       }
       const tag = fc.checked && p.ok && !selected ? ' <span class="tiny">(belongs in the spec)</span>' : '';
-      return '<button class="'+cls+' font-tix" data-act="fc-toggle-line" data-i="'+i+'"'+(fc.checked?' disabled':'')+'>'+esc(p.l)+tag+'</button>';
+      /* the quiz's own ✓/✗-plus-sr pattern: the verdict was border colour
+         alone here, invisible to assistive tech and to anyone colour-blind */
+      let mark = '', sr = '';
+      if(fc.checked && selected && p.ok){ mark='<span aria-hidden="true" class="opt-mark">✓</span> '; sr='<span class="sr-only">Correct, kept: </span>'; }
+      else if(fc.checked && selected && !p.ok){ mark='<span aria-hidden="true" class="opt-mark">✗</span> '; sr='<span class="sr-only">Decoy you picked: </span>'; }
+      return '<button class="'+cls+' font-tix" data-act="fc-toggle-line" data-i="'+i+'"'+(fc.checked?' disabled':'')+'>'+mark+sr+esc(p.l)+tag+'</button>';
     }).join('');
     const after = fc.checked
       ? '<div class="explain"><span class="brass2 bold">'+(fc.lastOk?'Clean build. ':'Not quite. ')+'</span>'
@@ -547,9 +557,10 @@ function renderFlashcards(){
     const answered = fc.picked !== null;
     const opts = fc.opts.map((o,i) => {
       let cls='opt-btn font-tix';
-      if(answered && o===c.spec[fc.clozeIdx]) cls+=' correct';
-      else if(answered && i===fc.picked) cls+=' wrong';
-      return '<button class="'+cls+'" data-act="fc-cloze-pick" data-i="'+i+'"'+(answered?' disabled':'')+'>'+esc(o)+'</button>';
+      let mark='', sr='';
+      if(answered && o===c.spec[fc.clozeIdx]){ cls+=' correct'; mark='<span aria-hidden="true" class="opt-mark">✓</span> '; sr='<span class="sr-only">Correct answer: </span>'; }
+      else if(answered && i===fc.picked){ cls+=' wrong'; mark='<span aria-hidden="true" class="opt-mark">✗</span> '; sr='<span class="sr-only">Your answer, incorrect: </span>'; }
+      return '<button class="'+cls+'" data-act="fc-cloze-pick" data-i="'+i+'"'+(answered?' disabled':'')+'>'+mark+sr+esc(o)+'</button>';
     }).join('');
     const after = answered
       ? '<div class="explain"><span class="brass2 bold">'+(fc.lastOk?'Correct. ':'Not quite. ')+'</span>The missing line is "'+esc(c.spec[fc.clozeIdx])+'".'+(c.note?' '+esc(c.note):'')+'</div>'
@@ -570,12 +581,13 @@ function renderFlashcards(){
       const right = s.keyed && s.keyed[f] ? s.keyed[f](c[f]) : c[f];
       const rows = s.opts[f].map((o,i) => {
         let cls = 'opt-btn';
+        let mark = '', sr = '';
         if(allPicked){
-          if(o === right) cls += ' correct';
-          else if(s.picked[f] === i) cls += ' wrong';
+          if(o === right){ cls += ' correct'; mark='<span aria-hidden="true" class="opt-mark">✓</span> '; sr='<span class="sr-only">Correct answer: </span>'; }
+          else if(s.picked[f] === i){ cls += ' wrong'; mark='<span aria-hidden="true" class="opt-mark">✗</span> '; sr='<span class="sr-only">Your answer, incorrect: </span>'; }
         } else if(s.picked[f] === i) cls += ' picked';
         return '<button class="'+cls+'" data-act="fc-svc-pick" data-f="'+f+'" data-i="'+i+'"'
-          + (allPicked?' disabled':'')+'>'+esc(o)+'</button>';
+          + (allPicked?' disabled':'')+'>'+mark+sr+esc(o)+'</button>';
       }).join('');
       return '<div><div class="eyebrow mb1">'+label+'</div><div class="col-sm">'+rows+'</div></div>';
     }).join('');
@@ -643,16 +655,23 @@ function qBlindOther(){
     options: shuffle([d.name,...wrong]), answer:d.name,
     explain: d.name+' — '+d.method.toLowerCase()+'. '+(d.why||'') };
 }
+/* Graded through the CATEGORY keys, the way service mode already does. Raw
+   prose graded raw prose, so "Coupe" and "Coupe or Nick & Nora" could stand
+   as separate options with one marked wrong — a distinction no bar makes —
+   and two methods differing only in phrasing collided the same way. The raw
+   spec text stays in the explain line, where prose belongs. */
 function qGlass(c){
-  const wrong = sample([...new Set(COCKTAILS.map(x=>x.glass))].filter(g=>g!==c.glass),3);
+  const mine = svcGlassKey(c.glass);
+  const wrong = sample([...new Set(COCKTAILS.map(x=>svcGlassKey(x.glass)))].filter(g=>g!==mine),3);
   return { prompt:'Which glass does the '+c.name+' go in?',
-    options: shuffle([c.glass,...wrong]), answer:c.glass,
+    options: shuffle([mine,...wrong]), answer:mine,
     explain: c.name+' — '+c.glass+'. '+(c.garnish?'Garnish: '+c.garnish+'.':'') };
 }
 function qMethod(c){
-  const wrong = sample([...new Set(COCKTAILS.map(x=>x.method))].filter(m=>m!==c.method),3);
+  const mine = svcMethodKey(c.method);
+  const wrong = sample([...new Set(COCKTAILS.map(x=>svcMethodKey(x.method)))].filter(m=>m!==mine),3);
   return { prompt:'How is the '+c.name+' built?',
-    options: shuffle([c.method,...wrong]), answer:c.method,
+    options: shuffle([mine,...wrong]), answer:mine,
     explain: c.name+' — '+c.method+'. Shake anything cloudy; stir anything all-spirit.' };
 }
 
@@ -705,7 +724,7 @@ function buildRound(mode, pool){
   }
   /* mixed: six generated items, four drawn from the authored bank with a
      deliberate topic spread. Previously only two were authored, so weeks of
-     study could pass without meeting most of the 185 questions. */
+     study could pass without meeting most of the 196 questions. */
   /* ONE sample partitioned across every drink question, so the same cocktail
      can't turn up as a blind ticket and a glass question in the same round */
   const picks = sample(cocktails, 5);
@@ -736,7 +755,7 @@ function renderQuiz(){
       .map(h => '<div class="hist-row"><span>'+esc(h.date)+(h.mode&&h.mode!=='mixed'?' · '+esc(h.mode):'')+'</span><span class="font-tix brass2">'+h.score+'/'+(h.total||10)+'</span></div>').join('');
     const chips = QUIZ_MODES.map(([k,l]) => {
       if(k==='mybar' && barN < 4) return '<button class="chip" disabled title="Add four drinks to My Bar and this round opens">'+esc(l)+' <span class="font-tix">'+barN+'/4</span></button>';
-      return '<button class="chip'+(mode===k?' on':'')+'" data-act="quiz-mode" data-m="'+k+'">'+esc(l)+'</button>';
+      return '<button class="chip'+(mode===k?' on':'')+'" aria-pressed="'+(mode===k?'true':'false')+'" data-act="quiz-mode" data-m="'+k+'">'+esc(l)+'</button>';
     }).join(' ');
     const blurb = (QUIZ_MODES.find(([k]) => k===mode) || QUIZ_MODES[0])[2];
     const pool = mode==='mixed' || mode==='tickets' || mode==='mybar' ? null : knowledgeByTopic(mode);
@@ -811,7 +830,7 @@ function videoSettingsHTML(){
   const chips = [['auto','Auto (best per drink)']].concat(CHANNELS.map(function(c){ return [c.id, c.name]; }))
     .map(function(o){
       const on = (p.channel||'auto')===o[0];
-      return '<button class="chip'+(on?' on':'')+'" data-act="vid-chan" data-c="'+esc(o[0])+'">'+esc(o[1])+'</button>';
+      return '<button class="chip'+(on?' on':'')+'" aria-pressed="'+(on?'true':'false')+'" data-act="vid-chan" data-c="'+esc(o[0])+'">'+esc(o[1])+'</button>';
     }).join(' ');
   return '<div class="panel p5 col" style="gap:12px">'
     + '<div class="eyebrow">Video settings</div>'
@@ -819,8 +838,8 @@ function videoSettingsHTML(){
     + '<div><div class="tiny eyebrow mb1">Preferred channel</div><div class="row" style="gap:6px">'+chips+'</div>'
     + '<div class="tiny dim mt1">Auto routes each drink to the channel that covers it best. Pin one if you like a particular bartender\'s style — it becomes the first button everywhere.</div></div>'
     + '<div><div class="tiny eyebrow mb1">Result length</div><div class="row" style="gap:6px">'
-    + '<button class="chip'+(!p.longform?' on':'')+'" data-act="vid-len" data-v="any">Any length</button>'
-    + '<button class="chip'+(p.longform?' on':'')+'" data-act="vid-len" data-v="long">Full tutorials only</button></div>'
+    + '<button class="chip'+(!p.longform?' on':'')+'" aria-pressed="'+(!p.longform?'true':'false')+'" data-act="vid-len" data-v="any">Any length</button>'
+    + '<button class="chip'+(p.longform?' on':'')+'" aria-pressed="'+(p.longform?'true':'false')+'" data-act="vid-len" data-v="long">Full tutorials only</button></div>'
     + '<div class="tiny dim mt1">Full tutorials adds a filter that pushes past 30-second Shorts toward videos that actually explain the technique.</div></div>'
     + '</div>';
 }

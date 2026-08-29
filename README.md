@@ -3,7 +3,7 @@
 An offline-first bartending study app. No frameworks, no build step, no tracking, no network calls.
 Open it once and it works on a plane.
 
-**365 cocktails · 75 shots · 85 zero-proof drinks · 37 prep recipes · 66 producers · 185 quiz questions**
+**365 cocktails · 75 shots · 85 zero-proof drinks · 37 prep recipes · 66 producers · 196 quiz questions**
 
 ## What it does
 

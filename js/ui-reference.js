@@ -315,7 +315,7 @@ function renderShots(){
 
   /* ---- THE BOARD (default) ---- */
   const cats = ['All',...SHOT_CATS].map(c =>
-    '<button class="chip'+(sh.cat===c?' on':'')+'" data-act="shots-cat" data-c="'+esc(c)+'">'+esc(c)+'</button>').join(' ');
+    '<button class="chip'+(sh.cat===c?' on':'')+'" aria-pressed="'+(sh.cat===c?'true':'false')+'" data-act="shots-cat" data-c="'+esc(c)+'">'+esc(c)+'</button>').join(' ');
   const list = SHOTS.map((s,i)=>({s,i})).filter(({s}) => sh.cat==='All' || s.cat===sh.cat);
   const rows = list.map(({s,i}) => {
     const open = sh.open===i;
@@ -327,7 +327,7 @@ function renderShots(){
       + '<span class="plusminus">'+(open?'−':'+')+'</span></button>'
       + (open ? '<div class="drink-body">'+shotTicketHTML(s)+varHTML+videoRowHTML({src:'Shots',name:s.name,group:s.cat,tier:null})+'</div>' : '')+'</div>';
   }).join('');
-  return wrap('<div class="small dim lh" style="padding:0 4px">Shots are a third of a busy bar\'s tickets and a tenth of its training. '+SHOTS.length+' calls across five categories — the party classics, the dessert tricks, the layered showpieces, the bombs, and the handshakes bartenders pour each other. Anything marked <span class="brass2">Varies</span> changes bar to bar; open it to learn the dialects.</div>'
+  return wrap('<div class="small dim lh" style="padding:0 4px">Shots are a third of a busy bar\'s tickets and a tenth of its training. '+SHOTS.length+' calls across '+SHOT_CATS.length+' categories — the party classics, the dessert tricks, the layered showpieces, the bombs, the handshakes bartenders pour each other, and the flaming showpieces. Anything marked <span class="brass2">Varies</span> changes bar to bar; open it to learn the dialects.</div>'
     + '<div class="row"><button class="btn btn-brass" data-act="shots-drill">Run the Shot Call drill</button>'
     + '<span class="tiny dim push">'+list.length+' shots shown</span></div>'
     + '<div class="row">'+cats+'</div>'
@@ -529,7 +529,7 @@ function renderNA(){
         + (open ? '<div class="accordion-body"><div class="small dim lh">'+esc(p)+'</div>'
             + '<div class="row"><a class="btn btn-ghost tiny" href="'+ytSearch(t.split('(')[0].trim()+' bartender how to make'+scopeSuffix())+'" target="_blank" rel="noopener noreferrer">▶ Watch it made</a></div></div>' : '')+'</div>';
     }).join('');
-    return wrap('<div class="small dim lh" style="padding:0 4px">Zero-proof drinks live or die on their components. Build these ten and you can make nearly everything in this section — plus better versions of half your cocktails.</div>'+rows);
+    return wrap('<div class="small dim lh" style="padding:0 4px">Zero-proof drinks live or die on their components. Build these '+NA_PANTRY.length+' and you can make nearly everything in this section — plus better versions of half your cocktails.</div>'+rows);
   }
 
   if(n.view==='theory'){
@@ -555,7 +555,7 @@ function renderNA(){
   }
 
   const cats = ['All',...NA_CATS].map(c =>
-    '<button class="chip'+(n.cat===c?' on':'')+'" data-act="na-cat" data-c="'+esc(c)+'">'+esc(c)+'</button>').join(' ');
+    '<button class="chip'+(n.cat===c?' on':'')+'" aria-pressed="'+(n.cat===c?'true':'false')+'" data-act="na-cat" data-c="'+esc(c)+'">'+esc(c)+'</button>').join(' ');
   const list = NA_DRINKS.map((d,i)=>({d,i})).filter(({d}) => n.cat==='All' || d.cat===n.cat);
   const rows = list.map(({d,i}) => {
     const open = n.open===i;
@@ -565,7 +565,7 @@ function renderNA(){
       + '<span class="plusminus">'+(open?'−':'+')+'</span></button>'
       + (open ? '<div class="drink-body">'+naTicketHTML(d)+videoRowHTML({src:'Zero Proof',name:d.name,group:d.cat,tier:null})+'</div>' : '')+'</div>';
   }).join('');
-  return wrap('<div class="small dim lh" style="padding:0 4px">'+NA_DRINKS.length+' zero-proof drinks across seven families. Not consolation prizes — drinks built with the same structure, technique, and theater as anything else on the ledger. Every ticket carries a <span class="brass2">why it works</span> note explaining what replaces the alcohol.</div>'
+  return wrap('<div class="small dim lh" style="padding:0 4px">'+NA_DRINKS.length+' zero-proof drinks across '+NA_CATS.length+' families. Not consolation prizes — drinks built with the same structure, technique, and theater as anything else on the ledger. Every ticket carries a <span class="brass2">why it works</span> note explaining what replaces the alcohol.</div>'
     + '<div class="row"><button class="btn btn-brass" data-act="na-drill">Run the zero-proof drill</button>'
     + '<span class="tiny dim push">'+list.length+' drinks shown</span></div>'
     + '<div class="row">'+cats+'</div>'

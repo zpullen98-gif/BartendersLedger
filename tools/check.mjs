@@ -12,12 +12,37 @@
  *    beside up to 93 drinks, and a mark true of one is false copy on the rest
  *  - the mark-vs-membership forks stay honest: families whose members split
  *    on method may only speak about the fork behind a condition word
+ *  - LORE and COCKTAILS close over each other: a renamed drink cannot strand
+ *    its story, and a new drink cannot ship storyless by accident
+ *  - slugify (read from ui-new.js itself, not copied) yields a unique route
+ *    for every name in every routed collection — two drinks colliding on a
+ *    slug would silently open the wrong page
+ *  - every SHELF_PRESETS id names a real SHELF row (the ginger lesson)
+ *  - the service worker's ASSETS and index.html agree: every script and
+ *    stylesheet the page loads is cached, and every cached file exists
  */
 import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
 
-const src = readFileSync(new URL('../js/data-core.js', import.meta.url), 'utf8');
+const read = (rel) => readFileSync(new URL(rel, import.meta.url), 'utf8');
+const src = read('../js/data-core.js');
 const { COCKTAILS, FAMILIES } = vm.runInNewContext(src + ';({COCKTAILS,FAMILIES})', {});
+
+// The wider sandbox: everything the closure checks below need. Engine wants
+// window/localStorage at load; stubs keep it honest and DOM-free.
+const sandbox = { window: {}, localStorage: { getItem: () => null, setItem() {} }, navigator: {} };
+const wide = [src, read('../js/data-lore.js'), read('../js/data-service.js'), read('../js/engine.js'), read('../js/ui-reference.js'), read('../js/ui-prep.js')].join(';'+String.fromCharCode(10));
+const W = vm.runInNewContext(
+	wide + ';({LORE, SHOTS, NA_DRINKS, PREPS, PRODUCERS, SHELF, SHELF_PRESETS})',
+	sandbox
+);
+
+// slugify is read out of ui-new.js itself so this gate cannot drift from the
+// app: if the routing function changes shape, the extraction fails loudly.
+const uiNew = read('../js/ui-new.js');
+const slugLine = uiNew.match(/function slugify.*$/m);
+if (!slugLine) throw new Error('slugify not found in ui-new.js — the extraction anchor moved');
+const slugify = vm.runInNewContext(slugLine[0] + ';slugify', {});
 
 const problems = [];
 
@@ -83,9 +108,69 @@ for (const [fam, re] of forks) {
 	}
 }
 
+// ---- lore closes over the canon, both directions ---------------------------
+{
+	const names = new Set(COCKTAILS.map((c) => c.name));
+	for (const k of Object.keys(W.LORE)) {
+		if (!names.has(k)) problems.push(`LORE key "${k}" names no cocktail — renamed drink stranded its story`);
+	}
+	for (const c of COCKTAILS) {
+		if (!(c.name in W.LORE)) problems.push(`"${c.name}" has no LORE entry — a drink shipped storyless`);
+	}
+}
+
+// ---- every routed collection slugs uniquely --------------------------------
+for (const [label, arr, key] of [
+	['COCKTAILS', COCKTAILS, 'name'],
+	['SHOTS', W.SHOTS, 'name'],
+	['NA_DRINKS', W.NA_DRINKS, 'name'],
+	['PREPS', W.PREPS, 'name'],
+	['PRODUCERS', W.PRODUCERS, 'name'],
+]) {
+	const seen = new Map();
+	for (const x of arr) {
+		const slug = slugify(x[key]);
+		if (seen.has(slug)) problems.push(`${label}: "${x[key]}" and "${seen.get(slug)}" collide on slug "${slug}"`);
+		else seen.set(slug, x[key]);
+	}
+}
+
+// ---- shelf presets reference only rows that exist ---------------------------
+{
+	const ids = new Set(W.SHELF.map((r) => r[0]));
+	for (const [pname, list] of W.SHELF_PRESETS) {
+		for (const id of list) {
+			if (!ids.has(id)) problems.push(`SHELF preset "${pname}" references unknown shelf id "${id}"`);
+		}
+	}
+}
+
+// ---- the worker caches what the page loads, and nothing imaginary -----------
+{
+	const { existsSync } = await import('node:fs');
+	const index = read('../index.html');
+	const sw = read('../sw.js');
+	const assetsSrc = sw.match(/const ASSETS = \[[\s\S]*?\];/);
+	if (!assetsSrc) problems.push('sw.js: ASSETS array not found');
+	else {
+		const assets = new Set(
+			[...assetsSrc[0].matchAll(/'\.\/([^']+)'/g)].map((m) => m[1])
+		);
+		const wanted = [...index.matchAll(/(?:src|href)="((?:js|css)\/[^"?]+)/g)].map((m) => m[1]);
+		for (const f of wanted) {
+			if (!assets.has(f)) problems.push(`index.html loads ${f} but sw.js ASSETS does not cache it — offline breaks`);
+		}
+		for (const f of assets) {
+			if (!existsSync(new URL('../' + f, import.meta.url))) {
+				problems.push(`sw.js caches ${f} but the file does not exist — install() rejects and NOTHING caches`);
+			}
+		}
+	}
+}
+
 if (problems.length) {
 	for (const p of problems) console.error('  ✗ ' + p);
 	console.error(`\n${problems.length} problem(s).`);
 	process.exit(1);
 }
-console.log(`  ✓ ${Object.keys(FAMILIES).length} families, ${COCKTAILS.length} cocktails — marks sound, membership closed, no smuggled drinks`);
+console.log(`  ✓ ${Object.keys(FAMILIES).length} families, ${COCKTAILS.length} cocktails — marks sound, membership + lore + slugs + shelf + worker cache all closed`);

@@ -1,7 +1,7 @@
 {
   "name": "The Bartender's Ledger",
   "short_name": "Ledger",
-  "description": "Interactive bartending study guide — the fifty classics, shots, zero-proof, prep, flashcards and drills.",
+  "description": "Interactive bartending study guide — 365 cocktail specs, shots, zero-proof, prep, flashcards and drills.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

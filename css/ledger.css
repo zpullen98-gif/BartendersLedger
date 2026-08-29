@@ -13,6 +13,12 @@
   --brass:#c9a44c; --brass-2:#e6cc8a;
   --cream:#f1e7d3; --cream-dim:#b9ac91;
   --oxblood:#a1453d; --oxblood-2:#7c332d;
+  /* Oxblood AS TEXT on the felts measures 2.3-2.7:1 — under even the 3:1
+     large-text floor, on exactly the numbers a low-vision reader must not
+     misread: the over-pour, the wrong order, the replace-it. This token is
+     the same voice at 4.9-5.9:1 on both felts. Backgrounds keep --oxblood;
+     text on felt takes --oxblood-text. */
+  --oxblood-text:#d4837b;
   --paper:#f6efdf; --ink:#26231c; --ink-dim:#6b6353;
 }
 *{ box-sizing:border-box; margin:0; padding:0; }
@@ -27,6 +33,9 @@ body::before{ content:''; position:fixed; inset:0; pointer-events:none; z-index:
 .font-display{ font-family:'Rye','Georgia',serif; }
 .font-tix{ font-family:'Courier Prime','Courier New',monospace; }
 .eyebrow{ letter-spacing:0.22em; text-transform:uppercase; font-size:0.66rem; color:var(--brass); font-weight:600; }
+/* eyebrows promoted to h2/h3 keep the exact same face — the heading is
+   for the accessibility tree, not the eye */
+h2.eyebrow,h3.eyebrow{ margin:0; }
 .dim{ color:var(--cream-dim); }
 .brass2{ color:var(--brass-2); }
 .small{ font-size:0.8rem; }

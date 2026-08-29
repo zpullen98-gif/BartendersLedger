@@ -24,18 +24,18 @@ function renderNav(){
   if(!Object.keys(TAB_LABEL).length) TABS.forEach(([k,l]) => TAB_LABEL[k] = l);
   const activeCluster = clusterOf(state.tab);
   const clusterRow = NAV_CLUSTERS.map(([ck,label]) =>
-    '<button class="cl-btn'+(activeCluster===ck?' active':'')+'" data-cluster="'+ck+'">'+label+'</button>').join('');
+    '<button class="cl-btn'+(activeCluster===ck?' active':'')+'"'+(activeCluster===ck?' aria-current="true"':'')+' data-cluster="'+ck+'">'+label+'</button>').join('');
   const subTabs = NAV_CLUSTERS.find(([ck]) => ck===activeCluster)[2];
   const subRow = subTabs.length > 1
     ? '<div class="subtabs">'+subTabs.map(k =>
-        '<button class="tab-btn'+(state.tab===k?' active':'')+'" data-tab="'+k+'">'+TAB_LABEL[k]+'</button>').join('')+'</div>'
+        '<button class="tab-btn'+(state.tab===k?' active':'')+'"'+(state.tab===k?' aria-current="page"':'')+' data-tab="'+k+'">'+TAB_LABEL[k]+'</button>').join('')+'</div>'
     : '';
   document.getElementById('tabs').innerHTML =
     '<div class="clusters">'+clusterRow+'<button class="cl-btn cl-search" data-search="1" title="Search ( / )">'+NAV_ICONS.search+'</button></div>'+subRow;
 
   const b = document.getElementById('bnav');
   if(b) b.innerHTML = NAV_CLUSTERS.map(([ck,label]) =>
-      '<button class="bnav-btn'+(activeCluster===ck?' active':'')+'" data-cluster="'+ck+'">'+NAV_ICONS[ck]+'<span>'+label+'</span></button>'
+      '<button class="bnav-btn'+(activeCluster===ck?' active':'')+'"'+(activeCluster===ck?' aria-current="true"':'')+' data-cluster="'+ck+'">'+NAV_ICONS[ck]+'<span>'+label+'</span></button>'
     ).join('') +
     '<button class="bnav-btn" data-search="1">'+NAV_ICONS.search+'<span>Search</span></button>';
 
@@ -43,7 +43,7 @@ function renderNav(){
   if(sh){
     if(state.sheet){
       const tabs = NAV_CLUSTERS.find(([ck]) => ck===state.sheet)[2];
-      sh.innerHTML = '<div class="sheet-back" data-sheet-close="1"></div><div class="sheet-panel">'
+      sh.innerHTML = '<div class="sheet-back" data-sheet-close="1"></div><div class="sheet-panel" role="dialog" aria-modal="true" aria-label="More sections">'
         + '<div class="eyebrow tc mb2">'+NAV_CLUSTERS.find(([ck])=>ck===state.sheet)[1]+'</div>'
         + tabs.map(k => '<button class="sheet-btn'+(state.tab===k?' active':'')+'" data-tab="'+k+'">'+TAB_LABEL[k]+'</button>').join('')
         + '</div>';
@@ -176,7 +176,7 @@ function renderSearch(){
     /* build the shell once per open — the input element must survive
        keystrokes or the caret snaps to the end while editing mid-string */
     ol.innerHTML = '<div class="search-back" data-search-close="1"></div>'
-      + '<div class="search-panel">'
+      + '<div class="search-panel" role="dialog" aria-modal="true" aria-label="Search the ledger">'
       + '<input id="search-in" class="input" type="text" aria-label="Search the ledger" placeholder="Search the ledger — drinks, preps, producers, notes…" autocomplete="off">'
       + '<div class="search-results" id="search-results"></div></div>';
     ol.classList.add('open');
@@ -204,11 +204,18 @@ function renderSearchResults(){
 }
 
 function openSearch(){
+  /* remember where the keyboard was — Escape should land the reader back on
+     the control that summoned the dialog, not at the top of the document */
+  search.returnTo = document.activeElement;
   search.open = true; search.q = ''; search.sel = 0;
   if(!SEARCH_INDEX) SEARCH_INDEX = buildSearchIndex();
   renderSearch();
 }
-function closeSearch(){ search.open = false; renderSearch(); }
+function closeSearch(){
+  search.open = false; renderSearch();
+  try{ if(search.returnTo && search.returnTo.focus) search.returnTo.focus(); }catch(e){}
+  search.returnTo = null;
+}
 function gotoHash(h){
   closeSearch();
   if(location.hash === h){ applyRoute(); render(); }
@@ -339,10 +346,14 @@ function handsStreak(){
 function handsDoneToday(){ return (progress.streakData || {}).lastHands === dateKey(0); }
 /* withHands = the night included a logged physical drill. Recitation alone still
    counts as a night, but only the hands number predicts a trail shift. */
-function recordSessionComplete(withHands){
+function recordSessionComplete(withHands, night){
   const s = progress.streakData || { last: null, n: 0, hands: 0, lastHands: null };
   if(s.hands === undefined){ s.hands = 0; s.lastHands = null; }
-  const today = dateKey(0);
+  /* `night` is the day the SESSION STARTED. A session straddling midnight
+     used to stamp both calendar days — cards before twelve, the drill after —
+     crediting two nights of streak for one sitting and pre-banking tomorrow.
+     One sitting is one night, dated by when it began. */
+  const today = night || dateKey(0);
   if(s.last !== today){
     if(s.last === dateKey(1)) s.n = s.n + 1;
     else { s.n = 1; s.hands = 0; }   /* streak broken — the hands count restarts with it */
@@ -395,7 +406,7 @@ function startSession(){
   const { dueDeck, newDeck } = sessionDeckParts();
   let deck = [...dueDeck, ...newDeck];
   if(!deck.length) deck = shuffle(allDrinks()).slice(0, 10);
-  state.sess = { active: true, step: 'cards', dueN: dueDeck.length, newN: newDeck.length };
+  state.sess = { active: true, step: 'cards', night: dateKey(0), dueN: dueDeck.length, newN: newDeck.length };
   state.tab = 'flashcards';
   Object.assign(state.fc, { stage:'run', mode:'name2spec', deck:deck, idx:0, right:0, wrong:0, missed:[] });
   prepCard();
@@ -530,10 +541,21 @@ function dataToolHTML(){
     + '<input type="file" id="data-import-file" accept=".json,application/json" style="display:none">'
     + '<span class="tiny dim" id="data-import-status"></span></div>'
     + '</div>'
+    + storageWarningHTML()
     + '<div class="panel p4 col" style="gap:8px"><div class="eyebrow">Storage</div>'
     + '<div class="tiny dim" id="data-storage-line">Checking what the browser will promise…</div>'
     + '<div class="row"><button class="chip" id="data-persist-btn" data-act="data-persist">Ask the browser to keep it</button></div></div>'
     + '</div>';
+}
+
+/* Shown wherever records are discussed, the moment a save has fallen through
+   to memory: the truth is "this session's records die with this tab". */
+function storageWarningHTML(){
+  if(!store.degraded) return '';
+  return '<div class="panel p4" style="border-color:var(--oxblood)">'
+    + '<div class="small bold" style="color:var(--oxblood-text)">The browser is refusing to save.</div>'
+    + '<div class="tiny dim lh">Everything from this session lives only until this tab closes. '
+    + 'Export a backup NOW (Tools \u2192 My Data), then check free space and site permissions.</div></div>';
 }
 
 function dataExport(){
@@ -577,7 +599,10 @@ function dataImport(file){
         const winner = { ...(theirsWins ? s : mine) };
         const loser = theirsWins ? mine : s;
         if(winner.due === undefined && loser.due !== undefined){
-          ['ef','ivl','reps','due','last'].forEach(f => { winner[f] = loser[f]; });
+          /* lapses included: the counter that says HOW a card has been hard
+             was dropped by the graft, so a merge quietly reset every card's
+             difficulty history while keeping its schedule. */
+          ['ef','ivl','reps','due','last','lapses'].forEach(f => { winner[f] = loser[f]; });
         }
         progress.cards[k] = winner;
       });
@@ -593,7 +618,12 @@ function dataImport(file){
         (arr || []).forEach(x => { if(!seen.has(JSON.stringify(x))) mine.push(x); });
         progress.practice[id] = mine.sort(byTs).slice(-20);
       });
-      if(Array.isArray(p.shelf) && !(progress.shelf || []).length) progress.shelf = p.shelf;
+      /* UNION, not adopt-if-empty: the old clause kept any non-empty local
+         shelf and dropped the backup's entirely — merging two devices' owned
+         bottles should own both sets. Ids, so the union is exact. */
+      if(Array.isArray(p.shelf)){
+        progress.shelf = [...new Set([...(progress.shelf || []), ...p.shelf])];
+      }
       /* the additive-only rule in person: every store the merge does not name
          is silently dropped, so My Bar gets an explicit clause — union by id
          (name as the fallback for hand-edited files), newer edit wins */
@@ -631,15 +661,31 @@ function dataImport(file){
           const i = progress.bottles.findIndex(x => x.name.toLowerCase() === tb.name.toLowerCase());
           if(i < 0){ progress.bottles.push(tb); return; }
           const mine = progress.bottles[i];
-          const seen = new Set((mine.history||[]).map(h => h.at + '|' + h.price + '|' + h.sizeMl));
-          (tb.history||[]).forEach(h => {
-            if(h && !seen.has(h.at + '|' + h.price + '|' + h.sizeMl)) (mine.history = mine.history||[]).push(h);
+          /* normalised FIRST: a hand-edited or older-build record without a
+             history array crashed the sort below, mid-merge, leaving progress
+             half-merged in memory. A guard beats a wreck. */
+          mine.history = Array.isArray(mine.history) ? mine.history : [];
+          const seen = new Set(mine.history.map(h => h.at + '|' + h.price + '|' + h.sizeMl));
+          (Array.isArray(tb.history) ? tb.history : []).forEach(h => {
+            if(h && !seen.has(h.at + '|' + h.price + '|' + h.sizeMl)) mine.history.push(h);
           });
           mine.history.sort((a,b) => (b.at||0) - (a.at||0));
           mine.history = mine.history.slice(0, 12);
           const head = mine.history[0];
           if(head){ mine.price = head.price; mine.sizeMl = head.sizeMl; mine.ts = Math.max(mine.ts||0, tb.ts||0); }
         });
+      }
+      /* streak: a RECORD, not a pref — the additive-only rule's reach. A
+         merge-restore onto a new phone zeroed a 200-night streak because
+         nothing named it. More recent night wins (last is YYYY-MM-DD, so
+         string compare IS date compare); ties keep the longer run. vidPrefs
+         stays unnamed on purpose — a preference is device-local. */
+      if(p.streakData && p.streakData.last){
+        const mineS = progress.streakData;
+        if(!mineS || !mineS.last || p.streakData.last > mineS.last ||
+           (p.streakData.last === mineS.last && (p.streakData.n||0) > (mineS.n||0))){
+          progress.streakData = p.streakData;
+        }
       }
       if(Array.isArray(p.bar)){
         progress.bar = progress.bar || [];

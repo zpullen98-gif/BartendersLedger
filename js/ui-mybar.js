@@ -114,9 +114,9 @@ function renderMyBar(){
     + (bar.length && !state.mybar.form
         ? '<div class="row" style="gap:8px">'
           + '<button class="btn btn-brass" data-act="mybar-new">Add a drink</button>'
-          + '<button class="btn btn-ghost" data-act="go" data-tab="flashcards">Drill the cards</button>'
-          + '<button class="btn btn-ghost" data-act="go" data-tab="quiz">Quiz your list</button>'
-          + '<button class="btn btn-ghost" data-act="go" data-tab="practice">The rail</button>'
+          + '<button class="btn btn-ghost" data-act="go" data-tab="flashcards" data-src="My Bar">Drill the cards</button>'
+          + '<button class="btn btn-ghost" data-act="go" data-tab="quiz" data-mode="mybar">Quiz your list</button>'
+          + '<button class="btn btn-ghost" data-act="go" data-tab="practice" data-view="rail">The rail</button>'
           + '</div>'
         : '')
     + '</div>';

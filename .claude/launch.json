@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ledger",
+      "runtimeExecutable": "py",
+      "runtimeArgs": ["serve.py", "8631"],
+      "port": 8631
+    }
+  ]
+}

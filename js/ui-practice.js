@@ -104,16 +104,16 @@ function renderTastingForm(){
   const cat = TASTE_CATS[t.cat];
   const catOpts = Object.keys(TASTE_CATS).map(c => '<option value="'+esc(c)+'"'+(t.cat===c?' selected':'')+'>'+esc(c)+'</option>').join('');
   const appearance = ['water white','straw','pale gold','gold','amber','copper','mahogany'].map(a =>
-    '<button class="chip'+(t.appearance===a?' on':'')+'" data-act="tst-app" data-v="'+esc(a)+'">'+esc(a)+'</button>').join(' ');
+    '<button class="chip'+(t.appearance===a?' on':'')+'" aria-pressed="'+(t.appearance===a?'true':'false')+'" data-act="tst-app" data-v="'+esc(a)+'">'+esc(a)+'</button>').join(' ');
   const noseChips = cat.nose.map(n =>
-    '<button class="chip'+(t.nose.includes(n)?' on':'')+'" data-act="tst-nose" data-v="'+esc(n)+'">'+esc(n)+'</button>').join(' ');
+    '<button class="chip'+(t.nose.includes(n)?' on':'')+'" aria-pressed="'+(t.nose.includes(n)?'true':'false')+'" data-act="tst-nose" data-v="'+esc(n)+'">'+esc(n)+'</button>').join(' ');
   const axes = [['sweet','Sweet'],['acid','Acid/Bright'],['bitter','Bitter'],['body','Body/Weight'],['heat','Heat']].map(([k,label]) => {
     const dots = [1,2,3,4,5].map(v =>
-      '<button class="chip'+(t.palate[k]===v?' on':'')+'" data-act="tst-axis" data-k="'+k+'" data-v="'+v+'" style="min-width:30px">'+v+'</button>').join('');
+      '<button class="chip'+(t.palate[k]===v?' on':'')+'" aria-pressed="'+(t.palate[k]===v?'true':'false')+'" data-act="tst-axis" data-k="'+k+'" data-v="'+v+'" style="min-width:30px">'+v+'</button>').join('');
     return '<div class="row" style="gap:6px"><span class="tiny dim" style="width:92px;flex-shrink:0">'+label+'</span>'+dots+'</div>';
   }).join('');
   const finish = ['short','medium','long','very long'].map(f =>
-    '<button class="chip'+(t.finish===f?' on':'')+'" data-act="tst-finish" data-v="'+esc(f)+'">'+esc(f)+'</button>').join(' ');
+    '<button class="chip'+(t.finish===f?' on':'')+'" aria-pressed="'+(t.finish===f?'true':'false')+'" data-act="tst-finish" data-v="'+esc(f)+'">'+esc(f)+'</button>').join(' ');
   const markers = cat.markers.map(m => '<li class="small dim lh" style="margin-bottom:5px">'+esc(m)+'</li>').join('');
   const benches = cat.benchmarks.map(b => '<div class="tiny dim">· '+esc(b)+'</div>').join('');
   return '<div class="panel p5 col" style="gap:14px">'
@@ -201,7 +201,7 @@ function railHTML(){
   const names = r.deck || [];
   if(!names.length){
     return '<div class="panel p5 col tc" style="align-items:center;gap:12px">'
-      + '<div class="eyebrow">The ticket rail</div>'
+      + '<h2 class="eyebrow">The ticket rail</h2>'
       + '<div class="small dim lh" style="max-width:460px">Four tickets land at once. You have drilled 365 specs one at a time — this is the other skill: which one starts, which one finishes last, which two share a tin. '
       + 'Deal the rail, start the clock, build all four for real, then check your order against the answer.</div>'
       + '<button class="btn btn-brass" data-act="rail-deal">Deal a rail</button></div>';
@@ -230,7 +230,7 @@ function railHTML(){
   /* The computed verdict, when the call was tapped. */
   const verdict = (r.revealed && r.autoCalled !== undefined)
     ? '<div class="panel p4" style="width:100%;max-width:460px;border-color:var(--'+(r.autoCalled?'brass':'oxblood')+')">'
-      + '<div class="small bold" style="color:var(--'+(r.autoCalled?'brass':'oxblood')+')">'
+      + '<div class="small bold" style="color:var(--'+(r.autoCalled?'brass':'oxblood-text')+')">'
       + (r.autoCalled ? 'Called right — every start in a workable order.' : 'Out of order' + (r.tapMiss ? ' — ' + esc(r.tapMiss) : '') + '.')
       + '</div></div>'
     : '';
@@ -245,7 +245,7 @@ function railHTML(){
     : '';
   const log = (progress.practice && progress.practice.rail) || [];
   const hist = log.slice(-5).reverse().map(e =>
-    '<div class="hist-row"><span>'+esc(e.d)+(e.ok===false?' <span style="color:var(--oxblood)">wrong order</span>':e.ok?' <span class="brass2">order right</span>':'')
+    '<div class="hist-row"><span>'+esc(e.d)+(e.ok===false?' <span style="color:var(--oxblood-text)">wrong order</span>':e.ok?' <span class="brass2">order right</span>':'')
     + '</span><span class="font-tix brass2">'+e.v+' sec</span></div>').join('');
   return '<div class="col" style="align-items:center">'
     + ticket
@@ -443,10 +443,16 @@ function plural(w){
 }
 function batchOutHTML(){
   const t = state.tools;
-  const c = COCKTAILS[t.drink];
+  const c = toolDrink();
   const f = t.serv;
   const lines = c.spec.map(l => '<div class="spec-line"><span>·</span><span>'+esc(pluralize(scaleLine(l,f)))+'</span></div>').join('');
   const perDrink = c.spec.reduce((s,l)=>s+lineOz(l),0);
+  /* Parts, pints, shots and per-batch lines parse as 0 oz — the strength
+     tool already refuses those specs in words, and a batch sheet that
+     prints a confident zero-yield is worse than one that says why not. */
+  if(!(perDrink > 0)){
+    return '<div class="tix-note">This spec is written in parts or counts rather than ounces, so yield and bottle math cannot be computed — scale the lines by eye, keeping the ratios.</div>';
+  }
   const totalOz = perDrink * f;
   const water = t.dilute ? totalOz * 0.25 : 0;
   const finalOz = totalOz + water;
@@ -510,24 +516,30 @@ function estimateABV(c, dilutionPct){
 
 /* ---- unit conversion ---- */
 const UNITS = [['oz',29.5735],['ml',1],['cl',10],['tsp',4.92892],['tbsp',14.7868],['cup',236.588],['dash',0.92],['barspoon',5],['part',0]];
-function convertHTML(){
+/* Factored so a keystroke can repaint ONLY this — a full render() per
+   keystroke destroyed the focused input after one character. The batch tool
+   and shot board already worked this way; these two now follow. */
+function convOutHTML(){
   const t = state.tools;
   const v = Number(t.convVal)||0;
   const from = UNITS.filter(function(u){ return u[0]===t.convFrom; })[0] || UNITS[0];
   const ml = v * from[1];
-  const rows = UNITS.filter(function(u){ return u[1]>0; }).map(function(u){
+  return UNITS.filter(function(u){ return u[1]>0; }).map(function(u){
     const out = ml / u[1];
     const bold = u[0]===t.convFrom ? ' style="color:var(--brass-2)"' : '';
     return '<div class="hist-row"'+bold+'><span class="small">'+esc(u[0])+'</span><span class="font-tix">'+trimNum(Math.round(out*1000)/1000)+'</span></div>';
   }).join('');
+}
+function convertHTML(){
+  const t = state.tools;
   const fromChips = UNITS.filter(function(u){ return u[1]>0; }).map(function(u){
-    return '<button class="chip'+(t.convFrom===u[0]?' on':'')+'" data-act="conv-unit" data-u="'+esc(u[0])+'">'+esc(u[0])+'</button>';
+    return '<button class="chip'+(t.convFrom===u[0]?' on':'')+'" aria-pressed="'+(t.convFrom===u[0]?'true':'false')+'" data-act="conv-unit" data-u="'+esc(u[0])+'">'+esc(u[0])+'</button>';
   }).join(' ');
   return '<div class="panel p5 col" style="gap:14px">'
-    + '<div class="eyebrow">Unit converter</div>'
+    + '<h2 class="eyebrow">Unit converter</h2>'
     + '<div class="small dim lh">Most of the world specs in ml; American bar books spec in ounces. A jigger marked 1 oz is 29.6ml, not 30 — the 30ml jiggers sold as "1 oz" run about 1.5% over on every pour.</div>'
-    + '<div class="row" style="gap:10px"><input class="input" type="number" step="any" id="conv-val" value="'+esc(String(t.convVal))+'" style="max-width:140px"><div class="row" style="gap:6px">'+fromChips+'</div></div>'
-    + '<div>'+rows+'</div>'
+    + '<div class="row" style="gap:10px"><input class="input" type="number" step="any" id="conv-val" aria-label="Amount to convert" value="'+esc(String(t.convVal))+'" style="max-width:140px"><div class="row" style="gap:6px">'+fromChips+'</div></div>'
+    + '<div id="conv-out">'+convOutHTML()+'</div>'
     + '<div class="tiny dim lh">Handy anchors: 1 oz = 29.6ml · 1.5 oz = 44ml · 2 oz = 59ml · 750ml bottle = 25.4 oz = about 16 two-ounce pours.</div>'
     + '</div>';
 }
@@ -551,35 +563,47 @@ function pourHTML(){
     const pct = e.target ? (dev / e.target) * 100 : 0;
     const sign = dev > 0 ? '+' : '';
     return '<div class="hist-row"><span>'+esc(e.d)+'</span>'
-      + '<span class="font-tix '+(Math.abs(pct) <= 5 ? 'brass2' : '')+'"'+(Math.abs(pct) > 5 ? ' style="color:var(--oxblood)"' : '')+'>'
+      + '<span class="font-tix '+(Math.abs(pct) <= 5 ? 'brass2' : '')+'"'+(Math.abs(pct) > 5 ? ' style="color:var(--oxblood-text)"' : '')+'>'
       + e.oz.toFixed(2)+' oz ('+sign+pct.toFixed(0)+'%)</span></div>';
   }).join('');
   /* the money line, from the last five pours at this target */
   const recent = log.slice(-5);
   const avgDev = recent.length ? recent.reduce((s,e) => s + (e.oz - e.target), 0) / recent.length : null;
+  /* Priced from YOUR book when it has bottles — the median $/oz across what
+     you actually pour beats the guide's canned percentage. The two tools were
+     built a week apart and did not speak until now. */
+  const bts = progress.bottles || [];
+  let perOzMed = null;
+  if(bts.length){
+    const rr = bts.map(b => b.price / (b.sizeMl / 29.5735)).sort((a,b) => a - b);
+    perOzMed = rr[Math.floor(rr.length / 2)];
+  }
   const money = avgDev === null ? ''
     : '<div class="tiny dim lh" style="max-width:460px">'
       + (Math.abs(avgDev) < 0.03
           ? 'Your last '+recent.length+' average within a thirtieth of an ounce. That is jigger-grade pouring.'
           : 'Your last '+recent.length+' run '+(avgDev>0?'+':'')+avgDev.toFixed(2)+' oz against the target — '
             + Math.abs((avgDev / t) * 100).toFixed(0)+'% '+(avgDev>0?'over':'under')+' on every pour. '
-            + (avgDev>0 ? 'The guide prices the habit: an eighth-ounce heavy on every jigger is 6% of spirit cost, invisible and constant.'
-                        : 'Under-pouring is not thrift — it is a short drink a guest can taste, and a reputation leak instead of a cost one.'))
+            + (avgDev>0
+                ? (perOzMed !== null
+                    ? 'At your bottle book\u2019s median $'+perOzMed.toFixed(2)+'/oz, that habit gives away $'+(avgDev*perOzMed*100).toFixed(0)+' every hundred pours — invisible and constant.'
+                    : 'The guide prices the habit: an eighth-ounce heavy on every jigger is 6% of spirit cost, invisible and constant.')
+                : 'Under-pouring is not thrift — it is a short drink a guest can taste, and a reputation leak instead of a cost one.'))
       + '</div>';
   const targets = POUR_TARGETS.map(x =>
     '<button class="chip'+(x===t?' brass':'')+'" data-act="pour-target" data-t="'+x+'" aria-pressed="'+(x===t?'true':'false')+'">'+x+' oz</button>').join(' ');
   return '<div class="col" style="align-items:center"><div class="panel p5 col" style="gap:12px;max-width:520px;width:100%">'
-    + '<div class="eyebrow">The free-pour bench</div>'
+    + '<h2 class="eyebrow">The free-pour bench</h2>'
     + '<div class="small dim lh">Speed pourer in the bottle, water in the bottle, jigger or scale on the bar. '
     + 'Pour to your count for the target, then MEASURE what landed and enter it. The bench keeps your deviation; '
     + 'it stays in your ledger and nobody else\'s.</div>'
     + '<div class="row" style="gap:8px;flex-wrap:wrap">'+targets+'</div>'
     + '<div class="row" style="gap:10px">'
-    + '<input class="input" type="number" step="any" inputmode="decimal" id="pour-oz" placeholder="what landed (oz)" style="max-width:170px">'
+    + '<input class="input" type="number" step="any" inputmode="decimal" id="pour-oz" aria-label="Measured pour in ounces" placeholder="what landed (oz)" value="'+esc(String(state.practice.pourOz||''))+'" style="max-width:170px">'
     + '<button class="btn btn-brass" data-act="pour-log">Log the pour</button></div>'
     + money
     + (rows ? '<div class="col-sm" style="gap:4px"><div class="eyebrow">At '+t+' oz</div>'+rows+'</div>' : '')
-    + '<div class="tiny dim lh">1.5 oz = 44 ml = a four-count on most speed pourers at a steady cadence — but the count is yours; the jigger is the judge.</div>'
+    + '<div class="tiny dim lh">1.5 oz = 44 ml = a six-count at the quarter-ounce-per-count cadence this ledger’s quiz grades (a four-count = 1 oz) — but the count is yours; the jigger is the judge.</div>'
     + '</div></div>';
 }
 
@@ -610,7 +634,7 @@ function spillHTML(){
   }).filter(r => r.n);
   const total = recent.reduce((s2,e) => s2 + (Number(e.cost)||0), 0);
   const chips = SPILL_REASONS.map(([k, label]) =>
-    '<button class="chip'+(reason===k?' on':'')+'" data-act="spill-reason" data-r="'+k+'" aria-pressed="'+(reason===k)+'">'+label+'</button>').join(' ');
+    '<button class="chip'+(reason===k?' on':'')+'" aria-pressed="'+(reason===k?'true':'false')+'" data-act="spill-reason" data-r="'+k+'">'+label+'</button>').join(' ');
   const rows = log.slice(-12).reverse().map(e =>
     '<div class="hist-row"><span>'+esc(e.d)+' · '+esc(e.what)+' <span class="tiny dim">'+esc((SPILL_REASONS.find(x=>x[0]===e.reason)||['',''])[1])+'</span></span>'
     + '<span class="font-tix brass2">'+(Number(e.cost) ? '$'+Number(e.cost).toFixed(2) : '—')
@@ -621,14 +645,14 @@ function spillHTML(){
       + '</div>'
     : '';
   return '<div class="col" style="align-items:center"><div class="panel p5 col" style="gap:12px;max-width:540px;width:100%">'
-    + '<div class="eyebrow">The spill log</div>'
+    + '<h2 class="eyebrow">The spill log</h2>'
     + '<div class="small dim lh">The register pages put it plainly: waste rung honestly all night is a rounding error — '
     + 'waste never rung at all is why a variance report starts to look like a crime scene. This is the habit, drilled: '
     + 'log the remake, the break, the comp, the foam, at the moment it happens.</div>'
     + '<div class="row" style="gap:6px;flex-wrap:wrap">'+chips+'</div>'
     + '<div class="row" style="gap:8px;flex-wrap:wrap">'
-    + '<input class="input" id="spill-what" placeholder="What — House Daiquiri, pint of hazy" style="flex:2;min-width:170px">'
-    + '<input class="input" type="number" step="any" inputmode="decimal" id="spill-cost" placeholder="est. $ (optional)" style="flex:1;min-width:110px">'
+    + '<input class="input" id="spill-what" aria-label="What went in the bin" placeholder="What — House Daiquiri, pint of hazy" value="'+esc(String(t.spillWhat||''))+'" style="flex:2;min-width:170px">'
+    + '<input class="input" type="number" step="any" inputmode="decimal" id="spill-cost" aria-label="Estimated cost in dollars" placeholder="est. $ (optional)" value="'+esc(String(t.spillCost||''))+'" style="flex:1;min-width:110px">'
     + '<button class="btn btn-brass" data-act="spill-log">Log it</button></div>'
     + rollup
     + (rows ? '<div class="col-sm" style="gap:4px"><div class="eyebrow">Entry by entry</div>'+rows+'</div>' : '')
@@ -661,26 +685,27 @@ function obHTML(){
     const ra = (now-a.at)/(864e5*(ka?ka[2]:30)), rb = (now-b.at)/(864e5*(kb?kb[2]:30));
     return rb - ra;   /* most urgent first */
   });
-  const kindOpts = BOTTLE_KINDS.map(k => '<option value="'+k[0]+'">'+k[1]+'</option>').join('');
+  const kindOpts = BOTTLE_KINDS.map(k =>
+    '<option value="'+k[0]+'"'+((state.tools.obKind||BOTTLE_KINDS[0][0])===k[0]?' selected':'')+'>'+k[1]+'</option>').join('');
   const rows = list.map(b => {
     const kind = BOTTLE_KINDS.find(k => k[0] === b.kind) || BOTTLE_KINDS[0];
     const days = Math.floor((now - b.at) / 864e5);
     const share = days / kind[2];
-    const verdict = share >= 1 ? ['replace it', 'oxblood'] : share >= 0.75 ? ['turning', 'brass'] : ['fresh', 'brass2'];
+    const verdict = share >= 1 ? ['replace it', 'oxblood-text'] : share >= 0.75 ? ['turning', 'brass'] : ['fresh', 'brass2'];
     return '<div class="hist-row"><span>'+esc(b.name)+' <span class="tiny dim">'+esc(kind[1])+'</span></span>'
       + '<span class="font-tix"><span style="color:var(--'+verdict[1]+')">'
       + (days === 0 ? 'opened today' : days + (days===1?' day':' days'))+' — '+verdict[0]+'</span>'
       + ' <button class="chip" data-act="ob-del" data-id="'+esc(b.id)+'">✕</button></span></div>';
   }).join('');
   return '<div class="col" style="align-items:center"><div class="panel p5 col" style="gap:12px;max-width:540px;width:100%">'
-    + '<div class="eyebrow">The open bottle board</div>'
+    + '<h2 class="eyebrow">The open bottle board</h2>'
     + '<div class="small dim lh">The pages of this ledger keep saying it: date the bottle. This board is that habit — '
     + 'log the open, and the age does the arithmetic against the app\u2019s own windows: vermouth a month, citrus a day, '
     + 'syrup a month, open wine one to four days by its weight.</div>'
     + '<div class="row" style="gap:8px;flex-wrap:wrap">'
-    + '<input class="input" id="ob-name" placeholder="Dolin dry, lime juice, rich demerara" style="flex:2;min-width:160px">'
-    + '<select class="input" id="ob-kind" style="flex:1;min-width:150px">'+kindOpts+'</select>'
-    + '<input class="input" type="number" min="0" max="365" id="ob-days" placeholder="days ago (0)" style="max-width:120px">'
+    + '<input class="input" id="ob-name" aria-label="Bottle or batch name" placeholder="Dolin dry, lime juice, rich demerara" value="'+esc(String(state.tools.obName||''))+'" style="flex:2;min-width:160px">'
+    + '<select class="input" id="ob-kind" aria-label="What kind of perishable" style="flex:1;min-width:150px">'+kindOpts+'</select>'
+    + '<input class="input" type="number" min="0" max="365" id="ob-days" aria-label="Opened how many days ago" placeholder="days ago (0)" value="'+esc(String(state.tools.obDays||''))+'" style="max-width:120px">'
     + '<button class="btn btn-brass" data-act="ob-add">Date it</button></div>'
     + (rows ? '<div class="col-sm" style="gap:4px">'+rows+'</div>'
             : '<div class="tiny dim">Nothing dated yet. Start with the vermouth — a Manhattan on tired vermouth is a dead Manhattan.</div>')
@@ -694,20 +719,58 @@ function parseMenuPrice(raw){
   const n = parseFloat(String(raw).replace(/[^\d.]/g, ''));
   return isFinite(n) && n > 0 ? n : null;
 }
-function costHTML(){
+/* Factored so a keystroke repaints ONLY the ticket — a full render() per
+   keystroke destroyed the focused input after one character, and rebuilding
+   the book block emptied the bottle-name field mid-flow. The name input
+   lives OUTSIDE cost-out for exactly that reason. */
+/* One resolver for every tool that takes "a drink": the canon by index, or
+   the house list when the source toggle says so. Batching and strength used
+   to see only the canon — the list a working bartender actually batches is
+   their own. */
+function toolDrink(){
   const t = state.tools;
   const bar = progress.bar || [];
-  /* The sheet costs YOUR list, not only the canon — the whole point of a pour
-     cost is the price on your own menu, and only My Bar drinks carry one. */
+  const useBar = t.costSrc === 'bar' && bar.length;
+  return useBar ? bar[Math.min(t.barDrink || 0, bar.length - 1)] : COCKTAILS[t.drink];
+}
+function toolSrcRowHTML(){
+  const t = state.tools;
+  const bar = progress.bar || [];
+  const srcChips = bar.length
+    ? '<button class="chip'+(t.costSrc!=='bar'?' on':'')+'" data-act="cost-src" data-s="canon" aria-pressed="'+(t.costSrc!=='bar')+'">The canon</button> '
+      + '<button class="chip'+(t.costSrc==='bar'?' on':'')+'" data-act="cost-src" data-s="bar" aria-pressed="'+(t.costSrc==='bar')+'">My Bar</button>'
+    : '';
+  const sel = (t.costSrc==='bar' && bar.length)
+    ? '<select class="input" id="bar-drink" aria-label="Drink from My Bar" style="flex:2;min-width:170px">'
+      + bar.map(function(x,i){ return '<option value="'+i+'"'+((t.barDrink||0)===i?' selected':'')+'>'+esc(x.name)+'</option>'; }).join('')
+      + '</select>'
+    : null;
+  return { srcChips: srcChips, barSel: sel };
+}
+function costTicketHTML(){
+  const t = state.tools;
+  const bar = progress.bar || [];
   const useBar = t.costSrc === 'bar' && bar.length;
   const b = useBar ? bar[Math.min(t.barDrink || 0, bar.length - 1)] : null;
   const c = useBar ? b : COCKTAILS[t.drink];
   const bottle = Number(t.bottlePrice)||0;
   const bottleMl = Number(t.bottleMl)||750;
   const target = Number(t.targetPour)||20;
-  const spiritOz = (c.spec||[]).reduce(function(s,l){
-    return s + (classifyLine(l)==='strong'||classifyLine(l)==='modifier' ? lineOz(l) : 0);
-  }, 0);
+  /* The engine's own read, not a private reduce: balanceOf already promotes a
+     liqueur- or wine-based drink's real base into the strong column, so an
+     Aperol Spritz stops pricing at $0. Mixers are never promoted — a Mimosa
+     genuinely has no ounce-priced base, and the guard below says so instead
+     of printing MENU PRICE $0 with a straight face. */
+  const bal = balanceOf(c);
+  const spiritOz = bal.strong + bal.modifier;
+  if(spiritOz === 0){
+    return '<div class="ticket"><div class="ticket-inner">'
+      + '<div class="tc"><div class="tix-label">Costing</div><div class="tix-name">'+esc(c.name.toUpperCase())+'</div></div>'
+      + '<div class="tix-rule"></div>'
+      + '<div class="tix-note">'+esc(c.name)+' has no spirit or fortified line this sheet can price by the ounce — '
+      + 'beer, bubbles, and juice are bought by the unit. Cost it from the bottle or the keg, not from this sheet.</div>'
+      + '</div></div>';
+  }
   const costPerOz = bottleMl>0 ? bottle / (bottleMl/29.5735) : 0;
   const spiritCost = spiritOz * costPerOz;
   const modifierCost = spiritCost * 0.25;   // rough allowance for juice, syrup, garnish, ice
@@ -726,6 +789,30 @@ function costHTML(){
       + '<div><span class="tix-label">Your menu price </span>$'+menuPrice.toFixed(2)+'</div>'
       + '<div><span class="tix-label">Actual pour cost </span>'+actualPct.toFixed(1)+'% \u2014 '+verdict+'</div>'
     : (useBar ? '<div class="tix-rule"></div><div class="tix-note">Give this drink a price in My Bar and the sheet scores your ACTUAL pour cost against the band.</div>' : '');
+  return '<div class="ticket"><div class="ticket-inner">'
+    + '<div class="tc"><div class="tix-label">Costing</div><div class="tix-name">'+esc(c.name.toUpperCase())+'</div></div>'
+    + '<div class="tix-rule"></div>'
+    + '<div><span class="tix-label">Liquor per drink </span>'+trimNum(spiritOz)+' oz</div>'
+    + '<div><span class="tix-label">Cost per oz </span>$'+costPerOz.toFixed(2)+'</div>'
+    + '<div><span class="tix-label">Liquor cost </span>$'+spiritCost.toFixed(2)+'</div>'
+    + '<div><span class="tix-label">+ non-liquor </span>$'+modifierCost.toFixed(2)+' (25% allowance)</div>'
+    + '<div class="tix-rule"></div>'
+    + '<div><span class="tix-label">Total cost </span>$'+totalCost.toFixed(2)+'</div>'
+    + '<div><span class="tix-label">At '+trimNum(target)+'% pour cost </span>$'+price.toFixed(2)+'</div>'
+    + '<div class="tix-name" style="font-size:1.1rem">MENU PRICE $'+menu+'</div>'
+    + actualRows
+    + '<div class="tix-rule"></div>'
+    + '<div class="tix-note">A rough model, not a P&amp;L. Real costing also carries labour, spillage, comps, and the batch yield loss you never quite recover.</div>'
+    + '</div></div>';
+}
+function costHTML(){
+  const t = state.tools;
+  const bar = progress.bar || [];
+  /* The sheet costs YOUR list, not only the canon — the whole point of a pour
+     cost is the price on your own menu, and only My Bar drinks carry one. */
+  const useBar = t.costSrc === 'bar' && bar.length;
+  const b = useBar ? bar[Math.min(t.barDrink || 0, bar.length - 1)] : null;
+  const c = useBar ? b : COCKTAILS[t.drink];
   /* the bottle book */
   const bottles = progress.bottles || [];
   const bookChips = bottles.map(function(x){
@@ -733,50 +820,34 @@ function costHTML(){
     const mv = bottleMovePct(x);
     return '<button class="chip" data-act="cost-use-bottle" data-name="'+esc(x.name)+'" '
       + 'title="Load this bottle into the sheet">'+esc(x.name)+' \u00b7 $'+perOz.toFixed(2)+'/oz'
-      + (mv !== null ? ' \u00b7 <span style="color:var(--'+(mv>0?'oxblood':'brass')+')">'+(mv>0?'+':'')+mv.toFixed(0)+'%</span>' : '')
+      + (mv !== null ? ' \u00b7 <span style="color:var(--'+(mv>0?'oxblood-text':'brass')+')">'+(mv>0?'+':'')+mv.toFixed(0)+'%</span>' : '')
       + '</button>';
   }).join(' ');
   const bookBlock = '<div class="panel p4 col" style="gap:8px;max-width:460px;width:100%">'
-    + '<div class="eyebrow">The bottle book</div>'
+    + '<h2 class="eyebrow">The bottle book</h2>'
     + '<div class="tiny dim lh">File the bottle once and the reprice keeps the old number \u2014 the previous price is the one thing a reprice normally destroys, and it is the whole reason to keep a book. A red percent is invoice creep, caught.</div>'
     + '<div class="row" style="gap:8px;flex-wrap:wrap">'
-    + '<input class="input" id="cost-bottle-name" placeholder="Bottle \u2014 e.g. Rittenhouse Rye" style="flex:1;min-width:160px">'
-    + '<button class="chip" data-act="cost-file-bottle">File at $'+(Number(t.bottlePrice)||0).toFixed(2)+' / '+(Number(t.bottleMl)||750)+'ml</button></div>'
+    + '<input class="input" id="cost-bottle-name" aria-label="Bottle name" placeholder="Bottle \u2014 e.g. Rittenhouse Rye" value="'+esc(String(t.bottleName||''))+'" style="flex:1;min-width:160px">'
+    + '<button class="chip" data-act="cost-file-bottle" title="Files the price and size the sheet above shows">File this bottle</button></div>'
     + (bookChips ? '<div class="row" style="gap:6px;flex-wrap:wrap">'+bookChips+'</div>' : '')
     + '</div>';
   return '<div class="panel p5 col" style="gap:14px">'
-    + '<div class="eyebrow">Pour cost &amp; menu price</div>'
-    + '<div class="small dim lh">Pour cost = cost of goods ÷ selling price. Most programs target 18–24%. This uses your base-spirit price plus a 25% allowance for juice, syrup, garnish, and ice.</div>'
+    + '<h2 class="eyebrow">Pour cost &amp; menu price</h2>'
+    + '<div class="small dim lh">Pour cost = cost of goods ÷ selling price. Most programs target 18–24%. This bills every spirit, fortified and amaro line at the entered bottle rate, plus a 25% allowance for juice, syrup, garnish, and ice.</div>'
     + '<div class="row" style="gap:10px">'
-    + '<input class="input" type="number" step="any" id="cost-price" value="'+esc(String(t.bottlePrice))+'" placeholder="bottle $" style="max-width:110px">'
-    + '<input class="input" type="number" step="any" id="cost-ml" value="'+esc(String(t.bottleMl))+'" placeholder="bottle ml" style="max-width:110px">'
-    + '<input class="input" type="number" step="any" id="cost-target" value="'+esc(String(t.targetPour))+'" placeholder="target %" style="max-width:100px"></div>'
-    + '<div class="ticket"><div class="ticket-inner">'
-    + '<div class="tc"><div class="tix-label">Costing</div><div class="tix-name">'+esc(c.name.toUpperCase())+'</div></div>'
-    + '<div class="tix-rule"></div>'
-    + '<div><span class="tix-label">Spirit per drink </span>'+trimNum(spiritOz)+' oz</div>'
-    + '<div><span class="tix-label">Cost per oz </span>$'+costPerOz.toFixed(2)+'</div>'
-    + '<div><span class="tix-label">Spirit cost </span>$'+spiritCost.toFixed(2)+'</div>'
-    + '<div><span class="tix-label">+ modifiers </span>$'+modifierCost.toFixed(2)+' (25% allowance)</div>'
-    + '<div class="tix-rule"></div>'
-    + '<div><span class="tix-label">Total cost </span>$'+totalCost.toFixed(2)+'</div>'
-    + '<div><span class="tix-label">At '+trimNum(target)+'% pour cost </span>$'+price.toFixed(2)+'</div>'
-    + '<div class="tix-name" style="font-size:1.1rem">MENU PRICE $'+menu+'</div>'
-    + '<div class="tix-rule"></div>'
-    + actualRows
-    + '<div class="tix-rule"></div>'
-    + '<div class="tix-note">A rough model, not a P&amp;L. Real costing also carries labour, spillage, comps, and the batch yield loss you never quite recover.</div>'
-    + '</div></div>' + bookBlock + '</div>';
+    + '<input class="input" type="number" step="any" id="cost-price" aria-label="Bottle price" value="'+esc(String(t.bottlePrice))+'" placeholder="bottle $" style="max-width:110px">'
+    + '<input class="input" type="number" step="any" id="cost-ml" aria-label="Bottle size in ml" value="'+esc(String(t.bottleMl))+'" placeholder="bottle ml" style="max-width:110px">'
+    + '<input class="input" type="number" step="any" id="cost-target" aria-label="Target pour cost percent" value="'+esc(String(t.targetPour))+'" placeholder="target %" style="max-width:100px"></div>'
+    + '<div id="cost-out">'+costTicketHTML()+'</div>'
+    + bookBlock + '</div>';
 }
-
-/* ---- strength estimator ---- */
 function strengthHTML(){
   const t = state.tools;
-  const c = COCKTAILS[t.drink];
+  const c = toolDrink();
   const dil = Number(t.dilPct)||25;
   const e = estimateABV(c, dil);
   const chips = [0,15,20,25,30,35].map(function(d){
-    return '<button class="chip'+(dil===d?' on':'')+'" data-act="dil-pct" data-v="'+d+'">'+(d===0?'neat':d+'%')+'</button>';
+    return '<button class="chip'+(dil===d?' on':'')+'" aria-pressed="'+(dil===d?'true':'false')+'" data-act="dil-pct" data-v="'+d+'">'+(d===0?'neat':d+'%')+'</button>';
   }).join(' ');
   let body;
   if(!e){ body = '<div class="small dim">This spec is written in parts or counts rather than ounces, so it cannot be estimated.</div>'; }
@@ -796,7 +867,7 @@ function strengthHTML(){
       + '</div></div>';
   }
   return '<div class="panel p5 col" style="gap:14px">'
-    + '<div class="eyebrow">Strength &amp; dilution</div>'
+    + '<h2 class="eyebrow">Strength &amp; dilution</h2>'
     + '<div class="small dim lh">Shaking adds roughly 25% water, stirring 20–25%, and building over ice keeps adding it in the glass. Knowing where a drink lands is how you pace a guest honestly — and it is the number behind responsible service.</div>'
     + '<div class="row"><span class="tiny dim" style="width:70px">Dilution</span>'+chips+'</div>'
     + body
@@ -821,8 +892,8 @@ function renderTools(){
   if(t.view==='cost'){
     const bar = progress.bar || [];
     const srcChips = bar.length
-      ? '<button class="chip'+(t.costSrc!=='bar'?' on':'')+'" data-act="cost-src" data-s="canon" aria-pressed="'+(t.costSrc!=='bar')+'">The canon</button> '
-        + '<button class="chip'+(t.costSrc==='bar'?' on':'')+'" data-act="cost-src" data-s="bar" aria-pressed="'+(t.costSrc==='bar')+'">My Bar</button>'
+      ? '<button class="chip'+(t.costSrc!=='bar'?' on':'')+'" aria-pressed="'+(t.costSrc!=='bar'?'true':'false')+'" data-act="cost-src" data-s="canon">The canon</button> '
+        + '<button class="chip'+(t.costSrc==='bar'?' on':'')+'" aria-pressed="'+(t.costSrc==='bar'?'true':'false')+'" data-act="cost-src" data-s="bar">My Bar</button>'
       : '';
     const barSel = (t.costSrc==='bar' && bar.length)
       ? '<select class="input" id="bar-drink" style="flex:2;min-width:170px">'
@@ -831,17 +902,20 @@ function renderTools(){
       : drinkSel('tool-drink');
     return wrap('<div class="row" style="gap:10px;flex-wrap:wrap">'+srcChips+barSel+'</div>'+costHTML());
   }
-  if(t.view==='strength') return wrap('<div class="row" style="gap:10px">'+drinkSel('tool-drink')+'</div>'+strengthHTML());
+  if(t.view==='strength'){
+    const sr = toolSrcRowHTML();
+    return wrap('<div class="row" style="gap:10px;flex-wrap:wrap">'+sr.srcChips+(sr.barSel||drinkSel('tool-drink'))+'</div>'+strengthHTML());
+  }
 
   if(t.view==='shelf'){
     const shelfChips = SHELF.map(function(s){
-      return '<button class="chip'+(t.shelf.indexOf(s[0])>=0?' on':'')+'" data-act="shelf-toggle" data-k="'+s[0]+'">'+esc(s[1])+'</button>';
+      return '<button class="chip'+(t.shelf.indexOf(s[0])>=0?' on':'')+'" aria-pressed="'+(t.shelf.indexOf(s[0])>=0?'true':'false')+'" data-act="shelf-toggle" data-k="'+s[0]+'">'+esc(s[1])+'</button>';
     }).join(' ');
     const presets = SHELF_PRESETS.map(function(p,i){
       return '<button class="btn btn-ghost tiny" data-act="tool-preset" data-i="'+i+'">'+esc(p[0])+'</button>';
     }).join(' ');
     const srcChips = ['Cocktails','Shots','Zero Proof'].map(function(s){
-      return '<button class="chip'+(t.shelfSrc===s?' on':'')+'" data-act="shelf-src" data-s="'+esc(s)+'">'+esc(s)+'</button>';
+      return '<button class="chip'+(t.shelfSrc===s?' on':'')+'" aria-pressed="'+(t.shelfSrc===s?'true':'false')+'" data-act="shelf-src" data-s="'+esc(s)+'">'+esc(s)+'</button>';
     }).join(' ');
     const pool = allDrinks().filter(function(d){ return d.src===t.shelfSrc; });
     let ready=[], close=[];
@@ -871,10 +945,10 @@ function renderTools(){
        and render Stocking as active while the 86 panel is on screen */
     const in86 = t.eightySix !== null && t.eightySix !== undefined;
     const modeChips = '<button class="chip'+(in86?'':' on')+'" data-act="shelf-mode" data-m="stock">Stocking</button> '
-      + '<button class="chip'+(in86?' on':'')+'" data-act="shelf-mode" data-m="86">86 drill</button>';
+      + '<button class="chip'+(in86?' on':'')+'" aria-pressed="'+(in86?'true':'false')+'" data-act="shelf-mode" data-m="86">86 drill</button>';
     if(in86){
       const owned = t.shelf.map(function(k){
-        return '<button class="chip'+(t.eightySix===k?' on':'')+'" data-act="shelf-86" data-k="'+k+'">'+esc(shelfLabel(k))+'</button>';
+        return '<button class="chip'+(t.eightySix===k?' on':'')+'" aria-pressed="'+(t.eightySix===k?'true':'false')+'" data-act="shelf-86" data-k="'+k+'">'+esc(shelfLabel(k))+'</button>';
       }).join(' ');
       return wrap('<div class="panel p5 col" style="gap:14px">'
         + '<div class="row between"><div class="eyebrow">86 drill</div><div class="row" style="gap:6px">'+modeChips+'</div></div>'
@@ -917,14 +991,17 @@ function renderTools(){
           + '</div>' : ''));
   }
 
+  /* the same source toggle the cost sheet earned — a working bartender
+     batches their own list, not just the canon */
+  const bsr = toolSrcRowHTML();
   const opts = COCKTAILS.map(function(c,i){ return '<option value="'+i+'"'+(t.drink===i?' selected':'')+'>'+esc(c.name)+'</option>'; }).join('');
   return wrap('<div class="panel p5 col" style="gap:14px">'
-    + '<div class="eyebrow">Batching calculator</div>'
+    + '<h2 class="eyebrow">Batching calculator</h2>'
     + '<div class="small dim lh">Scale any spec to a bottle, a pitcher, or a party. For stirred drinks bottled ahead, add the 25% water — it replaces the dilution the ice would have given.</div>'
-    + '<div class="row" style="gap:10px">'
-    + '<select class="input" id="tool-drink" style="flex:2;min-width:170px">'+opts+'</select>'
+    + '<div class="row" style="gap:10px;flex-wrap:wrap">' + bsr.srcChips
+    + (bsr.barSel || '<select class="input" id="tool-drink" aria-label="Drink to batch" style="flex:2;min-width:170px">'+opts+'</select>')
     + '<input class="input" type="number" min="1" max="500" id="tool-serv" value="'+t.serv+'" style="flex:1;min-width:80px" title="servings">'
-    + '<button class="chip'+(t.dilute?' on':'')+'" data-act="tool-dilute">+25% water</button></div>'
+    + '<button class="chip'+(t.dilute?' on':'')+'" aria-pressed="'+(t.dilute?'true':'false')+'" data-act="tool-dilute">+25% water</button></div>'
     + '<div id="batch-out" style="display:flex;justify-content:center">'+batchOutHTML()+'</div>'
     + '<div class="row"><a class="btn btn-ghost tiny" href="'+ytSearch('how to batch cocktails pre dilution bottled'+scopeSuffix())+'" target="_blank" rel="noopener noreferrer">▶ Watch batching explained</a></div>'
     + '</div>');

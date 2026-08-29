@@ -12,8 +12,12 @@ const store = {
   },
   async set(k,v){
     try{ if(window.storage){ await window.storage.set(k,v); return; } }catch(e){}
-    try{ localStorage.setItem(k,v); return; }catch(e){}
+    try{ localStorage.setItem(k,v); store.degraded = false; return; }catch(e){}
+    /* The in-memory fallback keeps the session alive — and dies with the tab.
+       Every save was reporting success while the browser refused to persist,
+       so the flag lets the UI say so while there is still time to export. */
     mem[k]=v;
+    store.degraded = true;
   }
 };
 
@@ -291,6 +295,10 @@ const SHELF = [
   ['rasp','Raspberry syrup',/raspberry/i],['gren','Grenadine',/grenadine/i],
   ['mint','Fresh mint',/mint/i],['egg','Eggs',/\begg\b/i],['cream','Cream',/(?<!coconut )\bcream\b/i],['coco','Coconut cream',/coconut/i],
   ['soda','Soda water',/\bsoda\b/i],['tonic','Tonic',/tonic/i],['gb','Ginger beer',/ginger beer/i],
+  /* 'ginger' itself: the Zero-proof station preset referenced this id and no
+     row defined it — the preset silently stocked one item fewer than it
+     claimed. The lookahead leaves beer and ale their own rows. */
+  ['ginger','Fresh ginger / ginger syrup',/\bginger\b(?! beer| ale)/i],
   ['espresso','Espresso',/espresso/i],['hotcoffee','Hot coffee',/hot coffee/i],
   ['mezcal','Mezcal',/mezcal/i],['cynar','Cynar',/cynar/i],['averna','Averna',/averna/i],['suze','Suze/gentian',/suze|gentian/i],
   ['drambuie','Drambuie',/drambuie/i],['amaretto','Amaretto',/amaretto|noyaux/i],['icream','Irish cream',/irish cream/i],

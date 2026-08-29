@@ -36,7 +36,12 @@ function render(){
   if(sig){
     let back = null;
     try{ back = document.querySelector(sig); }catch(e){}
-    if(back && back.focus) back.focus();
+    /* !back.disabled: focus() on a disabled control is a spec-defined no-op,
+       so the designed fallback below was unreachable on the app's single most
+       repeated act — answering a question disables the tapped option, the
+       signature still matches it, and a Tab user restarted from the masthead
+       after EVERY answer. A disabled match is a gone control. */
+    if(back && back.focus && !back.disabled) back.focus();
     else view.focus();                 /* the control is gone — land in the view, not at the top */
   }
   /* bring whatever the user just opened into sight */
@@ -46,9 +51,18 @@ function render(){
   if(tc) tc.addEventListener('change', e => {
     state.tast.cat = e.target.value; state.tast.nose = []; render();
   });
-  [['conv-val','convVal'],['cost-price','bottlePrice'],['cost-ml','bottleMl'],['cost-target','targetPour']].forEach(function(o){
+  /* Targeted repaints, the batch-out pattern: a render() per keystroke
+     replaced the focused input after ONE character and the next keystroke
+     went to <body>. The output block repaints; the input the user is typing
+     in survives untouched. */
+  [['conv-val','convVal','conv-out'],['cost-price','bottlePrice','cost-out'],['cost-ml','bottleMl','cost-out'],['cost-target','targetPour','cost-out']].forEach(function(o){
     const el2 = document.getElementById(o[0]);
-    if(el2) el2.addEventListener('input', function(e){ state.tools[o[1]] = e.target.value; render(); });
+    if(el2) el2.addEventListener('input', function(e){
+      state.tools[o[1]] = e.target.value;
+      const out = document.getElementById(o[2]);
+      if(out) out.innerHTML = (o[2]==='conv-out' ? convOutHTML() : costTicketHTML());
+      else render();
+    });
   });
   const sd = document.getElementById('shot-drink');
   if(sd) sd.addEventListener('change', e => { state.shots.rDrink = Number(e.target.value); render(); });
@@ -183,7 +197,13 @@ document.getElementById('view').addEventListener('click', e => {
      that repaints mid-edit must read them back into state first */
   if(state.mybar && state.mybar.form) captureBarForm();
   const fc = state.fc, z = state.quiz;
-  if(act==='go'){ state.tab = el.dataset.tab; }
+  if(act==='go'){ state.tab = el.dataset.tab;
+    /* optional deep links, so "Quiz your list" opens the quiz ON the list
+       instead of leaving the promise at the tab door */
+    if(el.dataset.view) state.practice.view = el.dataset.view;
+    if(el.dataset.mode) state.quiz.mode = el.dataset.mode;
+    if(el.dataset.src){ state.fc.src = el.dataset.src; state.fc.family='All'; state.fc.spirit='All'; state.fc.tier='All'; }
+  }
   else if(act==='fam-open'){ state.famOpen = state.famOpen===el.dataset.fam ? null : el.dataset.fam; }
   else if(act==='fam-goto'){ state.lib = { q:'', fam:el.dataset.fam, tier:'All', open:null }; state.tab='library'; }
   else if(act==='lib-fam'){ state.lib.fam = el.dataset.fam; state.lib.open=null; }
@@ -275,12 +295,12 @@ document.getElementById('view').addEventListener('click', e => {
     state.practice.view = 'drills';
   }
   else if(act==='sess-nobar'){
-    recordSessionComplete(false);
+    recordSessionComplete(false, state.sess && state.sess.night);
     state.sess.active = false;
     state.tab = 'home';
   }
   else if(act==='sess-hands'){
-    state.sess = { active:true, step:'drill' };
+    state.sess = { active:true, step:'drill', night: dateKey(0) };
     state.tab = 'practice';
     state.practice.view = 'drills';
   }
@@ -310,7 +330,7 @@ document.getElementById('view').addEventListener('click', e => {
       saveProgress();
       /* cards + quiz banks the night even if the drill never happens — without
          this, closing the tab here loses the streak entirely */
-      if(state.sess && state.sess.active && state.sess.step==='quiz') recordSessionComplete(false);
+      if(state.sess && state.sess.active && state.sess.step==='quiz') recordSessionComplete(false, state.sess.night);
       z.stage = 'done';
     } else { z.idx++; z.picked = null; } }
   else if(act==='quiz-replay'){
@@ -364,6 +384,10 @@ document.getElementById('view').addEventListener('click', e => {
         ...(isFinite(cost) && cost > 0 ? { cost:cost } : {}) });
       progress.spills = progress.spills.slice(-200);
       saveProgress();
+      state.tools.spillWhat = ''; state.tools.spillCost = '';
+      say('Logged \u2014 '+what.trim()+'.');
+    } else {
+      say('Nothing logged \u2014 say what went in the bin first.');
     }
   }
   else if(act==='spill-del'){
@@ -380,6 +404,10 @@ document.getElementById('view').addEventListener('click', e => {
       progress.openBottles.push({ id:id, name:name.trim(), kind:kind, at:Date.now() - daysAgo*864e5 });
       progress.openBottles = progress.openBottles.slice(-60);
       saveProgress();
+      state.tools.obName = ''; state.tools.obDays = '';
+      say('Dated \u2014 '+name.trim()+'.');
+    } else {
+      say('Nothing dated \u2014 name the bottle first.');
     }
   }
   else if(act==='ob-del'){
@@ -396,6 +424,10 @@ document.getElementById('view').addEventListener('click', e => {
        the field out from under the typist */
     if(recordBottle(nameEl && nameEl.value, state.tools.bottlePrice, state.tools.bottleMl)){
       saveProgress();
+      state.tools.bottleName = '';
+      say('Filed at $'+(Number(state.tools.bottlePrice)||0).toFixed(2)+'.');
+    } else {
+      say('Not filed \u2014 the book needs a name, a price, and a size.');
     }
   }
   else if(act==='pour-log'){
@@ -408,6 +440,10 @@ document.getElementById('view').addEventListener('click', e => {
       progress.pours.push({ d:new Date().toLocaleDateString(), ts:Date.now(), target:target, oz:oz });
       progress.pours = progress.pours.slice(-100);
       saveProgress();
+      state.practice.pourOz = '';
+      say('Logged '+oz.toFixed(2)+' ounces against '+target+'.');
+    } else {
+      say('Not logged \u2014 measure the pour and enter the ounces.');
     }
   }
   else if(act==='rail-called'){ if(state.practice.rail) state.practice.rail.called = el.dataset.ok==='1'; }
@@ -485,7 +521,10 @@ document.getElementById('view').addEventListener('click', e => {
     const id = el.dataset.id;
     const input = document.getElementById('pr-in-'+id);
     const v = parseFloat(input && input.value);
-    if(isNaN(v)) return;
+    /* Zero and negatives: a 0-second speed round or a -3 would become the
+       permanent unbeatable best on every low-is-better drill. */
+    const dd = DRILLS.find(x => x.id === id);
+    if(isNaN(v) || v < 0 || (v === 0 && dd && dd.dir === 'low')) return;
     if(!progress.practice) progress.practice = {};
     const arr = progress.practice[id] || [];
     const entry = { d:new Date().toLocaleDateString(), ts:Date.now(), v:v };
@@ -497,7 +536,7 @@ document.getElementById('view').addEventListener('click', e => {
     saveProgress();
     /* a logged drill is what upgrades tonight from recitation to hands */
     if(state.sess && state.sess.active && state.sess.step==='drill'){
-      recordSessionComplete(true);
+      recordSessionComplete(true, state.sess && state.sess.night);
       state.sess.active = false;
       state.tab = 'home';
     } }
@@ -623,11 +662,40 @@ document.getElementById('view').addEventListener('click', e => {
   else if(act==='svc-dom'){ state.svc.dom = el.dataset.d; state.svc.rowOpen = null; state.svc.refOpen = null; }
   else if(act==='svc-row'){ const i=Number(el.dataset.i); state.svc.rowOpen = state.svc.rowOpen===i ? null : i; }
   else if(act==='svc-ref'){ const n=el.dataset.n; state.svc.refOpen = state.svc.refOpen===n ? null : n; }
+  captureLiveInputs();
   render();
 });
 
+/* THE CAPTURE RULE, systematised. render() rebuilds the whole view, so any
+   text sitting in a live input dies with the DOM unless it is read back into
+   state first — captureBarForm learned this for My Bar, and then four new
+   forms shipped without it: tapping a reason chip wiped the spill you had
+   just described, and picking a pour target ate the ounces you had measured.
+   Called before EVERY render from the click handler; the views render these
+   fields back out of state, and the log acts clear them on success. */
+function captureLiveInputs(){
+  const grab = (id, obj, key) => {
+    const el2 = document.getElementById(id);
+    if(el2 && el2.value !== undefined) obj[key] = el2.value;
+  };
+  grab('spill-what', state.tools, 'spillWhat');
+  grab('spill-cost', state.tools, 'spillCost');
+  grab('ob-name',    state.tools, 'obName');
+  grab('ob-kind',    state.tools, 'obKind');
+  grab('ob-days',    state.tools, 'obDays');
+  grab('pour-oz',    state.practice, 'pourOz');
+  grab('cost-bottle-name', state.tools, 'bottleName');
+}
+
 (async () => {
-  try{ const raw = await store.get(KEY); if(raw) progress = JSON.parse(raw); }catch(e){}
+  try{ const raw = await store.get(KEY); if(raw) progress = JSON.parse(raw); }
+  catch(e){
+    /* The blob exists and does not parse. The old path discarded it silently
+       and the first save overwrote it — the only copy of a year of records,
+       gone because one write got truncated. Park it under a sibling key
+       BEFORE anything can save, so a hand or a future build can recover it. */
+    try{ const raw2 = localStorage.getItem(KEY); if(raw2) localStorage.setItem(KEY + '-corrupt-' + Date.now(), raw2); }catch(e2){}
+  }
   if(!progress.cards) progress.cards = {};
   if(!progress.quizzes) progress.quizzes = [];
   if(!progress.practice) progress.practice = {};
