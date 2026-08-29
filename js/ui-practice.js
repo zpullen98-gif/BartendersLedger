@@ -584,9 +584,20 @@ function pourHTML(){
 }
 
 /* ---- pour cost / pricing ---- */
+/** The venue's own price as a number, or null. Free text like the menu writes it. */
+function parseMenuPrice(raw){
+  if(!raw) return null;
+  const n = parseFloat(String(raw).replace(/[^\d.]/g, ''));
+  return isFinite(n) && n > 0 ? n : null;
+}
 function costHTML(){
   const t = state.tools;
-  const c = COCKTAILS[t.drink];
+  const bar = progress.bar || [];
+  /* The sheet costs YOUR list, not only the canon — the whole point of a pour
+     cost is the price on your own menu, and only My Bar drinks carry one. */
+  const useBar = t.costSrc === 'bar' && bar.length;
+  const b = useBar ? bar[Math.min(t.barDrink || 0, bar.length - 1)] : null;
+  const c = useBar ? b : COCKTAILS[t.drink];
   const bottle = Number(t.bottlePrice)||0;
   const bottleMl = Number(t.bottleMl)||750;
   const target = Number(t.targetPour)||20;
@@ -599,6 +610,36 @@ function costHTML(){
   const totalCost = spiritCost + modifierCost;
   const price = target>0 ? totalCost / (target/100) : 0;
   const menu = Math.ceil(price);
+  /* Your ACTUAL pour cost, when the drink carries your price. The verdict is
+     scored against the tool's own stated band — words beside the number. */
+  const menuPrice = useBar ? parseMenuPrice(b.price) : null;
+  const actualPct = menuPrice ? (totalCost / menuPrice) * 100 : null;
+  const verdict = actualPct === null ? '' :
+    actualPct > 24 ? 'above the 18\u201324% band \u2014 cut cost or raise the price' :
+    actualPct < 18 ? 'below the band \u2014 healthy, or an incomplete cost' : 'inside the 18\u201324% band';
+  const actualRows = menuPrice
+    ? '<div class="tix-rule"></div>'
+      + '<div><span class="tix-label">Your menu price </span>$'+menuPrice.toFixed(2)+'</div>'
+      + '<div><span class="tix-label">Actual pour cost </span>'+actualPct.toFixed(1)+'% \u2014 '+verdict+'</div>'
+    : (useBar ? '<div class="tix-rule"></div><div class="tix-note">Give this drink a price in My Bar and the sheet scores your ACTUAL pour cost against the band.</div>' : '');
+  /* the bottle book */
+  const bottles = progress.bottles || [];
+  const bookChips = bottles.map(function(x){
+    const perOz = x.price / (x.sizeMl / 29.5735);
+    const mv = bottleMovePct(x);
+    return '<button class="chip" data-act="cost-use-bottle" data-name="'+esc(x.name)+'" '
+      + 'title="Load this bottle into the sheet">'+esc(x.name)+' \u00b7 $'+perOz.toFixed(2)+'/oz'
+      + (mv !== null ? ' \u00b7 <span style="color:var(--'+(mv>0?'oxblood':'brass')+')">'+(mv>0?'+':'')+mv.toFixed(0)+'%</span>' : '')
+      + '</button>';
+  }).join(' ');
+  const bookBlock = '<div class="panel p4 col" style="gap:8px;max-width:460px;width:100%">'
+    + '<div class="eyebrow">The bottle book</div>'
+    + '<div class="tiny dim lh">File the bottle once and the reprice keeps the old number \u2014 the previous price is the one thing a reprice normally destroys, and it is the whole reason to keep a book. A red percent is invoice creep, caught.</div>'
+    + '<div class="row" style="gap:8px;flex-wrap:wrap">'
+    + '<input class="input" id="cost-bottle-name" placeholder="Bottle \u2014 e.g. Rittenhouse Rye" style="flex:1;min-width:160px">'
+    + '<button class="chip" data-act="cost-file-bottle">File at $'+(Number(t.bottlePrice)||0).toFixed(2)+' / '+(Number(t.bottleMl)||750)+'ml</button></div>'
+    + (bookChips ? '<div class="row" style="gap:6px;flex-wrap:wrap">'+bookChips+'</div>' : '')
+    + '</div>';
   return '<div class="panel p5 col" style="gap:14px">'
     + '<div class="eyebrow">Pour cost &amp; menu price</div>'
     + '<div class="small dim lh">Pour cost = cost of goods ÷ selling price. Most programs target 18–24%. This uses your base-spirit price plus a 25% allowance for juice, syrup, garnish, and ice.</div>'
@@ -618,8 +659,10 @@ function costHTML(){
     + '<div><span class="tix-label">At '+trimNum(target)+'% pour cost </span>$'+price.toFixed(2)+'</div>'
     + '<div class="tix-name" style="font-size:1.1rem">MENU PRICE $'+menu+'</div>'
     + '<div class="tix-rule"></div>'
+    + actualRows
+    + '<div class="tix-rule"></div>'
     + '<div class="tix-note">A rough model, not a P&amp;L. Real costing also carries labour, spillage, comps, and the batch yield loss you never quite recover.</div>'
-    + '</div></div></div>';
+    + '</div></div>' + bookBlock + '</div>';
 }
 
 /* ---- strength estimator ---- */
@@ -669,7 +712,19 @@ function renderTools(){
 
   if(t.view==='data') return wrap(dataToolHTML());
   if(t.view==='convert') return wrap(convertHTML());
-  if(t.view==='cost') return wrap('<div class="row" style="gap:10px">'+drinkSel('tool-drink')+'</div>'+costHTML());
+  if(t.view==='cost'){
+    const bar = progress.bar || [];
+    const srcChips = bar.length
+      ? '<button class="chip'+(t.costSrc!=='bar'?' on':'')+'" data-act="cost-src" data-s="canon" aria-pressed="'+(t.costSrc!=='bar')+'">The canon</button> '
+        + '<button class="chip'+(t.costSrc==='bar'?' on':'')+'" data-act="cost-src" data-s="bar" aria-pressed="'+(t.costSrc==='bar')+'">My Bar</button>'
+      : '';
+    const barSel = (t.costSrc==='bar' && bar.length)
+      ? '<select class="input" id="bar-drink" style="flex:2;min-width:170px">'
+        + bar.map(function(x,i){ return '<option value="'+i+'"'+((t.barDrink||0)===i?' selected':'')+'>'+esc(x.name)+'</option>'; }).join('')
+        + '</select>'
+      : drinkSel('tool-drink');
+    return wrap('<div class="row" style="gap:10px;flex-wrap:wrap">'+srcChips+barSel+'</div>'+costHTML());
+  }
   if(t.view==='strength') return wrap('<div class="row" style="gap:10px">'+drinkSel('tool-drink')+'</div>'+strengthHTML());
 
   if(t.view==='shelf'){

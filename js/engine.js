@@ -33,6 +33,43 @@ function familyMarksHTML(famName, label){
     + '</div>';
 }
 
+/* ---- the bottle book -------------------------------------------------------
+   Spirits invoices creep, and the previous price is the one number a reprice
+   destroys unless something keeps it. Keyed by lowercased name; history is
+   newest-first, capped, and a same-price refile is a no-op — the history is
+   of CHANGES, not of visits to the tool. */
+const BOTTLE_HISTORY_CAP = 12;
+function recordBottle(name, price, sizeMl){
+  const nm = String(name||'').trim();
+  const p = Number(price), ml = Number(sizeMl);
+  if(!nm || !(p > 0) || !(ml > 0)) return false;
+  if(!progress.bottles) progress.bottles = [];
+  const key = nm.toLowerCase();
+  const i = progress.bottles.findIndex(b => b.name.toLowerCase() === key);
+  if(i < 0){
+    progress.bottles.push({ name:nm, price:p, sizeMl:ml, ts:Date.now(),
+      history:[{ price:p, sizeMl:ml, at:Date.now() }] });
+    return true;
+  }
+  const b = progress.bottles[i];
+  if(b.price === p && b.sizeMl === ml){
+    if(b.name !== nm){ b.name = nm; return true; }   /* spelling fix, no fake move */
+    return false;
+  }
+  b.history = [{ price:p, sizeMl:ml, at:Date.now() }, ...(b.history||[])].slice(0, BOTTLE_HISTORY_CAP);
+  b.price = p; b.sizeMl = ml; b.ts = Date.now(); b.name = nm;
+  return true;
+}
+/* The move since last time, in percent — null until there is a last time,
+   and only within comparable sizes (a 700ml at the 750ml price is not a cut). */
+function bottleMovePct(b){
+  const h = (b.history||[]).filter(x => x && x.price > 0);
+  if(h.length < 2) return null;
+  const prev = h.slice(1).find(x => x.sizeMl === h[0].sizeMl && x.price !== h[0].price);
+  if(!prev) return null;
+  return ((h[0].price - prev.price) / prev.price) * 100;
+}
+
 let progress = { cards:{}, quizzes:[] };
 const saveProgress = () => store.set(KEY, JSON.stringify(progress));
 

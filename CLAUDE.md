@@ -53,7 +53,7 @@ data-core edit; it has been proven able to fail.
 - **bfcache**: navigating to an already-visited URL can restore the old JS heap without
   re-executing scripts. When testing, use a unique query string (`?fresh=anything`).
 - **Progress data**: localStorage key `bartenders-ledger-v1`. Never rename fields
-  (`cards{r,w,ef,ivl,reps,due,last}`, `quizzes`, `practice`, `tastings`, `vidPrefs`, `shelf`, `bar`, `pours`, `streakData`).
+  (`cards{r,w,ef,ivl,reps,due,last}`, `quizzes`, `practice`, `tastings`, `vidPrefs`, `shelf`, `bar`, `pours`, `bottles`, `streakData`).
   **Every new progress field needs a named clause in `dataImport`'s merge** — unnamed
   incoming stores are silently ignored, which is right for prefs and wrong for records.
   All changes must be additive; `srsMigrate` is idempotent and runs at boot.

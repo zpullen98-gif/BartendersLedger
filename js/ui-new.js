@@ -606,6 +606,27 @@ function dataImport(file){
         p.pours.forEach(x => { if(x && x.ts && !seen.has(x.ts)) progress.pours.push(x); });
         progress.pours = progress.pours.sort((a,b) => (a.ts||0)-(b.ts||0)).slice(-100);
       }
+      /* bottles: union by name, HISTORY unioned inside each — newer-wins-whole
+         would discard every price change the losing device recorded, which is
+         the one thing the book exists to keep. Same conclusion the World
+         Table's item book reached, ported with its reasoning. */
+      if(Array.isArray(p.bottles)){
+        progress.bottles = progress.bottles || [];
+        p.bottles.forEach(tb => {
+          if(!tb || !tb.name) return;
+          const i = progress.bottles.findIndex(x => x.name.toLowerCase() === tb.name.toLowerCase());
+          if(i < 0){ progress.bottles.push(tb); return; }
+          const mine = progress.bottles[i];
+          const seen = new Set((mine.history||[]).map(h => h.at + '|' + h.price + '|' + h.sizeMl));
+          (tb.history||[]).forEach(h => {
+            if(h && !seen.has(h.at + '|' + h.price + '|' + h.sizeMl)) (mine.history = mine.history||[]).push(h);
+          });
+          mine.history.sort((a,b) => (b.at||0) - (a.at||0));
+          mine.history = mine.history.slice(0, 12);
+          const head = mine.history[0];
+          if(head){ mine.price = head.price; mine.sizeMl = head.sizeMl; mine.ts = Math.max(mine.ts||0, tb.ts||0); }
+        });
+      }
       if(Array.isArray(p.bar)){
         progress.bar = progress.bar || [];
         p.bar.forEach(b => {
@@ -626,6 +647,7 @@ function dataImport(file){
     if(!progress.vidPrefs) progress.vidPrefs = { channel:'auto', longform:false };
     if(!progress.bar) progress.bar = [];
     if(!progress.pours) progress.pours = [];
+    if(!progress.bottles) progress.bottles = [];
     srsMigrate(progress.cards);
     state.tools.shelf = Array.isArray(progress.shelf) ? progress.shelf.slice() : [];
     barChanged();

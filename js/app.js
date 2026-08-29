@@ -60,6 +60,8 @@ function render(){
   });
   const td = document.getElementById('tool-drink');
   if(td) td.addEventListener('change', e => { state.tools.drink = Number(e.target.value); render(); });
+  const bd = document.getElementById('bar-drink');
+  if(bd) bd.addEventListener('change', e => { state.tools.barDrink = Number(e.target.value); render(); });
   const ts = document.getElementById('tool-serv');
   if(ts) ts.addEventListener('input', e => {
     state.tools.serv = Math.max(1, Math.min(200, Number(e.target.value)||1));
@@ -349,6 +351,19 @@ document.getElementById('view').addEventListener('click', e => {
     state.practice.noteOpen = null; }
   else if(act==='rail-deal'){ state.practice.rail = { deck: railDeal(), revealed:false }; }
   else if(act==='pour-target'){ state.practice.pourTarget = Number(el.dataset.t) || 1.5; }
+  else if(act==='cost-src'){ state.tools.costSrc = el.dataset.s; }
+  else if(act==='cost-use-bottle'){
+    const bk = (progress.bottles||[]).find(x => x.name === el.dataset.name);
+    if(bk){ state.tools.bottlePrice = bk.price; state.tools.bottleMl = bk.sizeMl; }
+  }
+  else if(act==='cost-file-bottle'){
+    const nameEl = document.getElementById('cost-bottle-name');
+    /* read at file time, never on input — a re-render per keystroke would eat
+       the field out from under the typist */
+    if(recordBottle(nameEl && nameEl.value, state.tools.bottlePrice, state.tools.bottleMl)){
+      saveProgress();
+    }
+  }
   else if(act==='pour-log'){
     const input = document.getElementById('pour-oz');
     const oz = parseFloat(input && input.value);
