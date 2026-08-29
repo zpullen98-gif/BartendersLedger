@@ -135,6 +135,9 @@ function renderMyBar(){
       + (b.price ? ' · '+esc(b.price) : '')+'</span></button>';
     const body = open
       ? '<div class="col-sm" style="gap:10px;padding:10px 0 4px">'+ticketHTML(b)
+        + (b.family && b.family !== 'Other' && typeof familyMarksHTML === 'function'
+            ? familyMarksHTML(b.family, 'Judged as a '+b.family+' — how to tell it went right')
+            : '')
         + '<div class="row" style="gap:8px"><button class="chip" data-act="mybar-edit" data-id="'+esc(b.id)+'">Edit</button>'
         + '<button class="chip" data-act="mybar-del" data-id="'+esc(b.id)+'">Remove</button></div></div>'
       : '';

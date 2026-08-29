@@ -17,6 +17,22 @@ const store = {
   }
 };
 
+/* ---- family standards ----------------------------------------------------
+   The marks live on FAMILIES (data-core) and render identically everywhere a
+   drink is judged: the families view, the library detail, and My Bar. One
+   renderer so the three cannot drift. `label` names WHOSE standard is being
+   read — a house drink is judged AS a Sour, and saying so is the teaching. */
+function familyMarksHTML(famName, label){
+  const f = FAMILIES[famName];
+  if(!f || !f.marks) return '';
+  const items = f.marks.map(m => '<li class="small lh" style="margin-bottom:6px">'+esc(m)+'</li>').join('');
+  return '<div class="col-sm" style="gap:8px;margin-top:4px">'
+    + '<div class="eyebrow">'+esc(label || ('How to tell it went right — the '+famName+' standard'))+'</div>'
+    + '<ul style="padding-left:18px;margin:0">'+items+'</ul>'
+    + '<div class="tiny lh" style="color:var(--brass)"><span class="bold">Where it goes wrong · </span>'+esc(f.fault)+'</div>'
+    + '</div>';
+}
+
 let progress = { cards:{}, quizzes:[] };
 const saveProgress = () => store.set(KEY, JSON.stringify(progress));
 

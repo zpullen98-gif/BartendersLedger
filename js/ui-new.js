@@ -597,6 +597,15 @@ function dataImport(file){
       /* the additive-only rule in person: every store the merge does not name
          is silently dropped, so My Bar gets an explicit clause — union by id
          (name as the fallback for hand-edited files), newer edit wins */
+      /* pours: union by timestamp — two devices' pours are disjoint
+         observations, and the additive-only rule says every new store gets a
+         named clause HERE or the next import silently drops it. */
+      if(Array.isArray(p.pours)){
+        progress.pours = progress.pours || [];
+        const seen = new Set(progress.pours.map(x => x.ts));
+        p.pours.forEach(x => { if(x && x.ts && !seen.has(x.ts)) progress.pours.push(x); });
+        progress.pours = progress.pours.sort((a,b) => (a.ts||0)-(b.ts||0)).slice(-100);
+      }
       if(Array.isArray(p.bar)){
         progress.bar = progress.bar || [];
         p.bar.forEach(b => {
@@ -616,6 +625,7 @@ function dataImport(file){
     if(!progress.tastings) progress.tastings = [];
     if(!progress.vidPrefs) progress.vidPrefs = { channel:'auto', longform:false };
     if(!progress.bar) progress.bar = [];
+    if(!progress.pours) progress.pours = [];
     srsMigrate(progress.cards);
     state.tools.shelf = Array.isArray(progress.shelf) ? progress.shelf.slice() : [];
     barChanged();

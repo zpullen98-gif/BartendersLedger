@@ -348,7 +348,47 @@ document.getElementById('view').addEventListener('click', e => {
     if(progress.tastings && progress.tastings[i]){ progress.tastings.splice(i,1); saveProgress(); }
     state.practice.noteOpen = null; }
   else if(act==='rail-deal'){ state.practice.rail = { deck: railDeal(), revealed:false }; }
+  else if(act==='pour-target'){ state.practice.pourTarget = Number(el.dataset.t) || 1.5; }
+  else if(act==='pour-log'){
+    const input = document.getElementById('pour-oz');
+    const oz = parseFloat(input && input.value);
+    const target = state.practice.pourTarget || 1.5;
+    /* refuse what cannot be a pour: blank, zero, negative, or a glassful */
+    if(!isNaN(oz) && oz > 0 && oz < 8){
+      if(!progress.pours) progress.pours = [];
+      progress.pours.push({ d:new Date().toLocaleDateString(), ts:Date.now(), target:target, oz:oz });
+      progress.pours = progress.pours.slice(-100);
+      saveProgress();
+    }
+  }
   else if(act==='rail-called'){ if(state.practice.rail) state.practice.rail.called = el.dataset.ok==='1'; }
+  else if(act==='rail-tap'){
+    const r = state.practice.rail;
+    if(r && !r.revealed){
+      const i = Number(el.dataset.i);
+      r.taps = r.taps || [];
+      const at = r.taps.indexOf(i);
+      if(at >= 0) r.taps.splice(at, 1);   /* tap again to un-pick */
+      else r.taps.push(i);
+      if(r.taps.length === r.deck.length){
+        /* grade: consecutive stage ranks may never DECREASE — equal ranks
+           accept either order, because the rail does not care which of two
+           sours you shake first */
+        const ds = r.taps.map(ix => railResolve(r.deck[ix])).filter(Boolean);
+        let ok = true, miss = '';
+        for(let k = 1; k < ds.length; k++){
+          if(railStage(ds[k]).rank < railStage(ds[k-1]).rank){
+            ok = false;
+            miss = ds[k].name + ' starts before ' + ds[k-1].name;
+            break;
+          }
+        }
+        r.autoCalled = ok; r.tapMiss = miss;
+        r.called = ok;        /* feeds the same log the honesty buttons feed */
+        r.revealed = true;
+      }
+    }
+  }
   else if(act==='rail-reveal'){ if(state.practice.rail) state.practice.rail.revealed = true; }
   else if(act==='pr-deal'){
     const id = el.dataset.id;

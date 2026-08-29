@@ -125,6 +125,7 @@ function renderFamilies(){
     const chips = members.map(m => '<button class="chip" data-act="fam-goto" data-fam="'+esc(name)+'">'+esc(m.name)+'</button>').join(' ');
     const body = isOpen ? '<div class="accordion-body">'
       + '<div class="small dim lh">'+esc(f.lesson)+'</div>'
+      + familyMarksHTML(name, 'How to tell it went right')
       + '<div class="eyebrow">Parent drink: '+esc(f.parent)+' · '+members.length+' in the ledger</div>'
       + '<div class="row">'+chips+'</div>'
       + '<div class="row">'+categoryVideoHTML(name,'family')+'</div></div>' : '';
@@ -157,7 +158,11 @@ function libListHTML(){
       ? '<details class="story"><summary><span class="story-orn">❦</span> The Story</summary><div class="story-body">'+esc(LORE[c.name])+'</div></details>' : '';
     const tip = BALANCE_TIPS[c.family] ? '<div class="tiny dim lh" style="max-width:400px"><span class="brass2 bold">Balance notes · </span>'+esc(BALANCE_TIPS[c.family])+'</div>' : '';
     const vd = { src:'Cocktails', name:c.name, group:c.family, tier:c.tier };
-    const body = isOpen ? '<div class="drink-body">'+ticketHTML(c)+story+tip+videoRowHTML(vd)+'</div>' : '';
+    /* The standard sits between the ticket and the lore: first what to make,
+       then how to tell you made it, then why it matters. */
+    const body = isOpen ? '<div class="drink-body">'+ticketHTML(c)
+      + familyMarksHTML(c.family, 'Judged as a '+c.family+' — how to tell it went right')
+      + story+tip+videoRowHTML(vd)+'</div>' : '';
     return '<div class="panel"><button class="drink-head" aria-expanded="'+(isOpen?'true':'false')+'" data-act="lib-toggle" data-i="'+i+'"'+(isOpen?' data-open="1"':'')+'>'
       + glassIcon(c.glass)
       + '<span class="bold">'+esc(c.name)+'</span>'

@@ -207,12 +207,35 @@ function railHTML(){
       + '<button class="btn btn-brass" data-act="rail-deal">Deal a rail</button></div>';
   }
   const drinks = names.map(railResolve).filter(Boolean);
+  /* THE CALL IS TAPPED, NOT CONFESSED. The lines are buttons until the reveal:
+     tap them in the order you would start them, and the grade is computed from
+     RAIL_STAGES rather than self-declared — two drinks sharing a stage accept
+     either order, because the rail genuinely does not care which sour you
+     shake first. The build-for-real path keeps the honesty buttons below. */
+  const taps = r.taps || [];
   const ticket = '<div class="ticket"><div class="ticket-inner">'
     + '<div class="tc"><div class="tix-label">Table 12 · all day</div></div><div class="tix-rule"></div>'
-    + drinks.map((c,i) => '<div class="spec-line"><span>'+(i+1)+'</span><span class="bold">'+esc(c.name.toUpperCase())+'</span></div>').join('')
-    + '<div class="tix-rule"></div><div class="tix-note">Fired '+drinks.length+' · one guest waiting on all of them</div></div></div>';
+    + drinks.map((c,i) => {
+        const pick = taps.indexOf(i);
+        const picked = pick >= 0;
+        if(r.revealed) return '<div class="spec-line"><span>'+(picked ? (pick+1)+'.' : '·')+'</span><span class="bold">'+esc(c.name.toUpperCase())+'</span></div>';
+        return '<button class="spec-line" style="width:100%;text-align:left;background:none;border:0;cursor:pointer;color:inherit;font:inherit'+(picked?';opacity:.55':'')+'" '
+          + 'data-act="rail-tap" data-i="'+i+'" aria-pressed="'+(picked?'true':'false')+'">'
+          + '<span>'+(picked ? (pick+1)+'.' : '—')+'</span><span class="bold">'+esc(c.name.toUpperCase())+'</span></button>';
+      }).join('')
+    + '<div class="tix-rule"></div><div class="tix-note">'
+    + (r.revealed ? 'Fired '+drinks.length+' · one guest waiting on all of them'
+                  : 'Tap the tickets in the order you would START them — or build the four for real and check after.')
+    + '</div></div></div>';
+  /* The computed verdict, when the call was tapped. */
+  const verdict = (r.revealed && r.autoCalled !== undefined)
+    ? '<div class="panel p4" style="width:100%;max-width:460px;border-color:var(--'+(r.autoCalled?'brass':'oxblood')+')">'
+      + '<div class="small bold" style="color:var(--'+(r.autoCalled?'brass':'oxblood')+')">'
+      + (r.autoCalled ? 'Called right — every start in a workable order.' : 'Out of order' + (r.tapMiss ? ' — ' + esc(r.tapMiss) : '') + '.')
+      + '</div></div>'
+    : '';
   const answer = r.revealed
-    ? '<div class="panel p4 col-sm" style="width:100%;max-width:460px">'
+    ? verdict + '<div class="panel p4 col-sm" style="width:100%;max-width:460px">'
       + '<div class="eyebrow mb1">The rail order</div>'
       + drinks.slice().sort((a,b) => railStage(a).rank - railStage(b).rank)
         .map((c,i) => '<div class="small lh" style="border-bottom:1px solid var(--felt-3);padding:7px 0">'
@@ -250,11 +273,12 @@ function railHTML(){
 
 function renderPractice(){
   const p = state.practice;
-  const nav = [['drills','Drills'],['rail','Ticket Rail'],['tasting','Tasting Room'],['flights','Flights'],['method','How to Taste']]
+  const nav = [['drills','Drills'],['rail','Ticket Rail'],['pour','Free Pour'],['tasting','Tasting Room'],['flights','Flights'],['method','How to Taste']]
     .map(([k,l]) => '<button class="tab-btn'+(p.view===k?' active':'')+'" data-act="pr-view" data-v="'+k+'">'+l+'</button>').join('');
   const wrap = (inner) => '<div class="col"><nav class="tabs" style="margin-bottom:4px">'+nav+'</nav>'+inner+'</div>';
 
   if(p.view==='rail') return wrap(railHTML());
+  if(p.view==='pour') return wrap(pourHTML());
 
   if(p.view==='tasting'){
     const log = progress.tastings || [];
@@ -506,6 +530,57 @@ function convertHTML(){
     + '<div>'+rows+'</div>'
     + '<div class="tiny dim lh">Handy anchors: 1 oz = 29.6ml · 1.5 oz = 44ml · 2 oz = 59ml · 750ml bottle = 25.4 oz = about 16 two-ounce pours.</div>'
     + '</div>';
+}
+
+/* ---------------- THE FREE-POUR BENCH ---------------- */
+/* The one leak the guide prices to the drop: "an eighth-ounce heavy on every
+   jigger is 6% of spirit cost, invisible and constant." The bench cannot hear
+   a pour, so it refuses to pretend: you pour to your own count into a jigger
+   or onto a scale, you enter what actually landed, and the ledger keeps YOUR
+   deviation — a private number, in your own record, read by nobody else. That
+   privacy is a design rule, not an accident: a pour log a manager reads goes
+   dishonest in a week. */
+const POUR_TARGETS = [0.75, 1, 1.25, 1.5, 2];
+
+function pourHTML(){
+  const t = state.practice.pourTarget || 1.5;
+  const log = (progress.pours || []).filter(e => e.target === t);
+  const last = log.slice(-10).reverse();
+  const rows = last.map(e => {
+    const dev = e.oz - e.target;
+    const pct = e.target ? (dev / e.target) * 100 : 0;
+    const sign = dev > 0 ? '+' : '';
+    return '<div class="hist-row"><span>'+esc(e.d)+'</span>'
+      + '<span class="font-tix '+(Math.abs(pct) <= 5 ? 'brass2' : '')+'"'+(Math.abs(pct) > 5 ? ' style="color:var(--oxblood)"' : '')+'>'
+      + e.oz.toFixed(2)+' oz ('+sign+pct.toFixed(0)+'%)</span></div>';
+  }).join('');
+  /* the money line, from the last five pours at this target */
+  const recent = log.slice(-5);
+  const avgDev = recent.length ? recent.reduce((s,e) => s + (e.oz - e.target), 0) / recent.length : null;
+  const money = avgDev === null ? ''
+    : '<div class="tiny dim lh" style="max-width:460px">'
+      + (Math.abs(avgDev) < 0.03
+          ? 'Your last '+recent.length+' average within a thirtieth of an ounce. That is jigger-grade pouring.'
+          : 'Your last '+recent.length+' run '+(avgDev>0?'+':'')+avgDev.toFixed(2)+' oz against the target — '
+            + Math.abs((avgDev / t) * 100).toFixed(0)+'% '+(avgDev>0?'over':'under')+' on every pour. '
+            + (avgDev>0 ? 'The guide prices the habit: an eighth-ounce heavy on every jigger is 6% of spirit cost, invisible and constant.'
+                        : 'Under-pouring is not thrift — it is a short drink a guest can taste, and a reputation leak instead of a cost one.'))
+      + '</div>';
+  const targets = POUR_TARGETS.map(x =>
+    '<button class="chip'+(x===t?' brass':'')+'" data-act="pour-target" data-t="'+x+'" aria-pressed="'+(x===t?'true':'false')+'">'+x+' oz</button>').join(' ');
+  return '<div class="col" style="align-items:center"><div class="panel p5 col" style="gap:12px;max-width:520px;width:100%">'
+    + '<div class="eyebrow">The free-pour bench</div>'
+    + '<div class="small dim lh">Speed pourer in the bottle, water in the bottle, jigger or scale on the bar. '
+    + 'Pour to your count for the target, then MEASURE what landed and enter it. The bench keeps your deviation; '
+    + 'it stays in your ledger and nobody else\'s.</div>'
+    + '<div class="row" style="gap:8px;flex-wrap:wrap">'+targets+'</div>'
+    + '<div class="row" style="gap:10px">'
+    + '<input class="input" type="number" step="any" inputmode="decimal" id="pour-oz" placeholder="what landed (oz)" style="max-width:170px">'
+    + '<button class="btn btn-brass" data-act="pour-log">Log the pour</button></div>'
+    + money
+    + (rows ? '<div class="col-sm" style="gap:4px"><div class="eyebrow">At '+t+' oz</div>'+rows+'</div>' : '')
+    + '<div class="tiny dim lh">1.5 oz = 44 ml = a four-count on most speed pourers at a steady cadence — but the count is yours; the jigger is the judge.</div>'
+    + '</div></div>';
 }
 
 /* ---- pour cost / pricing ---- */

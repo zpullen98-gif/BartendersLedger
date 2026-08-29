@@ -26,9 +26,17 @@ Then open http://localhost:8631. Use `serve.py` (not `python -m http.server`) �
 - `js/ui-practice.js` — tasting room, practice drills, tools (batching/ABV/cost/convert/**My Data**)
 - `js/ui-reference.js` — shots, zero proof, producers
 - `js/ui-prep.js` — prep room, video-link builders
+- `js/ui-mybar.js` — My Bar: the venue's own list, drilled by the same engines
 - `js/ui-new.js` — nav clusters, hash router, search overlay, SVG charts, riff critique, ornaments/glass icons, export/import
 - `js/app.js` — `render()`, the one delegated click handler (`data-act`), keyboard shortcuts, boot, SW registration
 - `sw.js` — cache-first service worker, explicit precache list
+
+## Checks
+
+`node tools/check.mjs` — the family standards gate: 3–5 observable marks and a
+fault per family, every cocktail's family resolves, no mark names a specific
+drink, and marks about a forked method carry a condition word. Run it after any
+data-core edit; it has been proven able to fail.
 
 ## Update discipline (deploying a change)
 
@@ -45,7 +53,9 @@ Then open http://localhost:8631. Use `serve.py` (not `python -m http.server`) �
 - **bfcache**: navigating to an already-visited URL can restore the old JS heap without
   re-executing scripts. When testing, use a unique query string (`?fresh=anything`).
 - **Progress data**: localStorage key `bartenders-ledger-v1`. Never rename fields
-  (`cards{r,w,ef,ivl,reps,due,last}`, `quizzes`, `practice`, `tastings`, `vidPrefs`, `shelf`).
+  (`cards{r,w,ef,ivl,reps,due,last}`, `quizzes`, `practice`, `tastings`, `vidPrefs`, `shelf`, `bar`, `pours`, `streakData`).
+  **Every new progress field needs a named clause in `dataImport`'s merge** — unnamed
+  incoming stores are silently ignored, which is right for prefs and wrong for records.
   All changes must be additive; `srsMigrate` is idempotent and runs at boot.
 - **Adding drinks**: LORE is keyed by exact `name`. Router slugs come from `slugify(name)`.
 - **Quiz questions** carry an optional `topic` (`service` | `beerwine` | `craft`). Legacy entries

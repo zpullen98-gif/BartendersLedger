@@ -570,51 +570,148 @@ const COCKTAILS = [
 
 const FAMILIES = {
   "Old Fashioned": {
+    /* Observable at the glass, holding for every member — conditionals
+       mark the family's real forks. `fault` is the commonest failure and
+       its diagnosis, the World Table's standards grammar. */
+    marks:[
+      "The sweetness arrives dissolved — stirred through where the drink is built on syrup or muddled sugar, or streaming up from the cube where the cube is the point. Grit in the last sip means the stir stopped early.",
+      "Cold and slightly softened, never watery: the first sip has lost its raw-spirit heat, and the last sip still tastes of the spirit rather than the melt.",
+      "The nose gets there first — expressed oils, a rinse, or bitters on the surface reach you before the liquid does.",
+      "The spirit is still the drink. Everything else frames it; nothing covers it.",
+    ],
+    fault:"Rushed. Sugar half-dissolved and dilution skipped, so the first sip is hot and dry and the bottom of the glass is syrup. The water is an ingredient — stir until the drink has taken it.",
     formula:"Spirit + sugar + bitters + water",
     lesson:"The original 1806 definition of 'cocktail'. Dilution is an ingredient — the water comes from ice, and it belongs there.",
     parent:"Old Fashioned",
   },
   "Sour": {
+    /* Observable at the glass, holding for every member — conditionals
+       mark the family's real forks. `fault` is the commonest failure and
+       its diagnosis, the World Table's standards grammar. */
+    marks:[
+      "Bright, not sharp: the citrus lifts the first sip and the sweet catches it — neither lands alone, whatever ratio the house pours.",
+      "The citrus tastes cut today. Day-old juice reads dull and bottled reads bitter, and no ratio fixes either.",
+      "Chilled and textured to what the serve asks — a fine froth on a shaken one, smooth slush on a frozen one, clean and cold on a built one.",
+      "Served up, the surface is clean: double-strained, no ice shards, no pulp rafts.",
+    ],
+    fault:"Tired juice, or a ratio that drifted. It tastes sharp up front and flat behind — the sweetness sitting on top of the drink instead of inside it — and the tell is that nobody orders a second.",
     formula:"2 oz spirit + 3/4–1 oz citrus + 3/4 oz sweet",
     lesson:"The biggest family in the canon. Balance lives in the citrus-to-sweet ratio; taste your citrus daily. Add orange liqueur and you have a New Orleans sour (Margarita, Sidecar). Add soda and it goes long (Collins, Fizz).",
     parent:"Daiquiri",
   },
   "Spirit & Vermouth": {
+    /* Observable at the glass, holding for every member — conditionals
+       mark the family's real forks. `fault` is the commonest failure and
+       its diagnosis, the World Table's standards grammar. */
+    marks:[
+      "The vermouth is alive: wine-fresh, kept cold, young enough to remember being opened. A drink on tired vermouth tastes dusty, and no stir saves it.",
+      "Silk at real cold — chilled until the vessel frosts, so it drinks smooth without the burn of under-dilution or the slack of over.",
+      "Stirred members pour bright as glass. Haze where none belongs means it was shaken, or the ice was wet.",
+      "The spirit leads and the wine frames it: you taste both, in that order, to the bottom of the glass.",
+    ],
+    fault:"The vermouth died on a warm shelf weeks ago, and everything made with it is quietly flat. Refrigerate it, date it, and pour it like the wine it is.",
     formula:"2 oz spirit + 1 oz aromatized wine (+ bitters)",
-    lesson:"Always stirred, always elegant. Vermouth is wine — refrigerate it, date the bottle, replace it monthly. A Manhattan on tired vermouth is a dead Manhattan.",
+    lesson:"Stirred whenever the glass holds only spirit and wine — the juiced cousins (the Bronx wing) shake. Vermouth is wine — refrigerate it, date the bottle, replace it monthly. A Manhattan on tired vermouth is a dead Manhattan.",
     parent:"Manhattan",
   },
   "Highball": {
+    /* Observable at the glass, holding for every member — conditionals
+       mark the family's real forks. `fault` is the commonest failure and
+       its diagnosis, the World Table's standards grammar. */
+    marks:[
+      "Where it sparkles, it sparkles to the last sip: cold glass, cold bottle, a gentle build, one lift of the spoon — never a hard stir that beats the gas out.",
+      "A full column of ice. Half a glass of ice is a warmer drink with a swim in it, not a colder one.",
+      "The spirit stays present through the lengthener — long, never lost.",
+      "The rolled and juiced members pour even and seasoned through, with nothing separating in the glass.",
+    ],
+    fault:"A warm glass and a hard stir. The sparkle is gone before it reaches the table, and what lands is flat mixer with spirit in it — in the one family whose entire point was the lift.",
     formula:"2 oz spirit + 4–6 oz carbonated lengthener",
     lesson:"Carbonation is fragile. Cold glass, cold mixer, gentle build, one lift of the barspoon — never a hard stir.",
     parent:"Gin & Tonic",
   },
   "Egg & Cream": {
+    /* Observable at the glass, holding for every member — conditionals
+       mark the family's real forks. `fault` is the commonest failure and
+       its diagnosis, the World Table's standards grammar. */
+    marks:[
+      "Where egg builds the head, the dry shake came first: the foam sets dense in the glass and holds a drop of bitters on its surface without swallowing it.",
+      "Silk, not slick — the texture reads as body, with no eggy smell riding over the aromatics.",
+      "Cream members pour rich but drinkable: the dairy rounds the drink without flattening the spirit.",
+      "Where there is a head, it lasts the length of the drink, not the length of a minute.",
+    ],
+    fault:"The dry shake was skipped or cut short. The head arrives thin, slides to the rim, and is gone before the first sip — and texture is the whole reason this family exists.",
     formula:"Base drink + egg or cream for texture",
     lesson:"Dry shake first (no ice) to emulsify, then shake with ice. The reward is silk and meringue.",
     parent:"Ramos Gin Fizz",
   },
   "Julep & Smash": {
+    /* Observable at the glass, holding for every member — conditionals
+       mark the family's real forks. `fault` is the commonest failure and
+       its diagnosis, the World Table's standards grammar. */
+    marks:[
+      "The herb is pressed awake, never shredded: bruised leaves give up their nose, torn ones give up bitterness and flecks through the ice.",
+      "The vessel frosts on the outside — the visible mark that the crushed ice and the work have done their job.",
+      "Crushed ice mounded proud of the rim, with the herb bouquet planted where the nose meets the straw.",
+    ],
+    fault:"Muddled like it owed money. Shredded leaves turn the drink grassy-bitter and stud the ice with green — the herb is a perfume here, not an ingredient.",
     formula:"Spirit + sugar + mint (or fruit) + crushed ice",
     lesson:"Slap or press mint — never shred it. Crushed ice is the engine: it dilutes, chills, and frosts the cup.",
     parent:"Mint Julep",
   },
   "Tiki": {
+    /* Observable at the glass, holding for every member — conditionals
+       mark the family's real forks. `fault` is the commonest failure and
+       its diagnosis, the World Table's standards grammar. */
+    marks:[
+      "Built on crushed or pebble ice, packed full — the dilution is designed in, and big cubes wash the design out.",
+      "A whip shake wakes it and no more: shaken just until mixed, because the ice in the glass finishes the chilling.",
+      "The sweeteners layer instead of merging into syrup: nut, citrus and cane arrive as different voices in one chord.",
+      "The garnish is architecture, and the straw still reaches the drink.",
+    ],
+    fault:"A full shake over big ice, then poured over crushed: diluted twice, so the loudest drink in the book tastes like juice. The glass was supposed to do half the work.",
     formula:"Split rums + multiple citrus + multiple syrups",
     lesson:"Tiki is the sour family in a Hawaiian shirt — the same balance math with more variables. Blend a light rum with a funky one for depth.",
     parent:"Mai Tai",
   },
   "Duo & Trio": {
+    /* Observable at the glass, holding for every member — conditionals
+       mark the family's real forks. `fault` is the commonest failure and
+       its diagnosis, the World Table's standards grammar. */
+    marks:[
+      "The liqueur is measured like the spirit, not poured like a mixer: the sweetness sits inside the drink, framing the proof.",
+      "Cold tightens it. Served properly chilled the sugar reads as roundness; lukewarm, the same spec reads as dessert.",
+      "Where a float is called, it floats — a distinct layer laid over the back of a spoon, not a stir that greys the whole glass.",
+    ],
+    fault:"A heavy hand on the liqueur. Two or three ingredients leave nowhere to hide, and a quarter ounce over turns a grown-up drink into a milkshake.",
     formula:"Spirit + liqueur (+ cream)",
     lesson:"Simple but unforgiving — with two or three ingredients, the quality of each is fully exposed.",
     parent:"Espresso Martini",
   },
   "Hot": {
+    /* Observable at the glass, holding for every member — conditionals
+       mark the family's real forks. `fault` is the commonest failure and
+       its diagnosis, the World Table's standards grammar. */
+    marks:[
+      "The glass was hot before the drink was: pre-heated, so it is still hot at the bottom rather than merely warm at the top.",
+      "Balance holds at temperature — heat amplifies both sweetness and burn, so the spirit is measured, never guessed.",
+      "Where cream finishes it, the cream floats: poured over a spoon to sit as a cool layer the hot drink is drunk through.",
+      "The steam carries the aromatics — spice, citrus, coffee — before the first sip does.",
+    ],
+    fault:"Built in a cold glass. The drink arrives warm and finishes cold, the float sinks, and the one step that carried all the others — heating the glass — was the one skipped.",
     formula:"Spirit + sweetener + hot liquid, in a pre-heated vessel",
     lesson:"Heat amplifies both sweetness and alcohol burn, so under-sweeten slightly compared to a cold build. Pre-heat the glass or the drink is lukewarm by the second sip, and never boil — boiling drives off the aromatics you're paying for.",
     parent:"Hot Toddy",
   },
   "Punch": {
+    /* Observable at the glass, holding for every member — conditionals
+       mark the family's real forks. `fault` is the commonest failure and
+       its diagnosis, the World Table's standards grammar. */
+    marks:[
+      "Balanced for the format, not the glass: sweetness and strength tuned so the last cup drinks as well as the first.",
+      "The ice fits the job — one large block where it stands in a bowl, cooling slowly instead of racing to water.",
+      "Strength that sneaks rather than announces: sessionable by design, which is exactly what makes it dangerous and why it is measured.",
+    ],
+    fault:"Built strong to impress and iced with cubes: it starts as a dare and ends as water. The format is the point — measured, mellowed, and cooled slowly.",
     formula:"One sour, two sweet, three strong, four weak",
     lesson:"The ancestor of everything — cocktails are single-serving punches. The old rhyme is the recipe: citrus, sweetener, spirit, then water/tea/juice to lengthen. Scale it up and rest it; punch improves with an hour in the bowl.",
     parent:"Fish House Punch",
