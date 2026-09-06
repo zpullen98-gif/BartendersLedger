@@ -29,6 +29,10 @@ Then open http://localhost:8631. Use `serve.py` (not `python -m http.server`) �
 - `js/ui-reference.js` — shots, zero proof, producers
 - `js/ui-prep.js` — prep room, video-link builders
 - `js/ui-menu.js` — Menu: the venue's own list, the bar's stock, and what can be poured right now
+- `js/menu-parse.js` — a page of menu text into rows (ported from the World Table, wrapped)
+- `js/menu-drinks.js` — those rows read as drinks. NEVER invents a quantity
+- `js/menu-read.js` — the photograph and address doors (ported; no downloaded OCR engine, no CORS proxy)
+- `js/ui-import.js` — the four doors and the review step
 - `js/ui-new.js` — nav clusters, hash router, search overlay, SVG charts, riff critique, ornaments/glass icons, export/import
 - `js/app.js` — `render()`, the one delegated click handler (`data-act`), keyboard shortcuts, boot, SW registration
 - `sw.js` — cache-first service worker, explicit precache list
@@ -93,6 +97,19 @@ exactly one cocktail, the Nojito, which is a real mocktail. Honour
   at every site that COMPARES one. Renaming the key would strand every record or
   blind the orphan sweep in `dataImport`, and both failures are silent.
   `TAB_WAS` in `ui-new.js` heals old `#/mybar/<slug>` links.
+- **The importer never invents a quantity.** A menu prints ingredients and no
+  measures. An ounce invented anywhere in `js/menu-drinks.js` reaches `lineOz`,
+  and from there `balanceOf`, `estimateABV`, the batch sheet and the pour-cost
+  sheet, so a bartender is shown a printed percentage that came from nowhere.
+  `tools/check-import.mjs` runs the REAL `lineOz` over every produced spec line
+  and asserts it is 0. The book's measures are offered as an explicit one-tap
+  fill and never applied in bulk. Blank is a true answer; a guess is not.
+- **`tools/check-import.mjs` is the third gate**, 111 cases: the World Table's
+  own `menu-parse` and `menu-link` suites ported from vitest to `node:test` and
+  pointed at the SHIPPED files through `vm`, plus the cocktail cases written
+  here. The food fixtures are kept verbatim on purpose: they exercise the same
+  code path and rewriting them as cocktails would drop coverage while looking
+  like work.
 - **Live inputs**: `render()` rebuilds `#view`, eating anything typed into an input.
   `captureLiveInputs()` in app.js grabs the known live fields into state before every
   delegated-handler render — add any NEW live input's id to that list when you mint one.
