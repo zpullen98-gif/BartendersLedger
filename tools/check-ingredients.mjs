@@ -31,10 +31,11 @@ const sandbox = {
 	document: { getElementById: () => null, querySelector: () => null },
 };
 const FILES = ['data-core.js', 'data-lore.js', 'data-service.js', 'data-ingredients.js',
-	'ingredients.js', 'engine.js', 'ui-reference.js', 'ui-prep.js'];
+	'ingredients.js', 'engine.js', 'ui-reference.js', 'ui-prep.js',
+	/* for SHELF_GROUPS, which check 8 reads */ 'ui-practice.js'];
 const W = vm.runInNewContext(FILES.map(read).join(';\n') +
 	';({COCKTAILS,SHOTS,NA_DRINKS,INGREDIENTS,NOTE_LINES,SHELF,SHELF_PRESETS,ING,' +
-	'specRefs,reqsOf,missingFor,stockSatisfies,isaChain,migrateShelf,state})', sandbox);
+	'specRefs,reqsOf,missingFor,stockSatisfies,isaChain,migrateShelf,state,SHELF_GROUPS})', sandbox);
 
 const problems = [];
 const say = [];
@@ -189,6 +190,21 @@ if (!zero) {
 	}
 }
 
+/* ---- 8. every stock chip is in a group --------------------------------
+   The chip panel renders group by group, so a chip whose kind names no group
+   is simply not drawn, and nothing on screen says a bottle went missing. It
+   is the vocabulary's own failure shape wearing different clothes: silence
+   where an absence should be loud. Adding a kind to data-ingredients.js and
+   forgetting SHELF_GROUPS is a two-file mistake nobody makes on purpose,
+   which is exactly why it needs a check rather than a convention. */
+const grouped = new Set(W.SHELF_GROUPS.map((g) => g[0]));
+const ungrouped = W.SHELF.filter((s) => !grouped.has((W.ING[s[0]] || {}).kind));
+if (ungrouped.length) {
+	problems.push('stock chip(s) whose kind is in no SHELF_GROUPS row, so they never render and nobody is told:');
+	for (const s of ungrouped) problems.push(`    ${s[0]}  (${s[1]})  kind: ${(W.ING[s[0]] || {}).kind}`);
+} else {
+	say.push(`chip groups: all ${W.SHELF.length} chips fall in one of the ${W.SHELF_GROUPS.length} groups`);
+}
 /* ---- report -------------------------------------------------------------- */
 console.log('\n  Checking the ingredient vocabulary\n');
 for (const s of say) console.log('  ' + s);
