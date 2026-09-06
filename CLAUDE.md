@@ -24,9 +24,11 @@ Then open http://localhost:8631. Use `serve.py` (not `python -m http.server`) �
 - `js/srs.js` — SM-2-lite scheduler (`scheduleCard`, `srsMigrate`, `srsForecast`)
 - `js/ui-study.js` — home (+dashboard), families, library (+print mode), flashcards, quiz, notes, riffs
 - `js/ui-practice.js` — tasting room, practice drills, tools (batching/ABV/cost/convert/**My Data**)
+  The stock panel that used to live here is the Menu tab's Stock view now; the engine
+  (`SHELF`, `missingFor`, `bestNextBottles`, `eightySixReport`) stayed in `engine.js`.
 - `js/ui-reference.js` — shots, zero proof, producers
 - `js/ui-prep.js` — prep room, video-link builders
-- `js/ui-mybar.js` — My Bar: the venue's own list, drilled by the same engines
+- `js/ui-menu.js` — Menu: the venue's own list, the bar's stock, and what can be poured right now
 - `js/ui-new.js` — nav clusters, hash router, search overlay, SVG charts, riff critique, ornaments/glass icons, export/import
 - `js/app.js` — `render()`, the one delegated click handler (`data-act`), keyboard shortcuts, boot, SW registration
 - `sw.js` — cache-first service worker, explicit precache list
@@ -79,10 +81,18 @@ exactly one cocktail, the Nojito, which is a real mocktail. Honour
 - **bfcache**: navigating to an already-visited URL can restore the old JS heap without
   re-executing scripts. When testing, use a unique query string (`?fresh=anything`).
 - **Progress data**: localStorage key `bartenders-ledger-v1`. Never rename fields
-  (`cards{r,w,ef,ivl,reps,due,last}`, `quizzes`, `practice`, `tastings`, `vidPrefs`, `shelf`, `bar`, `pours`, `bottles`, `spills`, `openBottles`, `streakData`).
+  (`cards{r,w,ef,ivl,reps,due,last}`, `quizzes`, `practice`, `tastings`, `vidPrefs`, `shelf`, `bar`, `eightySix`, `eightySixAt`, `pours`, `bottles`, `spills`, `openBottles`, `streakData`).
   **Every new progress field needs a named clause in `dataImport`'s merge** — unnamed
   incoming stores are silently ignored, which is right for prefs and wrong for records.
   All changes must be additive; `srsMigrate` is idempotent and runs at boot.
+- **The Menu tab is called Menu; its records still say `My Bar`.** `cardKey()` is
+  `src + ' · ' + name` and `src` comes from `DECK_SOURCES`, so the literal
+  `'My Bar'` is a PRIMARY KEY baked into every SRS record and every backup ever
+  exported, as well as a filter value in six engines. `srcLabel()` in `ui-study.js`
+  is the join: route it through every site that PRINTS a source, leave the literal
+  at every site that COMPARES one. Renaming the key would strand every record or
+  blind the orphan sweep in `dataImport`, and both failures are silent.
+  `TAB_WAS` in `ui-new.js` heals old `#/mybar/<slug>` links.
 - **Live inputs**: `render()` rebuilds `#view`, eating anything typed into an input.
   `captureLiveInputs()` in app.js grabs the known live fields into state before every
   delegated-handler render — add any NEW live input's id to that list when you mint one.
