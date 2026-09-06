@@ -44,6 +44,26 @@ changes any cached asset after the last sw.js change without bumping CACHE
 fails the build. Run it after any data or asset edit; every check has been
 proven able to fail.
 
+`node tools/check-ingredients.mjs` — the second gate, over the ingredient
+vocabulary in js/data-ingredients.js. It exists because what it checks failed
+silently for years: 104 regexes stood where the vocabulary is now, and a spec
+line no pattern matched became a need the matcher could not see. A need it
+could not see was a need that did not exist, so a drink whose spirit was
+unreadable read as MAKEABLE. 169 of 817 spec lines matched nothing, and the
+Zero-proof station preset, a shelf with no alcohol on it, offered a Hot Toddy
+and a Whiskey Highball. Nothing on screen said so.
+
+It checks: every spec line in COCKTAILS, SHOTS and NA_DRINKS resolves to an
+ingredient or a declared NOTE_LINES instruction; the vocabulary is well formed
+(parents exist, no cycles, no id or alias claimed twice); every requirement is
+reachable from some stock chip, which is what makes strict upward substitution
+safe rather than a silent trap; no drink requires nothing at all; preset ids
+resolve; the 104 pre-vocabulary shelf ids all still land somewhere under
+`migrateShelf`, which is frozen as a literal in the check file so that deleting
+a row cannot make the check vacuously pass; and the alcohol-free shelf claims
+exactly one cocktail, the Nojito, which is a real mocktail. Honour
+`LEDGER_JS=<dir>` to run it against another build.
+
 ## Update discipline (deploying a change)
 
 1. Edit files.

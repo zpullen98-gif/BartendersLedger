@@ -768,7 +768,16 @@ function captureLiveInputs(){
   if(!progress.tastings) progress.tastings = [];
   if(!progress.vidPrefs) progress.vidPrefs = { channel:'auto', longform:false };
   if(!progress.bar) progress.bar = [];
-  if(Array.isArray(progress.shelf)) state.tools.shelf = progress.shelf.slice();
+  /* A shelf stored before the vocabulary may hold ids that have since split,
+     and twelve of them did. migrateShelf is idempotent and never subtractive:
+     an id it does not know is kept, because an unknown id satisfies nothing
+     and costs nothing, whereas dropping it destroys a list somebody built by
+     hand. */
+  if(Array.isArray(progress.shelf)){
+    const migrated = migrateShelf(progress.shelf);
+    if(migrated.join('|') !== progress.shelf.join('|')){ progress.shelf = migrated; saveProgress(); }
+    state.tools.shelf = progress.shelf.slice();
+  }
   srsMigrate(progress.cards);
   applyRoute();
   render();

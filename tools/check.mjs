@@ -31,7 +31,11 @@ const { COCKTAILS, FAMILIES } = vm.runInNewContext(src + ';({COCKTAILS,FAMILIES}
 // The wider sandbox: everything the closure checks below need. Engine wants
 // window/localStorage at load; stubs keep it honest and DOM-free.
 const sandbox = { window: {}, localStorage: { getItem: () => null, setItem() {} }, navigator: {} };
-const wide = [src, read('../js/data-lore.js'), read('../js/data-service.js'), read('../js/engine.js'), read('../js/ui-reference.js'), read('../js/ui-prep.js')].join(';'+String.fromCharCode(10));
+/* data-ingredients.js and ingredients.js load BEFORE engine.js, because the
+   SHELF table is derived from the vocabulary now rather than hand-written.
+   The ingredient checks themselves live in tools/check-ingredients.mjs; run
+   both. */
+const wide = [src, read('../js/data-lore.js'), read('../js/data-service.js'), read('../js/data-ingredients.js'), read('../js/ingredients.js'), read('../js/engine.js'), read('../js/ui-reference.js'), read('../js/ui-prep.js')].join(';'+String.fromCharCode(10));
 const W = vm.runInNewContext(
 	wide + ';({LORE, SHOTS, NA_DRINKS, PREPS, PRODUCERS, SHELF, SHELF_PRESETS})',
 	sandbox
