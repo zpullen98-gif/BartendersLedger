@@ -205,6 +205,47 @@ if (ungrouped.length) {
 } else {
 	say.push(`chip groups: all ${W.SHELF.length} chips fall in one of the ${W.SHELF_GROUPS.length} groups`);
 }
+/* ---- 9. a zero-proof drink may not require alcohol ----------------------
+   The check this file should have had from the first day, and did not, so
+   nine of the 85 zero-proof drinks shipped requiring a drink. A Root Beer
+   Float needed a lager, a Mulled Cider needed hard cider, and an Elderflower
+   Spritz needed St-Germain, because longest-alias matching had no
+   non-alcoholic homonym to prefer and 'cider' beat 'apple cider'.
+
+   It is the exact mirror of the bug the vocabulary was built to kill. That
+   one said a drink was makeable when it could not be read; this one said a
+   drink was unmakeable on the shelf it was designed for. Both were silent.
+
+   'Carries alcohol' means an alcoholic KIND without an authored abv of 0.
+   Absent and zero must be different answers, which is why the zero-proof
+   rows author their zero rather than leaving the field off: a row with no
+   abv at all is assumed alcoholic, because failing closed is the rule.
+
+   An either/or requirement is only a problem when EVERY member is
+   alcoholic, since any one of them satisfies it. */
+const BOOZY_KINDS = ['spirit', 'liqueur', 'fortified', 'wine', 'beer'];
+const carriesAlcohol = (id) => {
+	const row = W.ING[id];
+	if (!row) return false;                       /* unknown: check 1 owns that */
+	if (row.abv === 0) return false;              /* authored zero, and it counts */
+	return BOOZY_KINDS.indexOf(row.kind) >= 0;
+};
+const boozyNA = [];
+for (const d of W.NA_DRINKS) {
+	const offending = [];
+	for (const r of W.reqsOf(d)) {
+		const ids = Array.isArray(r) ? r : [r];
+		if (ids.length && ids.every(carriesAlcohol)) offending.push(ids.join(' or '));
+	}
+	if (offending.length) boozyNA.push({ name: d.name, need: offending });
+}
+if (boozyNA.length) {
+	problems.push(`${boozyNA.length} zero-proof drink(s) require an ingredient that carries alcohol, ` +
+		'so a shelf with no alcohol on it cannot make them and a shelf with alcohol can:');
+	for (const x of boozyNA) problems.push(`    ${x.name}   needs ${x.need.join(', ')}`);
+} else {
+	say.push(`zero proof: none of the ${W.NA_DRINKS.length} drinks requires anything that carries alcohol`);
+}
 /* ---- report -------------------------------------------------------------- */
 console.log('\n  Checking the ingredient vocabulary\n');
 for (const s of say) console.log('  ' + s);

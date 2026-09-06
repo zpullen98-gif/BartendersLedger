@@ -81,6 +81,8 @@ var ING_UNIT = '(?:oz|ml|cl|dash(?:es)?|drops?|barspoons?|bar spoons?|bsp|tsp|tb
 	'sticks?|shots?|cans?|bottles?|pints?|handfuls?|scoops?|glass(?:es)?|splash(?:es)?|heaping tbsp)';
 var ING_QTY_RE = new RegExp('^\\s*(' + ING_FRACTION + ')?\\s*(' + ING_UNIT + ')?\\s+', 'i');
 var ING_BARE_UNIT_RE = new RegExp('^\\s*(' + ING_UNIT + ')\\s+', 'i');
+/* The same shape with the unit REQUIRED, for every pass after the first. */
+var ING_QTY_UNIT_RE = new RegExp('^\\s*(' + ING_FRACTION + ')\\s*(' + ING_UNIT + ')\\s+', 'i');
 var ING_ADJ_RE = new RegExp('^(?:' + ADJECTIVES.join('|').replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')\\s+', 'i');
 var ING_TAIL_RE = new RegExp(',?\\s*(?:' + TAILS.join('|').replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')\\s*$', 'i');
 
@@ -103,7 +105,18 @@ function normaliseFrag(s) {
 	var out = String(s == null ? '' : s).toLowerCase();
 	out = out.replace(/\s+/g, ' ').trim();
 	var prev;
-	do { prev = out; out = out.replace(ING_QTY_RE, '').replace(ING_BARE_UNIT_RE, ''); } while (out !== prev);
+	/* THE FIRST PASS MAY STRIP A BARE NUMBER; NO LATER PASS MAY.
+
+	   This ran to fixpoint with ING_QTY_RE, whose number and unit are BOTH
+	   optional, so a bare number followed by a space was eaten again and again:
+	   '1.5 oz 151 demerara rum' lost '1.5 oz ', then lost '151 ', resolved to
+	   arum, and the ledger read a 75.5% pour as a 40% one across the Zombie,
+	   the Jet Pilot, Cobra's Fang, the 151 Swizzle and three shots. A number
+	   that survives the first pass is part of the NAME: 151 rum, Licor 43.
+
+	   So the quantity comes off once, and the loop after it requires a unit. */
+	out = out.replace(ING_QTY_RE, '').replace(ING_BARE_UNIT_RE, '');
+	do { prev = out; out = out.replace(ING_QTY_UNIT_RE, '').replace(ING_BARE_UNIT_RE, ''); } while (out !== prev);
 	do { prev = out; out = out.replace(ING_TAIL_RE, ''); } while (out !== prev);
 	do { prev = out; out = out.replace(ING_ADJ_RE, ''); } while (out !== prev);
 	out = out.replace(/^of\s+/, '').replace(/[.,;:]+$/, '').trim();

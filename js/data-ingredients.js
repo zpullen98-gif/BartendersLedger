@@ -77,6 +77,19 @@ const INGREDIENTS = [
 	  alias: ['rye', 'rye whiskey', 'canadian rye'] },
 	{ id: 'scotch', label: 'Scotch', kind: 'spirit', shelf: true, parent: 'whiskey',
 	  alias: ['scotch', 'blended scotch', 'blended scotch whisky'] },
+	/* CHIPS, not up:true. If a bar stocks ordinary scotch it cannot make a Blue
+	   Blazer, which is set on fire and depends on the proof to light: standing a
+	   40% bottle in for a 58% one is a false yes, and a false yes sends somebody
+	   to build a drink they cannot finish mid service.
+
+	   Bottled at cask strength, and the canon pours them by volume: the Blue
+	   Blazer takes 2 oz and the Blue Blazer Shot 1.5 oz. Without these rows
+	   both inherited their parent's 40% and the ledger understated a 58% pour
+	   by nearly a third, in the one drink that is set on fire. */
+	{ id: 'caskscotch', label: 'Cask-strength scotch', kind: 'spirit', shelf: true, parent: 'scotch', abv: 0.58,
+	  alias: ['cask-strength scotch', 'cask strength scotch'] },
+	{ id: 'caskbourbon', label: 'Cask-proof bourbon', kind: 'spirit', shelf: true, parent: 'bourbon', abv: 0.62,
+	  alias: ['cask-proof bourbon', 'barrel-proof bourbon', 'cask-strength bourbon'] },
 	{ id: 'islay', label: 'Islay scotch', kind: 'spirit', shelf: true, parent: 'scotch',
 	  alias: ['islay scotch', 'islay single malt', 'peated scotch', 'smoky islay scotch'] },
 	{ id: 'irish', label: 'Irish whiskey', kind: 'spirit', shelf: true, parent: 'whiskey',
@@ -523,15 +536,53 @@ const INGREDIENTS = [
 	/* ---- zero proof ---------------------------------------------------------
 	   The Zero Proof tab's own bottles. They are ordinary rows, not a special
 	   case: an NA aperitivo is a thing a bar stocks or does not. */
-	{ id: 'naaperitivo', label: 'NA bitter aperitivo', kind: 'liqueur', shelf: true,
+	{ id: 'naaperitivo', label: 'NA bitter aperitivo', kind: 'liqueur', shelf: true, abv: 0,
 	  alias: ['na bitter aperitivo', 'alcohol-free aperitivo', 'na aperitivo'] },
-	{ id: 'nabitters', label: 'NA aromatic bitters', kind: 'bitters', shelf: true,
+	{ id: 'nabitters', label: 'NA aromatic bitters', kind: 'bitters', shelf: true, abv: 0,
 	  alias: ['na aromatic bitters', 'alcohol-free bitters', 'na bitters'] },
-	{ id: 'naspirit', label: 'NA botanical spirit', kind: 'spirit', shelf: true,
+	{ id: 'naspirit', label: 'NA botanical spirit', kind: 'spirit', shelf: true, abv: 0,
 	  alias: ['na botanical spirit', 'alcohol-free botanical spirit', 'na gin', 'na spirit'] },
-	{ id: 'navermouth', label: 'NA red vermouth', kind: 'fortified', shelf: true,
+	{ id: 'navermouth', label: 'NA red vermouth', kind: 'fortified', shelf: true, abv: 0,
 	  alias: ['na red vermouth alternative', 'alcohol-free red vermouth alternative',
 	          'na red vermouth'] },
+
+	/* ---- the zero-proof homonyms -------------------------------------------
+	   Every row here exists because an ALCOHOLIC row was swallowing a
+	   non-alcoholic line, and the Zero Proof tab was quietly requiring drink.
+	   Measured before these were added: nine of the 85 zero-proof drinks could
+	   not be made on a shelf with no alcohol on it, and a Root Beer Float
+	   demanded a lager.
+
+	   The mechanism is longest-alias-wins, so each of these carries an alias
+	   LONGER than the one it has to outbid: 'apple cider' beats 'cider', 'root
+	   beer' beats 'beer', 'elderflower cordial' beats 'elderflower'. Adding a
+	   row is therefore the whole fix; nothing in the resolver changes.
+
+	   abv: 0 is authored rather than left absent, because check 9 asks whether
+	   a zero-proof drink requires anything that carries alcohol, and 'absent'
+	   and 'zero' have to be different answers for that question to mean
+	   anything. */
+	{ id: 'rootbeer', label: 'Root beer', kind: 'mixer', shelf: true, abv: 0,
+	  alias: ['root beer', 'cold root beer'] },
+	{ id: 'applecider', label: 'Apple cider', kind: 'juice', shelf: true, abv: 0,
+	  alias: ['apple cider', 'hot spiced apple cider', 'spiced apple cider',
+	          'unfiltered apple cider'] },
+	{ id: 'nasparkling', label: 'NA sparkling wine', kind: 'mixer', shelf: true, abv: 0,
+	  alias: ['na sparkling wine', 'alcohol-free sparkling wine',
+	          'non-alcoholic sparkling wine', 'sparkling grape juice'] },
+	{ id: 'naredwine', label: 'NA red wine', kind: 'mixer', shelf: true, abv: 0,
+	  alias: ['na red wine', 'alcohol-free red wine', 'non-alcoholic red wine'] },
+	{ id: 'nalager', label: 'NA lager', kind: 'mixer', shelf: true, abv: 0,
+	  alias: ['na lager', 'alcohol-free lager', 'non-alcoholic lager', 'na beer'] },
+	{ id: 'naelder', label: 'Elderflower cordial', kind: 'syrup', shelf: true, abv: 0,
+	  alias: ['elderflower cordial', 'elderflower syrup'] },
+	{ id: 'nacoffeeliq', label: 'NA coffee liqueur', kind: 'syrup', shelf: true, abv: 0,
+	  alias: ['na coffee liqueur', 'alcohol-free coffee liqueur'] },
+	{ id: 'gentiansyrup', label: 'Bitter gentian syrup', kind: 'syrup', shelf: true, abv: 0,
+	  alias: ['gentian or wormwood tincture-free bitter syrup',
+	          'tincture-free bitter syrup', 'bitter syrup'] },
+	{ id: 'narum', label: 'NA rum alternative', kind: 'mixer', shelf: true, abv: 0,
+	  alias: ['na rum alternative', 'alcohol-free rum alternative', 'na rum'] },
 
 	/* ---- everything a bar has and nobody stocks as a decision ---------------
 	   These RESOLVE, which is the point: the gate can tell "this is salt" apart

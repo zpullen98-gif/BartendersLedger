@@ -336,7 +336,14 @@ const SHELF_PRESETS = [
   ['Classic well', WELL_PRESET],
   ['Craft cocktail bar', WELL_PRESET.concat(['arum','scotch','cognac','mezcal','irish','aperol','cynar','fernet','mara','chart','bene','abs','pey','elder','orgeat','honey','gfj','pine','cran','egg','cream','oj','sherry','champ','lillet','nonino','cassis','apricot','falernum','allspice','maple','agave','oprum'])],
   ['Tiki station', ['wrum','arum','oprum','teq','falernum','allspice','orgeat','ol','mara','abs','ango','lime','lemon','gfj','pine','oj','simple','honey','gren','coco','mint','cinn']],
-  ['Zero-proof station', ['lemon','lime','gfj','oj','pine','cran','simple','honey','ginger','mint','soda','tonic','gb','ga','cola','tomato','coco','espresso','brewedcoffee','cream','milk','agave','maple']],
+  /* The zero-proof station stocks the zero-proof BOTTLES too. Without them the
+     preset could not make a Root Beer Float or a Mulled Cider, which is the
+     other half of the bug that had those drinks requiring a lager and hard
+     cider: the rows were wrong AND the station that exists to pour them did
+     not carry them. */
+  ['Zero-proof station', ['lemon','lime','gfj','oj','pine','cran','simple','honey','ginger','mint','soda','tonic','gb','ga','cola','tomato','coco','espresso','brewedcoffee','cream','milk','agave','maple',
+    'naaperitivo','nabitters','naspirit','navermouth',
+    'rootbeer','applecider','nasparkling','naredwine','nalager','naelder','nacoffeeliq','gentiansyrup','narum']],
 ];
 /* A requirement the ledger could not read is shown as what it is, rather
    than as a bare id nobody can act on. */
