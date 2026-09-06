@@ -127,20 +127,64 @@ function ticketHTML(c, hideName){
 const idxOf = (name) => COCKTAILS.findIndex(c => c.name === name);
 
 /* ---------------- BALANCE ENGINE (the DeGroff correction) ---------------- */
+/* WHAT ROLE DOES THIS LINE PLAY IN THE BALANCE?
+
+   A regex cascade stood here, and it failed in the direction that costs money:
+   its last line was `return 'strong'`, so ANY line no pattern matched was
+   priced as a base spirit. Measured on the shipped bank, ten were, and none is
+   a spirit: "2 oz white peach purée" (Bellini), "5 oz cold water" (Pastis),
+   "1/2 oz olive brine" (Dirty Martini), "2 oz boiling water" (Blue Blazer),
+   "4 oz cold coffee", three fruit purées and a shrub. Pour Cost billed every
+   one of them at the bottle rate.
+
+   The vocabulary carries `bal` per row now, inherited down the parent chain,
+   so the answer comes from the ingredient rather than from the order of twenty
+   patterns.
+
+   TWO THINGS THE VOCABULARY CANNOT DECIDE, and both stay here:
+
+   1. BITTERS ARE VOLUME-DEPENDENT. A dash of Angostura is aromatic and is left
+      out of the balance; the Trinidad Sour pours 1.5 oz of it and that is the
+      base. No field on a row can know which, so the volume test comes FIRST
+      and the vocabulary answers everything else.
+
+   2. THE FALLBACK stays 'strong'. Check 1 in tools/check-ingredients.mjs
+      asserts that no shipped spec line is unresolvable, so it is unreachable
+      for the canon; it exists for menu imports, where a bartender can type
+      anything. Overcharging an unknown line is the safe direction on a cost
+      sheet, and that sheet already refuses outright when measures are missing. */
 function classifyLine(l){
   const s = l.toLowerCase();
-  /* aromatics are dashes and rinses — but a measured pour of bitters is a base
+  /* aromatics are dashes and rinses, and a MEASURED pour of bitters is a base
      spirit (the Trinidad Sour is 1.5 oz of Angostura), so check volume first */
-  if(/bitters|rinse|drops|flower water|dash/.test(s) && lineOz(l) === 0) return 'aromatic';
-  /* non-spirit bulk: mixers, beer, dairy and juices that lengthen rather than sour */
-  if(/champagne|prosecco|sparkling|\bsoda\b|tonic|ginger beer|ginger ale|\bcola\b|hot coffee|hot water|tomato|clamato|\bmilk\b|half-and-half|lager|\bstout\b|\bbeer\b|apple juice|lemonade|coconut water|grape juice|orange juice/.test(s)) return 'long';
-  if(/egg|whipped cream/.test(s)) return 'texture';
-  if(/vermouth|lillet|cocchi|dubonnet|punt e mes|\bsherry\b|\bport\b|campari|aperol|\bamaro\b|averna|montenegro|nonino|cynar|fernet|suze|amer picon|aperitivo/.test(s)) return 'modifier';
-  /* sweet: syrups AND the liqueur shelf. These patterns mirror the SHELF table
-     below — when you add one there, add it here or the two disagree. */
-  if(/simple|sugar|honey|orgeat|agave|syrup|cura|cointreau|liqueur|midori|maraschino|chartreuse|cacao|dictine|violette|mûre|falernum|grenadine|cordial|coconut|amaretto|triple sec|grand marnier|drambuie|crème de|creme de|cassis|schnapps|st-?germain|cherry heering|galliano|frangelico|limoncello|advocaat|chambord|midori|kahl|baileys|irish cream|sambuca|licor 43|velvet falernum|allspice dram|pimm/.test(s)) return 'sweet';
-  if(/\bcream\b/.test(s)) return 'texture';
-  if(/juice|lemon|lime|grapefruit|cranberry|pineapple|espresso/.test(s)) return 'sour';
+  const oz = lineOz(l);
+  if(/bitters|rinse|drops|flower water|dash/.test(s) && oz === 0) return 'aromatic';
+  try {
+    const refs = specRefs(l).filter(function(r){ return r.role === 'ingredient'; });
+    /* PREFER A NON-AROMATIC ROLE. A line can name two things, and a garnish is
+       not what the line is FOR: '2 oz orange + pineapple juice' resolves orange
+       (the fruit, aromatic) before pineapple (long), and reading the first ref
+       blindly made it aromatic, then the volume rule below made it a base
+       spirit. The juice is the ingredient; the fruit is how it is written. */
+    var firstAromatic;
+    for(var i = 0; i < refs.length; i++){
+      var v = refBal(refs[i]);
+      if(v === undefined) continue;
+      if(v === 'aromatic'){ if(firstAromatic === undefined) firstAromatic = refs[i]; continue; }
+      return v;
+    }
+    if(firstAromatic !== undefined){
+      /* AND THE VOLUME RULE, the other half of the bitters problem. The
+         vocabulary calls Angostura aromatic, which is right for two dashes and
+         wrong for the Trinidad Sour, whose base is 1.5 oz of it. Anything
+         POURED BY THE OUNCE is in the drink rather than on it. Scoped to the
+         bitters shelf: a muddled orange slice on a line that happens to carry a
+         volume is still a garnish. */
+      var row = ING[firstAromatic.id] || {};
+      if(oz > 0 && row.kind === 'bitters') return 'strong';
+      return 'aromatic';
+    }
+  } catch(e){}
   return 'strong';
 }
 function lineOz(l){

@@ -608,25 +608,42 @@ function batchOutHTML(){
     + (warn.length ? '<div class="tix-rule"></div><div class="tix-note">'+esc(warn.join('; '))+'.</div>' : '')
     + '</div></div>';
 }
-/* ---- ABV / dilution estimator ---- */
-const ABV_TABLE = [
-  /* zero row FIRST: ginger beer was matching /gin/, sparkling lemonade was
-     matching /sparkling/ — a Mule read as 4.3 standard drinks, and this table
-     is the number behind the responsible-service teaching */
-  [/ginger beer|ginger ale|ginger syrup|honey-ginger|lemonade/i, 0],
-  [/irish cream|baileys|amarula|rumchata/i, 0.17],
-  [/overproof|151|cask.strength/i, 0.62],[/absinthe/i,0.62],[/chartreuse/i,0.52],
-  [/fernet/i,0.39],[/rye|bourbon|whisk|scotch|irish/i,0.45],[/\bgin\b/i,0.44],
-  [/vodka|tequila|mezcal|rum|cacha|pisco|cognac|brandy|calvados|applejack|soju|shochu/i,0.40],
-  [/cointreau|curaçao|curacao|triple sec|grand marnier|maraschino|dictine|falernum|allspice/i,0.35],
-  [/amaro|averna|nonino|montenegro|suze|licor 43|drambuie|amaretto|frangelico|sambuca|schnapps|liqueur|cassis|violette|menthe|cacao|heering|elder|st-germain/i,0.25],
-  [/campari/i,0.24],[/aperol|cynar/i,0.13],[/vermouth|lillet|cocchi|dubonnet|sherry|port|advocaat/i,0.17],
-  [/champagne|prosecco|cava|sparkling|wine|sake/i,0.12],[/beer|lager|stout|cider/i,0.05],
-  [/bitters|dash/i,0.44],
-];
+/* ---- ABV / dilution estimator ----
+
+   Twenty regexes stood here and they were wrong in three different ways at
+   once, all of them measured rather than argued about:
+
+     SILENT ZEROS. Seven kinds of line matched no pattern at all and returned
+     0, so the ledger read those drinks as containing no alcohol: rhum
+     agricole (a Ti' Punch, because /rum/ does not match 'rhum'), pastis,
+     genever, singani, grappa, and '4 oz spirit of choice', which is the
+     entire alcohol content of the Clarified Milk Punch.
+
+     WRONG NUMBERS. soju and shochu both read 0.40 against a true 0.17 and
+     0.25, overstating a Somaek by more than double. Every 151 read 0.62
+     against a true 0.755, and the 151 lines were not even reaching the
+     overproof row: the quantity stripper was eating the '151'.
+
+     ONE NUMBER FOR A WHOLE SHELF. /amaro|...|liqueur|.../ gave 0.25 to
+     everything from creme de cassis at 15% to Green Chartreuse at 55%.
+
+   The vocabulary carries `abv` per row now, inherited down the parent chain,
+   and three rules make the lookup honest. An either/or takes the MAX of its
+   members, because understating how much was poured is the dangerous
+   direction in a tool that teaches standard drinks. An authored zero is a
+   value, not an absence. And a non-alcoholic KIND defaults to zero while an
+   alcoholic one does not, so a missing number on a spirit stays a bug the
+   gate can see rather than a silent zero. See js/ingredients.js. */
 function lineABV(l){
-  for(let i=0;i<ABV_TABLE.length;i++) if(ABV_TABLE[i][0].test(l)) return ABV_TABLE[i][1];
-  return 0;
+  var best = 0;
+  try {
+    specRefs(l).forEach(function(r){
+      if(r.role !== 'ingredient') return;
+      var v = refAbv(r);
+      if(typeof v === 'number' && v > best) best = v;
+    });
+  } catch(e){}
+  return best;
 }
 function estimateABV(c, dilutionPct){
   let alc=0, vol=0;
