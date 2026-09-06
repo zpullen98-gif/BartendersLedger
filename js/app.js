@@ -630,9 +630,15 @@ document.getElementById('view').addEventListener('click', e => {
     progress.eightySixAt = Date.now(); saveProgress(); }
   else if(act==='stock-86-add'){
     const k = el.dataset.k, out = progress.eightySix || (progress.eightySix = []);
+    /* Only a bottle the bar actually stocks can be 86'd. This was the one
+       path that added without going through dropDeadEightySix, so the drill's
+       own button could push an id that is not on the stock list, which is
+       exactly the disagreement dropDeadEightySix exists to prevent. */
+    if(state.tools.shelf.indexOf(k) < 0){ say(shelfLabel(k) + ' is not on the stock list, so there is nothing to take off.'); }
+    else {
     if(out.indexOf(k) < 0) out.push(k);
     progress.eightySixAt = Date.now(); state.menu.drill = null; saveProgress();
-    say(shelfLabel(k)+" is off the board for tonight."); }
+    say(shelfLabel(k)+" is off the board for tonight."); } }
   else if(act==='stock-86-clear'){
     progress.eightySix = []; progress.eightySixAt = Date.now(); saveProgress();
     say('Everything is back on.'); }
@@ -647,7 +653,11 @@ document.getElementById('view').addEventListener('click', e => {
   else if(act==='stock-toggle'){
     const k = el.dataset.k; const s = state.tools.shelf;
     const p = s.indexOf(k); if(p>=0) s.splice(p,1); else s.push(k);
-    progress.shelf = s.slice(); dropDeadEightySix(); saveProgress(); }
+    progress.shelf = s.slice(); dropDeadEightySix();
+    /* the drill is pointed at a bottle; if that bottle just left the shelf
+       the drill is answering a question about nothing */
+    if(state.menu.drill && state.tools.shelf.indexOf(state.menu.drill) < 0) state.menu.drill = '';
+    saveProgress(); }
   else if(act==='tool-open'){
     const i = Number(el.dataset.i);
     state.lib = { q:'', fam:'All', tier:'All', open:i };
@@ -846,10 +856,7 @@ function captureLiveInputs(){
      and carrying it forward would take drinks off the board for a bartender
      who never 86'd anything. Eighteen rather than twenty-four because a bar
      that closes at three and opens at eleven is the ordinary case. */
-  if(!Array.isArray(progress.eightySix)) progress.eightySix = [];
-  if(progress.eightySix.length && Date.now() - (progress.eightySixAt||0) > 18*3600*1000){
-    progress.eightySix = []; progress.eightySixAt = null; saveProgress();
-  }
+  if(expireStaleEightySix()) saveProgress();
   dropDeadEightySix();
   srsMigrate(progress.cards);
   applyRoute();

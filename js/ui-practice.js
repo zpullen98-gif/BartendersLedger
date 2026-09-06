@@ -897,7 +897,10 @@ function costTicketHTML(only){
   const bal = balanceOf(c);
   const spiritOz = bal.strong + bal.modifier;
   const unmeasured = (typeof unmeasuredReason === 'function') ? unmeasuredReason(c) : null;
-  if(spiritOz === 0){
+  /* Same order as the strength sheet: a spec with an unmeasured spirit can
+     still produce a non-zero spiritOz off its OTHER lines, and would then be
+     costed as though the missing spirit were free. */
+  if(unmeasured || spiritOz === 0){
     return '<div class="ticket"><div class="ticket-inner">'
       + '<div class="tc"><div class="tix-label">Costing</div><div class="tix-name">'+esc(c.name.toUpperCase())+'</div></div>'
       + '<div class="tix-rule"></div>'
@@ -991,9 +994,14 @@ function strengthHTML(){
     return '<button class="chip'+(dil===d?' on':'')+'" aria-pressed="'+(dil===d?'true':'false')+'" data-act="dil-pct" data-v="'+d+'">'+(d===0?'neat':d+'%')+'</button>';
   }).join(' ');
   let body;
-  if(!e){
-    const why = (typeof unmeasuredReason === 'function') ? unmeasuredReason(c) : null;
-    body = '<div class="small dim">' + esc(why || 'This spec is written in parts or counts rather than ounces, so it cannot be estimated.') + '</div>';
+  /* ASK FIRST, then trust the number. estimateABV divides by the MEASURED
+     volume only, so a spec whose spirit line carries no ounces returns a
+     perfectly well formed answer of 0.0% and the band line underneath said
+     'Low-ABV. Aperitivo territory, you can serve two.' about a gin drink.
+     A refusal has to come before the arithmetic, not after it fails. */
+  const why = (typeof unmeasuredReason === 'function') ? unmeasuredReason(c) : null;
+  if(why || !e){
+    body = '<div class="small dim lh">' + esc(why || 'This spec cannot be estimated.') + '</div>';
   }
   else {
     const band = strengthBand(e.abvServed).line;

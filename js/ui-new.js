@@ -747,20 +747,32 @@ function dataImport(file){
           }
         }
       }
-      /* NEWEST WINS WHOLE, and deliberately not a union like the shelf above.
-         The shelf is an accumulation: two devices' owned bottles should own
-         both sets. The 86 list is a claim about right now, and unioning two
-         devices would take a bottle off the board that the other bar has
-         already replaced, silently shrinking the menu with no way to see why.
-         An empty newer list is a real answer (everything came back on), so
-         the test is the stamp, never the length.
+      /* A UNION, and this reverses the rule that shipped first.
+
+         Newest-wins-whole was chosen to avoid taking a bottle off the board
+         that the other device had already restocked. That reasoning was only
+         half the picture: whole replacement produces the OPPOSITE error, and
+         it is the worse one. Two tablets behind the same bar, A 86s the rye at
+         eight and B 86s the gin at nine; merge A into B and the rye is back on
+         the board, so the ledger tells a bartender the Sazerac is pourable out
+         of an empty bottle. That is a false YES, which reqsOf's own sentinel
+         comment refuses in as many words: the ledger would rather say it does
+         not know than say yes.
+
+         The union's error is the cheap one. A bottle that has been restocked
+         shows as off the board, the bartender taps it back on, and it is
+         right. The false yes is invisible until somebody reaches for the
+         bottle in front of a guest.
+
+         The stamp goes to the NEWER of the two, so the eighteen hour expiry
+         still measures from the most recent shift either device worked.
 
          Which sub-view of the Menu tab you were last looking at is NOT stored
          at all, so it has nothing to merge: it lives in state, and a fresh
          open should land on the menu rather than wherever last night ended. */
-      if(Array.isArray(p.eightySix) && (p.eightySixAt || 0) > (progress.eightySixAt || 0)){
-        progress.eightySix = p.eightySix.slice();
-        progress.eightySixAt = p.eightySixAt || Date.now();
+      if(Array.isArray(p.eightySix)){
+        progress.eightySix = [...new Set([...(progress.eightySix || []), ...p.eightySix.filter(k => typeof k === 'string')])];
+        progress.eightySixAt = Math.max(progress.eightySixAt || 0, p.eightySixAt || 0) || Date.now();
       }
       if(Array.isArray(p.bar)){
         progress.bar = progress.bar || [];
@@ -810,7 +822,11 @@ function dataImport(file){
        running it on an already-migrated list costs a comparison. */
     progress.shelf = Array.isArray(progress.shelf) ? migrateShelf(progress.shelf) : [];
     state.tools.shelf = progress.shelf.slice();
-    if(!Array.isArray(progress.eightySix)) progress.eightySix = [];
+    /* The same eighteen hour rule the boot applies. It lived ONLY in the boot
+       sequence, so a restore brought a dead shift's 86 list back to life and
+       kept it there until the next reload: drinks off the board for a
+       bartender who never 86'd anything. One function, both call sites. */
+    expireStaleEightySix();
     dropDeadEightySix();
     barChanged();
     saveProgress();

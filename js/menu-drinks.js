@@ -212,14 +212,6 @@ function menuCanonMeasures(rec){
   return { name: c.name, spec: c.spec.slice(), extra: extra };
 }
 
-/* Why a tool is refusing to work on this drink, in the tool's own words rather
-   than a shrug. Derived, so it is not a field on the record and so it needs no
-   clause in the import merge. */
-function unmeasuredReason(c){
-  const spec = (c && c.spec) || [];
-  if(!spec.length) return 'This drink has no spec yet.';
-  const measured = spec.filter(function(l){ return lineOz(l) > 0; }).length;
-  if(measured) return null;
-  return 'This one came off a menu, which printed no measures. Put ounces on the '
-    + 'lines and this sheet can read it; until then the honest answer is that nobody knows.';
-}
+/* unmeasuredReason moved to js/engine.js beside lineOz, because four screens in
+   three files ask it and it now has to answer the PARTIALLY measured case too.
+   Left here as a pointer so the next reader looks in one place. */

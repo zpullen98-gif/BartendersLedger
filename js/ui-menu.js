@@ -230,17 +230,47 @@ function menuPaneHTML(b, pane){
     }
     const c = kin.match;
     const diffs = [];
+    const unknown = [];
+
+    /* INGREDIENTS: identity only, which is all reqsOf can answer. */
     const mine = reqsOf(b).map(reqKey), theirs = reqsOf(c).map(reqKey);
     const extra = reqsOf(b).filter(r => theirs.indexOf(reqKey(r)) < 0);
     const absent = reqsOf(c).filter(r => mine.indexOf(reqKey(r)) < 0);
     if(extra.length) diffs.push('Yours adds ' + extra.map(reqLabel).join(', ').toLowerCase() + '.');
     if(absent.length) diffs.push('The canon has ' + absent.map(reqLabel).join(', ').toLowerCase() + ' and yours does not.');
-    if(b.method && c.method && b.method.toLowerCase() !== c.method.toLowerCase()){
-      diffs.push('Method: yours is ' + b.method.toLowerCase() + ', the canon is ' + c.method.toLowerCase() + '.');
+
+    /* PROPORTIONS, which is where two drinks with the same ingredients stop
+       being the same drink. This was missing entirely, so a Margarita at
+       3 : 1/4 : 1 1/2 read as identical to the book's 2 : 1 : 1. */
+    const mineM = measureReport(b), theirsM = measureReport(c);
+    if(mineM.kind === 'all' && theirsM.kind !== 'none'){
+      const ba = balanceOf(b), bb = balanceOf(c);
+      const moved = [['strong','spirit'],['sour','sour'],['sweet','sweet'],['modifier','wine or bitter'],['long','long']]
+        .filter(function(p){ return Math.abs(ba[p[0]] - bb[p[0]]) >= 0.25; });
+      if(moved.length){
+        diffs.push('Proportions: ' + moved.map(function(p){
+          return p[1] + ' ' + ozNice(ba[p[0]]) + ' against the canon\u2019s ' + ozNice(bb[p[0]]);
+        }).join(', ') + ' oz.');
+      }
+    } else if(mineM.kind !== 'all'){
+      /* THE CASE THAT PRODUCED THE FALSE CLAIM. A menu prints no measures, so
+         an imported drink has none, and silence about proportions was being
+         read as agreement about them. Say what could not be compared. */
+      unknown.push('Proportions could not be compared: yours carries '
+        + (mineM.measured ? 'measures on only ' + mineM.measured + ' of ' + mineM.total + ' lines' : 'no measures')
+        + ', and the canon is a set of ratios.');
     }
-    if(b.glass && b.glass !== '—' && c.glass && b.glass.toLowerCase() !== c.glass.toLowerCase()){
-      diffs.push('Glass: yours is ' + b.glass.toLowerCase() + ', the canon is ' + c.glass.toLowerCase() + '.');
-    }
+
+    /* METHOD and GLASS. A blank is NOT a match: the importer leaves both empty
+       on purpose because a menu prints neither, and the old guards read that
+       silence as sameness. */
+    const said = function(v){ return v && v !== '—' ? String(v) : ''; };
+    [['method','Method'],['glass','Glass'],['garnish','Garnish']].forEach(function(p){
+      const m = said(b[p[0]]), t = said(c[p[0]]);
+      if(!t) return;
+      if(!m) unknown.push(p[1] + ': yours does not say. The canon is ' + t.toLowerCase() + '.');
+      else if(m.toLowerCase() !== t.toLowerCase()) diffs.push(p[1] + ': yours is ' + m.toLowerCase() + ', the canon is ' + t.toLowerCase() + '.');
+    });
     return '<div class="col-sm" style="gap:12px">'
       + '<div class="small dim lh">' + (exact
           ? 'The canon carries a drink by this name. Yours is the house spec and it wins at your bar: this pane is here so you know what a guest who has drunk one elsewhere is expecting.'
@@ -254,7 +284,17 @@ function menuPaneHTML(b, pane){
       + (diffs.length
           ? '<div><div class="eyebrow mb1">What is different</div><div class="col-sm" style="gap:4px">'
             + diffs.map(d => '<div class="small lh">'+esc(d)+'</div>').join('')+'</div></div>'
-          : '<div class="small lh">Nothing meaningful differs. Yours is the canon spec.</div>')
+          : '')
+      /* What could NOT be compared, kept apart from what differs. Saying
+         nothing here is what let the pane claim two specs agreed when it had
+         only checked their ingredient names. */
+      + (unknown.length
+          ? '<div><div class="eyebrow mb1">What could not be compared</div><div class="col-sm" style="gap:4px">'
+            + unknown.map(function(u){ return '<div class="small dim lh">'+esc(u)+'</div>'; }).join('')+'</div></div>'
+          : '')
+      + ((!diffs.length && !unknown.length)
+          ? '<div class="small lh">Everything this pane can compare matches: the ingredients, the proportions, the method and the glass. Yours is the canon spec.</div>'
+          : '')
       + '</div>';
   }
   if(pane === 'cost'){

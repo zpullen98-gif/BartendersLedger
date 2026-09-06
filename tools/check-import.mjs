@@ -52,7 +52,7 @@ globalThis.document = { getElementById: () => null, querySelector: () => null };
 const APP = ['data-core.js', 'data-lore.js', 'data-service.js', 'data-ingredients.js',
 	'ingredients.js', 'engine.js', 'ui-reference.js', 'ui-prep.js', 'menu-drinks.js'];
 const W = vm.runInThisContext(APP.map((f) => readFileSync(join(JS, f), 'utf8')).join(';\n') +
-	';({menuDrinkFromRow,menuDraftFromText,menuCanonMeasures,unmeasuredReason,' +
+	';({menuDrinkFromRow,menuDraftFromText,menuCanonMeasures,unmeasuredReason,measureReport,' +
 	'MD_isIngredientList,MD_spiritOf,lineOz,COCKTAILS,progress})');
 
 /* The handful of vitest matchers this suite uses, over node:assert. A shim
@@ -924,13 +924,46 @@ describe('the canon measures are offered, never applied', () => {
 });
 
 describe('a measureless drink gets a reason, not a shrug', () => {
-	it('names the measures as what is missing', () => {
+	it('refuses, and names the measure as what is missing', () => {
 		const [d] = draft('Garden Gimlet - Gin, elderflower, lime  14');
-		expect(W.unmeasuredReason(d.rec)).toMatch(/printed no measures/);
+		const why = W.unmeasuredReason(d.rec);
+		expect(why).toMatch(/measure/);
 	});
 
+	/* The sentence used to open 'This one came off a menu', which the function
+	   cannot know and which was false for three shipped canon cocktails and for
+	   every hand-typed metric spec. It reports what it can see now, so the test
+	   asserts the absence of the claim rather than its exact wording. */
+	it('never claims to know where the drink came from', () => {
+		const [d] = draft('Garden Gimlet - Gin, elderflower, lime  14');
+		expect(W.unmeasuredReason(d.rec)).not.toMatch(/came off a menu|from a menu|imported/i);
+		/* a canon spec written in parts is not a menu import either */
+		const parts = W.COCKTAILS.find((c) => c.spec.some((l) => /\bparts?\b/.test(l)));
+		if (parts) expect(W.unmeasuredReason(parts)).not.toMatch(/came off a menu/i);
+	});
+
+	/* THE BLOCKER THIS REPLACED. estimateABV divides by the MEASURED volume
+	   only, so one measured line was enough to license a confident 0.0% ABV for
+	   a gin drink, under a band line reading 'you can serve two'. A partially
+	   measured spec has to refuse just as firmly as an unmeasured one. */
+	it('refuses a spec whose alcohol carries no measure, even when another line does', () => {
+		const partial = { name: 'Garden Gimlet', spec: ['Gin', 'elderflower', 'cucumber', '3/4 oz lime'] };
+		expect(W.unmeasuredReason(partial)).toMatch(/carries no measure/);
+		const m = W.measureReport(partial);
+		expect(m.kind).toBe('some');
+		expect(m.missingBooze.length).toBeGreaterThan(0);
+	});
+
+	/* and it must NOT fire on the ordinary canon shape, where a dash of bitters
+	   or a garnish carries no ounces and never needed to: balanceOf and
+	   estimateABV already skip those, so refusing over one would be noise, and a
+	   check that cries wolf on half the book gets deleted. */
 	it('says nothing about a drink that carries ounces', () => {
 		expect(W.unmeasuredReason(W.COCKTAILS[0])).toBe(null);
+		for (const name of ['Old Fashioned', 'Manhattan', 'Martini', 'Mojito', 'Sazerac']) {
+			const c = W.COCKTAILS.find((x) => x.name === name);
+			if (c) expect(W.unmeasuredReason(c)).toBe(null);
+		}
 	});
 });
 
