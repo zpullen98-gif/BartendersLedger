@@ -597,6 +597,33 @@ function dataExport(){
   setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
 }
 
+/* Which of two records of the same card survives, and what it keeps.
+
+   Net record (right minus wrong) decides the winner, and the loser's SRS
+   schedule is grafted on when the winner never earned one, so a mastered
+   card cannot be demoted and an earned interval is not reset. `lapses` rides
+   with the graft: the counter that says HOW a card has been hard was being
+   dropped, which quietly reset every card's difficulty history while keeping
+   its schedule.
+
+   EXTRACTED because the rename path needs the same rule. It had its own,
+   weaker one (`take the old card only if the new key is empty`), and the
+   card loop above runs FIRST and fills that key, so on a cross-device rename
+   the graft never fired, the record was renamed, and the orphan sweep then
+   deleted the local card as unreachable. Two rules for one question is how
+   that happened; there is one now. */
+function bestCard(mine, theirs){
+  if(!mine) return theirs;
+  if(!theirs) return mine;
+  const theirsWins = ((theirs.r||0) - (theirs.w||0)) > ((mine.r||0) - (mine.w||0));
+  const winner = { ...(theirsWins ? theirs : mine) };
+  const loser = theirsWins ? mine : theirs;
+  if(winner.due === undefined && loser.due !== undefined){
+    ['ef','ivl','reps','due','last','lapses'].forEach(f => { winner[f] = loser[f]; });
+  }
+  return winner;
+}
+
 function dataImport(file){
   const status = msg => { const el = document.getElementById('data-import-status'); if(el) el.textContent = msg; };
   const reader = new FileReader();
@@ -629,21 +656,7 @@ function dataImport(file){
     const byTs = (a,b) => (a.ts || 0) - (b.ts || 0);
     if(merge){
       Object.entries(p.cards || {}).forEach(([k, s]) => {
-        const mine = progress.cards[k];
-        if(!mine){ progress.cards[k] = s; return; }
-        /* net record (right minus wrong) decides the winner, and the loser's
-           SRS schedule is grafted on if the winner never earned one — so a
-           mastered card can't be demoted and an earned interval isn't reset */
-        const theirsWins = ((s.r||0) - (s.w||0)) > ((mine.r||0) - (mine.w||0));
-        const winner = { ...(theirsWins ? s : mine) };
-        const loser = theirsWins ? mine : s;
-        if(winner.due === undefined && loser.due !== undefined){
-          /* lapses included: the counter that says HOW a card has been hard
-             was dropped by the graft, so a merge quietly reset every card's
-             difficulty history while keeping its schedule. */
-          ['ef','ivl','reps','due','last','lapses'].forEach(f => { winner[f] = loser[f]; });
-        }
-        progress.cards[k] = winner;
+        progress.cards[k] = bestCard(progress.cards[k], s);
       });
       ['quizzes','tastings'].forEach(key => {
         const seen = new Set((progress[key] || []).map(x => JSON.stringify(x)));
@@ -785,8 +798,14 @@ function dataImport(file){
           if(i < 0) progress.bar.push(b);
           else if((b.ts || 0) > (progress.bar[i].ts || 0)){
             const oldKey = 'My Bar · ' + progress.bar[i].name, newKey = 'My Bar · ' + b.name;
-            if(oldKey !== newKey && progress.cards && progress.cards[oldKey] && !progress.cards[newKey]){
-              progress.cards[newKey] = progress.cards[oldKey];
+            /* The record is being renamed, so its history has to move with it,
+               and BOTH keys may already hold a card: the card loop above ran
+               first and may have written newKey from the other device. Merge
+               them by the same rule every other card in this import uses, then
+               drop the old key, rather than letting the orphan sweep delete a
+               forty-review card because its name changed on another machine. */
+            if(oldKey !== newKey && progress.cards && progress.cards[oldKey]){
+              progress.cards[newKey] = bestCard(progress.cards[newKey], progress.cards[oldKey]);
               delete progress.cards[oldKey];
             }
             progress.bar[i] = b;

@@ -126,7 +126,19 @@ function menuDrinkFromRow(row){
   const sp = MD_spiritOf(spec);
   const family = MD_familyOf(row.section);
   const why = [];
-  if(isList) why.push(spec.length + ' ingredient' + (spec.length === 1 ? '' : 's') + ' read off the menu, no measures');
+  if(isList){
+    /* Count what the VOCABULARY recognised, not how many commas there were.
+       MD_isIngredientList only requires that ONE part be in the lexicon, so a
+       prose tail on an otherwise list-shaped description ships as an
+       ingredient, and saying '4 ingredients read off the menu' about three
+       ingredients and a fragment is the row overstating its own confidence. */
+    const known = spec.filter(function(p){
+      return specRefs(p).some(function(r){ return r.role === 'ingredient' && (r.id || r.anyOf); });
+    }).length;
+    why.push(known === spec.length
+      ? spec.length + ' ingredient' + (spec.length === 1 ? '' : 's') + ' read off the menu, no measures'
+      : known + ' of ' + spec.length + ' parts recognised as ingredients, no measures: check the rest');
+  }
   else if(desc) why.push('kept the description as the note: it reads as prose, not a list');
   else why.push('the menu gave a name and nothing else');
   if(sp.ambiguous) why.push('two spirits named, so the base is left open');
@@ -208,7 +220,24 @@ function menuCanonMeasures(rec){
      loud on the offer rather than hiding. */
   const flat = [];
   mine.forEach(function(m){ (Array.isArray(m) ? m : [m]).forEach(function(x){ flat.push(x); }); });
-  const extra = canon.filter(function(id){ return !stockSatisfies(flat, id); }).length;
+  /* LINES, not requirement ids. The tap fills in c.spec, so a count taken
+     over reqsOf (which drops optional lines and flattens either/or into
+     separate ids) disagreed with what the button then did. */
+  const named = {};
+  rec.spec.forEach(function(line){
+    specRefs(line).forEach(function(r){
+      if(r.role !== 'ingredient') return;
+      (r.anyOf || (r.id ? [r.id] : [])).forEach(function(id){ named[id] = 1; });
+    });
+  });
+  const extra = c.spec.filter(function(line){
+    const ids = [];
+    specRefs(line).forEach(function(r){
+      if(r.role !== 'ingredient') return;
+      (r.anyOf || (r.id ? [r.id] : [])).forEach(function(id){ ids.push(id); });
+    });
+    return ids.length && !ids.some(function(id){ return named[id]; });
+  }).length;
   return { name: c.name, spec: c.spec.slice(), extra: extra };
 }
 

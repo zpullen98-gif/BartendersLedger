@@ -734,12 +734,25 @@ document.getElementById('view').addEventListener('click', e => {
   else if(act==='imp-file-sure'){
     /* only the rows that read cleanly and are not already on the list. Every
        other row still has to be looked at, which is the point of the screen. */
+    /* If a row is OPEN, the form holds the user's edits and the draft does
+       not. Fold them back before filing, or 'Add the N that read cleanly'
+       silently throws away what they just typed and leaves the form behind
+       pointing at a row that no longer exists. */
+    if(state.menu.imp.open !== null && state.menu.form){
+      const open = state.menu.imp.drafts[state.menu.imp.open];
+      if(open) open.rec = Object.assign({}, open.rec, state.menu.form);
+      state.menu.form = null; state.menu.editing = null; state.menu.imp.open = null;
+    }
     for(let k = state.menu.imp.drafts.length - 1; k >= 0; k--){
       const d = state.menu.imp.drafts[k];
       if(d.confidence === 'high' && !d.existing) importFileRow(k, true);
     }
     say(state.menu.imp.filed + ' added to your menu.'); }
   else if(act==='menu-view'){ state.menu.view = el.dataset.v; state.menu.err = null;
+    /* leaving the review list by any route closes whichever row was open, or
+       menu-save keeps taking the importer branch for an ordinary edit and
+       splices a row out of a list the user is no longer looking at */
+    if(state.menu.imp) state.menu.imp.open = null;
     if(el.dataset.v==='add' && !state.menu.form) state.menu.form = blankBarForm(); }
   else if(act==='menu-pane'){ state.menu.pane = el.dataset.p; }
   else if(act==='menu-new'){ state.menu.form = blankBarForm(); state.menu.editing = null; state.menu.err = null; }
@@ -748,7 +761,8 @@ document.getElementById('view').addEventListener('click', e => {
   else if(act==='menu-edit'){
     const b = (progress.bar||[]).find(x => x.id===el.dataset.id);
     if(b){ state.menu.form = { name:b.name, spec:b.spec.slice(), method:b.method||'', glass:b.glass==='—'?'':b.glass, garnish:b.garnish==='—'?'':b.garnish, note:b.note||'', family:b.family||'Other', spirit:b.spirit||'Other', price:b.price||'' };
-      state.menu.editing = b.id; state.menu.err = null; state.menu.view = 'add'; } }
+      state.menu.editing = b.id; state.menu.err = null; state.menu.view = 'add';
+      if(state.menu.imp) state.menu.imp.open = null; } }
   else if(act==='menu-del'){
     const b = (progress.bar||[]).find(x => x.id===el.dataset.id);
     if(b && confirm('Remove "'+b.name+'" from your menu? Its practice record goes with it.')){

@@ -73,12 +73,24 @@ function saveBarRecord(f, editingId){
     price: (f.price||'').trim(), ts: Date.now() };
   progress.bar = progress.bar || [];
   const i = editingId ? progress.bar.findIndex(x => x.id === editingId) : -1;
+  /* An edit whose record has gone is not an add. Falling through to push()
+     RESURRECTED a drink the bartender had already deleted, keeping its old
+     id and losing the practice record the delete confirm promised to take
+     with it. The form is open on something that no longer exists, and the
+     honest answer is to say so rather than to invent it back. */
+  if(editingId && i < 0){
+    return 'That drink was removed while this form was open, so there is nothing to save it back onto.';
+  }
   if(i >= 0){
     /* a rename must carry its review history to the new key or the drink comes
        back unseen and the old key becomes an immortal orphan */
     const oldKey = 'My Bar · ' + progress.bar[i].name, newKey = 'My Bar · ' + name;
-    if(oldKey !== newKey && progress.cards && progress.cards[oldKey] && !progress.cards[newKey]){
-      progress.cards[newKey] = progress.cards[oldKey];
+    /* Both keys can hold a card here too, if a rename collides with a name
+       that was used before. Same rule as the import: merge, never strand. */
+    if(oldKey !== newKey && progress.cards && progress.cards[oldKey]){
+      progress.cards[newKey] = (typeof bestCard === 'function')
+        ? bestCard(progress.cards[newKey], progress.cards[oldKey])
+        : (progress.cards[newKey] || progress.cards[oldKey]);
       delete progress.cards[oldKey];
     }
     progress.bar[i] = rec;
@@ -434,7 +446,15 @@ function menuStockHTML(){
         + (next.length ? '<div><div class="eyebrow mb1">Best next bottle</div>'
             + '<div class="small dim lh mb2">Each of these unlocks the listed drinks on its own.</div>'
             + '<div class="col-sm">'+nextRows+'</div></div>' : '')
-        + (close.length ? '<div class="tiny dim">'+close.length+' more are a single ingredient away.</div>' : '')
+        /* A '?' requirement is an ingredient the ledger could not name, and
+           bestNextBottles already refuses to suggest one. Counting it here as
+           'a single ingredient away' promises a drink that no bottle unlocks. */
+        + (function(){
+            const real = close.filter(function(x){ return String(reqKey(x.miss)).charAt(0) !== '?'; });
+            if(!real.length) return '';
+            return '<div class="tiny dim">' + real.length
+              + (real.length === 1 ? ' more is' : ' more are') + ' a single ingredient away.</div>';
+          })()
         + '</div>' : '')
     + menuDrillHTML(pool);
 }
