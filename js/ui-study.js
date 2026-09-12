@@ -30,7 +30,7 @@ function renderHome(){
       + '<span class="tiny font-tix" style="color:var(--brass-2);width:38px;text-align:right">'+m+'/'+mem.length+'</span></div>';
   }).join('');
   const cards = [
-    ['families','The Families',FAMILIES ? Object.keys(FAMILIES).length+' templates unlock the whole canon — each with the marks that say a pour went right. Start here; this is Regan\'s map.' : ''],
+    ['families','The Families',FAMILIES ? Object.keys(FAMILIES).length+' templates unlock the whole canon — each with the marks that say a pour went right. Start here; this is Regan’s map.' : ''],
     ['library','The Library','All '+COCKTAILS.length+' specs — one for every day of the year — on ledger tickets with balance breakdowns.'],
     ['prep','The Prep Room','Syrups, infusions, cordials, juice and garnish specs, plus opening and closing checklists.'],
     ['producers','The Producers','Benchmark houses across nine categories — how they actually make it, and why it matters.'],
@@ -38,7 +38,7 @@ function renderHome(){
     ['shots','The Shot Board','75 calls, a round-batching builder, the layering density drill, and the service craft.'],
     ['service','Behind the Stick','Beer and draught, wine service, the legal floor, the register, conflict and glassware — the half of the job that is not a cocktail.'],
     ['flashcards','Flashcards',FC_MODES.length+' drill modes across every cocktail, shot, and zero-proof drink in the ledger.'],
-    ['quiz','Quiz Rounds','Families, blind tickets, bar knowledge, real-service scenarios, and the dealer\'s-choice call.'],
+    ['quiz','Quiz Rounds','Families, blind tickets, bar knowledge, real-service scenarios, and the dealer’s-choice call.'],
     ['riffs','Riff Builder','Improvise on the templates — the difference between knowing 50 drinks and 500.'],
     ['practice','Practice & Tasting','Nine hands-on drills, the Ticket Rail, the Hold-the-Round memory test, the free-pour bench, tasting scorecards, and twelve guided flights.'],
     ['tools','Bar Tools','Batching, shelf inventory with the 86 drill, strength estimates, pour costing with the bottle book, the spill log, open-bottle dating, unit conversion, and your backups.'],
@@ -46,7 +46,7 @@ function renderHome(){
   ].map(([k,t,d]) => '<button class="panel click p4" data-act="go" data-tab="'+k+'">'
     + '<div class="bold brass2">'+t+'</div><div class="small dim mt1 lh">'+d+'</div></button>').join('');
   /* First run: a stats panel of zeros, eight 0% bars and three empty donuts is
-     a terrible first impression. Until there's anything to report, say what the
+     a terrible first impression. Until there’s anything to report, say what the
      ledger is and point at the one button that starts everything. */
   const fresh = !studied && !quizzes.length && !tastings && !drillLogs;
   if(fresh){
@@ -118,7 +118,7 @@ function renderHome(){
 
 /* ---------------- FAMILIES ---------------- */
 function renderFamilies(){
-  const intro = '<div class="small dim lh" style="padding:0 4px">Gaz Regan\'s great insight: nearly every cocktail is a variation on a handful of templates. Learn the skeleton and you can reconstruct any drink from memory.</div>';
+  const intro = '<div class="small dim lh" style="padding:0 4px">Gaz Regan’s great insight: nearly every cocktail is a variation on a handful of templates. Learn the skeleton and you can reconstruct any drink from memory.</div>';
   const rows = Object.entries(FAMILIES).map(([name,f]) => {
     const isOpen = state.famOpen === name;
     const members = COCKTAILS.filter(c => c.family === name);
@@ -190,7 +190,7 @@ function renderLibrary(){
     + '<input class="input" id="lib-search" aria-label="Search the library" placeholder="Search by name, spirit, or ingredient…" value="'+esc(state.lib.q)+'">'
     + '<div class="row">'+famChips+'</div>'
     + '<div class="row">'+tierSel
-    + '<button class="chip" data-act="lib-print" title="Print the currently filtered specs as ticket cards">🖶 Print cards</button>'
+    + '<button class="chip" data-act="lib-print" title="Print the currently filtered specs as ticket cards">Print cards</button>'
     + '<span class="tiny dim push" id="lib-count">'+libList().length+' drinks</span></div>'
     + '<div class="col-sm" id="lib-list">'+libListHTML()+'</div></div>';
 }
@@ -216,7 +216,7 @@ function renderLibrary(){
 const DECK_SOURCES = ['Cocktails','My Bar','Shots','Zero Proof'];
 const SRC_LABEL = { 'My Bar': 'Menu' };
 function srcLabel(s){ return SRC_LABEL[s] || s; }
-/* the venue's own list earns its chips only once something is on it: an empty
+/* the venue’s own list earns its chips only once something is on it: an empty
    source is zero noise everywhere it would appear */
 function deckSources(){ return DECK_SOURCES.filter(s => s !== 'My Bar' || (progress.bar||[]).length); }
 function allDrinks(){
@@ -294,7 +294,7 @@ function isMastered(name){
   if(!(s && s.r>=3 && s.r>s.w)) return false;
   return s.due === undefined || s.due > Date.now();
 }
-/* lapses weigh in, mirroring the home screen's weakness list — a card that
+/* lapses weigh in, mirroring the home screen’s weakness list — a card that
    keeps collapsing accumulates r on every relearn cycle and w*2-r alone
    buries exactly the cards this ordering exists to surface */
 function weakScore(name){ const s=progress.cards[name]; return s ? (s.w*2 + (s.lapses||0)*1.5 - s.r + Math.random()*0.5) : (1 + Math.random()*0.5); }
@@ -312,7 +312,7 @@ function fcPool(){
     return true;
   });
 }
-/* Take AT MOST ONE line per donor, and try the drink's own family first.
+/* Take AT MOST ONE line per donor, and try the drink’s own family first.
    Pushing every line of one donor meant five decoys came from ~1.8 drinks, so
    the task became "spot the foreign spec" instead of discriminating between the
    neighbours a learner actually confuses (Manhattan / Rob Roy / Boulevardier). */
@@ -325,7 +325,7 @@ function decoyLines(c, n){
   const donors = shuffle(kin).concat(shuffle(base.filter(x => kin.indexOf(x) < 0)));
   donors.forEach(function(x){
     if(out.length >= n) return;
-    /* No optional-tagged donors: Assemble-the-Ticket's own copy says
+    /* No optional-tagged donors: Assemble-the-Ticket’s own copy says
        "optional lines are up to you", and a foreign "(optional)" decoy
        failed the build for including something it had just called free. */
     const usable = x.spec.filter(l => !/optional/i.test(l) && !c.spec.includes(l) && out.indexOf(l) < 0);
@@ -348,7 +348,7 @@ function prepCard(){
   if(fc.mode==='cloze'){
     fc.clozeIdx = Math.floor(Math.random()*c.spec.length);
     const ans = c.spec[fc.clozeIdx];
-    /* the blanked line's own role and unit shouldn't give it away — a decoy in
+    /* the blanked line’s own role and unit shouldn’t give it away — a decoy in
        ounces against a "2 dashes" answer is answerable without knowing the drink */
     const role = classifyLine(ans);
     const unit = (ans.match(/\b(oz|dash|dashes|drops?|barspoon|part|leaves|sprig|cube|splash|top)\b/i)||[''])[0].toLowerCase();
@@ -400,7 +400,7 @@ function recordCard(ok){
 function clozeTicketHTML(c, hideIdx){
   const specLines = c.spec.map((l,i) => '<div class="spec-line"><span>·</span><span>'
     + (i===hideIdx ? '<span class="bold" style="letter-spacing:0.15em">— ? ? ? —</span>' : esc(l)) + '</span></div>').join('');
-  const label = c.src==='Cocktails' ? "The Bartender's Ledger · Drink Ticket"
+  const label = c.src==='Cocktails' ? "The Bartender’s Ledger · Drink Ticket"
     : c.src==='Shots' ? esc(c.group)+' · Shot Call' : esc(c.group)+' · Zero Proof';
   return '<div class="ticket"><div class="ticket-inner">'
     + '<div class="tc"><div class="tix-label">'+label+'</div>'
@@ -554,7 +554,7 @@ function renderFlashcards(){
         else if(p.ok && !selected) cls+=' missedline';
       }
       const tag = fc.checked && p.ok && !selected ? ' <span class="tiny">(belongs in the spec)</span>' : '';
-      /* the quiz's own ✓/✗-plus-sr pattern: the verdict was border colour
+      /* the quiz’s own ✓/✗-plus-sr pattern: the verdict was border colour
          alone here, invisible to assistive tech and to anyone colour-blind */
       let mark = '', sr = '';
       if(fc.checked && selected && p.ok){ mark='<span aria-hidden="true" class="opt-mark">✓</span> '; sr='<span class="sr-only">Correct, kept: </span>'; }
@@ -636,10 +636,10 @@ const QUIZ_MODES = [
   ['beerwine','Beer & wine','Draught, bottle, varietal and glassware — the high-volume half.'],
   ['craft','Spirits & craft','Technique, production, ingredients and the balance behind the specs.'],
   ['tickets','Blind tickets','Ten blind tickets. Read the spec, call the drink.'],
-  ['dealer','Dealer\'s choice','A guest who knows what they like but not what it\'s called. Read the ask, make the call.'],
+  ['dealer','Dealer’s choice','A guest who knows what they like but not what it’s called. Read the ask, make the call.'],
 ];
 
-/* ---- DEALER'S CHOICE: constraints-to-drink, computed from the live data ----
+/* ---- DEALER’S CHOICE: constraints-to-drink, computed from the live data ----
    The most common real interaction is not "make a Boulevardier", it is
    "something with mezcal, not too sweet." Every axis here is derived from the
    spec by the same engines the Tools tab uses (estimateABV, balanceOf,
@@ -781,14 +781,14 @@ function spreadKnowledge(n){
 function buildRound(mode, pool){
   mode = mode || 'mixed';
   /* the session passes the deck it just drilled, so the quiz reinforces
-     tonight's drinks rather than quizzing tier 9 at a tier 2 learner */
+     tonight’s drinks rather than quizzing tier 9 at a tier 2 learner */
   const drinkPool = (pool && pool.length >= 8)
     ? COCKTAILS.filter(c => pool.some(d => d.src === 'Cocktails' && d.name === c.name))
     : COCKTAILS;
   const cocktails = drinkPool.length >= 8 ? drinkPool : COCKTAILS;
   const qs = [];
   if(mode === 'mybar'){
-    /* the whole round off the venue's own list: up to three question shapes
+    /* the whole round off the venue’s own list: up to three question shapes
        per drink, sliced to ten. The setup chip guards the <4-drink case. */
     shuffle((progress.bar||[]).slice()).forEach(b => {
       qs.push(qMyBarTicket(b));
@@ -816,7 +816,7 @@ function buildRound(mode, pool){
      deliberate topic spread. Previously only two were authored, so weeks of
      study could pass without meeting most of the 196 questions. */
   /* ONE sample partitioned across every drink question, so the same cocktail
-     can't turn up as a blind ticket and a glass question in the same round */
+     can’t turn up as a blind ticket and a glass question in the same round */
   const picks = sample(cocktails, 5);
   const fam = picks.find(c => FAMILIES[c.family]);
   if(fam) qs.push(qFamily(fam));
@@ -825,8 +825,8 @@ function buildRound(mode, pool){
   if(rest2[0]) qs.push(qGlass(rest2[0]));
   if(rest2[1]) qs.push(qMethod(rest2[1]));
   qs.push(qBlindOther());
-  /* one question from the venue's own list rides every mixed round — and so
-     rides Tonight's Session, whose quiz step deals a mixed round over the
+  /* one question from the venue’s own list rides every mixed round — and so
+     rides Tonight’s Session, whose quiz step deals a mixed round over the
      deck it just drilled */
   const bar = (pool || allDrinks()).filter(d => d.src === 'My Bar');
   if(bar.length) qs.push(qMyBarTicket(sample(bar,1)[0].ref));
@@ -850,7 +850,7 @@ function renderQuiz(){
     const blurb = (QUIZ_MODES.find(([k]) => k===mode) || QUIZ_MODES[0])[2];
     const pool = mode==='mixed' || mode==='tickets' || mode==='mybar' ? null : knowledgeByTopic(mode);
     const thin = pool && pool === KNOWLEDGE
-      ? '<div class="tiny dim">Nothing written for this domain yet — you\'ll get a mixed pool until there is.</div>' : '';
+      ? '<div class="tiny dim">Nothing written for this domain yet — you’ll get a mixed pool until there is.</div>' : '';
     return '<div class="col">'
       + '<div class="panel p5 tc col" style="align-items:center">'
       + '<div class="eyebrow">Quiz rounds</div>'
@@ -926,7 +926,7 @@ function videoSettingsHTML(){
     + '<div class="eyebrow">Video settings</div>'
     + '<div class="small dim lh">Every drink, prep, and technique in this guide links out to a live YouTube search. These two settings shape every one of those links.</div>'
     + '<div><div class="tiny eyebrow mb1">Preferred channel</div><div class="row" style="gap:6px">'+chips+'</div>'
-    + '<div class="tiny dim mt1">Auto routes each drink to the channel that covers it best. Pin one if you like a particular bartender\'s style — it becomes the first button everywhere.</div></div>'
+    + '<div class="tiny dim mt1">Auto routes each drink to the channel that covers it best. Pin one if you like a particular bartender’s style — it becomes the first button everywhere.</div></div>'
     + '<div><div class="tiny eyebrow mb1">Result length</div><div class="row" style="gap:6px">'
     + '<button class="chip'+(!p.longform?' on':'')+'" aria-pressed="'+(!p.longform?'true':'false')+'" data-act="vid-len" data-v="any">Any length</button>'
     + '<button class="chip'+(p.longform?' on':'')+'" aria-pressed="'+(p.longform?'true':'false')+'" data-act="vid-len" data-v="long">Full tutorials only</button></div>'
@@ -963,7 +963,7 @@ function renderRiffs(){
     return '<div class="col">'
       + '<div class="panel p5 col" style="gap:14px">'
       + '<div class="eyebrow">Riff builder</div>'
-      + '<div class="small dim lh">Regan\'s templates aren\'t for memorizing — they\'re for improvising. Pick a frame; the ledger deals you a random base and modifiers. Build the full drink in your head — amounts, method, glass, garnish — then reveal the frame\'s answer and see which classics already live in that slot.</div>'
+      + '<div class="small dim lh">Regan’s templates aren’t for memorizing — they’re for improvising. Pick a frame; the ledger deals you a random base and modifiers. Build the full drink in your head — amounts, method, glass, garnish — then reveal the frame’s answer and see which classics already live in that slot.</div>'
       + '<div class="col-sm">'+frames+'</div></div>'
       + '<div class="tiny dim lh" style="padding:0 4px">This is how the Boulevardier was born: someone looked at a Negroni and asked "what if bourbon?" Every classic was once a riff.</div>'
       + '</div>';
