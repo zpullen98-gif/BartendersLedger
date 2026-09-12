@@ -20,8 +20,23 @@
  *  - every SHELF_PRESETS id names a real SHELF row (the ginger lesson)
  *  - the service worker's ASSETS and index.html agree: every script and
  *    stylesheet the page loads is cached, and every cached file exists
+ *  - the four lists that name tabs agree with each other. TABS and the views
+ *    table live in app.js, NAV_CLUSTERS and ROUTE_SOURCES in ui-new.js, and
+ *    every disagreement between them fails in SILENCE. The worst is a tab in
+ *    no cluster: clusterOf falls back to 'ledger', that cluster holds one
+ *    leaf, subRow only draws above one, so no button anywhere reaches the tab
+ *    while its hash still works perfectly
+ *  - section keys slug uniquely, and every reference card's `dom` names a
+ *    real section. A card filed under a dom that no longer exists renders
+ *    nowhere and searches to a dead route, which is the shape a half-finished
+ *    move leaves behind
+ *
+ * This file also runs inside the Outside Of Time wing, from ledger/tools/,
+ * and the publish preflight calls it there as the "ledger wiring" gate. Until
+ * that copy existed, NOTHING anywhere compared the wing's sw.js against its
+ * index.html. Keep the two copies identical.
  */
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import vm from 'node:vm';
 
 const read = (rel) => readFileSync(new URL(rel, import.meta.url), 'utf8');
@@ -35,9 +50,14 @@ const sandbox = { window: {}, localStorage: { getItem: () => null, setItem() {} 
    SHELF table is derived from the vocabulary now rather than hand-written.
    The ingredient checks themselves live in tools/check-ingredients.mjs; run
    both. */
-const wide = [src, read('../js/data-lore.js'), read('../js/data-service.js'), read('../js/data-ingredients.js'), read('../js/ingredients.js'), read('../js/engine.js'), read('../js/ui-reference.js'), read('../js/ui-prep.js')].join(';'+String.fromCharCode(10));
+/* data-ontap.js is optional here on purpose: this gate predates the tab and
+   must keep passing on a tree that has not grown it yet. */
+const onTapSrc = existsSync(new URL('../js/data-ontap.js', import.meta.url)) ? read('../js/data-ontap.js') : '';
+const wide = [src, read('../js/data-lore.js'), read('../js/data-service.js'), onTapSrc, read('../js/data-ingredients.js'), read('../js/ingredients.js'), read('../js/engine.js'), read('../js/ui-reference.js'), read('../js/ui-prep.js')].join(';'+String.fromCharCode(10));
 const W = vm.runInNewContext(
-	wide + ';({LORE, SHOTS, NA_DRINKS, PREPS, PRODUCERS, SHELF, SHELF_PRESETS})',
+	wide + ';({LORE, SHOTS, NA_DRINKS, PREPS, PRODUCERS, SHELF, SHELF_PRESETS, SERVICE_STUDY, SERVICE_REF,'
+	     + ' ONTAP_STUDY: typeof ONTAP_STUDY === "undefined" ? null : ONTAP_STUDY,'
+	     + ' ONTAP_REF: typeof ONTAP_REF === "undefined" ? null : ONTAP_REF})',
 	sandbox
 );
 
@@ -139,6 +159,69 @@ for (const [label, arr, key] of [
 	}
 }
 
+// ---- the tab wiring closes: four lists, two files, one vocabulary ----------
+// TABS and the views table live in app.js; NAV_CLUSTERS and ROUTE_SOURCES live
+// in ui-new.js. All four name tabs and every disagreement between them fails in
+// SILENCE. The worst is a tab in no cluster: clusterOf falls back to 'ledger',
+// that cluster holds a single leaf, subRow only draws above one, so no button
+// anywhere reaches the tab while its hash still works perfectly. TABS and
+// NAV_CLUSTERS are evaluated rather than pattern-matched, for the same reason
+// slugify is read out of the app: a gate that re-implements the app drifts.
+{
+	const app = read('../js/app.js');
+	/* Sliced rather than matched, because TABS is one long line and NAV_CLUSTERS
+	   is many, and a pattern that handles both is harder to read than the two
+	   indexOf calls it replaces. Neither literal contains '];' before its own
+	   end: their inner arrays close with ']],'. */
+	const lit = (src, name) => {
+		const head = 'const ' + name + ' = [';
+		const start = src.indexOf(head);
+		if (start < 0) throw new Error(name + ' not found — an extraction anchor moved');
+		const end = src.indexOf('];', start);
+		if (end < 0) throw new Error(name + ' has no close — an extraction anchor moved');
+		return vm.runInNewContext(src.slice(start, end + 2) + ';' + name, {});
+	};
+	const tabs = lit(app, 'TABS').map((t) => t[0]);
+	const clustered = lit(uiNew, 'NAV_CLUSTERS').flatMap((g) => g[2]);
+	const grab = (src, re, pick) => [...((src.match(re) || [''])[0]).matchAll(pick)].map((m) => m[1]);
+	const views = grab(app, /const views = \{[\s\S]*?\};/, /(\w+):render/g);
+	const routed = grab(uiNew, /const ROUTE_SOURCES = \{[\s\S]*?\n\};/, /^\s*(\w+):\s*\{/gm);
+	const applied = (uiNew.match(/function applyRoute\(\)[\s\S]*?\n\}/) || [''])[0];
+	if (!views.length || !routed.length) problems.push('views or ROUTE_SOURCES not found — an extraction anchor moved');
+
+	for (const t of tabs) {
+		if (!views.includes(t)) problems.push(`TABS names "${t}" but render()'s views table has no renderer — every visit silently lands on Home`);
+		if (!clustered.includes(t)) problems.push(`TABS names "${t}" but no NAV_CLUSTERS cluster holds it — it falls into 'ledger', draws no sub-row, and no button can reach it`);
+	}
+	for (const v of views) {
+		if (!tabs.includes(v)) problems.push(`views renders "${v}" but TABS does not list it — applyRoute rejects #/${v}`);
+	}
+	for (const r of routed) {
+		if (!tabs.includes(r)) problems.push(`ROUTE_SOURCES routes "${r}" but TABS does not list it`);
+		if (!applied.includes(`tab==='${r}'`)) problems.push(`ROUTE_SOURCES resolves a slug for "${r}" but applyRoute never applies it — syncRoute erases the slug on the first paint`);
+	}
+}
+
+// ---- section keys slug uniquely, and every card names a real section --------
+// A reference card filed under a dom that names no section renders NOWHERE and
+// searches to a dead route, which is the exact shape of a half-finished move.
+for (const [label, secs, refs] of [
+	['SERVICE', W.SERVICE_STUDY, W.SERVICE_REF],
+	['ONTAP', W.ONTAP_STUDY, W.ONTAP_REF],
+]) {
+	if (!secs) continue;
+	const seen = new Map();
+	for (const x of secs) {
+		const slug = slugify(x.key);
+		if (seen.has(slug)) problems.push(`${label}_STUDY: "${x.key}" and "${seen.get(slug)}" collide on slug "${slug}"`);
+		else seen.set(slug, x.key);
+	}
+	const keys = new Set(secs.map((x) => x.key));
+	for (const x of (refs || [])) {
+		if (!keys.has(x.dom)) problems.push(`${label}_REF: "${x.name}" is filed under dom "${x.dom}", which names no section — the card renders nowhere and searches to a dead route`);
+	}
+}
+
 // ---- shelf presets reference only rows that exist ---------------------------
 {
 	const ids = new Set(W.SHELF.map((r) => r[0]));
@@ -199,7 +282,16 @@ for (const [label, arr, key] of [
 				const src = String(ic.src).replace(/^\.\//, '').split('?')[0];
 				if (!assets.has(src)) problems.push(`manifest icon ${src} is not in sw.js ASSETS`);
 			}
-		} catch (e) { problems.push('manifest.webmanifest does not parse: ' + e.message); }
+		} catch (e) {
+				/* Guarded on existence rather than assumed, because this same file now
+				   runs inside the Outside Of Time wing, which deliberately carries NO
+				   manifest of its own: the suite installs as one app from one manifest
+				   at the site root. Absence is correct there. A file that exists and
+				   does not parse is still a problem everywhere. */
+				if (existsSync(new URL('../manifest.webmanifest', import.meta.url))) {
+					problems.push('manifest.webmanifest does not parse: ' + e.message);
+				}
+			}
 	}
 }
 
