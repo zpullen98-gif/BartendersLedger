@@ -633,11 +633,29 @@ const QUIZ_MODES = [
   ['mixed','Mixed round','Families, blind tickets and bar knowledge — the shape of a shift.'],
   ['mybar','Menu','Your own list: name, glass and spec, straight off the menu.'],
   ['service','Service & law','Guests, pacing, refusal, the register and the legal floor.'],
-  ['beerwine','Beer & wine','Draught, bottle, varietal and glassware — the high-volume half.'],
+  ['ontap','On tap','The draught system: the pour, the gas, the glass, the fault trees and the styles.'],
+  ['wine','Wine','Varietal, fault, preservation, pour cost and the service sequence.'],
   ['craft','Spirits & craft','Technique, production, ingredients and the balance behind the specs.'],
   ['tickets','Blind tickets','Ten blind tickets. Read the spec, call the drink.'],
   ['dealer','Dealer’s choice','A guest who knows what they like but not what it’s called. Read the ask, make the call.'],
 ];
+
+/* The mode string is PERSISTED in progress.quizzes[].mode, and nothing
+   migrates it, because nothing has to: it LABELS a history row and is never
+   read back to build a round. buildRound takes state.quiz.mode, which is
+   ephemeral, boots at 'mixed', and is only ever set from a chip or a deep
+   link. So the whole cost of retiring a mode is a history row printing a key
+   the app no longer uses, and the whole heal is a rename map at the one read.
+   'beerwine' mixed beer and wine until beer left for On Tap; mapping it to
+   'wine' is approximate by construction and is the honest approximation,
+   because the wine pool is where the surviving mode lives. */
+var MODE_WAS = { beerwine: 'wine' };
+function modeLabel(m){
+  var k = MODE_WAS[m] || m;
+  var row = QUIZ_MODES.find(function(x){ return x[0] === k; });
+  return row ? row[1] : k;
+}
+
 
 /* ---- DEALER’S CHOICE: constraints-to-drink, computed from the live data ----
    The most common real interaction is not "make a Boulevardier", it is
@@ -769,7 +787,7 @@ function spreadKnowledge(n){
     const k = sample(fresh, 1)[0];
     used.add(k); picked.push(qKnowledge(k));
   };
-  ['service','beerwine','craft'].forEach(t => { if(picked.length < n) take(knowledgeByTopic(t)); });
+  ['service','ontap','wine','craft'].forEach(t => { if(picked.length < n) take(knowledgeByTopic(t)); });
   while(picked.length < n) {
     const before = picked.length;
     take(KNOWLEDGE);
@@ -840,9 +858,13 @@ function renderQuiz(){
     /* the mode can outlive the list that justified it — drinks deleted below
        the floor drop the round back to mixed rather than dealing a thin one */
     if(z.mode==='mybar' && barN < 4) z.mode = 'mixed';
+    /* An unknown mode dealt a FULL-BANK round under a chip claiming a domain,
+       because knowledgeByTopic falls back to the whole of KNOWLEDGE when a
+       pool comes back empty. Nothing on screen said so. */
+    if(!QUIZ_MODES.some(function(x){ return x[0]===z.mode; })) z.mode = MODE_WAS[z.mode] || 'mixed';
     const mode = z.mode || 'mixed';
     const hist = (progress.quizzes||[]).slice(-5).reverse()
-      .map(h => '<div class="hist-row"><span>'+esc(h.date)+(h.mode&&h.mode!=='mixed'?' · '+esc(h.mode):'')+'</span><span class="font-tix brass2">'+h.score+'/'+(h.total||10)+'</span></div>').join('');
+      .map(h => '<div class="hist-row"><span>'+esc(h.date)+(h.mode&&h.mode!=='mixed'?' · '+esc(modeLabel(h.mode)):'')+'</span><span class="font-tix brass2">'+h.score+'/'+(h.total||10)+'</span></div>').join('');
     const chips = QUIZ_MODES.map(([k,l]) => {
       if(k==='mybar' && barN < 4) return '<button class="chip" disabled title="Add four drinks to your menu and this round opens">'+esc(l)+' <span class="font-tix">'+barN+'/4</span></button>';
       return '<button class="chip'+(mode===k?' on':'')+'" aria-pressed="'+(mode===k?'true':'false')+'" data-act="quiz-mode" data-m="'+k+'">'+esc(l)+'</button>';
