@@ -124,6 +124,13 @@ exactly one cocktail, the Nojito, which is a real mocktail. Honour
   engine.js is the one served-ABV scale (the Tools panel and the Dealer's Choice
   quiz both use it — never fork a second scale).
 - **Adding drinks**: LORE is keyed by exact `name`. Router slugs come from `slugify(name)`.
+- **`node tools/check-options.mjs`** is the fourth gate: does option LENGTH give the answer away?
+  Gates pick-longest at 27% (chance is 25%) and unique-longest keys at 25. Repaired 2026-09-12 from
+  37.4% / 58 keys to 15.9% / 20. **Both mirror scores are printed for a reason**: forcing a
+  distractor to beat the key on every flagged question took pick-longest to 5.7% and handed
+  avoid-the-longest 30%, which is the same tell inverted. The walk-back rule: a key only one or two
+  characters longer than its longest distractor was never a cue a human could use, so those
+  repairs were reverted. Judge the bank on the WORST of the three strategies, not on the gated one.
 - **Quiz questions** carry an optional `topic` (`service` | `ontap` | `wine` | `craft`). `beerwine`
   retired when beer got its own tab; `MODE_WAS` in ui-study.js maps it to `wine` at the one place a
   persisted mode is read, which is a history label and never a round builder. Four sites know the

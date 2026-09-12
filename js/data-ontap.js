@@ -168,7 +168,7 @@ const ONTAP_REF = [
 KNOWLEDGE.push(
   /* --- beer --- */
   { q:"A faucet that has sat untouched for twenty minutes pours a glass of pure foam, and the next glass pours clean. Most likely cause?",
-    options:["The keg is nearly empty", "The CO2 regulator has drifted too high", "Beer sitting in the warm faucet broke out of solution", "The glass came off the washer still warm"],
+    options:["The keg is nearly empty", "The CO2 regulator has drifted high and unbalanced the line", "Beer in the warm faucet broke out of solution", "The glass came off the washer still warm"],
     a:2, topic:"ontap",
     explain:"The faucet is the warmest point in a draught system, and warm beer releases its CO2. A mis-set regulator, a blowing keg and a hot glass all foam too, but all three would foam the second pour as well — the fact that it self-corrects is the whole diagnosis." },
   { q:"The standard cooler and line temperature for a direct-draw draught system is…",
@@ -184,7 +184,7 @@ KNOWLEDGE.push(
     a:1, topic:"ontap",
     explain:"15.5 gallons is 1,984 fluid ounces, or 124 sixteen-ounce pours. 165 is what the same keg yields in 12 oz servings, and 141 is the tempting wrong turn — that's the count if you divide by the 14 oz of liquid actually in a headed pint rather than by the size of the glass." },
   { q:"You wet the inside of a glass and the water breaks into beads instead of running off in a sheet. That means…",
-    options:["The glass is beer-clean and ready", "The glass is colder than the beer", "Your water supply is unusually hard", "There is a fatty or detergent film on the glass"],
+    options:["The glass is beer-clean — water beads up on a properly washed glass", "The glass is colder than the beer", "Your water supply is unusually hard", "There's a fatty or detergent film on the glass"],
     a:3, topic:"ontap",
     explain:"Water sheets evenly off clean glass and beads on film. That film — grease, lipstick, or a fat-based sanitizer residue — will flatten the head on every beer you pour into it, and the guest will blame the beer." },
   { q:"A full pint has tiny bubbles clinging in patches to the inside of the glass wall. What does that tell you?",
