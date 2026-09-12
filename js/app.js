@@ -1,6 +1,6 @@
 /* ---------------- RENDER & EVENTS ---------------- */
 const prTicks = {};  /* one stopwatch interval per drill id */
-const TABS = [['home','Ledger'],['menu','Menu'],['families','Families'],['library','Library'],['shots','Shots'],['na','Zero Proof'],['service','Behind the Stick'],['prep','Prep'],['producers','Producers'],['notes','Notes'],['flashcards','Flashcards'],['quiz','Quiz'],['practice','Practice'],['riffs','Riffs'],['tools','Tools']];
+const TABS = [['home','Ledger'],['menu','Menu'],['families','Families'],['library','Library'],['shots','Shots'],['na','Zero Proof'],['service','Behind the Stick'],['ontap','On Tap'],['prep','Prep'],['producers','Producers'],['notes','Notes'],['flashcards','Flashcards'],['quiz','Quiz'],['practice','Practice'],['riffs','Riffs'],['tools','Tools']];
 /* Announce something to assistive tech. The region is outside #view so it
    survives the innerHTML swap below. */
 function say(msg){
@@ -37,7 +37,7 @@ function render(){
      build is enough to cause one. Landing on Home is a recoverable state; a
      white screen is not. */
   const views = {home:renderHome, menu:renderMenu, families:renderFamilies, library:renderLibrary,
-    shots:renderShots, na:renderNA, service:renderService, producers:renderProducers, prep:renderPrep,
+    shots:renderShots, na:renderNA, service:renderService, ontap:renderOnTap, producers:renderProducers, prep:renderPrep,
     flashcards:renderFlashcards, quiz:renderQuiz, riffs:renderRiffs,
     practice:renderPractice, tools:renderTools, notes:renderNotes};
   if(!views[state.tab]) state.tab = 'home';
@@ -806,6 +806,12 @@ document.getElementById('view').addEventListener('click', e => {
   else if(act==='svc-dom'){ state.svc.dom = el.dataset.d; state.svc.rowOpen = null; state.svc.refOpen = null; }
   else if(act==='svc-row'){ const i=Number(el.dataset.i); state.svc.rowOpen = state.svc.rowOpen===i ? null : i; }
   else if(act==='svc-ref'){ const n=el.dataset.n; state.svc.refOpen = state.svc.refOpen===n ? null : n; }
+  /* Distinct act names rather than a shared svc-* with a tab discriminator:
+     this chain is a flat if/else on el.dataset.act and has never once read
+     state.tab to decide what an action meant. */
+  else if(act==='ot-sec'){ state.ontap.sec = el.dataset.d; state.ontap.rowOpen = null; state.ontap.refOpen = null; }
+  else if(act==='ot-row'){ const i=Number(el.dataset.i); state.ontap.rowOpen = state.ontap.rowOpen===i ? null : i; }
+  else if(act==='ot-ref'){ const n=el.dataset.n; state.ontap.refOpen = state.ontap.refOpen===n ? null : n; }
   captureLiveInputs();
   render();
 });

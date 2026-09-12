@@ -20,7 +20,8 @@ Then open http://localhost:8631. Use `serve.py` (not `python -m http.server`) �
 - `js/engine.js` — helpers, `store`/`progress` persistence, balance engine, riff dealer, state
 - `js/data-questions.js` — scenario/knowledge question packs
 - `js/data-lore.js` — LORE (a story for all 365 cocktails) + GLOSSARY (68 terms)
-- `js/data-service.js` — **Behind the Stick**: SERVICE_STUDY (6 sections, 105 rows: beer/draught, wine, law & refusal, register, conflict & safety, glassware), SERVICE_REF (81 reference entries), and ~106 topic-tagged KNOWLEDGE questions
+- `js/data-service.js` — **Behind the Stick**: SERVICE_STUDY (5 sections, 82 rows: wine, law & refusal, register, conflict & safety, glassware), SERVICE_REF (67 reference entries), and 87 topic-tagged KNOWLEDGE questions
+- `js/data-ontap.js` — **On Tap**: ONTAP_STUDY (5 sections, 23 rows: the pour, beer-clean glass, the cellar & the system, foam & faults, the styles), ONTAP_REF (14 style cards, all filed `dom:"styles"`), and 19 KNOWLEDGE questions. Beer left Behind the Stick, where it had been the largest of six domains and the one that tab opened on. Two beer GLASSES stayed behind in SERVICE_REF under glassware on purpose: a lesson moves when the tab answering its question moves, a reference card stays where the object lives
 - `js/srs.js` — SM-2-lite scheduler (`scheduleCard`, `srsMigrate`, `srsForecast`)
 - `js/ui-study.js` — home (+dashboard), families, library (+print mode), flashcards, quiz, notes, riffs
 - `js/ui-practice.js` — tasting room, practice drills, tools (batching/ABV/cost/convert/**My Data**)
@@ -123,7 +124,12 @@ exactly one cocktail, the Nojito, which is a real mocktail. Honour
   engine.js is the one served-ABV scale (the Tools panel and the Dealer's Choice
   quiz both use it — never fork a second scale).
 - **Adding drinks**: LORE is keyed by exact `name`. Router slugs come from `slugify(name)`.
-- **Quiz questions** carry an optional `topic` (`service` | `beerwine` | `craft`). Legacy entries
+- **Quiz questions** carry an optional `topic` (`service` | `ontap` | `wine` | `craft`). `beerwine`
+  retired when beer got its own tab; `MODE_WAS` in ui-study.js maps it to `wine` at the one place a
+  persisted mode is read, which is a history label and never a round builder. Four sites know the
+  topic keys and must change together: `topicOf`, `knowledgeByTopic`, the hardcoded array in
+  `spreadKnowledge`, and `QUIZ_MODES`. Miss the third and a dead topic silently deals the WHOLE
+  bank, because `knowledgeByTopic` ends `return pool.length ? pool : KNOWLEDGE`. Legacy entries
   have none: `topicOf()` sends anything starting "SCENARIO —" to `service`, everything else to `craft`.
   `buildRound(mode)` shuffles options — never pass `k.options` through unshuffled, since most
   authored entries put the answer in slot 2.

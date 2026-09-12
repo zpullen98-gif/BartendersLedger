@@ -36,7 +36,8 @@ function renderHome(){
     ['producers','The Producers','Benchmark houses across nine categories — how they actually make it, and why it matters.'],
     ['na','Zero Proof','85 spirit-free drinks across nine families, the pantry behind them, and the ethics of sober service.'],
     ['shots','The Shot Board','75 calls, a round-batching builder, the layering density drill, and the service craft.'],
-    ['service','Behind the Stick','Beer and draught, wine service, the legal floor, the register, conflict and glassware — the half of the job that is not a cocktail.'],
+    ['service','Behind the Stick','Wine service, the legal floor, the register, conflict and glassware — the half of the job that is not a cocktail.'],
+    ['ontap','On Tap','The draught system end to end: the pour, beer-clean glass, couplers, gas, the fault trees, and fourteen style cards.'],
     ['flashcards','Flashcards',FC_MODES.length+' drill modes across every cocktail, shot, and zero-proof drink in the ledger.'],
     ['quiz','Quiz Rounds','Families, blind tickets, bar knowledge, real-service scenarios, and the dealer’s-choice call.'],
     ['riffs','Riff Builder','Improvise on the templates — the difference between knowing 50 drinks and 500.'],
@@ -69,6 +70,7 @@ function renderHome(){
       + '<button class="chip brass" data-act="go" data-tab="families">The '+Object.keys(FAMILIES).length+' families</button>'
       + '<button class="chip" data-act="go" data-tab="library">The library</button>'
       + '<button class="chip" data-act="go" data-tab="service">Behind the stick</button>'
+      + '<button class="chip" data-act="go" data-tab="ontap">On tap</button>'
       + '<button class="chip" data-act="go" data-tab="practice">The drills</button>'
       + '<button class="chip" data-search="1">Search anything</button></div>'
       + '<div class="tiny dim mt1">Press <span class="font-tix brass2">/</span> anywhere to search all '
@@ -101,6 +103,7 @@ function renderHome(){
     + '<span class="chip">'+PRODUCERS.length+' producers</span>'
     + '<span class="chip">'+FLIGHTS.length+' tasting flights</span>'
     + '<span class="chip">'+SERVICE_STUDY.reduce((n,x)=>n+x.rows.length,0)+' service lessons</span>'
+    + '<span class="chip">'+ONTAP_STUDY.reduce((n,x)=>n+x.rows.length,0)+' draught lessons</span>'
     + '<span class="chip">'+KNOWLEDGE.length+' quiz questions</span></div>'
     + (tastings ? '<div class="tiny dim mt2">'+tastings+' tasting note'+(tastings===1?'':'s')+' logged'
         + (drillLogs ? ' · '+drillLogs+' practice result'+(drillLogs===1?'':'s')+' recorded' : '')+'</div>'

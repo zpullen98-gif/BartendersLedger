@@ -1,5 +1,4 @@
 /* ---------------- NAVIGATION, ROUTER & SEARCH (Phase 2) ---------------- */
-
 const NAV_CLUSTERS = [
   /* Menu sits beside Practice, because it is where a bartender goes to work
      on their own list rather than to read about drinks. That leaves Ledger a
@@ -7,7 +6,7 @@ const NAV_CLUSTERS = [
      all along, and subRow only draws when a cluster holds more than one. */
   ['ledger', 'Ledger', ['home']],
   ['study', 'Study Hall', ['flashcards','quiz','practice','menu','riffs']],
-  ['reference', 'Reference', ['library','families','shots','na','service','prep','producers','notes']],
+  ['reference', 'Reference', ['library','families','shots','na','service','ontap','prep','producers','notes']],
   ['toolkit', 'Tools', ['tools']],
 ];
 const TAB_LABEL = {};
@@ -67,6 +66,7 @@ const ROUTE_SOURCES = {
   producers: { arr: () => PRODUCERS,  name: x => x.name },
   notes:     { arr: () => STUDY,      name: x => x.title },
   service:   { arr: () => SERVICE_STUDY, name: x => x.key },
+  ontap:     { arr: () => ONTAP_STUDY,   name: x => x.key },
 };
 
 function findBySlug(tab, slug){
@@ -81,10 +81,23 @@ function findBySlug(tab, slug){
    costs nothing to leave here forever. */
 const TAB_WAS = { mybar: 'menu' };
 
+/* A SECTION that changed tabs, not a tab that changed name, which is why
+   TAB_WAS above cannot carry it: '#/service/beer' names a tab that still
+   exists, so parts[0] resolves and only the slug moved. findBySlug would
+   return -1 in silence, renderService would fall back to its first section,
+   which is now Wine, and syncRoute would rewrite the hash on the first paint
+   so the evidence is gone before the reader can report it. Keyed 'tab/slug',
+   applied before the tab is validated, and it costs nothing to leave here
+   forever. */
+const ROUTE_WAS = { 'service/beer': ['ontap', 'pour'] };
+
+
 function applyRoute(){
   const parts = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
   if(!parts.length) return false;
-  const tab = TAB_WAS[parts[0]] || parts[0], slug = parts[1];
+  let tab = TAB_WAS[parts[0]] || parts[0], slug = parts[1];
+  const moved = ROUTE_WAS[tab + '/' + slug];
+  if(moved){ tab = moved[0]; slug = moved[1]; }
   if(!TABS.some(([k]) => k===tab)) return false;
   state.tab = tab;
   const i = slug !== undefined ? findBySlug(tab, slug) : -1;
@@ -96,6 +109,7 @@ function applyRoute(){
     else if(tab==='producers') Object.assign(state.prod, { cat:'All', open:i });
     else if(tab==='notes')   state.noteOpen = STUDY[i].title;
     else if(tab==='service') Object.assign(state.svc, { dom: SERVICE_STUDY[i].key, rowOpen:null, refOpen:null });
+    else if(tab==='ontap') Object.assign(state.ontap, { sec: ONTAP_STUDY[i].key, rowOpen:null, refOpen:null });
     else if(tab==='menu'){ state.menu.open = (progress.bar||[])[i] ? progress.bar[i].id : null;
                            state.menu.view = 'menu'; state.menu.pane = 'build'; }
   } else {
@@ -120,6 +134,7 @@ function currentRoute(){
   else if(t==='producers' && state.prod.open!=null && PRODUCERS[state.prod.open]) slug = slugify(PRODUCERS[state.prod.open].name);
   else if(t==='notes' && state.noteOpen && state.noteOpen !== '__glossary' && state.noteOpen !== '__plates') slug = slugify(state.noteOpen);
   else if(t==='service' && state.svc.dom) slug = slugify(state.svc.dom);
+  else if(t==='ontap' && state.ontap.sec) slug = slugify(state.ontap.sec);
   else if(t==='menu' && state.menu.open && state.menu.view === 'menu'){
     const b = (progress.bar||[]).find(x => x.id === state.menu.open);
     if(b) slug = slugify(b.name);
@@ -161,6 +176,11 @@ function buildSearchIndex(){
       h:'#/service/'+slugify(x.dom) }));
   if(typeof SERVICE_STUDY !== 'undefined') SERVICE_STUDY.forEach(sec => sec.rows.forEach(r =>
     ix.push({ t:r[0], s:sec.title, body:r[1].toLowerCase(), h:'#/service/'+slugify(sec.key) })));
+  if(typeof ONTAP_REF !== 'undefined') ONTAP_REF.forEach(x =>
+    ix.push({ t:x.name, s:x.cat, body:(x.note+' '+x.facts.map(f=>f.join(' ')).join(' ')).toLowerCase(),
+      h:'#/ontap/'+slugify(x.dom) }));
+  if(typeof ONTAP_STUDY !== 'undefined') ONTAP_STUDY.forEach(sec => sec.rows.forEach(r =>
+    ix.push({ t:r[0], s:sec.title, body:r[1].toLowerCase(), h:'#/ontap/'+slugify(sec.key) })));
   return ix;
 }
 
@@ -250,10 +270,53 @@ function serviceTicketHTML(x){
     + '<div class="tix-rule"></div><div class="tix-note">'+esc(x.note)+'</div></div></div>';
 }
 
+/* ---------------- ON TAP: beer, cider, sake and the wall ---------------- */
+/* renderService with two identifiers swapped, and deliberately so. The two
+   arrays share a shape, so one renderer pattern, one search-index pattern and
+   one check in tools/check.mjs cover both, and serviceTicketHTML is reused
+   rather than forked, which is how the two tabs would otherwise drift apart.
+   ONTAP_REF is filed entirely under 'styles', so the other four chips draw
+   rows alone; the refs.length guard below already covers that. */
+function renderOnTap(){
+  const s = state.ontap;
+  const sec = ONTAP_STUDY.find(x => x.key === s.sec) || ONTAP_STUDY[0];
+  const chips = ONTAP_STUDY.map(x =>
+    '<button class="tab-btn'+(s.sec===x.key?' active':'')+'"'+(s.sec===x.key?' aria-current="true"':'')+' data-act="ot-sec" data-d="'+x.key+'">'
+    + esc(x.title)+'</button>').join('');
+  const rows = sec.rows.map((r,i) => {
+    const open = s.rowOpen === i;
+    return '<div class="panel" style="padding:0 16px">'
+      + '<button class="accordion-btn'+(open?' open':'')+'" aria-expanded="'+(open?'true':'false')+'" data-act="ot-row" data-i="'+i+'">'
+      + '<span>'+esc(r[0])+'</span><span style="color:var(--brass)">'+(open?'−':'+')+'</span></button>'
+      + (open ? '<div class="accordion-body"><div class="small dim lh">'+esc(r[1])+'</div></div>' : '')+'</div>';
+  }).join('');
+  const refs = ONTAP_REF.filter(x => x.dom === s.sec);
+  const cats = [...new Set(refs.map(x => x.cat))];
+  const refHTML = refs.length
+    ? cats.map(cat => {
+        const items = refs.filter(x => x.cat === cat).map(x => {
+          const open = s.refOpen === x.name;
+          return '<div class="panel"><button class="drink-head" aria-expanded="'+(open?'true':'false')+'" data-act="ot-ref" data-n="'+esc(x.name)+'">'
+            + '<span class="bold">'+esc(x.name)+'</span>'
+            + '<span class="plusminus">'+(open?'−':'+')+'</span></button>'
+            + (open ? '<div class="drink-body">'+serviceTicketHTML(x)+'</div>' : '')+'</div>';
+        }).join('');
+        return '<div class="eyebrow" style="padding:0 4px;margin-top:8px">'+esc(cat)+'</div><div class="col-sm">'+items+'</div>';
+      }).join('')
+    : '';
+  return '<div class="col">'
+    + '<nav class="tabs" style="margin-bottom:4px">'+chips+'</nav>'
+    + '<div class="panel p4"><div class="eyebrow mb1">'+esc(sec.title)+'</div>'
+    + '<div class="small dim lh">Most bartenders pour more beer than they ever shake, and every fault on this tab is one a guest can taste before you can.</div></div>'
+    + '<div class="col-sm">'+rows+'</div>'
+    + refHTML
+    + '</div>';
+}
+
 function renderService(){
   const s = state.svc;
   const sec = SERVICE_STUDY.find(x => x.key === s.dom) || SERVICE_STUDY[0];
-  const DOM_LABEL = { beer:'Beer & Draught', wine:'Wine', law:'Law & Refusal',
+  const DOM_LABEL = { wine:'Wine', law:'Law & Refusal',
     register:'The Register', conflict:'Conflict & Safety', glassware:'Glassware' };
   const chips = SERVICE_STUDY.map(x =>
     '<button class="tab-btn'+(s.dom===x.key?' active':'')+'"'+(s.dom===x.key?' aria-current="true"':'')+' data-act="svc-dom" data-d="'+x.key+'">'

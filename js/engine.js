@@ -88,7 +88,13 @@ const state = {
   tools:{ view:'batch', drink:3, serv:8, dilute:false, shelf:[],
           convVal:1, convFrom:'oz', bottlePrice:30, bottleMl:750, targetPour:20, dilPct:25 },
   prep:{ cat:'Syrups', open:null, listOpen:null, safeOpen:null },
-  svc:{ dom:'beer', rowOpen:null, refOpen:null },
+  /* 'wine', not 'beer': the beer section left for the On Tap tab. Left at
+     'beer' this does not throw, because renderService falls back to its
+     first section. It paints Wine while currentRoute writes #/service/beer
+     into the address bar, which is a wrong URL that looks right, generated
+     by the app itself and ready to be shared. */
+  svc:{ dom:'wine', rowOpen:null, refOpen:null },
+  ontap:{ sec:'pour', rowOpen:null, refOpen:null },
   prod:{ cat:'All', open:null, primerOpen:null },
   practice:{ view:'drills', flightOpen:null, methodOpen:null, noteOpen:null, subjects:{}, timers:{}, rail:null },
   tast:{ cat:'Whiskey', label:'', appearance:null, nose:[], palate:{}, finish:null, notes:'' },
