@@ -448,8 +448,14 @@ function videoQuery(d, mode){
   // cocktail list contains a few spirit-free drinks and a couple of shots.
   const isShot = d.src==='Shots' || /\bshot\b/i.test(n) || /\bshooter\b/i.test(n);
   const isNA = d.src==='Zero Proof' || d.spirit==='Spirit-free';
+  /* Without this arm an unknown source falls into the cocktail branch below,
+     and every beer card's Watch it made row searched for
+     "Hefeweizen cocktail recipe how to make bartender". */
+  const isTap = d.src==='On Tap';
 
-  if(isShot){
+  if(isTap){
+    q += ' beer style guide what it tastes like';
+  } else if(isShot){
     if(!has('shot')) q += ' shot';
     q += ' recipe';
     if(needsQualifier(n)) q += ' bartender';

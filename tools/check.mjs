@@ -150,6 +150,11 @@ for (const [label, arr, key] of [
 	['NA_DRINKS', W.NA_DRINKS, 'name'],
 	['PREPS', W.PREPS, 'name'],
 	['PRODUCERS', W.PRODUCERS, 'name'],
+	/* ON_TAP earns its place here the moment it became a flashcard deck:
+	   cardKey is src + name, so two styles sharing a name share ONE spaced
+	   repetition record, and the mastery board shows two rows with the same
+	   bold name and one tally between them. */
+	['ONTAP_REF', W.ONTAP_REF || [], 'name'],
 ]) {
 	const seen = new Map();
 	for (const x of arr) {

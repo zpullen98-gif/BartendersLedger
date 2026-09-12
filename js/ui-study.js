@@ -38,7 +38,7 @@ function renderHome(){
     ['shots','The Shot Board','75 calls, a round-batching builder, the layering density drill, and the service craft.'],
     ['service','Behind the Stick','Wine service, the legal floor, the register, conflict and glassware — the half of the job that is not a cocktail.'],
     ['ontap','On Tap','The draught system end to end: the pour, beer-clean glass, couplers, gas, the fault trees, and fourteen style cards.'],
-    ['flashcards','Flashcards',FC_MODES.length+' drill modes across every cocktail, shot, and zero-proof drink in the ledger.'],
+    ['flashcards','Flashcards',FC_MODES.length+' drill modes across every cocktail, shot, zero-proof drink and beer style in the ledger.'],
     ['quiz','Quiz Rounds','Families, blind tickets, bar knowledge, real-service scenarios, and the dealer’s-choice call.'],
     ['riffs','Riff Builder','Improvise on the templates — the difference between knowing 50 drinks and 500.'],
     ['practice','Practice & Tasting','Nine hands-on drills, the Ticket Rail, the Hold-the-Round memory test, the free-pour bench, tasting scorecards, and twelve guided flights.'],
@@ -216,12 +216,25 @@ function renderLibrary(){
    each hit.
 
    The label lives here rather than in the view because five files print it. */
-const DECK_SOURCES = ['Cocktails','My Bar','Shots','Zero Proof'];
-const SRC_LABEL = { 'My Bar': 'Menu' };
+const DECK_SOURCES = ['Cocktails','My Bar','Shots','Zero Proof','On Tap'];
+/* 'On Tap' maps to itself, which is a no-op at run time and the point at
+   edit time: the tab will be renamed one day, exactly as My Bar became
+   Menu, and cardKey bakes this literal into every SRS record and every
+   backup ever exported. The rename is then a one-line change at a site
+   that already exists, and grep lands here. */
+const SRC_LABEL = { 'My Bar': 'Menu', 'On Tap': 'On Tap' };
 function srcLabel(s){ return SRC_LABEL[s] || s; }
 /* the venue’s own list earns its chips only once something is on it: an empty
    source is zero noise everywhere it would appear */
 function deckSources(){ return DECK_SOURCES.filter(s => s !== 'My Bar' || (progress.bar||[]).length); }
+/* A beer style is DRILLABLE and is not POURABLE. It carries facts, not a
+   spec, so reqsOf finds nothing to require and missingFor reports it ready
+   off an empty shelf: every style on the wall would read as makeable with
+   no bottles at all. That is the same false YES the ingredient vocabulary
+   was built to kill, arriving through a different door. The Stock view asks
+   what you can POUR, so it asks this list instead. */
+const FACT_SOURCES = ['On Tap'];
+function pourSources(){ return deckSources().filter(s => FACT_SOURCES.indexOf(s) < 0); }
 function allDrinks(){
   if(allDrinks._c) return allDrinks._c;
   const out = [];
@@ -241,6 +254,14 @@ function allDrinks(){
     out.push({ src:'Zero Proof', name:d.name, spec:d.spec, method:d.method, glass:d.glass,
       garnish:d.garnish, note:d.why, group:d.cat, spirit:'Spirit-free', tier:null, ref:d });
   });
+  /* spec is [] and not undefined on purpose: fcPool, decoyLines and the
+     stock report all reach for it, and an empty array fails closed in each
+     of them while undefined throws. Nothing here can be built, so nothing
+     here should look buildable. */
+  if(typeof ONTAP_REF !== 'undefined') ONTAP_REF.forEach(function(x){
+    out.push({ src:'On Tap', name:x.name, spec:[], method:null, glass:null,
+      garnish:null, note:x.note, group:x.cat, spirit:'—', tier:null, ref:x });
+  });
   allDrinks._c = out;
   return out;
 }
@@ -248,6 +269,10 @@ function cardKey(d){ return d.src==='Cocktails' ? d.name : d.src+' · '+d.name; 
 function cardTicket(d, hideName){
   if(d.src==='Cocktails' || d.src==='My Bar') return ticketHTML(d.ref, hideName);
   if(d.src==='Shots') return shotTicketHTML(d.ref, hideName);
+  /* before the fallthrough, which reads d.ref.spec and would throw. The
+     mastery board, the weakest-area drill and the empty-session fallback
+     all arrive here. */
+  if(d.src==='On Tap') return tapTicketHTML(d.ref, hideName);
   return naTicketHTML(d.ref, hideName);
 }
 function groupsFor(src){
@@ -255,6 +280,7 @@ function groupsFor(src){
   if(src==='My Bar') return [...new Set((progress.bar||[]).map(b => b.family).filter(Boolean))];
   if(src==='Shots') return SHOT_CATS;
   if(src==='Zero Proof') return NA_CATS;
+  if(src==='On Tap') return typeof ONTAP_REF === 'undefined' ? [] : [...new Set(ONTAP_REF.map(x => x.cat))];
   return [];
 }
 
@@ -323,7 +349,9 @@ function decoyLines(c, n){
   const out = [];
   const all = allDrinks();
   const same = all.filter(x => x.src === c.src);
-  const base = (same.length > 6 ? same : all).filter(x => x.name !== c.name);
+  /* donors must HAVE a spec: a fact-only source contributes nothing and an
+     empty donor silently shrinks the decoy count. */
+  const base = (same.length > 6 ? same : all).filter(x => x.name !== c.name && (x.spec||[]).length);
   const kin = base.filter(x => x.group && c.group && x.group === c.group);
   const donors = shuffle(kin).concat(shuffle(base.filter(x => kin.indexOf(x) < 0)));
   donors.forEach(function(x){
@@ -414,12 +442,20 @@ function clozeTicketHTML(c, hideIdx){
        + '<div><span class="tix-label">Garnish </span>'+esc(c.garnish)+'</div>' : '')
     + '</div></div>';
 }
+/* The fourth element answers "does this mode make sense for this card?".
+   Without it, Assemble the Ticket deals a beer style whose spec is empty, so
+   every option in the pool is correct, the reader wins by clicking all of
+   them, and scheduleCard advances an interval on a question that could not
+   be failed. Service Details is worse: svcGlassKey buckets a pilsner flute
+   and a shaker pint into the same answer and grades one as the other, which
+   lands in the scheduler as a lapse. */
+const hasSpec = d => Array.isArray(d.spec) && d.spec.length;
 const FC_MODES = [
-  ['name2spec','Name → Spec','The order comes in. Recite the whole build out loud, then flip and grade yourself.'],
-  ['spec2name','Spec → Name','Read a blind ticket and call the drink — the service-printer skill.'],
-  ['build','Assemble the Ticket','An ingredient bank with decoys mixed in. Select every line that belongs in the spec.'],
-  ['cloze','Fill the Missing Line','One line of the ticket is blanked. Pick the exact line that completes it.'],
-  ['service','Service Details','Glass, garnish and method with no spec to lean on — the part the guest actually sees.'],
+  ['name2spec','Name → Spec','The order comes in. Recite the whole build out loud, then flip and grade yourself.', d => true],
+  ['spec2name','Spec → Name','Read a blind ticket and call the drink — the service-printer skill.', d => true],
+  ['build','Assemble the Ticket','An ingredient bank with decoys mixed in. Select every line that belongs in the spec.', hasSpec],
+  ['cloze','Fill the Missing Line','One line of the ticket is blanked. Pick the exact line that completes it.', hasSpec],
+  ['service','Service Details','Glass, garnish and method with no spec to lean on — the part the guest actually sees.', d => FACT_SOURCES.indexOf(d.src) < 0],
 ];
 
 function renderFlashcards(){
@@ -446,7 +482,9 @@ function renderFlashcards(){
       .map(([k,l]) => '<button class="chip'+(fc.special===k?' on':'')+'" aria-pressed="'+(fc.special===k?'true':'false')+'" data-act="fc-special" data-s="'+k+'">'+l+'</button>').join(' ');
     const pool = fcPool();
     const masteredIn = pool.filter(function(d){ return isMastered(cardKey(d)); }).length;
-    const modeBtns = FC_MODES.map(([m,t,d],i) =>
+    /* index into the FILTERED list, or a deck that hides the first mode draws
+       no brass button at all */
+    const modeBtns = FC_MODES.filter(([,,,fits]) => !fits || pool.some(fits)).map(([m,t,d],i) =>
       '<button class="btn '+(i===0?'btn-brass':'btn-ghost')+'" data-act="fc-start" data-mode="'+m+'" style="text-align:left"'+(pool.length?'':' disabled')+'>'
       + '<span class="bold">'+t+'</span><br><span class="tiny'+(i===0?'':' dim')+'" style="font-weight:400">'+d+'</span></button>').join('');
     return '<div class="col">'
@@ -482,7 +520,9 @@ function renderFlashcards(){
       const open = fc.boardOpen===o.i;
       const rec = s ? '<span class="font-tix tiny" style="color:#7fbf95">✓'+s.r+'</span> <span class="font-tix tiny" style="color:var(--oxblood-text)">✗'+s.w+'</span>' : '<span class="tiny dim">unseen</span>';
       const badge = isMastered(key) ? '<span class="chip brass">Mastered</span>' : '';
-      const srcChip = o.d.src==='Cocktails' ? '' : '<span class="chip">'+esc(o.d.src)+'</span>';
+      /* srcLabel, not the raw literal: this is a site that PRINTS a source, and
+       it has been showing 'My Bar' since the tab was renamed to Menu. */
+    const srcChip = o.d.src==='Cocktails' ? '' : '<span class="chip">'+esc(srcLabel(o.d.src))+'</span>';
       return '<div class="panel"><button class="drink-head" aria-expanded="'+(open?'true':'false')+'" data-act="fc-board-open" data-i="'+o.i+'">'
         + '<span class="bold">'+esc(o.d.name)+'</span>'+srcChip+badge+'<span class="push">'+rec+'</span>'
         + '<span class="plusminus">'+(open?'−':'+')+'</span></button>'
@@ -532,7 +572,8 @@ function renderFlashcards(){
   if(fc.mode==='name2spec' || fc.mode==='spec2name'){
     if(!fc.flipped){
       const face = fc.mode==='name2spec'
-        ? '<div class="eyebrow">The order comes in —</div><div class="font-display" style="font-size:1.5rem;color:var(--brass-2)">'+esc(c.name)+'</div><div class="small dim">Say the spec, method, glass, and garnish out loud.</div>'
+        ? '<div class="eyebrow">'+(c.src==='On Tap'?'The guest asks for a':'The order comes in —')+'</div><div class="font-display" style="font-size:1.5rem;color:var(--brass-2)">'+esc(c.name)+'</div><div class="small dim">'
+          + (c.src==='On Tap' ? 'Say the strength, the glass, the serving temperature and what it tastes like.' : 'Say the spec, method, glass, and garnish out loud.')+'</div>'
         : '<div class="eyebrow">Read the ticket. Call the drink.</div>'+cardTicket(c,true);
       return '<div class="col">'+head+'<div class="panel p5 col tc" style="align-items:center">'+face
         + '<button class="btn btn-brass" data-act="fc-flip">Flip the card</button></div></div>';

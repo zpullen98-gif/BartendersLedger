@@ -270,6 +270,20 @@ function serviceTicketHTML(x){
     + '<div class="tix-rule"></div><div class="tix-note">'+esc(x.note)+'</div></div></div>';
 }
 
+/* A blind fact ticket is the best beer drill this app can offer: read 4.5 to
+   5.6 per cent, a weizen vase, 45 to 50F, banana and clove from the yeast,
+   and call it a hefeweizen. serviceTicketHTML cannot do it because it always
+   prints the name, so this is that function with a hideName arm. */
+function tapTicketHTML(x, hideName){
+  return '<div class="ticket"><div class="ticket-inner">'
+    + '<div class="tc"><div class="tix-label">'+esc(x.cat)+'</div>'
+    + '<div class="tix-name">'+(hideName ? '?' : esc(x.name.toUpperCase()))+'</div></div>'
+    + '<div class="tix-rule"></div>'
+    + x.facts.map(f => '<div><span class="tix-label">'+esc(f[0])+' </span>'+esc(f[1])+'</div>').join('')
+    + (hideName ? '' : '<div class="tix-rule"></div><div class="tix-note">'+esc(x.note)+'</div>')
+    + '</div></div>';
+}
+
 /* ---------------- ON TAP: beer, cider, sake and the wall ---------------- */
 /* renderService with two identifiers swapped, and deliberately so. The two
    arrays share a shape, so one renderer pattern, one search-index pattern and
@@ -485,7 +499,17 @@ function sessionDeckParts(){
   if(!pool.length) pool = fresh;
   /* stop pouring new cards into a deep hole — dig out first */
   const newCount = dueAll > 50 ? 0 : (dueDeck.length ? 5 : 8);
-  const newDeck = shuffle(pool).slice(0, newCount);
+  /* One seat in every hand of new cards belongs to the wall. The ladder
+     above is a STRICT ordering, so anything below cocktail tier 12 is
+     unreachable until all 365 have been seen: at five to eight new cards a
+     night that is two months away, which is why shots and zero-proof have
+     never been dealt as new cards either. A fixed minority seat deals the
+     styles out over a month without ever letting them crowd the canon, and
+     it closes itself as soon as they have all been seen. */
+  const tapFresh = fresh.filter(d => d.src === 'On Tap');
+  const tapSeats = tapFresh.length ? Math.min(Math.max(1, Math.round(newCount * 0.2)), newCount) : 0;
+  const newDeck = shuffle(shuffle(pool).filter(d => d.src !== 'On Tap').slice(0, newCount - tapSeats)
+    .concat(sample(tapFresh, tapSeats)));
   return { dueDeck, newDeck, dueAll };
 }
 
