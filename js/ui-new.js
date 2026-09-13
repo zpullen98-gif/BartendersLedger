@@ -289,7 +289,7 @@ function tapTicketHTML(x, hideName){
    arrays share a shape, so one renderer pattern, one search-index pattern and
    one check in tools/check.mjs cover both, and serviceTicketHTML is reused
    rather than forked, which is how the two tabs would otherwise drift apart.
-   ONTAP_REF fills three of the chips and the other seven draw rows alone;
+   ONTAP_REF fills four of the chips and the other seven draw rows alone;
    the refs.length guard below already covers that. */
 function renderOnTap(){
   const s = state.ontap;
