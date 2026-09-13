@@ -492,7 +492,7 @@ const SHELF_PRESETS = [
      other half of the bug that had those drinks requiring a lager and hard
      cider: the rows were wrong AND the station that exists to pour them did
      not carry them. */
-  ['Zero-proof station', ['lemon','lime','gfj','oj','pine','cran','simple','honey','ginger','mint','soda','tonic','gb','ga','cola','tomato','coco','espresso','brewedcoffee','cream','milk','agave','maple',
+  ['Zero-proof station', ['lemon','lime','gfj','oj','pine','cran','simple','honey','ginger','mint','soda','tonic','gb','ga','cola','tomato','coco','espresso','brewedcoffee','tea','cream','milk','agave','maple',
     'naaperitivo','nabitters','naspirit','navermouth',
     'rootbeer','applecider','nasparkling','naredwine','nalager','naelder','nacoffeeliq','gentiansyrup','narum']],
 ];
