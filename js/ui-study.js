@@ -38,6 +38,7 @@ function renderHome(){
     ['shots','The Shot Board','75 calls, a round-batching builder, the layering density drill, and the service craft.'],
     ['service','Behind the Stick','Wine service, the legal floor, the register, conflict and glassware — the half of the job that is not a cocktail.'],
     ['ontap','On Tap','The draught system end to end, sixty-three beer styles, the fault board, how beer is made, then cider, perry, sake and mead.'],
+    ['coffee','Coffee & Tea','Espresso and the machine, milk and latte art, filter and cold brew, tea, matcha and chai, with the films that teach the pours.'],
     ['flashcards','Flashcards',FC_MODES.length+' drill modes across every cocktail, shot, zero-proof drink, beer style, cider, sake and mead in the ledger.'],
     ['quiz','Quiz Rounds','Families, blind tickets, bar knowledge, real-service scenarios, and the dealer’s-choice call.'],
     ['riffs','Riff Builder','Improvise on the templates — the difference between knowing 50 drinks and 500.'],

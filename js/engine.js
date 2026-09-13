@@ -95,6 +95,12 @@ const state = {
      by the app itself and ready to be shared. */
   svc:{ dom:'wine', rowOpen:null, refOpen:null },
   ontap:{ sec:'pour', rowOpen:null, refOpen:null },
+  /* Paired with the applyRoute arm in ui-new.js and never added without it.
+     check.mjs gates the arm and gates nothing here, and a missing slice is
+     not a wrong render, it is Object.assign on undefined inside the router
+     at boot, before renderNav has run: a masthead with nothing under it,
+     and the hash survives the reload that would have cleared it. */
+  coffee:{ sec:'machine', rowOpen:null, refOpen:null },
   prod:{ cat:'All', open:null, primerOpen:null },
   practice:{ view:'drills', flightOpen:null, methodOpen:null, noteOpen:null, subjects:{}, timers:{}, rail:null },
   tast:{ cat:'Whiskey', label:'', appearance:null, nose:[], palate:{}, finish:null, notes:'' },

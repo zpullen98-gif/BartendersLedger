@@ -53,11 +53,14 @@ const sandbox = { window: {}, localStorage: { getItem: () => null, setItem() {} 
 /* data-ontap.js is optional here on purpose: this gate predates the tab and
    must keep passing on a tree that has not grown it yet. */
 const onTapSrc = existsSync(new URL('../js/data-ontap.js', import.meta.url)) ? read('../js/data-ontap.js') : '';
-const wide = [src, read('../js/data-lore.js'), read('../js/data-service.js'), onTapSrc, read('../js/data-ingredients.js'), read('../js/ingredients.js'), read('../js/engine.js'), read('../js/ui-reference.js'), read('../js/ui-prep.js')].join(';'+String.fromCharCode(10));
+const coffeeSrc = existsSync(new URL('../js/data-coffee.js', import.meta.url)) ? read('../js/data-coffee.js') : '';
+const wide = [src, read('../js/data-lore.js'), read('../js/data-service.js'), onTapSrc, coffeeSrc, read('../js/data-ingredients.js'), read('../js/ingredients.js'), read('../js/engine.js'), read('../js/ui-reference.js'), read('../js/ui-prep.js')].join(';'+String.fromCharCode(10));
 const W = vm.runInNewContext(
 	wide + ';({LORE, SHOTS, NA_DRINKS, PREPS, PRODUCERS, SHELF, SHELF_PRESETS, SERVICE_STUDY, SERVICE_REF,'
 	     + ' ONTAP_STUDY: typeof ONTAP_STUDY === "undefined" ? null : ONTAP_STUDY,'
-	     + ' ONTAP_REF: typeof ONTAP_REF === "undefined" ? null : ONTAP_REF})',
+	     + ' ONTAP_REF: typeof ONTAP_REF === "undefined" ? null : ONTAP_REF,'
+	     + ' COFFEE_STUDY: typeof COFFEE_STUDY === "undefined" ? null : COFFEE_STUDY,'
+	     + ' COFFEE_REF: typeof COFFEE_REF === "undefined" ? null : COFFEE_REF})',
 	sandbox
 );
 
@@ -155,6 +158,7 @@ for (const [label, arr, key] of [
 	   repetition record, and the mastery board shows two rows with the same
 	   bold name and one tally between them. */
 	['ONTAP_REF', W.ONTAP_REF || [], 'name'],
+	['COFFEE_REF', W.COFFEE_REF || [], 'name'],
 ]) {
 	const seen = new Map();
 	for (const x of arr) {
@@ -213,6 +217,7 @@ for (const [label, arr, key] of [
 for (const [label, secs, refs] of [
 	['SERVICE', W.SERVICE_STUDY, W.SERVICE_REF],
 	['ONTAP', W.ONTAP_STUDY, W.ONTAP_REF],
+	['COFFEE', W.COFFEE_STUDY, W.COFFEE_REF],
 ]) {
 	if (!secs) continue;
 	const seen = new Map();

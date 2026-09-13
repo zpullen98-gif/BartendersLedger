@@ -1,6 +1,6 @@
 /* ---------------- RENDER & EVENTS ---------------- */
 const prTicks = {};  /* one stopwatch interval per drill id */
-const TABS = [['home','Ledger'],['menu','Menu'],['families','Families'],['library','Library'],['shots','Shots'],['na','Zero Proof'],['service','Behind the Stick'],['ontap','On Tap'],['prep','Prep'],['producers','Producers'],['notes','Notes'],['flashcards','Flashcards'],['quiz','Quiz'],['practice','Practice'],['riffs','Riffs'],['tools','Tools']];
+const TABS = [['home','Ledger'],['menu','Menu'],['families','Families'],['library','Library'],['shots','Shots'],['na','Zero Proof'],['service','Behind the Stick'],['ontap','On Tap'],['coffee','Coffee & Tea'],['prep','Prep'],['producers','Producers'],['notes','Notes'],['flashcards','Flashcards'],['quiz','Quiz'],['practice','Practice'],['riffs','Riffs'],['tools','Tools']];
 /* Announce something to assistive tech. The region is outside #view so it
    survives the innerHTML swap below. */
 function say(msg){
@@ -37,7 +37,7 @@ function render(){
      build is enough to cause one. Landing on Home is a recoverable state; a
      white screen is not. */
   const views = {home:renderHome, menu:renderMenu, families:renderFamilies, library:renderLibrary,
-    shots:renderShots, na:renderNA, service:renderService, ontap:renderOnTap, producers:renderProducers, prep:renderPrep,
+    shots:renderShots, na:renderNA, service:renderService, ontap:renderOnTap, coffee:renderCoffee, producers:renderProducers, prep:renderPrep,
     flashcards:renderFlashcards, quiz:renderQuiz, riffs:renderRiffs,
     practice:renderPractice, tools:renderTools, notes:renderNotes};
   if(!views[state.tab]) state.tab = 'home';
@@ -812,6 +812,9 @@ document.getElementById('view').addEventListener('click', e => {
   else if(act==='ot-sec'){ state.ontap.sec = el.dataset.d; state.ontap.rowOpen = null; state.ontap.refOpen = null; }
   else if(act==='ot-row'){ const i=Number(el.dataset.i); state.ontap.rowOpen = state.ontap.rowOpen===i ? null : i; }
   else if(act==='ot-ref'){ const n=el.dataset.n; state.ontap.refOpen = state.ontap.refOpen===n ? null : n; }
+  else if(act==='cof-sec'){ state.coffee.sec = el.dataset.d; state.coffee.rowOpen = null; state.coffee.refOpen = null; }
+  else if(act==='cof-row'){ const i=Number(el.dataset.i); state.coffee.rowOpen = state.coffee.rowOpen===i ? null : i; }
+  else if(act==='cof-ref'){ const n=el.dataset.n; state.coffee.refOpen = state.coffee.refOpen===n ? null : n; }
   captureLiveInputs();
   render();
 });
@@ -879,7 +882,7 @@ function captureLiveInputs(){
   if(expireStaleEightySix()) saveProgress();
   dropDeadEightySix();
   srsMigrate(progress.cards);
-  applyRoute();
+  try { applyRoute(); } catch (e) { state.tab = 'home'; }
   render();
 })();
 

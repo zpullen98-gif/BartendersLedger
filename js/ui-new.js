@@ -6,7 +6,7 @@ const NAV_CLUSTERS = [
      all along, and subRow only draws when a cluster holds more than one. */
   ['ledger', 'Ledger', ['home']],
   ['study', 'Study Hall', ['flashcards','quiz','practice','menu','riffs']],
-  ['reference', 'Reference', ['library','families','shots','na','service','ontap','prep','producers','notes']],
+  ['reference', 'Reference', ['library','families','shots','na','service','ontap','coffee','prep','producers','notes']],
   ['toolkit', 'Tools', ['tools']],
 ];
 const TAB_LABEL = {};
@@ -67,6 +67,7 @@ const ROUTE_SOURCES = {
   notes:     { arr: () => STUDY,      name: x => x.title },
   service:   { arr: () => SERVICE_STUDY, name: x => x.key },
   ontap:     { arr: () => ONTAP_STUDY,   name: x => x.key },
+  coffee:    { arr: () => COFFEE_STUDY,  name: x => x.key },
 };
 
 function findBySlug(tab, slug){
@@ -110,6 +111,7 @@ function applyRoute(){
     else if(tab==='notes')   state.noteOpen = STUDY[i].title;
     else if(tab==='service') Object.assign(state.svc, { dom: SERVICE_STUDY[i].key, rowOpen:null, refOpen:null });
     else if(tab==='ontap') Object.assign(state.ontap, { sec: ONTAP_STUDY[i].key, rowOpen:null, refOpen:null });
+    else if(tab==='coffee') Object.assign(state.coffee, { sec: COFFEE_STUDY[i].key, rowOpen:null, refOpen:null });
     else if(tab==='menu'){ state.menu.open = (progress.bar||[])[i] ? progress.bar[i].id : null;
                            state.menu.view = 'menu'; state.menu.pane = 'build'; }
   } else {
@@ -135,6 +137,7 @@ function currentRoute(){
   else if(t==='notes' && state.noteOpen && state.noteOpen !== '__glossary' && state.noteOpen !== '__plates') slug = slugify(state.noteOpen);
   else if(t==='service' && state.svc.dom) slug = slugify(state.svc.dom);
   else if(t==='ontap' && state.ontap.sec) slug = slugify(state.ontap.sec);
+  else if(t==='coffee' && state.coffee.sec) slug = slugify(state.coffee.sec);
   else if(t==='menu' && state.menu.open && state.menu.view === 'menu'){
     const b = (progress.bar||[]).find(x => x.id === state.menu.open);
     if(b) slug = slugify(b.name);
@@ -181,6 +184,11 @@ function buildSearchIndex(){
       h:'#/ontap/'+slugify(x.dom) }));
   if(typeof ONTAP_STUDY !== 'undefined') ONTAP_STUDY.forEach(sec => sec.rows.forEach(r =>
     ix.push({ t:r[0], s:sec.title, body:r[1].toLowerCase(), h:'#/ontap/'+slugify(sec.key) })));
+  if(typeof COFFEE_REF !== 'undefined') COFFEE_REF.forEach(x =>
+    ix.push({ t:x.name, s:x.cat, body:(x.note+' '+x.facts.map(f=>f.join(' ')).join(' ')).toLowerCase(),
+      h:'#/coffee/'+slugify(x.dom) }));
+  if(typeof COFFEE_STUDY !== 'undefined') COFFEE_STUDY.forEach(sec => sec.rows.forEach(r =>
+    ix.push({ t:r[0], s:sec.title, body:r[1].toLowerCase(), h:'#/coffee/'+slugify(sec.key) })));
   return ix;
 }
 
