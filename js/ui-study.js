@@ -37,8 +37,8 @@ function renderHome(){
     ['na','Zero Proof','85 spirit-free drinks across nine families, the pantry behind them, and the ethics of sober service.'],
     ['shots','The Shot Board','75 calls, a round-batching builder, the layering density drill, and the service craft.'],
     ['service','Behind the Stick','Wine service, the legal floor, the register, conflict and glassware — the half of the job that is not a cocktail.'],
-    ['ontap','On Tap','The draught system end to end: the pour, beer-clean glass, couplers, gas, the fault trees, and fourteen style cards.'],
-    ['flashcards','Flashcards',FC_MODES.length+' drill modes across every cocktail, shot, zero-proof drink and beer style in the ledger.'],
+    ['ontap','On Tap','The draught system end to end, sixty-three beer styles, the fault board, how beer is made, and cider and perry beside it.'],
+    ['flashcards','Flashcards',FC_MODES.length+' drill modes across every cocktail, shot, zero-proof drink, beer style and cider in the ledger.'],
     ['quiz','Quiz Rounds','Families, blind tickets, bar knowledge, real-service scenarios, and the dealer’s-choice call.'],
     ['riffs','Riff Builder','Improvise on the templates — the difference between knowing 50 drinks and 500.'],
     ['practice','Practice & Tasting','Nine hands-on drills, the Ticket Rail, the Hold-the-Round memory test, the free-pour bench, tasting scorecards, and twelve guided flights.'],
@@ -235,6 +235,9 @@ function deckSources(){ return DECK_SOURCES.filter(s => s !== 'My Bar' || (progr
    what you can POUR, so it asks this list instead. */
 const FACT_SOURCES = ['On Tap'];
 function pourSources(){ return deckSources().filter(s => FACT_SOURCES.indexOf(s) < 0); }
+/* counted rather than typed, because the enumeration in the mastery blurb
+   went stale the moment this source existed and the total beside it did not. */
+function tapCount(){ return allDrinks().filter(d => d.src === 'On Tap').length; }
 function allDrinks(){
   if(allDrinks._c) return allDrinks._c;
   const out = [];
@@ -501,7 +504,7 @@ function renderFlashcards(){
       + '<div class="col-sm">'+modeBtns+'</div>'
       + '</div>'
       + '<div class="row center"><button class="btn btn-ghost" data-act="fc-board">Mastery board →</button></div>'
-      + '<div class="tiny dim lh" style="padding:0 4px">Every drink in the ledger is drillable — all '+COCKTAILS.length+' cocktails, '+SHOTS.length+' shots, '+((progress.bar||[]).length ? NA_DRINKS.length+' zero-proof drinks, and your '+progress.bar.length+' menu drink'+(progress.bar.length===1?'':'s') : 'and '+NA_DRINKS.length+' zero-proof drinks')+', '+allDrinks().length+' cards in total. Path to mastery: run <span class="brass2">Name → Spec</span> until clean, prove it in <span class="brass2">Assemble the Ticket</span>, then keep <span class="brass2">Trouble cards</span> + <span class="brass2">Weakest first</span> in rotation. Three honest wins with a winning record masters a card.</div>'
+      + '<div class="tiny dim lh" style="padding:0 4px">Every drink in the ledger is drillable — all '+COCKTAILS.length+' cocktails, '+SHOTS.length+' shots, '+NA_DRINKS.length+' zero-proof drinks, '+((progress.bar||[]).length ? tapCount()+' beer, cider and perry cards, and your '+progress.bar.length+' menu drink'+(progress.bar.length===1?'':'s') : 'and '+tapCount()+' beer, cider and perry cards')+', '+allDrinks().length+' cards in total. Path to mastery: run <span class="brass2">Name → Spec</span> until clean, prove it in <span class="brass2">Assemble the Ticket</span>, then keep <span class="brass2">Trouble cards</span> + <span class="brass2">Weakest first</span> in rotation. Three honest wins with a winning record masters a card.</div>'
       + '</div>';
   }
 
