@@ -33,7 +33,12 @@
 import { loadWing } from './load-wing.mjs';
 
 const LONGEST_GATE = 0.27;   /* pick-longest strategy score, as a fraction */
-const UNIQUE_GATE = 25;      /* questions whose key is strictly the longest */
+/* A RATE WITH A FLOOR, not a flat count. This was 25 against a bank of 196,
+   which is 12.8 percent of it. A flat count silently tightens as the bank
+   grows: at 292 questions the same 25 is 8.6 percent, so a pass that lowers
+   the rate can still trip a gate nobody re-decided. The floor keeps the
+   original strictness for a bank of 196 or smaller. */
+const uniqueGate = (n) => Math.max(25, Math.round(0.128 * n));
 
 /* data-ontap.js joined the bank when beer got its own tab; without it the
    nineteen draught questions are ungated. */
@@ -82,7 +87,8 @@ const n = KNOWLEDGE.length - malformed.length;
 const pct = (x) => (100 * x).toFixed(1) + '%';
 console.log('check-options: ' + n + ' questions' + (malformed.length ? ' (' + malformed.length + ' malformed, excluded)' : ''));
 console.log('  pick-longest strategy (ties split): ' + pct(strategy / n) + '  gate ' + pct(LONGEST_GATE));
-console.log('  key is the unique longest option:   ' + unique.length + '  gate ' + UNIQUE_GATE);
+console.log('  key is the unique longest option:   ' + unique.length + '  gate ' + uniqueGate(n)
+	+ ' (12.8% of ' + n + ')');
 console.log('  mean length, keys: ' + (keyChars / keyN).toFixed(1) + ' chars; distractors: ' + (distChars / distN).toFixed(1) + ' chars');
 console.log('  for the record (not gated): pick-shortest ' + pct(shortest / n) + ', avoid-the-longest ' + pct(avoidLongest / n) + '; chance is 25.0%');
 if (list) {
@@ -97,6 +103,6 @@ malformed.forEach(m => console.log('  malformed: ' + m));
 let fail = false;
 if (malformed.length) { console.error('check-options: malformed questions'); fail = true; }
 if (strategy / n > LONGEST_GATE) { console.error('check-options: pick-longest ' + pct(strategy / n) + ' is above the ' + pct(LONGEST_GATE) + ' gate'); fail = true; }
-if (unique.length > UNIQUE_GATE) { console.error('check-options: ' + unique.length + ' unique-longest keys is above the gate of ' + UNIQUE_GATE); fail = true; }
+if (unique.length > uniqueGate(n)) { console.error('check-options: ' + unique.length + ' unique-longest keys is above the gate of ' + uniqueGate(n)); fail = true; }
 if (fail) { console.error('check-options: FAIL'); process.exit(1); }
 console.log('check-options: OK');

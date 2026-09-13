@@ -680,7 +680,7 @@ const QUIZ_MODES = [
   ['mixed','Mixed round','Families, blind tickets and bar knowledge — the shape of a shift.'],
   ['mybar','Menu','Your own list: name, glass and spec, straight off the menu.'],
   ['service','Service & law','Guests, pacing, refusal, the register and the legal floor.'],
-  ['ontap','On tap','The draught system: the pour, the gas, the glass, the fault trees and the styles.'],
+  ['ontap','On tap','The draught system, the fault trees, the styles, and cider, perry, sake and mead.'],
   ['wine','Wine','Varietal, fault, preservation, pour cost and the service sequence.'],
   ['craft','Spirits & craft','Technique, production, ingredients and the balance behind the specs.'],
   ['tickets','Blind tickets','Ten blind tickets. Read the spec, call the drink.'],
