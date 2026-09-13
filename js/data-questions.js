@@ -181,7 +181,7 @@ STUDY.push({ title:"Watch It Made: The Channels", rows:[
   ["The Educated Barfly","Leandro DiMonriva. Encyclopedic recipe library plus opinionated bottle recommendations — good for building a shopping brain."],
   ["How to Drink","Greg Titian. Funny and historically curious, strong on the why behind a drink rather than just the build."],
   ["Behind the Bar","Cara Devine, Melbourne. A working bar manager's view — service reality and menu thinking from someone who makes these for money."],
-  ["Why the links are searches, not fixed videos","Every video button in this guide opens a YouTube search rather than one pinned video. Pinned links rot — creators delete, privatize, and re-upload constantly — and a guide full of dead links is worse than one with none. A search always returns what currently exists, and lets you compare three bartenders' takes on the same drink, which is better practice anyway."],
+  ["Why the links are mostly searches","Almost every video button in this guide opens a YouTube search rather than one pinned video. Pinned links rot, because creators delete, privatize and re-upload constantly, and a guide full of dead links is worse than one with none. A search always returns what currently exists, and lets you compare three bartenders' takes on the same drink, which is better practice anyway. Coffee and Tea is the exception, and only because its films are checked against YouTube before every release and each one still carries a search link beside it."],
 ]});
 
 STUDY.push({ title:"Where to Go Deeper", rows:[

@@ -54,13 +54,15 @@ const sandbox = { window: {}, localStorage: { getItem: () => null, setItem() {} 
    must keep passing on a tree that has not grown it yet. */
 const onTapSrc = existsSync(new URL('../js/data-ontap.js', import.meta.url)) ? read('../js/data-ontap.js') : '';
 const coffeeSrc = existsSync(new URL('../js/data-coffee.js', import.meta.url)) ? read('../js/data-coffee.js') : '';
-const wide = [src, read('../js/data-lore.js'), read('../js/data-service.js'), onTapSrc, coffeeSrc, read('../js/data-ingredients.js'), read('../js/ingredients.js'), read('../js/engine.js'), read('../js/ui-reference.js'), read('../js/ui-prep.js')].join(';'+String.fromCharCode(10));
+const filmSrc = existsSync(new URL('../js/data-coffee-films.js', import.meta.url)) ? read('../js/data-coffee-films.js') : '';
+const wide = [src, read('../js/data-lore.js'), read('../js/data-service.js'), onTapSrc, coffeeSrc, filmSrc, read('../js/data-ingredients.js'), read('../js/ingredients.js'), read('../js/engine.js'), read('../js/ui-reference.js'), read('../js/ui-prep.js')].join(';'+String.fromCharCode(10));
 const W = vm.runInNewContext(
 	wide + ';({LORE, SHOTS, NA_DRINKS, PREPS, PRODUCERS, SHELF, SHELF_PRESETS, SERVICE_STUDY, SERVICE_REF,'
 	     + ' ONTAP_STUDY: typeof ONTAP_STUDY === "undefined" ? null : ONTAP_STUDY,'
 	     + ' ONTAP_REF: typeof ONTAP_REF === "undefined" ? null : ONTAP_REF,'
 	     + ' COFFEE_STUDY: typeof COFFEE_STUDY === "undefined" ? null : COFFEE_STUDY,'
-	     + ' COFFEE_REF: typeof COFFEE_REF === "undefined" ? null : COFFEE_REF})',
+	     + ' COFFEE_REF: typeof COFFEE_REF === "undefined" ? null : COFFEE_REF,'
+	     + ' COFFEE_FILMS: typeof COFFEE_FILMS === "undefined" ? null : COFFEE_FILMS})',
 	sandbox
 );
 
@@ -229,6 +231,45 @@ for (const [label, secs, refs] of [
 	const keys = new Set(secs.map((x) => x.key));
 	for (const x of (refs || [])) {
 		if (!keys.has(x.dom)) problems.push(`${label}_REF: "${x.name}" is filed under dom "${x.dom}", which names no section — the card renders nowhere and searches to a dead route`);
+	}
+}
+
+// ---- every pinned film points at a lesson that still exists -----------------
+// A film is keyed sec + slugify(row title). A lesson renamed in a later pass
+// leaves its film pointing at nothing: the page keeps working and quietly goes
+// back to having no video, and nobody finds out. The World Table hit this and
+// answered it by failing the build; this is that answer, ported.
+//
+// The rest of these are shape checks on a MACHINE WRITTEN file. They exist
+// because the machine is the only thing that should ever write it: a
+// hand-edited title is the one way a wrong film can reach a reader with nothing
+// to catch it, and a non-ASCII byte in there is the fingerprint of one.
+if (W.COFFEE_FILMS) {
+	const secs = new Map((W.COFFEE_STUDY || []).map((s) => [s.key, new Set(s.rows.map((r) => slugify(r[0])))]));
+	const seenKey = new Set(), seenId = new Set();
+	for (const f of W.COFFEE_FILMS) {
+		const at = `COFFEE_FILMS "${f.sec}/${f.row}"`;
+		if (!secs.has(f.sec)) { problems.push(`${at}: sec names no COFFEE_STUDY section`); continue; }
+		if (!secs.get(f.sec).has(f.row)) {
+			problems.push(`${at}: row matches no lesson in that section, so the film points at nothing and the lesson silently loses its video`);
+		}
+		const key = f.sec + '/' + f.row;
+		if (seenKey.has(key)) problems.push(`${at}: two films on one lesson`); else seenKey.add(key);
+		if (seenId.has(f.id)) problems.push(`COFFEE_FILMS: id ${f.id} is pinned twice`); else seenId.add(f.id);
+		if (!/^[A-Za-z0-9_-]{11}$/.test(f.id || '')) problems.push(`${at}: "${f.id}" is not an eleven character video id`);
+		for (const k of ['title', 'channel']) {
+			if (!String(f[k] || '').trim()) problems.push(`${at}: no ${k}, which only films-add.mjs should ever write`);
+		}
+		if (f.start !== undefined && (!Number.isInteger(f.start) || f.start <= 0)) problems.push(`${at}: start must be a positive whole number of seconds`);
+		if (String(f.watchFor || '').trim().length < 40) problems.push(`${at}: watchFor is the whole value over a search link`);
+	}
+	/* The FILE, not the values. films-add.mjs escapes every codepoint outside
+	   printable ASCII, so the source is pure ASCII while the parsed title is
+	   whatever YouTube actually called it. A literal non-ASCII byte in here is
+	   therefore the fingerprint of a hand edit, and a hand edit is the one way
+	   a wrong film reaches a reader with nothing to catch it. */
+	if (filmSrc && !/^[\x00-\x7f]*$/.test(filmSrc)) {
+		problems.push('js/data-coffee-films.js carries a literal non-ASCII byte. films-add.mjs escapes every one of them, so this file has been hand-edited. Re-run the pipeline.');
 	}
 }
 

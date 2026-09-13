@@ -1,7 +1,9 @@
 # The Bartender's Ledger
 
-An offline-first bartending study app. No frameworks, no build step, no tracking, no network calls.
-Open it once and it works on a plane.
+An offline-first bartending study app. No frameworks, no build step, no tracking.
+Open it once and it works on a plane: everything except the Coffee & Tea films is
+local, and those are a thumbnail and a player that load only when you open a
+lesson that has one, and degrade to text and two links when you are offline.
 
 **365 cocktails · 75 shots · 85 zero-proof drinks · 37 prep recipes · 66 producers · 196 quiz questions**
 

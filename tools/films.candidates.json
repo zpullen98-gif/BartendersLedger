@@ -1,0 +1,49 @@
+[
+  { "sec": "machine", "row": "backflushing-and-the-cleaning-you-cannot-skip",
+    "url": "https://www.youtube.com/watch?v=5LEd0XoFVRg",
+    "watchFor": "The blind basket going in, and what comes out of the drain on the first cycle against the last. That colour is the answer to why a skipped week tastes like it does." },
+
+  { "sec": "machine", "row": "the-grinder-needs-cleaning-too-and-differently",
+    "url": "https://www.youtube.com/watch?v=jmKTA-5xt8o",
+    "watchFor": "How much old coffee comes out of a grinder that looked clean, and that nothing wet ever goes near the burrs. That is the difference from every other cleaning job on the bar." },
+
+  { "sec": "shot", "row": "distribution-and-tamping",
+    "url": "https://www.youtube.com/watch?v=kJbQuGwNGMM",
+    "watchFor": "The needles breaking clumps all the way to the bottom of the basket rather than raking the surface. Watch the depth, because a level top over a clumped bed is the failure this fixes." },
+
+  { "sec": "shot", "row": "channelling-and-how-to-see-it",
+    "url": "https://www.youtube.com/watch?v=rPg1P8On-HM",
+    "watchFor": "The underside of a bottomless basket: the moment a jet sprays sideways instead of the streams knitting into one. That spray is the thing you cannot see through a spouted portafilter." },
+
+  { "sec": "shot", "row": "sour-and-bitter-are-the-two-directions-of-extraction",
+    "url": "https://www.youtube.com/watch?v=5EmzD0Pzvug",
+    "watchFor": "The shots run side by side and tasted out loud. Hearing somebody name sour against bitter on two cups from one bag is the part a written description cannot give you." },
+
+  { "sec": "shot", "row": "dialling-in-as-a-procedure",
+    "url": "https://www.youtube.com/watch?v=W2HtvGv-Lk4",
+    "watchFor": "One variable moving at a time, and the scale staying on the drip tray the whole way through. The discipline is the lesson here, not the numbers." },
+
+  { "sec": "milk", "row": "what-steaming-actually-does-to-milk",
+    "url": "https://www.youtube.com/watch?v=cRsT4WhFTHo",
+    "watchFor": "The common mistakes section, where bad milk is shown beside good. Seeing froth and microfoam in the same pitcher is worth more than any description of either." },
+
+  { "sec": "milk", "row": "stretch-then-spin",
+    "url": "https://www.youtube.com/watch?v=TzsdPlaYHks",
+    "watchFor": "Where the tip sits during the air phase against the spin phase, and the pitcher dropping as the milk rises to hold that depth. Listen for the change in sound between the two." },
+
+  { "sec": "milk", "row": "the-vortex-and-what-it-is-for",
+    "url": "https://www.youtube.com/watch?v=QP8vsFTXTmc",
+    "watchFor": "The whole body of milk turning rather than the surface sputtering. That is the difference between folding bubbles under and just making them." },
+
+  { "sec": "milk", "row": "the-heart-is-floated-not-drawn",
+    "url": "https://www.youtube.com/watch?v=SiefJJv-Qho",
+    "watchFor": "The pitcher dropping close to the surface before any white appears, and the cut straight through at the end. Nothing is drawn; a circle is floated and then split." },
+
+  { "sec": "milk", "row": "rosetta-and-tulip",
+    "url": "https://www.youtube.com/watch?v=UkbLsAzhNBg",
+    "watchFor": "The wiggle starting while the pitcher is still moving back, and the drag forward through the middle at the end. Watch the wrist and the cup angle together." },
+
+  { "sec": "milk", "row": "alternative-milks-and-what-they-do-differently",
+    "url": "https://www.youtube.com/watch?v=oKLN13Tcyxc",
+    "watchFor": "The same wand and the same pitcher across several milks, and how differently each one behaves. The comparison is the point, not any single technique." }
+]

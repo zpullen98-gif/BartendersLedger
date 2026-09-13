@@ -4,13 +4,13 @@
    gate cover all three, and serviceTicketHTML is reused rather than forked.
 
    It lives in its own file rather than beside the other two in ui-new.js
-   because the video layer lands here next, and a video layer that grows inside
-   the router file is a video layer nobody can find.
+   because of the video layer below, and a video layer that grows inside the
+   router file is a video layer nobody can find.
 
-   Acts are cof-sec, cof-row and cof-ref. Distinct names rather than a shared
-   prefix with a state.tab discriminator, which is the standing rule in app.js:
-   that chain is a flat if/else on el.dataset.act and has never once read
-   state.tab to decide what an action meant. */
+   Acts are cof-sec, cof-row, cof-ref and cof-play. Distinct names rather than a
+   shared prefix with a state.tab discriminator, which is the standing rule in
+   app.js: that chain is a flat if/else on el.dataset.act and has never once
+   read state.tab to decide what an action meant. */
 function renderCoffee(){
   const s = state.coffee;
   const sec = COFFEE_STUDY.find(x => x.key === s.sec) || COFFEE_STUDY[0];
@@ -22,7 +22,8 @@ function renderCoffee(){
     return '<div class="panel" style="padding:0 16px">'
       + '<button class="accordion-btn'+(open?' open':'')+'" aria-expanded="'+(open?'true':'false')+'" data-act="cof-row" data-i="'+i+'">'
       + '<span>'+esc(r[0])+'</span><span style="color:var(--brass)">'+(open?'−':'+')+'</span></button>'
-      + (open ? '<div class="accordion-body"><div class="small dim lh">'+esc(r[1])+'</div></div>' : '')+'</div>';
+      + (open ? '<div class="accordion-body"><div class="small dim lh">'+esc(r[1])+'</div>'
+                + cofFilmHTML(sec.key, r[0]) + '</div>' : '')+'</div>';
   }).join('');
   return '<div class="col">'
     + '<nav class="tabs" style="margin-bottom:4px">'+chips+'</nav>'
@@ -34,9 +35,9 @@ function renderCoffee(){
 }
 
 /* Split out of renderCoffee because the cof-ref act repaints THIS alone rather
-   than calling render(). Once a film is playing in an open lesson above, a
-   full render would tear the iframe out of the page, and re-parenting an
-   iframe reloads it in every browser. */
+   than calling render(). With a film playing in an open lesson above, a full
+   render would tear the iframe out of the page, and re-parenting an iframe
+   reloads it in every browser. */
 function cofRefsHTML(s){
   const refs = COFFEE_REF.filter(x => x.dom === s.sec);
   if(!refs.length) return '<div id="cof-refs"></div>';
@@ -51,4 +52,116 @@ function cofRefsHTML(s){
     }).join('');
     return '<div class="eyebrow" style="padding:0 4px;margin-top:8px">'+esc(cat)+'</div><div class="col-sm">'+items+'</div>';
   }).join('') + '</div>';
+}
+
+/* ---------------- THE FILM ----------------
+   This tab is the ONE place in the Ledger that pins a video id rather than
+   building a search. The rest of the app argues against pinning, on screen and
+   in four other places, and that argument is right: a pinned id rots. This tab
+   earns the exception by being checked. tools/films-add.mjs is the only thing
+   that may write one, every title and channel came back from YouTube rather
+   than from anybody's memory, and tools/check-films.mjs asks again before each
+   release. And every card still carries a search link beside the film, so a
+   film that dies between releases costs one extra tap.
+
+   Nothing here contacts YouTube until the reader opens a lesson that has a
+   film, and then only for that one film. */
+function cofFilm(sec, rowTitle){
+  if(typeof COFFEE_FILMS === 'undefined') return null;
+  const key = slugify(rowTitle);
+  return COFFEE_FILMS.find(x => x.sec === sec && x.row === key) || null;
+}
+
+function cofFilmHTML(sec, rowTitle){
+  const f = cofFilm(sec, rowTitle);
+  if(!f) return '';
+  const watch = 'https://www.youtube.com/watch?v='+encodeURIComponent(f.id)+(f.start ? '&t='+f.start+'s' : '');
+  /* The fallback searches the FILM's title rather than the lesson's, because a
+     reader who lands here wants that film or its nearest equivalent, and a
+     re-upload keeps the title. scopeSuffix honours the longform preference the
+     reader may have set in Notes. */
+  const search = ytSearch(f.title + (typeof scopeSuffix === 'function' ? scopeSuffix() : ''));
+  /* navigator.onLine false is the one thing we actually know. Emit no thumbnail
+     and no play button rather than a broken image and a control that does
+     nothing. Online but unrouted is the commoner bar case, and the image's own
+     error event catches that one in cofAfter. */
+  const off = (typeof navigator !== 'undefined' && navigator.onLine === false);
+  const mins = f.start ? Math.floor(f.start/60)+':'+String(f.start%60).padStart(2,'0') : '';
+  return '<div class="vid-card">'
+    + (off ? '' :
+       '<div class="vid-frame" id="cof-frame">'
+       + '<button class="vid-thumb" data-act="cof-play" data-v="'+esc(f.id)+'"'
+       + (f.start ? ' data-s="'+f.start+'"' : '')
+       + ' aria-label="Play '+esc(f.title)+', by '+esc(f.channel)+'">'
+       + '<img src="https://i.ytimg.com/vi/'+esc(f.id)+'/hqdefault.jpg" alt="">'
+       + '<span class="vid-play" aria-hidden="true">&#9654;</span></button></div>')
+    + '<div class="vid-meta">'
+    + '<div class="eyebrow">Watch</div>'
+    + '<div class="bold lh">'+esc(f.title)+'</div>'
+    + '<div class="tiny dim">'+esc(f.channel)+(mins ? ' &middot; starts at '+mins : '')+'</div>'
+    + '<div class="small dim lh mt1"><span class="brass2">Watch for: </span>'+esc(f.watchFor)+'</div>'
+    + (off ? '<div class="tiny dim lh mt1">You are offline, so the film cannot load. The lesson above is the whole teaching; the links below work once you are back.</div>' : '')
+    + '<div class="row mt1" style="gap:8px">'
+    + '<a class="btn btn-ghost tiny" href="'+watch+'" target="_blank" rel="noopener noreferrer">Open on YouTube</a>'
+    + '<a class="btn btn-ghost tiny" href="'+search+'" target="_blank" rel="noopener noreferrer">Search instead</a>'
+    + '</div></div></div>';
+}
+
+/* THE PLAYING ID IS NEVER PUT IN state.
+   Every act in app.js ends in render(), which does one innerHTML and destroys
+   any iframe. If state knew a film was playing, the next render would rebuild
+   the iframe with autoplay and the film would restart from zero, with sound,
+   on every chip tap. So this mutates the DOM and returns, app.js gives cof-play
+   an early return rather than a render, and a later render simply paints the
+   thumbnail again. */
+function cofPlay(el){
+  const id = el.dataset.v, start = Number(el.dataset.s) || 0;
+  const host = document.getElementById('cof-frame');
+  if(!host) return;
+  const src = 'https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)
+    + '?autoplay=1&rel=0' + (start ? '&start='+start : '');
+  host.innerHTML = '<iframe src="'+src+'" title="'+esc(el.getAttribute('aria-label')||'Video')+'"'
+    + ' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"'
+    + ' allowfullscreen></iframe>';
+  const fr = host.querySelector('iframe');
+  if(fr) fr.focus();
+}
+
+/* Ran from the end of render(), guarded on the element being there rather than
+   on state.tab, which is how every other post-paint hook in app.js is written. */
+const cofProbe = {};        /* id -> 'ok' | 'gone', for this session only */
+function cofAfter(){
+  const host = document.getElementById('cof-frame');
+  if(!host) return;
+  const btn = host.querySelector('[data-act="cof-play"]');
+  if(!btn) return;
+  const id = btn.dataset.v;
+  const img = host.querySelector('img');
+  /* The thumbnail failing is the honest first signal that the network is not
+     really there, and it costs nothing to listen for. */
+  if(img) img.addEventListener('error', function(){ cofDemote(host, 'offline'); });
+  if(cofProbe[id] === 'gone'){ cofDemote(host, 'gone'); return; }
+  if(cofProbe[id] === 'ok') return;
+  fetch('https://www.youtube.com/oembed?url='
+    + encodeURIComponent('https://www.youtube.com/watch?v='+id) + '&format=json')
+    .then(function(r){
+      cofProbe[id] = r.ok ? 'ok' : 'gone';
+      /* the reader may have opened another lesson while this was in flight */
+      if(!r.ok && document.getElementById('cof-frame') === host) cofDemote(host, 'gone');
+    })
+    .catch(function(){
+      /* THE EMPTY CATCH IS THE POINT. A dropped connection and a deleted video
+         must never be confused, and a bar's wifi drops constantly. Saying
+         nothing is the honest answer to a request that did not complete. */
+    });
+}
+
+function cofDemote(host, why){
+  if(!host || host.dataset.demoted) return;
+  host.dataset.demoted = '1';
+  host.innerHTML = '<div class="vid-off small dim lh">'
+    + (why === 'gone'
+      ? 'This film is no longer available on YouTube. The lesson above still stands, and Search instead will find another.'
+      : 'The film cannot be reached from here. The lesson above is the whole teaching.')
+    + '</div>';
 }

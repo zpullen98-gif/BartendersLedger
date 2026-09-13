@@ -110,6 +110,10 @@ function render(){
     impF.addEventListener('change', e => { if(e.target.files[0]) dataImport(e.target.files[0]); });
     fillStorageLine();
   }
+  /* Guarded on the element, not on state.tab, like every other post-paint
+     hook in this function. It asks YouTube about the ONE film the reader
+     opened, and nothing at all on any other tab. */
+  if(typeof cofAfter === 'function') cofAfter();
   const search = document.getElementById('lib-search');
   if(search){
     search.addEventListener('input', e => {
@@ -814,7 +818,24 @@ document.getElementById('view').addEventListener('click', e => {
   else if(act==='ot-ref'){ const n=el.dataset.n; state.ontap.refOpen = state.ontap.refOpen===n ? null : n; }
   else if(act==='cof-sec'){ state.coffee.sec = el.dataset.d; state.coffee.rowOpen = null; state.coffee.refOpen = null; }
   else if(act==='cof-row'){ const i=Number(el.dataset.i); state.coffee.rowOpen = state.coffee.rowOpen===i ? null : i; }
-  else if(act==='cof-ref'){ const n=el.dataset.n; state.coffee.refOpen = state.coffee.refOpen===n ? null : n; }
+  else if(act==='cof-play'){ cofPlay(el); return; }
+  else if(act==='cof-ref'){
+    const n=el.dataset.n; state.coffee.refOpen = state.coffee.refOpen===n ? null : n;
+    /* A targeted repaint, because a full render would tear out a playing
+       iframe and re-parenting one reloads it in every browser. It also
+       skips render()'s focus restoration and has just replaced the button
+       that was clicked, so put focus back by hand or a keyboard reader
+       restarts from the masthead on every card. */
+    const out = document.getElementById('cof-refs');
+    if(out){
+      out.innerHTML = cofRefsHTML(state.coffee);
+      const back = out.querySelector('[data-act="cof-ref"][data-n="'+n.replace(/"/g,'\\"')+'"]');
+      if(back && back.focus) back.focus();
+      return;
+    }
+    /* no container on the page: fall through to the ordinary render
+       rather than dead-ending the click. */
+  }
   captureLiveInputs();
   render();
 });
