@@ -31,6 +31,7 @@ function renderCoffee(){
     + '<div class="small dim lh">Coffee and tea are the two things a bar sells all day and teaches nobody to make. Everything here is a technique a guest can taste before you can.</div></div>'
     + '<div class="col-sm">'+rows+'</div>'
     + cofRefsHTML(s)
+    + (sec.key === 'spiked' ? cofIndexHTML() : '')
     + '</div>';
 }
 
@@ -163,5 +164,70 @@ function cofDemote(host, why){
     + (why === 'gone'
       ? 'This film is no longer available on YouTube. The lesson above still stands, and Search instead will find another.'
       : 'The film cannot be reached from here. The lesson above is the whole teaching.')
+    + '</div>';
+}
+
+/* ---------------- WHAT THE BAR ALREADY POURS ----------------
+   The app holds 42 drinks built on coffee or tea, each with its own spec and
+   its own lore, and every one of them lives somewhere else: in the Library, on
+   the Shot Board, in Zero Proof. This section indexes them and links out. It
+   does not copy a single spec, because a drink name is a spaced repetition
+   primary key and moving one rewrites study records for no gain.
+
+   MEMBERSHIP IS COMPUTED, NEVER TYPED. A hand-written list of names is a list
+   of links that rot silently the first time a drink is renamed: findBySlug
+   returns -1, applyRoute still succeeds because the TAB is valid, the reader
+   lands at the top of a 365 row Library, and syncRoute erases the evidence on
+   the first paint. Asking the ingredient vocabulary instead means the index
+   cannot be stale and picks up any coffee drink added later on its own. */
+var cofIndexCache = null;
+function cofIndex(){
+  if(cofIndexCache) return cofIndexCache;
+  var BREW = ['brewedcoffee', 'espresso', 'tea'], LIQ = ['coffee'];
+  var out = { brew: [], liq: [] };
+  var lists = [['library', typeof COCKTAILS === 'undefined' ? [] : COCKTAILS],
+    ['shots', typeof SHOTS === 'undefined' ? [] : SHOTS],
+    ['na', typeof NA_DRINKS === 'undefined' ? [] : NA_DRINKS]];
+  lists.forEach(function(pair){
+    pair[1].forEach(function(d){
+      var r = [];
+      try { r = reqsOf(d) || []; } catch(e) { return; }
+      /* Three coffee beans floated on a sambuca is a garnish, and the matcher
+         reads it as the coffee row like any other mention. A countable solid
+         is not what this section is about, so a drink qualifies on beans
+         alone is not a coffee drink. */
+      var beansOnly = (d.spec || []).every(function(line){
+        return !/coffee|espresso|\btea\b|matcha|chai/i.test(line) || /\bbeans?\b/i.test(line);
+      });
+      var has = function(ids){ return ids.some(function(i){ return r.indexOf(i) >= 0; }); };
+      if(has(BREW) && !beansOnly) out.brew.push({ src: pair[0], name: d.name });
+      else if(has(LIQ)) out.liq.push({ src: pair[0], name: d.name });
+    });
+  });
+  cofIndexCache = out;
+  return out;
+}
+
+function cofIndexHTML(){
+  var ix = cofIndex();
+  /* An anchor, not a button. Nothing in this app has ever put an in-content
+     #/ link on screen, and data-hash is wired to exactly one listener, the
+     search overlay. A button carrying data-hash here would look like a button
+     and do nothing at all. An href goes through hashchange, which applyRoute
+     already answers. */
+  var chips = function(list){
+    return '<div class="row" style="flex-wrap:wrap;gap:6px">' + list.map(function(x){
+      return '<a class="chip" href="#/' + x.src + '/' + slugify(x.name) + '">' + esc(x.name) + '</a>';
+    }).join('') + '</div>';
+  };
+  if(!ix.brew.length && !ix.liq.length) return '';
+  return '<div class="panel p4 col-sm" style="margin-top:8px">'
+    + '<div class="eyebrow">What the bar already pours</div>'
+    + '<div class="small dim lh">Every one of these is already in the ledger with its full spec and its lore. This is the index, not a second copy.</div>'
+    + '<div class="eyebrow" style="margin-top:8px">Built on brewed coffee or tea <span class="font-tix">' + ix.brew.length + '</span></div>'
+    + chips(ix.brew)
+    + '<div class="eyebrow" style="margin-top:8px">Built on coffee liqueur <span class="font-tix">' + ix.liq.length + '</span></div>'
+    + chips(ix.liq)
+    + '<div class="tiny dim lh">The split is the vocabulary’s, not a judgement: the first group needs something brewed, the second needs a bottle. A guest asking for a coffee drink might mean either, which is the whole reason to ask.</div>'
     + '</div>';
 }
