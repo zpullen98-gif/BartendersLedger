@@ -194,6 +194,10 @@ for (const [label, arr, key] of [
 	};
 	const tabs = lit(app, 'TABS').map((t) => t[0]);
 	const clustered = lit(uiNew, 'NAV_CLUSTERS').flatMap((g) => g[2]);
+	/* the one nav the World Table, the Codex and the Ledger share: the same four
+	   words in the same order (the owner's decision, 26 September 2026) */
+	const navWords = lit(uiNew, 'NAV_CLUSTERS').map((g) => g[1]).join(' · ');
+	if (navWords !== 'Home · Levels · Library · Mine') problems.push(`the nav reads ${navWords}; the three apps share Home · Levels · Library · Mine, in that order`);
 	const grab = (src, re, pick) => [...((src.match(re) || [''])[0]).matchAll(pick)].map((m) => m[1]);
 	const views = grab(app, /const views = \{[\s\S]*?\};/, /(\w+):render/g);
 	const routed = grab(uiNew, /const ROUTE_SOURCES = \{[\s\S]*?\n\};/, /^\s*(\w+):\s*\{/gm);

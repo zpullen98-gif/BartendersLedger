@@ -87,15 +87,15 @@ globalThis.FileReader = class { readAsText(text){ this.result = text; if (this.o
    are asserted against, and they are the SHIPPED functions. Their order is
    index.html's, because ui-menu.js assigns SEARCH_INDEX, which ui-new.js
    declares; srs.js is here because the backup import calls srsMigrate. */
-const APP = ['data-core.js', 'data-lore.js', 'data-service.js', 'data-ingredients.js',
+const APP = ['data-core.js', 'data-lore.js', 'data-ontap.js', 'data-coffee.js', 'data-service.js', 'data-ingredients.js',
 	'ingredients.js', 'engine.js', 'srs.js', 'ui-study.js', 'ui-practice.js', 'ui-reference.js', 'ui-prep.js', 'ui-new.js',
-	'menu-drinks.js', 'ui-menu.js', 'ui-import.js'];
+	'menu-drinks.js', 'ui-menu.js', 'ui-import.js', 'data-levels.js', 'levels.js', 'ui-levels.js'];
 const W = vm.runInThisContext(APP.map((f) => readFileSync(join(JS, f), 'utf8')).join(';\n') +
 	';({menuDrinkFromDeskItem,menuDraftsFromDesk,menuDraftFromText,menuCanonMeasures,unmeasuredReason,measureReport,' +
 	'MD_isIngredientList,MD_listParts,MD_spiritOf,lineOz,COCKTAILS,progress,state,' +
 	'saveBarRecord,normalizeBarRecord,normalizeBarRecords,normalizeMaitre,mergeMaitre,missingFor,pourSources,allDrinks,barChanged,' +
 	'fcPool,buildRound,menuCardCount,sessionDeckParts,sessionCardPool,dataImport,keepMaitreField,' +
-	'blankImport,importFromText,importReKind})');
+	'blankImport,importFromText,importReKind,levelOf,cardKey,todayLevel,todayDoor,LEVEL_ITEMS})');
 
 /* The handful of vitest matchers this suite uses, over node:assert. A shim
    rather than a rewrite, so every assertion below is the assertion that was
@@ -2012,5 +2012,92 @@ describe('when the read cannot happen, and the cook needs the next step', () => 
 			// One sentence, and it ends like one.
 			expect(reason.trim()).toMatch(/[.)]$/);
 		}
+	});
+});
+
+/* ---- the four levels: Tonight deals from the level, and a backup keeps the
+   answers and the tests. Here because this is the file that already loads the
+   session deck and the backup import as they ship. */
+describe('the four levels, in the session and the backup', () => {
+	const cardKeysAt = (n) => Object.keys(W.LEVEL_ITEMS).flatMap((s) => W.LEVEL_ITEMS[s][n]).filter((k) => !/^(q|drill|sec|prod|flight|prep|preplist|prepsafe|plate|riff):/.test(k));
+
+	it('a fresh store is dealt Level I, then Level II once every Level I card is seen, and the Today door says which', () => {
+		const cards = W.progress.cards;
+		W.progress.cards = {};
+		try {
+			expect(W.todayLevel()).toBe(1);
+			for (let i = 0; i < 12; i++) {
+				const { newDeck } = W.sessionDeckParts();
+				for (const d of newDeck.filter((x) => x.src !== 'My Bar')) expect(W.levelOf(W.cardKey(d))).toBe(1);
+			}
+			expect(W.todayDoor().sub).toBe('Today deals from Level I.');
+			for (const k of cardKeysAt(1)) W.progress.cards[k] = { r: 1, w: 0, due: Date.now() + 9e8 };
+			expect(W.todayLevel()).toBe(2);
+			for (let i = 0; i < 12; i++) {
+				const { newDeck } = W.sessionDeckParts();
+				for (const d of newDeck.filter((x) => x.src !== 'My Bar')) expect(W.levelOf(W.cardKey(d))).toBe(2);
+			}
+			expect(W.todayDoor().sub).toBe('Today deals from Level II.');
+		} finally { W.progress.cards = cards; }
+	});
+
+	it('a level whose only unseen cards are on the wall deals the wall in every seat; the menu leads while it has a new card; a night of reviews says so', () => {
+		const cards = W.progress.cards, bar = W.progress.bar;
+		W.progress.cards = {};
+		try {
+			const tap1 = new Set(cardKeysAt(1).filter((k) => k.startsWith('On Tap · ')));
+			expect(tap1.size).toBeGreaterThan(0);
+			for (const k of cardKeysAt(1)) if (!tap1.has(k)) W.progress.cards[k] = { r: 1, w: 0, due: Date.now() + 9e8 };
+			expect(W.todayLevel()).toBe(1);
+			for (let i = 0; i < 12; i++) {
+				const { newDeck } = W.sessionDeckParts();
+				expect(newDeck.length).toBeGreaterThan(0);
+				for (const d of newDeck) expect(tap1.has(W.cardKey(d))).toBe(true);
+			}
+			expect(W.todayDoor().sub).toBe('Today deals from Level I.');
+			W.progress.bar = [{ id: 'lv-pin', name: 'House Sour', spec: ['2 oz rye', '1 oz lemon juice', '0.75 oz simple syrup'], method: 'Shake', glass: 'Coupe', garnish: 'Lemon twist', note: '', family: 'Sour', spirit: 'Rye' }];
+			W.barChanged();
+			expect(W.todayDoor().sub).toBe('Today deals from your menu, then Level I.');
+			W.progress.bar = [];
+			W.barChanged();
+			for (const d of W.sessionCardPool()) W.progress.cards[W.cardKey(d)] = { r: 1, w: 0, due: Date.now() + 9e8 };
+			expect(W.sessionDeckParts().newDeck).toHaveLength(0);
+			expect(W.todayDoor().sub).toBe('Reviews only tonight.');
+		} finally { W.progress.cards = cards; W.progress.bar = bar; W.barChanged(); }
+	});
+
+	it('a backup whose answers or level tests are the wrong shape loses only the bad rows', () => {
+		const qa = W.progress.qa, lv = W.progress.levels;
+		W.progress.qa = {};
+		W.progress.levels = {};
+		const file = JSON.stringify({ app: 'bartenders-ledger', progress: { cards: {},
+			qa: { 'q:junk': 'yes', 'q:list': [1, 2], 'q:ok': { r: '2', w: -1 } },
+			levels: { 9: [{ ts: 1, total: 17, miss: 0 }], 1: [{ ts: 5, total: 17, miss: 2 }, null, 'x', { total: 17 }], 2: 'lots' } } });
+		try {
+			globalThis.confirmAnswers = [true];
+			W.dataImport(file);
+			expect(W.progress.qa).toEqual({ 'q:ok': { r: 2, w: 0, last: 0 } });
+			expect(Object.keys(W.progress.levels)).toEqual(['1']);
+			expect(W.progress.levels[1].map((x) => x.ts)).toEqual([5]);
+		} finally { W.progress.qa = qa; W.progress.levels = lv; }
+	});
+
+	it('a backup merges the answers (the larger count wins) and the level tests (a union by time), and a second import changes nothing', () => {
+		const qa = W.progress.qa, lv = W.progress.levels;
+		W.progress.qa = { 'q:a': { r: 1, w: 2, last: 5 } };
+		W.progress.levels = { 1: [{ ts: 10, total: 17, miss: 3 }] };
+		const file = JSON.stringify({ app: 'bartenders-ledger', progress: { cards: {},
+			qa: { 'q:a': { r: 3, w: 1, last: 9 }, 'q:b': { r: 1, w: 0, last: 7 } },
+			levels: { 1: [{ ts: 10, total: 17, miss: 3 }, { ts: 20, total: 17, miss: 0 }], 2: [{ ts: 30, total: 17, miss: 5 }] } } });
+		try {
+			for (let pass = 0; pass < 2; pass++) {
+				globalThis.confirmAnswers = [true];
+				W.dataImport(file);
+				expect(W.progress.qa['q:a']).toEqual({ r: 3, w: 2, last: 9 });
+				expect(W.progress.qa['q:b']).toEqual({ r: 1, w: 0, last: 7 });
+				expect(W.progress.levels[1].map((x) => x.ts)).toEqual([10, 20]);
+				expect(W.progress.levels[2]).toHaveLength(1);
+			}
+		} finally { W.progress.qa = qa; W.progress.levels = lv; }
 	});
 });

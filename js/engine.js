@@ -102,7 +102,7 @@ const state = {
      and the hash survives the reload that would have cleared it. */
   coffee:{ sec:'machine', rowOpen:null, refOpen:null },
   prod:{ cat:'All', open:null, primerOpen:null },
-  practice:{ view:'drills', flightOpen:null, methodOpen:null, noteOpen:null, subjects:{}, timers:{}, rail:null },
+  practice:{ view:'drills', flightOpen:null, methodOpen:null, noteOpen:null, subjects:{}, timers:{}, rail:null, jump:null },
   tast:{ cat:'Whiskey', label:'', appearance:null, nose:[], palate:{}, finish:null, notes:'' },
   /* The Menu tab. `view` is which of the three sub-views is showing;
      `pane` is which chip is open inside an expanded drink; `src` is what
@@ -117,6 +117,12 @@ const state = {
   na:{ view:'list', cat:'All', open:null, pOpen:null, tOpen:null, sOpen:null, drill:false, order:[], idx:0, revealed:false },
   shots:{ view:'board', cat:'All', open:null, svc:null, drill:false, order:[], idx:0, revealed:false,
           rDrink:0, rCount:6, lay:null },
+  /* the four levels: which level's page is open (null is the reader's own,
+     derived, never stored), the level test while one is being sat, and
+     where Mine should open */
+  level:{ n:null },
+  lt:null,
+  mine:{ at:null },
   famOpen: Object.keys(FAMILIES)[0],
   noteOpen: STUDY[0].title,
 };

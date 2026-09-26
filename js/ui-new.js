@@ -1,19 +1,23 @@
 /* ---------------- NAVIGATION, ROUTER & SEARCH (Phase 2) ---------------- */
 const NAV_CLUSTERS = [
-  /* Menu sits beside Practice, because it is where a bartender goes to work
-     on their own list rather than to read about drinks. That leaves Ledger a
-     single-leaf cluster, which renderNav already handles: Tools has been one
-     all along, and subRow only draws when a cluster holds more than one. */
-  ['ledger', 'Ledger', ['home']],
-  ['study', 'Study Hall', ['flashcards','quiz','practice','menu','riffs']],
-  ['reference', 'Reference', ['library','families','shots','na','service','ontap','coffee','prep','producers','notes']],
-  ['toolkit', 'Tools', ['tools']],
+  /* The one nav the World Table, the Codex and the Ledger share, the same
+     four words in the same order (the owner's decision, 26 September 2026):
+     Home is the four levels, Levels is the level you are on, Library is the
+     reference, Mine is your bar with your record and tools behind it. A
+     cluster HOLDS every tab it owns, so the lit word is right wherever you
+     stand (tools/check.mjs requires every tab in one), but a tap lands on
+     the cluster's first tab and no sub-row is drawn: a level page, the
+     Library's shelf and Mine carry the doors to the rest. */
+  ['home', 'Home', ['home']],
+  ['levels', 'Levels', ['level','flashcards','quiz','practice','riffs']],
+  ['library', 'Library', ['library','families','shots','na','ontap','coffee','prep','producers','service','notes']],
+  ['mine', 'Mine', ['mine','menu','tools']],
 ];
 const TAB_LABEL = {};
 const TAB_CLUSTER = {};
 NAV_CLUSTERS.forEach(([ck,,tabs]) => tabs.forEach(t => TAB_CLUSTER[t] = ck));
 
-function clusterOf(tab){ return TAB_CLUSTER[tab] || 'ledger'; }
+function clusterOf(tab){ return TAB_CLUSTER[tab] || 'home'; }
 
 /* No pictograms in the navigation. The bottom bar used to draw a book, a
    glass and a magnifier over its words; that is the mainstream tab-bar
@@ -27,11 +31,9 @@ function renderNav(){
   const activeCluster = clusterOf(state.tab);
   const clusterRow = NAV_CLUSTERS.map(([ck,label]) =>
     '<button class="cl-btn'+(activeCluster===ck?' active':'')+'"'+(activeCluster===ck?' aria-current="true"':'')+' data-cluster="'+ck+'">'+label+'</button>').join('');
-  const subTabs = NAV_CLUSTERS.find(([ck]) => ck===activeCluster)[2];
-  const subRow = subTabs.length > 1
-    ? '<div class="subtabs">'+subTabs.map(k =>
-        '<button class="tab-btn'+(state.tab===k?' active':'')+'"'+(state.tab===k?' aria-current="page"':'')+' data-tab="'+k+'">'+TAB_LABEL[k]+'</button>').join('')+'</div>'
-    : '';
+  /* no sub-row since the four levels: a cluster's own page carries its doors
+     (js/ui-levels.js clusterChromeHTML) */
+  const subRow = '';
   document.getElementById('tabs').innerHTML =
     '<div class="clusters">'+clusterRow+'<button class="cl-btn cl-search" data-search="1" title="Search ( / )">Search</button></div>'+subRow;
 
@@ -59,6 +61,7 @@ function slugify(s){ return String(s).toLowerCase().replace(/&/g,'and').replace(
 
 const ROUTE_SOURCES = {
   menu:      { arr: () => progress.bar || [], name: x => x.name },
+  level:     { arr: () => LEVELS,     name: x => x.name },
   library:   { arr: () => COCKTAILS,  name: x => x.name },
   shots:     { arr: () => SHOTS,      name: x => x.name },
   na:        { arr: () => NA_DRINKS,  name: x => x.name },
@@ -103,12 +106,13 @@ function applyRoute(){
   state.tab = tab;
   const i = slug !== undefined ? findBySlug(tab, slug) : -1;
   if(i >= 0){
-    if(tab==='library')      state.lib = { q:'', fam:'All', tier:'All', open:i };
+    if(tab==='level'){ state.level.n = LEVELS[i].n; state.lt = null; }
+    else if(tab==='library')      state.lib = { q:'', fam:'All', tier:'All', open:i };
     else if(tab==='shots')   Object.assign(state.shots, { view:'board', cat:'All', open:i, drill:false });
     else if(tab==='na')      Object.assign(state.na, { view:'list', cat:'All', open:i, drill:false });
     else if(tab==='prep')    Object.assign(state.prep, { cat: PREPS[i].cat, open:i });
     else if(tab==='producers') Object.assign(state.prod, { cat:'All', open:i });
-    else if(tab==='notes')   state.noteOpen = STUDY[i].title;
+    else if(tab==='notes'){  state.noteOpen = STUDY[i].title; state.noteJump = true; }
     else if(tab==='service') Object.assign(state.svc, { dom: SERVICE_STUDY[i].key, rowOpen:null, refOpen:null });
     else if(tab==='ontap') Object.assign(state.ontap, { sec: ONTAP_STUDY[i].key, rowOpen:null, refOpen:null });
     else if(tab==='coffee') Object.assign(state.coffee, { sec: COFFEE_STUDY[i].key, rowOpen:null, refOpen:null });
@@ -122,6 +126,9 @@ function applyRoute(){
     else if(tab==='na')      Object.assign(state.na, { open:null, drill:false });
     else if(tab==='prep')    state.prep.open = null;
     else if(tab==='producers') state.prod.open = null;
+    /* the two accordions that are not STUDY entries: a search hit for a
+       glossary term used to open Notes with the target collapsed at the bottom */
+    else if(tab==='notes' && (slug==='glossary' || slug==='plates')){ state.noteOpen = '__'+slug; state.noteJump = true; }
   }
   return true;
 }
@@ -129,7 +136,8 @@ function applyRoute(){
 function currentRoute(){
   const t = state.tab;
   let slug = null;
-  if(t==='library' && state.lib.open!=null && COCKTAILS[state.lib.open]) slug = slugify(COCKTAILS[state.lib.open].name);
+  if(t==='level' && state.level.n) slug = slugify(levelInfo(state.level.n).name);
+  else if(t==='library' && state.lib.open!=null && COCKTAILS[state.lib.open]) slug = slugify(COCKTAILS[state.lib.open].name);
   else if(t==='shots' && state.shots.open!=null && SHOTS[state.shots.open]) slug = slugify(SHOTS[state.shots.open].name);
   else if(t==='na' && state.na.open!=null && NA_DRINKS[state.na.open]) slug = slugify(NA_DRINKS[state.na.open].name);
   else if(t==='prep' && state.prep.open!=null && PREPS[state.prep.open]) slug = slugify(PREPS[state.prep.open].name);
@@ -282,12 +290,30 @@ function serviceTicketHTML(x){
    5.6 per cent, a weizen vase, 45 to 50F, banana and clove from the yeast,
    and call it a hefeweizen. serviceTicketHTML cannot do it because it always
    prints the name, so this is that function with a hideName arm. */
+/* A blind card must not give its own name away in its facts ("Pilsner
+   flute", "a 12 oz latte"): each word of the name four letters and longer
+   is masked where a fact repeats it, whole words only, any case. */
+function maskName(text, name){
+  const L = 'A-Za-zÀ-ɏ';
+  const words = String(name).split(new RegExp('[^'+L+']+')).filter(w => w.length >= 4);
+  if(!words.length) return esc(text);
+  const re = new RegExp('(^|[^'+L+'])('+words.join('|')+')(?=$|[^'+L+'])', 'gi');
+  const MASK = '<span aria-hidden="true">…</span><span class="sr-only">the name</span>';
+  let out = '', last = 0, m;
+  while((m = re.exec(text))){
+    const at = m.index + m[1].length;
+    out += esc(text.slice(last, at)) + MASK;
+    last = at + m[2].length;
+    re.lastIndex = last;
+  }
+  return out + esc(text.slice(last));
+}
 function tapTicketHTML(x, hideName){
   return '<div class="ticket"><div class="ticket-inner">'
     + '<div class="tc"><div class="tix-label">'+esc(x.cat)+'</div>'
     + '<div class="tix-name">'+(hideName ? '?' : esc(x.name.toUpperCase()))+'</div></div>'
     + '<div class="tix-rule"></div>'
-    + x.facts.map(f => '<div><span class="tix-label">'+esc(f[0])+' </span>'+esc(f[1])+'</div>').join('')
+    + x.facts.map(f => '<div><span class="tix-label">'+esc(f[0])+' </span>'+(hideName ? maskName(f[1], x.name) : esc(f[1]))+'</div>').join('')
     + (hideName ? '' : '<div class="tix-rule"></div><div class="tix-note">'+esc(x.note)+'</div>')
     + '</div></div>';
 }
@@ -416,7 +442,7 @@ function platesHTML(){
   const body = isOpen
     ? '<div class="accordion-body"><div class="plate-grid">'+PLATES.map(plateFigure).join('')+'</div></div>' : '';
   return '<div class="panel" style="padding:0 16px">'
-    + '<button class="accordion-btn'+(isOpen?' open':'')+'" aria-expanded="'+(isOpen?'true':'false')+'" data-act="note-open" data-t="__plates">'
+    + '<button class="accordion-btn'+(isOpen?' open':'')+'" aria-expanded="'+(isOpen?'true':'false')+'" data-act="note-open" data-t="__plates" data-open="'+noteOpenMark(isOpen)+'">'
     + '<span>Technique Plates <span class="tiny dim">· '+PLATES.length+' figures</span></span>'
     + '<span style="color:var(--brass)">'+(isOpen?'−':'+')+'</span></button>'+body+'</div>';
 }
@@ -513,8 +539,22 @@ function sessionDeckParts(){
      cards come from the lowest tier that still has unseen cocktails, so the
      canon is learned in order; shots/NA join once cocktails run dry */
   let pool = fresh.filter(d => d.src === 'My Bar');
-  for(let t = 1; t <= 12 && !pool.length; t++) pool = fresh.filter(d => d.src === 'Cocktails' && d.tier === t);
-  if(!pool.length) pool = fresh;
+  /* then the level: the lowest unmet level that still holds a card never
+     seen (todayLevel), its cocktails in tier order, then its shots, zero
+     proof and coffee. The Today door says which level this is. */
+  const lv = (typeof todayLevel === 'function') ? todayLevel() : null;
+  const atLevel = lv ? fresh.filter(d => levelOf(cardKey(d)) === lv) : [];
+  for(let t = 1; t <= 12 && !pool.length; t++) pool = atLevel.filter(d => d.src === 'Cocktails' && d.tier === t);
+  if(!pool.length) pool = atLevel.filter(d => d.src === 'Shots' || d.src === 'Zero Proof' || d.src === 'Coffee');
+  /* the wall's cards at the level, and whether they are all it has left:
+     then every seat is the wall's, so the door's "Level N" stays true */
+  const tapAll = fresh.filter(d => d.src === 'On Tap');
+  const tapLevel = lv ? tapAll.filter(d => levelOf(cardKey(d)) === lv) : [];
+  const tapOnly = !pool.length && tapLevel.length > 0;
+  if(!tapOnly){
+    for(let t = 1; t <= 12 && !pool.length; t++) pool = fresh.filter(d => d.src === 'Cocktails' && d.tier === t);
+    if(!pool.length) pool = fresh;
+  }
   /* stop pouring new cards into a deep hole — dig out first */
   const newCount = dueAll > 50 ? 0 : (dueDeck.length ? 5 : 8);
   /* One seat in every hand of new cards belongs to the wall. The ladder
@@ -524,8 +564,10 @@ function sessionDeckParts(){
      never been dealt as new cards either. A fixed minority seat deals the
      styles out over a month without ever letting them crowd the canon, and
      it closes itself as soon as they have all been seen. */
-  const tapFresh = fresh.filter(d => d.src === 'On Tap');
-  const tapSeats = tapFresh.length ? Math.min(Math.max(1, Math.round(newCount * 0.2)), newCount) : 0;
+  /* the wall's seat stays inside the level: a level with no beer left to
+     meet deals none rather than a style from another level */
+  const tapFresh = lv ? tapLevel : tapAll;
+  const tapSeats = tapOnly ? newCount : tapFresh.length ? Math.min(Math.max(1, Math.round(newCount * 0.2)), newCount) : 0;
   const newDeck = shuffle(shuffle(pool).filter(d => d.src !== 'On Tap').slice(0, newCount - tapSeats)
     .concat(sample(tapFresh, tapSeats)));
   return { dueDeck, newDeck, dueAll };
@@ -771,8 +813,19 @@ function dataImport(file){
       ['quizzes','tastings','shelf','pours','spills','openBottles','bottles','bar'].forEach(k => {
         if(p[k] !== undefined && !Array.isArray(p[k])) p[k] = [];
       });
-      ['cards','practice','vidPrefs'].forEach(k => {
+      ['cards','practice','vidPrefs','qa','levels'].forEach(k => {
         if(p[k] !== undefined && (!p[k] || typeof p[k] !== 'object' || Array.isArray(p[k]))) p[k] = {};
+      });
+      /* the four levels' two records: an answer is three counts, a level's
+         sittings an array of stamped rows, and anything else is dropped */
+      if(p.qa) Object.keys(p.qa).forEach(k => {
+        const v = p.qa[k];
+        if(!v || typeof v !== 'object' || Array.isArray(v)) { delete p.qa[k]; return; }
+        p.qa[k] = { r: Math.max(0, Number(v.r) || 0), w: Math.max(0, Number(v.w) || 0), last: Number(v.last) || 0 };
+      });
+      if(p.levels) Object.keys(p.levels).forEach(n => {
+        if(['1','2','3','4'].indexOf(n) < 0 || !Array.isArray(p.levels[n])) { delete p.levels[n]; return; }
+        p.levels[n] = p.levels[n].filter(x => x && typeof x === 'object' && x.ts);
       });
       if(p.cards) Object.keys(p.cards).forEach(k => {
         const v = p.cards[k];
@@ -859,6 +912,30 @@ function dataImport(file){
           mine.history = mine.history.slice(0, 12);
           const head = mine.history[0];
           if(head){ mine.price = head.price; mine.sizeMl = head.sizeMl; mine.ts = Math.max(mine.ts||0, tb.ts||0); }
+        });
+      }
+      /* The four levels' two records. qa: every bank question answered,
+         right and wrong counts per key, merged by the larger count so a
+         repeat import changes nothing and two devices' answers both count
+         toward "met". levels: each level test sat, {ts,total,miss}, a union
+         by ts, the last twelve per level. */
+      if(p.qa && typeof p.qa === 'object' && !Array.isArray(p.qa)){
+        progress.qa = progress.qa || {};
+        Object.keys(p.qa).forEach(k => {
+          const t = p.qa[k], m = progress.qa[k];
+          if(!t || typeof t !== 'object') return;
+          progress.qa[k] = m ? { r: Math.max(m.r||0, t.r||0), w: Math.max(m.w||0, t.w||0), last: Math.max(m.last||0, t.last||0) }
+                             : { r: t.r||0, w: t.w||0, last: t.last||0 };
+        });
+      }
+      if(p.levels && typeof p.levels === 'object' && !Array.isArray(p.levels)){
+        progress.levels = progress.levels || {};
+        Object.keys(p.levels).forEach(n => {
+          if(!Array.isArray(p.levels[n])) return;
+          const mine = progress.levels[n] || [];
+          const seen = new Set(mine.map(x => x.ts));
+          p.levels[n].forEach(x => { if(x && x.ts && !seen.has(x.ts)) mine.push(x); });
+          progress.levels[n] = mine.sort((a,b) => (a.ts||0) - (b.ts||0)).slice(-12);
         });
       }
       /* streak: a RECORD, not a pref — the additive-only rule’s reach. A
@@ -973,6 +1050,8 @@ function dataImport(file){
     if(!progress.cards) progress.cards = {};
     if(!progress.quizzes) progress.quizzes = [];
     if(!progress.practice) progress.practice = {};
+    if(!progress.qa) progress.qa = {};
+    if(!progress.levels) progress.levels = {};
     if(!progress.tastings) progress.tastings = [];
     if(!progress.vidPrefs) progress.vidPrefs = { channel:'auto', longform:false };
     if(!progress.bar) progress.bar = [];
