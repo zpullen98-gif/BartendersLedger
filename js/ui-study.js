@@ -731,7 +731,12 @@ function knowledgeByTopic(t){
 /* A bank question's identity: the bank has no ids, and its stems are unique
    to sixty-four slug characters (tools/check-levels.mjs holds it). What
    progress.qa is keyed on, and what the level placement names. */
-function qKey(k){ return 'q:' + slugify(k.q).slice(0, 64); }
+function qKey(k){
+  /* the wing renamed five questions (it names nobody): one key for both, so
+     an answer counts the same in either and a backup carries between them */
+  const key = 'q:' + slugify(k.q).slice(0, 64);
+  return (typeof LEVEL_KEY_ALIAS !== 'undefined' && LEVEL_KEY_ALIAS[key]) || key;
+}
 /* options MUST be shuffled — 68 of the authored entries put the answer second */
 function qKnowledge(k){
   /* qkey: an answer in any round is evidence toward the question's level */

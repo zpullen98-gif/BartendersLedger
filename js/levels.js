@@ -95,6 +95,9 @@ function levelIndex(){
 function levelOf(key){ return levelIndex().level[key] || null; }
 function subOf(key){ return levelIndex().sub[key] || null; }
 function levelKeys(n, sub){ return (LEVEL_ITEMS[sub] && LEVEL_ITEMS[sub][n]) || []; }
+/* a key as the placement names it: the wing's key for an item it renamed
+   becomes the Ledger's (LEVEL_KEY_ALIAS, emitted with LEVEL_ITEMS) */
+function canonKey(k){ return (typeof LEVEL_KEY_ALIAS !== 'undefined' && LEVEL_KEY_ALIAS[k]) || k; }
 
 /* cards and questions by key, rebuilt only when the deck itself changes */
 let LV_CARDS = null, LV_CARDS_FOR = null, LV_QS = null;
@@ -226,16 +229,16 @@ function readDoorTarget(n, sub){
       if(m[1] === 'ontap') return { tab:'ontap', ontap:m[2] };
       if(m[1] === 'coffee') return { tab:'coffee', coffee:m[2] };
       if(m[1] === 'notes'){
-        const st = STUDY.find(function(x){ return slugify(x.title) === m[2]; });
+        const st = STUDY.find(function(x){ return canonKey('sec:notes/' + slugify(x.title)) === k; });
         if(st) return { tab:'notes', note:st.title };
       }
     }
     if(k.indexOf('prep:') === 0){
-      const i2 = PREPS.findIndex(function(p){ return 'prep:' + slugify(p.name) === k; });
+      const i2 = PREPS.findIndex(function(p){ return canonKey('prep:' + slugify(p.name)) === k; });
       if(i2 >= 0) return { tab:'prep', prep:i2 };
     }
     if(k.indexOf('prod:') === 0){
-      const i3 = PRODUCERS.findIndex(function(p){ return 'prod:' + slugify(p.name) === k; });
+      const i3 = PRODUCERS.findIndex(function(p){ return canonKey('prod:' + slugify(p.name)) === k; });
       if(i3 >= 0) return { tab:'producers', prod:i3 };
     }
     if(k.indexOf('plate:') === 0) return { tab:'notes', note:'__plates' };

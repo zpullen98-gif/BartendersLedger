@@ -69,7 +69,26 @@ const NOTE_SUB = {
 	'History: Know Your Lineage': 'cocktails',
 	'Watch It Made: The Channels': 'technique',
 	'Where to Go Deeper': 'spirits',
-	'The Sober Service: NA & Low-ABV': 'shots'
+	'The Sober Service: NA & Low-ABV': 'shots',
+	/* the Outside Of Time wing's name for the Meehan Half (see KEY_ALIAS) */
+	'Hospitality: The Other Half': 'stick'
+};
+
+/* One key for an item the Outside Of Time wing renamed. The wing names
+   nobody, so five history questions, the hospitality note and Don's Mix read
+   differently there; each is the same item at the same level. The wing's key
+   maps to the Ledger's here, the emitted js/data-levels.js carries the map as
+   LEVEL_KEY_ALIAS, and the app's qKey and read doors apply it, so the
+   placements, the answers in progress.qa and a backup carried between the
+   two all agree. */
+export const KEY_ALIAS = {
+	'q:when-were-cocktail-specs-first-collected-and-published-in-a-bar-': 'q:who-published-the-first-cocktail-book-and-when',
+	'q:the-flamed-orange-peel-became-the-signature-move-of-which-room': 'q:the-flamed-orange-peel-is-the-signature-move-of-which-bartender',
+	'q:the-cocktail-families-framework-this-ledger-is-built-on-was-set-': 'q:the-cocktail-families-framework-was-popularized-in-the-joy-of-mi',
+	'q:which-influential-new-york-bar-opened-in-2007-was-entered-throug': 'q:jim-meehan-s-influential-new-york-bar-opened-in-2007-was-called',
+	'q:the-hanky-panky-was-created-by-the-head-bartender-of-which-room': 'q:ada-coleman-creator-of-the-hanky-panky-was-head-bartender-at',
+	'sec:notes/hospitality-the-other-half': 'sec:notes/hospitality-the-meehan-half',
+	'prep:don-s-mix': 'prep:donn-s-mix'
 };
 
 const clip = (s, n = 140) => String(s ?? '').replace(/\s+/g, ' ').trim().slice(0, n);
@@ -87,7 +106,7 @@ export function universe(W = loadApp()) {
 	const g = (n) => W.get(n);
 	const slugify = g('slugify');
 	const rows = [];
-	const push = (r) => rows.push(r);
+	const push = (r) => rows.push(KEY_ALIAS[r.key] ? { ...r, key: KEY_ALIAS[r.key] } : r);
 
 	const TIER_NAMES = g('TIER_NAMES');
 	const LORE = g('LORE') || {};
@@ -180,7 +199,10 @@ export function emitDataLevels(placements, uni) {
 		'   node tools/levels/set-levels.mjs --emit). Pure ASCII: every non-ASCII\n' +
 		'   character is a backslash-u escape. tools/check-levels.mjs holds it to the\n' +
 		'   placements and to the items the app ships. js/levels.js reads it. */\n' +
-		'const LEVEL_ITEMS = ' + asciiJson(items) + ';\n'
+		'const LEVEL_ITEMS = ' + asciiJson(items) + ';\n' +
+		'/* the Outside Of Time wing\'s keys for items it renamed, to the Ledger\'s\n' +
+		'   (tools/levels/lib.mjs KEY_ALIAS) */\n' +
+		'const LEVEL_KEY_ALIAS = ' + asciiJson(KEY_ALIAS) + ';\n'
 	);
 }
 
