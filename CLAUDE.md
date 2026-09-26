@@ -211,9 +211,12 @@ By the owner's decision of 26 September 2026, shared with the World Table and th
   like `imp-read` before it) reads the box itself at the top of its branch; read from
   state alone, Keep after Edit filed her original words and threw the person's away.
 - **Wing sync**: the OutsideOfTime wing (`OutsideOfTime/ledger/`) diverges deliberately
-  (OOT.profiles `KEY()` in engine/app, TILE_BANDS home in ui-study, nav re-clustering in
-  ui-new). Sync = three-way `git merge-file -p wing base new` per file with base = the
-  last synced upstream commit (currently `ff3569e`); lineage-check both inheritances;
+  (OOT.profiles `KEY()` in engine/app, the dash-free wording, nobody named: the pillars by
+  their sources and five renamed questions, a note and a prep sheet, whose level keys
+  `KEY_ALIAS` in tools/levels/lib.mjs maps to this repo's). Every level file (data-levels,
+  levels, the tools) is identical in both trees; ui-levels.js differs only in the record's
+  words. Sync = three-way `git merge-file -p wing base new` per file with base = the
+  last synced upstream commit (currently `d0175e6`); lineage-check both inheritances;
   bump wing `?v=`/CACHE past the WING's own numbers (wing CACHE uses the oot-ledger- prefix, not ledger-).
 - **Shared helpers with mirror rules**: `specUnits()` in engine.js splits 'oz each:'
   lines — balanceOf and estimateABV both read through it; `strengthBand()` in
