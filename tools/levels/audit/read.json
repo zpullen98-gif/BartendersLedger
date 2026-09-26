@@ -1,0 +1,258 @@
+{
+	"assigned": "2026-09-26",
+	"standard": "tools/levels/README.md, \"The standard\"",
+	"counts": [
+		50,
+		65,
+		48,
+		12
+	],
+	"challenges": [
+		{
+			"key": "sec:service/conflict",
+			"proposed": 2,
+			"because": "Four of eight lessons are refusal and law cases (refusal that does not take, the guest who intends to drive, the code word, the regular) that a Bartender alone on a shift meets and the standard puts at I to II; the tie with III breaks down.",
+			"group": "read"
+		},
+		{
+			"key": "sec:ontap/cellar",
+			"proposed": 2,
+			"because": "Reading a keg collar, receiving a delivery and the cold chain are walk-in jobs a Barback does in week one, skunked-is-light is one sentence and tap honesty is II; only three of eight lessons are the Manager's condition work.",
+			"group": "read"
+		},
+		{
+			"key": "sec:ontap/styles",
+			"proposed": 2,
+			"because": "Most lessons are service, not style depth: bottle and can service, glass by style, glass families, temperature, counting beer against a guest, five questions to find a beer. Only style families and pairing need a paragraph.",
+			"group": "read"
+		},
+		{
+			"key": "sec:ontap/cider",
+			"proposed": 2,
+			"because": "Half the lessons are the draught line, service, selling and the licence count a Bartender handles weekly; half are apple classes, making, keeving and labels at III. Four against four is a tie, and ties break down.",
+			"group": "read"
+		},
+		{
+			"key": "sec:notes/syrups-citrus-and-bitters",
+			"proposed": 1,
+			"because": "The standard puts juice at Level I, and simple, honey and demerara syrups are what a Barback batches before doors in week one; only specialty syrups and bitters ask more, so most lessons sit at I.",
+			"group": "read"
+		},
+		{
+			"key": "prod:buffalo-trace",
+			"proposed": 1,
+			"because": "Buffalo Trace sits on nearly every back bar as the house or well bourbon, and guests order it by name every night. That puts it with Maker's Mark and Wild Turkey at I; ties break down.",
+			"group": "read"
+		},
+		{
+			"key": "prod:midleton",
+			"proposed": 2,
+			"because": "Midleton distils Jameson, the Irish whiskey on every well, and Redbreast, which a good bar pours every week. 'Jameson is made here' is a sentence and an example. It should not sit a level above Bushmills.",
+			"group": "read"
+		},
+		{
+			"key": "prod:hayman-s",
+			"proposed": 2,
+			"because": "Hayman's is the Old Tom on the shelf for the Martinez, which is fixed at II, and Old Tom against London Dry is a pair a Barback confuses. A Bartender rebuilding that spec needs this house.",
+			"group": "read"
+		},
+		{
+			"key": "prod:ford-s",
+			"proposed": 2,
+			"because": "Ford's is the well gin on many craft bars, so a Bartender reaches for it every shift. Its story takes one sentence (made by bartenders for bartenders), which argues for II, not the paragraph III asks.",
+			"group": "read"
+		},
+		{
+			"key": "prod:mgp-of-indiana",
+			"proposed": 3,
+			"because": "MGP is the question a guest who knows what they are ordering asks ('is this sourced?'), and the standard puts that guest and the producers behind the bottles at III. It takes a paragraph, not the whole house; ties break down.",
+			"group": "read"
+		},
+		{
+			"key": "prod:appleton-estate",
+			"proposed": 1,
+			"because": "Appleton is the Jamaican rum most bars use for the Mai Tai, fixed at I, and the Barback calls that drink from a blind ticket. The house behind the bottle in a Level I spec goes low; ties break down.",
+			"group": "read"
+		},
+		{
+			"key": "prod:luxardo",
+			"proposed": 1,
+			"because": "Luxardo cherries sit in the garnish tray a Barback preps and stocks from week one for the Old Fashioned and Manhattan, and its maraschino is the one bottle of the Aviation and Last Word, both Level I. It is on every craft rail and taught in one sentence, so ties break down to I.",
+			"group": "read"
+		},
+		{
+			"key": "flight:additives-and-the-honest-blanco",
+			"proposed": 3,
+			"because": "The standard names the flights that train a palate to tell producers apart at Level III; this is a palate flight like Terroir in Agave, and the IV bottle book is about money, not tasting. Ties break down.",
+			"group": "read"
+		},
+		{
+			"key": "prep:grenadine",
+			"proposed": 1,
+			"because": "It sits on every rail, any guest expects a bar to have it, and 'pomegranate and sugar' teaches it in one sentence: all three Level I signals. Tier 1 and 2 drinks such as the Tequila Sunrise lean on it.",
+			"group": "read"
+		},
+		{
+			"key": "prep:orgeat",
+			"proposed": 1,
+			"because": "It builds the Mai Tai, fixed at Level I, the same reason Honey Syrup went to I. From week one a barback labels and restocks it, and it is the almond bottle an allergy question turns on. Ties break down.",
+			"group": "read"
+		},
+		{
+			"key": "prepsafe:refrigeration-and-cooling",
+			"proposed": 1,
+			"because": "The Barback's standard asks for the walk-in, labels and shelf lives; cooling before sealing and keeping the fridge cold is one sentence and belongs with those rules, which the signals place at I. Ties break down.",
+			"group": "read"
+		},
+		{
+			"key": "prepsafe:raw-egg-and-dairy",
+			"proposed": 1,
+			"because": "Egg and cream already reach Level I drinks (Ramos Gin Fizz, Irish Coffee, the Whiskey Sour's white), and never holding separated whites warm is a one-sentence storage rule like the shelf lives the signals put at I.",
+			"group": "read"
+		},
+		{
+			"key": "prepsafe:allergens-are-your-responsibility",
+			"proposed": 1,
+			"because": "The drinks it names are Level I (Mai Tai orgeat, Irish Coffee cream, sours with egg white), any guest may ask whoever is behind the stick, and 'orgeat is tree nut' is one sentence of the plainest safety floor.",
+			"group": "read"
+		},
+		{
+			"key": "preplist:weekly-deep-prep",
+			"proposed": 1,
+			"because": "The signals place the opening and closing lists at I, and the weekly list is the same kind of checklist a barback works through; the syrup batches on it do not lift the list itself. Ties break down.",
+			"group": "read"
+		},
+		{
+			"key": "prep:super-juice",
+			"proposed": 2,
+			"because": "The signals place a prep sheet at the level a shift depends on it: where a bar runs super juice, every sour of the shift depends on it, and the method is a sentence and an example (peels and acid by weight). Ties break down.",
+			"group": "read"
+		}
+	],
+	"dispositions": [
+		{
+			"key": "sec:service/conflict",
+			"action": "kept",
+			"reason": "The standard names conflict and safety on the floor at III by this section's title, and five of eight lessons (tells, the sentences, escalation, harassment, the code word) are conflict and safety rather than law cases, so there is no tie.",
+			"group": "read"
+		},
+		{
+			"key": "sec:ontap/cellar",
+			"action": "kept",
+			"reason": "The standard places cellar and condition at IV by this section's exact title; the owner's direct naming outweighs a lesson tally, and the packaging, oxygen and ageing lessons are the menu writer's knowledge.",
+			"group": "read"
+		},
+		{
+			"key": "sec:ontap/styles",
+			"action": "kept",
+			"reason": "The standard names the wall in full, the styles, at III, and the section exists to teach style families and pairing, which need a paragraph; the service lessons support that teaching.",
+			"group": "read"
+		},
+		{
+			"key": "sec:ontap/cider",
+			"action": "kept",
+			"reason": "The standard names cider and perry at III directly by this section's title, so the lesson split is not the deciding signal and there is no tie to break.",
+			"group": "read"
+		},
+		{
+			"key": "sec:notes/syrups-citrus-and-bitters",
+			"action": "kept",
+			"reason": "The standard puts the syrups a shift depends on at II, and only the citrus lesson is Level I juice; specialty syrups and bitters sit higher, so most lessons are II.",
+			"group": "read"
+		},
+		{
+			"key": "prod:buffalo-trace",
+			"action": "moved",
+			"reason": "It stands on nearly every back bar and a guest names it by brand, the same signal that puts Maker's Mark and Wild Turkey at I, so the tie breaks down.",
+			"group": "read"
+		},
+		{
+			"key": "prod:midleton",
+			"action": "moved",
+			"reason": "A guest names the house through Jameson on the well and Redbreast poured weekly, and that takes a sentence and an example, so it belongs at II beside the other Irish houses, not a level above Bushmills.",
+			"group": "read"
+		},
+		{
+			"key": "prod:hayman-s",
+			"action": "moved",
+			"reason": "The Martinez is fixed at II and Hayman's is its Old Tom. Old Tom against London Dry is the pair a Barback confuses, which is a Level II signal, so the tie breaks down from III.",
+			"group": "read"
+		},
+		{
+			"key": "prod:ford-s",
+			"action": "moved",
+			"reason": "A good bar pours it every shift and its story takes a sentence and an example, not the paragraph III asks, so the tie breaks down to II.",
+			"group": "read"
+		},
+		{
+			"key": "prod:mgp-of-indiana",
+			"action": "moved",
+			"reason": "The sourcing question comes from a guest who knows what they are ordering, and the standard puts the producers behind the bottles at III. The answer takes a paragraph, not the full bottle book, so the tie breaks down from IV.",
+			"group": "read"
+		},
+		{
+			"key": "prod:appleton-estate",
+			"action": "kept",
+			"reason": "The Barback is asked for the Mai Tai's name, family and glass, not for the rum house behind it. Appleton is not a well brand, and the everyday tiki that uses it sits at II, so II stands.",
+			"group": "read"
+		},
+		{
+			"key": "prod:luxardo",
+			"action": "moved",
+			"reason": "The challenge wins: Luxardo is the benchmark maraschino house of the well, the only bottle for the Aviation and Last Word (both fixed at Level I), and its cherries are Barback garnish prep; it is taught in one sentence like Cointreau and Campari, so the tie breaks down to I.",
+			"group": "read"
+		},
+		{
+			"key": "flight:additives-and-the-honest-blanco",
+			"action": "moved",
+			"reason": "The challenge wins: recognising what should not be in the glass is palate work, which the standard names as the Head Bartender's flights, the bottle book at IV is about money not tasting, and between III and IV the tie breaks down.",
+			"group": "read"
+		},
+		{
+			"key": "prep:grenadine",
+			"action": "kept",
+			"reason": "No drink in the fixed tier 1 or 2 set is listed as depending on it: its uses are the Shirley Temple (tier 3, fixed at II), Jack Rose, Ward 8 and tiki, so a shift first depends on the prep sheet at the Bartender level, whose standard names the syrups and prep sheets.",
+			"group": "read"
+		},
+		{
+			"key": "prep:orgeat",
+			"action": "moved",
+			"reason": "The challenge wins: orgeat builds the Mai Tai, fixed at Level I in the Classics Canon, the same ground on which Honey Syrup sits at I for the Bee's Knees and Penicillin, and ties break down.",
+			"group": "read"
+		},
+		{
+			"key": "prepsafe:refrigeration-and-cooling",
+			"action": "moved",
+			"reason": "The challenge wins: cooling before sealing and a cold fridge is a one-sentence walk-in rule of the same kind as labels and shelf lives, which the signals place at I, and ties break down.",
+			"group": "read"
+		},
+		{
+			"key": "prepsafe:raw-egg-and-dairy",
+			"action": "moved",
+			"reason": "The challenge wins: this is storage and handling, not the dry shake, and egg and cream already reach Level I drinks, so a one-sentence rule belongs at I.",
+			"group": "read"
+		},
+		{
+			"key": "prepsafe:allergens-are-your-responsibility",
+			"action": "moved",
+			"reason": "The challenge wins: the drinks it names are Level I, any guest may ask whoever is behind the stick, and orgeat being tree nut is one sentence of the safety floor.",
+			"group": "read"
+		},
+		{
+			"key": "preplist:weekly-deep-prep",
+			"action": "kept",
+			"reason": "The signals name only the opening and closing lists at I; the weekly list is made of syrup batches and deep prep, the syrups and prep sheets of Level II.",
+			"group": "read"
+		},
+		{
+			"key": "prep:super-juice",
+			"action": "kept",
+			"reason": "A shift depends on it only where a bar chooses to run it, which is specialist, and the acid-by-weight method with its cost reasoning takes a paragraph, a Level III signal.",
+			"group": "read"
+		}
+	],
+	"criticChanges": [],
+	"criticDropped": [],
+	"unresolved": [],
+	"notes": "Supply is the main problem, and the gate (tools/check-levels.mjs SUPPLY) will still fail after this repair. (1) Spirits: only 15 craft questions carry [spirits], but four at each of four levels needs 16. No set of moves can pass. Before the moves: I 4, II 7, III 4, IV 0, so the Level IV test (it deals 2 spirits questions) could not be dealt at all. After moves 1, 2 and 7: 4/4/4/3. The operator must write one more spirits question for Bar Manager (bottle book, allocation or sourcing) or lower SUPPLY. (2) The craft budget is floor(78/10) = 7, so moves 8 and 9 (stirred drink to III, oleo to III) are recorded but not applied. Level III then holds 1 technique and 1 prep question against 2 each. Apply them by hand: II keeps 4 of each. (3) Level IV started with 0 technique and 0 prep questions. Moves 3 to 6 bring each to 2. (4) Level IV Behind the Stick goes 4 to 6 with the two stick moves. Level IV shots goes 1 to 4. Drift I found and left: the mead questions at II sit below the mead cards at III, the Trappist mark question at II sits below its card at III, and the Dunkel/Schwarzbier question at II sits below Schwarzbier at III. These are below their lessons, not above, and ties break down, so one option is to lower those cards. The Chartreuse and NOM questions now sit at IV, above prod:chartreuse (II) and the III agave producers and flight. That drift is caused by supply and goes away once a real IV spirits question exists. Coffee faults at IV (Stale, Scale and water) follow the standard's own line on coffee faults. Briefs read: tools/levels/out/questions-craft-1/2, shots-1..4, coffee-1/2; standard in C:/Users/zpull/BartendersLedger/tools/levels/README.md."
+}

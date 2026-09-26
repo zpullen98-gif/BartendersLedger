@@ -1,0 +1,201 @@
+{
+	"assigned": "2026-09-26",
+	"standard": "tools/levels/README.md, \"The standard\"",
+	"counts": [
+		12,
+		36,
+		62,
+		5
+	],
+	"challenges": [
+		{
+			"key": "On Tap · Hefeweizen",
+			"proposed": 1,
+			"because": "Ordered by name on most craft walls and taught in one sentence (the banana and clove come from the yeast); the vase pour is the Barback's pour of a beer, so the tie breaks down to I.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Bitter & ESB",
+			"proposed": 2,
+			"because": "The note says the misleading name costs sales every night, so guests ask about it; 'bitter is not bitter, 25 to 40 units, earthy hop' is a sentence and an example, which is II.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Baltic Porter",
+			"proposed": 3,
+			"because": "Porter recipe, lager yeast, months of lagering is one paragraph, and III already holds 'the wall in full (the styles)'; Rauchbier is the true rarest style, so the tie breaks down to III.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Belgian Strong (Dubbel, Tripel, Quad)",
+			"proposed": 2,
+			"because": "A tripel is on most good craft walls weekly, and the card's point is one fact with an example: 9.5% that drinks like 5%, so two is over three drinks. That is the law in its cases, which a Bartender alone on a shift needs. A tie with the Belgian lean breaks down.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Belgian Golden Strong",
+			"proposed": 2,
+			"because": "Duvel and its kin are poured weekly, and the card teaches one sentence and an example: a pale, light-looking beer at tripel strength, with the devil on the label as the warning. That is service safety for a Bartender, so the tie with the Belgian lean breaks down.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Lambic",
+			"proposed": 3,
+			"because": "The card says it earns its place because it explains gueuze and kriek, both at III. Placing the parent above its children hides the lesson those cards depend on. The sour styles lean III, and the tie with rarity breaks down.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Oud Bruin",
+			"proposed": 3,
+			"because": "The card is a pairing lesson set against Flanders red (III): stainless instead of oak, under a year instead of two. Telling two sours apart is the III signal. The sour styles lean III, and the tie with rarity breaks down.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Butyric (rancid butter)",
+			"proposed": 3,
+			"because": "The signals put the fault board at III and keep IV for the rarest styles and the brewing process, not the rarest faults. The card is a split from diacetyl (II), which is III work, so the tie breaks down.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Barrel-Aged Stout",
+			"proposed": 2,
+			"because": "A seasonal staple on craft walls, and the card's instruction is register work: quote the price when you take the order. The standard puts the register and the money at II. The barrel lore does not outweigh a service habit every shift needs.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Cream Ale",
+			"proposed": 1,
+			"because": "The card calls it the first question at the bar, and the answer takes one sentence: no cream, no lactose, no dairy. It is an allergen answer that whoever is pouring beer must give correctly, and one sentence is the Level I signal.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Commercial Sweet Cider",
+			"proposed": 1,
+			"because": "It is on every menu and outsells every dry cider stocked, so a guest expects any bartender to have it, and the card's point (concentrate, fermented out, back-sweetened) is one sentence: all three Level I signals; ties break down.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Kimoto and Yamahai",
+			"proposed": 3,
+			"because": "These are label words printed on bottles a sake list pours, not a brewery lesson; a guest who orders a yamahai will notice a miss, the Level III signal, and sake sits at III. Ties break down from IV.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Metheglin",
+			"proposed": 3,
+			"because": "Spiced mead is one of the commonest mead variants poured, not an outlier, and it takes a paragraph to explain; the standard names mead at Level III and ties break down.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Pyment",
+			"proposed": 3,
+			"because": "Pyment is the sibling of Cyser (honey fermented with fruit juice, here grape) and needs the same paragraph; Cyser sits at III, so this is a tie and ties break down to the mead line at III.",
+			"group": "ontap-cards"
+		}
+	],
+	"dispositions": [
+		{
+			"key": "On Tap · Hefeweizen",
+			"action": "moved",
+			"reason": "The challenge wins: it is ordered by name on most craft walls and its lesson is one sentence (the yeast gives banana and clove), which meets the Level I signals as well as II, so the tie breaks down to I, level with Witbier.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Bitter & ESB",
+			"action": "moved",
+			"reason": "The challenge wins: the note says guests ask about the misleading name every night, and the answer is a sentence and an example (25 to 40 units, earthy hop), not a paragraph, so it sits at II with the other everyday ales.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Baltic Porter",
+			"action": "moved",
+			"reason": "The challenge wins: it is uncommon rather than among the rarest (Rauchbier holds that place at IV), its explanation is one paragraph, and III holds the wall in full, so the tie breaks down to III beside Dark Mild.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Belgian Strong (Dubbel, Tripel, Quad)",
+			"action": "moved",
+			"reason": "Frequency and length both say II: tripels are poured weekly and the card's lesson is one fact with an example about hidden strength, which is service safety a lone Bartender needs; the Belgian lean is only a tie, and ties break down.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Belgian Golden Strong",
+			"action": "moved",
+			"reason": "Duvel-type beers are weekly pours and the card is a sentence and an example about strength against a pale look, so the II signals outweigh the Belgian lean and the tie breaks down.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Lambic",
+			"action": "moved",
+			"reason": "The card's own note says it earns its place by explaining gueuze and kriek, both at III; placing it at IV would hide the lesson they depend on, and the sour lean is III with the rarity tie breaking down.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Oud Bruin",
+			"action": "moved",
+			"reason": "The card is a pair set against Flanders red at III, and telling two sours apart is III work; the sour lean is III and the tie with rarity breaks down.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Butyric (rancid butter)",
+			"action": "moved",
+			"reason": "The signals put the fault board at III and reserve IV for the rarest styles and the brewing process, not rare faults; the card splits it from diacetyl, a paragraph at III.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Barrel-Aged Stout",
+			"action": "moved",
+			"reason": "The card's instruction is to quote the price at the order, which is register and money work the standard places at II, and a seasonal staple on craft walls is a weekly pour.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Cream Ale",
+			"action": "kept",
+			"reason": "The answer fits in one sentence, but frequency weighs before length: Level I asks for what is on every menu, and cream ale is a weekly craft pour, not on every menu, so II stands.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Commercial Sweet Cider",
+			"action": "moved",
+			"reason": "The challenge wins: it is on nearly every menu and outsells the dry ciders, a guest expects any bartender to have it, and the card's point is one sentence, which meets all three Level I signals. Ties break down.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Kimoto and Yamahai",
+			"action": "moved",
+			"reason": "The challenge wins: these are label words on bottles a sake list pours, not a brewing lesson for the menu writer, so the sake line at III applies. Ties break down from IV.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Metheglin",
+			"action": "moved",
+			"reason": "The challenge wins: spiced mead is one of the named, commonly poured mead variants rather than an outlier, it needs a paragraph, and the standard places mead at III. Ties break down.",
+			"group": "ontap-cards"
+		},
+		{
+			"key": "On Tap · Pyment",
+			"action": "moved",
+			"reason": "The challenge wins: pyment is Cyser's grape sibling and needs the same paragraph, so with Cyser at III the tie breaks down to the mead line at III.",
+			"group": "ontap-cards"
+		}
+	],
+	"criticChanges": [
+		{
+			"group": "ontap-cards",
+			"key": "On Tap · Biere de Garde",
+			"from": 4,
+			"to": 3,
+			"because": "Drift: the question on its blonde, ambree and brune versions sits at III, so the card it tests should not sit above it; ties break down."
+		},
+		{
+			"group": "ontap-cards",
+			"key": "On Tap · Mousy",
+			"from": 4,
+			"to": 3,
+			"because": "Drift: the mouse cage and stale crackers question sits at III, so the fault card it tests belongs there too; IV keeps five On Tap cards."
+		}
+	],
+	"criticDropped": [],
+	"unresolved": [],
+	"notes": "Supply is the main problem, and the gate (tools/check-levels.mjs SUPPLY) will still fail after this repair. (1) Spirits: only 15 craft questions carry [spirits], but four at each of four levels needs 16. No set of moves can pass. Before the moves: I 4, II 7, III 4, IV 0, so the Level IV test (it deals 2 spirits questions) could not be dealt at all. After moves 1, 2 and 7: 4/4/4/3. The operator must write one more spirits question for Bar Manager (bottle book, allocation or sourcing) or lower SUPPLY. (2) The craft budget is floor(78/10) = 7, so moves 8 and 9 (stirred drink to III, oleo to III) are recorded but not applied. Level III then holds 1 technique and 1 prep question against 2 each. Apply them by hand: II keeps 4 of each. (3) Level IV started with 0 technique and 0 prep questions. Moves 3 to 6 bring each to 2. (4) Level IV Behind the Stick goes 4 to 6 with the two stick moves. Level IV shots goes 1 to 4. Drift I found and left: the mead questions at II sit below the mead cards at III, the Trappist mark question at II sits below its card at III, and the Dunkel/Schwarzbier question at II sits below Schwarzbier at III. These are below their lessons, not above, and ties break down, so one option is to lower those cards. The Chartreuse and NOM questions now sit at IV, above prod:chartreuse (II) and the III agave producers and flight. That drift is caused by supply and goes away once a real IV spirits question exists. Coffee faults at IV (Stale, Scale and water) follow the standard's own line on coffee faults. Briefs read: tools/levels/out/questions-craft-1/2, shots-1..4, coffee-1/2; standard in C:/Users/zpull/BartendersLedger/tools/levels/README.md."
+}

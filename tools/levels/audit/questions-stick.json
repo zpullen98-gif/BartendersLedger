@@ -1,0 +1,201 @@
+{
+	"assigned": "2026-09-26",
+	"standard": "tools/levels/README.md, \"The standard\"",
+	"counts": [
+		22,
+		55,
+		16,
+		6
+	],
+	"challenges": [
+		{
+			"key": "q:scenario-i-ll-have-a-martini-nothing-else-what-s-your-move",
+			"proposed": 1,
+			"because": "For a question, the level of the lesson it tests: the Martini is tier 1, fixed at Level I, and asking gin or vodka, then dry, dirty, twist or olive is the one sentence any guest expects of whoever takes the order.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:opening-a-bottle-of-sparkling-wine-what-s-the-grip",
+			"proposed": 1,
+			"because": "Thumb on the cork, turn the bottle is a one-sentence safety rule, and the Aperol Spritz and French 75 are tier 2 at Level I, so whoever builds them opens sparkling from week one, not from the wine-by-the-glass line.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:which-house-prep-is-a-major-undisclosed-allergen-risk",
+			"proposed": 1,
+			"because": "Orgeat is almond is one sentence, it rides in the Mai Tai (tier 2, Level I), and the person who labels and dates the prep bottles needs it on day one; an allergen fact placed high hides it from the hands that pour it.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:a-chardonnay-you-pour-every-night-suddenly-has-almost-no-nose-an",
+			"proposed": 2,
+			"because": "Cork taint is the fault a guest names most, and the item is the house pour you know nightly: wine by the glass and its common faults at Level II, a sentence and an example (mute and short before it smells musty); ties break down.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:the-cheapest-fake-ids-are-real-cards-that-have-been-split-open-a",
+			"proposed": 1,
+			"because": "Thumbing the edges and corners for lift is the first physical ID check a door or barback learns in week one, the ID floor in its plainest case and taught in one sentence.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:scenario-a-sober-guest-orders-two-old-fashioneds-you-watched-her",
+			"proposed": 1,
+			"because": "The friend is visibly impaired, so this is the visibly intoxicated guest in its plainest case; the pass-off is the commonest route to him, and 'no drink reaches him through anyone' is one sentence. Ties break down.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:scenario-a-father-orders-a-beer-for-my-son-who-is-plainly-about-",
+			"proposed": 2,
+			"because": "The question tests the default a shift acts on, which is to decline for a plain 19-year-old at the bar. That is the law in its cases (II); the state exceptions are only its explanation, and at IV the decline is hidden.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:standard-service-practice-puts-the-foil-cut-where-on-a-still-win",
+			"proposed": 2,
+			"because": "Every still bottle opened for the by-the-glass list gets a foil cut, a one-sentence fact a lone Bartender needs weekly. It is wine by the glass (II), not the tableside sequence, and ties break down.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:you-ve-confirmed-a-bottle-is-corked-what-happens-to-it",
+			"proposed": 2,
+			"because": "The lesson is recork, date and hold for credit: the money on a by-the-glass bottle that any closing Bartender handles. Spotting TCA may be III, but this tests the register and the money at II.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:scenario-you-re-closing-alone-on-a-slow-tuesday-which-set-of-hab",
+			"proposed": 1,
+			"because": "Lock the front behind the last guest, trash out before close, drawer away from the windows: this is the closing list, which the standard names at Level I, and each habit is one sentence. Ties break down.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:scenario-a-guest-back-from-the-bathroom-says-she-thinks-someone-",
+			"proposed": 2,
+			"because": "Kill the drink, hold the glass, remake it, get a manager: a one-line rule with no judgement in it, applied by whoever is behind the bar on any shift. A shift run alone depends on it, so Level II, not III.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:scenario-a-guest-leans-in-and-uses-your-bar-s-drink-safety-code-",
+			"proposed": 2,
+			"because": "The code maps each variant to a fixed response so nobody on staff judges it. Its sibling item says everyone on the floor, barback included, learns it before their first Friday, so it cannot sit above Level II.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:scenario-a-man-at-the-bar-asks-you-which-way-the-woman-who-just-",
+			"proposed": 2,
+			"because": "Never confirm a guest was here, where she went or when she returns: a one-sentence house rule that any bartender on a shift alone must apply without a paragraph of judgement. Ties break down from III.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:variance-in-a-bar-program-is-the-gap-between",
+			"proposed": 2,
+			"because": "This asks only for the definition: POS sales against poured inventory, as distinct from the drawer's over/short. That is a sentence and an example, and the Level II unrung-drink item already depends on it. Diagnosing variance stays at IV.",
+			"group": "questions-stick"
+		}
+	],
+	"dispositions": [
+		{
+			"key": "q:scenario-i-ll-have-a-martini-nothing-else-what-s-your-move",
+			"action": "moved",
+			"reason": "For a question the lesson decides it: the Martini is tier 1, fixed at Level I, and asking base then style is one sentence, so ties break down to I.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:opening-a-bottle-of-sparkling-wine-what-s-the-grip",
+			"action": "moved",
+			"reason": "The grip is a one-sentence safety rule, and the Aperol Spritz and French 75 sit at Level I, so the hands that build them need it there; ties break down.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:which-house-prep-is-a-major-undisclosed-allergen-risk",
+			"action": "moved",
+			"reason": "Orgeat is almond is a one-sentence fact carried by the Mai Tai at Level I and sits with labels and shelf lives; placing an allergen fact high hides it from those who pour it.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:a-chardonnay-you-pour-every-night-suddenly-has-almost-no-nose-an",
+			"action": "moved",
+			"reason": "Cork taint is the most common fault of wine by the glass, a Level II line, and the lesson fits a sentence and an example; the paragraph case for III is a tie, which breaks down.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:the-cheapest-fake-ids-are-real-cards-that-have-been-split-open-a",
+			"action": "moved",
+			"reason": "The challenge wins: thumbing edges and corners for lift is a one-sentence physical ID check, the ID floor in its plainest case, and ties break down to Level I.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:scenario-a-sober-guest-orders-two-old-fashioneds-you-watched-her",
+			"action": "moved",
+			"reason": "The challenge wins: the friend is visibly impaired, which is the plainest intoxicated-guest case, and the rule that no drink reaches him through anyone is one sentence, so Level I with ties breaking down.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:scenario-a-father-orders-a-beer-for-my-son-who-is-plainly-about-",
+			"action": "moved",
+			"reason": "The challenge wins: the answer tested is the decline a shift acts on, the law in its cases at Level II; the state-by-state exceptions are only its explanation, and at IV the plain decline would be hidden.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:standard-service-practice-puts-the-foil-cut-where-on-a-still-win",
+			"action": "moved",
+			"reason": "The challenge wins: every still bottle opened for the by-the-glass list takes a foil cut, so this is wine by the glass at Level II rather than tableside service in sequence, and the tie breaks down.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:you-ve-confirmed-a-bottle-is-corked-what-happens-to-it",
+			"action": "moved",
+			"reason": "The challenge wins: the question asks what happens to the bottle (recork, date, hold for credit), which is the money on a by-the-glass bottle at Level II, not the detection of TCA, and the tie breaks down.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:scenario-you-re-closing-alone-on-a-slow-tuesday-which-set-of-hab",
+			"action": "moved",
+			"reason": "The answer is the closing list, which the standard names at Level I, and each habit is one sentence; ties break down from II.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:scenario-a-guest-back-from-the-bathroom-says-she-thinks-someone-",
+			"action": "moved",
+			"reason": "The answer is a fixed rule with no judgement, applied by whoever is behind the bar on any shift, so a shift run alone depends on it and ties break down to II.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:scenario-a-guest-leans-in-and-uses-your-bar-s-drink-safety-code-",
+			"action": "moved",
+			"reason": "Its sibling item requires everyone on the floor, barback included, to learn the code before Friday, and each variant maps to a fixed response, so it cannot sit above II.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:scenario-a-man-at-the-bar-asks-you-which-way-the-woman-who-just-",
+			"action": "moved",
+			"reason": "Never confirm a guest's movements is a one-sentence house rule every bartender applies alone, not a paragraph of judgement; ties break down to II.",
+			"group": "questions-stick"
+		},
+		{
+			"key": "q:variance-in-a-bar-program-is-the-gap-between",
+			"action": "moved",
+			"reason": "The question asks only for the definition, a sentence and an example that the Level II unrung-drink item depends on; diagnosing variance stays at IV with the 12% gin item.",
+			"group": "questions-stick"
+		}
+	],
+	"criticChanges": [
+		{
+			"group": "questions-stick",
+			"key": "q:dram-shop-liability-in-the-states-that-have-it-means-that",
+			"from": 2,
+			"to": 4,
+			"because": "Supply: Level IV holds four Behind the Stick questions against six; dram shop liability is the law at its edges, named in the Level IV standard."
+		},
+		{
+			"group": "questions-stick",
+			"key": "q:variance-in-a-bar-program-is-the-gap-between",
+			"from": 2,
+			"to": 4,
+			"because": "Supply: fifth toward six at Level IV; variance is the ledger's money in full, and the gin variance scenario that tests it already sits at IV."
+		}
+	],
+	"criticDropped": [],
+	"unresolved": [],
+	"notes": "Supply is the main problem, and the gate (tools/check-levels.mjs SUPPLY) will still fail after this repair. (1) Spirits: only 15 craft questions carry [spirits], but four at each of four levels needs 16. No set of moves can pass. Before the moves: I 4, II 7, III 4, IV 0, so the Level IV test (it deals 2 spirits questions) could not be dealt at all. After moves 1, 2 and 7: 4/4/4/3. The operator must write one more spirits question for Bar Manager (bottle book, allocation or sourcing) or lower SUPPLY. (2) The craft budget is floor(78/10) = 7, so moves 8 and 9 (stirred drink to III, oleo to III) are recorded but not applied. Level III then holds 1 technique and 1 prep question against 2 each. Apply them by hand: II keeps 4 of each. (3) Level IV started with 0 technique and 0 prep questions. Moves 3 to 6 bring each to 2. (4) Level IV Behind the Stick goes 4 to 6 with the two stick moves. Level IV shots goes 1 to 4. Drift I found and left: the mead questions at II sit below the mead cards at III, the Trappist mark question at II sits below its card at III, and the Dunkel/Schwarzbier question at II sits below Schwarzbier at III. These are below their lessons, not above, and ties break down, so one option is to lower those cards. The Chartreuse and NOM questions now sit at IV, above prod:chartreuse (II) and the III agave producers and flight. That drift is caused by supply and goes away once a real IV spirits question exists. Coffee faults at IV (Stale, Scale and water) follow the standard's own line on coffee faults. Briefs read: tools/levels/out/questions-craft-1/2, shots-1..4, coffee-1/2; standard in C:/Users/zpull/BartendersLedger/tools/levels/README.md."
+}

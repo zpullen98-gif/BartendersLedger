@@ -1,0 +1,268 @@
+{
+	"assigned": "2026-09-26",
+	"standard": "tools/levels/README.md, \"The standard\"",
+	"counts": [
+		16,
+		122,
+		18,
+		4
+	],
+	"challenges": [
+		{
+			"key": "Shots · Ferrari",
+			"proposed": 2,
+			"because": "The spec is one line, equal parts Fernet and Campari, not a paragraph of lore. It is the Chilled Fernet's pair, which is placed at II, and the pair a Barback confuses. Trade guests call it weekly, so ties break down.",
+			"group": "shots"
+		},
+		{
+			"key": "Shots · Snaquiri",
+			"proposed": 2,
+			"because": "It is a Daiquiri, a Level I Core Dozen drink, poured small: the spec is already known and the ritual takes a sentence and an example, so the Industry Handshakes lean stops at II and the tie breaks down.",
+			"group": "shots"
+		},
+		{
+			"key": "Shots · Green Chartreuse",
+			"proposed": 2,
+			"because": "A straight pour of one bottle that any craft bar sells weekly as the staff and closing shot; the lore (monks, 130 herbs, high proof) is a sentence, not a paragraph, so the higher lean breaks down to II.",
+			"group": "shots"
+		},
+		{
+			"key": "Shots · Cement Mixer",
+			"proposed": 2,
+			"because": "Two ingredients, no fire, and the rule that matters is one sentence: never serve it to anyone who did not order it knowingly. Placing it at III hides that rule from the shift that pours it; ties break down.",
+			"group": "shots"
+		},
+		{
+			"key": "Shots · Flaming Lamborghini",
+			"proposed": 3,
+			"because": "Its hazard is the same fire rules that place Flaming Sambuca and Flaming Dr Pepper at III, and the card's note already gives the safe serve; rarity alone does not need the person who trains the floor, so the tie breaks to III.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Chicory Old Fashioned",
+			"proposed": 3,
+			"because": "Guests ask for a no-proof Old Fashioned by name every week, and it is built on the family's template: stirred, big cube, slow dilution, as the why says in one sentence. Not Obscura or last-member work. Bitter and Complex lifts it to III at most.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Smoked Tea Sour",
+			"proposed": 3,
+			"because": "It is a sour on the template with a lapsang syrup from the prep sheet. The peated scotch analogy is a paragraph of palate work, which is III. Nothing makes it menu-writer or Obscura material, and ties break down.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Sober Ramos",
+			"proposed": 2,
+			"because": "The Ramos Gin Fizz is fixed at Level I as tier 2. Its NA twin asks for the same long shake and the Dry-Shake Discipline the standard sets at Level II, so III places it against its own book with no argument.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Bitter Orange Spritz",
+			"proposed": 2,
+			"because": "This is the NA twin of the Aperol Spritz, which is tier 2 at Level I. Spritzes are named Level II house calls, and the why makes it the NA drink a bar reaches for first for an adult palate. A good bar pours it weekly.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Grapefruit Gentian Tonic",
+			"proposed": 2,
+			"because": "It is a tonic highball on the G&T template, and its why takes one sentence: lean on the quinine. Garden Highball sits at II and Cucumber Tonic at I, so putting this one at III leaves the three tonic cards two levels apart.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Verjus Spritz",
+			"proposed": 2,
+			"because": "It is a spritz, a Level II house call, and the why is one sentence: verjus is unripe grape juice. The only wine knowledge it needs is by-the-glass, which is Level II. Wine service in sequence at III is not what this card asks.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Virgin Mary",
+			"proposed": 2,
+			"because": "The Nojito is the NA twin of a tier 1 Mojito and is fixed at II, and the Shirley Temple is fixed at II. The standard puts the zero-proof classics on the Level II line, so the Bloody Mary argument would also have put the Nojito at I, and it did not.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Sage & Honey Lemonade",
+			"proposed": 2,
+			"because": "This is a house herbal recipe from the Garden and Herbal board, not something on every menu. It cannot sit below the Shirley Temple and Nojito, which are fixed at II. The honey viscosity point in the why takes a sentence and an example.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Watermelon Lime Cooler",
+			"proposed": 2,
+			"because": "A seasonal house cooler from the Fruit Forward board is not on every menu. The zero-proof classics themselves sit at II, and the Shirley Temple is fixed there, so a house cooler cannot sit below them. Salting the fruit takes a sentence and an example.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Cucumber Tonic",
+			"proposed": 2,
+			"because": "It is a house highball from the Fizzes and Spritzes board, and not on every menu the way the fixed Level II Shirley Temple is. It also belongs with Garden Highball at II: two NA tonic highballs should not be split between I and II.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Kombucha Spritz",
+			"proposed": 2,
+			"because": "Kombucha spritzes are now a weekly pour on most zero-proof lists. The trace-alcohol caveat is the law in its cases, owed to a guest in recovery or pregnant, and Level II holds that. Placed at III, it is hidden from the person pouring it.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · House Ginger Beer",
+			"proposed": 2,
+			"because": "It is a prep sheet a shift runs from, and the standard puts those at Level II. It feeds the Moscow Mule and the Dark 'n' Stormy, both Level I drinks, so the station that pours them has to know it.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Sekanjabin",
+			"proposed": 3,
+			"because": "Its book is Global Refreshers, which leans III, not an Obscura or after-dinner book leaning IV. The build and the oxymel story take a paragraph, like Tamarindo and Nimbu Pani at III. Rarity alone makes a tie, and ties break down.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Switchel",
+			"proposed": 2,
+			"because": "Restoratives and Brunch is a house-call board, and every other card on it sits at II. The build is one line: vinegar for citrus, with ginger and maple. The lore is colour and nobody needs it to pour the drink. The tie between rarity and the book breaks down.",
+			"group": "shots"
+		}
+	],
+	"dispositions": [
+		{
+			"key": "Shots · Ferrari",
+			"action": "moved",
+			"reason": "The challenge wins: the spec is one line of equal parts Fernet and Campari, a sentence and an example rather than a paragraph, and it pairs with the Chilled Fernet already at II, so the Industry Handshakes lean does not outweigh the tie breaking down.",
+			"group": "shots"
+		},
+		{
+			"key": "Shots · Snaquiri",
+			"action": "moved",
+			"reason": "The challenge wins: the spec is the Level I Daiquiri, a craft bar pours it weekly and the ritual takes a sentence and an example, so the Industry Handshakes lean stops at II and the tie breaks down.",
+			"group": "shots"
+		},
+		{
+			"key": "Shots · Green Chartreuse",
+			"action": "moved",
+			"reason": "The challenge wins: it is a straight pour of one bottle sold weekly as the closing shot, and the monks, herbs and proof are a sentence, not a paragraph, so the higher lean breaks down to II.",
+			"group": "shots"
+		},
+		{
+			"key": "Shots · Cement Mixer",
+			"action": "moved",
+			"reason": "The challenge wins: two ingredients, no fire, and its safety rule is one sentence; placing it at III hides that rule from the shift that pours it, and ties break down.",
+			"group": "shots"
+		},
+		{
+			"key": "Shots · Flaming Lamborghini",
+			"action": "moved",
+			"reason": "The challenge wins: its hazard is the same fire rules that place Flaming Sambuca and Flaming Dr Pepper at III and the card gives the safe serve; rarity alone is a tie, which breaks down to III.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Chicory Old Fashioned",
+			"action": "moved",
+			"reason": "It is built on the Old Fashioned template and asked for by name; nothing makes it Obscura or last-member work, so the board lifts it to III at most.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Smoked Tea Sour",
+			"action": "moved",
+			"reason": "A sour on the template with a prep-sheet syrup; the peated scotch analogy is paragraph work, which is III, and ties break down.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Sober Ramos",
+			"action": "moved",
+			"reason": "Its source drink is fixed at Level I and its method is the Level II Dry-Shake Discipline, so III outranks its own book.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Bitter Orange Spritz",
+			"action": "moved",
+			"reason": "It is the NA twin of a tier 2 Aperol Spritz, spritzes are named Level II house calls, and the why is one sentence.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Grapefruit Gentian Tonic",
+			"action": "moved",
+			"reason": "A tonic highball on the G&T template with a one-sentence why; III would split the tonic cards two levels apart.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Verjus Spritz",
+			"action": "moved",
+			"reason": "A spritz is a Level II house call and the card needs only by-the-glass wine knowledge, not wine service in sequence.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Virgin Mary",
+			"action": "moved",
+			"reason": "The standard names the zero-proof classics on the Level II line, and the Nojito, twin of a tier 1 drink, is fixed at II.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Sage & Honey Lemonade",
+			"action": "moved",
+			"reason": "A house herbal recipe is not on every menu and cannot sit below the Shirley Temple and Nojito, fixed at II.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Watermelon Lime Cooler",
+			"action": "moved",
+			"reason": "A seasonal house cooler cannot sit below the zero-proof classics the standard puts at II; salting fruit takes a sentence and an example.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Cucumber Tonic",
+			"action": "moved",
+			"reason": "A house highball not on every menu, and it belongs with Garden Highball at II rather than split from it.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Kombucha Spritz",
+			"action": "moved",
+			"reason": "The challenge wins: the trace-alcohol caveat is the law in its cases, which the standard sets at Level II, and a spritz poured weekly sits with the common spritzes; the Global Refreshers lean makes a tie that breaks down.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · House Ginger Beer",
+			"action": "moved",
+			"reason": "The challenge wins: the standard names the syrups and prep sheets a shift depends on at Level II, and it feeds two Level I drinks, so placing it at III hides it from the station that pours them.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Sekanjabin",
+			"action": "moved",
+			"reason": "The challenge wins: Global Refreshers leans III, not IV, the build and oxymel story take a paragraph like Tamarindo and Nimbu Pani, and rarity alone against the board is a tie that breaks down.",
+			"group": "shots"
+		},
+		{
+			"key": "Zero Proof · Switchel",
+			"action": "moved",
+			"reason": "The challenge wins: Restoratives and Brunch is a board of house calls that leans II, the build takes a line, and the colonial lore is not needed to pour it, so the tie with rarity breaks down.",
+			"group": "shots"
+		}
+	],
+	"criticChanges": [
+		{
+			"group": "shots",
+			"key": "Shots · Flaming Lamborghini",
+			"from": 3,
+			"to": 4,
+			"because": "Supply: Level IV holds one shots or zero-proof card against four; its traditional serve breaks both fire rules, so whether fire is served at all is a house decision, beside the Blue Blazer Shot at IV."
+		},
+		{
+			"group": "shots",
+			"key": "Shots · Flaming Sambuca",
+			"from": 3,
+			"to": 4,
+			"because": "Supply: second card toward four at Level IV; lit service is a policy the Bar Manager sets and trains, matching the Blue Blazer Shot and Blue Blazer already at IV."
+		},
+		{
+			"group": "shots",
+			"key": "Zero Proof · Sekanjabin",
+			"from": 3,
+			"to": 4,
+			"because": "Supply: third card toward four at Level IV; a Persian oxymel is rare on menus and specialist, the Level IV signal, and brings a zero-proof card to the level."
+		}
+	],
+	"criticDropped": [],
+	"unresolved": [],
+	"notes": "Supply is the main problem, and the gate (tools/check-levels.mjs SUPPLY) will still fail after this repair. (1) Spirits: only 15 craft questions carry [spirits], but four at each of four levels needs 16. No set of moves can pass. Before the moves: I 4, II 7, III 4, IV 0, so the Level IV test (it deals 2 spirits questions) could not be dealt at all. After moves 1, 2 and 7: 4/4/4/3. The operator must write one more spirits question for Bar Manager (bottle book, allocation or sourcing) or lower SUPPLY. (2) The craft budget is floor(78/10) = 7, so moves 8 and 9 (stirred drink to III, oleo to III) are recorded but not applied. Level III then holds 1 technique and 1 prep question against 2 each. Apply them by hand: II keeps 4 of each. (3) Level IV started with 0 technique and 0 prep questions. Moves 3 to 6 bring each to 2. (4) Level IV Behind the Stick goes 4 to 6 with the two stick moves. Level IV shots goes 1 to 4. Drift I found and left: the mead questions at II sit below the mead cards at III, the Trappist mark question at II sits below its card at III, and the Dunkel/Schwarzbier question at II sits below Schwarzbier at III. These are below their lessons, not above, and ties break down, so one option is to lower those cards. The Chartreuse and NOM questions now sit at IV, above prod:chartreuse (II) and the III agave producers and flight. That drift is caused by supply and goes away once a real IV spirits question exists. Coffee faults at IV (Stale, Scale and water) follow the standard's own line on coffee faults. Briefs read: tools/levels/out/questions-craft-1/2, shots-1..4, coffee-1/2; standard in C:/Users/zpull/BartendersLedger/tools/levels/README.md."
+}

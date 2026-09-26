@@ -1,0 +1,410 @@
+{
+	"assigned": "2026-09-26",
+	"standard": "tools/levels/README.md, \"The standard\"",
+	"counts": [
+		0,
+		122,
+		138,
+		48
+	],
+	"challenges": [
+		{
+			"key": "Rome with a View",
+			"proposed": 2,
+			"because": "It is an Americano given a sour's lime and sugar under soda: a sentence and an example. It is a low-proof aperitivo highball, and the standard names the common highballs and spritzes at II. A house-call book leans II, and ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Cable Car",
+			"proposed": 2,
+			"because": "It is a Sidecar (a Level I template) on spiced rum with a cinnamon-sugar rim: a sentence and an example, with no paragraph needed. 'Tied to one bar' is true of every drink in this book, Gold Rush and Tommy's included, so it cannot decide the level. Ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Clarified Milk Punch",
+			"proposed": 2,
+			"because": "Book is weighed first and Modern Craft Classics leans II. Craft bars pour it weekly from a batch, and a batch made off a prep sheet is Bartender work. The paragraph-length method is prep, not a call made at the stick, so the tie breaks down to II.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Port Light",
+			"proposed": 3,
+			"because": "Tiki & Tropical is not one of the books that lean IV (Obscura, frozen, after-dinner). Port Light sits in the revival tiki canon and is poured at tiki bars today, so it is the tiki canon in full at III. Between III and IV, the tie breaks down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Halekulani",
+			"proposed": 3,
+			"because": "It is a Tiki & Tropical book drink with a four-line sour spec, printed in the revival tiki canon and kept on tiki revival menus. The book puts the tiki canon in full at III, nothing leans it to IV, and the tie breaks down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Suffering Bastard",
+			"proposed": 2,
+			"because": "Family is Highball and it is built, not shaken: gin and brandy with lime, bitters and ginger beer, a Buck. That is a sentence and an example, and tiki menus pour it weekly next to the Mai Tai, so its lore alone does not lift it to III.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Goombay Smash",
+			"proposed": 2,
+			"because": "It is a beach bar house call poured weekly across the Caribbean and Florida, taught in a sentence and an example (a coconut rum punch with apricot), so it is everyday tiki, which the standard puts at II.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Boothby",
+			"proposed": 3,
+			"because": "It is a Manhattan with a champagne float, explained in one line against its Level I parent and still poured in San Francisco. Old Pal and Improved Whiskey Cocktail sit at III on that argument, and the III/IV tie breaks down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Mamie Taylor",
+			"proposed": 2,
+			"because": "Highball book leans II and the build is one sentence and an example: the Moscow Mule on Scotch. The Horse's Neck and Presbyterian are no more ordered and sit at II, so the tie breaks down and the lore is garnish, not the lesson.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Batanga",
+			"proposed": 2,
+			"because": "Highball book leans II; tequila, Coke, lime and a salt rim is the Cuba Libre's pair, taught in a sentence and an example. Kalimotxo, just as rare and also cola-built, was put at II despite rarity, so the same tie breaks down here.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Death in the Afternoon",
+			"proposed": 2,
+			"because": "Highball book leans II; two ingredients, absinthe first then champagne to the louche, is a sentence and an example. The Kalimotxo precedent in this chunk puts a rare two-ingredient build at II, so the tie breaks down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Grasshopper",
+			"proposed": 2,
+			"because": "It is the template of the crème and cream trio, ordered on any night in supper-club country and paired with the Brandy Alexander at II. Equal parts, shaken hard, taught in a sentence and an example. The lore is colour, not the signal, and ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Toasted Almond",
+			"proposed": 2,
+			"because": "A White Russian with amaretto added: one swap on a Level II Duo and Trio template, taught in a sentence and an example. It sits beside the Mudslide at II. \"Expects it made right\" is true of any drink and does not decide the level.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Stinger",
+			"proposed": 2,
+			"because": "It is a two-bottle Duo, the family's template shape, like the Rusty Nail and Godfather at II. \"Shaken, not stirred, always white menthe\" is a sentence and an example, not a paragraph. Ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Eggnog",
+			"proposed": 2,
+			"because": "The most asked-for seasonal call in the book, sitting beside Mulled Wine at II. The dry shake it needs is a Level II drill (Dry-Shake Discipline). Batch ageing belongs to the prep sheet, not to the pour.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Sherry Flip",
+			"proposed": 3,
+			"because": "It has the same method, glass and family as the Porto Flip at III, with one bottle swapped. The note calls it the gentlest member of its family, not a last member. Ties break down, so it sits with its sibling.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Ferrari",
+			"proposed": 2,
+			"because": "The card itself says it is also on the Shot Board, and the standard puts the shot board's classic shooters at II. Fernet and Campari in equal parts is a sentence and an example, and staff and industry guests call it weekly. The ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Nutty Irishman",
+			"proposed": 2,
+			"because": "The reason already concedes it is the book's everyday call. It is an equal-parts two-bottle build, one sentence with no technique, and it is poured weekly wherever coffee is served after dinner. Within a book the weekly pours sit lower, and the ties break down to II.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Snowball",
+			"proposed": 3,
+			"because": "This is a British English book, and in a British bar every December a guest asks for it by name. It is two bottles and a squeeze of lime, one sentence. Seasonal is not rare. The after-dinner lean is outweighed by how often it is ordered, so it moves at least one level down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Brave Bull",
+			"proposed": 3,
+			"because": "Its whole spec is the White Russian family's template with the spirit swapped (the White Russian is fixed at II), so it takes a sentence and an example. The family's template riffs sit lower than its outliers. With the book leaning IV and the explanation leaning II, the ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Porto Tónico",
+			"proposed": 2,
+			"because": "White port and tonic over ice is the G&T template with the base swapped, a sentence and an example, not a paragraph. Common highballs and spritzes are house calls at II, and it is now a standard aperitif serve on summer menus.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Tatanka",
+			"proposed": 2,
+			"because": "It is Żubrówka and apple juice, two bottles and a sentence. It is a standing house call in British and Polish bars, and guests order it by name. The bottle behind it is a Level III spirits lesson, but the drink itself is a common highball, and common highballs sit at II.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Caffè Corretto",
+			"proposed": 2,
+			"because": "It is an espresso with a measure of grappa or sambuca poured in: one sentence. Any bar with a coffee machine is asked for it weekly after dinner. The resentin is a garnish of lore, not the build, so it does not lift the drink to III, and the ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Charro Negro",
+			"proposed": 2,
+			"because": "Tequila, cola and lime on a salt rim is a three-ingredient build a sentence and one example cover (a Cuba Libre on tequila), not a paragraph. Tequila and Coke is a weekly call, the same case as Bloody Maria at II, and ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Palmetto",
+			"proposed": 4,
+			"because": "The reason misreads the family signal: the Manhattan is the template and a rum Manhattan is an outlier by spirit. It is rare on menus, and the Obscura leans IV, so no signal argues it lower.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Pomegranate Martini",
+			"proposed": 2,
+			"because": "Its own note explains it in one line: a Cosmopolitan with pomegranate instead of cranberry. That is a sentence and an example (II), with none of the III signals, no paragraph and no miss a knowing guest would catch. Ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Astoria",
+			"proposed": 3,
+			"because": "The inverted Martini is the same vermouth-as-wine lesson as the Fifty-Fifty, which is placed at III, and a reverse Martini is still called at craft bars. The Martini book leans III, and nothing here needs the person who trains the floor.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Turf Cocktail",
+			"proposed": 3,
+			"because": "It is a lost pre-Prohibition Martini dressing explained in a paragraph, which is exactly the argument that put Blue Moon at III. The Martini book leans III, and Level IV names the Obscura, not the old corners of the Martini book.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Obituary Cocktail",
+			"proposed": 3,
+			"because": "It is a Martini with two dashes of absinthe and one bar's lore: a paragraph at most, the Martini book's own III register. Being rare inside a III book does not make it Obscura, and ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Miami Vice",
+			"proposed": 2,
+			"because": "It is half Frozen Piña Colada and half Strawberry Daiquiri, both placed at II, and beach and resort bars pour it weekly as everyday tiki. Matching the thickness takes a sentence and an example, not a paragraph.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Frosé",
+			"proposed": 3,
+			"because": "It is still on summer patio menus every year and asked for by name, so it is not rare. Freezing the wine first and adding vodka for texture needs a paragraph (III), not the menu writer. Ties break down from IV.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Banana Daiquiri",
+			"proposed": 2,
+			"because": "It is the Strawberry Daiquiri (II) with a different fruit, following the family template. The one point, a very ripe banana for body, takes a sentence and an example, so there is no III signal and the tie breaks down.",
+			"group": "cocktails"
+		}
+	],
+	"dispositions": [
+		{
+			"key": "Rome with a View",
+			"action": "moved",
+			"reason": "The challenge wins: the drink is the Americano (a Level II calibration drink) with lime, sugar and soda, which takes a sentence and an example, the standard names the common highballs at II, and the house-call book leans II; ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Cable Car",
+			"action": "moved",
+			"reason": "The challenge wins: it is the Sidecar template (Level I) on spiced rum with a cinnamon-sugar rim, a sentence and an example, and 'tied to one bar' is true of the whole book, so the house-call lean to II decides; ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Clarified Milk Punch",
+			"action": "moved",
+			"reason": "The book is the first signal and Modern Craft Classics leans II. The long method is batch prep off a sheet, which the standard puts at II, not a call made at the stick. The tie breaks down, so II.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Port Light",
+			"action": "moved",
+			"reason": "The standard leans only the Obscura, frozen and after-dinner books to IV. Tiki & Tropical is a lore book whose canon in full sits at III. Being rare on menus is a weaker signal than the book, so the tie breaks down to III. Tradewinds moves with it for the same reason.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Halekulani",
+			"action": "moved",
+			"reason": "Same reading as Port Light: a short sour spec in the tiki book, whose canon in full is III. No book or family signal lifts it to IV, and ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Suffering Bastard",
+			"action": "moved",
+			"reason": "It is a built Highball (a Buck with gin and brandy), explained in a sentence and an example, and poured regularly on tiki menus. The family template and the pour frequency outweigh the lore, so the tie breaks down to II.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Goombay Smash",
+			"action": "moved",
+			"reason": "The challenge wins: its rum, coconut, pineapple and apricot build takes a sentence and an example, and beach bars pour it weekly, so it counts as everyday tiki. Between II and III the tie breaks down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Boothby",
+			"action": "moved",
+			"reason": "The challenge wins: it is a Manhattan with a champagne float, explained in one line against its Level I parent. Its siblings Old Pal and Improved Whiskey Cocktail sit at III, and the III or IV tie breaks down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Mamie Taylor",
+			"action": "moved",
+			"reason": "The book of house calls leans II and the build takes a sentence and an example; rarity is the only pull upward, and the Horse's Neck and Presbyterian, just as seldom ordered, sit at II, so the tie breaks down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Batanga",
+			"action": "moved",
+			"reason": "The book leans II and the drink is the Cuba Libre's tequila pair, taught in a sentence and an example; the La Capilla lore adds colour, not a lesson, and the Kalimotxo sets the precedent for a rare cola build at II.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Death in the Afternoon",
+			"action": "moved",
+			"reason": "Two ingredients with one point of method, the louche, fit a sentence and an example in a book that leans II; rarity alone ties, as with the Kalimotxo, and ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Grasshopper",
+			"action": "moved",
+			"reason": "The challenge wins on family and explanation: it is the cream family's template, equal parts shaken, a sentence and an example beside the Brandy Alexander at II. The lore is colour, not the deciding signal, and ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Toasted Almond",
+			"action": "moved",
+			"reason": "One swap on the White Russian (Level II) template is a sentence and an example; a guest expecting it made right is true of every drink and does not decide the level. It sits with the Mudslide at II.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Stinger",
+			"action": "moved",
+			"reason": "A two-bottle Duo on the template shape, like the Rusty Nail and Godfather at II. Shaken, always white menthe, is one sentence and an example rather than a paragraph, and ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Eggnog",
+			"action": "moved",
+			"reason": "It is the most asked-for seasonal call, beside Mulled Wine at II; the dry shake is the Level II Dry-Shake Discipline drill, and batch ageing is prep-sheet work, not the pour.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Sherry Flip",
+			"action": "moved",
+			"reason": "Same method, glass and family as the Porto Flip at III with one bottle swapped; the note calls it the gentlest member, not a last member, so it does not lean higher. Ties break down to its sibling.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Ferrari",
+			"action": "kept",
+			"reason": "The after-dinner book leans IV and the Shot Board mention already lowers it one step to III; the Shot Board card carries the shooter placement, and a staff handshake is not a guest's weekly call at a good bar.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Nutty Irishman",
+			"action": "kept",
+			"reason": "The first signal, the after-dinner book, leans IV; being the book's everyday call is exactly what lowered it to III, and a coffee-service liqueur pour is not among the house calls the standard names at II.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Snowball",
+			"action": "moved",
+			"reason": "The challenge wins: a British bar is asked for it by name every December and it is one sentence to build, so the frequency and explanation signals pull it below the book's IV lean, and ties break down to III.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Brave Bull",
+			"action": "moved",
+			"reason": "The challenge wins: it is the Black Russian template with the spirit swapped, a family template riff rather than an outlier, explained in a sentence, so against the book's IV lean the tie breaks down to III.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Porto Tónico",
+			"action": "moved",
+			"reason": "The challenge wins: it is the Gin & Tonic template with white port as the base, a sentence and an example, and a common spritz-style aperitif serve is a house call at II; the paragraph claim does not hold.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Tatanka",
+			"action": "kept",
+			"reason": "The book leans III and the frequency signal does not pull it down: outside Polish bars it is not a weekly house call at a good bar, unlike the Caipiroska or Snakebite, so it stays with its book.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Caffè Corretto",
+			"action": "moved",
+			"reason": "The challenge wins: it is one sentence to build, the Carajillo in the same book already sits at II on the same logic, and the resentin is lore rather than build, so ties break down to II.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Charro Negro",
+			"action": "moved",
+			"reason": "The challenge wins: within its world book a tequila, cola and lime build is a weekly call that takes a sentence and an example, the same case as Bloody Maria at II, and ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Palmetto",
+			"action": "moved",
+			"reason": "The challenge wins: the Manhattan is the family's template, not the Palmetto; the Obscura leans IV, it is rare on menus and not a weekly pour, so the first two signals agree on IV, consistent with the Harvard.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Pomegranate Martini",
+			"action": "moved",
+			"reason": "Its own note explains it in one sentence against a Level I drink, the same register as the Lychee Martini and Appletini at II; nothing in it needs a paragraph, so the tie breaks down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Astoria",
+			"action": "moved",
+			"reason": "The Martini book leans III, not IV; the inverted Martini is the Fifty-Fifty's lesson at III, and nothing here is asked of the person who trains the floor.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Turf Cocktail",
+			"action": "moved",
+			"reason": "A pre-Prohibition Martini dressing explained in a paragraph matches Blue Moon at III; Level IV names the Obscura, and the Martini book's last members sit at its own III lean.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Obituary Cocktail",
+			"action": "moved",
+			"reason": "A Martini with two dashes of absinthe and one bar's lore is a paragraph at most; rarity inside a III book does not lift it past the book's lean, and ties break down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Miami Vice",
+			"action": "moved",
+			"reason": "Both halves are placed at II and it is everyday beach-bar tiki; matching the thickness of two batches is a sentence and an example, so the tie breaks down.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Frosé",
+			"action": "moved",
+			"reason": "It is still asked for by name on summer patio menus, so it is not rare; the freezing and texture point takes a paragraph, not the menu writer, so it breaks down to III.",
+			"group": "cocktails"
+		},
+		{
+			"key": "Banana Daiquiri",
+			"action": "moved",
+			"reason": "It follows the Strawberry Daiquiri template at II with a different fruit; the ripe-banana point is a sentence and an example, with no III signal, so the tie breaks down.",
+			"group": "cocktails"
+		}
+	],
+	"criticChanges": [
+		{
+			"group": "cocktails",
+			"key": "Frozen Mudslide",
+			"from": 4,
+			"to": 2,
+			"because": "Everyday item placed high: within the frozen book the drinks a good bar pours weekly sit lower, and the Mudslide, Frozen Margarita and Frozen Piña Colada already sit at II."
+		}
+	],
+	"criticDropped": [],
+	"unresolved": [],
+	"notes": "Supply is the main problem, and the gate (tools/check-levels.mjs SUPPLY) will still fail after this repair. (1) Spirits: only 15 craft questions carry [spirits], but four at each of four levels needs 16. No set of moves can pass. Before the moves: I 4, II 7, III 4, IV 0, so the Level IV test (it deals 2 spirits questions) could not be dealt at all. After moves 1, 2 and 7: 4/4/4/3. The operator must write one more spirits question for Bar Manager (bottle book, allocation or sourcing) or lower SUPPLY. (2) The craft budget is floor(78/10) = 7, so moves 8 and 9 (stirred drink to III, oleo to III) are recorded but not applied. Level III then holds 1 technique and 1 prep question against 2 each. Apply them by hand: II keeps 4 of each. (3) Level IV started with 0 technique and 0 prep questions. Moves 3 to 6 bring each to 2. (4) Level IV Behind the Stick goes 4 to 6 with the two stick moves. Level IV shots goes 1 to 4. Drift I found and left: the mead questions at II sit below the mead cards at III, the Trappist mark question at II sits below its card at III, and the Dunkel/Schwarzbier question at II sits below Schwarzbier at III. These are below their lessons, not above, and ties break down, so one option is to lower those cards. The Chartreuse and NOM questions now sit at IV, above prod:chartreuse (II) and the III agave producers and flight. That drift is caused by supply and goes away once a real IV spirits question exists. Coffee faults at IV (Stale, Scale and water) follow the standard's own line on coffee faults. Briefs read: tools/levels/out/questions-craft-1/2, shots-1..4, coffee-1/2; standard in C:/Users/zpull/BartendersLedger/tools/levels/README.md."
+}

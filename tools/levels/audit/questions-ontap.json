@@ -1,0 +1,230 @@
+{
+	"assigned": "2026-09-26",
+	"standard": "tools/levels/README.md, \"The standard\"",
+	"counts": [
+		13,
+		52,
+		40,
+		10
+	],
+	"challenges": [
+		{
+			"key": "q:a-barback-goes-into-the-walk-in-to-change-a-keg-drops-and-does-n",
+			"proposed": 1,
+			"because": "Level I is asked to know the walk-in, and changing kegs there is week-one barback work. The answer (stay out, call for help, prop the door) is one sentence, and the person at risk is the one it must reach first. Ties break down.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:most-american-domestic-and-craft-kegs-use-which-coupler",
+			"proposed": 1,
+			"because": "Tapping a fresh keg in the walk-in is trusted to a barback in week one, and 'US kegs take a D coupler' is one sentence that applies to nearly every keg on the floor. The finer coupler cases (U, S, German imports) stay at II.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:why-does-a-long-draw-line-want-a-fob-detector-when-a-direct-draw",
+			"proposed": 2,
+			"because": "On a long-draw bar a FOB gets reset at every keg change in a shift, and the answer ('it holds beer in the run when the keg blows') takes a sentence and an example. That is system upkeep at II, not a paragraph.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:an-hour-into-a-hot-festival-the-jockey-box-pours-nothing-but-foa",
+			"proposed": 2,
+			"because": "The lesson is restriction against applied pressure: raise the gas to cover what the coil eats up. That is the draught balance the standard gives to II, the same lesson as the trimmed-line question placed at II. Ties break down.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:you-are-setting-up-a-manifold-serving-kegs-that-want-anywhere-fr",
+			"proposed": 2,
+			"because": "'A secondary regulator only cuts pressure, so the primary sits above the thirstiest keg' takes a sentence and an example. That is gas and the system, which the signals place at II, and nothing in it tests the styles in full.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-60-foot-run-needs-30-psi-applied-to-move-beer-at-a-working-spe",
+			"proposed": 3,
+			"because": "This is gas, not cellar and condition or how beer is made (the only IV lessons the signals name). A paragraph of partial pressure puts it at III at most, and ties break down.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:one-keg-pours-with-a-wet-cardboard-note-every-other-tap-is-clean",
+			"proposed": 2,
+			"because": "It tests the same lesson as the pull-the-handle question placed at II: leave the beer in the keg, photograph the date code, call the rep. The shift bartender finds the keg and must not dump it, and that is a sentence and an example.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-guest-tells-you-they-have-a-milk-allergy-and-asks-whether-they",
+			"proposed": 1,
+			"because": "Milk stout is on most draught walls, a guest expects any bartender to know lactose is milk, and the answer is one sentence. Placing an allergen refusal high hides a safety answer from the person most likely to pour it.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-guest-tells-you-she-is-not-drinking-tonight-then-asks-for-the-",
+			"proposed": 1,
+			"because": "A radler is half beer, so it is not alcohol free: one sentence. It is the plainest case of the legal floor, pouring alcohol for a guest who has said they are not drinking, and any bartender is expected to catch it.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:your-wall-has-a-dunkel-and-a-schwarzbier-side-by-side-and-a-gues",
+			"proposed": 2,
+			"because": "Two dark lagers side by side, a guest asking, and a one-line answer (bread crust and no roast, against dry cocoa). That is the pair a Barback confuses, the same signal that put pilsner against helles at II. Ties break down.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-guest-who-dislikes-bitterness-asks-whether-the-triple-dry-hopp",
+			"proposed": 2,
+			"because": "Hazy IPA is on nearly every tap wall and \"will it be bitter?\" is a weekly guest question. Guest frequency outweighs lesson depth, and the answer is one sentence with an example: cold hops still bite, about two thirds as hard.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-guest-waves-off-the-schwarzbier-because-dark-beer-is-heavy-and",
+			"proposed": 2,
+			"because": "\"Dark beer is heavy\" is the commonest myth a guest brings to the tap wall. The fix takes a sentence and an example: dark grain is 2 to 10 percent of the bill and adds colour, not strength. Guest frequency outranks lesson depth, and ties break down.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:your-first-cider-keg-pours-a-head-that-is-gone-before-the-glass-",
+			"proposed": 2,
+			"because": "Cider is on most tap walls, and a flat-looking cider head is a routine keg-change query that stops a bartender from chasing the gas. That is the draught system and its common faults, answered in one sentence (no protein, no foam), so Level II.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-guest-balks-at-18-dollars-for-a-10-oz-barrel-aged-stout-and-as",
+			"proposed": 3,
+			"because": "This is a guest challenging a price across the bar, answered on the floor rather than in the pour-cost ledger. It needs a paragraph, and a knowing guest notices a weak answer, which is the Level III signal. Ties break down from IV.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-normandy-cidre-doux-is-sweet-and-under-3-percent-alcohol-and-n",
+			"proposed": 3,
+			"because": "The brief places cider and perry at III and names only how beer is made at IV. Keeving is the method behind a style that cider bars list, and it needs a paragraph, so the cider line decides it and the tie breaks down.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-small-meadery-s-young-bottle-smells-of-rotten-egg-and-they-tel",
+			"proposed": 3,
+			"because": "The signals place mead at III, and the lesson is spotting a mead fault and not accepting the maker's \"give it a year\". That takes a paragraph but is not how beer is made, so the mead line holds it at III and the tie breaks down.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-cook-asks-why-sake-needs-no-mash-rest-and-no-boil-the-way-beer",
+			"proposed": 3,
+			"because": "The signals name sake at III. Koji and parallel fermentation are the core of what sake is, and a Head Bartender explaining the sake list needs them. The beer mash only serves as the contrast, so the sake lesson decides it and the tie breaks down.",
+			"group": "questions-ontap"
+		}
+	],
+	"dispositions": [
+		{
+			"key": "q:a-barback-goes-into-the-walk-in-to-change-a-keg-drops-and-does-n",
+			"action": "moved",
+			"reason": "Level I is asked to know the walk-in, and keg changes there happen at that level. The answer is one sentence, a Level I signal, and the tie with gas at II breaks down.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:most-american-domestic-and-craft-kegs-use-which-coupler",
+			"action": "moved",
+			"reason": "'US kegs take a D coupler' is one sentence about nearly every keg changed in the walk-in, which is Level I ground. The finer coupler families stay at II, and the tie breaks down.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:why-does-a-long-draw-line-want-a-fob-detector-when-a-direct-draw",
+			"action": "moved",
+			"reason": "The answer is one line, and the explanation needs only a sentence and an example about system upkeep at a keg change, so II not III. The glycol tower question moved with it for the same reason.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:an-hour-into-a-hot-festival-the-jockey-box-pours-nothing-but-foa",
+			"action": "moved",
+			"reason": "The lesson is restriction against applied pressure, the draught balance the standard gives to II, the same lesson as the trimmed-line question already at II.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:you-are-setting-up-a-manifold-serving-kegs-that-want-anywhere-fr",
+			"action": "moved",
+			"reason": "Regulator order takes a sentence and an example about gas and the system, which the signals place at II. Unlike the porter and hefeweizen question, it does not test the styles in full.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-60-foot-run-needs-30-psi-applied-to-move-beer-at-a-working-spe",
+			"action": "moved",
+			"reason": "The signals name only cellar and condition and how beer is made at IV, and this is gas. It needs a paragraph of partial pressure, so III at most, and ties break down.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:one-keg-pours-with-a-wet-cardboard-note-every-other-tap-is-clean",
+			"action": "moved",
+			"reason": "The lesson tested is the shift move on a faulted keg (leave it, photograph the code, call the rep), the same lesson as the pull-the-handle question at Level II, not the ledger in full; ties break down.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-guest-tells-you-they-have-a-milk-allergy-and-asks-whether-they",
+			"action": "moved",
+			"reason": "Unlike the celiac question, the answer is one sentence (lactose is milk) on a style found on most walls, and a safety answer placed high hides it; ties break down to Level I.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-guest-tells-you-she-is-not-drinking-tonight-then-asks-for-the-",
+			"action": "moved",
+			"reason": "The lesson is that a radler is half beer and so not alcohol free, one sentence any bartender is expected to have; the percentage arithmetic is explanation, not the test, so the tie breaks down.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:your-wall-has-a-dunkel-and-a-schwarzbier-side-by-side-and-a-gues",
+			"action": "moved",
+			"reason": "Two dark lagers side by side are the pair a Barback confuses, the same signal that put pilsner against helles at Level II, and the answer takes a sentence and an example; ties break down.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-guest-who-dislikes-bitterness-asks-whether-the-triple-dry-hopp",
+			"action": "moved",
+			"reason": "Hazy IPA is a common style, not the styles in full, and the bitterness question comes weekly with a one-sentence answer and an example; guest frequency outranks lesson depth and ties break down to II.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-guest-waves-off-the-schwarzbier-because-dark-beer-is-heavy-and",
+			"action": "moved",
+			"reason": "The dark-beer myth is the commonest a guest brings, and the fix is a sentence and an example (2 to 10 percent of the bill, colour not strength), the Level II signal; ties break down.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:your-first-cider-keg-pours-a-head-that-is-gone-before-the-glass-",
+			"action": "moved",
+			"reason": "The lesson tested is not misdiagnosing a routine keg-change fault on the draught system, answered in one sentence (no protein, no foam), so Level II rather than cider in full.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-guest-balks-at-18-dollars-for-a-10-oz-barrel-aged-stout-and-as",
+			"action": "moved",
+			"reason": "The question is a guest challenging a price across the bar, not the house pour-cost ledger; it needs a paragraph and a knowing guest notices a weak answer, so III, ties breaking down from IV.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-normandy-cidre-doux-is-sweet-and-under-3-percent-alcohol-and-n",
+			"action": "moved",
+			"reason": "The signals place cider at III and name only how beer is made at IV; keeving is the method behind a cider style bars list and needs a paragraph, so III with the tie breaking down.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-small-meadery-s-young-bottle-smells-of-rotten-egg-and-they-tel",
+			"action": "moved",
+			"reason": "Mead sits at III in the signals and the floor lesson is recognising the fault and rejecting the maker's excuse; it is not how beer is made, so III with the tie breaking down.",
+			"group": "questions-ontap"
+		},
+		{
+			"key": "q:a-cook-asks-why-sake-needs-no-mash-rest-and-no-boil-the-way-beer",
+			"action": "moved",
+			"reason": "Koji and parallel fermentation are what sake is, and the signals name sake at III; the beer mash is only the contrast, so the sake lesson decides it and the tie breaks down to III.",
+			"group": "questions-ontap"
+		}
+	],
+	"criticChanges": [
+		{
+			"group": "questions-ontap",
+			"key": "q:the-baltic-porter-runs-8-5-percent-and-carries-none-of-the-alcoh",
+			"from": 4,
+			"to": 3,
+			"because": "Drift: the question sits above the style it asks about; On Tap · Baltic Porter is at III, and ties break down."
+		}
+	],
+	"criticDropped": [],
+	"unresolved": [],
+	"notes": "Supply is the main problem, and the gate (tools/check-levels.mjs SUPPLY) will still fail after this repair. (1) Spirits: only 15 craft questions carry [spirits], but four at each of four levels needs 16. No set of moves can pass. Before the moves: I 4, II 7, III 4, IV 0, so the Level IV test (it deals 2 spirits questions) could not be dealt at all. After moves 1, 2 and 7: 4/4/4/3. The operator must write one more spirits question for Bar Manager (bottle book, allocation or sourcing) or lower SUPPLY. (2) The craft budget is floor(78/10) = 7, so moves 8 and 9 (stirred drink to III, oleo to III) are recorded but not applied. Level III then holds 1 technique and 1 prep question against 2 each. Apply them by hand: II keeps 4 of each. (3) Level IV started with 0 technique and 0 prep questions. Moves 3 to 6 bring each to 2. (4) Level IV Behind the Stick goes 4 to 6 with the two stick moves. Level IV shots goes 1 to 4. Drift I found and left: the mead questions at II sit below the mead cards at III, the Trappist mark question at II sits below its card at III, and the Dunkel/Schwarzbier question at II sits below Schwarzbier at III. These are below their lessons, not above, and ties break down, so one option is to lower those cards. The Chartreuse and NOM questions now sit at IV, above prod:chartreuse (II) and the III agave producers and flight. That drift is caused by supply and goes away once a real IV spirits question exists. Coffee faults at IV (Stale, Scale and water) follow the standard's own line on coffee faults. Briefs read: tools/levels/out/questions-craft-1/2, shots-1..4, coffee-1/2; standard in C:/Users/zpull/BartendersLedger/tools/levels/README.md."
+}

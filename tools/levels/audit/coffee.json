@@ -1,0 +1,146 @@
+{
+	"assigned": "2026-09-26",
+	"standard": "tools/levels/README.md, \"The standard\"",
+	"counts": [
+		10,
+		20,
+		8,
+		5
+	],
+	"challenges": [
+		{
+			"key": "Coffee · Flat White",
+			"proposed": 1,
+			"because": "A milk drink sold every morning and on every British coffee board. How often it is ordered weighs before how much it takes to explain, so the latte pairing alone should not lift it above the cappuccino and latte at I.",
+			"group": "coffee"
+		},
+		{
+			"key": "Coffee · Green Tea",
+			"proposed": 1,
+			"because": "It is the second tea on any menu that has tea, and guests expect it. The fix is one sentence, off the boil because hot water pulls the bitter catechins too fast, so frequency and a one-line lesson put it at I. Ties break down.",
+			"group": "coffee"
+		},
+		{
+			"key": "Coffee · Under-extracted",
+			"proposed": 2,
+			"because": "The card tests the Shot lesson 'Sour and bitter are the two directions of extraction', and that section sits at II; a sour morning shot is tasted every shift and the fix takes a sentence and an example.",
+			"group": "coffee"
+		},
+		{
+			"key": "Coffee · Over-extracted",
+			"proposed": 2,
+			"because": "This is the same Shot lesson as Under-extracted, in a section placed at II. 'Bitter is not strong, so grind coarser' is a sentence and an example a shift depends on. At IV it is hidden from the person pulling the shots.",
+			"group": "coffee"
+		},
+		{
+			"key": "Coffee · Scalded milk",
+			"proposed": 2,
+			"because": "It tests 'The temperature ceiling' in Milk and Latte Art, placed at II. Extra hot is asked for every morning, and the answer is a sentence and an example (the ceiling, then what it does to sweetness).",
+			"group": "coffee"
+		},
+		{
+			"key": "Coffee · Stewed tea",
+			"proposed": 2,
+			"because": "It tests 'The steep, and what over-steeping actually is' in Tea Service, placed at II. A guest asking for a top up happens on any shift, and the answer is a sentence and an example.",
+			"group": "coffee"
+		},
+		{
+			"key": "Coffee · Rancid oils",
+			"proposed": 2,
+			"because": "A detergent backflush is on the closing list, which the standard puts at Level I. Knowing why a water flush is not cleaning takes a sentence and an example, and ties break down.",
+			"group": "coffee"
+		},
+		{
+			"key": "Coffee · Split milk",
+			"proposed": 3,
+			"because": "Cream and milk splitting in hot, acidic or spiked cups (Irish Coffee is Level I) is a miss a guest sees at the pass. The diagnosis needs a paragraph, not the menu writer, and ties break down.",
+			"group": "coffee"
+		},
+		{
+			"key": "sec:coffee/matcha",
+			"proposed": 2,
+			"because": "The matcha latte on a bar and chai are poured weekly, and the Matcha card is already placed at II. Ties break down, so a section should not sit above its everyday card.",
+			"group": "coffee"
+		},
+		{
+			"key": "Coffee · Pu-erh",
+			"proposed": 3,
+			"because": "It tests 'Pu-erh and the genuinely fermented teas' in The Leaf, a book of lore placed at III. Wet piling needs a paragraph of lore, not the person who writes the menu, and ties break down.",
+			"group": "coffee"
+		}
+	],
+	"dispositions": [
+		{
+			"key": "Coffee · Flat White",
+			"action": "moved",
+			"reason": "The challenge wins: the signals put the milk drinks a bar sells every morning low, and order frequency weighs before explanation, so the flat white sits with the cappuccino and latte at I.",
+			"group": "coffee"
+		},
+		{
+			"key": "Coffee · Green Tea",
+			"action": "moved",
+			"reason": "The challenge wins: green tea is on nearly every menu that has tea, its lesson is one sentence (off the boil), and with black tea at I the tie breaks down.",
+			"group": "coffee"
+		},
+		{
+			"key": "Coffee · Under-extracted",
+			"action": "moved",
+			"reason": "The card tests a lesson of The Shot, placed at II, and a sour shot is tasted every morning; the drinks sold every morning sit lower than the faults line, and ties break down.",
+			"group": "coffee"
+		},
+		{
+			"key": "Coffee · Over-extracted",
+			"action": "moved",
+			"reason": "Same Shot lesson as Under-extracted at II; bitter is not strong is a sentence and an example, and at IV it would be hidden from the person pulling shots.",
+			"group": "coffee"
+		},
+		{
+			"key": "Coffee · Scalded milk",
+			"action": "moved",
+			"reason": "It tests the temperature ceiling lesson in Milk and Latte Art at II, extra hot is asked daily, and the answer is a sentence and an example, so ties break down from III.",
+			"group": "coffee"
+		},
+		{
+			"key": "Coffee · Stewed tea",
+			"action": "moved",
+			"reason": "It tests the steep lesson in Tea Service at II, a top up is asked on any shift, and the answer is a sentence and an example, so ties break down from III.",
+			"group": "coffee"
+		},
+		{
+			"key": "Coffee · Rancid oils",
+			"action": "moved",
+			"reason": "The detergent backflush is nightly closing work, and why water does not clean oxidised fat takes a sentence and an example; IV hid it from the person who closes the machine.",
+			"group": "coffee"
+		},
+		{
+			"key": "Coffee · Split milk",
+			"action": "moved",
+			"reason": "Splitting in hot, acidic or spiked cups (Irish Coffee is Level I) is seen by the guest at the pass and needs a paragraph, not the menu writer; ties break down to III.",
+			"group": "coffee"
+		},
+		{
+			"key": "sec:coffee/matcha",
+			"action": "moved",
+			"reason": "The matcha latte and chai are poured weekly and the Matcha card sits at II; a section should not sit above its everyday card, and ties break down.",
+			"group": "coffee"
+		},
+		{
+			"key": "Coffee · Pu-erh",
+			"action": "moved",
+			"reason": "The Leaf, a book of lore placed at III, holds the pu-erh lesson and the book signal weighs first; wet piling needs a paragraph, not the menu writer, so ties break down to III.",
+			"group": "coffee"
+		}
+	],
+	"criticChanges": [
+		{
+			"group": "coffee",
+			"key": "Coffee · Oolong",
+			"from": 4,
+			"to": 3,
+			"because": "Drift: Pu-erh, the more specialist tea, sits at III; oolong is on more tea lists, and ties break down. IV keeps four coffee or tea cards."
+		}
+	],
+	"criticDropped": [],
+	"unresolved": [],
+	"notes": "Supply is the main problem, and the gate (tools/check-levels.mjs SUPPLY) will still fail after this repair. (1) Spirits: only 15 craft questions carry [spirits], but four at each of four levels needs 16. No set of moves can pass. Before the moves: I 4, II 7, III 4, IV 0, so the Level IV test (it deals 2 spirits questions) could not be dealt at all. After moves 1, 2 and 7: 4/4/4/3. The operator must write one more spirits question for Bar Manager (bottle book, allocation or sourcing) or lower SUPPLY. (2) The craft budget is floor(78/10) = 7, so moves 8 and 9 (stirred drink to III, oleo to III) are recorded but not applied. Level III then holds 1 technique and 1 prep question against 2 each. Apply them by hand: II keeps 4 of each. (3) Level IV started with 0 technique and 0 prep questions. Moves 3 to 6 bring each to 2. (4) Level IV Behind the Stick goes 4 to 6 with the two stick moves. Level IV shots goes 1 to 4. Drift I found and left: the mead questions at II sit below the mead cards at III, the Trappist mark question at II sits below its card at III, and the Dunkel/Schwarzbier question at II sits below Schwarzbier at III. These are below their lessons, not above, and ties break down, so one option is to lower those cards. The Chartreuse and NOM questions now sit at IV, above prod:chartreuse (II) and the III agave producers and flight. That drift is caused by supply and goes away once a real IV spirits question exists. Coffee faults at IV (Stale, Scale and water) follow the standard's own line on coffee faults. Briefs read: tools/levels/out/questions-craft-1/2, shots-1..4, coffee-1/2; standard in C:/Users/zpull/BartendersLedger/tools/levels/README.md."
+}
