@@ -2,8 +2,9 @@
  * The menu importer's parser, gated.
  *
  * This is src/lib/menu-parse.test.ts from the World Table, ported from vitest
- * to node:test, and pointed at the SHIPPED js/menu-parse.js rather than at a
- * copy of it. Extracting the real function through vm is the same anti-drift
+ * to node:test, and pointed at the SHIPPED js/menu-desk.js (the Menu Desk
+ * port, through its parseMenuText adapter) rather than at a copy of it.
+ * Extracting the real function through vm is the same anti-drift
  * discipline tools/check.mjs already uses for slugify: a test that reads a
  * duplicate of the code passes forever after the code changes.
  *
@@ -18,8 +19,22 @@
  * The three vitest imports and the `type Row = Omit<...>` line; the two type
  * annotations on the `rows` and `one` helpers; the `as never` casts; and that
  * is all. Every assertion below is the assertion that was written for the
- * parser, not a transcription of it. The cocktail half at the bottom was
+ * parser, not a transcription of it, with two pins re-read for the desk: the
+ * reader now takes every run-on line until the next item, and a name over a
+ * price on its own line is a priced dish. The cocktail half at the bottom was
  * written here, because js/menu-drinks.js has no counterpart over there.
+ *
+ * THE DESK HALF runs the three desk fixtures under tools/fixtures/ (copied
+ * from WorldTable/src/lib/desk/fixtures, never edited here) through the
+ * shipped readMenu, then through menuDrinkFromDeskItem and saveBarRecord
+ * with progress stubbed, and pins the rule that matters most: every measure
+ * lineOz finds on a produced spec line is a substring of the raw line the
+ * row came from, and '3/4 oz lime' is one part reading 0.75, never '4 oz'.
+ * Beside it: a draft is dealt by no deck, Tonight's Session included, and
+ * arrives as a draft through the backup import's two branches; her method,
+ * glass and garnish are kept INTO the field through keepMaitreField; "It is
+ * a dish" on the shared origin replaces the inbox's row by id over a
+ * Map-backed slot; and the never-twice answer is said once through say().
  *
  * Run: node tools/check-import.mjs
  */
@@ -30,12 +45,15 @@ import assert from 'node:assert/strict';
 import vm from 'node:vm';
 
 const JS = process.env.LEDGER_JS || new URL('../js/', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1');
-const src = readFileSync(join(JS, 'menu-parse.js'), 'utf8');
+const src = readFileSync(join(JS, 'menu-desk.js'), 'utf8');
 /* runInThisContext, not a sandbox: the parser touches no DOM, and an array
    built in another realm has another realm's Array.prototype, which makes
    every deepStrictEqual in this file fail on the prototype rather than on
    the values. */
-const { parseMenuText } = vm.runInThisContext(src + ';({parseMenuText})');
+const { parseMenuText, readMenu, deskSource, deskInbox, reReadAs, priceInRaw } = vm.runInThisContext(
+	src + ';({parseMenuText,readMenu,deskSource,deskInbox,reReadAs,priceInRaw})');
+const FIXTURES = new URL('./fixtures/', import.meta.url);
+const fixture = (name) => readFileSync(new URL(name, FIXTURES), 'utf8');
 const { htmlToMenuText, linkToText } = vm.runInThisContext(
 	readFileSync(join(JS, 'menu-read.js'), 'utf8') + ';({htmlToMenuText,linkToText})');
 
@@ -49,11 +67,35 @@ globalThis.window = {};
 if(!globalThis.navigator) Object.defineProperty(globalThis, 'navigator', { value: {}, configurable: true });
 globalThis.localStorage = { getItem: () => null, setItem(){}, removeItem(){} };
 globalThis.document = { getElementById: () => null, querySelector: () => null };
+/* ui-import.js rides along too, for the desk's re-kind and the never-twice
+   answer. It calls say() and render(), which live in app.js and are not
+   loaded, so both are stubs: say() collects what it was asked to announce,
+   and the pins read that list. FileReader and confirm are the two globals
+   the backup import touches; both are stubbed synchronous, so a pin reads
+   the result in the same tick, and confirm answers from a queue because the
+   import asks twice (merge? then replace?) on the replace path. */
+globalThis.announced = [];
+globalThis.say = (m) => { if (m) globalThis.announced.push(String(m)); };
+globalThis.render = () => {};
+globalThis.confirmAnswers = [];
+globalThis.confirm = () => (globalThis.confirmAnswers.length ? globalThis.confirmAnswers.shift() : true);
+globalThis.FileReader = class { readAsText(text){ this.result = text; if (this.onload) this.onload(); } };
+/* ui-study.js, ui-new.js, ui-menu.js and ui-import.js ride along for the desk
+   half: the record's save (saveBarRecord), its shape pass
+   (normalizeBarRecord), the pour sources, the session deck, the backup
+   import and the re-kind of a row are what the drafts and the round trip
+   are asserted against, and they are the SHIPPED functions. Their order is
+   index.html's, because ui-menu.js assigns SEARCH_INDEX, which ui-new.js
+   declares; srs.js is here because the backup import calls srsMigrate. */
 const APP = ['data-core.js', 'data-lore.js', 'data-service.js', 'data-ingredients.js',
-	'ingredients.js', 'engine.js', 'ui-reference.js', 'ui-prep.js', 'menu-drinks.js'];
+	'ingredients.js', 'engine.js', 'srs.js', 'ui-study.js', 'ui-practice.js', 'ui-reference.js', 'ui-prep.js', 'ui-new.js',
+	'menu-drinks.js', 'ui-menu.js', 'ui-import.js'];
 const W = vm.runInThisContext(APP.map((f) => readFileSync(join(JS, f), 'utf8')).join(';\n') +
-	';({menuDrinkFromRow,menuDraftFromText,menuCanonMeasures,unmeasuredReason,measureReport,' +
-	'MD_isIngredientList,MD_spiritOf,lineOz,COCKTAILS,progress})');
+	';({menuDrinkFromDeskItem,menuDraftsFromDesk,menuDraftFromText,menuCanonMeasures,unmeasuredReason,measureReport,' +
+	'MD_isIngredientList,MD_listParts,MD_spiritOf,lineOz,COCKTAILS,progress,state,' +
+	'saveBarRecord,normalizeBarRecord,normalizeBarRecords,normalizeMaitre,mergeMaitre,missingFor,pourSources,allDrinks,barChanged,' +
+	'fcPool,buildRound,menuCardCount,sessionDeckParts,sessionCardPool,dataImport,keepMaitreField,' +
+	'blankImport,importFromText,importReKind})');
 
 /* The handful of vitest matchers this suite uses, over node:assert. A shim
    rather than a rewrite, so every assertion below is the assertion that was
@@ -539,11 +581,15 @@ describe('names and descriptions', () => {
 		);
 	});
 
-	it('takes two run-on lines and then stops', () => {
+	it('takes every run-on line until the next item', () => {
+		// The two-line cap went with the desk: a description is however many
+		// lines the menu gave it, and the next ITEM (a priced line, a name over
+		// a price, a heading) is what ends it, not a count.
 		const { dishes } = parseMenuText('Roast chicken 16\nbread sauce\nand greens\nand a fourth line');
-		expect(dishes[0].description).toBe('bread sauce and greens');
-		expect(dishes).toHaveLength(2);
-		expect(dishes[1].name).toBe('and a fourth line');
+		expect(dishes).toHaveLength(1);
+		expect(dishes[0].description).toBe('bread sauce and greens and a fourth line');
+		const two = parseMenuText('Roast chicken 16\nbread sauce\nand greens\nWhole plaice 24');
+		expect(two).toMatchObject({ dishes: [{ description: 'bread sauce and greens' }, { name: 'Whole plaice', price: '24' }] });
 	});
 
 	it('keeps a word an OCR pass split in half with the dish it belongs to', () => {
@@ -556,6 +602,12 @@ describe('names and descriptions', () => {
 		expect(parseMenuText('9.50').dishes).toEqual([]);
 		expect(parseMenuText('(v)').dishes).toEqual([]);
 		expect(parseMenuText('9.50').skipped).toEqual(['9.50']);
+		// A price alone is an orphan; a price under a name is the name's. This
+		// was the main failure on a real menu: the price on its own line was
+		// junk, and the dish above it went priceless.
+		const { dishes } = parseMenuText('Soup of the day\n9.50');
+		expect(dishes).toHaveLength(1);
+		expect(dishes[0]).toMatchObject({ name: 'Soup of the day', price: '9.50', confidence: 'high' });
 	});
 
 	it('takes a takeaway menu number off the front of the dish', () => {
@@ -873,13 +925,57 @@ describe('nothing is invented', () => {
 	/* THE ONE THAT MATTERS. lineOz is the real shipped function, not a copy of
 	   its pattern: if a measure ever reaches a produced line it reaches
 	   balanceOf and the pour-cost sheet, and a bartender is shown a percentage
-	   that came from nowhere. */
-	it('never puts a measure on a spec line', () => {
+	   that came from nowhere. A menu that prints no measures produces none. */
+	it('never puts a measure on a spec line the menu did not print', () => {
 		for (const d of draft(MENU)) {
 			for (const line of d.rec.spec) {
 				expect(W.lineOz(line)).toBe(0);
 			}
 		}
+	});
+
+	/* And a menu that DOES print measures keeps them exactly, on the part the
+	   menu put them on: every measure lineOz finds in a produced line is a
+	   substring of the raw line the row came from. The trap this pins is the
+	   fraction slash: the old splitter cut '3/4 oz lime' at the slash and
+	   shipped a part reading '4 oz lime', an invented measure that reached the
+	   cost sheet. The desk masks the fraction before it splits. */
+	it('never puts a measure on a spec line that the raw line did not print', () => {
+		const PRINTED = [
+			'COCKTAILS',
+			'',
+			'Gimlet - 2 oz gin / 3/4 oz lime / 3/4 oz simple syrup   14',
+			'Daiquiri | 2 oz white rum, 1 oz lime, 3/4 oz simple   13',
+			'Old Fashioned',
+			'15',
+			'2 oz bourbon | 1/4 oz demerara syrup | 2 dashes angostura',
+		].join('\n');
+		const ds = draft(PRINTED);
+		expect(ds).toHaveLength(3);
+		const OZ = /(\d+\/\d+|\d+(?:\.\d+)?)\s*oz/g;
+		for (const d of ds) {
+			expect(d.rec.spec.length).toBeGreaterThan(0);
+			for (const line of d.rec.spec) {
+				for (const m of line.matchAll(OZ)) expect(d.raw).toContain(m[0]);
+				expect(line).not.toMatch(/^4 oz/);
+			}
+		}
+		const gimlet = ds[0].rec.spec;
+		expect(gimlet).toEqual(['2 oz gin', '3/4 oz lime', '3/4 oz simple syrup']);
+		expect(W.lineOz('3/4 oz lime')).toBe(0.75);
+		/* read by the shipped lineOz: two, three quarters, three quarters; a
+		   part reading '4 oz lime' would come out as 4 here, and never does */
+		expect(gimlet.map(W.lineOz)).toEqual([2, 0.75, 0.75]);
+		expect(ds[2].rec.spec).toEqual(['2 oz bourbon', '1/4 oz demerara syrup', '2 dashes angostura']);
+		expect(W.lineOz(ds[2].rec.spec[1])).toBe(0.25);
+	});
+
+	it('splits the Ledger’s own list separator with the same fraction mask', () => {
+		expect(W.MD_listParts('2 oz gin / 3/4 oz lime / 3/4 oz simple')).toEqual(['2 oz gin', '3/4 oz lime', '3/4 oz simple']);
+		expect(W.MD_listParts('Tequila / grapefruit / lime / soda')).toEqual(['Tequila', 'grapefruit', 'lime', 'soda']);
+		expect(W.MD_listParts('gin | benedictine | lime')).toEqual(['gin', 'benedictine', 'lime']);
+		expect(W.MD_listParts('gin • lime · soda')).toEqual(['gin', 'lime', 'soda']);
+		expect(W.MD_isIngredientList('2 oz gin / 3/4 oz lime')).toBe(true);
 	});
 
 	it('never puts a method, a glass or a garnish on a row', () => {
@@ -964,6 +1060,466 @@ describe('a measureless drink gets a reason, not a shrug', () => {
 			const c = W.COCKTAILS.find((x) => x.name === name);
 			if (c) expect(W.unmeasuredReason(c)).toBe(null);
 		}
+	});
+});
+
+/* ---------------------------------------------------------------------------
+   THE DESK HALF. The three fixtures the World Table pins its reader on, run
+   through the shipped port and then through this app's own adopt path, with
+   progress stubbed so saveBarRecord files into a list this test owns.
+   ------------------------------------------------------------------------- */
+
+const source = (text) => deskSource('paste', 'ledger', text);
+/** A clean list for one test: saveBarRecord writes into W.progress.bar and this puts it back. */
+function withBar(fn){
+	const before = W.progress.bar;
+	W.progress.bar = [];
+	W.barChanged();
+	try { return fn(); } finally { W.progress.bar = before; W.barChanged(); }
+}
+
+describe('the desk fixtures, read here', () => {
+	const drinks = fixture('commanders-drinks.txt');
+	const file = readMenu(drinks, source(drinks));
+
+	it('reads the drinks list into four cocktails and six wines, and the bar’s share is the four', () => {
+		expect(file.format).toBe('oot-menu-desk');
+		expect(file.items.filter((i) => i.kind === 'cocktail')).toHaveLength(4);
+		expect(file.items.filter((i) => i.kind === 'wine')).toHaveLength(6);
+		const { drafts, counts, skipped } = W.menuDraftsFromDesk(file);
+		expect(drafts.map((d) => d.rec.name)).toEqual(['Holy Trinity', 'Fuzzy Buffalo', 'Tequila Mockingbird #2', 'Gold Rush']);
+		expect(counts).toMatchObject({ cocktails: 4, wines: 6, dishes: 0, unplaced: 0 });
+		expect(skipped).toEqual([]);
+	});
+
+	it('reads the price from the line under the name and the spec from the line under that', () => {
+		const [holy] = W.menuDraftsFromDesk(file).drafts;
+		expect(holy.rec).toMatchObject({ name: 'Holy Trinity', price: '15', spec: ['trinity infused gin', 'benedictine', 'lime'], spirit: 'Gin', family: 'Other' });
+		expect(holy.confidence).toBe('high');
+		expect(holy.raw).toBe('Holy Trinity\n15\ntrinity infused gin | benedictine | lime');
+		expect(holy.priceBlanked).toBe(false);
+		expect(holy.unsure).toBe(false);
+	});
+
+	it('names the base through the lexicon, not the desk: reposado tequila is Tequila, bourbon is Whiskey', () => {
+		const names = Object.fromEntries(W.menuDraftsFromDesk(file).drafts.map((d) => [d.rec.name, d.rec.spirit]));
+		expect(names['Tequila Mockingbird #2']).toBe('Tequila');
+		expect(names['Fuzzy Buffalo']).toBe('Whiskey');
+		expect(names['Gold Rush']).toBe('Whiskey');
+	});
+
+	it('round trip: readMenu, menuDrinkFromDeskItem, saveBarRecord, and every record is a real drink', () => {
+		withBar(() => {
+			const { drafts } = W.menuDraftsFromDesk(file);
+			for (const d of drafts) {
+				const out = W.saveBarRecord(d.rec, null, { allowEmptySpec: true });
+				expect(typeof out).toBe('object');
+				expect(out.draft === undefined).toBe(true);
+				expect(out.spec).toEqual(d.rec.spec);
+				expect(out.price).toBe(d.rec.price);
+				expect(Object.keys(out).sort()).toEqual(['family', 'garnish', 'glass', 'id', 'method', 'name', 'note', 'price', 'spec', 'spirit', 'ts']);
+			}
+			expect(W.progress.bar).toHaveLength(4);
+			/* the menu printed no measures, so none reached the list */
+			for (const b of W.progress.bar) for (const line of b.spec) expect(W.lineOz(line)).toBe(0);
+			/* and the list is pourable in principle: a real spec, not a draft */
+			expect(W.pourSources()).toContain('My Bar');
+		});
+	});
+
+	it('the dinner menu: the one cocktail hiding in the tasting menu comes to the bar as an unsure row', () => {
+		const dinner = fixture('commanders-dinner.txt');
+		const f = readMenu(dinner, source(dinner));
+		const { drafts, counts } = W.menuDraftsFromDesk(f);
+		expect(counts.dishes).toBeGreaterThan(30);
+		expect(drafts).toHaveLength(1);
+		expect(drafts[0].rec.name).toBe('Kiss the Crab');
+		expect(drafts[0].unsure).toBe(true);
+		expect(drafts[0].confidence).toBe('low');
+		expect(drafts[0].why).toMatch(/could not tell what this row is/);
+		/* read again as a cocktail off its own lines. The line under the name
+		   opens with a 49-character part ('Blue crab-brown butter washed
+		   Zacapa No. 23 Solera'), which is a sentence and not an ingredient
+		   by both the desk's and this app's own rule, so it is the note, not a
+		   spec, and the row waits for a person: a guessed split would have
+		   shipped 'Blue crab-brown butter washed Zacapa No. 23 Solera' as one
+		   bottle on a spec line. */
+		expect(drafts[0].rec.spec).toEqual([]);
+		expect(drafts[0].rec.note).toMatch(/^Blue crab-brown butter washed Zacapa/);
+		expect(drafts[0].rec.price).toBe('');
+	});
+
+	it('the cellar list is nobody’s here: every row is a wine and the bar’s share is empty', () => {
+		const list = fixture('codex-pdf-list.txt');
+		const f = readMenu(list, source(list));
+		expect(f.items.every((i) => i.kind === 'wine')).toBe(true);
+		const out = W.menuDraftsFromDesk(f);
+		expect(out.drafts).toEqual([]);
+		expect(out.counts.wines).toBe(f.items.length);
+	});
+
+	it('the desk file is a draft, never a store: nothing in the round trip touches progress.bar but saveBarRecord', () => {
+		withBar(() => {
+			W.menuDraftsFromDesk(file);
+			W.menuDraftFromText(drinks, 'paste');
+			expect(W.progress.bar).toEqual([]);
+		});
+	});
+});
+
+describe('a draft: a name and nothing else', () => {
+	const bare = () => draft('COCKTAILS\n\nNegroni    13')[0];
+
+	it('is refused by the form path and filed as a draft by the importer’s', () => {
+		withBar(() => {
+			const d = bare();
+			expect(d.rec.spec).toEqual([]);
+			expect(d.confidence).toBe('low');
+			expect(typeof W.saveBarRecord(d.rec, null)).toBe('string');
+			const rec = W.saveBarRecord(d.rec, null, { allowEmptySpec: true });
+			expect(typeof rec).toBe('object');
+			expect(rec.draft).toBe(true);
+			expect(rec.spec).toEqual([]);
+			expect(rec.price).toBe('13');
+		});
+	});
+
+	it('is refused by missingFor and by pourSources, so it never reads as ready to pour', () => {
+		withBar(() => {
+			const rec = W.saveBarRecord(bare().rec, null, { allowEmptySpec: true });
+			/* a draft requires "nothing", which off an empty shelf would read as
+			   pourable; the sentinel is what a shelf can never satisfy */
+			expect(W.missingFor(rec, []).length).toBeGreaterThan(0);
+			expect(W.missingFor(rec, ['gin', 'campari', 'sweet-vermouth']).length).toBeGreaterThan(0);
+			expect(W.pourSources()).not.toContain('My Bar');
+			expect(W.allDrinks().find((x) => x.src === 'My Bar' && x.name === 'Negroni').draft).toBe(true);
+		});
+	});
+
+	it('stops being a draft the moment it is given a line', () => {
+		withBar(() => {
+			const rec = W.saveBarRecord(bare().rec, null, { allowEmptySpec: true });
+			const edited = W.saveBarRecord({ name: 'Negroni', spec: ['1 oz gin', '1 oz Campari', '1 oz sweet vermouth'], family: 'Other', spirit: 'Gin', price: '13' }, rec.id);
+			expect(typeof edited).toBe('object');
+			expect(edited.draft === undefined).toBe(true);
+			expect(W.pourSources()).toContain('My Bar');
+			/* the shelf ids the vocabulary gives the three lines: gin, campari, sv */
+			expect(W.missingFor(edited, ['gin', 'campari', 'sv'])).toEqual([]);
+		});
+	});
+
+	it('survives the shape pass at boot as a draft, and a nameless record does not', () => {
+		expect(W.normalizeBarRecord({ name: 'Negroni', spec: [], price: '13' })).toMatchObject({ name: 'Negroni', spec: [], draft: true });
+		expect(W.normalizeBarRecord({ name: 'Paloma', spec: ['2 oz tequila'] }).draft === undefined).toBe(true);
+		expect(W.normalizeBarRecord({ spec: ['2 oz tequila'] })).toBe(null);
+		expect(W.normalizeBarRecords([{ name: 'A', spec: [] }, null, { name: 'B', spec: ['x'] }])).toMatchObject({ skipped: 1 });
+	});
+
+	it('is dealt by no flashcard deck and no quiz round: a ticket with no lines is not a question', () => {
+		withBar(() => {
+			/* a name no question in the bank could mention, because the mixed
+			   round deals bank questions too and the bank knows the Negroni */
+			const zed = draft('COCKTAILS\n\nHouse Draft Zed    13')[0];
+			expect(zed.rec.spec).toEqual([]);
+			W.saveBarRecord(zed.rec, null, { allowEmptySpec: true });
+			const paloma = W.saveBarRecord({ name: 'Paloma', spec: ['2 oz tequila', '3 oz grapefruit soda', '1/2 oz lime'],
+				glass: 'Highball', family: 'Highball', spirit: 'Tequila' }, null);
+			expect(typeof paloma).toBe('object');
+			/* the flashcard pool, filtered to the menu: the real drink and never the draft */
+			const fc = W.state.fc;
+			const was = fc.src;
+			fc.src = 'My Bar';
+			try { expect(W.fcPool().map((d) => d.name)).toEqual(['Paloma']); } finally { fc.src = was; }
+			/* the Menu round, and the one menu question every mixed round deals:
+			   no ticket is a draft's and no question is about the draft. Dealt
+			   twenty times, because the rounds are shuffled samples. */
+			for (let i = 0; i < 20; i++) {
+				for (const q of W.buildRound('mybar').concat(W.buildRound('mixed'))) {
+					if (q.ticket) expect(q.ticket.draft === undefined).toBe(true);
+					expect(String(q.prompt) + ' ' + String(q.explain || '')).not.toMatch(/House Draft Zed/);
+				}
+			}
+			/* and the round's floor counts drinks with a spec: one card, not two */
+			expect(W.menuCardCount()).toBe(1);
+			expect(W.progress.bar).toHaveLength(2);
+			/* Tonight's Session: the venue's list deals FIRST in its ladder, so
+			   an unfiltered pool made the draft the first new card every night.
+			   Twenty deals over an empty card store (everything fresh, nothing
+			   due), then the empty-deck fallback's pool: no draft in either,
+			   and the real menu card is dealt. */
+			const cards = W.progress.cards;
+			W.progress.cards = {};
+			try {
+				for (let i = 0; i < 20; i++) {
+					const { dueDeck, newDeck } = W.sessionDeckParts();
+					for (const d of dueDeck.concat(newDeck)) expect(!!d.draft).toBe(false);
+					expect(newDeck.some((d) => d.src === 'My Bar' && d.name === 'Paloma')).toBe(true);
+					expect(newDeck.some((d) => d.name === 'House Draft Zed')).toBe(false);
+				}
+				const pool = W.sessionCardPool();
+				expect(pool.some((d) => d.draft)).toBe(false);
+				expect(pool.some((d) => d.name === 'House Draft Zed')).toBe(false);
+				expect(pool.some((d) => d.src === 'My Bar' && d.name === 'Paloma')).toBe(true);
+			} finally { W.progress.cards = cards; }
+		});
+	});
+
+	it('arrives as a draft through the backup import too, merge or replace, with no boot in between', () => {
+		const backup = (bar) => JSON.stringify({ app: 'bartenders-ledger', progress: { cards: {}, bar } });
+		withBar(() => {
+			/* MERGE: OK on the one confirm. A record with a name and no spec,
+			   as an older export or a hand-edited file carries it, and a
+			   nameless row beside it. */
+			globalThis.confirmAnswers = [true];
+			W.dataImport(backup([{ name: 'Old Export', spec: [] }, { spec: ['no name'] }]));
+			expect(W.progress.bar).toHaveLength(1);
+			const merged = W.progress.bar[0];
+			expect(merged).toMatchObject({ name: 'Old Export', spec: [], draft: true });
+			expect(W.missingFor(merged, []).length).toBeGreaterThan(0);
+			expect(W.pourSources()).not.toContain('My Bar');
+			/* and a collision with the record already here takes the same pass:
+			   the newer one wins, as a draft, with a forbidden mark refused */
+			globalThis.confirmAnswers = [true];
+			W.dataImport(backup([{ id: merged.id, name: 'Old Export', spec: [], ts: Date.now() + 1000,
+				maitre: { allergens: { value: 'nuts', by: 'maitre', ts: 1 } } }]));
+			expect(W.progress.bar).toHaveLength(1);
+			expect(W.progress.bar[0].draft).toBe(true);
+			expect(W.progress.bar[0].maitre === undefined).toBe(true);
+		});
+		/* REPLACE: Cancel on the first confirm, OK on the second. progress is
+		   rebound whole by that branch, so the result is read back through the
+		   realm and the old object put back after, or every later test in this
+		   file would be looking at a stale one. */
+		const before = W.progress;
+		globalThis.confirmAnswers = [false, true];
+		W.dataImport(backup([{ name: 'Whole Restore', spec: [] }]));
+		const now = vm.runInThisContext('progress');
+		try {
+			expect(now === before).toBe(false);
+			expect(now.bar).toHaveLength(1);
+			expect(now.bar[0]).toMatchObject({ name: 'Whole Restore', spec: [], draft: true });
+			expect(W.missingFor(now.bar[0], []).length).toBeGreaterThan(0);
+		} finally {
+			vm.runInThisContext('(function(o){ progress = o; })')(before);
+			W.barChanged();
+		}
+	});
+
+	it('is excluded from "the N that read cleanly": one spec part or none is not clean', () => {
+		const ds = draft('COCKTAILS\n\nNegroni    13\nGarden Gimlet - Gin, elderflower, lime  14\nSeedlip Spritz - Seedlip  9');
+		const clean = ds.filter((d) => d.confidence === 'high' && !d.existing && !d.unsure && d.rec.spec.length >= 2);
+		expect(clean.map((d) => d.rec.name)).toEqual(['Garden Gimlet']);
+	});
+});
+
+describe('the price guard runs on every row, whichever engine read it', () => {
+	it('blanks a price that is not in the row’s own lines and says so', () => {
+		const item = { id: 'k-00000001', kind: 'cocktail', section: '', name: 'Paloma', price: { printed: '99', parts: [{ amount: '99', label: '' }] },
+			marks: [], confidence: 'high', why: [], raw: 'Paloma\ntequila | grapefruit | lime', lines: [0, 1],
+			spec: ['tequila', 'grapefruit', 'lime'], description: '', baseSpirit: 'tequila' };
+		const d = W.menuDrinkFromDeskItem(item);
+		expect(d.rec.price).toBe('');
+		expect(d.priceBlanked).toBe(true);
+		expect(d.confidence).toBe('low');
+		expect(d.why).toMatch(/blanked/);
+	});
+
+	it('keeps a price that is in the lines, whitespace folded', () => {
+		expect(priceInRaw('45.00 / 22.50', 'Ployez\n45.00 /  22.50')).toBe(true);
+		expect(priceInRaw('', 'anything')).toBe(true);
+		expect(priceInRaw('12', 'Soup 9.50')).toBe(false);
+	});
+
+	it('takes the desk’s spirit word only when the lexicon resolves nothing, and through the lexicon', () => {
+		const item = { id: 'k-00000002', kind: 'cocktail', section: '', name: 'House Thing', price: { printed: '', parts: [] },
+			marks: [], confidence: 'low', why: [], raw: 'House Thing\nzzz | yyy', lines: [0, 1],
+			spec: ['zzz', 'yyy'], description: '', baseSpirit: 'mezcal' };
+		expect(W.menuDrinkFromDeskItem(item).rec.spirit).toBe('Mezcal');
+		const none = Object.assign({}, item, { baseSpirit: '' });
+		expect(W.menuDrinkFromDeskItem(none).rec.spirit).toBe('Other');
+		/* a word the lexicon does not know as a spirit cannot become a base */
+		const nonsense = Object.assign({}, item, { baseSpirit: 'moonbeam' });
+		expect(W.menuDrinkFromDeskItem(nonsense).rec.spirit).toBe('Other');
+	});
+});
+
+describe('her marks on a record', () => {
+	const hers = { guest: { value: 'A gin sour with a herbal edge.', by: 'maitre', ts: 100, model: 'claude-opus-5' } };
+
+	it('ride through saveBarRecord and the shape pass, and never as a plain field', () => {
+		withBar(() => {
+			const rec = W.saveBarRecord({ name: 'Holy Trinity', spec: ['gin', 'benedictine', 'lime'], maitre: hers }, null);
+			expect(rec.maitre.guest).toMatchObject({ value: 'A gin sour with a herbal edge.', by: 'maitre' });
+			expect(rec.note).toBe('');
+			/* an edit through the form, which carries no marks, keeps them */
+			const edited = W.saveBarRecord({ name: 'Holy Trinity', spec: ['2 oz gin', '1/2 oz benedictine', '3/4 oz lime'] }, rec.id);
+			expect(edited.maitre.guest.by).toBe('maitre');
+			const again = W.normalizeBarRecord(JSON.parse(JSON.stringify(edited)));
+			expect(again.maitre).toEqual(edited.maitre);
+		});
+	});
+
+	it('refuse any field the block does not name, allergens above all', () => {
+		const m = W.normalizeMaitre({ guest: hers.guest, allergens: { value: 'nuts', by: 'maitre', ts: 1 }, contains: { value: 'x', by: 'maitre', ts: 1 } });
+		expect(Object.keys(m)).toEqual(['guest']);
+		expect(W.normalizeMaitre({})).toBe(null);
+		expect(W.normalizeMaitre({ guest: { value: '', by: 'maitre', ts: 1 } })).toBe(null);
+	});
+
+	it('merge on import: the newer record’s block wins, the kept notes are unioned on ts|q', () => {
+		const mine = { guest: { value: 'mine', by: 'person', ts: 5 }, kept: [{ q: 'a', a: 'A', ts: 1 }, { q: 'b', a: 'B', ts: 2 }] };
+		const theirs = { guest: { value: 'theirs', by: 'maitre', ts: 9 }, kept: [{ q: 'b', a: 'B', ts: 2 }, { q: 'c', a: 'C', ts: 3 }] };
+		const merged = W.mergeMaitre(theirs, mine);
+		expect(merged.guest.value).toBe('theirs');
+		expect(merged.kept.map((k) => k.q)).toEqual(['a', 'b', 'c']);
+		expect(W.mergeMaitre(null, null)).toBe(null);
+		/* the winner's marks are the winner's, even when it has none: a newer
+		   save with no block is a newer decision; only the kept notes, which
+		   are observations, survive from the loser */
+		const noBlock = W.mergeMaitre(null, mine);
+		expect(noBlock.guest === undefined).toBe(true);
+		expect(noBlock.kept.map((k) => k.q)).toEqual(['a', 'b']);
+	});
+
+	it('her method, glass and garnish are kept INTO the field one at a time, and a draft keeps its licence', () => {
+		withBar(() => {
+			const dash = String.fromCharCode(0x2014);
+			const marks = { glass: { value: 'Coupe', by: 'maitre', ts: 100, model: 'claude-haiku-4-5' },
+				garnish: { value: 'Lime wheel', by: 'maitre', ts: 100 }, guest: hers.guest };
+			const rec = W.saveBarRecord({ name: 'Holy Trinity', spec: ['gin', 'benedictine', 'lime'], maitre: marks }, null);
+			/* unkept: the plain field is the placeholder and the mark is hers */
+			expect(rec.glass).toBe(dash);
+			expect(rec.maitre.glass.by).toBe('maitre');
+			const kept = W.keepMaitreField(rec, 'glass', 'Coupe');
+			expect(typeof kept).toBe('object');
+			expect(kept.glass).toBe('Coupe');
+			expect(kept.maitre.glass === undefined).toBe(true);
+			expect(kept.maitre.garnish.value).toBe('Lime wheel');
+			expect(kept.maitre.guest.by).toBe('maitre');
+			expect(W.progress.bar).toHaveLength(1);
+			/* Edit: the person's words go in, not hers */
+			const edited = W.keepMaitreField(kept, 'garnish', 'Lime twist');
+			expect(edited.garnish).toBe('Lime twist');
+			expect(edited.maitre.garnish === undefined).toBe(true);
+			/* the last mark kept off leaves no block, rather than the record's
+			   old block coming back through the save's fallback */
+			const only = W.saveBarRecord({ name: 'Lone Mark', spec: ['gin'], maitre: { method: { value: 'Stirred', by: 'maitre', ts: 1 } } }, null);
+			const bare = W.keepMaitreField(only, 'method', 'Stirred');
+			expect(bare.method).toBe('Stirred');
+			expect(bare.maitre === undefined).toBe(true);
+			/* while a form with NO block still keeps the record's marks */
+			const viaForm = W.saveBarRecord({ name: 'Holy Trinity', spec: ['2 oz gin', '1 oz lime'] }, edited.id);
+			expect(viaForm.maitre.guest.by).toBe('maitre');
+			/* refusals in words: nothing of hers on the field, an empty edit, the guest line (no plain field) */
+			expect(typeof W.keepMaitreField(bare, 'method', 'Shaken')).toBe('string');
+			expect(typeof W.keepMaitreField(viaForm, 'guest', 'x')).toBe('string');
+			const blank = W.saveBarRecord({ name: 'Blank Edit', spec: ['gin'], maitre: { glass: { value: 'Nick and Nora', by: 'maitre', ts: 1 } } }, null);
+			expect(typeof W.keepMaitreField(blank, 'glass', '   ')).toBe('string');
+			expect(W.progress.bar.find((b) => b.id === blank.id).maitre.glass.value).toBe('Nick and Nora');
+			/* a draft: Keep changes no spec, so it stays a draft, out of every sheet, and keeps the glass */
+			const d = W.saveBarRecord({ name: 'Draft With Glass', spec: [], maitre: { glass: { value: 'Rocks', by: 'maitre', ts: 1 } } }, null, { allowEmptySpec: true });
+			const dk = W.keepMaitreField(d, 'glass', 'Rocks');
+			expect(typeof dk).toBe('object');
+			expect(dk.draft).toBe(true);
+			expect(dk.glass).toBe('Rocks');
+			expect(dk.maitre === undefined).toBe(true);
+			expect(W.missingFor(dk, []).length).toBeGreaterThan(0);
+		});
+	});
+});
+
+describe('“It is a dish” on the shared origin', () => {
+	/* A Map-backed slot, so the inbox's read, write, taken and clear all run
+	   for real through the shipped port; the shared origin is a pathname, so
+	   location is stubbed to one for the length of a test and taken away
+	   after. The importer's state is put back too, because these tests build
+	   a review list of their own. */
+	function withSharedDesk(fn){
+		const store = new Map();
+		const storage = {
+			getItem: (k) => (store.has(k) ? store.get(k) : null),
+			setItem: (k, v) => { store.set(k, String(v)); },
+			removeItem: (k) => { store.delete(k); },
+		};
+		const before = { storage: globalThis.localStorage, hadLocation: 'location' in globalThis, location: globalThis.location,
+			imp: W.state.menu.imp, form: W.state.menu.form };
+		globalThis.localStorage = storage;
+		globalThis.location = { pathname: '/ledger/' };
+		try { return withBar(fn); }
+		finally {
+			globalThis.localStorage = before.storage;
+			if (before.hadLocation) globalThis.location = before.location; else delete globalThis.location;
+			W.state.menu.imp = before.imp; W.state.menu.form = before.form;
+		}
+	}
+	const drinks = fixture('commanders-drinks.txt');
+	const dinner = fixture('commanders-dinner.txt');
+
+	it('replaces the inbox’s row BY ID: the bar is not offered it again, the World Table sees it once, and the Codex’s taken mark survives', () => {
+		withSharedDesk(() => {
+			W.state.menu.imp = W.blankImport();
+			W.importFromText(drinks, 'paste');
+			const i = W.state.menu.imp;
+			expect(i.drafts.map((d) => d.rec.name)).toContain('Holy Trinity');
+			expect(i.handed).toMatchObject({ ok: true, shared: true, wines: 6 });
+			/* the whole file is in the slot, the bar's rows riding along */
+			const first = deskInbox.read();
+			expect(deskInbox.share(first, 'cocktail').map((x) => x.name)).toContain('Holy Trinity');
+			/* the Codex takes its share first, so that mark has to survive the rebuild */
+			deskInbox.taken('wine');
+			const k = i.drafts.findIndex((d) => d.rec.name === 'Holy Trinity');
+			const id = i.drafts[k].item.id;
+			W.importReKind(k, 'dish');
+			const inbox = deskInbox.read();
+			expect(deskInbox.share(inbox, 'cocktail').map((x) => x.name)).not.toContain('Holy Trinity');
+			expect(deskInbox.share(inbox, 'cocktail')).toHaveLength(3);
+			expect(deskInbox.share(inbox, 'dish').map((x) => x.name)).toEqual(['Holy Trinity']);
+			expect(inbox.items.filter((x) => x.id === id).map((x) => x.kind)).toEqual(['dish']);
+			expect(!!(inbox.taken && inbox.taken.wine)).toBe(true);
+			expect(i.handed.dishes).toBe(1);
+			expect(i.drafts.map((d) => d.rec.name)).not.toContain('Holy Trinity');
+			/* the file in memory agrees with the slot, so the download would too */
+			expect(i.file.items.filter((x) => x.id === id).map((x) => x.kind)).toEqual(['dish']);
+			expect(globalThis.announced[globalThis.announced.length - 1]).toMatch(/Holy Trinity is now a dish, waiting for the World Table/);
+		});
+	});
+
+	it('leaves a stranger’s desk alone: a newer read in the slot is not edited, and the row rides the download', () => {
+		withSharedDesk(() => {
+			W.state.menu.imp = W.blankImport();
+			W.importFromText(drinks, 'paste');
+			const i = W.state.menu.imp;
+			/* another app reads another menu into the slot meanwhile */
+			deskInbox.clear();
+			deskInbox.write(readMenu(dinner, deskSource('paste', 'table', dinner)));
+			const before = deskInbox.read();
+			const k = i.drafts.findIndex((d) => d.rec.name === 'Holy Trinity');
+			W.importReKind(k, 'dish');
+			expect(deskInbox.read()).toEqual(before);
+			expect(i.handed).toMatchObject({ ok: false, shared: true, dishes: 1, wines: 6 });
+			expect(i.handed.said).toMatch(/newer read/);
+			expect(i.file.items.some((x) => x.name === 'Holy Trinity' && x.kind === 'dish')).toBe(true);
+			expect(i.drafts.map((d) => d.rec.name)).not.toContain('Holy Trinity');
+		});
+	});
+
+	it('says the never-twice answer once, through the live region, and shows nothing to review', () => {
+		withSharedDesk(() => {
+			W.state.menu.imp = W.blankImport();
+			W.importFromText(drinks, 'paste');
+			globalThis.announced.length = 0;
+			W.importFromText(drinks, 'paste');
+			const i = W.state.menu.imp;
+			expect(!!i.already).toBe(true);
+			expect(i.already.share).toHaveLength(4);
+			expect(i.drafts).toBe(null);
+			expect(globalThis.announced).toHaveLength(1);
+			expect(globalThis.announced[0]).toMatch(/^This menu was read .* 4 cocktails are already waiting here\.$/);
+			/* and "Read it again anyway" reads */
+			W.importFromText(drinks, 'paste', { again: true });
+			expect(i.already).toBe(null);
+			expect(i.drafts).toHaveLength(4);
+		});
 	});
 });
 

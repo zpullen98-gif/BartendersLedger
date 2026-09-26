@@ -1,0 +1,39 @@
+THE CELLAR LIST
+
+CHAMPAGNE
+101  Ployez-Jacquemart Extra Brut
+NV
+Champagne, France
+1250
+
+102  Krug Grande Cuvée 171ème Édition
+NV
+Champagne, France
+4200
+
+BURGUNDY WHITE
+201  Domaine Leflaive Puligny-Montrachet 1er Cru Les Pucelles 2019
+Chardonnay, Burgundy, France
+3800
+
+202  Leflaive Bourgogne Blanc 2021
+Chardonnay, Burgundy, France
+1100
+
+BORDEAUX
+301  Ch. Margaux 2015
+Margaux, Bordeaux, France
+9500
+
+302  Ch. Lynch-Bages 2016
+Pauillac, Bordeaux, France
+2900
+
+AUSTRALIA
+401  Penfolds Bin 389 Shiraz 2018
+Cabernet Sauvignon, Shiraz, South Australia
+1600
+
+402  Penfolds Grange 2017
+Shiraz, South Australia
+9800
