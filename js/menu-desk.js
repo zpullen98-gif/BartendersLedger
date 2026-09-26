@@ -1421,17 +1421,53 @@ function handList(wines, cocktails) {
     return parts.join(' and ');
 }
 const fold = (s) => s.replace(/\s+/g, ' ').trim();
+const isDigit = (c) => c >= '0' && c <= '9';
+/**
+ * Where `figure` next occurs in `hay` at or after `from` as a figure of its
+ * own, or -1: not the 50 inside 9.50, not the 12 inside 12.50, not the 8
+ * inside 2018. The same walk the Maître d' client makes over the source
+ * text (onPage in oot-maitre.js), kept here so the two guards agree on what
+ * "on the page" means. A separator binds only between digits, so the comma
+ * in "Bread,12" binds nothing. Neither string is folded here: the caller
+ * folds once and keeps the indices.
+ */
+function figureIndex(hay, figure, from = 0) {
+    if (!figure)
+        return -1;
+    let at;
+    while ((at = hay.indexOf(figure, from)) >= 0) {
+        const before = at > 0 ? hay.charAt(at - 1) : '';
+        const before2 = at > 1 ? hay.charAt(at - 2) : '';
+        const after = hay.charAt(at + figure.length);
+        const after2 = hay.charAt(at + figure.length + 1);
+        const leftOk = !isDigit(before) && !((before === '.' || before === ',') && isDigit(before2));
+        const rightOk = !isDigit(after) && !((after === '.' || after === ',') && isDigit(after2));
+        if (leftOk && rightOk)
+            return at;
+        from = at + 1;
+    }
+    return -1;
+}
 /**
  * True when the printed price occurs in the row's own lines, whitespace
- * folded. An empty price is always fine: it is the honest answer for a line
- * that had none. The check is a substring rather than a token match because
- * a printed price is whatever the menu printed, "45.00 / 22.50" included.
+ * folded, or when every one of its parts does. An empty price is always
+ * fine: it is the honest answer for a line that had none. The whole string
+ * is a substring rather than a token match because a printed price is
+ * whatever the menu printed, "45.00 / 22.50" included. The parts are the
+ * second door, for a wine the Maître d' read: she hands the glass, the pours
+ * and the bottle back as separate figures, each already checked against the
+ * page, and a price line built from them can differ from the page's own
+ * order of words. Each part must then stand on the line as a figure of its
+ * own (figureIndex), and a price with no parts has no second door.
  */
-function priceInRaw(printed, raw) {
+function priceInRaw(printed, raw, parts = []) {
     const p = fold(printed);
     if (!p)
         return true;
-    return fold(raw).includes(p);
+    const hay = fold(raw);
+    if (hay.includes(p))
+        return true;
+    return parts.length > 0 && parts.every((part) => figureIndex(hay, fold(part.amount)) >= 0);
 }
 
 /* ==================== src/lib/desk/desk-sort.ts ==================== */
@@ -1630,6 +1666,12 @@ const TRUNCATION_NOTICE = 'Only the first 200,000 characters were read. Split th
  * end in a number, and it bounds the work done per line on a pasted wall of text.
  */
 const PRICE_TAIL_TOKENS = 8;
+/**
+ * The `why` sentence on a row whose description opens on a framed note the
+ * page printed over its name ('~le Coup du Milieu~' over 'Kiss the Crab').
+ * One string, because the first reading and a re-read must say the same thing.
+ */
+const LEAD_IN_WHY = 'The framed note above the name was read as a lead-in to its description.';
 /**
  * The gap marker. A tab, a run of two or more spaces, a dot leader or a rule
  * of dashes between a name and its price is a GAP, and in a stacked block a
@@ -2018,6 +2060,7 @@ function scan(raw, index) {
         stacked: { name: '', price: '' },
         lead: { name: '', price: '' },
         note: '',
+        framedNote: false,
         framedHeading: '',
         sizes: [],
         vintage: ''
@@ -2081,8 +2124,15 @@ function scan(raw, index) {
     base.marks = marked.marks;
     // Decorated lines. Framed, with a title-case or capitals core, is a heading
     // ('~ Mains ~'); a colon at the end is a heading ('Sides:'); a tilde or a
-    // star at the front of anything else is a NOTE that belongs to the item
-    // above ('~le Coup du Milieu~', '* Must be ordered 20 minutes in advance').
+    // star at the front of anything else is a NOTE ('~le Coup du Milieu~',
+    // '* Must be ordered 20 minutes in advance'). Which item a note belongs to
+    // is the block pass's decision, and it needs to know whether the note was
+    // framed, because only the framed shape can be a label for the item under
+    // it. Only the TILDE frame counts as one there: FRAMED accepts a star at
+    // either end, so a star-led footnote closed with a second star ('* Must be
+    // ordered in advance *') would read as framed and be held for the name
+    // under it, when the star points back at the item above it whatever
+    // closes the line.
     const core = stripDecoration(text);
     const framed = FRAMED.test(text) && words(core).length <= 6;
     if (base.inline.price === '' && core) {
@@ -2091,10 +2141,10 @@ function scan(raw, index) {
         if (text.endsWith(':') && words(core).length <= 6)
             return Object.assign(Object.assign({}, base), { framedHeading: core });
         if (NOTE_LEAD.test(text) && !(isTitleCase(core) && words(core).length <= 6) && !isCaps(core)) {
-            return Object.assign(Object.assign({}, base), { kind: 'note', note: text.replace(/^[\s~]+|[\s~]+$/g, '').trim() });
+            return Object.assign(Object.assign({}, base), { kind: 'note', note: text.replace(/^[\s~]+|[\s~]+$/g, '').trim(), framedNote: framed && /^\s*~/.test(text) });
         }
         if (framed)
-            return Object.assign(Object.assign({}, base), { kind: 'note', note: core });
+            return Object.assign(Object.assign({}, base), { kind: 'note', note: core, framedNote: true });
     }
     return base;
 }
@@ -2688,11 +2738,45 @@ function place(p) {
     let lastPriceAt = -1;
     /** The block whose first name took a held price: one that prints each price ABOVE its name. */
     let priceAboveBlock = -1;
+    /**
+     * The framed notes held back while the line under them is placed, because
+     * that line decides where they go: see the note rule in the loop below. A
+     * list in page order, because two framed notes can stack over one name.
+     */
+    let leads = [];
     const orphan = (s, reason) => unsorted.push({ raw: s.raw, line: s.index, reason });
     const dropHeld = () => {
         if (held)
             orphan(held, 'orphan-price');
         held = null;
+    };
+    /** The note rule's plain case: the note is a footnote on the item above it, or on nothing. */
+    const joinNote = (d, s) => {
+        if (!d) {
+            orphan(s, 'heading-note');
+            return;
+        }
+        d.body.push(s.note);
+        d.why.push('A note under the item joined it.');
+        extend(d, s);
+    };
+    /**
+     * The held notes go to the item above after all, because the line under
+     * them did not start a row. Called BEFORE anything else is added to a draft
+     * or a section is closed, so `raw` keeps the page's order: the notes sit
+     * above the line that is about to join, and they must be appended first,
+     * in the order the page printed them.
+     */
+    const settleLead = (to) => {
+        for (const l of leads)
+            joinNote(to, l);
+        leads = [];
+    };
+    /** A line that runs on under a row joins it; a note held over that line joins the row first. */
+    const join = (d, s, name) => {
+        settleLead(d);
+        d.body.push(name);
+        extend(d, s);
     };
     const start = (s, name, price) => {
         const b = p.blockOf[s.index];
@@ -2700,6 +2784,25 @@ function place(p) {
         const d = newDraft(b, section, headings, s, name, price, layout === 'stacked');
         if (price && layout === 'priceFirst')
             d.priceWhy = 'Price read from the start of the line.';
+        if (leads.length) {
+            // The framed notes held over this name label it: they lead the
+            // description, as printed with the frame off and in page order,
+            // ahead of anything the name line itself carried after a dash or a
+            // colon. Joined with a single space, which is the join reReadAs makes
+            // when it reads the same lines back, so a re-read row keeps the
+            // description its first reading gave it. Taken before the held price
+            // below, so a price line above them all still comes first in `raw`.
+            const notes = leads.map((l) => l.note).join(' ');
+            d.description = d.description ? `${notes} ${d.description}` : notes;
+            d.raw = leads.map((l) => l.raw).join('\n') + '\n' + d.raw;
+            d.first = leads[0].index;
+            for (const l of leads)
+                for (const m of l.marks)
+                    if (!d.marks.includes(m))
+                        d.marks.push(m);
+            d.why.push(LEAD_IN_WHY);
+            leads = [];
+        }
         if (!price && held) {
             // The block began with a price: it belongs to the first name under it,
             // and every later price line in the block belongs to the name below it.
@@ -2717,6 +2820,9 @@ function place(p) {
         return d;
     };
     const setSection = (name, at) => {
+        // A note held over a line that turned out to be a heading goes back to
+        // the last item of the section that is closing, while it is still here.
+        settleLead(lastInSection);
         // Two headings with nothing between them are one run: 'OUR WINE PROGRAM'
         // then 'WINE BY GLASS', and the sorter reads both.
         headings = lastInSection === null && section ? [name, section] : [name];
@@ -2845,19 +2951,50 @@ function place(p) {
             continue;
         }
         if (s.kind === 'note') {
-            if (lastInSection) {
-                lastInSection.body.push(s.note);
-                lastInSection.why.push('A note under the item joined it.');
-                extend(lastInSection, s);
+            // The note rule. A note is a footnote on the item above it, across a
+            // blank line if need be, EXCEPT a framed one printed directly over a
+            // text line in its own block: '~le Coup du Milieu~' over 'Kiss the
+            // Crab' is the page labelling the mid-meal drink under it, and joined
+            // to the crudo above it the label named the wrong course. Only the
+            // line under it can say whether it starts a row (the note leads that
+            // row's description) or joins the row above (the note joins it too),
+            // so the note is held until that line is placed. A framed note over
+            // ANOTHER framed note is held as well, so two labels stacked over one
+            // name both lead it, and the line under the lower one decides for
+            // both. Only the FRAMED shape is held: a star-led footnote sits on
+            // the line before the next dish name just as often ('* Must be
+            // ordered 20 minutes in advance' directly over 'Housemade Ice
+            // Cream'), and the star points back at the soufflé above it, not
+            // forward at the ice cream. A blank, a heading, a price line or the
+            // block's end under the note leaves it with the item above, and so
+            // does an unframed note, which is why the plain case settles any
+            // held notes before it joins: they sit above it on the page.
+            //
+            // A held note is marked consumed, so the backward lookers read past
+            // it the way they read past a consumed price line. 'Mains' under a
+            // held note still has its break above, and firstInBlock() has to say
+            // so, or the heading is demoted to a dish that the note then leads
+            // and every row under it loses its section. The loop is already past
+            // this index, so nothing else reads the mark.
+            const under = scans[i + 1];
+            const underCanLead = !!under &&
+                p.blockOf[under.index] === b &&
+                !p.consumed.has(under.index) &&
+                ((under.kind === 'text' && !under.framedHeading) || (under.kind === 'note' && under.framedNote));
+            if (s.framedNote && underCanLead) {
+                leads.push(s);
+                p.consumed.add(i);
+                continue;
             }
-            else
-                orphan(s, 'heading-note');
+            settleLead(lastInSection);
+            joinNote(lastInSection, s);
             continue;
         }
         /* A text line. */
         const { name, price } = nameOf(p, s);
         if (name === '') {
             // Nothing but marks, or nothing at all once the decoration came off.
+            settleLead(lastInSection);
             orphan(s, 'no-name');
             continue;
         }
@@ -2969,6 +3106,7 @@ function place(p) {
             // includes Soup or Salad and Dessert') and goes to the unplaced list
             // where a person can still make a row of it; anything else starts one.
             if (!held && !s.bin && !nextIsPriceLine && isSentenceShaped(name) && !lastInSection && section) {
+                settleLead(lastInSection);
                 orphan(s, 'heading-note');
                 continue;
             }
@@ -2980,8 +3118,7 @@ function place(p) {
             // current row's description. The stacked signature (a price line under
             // a name) means nothing here, because the price under a line is the
             // next row's.
-            current.body.push(name);
-            extend(current, s);
+            join(current, s, name);
             continue;
         }
         if (layoutOf(p, i) !== 'stacked') {
@@ -2991,10 +3128,8 @@ function place(p) {
             // because gluing 'Bread' onto the chips above it would lose a side the
             // kitchen sells; an indented line is allowed to be one whatever its
             // shape, because headings do not sit in from the margin.
-            if (!isTitleCase(name) || s.indented) {
-                current.body.push(name);
-                extend(current, s);
-            }
+            if (!isTitleCase(name) || s.indented)
+                join(current, s, name);
             else
                 start(s, name, '');
             continue;
@@ -3016,10 +3151,8 @@ function place(p) {
             // Leeks' over '10' is a side, not the boudin's description).
             if (nextIsPriceLine && priced)
                 start(s, name, '');
-            else {
-                current.body.push(name);
-                extend(current, s);
-            }
+            else
+                join(current, s, name);
             continue;
         }
         const hasBody = current.body.length > 0;
@@ -3039,11 +3172,12 @@ function place(p) {
             begins = !priced && !hasBody;
         if (begins)
             start(s, name, '');
-        else {
-            current.body.push(name);
-            extend(current, s);
-        }
+        else
+            join(current, s, name);
     }
+    // A held note is always settled by the line under it, which is why it was
+    // held; this is the guarantee, so a note can never be dropped in silence.
+    settleLead(lastInSection);
     dropHeld();
     return { drafts, unsorted };
 }
@@ -3104,12 +3238,22 @@ function reReadAs(item, kind) {
     const splitOf = (s) => (layout === 'stacked' ? s.stacked : layout === 'priceFirst' ? s.lead : s.inline);
     let draft = null;
     let held = '';
+    /** A framed note printed over the name line: the lead-in its first reading gave the description. */
+    let lead = '';
     for (const s of scans) {
         if (s.kind === 'blank' || s.kind === 'noise')
             continue;
         if (!draft) {
             if (s.kind === 'price')
                 held = held ? `${held} ${s.text}` : s.text;
+            else if (s.kind === 'note' && s.framedNote && first !== undefined && first.index > s.index) {
+                // The row's lines open on a framed note, or on two stacked, with
+                // the name under them, which is how the note rule wrote the lead-in
+                // case; they are joined with the single space start() used. Read as
+                // the name it would rename the crab 'le Coup du Milieu'; a lone
+                // note made into a row from the unplaced list still becomes the name.
+                lead = lead ? `${lead} ${s.note}` : s.note;
+            }
             else if (s.kind === 'text' || s.kind === 'note') {
                 const split = s.kind === 'note' ? { name: s.note, price: '' } : splitOf(s);
                 draft = newDraft(0, item.section, [item.section], s, split.name || item.name, split.price || held, layout === 'stacked');
@@ -3117,6 +3261,10 @@ function reReadAs(item, kind) {
                     draft.priceWhy = 'Price read from the line above the name.';
                 else if (split.price && layout === 'priceFirst')
                     draft.priceWhy = 'Price read from the start of the line.';
+                if (lead) {
+                    draft.description = draft.description ? `${lead} ${draft.description}` : lead;
+                    draft.why.push(LEAD_IN_WHY);
+                }
             }
             continue;
         }

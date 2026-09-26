@@ -1137,15 +1137,25 @@ describe('the desk fixtures, read here', () => {
 		expect(drafts[0].unsure).toBe(true);
 		expect(drafts[0].confidence).toBe('low');
 		expect(drafts[0].why).toMatch(/could not tell what this row is/);
-		/* read again as a cocktail off its own lines. The line under the name
-		   opens with a 49-character part ('Blue crab-brown butter washed
+		/* read again as a cocktail off its own lines. '~le Coup du Milieu~'
+		   sits directly over the name with no blank between, and the desk
+		   reads that framed note as the lead-in of the row UNDER it (it is
+		   the page labelling the mid-meal drink), so the description opens
+		   with the note, frame off, and then the line under the name. That
+		   line opens with a 49-character part ('Blue crab-brown butter washed
 		   Zacapa No. 23 Solera'), which is a sentence and not an ingredient
-		   by both the desk's and this app's own rule, so it is the note, not a
-		   spec, and the row waits for a person: a guessed split would have
-		   shipped 'Blue crab-brown butter washed Zacapa No. 23 Solera' as one
-		   bottle on a spec line. */
+		   by both the desk's and this app's own rule, so the whole is the
+		   note, not a spec, and the row waits for a person: a guessed split
+		   would have shipped 'Blue crab-brown butter washed Zacapa No. 23
+		   Solera' as one bottle on a spec line. Pinned whole so a change to
+		   where the desk sends a framed note is heard here. */
 		expect(drafts[0].rec.spec).toEqual([]);
-		expect(drafts[0].rec.note).toMatch(/^Blue crab-brown butter washed Zacapa/);
+		expect(drafts[0].rec.note).toBe(
+			'le Coup du Milieu Blue crab-brown butter washed Zacapa No. 23 Solera, banana oleosacrum, dry vermouth, orange peel'
+		);
+		expect(drafts[0].raw).toBe(
+			'~le Coup du Milieu~\nKiss the Crab\nBlue crab-brown butter washed Zacapa No. 23 Solera, banana oleosacrum, dry vermouth, orange peel'
+		);
 		expect(drafts[0].rec.price).toBe('');
 	});
 
