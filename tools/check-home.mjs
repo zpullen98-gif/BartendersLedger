@@ -8,7 +8,8 @@
  * with every Level I unit met. Against each:
  *
  *   - the home is the shared contract and nothing else: one section.levels of
- *     four button.level (I to IV, the names, a word and figure in each), then
+ *     four button.level (the names, a word and figure in each, and no numeral
+ *     on sight: "Level I" to "Level IV" is hidden text for a screen reader), then
  *     one nav.quiet of four doors (Today, Library, Record, Mine · My Bar); one
  *     card is `on`, carries aria-current and the words "Your level", and it is
  *     the level this gate works out for itself; every card's word and figure
@@ -120,7 +121,8 @@ for (const [name, rec] of [['fresh', fresh], ['partial', partial], ['Level I met
 	cards.forEach((c, i) => {
 		const n = Number(c[2]), body = c[4];
 		if (n !== i + 1) fail(`${where}: card ${i + 1} is level ${n}`);
-		const num = (body.match(/<span class="lv-num">([^<]*)<\/span>/) || [])[1];
+		const num = (body.match(/<span class="sr-only">Level ([^<]*)<\/span>/) || [])[1];
+		if (/lv-num/.test(body)) fail(`${where}: card ${i + 1} shows a numeral, and the home cards carry none`);
 		const nm = (body.match(/<span class="lv-name">([^<]*)<\/span>/) || [])[1];
 		const stat = (body.match(/<span class="lv-stat">([^<]*)<\/span>/) || [])[1];
 		if (num !== romans[i]) fail(`${where}: card ${i + 1} numeral ${num}`);
