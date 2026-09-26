@@ -51,7 +51,8 @@ problems.push(...problemsOf(placements, uni));
 /* the emitted file is exactly the placements */
 if (!existsSync(DATA_FILE)) problems.push('js/data-levels.js does not exist: run node tools/levels/set-levels.mjs --emit');
 else {
-	const text = readFileSync(DATA_FILE, 'utf8');
+	/* line endings as git may have checked them out: the text is compared, not the bytes */
+	const text = readFileSync(DATA_FILE, 'utf8').replace(/\r\n/g, '\n');
 	if (/[^\x00-\x7f]/.test(text)) problems.push('js/data-levels.js carries a non-ASCII byte: it is machine written; re-emit it');
 	if (placements.length && text !== emitDataLevels(placements, uni)) problems.push('js/data-levels.js is not what tools/levels/placements.json emits: run node tools/levels/set-levels.mjs --emit');
 }
