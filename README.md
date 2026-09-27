@@ -64,3 +64,24 @@ Clone it, run `py serve.py 8631`, and open http://localhost:8631. There is no in
 build — the repo *is* the artifact. Read [CLAUDE.md](CLAUDE.md) first: it documents the script load
 order (which matters — the files share one global scope), the cache-busting discipline for deploys,
 and the data shapes you must not rename without a migration.
+
+## Explorer's Library design (27 September 2026)
+
+The production Ledger now uses `css/house.css`, loaded after the original layout
+stylesheet. It styles every view: the illustrated Home entrance, compact interior
+masthead, named levels, Library and reference shelves, paper recipe tickets,
+flashcard faces, quizzes, practice, Menu, Tools, Record and search. The original
+stylesheet supplies layout and the print edition; house.css is screen-only.
+
+The presentation hook in `render()` sets `body.dataset.ledgerPage` and
+`#view.dataset.tab`. Flashcards add `study-face`, `study-toolbar` and `study-modes`
+classes without changing their content, grading or storage. Text remains live;
+`img/explorers-library.webp` is decorative, has fixed intrinsic dimensions and
+is precached with the self-hosted Cinzel and EB Garamond fonts. Font notices live
+in fonts/NOTICE.md and fonts/house-OFL.txt.
+
+Keep the skin and artwork byte-identical in BartendersLedger and the suite's
+ledger directory. Change each tree's shell and cache stamps independently. Do not
+copy a standalone shell, worker, app.js or ui-study.js over the suite: those files
+carry intentional integration and wording differences. Existing content and
+progress formats are unchanged.
