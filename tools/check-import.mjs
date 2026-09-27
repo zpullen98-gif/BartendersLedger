@@ -2021,7 +2021,7 @@ describe('when the read cannot happen, and the cook needs the next step', () => 
 describe('the four levels, in the session and the backup', () => {
 	const cardKeysAt = (n) => Object.keys(W.LEVEL_ITEMS).flatMap((s) => W.LEVEL_ITEMS[s][n]).filter((k) => !/^(q|drill|sec|prod|flight|prep|preplist|prepsafe|plate|riff):/.test(k));
 
-	it('a fresh store is dealt Level I, then Level II once every Level I card is seen, and the Today door says which', () => {
+	it('a fresh store is dealt Barback, then Bartender once every Barback card is seen, and the Today door names which', () => {
 		const cards = W.progress.cards;
 		W.progress.cards = {};
 		try {
@@ -2030,14 +2030,14 @@ describe('the four levels, in the session and the backup', () => {
 				const { newDeck } = W.sessionDeckParts();
 				for (const d of newDeck.filter((x) => x.src !== 'My Bar')) expect(W.levelOf(W.cardKey(d))).toBe(1);
 			}
-			expect(W.todayDoor().sub).toBe('Today deals from Level I.');
+			expect(W.todayDoor().sub).toBe('Today deals from Barback.');
 			for (const k of cardKeysAt(1)) W.progress.cards[k] = { r: 1, w: 0, due: Date.now() + 9e8 };
 			expect(W.todayLevel()).toBe(2);
 			for (let i = 0; i < 12; i++) {
 				const { newDeck } = W.sessionDeckParts();
 				for (const d of newDeck.filter((x) => x.src !== 'My Bar')) expect(W.levelOf(W.cardKey(d))).toBe(2);
 			}
-			expect(W.todayDoor().sub).toBe('Today deals from Level II.');
+			expect(W.todayDoor().sub).toBe('Today deals from Bartender.');
 		} finally { W.progress.cards = cards; }
 	});
 
@@ -2054,10 +2054,10 @@ describe('the four levels, in the session and the backup', () => {
 				expect(newDeck.length).toBeGreaterThan(0);
 				for (const d of newDeck) expect(tap1.has(W.cardKey(d))).toBe(true);
 			}
-			expect(W.todayDoor().sub).toBe('Today deals from Level I.');
+			expect(W.todayDoor().sub).toBe('Today deals from Barback.');
 			W.progress.bar = [{ id: 'lv-pin', name: 'House Sour', spec: ['2 oz rye', '1 oz lemon juice', '0.75 oz simple syrup'], method: 'Shake', glass: 'Coupe', garnish: 'Lemon twist', note: '', family: 'Sour', spirit: 'Rye' }];
 			W.barChanged();
-			expect(W.todayDoor().sub).toBe('Today deals from your menu, then Level I.');
+			expect(W.todayDoor().sub).toBe('Today deals from your menu, then Barback.');
 			W.progress.bar = [];
 			W.barChanged();
 			for (const d of W.sessionCardPool()) W.progress.cards[W.cardKey(d)] = { r: 1, w: 0, due: Date.now() + 9e8 };

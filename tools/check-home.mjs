@@ -5,25 +5,31 @@
  * The whole app is loaded from index.html's own script list into a DOM-free
  * sandbox (tools/load-wing.mjs), so what is checked is the SHIPPED renderers.
  * Three records are put in front of them: a fresh one, a partial one, and one
- * with every Level I unit met. Against each:
+ * with every Barback unit met. Against each:
  *
  *   - the home is the shared contract and nothing else: one section.levels of
  *     four button.level (the names, a word and figure in each, and no numeral
- *     on sight: "Level I" to "Level IV" is hidden text for a screen reader), then
+ *     on sight or for a screen reader: the name is the whole label), then
  *     one nav.quiet of four doors (Today, Library, Record, Mine · My Bar); one
  *     card is `on`, carries aria-current and the words "Your level", and it is
  *     the level this gate works out for itself; every card's word and figure
  *     equals the one this gate computes independently from the placements
  *     and the records; the Today door names the level it deals from
- *   - every level page lists the eight subsections, each with "N at this
- *     level", and every training door it draws resolves to a real tab; the
- *     page ends on "The Level N test"
+ *   - every level page is titled by the level's name alone, switches between
+ *     the four by their names, lists the eight subsections, each with "N at
+ *     this level", and every training door it draws resolves to a real tab;
+ *     the page ends on its test by name ("The Barback test")
  *   - every level test deals seventeen questions; sat wrong, it ends on "What
  *     got away" with no percentage, no score (no "n / m"), none of the quiz
  *     round's verdicts, and without adding a row to progress.quizzes; sat
  *     right, it ends on "Nothing got away."; either way the sitting is
  *     recorded in progress.levels
  *   - nothing these screens render carries an em dash
+ *   - no level is named by a numeral anywhere a reader sees or hears one
+ *     (the owner, 27 Sep 2026): the screens above, the way back from a
+ *     level's tab, the Library's level filter, the flashcards' level line,
+ *     a level round's history label and the record's level tests all print
+ *     the name
  *
  * This file also runs inside the Outside Of Time wing, from ledger/tools/;
  * keep the two copies identical.
@@ -102,17 +108,19 @@ for (const s of SUBS) {
 	}
 }
 
-const romans = ['I', 'II', 'III', 'IV'];
+/* a level by numeral, in words or in the old span: none may be shown */
+const NUMERAL = /\bLevel\s+(?:I{1,3}|IV|[1-4])\b|lv-num/;
 const LEVELS = g('LEVELS');
 const TABS = new Set(g('TABS').map((t) => t[0]));
 const strip = (s) => s.replace(/<[^>]+>/g, '');
 
-for (const [name, rec] of [['fresh', fresh], ['partial', partial], ['Level I met', levelOne]]) {
+for (const [name, rec] of [['fresh', fresh], ['partial', partial], ['Barback met', levelOne]]) {
 	setProgress(rec);
 	run('state.lt = null; state.sess = null; state.level.n = null;');
 	const home = g('renderHome')();
 	const where = `home (${name})`;
 	if (home.includes(EMDASH)) fail(`${where}: carries an em dash`);
+	if (NUMERAL.test(home)) fail(`${where}: names a level by a numeral`);
 	const inner = home.replace(/^<div class="home4">/, '').replace(/<\/div>$/, '');
 	if (!/^<section class="levels" aria-label="Levels">[\s\S]*<\/section><nav class="quiet" aria-label="Doors">[\s\S]*<\/nav>$/.test(inner)) fail(`${where}: is not exactly section.levels then nav.quiet`);
 	const cards = [...home.matchAll(/<button class="level( on)?" data-act="level-open" data-n="(\d)" data-level="\d"( aria-current="step")?>([\s\S]*?)<\/button>/g)];
@@ -121,16 +129,14 @@ for (const [name, rec] of [['fresh', fresh], ['partial', partial], ['Level I met
 	cards.forEach((c, i) => {
 		const n = Number(c[2]), body = c[4];
 		if (n !== i + 1) fail(`${where}: card ${i + 1} is level ${n}`);
-		const num = (body.match(/<span class="sr-only">Level ([^<]*)<\/span>/) || [])[1];
-		if (/lv-num/.test(body)) fail(`${where}: card ${i + 1} shows a numeral, and the home cards carry none`);
+		if (/sr-only/.test(body)) fail(`${where}: card ${i + 1} carries hidden words, and its name is the whole label`);
 		const nm = (body.match(/<span class="lv-name">([^<]*)<\/span>/) || [])[1];
 		const stat = (body.match(/<span class="lv-stat">([^<]*)<\/span>/) || [])[1];
-		if (num !== romans[i]) fail(`${where}: card ${i + 1} numeral ${num}`);
 		if (nm !== LEVELS[i].name) fail(`${where}: card ${i + 1} name ${nm}`);
 		const expect = levelWord(rec, n);
-		if (stat !== expect) fail(`${where}: Level ${romans[i]} reads "${stat}", the gate reckons "${expect}"`);
+		if (stat !== expect) fail(`${where}: ${LEVELS[i].name} reads "${stat}", the gate reckons "${expect}"`);
 		const on = Boolean(c[1]);
-		if (on !== (n === want)) fail(`${where}: Level ${romans[i]} ${on ? 'is' : 'is not'} marked, and the reader is on Level ${romans[want - 1]}`);
+		if (on !== (n === want)) fail(`${where}: ${LEVELS[i].name} ${on ? 'is' : 'is not'} marked, and the reader is on ${LEVELS[want - 1].name}`);
 		if (on && (!c[3] || !/<span class="lv-here">Your level<\/span>/.test(body))) fail(`${where}: the current card lacks aria-current or "Your level"`);
 		if (!on && /lv-here/.test(body)) fail(`${where}: "Your level" on a card that is not current`);
 	});
@@ -139,9 +145,9 @@ for (const [name, rec] of [['fresh', fresh], ['partial', partial], ['Level I met
 	if (names.join('|') !== 'Today|Library|Record|Mine · My Bar') fail(`${where}: the doors read ${JSON.stringify(names)}`);
 	const today = doors[0] && doors[0][4];
 	const deals = g('todayLevel')();
-	if (today !== `Today deals from Level ${romans[deals - 1]}.`) fail(`${where}: the Today door says ${JSON.stringify(today)}`);
-	if (name === 'Level I met' && deals !== 2) fail(`${where}: with Level I met, Today still deals from Level ${romans[deals - 1]}`);
-	if (name === 'fresh' && deals !== 1) fail(`${where}: a fresh record is dealt Level ${romans[deals - 1]}`);
+	if (today !== `Today deals from ${LEVELS[deals - 1].name}.`) fail(`${where}: the Today door says ${JSON.stringify(today)}`);
+	if (name === 'Barback met' && deals !== 2) fail(`${where}: with Barback met, Today still deals from ${LEVELS[deals - 1].name}`);
+	if (name === 'fresh' && deals !== 1) fail(`${where}: a fresh record is dealt ${LEVELS[deals - 1].name}`);
 }
 
 /* ---- the level pages and their doors ---- */
@@ -149,9 +155,13 @@ setProgress(fresh);
 for (let n = 1; n <= 4; n++) {
 	run(`state.lt = null; state.level.n = ${n};`);
 	const page = g('renderLevel')();
-	const where = `Level ${romans[n - 1]}'s page`;
+	const where = `the ${LEVELS[n - 1].name} page`;
 	if (page.includes(EMDASH)) fail(`${where}: carries an em dash`);
-	if (!page.includes(`<h2 class="lv-title"><span class="lv-num">${romans[n - 1]}</span> ${LEVELS[n - 1].name}</h2>`)) fail(`${where}: the title is not the numeral and the name`);
+	if (NUMERAL.test(page)) fail(`${where}: names a level by a numeral`);
+	if (!page.includes(`<h2 class="lv-title">${LEVELS[n - 1].name}</h2>`)) fail(`${where}: the title is not the name alone`);
+	const sw = (page.match(/<nav class="lv-switch"[^>]*>([\s\S]*?)<\/nav>/) || [])[1] || '';
+	const swNames = [...sw.matchAll(/<button[^>]*>([^<]*)<\/button>/g)].map((m) => m[1]);
+	if (swNames.join('|') !== LEVELS.map((l) => l.name).join('|')) fail(`${where}: the switch reads ${JSON.stringify(swNames)}, not the four names`);
 	const subs = [...page.matchAll(/<li class="subsection" data-sub="(\w+)">([\s\S]*?)<\/li>/g)];
 	if (subs.length !== 8) fail(`${where}: ${subs.length} subsections, not eight`);
 	for (const s of subs) {
@@ -165,7 +175,7 @@ for (let n = 1; n <= 4; n++) {
 	}
 	if (/data-m="read"[^>]*>Read<\/button>/.test(page)) fail(`${where}: a Read door does not say where it goes`);
 	const last = page.match(/<button class="btn btn-brass leveltest" data-act="lt-start" data-n="(\d)">([^<]*)<\/button>/);
-	if (!last || last[2] !== `The Level ${romans[n - 1]} test`) fail(`${where}: does not end on its test`);
+	if (!last || last[2] !== `The ${LEVELS[n - 1].name} test`) fail(`${where}: does not end on its test`);
 }
 
 /* ---- the level tests ---- */
@@ -175,7 +185,7 @@ for (let n = 1; n <= 4; n++) {
 		setProgress(blank());
 		const quizzesBefore = getProgress().quizzes.length;
 		const t = g('ltStart')(n);
-		const where = `the Level ${romans[n - 1]} test, sat ${right ? 'right' : 'wrong'}`;
+		const where = `the ${LEVELS[n - 1].name} test, sat ${right ? 'right' : 'wrong'}`;
 		if (t.none || t.qs.length !== 17) { fail(`${where}: dealt ${t.none ? 'nothing' : t.qs.length + ' questions'}, not seventeen`); continue; }
 		for (let i = 0; i < 17; i++) {
 			const q = vm.runInContext('state.lt.qs[state.lt.idx]', W);
@@ -186,6 +196,8 @@ for (let n = 1; n <= 4; n++) {
 			   the page talking, so the panel that holds it is taken out */
 			const screen = g('renderLevelTest')().replace(/<div class="panel p5 col">[\s\S]*$/, '');
 			if (screen.includes(EMDASH)) fail(`${where}: question ${i + 1}'s screen carries an em dash`);
+			if (NUMERAL.test(screen)) fail(`${where}: question ${i + 1}'s screen names a level by a numeral`);
+			if (!screen.includes(`<h2 class="lv-title">The ${LEVELS[n - 1].name} test</h2>`)) fail(`${where}: question ${i + 1}'s screen is not headed by the level's name`);
 			if (/%|score/i.test(strip(screen))) fail(`${where}: question ${i + 1}'s screen shows a percentage or a score`);
 			g('ltPick')(idx);
 			g('ltNext')();
@@ -195,6 +207,8 @@ for (let n = 1; n <= 4; n++) {
 		const done = g('renderLevelTest')().replace(/<ul class="lt-misses">[\s\S]*?<\/ul>/, '<ul class="lt-misses"></ul>');
 		const text = strip(done);
 		if (done.includes(EMDASH)) fail(`${where}: the end carries an em dash`);
+		if (NUMERAL.test(done)) fail(`${where}: the end names a level by a numeral`);
+		if (!done.includes(`>Back to ${LEVELS[n - 1].name}</button>`)) fail(`${where}: the way back does not name the level`);
 		if (/%/.test(text)) fail(`${where}: the end shows a percentage`);
 		if (/\d+\s*\/\s*\d+/.test(text)) fail(`${where}: the end shows a score`);
 		for (const v of VERDICTS) if (text.includes(v)) fail(`${where}: the end says the quiz's verdict "${v}"`);
@@ -215,7 +229,7 @@ for (let n = 1; n <= 4; n++) {
 	for (const sub of ['ontap', 'coffee']) {
 		const t = g('trainTarget')('quiz', n, sub);
 		if (!t) continue;
-		if (!g('applyTarget')(t)) { fail(`Level ${romans[n - 1]}, ${sub}: the Quiz door dealt nothing`); continue; }
+		if (!g('applyTarget')(t)) { fail(`${LEVELS[n - 1].name}, ${sub}: the Quiz door dealt nothing`); continue; }
 		const round = vm.runInContext('state.quiz.round', W);
 		round.forEach((q, i) => {
 			if (!q.factCard) return;
@@ -223,17 +237,44 @@ for (let n = 1; n <= 4; n++) {
 			run(`state.quiz.idx = ${i}; state.quiz.picked = null;`);
 			const screen = g('renderQuiz')();
 			const whole = (screen.match(/<div class="ticket">[\s\S]*?<\/div><\/div>(?=<div class="col-sm">)/) || [])[0];
-			if (!whole) { fail(`Level ${romans[n - 1]}, ${sub}: "${q.factCard.name}" is asked without its card`); return; }
+			if (!whole) { fail(`${LEVELS[n - 1].name}, ${sub}: "${q.factCard.name}" is asked without its card`); return; }
 			/* the facts, below the card's category (a cider is labelled Cider on
 			   purpose: the decoys are ciders too) */
 			const ticket = whole.split('<div class="tix-rule"></div>').slice(1).join(' ');
 			const words = q.factCard.name.split(/[^A-Za-z\u00C0-\u024F]+/).filter((w) => w.length >= 4);
 			const text = strip(ticket).toLowerCase();
-			for (const w of words) if (new RegExp('(^|[^a-z\u00C0-\u024F])' + w.toLowerCase() + '($|[^a-z\u00C0-\u024F])').test(text)) fail(`Level ${romans[n - 1]}, ${sub}: the blind card for "${q.factCard.name}" names it`);
+			for (const w of words) if (new RegExp('(^|[^a-z\u00C0-\u024F])' + w.toLowerCase() + '($|[^a-z\u00C0-\u024F])').test(text)) fail(`${LEVELS[n - 1].name}, ${sub}: the blind card for "${q.factCard.name}" names it`);
 		});
 	}
 }
 if (!factQs) fail('no Quiz door dealt a beer or coffee card, so the blind card was never checked');
+
+/* ---- a level is its name everywhere else it is shown ----
+   The way back from a level's tab, the Library's level filter, the
+   flashcards' level line, a level round's history label and the record's
+   level tests each print a level, and each prints its name. */
+const NAMES = LEVELS.map((l) => l.name);
+setProgress({ ...blank(), levels: Object.fromEntries(NAMES.map((_, i) => [i + 1, [{ ts: now, total: 17, miss: 0 }]])) });
+for (let n = 1; n <= 4; n++) {
+	const name = NAMES[n - 1];
+	run(`state.lt = null; state.tab = 'flashcards'; state.level.n = ${n};`);
+	const crumb = g('clusterChromeHTML')();
+	if (!crumb.includes(`>Back to ${name}</button>`)) fail(`the way back from a ${name} tab reads ${JSON.stringify(strip(crumb))}`);
+	const label = g('modeLabel')(`level-${n}-cocktails`);
+	if (label !== `${name} · Cocktails`) fail(`a ${name} round's history label reads ${JSON.stringify(label)}`);
+	if (!g('applyTarget')(g('trainTarget')('cards', n, 'cocktails'))) { fail(`the ${name} Flashcards door deals nothing`); continue; }
+	const fc = g('renderFlashcards')();
+	if (!fc.includes(`Dealing from ${name}, Cocktails.`)) fail(`the ${name} Flashcards door does not say it deals from ${name}`);
+	if (NUMERAL.test(fc)) fail(`the ${name} flashcards names a level by a numeral`);
+}
+run("state.tab = 'library'; state.lib = { q:'', fam:'All', tier:'All', open:null, level:null };");
+const libSel = (g('renderLibrary')().match(/<select[^>]*id="lib-level"[^>]*>([\s\S]*?)<\/select>/) || [])[1] || '';
+const libOpts = [...libSel.matchAll(/<option[^>]*>([^<]*)<\/option>/g)].map((m) => m[1]);
+if (libOpts.join('|') !== ['Every level', ...NAMES].join('|')) fail(`the Library's level filter reads ${JSON.stringify(libOpts)}`);
+const sat = [...g('levelTestsHTML')().matchAll(/<div class="hist-row"><span>([^<]*)<\/span>/g)].map((m) => m[1]);
+if (sat.join('|') !== NAMES.join('|')) fail(`the record's level tests read ${JSON.stringify(sat)}`);
+if (NUMERAL.test(g('renderMine')())) fail('Mine names a level by a numeral');
+run("state.tab = 'home';");
 
 /* ---- the Record door lands on the record ---- */
 run("state.mine.at = 'record';");
@@ -244,4 +285,4 @@ if (problems.length) {
 	for (const p of problems.slice(0, 60)) console.error(`    ${p}`);
 	process.exit(1);
 }
-console.log('  ✓ the home is the contract on three records, every level page and door resolves, every level test ends on what got away with no score');
+console.log('  ✓ the home is the contract on three records, every level page and door resolves, every level test ends on what got away with no score, and every level is its name');
