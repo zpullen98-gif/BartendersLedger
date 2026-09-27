@@ -99,8 +99,11 @@ export function loadApp() {
 
 /**
  * Every item, as rows { key, name, kind, sub, metable, fixed?, signals }.
- * `fixed` is a level the rules decide, never an agent: tiers 1 and 2 are
- * Level I and tier 3 is Level II, by the owner's standard.
+ * `fixed` is a level the rules decide, never an agent: the Core Dozen and
+ * the Classics Canon (keys tier:1 and tier:2) are Barback, every drink, and
+ * the Extended Canon (tier:3) is Bartender, every drink, by the owner's
+ * standard. A book is named and never numbered where a reader sees it;
+ * `signals.tier` is its key, for the agents' briefs only.
  */
 export function universe(W = loadApp()) {
 	const g = (n) => W.get(n);
@@ -218,8 +221,10 @@ export function problemsOf(placements, uni) {
 		if (seen.has(p.key)) problems.push(`${where}: placed twice`);
 		seen.add(p.key);
 		if (![1, 2, 3, 4].includes(p.level)) problems.push(`${where}: level ${JSON.stringify(p.level)} is not 1 to 4`);
-		if (r.fixed && p.level !== r.fixed) problems.push(`${where}: tier ${r.signals.tier} is Level ${r.fixed} by rule, placed at ${p.level}`);
-		if (r.kind === 'card' && r.src === 'Cocktails' && r.signals.tier >= 4 && p.level === 1) problems.push(`${where}: tier ${r.signals.tier} is never Level I`);
+		const named = (n) => LEVEL_NAMES[n - 1] || JSON.stringify(n);
+		if (r.fixed && p.level !== r.fixed) problems.push(`${where}: ${r.signals.book} is ${named(r.fixed)}, every drink, by rule; placed at ${named(p.level)}`);
+		/* every book after the first three (keys 4 to 12) */
+		if (r.kind === 'card' && r.src === 'Cocktails' && r.signals.tier >= 4 && p.level === 1) problems.push(`${where}: ${r.signals.book} is never Barback; only the Core Dozen and the Classics Canon are`);
 		if (typeof p.reason !== 'string' || p.reason.trim().length < 12) problems.push(`${where}: carries no reason`);
 		const want = r.sub ?? null;
 		if (want && p.sub !== want) problems.push(`${where}: filed under ${JSON.stringify(p.sub)}, belongs to ${want}`);

@@ -1,10 +1,12 @@
 # The four levels: how an item gets its level
 
-The home is four level cards (I Barback, II Bartender, III Head Bartender,
-IV Bar Manager) and one quiet row of doors; each level is the same eight
+The home is four level cards (Barback, Bartender, Head Bartender, Bar
+Manager) and one quiet row of doors; each level is the same eight
 subsections at that level's difficulty, with training from there. The same
 shape as the World Table and the Codex, by the owner's decision of
-26 September 2026. Nothing is locked: a level guides, it never bars.
+26 September 2026. Nothing is locked: a level guides, it never bars. A level
+is its name and is never numbered where a reader sees or hears it (the
+owner, 27 September 2026); 1 to 4 is its key in the placements and the data.
 
 The eight subsections: Cocktails; Shots and Zero Proof; On Tap; Spirits and
 Producers; Technique and Method; Behind the Stick; The Prep Room; Coffee and
@@ -17,16 +19,52 @@ producers, flights, prep sheets and lists, the technique plates, the riff
 frames) are read, never graded, and are placed so a level page opens the
 right part of the book.
 
-Two rules decide levels without an agent: tiers 1 and 2 (the Core Dozen and
-the Classics Canon, 33 drinks) are Level I, every one, and tier 3 (the
-Extended Canon, 24) is Level II. Tiers 4 to 12 are placed at II, III or IV,
-never I. The Menu (My Bar) is the venue's own list and is never levelled.
+Two rules decide levels without an agent: the Core Dozen and the Classics
+Canon (33 drinks) are Barback, every drink, and the Extended Canon (24) is
+Bartender, every drink. Every other book is placed at Bartender, Head
+Bartender or Bar Manager, never Barback. The Menu (My Bar) is the venue's
+own list and is never levelled.
+
+## The books inside the levels
+
+The 365 cocktails are filed in twelve books, and the books are not a ladder
+beside the levels: they live inside them. Once they were twelve numbered
+tiers; by the owner's word of 27 September 2026 they are named and never
+numbered anywhere a reader sees or hears one, the rule the levels keep.
+`c.tier` in js/data-core.js is still each drink's key into `TIER_NAMES`, and
+`state.lib.tier` and `state.fc.tier` still hold it, so no record, backup or
+stored filter changed; only what is shown did.
+
+The books read in the order the levels climb, which is `BOOK_ORDER` next to
+the names: each book's place is the mean level of its drinks in
+`placements.json`, a tie kept in key order. The Core Dozen and the Classics
+Canon (Barback, every drink), the Extended Canon and Highballs, Spritzes &
+Party Calls (Bartender, every drink), then Modern Craft Classics, the Martini
+Book, Tiki & Tropical, Drinks of the World, Frozen & Blended, Dessert, Hot &
+After-Dinner, the Golden Age & Prohibition, and the Bartender's Obscura,
+mostly Bar Manager. `tools/check-levels.mjs` fails when a placement moves a
+book out of that order, so moving drinks and reordering `BOOK_ORDER` go
+together.
+
+Where a reader meets them: a level page's Cocktails names the books at that
+level, in book order, each a door with its count there into the Library at
+that level and that book, and a book that runs on says where it continues
+("Continues at Head Bartender"); the Library's and the flashcards' book
+filter lists only the books the chosen level holds, with their counts at
+it, and falls back to Every book when the level changes under a book it
+does not hold; a drink's chip is its level and its book ("Barback · The Core
+Dozen"); the search index reads family, spirit and book. The Library reads by
+level, then book, then name, and Tonight's Session deals a level's cocktails
+book by book in the same order. The drills that deal everyday drinks (the
+Ticket Rail, the picked drills) deal from the drinks placed at Barback or
+Bartender (`everydayCocktails`), never from a book's key.
+`tools/check-home.mjs` holds all of it.
 
 ## The standard
 
-**Level I, Barback.** A Barback is asked to know the well and the walk-in,
-not the book. At the well: the Core Dozen and the Classics Canon (tiers 1
-and 2, every one of them), called by name from a blind ticket, with the
+**Barback.** A Barback is asked to know the well and the walk-in, not the
+book. At the well: the Core Dozen and the Classics Canon (every one of
+them), called by name from a blind ticket, with the
 family each belongs to and the glass it goes in; the families as a map
 rather than as formulas. Behind the stick: ice, juice, the station set and
 struck, labels and shelf lives, the opening and closing lists, the pour of a
@@ -36,8 +74,8 @@ Prep Speed, Glass Call and Free-Pour Calibration at their ready figures. The
 signals that place an item here: it is on every menu, a guest expects any
 bartender to have it, and it can be taught in one sentence.
 
-**Level II, Bartender.** A Bartender runs a full shift alone: the Extended
-Canon (tier 3, every one) plus the house calls from the themed books that
+**Bartender.** A Bartender runs a full shift alone: the Extended Canon
+(every one) plus the house calls from the themed books that
 any good bar pours weekly (the Modern Craft classics, the common highballs
 and spritzes, the everyday tiki and the everyday sours), with the family
 formula understood well enough to rebuild a spec from memory; the shot
@@ -49,7 +87,7 @@ Consistency under 8 g, Dry-Shake Discipline, Hold the Round. The signals: a
 good bar pours it weekly, a guest asks about it, it takes a sentence and an
 example, and it is the pair a Barback confuses.
 
-**Level III, Head Bartender.** A Head Bartender is judged on depth and pace:
+**Head Bartender.** A Head Bartender is judged on depth and pace:
 the Golden Age and Prohibition book, the Martini book, the tiki canon in full
 and the drinks of the world, each with its lore; the wall in full (the
 styles, the fault board), cider and perry, sake and mead; wine service in
@@ -60,7 +98,7 @@ is marked against. The signals: it needs a paragraph, it separates a strong
 bartender from a competent one, and a guest who knows what they are ordering
 will notice a miss.
 
-**Level IV, Bar Manager.** A Bar Manager owns the whole house: the Obscura,
+**Bar Manager.** A Bar Manager owns the whole house: the Obscura,
 the frozen and blended book, the dessert, hot and after-dinner drinks, and
 the last members of every family; cellar and condition, how beer is made,
 and the ledger's money in full (pour cost, the bottle book, spillage,
@@ -69,15 +107,15 @@ their faults; the riff frames and the critique that says whether a new drink
 works; and the judgement to place a drink in its family from the spec alone.
 The signals: it is rare on menus or specialist, it is asked of the person
 who writes the menu and trains the floor, and knowing it is what lets
-somebody teach Levels I to III.
+somebody teach the three levels below.
 
-**Signals, weighed in this order.** The tier and its themed book (the fixed
-rules above, then: a book of house calls leans II, a book of lore and depth
-leans III, the Obscura, frozen and after-dinner books lean IV, and within a
-book the drinks a good bar pours weekly sit lower than its last members);
-how often a guest orders or asks it; how much it takes to explain (one
-sentence I, a sentence and an example II, a paragraph III, the person who
-trains the floor IV); the family (the family's template drinks lower, its
+**Signals, weighed in this order.** The drink's book (the fixed rules above,
+then: a book of house calls leans Bartender, a book of lore and depth leans
+Head Bartender, the Obscura, frozen and after-dinner books lean Bar Manager,
+and within a book the drinks a good bar pours weekly sit lower than its last
+members); how often a guest orders or asks it; how much it takes to explain
+(one sentence Barback, a sentence and an example Bartender, a paragraph Head
+Bartender, the person who trains the floor Bar Manager); the family (the family's template drinks lower, its
 outliers higher); for a question, the level of the lesson it tests; for a
 drill, the ready figure and whether a shift depends on it. Ties break DOWN,
 because nothing is locked and an item placed low costs nothing while an item

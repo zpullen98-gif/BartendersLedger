@@ -14,8 +14,9 @@
  * and refuses, all or nothing:
  *   - a key that is not an item, or one placed twice
  *   - an item left without a level (the fixed ones are filled here, by rule)
- *   - a level outside 1 to 4, a fixed rule broken (tiers 1 and 2 at I, tier 3
- *     at II, tiers 4 to 12 never at I), a placement with no reason
+ *   - a level outside 1 to 4, a fixed rule broken (the Core Dozen and the
+ *     Classics Canon at Barback and the Extended Canon at Bartender, every
+ *     drink; no other book ever at Barback), a placement with no reason
  *   - a craft question with no subsection or one outside CRAFT_SUBS
  * then writes tools/levels/placements.json (one item per line, universe
  * order), tools/levels/audit/<group>.json, and js/data-levels.js.
@@ -23,7 +24,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { universe, emitDataLevels, problemsOf, AUDIT_DIR, DATA_FILE, ROOT } from './lib.mjs';
+import { universe, emitDataLevels, problemsOf, AUDIT_DIR, DATA_FILE, ROOT, LEVEL_NAMES } from './lib.mjs';
 
 const PLACEMENTS = join(ROOT, 'tools', 'levels', 'placements.json');
 
@@ -71,7 +72,7 @@ for (const [group, rows] of Object.entries(run.placements)) {
 /* the rules' own placements, which no agent was asked for */
 for (const r of uni) {
 	if (r.fixed && !groupOf.has(r.key)) {
-		placements.push({ key: r.key, level: r.fixed, sub: r.sub, reason: `Tier ${r.signals.tier}, ${r.signals.book}: Level ${r.fixed} by the owner's rule (tiers 1 and 2 are Level I, tier 3 is Level II).` });
+		placements.push({ key: r.key, level: r.fixed, sub: r.sub, reason: `${r.signals.book}: ${LEVEL_NAMES[r.fixed - 1]}, every drink, by the owner's rule (the Core Dozen and the Classics Canon are Barback, the Extended Canon is Bartender).` });
 		groupOf.set(r.key, 'fixed');
 	}
 }

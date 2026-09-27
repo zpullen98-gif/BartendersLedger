@@ -30,6 +30,16 @@
  *     level's tab, the Library's level filter, the flashcards' level line,
  *     a level round's history label and the record's level tests all print
  *     the name
+ *   - the twelve books live inside the levels, named and never numbered (the
+ *     owner, 27 Sep 2026): no "tier" reaches the Library, the flashcards
+ *     setup, a drink's chip, the search index or a level page; the book
+ *     filter in the Library and the flashcards lists the books the level
+ *     holds, in the order the levels climb, each "name (count at the
+ *     level)", and a book the level does not hold falls back to Every book;
+ *     a drink's chip is its level and its book; the Library reads by level,
+ *     then book, then name; each level page names its books in that order
+ *     as 44px doors with their count and where they continue, and every book
+ *     door opens the Library at that level and that book
  *
  * This file also runs inside the Outside Of Time wing, from ledger/tools/;
  * keep the two copies identical.
@@ -276,6 +286,133 @@ if (sat.join('|') !== NAMES.join('|')) fail(`the record's level tests read ${JSO
 if (NUMERAL.test(g('renderMine')())) fail('Mine names a level by a numeral');
 run("state.tab = 'home';");
 
+/* ---- the books inside the levels ----
+   The twelve books are named and never numbered anywhere a reader sees or
+   hears one (the owner, 27 Sep 2026): no "Tier", no "tiers", no book's
+   number. Written again here from LEVEL_ITEMS and the drinks, not from the
+   app's helpers: the books a level holds, in the order the levels climb
+   (each book's mean level, a tie in key order), each with its count there. */
+const COCKTAILS = g('COCKTAILS');
+const BOOKS = g('TIER_NAMES');
+const TIERWORD = /\btiers?\b/i;
+const unesc = (s) => s.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&amp;/g, '&');
+const drinkLevel = new Map();
+for (let n = 1; n <= 4; n++) for (const k of LEVEL_ITEMS.cocktails[n] || []) drinkLevel.set(k, n);
+const meanLevel = (t) => { const ls = COCKTAILS.filter((c) => c.tier === t).map((c) => drinkLevel.get(c.name) || 0); return ls.reduce((a, b) => a + b, 0) / ls.length; };
+const climb = Object.keys(BOOKS).map(Number).sort((a, b) => (meanLevel(a) - meanLevel(b)) || (a - b));
+if (climb.join() !== (g('BOOK_ORDER') || []).join()) fail(`BOOK_ORDER ${JSON.stringify(g('BOOK_ORDER'))} is not the order the levels climb, ${JSON.stringify(climb)}`);
+const booksAt = (n) => climb.map((t) => ({ t, name: BOOKS[t], n: COCKTAILS.filter((c) => c.tier === t && (!n || drinkLevel.get(c.name) === n)).length })).filter((b) => b.n);
+const bookLabel = (b) => `${b.name} (${b.n})`;
+const nextLevelOf = (t, n) => { for (let m = n + 1; m <= 4; m++) if (COCKTAILS.some((c) => c.tier === t && drinkLevel.get(c.name) === m)) return m; return null; };
+/* a book select's options, their words and the one selected */
+const bookSelect = (screen, id) => {
+	const m = screen.match(new RegExp(`<select[^>]*id="${id}"[^>]*>([\\s\\S]*?)<\\/select>`));
+	if (!m) return null;
+	const opts = [...m[1].matchAll(/<option value="[^"]*"( selected)?>([^<]*)<\/option>/g)];
+	return { tag: m[0].slice(0, m[0].indexOf('>') + 1), words: opts.map((o) => unesc(o[2])), selected: unesc((opts.find((o) => o[1]) || [])[2] || '') };
+};
+const bookWhere = (n) => (n ? NAMES[n - 1] : 'every level');
+
+/* the Library: the book filter scoped by the level, the order, the chips */
+setProgress(blank());
+for (const n of [0, 1, 2, 3, 4]) {
+	run(`state.tab = 'library'; state.lib = { q:'', fam:'All', tier:'All', open:null, level:${n || null} };`);
+	const lib = g('renderLibrary')();
+	const where = `the Library at ${bookWhere(n)}`;
+	if (TIERWORD.test(lib)) fail(`${where}: says "tier"`);
+	const sel = bookSelect(lib, 'lib-book');
+	if (!sel) { fail(`${where}: no book filter`); continue; }
+	if (!/aria-label="Filter by book"/.test(sel.tag)) fail(`${where}: the book filter is not labelled "Filter by book"`);
+	const want = ['Every book', ...booksAt(n).map(bookLabel)];
+	if (sel.words.join('|') !== want.join('|')) fail(`${where}: the book filter reads ${JSON.stringify(sel.words)}, not ${JSON.stringify(want)}`);
+	if (n === 1 && want.join('|') !== 'Every book|The Core Dozen (12)|The Classics Canon (21)') fail(`Barback holds ${JSON.stringify(want.slice(1))}, not the Core Dozen and the Classics Canon`);
+	/* every drink's chip is its level and its book, by name, and the list reads
+	   by level, then book order, then name */
+	const heads = [...lib.matchAll(/data-act="lib-toggle" data-i="(\d+)"[^>]*>[\s\S]*?<span class="bold">[^<]*<\/span><span class="chip">[^<]*<\/span><span class="chip brass">[^<]*<\/span><span class="chip">([^<]*)<\/span>/g)];
+	const expect = COCKTAILS.map((c, i) => ({ c, i, l: drinkLevel.get(c.name) || 5, b: climb.indexOf(c.tier) }))
+		.filter((x) => !n || x.l === n)
+		.sort((a, b) => (a.l - b.l) || (a.b - b.b) || a.c.name.localeCompare(b.c.name));
+	if (heads.map((h) => h[1]).join() !== expect.map((x) => x.i).join()) fail(`${where}: the drinks do not read by level, then book order, then name`);
+	for (const h of heads) {
+		const c = COCKTAILS[Number(h[1])];
+		const chip = unesc(h[2]);
+		const place = `${NAMES[drinkLevel.get(c.name) - 1]} · ${BOOKS[c.tier]}`;
+		if (chip !== place) { fail(`${where}: ${c.name} carries "${chip}", not "${place}"`); break; }
+	}
+}
+/* a book the level does not hold falls back to Every book; one it holds stays */
+run("state.tab = 'library'; state.lib = { q:'', fam:'All', tier:'10', open:null, level:1 };");
+{
+	const sel = bookSelect(g('renderLibrary')(), 'lib-book');
+	if (vm.runInContext('state.lib.tier', W) !== 'All' || (sel && sel.selected !== 'Every book')) fail('the Library at Barback keeps a book Barback does not hold, where it should read Every book');
+	if (g('libList')().length !== booksAt(1).reduce((a, b) => a + b.n, 0)) fail('the Library at Barback, Every book, does not list every Barback drink');
+}
+/* the flashcards setup: the same filter, scoped by the level it deals from */
+for (let n = 1; n <= 4; n++) {
+	g('applyTarget')(g('trainTarget')('cards', n, 'cocktails'));
+	run("state.fc.tier = '10';");
+	const fc = g('renderFlashcards')();
+	const where = `the flashcards dealing from ${NAMES[n - 1]}`;
+	if (TIERWORD.test(fc)) fail(`${where}: says "tier"`);
+	const sel = bookSelect(fc, 'fc-book');
+	if (!sel) { fail(`${where}: no book filter`); continue; }
+	if (!/aria-label="Filter by book"/.test(sel.tag)) fail(`${where}: the book filter is not labelled "Filter by book"`);
+	const want = ['Every book', ...booksAt(n).map(bookLabel)];
+	if (sel.words.join('|') !== want.join('|')) fail(`${where}: the book filter reads ${JSON.stringify(sel.words)}, not ${JSON.stringify(want)}`);
+	const held = booksAt(n).some((b) => b.t === 10);
+	if (sel.selected !== (held ? bookLabel(booksAt(n).find((b) => b.t === 10)) : 'Every book')) fail(`${where}: the Obscura chosen reads ${JSON.stringify(sel.selected)}`);
+}
+run('state.fc.level = null; state.fc.sub = null; state.fc.tier = \'All\';');
+{
+	const fc = g('renderFlashcards')();
+	const sel = bookSelect(fc, 'fc-book');
+	const want = ['Every book', ...booksAt(0).map(bookLabel)];
+	if (!sel || sel.words.join('|') !== want.join('|')) fail(`the flashcards at every level: the book filter reads ${JSON.stringify(sel && sel.words)}`);
+	if (TIERWORD.test(fc)) fail('the flashcards at every level: says "tier"');
+}
+/* the search index: family, spirit and the book's name */
+for (const e of g('buildSearchIndex')()) {
+	if (TIERWORD.test(e.s)) { fail(`the search index: "${e.t}" reads "${e.s}"`); break; }
+	if (!e.h.startsWith('#/library/')) continue;
+	const c = COCKTAILS.find((x) => x.name === e.t);
+	if (c && e.s !== `${c.family} · ${c.spirit} · ${BOOKS[c.tier]}`) { fail(`the search index: "${e.t}" reads "${e.s}"`); break; }
+}
+/* a level page: its books, in book order, each a door with its count there,
+   saying where it continues, and each door opens the Library at the level
+   and the book */
+const css = readFileSync(join(LEDGER, 'css', 'ledger.css'), 'utf8');
+if (!/\.book\{[^}]*min-height:44px/.test(css)) fail('a book door is not 44px tall (css/ledger.css .book)');
+for (let n = 1; n <= 4; n++) {
+	setProgress(blank());
+	run(`state.lt = null; state.tab = 'level'; state.level.n = ${n};`);
+	const page = g('renderLevel')();
+	const where = `the ${NAMES[n - 1]} page`;
+	if (TIERWORD.test(page)) fail(`${where}: says "tier"`);
+	const cell = (page.match(/<li class="subsection" data-sub="cocktails">([\s\S]*?)<\/li>/) || [])[1] || '';
+	const group = cell.match(/<div class="books" role="group" aria-label="([^"]*)">([\s\S]*?)<\/div>/);
+	if (!group) { fail(`${where}: the cocktails name no books`); continue; }
+	if (group[1] !== `The books at ${NAMES[n - 1]}`) fail(`${where}: the books are labelled ${JSON.stringify(group[1])}`);
+	const doors = [...group[2].matchAll(/<button class="book" data-act="book" data-n="(\d)" data-t="(\d+)">([\s\S]*?)<\/button>/g)];
+	const want = booksAt(n);
+	if (doors.map((d) => Number(d[2])).join() !== want.map((b) => b.t).join()) fail(`${where}: the books read ${JSON.stringify(doors.map((d) => BOOKS[d[2]]))}, not ${JSON.stringify(want.map((b) => b.name))} in book order`);
+	for (const d of doors) {
+		const b = want.find((x) => x.t === Number(d[2]));
+		if (!b) continue;
+		const next = nextLevelOf(b.t, n);
+		const words = `${b.name} ${b.n} drink${b.n === 1 ? '' : 's'}${next ? ` Continues at ${NAMES[next - 1]}` : ''}`;
+		if (unesc(strip(d[3])) !== words) fail(`${where}: the door to ${b.name} reads ${JSON.stringify(unesc(strip(d[3])))}, not ${JSON.stringify(words)}`);
+		if (Number(d[1]) !== n) fail(`${where}: the door to ${b.name} opens another level`);
+		const t = g('bookTarget')(n, b.t);
+		if (!g('applyTarget')(t)) { fail(`${where}: the door to ${b.name} goes nowhere`); continue; }
+		const lib = vm.runInContext('JSON.stringify({ tab: state.tab, level: state.lib.level, tier: state.lib.tier })', W);
+		if (lib !== JSON.stringify({ tab: 'library', level: n, tier: String(b.t) })) fail(`${where}: the door to ${b.name} lands on ${lib}`);
+		const sel = bookSelect(g('renderLibrary')(), 'lib-book');
+		if (!sel || sel.selected !== bookLabel(b)) fail(`${where}: the door to ${b.name} opens the Library on ${JSON.stringify(sel && sel.selected)}`);
+		if (g('libList')().length !== b.n) fail(`${where}: the door to ${b.name} lists ${g('libList')().length} drinks, not ${b.n}`);
+	}
+}
+run("state.tab = 'home';");
+
 /* ---- the Record door lands on the record ---- */
 run("state.mine.at = 'record';");
 if (!/<h3 class="sub-head" id="record-head" tabindex="-1" data-open="1">The record<\/h3>/.test(g('renderMine')())) fail('the Record door does not land on the record heading');
@@ -285,4 +422,4 @@ if (problems.length) {
 	for (const p of problems.slice(0, 60)) console.error(`    ${p}`);
 	process.exit(1);
 }
-console.log('  ✓ the home is the contract on three records, every level page and door resolves, every level test ends on what got away with no score, and every level is its name');
+console.log('  ✓ the home is the contract on three records, every level page and door resolves, every level test ends on what got away with no score, every level is its name, and the twelve books sit inside the levels by name');

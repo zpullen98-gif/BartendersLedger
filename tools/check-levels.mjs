@@ -6,8 +6,14 @@
  * them through the app's own scripts):
  *   - every item placed exactly once in tools/levels/placements.json, no
  *     placement for an item that does not exist, every placement with a
- *     reason, the fixed rules (tiers 1 and 2 at Level I, tier 3 at II, tiers
- *     4 to 12 never at I), every craft question filed under a subsection
+ *     reason, the fixed rules (the Core Dozen and the Classics Canon are
+ *     Barback, every drink; the Extended Canon is Bartender, every drink; no
+ *     other book is ever Barback), every craft question filed under a
+ *     subsection
+ *   - the twelve books read in the order the levels climb: BOOK_ORDER in
+ *     js/data-core.js is every book once, by the mean level of its drinks in
+ *     the placements, so a move that reorders the books fails here until
+ *     BOOK_ORDER is reordered with it
  *   - js/data-levels.js is EXACTLY what the placements emit, and pure ASCII
  *   - supply: every level can deal its level test with headroom, and every
  *     subsection holds at least one met-able unit at every level
@@ -63,11 +69,32 @@ for (const level of [1, 2, 3, 4]) {
 	for (const [what, min] of Object.entries(SUPPLY)) {
 		const [sub, kind] = what.split(' ');
 		const n = count(level, (p, r) => r && p.sub === sub && r.kind === kind);
-		if (n < min) problems.push(`Level ${level} holds ${n} ${what}(s); the level test needs at least ${min}`);
+		if (n < min) problems.push(`${LEVEL_NAMES[level - 1]} holds ${n} ${what}(s); the level test needs at least ${min}`);
 	}
 	for (const sub of SUB_KEYS) {
 		const n = count(level, (p, r) => r && p.sub === sub && r.metable);
-		if (!n) problems.push(`Level ${level}, ${sub}: nothing met-able; every subsection holds at least one unit at every level`);
+		if (!n) problems.push(`${LEVEL_NAMES[level - 1]}, ${sub}: nothing met-able; every subsection holds at least one unit at every level`);
+	}
+}
+
+/* the books in the order the levels climb: each book's mean level from the
+   placements, never falling along BOOK_ORDER (a tie keeps key order) */
+{
+	const ORDER = W.get('BOOK_ORDER');
+	const NAMES = W.get('TIER_NAMES');
+	const keys = Object.keys(NAMES).map(Number).sort((a, b) => a - b);
+	if (!Array.isArray(ORDER) || ORDER.length !== keys.length || [...ORDER].sort((a, b) => a - b).join() !== keys.join()) {
+		problems.push(`BOOK_ORDER in js/data-core.js is not every book once: ${JSON.stringify(ORDER)}`);
+	} else {
+		const at = new Map(placements.map((p) => [p.key, p.level]));
+		const mean = (t) => {
+			const ls = W.get('COCKTAILS').filter((c) => c.tier === t).map((c) => at.get(c.name)).filter(Boolean);
+			return ls.length ? ls.reduce((a, b) => a + b, 0) / ls.length : 0;
+		};
+		for (let i = 1; i < ORDER.length; i++) {
+			const a = ORDER[i - 1], b = ORDER[i], ma = mean(a), mb = mean(b);
+			if (ma > mb + 1e-9 || (Math.abs(ma - mb) < 1e-9 && a > b)) problems.push(`BOOK_ORDER puts ${NAMES[a]} (mean level ${ma.toFixed(2)}) before ${NAMES[b]} (${mb.toFixed(2)}): the books read in the order the levels climb`);
+		}
 	}
 }
 
@@ -112,4 +139,4 @@ if (problems.length) {
 	if (problems.length > 60) console.error(`    ... and ${problems.length - 60} more`);
 	process.exit(1);
 }
-console.log(`\n  ✓ the four levels hold: ${placements.length} items placed, supply met at every level, every drill ready figure stated`);
+console.log(`\n  ✓ the four levels hold: ${placements.length} items placed, supply met at every level, every drill ready figure stated, the twelve books in the order the levels climb`);
