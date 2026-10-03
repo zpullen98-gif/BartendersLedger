@@ -198,10 +198,22 @@ function houseApplyChanges(out){
 }
 
 /* ---- the wake: the list and the current house brought into step --------- */
+/* One wake at a time. The boot and a storage event can ask together, and
+   two syncs over the same rows would both report the same row as added:
+   the second then files a drink the first already filed and the door
+   refuses it by name. So a wake in flight is waited for, and the next runs
+   over the list as the first left it, where the engine finds nothing to
+   change. */
+var houseWakeInFlight = null;
 function houseSyncIn(){
   const api = houseHere();
   if(!api) return Promise.resolve(null);
+  if(houseWakeInFlight) return houseWakeInFlight.then(function(){ return houseSyncIn(); });
   houseAttach();
+  const done = function(){ houseWakeInFlight = null; };
+  return (houseWakeInFlight = houseSyncInNow(api).then(function(out){ done(); return out; }, function(err){ done(); throw err; }));
+}
+function houseSyncInNow(api){
   return api.ready().then(function(){
     houseNamesRefresh();
     if(!api.current()){ houseSyncedTo = null; return null; }

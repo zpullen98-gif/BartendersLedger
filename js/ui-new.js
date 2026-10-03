@@ -1132,6 +1132,12 @@ function dataImport(file){
     render();
     const el = document.getElementById('data-import-status');
     if(el) el.textContent = merge ? 'Merged. The ledger remembers.' : 'Restored from backup.';
+    /* projection first, House second: the list is saved and on screen, and
+       now the House hears of every row the backup brought (js/house-bar.js).
+       The wake adopts a row with no house into the current one, and a row
+       the House already holds is settled by the newer stamp, so a backup
+       read twice costs nothing the second time. */
+    if(typeof houseSyncIn === 'function') houseSyncIn().then(function(){ if(typeof houseRepaint === 'function') houseRepaint(); }).catch(function(){});
   };
   reader.onerror = () => status('Could not read that file.');
   reader.readAsText(file);
