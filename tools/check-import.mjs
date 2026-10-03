@@ -2493,6 +2493,50 @@ houseDescribe('the House behind the menu', () => {
 			expect(W.houseLineHTML()).not.toContain('data-act="house-export">Export</button>');
 		});
 	});
+
+	/* VERIFIER CASES (3 October 2026): two holes found on review, each a failing case and no fix. */
+	it('a backup merged through dataImport reaches the House too: projection first, House second, not projection only', async () => {
+		const api = await importCurrent();
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			const row = { id: 'b-backup01', name: 'Backup Sour', spec: ['2 oz rye', '1 oz lemon'], method: '', glass: '', garnish: '', note: '', family: 'Sour', spirit: 'Rye', price: '', ts: 5 };
+			globalThis.confirmAnswers = [true];
+			W.dataImport(JSON.stringify({ app: 'bartenders-ledger', progress: { cards: {}, bar: [row] } }));
+			expect(W.progress.bar.some((b) => b.id === 'b-backup01')).toBe(true);
+			/* the House must hear of the row the import filed, by the time any asynchronous put would have landed */
+			await new Promise((r) => setTimeout(r, 20));
+			expect(api.current().cocktails.some((c) => c.id === 'b-backup01')).toBe(true);
+			expect(api.buildPack('ledger').pack.house.cocktails.some((c) => c.name === 'Backup Sour')).toBe(true);
+		});
+	});
+
+	it('two wakes in flight at once (the boot and a storage event) end on the list once and no refusal on Mine', async () => {
+		await importCurrent();
+		await withBarAsync(async () => {
+			W.state.house.err = '';
+			const both = await Promise.all([W.houseSyncIn(), W.houseSyncIn()]);
+			expect(both[0].ok && both[1].ok).toBe(true);
+			expect(W.progress.bar).toHaveLength(2);
+			expect(W.state.house.err).toBe('');
+		});
+	});
+
+	it('a projection asked for while a wake is in flight waits its turn, so the two file the list once and no refusal on Mine', async () => {
+		await importCurrent();
+		await withBarAsync(async () => {
+			W.state.house.err = '';
+			const both = await Promise.all([W.houseSyncIn(), W.houseProject()]);
+			expect(both[0].ok).toBe(true);
+			expect(both[1]).toHaveLength(2);
+			expect(W.progress.bar).toHaveLength(2);
+			expect(W.state.house.err).toBe('');
+			/* and the other way round, the wake queued behind the projection */
+			const again = await Promise.all([W.houseProject(), W.houseSyncIn()]);
+			expect(again[1].changes).toHaveLength(0);
+			expect(W.progress.bar).toHaveLength(2);
+			expect(W.state.house.err).toBe('');
+		});
+	});
 });
 
 describe('house-bar.js with no engine at all', () => {
