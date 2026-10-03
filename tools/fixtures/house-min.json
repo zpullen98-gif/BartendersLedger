@@ -1,0 +1,446 @@
+{
+	"format": "oot-house",
+	"version": 1,
+	"id": "h-lantern0",
+	"name": "The Lantern Room",
+	"address": "14 Quay Lane, Harbourside",
+	"phone": "01234 567890",
+	"site": "lanternroom.example",
+	"meals": [
+		{ "name": "Dinner", "days": "Tuesday to Saturday", "hours": "6 pm to 10 pm" }
+	],
+	"history": {
+		"value": "Opened in the old lamp store on the quay. The hearth in the dining room is the one the lamp makers warmed their hands at, and the chicken has roasted over it since the first night.",
+		"by": "person",
+		"ts": 1790672400000
+	},
+	"dressCode": "Smart, jackets welcome, nothing required",
+	"menusReadOn": "2026-09-28",
+	"sources": [
+		{ "title": "The dinner menu, printed card", "url": "", "readOn": "2026-09-28" },
+		{ "title": "The by the glass list on the bar", "url": "", "readOn": "2026-09-28" }
+	],
+	"tastings": [
+		{
+			"id": "t-harbour1",
+			"name": "The Harbour Supper",
+			"price": "45",
+			"meal": "Dinner",
+			"includesDrinks": false,
+			"courses": [
+				{ "n": 1, "label": "To start", "dishIds": ["d-beetrt01"], "pourId": "w-lantern1", "pourText": "A glass of the Harbour White" },
+				{ "n": 2, "label": "The main", "dishIds": ["d-chicken1"], "pourId": "", "pourText": "" }
+			],
+			"note": "For the whole table, Tuesday to Thursday.",
+			"ts": 1790589600000
+		}
+	],
+	"dishes": [
+		{
+			"id": "d-chicken1",
+			"house": "h-lantern0",
+			"kind": "dish",
+			"name": "Lantern Roast Chicken",
+			"section": "Mains",
+			"meals": ["Dinner"],
+			"price": "24",
+			"prices": [{ "meal": "Dinner", "printed": "24" }],
+			"description": "Half a corn fed chicken roasted over the embers, leeks, crushed potatoes, rosemary gravy",
+			"ingredients": ["chicken", "leeks", "potatoes", "rosemary", "chicken stock", "olive oil", "lemon"],
+			"marks": [],
+			"signature": true,
+			"ingredientsNamed": {
+				"value": ["chicken", "leeks", "crushed potatoes", "rosemary gravy"],
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"say": {
+				"value": "Say it as it reads: LAN tern roast chicken, the stress on the first word.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"guest": {
+				"value": "Half a chicken roasted over the embers, with leeks, crushed potatoes and a rosemary gravy.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"why": {
+				"value": "It is the dish the room opened on, and the one the regulars order without looking at the card.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"pairs": {
+				"value": "The Harbour White by the glass, or the verjus and tonic for a table that is not drinking.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"origin": {
+				"value": "The chef cooked it on a farmhouse hearth in the hills before the room opened, and brought the hearth with her.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"parts": {
+				"value": {
+					"main": "Half a corn fed chicken",
+					"technique": "Roasted over embers, rested, carved at the pass",
+					"sauce": "Rosemary gravy from the roasting juices",
+					"sides": "Leeks and crushed potatoes",
+					"taste": "Smoky skin, sweet leek, a sharp lift from the lemon"
+				},
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"lines": {
+				"value": {
+					"s10": "Half a chicken roasted over the embers, with leeks, crushed potatoes and a rosemary gravy.",
+					"s20": "Half a corn fed chicken, roasted over the embers in the dining room until the skin is smoky and crisp. It comes with soft leeks, crushed potatoes and a gravy made from the roasting juices and rosemary.",
+					"s45": "This is the dish the room opened on. Half a corn fed chicken goes over the embers of the hearth you can see from the door, and roasts until the skin is smoky and crisp and the meat is still juicy. It rests, then it is carved at the pass and set on soft leeks and crushed potatoes, with a gravy made from the roasting juices, a little rosemary and a squeeze of lemon. It is a plate for one, and the regulars order it without looking at the card."
+				},
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"pairing": {
+				"value": {
+					"wineId": "w-lantern1",
+					"why": "The wine is dry and a little saline, which lifts the smoke on the skin.",
+					"sayIt": "With the chicken I would pour the Harbour White. It is dry and bright, and it loves the smoke.",
+					"whyThisWine": "Bacchus from the slope above the harbour has the acid to cut the skin and the salt to meet the gravy.",
+					"palate": "Crisp, saline, a green apple edge",
+					"principles": ["acid", "fat", "bridge"],
+					"secondId": "",
+					"secondWhy": "",
+					"stepUp": "The same wine by the bottle, printed at thirty eight on the list.",
+					"serve": "Well chilled, poured as the plates land.",
+					"avoid": "A heavy red; the smoke turns it bitter.",
+					"zeroProofId": "b-verjus01",
+					"zeroProofWhy": "Verjus has the same sharp edge as the wine and none of the alcohol."
+				},
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"kept": [
+				{
+					"q": "What do I say when the table asks how long the chicken takes?",
+					"a": "Twenty minutes from the order, because it roasts to order and rests before it is carved.",
+					"ts": 1790672400000
+				}
+			],
+			"serviceNote": "Ask the chef which stock went into the gravy tonight. Confirm at lineup.",
+			"ts": 1790589600000
+		},
+		{
+			"id": "d-beetrt01",
+			"house": "h-lantern0",
+			"kind": "dish",
+			"name": "Beetroot and Apple Salad",
+			"section": "Starters",
+			"meals": ["Dinner"],
+			"price": "11",
+			"prices": [{ "meal": "Dinner", "printed": "11" }],
+			"description": "Salt baked beetroot, apple, shallot, sherry vinegar, parsley",
+			"ingredients": ["beetroot", "apple", "shallot", "sherry vinegar", "parsley", "olive oil"],
+			"marks": ["v"],
+			"signature": false,
+			"serviceNote": "",
+			"ts": 1790589600000
+		}
+	],
+	"wines": [
+		{
+			"id": "w-lantern1",
+			"house": "h-lantern0",
+			"kind": "wine",
+			"name": "Quay Lane Harbour White 2024",
+			"section": "By the glass",
+			"meals": ["Dinner"],
+			"price": "9",
+			"prices": [{ "meal": "Dinner", "printed": "9 / 38" }],
+			"producer": "Quay Lane Vineyard",
+			"wine": "Harbour White",
+			"vintage": "2024",
+			"region": "Harbourside",
+			"grapes": ["Bacchus"],
+			"style": "Dry white, light",
+			"glass": "9",
+			"bottle": "38",
+			"pours": ["125 ml", "175 ml"],
+			"say": {
+				"value": "BAK us, like the god; Harbour White as it reads.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"guest": {
+				"value": "A dry white from the slope above the harbour, crisp and a little salty, made from Bacchus.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"why": {
+				"value": "It is the one wine on the list grown within sight of the dining room.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"pairs": {
+				"value": "The roast chicken first, the beetroot salad second, anything off the grill.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"origin": {
+				"value": "Quay Lane Vineyard planted the slope above the harbour on the chalk, and this is its third vintage.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"profile": {
+				"value": "Green apple, cut grass, a saline finish.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"goesWith": {
+				"value": "The roast chicken, the beetroot salad, anything from the grill.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"firstPickIds": {
+				"value": ["d-chicken1"],
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"serve": {
+				"value": "Well chilled, a white wine glass, opened on the day.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"parts": {
+				"value": {
+					"main": "Bacchus from Quay Lane, on the chalk above the harbour",
+					"technique": "Cool fermented in steel, no oak, bottled young",
+					"sauce": "Green apple, cut grass, a saline finish",
+					"sides": "The roast chicken and the beetroot salad",
+					"taste": "Crisp and bright, dry, a long salty finish"
+				},
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"lines": {
+				"value": {
+					"s10": "A dry white from the slope above the harbour, crisp, with a salty finish.",
+					"s20": "This is Bacchus from Quay Lane, grown on the chalk above the harbour and fermented cool in steel. It is dry and bright, green apple and cut grass, with a salty finish that suits the chicken.",
+					"s45": "The Harbour White is the one wine on the list you can see the vines of from the window. Quay Lane planted Bacchus on the chalk slope above the harbour and this is the third vintage. It is fermented cool in steel with no oak, so what you get is the grape: green apple, cut grass and a long salty finish from the sea air. It is the first pick with the roast chicken, because the acid cuts the skin and the salt meets the gravy, and it is nine by the glass or thirty eight the bottle."
+				},
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"serviceNote": "The list prints the glass at nine; the card on the bar says ten. Confirm at lineup.",
+			"ts": 1790589600000
+		}
+	],
+	"cocktails": [
+		{
+			"id": "b-collins1",
+			"house": "h-lantern0",
+			"kind": "cocktail",
+			"name": "The Lantern Collins",
+			"section": "Cocktails",
+			"meals": ["Dinner"],
+			"price": "12",
+			"prices": [{ "meal": "Dinner", "printed": "12" }],
+			"spec": ["50 ml gin", "25 ml lemon", "15 ml rosemary syrup", "top soda"],
+			"method": "Build over cubed ice, stir, top with soda",
+			"glass": "Highball",
+			"garnish": "Rosemary sprig",
+			"note": "The house long drink",
+			"family": "Collins",
+			"spirit": "Gin",
+			"zeroProof": false,
+			"say": {
+				"value": "The Lantern Collins, as it reads.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"guest": {
+				"value": "A long gin drink with lemon, a rosemary syrup from the hearth and soda.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"why": {
+				"value": "The rosemary is the same sprig that goes into the gravy, so the bar and the kitchen taste of one room.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"pairs": {
+				"value": "Before the chicken, or with the beetroot salad.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"origin": {
+				"value": "A Collins is a long gin drink from the old London hotel bars; this one took the house rosemary.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"ingredientsNamed": {
+				"value": ["gin", "lemon", "rosemary syrup", "soda"],
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"parts": {
+				"value": {
+					"main": "Gin",
+					"technique": "Built over cubed ice and stirred, topped with soda",
+					"sauce": "Lemon and a rosemary syrup",
+					"sides": "A highball with a rosemary sprig",
+					"taste": "Sharp and long, the rosemary on the finish"
+				},
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"lines": {
+				"value": {
+					"s10": "A long gin drink with lemon, rosemary syrup and soda, built over ice.",
+					"s20": "The Lantern Collins is our long drink: gin, fresh lemon and a rosemary syrup we make from the sprigs the kitchen uses, built over cubed ice and topped with soda. Sharp, long, and the rosemary comes through on the finish.",
+					"s45": "The Lantern Collins is the house long drink. A Collins is an old London hotel bar drink, gin lengthened with citrus and soda, and ours takes the rosemary that goes into the roast chicken gravy, made into a syrup at the bar. Fifty of gin, a good squeeze of lemon, the syrup, built over cubed ice in a highball and topped with soda, with a sprig on top. It is sharp and long and it drinks well before the chicken or beside the beetroot salad."
+				},
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"upsells": {
+				"value": ["b-verjus01"],
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"serviceNote": "",
+			"ts": 1790589600000
+		},
+		{
+			"id": "b-verjus01",
+			"house": "h-lantern0",
+			"kind": "cocktail",
+			"name": "Verjus and Tonic",
+			"section": "Without alcohol",
+			"meals": ["Dinner"],
+			"price": "7",
+			"prices": [{ "meal": "Dinner", "printed": "7" }],
+			"spec": [],
+			"method": "",
+			"glass": "Highball",
+			"garnish": "Apple slice",
+			"note": "Zero proof, built to order",
+			"family": "Highball",
+			"spirit": "",
+			"zeroProof": true,
+			"serviceNote": "",
+			"ts": 1790589600000
+		}
+	],
+	"lexicon": [
+		{
+			"id": "x-verjus01",
+			"term": "Verjus",
+			"say": {
+				"value": "vair ZHOO",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"toGuest": {
+				"value": "The juice of unripe grapes, sharp like lemon, with no alcohol in it.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"itemIds": ["b-verjus01"],
+			"ts": 1790589600000
+		},
+		{
+			"id": "x-saltbak1",
+			"term": "Salt baked",
+			"say": {
+				"value": "As it reads: salt baked.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"itemIds": ["d-beetrt01"],
+			"ts": 1790589600000
+		}
+	],
+	"scenarios": [
+		{
+			"id": "s-hurry001",
+			"title": "A table in a hurry",
+			"guest": "We have a show at eight. What can we have that is quick?",
+			"you": {
+				"value": "The beetroot salad is plated cold and the chicken comes off the embers in twenty minutes. Order both now and I will tell the pass.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"principle": {
+				"value": "Name the time honestly and set the kitchen in motion before you leave the table.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"itemIds": ["d-beetrt01", "d-chicken1"],
+			"ts": 1790589600000
+		}
+	],
+	"mixUps": [
+		{
+			"id": "m-chkbeet1",
+			"aId": "d-chicken1",
+			"bId": "d-beetrt01",
+			"difference": {
+				"value": "One is a roast main for one person; the other is a cold starter to share.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"ask": {
+				"value": "Are you starting with it, or is this your main?",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"ts": 1790589600000
+		}
+	],
+	"mustKnows": [
+		{
+			"id": "k-lastord1",
+			"title": "The kitchen closes at ten",
+			"body": {
+				"value": "Last orders for food are at ten; the bar pours until eleven. Say so to any table seated after half past nine.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"ts": 1790589600000
+		}
+	],
+	"askAtLineup": [
+		{
+			"id": "a-gravy001",
+			"question": "Which stock goes into the rosemary gravy on a Tuesday, when the hearth is lit late?",
+			"askWhom": "chef",
+			"itemIds": ["d-chicken1"],
+			"blocksField": "serviceNote",
+			"ts": 1790589600000
+		}
+	],
+	"disputes": [
+		{
+			"id": "u-glass001",
+			"itemId": "w-lantern1",
+			"field": "glass",
+			"a": { "text": "9", "source": "the printed list", "date": "2026-09-28" },
+			"b": { "text": "10", "source": "the card on the bar", "date": "2026-09-28" },
+			"ts": 1790589600000
+		}
+	],
+	"removed": {},
+	"build": {
+		"card": 1790589600000,
+		"menus": 1790589600000,
+		"filed": 1790589600000,
+		"formula": 1790672400000,
+		"pairings": 1790672400000,
+		"wines": 1790672400000,
+		"lexicon": 1790672400000,
+		"scenarios": 1790672400000
+	},
+	"began": "pack",
+	"createdAt": "2026-09-28T10:00:00.000Z",
+	"lastWrite": 1790758800000,
+	"pack": { "id": "house-min", "builtBy": "the fixture", "builtAt": "2026-09-28T10:00:00.000Z", "version": 1 }
+}

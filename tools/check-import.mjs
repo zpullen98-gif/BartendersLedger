@@ -38,7 +38,7 @@
  *
  * Run: node tools/check-import.mjs
  */
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, it, mock } from 'node:test';
 import assert from 'node:assert/strict';
@@ -52,6 +52,8 @@ const src = readFileSync(join(JS, 'menu-desk.js'), 'utf8');
    the values. */
 const { parseMenuText, readMenu, deskSource, deskInbox, reReadAs, priceInRaw } = vm.runInThisContext(
 	src + ';({parseMenuText,readMenu,deskSource,deskInbox,reReadAs,priceInRaw})');
+/* the desk's line cap, raised for the House on 3 October 2026; the port keeps it inside its own scope, so the figure is pinned here */
+const MAX_LINES = 20000;
 const FIXTURES = new URL('./fixtures/', import.meta.url);
 const fixture = (name) => readFileSync(new URL(name, FIXTURES), 'utf8');
 const { htmlToMenuText, linkToText } = vm.runInThisContext(
@@ -89,13 +91,32 @@ globalThis.FileReader = class { readAsText(text){ this.result = text; if (this.o
    declares; srs.js is here because the backup import calls srsMigrate. */
 const APP = ['data-core.js', 'data-lore.js', 'data-ontap.js', 'data-coffee.js', 'data-service.js', 'data-ingredients.js',
 	'ingredients.js', 'engine.js', 'srs.js', 'ui-study.js', 'ui-practice.js', 'ui-reference.js', 'ui-prep.js', 'ui-new.js',
-	'menu-drinks.js', 'ui-menu.js', 'ui-import.js', 'data-levels.js', 'levels.js', 'ui-levels.js'];
+	'menu-drinks.js', 'ui-menu.js', 'ui-import.js', 'data-levels.js', 'levels.js', 'ui-levels.js', 'house-bar.js'];
 const W = vm.runInThisContext(APP.map((f) => readFileSync(join(JS, f), 'utf8')).join(';\n') +
 	';({menuDrinkFromDeskItem,menuDraftsFromDesk,menuDraftFromText,menuCanonMeasures,unmeasuredReason,measureReport,' +
 	'MD_isIngredientList,MD_listParts,MD_spiritOf,lineOz,COCKTAILS,progress,state,' +
 	'saveBarRecord,normalizeBarRecord,normalizeBarRecords,normalizeMaitre,mergeMaitre,missingFor,pourSources,allDrinks,barChanged,' +
 	'fcPool,buildRound,menuCardCount,sessionDeckParts,sessionCardPool,dataImport,keepMaitreField,' +
-	'blankImport,importFromText,importReKind,levelOf,cardKey,todayLevel,todayDoor,LEVEL_ITEMS})');
+	'blankImport,importFromText,importReKind,levelOf,cardKey,todayLevel,todayDoor,LEVEL_ITEMS,' +
+	'removeBarRecord,normalizeHouseRecords,mergeHouseRecords,FC_MODES,hasSpec,' +
+	'houseHere,houseSyncIn,houseProject,houseSwitch,housePut,houseRemove,houseNames,houseNamesRefresh,' +
+	'isHouseCard,hasKeptLines,keptLineOf,qMyBarLine,houseLineHTML,houseTakePack,houseImportChoice,houseOpenAdded,houseNotNow,houseMint})');
+
+/* The House engine, ../shared/oot-house.js, for the house cases below: the
+   wing layout keeps it two folders up, the source repo reads WorldTable's
+   copy beside it, and OOT_SHARED=<dir> names another. A named directory
+   that lacks the engine is a failure, so a mis-set path cannot pass as a
+   skip; neither default present is a note and a skip. */
+const SHARED_DEFAULTS = ['../../shared/', '../../worldtable/static/shared/'];
+const sharedDir = process.env.OOT_SHARED
+	? process.env.OOT_SHARED.replace(/[\\/]?$/, '/')
+	: SHARED_DEFAULTS.map((d) => new URL(d, import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')).find((d) => existsSync(join(d, 'oot-house.js')));
+const HOUSE_ENGINE = sharedDir ? join(sharedDir, 'oot-house.js') : null;
+if (process.env.OOT_SHARED && !existsSync(HOUSE_ENGINE)) {
+	console.error('check-import: OOT_SHARED names ' + sharedDir + ' but it holds no oot-house.js');
+	process.exit(1);
+}
+if (!HOUSE_ENGINE) console.log('SKIPPED house cases: no shared folder beside this checkout (OOT_SHARED=<dir> names one)');
 
 /* The handful of vitest matchers this suite uses, over node:assert. A shim
    rather than a rewrite, so every assertion below is the assertion that was
@@ -759,12 +780,13 @@ describe('the parser is total', () => {
 	});
 
 	it('stops at the size guard and says so rather than reading half a menu in silence', () => {
-		const huge = 'Crispy squid 9.50\n'.repeat(20000);
+		/* Stacked, one row per four lines, so the twenty thousand lines read mint five thousand ids and read in time (the caps were raised for the House on 3 October 2026; the pin follows the source's). */
+		const huge = 'Shrimp & Tasso Henican\n15.50\nWild shrimp stuffed with tasso ham, pickled okra and pepper jelly\n\n'.repeat(15000);
 		const started = Date.now();
 		const { dishes, skipped } = parseMenuText(huge);
 		expect(Date.now() - started).toBeLessThan(5000);
-		expect(dishes.length).toBeLessThanOrEqual(5000);
-		expect(skipped[skipped.length - 1]).toMatch(/^Only the first 200,000 characters were read/);
+		expect(dishes.length).toBeLessThanOrEqual(MAX_LINES);
+		expect(skipped[skipped.length - 1]).toMatch(/^Only the first 1,000,000 characters were read/);
 	});
 });
 
@@ -2099,5 +2121,401 @@ describe('the four levels, in the session and the backup', () => {
 				expect(W.progress.levels[2]).toHaveLength(1);
 			}
 		} finally { W.progress.qa = qa; W.progress.levels = lv; }
+	});
+});
+
+/* ---- the House ---------------------------------------------------------
+   The engine is loaded into this realm over a Map (no IndexedDB in node, so
+   the api is volatile) and installed where the shipped house-bar.js reads
+   it, OOT.house; every case builds a fresh api so no house leaks between
+   them. The fixture is the World Table's own house-min.json, copied and never
+   edited here; a pack is built from it through the engine's own buildPack. */
+const houseDescribe = HOUSE_ENGINE ? describe : describe.skip;
+houseDescribe('the House behind the menu', () => {
+	vm.runInThisContext(readFileSync(HOUSE_ENGINE, 'utf8'));
+	/* the engine installs on window; house-bar.js reads the bare name */
+	globalThis.OOT = globalThis.window.OOT;
+	const lib = OOT.houseLib;
+	const fixtureHouse = () => JSON.parse(fixture('house-min.json'));
+	const packOf = (house) => JSON.stringify(lib.buildPack(house, 'tools', Date.now()));
+	const fresh = () => { OOT.house = lib.createHouseApi(lib.mapStorage(), { from: 'ledger' }); return OOT.house; };
+	const importCurrent = async (house) => {
+		const api = fresh();
+		const r = await api.importPack(packOf(house || fixtureHouse()), { mode: 'new' });
+		expect(r.ok).toBe(true);
+		expect(r.current).toBe(true);
+		return api;
+	};
+	const withBarAsync = async (fn) => {
+		const before = W.progress.bar, cards = W.progress.cards;
+		W.progress.bar = [];
+		W.progress.cards = {};
+		W.barChanged();
+		try { return await fn(); } finally { W.progress.bar = before; W.progress.cards = cards; W.barChanged(); }
+	};
+	const TWELVE = ['family', 'garnish', 'glass', 'house', 'id', 'method', 'name', 'note', 'price', 'spec', 'spirit', 'ts'];
+	const lastPut = () => vm.runInThisContext('houseLastPut');
+
+	it('a spec-less house drink is filed as a draft through saveBarRecord, under the House’s own id, with the twelve keys, and the next wake has nothing to say', async () => {
+		await importCurrent();
+		await withBarAsync(async () => {
+			const out = await W.houseSyncIn();
+			expect(out.ok).toBe(true);
+			expect(out.changes.map((c) => c.what).sort()).toEqual(['row-added', 'row-added']);
+			expect(W.progress.bar).toHaveLength(2);
+			const verjus = W.progress.bar.find((b) => b.id === 'b-verjus01');
+			expect(verjus.draft).toBe(true);
+			expect(verjus.house).toBe('h-lantern0');
+			expect(Object.keys(verjus).filter((k) => k !== 'draft').sort()).toEqual(TWELVE);
+			expect(verjus.maitre === undefined).toBe(true);
+			expect(W.missingFor(verjus, []).length).toBeGreaterThan(0);
+			const collins = W.progress.bar.find((b) => b.id === 'b-collins1');
+			expect(collins.draft === undefined).toBe(true);
+			expect(collins.spec).toEqual(['50 ml gin', '25 ml lemon', '15 ml rosemary syrup', 'top soda']);
+			expect(collins.maitre.say.by).toBe('person');
+			expect(collins.ts).toBe(1790589600000);
+			expect(W.pourSources()).toContain('My Bar');
+			/* stable: the stamp the two sides agreed on was written, not the clock */
+			const again = await W.houseSyncIn();
+			expect(again.changes).toEqual([]);
+			expect(W.progress.bar).toHaveLength(2);
+		});
+	});
+
+	it('a person’s save reaches the House through housePut, carries the house stamp back, and the placeholder glass never churns', async () => {
+		const api = await importCurrent();
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			const rec = W.saveBarRecord({ name: 'House Sour', spec: ['2 oz rye', '1 oz lemon'], family: 'Sour', spirit: 'Rye' }, null);
+			expect(typeof rec).toBe('object');
+			expect(rec.house === undefined).toBe(true);
+			await lastPut();
+			const item = api.current().cocktails.find((c) => c.id === rec.id);
+			expect(item.name).toBe('House Sour');
+			expect(item.glass).toBe('');
+			const now = W.progress.bar.find((b) => b.id === rec.id);
+			expect(now.house).toBe('h-lantern0');
+			expect(now.glass).toBe(String.fromCharCode(0x2014));
+			/* eleven keys plus the house, and still no empty key */
+			expect(Object.keys(now).sort()).toEqual(TWELVE);
+			const again = await W.houseSyncIn();
+			expect(again.changes).toEqual([]);
+			/* an edit through the form, which carries no house, keeps it */
+			const edited = W.saveBarRecord({ name: 'House Sour', spec: ['2 oz rye', '1 oz lemon', '0.75 oz simple'], family: 'Sour', spirit: 'Rye' }, rec.id);
+			expect(edited.house).toBe('h-lantern0');
+			await lastPut();
+			expect(api.current().cocktails.find((c) => c.id === rec.id).spec).toHaveLength(3);
+		});
+	});
+
+	it('a kept line beats hers, whichever side is newer', async () => {
+		const house = fixtureHouse();
+		house.cocktails[0].guest = { value: 'Her line, newer', by: 'maitre', ts: 1900000000000 };
+		await importCurrent(house);
+		await withBarAsync(async () => {
+			W.progress.bar = [{ id: 'b-collins1', house: 'h-lantern0', name: 'The Lantern Collins', spec: ['50 ml gin'], method: '', glass: '', garnish: '', note: '', family: 'Collins', spirit: 'Gin', price: '', ts: 5,
+				maitre: { guest: { value: 'My own words', by: 'person', ts: 5 } } }];
+			W.barChanged();
+			const out = await W.houseSyncIn();
+			const item = OOT.house.current().cocktails.find((c) => c.id === 'b-collins1');
+			expect(item.guest).toMatchObject({ value: 'My own words', by: 'person' });
+			const row = W.progress.bar.find((b) => b.id === 'b-collins1');
+			expect(row.maitre.guest).toMatchObject({ value: 'My own words', by: 'person' });
+			expect(out.changes.some((c) => c.id === 'b-collins1' && c.what === 'item-updated')).toBe(true);
+		});
+		/* and the other way: hers on the row, kept on the House */
+		await importCurrent();
+		await withBarAsync(async () => {
+			W.progress.bar = [{ id: 'b-collins1', house: 'h-lantern0', name: 'The Lantern Collins', spec: ['50 ml gin'], method: '', glass: '', garnish: '', note: '', family: 'Collins', spirit: 'Gin', price: '', ts: 1900000000000,
+				maitre: { guest: { value: 'Her line, newer', by: 'maitre', ts: 1900000000000 } } }];
+			W.barChanged();
+			await W.houseSyncIn();
+			const row = W.progress.bar.find((b) => b.id === 'b-collins1');
+			expect(row.maitre.guest.by).toBe('person');
+			expect(row.maitre.guest.value).toBe('A long gin drink with lemon, a rosemary syrup from the hearth and soda.');
+			expect(OOT.house.current().cocktails.find((c) => c.id === 'b-collins1').guest.by).toBe('person');
+		});
+	});
+
+	it('no removal without a tombstone: a row the House lacks is added to it; a newer tombstone takes the row and its card; an older one is stale and goes instead', async () => {
+		const house = fixtureHouse();
+		house.removed = { 'b-oldtomb1': 1 };
+		const api = await importCurrent(house);
+		await withBarAsync(async () => {
+			const row = (id, name) => ({ id, house: 'h-lantern0', name, spec: ['2 oz rye'], method: '', glass: '', garnish: '', note: '', family: 'Sour', spirit: 'Rye', price: '', ts: 5 });
+			W.progress.bar = [row('b-abcdefgh', 'House Sour'), row('b-oldtomb1', 'Old Tombstone Sour')];
+			W.progress.cards['My Bar · House Sour'] = { r: 2, w: 0 };
+			W.barChanged();
+			const out = await W.houseSyncIn();
+			expect(W.progress.bar.map((b) => b.id).sort()).toEqual(['b-abcdefgh', 'b-collins1', 'b-oldtomb1', 'b-verjus01']);
+			expect(out.changes.filter((c) => c.what === 'row-removed')).toEqual([]);
+			expect(api.current().cocktails.some((c) => c.id === 'b-abcdefgh')).toBe(true);
+			expect(api.current().cocktails.some((c) => c.id === 'b-oldtomb1')).toBe(true);
+			expect(api.current().removed['b-oldtomb1'] === undefined).toBe(true);
+			/* the Remove act's two steps: the list first, then the tombstone */
+			expect(W.removeBarRecord('b-abcdefgh').name).toBe('House Sour');
+			expect(W.progress.cards['My Bar · House Sour'] === undefined).toBe(true);
+			expect(await W.houseRemove('b-abcdefgh')).toBe(true);
+			expect(typeof api.current().removed['b-abcdefgh']).toBe('number');
+			/* an old backup brings the row back, older than the tombstone: the wake takes it off again, card and all */
+			W.progress.bar.push(row('b-abcdefgh', 'House Sour'));
+			W.progress.cards['My Bar · House Sour'] = { r: 2, w: 0 };
+			W.barChanged();
+			const again = await W.houseSyncIn();
+			expect(again.changes.some((c) => c.id === 'b-abcdefgh' && c.what === 'row-removed')).toBe(true);
+			expect(W.progress.bar.some((b) => b.id === 'b-abcdefgh')).toBe(false);
+			expect(W.progress.cards['My Bar · House Sour'] === undefined).toBe(true);
+			expect(W.removeBarRecord('b-nothere1')).toBe(null);
+		});
+	});
+
+	it('a name twin is re-keyed to the House’s id through saveBarRecord, and its card moves with the name', async () => {
+		await importCurrent();
+		await withBarAsync(async () => {
+			W.progress.bar = [{ id: 'b-oldid001', house: 'h-lantern0', name: 'the lantern collins', spec: ['50 ml gin'], method: '', glass: '', garnish: '', note: '', family: 'Collins', spirit: 'Gin', price: '', ts: 1 }];
+			W.progress.cards['My Bar · the lantern collins'] = { r: 3, w: 1 };
+			W.barChanged();
+			const out = await W.houseSyncIn();
+			expect(out.changes.some((c) => c.what === 'renamed' && c.id === 'b-collins1' && c.from === 'b-oldid001')).toBe(true);
+			expect(W.progress.bar.map((b) => b.id).sort()).toEqual(['b-collins1', 'b-verjus01']);
+			const rec = W.progress.bar.find((b) => b.id === 'b-collins1');
+			expect(rec.name).toBe('The Lantern Collins');
+			expect(rec.spec).toHaveLength(4);
+			expect(W.progress.cards['My Bar · The Lantern Collins']).toMatchObject({ r: 3, w: 1 });
+			expect(W.progress.cards['My Bar · the lantern collins'] === undefined).toBe(true);
+		});
+	});
+
+	it('progress.house unions on ts|id in the merge branch, capped at a thousand, and is normalised in the replace branch', () => {
+		const was = W.progress.house;
+		W.progress.house = { say: [{ ts: 1, id: 'a', verdict: 'clean' }], role: [] };
+		const file = (house) => JSON.stringify({ app: 'bartenders-ledger', progress: { cards: {}, house } });
+		try {
+			for (let pass = 0; pass < 2; pass++) {
+				globalThis.confirmAnswers = [true];
+				W.dataImport(file({ say: [{ ts: 1, id: 'a', verdict: 'clean' }, { ts: 2, id: 'b' }, 'junk', { id: 'no stamp' }], role: [{ ts: 3, id: 'c' }], other: [1] }));
+				expect(W.progress.house.say.map((x) => x.ts + '|' + x.id)).toEqual(['1|a', '2|b']);
+				expect(W.progress.house.role.map((x) => x.id)).toEqual(['c']);
+				expect(Object.keys(W.progress.house).sort()).toEqual(['role', 'say']);
+			}
+			const many = Array.from({ length: 1200 }, (_, i) => ({ ts: i + 10, id: 's' + i }));
+			globalThis.confirmAnswers = [true];
+			W.dataImport(file({ say: many, role: [] }));
+			expect(W.progress.house.say).toHaveLength(1000);
+			expect(W.progress.house.say[999].id).toBe('s1199');
+			/* a backup with no house store leaves the records alone */
+			globalThis.confirmAnswers = [true];
+			W.dataImport(JSON.stringify({ app: 'bartenders-ledger', progress: { cards: {} } }));
+			expect(W.progress.house.say).toHaveLength(1000);
+		} finally { W.progress.house = was; }
+		/* REPLACE: the backup's store as it stands, normalised, or defaulted when it carries none */
+		const before = W.progress;
+		globalThis.confirmAnswers = [false, true];
+		W.dataImport(file({ say: 'junk', role: [{ ts: 7, id: 'r' }, null] }));
+		let now = vm.runInThisContext('progress');
+		try {
+			expect(now.house).toEqual({ say: [], role: [{ ts: 7, id: 'r' }] });
+			globalThis.confirmAnswers = [false, true];
+			W.dataImport(JSON.stringify({ app: 'bartenders-ledger', progress: { cards: {} } }));
+			now = vm.runInThisContext('progress');
+			expect(now.house).toEqual({ say: [], role: [] });
+		} finally {
+			vm.runInThisContext('(function(o){ progress = o; })')(before);
+			W.barChanged();
+		}
+	});
+
+	it('the orphan sweep spares a card whose drink is on any house on the device, current or not', async () => {
+		const api = await importCurrent();
+		const second = fixtureHouse();
+		second.id = 'h-second01';
+		second.name = 'The Second Room';
+		second.dishes = []; second.wines = []; second.tastings = []; second.lexicon = []; second.scenarios = []; second.mixUps = []; second.mustKnows = []; second.askAtLineup = []; second.disputes = [];
+		second.cocktails = [{ id: 'b-second01', house: 'h-second01', kind: 'cocktail', name: 'Second House Sour', section: '', meals: [], price: '', prices: [], spec: ['2 oz rye'], method: '', glass: '', garnish: '', note: '', family: 'Sour', spirit: 'Rye', zeroProof: false, serviceNote: '', ts: 5 }];
+		const r = await api.importPack(packOf(second), { mode: 'new' });
+		expect(r.ok).toBe(true);
+		expect(r.current).toBe(false);
+		await W.houseNamesRefresh();
+		expect(W.houseNames().sort()).toEqual(['Second House Sour', 'The Lantern Collins', 'Verjus and Tonic']);
+		await withBarAsync(async () => {
+			W.progress.cards['My Bar · Second House Sour'] = { r: 4, w: 0 };
+			W.progress.cards['My Bar · The Lantern Collins'] = { r: 1, w: 0 };
+			W.progress.cards['My Bar · Nowhere'] = { r: 1, w: 0 };
+			globalThis.confirmAnswers = [true];
+			W.dataImport(JSON.stringify({ app: 'bartenders-ledger', progress: { cards: {}, bar: [] } }));
+			expect(W.progress.cards['My Bar · Second House Sour']).toMatchObject({ r: 4 });
+			expect(W.progress.cards['My Bar · The Lantern Collins']).toMatchObject({ r: 1 });
+			expect(W.progress.cards['My Bar · Nowhere'] === undefined).toBe(true);
+		});
+	});
+
+	it('a switch of house replaces the list through the doors and leaves the outgoing cards for the day the house comes back', async () => {
+		const api = await importCurrent();
+		const second = fixtureHouse();
+		second.id = 'h-second01'; second.name = 'The Second Room';
+		second.dishes = []; second.wines = []; second.tastings = []; second.lexicon = []; second.scenarios = []; second.mixUps = []; second.mustKnows = []; second.askAtLineup = []; second.disputes = [];
+		second.cocktails = [{ id: 'b-second01', house: 'h-second01', kind: 'cocktail', name: 'Second House Sour', section: '', meals: [], price: '', prices: [], spec: ['2 oz rye'], method: '', glass: '', garnish: '', note: '', family: 'Sour', spirit: 'Rye', zeroProof: false, serviceNote: '', ts: 5 }];
+		await api.importPack(packOf(second), { mode: 'new' });
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			W.progress.cards['My Bar · The Lantern Collins'] = { r: 2, w: 0 };
+			expect(await W.houseSwitch('h-second01')).toBe(true);
+			expect(api.currentId()).toBe('h-second01');
+			expect(W.progress.bar.map((b) => b.id)).toEqual(['b-second01']);
+			expect(W.progress.bar[0].house).toBe('h-second01');
+			expect(W.progress.cards['My Bar · The Lantern Collins']).toMatchObject({ r: 2 });
+			expect(W.houseLineHTML()).toContain('The Second Room · 1 drink here');
+			expect(await W.houseSwitch('h-lantern0')).toBe(true);
+			expect(W.progress.bar.map((b) => b.id).sort()).toEqual(['b-collins1', 'b-verjus01']);
+			expect(W.houseLineHTML()).toContain('The Lantern Room · 2 drinks here · complete · menus read 2026-09-28');
+		});
+	});
+
+	it('isHouseCard deals a line-only draft to line10 and never to name2spec, and an unkept line is no card', async () => {
+		const api = await importCurrent();
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			const fc = W.state.fc, was = fc.src;
+			fc.src = 'My Bar';
+			try {
+				expect(W.fcPool().map((d) => d.name)).toEqual(['The Lantern Collins']);
+				expect(W.menuCardCount()).toBe(1);
+				const verjus = W.progress.bar.find((b) => b.id === 'b-verjus01');
+				expect(W.isHouseCard(verjus)).toBe(false);
+				/* hers, not kept: still no card */
+				expect(await api.setMark('cocktail', 'b-verjus01', 'lines', { value: { s10: 'Her ten second line about verjus.', s20: '', s45: '' }, by: 'maitre', ts: 1 })).toBe(true);
+				expect(W.isHouseCard(verjus)).toBe(false);
+				expect(W.fcPool().map((d) => d.name)).toEqual(['The Lantern Collins']);
+				/* kept: a card for the line modes and nothing else */
+				expect(await api.setMark('cocktail', 'b-verjus01', 'lines', { value: { s10: 'Verjus and tonic, sharp as a lemon and nothing in it.', s20: '', s45: '' }, by: 'person', ts: 2 })).toBe(true);
+				expect(W.isHouseCard(verjus)).toBe(true);
+				expect(W.hasKeptLines(verjus)).toBe(true);
+				expect(W.keptLineOf(verjus, 's10')).toMatch(/^Verjus and tonic/);
+				expect(W.keptLineOf(verjus, 's20')).toBe('');
+				expect(W.menuCardCount()).toBe(2);
+				const pool = W.fcPool();
+				expect(pool.map((d) => d.name).sort()).toEqual(['The Lantern Collins', 'Verjus and Tonic']);
+				const card = pool.find((d) => d.name === 'Verjus and Tonic');
+				expect(card.draft).toBe(true);
+				const fits = Object.fromEntries(W.FC_MODES.map((m) => [m[0], !!m[3](card)]));
+				expect(fits).toEqual({ name2spec: false, spec2name: false, build: false, cloze: false, service: false, line10: true, line20: false, line45: false });
+				/* the fixture's Collins carries a spec AND kept lines: every mode fits it */
+				const collins = pool.find((d) => d.name === 'The Lantern Collins');
+				expect(W.FC_MODES.find((m) => m[0] === 'name2spec')[3](collins)).toBe(true);
+				expect(W.FC_MODES.find((m) => m[0] === 'line45')[3](collins)).toBe(true);
+				/* a beer card still fits the name modes with no spec */
+				const beer = W.allDrinks().find((d) => d.src === 'On Tap');
+				expect(W.FC_MODES.find((m) => m[0] === 'name2spec')[3](beer)).toBe(true);
+				/* the Menu round: no ticket is the draft's, and its line is asked */
+				let lineAsked = false;
+				for (let i = 0; i < 20; i++) {
+					for (const q of W.buildRound('mybar')) {
+						if (q.ticket) expect(q.ticket.draft === undefined).toBe(true);
+						if (/Verjus and Tonic/.test(q.prompt)) { lineAsked = true; expect(q.answer).toMatch(/^Verjus and tonic/); expect(q.options).toHaveLength(4); }
+					}
+				}
+				expect(lineAsked).toBe(true);
+				const ql = W.qMyBarLine(W.progress.bar.find((b) => b.id === 'b-collins1'));
+				expect(ql.prompt).toBe('Which is the line for The Lantern Collins on your menu, said in ten seconds?');
+				expect(ql.options).toContain(ql.answer);
+				/* no kept line, no question */
+				expect(W.qMyBarLine({ id: 'b-nothere1', name: 'Nowhere', spec: [] })).toBe(null);
+			} finally { fc.src = was; }
+		});
+	});
+
+	it('a pack whose id is on the device stops on the choice; every import ends on "{name} added. Open it now?"; Open switches, Not now does not; the first house minted adopts the list', async () => {
+		await importCurrent();
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			const h = W.state.house;
+			expect(await W.houseTakePack('not json')).toBe(null);
+			expect(h.err).toMatch(/not a house pack/);
+			await W.houseTakePack(packOf(fixtureHouse()));
+			expect(h.pending).toMatchObject({ id: 'h-lantern0', name: 'The Lantern Room', intoName: 'The Lantern Room' });
+			let html = W.houseLineHTML();
+			expect(html).toContain('The Lantern Room is already on this device. Add it as a new house, or merge it into The Lantern Room.');
+			expect(html).toContain('data-act="house-import-new"');
+			expect(html).toContain('data-act="house-import-merge"');
+			expect(OOT.house.list()).toHaveLength(1);
+			const r = await W.houseImportChoice('new');
+			expect(r.ok).toBe(true);
+			expect(h.pending).toBe(null);
+			expect(h.added.name).toBe('The Lantern Room');
+			expect(h.added.id === 'h-lantern0').toBe(false);
+			html = W.houseLineHTML();
+			expect(html).toContain('The Lantern Room added. Open it now?');
+			expect(html).toContain('data-act="house-open-added">Open</button>');
+			expect(html).toContain('data-act="house-not-now">Not now</button>');
+			expect(OOT.house.list()).toHaveLength(2);
+			expect(OOT.house.currentId()).toBe('h-lantern0');
+			const addedId = h.added.id;
+			W.houseNotNow();
+			expect(h.added).toBe(null);
+			expect(OOT.house.currentId()).toBe('h-lantern0');
+			h.added = { id: addedId, name: 'The Lantern Room' };
+			expect(await W.houseOpenAdded()).toBe(true);
+			expect(OOT.house.currentId()).toBe(addedId);
+			expect(h.added).toBe(null);
+			expect(W.progress.bar.map((b) => b.house)).toEqual([addedId, addedId]);
+			/* merge into the twin, said in the engine's words */
+			await W.houseTakePack(packOf(fixtureHouse()));
+			const m = await W.houseImportChoice('merge');
+			expect(m.ok).toBe(true);
+			expect(OOT.house.list()).toHaveLength(2);
+		});
+		/* a device with no house: the drinks already here join the one minted */
+		fresh();
+		await withBarAsync(async () => {
+			W.progress.bar = [{ id: 'b-abcdefgh', name: 'House Sour', spec: ['2 oz rye'], method: '', glass: '', garnish: '', note: '', family: 'Sour', spirit: 'Rye', price: '', ts: 5 }];
+			W.barChanged();
+			W.state.house.name = 'The Corner Bar';
+			const made = await W.houseMint();
+			expect(made.name).toBe('The Corner Bar');
+			expect(OOT.house.currentId()).toBe(made.id);
+			expect(W.progress.bar[0].house).toBe(made.id);
+			expect(OOT.house.current().cocktails.map((c) => c.name)).toEqual(['House Sour']);
+			expect(W.state.house.live).toBe('The Corner Bar is your house now.');
+			expect(W.houseLineHTML()).toContain('The Corner Bar · 1 drink here · next: the house card');
+		});
+	});
+
+	it('with no house on the device the wake does nothing and the line says so', async () => {
+		fresh();
+		await withBarAsync(async () => {
+			W.progress.bar = [{ id: 'b-abcdefgh', name: 'House Sour', spec: ['2 oz rye'], method: '', glass: '', garnish: '', note: '', family: 'Sour', spirit: 'Rye', price: '', ts: 5 }];
+			W.barChanged();
+			expect(await W.houseSyncIn()).toBe(null);
+			expect(W.progress.bar).toHaveLength(1);
+			expect(W.progress.bar[0].house === undefined).toBe(true);
+			expect(OOT.house.list()).toEqual([]);
+			expect(W.houseLineHTML()).toContain('No house yet.');
+			expect(W.houseLineHTML()).not.toContain('data-act="house-export">Export</button>');
+		});
+	});
+});
+
+describe('house-bar.js with no engine at all', () => {
+	it('loads with no OOT, and every door does nothing', async () => {
+		const sandbox = { console, setTimeout, clearTimeout, Promise, window: { addEventListener() {} },
+			state: { menu: { form: null, editing: null, open: null }, fc: {} }, progress: { bar: [{ id: 'b-1', name: 'A', spec: [] }] },
+			hasSpec: (d) => Array.isArray(d.spec) && d.spec.length, barText: (v) => (v == null ? '' : String(v).trim()),
+			sample: (a, n) => a.slice(0, n), shuffle: (a) => a.slice(), esc: (s) => String(s), COCKTAILS: [] };
+		vm.createContext(sandbox);
+		vm.runInContext(readFileSync(join(JS, 'house-bar.js'), 'utf8'), sandbox, { filename: 'house-bar.js' });
+		const g = (n) => vm.runInContext(n, sandbox);
+		expect(g('houseHere()')).toBe(null);
+		expect(g('houseLineHTML()')).toBe('');
+		expect(g('isHouseCard({ spec: [] })')).toBe(false);
+		expect(g('isHouseCard({ spec: ["x"] })')).toBe(true);
+		expect(g('hasKeptLines({ id: "b-1", spec: [] })')).toBe(false);
+		expect(g('houseNames()')).toHaveLength(0);
+		expect(await g('houseSyncIn()')).toBe(null);
+		expect(await g('houseProject()')).toBe(null);
+		expect(await g('housePut({ id: "b-1" })')).toBe(null);
+		expect(await g('houseRemove("b-1")')).toBe(false);
+		expect(g('qMyBarLine({ id: "b-1", name: "A", spec: [] })')).toBe(null);
+		expect(g('state.house.panel')).toBe('');
+		expect(sandbox.progress.bar).toHaveLength(1);
 	});
 });

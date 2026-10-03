@@ -1,6 +1,6 @@
 /* The Bartender's Ledger — service worker.
    Bump CACHE on every deploy; that string is the whole update mechanism. */
-const CACHE = 'ledger-v61';
+const CACHE = 'ledger-v62';
 
 const ASSETS = [
   './',
@@ -37,6 +37,7 @@ const ASSETS = [
   './js/data-levels.js',
   './js/levels.js',
   './js/ui-levels.js',
+  './js/house-bar.js',
   './js/app.js',
   './js/storage-alarm.js',
   './fonts/rye-400.woff2',
