@@ -68,7 +68,7 @@ globalThis.window = {};
 /* navigator is a getter-only global in node, so define rather than assign */
 if(!globalThis.navigator) Object.defineProperty(globalThis, 'navigator', { value: {}, configurable: true });
 globalThis.localStorage = { getItem: () => null, setItem(){}, removeItem(){} };
-globalThis.document = { getElementById: () => null, querySelector: () => null };
+globalThis.document = { getElementById: () => null, querySelector: () => null, querySelectorAll: () => [] };
 /* ui-import.js rides along too, for the desk's re-kind and the never-twice
    answer. It calls say() and render(), which live in app.js and are not
    loaded, so both are stubs: say() collects what it was asked to announce,
@@ -100,7 +100,8 @@ const W = vm.runInThisContext(APP.map((f) => readFileSync(join(JS, f), 'utf8')).
 	'blankImport,importFromText,importReKind,levelOf,cardKey,todayLevel,todayDoor,LEVEL_ITEMS,' +
 	'removeBarRecord,normalizeHouseRecords,mergeHouseRecords,FC_MODES,hasSpec,' +
 	'houseHere,houseSyncIn,houseProject,houseSwitch,housePut,houseRemove,houseNames,houseNamesRefresh,' +
-	'isHouseCard,hasKeptLines,keptLineOf,qMyBarLine,houseLineHTML,houseTakePack,houseImportChoice,houseOpenAdded,houseNotNow,houseMint})');
+	'isHouseCard,hasKeptLines,keptLineOf,qMyBarLine,houseLineHTML,houseTakePack,houseImportChoice,houseOpenAdded,houseNotNow,houseMint,' +
+	'menuFormulaChip,menuFormulaHTML,menuPaneHTML,menuListHTML,houseFormulaAct,houseProblems,houseUIHooks,houseAfterRender,houseStep,housePackPanelHTML,houseRedrawIfShown})');
 
 /* The House engine, ../shared/oot-house.js, for the house cases below: the
    wing layout keeps it two folders up, the source repo reads WorldTable's
@@ -2124,6 +2125,54 @@ describe('the four levels, in the session and the backup', () => {
 	});
 });
 
+/* The least of a DOM the shared screens need, for the two doors: elements
+   with children, attributes, text, listeners, closest and querySelector by
+   tag, class and attribute. Ported from WorldTable's tools/check-house-ui.mjs. */
+function stubSelector(sel) {
+	return sel.split(',').map((raw) => {
+		const m = /^([a-zA-Z0-9]*)((?:\.[\w-]+)*)((?:\[[^\]]+\])*)$/.exec(raw.trim());
+		if (!m) throw new Error('stub: a selector it does not read: ' + raw);
+		const attrs = [];
+		const re = /\[([^\]=]+)(?:=("?)([^\]"]*)\2)?\]/g;
+		let a;
+		while ((a = re.exec(m[3]))) attrs.push({ name: a[1], value: a[3] === undefined ? null : a[3] });
+		return { tag: m[1].toUpperCase(), classes: m[2] ? m[2].split('.').filter(Boolean) : [], attrs };
+	});
+}
+class StubNode {
+	constructor(kind, tag, text) {
+		this.kind = kind; this.tagName = tag.toUpperCase(); this.text = text;
+		this.childNodes = []; this.parentNode = null; this.attrs = {}; this.listeners = {}; this.value = '';
+	}
+	get firstChild() { return this.childNodes.length ? this.childNodes[0] : null; }
+	get dataset() { const d = {}; for (const k of Object.keys(this.attrs)) if (k.startsWith('data-')) d[k.slice(5).replace(/-([a-z])/g, (_, c) => c.toUpperCase())] = this.attrs[k]; return d; }
+	appendChild(n) { if (n.parentNode) n.parentNode.removeChild(n); n.parentNode = this; this.childNodes.push(n); return n; }
+	removeChild(n) { const i = this.childNodes.indexOf(n); if (i < 0) throw new Error('stub: not a child'); this.childNodes.splice(i, 1); n.parentNode = null; return n; }
+	setAttribute(k, v) { this.attrs[k] = String(v); }
+	getAttribute(k) { return Object.prototype.hasOwnProperty.call(this.attrs, k) ? this.attrs[k] : null; }
+	get textContent() { return this.kind === 'text' ? this.text : this.childNodes.map((c) => c.textContent).join(''); }
+	addEventListener(type, fn) { (this.listeners[type] = this.listeners[type] || []).push(fn); }
+	dispatch(type) { const ev = { type, target: this, preventDefault() {} }; for (let n = this; n; n = n.parentNode) for (const fn of (n.listeners[type] || []).slice()) fn.call(n, ev); }
+	click() { this.dispatch('click'); }
+	focus() {}
+	matches(sel) { return stubSelector(sel).some((p) => {
+		if (p.tag && this.tagName !== p.tag) return false;
+		const cls = (this.getAttribute('class') || '').split(/\s+/);
+		for (const c of p.classes) if (!cls.includes(c)) return false;
+		for (const a of p.attrs) { const v = this.getAttribute(a.name); if (v === null) return false; if (a.value !== null && v !== a.value) return false; }
+		return true;
+	}); }
+	closest(sel) { for (let n = this; n; n = n.parentNode) if (n.kind === 'element' && n.matches(sel)) return n; return null; }
+	querySelectorAll(sel) { const out = []; const walk = (n) => { for (const c of n.childNodes) { if (c.kind === 'element' && c.matches(sel)) out.push(c); walk(c); } }; walk(this); return out; }
+	querySelector(sel) { const all = this.querySelectorAll(sel); return all.length ? all[0] : null; }
+}
+function stubDocument() {
+	return { head: new StubNode('element', 'head', ''), body: new StubNode('element', 'body', ''),
+		createElement: (tag) => new StubNode('element', tag, ''), createTextNode: (s) => new StubNode('text', '#text', String(s)) };
+}
+/* the app's own escaper, for a label pinned through it */
+const W_esc = vm.runInThisContext('esc');
+
 /* ---- the House ---------------------------------------------------------
    The engine is loaded into this realm over a Map (no IndexedDB in node, so
    the api is volatile) and installed where the shipped house-bar.js reads
@@ -2535,6 +2584,445 @@ houseDescribe('the House behind the menu', () => {
 			expect(again[1].changes).toHaveLength(0);
 			expect(W.progress.bar).toHaveLength(2);
 			expect(W.state.house.err).toBe('');
+		});
+	});
+
+	/* ---- read and keep, no key (the formula pane, the two doors, the pack) ----
+	   The pane's acts read their boxes through app.js's captureLiveInputs,
+	   which is not loaded here (app.js boots), so the function is cut out
+	   of the shipped source by its head and run in this realm; a box is a
+	   stub the document hands back by id. Every new input id the pane
+	   mints must be in that function, by grep, or a render between typing
+	   and Save eats the edit. */
+	const APP_SRC = readFileSync(join(JS, 'app.js'), 'utf8');
+	const captureSrc = (() => {
+		const at = APP_SRC.indexOf('\nfunction captureLiveInputs(){');
+		expect(at > 0).toBe(true);
+		const end = APP_SRC.indexOf('\n}\n', at);
+		return APP_SRC.slice(at + 1, end + 2);
+	})();
+	vm.runInThisContext(captureSrc + ';globalThis.captureLiveInputs = captureLiveInputs;');
+	const boxes = {};
+	const docWas = globalThis.document;
+	const withBoxes = async (fn) => {
+		globalThis.document = { getElementById: (id) => (Object.prototype.hasOwnProperty.call(boxes, id) ? boxes[id] : null), querySelector: () => null, querySelectorAll: () => [] };
+		try { return await fn(); } finally { globalThis.document = docWas; for (const k of Object.keys(boxes)) delete boxes[k]; }
+	};
+	const openOn = (id) => { W.state.menu.open = id; W.state.menu.pane = 'formula'; W.state.house.edit = null; W.state.house.note = null; W.state.house.pick = ''; W.state.house.said = ''; };
+	const collins = () => OOT.house.current().cocktails.find((c) => c.id === 'b-collins1');
+	const bar = (id) => W.progress.bar.find((b) => b.id === id);
+	/* the fixture with her marks instead of kept ones on the Collins */
+	const hersHouse = () => {
+		const house = fixtureHouse();
+		const c = house.cocktails[0];
+		for (const f of ['parts', 'lines', 'upsells']) c[f] = Object.assign({}, c[f], { by: 'maitre', ts: 1790672400000 });
+		return house;
+	};
+
+	it('every input id the formula pane mints is in captureLiveInputs, and the two hooks the pane needs are in ui-menu.js and ui-new.js', () => {
+		const bar = readFileSync(join(JS, 'house-bar.js'), 'utf8');
+		const ids = new Set();
+		/* a whole id; the two the loops mint come below, and the counts are output */
+		for (const m of bar.matchAll(/id="(hf-[a-z0-9-]+)"/g)) if (!m[1].startsWith('hf-count')) ids.add(m[1]);
+		for (const m of bar.matchAll(/id="hf-(part|line)-' \+ k \+ '"/g)) { for (const k of (m[1] === 'part' ? ['main', 'technique', 'sauce', 'sides', 'taste'] : ['s10', 's20', 's45'])) ids.add('hf-' + m[1] + '-' + k); }
+		expect([...ids].sort()).toEqual(['hf-line-s10', 'hf-line-s20', 'hf-line-s45', 'hf-note', 'hf-part-main', 'hf-part-sauce', 'hf-part-sides', 'hf-part-taste', 'hf-part-technique', 'hf-upsell']);
+		for (const id of ids) expect(captureSrc.includes("'" + id + "'")).toBe(true);
+		/* the counts are output, not input, and need no grab */
+		expect(bar).toContain("id=\"hf-count-' + k + '\"");
+		expect(readFileSync(join(JS, 'ui-menu.js'), 'utf8')).toContain("typeof menuFormulaChip === 'function' ? menuFormulaChip() : []");
+		expect(readFileSync(join(JS, 'ui-menu.js'), 'utf8')).toContain("if(pane === 'formula') return typeof menuFormulaHTML === 'function' ? menuFormulaHTML(b) : ''");
+		expect(readFileSync(join(JS, 'ui-new.js'), 'utf8')).toContain("typeof housePackPanelHTML === 'function' ? housePackPanelHTML() : ''");
+		expect(APP_SRC).toContain("if(typeof houseAfterRender === 'function') houseAfterRender();");
+		expect(APP_SRC).toContain("else if(act.indexOf('hf-')===0){ houseFormulaAct(act, el.dataset); return; }");
+	});
+
+	it('the formula chip is the fifth on an open drink with the engine, and the pane draws the parts with the engine labels, the lines with their counts, the upsells by name and the note under its fixed eyebrow', async () => {
+		await importCurrent();
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			expect(W.menuFormulaChip()).toEqual([['formula', 'The formula']]);
+			openOn('b-collins1');
+			const list = W.menuListHTML();
+			expect(list).toContain('data-act="menu-pane" data-p="formula">The formula</button>');
+			expect(list.indexOf('data-p="cost"') < list.indexOf('data-p="formula"')).toBe(true);
+			const html = W.menuPaneHTML(bar('b-collins1'), 'formula');
+			for (const label of Object.values(OOT.houseLib.COCKTAIL_PARTS)) expect(html).toContain(W_esc(label));
+			expect(html).toContain('Built over cubed ice and stirred, topped with soda');
+			expect(html).toContain('13 of 25 words');
+			expect(html).toContain('Verjus and Tonic');
+			expect(html).toContain('Your words. Allergens: confirm at lineup.');
+			expect(html).toContain('id="hf-note"');
+			/* every mark on the fixture Collins is kept: Kept, and no Keep all */
+			expect(html).not.toContain('Hers, not yet kept');
+			expect(html).not.toContain('Keep all on the drink');
+			expect((html.match(/>Kept</g) || []).length).toBe(3);
+			/* the picker offers only the house's other cocktails, and not one already listed */
+			expect(html).not.toContain('<option value="b-verjus01"');
+			expect(html).toContain('Every other drink on the house is already here.');
+			/* the drink with nothing on it: every block says so, with Write it, and no Keep */
+			const verjus = W.menuPaneHTML(bar('b-verjus01'), 'formula');
+			expect((verjus.match(/>Nothing yet</g) || []).length).toBe(3);
+			expect(verjus).toContain('>Write it</button>');
+			expect(verjus).not.toContain('>Keep</button>');
+			expect(verjus).toContain('<option value="b-collins1"');
+			/* no allergen reaches the pane beyond the fixed eyebrow */
+			expect((html.match(/llergen/g) || []).length).toBe(1);
+		});
+		/* and nothing at all with no house open */
+		fresh();
+		expect(W.menuFormulaHTML({ id: 'b-x', name: 'X' })).toContain('No house holds this drink yet.');
+	});
+
+	it('Keep on a part and a line writes her value back through the engine with by person, and Keep all takes the rest', async () => {
+		await importCurrent(hersHouse());
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			openOn('b-collins1');
+			expect(collins().parts.by).toBe('maitre');
+			let html = W.menuPaneHTML(bar('b-collins1'), 'formula');
+			expect((html.match(/Hers, not yet kept/g) || []).length).toBe(3);
+			expect(html).toContain('>Keep all on the drink</button>');
+			expect(html).toContain('data-act="hf-keep" data-id="b-collins1" data-f="parts"');
+			expect(await W.houseFormulaAct('hf-keep', { id: 'b-collins1', f: 'parts' })).toBe(true);
+			expect(collins().parts.by).toBe('person');
+			expect(collins().parts.value.main).toBe('Gin');
+			expect(collins().parts.ts > 1790672400000).toBe(true);
+			expect(await W.houseFormulaAct('hf-keep', { id: 'b-collins1', f: 'lines' })).toBe(true);
+			expect(collins().lines.by).toBe('person');
+			expect(collins().lines.value.s10).toMatch(/^A long gin drink/);
+			expect(W.state.house.said).toBe('Kept. It is yours now and goes with the drink.');
+			/* a kept mark offers no Keep */
+			html = W.menuPaneHTML(bar('b-collins1'), 'formula');
+			expect(html).not.toContain('data-act="hf-keep" data-id="b-collins1" data-f="parts"');
+			expect(html).toContain('data-act="hf-keep" data-id="b-collins1" data-f="upsells"');
+			/* Keep all: the upsells, the one left */
+			expect(await W.houseFormulaAct('hf-keep-all', { id: 'b-collins1' })).toBe(true);
+			expect(collins().upsells.by).toBe('person');
+			expect(W.state.house.said).toBe('Kept, all 1 on the drink.');
+			expect(W.menuPaneHTML(bar('b-collins1'), 'formula')).not.toContain('Hers, not yet kept');
+			/* the kept line is a card's now */
+			expect(W.hasKeptLines(bar('b-collins1'))).toBe(true);
+			/* and the row carries none of it: parts, lines and upsells are House-only */
+			expect(bar('b-collins1').parts === undefined && bar('b-collins1').lines === undefined && bar('b-collins1').upsells === undefined).toBe(true);
+		});
+	});
+
+	it('Edit then Save writes the typed words from the boxes, an edited line over the cap shows the over-cap word and still saves, and Discard removes the mark', async () => {
+		await importCurrent(hersHouse());
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			openOn('b-collins1');
+			await W.houseFormulaAct('hf-edit', { id: 'b-collins1', f: 'lines' });
+			expect(W.state.house.edit).toMatchObject({ id: 'b-collins1', field: 'lines' });
+			let html = W.menuPaneHTML(bar('b-collins1'), 'formula');
+			expect(html).toContain('id="hf-line-s10"');
+			expect(html).toContain('id="hf-count-s10"');
+			expect(html).toContain('>Save</button>');
+			expect(html).toContain('>Cancel</button>');
+			/* one editor at a time: Edit on the parts closes the lines */
+			await W.houseFormulaAct('hf-edit', { id: 'b-collins1', f: 'parts' });
+			expect(W.state.house.edit.field).toBe('parts');
+			expect(W.menuPaneHTML(bar('b-collins1'), 'formula')).not.toContain('id="hf-line-s10"');
+			await W.houseFormulaAct('hf-edit', { id: 'b-collins1', f: 'lines' });
+			const long = Array.from({ length: 30 }, (_, i) => 'word' + i).join(' ');
+			await withBoxes(async () => {
+				boxes['hf-line-s10'] = { value: long };
+				boxes['hf-line-s20'] = { value: 'My twenty.' };
+				boxes['hf-line-s45'] = { value: '' };
+				expect(await W.houseFormulaAct('hf-save', { id: 'b-collins1', f: 'lines' })).toBe(true);
+			});
+			expect(W.state.house.edit).toBe(null);
+			const m = collins().lines;
+			expect(m.by).toBe('person');
+			expect(m.value.s10).toBe(long);
+			expect(m.value.s20).toBe('My twenty.');
+			expect(m.value.s45).toBe('');
+			html = W.menuPaneHTML(bar('b-collins1'), 'formula');
+			expect(html).toContain('30 of 25 words. Over its cap');
+			expect(html).toContain('2 of 50 words');
+			expect(W.state.house.said).toBe('Saved, in your words.');
+			/* the engine's own count says the same through the problems hook */
+			expect(W.houseProblems('cocktail', 'b-collins1')).toEqual([{ field: 'lines', said: 'By the engine, the ten seconds line runs 30 words against its cap of 25.' }]);
+			/* the parts, typed */
+			await W.houseFormulaAct('hf-edit', { id: 'b-collins1', f: 'parts' });
+			await withBoxes(async () => {
+				for (const k of ['main', 'technique', 'sauce', 'sides', 'taste']) boxes['hf-part-' + k] = { value: 'my ' + k };
+				expect(await W.houseFormulaAct('hf-save', { id: 'b-collins1', f: 'parts' })).toBe(true);
+			});
+			expect(collins().parts).toMatchObject({ by: 'person', value: { main: 'my main', taste: 'my taste' } });
+			/* every box empty is no save */
+			await W.houseFormulaAct('hf-edit', { id: 'b-collins1', f: 'parts' });
+			await withBoxes(async () => {
+				for (const k of ['main', 'technique', 'sauce', 'sides', 'taste']) boxes['hf-part-' + k] = { value: '  ' };
+				expect(await W.houseFormulaAct('hf-save', { id: 'b-collins1', f: 'parts' })).toBe(false);
+			});
+			expect(W.state.house.said).toMatch(/^Nothing to save/);
+			expect(collins().parts.value.main).toBe('my main');
+			/* Discard: the mark is gone from the engine and the pane says Nothing yet */
+			expect(await W.houseFormulaAct('hf-discard', { id: 'b-collins1', f: 'lines' })).toBe(true);
+			expect(collins().lines === undefined).toBe(true);
+			expect(W.hasKeptLines(bar('b-collins1'))).toBe(false);
+			html = W.menuPaneHTML(bar('b-collins1'), 'formula');
+			expect(html).toContain('what you would say about it in ten, twenty and forty five seconds');
+			expect(W.houseProblems('cocktail', 'b-collins1')).toEqual([]);
+			/* a dash in a kept line is said by the engine too */
+			await OOT.house.setMark('cocktail', 'b-collins1', 'lines', { value: { s10: 'Gin ' + String.fromCharCode(8212) + ' long', s20: '', s45: '' }, by: 'maitre', ts: 3 });
+			expect(W.houseProblems('cocktail', 'b-collins1')).toEqual([{ field: 'lines', said: 'By the engine, the ten seconds line carries a dash.' }]);
+			expect(W.menuPaneHTML(bar('b-collins1'), 'formula')).toContain('Carries a dash');
+		});
+	});
+
+	it('the service note saves through setItemField and never through the row, and the upsell picker adds and removes only house cocktails', async () => {
+		const api = await importCurrent();
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			openOn('b-verjus01');
+			const put = mock.method(api, 'put');
+			const field = mock.method(api, 'setItemField');
+			const rowBefore = JSON.stringify(bar('b-verjus01'));
+			await withBoxes(async () => {
+				boxes['hf-note'] = { value: '  Tell the kitchen when it is for the chef.  ', dataset: { id: 'b-verjus01' } };
+				expect(await W.houseFormulaAct('hf-note-save', { id: 'b-verjus01' })).toBe(true);
+			});
+			expect(field.mock.callCount()).toBe(1);
+			expect(field.mock.calls[0].arguments).toEqual(['cocktail', 'b-verjus01', { serviceNote: 'Tell the kitchen when it is for the chef.' }]);
+			expect(put.mock.callCount()).toBe(0);
+			expect(api.current().cocktails.find((c) => c.id === 'b-verjus01').serviceNote).toBe('Tell the kitchen when it is for the chef.');
+			expect(JSON.stringify(bar('b-verjus01'))).toBe(rowBefore);
+			expect(bar('b-verjus01').serviceNote === undefined).toBe(true);
+			expect(W.state.house.said).toBe('Saved. Your words, on the house.');
+			const html = W.menuPaneHTML(bar('b-verjus01'), 'formula');
+			expect(html).toContain('>Tell the kitchen when it is for the chef.</textarea>');
+			/* the next wake: the engine re-stamped the item, so the row may be
+			   filed again under the new stamp, and still carries no note and
+			   the same twelve keys */
+			const again = await W.houseSyncIn();
+			expect(again.changes.every((c) => c.what === 'row-updated' && c.id === 'b-verjus01')).toBe(true);
+			/* the twelve, and the draft flag a spec-less row carries */
+			expect(Object.keys(bar('b-verjus01')).sort()).toEqual(TWELVE.concat(['draft']).sort());
+			expect(bar('b-verjus01').serviceNote === undefined).toBe(true);
+			expect((await W.houseSyncIn()).changes).toHaveLength(0);
+			put.mock.restore(); field.mock.restore();
+			/* the picker: a house cocktail is added as a person's mark; anything else is refused */
+			W.state.house.pick = 'b-nothere1';
+			expect(await W.houseFormulaAct('hf-upsell-add', { id: 'b-verjus01' })).toBe(false);
+			expect(W.state.house.said).toBe('Choose a drink on this house first.');
+			W.state.house.pick = 'b-verjus01';
+			expect(await W.houseFormulaAct('hf-upsell-add', { id: 'b-verjus01' })).toBe(false);
+			W.state.house.pick = 'b-collins1';
+			expect(await W.houseFormulaAct('hf-upsell-add', { id: 'b-verjus01' })).toBe(true);
+			expect(api.current().cocktails.find((c) => c.id === 'b-verjus01').upsells).toMatchObject({ by: 'person', value: ['b-collins1'] });
+			let pane = W.menuPaneHTML(bar('b-verjus01'), 'formula');
+			expect(pane).toContain('The Lantern Collins');
+			expect(pane).toContain('data-act="hf-upsell-drop" data-id="b-verjus01" data-up="b-collins1"');
+			expect(pane).not.toContain('<option value="b-collins1"');
+			/* the picker read from the box, a canon drink's name is never an option */
+			expect(pane).not.toContain('Old Fashioned');
+			expect(await W.houseFormulaAct('hf-upsell-drop', { id: 'b-verjus01', up: 'b-collins1' })).toBe(true);
+			expect(api.current().cocktails.find((c) => c.id === 'b-verjus01').upsells === undefined).toBe(true);
+			pane = W.menuPaneHTML(bar('b-verjus01'), 'formula');
+			expect(pane).toContain('<option value="b-collins1"');
+		});
+	});
+
+	it('the two doors draw the shared screens with the fixture house, a Keep through the review hook lands on the engine, and the panels redraw from the house', async () => {
+		const UI_SRC = readFileSync(join(sharedDir, 'oot-house-ui.js'), 'utf8');
+		await importCurrent(hersHouse());
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			const h = W.state.house;
+			/* the chips, only with the shared screens here */
+			delete OOT.houseUI;
+			let line = W.houseLineHTML();
+			expect(line).not.toContain('>The house</button>');
+			expect(line).not.toContain('>Hers, to look over</button>');
+			const doc = stubDocument();
+			globalThis.window.document = doc;
+			vm.runInThisContext(UI_SRC);
+			expect(typeof OOT.houseUI.review).toBe('function');
+			line = W.houseLineHTML();
+			expect(line).toContain('data-act="house-panel" data-p="read" aria-expanded="false">The house</button>');
+			expect(line).toContain('data-act="house-panel" data-p="review" aria-expanded="false">Hers, to look over</button>');
+			expect(line).not.toContain('house-ui-root');
+			/* the read door */
+			h.panel = 'read';
+			line = W.houseLineHTML();
+			expect(line).toContain('data-p="read" aria-expanded="true"');
+			expect(line).toContain('<div id="house-ui-root"></div>');
+			const root = doc.createElement('div');
+			root.setAttribute('id', 'house-ui-root');
+			let renders = 0;
+			const renderWas = globalThis.render;
+			globalThis.render = () => { renders++; };
+			await withBoxes(async () => {
+				boxes['house-ui-root'] = root;
+				W.houseAfterRender();
+				expect(root.getAttribute('data-oot-house-ui')).toBe('read');
+				expect(root.textContent).toContain('The Lantern Room');
+				expect(root.textContent).toContain('The house');
+				/* the review door, on its steps */
+				h.panel = 'review';
+				line = W.houseLineHTML();
+				for (const s of ['formula', 'pairings', 'wines', 'lexicon', 'scenarios']) expect(line).toContain('data-act="house-step" data-s="' + s + '"');
+				expect(line).toContain('data-s="formula" aria-pressed="true"');
+				W.houseStep('wines'); expect(h.step).toBe('wines');
+				W.houseStep('nowhere'); expect(h.step).toBe('wines');
+				W.houseStep('formula');
+				W.houseAfterRender();
+				expect(root.getAttribute('data-oot-house-ui')).toBe('review');
+				expect(root.textContent).toContain('Hers, not yet kept');
+				expect(root.textContent).toContain('The Lantern Collins');
+				/* the problems hook's sentence is drawn on a line over its cap */
+				await OOT.house.setMark('cocktail', 'b-collins1', 'lines', { value: { s10: Array.from({ length: 30 }, (_, i) => 'w' + i).join(' '), s20: '', s45: '' }, by: 'maitre', ts: 5 });
+				W.houseAfterRender();
+				expect(root.textContent).toContain('By the engine, the ten seconds line runs 30 words against its cap of 25.');
+				/* Keep through the hook: the parts, by person on the engine */
+				const keep = root.querySelectorAll('button[data-h="keep"][data-id="b-collins1"][data-field="parts"]');
+				expect(keep).toHaveLength(1);
+				expect(collins().parts.by).toBe('maitre');
+				const before = renders;
+				keep[0].click();
+				await new Promise((r) => setTimeout(r, 20));
+				expect(collins().parts.by).toBe('person');
+				expect(collins().parts.value.main).toBe('Gin');
+				/* the engine's change asked for a render, which draws the panel again from the house */
+				expect(renders > before).toBe(true);
+				W.houseAfterRender();
+				expect(root.querySelectorAll('button[data-h="keep"][data-id="b-collins1"][data-field="parts"]')).toHaveLength(0);
+				/* Discard through the hook */
+				const discard = root.querySelectorAll('button[data-h="discard"][data-id="b-collins1"][data-field="upsells"]');
+				expect(discard).toHaveLength(1);
+				discard[0].click();
+				await new Promise((r) => setTimeout(r, 20));
+				expect(collins().upsells === undefined).toBe(true);
+				/* a change the pane shows asks for a render too; one with nothing showing does not */
+				h.panel = ''; W.state.menu.open = null;
+				const quiet = renders;
+				W.houseRedrawIfShown();
+				expect(renders).toBe(quiet);
+				W.state.menu.open = 'b-collins1'; W.state.menu.pane = 'formula';
+				W.houseRedrawIfShown();
+				expect(renders).toBe(quiet + 1);
+			});
+			globalThis.render = renderWas;
+			delete globalThis.window.document;
+		});
+	});
+
+	it('My Data offers the house as a pack, the same file the Mine chip makes, and nothing with no house', async () => {
+		await importCurrent();
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			const html = W.housePackPanelHTML();
+			expect(html).toContain('data-act="house-export">Export the house as a pack</button>');
+			expect(html).toContain('The Lantern Room, with its 2 drinks');
+			expect(W.houseLineHTML()).toContain('data-act="house-export">Export</button>');
+			expect(OOT.house.buildPack('ledger').filename).toMatch(/^house-the-lantern-room-.*\.oothouse\.json$/);
+		});
+		fresh();
+		expect(W.housePackPanelHTML()).toBe('');
+	});
+
+	/* ---- the verifier's cases: holes in read and keep, each a failing case
+	   until the piece closes it. Nothing here is planted for keeps: each case
+	   names the hole in its title and the fix belongs in js/house-bar.js (or
+	   the engine) rather than in the assertion. */
+
+	it('VERIFIER: a Keep pressed while a wake is in flight lands on the engine and the wake\'s own change lands too, whichever starts first', async () => {
+		for (const keepFirst of [true, false]) {
+			await importCurrent(hersHouse());
+			await withBarAsync(async () => {
+				await W.houseSyncIn();
+				openOn('b-collins1');
+				/* the list carries a newer price, so the wake has something to write */
+				const row = bar('b-collins1');
+				row.price = '99'; row.ts = Date.now() + 5000;
+				const keep = () => W.houseFormulaAct('hf-keep', { id: 'b-collins1', f: 'parts' });
+				const wake = () => W.houseSyncIn();
+				const [a, b] = keepFirst ? [keep(), wake()] : [wake(), keep()];
+				const [kept, out] = keepFirst ? await Promise.all([a, b]) : (await Promise.all([a, b])).reverse();
+				expect(kept).toBe(true);
+				expect(out.ok).toBe(true);
+				/* the Keep said Kept, so the house holds it after the wake too */
+				expect(collins().parts.by).toBe('person');
+				/* and the wake's own write was not thrown away by the Keep */
+				expect(collins().price).toBe('99');
+			});
+		}
+	});
+
+	it('VERIFIER: an editor open in the review door, with words typed in it, survives the render the wing does on every press and every wake', async () => {
+		const UI_SRC = readFileSync(join(sharedDir, 'oot-house-ui.js'), 'utf8');
+		await importCurrent(hersHouse());
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			const doc = stubDocument();
+			globalThis.window.document = doc;
+			delete OOT.houseUI;
+			vm.runInThisContext(UI_SRC);
+			const h = W.state.house;
+			h.panel = 'review'; h.step = 'formula';
+			const renderWas = globalThis.render;
+			globalThis.render = () => {};
+			try {
+				/* the first paint: the root under the line, Edit pressed on her lines */
+				const root1 = doc.createElement('div'); root1.setAttribute('id', 'house-ui-root');
+				await withBoxes(async () => {
+					boxes['house-ui-root'] = root1;
+					W.houseAfterRender();
+					const edit = root1.querySelectorAll('button[data-h="edit"][data-id="b-collins1"][data-field="lines"]');
+					expect(edit).toHaveLength(1);
+					edit[0].click();
+					const ed = root1.querySelector('[data-editor="lines"]');
+					expect(ed).not.toBe(null);
+					const box = ed.querySelector('[data-e]');
+					expect(box).not.toBe(null);
+					box.value = 'words a person is still typing';
+				});
+				/* render(): #view is innerHTML, so the root is a NEW element, and
+				   houseAfterRender draws into it; the editor and the typed words
+				   must still be there, as every box in captureLiveInputs is */
+				const root2 = doc.createElement('div'); root2.setAttribute('id', 'house-ui-root');
+				await withBoxes(async () => {
+					boxes['house-ui-root'] = root2;
+					W.houseAfterRender();
+					const ed = root2.querySelector('[data-editor="lines"]');
+					expect(ed).not.toBe(null);
+					expect(ed.querySelector('[data-e]').value).toBe('words a person is still typing');
+				});
+			} finally {
+				globalThis.render = renderWas;
+				delete globalThis.window.document;
+			}
+		});
+	});
+
+	it('VERIFIER: a merge of a newer pack through Import a pack keeps the service note a person wrote on this device', async () => {
+		const api = await importCurrent();
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			expect(await api.setItemField('cocktail', 'b-verjus01', { serviceNote: 'My own words, on this device.' })).toBe(true);
+			/* the same house from another device, its Verjus stamped later and carrying no note */
+			const other = fixtureHouse();
+			other.cocktails.find((c) => c.id === 'b-verjus01').ts = Date.now() + 20000;
+			await W.houseTakePack(packOf(other));
+			expect(W.state.house.pending && W.state.house.pending.id).toBe('h-lantern0');
+			const r = await W.houseImportChoice('merge');
+			expect(r.ok).toBe(true);
+			expect(api.current().cocktails.find((c) => c.id === 'b-verjus01').serviceNote).toBe('My own words, on this device.');
+		});
+	});
+
+	it('VERIFIER: no new screen carries an allergen word beyond the fixed eyebrow', async () => {
+		await importCurrent();
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			expect(W.housePackPanelHTML()).not.toMatch(/llergen/);
+			const bar = readFileSync(join(JS, 'house-bar.js'), 'utf8');
+			const from = bar.indexOf('READ AND KEEP, NO KEY');
+			expect(from > 0).toBe(true);
+			const strings = bar.slice(from).split('\n').filter((l) => /llergen/.test(l) && !/^\s*(\/\*|\*|\/\/)/.test(l) && !/^\s+an allergen: the note/.test(l));
+			expect(strings).toEqual(["var HOUSE_NOTE_EYEBROW = 'Your words. Allergens: confirm at lineup.';"]);
 		});
 	});
 });
