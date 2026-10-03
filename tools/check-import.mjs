@@ -103,7 +103,8 @@ const W = vm.runInThisContext(APP.map((f) => readFileSync(join(JS, f), 'utf8')).
 	'isHouseCard,hasKeptLines,keptLineOf,qMyBarLine,houseLineHTML,houseTakePack,houseImportChoice,houseOpenAdded,houseNotNow,houseMint,' +
 	'menuFormulaChip,menuFormulaHTML,menuPaneHTML,menuListHTML,houseFormulaAct,houseProblems,houseUIHooks,houseAfterRender,houseStep,housePackPanelHTML,houseRedrawIfShown,' +
 	'qMyBarUpsell,qMyBarParts,keptPartsOf,keptUpsellsOf,houseCardFits,houseCardBackHTML,houseUpsellWhy,houseDrillPanelHTML,houseStartCards,houseStartPair,' +
-	'housePairReady,housePairWhy,houseQuizRound,renderQuiz,renderFlashcards,renderMenu,recordCard,QUIZ_MODES})');
+	'housePairReady,housePairWhy,houseQuizRound,renderQuiz,renderFlashcards,renderMenu,recordCard,QUIZ_MODES,' +
+	'houseAutoLoad,houseDrillAct,houseDrillHTML,houseDrillDoorsHTML,houseSayItems,houseRoleDeck,houseSayPick,houseRowForm})');
 
 /* The House engine, ../shared/oot-house.js, for the house cases below: the
    wing layout keeps it two folders up, the source repo reads WorldTable's
@@ -3359,8 +3360,405 @@ houseDescribe('the House behind the menu', () => {
 			const from = bar.indexOf('READ AND KEEP, NO KEY');
 			expect(from > 0).toBe(true);
 			const strings = bar.slice(from).split('\n').filter((l) => /llergen/.test(l) && !/^\s*(\/\*|\*|\/\/)/.test(l) && !/^\s+an allergen: the note/.test(l));
-			expect(strings).toEqual(["var HOUSE_NOTE_EYEBROW = 'Your words. Allergens: confirm at lineup.';"]);
+			expect(strings).toEqual(["var HOUSE_NOTE_EYEBROW = 'Your words. Allergens: confirm at lineup.';",
+				"var HOUSE_DRILL_KITCHEN = 'Allergens are the kitchen\\'s: confirm at lineup.';"]);
 		});
+	});
+	/* ---- the shipped pack at boot, and Say it back and Guest at the table ----
+	   The pack is the one this site ships, read from the shared folder; the
+	   fetch is a stub handing back its text, and the device is a Map whose
+	   every write is counted, so "writes nothing" is a count of nought. */
+	const PACK_PATH = join(sharedDir, 'packs', 'brennans-new-orleans.v1.oothouse.json');
+	const packIt = existsSync(PACK_PATH) ? it : it.skip;
+	const PACK_TEXT = existsSync(PACK_PATH) ? readFileSync(PACK_PATH, 'utf8') : '';
+	const counted = () => {
+		const backing = new Map();
+		const box = { writes: 0 };
+		const set = backing.set.bind(backing);
+		backing.set = (k, v) => { box.writes++; return set(k, v); };
+		OOT.house = lib.createHouseApi(lib.mapStorage(backing), { from: 'ledger' });
+		return box;
+	};
+	const withFetch = async (answer, fn) => {
+		const was = globalThis.fetch;
+		const calls = [];
+		globalThis.fetch = async (url, opts) => { calls.push({ url, opts }); return typeof answer === 'function' ? answer(url) : { ok: true, status: 200, text: async () => answer }; };
+		try { return await fn(calls); } finally { globalThis.fetch = was; }
+	};
+	/* an earlier edition of the same pack: built two days before, every
+	   edition stamp moved with it, and its last drink not yet on it */
+	const olderEdition = () => {
+		const stamp = Date.parse(JSON.parse(PACK_TEXT).house.pack.builtAt);
+		const older = stamp - 2 * 86400000;
+		const p = JSON.parse(PACK_TEXT.split(String(stamp)).join(String(older)));
+		p.house.pack.builtAt = new Date(older).toISOString();
+		const gone = p.house.cocktails.pop();
+		/* nothing else may point at the drink this edition lacks */
+		const strip = (v) => {
+			if (Array.isArray(v)) return v.filter((x) => x !== gone.id).map(strip);
+			if (v && typeof v === 'object') { for (const k of Object.keys(v)) { if (v[k] === gone.id) v[k] = ''; else v[k] = strip(v[k]); } }
+			return v;
+		};
+		for (const k of Object.keys(p.house)) if (k !== 'cocktails') p.house[k] = strip(p.house[k]);
+		p.house.cocktails = strip(p.house.cocktails);
+		return { text: JSON.stringify(p), gone };
+	};
+
+	packIt('the auto-load adds the shipped pack on an empty device, takes its drinks through the doors, says so once, and a second boot writes nothing', async () => {
+		const box = counted();
+		const pack = JSON.parse(PACK_TEXT).house;
+		await withBarAsync(async () => {
+			await withFetch(PACK_TEXT, async (calls) => {
+				/* the boot's order: the wake (no house yet, nothing), then the pack */
+				expect(await W.houseSyncIn()).toBe(null);
+				expect(box.writes).toBe(0);
+				const r = await W.houseAutoLoad();
+				expect(r.action).toBe('added');
+				expect(r.current).toBe(true);
+				expect(calls).toHaveLength(1);
+				expect(calls[0].url).toBe('../shared/packs/brennans-new-orleans.v1.oothouse.json');
+				expect(calls[0].opts).toEqual({ cache: 'no-cache' });
+				const cur = OOT.house.current();
+				expect(cur.name).toBe(pack.name);
+				expect(W.progress.bar).toHaveLength(pack.cocktails.length);
+				expect(W.progress.bar.every((b) => b.house === cur.id)).toBe(true);
+				expect(W.progress.bar.map((b) => b.id).sort()).toEqual(pack.cocktails.map((c) => c.id).sort());
+				expect(W.state.house.err).toBe('');
+				expect(W.state.house.live).toBe(pack.name + ' is loaded: ' + pack.dishes.length + ' dishes, ' + pack.cocktails.length + ' drinks, ' + pack.wines.length + ' wines.');
+				/* the second boot: the wake and the pack again, and nothing written anywhere */
+				const bar = JSON.stringify(W.progress.bar), cards = JSON.stringify(W.progress.cards);
+				const writes = box.writes;
+				W.state.house.live = '';
+				await W.houseSyncIn();
+				const again = await W.houseAutoLoad();
+				expect(again.action).toBe('current');
+				expect(box.writes).toBe(writes);
+				expect(JSON.stringify(W.progress.bar)).toBe(bar);
+				expect(JSON.stringify(W.progress.cards)).toBe(cards);
+				expect(W.state.house.live).toBe('');
+			});
+			/* offline, or a fetch that fails: nothing asked of the engine, nothing written */
+			const writes = box.writes;
+			navigator.onLine = false;
+			try {
+				await withFetch(PACK_TEXT, async (calls) => { expect(await W.houseAutoLoad()).toBe(null); expect(calls).toHaveLength(0); });
+			} finally { delete navigator.onLine; }
+			await withFetch(() => { throw new Error('offline'); }, async () => { expect(await W.houseAutoLoad()).toBe(null); });
+			await withFetch(() => ({ ok: false, status: 404, text: async () => 'gone' }), async () => { expect(await W.houseAutoLoad()).toBe(null); });
+			await withFetch('not a pack', async () => { expect((await W.houseAutoLoad()).action).toBe('refused'); });
+			expect(box.writes).toBe(writes);
+		});
+	});
+
+	packIt('a newer edition refreshes the house through the sync, adds what it brings, and keeps a drink the person edited and a line the person kept', async () => {
+		counted();
+		const { text: oldText, gone } = olderEdition();
+		await withBarAsync(async () => {
+			await withFetch(oldText, async () => { expect((await W.houseAutoLoad()).action).toBe('added'); });
+			expect(W.progress.bar.some((b) => b.id === gone.id)).toBe(false);
+			/* the person edits a drink on the list (projection first, House second) */
+			const first = W.progress.bar[0];
+			const form = W.houseRowForm(first);
+			form.note = 'My own words on this drink.';
+			const saved = W.saveBarRecord(form, first.id);
+			expect(typeof saved === 'string').toBe(false);
+			await lastPut();
+			expect(OOT.house.current().cocktails.find((c) => c.id === first.id).note).toBe('My own words on this drink.');
+			/* and keeps a line of their own on another */
+			const second = W.progress.bar[1];
+			const mine = { value: { s10: 'My ten second line.', s20: 'My twenty second line, in my words.', s45: 'My forty five second line.' }, by: 'person', ts: Date.now() + 1000 };
+			expect(await OOT.house.setMark('cocktail', second.id, 'lines', mine)).toBe(true);
+			W.state.house.live = '';
+			await withFetch(PACK_TEXT, async () => {
+				const r = await W.houseAutoLoad();
+				expect(r.action).toBe('refreshed');
+				expect(r.counts.added).toBe(1);
+			});
+			const cur = OOT.house.current();
+			expect(W.state.house.live).toBe(cur.name + ' updated: 1 new.');
+			/* the drink the edition brought reached the list through the doors */
+			expect(W.progress.bar.some((b) => b.id === gone.id && b.house === cur.id)).toBe(true);
+			expect(W.progress.bar).toHaveLength(JSON.parse(PACK_TEXT).house.cocktails.length);
+			/* the person's edit stands, on the house and on the list */
+			expect(cur.cocktails.find((c) => c.id === first.id).note).toBe('My own words on this drink.');
+			expect(W.progress.bar.find((b) => b.id === first.id).note).toBe('My own words on this drink.');
+			expect(cur.cocktails.find((c) => c.id === second.id).lines.value.s20).toBe('My twenty second line, in my words.');
+			expect(W.state.house.err).toBe('');
+		});
+	});
+
+	packIt('Say it back over the house drinks: reached from the Menu tab and Mine, graded through houseLib.drills.gradeSaid, and written only on Record it', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
+			const tab = W.state.tab;
+			const before = { levels: JSON.stringify(W.progress.levels), qa: JSON.stringify(W.progress.qa), cards: JSON.stringify(W.progress.cards) };
+			const recWas = W.progress.house;
+			W.progress.house = { say: [], role: [] };
+			try {
+				await withBoxes(async () => {
+					/* the two doors: the Menu tab's drill panel and Mine's house line */
+					expect(W.houseDrillPanelHTML()).toContain('data-act="hd-open" data-mode="say"');
+					expect(W.houseDrillPanelHTML()).toContain('data-act="hd-open" data-mode="role"');
+					expect(W.houseLineHTML()).toContain('data-act="hd-open" data-mode="say"');
+					const cur = OOT.house.current();
+					const items = W.houseSayItems();
+					expect(items.length).toBe(cur.cocktails.filter((c) => c.lines && c.lines.by === 'person').length);
+					expect(items.every((i) => i.kind === 'cocktail')).toBe(true);
+					W.state.tab = 'menu';
+					W.houseDrillAct('hd-open', { mode: 'say' });
+					expect(W.state.tab).toBe('mine');
+					expect(W.state.house.drill).toBe('say');
+					expect(items.some((i) => i.id === W.state.house.say.id)).toBe(true);
+					/* the screen on Mine, under the line, every control 44px */
+					const html = W.houseLineHTML();
+					expect(html).toContain('id="house-drill-head"');
+					expect(html).toContain('id="hs-item"');
+					expect(html).toContain('id="hs-said"');
+					expect(html).not.toContain('Speak');
+					for (const m of html.slice(html.indexOf('house-drill')).matchAll(/<(button|select|textarea)\b[^>]*>/g)) expect(m[0]).toMatch(/min-height:(44|88)px/);
+					/* a chosen drink, its kept line typed back */
+					const drink = cur.cocktails.find((c) => c.id === items[0].id);
+					W.houseSayPick(drink.id);
+					W.houseDrillAct('hd-say-length', { l: 's20' });
+					const said = drink.lines.value.s20;
+					boxes['hs-said'] = { value: said };
+					W.houseDrillAct('hd-say-check', {});
+					const g = W.state.house.say.grade;
+					expect(g).toEqual(lib.drills.gradeSaid(cur, drink.id, 's20', said));
+					expect(g.verdict).toBe('met');
+					expect(W.progress.house.say).toHaveLength(0);
+					const shown = W.houseDrillHTML();
+					expect(shown).toContain('>Met<');
+					for (const p of g.parts) expect(shown).toContain(W_esc(p.label));
+					expect(shown).toContain('Your kept line');
+					expect(shown).toContain(W_esc(said));
+					expect(shown).toContain('data-act="hd-say-record"');
+					/* Record it: the one write, in its shape, once */
+					W.houseDrillAct('hd-say-record', {});
+					W.houseDrillAct('hd-say-record', {});
+					expect(W.progress.house.say).toHaveLength(1);
+					const e = W.progress.house.say[0];
+					expect(Object.keys(e).sort()).toEqual(['coverage', 'id', 'kind', 'length', 'ts', 'verdict']);
+					expect(e).toMatchObject({ id: drink.id, kind: 'cocktail', length: 's20', verdict: 'met', coverage: g.coverage });
+					expect(W.houseDrillHTML()).toContain('Recorded.');
+					/* Try again empties the box and the grade; a line said badly is missed, and nothing is written without Record it */
+					W.houseDrillAct('hd-say-again', {});
+					expect(boxes['hs-said'].value).toBe('');
+					expect(W.state.house.say.grade).toBe(null);
+					boxes['hs-said'].value = 'Something else entirely about a lemon.';
+					W.houseDrillAct('hd-say-check', {});
+					expect(W.state.house.say.grade.verdict).toBe('missed');
+					expect(W.houseDrillHTML()).toContain('>Missed<');
+					expect(W.progress.house.say).toHaveLength(1);
+					/* Next deals another drink with a kept line */
+					W.houseDrillAct('hd-say-next', {});
+					expect(items.some((i) => i.id === W.state.house.say.id)).toBe(true);
+					/* the speech button only where the browser offers one, with its sentence */
+					window.webkitSpeechRecognition = function () {};
+					try {
+						const sp = W.houseDrillHTML();
+						expect(sp).toContain('data-act="hd-speak"');
+						expect(sp).toContain('Your voice goes to your browser');
+						expect(sp).toContain('not to Anthropic.');
+					} finally { delete window.webkitSpeechRecognition; }
+				});
+				expect(JSON.stringify(W.progress.levels)).toBe(before.levels);
+				expect(JSON.stringify(W.progress.qa)).toBe(before.qa);
+				expect(JSON.stringify(W.progress.cards)).toBe(before.cards);
+			} finally { W.progress.house = recWas; W.state.tab = tab; W.state.house.drill = ''; }
+		});
+	});
+
+	packIt('Guest at the table deals the kept scenarios and the mix ups, grades through houseLib.drills.gradeScenario, and writes only on Record it', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
+			const tab = W.state.tab;
+			const recWas = W.progress.house;
+			W.progress.house = { say: [], role: [] };
+			try {
+				await withBoxes(async () => {
+					const cur = OOT.house.current();
+					const deck = W.houseRoleDeck();
+					const scen = deck.filter((e) => e.kind === 'scenario');
+					/* the deck is the kept scenarios about a drink, less any on
+					   the kitchen's word or about a person, then the kept mix ups
+					   about a drink */
+					const drinks = new Set(cur.cocktails.map((c) => c.id));
+					const kitchen = /allerg|shellfish|gluten|tree nut|\bnuts?\b|vegan|vegetarian|dairy|lactose|coeliac|celiac|peanut|pregnan/i;
+					const person = /\bfound(?:ed|er)\b|\bOwen Brennan\b|\bElla Brennan\b/;
+					const textOf = (s) => [s.title, s.guest, s.you && s.you.value, s.principle && s.principle.value].join(' ');
+					const roleIds = lib.drills.roleable(cur).map((s) => s.id);
+					for (const e of scen) expect(roleIds.includes(e.id)).toBe(true);
+					const wanted = roleIds.map((id) => cur.scenarios.find((s) => s.id === id))
+						.filter((s) => (s.itemIds || []).some((i) => drinks.has(i)) && !kitchen.test(textOf(s)) && !person.test(textOf(s)));
+					expect(wanted.length > 5).toBe(true);
+					expect(scen.map((e) => e.id).sort()).toEqual(wanted.map((s) => s.id).sort());
+					expect(deck.filter((e) => e.kind === 'mixup')).toHaveLength(cur.mixUps.filter((m) => m.difference && m.difference.by === 'person' && (drinks.has(m.aId) || drinks.has(m.bId))).length);
+					W.houseDrillAct('hd-open', { mode: 'role' });
+					expect(W.state.tab).toBe('mine');
+					expect(W.state.house.drill).toBe('role');
+					/* a scenario, answered with its kept words */
+					const sc = cur.scenarios.find((s) => s.id === scen[0].id);
+					W.state.house.role = { kind: 'scenario', id: sc.id, text: '', grade: null, recorded: false };
+					expect(W.houseDrillHTML()).toContain(W_esc(sc.guest));
+					boxes['hr-said'] = { value: sc.you.value };
+					W.houseDrillAct('hd-role-check', {});
+					const g = W.state.house.role.grade;
+					expect(g).toEqual(lib.drills.gradeScenario(cur, sc.id, sc.you.value));
+					expect(g.verdict).toBe('met');
+					expect(W.progress.house.role).toHaveLength(0);
+					const shown = W.houseDrillHTML();
+					expect(shown).toContain('>Met<');
+					expect(shown).toContain('The kept answer');
+					if (g.principle) expect(shown).toContain(W_esc(g.principle));
+					W.houseDrillAct('hd-role-record', {});
+					expect(W.progress.house.role).toHaveLength(1);
+					expect(Object.keys(W.progress.house.role[0]).sort()).toEqual(['coverage', 'id', 'kind', 'ts', 'verdict']);
+					expect(W.progress.house.role[0]).toMatchObject({ id: sc.id, kind: 'scenario', verdict: 'met' });
+					/* a mix up, asked as which is which, graded against the kept difference */
+					const mx = deck.find((e) => e.kind === 'mixup');
+					const m = cur.mixUps.find((x) => x.id === mx.id);
+					W.state.house.role = { kind: 'mixup', id: mx.id, text: '', grade: null, recorded: false };
+					expect(W.houseDrillHTML()).toContain('Which is which');
+					boxes['hr-said'].value = m.difference.value;
+					W.houseDrillAct('hd-role-check', {});
+					expect(W.state.house.role.grade.verdict).toBe('met');
+					expect(W.state.house.role.grade.keptYou).toBe(m.difference.value.trim());
+					expect(W.progress.house.role).toHaveLength(1);
+					W.houseDrillAct('hd-role-record', {});
+					expect(W.progress.house.role).toHaveLength(2);
+					expect(W.progress.house.role[1]).toMatchObject({ id: mx.id, kind: 'mixup', verdict: 'met' });
+					/* the mix up's copy of the house was never saved */
+					expect(OOT.house.current().scenarios).toHaveLength(cur.scenarios.length);
+					/* an empty answer is missed and says so */
+					W.houseDrillAct('hd-role-again', {});
+					W.houseDrillAct('hd-role-check', {});
+					expect(W.state.house.role.grade.verdict).toBe('missed');
+					W.houseDrillAct('hd-role-deal', {});
+					expect(deck.some((e) => e.kind === W.state.house.role.kind && e.id === W.state.house.role.id)).toBe(true);
+				});
+			} finally { W.progress.house = recWas; W.state.tab = tab; W.state.house.drill = ''; }
+		});
+	});
+
+	/* ---- VERIFIER cases (adversarial pass on the auto-load and the drills) ---- */
+	packIt('VERIFIER: a drink the person took off the list stays off after a newer edition refreshes the house', async () => {
+		counted();
+		const { text: oldText } = olderEdition();
+		await withBarAsync(async () => {
+			await withFetch(oldText, async () => { expect((await W.houseAutoLoad()).action).toBe('added'); });
+			const gone = W.progress.bar[2];
+			W.removeBarRecord(gone.id);
+			expect(await W.houseRemove(gone.id)).toBe(true);
+			expect(W.progress.bar.some((b) => b.id === gone.id)).toBe(false);
+			await withFetch(PACK_TEXT, async () => { expect((await W.houseAutoLoad()).action).toBe('refreshed'); });
+			expect(OOT.house.current().cocktails.some((c) => c.id === gone.id)).toBe(false);
+			expect(W.progress.bar.some((b) => b.id === gone.id)).toBe(false);
+		});
+	});
+
+	packIt('VERIFIER: a refresh of the shipped house while another house is current never switches the current house or touches its list', async () => {
+		counted();
+		const { text: oldText } = olderEdition();
+		await withBarAsync(async () => {
+			expect((await OOT.house.importPack(packOf(fixtureHouse()), { mode: 'new' })).ok).toBe(true);
+			await W.houseSyncIn();
+			const mineId = OOT.house.currentId();
+			await withFetch(oldText, async () => {
+				const r = await W.houseAutoLoad();
+				expect(r.action).toBe('added');
+				expect(r.current).toBe(false);
+			});
+			expect(OOT.house.currentId()).toBe(mineId);
+			const list = JSON.stringify(W.progress.bar);
+			await withFetch(PACK_TEXT, async () => { expect((await W.houseAutoLoad()).action).toBe('refreshed'); });
+			expect(OOT.house.currentId()).toBe(mineId);
+			expect(JSON.stringify(W.progress.bar)).toBe(list);
+		});
+	});
+
+	packIt('VERIFIER: drinks the person typed before any house are never filed into the shipped house by the auto-load', async () => {
+		counted();
+		await withBarAsync(async () => {
+			const mine = W.saveBarRecord({ name: 'My Own Negroni', spec: ['1 oz gin', '1 oz Campari', '1 oz sweet vermouth'], method: 'Stir', glass: 'Rocks', garnish: 'Orange', family: '', spirit: '', price: '', note: '' }, null);
+			expect(typeof mine === 'string').toBe(false);
+			const id = W.progress.bar[0].id;
+			await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
+			expect(W.progress.bar.some((b) => b.id === id)).toBe(true);
+			const shipped = OOT.house.list().find((s) => s.id === JSON.parse(PACK_TEXT).house.id);
+			expect(!!shipped).toBe(true);
+			const cur = OOT.house.current();
+			if (cur && cur.id === shipped.id) expect(cur.cocktails.some((c) => c.id === id || c.name === 'My Own Negroni')).toBe(false);
+			/* the person's drinks are kept under a hand house of their own,
+			   which stays current; the shipped house waits behind 'Open it now?' */
+			expect(cur.id).not.toBe(shipped.id);
+			expect(cur.cocktails.some((c) => c.id === id)).toBe(true);
+			expect(W.state.house.added && W.state.house.added.id).toBe(shipped.id);
+			expect(W.progress.bar.every((b) => b.house === cur.id)).toBe(true);
+		});
+	});
+
+	packIt('VERIFIER: Guest at the table grades nobody on allergen content: no allergy scenario is dealt', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
+			const cur = OOT.house.current();
+			const ALG = /allerg|shellfish|gluten|tree nut|\bnuts?\b|vegan|dairy|lactose|coeliac|celiac|peanut/i;
+			const bad = [];
+			for (const e of W.houseRoleDeck()) {
+				const sc = e.kind === 'scenario' ? cur.scenarios.find((s) => s.id === e.id) : null;
+				const text = sc ? [sc.title, sc.guest, sc.you && sc.you.value, sc.principle && sc.principle.value].join(' ') : [e.title, e.guest, e.difference, e.ask].join(' ');
+				if (ALG.test(text)) bad.push(e.title);
+			}
+			expect(bad).toEqual([]);
+		});
+	});
+
+	packIt('VERIFIER: the Ledger names nobody: no person\'s name reaches Say it back or Guest at the table', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
+			const cur = OOT.house.current();
+			const PEOPLE = /\bOwen Brennan\b|\bElla Brennan\b|\bPaul Blang/;
+			const bad = [];
+			for (const e of W.houseRoleDeck()) {
+				const sc = e.kind === 'scenario' ? cur.scenarios.find((s) => s.id === e.id) : null;
+				const text = sc ? [sc.title, sc.guest, sc.you && sc.you.value, sc.principle && sc.principle.value].join(' ') : [e.title, e.guest, e.difference, e.ask].join(' ');
+				if (PEOPLE.test(text)) bad.push(e.title);
+			}
+			for (const i of W.houseSayItems()) {
+				const c = cur.cocktails.find((x) => x.id === i.id);
+				if (PEOPLE.test(JSON.stringify(c.lines && c.lines.value))) bad.push(c.name);
+			}
+			expect(bad).toEqual([]);
+		});
+	});
+
+	it('VERIFIER: every new input id on the drills screen, the select included, joins captureLiveInputs', () => {
+		const bar = readFileSync(join(JS, 'house-bar.js'), 'utf8');
+		const from = bar.indexOf('SAY IT BACK AND GUEST AT THE TABLE');
+		const ids = new Set();
+		for (const m of bar.slice(from).matchAll(/<(?:textarea|input|select)\b[^>]*id="([a-z0-9-]+)"/g)) ids.add(m[1]);
+		expect(ids.has('hs-item')).toBe(true);
+		for (const id of ids) expect(captureSrc.includes("'" + id + "'")).toBe(true);
+	});
+
+	it('the two drills\' boxes are in captureLiveInputs, their list is heard on change, their acts reach the drill, and the boot loads the pack after the wake', () => {
+		const bar = readFileSync(join(JS, 'house-bar.js'), 'utf8');
+		const from = bar.indexOf('SAY IT BACK AND GUEST AT THE TABLE');
+		expect(from > 0).toBe(true);
+		const ids = new Set();
+		for (const m of bar.slice(from).matchAll(/<(?:textarea|input)\b[^>]*id="([a-z0-9-]+)"/g)) ids.add(m[1]);
+		expect([...ids].sort()).toEqual(['hr-said', 'hs-said']);
+		for (const id of ids) expect(captureSrc.includes("'" + id + "'")).toBe(true);
+		expect(APP_SRC).toContain("if(hsi) hsi.addEventListener('change', e => { houseSayPick(e.target.value); });");
+		expect(APP_SRC).toContain("else if(act.indexOf('hd-')===0){ houseDrillAct(act, el.dataset); return; }");
+		const boot = APP_SRC.slice(APP_SRC.indexOf('(async () => {'));
+		expect(boot.indexOf('await houseSyncIn()') > 0).toBe(true);
+		expect(boot.indexOf('houseAutoLoad()') > boot.indexOf('await houseSyncIn()')).toBe(true);
+		expect(boot).not.toContain('await houseAutoLoad');
 	});
 });
 
@@ -3393,6 +3791,12 @@ describe('house-bar.js with no engine at all', () => {
 		expect(g('houseQuizRound()')).toHaveLength(0);
 		expect(g('houseUpsellWhy()')).toBe('');
 		expect(g('state.house.panel')).toBe('');
+		/* the shipped pack and the two offline drills: nothing at all */
+		expect(await g('houseAutoLoad()')).toBe(null);
+		expect(g('houseDrillHTML()')).toBe('');
+		expect(g('houseDrillDoorsHTML()')).toBe('');
+		expect(g('houseSayItems()')).toHaveLength(0);
+		expect(g('houseRoleDeck()')).toHaveLength(0);
 		expect(sandbox.progress.bar).toHaveLength(1);
 	});
 });
