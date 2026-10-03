@@ -101,7 +101,9 @@ const W = vm.runInThisContext(APP.map((f) => readFileSync(join(JS, f), 'utf8')).
 	'removeBarRecord,normalizeHouseRecords,mergeHouseRecords,FC_MODES,hasSpec,' +
 	'houseHere,houseSyncIn,houseProject,houseSwitch,housePut,houseRemove,houseNames,houseNamesRefresh,' +
 	'isHouseCard,hasKeptLines,keptLineOf,qMyBarLine,houseLineHTML,houseTakePack,houseImportChoice,houseOpenAdded,houseNotNow,houseMint,' +
-	'menuFormulaChip,menuFormulaHTML,menuPaneHTML,menuListHTML,houseFormulaAct,houseProblems,houseUIHooks,houseAfterRender,houseStep,housePackPanelHTML,houseRedrawIfShown})');
+	'menuFormulaChip,menuFormulaHTML,menuPaneHTML,menuListHTML,houseFormulaAct,houseProblems,houseUIHooks,houseAfterRender,houseStep,housePackPanelHTML,houseRedrawIfShown,' +
+	'qMyBarUpsell,qMyBarParts,keptPartsOf,keptUpsellsOf,houseCardFits,houseCardBackHTML,houseUpsellWhy,houseDrillPanelHTML,houseStartCards,houseStartPair,' +
+	'housePairReady,housePairWhy,houseQuizRound,renderQuiz,renderFlashcards,renderMenu,recordCard,QUIZ_MODES})');
 
 /* The House engine, ../shared/oot-house.js, for the house cases below: the
    wing layout keeps it two folders up, the source repo reads WorldTable's
@@ -2447,7 +2449,7 @@ houseDescribe('the House behind the menu', () => {
 				const card = pool.find((d) => d.name === 'Verjus and Tonic');
 				expect(card.draft).toBe(true);
 				const fits = Object.fromEntries(W.FC_MODES.map((m) => [m[0], !!m[3](card)]));
-				expect(fits).toEqual({ name2spec: false, spec2name: false, build: false, cloze: false, service: false, line10: true, line20: false, line45: false });
+				expect(fits).toEqual({ name2spec: false, spec2name: false, build: false, cloze: false, service: false, line10: true, line20: false, line45: false, parts: false, upsell: false });
 				/* the fixture's Collins carries a spec AND kept lines: every mode fits it */
 				const collins = pool.find((d) => d.name === 'The Lantern Collins');
 				expect(W.FC_MODES.find((m) => m[0] === 'name2spec')[3](collins)).toBe(true);
@@ -2464,12 +2466,347 @@ houseDescribe('the House behind the menu', () => {
 					}
 				}
 				expect(lineAsked).toBe(true);
-				const ql = W.qMyBarLine(W.progress.bar.find((b) => b.id === 'b-collins1'));
-				expect(ql.prompt).toBe('Which is the line for The Lantern Collins on your menu, said in ten seconds?');
+				const ql = W.qMyBarLine(verjus);
+				expect(ql.prompt).toBe('Which is the line for Verjus and Tonic on your menu, said in ten seconds?');
 				expect(ql.options).toContain(ql.answer);
+				/* every wrong answer is a line kept on the house's other drink, the Collins */
+				const collinsLines = ['s10', 's20', 's45'].map((k) => W.keptLineOf(W.progress.bar.find((b) => b.id === 'b-collins1'), k).trim());
+				for (const o of ql.options) if (o !== ql.answer) expect(collinsLines).toContain(o);
+				/* the Collins has one line kept elsewhere, not three: no question */
+				expect(W.qMyBarLine(W.progress.bar.find((b) => b.id === 'b-collins1'))).toBe(null);
 				/* no kept line, no question */
 				expect(W.qMyBarLine({ id: 'b-nothere1', name: 'Nowhere', spec: [] })).toBe(null);
 			} finally { fc.src = was; }
+		});
+	});
+
+	/* ---- the offline drills (piece 7): the two card modes, the two Menu
+	   round questions and Pair the menu. Every one reads kept marks only,
+	   stands behind no lock, and writes nothing to progress.levels or
+	   progress.house. A house of n cocktails, each with its parts, its
+	   lines and an upsell to the next one, by person unless `hers` names
+	   it; four dishes with a kept pairing onto four wines and four of the
+	   cocktails, for the engine's two pairing kinds. */
+	const bigHouse = (n, hers) => {
+		const house = fixtureHouse();
+		const base = house.cocktails[0];
+		const ids = Array.from({ length: n }, (_, i) => 'b-drink00' + String(i + 1).padStart(2, '0'));
+		house.cocktails = ids.map((id, i) => {
+			const c = JSON.parse(JSON.stringify(base));
+			c.id = id; c.name = 'House Drink ' + ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight'][i];
+			c.spec = ['50 ml gin', (20 + i) + ' ml lemon'];
+			const by = hers && hers.indexOf(id) >= 0 ? 'maitre' : 'person';
+			c.parts = { value: { main: 'Gin', technique: 'Shaken', sauce: 'Lemon and syrup number ' + (i + 1), sides: 'A coupe', taste: 'Sharp' }, by, ts: 1790672400000 };
+			c.lines = { value: { s10: 'The ten second line for drink number ' + (i + 1) + '.', s20: '', s45: '' }, by, ts: 1790672400000 };
+			c.upsells = { value: [ids[(i + 1) % n]], by, ts: 1790672400000 };
+			delete c.say; delete c.guest; delete c.why; delete c.pairs; delete c.origin; delete c.ingredientsNamed;
+			return c;
+		});
+		const wine = house.wines[0];
+		house.wines = ['One', 'Two', 'Three', 'Four'].map((w, i) => Object.assign(JSON.parse(JSON.stringify(wine)), { id: 'w-wine000' + (i + 1), name: 'Quay Wine ' + w, wine: 'Quay ' + w }));
+		const dish = house.dishes[0];
+		house.dishes = ['Hake', 'Lamb', 'Beet', 'Pie'].map((d, i) => {
+			const x = JSON.parse(JSON.stringify(dish));
+			x.id = 'd-dish000' + (i + 1); x.name = 'Lantern ' + d;
+			x.pairing.value.wineId = 'w-wine000' + (i + 1);
+			x.pairing.value.zeroProofId = ids[i % n];
+			return x;
+		});
+		house.tastings = [];
+		house.mixUps = [];
+		house.scenarios = [];
+		return house;
+	};
+	const row = (id) => W.progress.bar.find((b) => b.id === id);
+	const names = (house) => house.cocktails.map((c) => c.name);
+
+	it('the parts and the upsell cards deal only on kept marks and never on hers, and the back shows the kept parts under the engine labels and the kept upsells by name', async () => {
+		await importCurrent(bigHouse(4, ['b-drink0002']));
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			expect(W.progress.bar).toHaveLength(4);
+			const fc = W.state.fc, was = fc.src;
+			fc.src = 'My Bar';
+			try {
+				const pool = W.fcPool();
+				expect(pool).toHaveLength(4);
+				const kept = pool.find((d) => d.name === 'House Drink One');
+				const hers = pool.find((d) => d.name === 'House Drink Two');
+				const fitsOf = (d) => Object.fromEntries(W.FC_MODES.map((m) => [m[0], !!m[3](d)]));
+				expect(fitsOf(kept)).toMatchObject({ parts: true, upsell: true, line10: true });
+				expect(fitsOf(hers)).toMatchObject({ parts: false, upsell: false, line10: false, name2spec: true });
+				expect(W.keptPartsOf(hers)).toBe(null);
+				expect(W.keptUpsellsOf(hers)).toBe(null);
+				expect(W.keptPartsOf(kept)).toMatchObject({ sauce: 'Lemon and syrup number 1' });
+				expect(W.keptUpsellsOf(kept)).toEqual(['House Drink Two']);
+				/* the back of each card */
+				const parts = W.houseCardBackHTML('parts', kept);
+				for (const label of Object.values(OOT.houseLib.COCKTAIL_PARTS)) expect(parts).toContain(W_esc(label));
+				expect(parts).toContain('Lemon and syrup number 1');
+				expect(W.houseCardBackHTML('upsell', kept)).toContain('House Drink Two');
+				/* the deck of a house mode, over the menu alone, through the Menu tab's door */
+				const levels = JSON.stringify(W.progress.levels), houseRec = JSON.stringify(W.progress.house);
+				expect(W.houseStartCards('parts')).toBe(true);
+				expect(W.state.tab).toBe('flashcards');
+				expect(fc.mode).toBe('parts');
+				expect(fc.deck.map((d) => d.name).sort()).toEqual(['House Drink Four', 'House Drink One', 'House Drink Three']);
+				let html = W.renderFlashcards();
+				expect(html).toContain('What is in it?');
+				expect(html).toContain('data-act="fc-flip"');
+				fc.flipped = true;
+				html = W.renderFlashcards();
+				expect(html).toContain('data-act="fc-grade" data-ok="1"');
+				expect(html).toContain('Lemon and syrup number');
+				/* graded through the deck, under My Bar, and nothing on a level or on the house */
+				const name = fc.deck[fc.idx].name;
+				W.recordCard(true);
+				expect(W.progress.cards['My Bar \u00b7 ' + name]).toMatchObject({ r: 1, w: 0 });
+				expect(JSON.stringify(W.progress.levels)).toBe(levels);
+				expect(JSON.stringify(W.progress.house)).toBe(houseRec);
+				expect(W.houseStartCards('upsell')).toBe(true);
+				expect(fc.deck).toHaveLength(3);
+				fc.flipped = true;
+				expect(W.renderFlashcards()).toContain('What you kept to offer next');
+				/* a mode nobody can run is refused and the setup is shown */
+				expect(W.houseStartCards('nowhere')).toBe(false);
+				/* every mark hers: no card for the two modes, and the panel says so */
+				await importCurrent(bigHouse(4, ['b-drink0001', 'b-drink0002', 'b-drink0003', 'b-drink0004']));
+				await W.houseProject();
+				expect(W.houseStartCards('parts')).toBe(false);
+				expect(fc.stage).toBe('setup');
+				expect(W.houseDrillPanelHTML()).toContain('Nothing kept yet');
+			} finally { fc.src = was; fc.stage = 'setup'; fc.deck = []; W.state.tab = 'home'; }
+		});
+	});
+
+	it('qMyBarUpsell deals four options that are all house cocktails, the answer a kept upsell, never another kept upsell among the wrong ones, and nothing on hers', async () => {
+		const house = bigHouse(5, ['b-drink0005']);
+		await importCurrent(house);
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			const all = names(house);
+			for (let i = 0; i < 40; i++) {
+				const q = W.qMyBarUpsell(row('b-drink0001'));
+				expect(q.prompt).toBe('A guest has finished the House Drink One. Which drink on your menu do you offer next?');
+				expect(q.options).toHaveLength(4);
+				expect(new Set(q.options).size).toBe(4);
+				for (const o of q.options) expect(all).toContain(o);
+				expect(q.answer).toBe('House Drink Two');
+				expect(q.options).toContain(q.answer);
+				expect(q.options.indexOf('Old Fashioned')).toBe(-1);
+			}
+			/* two kept upsells: the other one is never a wrong option */
+			await OOT.house.setMark('cocktail', 'b-drink0001', 'upsells', { value: ['b-drink0002', 'b-drink0003'], by: 'person', ts: 2 });
+			for (let i = 0; i < 40; i++) {
+				const q = W.qMyBarUpsell(row('b-drink0001'));
+				expect(['House Drink Two', 'House Drink Three']).toContain(q.answer);
+				const other = q.answer === 'House Drink Two' ? 'House Drink Three' : 'House Drink Two';
+				expect(q.options.indexOf(other)).toBe(-1);
+			}
+			/* hers, not kept: no question; and a drink since taken off the house names nothing */
+			expect(W.qMyBarUpsell(row('b-drink0005'))).toBe(null);
+			await OOT.house.setMark('cocktail', 'b-drink0004', 'upsells', { value: ['b-nothere1'], by: 'person', ts: 2 });
+			expect(W.qMyBarUpsell(row('b-drink0004'))).toBe(null);
+			/* the Menu round carries it */
+			let asked = false;
+			for (let i = 0; i < 20 && !asked; i++) asked = W.buildRound('mybar').some((q) => /offer next\?$/.test(q.prompt));
+			expect(asked).toBe(true);
+		});
+	});
+
+	it('a round over a house with three cocktails deals no upsell question, and the Menu tab says why', async () => {
+		await importCurrent(bigHouse(3));
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			expect(W.progress.bar).toHaveLength(3);
+			expect(W.qMyBarUpsell(row('b-drink0001'))).toBe(null);
+			for (let i = 0; i < 20; i++) for (const q of W.buildRound('mybar')) expect(/offer next/.test(q.prompt)).toBe(false);
+			expect(W.houseUpsellWhy()).toBe('The offer next question opens at four cocktails on the house: 3 here.');
+			const panel = W.houseDrillPanelHTML();
+			expect(panel).toContain('The offer next question opens at four cocktails on the house: 3 here.');
+			expect(panel).toContain('data-act="house-fc" data-mode="line10">The ten second line (3)</button>');
+			expect(panel).toContain('data-act="house-fc" data-mode="parts">The five parts (3)</button>');
+			expect(panel).toContain('data-act="house-fc" data-mode="upsell">What to offer next (3)</button>');
+			expect(panel).toContain('counted toward no level');
+			/* and the Menu tab draws it under Drill what is on it */
+			W.state.menu.view = 'add';
+			try {
+				const menu = W.renderMenu();
+				expect(menu).toContain('Drill what is on it');
+				expect(menu).toContain('data-act="house-fc" data-mode="parts"');
+			} finally { W.state.menu.view = 'menu'; }
+			/* four cocktails, and it opens */
+			await importCurrent(bigHouse(4));
+			await W.houseProject();
+			expect(W.houseUpsellWhy()).toBe('');
+			expect(W.qMyBarUpsell(row('b-drink0001'))).not.toBe(null);
+			expect(W.houseDrillPanelHTML()).not.toContain('offer next question opens');
+		});
+	});
+
+	it('qMyBarParts deals the kept modifiers and key flavours of four house drinks, never hers, and the fixture\'s two drinks deal none', async () => {
+		await importCurrent(bigHouse(5, ['b-drink0005']));
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			for (let i = 0; i < 40; i++) {
+				const q = W.qMyBarParts(row('b-drink0001'));
+				expect(q.prompt).toBe('Which are the modifiers and key flavours of your House Drink One?');
+				expect(q.options).toHaveLength(4);
+				expect(new Set(q.options).size).toBe(4);
+				expect(q.answer).toBe('Lemon and syrup number 1');
+				expect(q.options).toContain(q.answer);
+				for (const o of q.options) expect(/^Lemon and syrup number [1-4]$/.test(o)).toBe(true);
+				/* her unkept parts on the fifth are no option */
+				expect(q.options.indexOf('Lemon and syrup number 5')).toBe(-1);
+			}
+			expect(W.qMyBarParts(row('b-drink0005'))).toBe(null);
+		});
+		await importCurrent();
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			expect(W.qMyBarParts(row('b-collins1'))).toBe(null);
+			expect(W.qMyBarUpsell(row('b-collins1'))).toBe(null);
+		});
+	});
+
+	it('Pair the menu deals the engine\'s firstPickFor and zeroProofFor over the current house into the quiz, only where the house is ready, and writes nothing to a level', async () => {
+		await importCurrent();
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			expect(W.housePairReady()).toEqual([]);
+			expect(W.housePairWhy()).toBe('Pair the menu opens at four dishes with a kept pairing: 1 name a wine and 1 a drink without alcohol here.');
+			expect(W.houseQuizRound()).toEqual([]);
+			expect(W.buildRound('housepair')).toEqual([]);
+			expect(W.houseStartPair()).toBe(false);
+			expect(W.state.quiz.stage).toBe('setup');
+			expect(W.houseDrillPanelHTML()).toContain('Pair the menu opens at four dishes');
+			expect(W.houseDrillPanelHTML()).not.toContain('data-act="house-pair"');
+			W.state.quiz.mode = 'housepair';
+			let setup = W.renderQuiz();
+			expect(setup).not.toContain('data-m="housepair"');
+			expect(W.state.quiz.mode).toBe('mixed');
+		});
+		const house = bigHouse(4);
+		await importCurrent(house);
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			expect(W.housePairReady()).toEqual(['firstPickFor', 'zeroProofFor']);
+			const labels = OOT.houseLib.drills.DRILL_LABELS;
+			const wines = house.wines.map((w) => w.name), drinks = names(house), dishes = house.dishes.map((d) => d.name);
+			for (let i = 0; i < 10; i++) {
+				const round = W.houseQuizRound();
+				expect(round.length > 0 && round.length <= 10).toBe(true);
+				for (const q of round) {
+					expect(q.options).toHaveLength(4);
+					expect(new Set(q.options).size).toBe(4);
+					expect(q.options).toContain(q.answer);
+					const dish = dishes.find((d) => q.prompt.indexOf(d + '. ') === 0);
+					expect(!!dish).toBe(true);
+					expect(q.prompt).toBe(dish + '. ' + labels[q.houseKind]);
+					const field = q.houseKind === 'firstPickFor' ? wines : drinks;
+					for (const o of q.options) expect(field).toContain(o);
+					expect(q.qkey === undefined).toBe(true);
+				}
+				expect(new Set(round.map((q) => q.houseKind + '|' + q.prompt)).size).toBe(round.length);
+			}
+			const levels = JSON.stringify(W.progress.levels), houseRec = JSON.stringify(W.progress.house);
+			expect(W.houseStartPair()).toBe(true);
+			expect(W.state.tab).toBe('quiz');
+			expect(W.state.quiz.mode).toBe('housepair');
+			expect(W.state.quiz.stage).toBe('run');
+			const run = W.renderQuiz();
+			expect(run).toContain('data-act="quiz-pick"');
+			expect(run).toContain('Which wine is the first pick with this dish?');
+			W.state.quiz.stage = 'setup';
+			const setup = W.renderQuiz();
+			expect(setup).toContain('data-act="quiz-mode" data-m="housepair">Pair the menu</button>');
+			expect(W.state.quiz.mode).toBe('housepair');
+			expect(W.houseDrillPanelHTML()).toContain('data-act="house-pair">Pair the menu</button>');
+			expect(JSON.stringify(W.progress.levels)).toBe(levels);
+			expect(JSON.stringify(W.progress.house)).toBe(houseRec);
+			W.state.quiz.mode = 'mixed'; W.state.tab = 'home';
+		});
+		/* no engine lib at all: nothing deals, and the mode falls back */
+		const libWas = OOT.houseLib;
+		delete OOT.houseLib;
+		try {
+			expect(W.housePairReady()).toEqual([]);
+			expect(W.houseQuizRound()).toEqual([]);
+		} finally { OOT.houseLib = libWas; }
+		/* the drills join no lock: the shared lock table is untouched by this wing */
+		expect(readFileSync(join(JS, 'house-bar.js'), 'utf8')).not.toMatch(/oot-locks|OOT\.locks|OOT\.gate/);
+	});
+
+	/* ---- the adversarial verifier's cases (piece 7). Each names a hole the
+	   build left; each fails until the hole is closed. ---- */
+	it('VERIFIER: a spec-less house drink with kept parts and kept upsells and no kept line gets its parts and upsell cards', async () => {
+		const house = bigHouse(4);
+		const c = house.cocktails[0];
+		c.spec = [];
+		delete c.lines;
+		await importCurrent(house);
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			const fc = W.state.fc, was = fc.src;
+			fc.src = 'My Bar';
+			try {
+				expect(W.keptPartsOf(row('b-drink0001'))).not.toBe(null);
+				expect(W.houseCardFits('parts', row('b-drink0001'))).toBe(true);
+				/* the deck the Menu tab door opens must hold it */
+				expect(W.houseStartCards('parts')).toBe(true);
+				expect(fc.deck.map((d) => d.name)).toContain('House Drink One');
+			} finally { fc.src = was; fc.stage = 'setup'; fc.deck = []; W.state.tab = 'home'; }
+		});
+	});
+
+	it('VERIFIER: a drink with kept upsells that deals no offer next question on a house of four cocktails is told why', async () => {
+		await importCurrent(bigHouse(4));
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			await OOT.house.setMark('cocktail', 'b-drink0001', 'upsells', { value: ['b-drink0002', 'b-drink0003'], by: 'person', ts: 2 });
+			await W.houseProject();
+			const q = W.qMyBarUpsell(row('b-drink0001'));
+			const panel = W.houseDrillPanelHTML();
+			expect(q !== null || /offer next question/i.test(panel)).toBe(true);
+		});
+	});
+
+	it('VERIFIER: every option of qMyBarLine is a kept line of a drink on this house, never a canon note or an unkept note', async () => {
+		await importCurrent();
+		await withBarAsync(async () => {
+			await W.houseSyncIn();
+			const keptLines = [];
+			for (const b of W.progress.bar) for (const k of ['s10', 's20', 's45']) { const t = W.keptLineOf(b, k); if (t) keptLines.push(t.trim()); }
+			for (let i = 0; i < 20; i++) {
+				const q = W.qMyBarLine(row('b-collins1'));
+				if (!q) continue;
+				for (const o of q.options) expect(keptLines).toContain(o);
+			}
+			/* the fixture's Collins has no line kept on another drink: no question, and the Menu tab says why */
+			expect(W.qMyBarLine(row('b-collins1'))).toBe(null);
+			expect(W.houseDrillPanelHTML()).toMatch(/The which line question needs three lines kept on the house.{1,8}s other drinks: The Lantern Collins has fewer\./);
+		});
+	});
+
+	it('VERIFIER: a Pair the menu round writes no progress.quizzes row, so no house drill rides in a backup or the dashboard trend before piece 10', () => {
+		const app = readFileSync(join(JS, 'app.js'), 'utf8');
+		const at = app.indexOf("act==='quiz-next'");
+		expect(at).toBeGreaterThan(-1);
+		const block = app.slice(at, app.indexOf("act==='quiz-replay'", at));
+		expect(block).toMatch(/housepair/);
+	});
+
+	it('VERIFIER: with the engine here and no current house, the panel, the modes and the pair round draw without throwing', async () => {
+		fresh();
+		await OOT.house.ready();
+		await withBarAsync(async () => {
+			expect(!OOT.house.current()).toBe(true);
+			expect(() => W.houseDrillPanelHTML()).not.toThrow();
+			expect(W.houseQuizRound()).toEqual([]);
+			expect(W.qMyBarUpsell({ id: 'b-x', name: 'X', spec: ['1 oz gin'] })).toBe(null);
+			W.state.quiz.mode = 'housepair';
+			expect(() => W.renderQuiz()).not.toThrow();
+			expect(W.state.quiz.mode).toBe('mixed');
 		});
 	});
 
@@ -3047,6 +3384,14 @@ describe('house-bar.js with no engine at all', () => {
 		expect(await g('housePut({ id: "b-1" })')).toBe(null);
 		expect(await g('houseRemove("b-1")')).toBe(false);
 		expect(g('qMyBarLine({ id: "b-1", name: "A", spec: [] })')).toBe(null);
+		expect(g('qMyBarUpsell({ id: "b-1", name: "A", spec: [] })')).toBe(null);
+		expect(g('qMyBarParts({ id: "b-1", name: "A", spec: [] })')).toBe(null);
+		expect(g('houseCardFits("parts", { id: "b-1", spec: [] })')).toBe(false);
+		expect(g('houseCardFits("upsell", { id: "b-1", spec: [] })')).toBe(false);
+		expect(g('houseDrillPanelHTML()')).toBe('');
+		expect(g('housePairReady()')).toHaveLength(0);
+		expect(g('houseQuizRound()')).toHaveLength(0);
+		expect(g('houseUpsellWhy()')).toBe('');
 		expect(g('state.house.panel')).toBe('');
 		expect(sandbox.progress.bar).toHaveLength(1);
 	});

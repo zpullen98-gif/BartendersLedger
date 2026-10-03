@@ -29,8 +29,24 @@
  * Exits non-zero when either gate is exceeded, or when a question is
  * malformed (fewer than two options, an answer index off the end, or a
  * duplicated option).
+ *
+ * THE DEALING PROOF, below the bank: the Menu round's house questions
+ * (qMyBarLine, qMyBarUpsell and qMyBarParts in js/house-bar.js) are not
+ * authored, they are dealt at run time off the marks a person kept on the
+ * House, so there is no bank to measure. Instead the three are dealt a few
+ * thousand times over a house of six drinks with every mark kept, and the
+ * deal itself is held to the rules: the answer lands in each of the four
+ * positions about a quarter of the time (the gate is 17 to 33 percent, where
+ * the draw's own spread is under one point), every option is distinct, the
+ * answer is among them, no stem carries its answer, and on the offer next
+ * question every option is a drink of this house. The engine comes from
+ * OOT_SHARED=<dir>, or the shared folder beside this checkout; none is a
+ * note and a skip, and a named folder without the engine is a failure.
  */
-import { loadWing } from './load-wing.mjs';
+import { existsSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import vm from 'node:vm';
+import { loadWing, LEDGER } from './load-wing.mjs';
 
 const LONGEST_GATE = 0.27;   /* pick-longest strategy score, as a fraction */
 /* A RATE WITH A FLOOR, not a flat count. This was 25 against a bank of 196,
@@ -104,5 +120,98 @@ let fail = false;
 if (malformed.length) { console.error('check-options: malformed questions'); fail = true; }
 if (strategy / n > LONGEST_GATE) { console.error('check-options: pick-longest ' + pct(strategy / n) + ' is above the ' + pct(LONGEST_GATE) + ' gate'); fail = true; }
 if (unique.length > uniqueGate(n)) { console.error('check-options: ' + unique.length + ' unique-longest keys is above the gate of ' + uniqueGate(n)); fail = true; }
+
+/* ---- the dealing proof: the house questions, dealt and measured ---------- */
+const POSITION_LOW = 0.17, POSITION_HIGH = 0.33;
+const DEALS_PER_DRINK = 400;
+const SHARED_DEFAULTS = ['../../shared/', '../../worldtable/static/shared/'];
+const sharedDir = process.env.OOT_SHARED
+  ? process.env.OOT_SHARED.replace(/[\\/]?$/, '/')
+  : SHARED_DEFAULTS.map((d) => new URL(d, import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')).find((d) => existsSync(join(d, 'oot-house.js')));
+const HOUSE_ENGINE = sharedDir ? join(sharedDir, 'oot-house.js') : null;
+if (process.env.OOT_SHARED && !existsSync(HOUSE_ENGINE)) {
+  console.error('check-options: OOT_SHARED names ' + sharedDir + ' but it holds no oot-house.js');
+  process.exit(1);
+}
+
+/* the fixture house with six drinks, every mark kept: a ten second line, the
+   five parts with a sauce of its own, and an upsell to the next drink */
+function sixDrinkHouse() {
+  const house = JSON.parse(readFileSync(join(LEDGER, 'tools', 'fixtures', 'house-min.json'), 'utf8'));
+  const base = house.cocktails[0];
+  const words = ['One', 'Two', 'Three', 'Four', 'Five', 'Six'];
+  const ids = words.map((_, i) => 'b-drink00' + String(i + 1).padStart(2, '0'));
+  house.cocktails = ids.map((id, i) => {
+    const c = JSON.parse(JSON.stringify(base));
+    c.id = id; c.name = 'House Drink ' + words[i];
+    c.spec = ['50 ml gin', (20 + i) + ' ml lemon'];
+    const ts = 1790672400000;
+    c.parts = { value: { main: 'Gin', technique: 'Shaken', sauce: 'Lemon and syrup number ' + (i + 1), sides: 'A coupe', taste: 'Sharp' }, by: 'person', ts };
+    c.lines = { value: { s10: 'The ten second line for drink number ' + (i + 1) + '.', s20: '', s45: '' }, by: 'person', ts };
+    c.upsells = { value: [ids[(i + 1) % ids.length]], by: 'person', ts };
+    for (const k of ['say', 'guest', 'why', 'pairs', 'origin', 'ingredientsNamed']) delete c[k];
+    return c;
+  });
+  house.tastings = []; house.mixUps = []; house.scenarios = [];
+  return house;
+}
+const fold = (s) => String(s || '').trim().toLowerCase().replace(/\s+/g, ' ');
+
+async function dealingProof() {
+  if (!HOUSE_ENGINE) {
+    console.log('check-options: SKIPPED the house dealing proof: no shared folder beside this checkout (OOT_SHARED=<dir> names one)');
+    return true;
+  }
+  const APP = ['data-core.js', 'data-lore.js', 'data-ontap.js', 'data-coffee.js', 'data-service.js', 'data-ingredients.js',
+    'ingredients.js', 'engine.js', 'srs.js', 'ui-study.js', 'ui-practice.js', 'ui-reference.js', 'ui-prep.js', 'ui-new.js',
+    'menu-drinks.js', 'ui-menu.js', 'ui-import.js', 'data-levels.js', 'levels.js', 'ui-levels.js', 'house-bar.js'];
+  const w = loadWing(APP);
+  vm.runInContext(readFileSync(HOUSE_ENGINE, 'utf8'), w, { filename: 'oot-house.js' });
+  const OOT = w.get('OOT');
+  const lib = OOT.houseLib;
+  OOT.house = lib.createHouseApi(lib.mapStorage(), { from: 'ledger' });
+  const house = sixDrinkHouse();
+  const imported = await OOT.house.importPack(JSON.stringify(lib.buildPack(house, 'tools', Date.now())), { mode: 'new' });
+  if (!imported.ok || !imported.current) { console.error('check-options: the six drink house would not import: ' + imported.said); return false; }
+  const out = await w.get('houseSyncIn')();
+  const bar = w.get('progress').bar;
+  if (!out || !out.ok || bar.length !== 6) { console.error('check-options: the six drink house did not reach the list (' + bar.length + ' rows)'); return false; }
+  const houseNames = house.cocktails.map((c) => c.name);
+  let ok = true;
+  for (const name of ['qMyBarLine', 'qMyBarUpsell', 'qMyBarParts']) {
+    const fn = w.get(name);
+    const positions = [0, 0, 0, 0];
+    const faults = [];
+    let deals = 0;
+    for (const b of bar) {
+      for (let i = 0; i < DEALS_PER_DRINK; i++) {
+        const q = fn(b);
+        if (!q) { faults.push(name + ' dealt nothing for ' + b.name); break; }
+        deals++;
+        const opts = Array.isArray(q.options) ? q.options : [];
+        if (opts.length !== 4) faults.push(name + ': ' + opts.length + ' options for ' + b.name);
+        if (new Set(opts.map(fold)).size !== opts.length) faults.push(name + ': a repeated option for ' + b.name);
+        const at = opts.indexOf(q.answer);
+        if (at < 0) faults.push(name + ': the answer is not among the options for ' + b.name);
+        else positions[at]++;
+        if (fold(q.prompt).indexOf(fold(q.answer)) >= 0) faults.push(name + ': the stem carries its answer for ' + b.name);
+        if (name === 'qMyBarUpsell') for (const o of opts) if (houseNames.indexOf(o) < 0) faults.push(name + ': ' + o + ' is not a drink of this house');
+        if (faults.length > 8) break;
+      }
+      if (faults.length > 8) break;
+    }
+    const shares = positions.map((c) => deals ? c / deals : 0);
+    console.log('  ' + name + ': ' + deals + ' deals; the answer in each position ' + shares.map(pct).join(', ') + '  gate ' + pct(POSITION_LOW) + ' to ' + pct(POSITION_HIGH));
+    const seen = {};
+    for (const f of faults) if (!seen[f]) { seen[f] = true; console.error('  ' + f); }
+    if (faults.length) ok = false;
+    if (shares.some((x) => x < POSITION_LOW || x > POSITION_HIGH)) { console.error('  ' + name + ': the answer favours a position'); ok = false; }
+  }
+  return ok;
+}
+
+console.log('check-options: the house questions, dealt');
+if (!(await dealingProof())) { console.error('check-options: the house dealing proof failed'); fail = true; }
+
 if (fail) { console.error('check-options: FAIL'); process.exit(1); }
 console.log('check-options: OK');
