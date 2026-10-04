@@ -3664,7 +3664,9 @@ houseDescribe('the House behind the menu', () => {
 	};
 	/* the router reads app.js's tab list, which boots and is not loaded here */
 	if (!/\bTABS\b/.test(Object.keys(globalThis).join(' '))) { try { vm.runInThisContext('TABS'); } catch (e) { vm.runInThisContext(APP_SRC.match(/^const TABS = .*$/m)[0].replace(/^const /, 'var ')); } }
-	const SAZ = 'b-olsmh04y', CATALINA = 'b-uzw5oty7', HUSSARDE = 'd-1q0xk7jv';
+	/* the pack's own read date, written the way the study view writes it, so a new edition needs no edit here */
+	const READ_ON = (iso) => { const [y, m, d] = String(iso).split('-').map(Number); return d + ' ' + ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][m - 1] + ' ' + y; };
+	const SAZ = 'b-olsmh04y', HUSSARDE = 'd-1q0xk7jv';
 
 	packIt('the study view is the default with a house: one row per drink in the house\'s order, its sections in order, and today\'s list behind Edit the menu or with no house', async () => {
 		counted();
@@ -3686,10 +3688,11 @@ houseDescribe('the House behind the menu', () => {
 				const secs = [...html.matchAll(/<h3 class="eyebrow hs-sec-name">([^<]+) · \d+<\/h3>/g)].map((m) => m[1]);
 				const want = [...new Set(cur.cocktails.map((c) => c.section))].map(W_esc);
 				expect(secs).toEqual(want);
-				expect(secs).toHaveLength(8);
+				expect(secs).toHaveLength(want.length);
+				expect(secs.length).toBeGreaterThan(1);
 				expect(html).not.toMatch(/<[^>]*\schecked[\s>=]/);
 				/* every control a button of the study view, none under its height rule by class */
-				expect(html).toContain('Menus read 26 September 2026');
+				expect(html).toContain('Menus read ' + READ_ON(cur.menusReadOn));
 				/* Edit the menu: today's list, unchanged, with the switch back */
 				W.houseStudyAct('hs-editall', {});
 				expect(W.houseStudyOn()).toBe(false);
@@ -3735,7 +3738,7 @@ houseDescribe('the House behind the menu', () => {
 				/* the canon's quantities: every measured line of its spec */
 				for (const line of canon.spec.filter((l) => /\d/.test(l))) expect(card).not.toContain(W_esc(line));
 				expect((card.match(/class="hs-price">\$13</g) || []).length).toBe(1);
-				expect(card).toContain('Prices as printed on 26 September 2026. Confirm before quoting.');
+				expect(card).toContain('Prices as printed on ' + READ_ON(OOT.house.current().menusReadOn) + '. Confirm before quoting.');
 				expect(card).toContain('<dt>Bitters</dt>');
 				expect(card).toContain('<dt>Rinse</dt>');
 				expect(card).toContain('Your words. Allergens: confirm at lineup.');
@@ -3745,8 +3748,10 @@ houseDescribe('the House behind the menu', () => {
 				/* the next card replaces the address, it pushes nothing */
 				W.houseStudyAct('hs-next', {});
 				expect(pushed).toHaveLength(1);
-				/* Catalina Island is poured with Eggs Hussarde: the Table's card, on the suite's path */
-				W.houseStudyAct('hs-open', { id: CATALINA });
+				/* the spirit-free drink poured with Eggs Hussarde (read from the pack): the Table's card, on the suite's path */
+				const zp = OOT.house.current().dishes.find((d) => d.id === HUSSARDE).pairing.value.zeroProofId;
+				expect(zp).toMatch(/^b-/);
+				W.houseStudyAct('hs-open', { id: zp });
 				const cat = W.renderMenu();
 				expect(cat).toContain('<div class="eyebrow">Poured with</div>');
 				expect(cat).toContain('href="/table/menu#' + HUSSARDE + '"');
