@@ -105,7 +105,7 @@ const W = vm.runInThisContext(APP.map((f) => readFileSync(join(JS, f), 'utf8')).
 	'qMyBarUpsell,qMyBarParts,keptPartsOf,keptUpsellsOf,houseCardFits,houseCardBackHTML,houseUpsellWhy,houseDrillPanelHTML,houseStartCards,houseStartPair,' +
 	'housePairReady,housePairWhy,houseQuizRound,renderQuiz,renderFlashcards,renderMenu,recordCard,QUIZ_MODES,' +
 	'houseAutoLoad,houseDrillAct,houseDrillHTML,houseDrillDoorsHTML,houseSayItems,houseRoleDeck,houseSayPick,houseRowForm,' +
-	'houseStudyOn,houseStudyHTML,houseStudyAct,openDeck,startDeckRun,deckDef,houseStudyDeepLink,houseStudyRoute,houseStudySectionOf,hsCanonFor,hsProducersFor,hsVideoUrlOk,hsVideosForLocal,hsVideoGroupsLocal,hsVideosFor,hsVideoGroups,hsVideoLI,hsVideoOrdinals,applyRoute,currentRoute})');
+	'houseStudyOn,houseStudyHTML,houseStudyAct,openDeck,startDeckRun,deckDef,houseStudyDeepLink,houseStudyRoute,houseStudySectionOf,hsCanonFor,hsProducersFor,hsVideoUrlOk,hsVideosForLocal,hsVideoGroupsLocal,hsVideosFor,hsVideoGroups,hsVideoLI,hsVideoOrdinals,applyRoute,currentRoute,deckNameNow,cardByKey,componentCards})');
 
 /* The House engine, ../shared/oot-house.js, for the house cases below: the
    wing layout keeps it two folders up, the source repo reads WorldTable's
@@ -2451,7 +2451,7 @@ houseDescribe('the House behind the menu', () => {
 				const card = pool.find((d) => d.name === 'Verjus and Tonic');
 				expect(card.draft).toBe(true);
 				const fits = Object.fromEntries(W.FC_MODES.map((m) => [m[0], !!m[3](card)]));
-				expect(fits).toEqual({ name2spec: false, spec2name: false, build: false, cloze: false, service: false, line10: true, line20: false, line45: false, parts: false, upsell: false, study: true, word: false });
+				expect(fits).toEqual({ name2spec: false, spec2name: false, build: false, cloze: false, service: false, line10: true, line20: false, line45: false, parts: false, upsell: false, study: true, word: false, component: false });
 				/* the fixture's Collins carries a spec AND kept lines: every mode fits it */
 				const collins = pool.find((d) => d.name === 'The Lantern Collins');
 				expect(W.FC_MODES.find((m) => m[0] === 'name2spec')[3](collins)).toBe(true);
@@ -3716,6 +3716,95 @@ houseDescribe('the House behind the menu', () => {
 		});
 	});
 
+	/* What a drink is made of and what to compare it with (the component deep dive): the pack with two
+	   components and two comparisons put on the Classic Sazerac here, and one video naming a component. */
+	const COMPONENT_PACK = () => {
+		const p = JSON.parse(PACK_TEXT);
+		const h = p.house;
+		const ts = Date.parse(h.pack.builtAt);
+		const mark = (value) => ({ value, by: 'person', ts });
+		/* the shipped edition files its own components and comparisons; the case stands on its two alone */
+		for (const list of ['dishes', 'wines', 'cocktails']) for (const r of h[list] || []) delete r.compare;
+		for (const v of h.videos || []) delete v.componentIds;
+		h.components = ([
+			{ id: 'c-testrin1', kind: 'technique', name: 'The rinse', say: mark('RINSE.'), explain: mark('A rinse coats a chilled glass with a strong spirit.\n\nWhat does not cling is poured away before the drink goes in.'), card: mark({ front: 'What does the rinse do?', back: 'It coats the chilled glass and the rest is poured away, so the scent meets the guest first.' }), itemIds: [SAZ], termIds: [], ts },
+			{ id: 'c-teststo1', kind: 'story', name: 'A test story', explain: mark('A first paragraph.\n\nA second paragraph.'), card: mark({ front: 'A test question?', back: 'A test answer, kept.' }), itemIds: [SAZ], termIds: [], ts }
+		]);
+		const saz = h.cocktails.find((c) => c.id === SAZ);
+		saz.compare = mark([
+			{ app: 'ledger', ref: 'Sazerac', label: 'The canon Sazerac', same: 'Rye, sugar, bitters and a rinsed glass.', different: 'The house builds to its own spec.' },
+			{ app: 'classic', ref: '', label: 'An old fashioned', same: 'Spirit, sugar and bitters.', different: 'No rinse, and served over ice.' }
+		]);
+		h.videos[0].componentIds = ['c-testrin1'];
+		return JSON.stringify(p);
+	};
+
+	packIt('a drink card says what it is made of, grouped by kind, each component opening to its say, explanation and card, and Compare with links the canon in the Library and writes a classic out', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async () => {
+				await withFetch(COMPONENT_PACK(), async () => { await W.houseAutoLoad(); });
+				W.houseStudyAct('hs-open', { id: SAZ });
+				const card = W.renderMenu();
+				expect(card).toContain('id="hs-madeof-h">What it\u2019s made of</h3>');
+				expect(card.indexOf('data-kind="technique">Techniques<')).toBeLessThan(card.indexOf('data-kind="story">Stories<'));
+				expect(card).toContain('<li data-component="c-testrin1"><details class="hs-more hs-comp"><summary>The rinse</summary>');
+				expect(card).toContain('<span class="hs-soft">Say it:</span> RINSE.');
+				expect(card).toContain('<p>What does not cling is poured away before the drink goes in.</p>');
+				expect(card).toContain('<dt>On the card</dt><dd>What does the rinse do?</dd>');
+				expect(card).toContain('data-act="hs-comp-cards" data-id="' + SAZ + '">Flash these components</button>');
+				expect(card).toMatch(/data-component="c-testrin1">[\s\S]*?class="hs-vlink"[\s\S]*?<\/details>/);
+				expect(card).toContain('id="hs-compare-h">Compare with</h3>');
+				expect(card).toContain('<li data-app="ledger"><a class="hs-link" href="#/library/sazerac">The canon Sazerac</a> <span class="hs-soft">in the Library</span>');
+				expect(card).toContain('<span class="hs-strong">An old fashioned</span> <span class="hs-soft">A classic, for comparison</span>');
+				expect(card).toContain('<span class="hs-soft">What differs:</span> No rinse, and served over ice.');
+				/* the made-of block sits after the build and before the five parts */
+				expect(card.indexOf('hs-madeof-h')).toBeGreaterThan(card.indexOf('class="ticket"'));
+				/* a drink with no components draws neither block */
+				const other = OOT.house.current().cocktails.find((c) => c.id !== SAZ && !c.compare);
+				W.houseStudyAct('hs-open', { id: other.id });
+				const plain = W.renderMenu();
+				expect(plain).not.toContain('hs-madeof-h');
+				expect(plain).not.toContain('hs-compare-h');
+			});
+		});
+	});
+
+	packIt('Flash these components deals the drink\'s components on the card screen in kind order, and the Flashcards root lists a deck per kind', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async () => {
+				await withFetch(COMPONENT_PACK(), async () => { await W.houseAutoLoad(); });
+				W.houseStudyAct('hs-open', { id: SAZ });
+				expect(W.houseStudyAct('hs-comp-cards', { id: SAZ })).toBe(true);
+				const fc = W.state.fc;
+				expect(W.state.tab).toBe('flashcards');
+				expect(fc.stage).toBe('run');
+				expect(fc.mode).toBe('component');
+				expect(fc.deck.map((d) => d.name)).toEqual(['What does the rinse do?', 'A test question?']);
+				expect(W.deckNameNow()).toBe('Classic Sazerac: what it is made of');
+				const face = W.renderFlashcards();
+				expect(face).toContain('<div class="eyebrow fc-kind">Techniques</div>');
+				expect(face).toContain('What does the rinse do?');
+				expect(face).not.toContain('poured away, so the scent');
+				fc.flipped = true;
+				expect(W.renderFlashcards()).toContain('poured away, so the scent meets the guest first.');
+				expect(W.cardKey(fc.deck[0])).toBe('Components · What does the rinse do?');
+				expect(W.cardByKey('Components · What does the rinse do?')).toMatchObject({ src: 'Components', kind: 'technique' });
+				expect(W.deckDef('components:technique').name).toBe('Techniques');
+				expect(W.deckDef('components:story').preset.only.map((d) => d.name)).toEqual(['A test question?']);
+				expect(W.deckDef('components:garnish')).toBe(null);
+				expect(W.deckDef('item-components:' + SAZ).preset.deckModes).toEqual(['component']);
+				fc.stage = 'pick';
+				const root = W.renderFlashcards();
+				expect(root).toContain('id="fc-made-h">What it\u2019s made of</h3>');
+				expect(root).toContain('data-deck="components:technique"');
+				expect(root).toContain('data-deck="components:story"');
+				expect(root).not.toContain('data-deck="components:ingredient"');
+			});
+		});
+	});
+
 	packIt('the Classic Sazerac card links the canon Sazerac and its story, never draws the canon\'s quantities, and shows its upsells as buttons to their cards', async () => {
 		counted();
 		await withBarAsync(async () => {
@@ -3890,7 +3979,9 @@ houseDescribe('the House behind the menu', () => {
 				expect(W.hsVideoLI(cur, twins[1], false, ords[twins[1].id])).toContain('>A video on The Sazerac, 2 of 2<');
 				const espresso = cur.cocktails.find((c) => c.name === 'Espresso Martini');
 				W.houseStudyAct('hs-open', { id: espresso.id });
-				const labels = [...W.renderMenu().matchAll(/<a class="hs-vlink"[^>]*>([^<]+)</g)].map((m) => m[1]);
+				/* the Watch block itself: a component's disclosure may list one of the same videos again */
+				const labels = [...section(W.renderMenu(), '<section class="hs-group hs-watch"').matchAll(/<a class="hs-vlink"[^>]*>([^<]+)</g)].map((m) => m[1]);
+				expect(labels.length).toBeGreaterThan(1);
 				expect(new Set(labels).size).toBe(labels.length);
 			});
 		});
