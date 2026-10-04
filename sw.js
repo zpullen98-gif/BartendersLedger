@@ -1,10 +1,12 @@
 /* The Bartender's Ledger — service worker.
    Bump CACHE on every deploy; that string is the whole update mechanism. */
-const CACHE = 'ledger-v71';
+const CACHE = 'ledger-v72';
 
 const ASSETS = [
   './',
   './index.html',
+  './js/oot-service.js',
+  './css/service-day.css',
   './manifest.webmanifest',
   './css/ledger.css',
   './css/house.css',

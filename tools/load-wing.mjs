@@ -28,7 +28,9 @@ export function loadWing(files) {
   const sandbox = {
     console,
     document: {
-      readyState: 'complete',
+      /* Head scripts load while the document is being parsed. This
+         DOM-free engine fixture never mounts post-load toolbar markup. */
+      readyState: 'loading',
       addEventListener() {}, getElementById: () => Object.create(stub), querySelector: () => null,
       querySelectorAll: () => [], createElement: () => Object.create(stub), body: Object.create(stub),
       activeElement: null, head: Object.create(stub), documentElement: Object.create(stub),
@@ -39,6 +41,7 @@ export function loadWing(files) {
     navigator: {},
     setTimeout, clearTimeout, setInterval, clearInterval,
     matchMedia: () => ({ matches: false }),
+    addEventListener() {}, removeEventListener() {},
     confirm: () => false, alert() {},
   };
   sandbox.window = sandbox;

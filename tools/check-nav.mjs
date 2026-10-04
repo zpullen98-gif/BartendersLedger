@@ -110,7 +110,7 @@ function boot({ hash = '', local = {}, session = {}, referrer = '', navType = 'n
 	const doc = {
 		readyState: 'complete', referrer, activeElement: null, title: '',
 		body: { dataset: {}, classList: { add() {}, remove() {}, toggle() {}, contains() { return false; } }, appendChild() {}, style: {} },
-		head: { appendChild() {} }, documentElement: { dataset: {}, style: {}, classList: { add() {}, remove() {} } },
+		head: { appendChild() {} }, documentElement: { dataset: {}, style: {}, setAttribute() {}, classList: { add() {}, remove() {} } },
 		getElementById: (id) => els[id] || null,
 		querySelector: () => null, querySelectorAll: () => [],
 		createElement: () => el('x' + Math.random()),
@@ -216,7 +216,7 @@ function boot({ hash = '', local = {}, session = {}, referrer = '', navType = 'n
 	/* at: the entry's place in the history, which a push after a Back moves on
 	   by one while length stays (the browser drops the forward entries) */
 	const state = () => ({ hash: loc.hash, d: (history.state || {}).ootd, len: history.length, at: H.i, key: g('screenKey')(), tab: run('state.tab') });
-	return { sandbox, g, run, view, nav, tap, tabTap, state, history, loc, H, ls, ss, fire: (t, e) => fire(listeners.window, t, e) };
+	return { sandbox, g, run, view, nav, tap, tabTap, state, history, loc, H, ls, ss, fire: (t, e) => fire(listeners.window, t, e), key: (e) => fire(listeners.document, 'keydown', e) };
 }
 
 /* the records a fresh device and a device with its own menu start from */
@@ -654,6 +654,41 @@ else {
 	await settle();
 	await wake(N);
 	if (N.state().hash !== '#/menu') fail(`a section the woken house lacks leaves the address at ${N.state().hash}, not #/menu`);
+}
+
+/* Scope replaces the chosen button, but must not drop keyboard readers at
+   the beginning of the page. Exercise the real render and Escape listener. */
+{
+	for (const root of ['flashcards', 'quiz', 'library']) {
+		const A = boot({ hash: '#/' + root });
+		await settle();
+		const doc = A.sandbox.document;
+		let focused = '';
+		doc.querySelector = (selector) => {
+			const attrs = [...String(selector).matchAll(/\[data-([a-z]+)="([^"]+)"\]/g)];
+			if (!attrs.length || !String(selector).includes('scope-')) return null;
+			const present = [...A.view().matchAll(/<button\b([^>]*)>/g)].some((m) => attrs.every((a) => m[1].includes('data-' + a[1] + '="' + a[2] + '"')));
+			return present ? { focus() { focused = selector; } } : null;
+		};
+		const opener = '[data-act="scope-open"][data-for="' + root + '"]';
+		A.tap({ 'data-act': 'scope-open', 'data-for': root });
+		if (!A.view().includes('aria-controls="scope-options-' + root + '"') || !A.view().includes('id="scope-options-' + root + '"')) fail(root + ': scope disclosure has no associated options group');
+		doc.activeElement = { dataset: { act: 'scope-pick', for: root, n: '2' } };
+		A.tap({ 'data-act': 'scope-pick', 'data-for': root, 'data-n': '2' });
+		if (focused !== opener) fail(root + ': selecting a level does not restore focus to the surviving scope button');
+		A.tap({ 'data-act': 'scope-open', 'data-for': root });
+		focused = ''; doc.activeElement = { dataset: { act: 'scope-pick', for: root, n: '3' } };
+		const before = A.history.length;
+		let prevented = false;
+		A.key({ key: 'Escape', target: { tagName: 'BUTTON' }, preventDefault() { prevented = true; } });
+		if (!prevented || A.run('state.scopeOpen') || focused !== opener || A.history.length !== before) fail(root + ': Escape must close the scope picker, restore focus and leave history alone');
+		doc.activeElement = { dataset: { act: 'scope-all', for: root } }; focused = '';
+		A.tap({ 'data-act': 'scope-all', 'data-for': root });
+		if (focused !== '[data-act="scope-one"][data-for="' + root + '"]') fail(root + ': show all loses focus instead of handing it to show one level');
+		doc.activeElement = { dataset: { act: 'scope-one', for: root } }; focused = '';
+		A.tap({ 'data-act': 'scope-one', 'data-for': root });
+		if (focused !== opener) fail(root + ': returning to one level loses scope focus');
+	}
 }
 
 if (process.argv.includes('--mutations')) await mutations();

@@ -282,6 +282,21 @@ When a house with cocktails is current and "Edit the menu" is off, the Menu tab'
 - **Streak**: `progress.streakData = {last, n, hands, lastHands}`. A night counts on cards+quiz;
   only a logged physical drill increments `hands`. Breaking the streak resets both.
 
+## Shared day and night service
+
+`js/oot-service.js` is an exact copy of the canonical
+`WorldTable/static/service/oot-service.js`. Update the canonical file first;
+do not fork the controller in this wing. It reads the device preference
+`oot.service.v1`, applies `html[data-service="day"|"night"]`, and exposes
+`OOT.service.get/set/subscribe`. `css/service-day.css` owns this wing's day
+palette and exceptions for filled controls, art headers and status text.
+It is screen-only; wine/ingredient illustrations and printed recipes keep
+their colours. Both files belong in the worker shell cache.
+
+The Ledger's level picker restores focus to its surviving scope button
+after a choice, Show all/one, or Escape. Keep the scope options' associated
+group and run `node tools/check-nav.mjs` after changing that flow.
+
 ## Icons
 
 `icons/icon.svg` is the master. Regenerate PNGs with `@resvg/resvg-js`
