@@ -195,13 +195,14 @@ for (const [label, arr, key] of [
 	const tabs = lit(app, 'TABS').map((t) => t[0]);
 	const clustered = lit(uiNew, 'NAV_CLUSTERS').flatMap((g) => g[2]);
 	/* the one nav the World Table, the Codex and the Ledger share: the same four
-	   words in the same order (the owner's decision, 26 September 2026) */
+	   tab words in the same order, then the quiet More (the owner's answers of
+	   4 October 2026, the consolidation) */
 	const navWords = lit(uiNew, 'NAV_CLUSTERS').map((g) => g[1]).join(' · ');
-	if (navWords !== 'Home · Levels · Library · Mine') problems.push(`the nav reads ${navWords}; the three apps share Home · Levels · Library · Mine, in that order`);
+	if (navWords !== 'Home · Flashcards · Quizzes · Library · More') problems.push(`the nav reads ${navWords}; the three apps share Home · Flashcards · Quizzes · Library, then More, in that order`);
 	const grab = (src, re, pick) => [...((src.match(re) || [''])[0]).matchAll(pick)].map((m) => m[1]);
 	const views = grab(app, /const views = \{[\s\S]*?\};/, /(\w+):render/g);
 	const routed = grab(uiNew, /const ROUTE_SOURCES = \{[\s\S]*?\n\};/, /^\s*(\w+):\s*\{/gm);
-	const applied = (uiNew.match(/function applyRoute\(\)[\s\S]*?\n\}/) || [''])[0];
+	const applied = (uiNew.match(/function applyRoute\([^)]*\)[\s\S]*?\n\}/) || [''])[0];
 	if (!views.length || !routed.length) problems.push('views or ROUTE_SOURCES not found — an extraction anchor moved');
 
 	for (const t of tabs) {

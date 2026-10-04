@@ -91,7 +91,7 @@ globalThis.FileReader = class { readAsText(text){ this.result = text; if (this.o
    declares; srs.js is here because the backup import calls srsMigrate. */
 const APP = ['data-core.js', 'data-lore.js', 'data-ontap.js', 'data-coffee.js', 'data-service.js', 'data-ingredients.js',
 	'ingredients.js', 'engine.js', 'srs.js', 'ui-study.js', 'ui-practice.js', 'ui-reference.js', 'ui-prep.js', 'ui-new.js',
-	'menu-drinks.js', 'ui-menu.js', 'ui-import.js', 'data-levels.js', 'levels.js', 'ui-levels.js', 'house-bar.js', 'house-study.js'];
+	'menu-drinks.js', 'ui-menu.js', 'ui-import.js', 'data-levels.js', 'levels.js', 'ui-levels.js', 'house-bar.js', 'house-study.js', 'ui-nav.js'];
 const W = vm.runInThisContext(APP.map((f) => readFileSync(join(JS, f), 'utf8')).join(';\n') +
 	';({menuDrinkFromDeskItem,menuDraftsFromDesk,menuDraftFromText,menuCanonMeasures,unmeasuredReason,measureReport,' +
 	'MD_isIngredientList,MD_listParts,MD_spiritOf,lineOz,COCKTAILS,progress,state,' +
@@ -105,7 +105,7 @@ const W = vm.runInThisContext(APP.map((f) => readFileSync(join(JS, f), 'utf8')).
 	'qMyBarUpsell,qMyBarParts,keptPartsOf,keptUpsellsOf,houseCardFits,houseCardBackHTML,houseUpsellWhy,houseDrillPanelHTML,houseStartCards,houseStartPair,' +
 	'housePairReady,housePairWhy,houseQuizRound,renderQuiz,renderFlashcards,renderMenu,recordCard,QUIZ_MODES,' +
 	'houseAutoLoad,houseDrillAct,houseDrillHTML,houseDrillDoorsHTML,houseSayItems,houseRoleDeck,houseSayPick,houseRowForm,' +
-	'houseStudyOn,houseStudyHTML,houseStudyAct,houseStudyDeck,houseStudyDeepLink,houseStudyRoute,houseStudySectionOf,hsCanonFor,hsProducersFor,hsVideoUrlOk,hsVideosForLocal,hsVideoGroupsLocal,hsVideosFor,hsVideoGroups,hsVideoLI,hsVideoOrdinals,applyRoute,currentRoute})');
+	'houseStudyOn,houseStudyHTML,houseStudyAct,openDeck,startDeckRun,deckDef,houseStudyDeepLink,houseStudyRoute,houseStudySectionOf,hsCanonFor,hsProducersFor,hsVideoUrlOk,hsVideosForLocal,hsVideoGroupsLocal,hsVideosFor,hsVideoGroups,hsVideoLI,hsVideoOrdinals,applyRoute,currentRoute})');
 
 /* The House engine, ../shared/oot-house.js, for the house cases below: the
    wing layout keeps it two folders up, the source repo reads WorldTable's
@@ -2451,7 +2451,7 @@ houseDescribe('the House behind the menu', () => {
 				const card = pool.find((d) => d.name === 'Verjus and Tonic');
 				expect(card.draft).toBe(true);
 				const fits = Object.fromEntries(W.FC_MODES.map((m) => [m[0], !!m[3](card)]));
-				expect(fits).toEqual({ name2spec: false, spec2name: false, build: false, cloze: false, service: false, line10: true, line20: false, line45: false, parts: false, upsell: false, study: true });
+				expect(fits).toEqual({ name2spec: false, spec2name: false, build: false, cloze: false, service: false, line10: true, line20: false, line45: false, parts: false, upsell: false, study: true, word: false });
 				/* the fixture's Collins carries a spec AND kept lines: every mode fits it */
 				const collins = pool.find((d) => d.name === 'The Lantern Collins');
 				expect(W.FC_MODES.find((m) => m[0] === 'name2spec')[3](collins)).toBe(true);
@@ -2721,7 +2721,8 @@ houseDescribe('the House behind the menu', () => {
 			expect(run).toContain('Which wine is the first pick with this dish?');
 			W.state.quiz.stage = 'setup';
 			const setup = W.renderQuiz();
-			expect(setup).toContain('data-act="quiz-mode" data-m="housepair">Pair the menu</button>');
+			/* the Quizzes root draws the round as a row (the consolidation) */
+			expect(setup).toContain('data-act="quiz-go" data-m="housepair"><span class="door-name">Pair the menu</span>');
 			expect(W.state.quiz.mode).toBe('housepair');
 			expect(W.houseDrillPanelHTML()).toContain('data-act="house-pair">Pair the menu</button>');
 			expect(JSON.stringify(W.progress.levels)).toBe(levels);
@@ -3508,11 +3509,14 @@ houseDescribe('the House behind the menu', () => {
 					expect(items.every((i) => i.kind === 'cocktail')).toBe(true);
 					W.state.tab = 'menu';
 					W.houseDrillAct('hd-open', { mode: 'say' });
-					expect(W.state.tab).toBe('mine');
+					/* a screen under Quizzes since the consolidation */
+					expect(W.state.tab).toBe('quiz');
+					expect(W.state.quiz.stage).toBe('house');
 					expect(W.state.house.drill).toBe('say');
 					expect(items.some((i) => i.id === W.state.house.say.id)).toBe(true);
-					/* the screen on Mine, under the line, every control 44px */
-					const html = W.houseLineHTML();
+					/* the screen, every control 44px, and no second way back on it */
+					const html = W.renderQuiz();
+					expect(html).not.toContain('data-act="hd-close"');
 					expect(html).toContain('id="house-drill-head"');
 					expect(html).toContain('id="hs-item"');
 					expect(html).toContain('id="hs-said"');
@@ -3598,7 +3602,7 @@ houseDescribe('the House behind the menu', () => {
 					expect(scen.map((e) => e.id).sort()).toEqual(wanted.map((s) => s.id).sort());
 					expect(deck.filter((e) => e.kind === 'mixup')).toHaveLength(cur.mixUps.filter((m) => m.difference && m.difference.by === 'person' && (drinks.has(m.aId) || drinks.has(m.bId))).length);
 					W.houseDrillAct('hd-open', { mode: 'role' });
-					expect(W.state.tab).toBe('mine');
+					expect(W.state.tab).toBe('quiz');
 					expect(W.state.house.drill).toBe('role');
 					/* a scenario, answered with its kept words */
 					const sc = cur.scenarios.find((s) => s.id === scen[0].id);
@@ -3958,39 +3962,51 @@ houseDescribe('the House behind the menu', () => {
 				/* a drink of the person's own, on no house, is never dealt by the house deck */
 				W.progress.bar.push({ id: 'b-own00001', name: 'My Own Sour', spec: ['2 oz gin', '1 oz lemon', '3/4 oz syrup'], method: 'Shake', glass: 'Coupe', garnish: '', family: '', spirit: '', price: '', note: '', ts: 1 });
 				W.barChanged();
-				expect(W.houseStudyDeck({})).toBe(true);
-				const all = W.state.menu.study.deck.ids;
+				/* the study view's Flash cards open the Flashcards tab's decks
+				   (the consolidation: one card style), graded on the same keys */
+				W.houseStudyAct('hs-cards', {});
+				expect(W.state.tab).toBe('flashcards');
+				expect(W.state.fc.deckId).toBe('menu');
+				expect(W.state.fc.stage).toBe('setup');
+				expect(W.startDeckRun('study')).toBe(true);
+				const all = W.state.fc.deck.map((d) => d.ref.id);
 				expect(all.length > 10).toBe(true);
+				/* the house card deals house drinks alone, never the person's own */
 				expect(all.every((id) => houseIds.has(id))).toBe(true);
-				expect(all).toEqual(cur.cocktails.filter((c) => all.includes(c.id)).map((c) => c.id));
-				expect(W.houseStudyDeck({ section: 'Signature drinks' })).toBe(true);
-				const sig = W.state.menu.study.deck.ids;
+				W.houseStudyAct('hs-cards', { s: 'Signature drinks' });
+				expect(W.state.fc.deckId).toBe('menu:signature-drinks');
+				expect(W.startDeckRun('study')).toBe(true);
+				const sig = W.state.fc.deck.map((d) => d.ref.id);
 				expect(sig.length > 0).toBe(true);
 				expect(sig.every((id) => W.houseStudySectionOf(id) === 'Signature drinks')).toBe(true);
-				/* one drink's card: the face is one button, Got it comes after Flip */
+				/* one drink's card: Got it and Again come after Flip */
 				W.houseStudyAct('hs-cards', { id: SAZ });
-				expect(W.state.menu.study.deck.ids).toEqual([SAZ]);
-				let face = W.renderMenu();
-				expect(face).toContain('data-act="hs-flip"');
+				expect(W.state.fc.deckId).toBe('drink:' + SAZ);
+				expect(W.startDeckRun('study')).toBe(true);
+				expect(W.state.fc.deck.map((d) => d.ref.id)).toEqual([SAZ]);
+				let face = W.renderFlashcards();
+				expect(face).toContain('data-act="fc-flip"');
 				expect(face).toContain('Say the ten second line aloud, then flip.');
-				expect(face).not.toContain('data-act="hs-got"');
-				W.houseStudyAct('hs-flip', {});
-				face = W.renderMenu();
-				expect(face).toContain('data-act="hs-got"');
-				expect(face).toContain('data-act="hs-again"');
-				expect(face.indexOf('data-act="hs-again"') < face.indexOf('data-act="hs-got"')).toBe(true);
-				W.houseStudyAct('hs-got', {});
+				expect(face).not.toContain('data-act="fc-grade"');
+				W.state.fc.flipped = true;
+				face = W.renderFlashcards();
+				expect(face).toContain('data-act="fc-grade" data-ok="1">Got it</button>');
+				expect(face).toContain('data-act="fc-grade" data-ok="0">Again</button>');
+				W.recordCard(true); W.state.fc.idx++;
 				expect(W.progress.cards['My Bar · Classic Sazerac']).toMatchObject({ r: 1, w: 0 });
-				expect(W.renderMenu()).toContain('Deck complete');
+				expect(W.renderFlashcards()).toContain('Deck done');
 				/* Again on the Bloody Bull makes it the one weak card */
 				W.houseStudyAct('hs-cards', { id: 'b-xid4q2qi' });
-				W.houseStudyAct('hs-flip', {});
-				W.houseStudyAct('hs-again', {});
+				expect(W.startDeckRun('study')).toBe(true);
+				W.state.fc.flipped = true;
+				W.recordCard(false);
 				expect(W.progress.cards['My Bar · Bloody Bull']).toMatchObject({ r: 0, w: 1 });
-				W.houseStudyAct('hs-close', {});
+				W.state.tab = 'menu';
 				expect(W.renderMenu()).toContain('My weak ones (1)');
-				expect(W.houseStudyDeck({ weak: true })).toBe(true);
-				expect(W.state.menu.study.deck.ids).toEqual(['b-xid4q2qi']);
+				W.houseStudyAct('hs-cards', { weak: '1' });
+				expect(W.state.fc.deckId).toBe('menu-weak');
+				expect(W.fcPool().map((d) => d.ref.id)).toEqual(['b-xid4q2qi']);
+				W.state.fc.special = 'All'; W.state.fc.deckId = null;
 				/* the Flashcards tab's own deck, the house card mode and a section */
 				W.state.fc.src = 'My Bar'; W.state.fc.section = 'Signature drinks';
 				const pool = W.fcPool();
@@ -4254,7 +4270,7 @@ describe('house-bar.js with no engine at all', () => {
 		expect(g('houseStudyDeepLink()')).toBe(false);
 		expect(g('houseStudyRoute(null)')).toBe(false);
 		expect(g('houseStudyEditBarHTML()')).toBe('');
-		expect(g('houseStudyDeck({})')).toBe(false);
+		expect(g('houseStudyAct("hs-cards", {})')).toBe(false);
 		expect(sandbox.progress.bar).toHaveLength(1);
 	});
 });

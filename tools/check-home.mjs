@@ -7,18 +7,23 @@
  * Three records are put in front of them: a fresh one, a partial one, and one
  * with every Barback unit met. Against each:
  *
- *   - the home is the shared contract and nothing else: one section.levels of
- *     four button.level (the names, a word and figure in each, and no numeral
- *     on sight or for a screen reader: the name is the whole label), then
- *     one nav.quiet of four doors (Today, Library, Record, Mine · My Bar); one
- *     card is `on`, carries aria-current and the words "Your level", and it is
- *     the level this gate works out for itself; every card's word and figure
- *     equals the one this gate computes independently from the placements
- *     and the records; the Today door names the level it deals from
- *   - every level page is titled by the level's name alone, switches between
- *     the four by their names, lists the eight subsections, each with "N at
- *     this level", and every training door it draws resolves to a real tab;
- *     the page ends on its test by name ("The Barback test")
+ *   - the home is the shared contract and nothing else (the consolidation,
+ *     4 October 2026): one section.levels of four button.level (the names, a
+ *     word and figure in each, and no numeral on sight or for a screen
+ *     reader: the name is the whole label), and no doors; one card is `on`,
+ *     carries aria-current and the words "Your level", and it is the level
+ *     this gate works out for itself; every card's word and figure equals the
+ *     one this gate computes independently from the placements and the
+ *     records; the level page's Tonight's session row names the level it
+ *     deals from
+ *   - every level page is titled by the level's name alone, opens on Today's
+ *     study (Due today, Quick quiz, Next reading, Tonight's session), then My
+ *     restaurant and a search, then what it holds behind a closed disclosure:
+ *     the eight subsections, each with "N at this level" and a door that says
+ *     where it is read and resolves to a real tab; no training door is left on
+ *     it; the switch between the four by their names is at its foot, under
+ *     "Another level"; its test is the last thing on Quizzes, by name ("The
+ *     Barback test")
  *   - every level test deals seventeen questions; sat wrong, it ends on "What
  *     got away" with no percentage, no score (no "n / m"), none of the quiz
  *     round's verdicts, and without adding a row to progress.quizzes; sat
@@ -26,8 +31,8 @@
  *     recorded in progress.levels
  *   - nothing these screens render carries an em dash
  *   - no level is named by a numeral anywhere a reader sees or hears one
- *     (the owner, 27 Sep 2026): the screens above, the way back from a
- *     level's tab, the Library's level filter, the flashcards' level line,
+ *     (the owner, 27 Sep 2026): the screens above, the one Back (which says
+ *     Back and nothing else), the Library's level filter, the flashcards' level line,
  *     a level round's history label and the record's level tests all print
  *     the name
  *   - the twelve books live inside the levels, named and never numbered (the
@@ -132,7 +137,7 @@ for (const [name, rec] of [['fresh', fresh], ['partial', partial], ['Barback met
 	if (home.includes(EMDASH)) fail(`${where}: carries an em dash`);
 	if (NUMERAL.test(home)) fail(`${where}: names a level by a numeral`);
 	const inner = home.replace(/^<div class="home4">/, '').replace(/<\/div>$/, '');
-	if (!/^<section class="levels" aria-label="Levels">[\s\S]*<\/section><nav class="quiet" aria-label="Doors">[\s\S]*<\/nav>$/.test(inner)) fail(`${where}: is not exactly section.levels then nav.quiet`);
+	if (!/^<section class="levels" aria-label="Levels">[\s\S]*<\/section>$/.test(inner) || /<nav\b/.test(inner)) fail(`${where}: is not exactly section.levels and nothing else`);
 	const cards = [...home.matchAll(/<button class="level( on)?" data-act="level-open" data-n="(\d)" data-level="\d"( aria-current="step")?>([\s\S]*?)<\/button>/g)];
 	if (cards.length !== 4) fail(`${where}: ${cards.length} level cards, not four`);
 	const want = firstUnmet(rec);
@@ -150,12 +155,14 @@ for (const [name, rec] of [['fresh', fresh], ['partial', partial], ['Barback met
 		if (on && (!c[3] || !/<span class="lv-here">Your level<\/span>/.test(body))) fail(`${where}: the current card lacks aria-current or "Your level"`);
 		if (!on && /lv-here/.test(body)) fail(`${where}: "Your level" on a card that is not current`);
 	});
-	const doors = [...home.matchAll(/<button class="door" data-act="door" data-d="(\w+)"><span class="door-name">([^<]*)<\/span><span class="door-line">([^<]*)<\/span>(?:<span class="door-sub">([^<]*)<\/span>)?<\/button>/g)];
-	const names = doors.map((d) => d[2]);
-	if (names.join('|') !== 'Today|Library|Record|Mine · My Bar') fail(`${where}: the doors read ${JSON.stringify(names)}`);
+	/* the old Today door's words live on as the level page's Tonight's session row */
+	run(`state.level.n = ${want};`);
+	const lp = g('renderLevel')();
+	const doors = [...lp.matchAll(/<button class="door" data-act="door" data-d="(\w+)"><span class="door-name">([^<]*)<\/span><span class="door-line">([^<]*)<\/span>(?:<span class="door-sub">([^<]*)<\/span>)?<\/button>/g)];
 	const today = doors[0] && doors[0][4];
 	const deals = g('todayLevel')();
-	if (today !== `Today deals from ${LEVELS[deals - 1].name}.`) fail(`${where}: the Today door says ${JSON.stringify(today)}`);
+	if (!doors[0] || doors[0][2] !== 'Tonight’s session') fail(`${where}: the level page has no Tonight's session row`);
+	if (today !== `Today deals from ${LEVELS[deals - 1].name}.`) fail(`${where}: Tonight's session says ${JSON.stringify(today)}`);
 	if (name === 'Barback met' && deals !== 2) fail(`${where}: with Barback met, Today still deals from ${LEVELS[deals - 1].name}`);
 	if (name === 'fresh' && deals !== 1) fail(`${where}: a fresh record is dealt ${LEVELS[deals - 1].name}`);
 }
@@ -168,25 +175,44 @@ for (let n = 1; n <= 4; n++) {
 	const where = `the ${LEVELS[n - 1].name} page`;
 	if (page.includes(EMDASH)) fail(`${where}: carries an em dash`);
 	if (NUMERAL.test(page)) fail(`${where}: names a level by a numeral`);
-	if (!page.includes(`<h2 class="lv-title">${LEVELS[n - 1].name}</h2>`)) fail(`${where}: the title is not the name alone`);
+	if (!page.includes(`<h2 class="lv-title" tabindex="-1">${LEVELS[n - 1].name}</h2>`)) fail(`${where}: the title is not the name alone`);
 	const sw = (page.match(/<nav class="lv-switch"[^>]*>([\s\S]*?)<\/nav>/) || [])[1] || '';
 	const swNames = [...sw.matchAll(/<button[^>]*>([^<]*)<\/button>/g)].map((m) => m[1]);
 	if (swNames.join('|') !== LEVELS.map((l) => l.name).join('|')) fail(`${where}: the switch reads ${JSON.stringify(swNames)}, not the four names`);
+	/* the page's order: Today's study, My restaurant, Search, what it holds, then the switch */
+	const at = (re) => { const m = page.match(re); return m ? m.index : -1; };
+	const order = [at(/>Today’s study<\/h3>/), at(/>My restaurant<\/h3>/), at(/>Search<\/h3>/), at(/<details class="lv-holds">/), at(/>Another level<\/h3>/), at(/<nav class="lv-switch"/)];
+	if (order.some((x) => x < 0) || order.some((x, i) => i && x < order[i - 1])) fail(`${where}: does not read Today's study, My restaurant, Search, what it holds, then Another level (${order.join(',')})`);
+	const rows = [...page.matchAll(/<nav class="quiet rows today"[^>]*>([\s\S]*?)<\/nav>/g)].map((m) => [...m[1].matchAll(/<span class="door-name">([^<]*)<\/span>/g)].map((x) => x[1]))[0] || [];
+	if (rows.join('|') !== 'Due today|Quick quiz|Next reading|Tonight’s session') fail(`${where}: Today's study reads ${JSON.stringify(rows)}`);
+	if (!/<input class="input" id="lv-q"/.test(page)) fail(`${where}: no search box`);
+	if (!page.includes(`<span class="when-closed">Show what ${LEVELS[n - 1].name} holds</span>`)) fail(`${where}: what it holds is not a disclosure that says Show`);
+	if (/data-act="train"/.test(page)) fail(`${where}: a training door is still on the page`);
+	if (/data-act="lt-start"/.test(page)) fail(`${where}: the test is still on the page, not on Quizzes`);
 	const subs = [...page.matchAll(/<li class="subsection" data-sub="(\w+)">([\s\S]*?)<\/li>/g)];
 	if (subs.length !== 8) fail(`${where}: ${subs.length} subsections, not eight`);
-	for (const s of subs) {
-		if (!/<p class="sub-line">\d+ at this level · [^<]+<\/p>/.test(s[2])) fail(`${where}, ${s[1]}: no "N at this level"`);
-		const trains = [...s[2].matchAll(/data-act="train" data-m="(\w+)" data-n="(\d)" data-s="(\w+)"/g)];
-		if (!trains.length) fail(`${where}, ${s[1]}: no training door`);
-		for (const t of trains) {
-			const target = g('trainTarget')(t[1], Number(t[2]), t[3]);
-			if (!target || !TABS.has(target.tab)) fail(`${where}, ${s[1]}: the ${t[1]} door goes nowhere`);
+	for (const s2 of subs) {
+		if (!/<p class="sub-line">\d+ at this level · [^<]+<\/p>/.test(s2[2])) fail(`${where}, ${s2[1]}: no "N at this level"`);
+		const reads = [...s2[2].matchAll(/data-act="read-at" data-n="(\d)" data-s="(\w+)">([^<]*)<\/button>/g)];
+		if (reads.length !== 1) fail(`${where}, ${s2[1]}: ${reads.length} reading doors, not one`);
+		for (const t of reads) {
+			const target = g('readDoorTarget')(Number(t[1]), t[2]);
+			if (!target || !TABS.has(target.tab)) fail(`${where}, ${s2[1]}: the reading door goes nowhere`);
+			if (!t[3].trim()) fail(`${where}, ${s2[1]}: the reading door says nothing`);
 		}
 	}
-	if (/data-m="read"[^>]*>Read<\/button>/.test(page)) fail(`${where}: a Read door does not say where it goes`);
-	const last = page.match(/<button class="btn btn-brass leveltest" data-act="lt-start" data-n="(\d)">([^<]*)<\/button>/);
-	if (!last || last[2] !== `The ${LEVELS[n - 1].name} test`) fail(`${where}: does not end on its test`);
 }
+/* the test is the last thing on Quizzes, by the chosen level's name */
+for (let n = 1; n <= 4; n++) {
+	setProgress(fresh);
+	run(`localStorage.getItem = (k) => k === 'oot-level-ledger-v1' ? '${n}' : null; state.lt = null; state.tab = 'quiz'; state.quiz.stage = 'setup';`);
+	const q = g('renderQuiz')();
+	const last = [...q.matchAll(/<button class="btn btn-brass leveltest" data-act="lt-start" data-n="(\d)"[^>]*>([^<]*)<\/button>/g)];
+	if (last.length !== 1 || last[0][2] !== `The ${LEVELS[n - 1].name} test` || Number(last[0][1]) !== n) fail(`Quizzes at ${LEVELS[n - 1].name}: does not end on the ${LEVELS[n - 1].name} test`);
+	if (NUMERAL.test(q)) fail(`Quizzes at ${LEVELS[n - 1].name}: names a level by a numeral`);
+	if (q.includes(EMDASH)) fail(`Quizzes at ${LEVELS[n - 1].name}: carries an em dash`);
+}
+run('localStorage.getItem = () => null;');
 
 /* ---- the level tests ---- */
 const VERDICTS = ['Clean round', 'Solid. Read the misses', 'Half is a start', 'Everyone starts by polishing'];
@@ -218,7 +244,7 @@ for (let n = 1; n <= 4; n++) {
 		const text = strip(done);
 		if (done.includes(EMDASH)) fail(`${where}: the end carries an em dash`);
 		if (NUMERAL.test(done)) fail(`${where}: the end names a level by a numeral`);
-		if (!done.includes(`>Back to ${LEVELS[n - 1].name}</button>`)) fail(`${where}: the way back does not name the level`);
+		if (/>Back to /.test(done)) fail(`${where}: carries a second way back ("Back to"), where the one Back above serves`);
 		if (/%/.test(text)) fail(`${where}: the end shows a percentage`);
 		if (/\d+\s*\/\s*\d+/.test(text)) fail(`${where}: the end shows a score`);
 		for (const v of VERDICTS) if (text.includes(v)) fail(`${where}: the end says the quiz's verdict "${v}"`);
@@ -269,7 +295,7 @@ for (let n = 1; n <= 4; n++) {
 	const name = NAMES[n - 1];
 	run(`state.lt = null; state.tab = 'flashcards'; state.level.n = ${n};`);
 	const crumb = g('clusterChromeHTML')();
-	if (!crumb.includes(`>Back to ${name}</button>`)) fail(`the way back from a ${name} tab reads ${JSON.stringify(strip(crumb))}`);
+	if ((crumb.match(/data-act="back"/g) || []).length !== 1 || !crumb.includes('data-act="back">Back</button>') || /Back to/.test(crumb)) fail(`the way back from a tab reads ${JSON.stringify(strip(crumb))}, not the one Back`);
 	const label = g('modeLabel')(`level-${n}-cocktails`);
 	if (label !== `${name} · Cocktails`) fail(`a ${name} round's history label reads ${JSON.stringify(label)}`);
 	if (!g('applyTarget')(g('trainTarget')('cards', n, 'cocktails'))) { fail(`the ${name} Flashcards door deals nothing`); continue; }
@@ -413,9 +439,10 @@ for (let n = 1; n <= 4; n++) {
 }
 run("state.tab = 'home';");
 
-/* ---- the Record door lands on the record ---- */
+/* ---- the Record door lands on the record, More's first row ---- */
 run("state.mine.at = 'record';");
-if (!/<h3 class="sub-head" id="record-head" tabindex="-1" data-open="1">The record<\/h3>/.test(g('renderMine')())) fail('the Record door does not land on the record heading');
+if (!/<h2 class="lv-title" id="record-head" tabindex="-1" data-open="1">The record<\/h2>/.test(g('renderRecord')())) fail('the Record door does not land on the record heading');
+if (!/data-act="go" data-tab="record"/.test(g('renderMine')())) fail('More has no door to the record');
 
 if (problems.length) {
 	console.error(`\n  ✗ ${problems.length} problem(s)`);

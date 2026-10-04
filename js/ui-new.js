@@ -1,23 +1,29 @@
 /* ---------------- NAVIGATION, ROUTER & SEARCH (Phase 2) ---------------- */
 const NAV_CLUSTERS = [
-  /* The one nav the World Table, the Codex and the Ledger share, the same
-     four words in the same order (the owner's decision, 26 September 2026):
-     Home is the four levels, Levels is the level you are on, Library is the
-     reference, Mine is your bar with your record and tools behind it. A
-     cluster HOLDS every tab it owns, so the lit word is right wherever you
-     stand (tools/check.mjs requires every tab in one), but a tap lands on
-     the cluster's first tab and no sub-row is drawn: a level page, the
-     Library's shelf and Mine carry the doors to the rest. */
-  ['home', 'Home', ['home']],
-  ['levels', 'Levels', ['level','flashcards','quiz','practice','riffs']],
-  ['library', 'Library', ['library','families','shots','na','ontap','coffee','prep','producers','service','notes']],
-  ['mine', 'Mine', ['mine','menu','tools']],
+  /* The one nav the World Table, the Codex and the Ledger share (the owner's
+     answers of 4 October 2026): four tabs, Home, Flashcards, Quizzes and
+     Library, in that order, then a quiet More. A cluster HOLDS every tab it
+     owns, so the lit word is right wherever you stand (tools/check.mjs
+     requires every tab in one), and a tap lands on the cluster's first tab,
+     its root, never on a remembered sub-screen. Home is the four levels, a
+     level's page and My restaurant; Flashcards is the one deck picker;
+     Quizzes is every round, the drills and the level tests; Library is
+     reading only; More is the record, the tools, the data and settings. */
+  ['home', 'Home', ['home','level','menu']],
+  ['flashcards', 'Flashcards', ['flashcards']],
+  ['quizzes', 'Quizzes', ['quiz','practice','riffs']],
+  ['library', 'Library', ['library','families','shots','na','ontap','coffee','prep','producers','service','notes','videos']],
+  ['more', 'More', ['mine','record','tools']],
 ];
 const TAB_LABEL = {};
 const TAB_CLUSTER = {};
 NAV_CLUSTERS.forEach(([ck,,tabs]) => tabs.forEach(t => TAB_CLUSTER[t] = ck));
 
-function clusterOf(tab){ return TAB_CLUSTER[tab] || 'home'; }
+function clusterOf(tab){
+  /* a level test is sat from Quizzes, and lights it */
+  if(tab === 'level' && typeof state !== 'undefined' && state.lt) return 'quizzes';
+  return TAB_CLUSTER[tab] || 'home';
+}
 
 /* No pictograms in the navigation. The bottom bar used to draw a book, a
    glass and a magnifier over its words; that is the mainstream tab-bar
@@ -29,31 +35,27 @@ function clusterOf(tab){ return TAB_CLUSTER[tab] || 'home'; }
 function renderNav(){
   if(!Object.keys(TAB_LABEL).length) TABS.forEach(([k,l]) => TAB_LABEL[k] = l);
   const activeCluster = clusterOf(state.tab);
+  /* the due count on Flashcards: a figure for the eye and a word for a
+     screen reader, absent at zero; one function gives it, the level page's
+     row and the root's line (dueToday, js/ui-nav.js) */
+  let due = 0;
+  try { due = typeof dueToday === 'function' ? dueToday().deck.length : 0; } catch(e){ due = 0; }
+  const pill = due ? ' <span class="font-tix nav-pill">'+due+'<span class="sr-only"> due</span></span>' : '';
+  const word = (ck, label) => label + (ck === 'flashcards' ? pill : '');
+  /* More is the quiet control after the four tabs: muted, set apart by a
+     rule, lit only while a More screen shows (design 2.1) */
   const clusterRow = NAV_CLUSTERS.map(([ck,label]) =>
-    '<button class="cl-btn'+(activeCluster===ck?' active':'')+'"'+(activeCluster===ck?' aria-current="true"':'')+' data-cluster="'+ck+'">'+label+'</button>').join('');
-  /* no sub-row since the four levels: a cluster's own page carries its doors
-     (js/ui-levels.js clusterChromeHTML) */
-  const subRow = '';
-  document.getElementById('tabs').innerHTML =
-    '<div class="clusters">'+clusterRow+'<button class="cl-btn cl-search" data-search="1" title="Search ( / )">Search</button></div>'+subRow;
+    '<button class="cl-btn'+(ck==='more'?' cl-more':'')+(activeCluster===ck?' active':'')+'"'+(activeCluster===ck?' aria-current="page"':'')+' data-cluster="'+ck+'">'+word(ck, label)+'</button>').join('');
+  /* no sub-row: a cluster's own page carries its doors */
+  document.getElementById('tabs').innerHTML = '<div class="clusters">'+clusterRow+'</div>';
 
   const b = document.getElementById('bnav');
   if(b) b.innerHTML = NAV_CLUSTERS.map(([ck,label]) =>
-      '<button class="bnav-btn'+(activeCluster===ck?' active':'')+'"'+(activeCluster===ck?' aria-current="true"':'')+' data-cluster="'+ck+'"><span>'+label+'</span></button>'
-    ).join('') +
-    '<button class="bnav-btn" data-search="1"><span>Search</span></button>';
+      '<button class="bnav-btn'+(ck==='more'?' bnav-more':'')+(activeCluster===ck?' active':'')+'"'+(activeCluster===ck?' aria-current="page"':'')+' data-cluster="'+ck+'"><span>'+word(ck, label)+'</span></button>'
+    ).join('');
 
   const sh = document.getElementById('sheet');
-  if(sh){
-    if(state.sheet){
-      const tabs = NAV_CLUSTERS.find(([ck]) => ck===state.sheet)[2];
-      sh.innerHTML = '<div class="sheet-back" data-sheet-close="1"></div><div class="sheet-panel" role="dialog" aria-modal="true" aria-label="More sections">'
-        + '<div class="eyebrow tc mb2">'+NAV_CLUSTERS.find(([ck])=>ck===state.sheet)[1]+'</div>'
-        + tabs.map(k => '<button class="sheet-btn'+(state.tab===k?' active':'')+'"'+(state.tab===k?' aria-current="page"':'')+' data-tab="'+k+'">'+TAB_LABEL[k]+'</button>').join('')
-        + '</div>';
-      sh.classList.add('open');
-    } else { sh.innerHTML=''; sh.classList.remove('open'); }
-  }
+  if(sh){ sh.innerHTML=''; sh.classList.remove('open'); }
 }
 
 /* ---- hash router ---- */
@@ -96,9 +98,14 @@ const TAB_WAS = { mybar: 'menu' };
 const ROUTE_WAS = { 'service/beer': ['ontap', 'pour'] };
 
 
-function applyRoute(){
-  const parts = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
+function applyRoute(hashArg){
+  const hash = typeof hashArg === 'string' ? hashArg : location.hash;
+  const parts = hash.replace(/^#\/?/, '').split('/').filter(Boolean);
   if(!parts.length) return false;
+  /* the four tabs' own addresses (js/ui-nav.js): the deck picker, a deck and
+     its run, the Quizzes root and a round, a practice or tools view, a level
+     test, a section of the menu, the Library's scope */
+  if(typeof applyNavRoute === 'function' && applyNavRoute([TAB_WAS[parts[0]] || parts[0]].concat(parts.slice(1)))) return true;
   let tab = TAB_WAS[parts[0]] || parts[0], slug = parts[1];
   const moved = ROUTE_WAS[tab + '/' + slug];
   if(moved){ tab = moved[0]; slug = moved[1]; }
@@ -106,8 +113,15 @@ function applyRoute(){
   state.tab = tab;
   const i = slug !== undefined ? findBySlug(tab, slug) : -1;
   if(i >= 0){
-    if(tab==='level'){ state.level.n = LEVELS[i].n; state.lt = null; }
-    else if(tab==='library')      state.lib = { q:'', fam:'All', tier:'All', open:i };
+    if(tab==='level'){ state.level.n = LEVELS[i].n; state.lt = null; if(typeof setChosenLevel === 'function') setChosenLevel(LEVELS[i].n); }
+    /* an item opened from the list keeps the list's filters, so Back finds
+       the list as it was left; one the filters hide opens on every level */
+    else if(tab==='library'){
+      const lv = Number(state.lib.level) || 0;
+      const shown = typeof libList === 'function' && libList().some(function(x){ return x.i === i; });
+      if(shown) state.lib.open = i;
+      else state.lib = { q:'', fam:'All', tier:'All', open:i, level: lv && levelOf(COCKTAILS[i].name) === lv ? lv : null };
+    }
     else if(tab==='shots')   Object.assign(state.shots, { view:'board', cat:'All', open:i, drill:false });
     else if(tab==='na')      Object.assign(state.na, { view:'list', cat:'All', open:i, drill:false });
     else if(tab==='prep')    Object.assign(state.prep, { cat: PREPS[i].cat, open:i });
@@ -124,7 +138,9 @@ function applyRoute(){
   } else {
     /* slugless or unresolved slug: clear the tab’s open item so syncRoute
        doesn’t resurrect a previously-open drink into the shared URL */
-    if(tab==='library')      state.lib.open = null;
+    if(tab==='level' && slug === undefined){ state.lt = null; state.level.n = typeof chosenLevel === 'function' ? chosenLevel() : firstUnmetLevel(); }
+    /* the Library's own address is the chosen level's shelf unless it says /all */
+    if(tab==='library'){ state.lib.open = null; if(!state.lib.level && typeof chosenLevel === 'function') state.lib.level = chosenLevel(); }
     else if(tab==='shots')   Object.assign(state.shots, { open:null, drill:false });
     else if(tab==='na')      Object.assign(state.na, { open:null, drill:false });
     else if(tab==='prep')    state.prep.open = null;
@@ -138,7 +154,12 @@ function applyRoute(){
   return true;
 }
 
+/* The address of the screen showing (js/ui-nav.js routeNow), and below it
+   the reading tabs' own address, which routeNow asks for. */
 function currentRoute(){
+  return typeof routeNow === 'function' ? routeNow().hash : legacyRoute();
+}
+function legacyRoute(){
   const t = state.tab;
   let slug = null;
   if(t==='level' && state.level.n) slug = slugify(levelInfo(state.level.n).name);
@@ -159,9 +180,14 @@ function currentRoute(){
   return '#/' + t + (slug ? '/' + slug : '');
 }
 
-function syncRoute(){
+/* Every screen change pushes one entry and every change within a screen
+   replaces it (js/ui-nav.js navSync); kind is 'push', 'replace' or 'none'
+   (a pop: the address is already right), and undefined lets the screen's
+   key decide. */
+function syncRoute(kind){
+  if(typeof navSync === 'function') return navSync(kind);
   const h = currentRoute();
-  if(location.hash !== h) history.replaceState(null, '', h);
+  if(location.hash !== h) history.replaceState(history.state, '', h);
 }
 
 /* ---- global search ---- */
@@ -276,10 +302,12 @@ function closeSearch(){
   try{ if(search.returnTo && search.returnTo.focus) search.returnTo.focus(); }catch(e){}
   search.returnTo = null;
 }
+/* A link inside the app is a push through the router, never an assignment
+   to location.hash, which would make an entry the history model did not
+   write (design 2.3). */
 function gotoHash(h){
   closeSearch();
-  if(location.hash === h){ applyRoute(); render(); }
-  else location.hash = h;
+  if(applyRoute(h)) render();
 }
 
 /* ---------------- BEHIND THE STICK: the rest of the job ---------------- */
@@ -550,7 +578,7 @@ function sessionDeckParts(){
   /* then the level: the lowest unmet level that still holds a card never
      seen (todayLevel), its cocktails book by book in book order, then its
      shots, zero proof and coffee. The Today door says which level this is. */
-  const lv = (typeof todayLevel === 'function') ? todayLevel() : null;
+  const lv = (typeof dealLevel === 'function') ? dealLevel() : (typeof todayLevel === 'function') ? todayLevel() : null;
   const atLevel = lv ? fresh.filter(d => levelOf(cardKey(d)) === lv) : [];
   for(let i = 0; i < BOOK_ORDER.length && !pool.length; i++) pool = atLevel.filter(d => d.src === 'Cocktails' && d.tier === BOOK_ORDER[i]);
   if(!pool.length) pool = atLevel.filter(d => d.src === 'Shots' || d.src === 'Zero Proof' || d.src === 'Coffee');
@@ -582,14 +610,17 @@ function sessionDeckParts(){
 }
 
 function startSession(){
-  const { dueDeck, newDeck } = sessionDeckParts();
+  /* the same hand Due today deals and counts (js/ui-nav.js dueToday), so
+     the session's door and the level page's row never say two numbers */
+  const parts = typeof dueToday === 'function' ? dueToday() : null;
+  const { dueDeck, newDeck } = parts ? { dueDeck: parts.deck.slice(0, parts.nDue), newDeck: parts.deck.slice(parts.nDue) } : sessionDeckParts();
   let deck = [...dueDeck, ...newDeck];
   /* the same pool as the parts above: a night with nothing due and nothing
      fresh still deals no draft */
   if(!deck.length) deck = shuffle(sessionCardPool()).slice(0, 10);
   state.sess = { active: true, step: 'cards', night: dateKey(0), dueN: dueDeck.length, newN: newDeck.length };
   state.tab = 'flashcards';
-  Object.assign(state.fc, { stage:'run', mode:'name2spec', deck:deck, idx:0, right:0, wrong:0, missed:[] });
+  Object.assign(state.fc, { stage:'run', deckId:'session', only:null, deckModes:null, mode:'name2spec', deck:deck, idx:0, right:0, wrong:0, missed:[] });
   prepCard();
 }
 
