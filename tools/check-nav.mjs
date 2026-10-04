@@ -421,6 +421,23 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	if (C.state().hash !== '#/quiz' || C.history.length !== 1) fail(`a cold #/quiz/mixed/done lands on ${C.state().hash} with ${C.history.length} entries`);
 }
 
+/* A citrus reference is a reading stop, not a replacement for the drink.
+   Its link must adopt one browser entry and Back must restore the ticket. */
+{
+	const A = boot({ hash: '#/library/negroni' });
+	await settle();
+	const before = A.state();
+	if (!A.view().includes('href="#/notes/garnish"')) fail('the Negroni ticket has no citrus reference link');
+	A.loc.hash = '#/notes/garnish';
+	await settle();
+	if (A.state().hash !== '#/notes/garnish' || A.run('state.noteOpen') !== '__garnish' || !A.view().includes('data-teaching-image="garnish-citrus"')) fail('the citrus reference did not open its illustrated key');
+	if (A.state().at !== before.at + 1) fail('the citrus reference made more than one history entry');
+	A.tap({ 'data-act': 'back' }); await settle();
+	if (A.state().hash !== before.hash) fail('Back from the citrus reference did not restore the drink');
+	const C = boot({ hash: '#/notes/garnish' }); await settle();
+	if (C.state().hash !== '#/notes/garnish' || !C.view().includes('data-teaching-image="garnish-citrus"')) fail('a cold citrus reference lost its address or key');
+}
+
 /* ---- 6. routes round-trip, and the parent map is total --------------------- */
 {
 	const A = boot({ local: { [KEY]: JSON.stringify(ownMenu()) } });

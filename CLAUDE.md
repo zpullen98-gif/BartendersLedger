@@ -312,7 +312,9 @@ fields draw no glass; never infer a house's glass or garnish from a classic.
 `js/data-teaching-images.js` is the reviewed registry, populated only after
 artwork is approved. Each stable key holds `{src,width,height,alt,caption}`;
 optional `thumb` holds `{src,width,height}` with exactly the same aspect ratio.
-Optional `labels` is the numbered HTML key. The first glass-shapes reference
+Optional `labels` is the numbered HTML key; `notes`, when present, has exactly
+one plain-text reading cue per label. Neither field accepts markup.
+The first glass-shapes reference
 has nine vessel names only and explicitly asks the reader to confirm each
 drink's glass with the bar; it makes no house drink-to-glass assignments.
 Only versioned WebPs in `img/brennans/`, `img/cards/` and `img/plates/` qualify.
@@ -323,6 +325,28 @@ with any provisional classic glass clearly distinguished from house practice.
 `LedgerTeaching.disclosure(id,title)` loads the picture only when opened. It is
 used at the foot of the menu list and within Library's Glassware reference;
 individual house cards remain unchanged.
+The three craft sheets live in `img/plates/`: `garnish-citrus-v1.webp` (eight
+cuts), `ice-v1.webp` (four forms), and `bar-tools-v1.webp` (ten tools), each
+with a same-frame `.thumb.webp`. Notes has a routed `#/notes/garnish` panel
+beside Technique Plates. Mechanics offers tools at the head and ice beside
+its Ice row, so Barback's Technique and Method reading reaches both. The
+matching prep sheets and Behind the Stick also offer these references.
+Only actual named citrus cuts in a ticket's kept garnish field earn a link;
+blind tickets and unspecified house garnishes do not. `LedgerTeaching.lesson`
+draws an image and its readable key only in an explicitly opened panel.
+The general guidance neither assigns house garnishes nor fixes jigger/spoon
+capacities. Ice size alone does not promise a dilution rate. The old muddler
+engraving now has a blunt flat working face, consistent with the new tools key.
+
+Primary review references (4 October 2026): Diageo Bar Academy's
+[Essential Bar Skills: Garnish](https://www.diageobaracademy.com/en-us/home/bartender-skills-and-techniques/essential-bar-skills-garnish)
+for crosswise wheels, lengthwise wedges and peel twists; Cocktail Kingdom's
+[equipment catalogue](https://cocktailkingdom.com/products/ultimate-kit-stainless-steel)
+for tool identities; and Dave Arnold's
+[original crushed/whole ice experiment](https://cookingissues.com/2009/12/03/cocktail-science-does-crushed-ice-dilute-more/)
+for the distinction between surface meltwater and size alone. The latter
+supports the narrowed Ice notes, not a universal promise for every method.
+
 An opened reference offers a keyboard-accessible full-image link in a new tab.
 Closing and reopening retries an illustration only after both size choices fail;
 successful images stay in place and unopened references request nothing.
