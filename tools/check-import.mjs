@@ -91,7 +91,7 @@ globalThis.FileReader = class { readAsText(text){ this.result = text; if (this.o
    declares; srs.js is here because the backup import calls srsMigrate. */
 const APP = ['data-core.js', 'data-lore.js', 'data-ontap.js', 'data-coffee.js', 'data-service.js', 'data-ingredients.js',
 	'ingredients.js', 'engine.js', 'srs.js', 'ui-study.js', 'ui-practice.js', 'ui-reference.js', 'ui-prep.js', 'ui-new.js',
-	'menu-drinks.js', 'ui-menu.js', 'ui-import.js', 'data-levels.js', 'levels.js', 'ui-levels.js', 'house-bar.js'];
+	'menu-drinks.js', 'ui-menu.js', 'ui-import.js', 'data-levels.js', 'levels.js', 'ui-levels.js', 'house-bar.js', 'house-study.js'];
 const W = vm.runInThisContext(APP.map((f) => readFileSync(join(JS, f), 'utf8')).join(';\n') +
 	';({menuDrinkFromDeskItem,menuDraftsFromDesk,menuDraftFromText,menuCanonMeasures,unmeasuredReason,measureReport,' +
 	'MD_isIngredientList,MD_listParts,MD_spiritOf,lineOz,COCKTAILS,progress,state,' +
@@ -104,7 +104,8 @@ const W = vm.runInThisContext(APP.map((f) => readFileSync(join(JS, f), 'utf8')).
 	'menuFormulaChip,menuFormulaHTML,menuPaneHTML,menuListHTML,houseFormulaAct,houseProblems,houseUIHooks,houseAfterRender,houseStep,housePackPanelHTML,houseRedrawIfShown,' +
 	'qMyBarUpsell,qMyBarParts,keptPartsOf,keptUpsellsOf,houseCardFits,houseCardBackHTML,houseUpsellWhy,houseDrillPanelHTML,houseStartCards,houseStartPair,' +
 	'housePairReady,housePairWhy,houseQuizRound,renderQuiz,renderFlashcards,renderMenu,recordCard,QUIZ_MODES,' +
-	'houseAutoLoad,houseDrillAct,houseDrillHTML,houseDrillDoorsHTML,houseSayItems,houseRoleDeck,houseSayPick,houseRowForm})');
+	'houseAutoLoad,houseDrillAct,houseDrillHTML,houseDrillDoorsHTML,houseSayItems,houseRoleDeck,houseSayPick,houseRowForm,' +
+	'houseStudyOn,houseStudyHTML,houseStudyAct,houseStudyDeck,houseStudyDeepLink,houseStudyRoute,houseStudySectionOf,hsCanonFor,hsProducersFor,applyRoute,currentRoute})');
 
 /* The House engine, ../shared/oot-house.js, for the house cases below: the
    wing layout keeps it two folders up, the source repo reads WorldTable's
@@ -2450,7 +2451,7 @@ houseDescribe('the House behind the menu', () => {
 				const card = pool.find((d) => d.name === 'Verjus and Tonic');
 				expect(card.draft).toBe(true);
 				const fits = Object.fromEntries(W.FC_MODES.map((m) => [m[0], !!m[3](card)]));
-				expect(fits).toEqual({ name2spec: false, spec2name: false, build: false, cloze: false, service: false, line10: true, line20: false, line45: false, parts: false, upsell: false });
+				expect(fits).toEqual({ name2spec: false, spec2name: false, build: false, cloze: false, service: false, line10: true, line20: false, line45: false, parts: false, upsell: false, study: true });
 				/* the fixture's Collins carries a spec AND kept lines: every mode fits it */
 				const collins = pool.find((d) => d.name === 'The Lantern Collins');
 				expect(W.FC_MODES.find((m) => m[0] === 'name2spec')[3](collins)).toBe(true);
@@ -3643,6 +3644,309 @@ houseDescribe('the House behind the menu', () => {
 		});
 	});
 
+	/* ---- the study view of the house's drinks (js/house-study.js) ----
+	   The shipped pack through the auto-load, as above; location and
+	   history are stubs this realm installs for the address cases and
+	   takes away after. */
+	const withStudy = async (fn) => {
+		const tab = W.state.tab, menu = Object.assign({}, W.state.menu), fc = Object.assign({}, W.state.fc);
+		const locWas = globalThis.location, histWas = globalThis.history;
+		const pushed = [];
+		globalThis.location = { hash: '', pathname: '/ledger/' };
+		globalThis.history = { replaceState(s, t, h) { globalThis.location.hash = h; }, pushState(s, t, h) { pushed.push(h); globalThis.location.hash = h; } };
+		W.state.menu.view = 'menu'; W.state.menu.open = null;
+		W.state.menu.study = { q: '', sec: '', open: null, editAll: false, deck: null, y: 0, jump: null, pushed: false, l20: false, l45: false, lastId: null };
+		try { return await fn(pushed); } finally {
+			W.state.tab = tab; Object.assign(W.state.menu, menu); W.state.menu.study = null; Object.assign(W.state.fc, fc);
+			if (locWas === undefined) delete globalThis.location; else globalThis.location = locWas;
+			if (histWas === undefined) delete globalThis.history; else globalThis.history = histWas;
+		}
+	};
+	/* the router reads app.js's tab list, which boots and is not loaded here */
+	if (!/\bTABS\b/.test(Object.keys(globalThis).join(' '))) { try { vm.runInThisContext('TABS'); } catch (e) { vm.runInThisContext(APP_SRC.match(/^const TABS = .*$/m)[0].replace(/^const /, 'var ')); } }
+	const SAZ = 'b-olsmh04y', CATALINA = 'b-uzw5oty7', HUSSARDE = 'd-1q0xk7jv';
+
+	packIt('the study view is the default with a house: one row per drink in the house\'s order, its sections in order, and today\'s list behind Edit the menu or with no house', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async () => {
+				/* no house: today's screen */
+				expect(W.houseStudyOn()).toBe(false);
+				expect(W.renderMenu()).not.toContain('hs-bar');
+				await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
+				const cur = OOT.house.current();
+				expect(W.houseStudyOn()).toBe(true);
+				const html = W.renderMenu();
+				expect(html).toContain('class="hs-bar"');
+				expect(html).toContain('id="hs-q"');
+				expect(html).toContain('data-act="hs-cards"');
+				expect(html).not.toContain('data-act="menu-open"');
+				const rows = [...html.matchAll(/<button class="hs-row" data-act="hs-open" data-id="([^"]+)"/g)].map((m) => m[1]);
+				expect(rows).toEqual(cur.cocktails.map((c) => c.id));
+				const secs = [...html.matchAll(/<h3 class="eyebrow hs-sec-name">([^<]+) · \d+<\/h3>/g)].map((m) => m[1]);
+				const want = [...new Set(cur.cocktails.map((c) => c.section))].map(W_esc);
+				expect(secs).toEqual(want);
+				expect(secs).toHaveLength(8);
+				expect(html).not.toMatch(/<[^>]*\schecked[\s>=]/);
+				/* every control a button of the study view, none under its height rule by class */
+				expect(html).toContain('Menus read 26 September 2026');
+				/* Edit the menu: today's list, unchanged, with the switch back */
+				W.houseStudyAct('hs-editall', {});
+				expect(W.houseStudyOn()).toBe(false);
+				const edit = W.renderMenu();
+				expect(edit).toContain('data-act="menu-open"');
+				expect(edit).toContain('Edit the menu: on');
+				expect(edit).not.toContain('hs-bar');
+				W.houseStudyAct('hs-editall', {});
+				expect(W.houseStudyOn()).toBe(true);
+				/* the card's Edit opens that drink on today's Build pane */
+				W.houseStudyAct('hs-edit', { id: SAZ });
+				expect(W.state.menu.study.editAll).toBe(true);
+				expect(W.state.menu.open).toBe(SAZ);
+				expect(W.state.menu.pane).toBe('build');
+				expect(W.renderMenu()).toContain('aria-expanded="true" data-act="menu-open" data-id="' + SAZ + '"');
+			});
+		});
+	});
+
+	packIt('the Classic Sazerac card links the canon Sazerac and its story, never draws the canon\'s quantities, and shows its upsells as buttons to their cards', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async (pushed) => {
+				await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
+				W.houseStudyAct('hs-open', { id: SAZ });
+				expect(pushed).toEqual(['#/menu/classic-sazerac']);
+				const card = W.renderMenu();
+				expect(card).toContain('id="hs-name"');
+				expect(card).toContain('>Classic Sazerac</h2>');
+				expect(card).not.toContain('hs-bar');
+				expect(card).toContain('class="ticket"');
+				/* About it and On the floor wherever the edition carries the fixed questions */
+				const qs = (OOT.house.current().cocktails.find((c) => c.id === SAZ).kept || []).map((n) => n.q);
+				const heads = ['The build', 'The five parts', 'In this app'].concat(qs.includes('Tell me about it.') ? ['About it'] : [], qs.includes('How do I sell it?') ? ['On the floor'] : []);
+				for (const h of heads) expect(card).toContain('>' + h + '</h3>');
+				expect(card).toContain('<div class="eyebrow">Offer next</div>');
+				expect(card).toContain('data-act="hs-open" data-id="b-15i9pacz">Thompson’s Dream $20</button>');
+				expect(card).toContain('data-act="hs-open" data-id="b-m0mhbaq8">Origin Story $40</button>');
+				expect(card).toContain('href="#/library/sazerac"');
+				expect(card).toContain(W_esc('The classic Sazerac is in the Library. Its build is the classic’s, not ours.'));
+				expect(card).toContain('Read the whole story');
+				const canon = W.COCKTAILS.find((c) => c.name === 'Sazerac');
+				/* the canon's quantities: every measured line of its spec */
+				for (const line of canon.spec.filter((l) => /\d/.test(l))) expect(card).not.toContain(W_esc(line));
+				expect((card.match(/class="hs-price">\$13</g) || []).length).toBe(1);
+				expect(card).toContain('Prices as printed on 26 September 2026. Confirm before quoting.');
+				expect(card).toContain('<dt>Bitters</dt>');
+				expect(card).toContain('<dt>Rinse</dt>');
+				expect(card).toContain('Your words. Allergens: confirm at lineup.');
+				expect(card).not.toMatch(/<[^>]*\schecked[\s>=]/);
+				expect(card).not.toContain('/table/menu#');
+				expect(card).toContain('SAZ-uh-rak');
+				/* the next card replaces the address, it pushes nothing */
+				W.houseStudyAct('hs-next', {});
+				expect(pushed).toHaveLength(1);
+				/* Catalina Island is poured with Eggs Hussarde: the Table's card, on the suite's path */
+				W.houseStudyAct('hs-open', { id: CATALINA });
+				const cat = W.renderMenu();
+				expect(cat).toContain('<div class="eyebrow">Poured with</div>');
+				expect(cat).toContain('href="/table/menu#' + HUSSARDE + '"');
+				/* off the suite's path, the same dish is words and no link */
+				globalThis.location.pathname = '/';
+				expect(W.renderMenu()).not.toContain('/table/menu#');
+				/* the canon and the producers across the menu, by the rules alone */
+				const cur = OOT.house.current();
+				const canonN = cur.cocktails.filter((c) => W.hsCanonFor(c)).length;
+				const prodN = cur.cocktails.filter((c) => W.hsProducersFor(c, W.progress.bar.find((b) => b.id === c.id) || c).length).length;
+				expect(canonN >= 9).toBe(true);
+				expect(prodN >= 4).toBe(true);
+			});
+		});
+	});
+
+	packIt('#drink=<id> opens that drink\'s study card and leaves its own address; a malformed one writes nothing; the drink\'s address opens the card and not the editor, and the menu\'s address closes it', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async () => {
+				await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
+				globalThis.location.hash = '#drink=b-OLSMH04Y';
+				W.state.tab = 'home';
+				expect(W.houseStudyDeepLink()).toBe(false);
+				expect(globalThis.location.hash).toBe('#drink=b-OLSMH04Y');
+				expect(W.state.tab).toBe('home');
+				expect(W.state.menu.study.open).toBe(null);
+				globalThis.location.hash = '#drink=' + SAZ;
+				expect(W.houseStudyDeepLink()).toBe(true);
+				expect(W.state.tab).toBe('menu');
+				expect(W.state.menu.study.open).toBe(SAZ);
+				expect(globalThis.location.hash).toBe('#/menu/classic-sazerac');
+				/* the router runs next at boot, on the address left behind */
+				expect(W.applyRoute()).toBe(true);
+				expect(W.state.menu.study.open).toBe(SAZ);
+				expect(W.state.menu.open).toBe(null);
+				expect(W.currentRoute()).toBe('#/menu/classic-sazerac');
+				expect(W.renderMenu()).toContain('>Classic Sazerac</h2>');
+				/* the menu's address closes the card, as the back gesture does */
+				globalThis.location.hash = '#/menu';
+				W.applyRoute();
+				expect(W.state.menu.study.open).toBe(null);
+				expect(W.state.menu.study.jump).toBe('back');
+				expect(W.currentRoute()).toBe('#/menu');
+				/* the global search's address, with Edit the menu on: today's Build pane */
+				W.state.menu.study.editAll = true;
+				globalThis.location.hash = '#/menu/classic-sazerac';
+				W.applyRoute();
+				expect(W.state.menu.study.open).toBe(null);
+				expect(W.state.menu.open).toBe(SAZ);
+				expect(W.state.menu.pane).toBe('build');
+			});
+		});
+	});
+
+	packIt('flash cards from the study view deal only house drinks in scope, grade the deck\'s own record, show Got it only after Flip, and the weak ones are the trouble cards', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async () => {
+				await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
+				const cur = OOT.house.current();
+				const houseIds = new Set(cur.cocktails.map((c) => c.id));
+				/* a drink of the person's own, on no house, is never dealt by the house deck */
+				W.progress.bar.push({ id: 'b-own00001', name: 'My Own Sour', spec: ['2 oz gin', '1 oz lemon', '3/4 oz syrup'], method: 'Shake', glass: 'Coupe', garnish: '', family: '', spirit: '', price: '', note: '', ts: 1 });
+				W.barChanged();
+				expect(W.houseStudyDeck({})).toBe(true);
+				const all = W.state.menu.study.deck.ids;
+				expect(all.length > 10).toBe(true);
+				expect(all.every((id) => houseIds.has(id))).toBe(true);
+				expect(all).toEqual(cur.cocktails.filter((c) => all.includes(c.id)).map((c) => c.id));
+				expect(W.houseStudyDeck({ section: 'Signature drinks' })).toBe(true);
+				const sig = W.state.menu.study.deck.ids;
+				expect(sig.length > 0).toBe(true);
+				expect(sig.every((id) => W.houseStudySectionOf(id) === 'Signature drinks')).toBe(true);
+				/* one drink's card: the face is one button, Got it comes after Flip */
+				W.houseStudyAct('hs-cards', { id: SAZ });
+				expect(W.state.menu.study.deck.ids).toEqual([SAZ]);
+				let face = W.renderMenu();
+				expect(face).toContain('data-act="hs-flip"');
+				expect(face).toContain('Say the ten second line aloud, then flip.');
+				expect(face).not.toContain('data-act="hs-got"');
+				W.houseStudyAct('hs-flip', {});
+				face = W.renderMenu();
+				expect(face).toContain('data-act="hs-got"');
+				expect(face).toContain('data-act="hs-again"');
+				expect(face.indexOf('data-act="hs-again"') < face.indexOf('data-act="hs-got"')).toBe(true);
+				W.houseStudyAct('hs-got', {});
+				expect(W.progress.cards['My Bar · Classic Sazerac']).toMatchObject({ r: 1, w: 0 });
+				expect(W.renderMenu()).toContain('Deck complete');
+				/* Again on the Bloody Bull makes it the one weak card */
+				W.houseStudyAct('hs-cards', { id: 'b-xid4q2qi' });
+				W.houseStudyAct('hs-flip', {});
+				W.houseStudyAct('hs-again', {});
+				expect(W.progress.cards['My Bar · Bloody Bull']).toMatchObject({ r: 0, w: 1 });
+				W.houseStudyAct('hs-close', {});
+				expect(W.renderMenu()).toContain('My weak ones (1)');
+				expect(W.houseStudyDeck({ weak: true })).toBe(true);
+				expect(W.state.menu.study.deck.ids).toEqual(['b-xid4q2qi']);
+				/* the Flashcards tab's own deck, the house card mode and a section */
+				W.state.fc.src = 'My Bar'; W.state.fc.section = 'Signature drinks';
+				const pool = W.fcPool();
+				expect(pool.length > 0).toBe(true);
+				expect(pool.every((d) => d.src === 'My Bar' && W.houseStudySectionOf(d.ref.id) === 'Signature drinks')).toBe(true);
+				expect(W.FC_MODES.find((m) => m[0] === 'study')[3](pool[0])).toBe(true);
+			});
+		});
+	});
+
+	it('every input id the study view mints joins captureLiveInputs, and the hooks are where the design puts them', () => {
+		const study = readFileSync(join(JS, 'house-study.js'), 'utf8');
+		const ids = new Set();
+		for (const m of study.matchAll(/<(?:textarea|input|select)\b[^>]*id="([a-z0-9-]+)"/g)) ids.add(m[1]);
+		expect([...ids]).toEqual(['hs-q']);
+		const ui = readFileSync(join(JS, 'ui-study.js'), 'utf8');
+		expect(ui).toContain('id="fc-section"');
+		for (const id of ['hs-q', 'fc-section']) expect(captureSrc.includes("'" + id + "'")).toBe(true);
+		expect(APP_SRC).toContain("else if(act.indexOf('hs-')===0){ houseStudyAct(act, el.dataset); return; }");
+		const boot = APP_SRC.slice(APP_SRC.indexOf('(async () => {'));
+		expect(boot.indexOf('houseStudyDeepLink()') > 0 && boot.indexOf('houseStudyDeepLink()') < boot.indexOf('applyRoute()')).toBe(true);
+		expect(readFileSync(join(JS, 'ui-menu.js'), 'utf8')).toContain("(typeof houseStudyOn === 'function' && houseStudyOn()) ? houseStudyHTML() : menuListHTML()");
+		expect(/[\u2013\u2014]| -{2} /.test(study)).toBe(false);
+		expect(/\b(colou?r|favorite|practice|Lizzy|Brennan)\b/.test(study.replace(/\/\*[\s\S]*?\*\//g, ''))).toBe(false);
+	});
+
+	/* ---- VERIFIER (study view): a card opened under a shift that hides its drink ----
+	   With "Dinner" chosen, a deep link from the Table (or the global search,
+	   or an Offer next button) to a breakfast-only drink, or to a Roost Bar
+	   drink whose meals name no house meal, opened a card reading "0 of 3 in
+	   Signature drinks" or "0 of 0 in Luxury Roost Bar Cocktails" with no
+	   Next and no Previous: the position counts the shift's rows, which do not
+	   hold the drink. The card must say a real position and offer a way on. */
+	packIt('VERIFIER: a card opened on a drink the chosen shift hides still says a real position and offers Next', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async () => {
+				await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
+				const ls = globalThis.localStorage;
+				const store = { 'oot-study-meal-v1': 'Dinner' };
+				globalThis.localStorage = { getItem: (k) => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = String(v); }, removeItem: (k) => { delete store[k]; } };
+				try {
+					for (const id of ['b-c0ei23l2', 'b-30rc57xd']) {
+						W.houseStudyAct('hs-open', { id });
+						const card = W.renderMenu();
+						const pos = (card.match(/<span class="hs-pos">([^<]*)<\/span>/) || [])[1] || '';
+						expect(pos).not.toMatch(/^0 of /);
+						expect(card).toContain('data-act="hs-next"');
+						W.houseStudyAct('hs-back', {});
+					}
+				} finally { globalThis.localStorage = ls; }
+			});
+		});
+	});
+
+	/* ---- REPAIR (study view): the shift, the offer line, the Library's story, the build ----
+	   A drink whose meals name no house meal (the Roost Bar's three, tagged
+	   with the room) shows under every shift, the way an untagged one does;
+	   each upsell keeps its comma inside one piece; the Library's story is
+	   its own closed disclosure, labelled as the Library's, below the
+	   house's coaching; the build is printed once, with words and no dash. */
+	packIt('REPAIR: the Roost Bar rows show under Dinner, the offer line keeps its commas, the story is the Library\'s and closed, the build is said once', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async () => {
+				await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
+				const ls = globalThis.localStorage;
+				const store = { 'oot-study-meal-v1': 'Dinner' };
+				globalThis.localStorage = { getItem: (k) => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = String(v); }, removeItem: (k) => { delete store[k]; } };
+				try {
+					const list = W.renderMenu();
+					for (const id of ['b-30rc57xd', 'b-1acbdbmb', 'b-h6w1b886']) expect(list).toContain('data-act="hs-open" data-id="' + id + '"');
+					/* a breakfast-only drink still leaves the Dinner list */
+					expect(list).not.toContain('data-act="hs-open" data-id="b-c0ei23l2"');
+					store['oot-study-meal-v1'] = "Bubbles at Brennan's";
+					const bub = W.renderMenu();
+					for (const id of ['b-590pi2gd', 'b-30rc57xd', 'b-1acbdbmb', 'b-h6w1b886']) expect(bub).toContain('data-act="hs-open" data-id="' + id + '"');
+					/* the card off the shift says so in words */
+					W.houseStudyAct('hs-open', { id: 'b-c0ei23l2' });
+					expect(W.renderMenu()).toContain('Not on the Bubbles at Brennan');
+					W.houseStudyAct('hs-back', {});
+				} finally { globalThis.localStorage = ls; }
+				W.houseStudyAct('hs-open', { id: SAZ });
+				const card = W.renderMenu();
+				const offer = (card.match(/<p class="hs-offer">([\s\S]*?)<\/p>/) || [])[1] || '';
+				expect(offer).toContain('Thompson’s Dream $20</button>,</span>');
+				expect(offer).not.toMatch(/<\/span>\s*,/);
+				const story = card.indexOf('The Library’s story, not the house’s');
+				expect(story > card.indexOf('>In this app</h3>')).toBe(true);
+				expect(card.slice(0, story)).toMatch(/<details class="hs-more"><summary>$/);
+				expect(card).not.toContain('<div class="eyebrow">The story</div>');
+				const floor = card.indexOf('>On the floor</h3>');
+				if (floor >= 0) expect(story > floor).toBe(true);
+				const build = card.slice(card.indexOf('>The build</h3>'), card.indexOf('</section>', card.indexOf('>The build</h3>')));
+				expect(/[\u2013\u2014]/.test(build)).toBe(false);
+				expect((build.match(/not printed; confirm with the bar/g) || []).length).toBe(2);
+				expect(build).not.toContain('<li>Method:');
+				expect(build).not.toContain('<li>Glass:');
+			});
+		});
+	});
+
 	/* ---- VERIFIER cases (adversarial pass on the auto-load and the drills) ---- */
 	packIt('VERIFIER: a drink the person took off the list stays off after a newer edition refreshes the house', async () => {
 		counted();
@@ -3770,6 +4074,7 @@ describe('house-bar.js with no engine at all', () => {
 			sample: (a, n) => a.slice(0, n), shuffle: (a) => a.slice(), esc: (s) => String(s), COCKTAILS: [] };
 		vm.createContext(sandbox);
 		vm.runInContext(readFileSync(join(JS, 'house-bar.js'), 'utf8'), sandbox, { filename: 'house-bar.js' });
+		vm.runInContext(readFileSync(join(JS, 'house-study.js'), 'utf8'), sandbox, { filename: 'house-study.js' });
 		const g = (n) => vm.runInContext(n, sandbox);
 		expect(g('houseHere()')).toBe(null);
 		expect(g('houseLineHTML()')).toBe('');
@@ -3797,6 +4102,13 @@ describe('house-bar.js with no engine at all', () => {
 		expect(g('houseDrillDoorsHTML()')).toBe('');
 		expect(g('houseSayItems()')).toHaveLength(0);
 		expect(g('houseRoleDeck()')).toHaveLength(0);
+		/* the study view: off, empty, and the address read and dropped */
+		expect(g('houseStudyOn()')).toBe(false);
+		expect(g('houseStudyHTML()')).toBe('');
+		expect(g('houseStudyDeepLink()')).toBe(false);
+		expect(g('houseStudyRoute(null)')).toBe(false);
+		expect(g('houseStudyEditBarHTML()')).toBe('');
+		expect(g('houseStudyDeck({})')).toBe(false);
 		expect(sandbox.progress.bar).toHaveLength(1);
 	});
 });
