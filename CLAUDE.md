@@ -299,5 +299,52 @@ group and run `node tools/check-nav.mjs` after changing that flow.
 
 ## Icons
 
+The decorative glass symbol illustrates only the first vessel named in a
+printed glass field. `glassIconKey` in `js/ui-new.js` keeps Irish coffee, Nick
+and Nora, tiki, copper, punch and demitasse shapes distinct. Unknown or blank
+fields draw no glass; never infer a house's glass or garnish from a classic.
+
 `icons/icon.svg` is the master. Regenerate PNGs with `@resvg/resvg-js`
 (see git-less scratch script pattern: render at 512/192/180 + maskable at 80% on felt).
+
+## Reviewed teaching pictures
+
+`js/data-teaching-images.js` is the reviewed registry, populated only after
+artwork is approved. Each stable key holds `{src,width,height,alt,caption}`;
+optional `thumb` holds `{src,width,height}` with exactly the same aspect ratio.
+Optional `labels` is the numbered HTML key. The first glass-shapes reference
+has nine vessel names only and explicitly asks the reader to confirm each
+drink's glass with the bar; it makes no house drink-to-glass assignments.
+Only versioned WebPs in `img/brennans/`, `img/cards/` and `img/plates/` qualify.
+Use `LedgerTeaching.figure(id)` at the relevant reading surface or revealed
+answer. An absent entry returns no markup. Do not expose answer pictures on a
+blind flashcard front. Captions and alt text describe the actual reviewed art,
+with any provisional classic glass clearly distinguished from house practice.
+`LedgerTeaching.disclosure(id,title)` loads the picture only when opened. It is
+used at the foot of the menu list and within Library's Glassware reference;
+individual house cards remain unchanged.
+An opened reference offers a keyboard-accessible full-image link in a new tab.
+Closing and reopening retries an illustration only after both size choices fail;
+successful images stay in place and unopened references request nothing.
+
+`js/teaching-images.js` is loaded by both the page and the worker. Requested,
+validated images use `ledgerart-v1-<encoded installation directory>`, separate
+from shell updates and the other rooms. Limits are 512 KiB per image, 64 saved
+images and 16 MiB overall, with oldest entries evicted first. No collection is
+downloaded automatically. Finished images loaded before the first worker claim
+are warmed through that installation's worker; unseen lazy images stay unseen.
+Failed downloads retain the readable lesson and can be retried by reopening.
+`LedgerTeaching.forget()` removes only this installation's optional art cache.
+Unknown paths in those three teaching namespaces are network-only. Saved bodies
+are revalidated before use. Worker registration uses `updateViaCache: 'none'`
+so imported registry/helper scripts revalidate with each worker update.
+
+Never overwrite a published image. A correction uses a new `-vN.webp` path and
+registry entry. Keep pictures out of shell `ASSETS`; the two registry/helper
+scripts are shell assets. Run `node tools/check-art.mjs`, the wiring/home/nav
+gates, and phone/offline browser QA after art integration. `tools/load-wing.mjs`
+supplies the browser URL primitive so existing engine gates load this layer.
+The current masthead remains the original picture, with a 768 by 512 WebP
+variant selected below 640px. Regenerate that size from the original without
+changing its composition. New image folders require explicit copying during
+public integration because `sync-wing` skips new `img/` paths.

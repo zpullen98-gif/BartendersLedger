@@ -1,6 +1,8 @@
 /* The Bartender's Ledger — service worker.
    Bump CACHE on every deploy; that string is the whole update mechanism. */
-const CACHE = 'ledger-v72';
+const CACHE = 'ledger-v74';
+/* Optional pictures have their own exact inventory and bounded cache. */
+importScripts('./js/data-teaching-images.js', './js/teaching-images.js');
 
 const ASSETS = [
   './',
@@ -12,6 +14,9 @@ const ASSETS = [
   './css/house.css',
   './css/house-menu.css',
   './img/explorers-library.webp',
+  './img/explorers-library-768-v1.webp',
+  './js/data-teaching-images.js',
+  './js/teaching-images.js',
   './fonts/cinzel-latin.woff2',
   './fonts/garamond-latin.woff2',
   './css/print.css',
@@ -84,6 +89,16 @@ self.addEventListener('fetch', e => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
   if (url.origin !== location.origin) return; // external links pass through
+  if (LedgerTeaching.handles(req)) {
+    e.respondWith(LedgerTeaching.serve(req));
+    return;
+  }
+  // Unknown teaching paths are network-only, never a query-insensitive shell
+  // or sibling-cache lookup. Register a reviewed version to save it offline.
+  if (LedgerTeaching.owns(req)) {
+    e.respondWith(fetch(req));
+    return;
+  }
   e.respondWith(
     caches.match(req, { ignoreSearch: true }).then(hit =>
       hit || fetch(req).catch(() => (req.mode === 'navigate' ? caches.match('./index.html') : undefined))
