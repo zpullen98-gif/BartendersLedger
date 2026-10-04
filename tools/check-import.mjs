@@ -105,7 +105,7 @@ const W = vm.runInThisContext(APP.map((f) => readFileSync(join(JS, f), 'utf8')).
 	'qMyBarUpsell,qMyBarParts,keptPartsOf,keptUpsellsOf,houseCardFits,houseCardBackHTML,houseUpsellWhy,houseDrillPanelHTML,houseStartCards,houseStartPair,' +
 	'housePairReady,housePairWhy,houseQuizRound,renderQuiz,renderFlashcards,renderMenu,recordCard,QUIZ_MODES,' +
 	'houseAutoLoad,houseDrillAct,houseDrillHTML,houseDrillDoorsHTML,houseSayItems,houseRoleDeck,houseSayPick,houseRowForm,' +
-	'houseStudyOn,houseStudyHTML,houseStudyAct,houseStudyDeck,houseStudyDeepLink,houseStudyRoute,houseStudySectionOf,hsCanonFor,hsProducersFor,applyRoute,currentRoute})');
+	'houseStudyOn,houseStudyHTML,houseStudyAct,houseStudyDeck,houseStudyDeepLink,houseStudyRoute,houseStudySectionOf,hsCanonFor,hsProducersFor,hsVideoUrlOk,hsVideosForLocal,hsVideoGroupsLocal,hsVideosFor,hsVideoGroups,hsVideoLI,hsVideoOrdinals,applyRoute,currentRoute})');
 
 /* The House engine, ../shared/oot-house.js, for the house cases below: the
    wing layout keeps it two folders up, the source repo reads WorldTable's
@@ -3764,6 +3764,147 @@ houseDescribe('the House behind the menu', () => {
 				const prodN = cur.cocktails.filter((c) => W.hsProducersFor(c, W.progress.bar.find((b) => b.id === c.id) || c).length).length;
 				expect(canonN >= 9).toBe(true);
 				expect(prodN >= 4).toBe(true);
+			});
+		});
+	});
+
+	/* The house's videos: the shipped pack with four put on it here (one on the Sazerac, one about the
+	   house itself on a dish, one through a term that reaches the Sazerac, one with a link the engine
+	   refuses), so the cases need no edition that carries videos. Links out, never a player. */
+	const videoPack = () => {
+		const p = JSON.parse(PACK_TEXT);
+		const h = p.house;
+		const term = h.lexicon.find((t) => t.itemIds.includes(SAZ) && !/sazerac/i.test(t.term));
+		h.videos = [
+			{ id: 'v-sazerac1', url: 'https://www.youtube.com/watch?v=aaaaaaaaaaa', title: 'The Sazerac Cocktail', channel: 'Educated Barfly', mins: 4, topic: 'The Sazerac', why: 'The rinse, the stir and the peel, so the build on the ticket reads as a ritual.', itemIds: [SAZ], termIds: [], house: false, checkedOn: '2026-10-04', ts: 1 },
+			{ id: 'v-houseone', url: 'https://youtu.be/bbbbbbbbbbb', title: 'Inside the House', channel: 'SAVEUR Magazine', mins: 0, topic: 'The house', why: 'The room and its story, the one a first visit asks for.', itemIds: [HUSSARDE], termIds: [], house: true, checkedOn: '2026-10-04', ts: 1 },
+			{ id: 'v-termone1', url: 'https://vimeo.com/123456', title: 'A Word on the Bar', channel: 'GuildSomm International', mins: 7.6, topic: 'The bar', why: 'The word behind the drink, said the way the bar says it.', itemIds: [], termIds: term ? [term.id] : [], house: false, checkedOn: '2026-10-04', ts: 1 },
+			{ id: 'v-badlink1', url: 'http://www.youtube.com/watch?v=ccccccccccc', title: 'Not Secure', channel: 'Nobody', mins: 1, topic: 'The bar', why: 'Dropped by the engine.', itemIds: [SAZ], termIds: [], house: false, checkedOn: '2026-10-04', ts: 1 }
+		];
+		return { text: JSON.stringify(p), term };
+	};
+
+	packIt('the house\'s videos: a Watch block on a drink\'s card and a Videos entry by topic, the house first, each a link out in a new tab and never a player', async () => {
+		counted();
+		const { text, term } = videoPack();
+		expect(!!term).toBe(true);
+		await withBarAsync(async () => {
+			await withStudy(async () => {
+				await withFetch(text, async () => { await W.houseAutoLoad(); });
+				const cur = OOT.house.current();
+				/* the engine dropped the link it refuses; three stand */
+				expect(cur.videos.map((v) => v.id)).toEqual(['v-sazerac1', 'v-houseone', 'v-termone1']);
+				const list = W.renderMenu();
+				expect(list).toContain('<h3 class="eyebrow hs-sec-name" id="hs-videos-h">Videos (3)</h3>');
+				expect(list).toContain('Each video opens on YouTube or Vimeo in a new tab, and needs a connection.');
+				const topics = [...list.matchAll(/<details class="hs-more"><summary>([^<]+) \((\d+)\)<\/summary><ul class="hs-vlist">/g)].map((m) => m[1]);
+				expect(topics).toEqual(['The house', 'The Sazerac', 'The bar']);
+				/* every link a new tab with rel noopener, on a video host, and no player anywhere */
+				const links = [...list.matchAll(/<a class="hs-vlink" href="([^"]+)" target="_blank" rel="noopener">/g)].map((m) => m[1]);
+				expect(links).toEqual(['https://youtu.be/bbbbbbbbbbb', 'https://www.youtube.com/watch?v=aaaaaaaaaaa', 'https://vimeo.com/123456']);
+				expect(list).not.toMatch(/<iframe|<video[\s>]|autoplay/i);
+				expect(list).not.toContain('ccccccccccc');
+				/* the list names what each teaches: a drink opens its card, a dish is words or a link into its room */
+				expect(list).toContain('For: <button class="hs-inline" data-act="hs-open" data-id="' + SAZ + '">Classic Sazerac</button>');
+				expect(list).toContain(W_esc(cur.dishes.find((d) => d.id === HUSSARDE).name));
+				expect(list).toContain('<span class="hs-vmeta">GuildSomm International, 8 min</span>');
+				expect(list).toContain('<span class="hs-vmeta">SAVEUR Magazine</span>');
+				/* the card: the drink's own video first, then the one through its term */
+				W.houseStudyAct('hs-open', { id: SAZ });
+				const card = W.renderMenu();
+				expect(card).toContain('<h3 class="hs-h3" id="hs-watch-h">Watch</h3>');
+				const onCard = [...card.matchAll(/<li class="hs-video" data-video="([^"]+)">/g)].map((m) => m[1]);
+				expect(onCard).toEqual(['v-sazerac1', 'v-termone1']);
+				expect(card).toContain('<span class="hs-vmeta">Educated Barfly, 4 min</span>');
+				expect(card).toContain('<span class="sr-only"> (opens in a new tab)</span>');
+				expect(card).not.toMatch(/<iframe|<video[\s>]|autoplay/i);
+				/* Watch sits after the service note and before In this app */
+				expect(card.indexOf('Your words. Allergens: confirm at lineup.')).toBeLessThan(card.indexOf('id="hs-watch-h"'));
+				expect(card.indexOf('id="hs-watch-h"')).toBeLessThan(card.indexOf('>In this app</h3>'));
+				/* a drink no video names has no Watch block */
+				const other = cur.cocktails.find((c) => c.id !== SAZ && !(term.itemIds || []).includes(c.id));
+				W.houseStudyAct('hs-open', { id: other.id });
+				expect(W.renderMenu()).not.toContain('hs-watch');
+				/* the rules here are the engine's: a page holding an older engine lists the same */
+				for (const c of cur.cocktails) expect(W.hsVideosForLocal(cur, c.id).map((v) => v.id)).toEqual(lib.videosFor(cur, c.id).map((v) => v.id));
+				expect(JSON.stringify(W.hsVideoGroupsLocal(cur))).toBe(JSON.stringify(lib.videoGroups(cur)));
+				const LINKS = ['https://www.youtube.com/watch?v=x', 'https://m.youtube.com/x', 'https://youtu.be/x', 'https://player.vimeo.com/video/1', 'http://www.youtube.com/x', 'https://youtube.com.example.org/x', 'https://user@youtube.com/x', 'https://www.youtube.com:8080/x', 'javascript:alert(1)', ''];
+				expect(LINKS.map(W.hsVideoUrlOk)).toEqual(LINKS.map(lib.videoUrlOk));
+				/* a link that slipped past an older engine is never drawn */
+				const raw = JSON.parse(JSON.stringify(cur));
+				raw.videos.push({ id: 'v-sneaked1', url: 'javascript:alert(1)', title: 'Sneaked', channel: '', mins: 0, topic: '', why: '', itemIds: [SAZ], termIds: [], house: false, checkedOn: '', ts: 1 });
+				expect(W.hsVideosFor(raw, SAZ).map((v) => v.id)).not.toContain('v-sneaked1');
+				expect(W.hsVideoGroups(raw).flatMap((g) => g.videos.map((v) => v.id))).not.toContain('v-sneaked1');
+			});
+		});
+	});
+
+	packIt('VERIFIER: the Ledger names nobody in its videos: a person\'s channel or a title "with" a chef is drawn under a plain label, and the shipped pack\'s list carries no name', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async () => {
+				await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
+				const cur = OOT.house.current();
+				expect((cur.videos || []).length).toBeGreaterThan(0);
+				/* the living people the shipped pack's video titles, channels and whys name today */
+				const PEOPLE = /Ralph Brennan|Anders|Erickson|P[e\u00e9]pin|Kenji|L[o\u00f3]pez|Jean-Pierre|Jamie Oliver/;
+				const section = (html, open) => { const at = html.indexOf(open); return at < 0 ? '' : html.slice(at, html.indexOf('</section>', at)); };
+				const list = W.renderMenu();
+				expect(list).toContain('id="hs-videos-h">Videos (' + cur.videos.length + ')</h3>');
+				const videos = section(list, '<section class="panel hs-sec hs-videos"');
+				expect(videos.length).toBeGreaterThan(0);
+				expect(videos).not.toMatch(PEOPLE);
+				/* every drink's card too, where the Watch block draws the same rows */
+				let watched = 0;
+				for (const c of cur.cocktails) {
+					W.houseStudyAct('hs-open', { id: c.id });
+					const watch = section(W.renderMenu(), '<section class="hs-group hs-watch"');
+					if (watch) watched++;
+					expect(watch).not.toMatch(PEOPLE);
+				}
+				expect(watched).toBeGreaterThan(0);
+				/* a vetted channel keeps its title and channel; a person's channel, or a title in a
+				   person's shape, gets the plain label, no channel, the length kept */
+				const base = { url: 'https://www.youtube.com/watch?v=ddddddddddd', mins: 3, topic: 'The Sazerac', itemIds: [], termIds: [], house: false, checkedOn: '2026-10-04', ts: 1 };
+				const row = (v) => W.hsVideoLI(cur, Object.assign({}, base, v), false);
+				const kept = row({ id: 'v-kept0001', title: 'The Wines of Champagne', channel: 'GuildSomm International', why: 'The frame for every bubble.' });
+				expect(kept).toContain('>The Wines of Champagne<');
+				expect(kept).toContain('<span class="hs-vmeta">GuildSomm International, 3 min</span>');
+				const person = row({ id: 'v-person01', title: 'The Sazerac Cocktail', channel: 'Some Bartender', why: 'The rinse and the stir.' });
+				expect(person).toContain('>A video on The Sazerac<');
+				expect(person).not.toContain('Some Bartender');
+				expect(person).not.toContain('The Sazerac Cocktail');
+				expect(person).toContain('<span class="hs-vmeta">3 min</span>');
+				expect(person).toContain('The rinse and the stir.');
+				const shaped = row({ id: 'v-shaped01', title: 'The Real Dessert with Some Cook', channel: 'SAVEUR Magazine', why: 'Told with Chef Some Body at the pan.' });
+				expect(shaped).toContain('>A video on The Sazerac<');
+				expect(shaped).not.toMatch(/Some Cook|Some Body|SAVEUR/);
+				/* two plain videos on one topic in one list are counted, so no two links read alike */
+				const twins = [Object.assign({}, base, { id: 'v-twin0001', title: 'One', channel: 'Some Bartender', why: '' }), Object.assign({}, base, { id: 'v-twin0002', title: 'Two', channel: 'Some Bartender', why: '' })];
+				const ords = W.hsVideoOrdinals(twins);
+				expect(W.hsVideoLI(cur, twins[0], false, ords[twins[0].id])).toContain('>A video on The Sazerac, 1 of 2<');
+				expect(W.hsVideoLI(cur, twins[1], false, ords[twins[1].id])).toContain('>A video on The Sazerac, 2 of 2<');
+				const espresso = cur.cocktails.find((c) => c.name === 'Espresso Martini');
+				W.houseStudyAct('hs-open', { id: espresso.id });
+				const labels = [...W.renderMenu().matchAll(/<a class="hs-vlink"[^>]*>([^<]+)</g)].map((m) => m[1]);
+				expect(new Set(labels).size).toBe(labels.length);
+			});
+		});
+	});
+
+	packIt('a house with no videos draws no Videos entry and no Watch block', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async () => {
+				/* the shipped pack files videos from its 06:30 edition of 4 October 2026, so the case is
+				   that pack with its list taken out, the shape every earlier edition had */
+				const bare = JSON.parse(PACK_TEXT);
+				delete bare.house.videos;
+				await withFetch(JSON.stringify(bare), async () => { await W.houseAutoLoad(); });
+				expect(OOT.house.current().videos).toBe(undefined);
+				expect(W.renderMenu()).not.toContain('hs-videos');
+				W.houseStudyAct('hs-open', { id: SAZ });
+				expect(W.renderMenu()).not.toContain('hs-watch');
 			});
 		});
 	});
