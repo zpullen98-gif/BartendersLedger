@@ -315,3 +315,87 @@ test('reopening retries only a fully failed picture and retains a successful one
   assert.equal(renders,2,'an image that has not failed must survive collapse and reopen');
   assert.equal(requests.length,0,'toggle never prefetches; only the inserted browser image makes its request');
 });
+
+test('numbered reading cues are closed, escaped, and reject incomplete keys', () => {
+  const good={...entry(),labels:['One','Two'],notes:['First <shape>','Second & last']};
+  const {api,requests}=harness({manifest:{good,bad:{...good,notes:['Only one']},markup:{...good,notes:['First',{}]}}});
+  assert.deepEqual(Object.keys(api.entries),['good']);
+  const closed=api.disclosure('good','Study');
+  assert.ok(!closed.includes('<img') && !closed.includes('example-v1.webp'));
+  assert.ok(closed.includes('<strong>One</strong><span>First &lt;shape&gt;</span>'));
+  assert.ok(closed.includes('Second &amp; last'));
+  assert.ok(api.lesson('good').includes('<img'));
+  assert.equal(api.lesson('constructor'),'');
+  assert.equal(requests.length,0);
+});
+
+test('the shipped craft references route correctly and never request pictures before opening', () => {
+  const files=[...read('index.html').matchAll(/<script src="js\/([^"?]+)/g)].map(m=>m[1]).filter(f=>f!=='storage-alarm.js');
+  const wing=loadWing(files), run=code=>vm.runInContext(code,wing);
+  const before=run('JSON.stringify(progress)');
+  run('state.tab="notes"; state.noteOpen=null');
+  const closed=wing.get('renderNotes')();
+  assert.ok(closed.includes('data-t="__garnish"'));
+  assert.ok(!closed.includes('data-teaching-image="garnish-citrus"'));
+  run('applyRoute("#/notes/garnish")');
+  assert.equal(run('currentRoute()'),'#/notes/garnish');
+  assert.equal(run('state.noteOpen'),'__garnish');
+  const opened=wing.get('renderNotes')();
+  assert.ok(opened.includes('data-teaching-image="garnish-citrus"'));
+  assert.ok(opened.includes('Orange slice (half wheel)'));
+  assert.ok(opened.includes('data-open="1"'));
+  run('applyRoute("#/notes/technique-the-mechanics")');
+  const mechanics=wing.get('renderNotes')();
+  for(const id of ['bar-tools','ice']) {
+    assert.ok(mechanics.includes('data-teaching-reference="'+id+'"'));
+    assert.ok(!mechanics.includes('data-teaching-image="'+id+'"'));
+  }
+  assert.equal(run('readDoorTarget(1,"technique").note'),'Technique: The Mechanics');
+  for(const [name,id] of [['Cutting Garnishes','garnish-citrus'],['Ice Program','ice']]) {
+    run('state.prep.cat="Juice & Garnish"; state.prep.open=PREPS.findIndex(x=>x.name==='+JSON.stringify(name)+')');
+    const html=wing.get('renderPrep')();
+    assert.ok(html.includes('data-teaching-reference="'+id+'"'));
+    assert.ok(!html.includes('data-teaching-image="'+id+'"'));
+  }
+  assert.equal(run('JSON.stringify(progress)'),before,'reading must not mutate progress or house records');
+});
+
+test('citrus links use printed cut names and stay off blind tickets', () => {
+  const files=[...read('index.html').matchAll(/<script src="js\/([^"?]+)/g)].map(m=>m[1]).filter(f=>f!=='storage-alarm.js');
+  const wing=loadWing(files), run=code=>vm.runInContext(code,wing), link=wing.get('citrusGarnishLink');
+  for(const garnish of ['Lemon twist','Orange twist','Expressed orange peel','Lime wheel','Lemon wheel','Lime wedge','Lemon wedge','Orange slice','Orange half-wheel']) assert.match(link(garnish),/href="#\/notes\/garnish"/,garnish);
+  for(const garnish of ['',null,'not printed; confirm with the bar','Lime','Orange juice','Grapefruit twist','Orange blossom','Olive']) assert.equal(link(garnish),'',String(garnish));
+  run('var cutFixture={name:"Fixture",cat:"Fixture",spec:["A printed spec"],method:"Stir",glass:"Rocks",garnish:"Orange twist"}');
+  for(const fn of ['ticketHTML','naTicketHTML']) {
+    assert.ok(run(fn+'(cutFixture,false)').includes('href="#/notes/garnish"'));
+    assert.ok(!run(fn+'(cutFixture,true)').includes('href="#/notes/garnish"'));
+    assert.ok(!run(fn+'({...cutFixture,garnish:"not printed; confirm with the bar"},false)').includes('href="#/notes/garnish"'));
+  }
+});
+
+test('all six delivered craft image URLs cache only when requested and survive an offline reopen', async () => {
+  const ctx={}; vm.runInNewContext(read('js/data-teaching-images.js'),ctx);
+  const ids=['garnish-citrus','ice','bar-tools'], counts=[8,4,10];
+  let online=true;
+  const {api,events,caches,requests}=harness({worker:true,manifest:ctx.LEDGER_TEACHING_IMAGES,fetcher:url=>{
+    if(!online) throw Error('offline');
+    return new Response(readFileSync(new URL('../'+new URL(url).pathname.replace('/ledger/',''),import.meta.url)),{headers:{'Content-Type':'image/webp'}});
+  }});
+  assert.equal(requests.length,0);
+  const get=async path=>{let reply; events.fetch({request:request(path),respondWith(p){reply=p;}}); return reply;};
+  const files=[];
+  for(const [i,id] of ids.entries()) {
+    assert.equal(api.entries[id].labels.length,counts[i]);
+    assert.equal(api.entries[id].notes.length,counts[i]);
+    for(const file of [api.entries[id].src,api.entries[id].thumb.src]) {
+      files.push(file); assert.equal((await get(file)).status,200);
+    }
+  }
+  assert.equal(requests.length,6);
+  online=false;
+  for(const file of files) assert.equal((await get(file)).status,200);
+  assert.equal(requests.length,6,'reopening offline uses only validated saved bytes');
+  const saved=await (await caches.open(api.cacheName)).keys();
+  assert.equal(saved.length,6);
+  assert.ok(!saved.some(x=>x.url.includes('brennans-glassware')),'the unopened glassware picture is not downloaded');
+});
