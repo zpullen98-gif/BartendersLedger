@@ -50,6 +50,14 @@
  *     #/menu/section/<slug> keeps its section and its address through the wake
  *   - Print cards is a screen of its own, #/library/print, with the one Back
  *     and no second way back; Back closes it onto the Library
+ *   - with the House engine beside this checkout, the bar's producers: the
+ *     Producers tab opens on the house's bar, an open producer is its own
+ *     screen (#/producers/house/<component id>, one push, closed by its own
+ *     header with no dead entry), a drink chip opens the card and Back
+ *     returns to the open producer, a card's All producers and Flash these
+ *     producers and the level page's door are one push each with one Back,
+ *     a cold profile keeps its address through the wake and walks up with
+ *     replaces, and one the woken house lacks is dropped by a replace
  *
  * This file also runs inside the Outside Of Time wing, from ledger/tools/;
  * keep the two copies identical.
@@ -673,6 +681,115 @@ else {
 	if (N.state().hash !== '#/menu') fail(`a section the woken house lacks leaves the address at ${N.state().hash}, not #/menu`);
 }
 
+/* ---- 12. the bar's producers: the house group, a profile, a drink's card, and Back ----
+   The shipped pack with two drink producers put on the Classic Sazerac here
+   (its rye and its bitters, the bitters reaching the Origin Story too), so
+   the case stands whatever the edition files. */
+if (!HOUSE_HERE) console.log('  SKIPPED the producers cases: no House engine and pack beside this checkout (OOT_SHARED=<dir> names one)');
+else {
+	const p = JSON.parse(readFileSync(HOUSE_PACK, 'utf8'));
+	const ts = Date.parse(p.house.pack.builtAt);
+	for (const c of p.house.components || []) delete c.producer;
+	const put = (id, who, where) => { const c = p.house.components.find((x) => x.id === id); c.producer = { value: { type: 'maker', who, where, founded: '1801', facts: ['A fixture fact.'], history: 'A fixture paragraph.', notes: [], sayIt: '', askKitchen: [] }, by: 'person', ts }; };
+	put('c-70rdihwo', 'Fixture Rye House', 'Alderford');
+	put('c-hexgqdzk', 'Fixture Bitters Co.', 'Brightwater');
+	const prodPack = JSON.stringify(p);
+	const BIT = 'c-hexgqdzk', SAZ = 'b-olsmh04y';
+	const wake = async (A) => {
+		await A.run('OOT.house').importPack(prodPack, { mode: 'new' });
+		await A.run('houseSyncIn()');
+		A.run('houseRepaint()');
+		await settle();
+	};
+	const A = boot({ house: true });
+	await settle();
+	await wake(A);
+	A.tabTap('library'); await settle();
+	A.tap({ 'data-act': 'go', 'data-tab': 'producers' }); await settle();
+	const s0 = A.state();
+	if (s0.key !== 'producers' || s0.hash !== '#/producers') fail(`the Producers tab is ${s0.key} at ${s0.hash}`);
+	const v0 = A.view();
+	if (!/id="prod-house-h"[^>]*>Brennan(&rsquo;|’|&#39;)s bar<\/h2>/.test(v0)) fail('the Producers tab has no group titled with the house\'s bar');
+	if (v0.indexOf('prod-house-h') > v0.indexOf('On the word')) fail('the house\'s bar is not at the top of the Producers tab');
+	/* the group's own words: no dash, no level by a numeral, no mark at or above U+2190 but the open-and-close sign the library's rows share */
+	const group = strip(v0.slice(v0.indexOf('prod-house'), v0.indexOf('On the word'))).replace(/[+−]/g, '');
+	if (EMDASH.test(group)) fail(`the house's bar carries a dash (${(group.match(EMDASH) || [])[0]})`);
+	if (GLYPH.test(group.replace(/[‘’“”·îéè]/g, ''))) fail(`the house's bar carries a mark at or above U+2190 (${(group.match(GLYPH) || [])[0]})`);
+	if (backs(v0) !== 1) fail(`the Producers tab: ${backs(v0)} Back controls, not one`);
+	/* a profile opened is a screen: one push, its own address */
+	A.tap({ 'data-act': 'prod-house', 'data-id': BIT }); await settle();
+	const s1 = A.state();
+	if (s1.key !== 'producers/house/' + BIT || s1.hash !== '#/producers/house/' + BIT || s1.at !== s0.at + 1 || s1.d !== s0.d + 1) fail(`opening a producer of the house is ${s1.key} at ${s1.hash}, entry ${s0.at} to ${s1.at}, not one push to #/producers/house/${BIT}`);
+	if (!/aria-expanded="true" data-act="prod-house" data-id="c-hexgqdzk"/.test(A.view())) fail('the opened producer is not drawn open');
+	if (backs(A.view()) !== 1) fail(`an open producer: ${backs(A.view())} Back controls, not one`);
+	/* its drink chip opens the card, one push, and Back returns to the open profile */
+	A.tap({ 'data-act': 'prod-drink', 'data-id': SAZ }); await settle();
+	const s2 = A.state();
+	if (s2.key !== 'menu/card' || s2.hash !== '#/menu/classic-sazerac' || s2.at !== s1.at + 1) fail(`a producer's drink chip opens ${s2.key} at ${s2.hash}, entry ${s1.at} to ${s2.at}, not the card by one push`);
+	A.tap({ 'data-act': 'back' }); await settle();
+	if (A.state().key !== 'producers/house/' + BIT || !/aria-expanded="true" data-act="prod-house" data-id="c-hexgqdzk"/.test(A.view())) fail(`Back from a drink's card lands on ${A.state().key}, not the open producer`);
+	A.tap({ 'data-act': 'back' }); await settle();
+	if (A.state().key !== 'producers' || A.state().at !== s0.at) fail(`Back from an open producer lands on ${A.state().key} at entry ${A.state().at}, not the Producers tab at ${s0.at}`);
+	/* closing by its own header takes the entry back: no dead entry */
+	A.tap({ 'data-act': 'prod-house', 'data-id': BIT }); await settle();
+	A.tap({ 'data-act': 'prod-house', 'data-id': BIT }); await settle();
+	if (A.state().key !== 'producers' || A.state().at !== s0.at) fail(`closing a producer by its header lands on ${A.state().key} at entry ${A.state().at}, not back on entry ${s0.at}`);
+	/* the round trip and the parent */
+	A.run(`state.tab='producers'; state.prod.open=null; state.prod.house='${BIT}'; navNormalise()`);
+	const r1 = A.g('routeNow')();
+	A.run("state.tab='home'; state.prod.house=null;");
+	if (!A.g('applyRoute')(r1.hash)) fail(`${r1.hash} is not an address applyRoute reads`);
+	A.run('navNormalise()');
+	if (A.g('routeNow')().key !== r1.key) fail(`${r1.hash} reads back as ${A.g('routeNow')().key}, not ${r1.key}`);
+	if (A.g('parentTab')() !== 'producers') fail(`an open producer's parent is ${A.g('parentTab')()}, not the Producers tab`);
+	A.g('applyParent')(); A.run('navNormalise()');
+	if (A.g('routeNow')().key !== 'producers') fail(`an open producer's parent lands on ${A.g('routeNow')().key}`);
+	A.g('applyRoute')('#/producers/willett');
+	A.run('navNormalise()');
+	if (A.run('state.prod.house') || A.g('routeNow')().key !== 'producers/willett') fail('a library entry\'s address leaves a house producer open');
+	/* All producers on a card reached from the menu: one push to the house's bar; Back returns to the card */
+	const B = boot({ house: true });
+	await settle();
+	await wake(B);
+	B.run('openLevel(1); render()'); await settle();
+	B.tap({ 'data-act': 'lv-menu' }); await settle();
+	B.tap({ 'data-act': 'hs-open', 'data-id': SAZ }); await settle();
+	const c0 = B.state();
+	if (c0.key !== 'menu/card') fail(`the Classic Sazerac card is ${c0.key}`);
+	if (!/data-act="hs-producers">All producers<\/button>/.test(B.view())) fail('the Classic Sazerac card has no All producers');
+	B.tap({ 'data-act': 'hs-producers' }); await settle();
+	if (B.state().key !== 'producers' || B.state().at !== c0.at + 1) fail(`All producers opens ${B.state().key} at entry ${B.state().at}, not the Producers tab by one push`);
+	B.tap({ 'data-act': 'back' }); await settle();
+	if (B.state().key !== 'menu/card') fail(`Back from All producers lands on ${B.state().key}, not the card`);
+	/* Flash these producers: the card screen at once; Back returns to the card */
+	B.tap({ 'data-act': 'hs-prod-cards', 'data-id': SAZ }); await settle();
+	if (B.state().key !== 'flashcards/item-producers:' + SAZ + '/card' || B.state().at !== c0.at + 1) fail(`Flash these producers opens ${B.state().key}, not the drink's producers on the card screen by one push`);
+	B.tap({ 'data-act': 'back' }); await settle();
+	if (B.state().key !== 'menu/card') fail(`Back from Flash these producers lands on ${B.state().key}, not the card`);
+	/* the level page's door: one push to the Producers tab, Back to the level */
+	B.run('openLevel(1); render()'); await settle();
+	const l0 = B.state();
+	if (!/data-act="lv-producers"><span class="door-name">The producers<\/span><span class="door-line">2 producers behind 2 drinks on the menu\.<\/span>/.test(B.view())) fail('the level page\'s My restaurant has no door to the producers with its count');
+	B.tap({ 'data-act': 'lv-producers' }); await settle();
+	if (B.state().key !== 'producers' || B.state().at !== l0.at + 1) fail(`the level page's door opens ${B.state().key} at entry ${B.state().at}, not the Producers tab by one push`);
+	B.tap({ 'data-act': 'back' }); await settle();
+	if (B.state().key !== l0.key) fail(`Back from the producers' door lands on ${B.state().key}, not ${l0.key}`);
+	/* a cold profile before the wake keeps its address, opens once the house holds it, and walks up with replaces */
+	const C = boot({ hash: '#/producers/house/' + BIT, house: true });
+	await settle();
+	if (C.state().hash !== '#/producers/house/' + BIT) fail(`a cold #/producers/house/${BIT} before the wake rewrote its address to ${C.state().hash}`);
+	await wake(C);
+	if (C.state().key !== 'producers/house/' + BIT || C.history.length !== 1 || !/aria-expanded="true" data-act="prod-house" data-id="c-hexgqdzk"/.test(C.view())) fail(`a cold #/producers/house/${BIT} after the wake is ${C.state().key} with ${C.history.length} entries`);
+	const keys = [];
+	for (let i = 0; i < 3 && backs(C.view()); i++) { C.tap({ 'data-act': 'back' }); await settle(); keys.push(C.state().key); }
+	if (keys.join('|') !== 'producers|library|home' || C.history.length !== 1) fail(`a cold open producer walks up ${keys.join(' > ')} with ${C.history.length} entries, not producers > library > home by replaces`);
+	/* a producer the woken house does not hold is dropped, by a replace */
+	const N = boot({ hash: '#/producers/house/c-zzzzzzzz', house: true });
+	await settle();
+	await wake(N);
+	if (N.state().hash !== '#/producers' || N.history.length !== 1) fail(`a producer the woken house lacks leaves the address at ${N.state().hash} with ${N.history.length} entries, not #/producers by a replace`);
+}
+
 /* Scope replaces the chosen button, but must not drop keyboard readers at
    the beginning of the page. Exercise the real render and Escape listener. */
 {
@@ -733,6 +850,7 @@ async function mutations(){
 		['a held section rewritten before the wake', 'ui-nav.js', "    else if(NAV_WANT_SEC){ hash += '/section/' + NAV_WANT_SEC; }\n", ""],
 		['Print cards not a screen', 'ui-nav.js', "    if(t === 'library' && state.lib.print){ hash = '#/library/print'; key = 'library/print'; }\n", ""],
 		['a Back to crumb restored', 'ui-levels.js', "  return back;\n}", "  return back + '<div class=\"crumb\"><button class=\"chip\" data-act=\"go\" data-tab=\"home\">Back to Home</button></div>';\n}"],
+		['a house producer not its own screen', 'ui-nav.js', "  } else if(t === 'producers' && state.prod.house){", "  } else if(false){"],
 	];
 	let held = 0;
 	for (const [name, file, from, to] of MUT) {

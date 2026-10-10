@@ -39,7 +39,12 @@
  * positions about a quarter of the time (the gate is 17 to 33 percent, where
  * the draw's own spread is under one point), every option is distinct, the
  * answer is among them, no stem carries its answer, and on the offer next
- * question every option is a drink of this house. The engine comes from
+ * question every option is a drink of this house. The producer questions
+ * (houseProducerQuestions in js/house-study.js: which producer is behind a
+ * drink, where a producer is from, which drink uses one) are dealt the same
+ * way over four producers behind the six drinks and a fifth behind none:
+ * the same position gate, and every option one of the bar's producers,
+ * places or drinks, never the fifth. The engine comes from
  * OOT_SHARED=<dir>, or the shared folder beside this checkout; none is a
  * note and a skip, and a named folder without the engine is a failure.
  */
@@ -153,6 +158,20 @@ function sixDrinkHouse() {
     return c;
   });
   house.tastings = []; house.mixUps = []; house.scenarios = [];
+  /* four producers behind the drinks, every profile kept, each reaching one
+     drink (the first reaches two), and a fifth that reaches none of them,
+     which no producer question may offer; in a house of four producers a
+     drink with two would leave its which-producer question one wrong answer
+     short of three, and the engine rightly deals none */
+  const ts = 1790672400000;
+  const mark = (value) => ({ value, by: 'person', ts });
+  const places = ['Alderford', 'Brightwater', 'Corriemoor', 'Dunmere', 'Eastmarsh'];
+  house.components = places.map((where, i) => ({
+    id: 'c-prod000' + (i + 1), kind: 'ingredient', name: 'Ingredient ' + words[i],
+    explain: mark('The ingredient number ' + (i + 1) + ', explained.'),
+    producer: mark({ type: 'maker', who: 'Maker ' + words[i], where, founded: String(1900 + i), facts: ['A fact about maker number ' + (i + 1) + '.'], history: 'The story of maker number ' + (i + 1) + '.', notes: [], sayIt: '', askKitchen: [] }),
+    itemIds: i === 0 ? [ids[0], ids[4]] : i < 4 ? [ids[i]] : [], termIds: [], ts
+  }));
   return house;
 }
 const fold = (s) => String(s || '').trim().toLowerCase().replace(/\s+/g, ' ');
@@ -164,7 +183,7 @@ async function dealingProof() {
   }
   const APP = ['data-core.js', 'data-lore.js', 'data-ontap.js', 'data-coffee.js', 'data-service.js', 'data-ingredients.js',
     'ingredients.js', 'engine.js', 'srs.js', 'ui-study.js', 'ui-practice.js', 'ui-reference.js', 'ui-prep.js', 'ui-new.js',
-    'menu-drinks.js', 'ui-menu.js', 'ui-import.js', 'data-levels.js', 'levels.js', 'ui-levels.js', 'house-bar.js'];
+    'menu-drinks.js', 'ui-menu.js', 'ui-import.js', 'data-levels.js', 'levels.js', 'ui-levels.js', 'house-bar.js', 'house-study.js', 'ui-nav.js'];
   const w = loadWing(APP);
   vm.runInContext(readFileSync(HOUSE_ENGINE, 'utf8'), w, { filename: 'oot-house.js' });
   const OOT = w.get('OOT');
@@ -207,6 +226,38 @@ async function dealingProof() {
     if (faults.length) ok = false;
     if (shares.some((x) => x < POSITION_LOW || x > POSITION_HIGH)) { console.error('  ' + name + ': the answer favours a position'); ok = false; }
   }
+  /* the producer questions (js/house-study.js houseProducerQuestions): the
+     three kinds, every option a producer, a place or a drink of the bar's,
+     and never the producer that reaches no drink */
+  const deal = w.get('houseProducerQuestions');
+  const field = { producerOf: ['Maker One', 'Maker Two', 'Maker Three', 'Maker Four'], producerWhere: ['Alderford', 'Brightwater', 'Corriemoor', 'Dunmere'], producerDish: houseNames };
+  const kinds = { producerOf: [0, 0, 0, 0], producerWhere: [0, 0, 0, 0], producerDish: [0, 0, 0, 0] };
+  const pfaults = [];
+  let pdeals = 0;
+  for (let i = 0; i < 800 && pfaults.length < 9; i++) {
+    for (const q of deal(3)) {
+      pdeals++;
+      const opts = Array.isArray(q.options) ? q.options : [];
+      if (!kinds[q.houseKind]) { pfaults.push('houseProducerQuestions: a question of kind ' + q.houseKind); continue; }
+      if (opts.length !== 4) pfaults.push('houseProducerQuestions: ' + opts.length + ' options on ' + q.prompt);
+      if (new Set(opts.map(fold)).size !== opts.length) pfaults.push('houseProducerQuestions: a repeated option on ' + q.prompt);
+      const at = opts.indexOf(q.answer);
+      if (at < 0) pfaults.push('houseProducerQuestions: the answer is not among the options on ' + q.prompt);
+      else kinds[q.houseKind][at]++;
+      if (fold(q.prompt).indexOf(fold(q.answer)) >= 0) pfaults.push('houseProducerQuestions: the stem carries its answer on ' + q.prompt);
+      for (const o of opts) if (field[q.houseKind].indexOf(o) < 0) pfaults.push('houseProducerQuestions: ' + o + ' is not one of the bar\'s on ' + q.prompt);
+    }
+  }
+  for (const [kind, positions] of Object.entries(kinds)) {
+    const n = positions.reduce((a, b) => a + b, 0);
+    const shares = positions.map((c) => n ? c / n : 0);
+    console.log('  ' + kind + ': ' + n + ' deals; the answer in each position ' + shares.map(pct).join(', ') + '  gate ' + pct(POSITION_LOW) + ' to ' + pct(POSITION_HIGH));
+    if (!n) { console.error('  ' + kind + ': dealt nothing over four producers'); ok = false; }
+    else if (shares.some((x) => x < POSITION_LOW || x > POSITION_HIGH)) { console.error('  ' + kind + ': the answer favours a position'); ok = false; }
+  }
+  const pseen = {};
+  for (const f of pfaults) if (!pseen[f]) { pseen[f] = true; console.error('  ' + f); }
+  if (pfaults.length) ok = false;
   return ok;
 }
 

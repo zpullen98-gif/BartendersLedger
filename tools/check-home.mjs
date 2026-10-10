@@ -215,7 +215,7 @@ for (let n = 1; n <= 4; n++) {
 run('localStorage.getItem = () => null;');
 
 /* ---- the level tests ---- */
-const VERDICTS = ['Clean round', 'Solid. Read the misses', 'Half is a start', 'Everyone starts by polishing'];
+const VERDICTS = ['Clean round', 'Nearly clean', 'Solid. Read the misses', 'Half is a start', 'Everyone starts by polishing'];
 for (let n = 1; n <= 4; n++) {
 	for (const right of [false, true]) {
 		setProgress(blank());
@@ -255,6 +255,21 @@ for (let n = 1; n <= 4; n++) {
 		if (!(after.levels[n] || []).length) fail(`${where}: the sitting is not recorded`);
 	}
 }
+
+/* ---- the quiz's own verdict ----
+   Clean round only with nothing missed: nine in ten says it is close, and
+   neither line carries an em dash. */
+for (const [score, want] of [[10, 'Clean round.'], [9, 'Nearly clean.'], [7, 'Solid.']]) {
+	setProgress(blank());
+	run(`state.tab = 'quiz'; state.quiz.stage = 'done'; state.quiz.mode = 'mixed'; state.quiz.score = ${score};
+		state.quiz.round = Array.from({ length: 10 }, (_, i) => ({ prompt: 'Fixture question ' + i + '?', options: ['a', 'b', 'c', 'd'], answer: 'a' }));
+		state.quiz.missedQ = state.quiz.round.slice(${score});`);
+	const done = g('renderQuiz')();
+	const verdict = (done.match(/<div class="tix-note tiny">([^<]*)<\/div>/) || [])[1] || '';
+	if (verdict.indexOf(want) !== 0) fail(`the quiz at ${score} of 10: the verdict reads "${verdict}", not "${want}..."`);
+	if (verdict.includes(EMDASH)) fail(`the quiz at ${score} of 10: the verdict carries an em dash`);
+}
+run(`state.quiz.stage = 'setup'; state.quiz.round = []; state.quiz.missedQ = []; state.quiz.score = 0; state.tab = 'home';`);
 
 /* ---- a level's Quiz door on the beer and coffee cards ----
    The question is the card: the ordinary quiz screen must draw it, blind,

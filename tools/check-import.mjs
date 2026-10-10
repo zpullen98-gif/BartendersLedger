@@ -36,6 +36,15 @@
  * a dish" on the shared origin replaces the inbox's row by id over a
  * Map-backed slot; and the never-twice answer is said once through say().
  *
+ * THE BAR'S PRODUCERS (the producer deep dive) run over the shipped pack with
+ * its own producers taken off and four drink producers put on, beside a
+ * producer of the kitchen's alone whose story names a sentinel person and a
+ * profile nobody kept: Who makes it on the drink card, the house group on
+ * the Producers tab (and, over the pack as shipped, exactly its kept drink
+ * producers), the Producers deck and a drink's own, the producer questions
+ * in the menu drill, and nobody named, held to tools/check-producers.mjs's
+ * LIVING list over every producer word a reader is shown.
+ *
  * Run: node tools/check-import.mjs
  */
 import { readFileSync, existsSync } from 'node:fs';
@@ -43,6 +52,7 @@ import { join } from 'node:path';
 import { describe, it, mock } from 'node:test';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
+import { livingIn } from './check-producers.mjs';
 
 const JS = process.env.LEDGER_JS || new URL('../js/', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1');
 const src = readFileSync(join(JS, 'menu-desk.js'), 'utf8');
@@ -105,7 +115,9 @@ const W = vm.runInThisContext(APP.map((f) => readFileSync(join(JS, f), 'utf8')).
 	'qMyBarUpsell,qMyBarParts,keptPartsOf,keptUpsellsOf,houseCardFits,houseCardBackHTML,houseUpsellWhy,houseDrillPanelHTML,houseStartCards,houseStartPair,' +
 	'housePairReady,housePairWhy,houseQuizRound,renderQuiz,renderFlashcards,renderMenu,recordCard,QUIZ_MODES,' +
 	'houseAutoLoad,houseDrillAct,houseDrillHTML,houseDrillDoorsHTML,houseSayItems,houseRoleDeck,houseSayPick,houseRowForm,' +
-	'houseStudyOn,houseStudyHTML,houseStudyAct,openDeck,startDeckRun,deckDef,houseStudyDeepLink,houseStudyRoute,houseStudySectionOf,hsCanonFor,hsProducersFor,hsVideoUrlOk,hsVideosForLocal,hsVideoGroupsLocal,hsVideosFor,hsVideoGroups,hsVideoLI,hsVideoOrdinals,applyRoute,currentRoute,deckNameNow,cardByKey,componentCards})');
+	'houseStudyOn,houseStudyHTML,houseStudyAct,openDeck,startDeckRun,deckDef,houseStudyDeepLink,houseStudyRoute,houseStudySectionOf,hsCanonFor,hsProducersFor,hsVideoUrlOk,hsVideosForLocal,hsVideoGroupsLocal,hsVideosFor,hsVideoGroups,hsVideoLI,hsVideoOrdinals,applyRoute,currentRoute,deckNameNow,cardByKey,componentCards,' +
+	'hsWhoMakesHTML,hsDrinkProducers,hsProducersLine,producerCards,renderProducers,houseProducerQuestions,studyHashOf,missCardKey,myRestaurantHTML,navAct,PRODUCERS,hsProducerCardsLocal,hsDealProducerLocal,hsDrinkProducerHouse,' +
+	'hsLibraryProducer,hsFoundedSentence,houseStudyAfterRender,PROD_CATS})');
 
 /* The House engine, ../shared/oot-house.js, for the house cases below: the
    wing layout keeps it two folders up, the source repo reads WorldTable's
@@ -2451,7 +2463,7 @@ houseDescribe('the House behind the menu', () => {
 				const card = pool.find((d) => d.name === 'Verjus and Tonic');
 				expect(card.draft).toBe(true);
 				const fits = Object.fromEntries(W.FC_MODES.map((m) => [m[0], !!m[3](card)]));
-				expect(fits).toEqual({ name2spec: false, spec2name: false, build: false, cloze: false, service: false, line10: true, line20: false, line45: false, parts: false, upsell: false, study: true, word: false, component: false });
+				expect(fits).toEqual({ name2spec: false, spec2name: false, build: false, cloze: false, service: false, line10: true, line20: false, line45: false, parts: false, upsell: false, study: true, word: false, component: false, producer: false });
 				/* the fixture's Collins carries a spec AND kept lines: every mode fits it */
 				const collins = pool.find((d) => d.name === 'The Lantern Collins');
 				expect(W.FC_MODES.find((m) => m[0] === 'name2spec')[3](collins)).toBe(true);
@@ -3805,6 +3817,441 @@ houseDescribe('the House behind the menu', () => {
 		});
 	});
 
+	/* Who makes it and the bar's producers (the producer deep dive): the shipped pack with every producer it files
+	   taken off, then four drink producers put on here (two on the Classic Sazerac: its rye and its bitters; Willett on
+	   Thompson's Dream; Monkey 47 on the Flamingo), a producer of the kitchen's alone whose story names a sentinel
+	   person, and one profile nobody kept. The words are a fixture's, not a claim about any house. */
+	const PROD_IDS = { rye: 'c-70rdihwo', bitters: 'c-hexgqdzk', willett: 'c-bvyyiku3', monkey: 'c-bx850h1y', herbsaint: 'c-r8v9mkjs' };
+	const SENTINEL = 'Ada Sentinel';
+	const PRODUCER_PACK = () => {
+		const p = JSON.parse(PACK_TEXT);
+		const h = p.house;
+		const ts = Date.parse(h.pack.builtAt);
+		const mark = (value, by = 'person') => ({ value, by, ts });
+		for (const c of h.components || []) delete c.producer;
+		const put = (id, value, by) => { const c = h.components.find((x) => x.id === id); c.producer = mark(value, by); return c; };
+		put(PROD_IDS.rye, { type: 'maker', who: 'Sazerac Company (fixture)', where: 'Alderford', founded: '1801', facts: ['A rye fixture fact.'], history: 'One fixture paragraph about the rye.', notes: [], sayIt: 'A fixture line about the rye.', askKitchen: [] });
+		put(PROD_IDS.bitters, { type: 'maker', who: 'Fixture Bitters Co.', where: 'Brightwater', founded: '1802', facts: ['A first fixture fact.', 'A second fixture fact.'], history: 'A first fixture paragraph.\n\nA second fixture paragraph.', notes: ['A fixture note for the floor.'], sayIt: 'A fixture line to say at the table.', askKitchen: ['Which fixture bottle is open tonight?'] });
+		put(PROD_IDS.willett, { type: 'maker', who: 'Willett (fixture)', where: 'Corriemoor', founded: '1803', facts: ['A Willett fixture fact.'], history: 'A Willett fixture paragraph.', notes: [], sayIt: '', askKitchen: [] });
+		put(PROD_IDS.monkey, { type: 'origin', who: 'Monkey 47 (fixture)', where: 'Dunmere', founded: '', facts: [], history: 'A Monkey 47 fixture paragraph.', notes: ['A Monkey 47 fixture note.'], sayIt: '', askKitchen: [] });
+		/* hers, unkept: never drawn */
+		put(PROD_IDS.herbsaint, { type: 'maker', who: 'Unkept Herbsaint House', where: 'Eastmarsh', founded: '1804', facts: ['Unkept.'], history: 'Unkept.', notes: [], sayIt: '', askKitchen: [] }, 'maitre');
+		/* the kitchen's alone, naming a person: never drawn in the Ledger */
+		const food = h.components.find((c) => c.kind === 'ingredient' && c.itemIds.length && c.itemIds.every((i) => /^d-/.test(i)));
+		food.producer = mark({ type: 'farm', who: 'Sentinel Farm', where: 'Westmarsh', founded: '1805', facts: ['Run today by ' + SENTINEL + '.'], history: 'Led today by its owner, ' + SENTINEL + '.', notes: [], sayIt: '', askKitchen: [] });
+		return JSON.stringify(p);
+	};
+	/* what a reader is shown, without the markup, held to the list of the living and the sentinel */
+	const namesNobody = (html) => {
+		const text = String(html).replace(/<[^>]+>/g, ' ');
+		expect(livingIn(text)).toEqual([]);
+		expect(text).not.toContain(SENTINEL);
+		expect(text).not.toContain('Sentinel Farm');
+		expect(text).not.toContain('Unkept Herbsaint House');
+	};
+	const liOf = (html, id) => { const i = html.indexOf('<li data-producer="' + id + '">'); return i < 0 ? '' : html.slice(i, html.indexOf('</details></li>', i) + 15); };
+
+	packIt('a drink card says who makes it above what it is made of: each kept producer of the drink a closed disclosure with its whole profile, Ask the bar only when there is something to ask, the library linked where it holds the house, two doors, and nobody living named', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async () => {
+				await withFetch(PRODUCER_PACK(), async () => { await W.houseAutoLoad(); });
+				W.houseStudyAct('hs-open', { id: SAZ });
+				const card = W.renderMenu();
+				expect(card).toContain('<h3 class="hs-h3" id="hs-whomakes-h">Who makes it</h3>');
+				expect(card.indexOf('hs-whomakes-h')).toBeGreaterThan(card.indexOf('class="ticket"'));
+				expect(card.indexOf('hs-whomakes-h')).toBeLessThan(card.indexOf('hs-madeof-h'));
+				/* the drink's two kept producers, in the house's order; hers and the kitchen's are not here */
+				const ids = [...card.matchAll(/<li data-producer="([^"]+)">/g)].map((m) => m[1]);
+				expect(ids).toEqual([PROD_IDS.rye, PROD_IDS.bitters]);
+				const bit = liOf(card, PROD_IDS.bitters);
+				expect(bit).toContain('<details class="hs-more hs-comp"><summary>Fixture Bitters Co.</summary>');
+				expect(bit).not.toContain('<details class="hs-more hs-comp" open');
+				expect(bit).toContain('<dt>Supplies</dt><dd>Peychaud\'s bitters</dd>');
+				expect(bit).toContain('<dt>Where</dt><dd>Brightwater</dd><dt>Founded</dt><dd>1802</dd>');
+				expect(bit).toContain('<span class="hs-soft">Say it:</span> “A fixture line to say at the table.”');
+				expect(bit).toContain('<div class="eyebrow">Facts</div><ul class="hs-list"><li>A first fixture fact.</li><li>A second fixture fact.</li></ul>');
+				expect(bit).toContain('<div class="eyebrow">The story</div><p>A first fixture paragraph.</p><p>A second fixture paragraph.</p>');
+				expect(bit).toContain('<div class="eyebrow">Notes for the floor</div><ul class="hs-list"><li>A fixture note for the floor.</li></ul>');
+				expect(bit).toContain('<div class="eyebrow">Ask the bar</div><ul class="hs-list"><li>Which fixture bottle is open tonight?</li></ul>');
+				/* the library holds Peychaud’s since the drink producers of October 2026: a who that names no
+				   library house is matched on the component it supplies, here the shipped Peychaud's bitters */
+				expect(bit).toContain('<p><a class="hs-link" href="#/producers/peychaud-s">In the Ledger’s library</a></p>');
+				const rye = liOf(card, PROD_IDS.rye);
+				expect(rye).not.toContain('In the Ledger');
+				expect(rye).not.toContain('Ask the bar');
+				expect(rye).not.toContain('Notes for the floor');
+				expect(card).toContain('data-act="hs-prod-cards" data-id="' + SAZ + '">Flash these producers</button>');
+				expect(card).toContain('data-act="hs-producers">All producers</button>');
+				namesNobody(card.slice(card.indexOf('hs-whomakes-h'), card.indexOf('hs-madeof-h')));
+				/* the library's own Willett, from the drink that pours it */
+				W.houseStudyAct('hs-open', { id: 'b-15i9pacz' });
+				const td = W.renderMenu();
+				expect(liOf(td, PROD_IDS.willett)).toContain('<p><a class="hs-link" href="#/producers/willett">In the Ledger’s library</a></p>');
+				expect(W.PRODUCERS.some((x) => x.name === 'Willett')).toBe(true);
+				/* a drink no producer reaches draws no block */
+				W.houseStudyAct('hs-open', { id: 'b-xid4q2qi' });
+				expect(W.renderMenu()).not.toContain('hs-whomakes-h');
+				/* All producers opens the Producers tab on its house group */
+				W.houseStudyAct('hs-open', { id: SAZ });
+				expect(W.houseStudyAct('hs-producers', {})).toBe(true);
+				expect(W.state.tab).toBe('producers');
+				expect(W.state.prod.house).toBe(null);
+				expect(W.state.prod.open).toBe(null);
+			});
+		});
+	});
+
+	packIt('the Producers tab opens on the house\'s bar: every kept producer that reaches a drink and never the kitchen\'s alone, each opening its whole profile with its drinks as chips to their cards, then the library as before, with the level page\'s door and its count', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async () => {
+				await withFetch(PRODUCER_PACK(), async () => { await W.houseAutoLoad(); });
+				const was = Object.assign({}, W.state.prod);
+				try {
+					W.state.tab = 'producers';
+					Object.assign(W.state.prod, { cat: 'All', open: null, house: null, primerOpen: null });
+					const cur = OOT.house.current();
+					const drinks = new Set(cur.cocktails.map((c) => c.id));
+					const want = cur.components.filter((c) => c.producer && c.producer.by === 'person' && c.itemIds.some((i) => drinks.has(i))).map((c) => c.id);
+					expect(want).toHaveLength(4);
+					const html = W.renderProducers();
+					expect(html).toContain('<h2 class="eyebrow" id="prod-house-h" style="margin:0">' + W_esc('Brennan’s bar') + '</h2>');
+					expect(html).toContain('4 producers behind 4 drinks on the menu.');
+					expect(html.indexOf('prod-house-h')).toBeLessThan(html.indexOf('On the word'));
+					const rows = [...html.matchAll(/<div class="panel" data-producer="([^"]+)"><button class="drink-head" aria-expanded="false" data-act="prod-house"/g)].map((m) => m[1]);
+					expect(rows).toEqual(want);
+					namesNobody(html.slice(0, html.indexOf('On the word')));
+					/* the library as before, after the group */
+					expect(html).toContain('<span class="eyebrow">All producers</span>');
+					expect(html).toContain('data-act="prod-open" data-i="0"');
+					/* a profile opened: its whole story, its drinks as chips, Ask the bar */
+					expect(W.navAct('prod-house', { id: PROD_IDS.bitters })).toBe('render');
+					expect(W.state.prod.house).toBe(PROD_IDS.bitters);
+					const open = W.renderProducers();
+					const body = open.slice(open.indexOf('data-producer="' + PROD_IDS.bitters + '"'), open.indexOf('data-producer="' + PROD_IDS.willett + '"'));
+					expect(body).toContain('aria-expanded="true" data-act="prod-house" data-id="' + PROD_IDS.bitters + '" data-open="1"');
+					expect(body).toContain('<div class="tix-name">FIXTURE BITTERS CO.</div>');
+					expect(body).toContain('Brightwater · est. 1802');
+					expect(body).toContain('<li>A second fixture fact.</li>');
+					expect(body).toContain('A second fixture paragraph.');
+					expect(body).toContain('<div class="eyebrow mb1">Ask the bar</div>');
+					expect(body).toContain('<button class="chip" data-act="prod-drink" data-id="' + SAZ + '">Classic Sazerac</button>');
+					expect(body).toContain('<button class="chip" data-act="prod-drink" data-id="b-m0mhbaq8">Origin Story</button>');
+					namesNobody(body);
+					/* one open at a time: tapped again it closes, and a library entry opened closes it */
+					W.navAct('prod-house', { id: PROD_IDS.willett });
+					const w = W.renderProducers();
+					expect(w).toContain('href="#/producers/willett">In the Ledger’s library</a>');
+					expect(w).not.toContain('FIXTURE BITTERS CO.');
+					W.navAct('prod-house', { id: PROD_IDS.willett });
+					expect(W.state.prod.house).toBe(null);
+					/* a chip opens the drink's card on the Menu tab */
+					W.state.prod.house = PROD_IDS.bitters;
+					expect(W.navAct('prod-drink', { id: SAZ })).toBe('render');
+					expect(W.state.tab).toBe('menu');
+					expect(W.houseStudyOn()).toBe(true);
+					expect(W.state.menu.study.open).toBe(SAZ);
+					expect(W.renderMenu()).toContain('>Classic Sazerac</h2>');
+					expect(W.state.prod.house).toBe(PROD_IDS.bitters);
+					/* the level page's door, with its count */
+					const lv = W.myRestaurantHTML();
+					expect(lv).toContain('data-act="lv-producers"><span class="door-name">The producers</span><span class="door-line">4 producers behind 4 drinks on the menu.</span>');
+					/* the shipped pack as it stands: the house group is exactly its kept producers that reach a drink, and names nobody */
+					counted();
+					await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
+					const ship = OOT.house.current();
+					const sd = new Set(ship.cocktails.map((c) => c.id));
+					const shipWant = ship.components.filter((c) => c.producer && c.producer.by === 'person' && c.producer.value && c.producer.value.who && c.itemIds.some((i) => sd.has(i))).map((c) => c.id);
+					W.state.tab = 'producers';
+					Object.assign(W.state.prod, { cat: 'All', open: null, house: null });
+					const shipHtml = W.renderProducers();
+					expect([...shipHtml.matchAll(/<div class="panel" data-producer="([^"]+)">/g)].map((m) => m[1])).toEqual(shipWant);
+					namesNobody(shipHtml.slice(0, shipHtml.indexOf('On the word')));
+					for (const id of shipWant) {
+						W.state.prod.house = id;
+						const one = W.renderProducers();
+						namesNobody(one.slice(0, one.indexOf('On the word')));
+					}
+					/* and no producer of the kitchen's alone */
+					for (const c of ship.components.filter((x) => x.producer && !x.itemIds.some((i) => sd.has(i)))) expect(shipHtml).not.toContain('data-producer="' + c.id + '"');
+				} finally { Object.assign(W.state.prod, was, { house: null }); }
+			});
+		});
+	});
+
+	packIt('a profile, a component and the Library\'s story opened on the card stay open through the paint after the reader leaves by Flash these producers, All producers or the library\'s link and comes Back, so the scroll the router puts back lands where it was; a card opened afresh opens with none open', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async () => {
+				await withFetch(PRODUCER_PACK(), async () => { await W.houseAutoLoad(); });
+				/* the view's capture listener, registered by the paint's after-render, fed the toggle events a tap makes */
+				const docWas = globalThis.document;
+				const heard = [];
+				const view = { addEventListener(type, fn, capture) { heard.push({ type, fn, capture }); } };
+				globalThis.document = { getElementById: (id) => (id === 'view' ? view : null), querySelector: () => null, querySelectorAll: () => [] };
+				const toggle = (open, row, own) => {
+					const target = { tagName: 'DETAILS', open, getAttribute: (n) => (n === 'data-keep' ? own || null : null), parentNode: { getAttribute: (n) => (row && n === row[0] ? row[1] : null) } };
+					for (const h of heard) if (h.type === 'toggle') h.fn({ target });
+				};
+				const openIn = (html, attr) => { const i = html.indexOf(attr); return i >= 0 && /^<details[^>]* open>/.test(html.slice(html.indexOf('<details', i))); };
+				/* the kept kinds open on a card: a producer's profile, a component, the story (the first coaching note is open by design) */
+				const keptOpen = (html) => [...html.matchAll(/<li data-(producer|component)="[^"]+"><details[^>]* open>|<details[^>]*data-keep="[^"]+"[^>]* open>/g)].length;
+				try {
+					W.state.tab = 'menu';
+					W.houseStudyAct('hs-open', { id: SAZ });
+					let card = W.renderMenu();
+					W.houseStudyAfterRender();
+					expect(heard.filter((h) => h.type === 'toggle' && h.capture === true)).toHaveLength(1);
+					W.houseStudyAfterRender();
+					expect(heard.filter((h) => h.type === 'toggle')).toHaveLength(1);
+					/* none open on a card opened afresh */
+					expect(keptOpen(card)).toBe(0);
+					/* the reader opens the bitters' profile, a component and the story */
+					const comp = (card.match(/<li data-component="([^"]+)">/) || [])[1];
+					expect(typeof comp).toBe('string');
+					toggle(true, ['data-producer', PROD_IDS.bitters]);
+					toggle(true, ['data-component', comp]);
+					toggle(true, null, 'story');
+					card = W.renderMenu();
+					expect(openIn(card, '<li data-producer="' + PROD_IDS.bitters + '">')).toBe(true);
+					expect(openIn(card, '<li data-producer="' + PROD_IDS.rye + '">')).toBe(false);
+					expect(openIn(card, '<li data-component="' + comp + '">')).toBe(true);
+					expect(card).toContain('<details class="hs-more" data-keep="story" open><summary>');
+					/* away by Flash these producers, and Back to the card's address */
+					expect(W.houseStudyAct('hs-prod-cards', { id: SAZ })).toBe(true);
+					expect(W.state.tab).toBe('flashcards');
+					globalThis.location.hash = '#/menu/classic-sazerac';
+					expect(W.applyRoute()).toBe(true);
+					card = W.renderMenu();
+					expect(openIn(card, '<li data-producer="' + PROD_IDS.bitters + '">')).toBe(true);
+					expect(openIn(card, '<li data-component="' + comp + '">')).toBe(true);
+					/* away by All producers, and Back */
+					expect(W.houseStudyAct('hs-producers', {})).toBe(true);
+					expect(W.state.tab).toBe('producers');
+					W.applyRoute();
+					card = W.renderMenu();
+					expect(openIn(card, '<li data-producer="' + PROD_IDS.bitters + '">')).toBe(true);
+					/* the library's link is a hash link: away to the entry, Back to the card */
+					globalThis.location.hash = '#/producers/peychaud-s';
+					W.applyRoute();
+					expect(W.state.tab).toBe('producers');
+					globalThis.location.hash = '#/menu/classic-sazerac';
+					W.applyRoute();
+					card = W.renderMenu();
+					expect(openIn(card, '<li data-producer="' + PROD_IDS.bitters + '">')).toBe(true);
+					/* closed by the reader, it stays closed */
+					toggle(false, ['data-component', comp]);
+					card = W.renderMenu();
+					expect(openIn(card, '<li data-component="' + comp + '">')).toBe(false);
+					expect(openIn(card, '<li data-producer="' + PROD_IDS.bitters + '">')).toBe(true);
+					/* another drink's card, then the Sazerac's again: opened afresh, none open */
+					W.houseStudyAct('hs-open', { id: 'b-15i9pacz' });
+					expect(keptOpen(W.renderMenu())).toBe(0);
+					W.houseStudyAct('hs-open', { id: SAZ });
+					card = W.renderMenu();
+					expect(keptOpen(card)).toBe(0);
+				} finally { globalThis.document = docWas; }
+			});
+		});
+	});
+
+	packIt('no em dash in what a drink card or the Producers tab shows, over the shipped pack: the card\'s own words, In this app (the glossary, the producers, the Library\'s story) and Who makes it, every producer opened, and the tab\'s panel, primers and every library entry opened', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async () => {
+				await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
+				const EMDASH = String.fromCharCode(0x2014);
+				const shown = (html) => String(html).replace(/<[^>]+>/g, ' ');
+				const cur = OOT.house.current();
+				W.state.tab = 'menu';
+				for (const d of cur.cocktails) {
+					W.houseStudyAct('hs-open', { id: d.id });
+					const text = shown(W.renderMenu());
+					const at = text.indexOf(EMDASH);
+					expect(at < 0 ? '' : d.name + ': ' + text.slice(Math.max(0, at - 60), at + 20)).toBe('');
+				}
+				const was = Object.assign({}, W.state.prod);
+				try {
+					W.state.tab = 'producers';
+					expect(W.PROD_CATS.length).toBeGreaterThan(8);
+					const primers = vm.runInThisContext('PRIMERS');
+					for (const cat of ['All'].concat(W.PROD_CATS)) {
+						for (const t of [null].concat((primers[cat] || []).map((x) => x[0]))) {
+							Object.assign(W.state.prod, { cat, open: null, house: null, primerOpen: t });
+							const root = shown(W.renderProducers());
+							if (t) expect(root).toContain(primers[cat].find((x) => x[0] === t)[1].slice(0, 30));
+							expect(root.indexOf(EMDASH) < 0 ? '' : cat + ' ' + t + ': ' + root.slice(Math.max(0, root.indexOf(EMDASH) - 60), root.indexOf(EMDASH) + 20)).toBe('');
+						}
+					}
+					Object.assign(W.state.prod, { cat: 'All', house: null, primerOpen: null });
+					W.PRODUCERS.forEach((x, i) => {
+						W.state.prod.open = i;
+						const one = shown(W.renderProducers());
+						expect(one.indexOf(EMDASH) < 0 ? '' : x.name + ': ' + one.slice(Math.max(0, one.indexOf(EMDASH) - 60), one.indexOf(EMDASH) + 20)).toBe('');
+					});
+				} finally { Object.assign(W.state.prod, was, { house: null }); }
+			});
+		});
+	});
+
+	it('the library\'s entry for a producer is matched on words, never mapped by hand: a bracket\'s parts, every word of a name in another order, and never the cognac house behind the group\'s name', () => {
+		const lib = (who, supplies) => { const p = W.hsLibraryProducer(who, supplies); return p ? p.name : null; };
+		/* every word of the library's name, in another order */
+		expect(lib('L.N. Mattei, makers of Cap Corse Mattei', 'Cap Corse Mattei Blanc quinquina')).toBe('Mattei Cap Corse');
+		/* a bracket's parts, each a name of its own */
+		expect(lib('Toschi Vignola, makers of Nocello', 'Nocello')).toBe('Toschi (Nocello)');
+		expect(lib('A fixture importer', 'Nocello')).toBe('Toschi (Nocello)');
+		/* the group's name is not the house's: Moët Hennessy is not the Hennessy cognac house */
+		expect(lib('Chandon, the sparkling wine house of Moët Hennessy (LVMH)', 'Chandon Brut')).toBe(null);
+		expect(lib('Volcán De Mi Tierra, Moët Hennessy', 'Volcán reposado tequila')).toBe('Volcán De Mi Tierra');
+		expect(lib('Hennessy, the cognac house', 'Hennessy VS')).toBe('Hennessy');
+		/* a capitalised word that opens the who is no part of a longer name */
+		expect(lib('Maison Dudognon', 'Dudognon Cognac')).toBe('Dudognon');
+		/* the parent named after the comma, as a run of words */
+		expect(lib('Rittenhouse Rye, Heaven Hill', 'Brennan\'s barrel-aged Rittenhouse rye')).toBe('Heaven Hill');
+		expect(lib('House of Angostura (Angostura Holdings)', 'Angostura bitters')).toBe('Angostura');
+		expect(lib('Gentilly Gin, Seven Three Distilling Co.', 'Gentilly Gin')).toBe('Gentilly Gin (Seven Three)');
+		/* a house the library does not hold has no entry, and no near name stands in */
+		expect(lib('Sazerac Rye, the Sazerac Company', 'Sazerac rye whiskey')).toBe(null);
+		expect(lib('Daron Calvados, Maison Ferrand', 'Daron Fine Calvados')).toBe(null);
+	});
+
+	it('the who card says a founded phrase as its own sentence, by the engine\'s rule, and only a date after Founded', () => {
+		expect(W.hsFoundedSentence('1896')).toBe('Founded 1896');
+		expect(W.hsFoundedSentence('between 1849 and 1857, by the most careful account')).toBe('Founded between 1849 and 1857, by the most careful account');
+		expect(W.hsFoundedSentence('Distillery 1896; brand 1992 or 1993')).toBe('Distillery 1896; brand 1992 or 1993');
+		expect(W.hsFoundedSentence('The family has pressed salt there since the 1890s.')).toBe('The family has pressed salt there since the 1890s');
+		expect(W.hsFoundedSentence('')).toBe('');
+	});
+
+	packIt('the producers deal as cards: the Producers deck under My restaurant, a drink\'s producers in the card\'s order from Flash these producers, each graded under its own key, and never the kitchen\'s alone', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async () => {
+				await withFetch(PRODUCER_PACK(), async () => { await W.houseAutoLoad(); });
+				const all = W.producerCards();
+				/* three each: who and where (or where alone with no founding), one thing to know (a fact, else the story's first sentence), which drinks */
+				expect(all).toHaveLength(12);
+				expect(all.every((d) => d.src === 'Producers')).toBe(true);
+				expect(new Set(all.map((d) => W.cardKey(d))).size).toBe(all.length);
+				expect(all.some((d) => /Sentinel|Unkept/.test(d.name + d.back))).toBe(false);
+				expect(all.filter((d) => d.ref.id === PROD_IDS.bitters).map((d) => d.name)).toEqual(['Fixture Bitters Co.: where, and since when?', 'Fixture Bitters Co.: one thing to know', 'Fixture Bitters Co.: which drinks?']);
+				expect(all.find((d) => d.name === 'Fixture Bitters Co.: which drinks?').back).toBe('Classic Sazerac and Origin Story.');
+				expect(all.find((d) => d.name === 'Monkey 47: where from?').back).toBe('Dunmere.');
+				/* the engine deals them (buildFlashcards, kind producer); an engine without that kind gets the same cards made here */
+				const view = W.hsDrinkProducerHouse(OOT.house.current());
+				const strip = (list) => list.filter((c) => c.kind === 'producer').map((c) => [c.front, c.back, c.itemId, c.n]);
+				expect(strip(W.hsProducerCardsLocal(view))).toEqual(strip(lib.buildFlashcards(view)));
+				/* a founded phrase is a sentence of its own on both, never Founded before it, and one stop at the end */
+				const phrased = JSON.parse(JSON.stringify(view));
+				const rc = phrased.components.find((c) => c.id === PROD_IDS.rye);
+				rc.producer.value.founded = 'The fixture company: 1801, from a coffee house of the 1790s.';
+				rc.producer.value.where = 'Alderford.';
+				const pl = strip(W.hsProducerCardsLocal(phrased)), pe = strip(lib.buildFlashcards(phrased));
+				expect(pl).toEqual(pe);
+				expect(pl.find((c) => c[2] === PROD_IDS.rye && c[3] === 0)[1]).toBe('Alderford. The fixture company: 1801, from a coffee house of the 1790s.');
+				expect(pl.some((c) => /Founded [A-Z]|\.\./.test(c[1]))).toBe(false);
+				expect(view.dishes).toEqual([]);
+				expect(view.components.map((c) => c.id).sort()).toEqual([PROD_IDS.rye, PROD_IDS.bitters, PROD_IDS.willett, PROD_IDS.monkey].sort());
+				/* a drawn record that cannot find three wrong answers (the Sazerac, with two right ones among four) deals nothing, so each draws until one deals */
+				const until = (fn) => { for (let i = 0; i < 60; i++) { const q = fn(); if (q) return q; } return null; };
+				for (const kind of ['producerOf', 'producerWhere', 'producerDish']) {
+					const q = until(() => W.hsDealProducerLocal(view, kind, Math.random));
+					const e = until(() => lib.dealQuestion(view, kind, Math.random));
+					expect(q.kind).toBe(kind);
+					expect(new Set(q.options).size).toBe(4);
+					expect(q.options).toContain(q.answer);
+					expect(e.kind).toBe(kind);
+				}
+				expect(W.deckDef('producers')).toMatchObject({ name: 'The producers', preset: { deckModes: ['producer'] } });
+				expect(W.deckDef('producers').preset.only).toHaveLength(12);
+				expect(all.find((d) => d.name === 'Monkey 47: one thing to know').back).toBe('A Monkey 47 fixture paragraph.');
+				expect(W.deckDef('item-producers:' + SAZ).preset.ordered).toBe(true);
+				expect(W.deckDef('item-producers:b-xid4q2qi')).toBe(null);
+				W.houseStudyAct('hs-open', { id: SAZ });
+				expect(W.houseStudyAct('hs-prod-cards', { id: SAZ })).toBe(true);
+				const fc = W.state.fc;
+				expect(W.state.tab).toBe('flashcards');
+				expect(fc.stage).toBe('run');
+				expect(fc.mode).toBe('producer');
+				expect(fc.deck.map((d) => d.name)).toEqual(['Sazerac Company: where, and since when?', 'Sazerac Company: one thing to know', 'Sazerac Company: which drinks?',
+					'Fixture Bitters Co.: where, and since when?', 'Fixture Bitters Co.: one thing to know', 'Fixture Bitters Co.: which drinks?']);
+				expect(W.deckNameNow()).toBe('Classic Sazerac: who makes it');
+				const face = W.renderFlashcards();
+				expect(face).toContain('<div class="eyebrow fc-kind">Maker</div>');
+				expect(face).toContain('Sazerac Company: where, and since when?');
+				expect(face).not.toContain('Alderford. Founded 1801.');
+				fc.flipped = true;
+				expect(W.renderFlashcards()).toContain('Alderford. Founded 1801.');
+				const key = W.cardKey(fc.deck[0]);
+				expect(key).toBe('Producers · Sazerac Company: where, and since when?');
+				expect(W.cardByKey(key)).toMatchObject({ src: 'Producers', kind: 'maker', ref: { id: PROD_IDS.rye } });
+				expect(W.studyHashOf(key)).toBe('#/producers/house/' + PROD_IDS.rye);
+				W.recordCard(true);
+				expect(W.progress.cards[key]).toMatchObject({ r: 1, w: 0 });
+				fc.stage = 'pick';
+				const root = W.renderFlashcards();
+				const house = root.slice(root.indexOf('id="fc-house-h"'), root.indexOf('id="fc-level-h"'));
+				expect(house).toContain('data-act="deck" data-deck="producers"><span class="door-name">The producers</span>');
+				delete W.progress.cards[key];
+			});
+		});
+	});
+
+	packIt('the menu drill asks about the producers: which is behind a drink, where one is from, which drink uses one, every wrong answer another of the bar\'s, recorded as the round is and studied at the producer\'s card', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async () => {
+				await withFetch(PRODUCER_PACK(), async () => { await W.houseAutoLoad(); });
+				const shorts = ['Sazerac Company', 'Fixture Bitters Co.', 'Willett', 'Monkey 47'];
+				const wheres = ['Alderford', 'Brightwater', 'Corriemoor', 'Dunmere'];
+				const drinkNames = OOT.house.current().cocktails.map((c) => c.name);
+				const seen = new Set();
+				for (let i = 0; i < 12; i++) {
+					for (const q of W.houseProducerQuestions(6)) {
+						seen.add(q.houseKind);
+						expect(q.options).toHaveLength(4);
+						expect(new Set(q.options).size).toBe(4);
+						expect(q.options).toContain(q.answer);
+						expect(q.options.some((o) => /Sentinel|Unkept|Westmarsh|Eastmarsh/.test(o))).toBe(false);
+						if (q.houseKind === 'producerOf') {
+							expect(q.prompt).toMatch(/^Which producer is behind the .+ on your menu\?$/);
+							for (const o of q.options) expect(shorts).toContain(o);
+						} else if (q.houseKind === 'producerWhere') {
+							expect(q.prompt).toMatch(/^Where is .+ from\?$/);
+							for (const o of q.options) expect(wheres).toContain(o);
+						} else {
+							expect(q.houseKind).toBe('producerDish');
+							expect(q.prompt).toMatch(/^Which drink on your menu uses .+\?$/);
+							for (const o of q.options) expect(drinkNames).toContain(o);
+						}
+						/* the miss studies the producer's card, never a drink's */
+						expect(String(q.ckey).indexOf('Producers · ')).toBe(0);
+						expect(W.cardByKey(q.ckey).src).toBe('Producers');
+						expect(W.missCardKey(q)).toBe(q.ckey);
+						expect(W.studyHashOf(q.ckey)).toMatch(/^#\/producers\/house\/c-[a-z0-9]{8}$/);
+						namesNobody(q.prompt + ' ' + q.options.join(' ') + ' ' + q.explain);
+					}
+				}
+				expect([...seen].sort()).toEqual(['producerDish', 'producerOf', 'producerWhere']);
+				/* the Menu round deals them among its ten, and a section's round only about its own drinks */
+				let asked = false;
+				for (let i = 0; i < 10 && !asked; i++) { const r = W.buildRound('mybar'); expect(r.length).toBeLessThanOrEqual(10); asked = r.some((q) => /^producer/.test(q.houseKind || '')); }
+				expect(asked).toBe(true);
+				W.state.quiz.section = 'Bubbles at Brennan\'s';
+				try { for (let i = 0; i < 6; i++) expect(W.houseProducerQuestions(6)).toEqual([]); }
+				finally { W.state.quiz.section = null; }
+				/* two producers or fewer make no question: four options are never padded */
+				counted();
+				await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
+				const sd = new Set(OOT.house.current().cocktails.map((c) => c.id));
+				const n = OOT.house.current().components.filter((c) => c.producer && c.producer.by === 'person' && c.itemIds.some((i) => sd.has(i))).length;
+				if (n < 2) expect(W.houseProducerQuestions(6)).toEqual([]);
+			});
+		});
+	});
+
 	packIt('the Classic Sazerac card links the canon Sazerac and its story, never draws the canon\'s quantities, and shows its upsells as buttons to their cards', async () => {
 		counted();
 		await withBarAsync(async () => {
@@ -4187,8 +4634,11 @@ houseDescribe('the House behind the menu', () => {
 				expect(offer).not.toMatch(/<\/span>\s*,/);
 				const story = card.indexOf('The Library’s story, not the house’s');
 				expect(story > card.indexOf('>In this app</h3>')).toBe(true);
-				expect(card.slice(0, story)).toMatch(/<details class="hs-more"><summary>$/);
-				expect(card).not.toContain('<div class="eyebrow">The story</div>');
+				expect(card.slice(0, story)).toMatch(/<details class="hs-more" data-keep="story"><summary>$/);
+				/* a producer's own story under Who makes it (the shipped pack files the Sazerac's) is not the Library's */
+				const whoAt = card.indexOf('<section class="hs-group hs-whomakes"');
+				const outsideWho = whoAt < 0 ? card : card.slice(0, whoAt) + card.slice(card.indexOf('</section>', whoAt));
+				expect(outsideWho).not.toContain('<div class="eyebrow">The story</div>');
 				const floor = card.indexOf('>On the floor</h3>');
 				if (floor >= 0) expect(story > floor).toBe(true);
 				const build = card.slice(card.indexOf('>The build</h3>'), card.indexOf('</section>', card.indexOf('>The build</h3>')));

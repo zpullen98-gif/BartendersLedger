@@ -1,16 +1,16 @@
 /* ---------------- THE STORY: LORE FOR THE CANON, BOOK BY BOOK ----------------
    Keyed by exact cocktail name. Rendered as "The Story" in the Library
    and as a footnote on flashcard backs. Drinks outside the canon simply
-   have no story panel — the ledger stays honest about what it knows. */
+   have no story panel: the ledger stays honest about what it knows. */
 
 const LORE = {
   /* ---- The Core Dozen ---- */
   "Old Fashioned":
-    "When the word 'cocktail' was first defined in print in 1806, it meant exactly this: spirit, sugar, water, bitters. By the 1880s, bartenders drowning drinks in curaçao and absinthe prompted customers to ask for one made 'the old-fashioned way' — and the protest became the name. The Pendennis Club in Louisville claims it; the truth is it was everywhere. It survived Prohibition, a mid-century dark age of muddled fruit salad, and returned as the bedrock drink of the craft revival. If you can make this well, slowly, you understand the whole book.",
+    "When the word 'cocktail' was first defined in print in 1806, it meant exactly this: spirit, sugar, water, bitters. By the 1880s, bartenders drowning drinks in curaçao and absinthe prompted customers to ask for one made 'the old-fashioned way', and the protest became the name. The Pendennis Club in Louisville claims it; the truth is it was everywhere. It survived Prohibition, a mid-century dark age of muddled fruit salad, and returned as the bedrock drink of the craft revival. If you can make this well, slowly, you understand the whole book.",
   "Manhattan":
     "Born in New York in the early 1880s — the Manhattan Club took credit, though the story about Winston Churchill's mother hosting the launch party is a myth (she was in England, around Winston's birth, at the time). Here is the first great marriage of American whiskey and Italian vermouth, and it taught bartenders the template that produced the Rob Roy and, by most tellings, the Martinez and eventually the Martini. Rye is the traditional call: its spice stands up to the vermouth's sweetness. Treat the vermouth as wine, because it is one — fresh bottle, refrigerated, or the drink is already dead.",
   "Martini":
-    "By the usual telling, the Martini descended from the sweeter Martinez sometime in the 1880s–90s, drying out decade by decade as gin got better and palates got drier. The early dry Martini carried orange bitters; they vanished mid-century and the craft revival put them back. The 20th century turned it into an accessory — ever-drier, ever-colder, shaken by secret agents — but the drink underneath is simply gin and dry vermouth in honest proportion, stirred to silk. Ask twist or olive. Never assume; people are loyal to their answer in a way they are loyal to little else.",
+    "By the usual telling, the Martini descended from the sweeter Martinez sometime in the 1880s–90s, drying out decade by decade as gin got better and palates got drier. The early dry Martini carried orange bitters; they vanished mid-century and the craft revival put them back. The 20th century turned it into an accessory (ever-drier, ever-colder, shaken by secret agents) but the drink underneath is simply gin and dry vermouth in honest proportion, stirred to silk. Ask twist or olive. Never assume; people are loyal to their answer in a way they are loyal to little else.",
   "Daiquiri":
     "Named for a beach near Santiago de Cuba, standardized around 1900 by American mining engineer Jennings Cox, and perfected at Havana's El Floridita, where Constantino Ribalaigua built a daiquiri empire and Hemingway drank doubles. There is nowhere to hide in it: rum, lime, sugar, and your shake. That is why bartenders order it to test each other — the 'bartender's handshake.' If the frozen slushy version is the only one you know, this spec is the correction: bright, cold, bone-dry at the finish.",
   "Margarita":
@@ -22,17 +22,17 @@ const LORE = {
   "Mojito":
     "A Cuban classic with roots in the Draque, aguardiente with lime, sugar and mint, taken as medicine in 19th-century Havana. The story that Francis Drake's sailors drank it in 1586 is legend; nothing in the record supports it. Refined in Havana's cantinas and made famous at La Bodeguita del Medio, it is the drink every new bartender learns to dread on a busy night and every good bartender learns to respect. The mint is the whole argument: press it gently to release oil, never shred it to chlorophyll. Made with care it is the best hot-weather drink in the canon; made carelessly it is a salad.",
   "Moscow Mule":
-    "Invented around 1941 at the Cock 'n' Bull in Hollywood by three people with inventory problems: a bar owner with unsold ginger beer, a spirits executive with unsold Smirnoff, and (as the story goes) a copper-mug salesman. The mug was marketing genius — photographed in Hollywood hands, it launched vodka from obscurity to the best-selling spirit in America. The drink itself is honest and self-balancing: spicy ginger, sharp lime, clean spirit, ice-cold copper. Few drinks owe more to their glassware.",
+    "Invented around 1941 at the Cock 'n' Bull in Hollywood by three people with inventory problems: a bar owner with unsold ginger beer, a spirits executive with unsold Smirnoff, and (as the story goes) a copper-mug salesman. The mug was marketing genius: photographed in Hollywood hands, it launched vodka from obscurity to the best-selling spirit in America. The drink itself is honest and self-balancing: spicy ginger, sharp lime, clean spirit, ice-cold copper. Few drinks owe more to their glassware.",
   "Gin & Tonic":
     "British officers in colonial India took bitter quinine against malaria and cut it with sugar, soda and their gin ration — inventing, almost by accident, the world's most durable highball. A line usually attributed to Winston Churchill has it that gin and tonic 'saved more Englishmen's lives than all the doctors in the Empire.' Modern Spain rebuilt it as the Gin-Tonica: big balloon glass, mountains of clear ice, garnish matched to the gin's botanicals. The craft is all temperature and bubbles — cold glass, cold tonic, one gentle lift. Stir it like a Manhattan and you have murdered it.",
   "Tom Collins":
-    "A gin sour served long, named — in the most likely telling — for the Great Tom Collins Hoax of 1874, a fad where you told a friend that a man named Tom Collins was slandering him in a bar down the street. When the victim stormed in demanding Tom Collins, the bartender handed him this. Originally built on sweet Old Tom gin (the pun wrote itself), it settled into London dry. The Collins glass is named for the drink, not the other way around.",
+    "A gin sour served long, named, in the most likely telling, for the Great Tom Collins Hoax of 1874, a fad where you told a friend that a man named Tom Collins was slandering him in a bar down the street. When the victim stormed in demanding Tom Collins, the bartender handed him this. Originally built on sweet Old Tom gin (the pun wrote itself), it settled into London dry. The Collins glass is named for the drink, not the other way around.",
   "Espresso Martini":
-    "London, 1983: a young model asked Dick Bradsell at the Soho Brasserie for something to 'wake me up' — his answer was vodka, fresh espresso and coffee liqueur, shaken violently. He called it the Vodka Espresso, the 1990s renamed it, and after a couple of dormant decades it returned as the defining drink of the 2020s. The crema on fresh espresso is what builds the foam, and the three beans on top are traditional: health, wealth and happiness. Shake it like you mean it or serve it flat and thin.",
+    "London, 1983: a young model asked Dick Bradsell at the Soho Brasserie for something to 'wake me up'; his answer was vodka, fresh espresso and coffee liqueur, shaken violently. He called it the Vodka Espresso, the 1990s renamed it, and after a couple of dormant decades it returned as the defining drink of the 2020s. The crema on fresh espresso is what builds the foam, and the three beans on top are traditional: health, wealth and happiness. Shake it like you mean it or serve it flat and thin.",
 
   /* ---- The Classics Canon ---- */
   "Sazerac":
-    "New Orleans in a glass, and by some arguments America's first branded cocktail — named, by way of the Sazerac House saloon, for the Sazerac-de-Forge cognac once imported there. Legend says the drink began on that cognac and switched to rye when phylloxera hit France in the 1870s; in print, from its first appearance in 1899, it is a rye drink. The absinthe rinse, the Peychaud's bitters (invented by a local apothecary), the lemon peel expressed and discarded — every gesture is ritual, and the ritual is the point. Served without ice, cold from the stir, in a chilled rocks glass. There is no garnish to hide behind.",
+    "New Orleans in a glass, and by some arguments America's first branded cocktail, named, by way of the Sazerac House saloon, for the Sazerac-de-Forge cognac once imported there. Legend says the drink began on that cognac and switched to rye when phylloxera hit France in the 1870s; in print, from its first appearance in 1899, it is a rye drink. The absinthe rinse, the Peychaud's bitters (invented by a local apothecary), the lemon peel expressed and discarded: every gesture is ritual, and the ritual is the point. Served without ice, cold from the stir, in a chilled rocks glass. There is no garnish to hide behind.",
   "Sidecar":
     "The great brandy sour of the Prohibition era, first printed in 1922, when Harry MacElhone credited Pat MacGarry of Buck's Club in London; Harry's New York Bar in Paris and the Ritz have both claimed it since, and the tale that it was named for an American army captain who arrived by motorcycle sidecar is legend. It is the New Orleans sour template — spirit, citrus, orange liqueur — executed on cognac, and the direct ancestor of the Margarita and the White Lady. The sugared rim appeared early as a customer-side correction for tartness; a well-balanced Sidecar doesn't strictly need it, but tradition has its privileges.",
   "Gimlet":
@@ -42,15 +42,15 @@ const LORE = {
   "Mai Tai":
     "Trader Vic Bergeron, Oakland, 1944: seventeen-year-old J. Wray & Nephew rum, lime, orange curaçao, orgeat, rock candy syrup. He served it to Tahitian friends who pronounced it 'maita'i roa' — 'the best.' Don the Beachcomber claimed it too, and the feud defined tiki's golden age. The drink is a rum sour dressed in almond and orange, no fruit juice parade — decades of pineapple-and-grenadine abuse are a separate drink wearing its name. The spent lime shell and mint sprig garnish is traditional: an island and a palm tree.",
   "Paloma":
-    "Mexico's actual favorite tequila drink — the Margarita is for export. A blue-collar highball of tequila and grapefruit soda with a squeeze of lime and a pinch of salt, probably named for a folk song, undocumented before the 1990s because nobody writes down what everybody already drinks. The craft version splits the soda into fresh grapefruit, lime and syrup with a soda top; the cantina version cracks open a Squirt. Both are correct. The salt is not optional — it is what makes the grapefruit bloom.",
+    "Mexico's actual favorite tequila drink: the Margarita is for export. A blue-collar highball of tequila and grapefruit soda with a squeeze of lime and a pinch of salt, probably named for a folk song, undocumented before the 1990s because nobody writes down what everybody already drinks. The craft version splits the soda into fresh grapefruit, lime and syrup with a soda top; the cantina version cracks open a Squirt. Both are correct. The salt is not optional: it is what makes the grapefruit bloom.",
   "Boulevardier":
     "Erskine Gwynne, an American magazine publisher idling in 1920s Paris, gave his name — via his expat journal The Boulevardier — to the Negroni's autumn cousin: bourbon where the gin was. Harry MacElhone recorded it in 1927. Whiskey's weight changes the drink's season entirely, warm where the Negroni is bracing, and it drinks best slightly whiskey-heavy (1.25–1.5 oz) rather than strict equal parts. Swap the bourbon for rye and the sweet vermouth for dry and you have its leaner sibling, the Old Pal.",
   "Aperol Spritz":
-    "The spritz began with 19th-century Austrian soldiers in the Veneto watering the local wine ('spritzen' — to spray). Aperol arrived in 1919, a gentler, brighter orange cousin to Campari, and the 3-2-1 formula — prosecco, Aperol, soda — became the Veneto's official evening ritual, the aperitivo hour in a glass. A century later a marketing campaign conquered the world with it. Build it over fat ice in a big wine glass, orange slice in, and resist the urge to stir out the bubbles. It is sunshine engineering.",
+    "The spritz began with 19th-century Austrian soldiers in the Veneto watering the local wine ('spritzen': to spray). Aperol arrived in 1919, a gentler, brighter orange cousin to Campari, and the 3-2-1 formula (prosecco, Aperol, soda) became the Veneto's official evening ritual, the aperitivo hour in a glass. A century later a marketing campaign conquered the world with it. Build it over fat ice in a big wine glass, orange slice in, and resist the urge to stir out the bubbles. It is sunshine engineering.",
   "French 75":
     "Named for the French 75mm field gun of the First World War, because that's what the kick felt like. Harry MacElhone published an early version; the modern gin-lemon-sugar-champagne spec settled at the Stork Club and in the Savoy Cocktail Book. There is an old argument about gin versus cognac — New Orleans's Arnaud's French 75 Bar serves cognac and calls history its witness. Either way it is a Tom Collins in evening wear: a sour lengthened with champagne instead of soda, served up in a flute.",
   "Dark 'n' Stormy":
-    "Bermuda, after the First World War: Gosling's black rum met the ginger beer the Royal Navy brewed to keep sailors off worse things. The name — a sailor supposedly said the drink was 'the colour of a cloud only a fool or a dead man would sail under' — is one of the only trademarked cocktail names on earth; Gosling's has defended it in court (they register it 'Dark 'n Stormy,' one apostrophe), so the true article is Gosling's Black Seal by definition. Build the ginger beer first and float the rum on top: the drink is named for its weather.",
+    "Bermuda, after the First World War: Gosling's black rum met the ginger beer the Royal Navy brewed to keep sailors off worse things. The name (a sailor supposedly said the drink was 'the colour of a cloud only a fool or a dead man would sail under') is one of the only trademarked cocktail names on earth; Gosling's has defended it in court (they register it 'Dark 'n Stormy,' one apostrophe), so the true article is Gosling's Black Seal by definition. Build the ginger beer first and float the rum on top: the drink is named for its weather.",
   "Penicillin":
     "Sam Ross, Milk & Honey, New York, 2005 — a Gold Rush (whiskey-honey sour) rebuilt with ginger and finished with a float of smoky Islay scotch drifting over the top like weather. It is the most successful cocktail invented in the 21st century, a modern classic that reads as if it had always existed: honey and ginger say medicine, smoke says cure. The name closed the deal. Blended scotch in the body, the peated single malt only as perfume — invert that and the drink is a campfire.",
   "Paper Plane":
@@ -70,13 +70,13 @@ const LORE = {
   "Bloody Mary":
     "Fernand Petiot claimed the tomato-vodka original at Harry's New York Bar in the 1920s, then salted and spiced it properly when he moved to the St. Regis (where propriety renamed it the Red Snapper). It is the only canonical cocktail that is genuinely a meal, the anchor of brunch, and the world's most personal spec — every bartender's mix is a fingerprint of heat, salt, acid and umami. Roll it between tins instead of shaking; shaken tomato juice aerates into pink foam. Legend says the celery stick started at Chicago's Pump Room, when a guest with no stirrer grabbed a stalk off the relish tray. Nobody has proved it, and celery was already stirring tomato juice drinks through the 1950s.",
   "Irish Coffee":
-    "Foynes flying-boat terminal, Ireland, winter 1943: chef Joe Sheridan spiked coffee with whiskey for passengers off a storm-turned flight, and answered 'is this Brazilian coffee?' with 'no, that's Irish coffee.' Travel writer Stanton Delaplane carried it to the Buena Vista in San Francisco in 1952, where they cracked the physics — cream aged 48 hours, lightly whipped, floated over sweetened coffee — and have poured thousands a day since. The sugar isn't optional: it changes the coffee's density so the cream can sit. Drink the hot coffee through the cold cream; never stir.",
+    "Foynes flying-boat terminal, Ireland, winter 1943: chef Joe Sheridan spiked coffee with whiskey for passengers off a storm-turned flight, and answered 'is this Brazilian coffee?' with 'no, that's Irish coffee.' Travel writer Stanton Delaplane carried it to the Buena Vista in San Francisco in 1952, where they cracked the physics (cream aged 48 hours, lightly whipped, floated over sweetened coffee) and have poured thousands a day since. The sugar isn't optional: it changes the coffee's density so the cream can sit. Drink the hot coffee through the cold cream; never stir.",
   "Martinez":
     "The missing link between the Manhattan and the Martini, from the 1880s when American bartending ran sweet: Old Tom gin under sweet vermouth, a spoon of maraschino, a dash of bitters. Two stories claim it: Martinez, California, where a 1992 plaque says bartender Julio Richelieu served the first Martini in 1874, and San Francisco, where Jerry Thomas supposedly mixed it for a traveler bound for Martinez. Neither is proven. The first printed mention is O.H. Byron's in 1884, followed by Thomas's recipe in 1887. It drinks like a Manhattan that swapped its whiskey for perfume — rich, silky, faintly cherried. Order one and you are drinking the Martini's baby pictures.",
   "Hanky Panky":
     "Ada Coleman — 'Coley' — ran the American Bar at the Savoy for two decades, one of the first great female head bartenders. Around 1920, actor Charles Hawtrey asked her for 'something with a bit of punch in it'; the sweet Martini she laced with Fernet-Branca made him declare, 'By Jove! That is the real hanky-panky!' Two dashes of fernet seems like nothing and changes everything — menthol and bitter root under the gin and vermouth. It remains the best answer to a guest who says they want 'a Martini, but interesting.'",
   "Rob Roy":
-    "The Manhattan in a kilt: credited by tradition to the Waldorf's bar in 1894 and named for the operetta about the Scottish folk hero that opened down the street that October. That is legend, not record: a New York bartender was already pouring a drink called the Rob Roy in 1873. Scotch's malt-and-smoke replaces rye's spice, which is the whole conversation — a blended scotch keeps it silky, and even a whisper of peat will colonize the glass. Sweet vermouth is standard; ask for it 'perfect' (half sweet, half dry) and you're drinking the classiest version. One of the few classics that has never been fashionable and never disappeared.",
+    "The Manhattan in a kilt: credited by tradition to the Waldorf's bar in 1894 and named for the operetta about the Scottish folk hero that opened down the street that October. That is legend, not record: a New York bartender was already pouring a drink called the Rob Roy in 1873. Scotch's malt-and-smoke replaces rye's spice, which is the whole conversation: a blended scotch keeps it silky, and even a whisper of peat will colonize the glass. Sweet vermouth is standard; ask for it 'perfect' (half sweet, half dry) and you're drinking the classiest version. One of the few classics that has never been fashionable and never disappeared.",
   "Americano":
     "The senior member of the aperitivo family: Campari and sweet vermouth over ice with soda, born as the 'Milano-Torino' at Gaspare Campari's own café in the 1860s (Campari from Milan, sweet vermouth from Turin). The name honors — depending on who's telling it — the American tourists who adopted it, or boxer Primo Carnera. It is the drink James Bond orders in Casino Royale before the Vesper existed, and the direct parent of the Negroni. Low-proof, bitter, endlessly sessionable: the correct first drink of a long evening.",
   "Jungle Bird":
@@ -84,7 +84,7 @@ const LORE = {
   "Piña Colada":
     "Puerto Rico's national drink, claimed by two San Juan bartenders at the Caribe Hilton in 1954 (the hotel celebrates Ramón 'Monchito' Marrero) and by Barrachina downtown. Coco López — the sweetened cream of coconut invented on the island in 1948 — is the enabling technology; without it there is no colada. Blend it with fresh pineapple and good rum and it is a genuinely great drink, not a guilty one. The 1979 Rupert Holmes song is about a failing marriage; the drink deserved better press.",
   "Caipirinha":
-    "Brazil's national cocktail: cachaça — sugarcane spirit older than rum, funky and green — over a whole lime muddled with sugar in the glass it's served in. Folk history traces it to a Spanish-flu remedy of lime, garlic and honey that lost the garlic and gained ice. The muddle is the technique: press the lime's oils out of the skin without grinding the pith's bitterness in. Use superfine sugar (it dissolves; granulated sits) and crushed ice, and serve it with the muddled hulls still in the glass. It is the Daiquiri's barefoot cousin and loses nothing in the comparison.",
+    "Brazil's national cocktail: cachaça (sugarcane spirit older than rum, funky and green) over a whole lime muddled with sugar in the glass it's served in. Folk history traces it to a Spanish-flu remedy of lime, garlic and honey that lost the garlic and gained ice. The muddle is the technique: press the lime's oils out of the skin without grinding the pith's bitterness in. Use superfine sugar (it dissolves; granulated sits) and crushed ice, and serve it with the muddled hulls still in the glass. It is the Daiquiri's barefoot cousin and loses nothing in the comparison.",
   "Pisco Sour":
     "Victor Morris, an American expat, opened Morris' Bar in Lima around 1916 and ran the whiskey sour template on Peru's grape brandy; the egg-white silk came a little later, usually credited to his Peruvian apprentice Mario Bruiget. Peru and Chile both claim pisco and this drink with genuine diplomatic heat — Peru celebrates a national Pisco Sour Day. The Angostura dashed across the foam isn't decoration: drag a straw through it and it aromatizes every sip. Peruvian pisco is distilled to proof and rested, never oaked — the drink should taste of grapes and altitude, not barrel.",
   "Bramble":
@@ -98,29 +98,29 @@ const LORE = {
   "White Lady":
     "Harry MacElhone sketched it with crème de menthe in 1919, then perfected it at Harry's New York Bar in 1929 with gin — a Sidecar rebuilt on juniper. Harry Craddock at the Savoy claimed it too, and printed the gin version in his 1930 Savoy Cocktail Book. Gin, Cointreau, lemon, sometimes an egg white for silk: it is the cleanest expression of the New Orleans sour on gin, and the direct ancestor of half the 'floral gin sour' menu items of the last twenty years. Serve it up, very cold, and it justifies its name — pale, poised, quietly strong.",
   "Airmail":
-    "A Cuban celebration of the new airmail routes of the late 1920s: a honey daiquiri lengthened with champagne, first printed in Bacardi promotional material around 1930. It is the French 75's tropical pen pal — rum and honey where gin and sugar were — and one of the great under-ordered drinks of the canon. The honey has to be syrup (3:1) or it dies in the cold shake. Some old specs deliver it in a tall glass with a postage stamp stuck to the side; a coupe works, but the stamp was a better idea than most garnishes.",
+    "A Cuban celebration of the new airmail routes of the late 1920s: a honey daiquiri lengthened with champagne, first printed in Bacardi promotional material around 1930. It is the French 75's tropical pen pal, rum and honey where gin and sugar were, and one of the great under-ordered drinks of the canon. The honey has to be syrup (3:1) or it dies in the cold shake. Some old specs deliver it in a tall glass with a postage stamp stuck to the side; a coupe works, but the stamp was a better idea than most garnishes.",
   "Mint Julep":
-    "Older than the cocktail itself — an 18th-century Virginia morning medicine ('julab', from the Persian for rosewater) of spirit, sugar and mint, taken before the heat of the day. It moved from medicinal dram to plantation-porch institution to the official drink of the Kentucky Derby, which now sells 120,000 every race weekend. The build is architecture: mint pressed gently in the bottom, bourbon, then crushed ice packed to a dome, swizzled until the pewter or silver cup frosts. You drink the meltwater as much as the whiskey; the cup's frost is the doneness indicator.",
+    "Older than the cocktail itself: an 18th-century Virginia morning medicine ('julab', from the Persian for rosewater) of spirit, sugar and mint, taken before the heat of the day. It moved from medicinal dram to plantation-porch institution to the official drink of the Kentucky Derby, which now sells 120,000 every race weekend. The build is architecture: mint pressed gently in the bottom, bourbon, then crushed ice packed to a dome, swizzled until the pewter or silver cup frosts. You drink the meltwater as much as the whiskey; the cup's frost is the doneness indicator.",
   "Whiskey Smash":
     "Jerry Thomas listed the smash as its own family in 1862 — 'a julep on a small plan,' mint pressed in sugar and water as for a julep, then spirit over shaved ice, with no lemon at all (the brandy version got a little orange and berries laid on top). Dale DeGroff's 1990s Rainbow Room version — bourbon, lemon quarters muddled skin-and-all, mint — singlehandedly revived the format and became one of the most copied specs of the craft era. The lemon oils from the muddled peel are what separate it from a mere sour. It is the drink for the guest who says they don't like whiskey; it has converted thousands.",
   "Sherry Cobbler":
     "The most popular drink in 19th-century America, full stop: sherry, sugar and fresh fruit over crushed ice, drunk through a straw — a combination so novel that the cobbler is substantially responsible for popularizing both the drinking straw and the ice trade. Dickens's Martin Chuzzlewit stops the plot to marvel at one. Low-proof, cold, fruit-perfumed, it is the great-grandparent of every spritz-and-session drink on a modern menu. Build it with a decent amontillado or oloroso and berries in season, and serve it looking like a jewelry box.",
   "Hot Toddy":
-    "Whisky, hot water, sugar — the toddy (the name likely from an Indian palm liquor via Scots usage) predates the cocktail and was prescribed by actual physicians well into the 20th century. Lemon and clove entered as the drink migrated from Scottish firesides to everywhere with a kettle and a cold. The craft is restraint and temperature: hot water, not boiling, or the alcohol steams off the top; sugar slightly under, since heat amplifies sweetness; and a pre-warmed glass so it doesn't crack or go lukewarm in a minute. It won't cure anything, and it absolutely helps.",
+    "Whisky, hot water, sugar: the toddy (the name likely from an Indian palm liquor via Scots usage) predates the cocktail and was prescribed by actual physicians well into the 20th century. Lemon and clove entered as the drink migrated from Scottish firesides to everywhere with a kettle and a cold. The craft is restraint and temperature: hot water, not boiling, or the alcohol steams off the top; sugar slightly under, since heat amplifies sweetness; and a pre-warmed glass so it doesn't crack or go lukewarm in a minute. It won't cure anything, and it absolutely helps.",
   "Champagne Cocktail":
     "In print by 1855 and set down in Jerry Thomas's 1862 book as loose sugar, a dash or two of bitters and a piece of lemon peel in a tumbler one-third full of broken ice, filled with champagne and shaken. The flute with an Angostura-soaked cube and lemon oils on top came later, and that is the drink we pour now. The cube is theater and engineering at once — a nucleation site that pulls a steady thread of bubbles and meters bitterness into the wine as it dissolves, so the drink evolves from dry to spiced as you sip. It appears in Casablanca more than once. When someone wants champagne but also wants a cocktail, this is the 170-year-old answer.",
   "Brandy Alexander":
     "The gin original ('Alexander') appeared around 1915; cognac took over by the 1930s and improved the argument — brandy, dark crème de cacao and cream (equal parts in the classic and IBA spec, though the spec here lets the brandy lead), nutmeg grated over the top. It is dessert with a spine, the drink John Lennon famously fell for (he called it a milkshake) during his Lost Weekend. Fresh cream, real nutmeg, and honest measurement keep it a cocktail; carelessness turns it into melted ice cream. Serve it after dinner, up, and watch it convert whoever claims they don't like brandy.",
   "White Russian":
-    "The Black Russian — vodka and coffee liqueur — appeared in 1949 Brussels, named for the color and the spirit's supposed nationality. Cream landed on top by the 1960s, and the White Russian settled into shag-carpet obscurity until 1998, when The Big Lebowski made it the Dude's sacrament and single-handedly revived it. It survives fashion because it works: coffee bitterness, sweet liqueur, cold cream. Build it over ice, float the cream, and let the drinker marble it themselves. The Dude abides; so does the drink.",
+    "The Black Russian, vodka and coffee liqueur, appeared in 1949 Brussels, named for the color and the spirit's supposed nationality. Cream landed on top by the 1960s, and the White Russian settled into shag-carpet obscurity until 1998, when The Big Lebowski made it the Dude's sacrament and single-handedly revived it. It survives fashion because it works: coffee bitterness, sweet liqueur, cold cream. Build it over ice, float the cream, and let the drinker marble it themselves. The Dude abides; so does the drink.",
   "Gin Fizz":
-    "The fizz is the sour's effervescent child, a New Orleans specialty by the 1870s–80s: shake gin, lemon and sugar, strain into a small glass with no ice, and fill with soda so the drink foams to the rim. Drunk fast and cold in two or three swallows, morning or afternoon — the espresso shot of its era. At its peak, New Orleans bars employed relay teams of shaker boys just to keep up with fizz demand. Add egg white and it's a Silver Fizz; add yolk, Golden; the whole egg, Royal. Keep the glass small: a fizz that sits goes flat, and a flat fizz is just a weak Collins.",
+    "The fizz is the sour's effervescent child, a New Orleans specialty by the 1870s–80s: shake gin, lemon and sugar, strain into a small glass with no ice, and fill with soda so the drink foams to the rim. Drunk fast and cold in two or three swallows, morning or afternoon: the espresso shot of its era. At its peak, New Orleans bars employed relay teams of shaker boys just to keep up with fizz demand. Add egg white and it's a Silver Fizz; add yolk, Golden; the whole egg, Royal. Keep the glass small: a fizz that sits goes flat, and a flat fizz is just a weak Collins.",
 
   /* ---- The Extended Canon: the zero-proof standards ---- */
   "Nojito":
-    "The Mojito's sober twin, and the proof that the template — mint, lime, sugar, bubbles, crushed ice — never needed the rum to make its argument. Build it with the same care you'd give the original: press the mint, don't shred it, and let the soda lift the aromatics. A splash of chilled green tea in place of the spirit adds the tannic grip that rum's absence leaves behind.",
+    "The Mojito's sober twin, and the proof that the template (mint, lime, sugar, bubbles, crushed ice) never needed the rum to make its argument. Build it with the same care you'd give the original: press the mint, don't shred it, and let the soda lift the aromatics. A splash of chilled green tea in place of the spirit adds the tannic grip that rum's absence leaves behind.",
   "Cinderella":
-    "A bar-book classic since at least 1937, when London's Café Royal Cocktail Book listed it among its non-alcoholic cocktails as equal parts lemon, pineapple and orange, shaken. Today's build keeps that trio shaken bright, adds a blush of grenadine, and lengthens it with soda or ginger ale depending on the house. It has been on hotel menus for nearly a century because it solves a real problem — a guest who wants something bright, adult and celebratory in a tall glass. Fresh juice or nothing; from concentrate, the drink turns into punch-bowl regret.",
+    "A bar-book classic since at least 1937, when London's Café Royal Cocktail Book listed it among its non-alcoholic cocktails as equal parts lemon, pineapple and orange, shaken. Today's build keeps that trio shaken bright, adds a blush of grenadine, and lengthens it with soda or ginger ale depending on the house. It has been on hotel menus for nearly a century because it solves a real problem: a guest who wants something bright, adult and celebratory in a tall glass. Fresh juice or nothing; from concentrate, the drink turns into punch-bowl regret.",
   "Shirley Temple":
     "Invented in the 1930s — Hollywood legend says at Chasen's — for the child star herself, who reportedly found it too sweet and said she had nothing to do with it. Grenadine and ginger ale with a cherry: the first 'cocktail' most Americans ever order. Made with real pomegranate grenadine instead of dyed corn syrup, it is genuinely good — tart, rosy, and worth the maraschino flourish. Temple went to court to stop bottled versions trading on her name; respect the woman, pour the good grenadine.",
   /* ---- Modern Craft Classics ---- */
@@ -151,7 +151,7 @@ const LORE = {
   "Amaretto Sour":
     "A 1970s bottle-driven crowd-pleaser that Jeffrey Morgenthaler famously rehabilitated in 2012 — cask-proof bourbon stiffening the amaretto, lemon, and egg white for silk — under the modest headline that he makes the best one in the world. He might.",
   "New York Sour":
-    "A whiskey sour with a float of dry red wine laid over the top like a sunset — a special effect dating to the 1880s, when Chicago bartenders poured it as the Continental Sour. Drink through the float; never stir it away.",
+    "A whiskey sour with a float of dry red wine laid over the top like a sunset, a special effect dating to the 1880s, when Chicago bartenders poured it as the Continental Sour. Drink through the float; never stir it away.",
   "Gin Basil Smash":
     "Jörg Meyer at Le Lion in Hamburg, 2008: a gin sour muddled with a fistful of fresh basil, shaken to a startling green. It crossed the Atlantic in about a season — the fastest-spreading European cocktail of its generation.",
   "Porn Star Martini":
@@ -179,9 +179,9 @@ const LORE = {
   "Juliet & Romeo":
     "Toby Maloney, The Violet Hour, 2007: gin, mint, cucumber and a ghost of rose water — a drink engineered to be beautiful, served with three droplets of bitters like a signature. Chicago's most romantic spec.",
   "Water Lily":
-    "From New York's Little Branch school: gin, crème de violette, orange liqueur and lemon in equal parts — the Aviation's violet made structural instead of decorative. Pale purple, served up, gone in four sips.",
+    "From New York's Little Branch school: gin, crème de violette, orange liqueur and lemon in equal parts, the Aviation's violet made structural instead of decorative. Pale purple, served up, gone in four sips.",
   "Vieux Mot":
-    "The Last Word template run through the elderflower boom of the late 2000s: gin, St-Germain, lemon. The name — 'old word' — is the joke, and the drink converted a thousand skeptics of 'bartender's ketchup.'",
+    "The Last Word template run through the elderflower boom of the late 2000s: gin, St-Germain, lemon. The name, 'old word', is the joke, and the drink converted a thousand skeptics of 'bartender's ketchup.'",
   "Art of Choke":
     "Kyle Davidson at The Violet Hour: rum and a heavy pour of Cynar with mint, lime and a whisper of green Chartreuse — an artichoke tiki drink, which should be impossible. The name commits to the bit.",
   "Rome with a View":
@@ -201,13 +201,13 @@ const LORE = {
   "Bourbon Renewal":
     "Jeffrey Morgenthaler, early 2000s Oregon: bourbon, lemon, and crème de cassis over fresh ice — a whiskey sour in blackcurrant velvet. Named like an urban-planning initiative, drinks like a porch swing.",
   "Eastside":
-    "The Southside's cucumber cousin from the 2000s New York school — gin, mint, cucumber, lime — attribution as blurry as most bar inventions. It became the modern shorthand for 'refreshing gin drink' on menus everywhere.",
+    "The Southside's cucumber cousin from the 2000s New York school (gin, mint, cucumber, lime), attribution as blurry as most bar inventions. It became the modern shorthand for 'refreshing gin drink' on menus everywhere.",
   "Nuclear Daiquiri":
     "Gregor de Gruyther, London, 2005: overproof Jamaican rum, green Chartreuse, falernum and lime — a Daiquiri wearing a hazmat suit. The name is a fair warning; the balance, improbably, holds.",
   "Mezcal Negroni":
-    "The simplest possible smoke swap — mezcal for gin, everything else untouched — and one of the first moves every bar made when good mezcal arrived. The Campari picks a fight with the smoke; they end the night friends.",
+    "The simplest possible smoke swap (mezcal for gin, everything else untouched) and one of the first moves every bar made when good mezcal arrived. The Campari picks a fight with the smoke; they end the night friends.",
   "Spicy Margarita":
-    "The 2010s' most-ordered modification: jalapeño or serrano heat muddled or infused into the standard Margarita math. Now so universal it's effectively canon — control the heat at the infusion stage, not the muddle, if you value consistency.",
+    "The 2010s' most-ordered modification: jalapeño or serrano heat muddled or infused into the standard Margarita math. Now so universal it's effectively canon: control the heat at the infusion stage, not the muddle, if you value consistency.",
   "Clarified Milk Punch":
     "An 18th-century preservation trick — citrus curdles warm milk, the curds get filtered out and take the harshness with them — leaving a clear, silky, shelf-stable punch; Benjamin Franklin left a recipe. The craft era revived it as its favorite show-off project.",
   "Cynar Julep":
@@ -219,9 +219,9 @@ const LORE = {
   "Zombie":
     "Donn Beach's 1934 flagship — three rums, falernum, grenadine, lime, absinthe and his coded 'Don's Mix' — so potent his menus limited guests to two. He kept the recipe in cipher to foil poaching bartenders; Jeff 'Beachbum' Berry spent years decoding it, and tiki archaeology was born.",
   "Painkiller":
-    "Born at the Soggy Dollar Bar on Jost Van Dyke — no dock; you swim in, hence the name of the bar and the wet money — in the early 1970s. Pusser's trademarked the drink for its navy rum, one of the only cocktails owned by a brand: rum, pineapple, orange, coconut, and a snowfall of nutmeg.",
+    "Born at the Soggy Dollar Bar on Jost Van Dyke (no dock; you swim in, hence the name of the bar and the wet money) in the early 1970s. Pusser's trademarked the drink for its navy rum, one of the only cocktails owned by a brand: rum, pineapple, orange, coconut, and a snowfall of nutmeg.",
   "Hurricane":
-    "Pat O'Brien's, New Orleans, 1940s — the story goes that wartime whiskey was scarce and distributors made bars buy surplus rum by the case, and this passion-fruit red giant, served in a hurricane-lamp glass, solved the inventory problem. Bourbon Street has never recovered.",
+    "Pat O'Brien's, New Orleans, 1940s: the story goes that wartime whiskey was scarce and distributors made bars buy surplus rum by the case, and this passion-fruit red giant, served in a hurricane-lamp glass, solved the inventory problem. Bourbon Street has never recovered.",
   "Navy Grog":
     "Donn Beach's tribute to the Royal Navy's daily rum ration, civilized with three rums, grapefruit, lime and honey — famously served with an ice cone frozen around the straw. Richard Nixon was reportedly a fan, but what he ordered at Trader Vic's was Vic's own Navy Grog, a different drink built on four rums with allspice dram and falernum.",
   "Three Dots and a Dash":
@@ -251,21 +251,21 @@ const LORE = {
   "Ancient Mariner":
     "Jeff 'Beachbum' Berry's 1994 creation in the old Navy Grog style — dark and demerara rums, allspice dram, grapefruit and lime — named for Coleridge's cursed sailor. The revival era proving it could build new hulls, not just salvage wrecks.",
   "Port Light":
-    "The rare bourbon tiki drink, mid-century vintage: whiskey with passion fruit, lemon and grenadine, sometimes crowned with honey foam. A port light is the red lamp on a ship's left side — the drink glows the same color.",
+    "The rare bourbon tiki drink, mid-century vintage: whiskey with passion fruit, lemon and grenadine, sometimes crowned with honey foam. A port light is the red lamp on a ship's left side: the drink glows the same color.",
   "Suffering Bastard":
     "Joe Scialom at Shepheard's Hotel, Cairo, 1942: gin AND brandy with ginger beer and bitters, invented as a hangover cure for officers during the battle of El Alamein — legend says jerry-cans of it went to the front. The name was the customers' self-diagnosis.",
   "Singapore Sling":
     "Created at Raffles Hotel's Long Bar, credited to Ngiam Tong Boon around 1915 — a gin sling blushed pink with cherry brandy — supposedly so ladies could drink discreetly at tea. The 'original' recipe was lost and reconstructed decades later, which every tiki historian delights in pointing out.",
   "Planter's Punch":
-    "Jamaica's foundational rhyme — 'one of sour, two of sweet, three of strong, four of weak' — old enough that its true origin is folklore. Every estate, hotel and grandmother has the correct version, and they all disagree.",
+    "Jamaica's foundational rhyme ('one of sour, two of sweet, three of strong, four of weak'), old enough that its true origin is folklore. Every estate, hotel and grandmother has the correct version, and they all disagree.",
   "Bahama Mama":
     "The cruise-port standard: two rums (one of them coconut), pineapple and orange, and a half ounce of coffee liqueur that nobody expects. Nobody owns it, everybody pours it, and on the right beach it is exactly perfect.",
   "Blue Hawaii":
     "Harry Yee, head bartender of the Hilton Hawaiian Village, 1957 — asked by a Bols salesman to use their blue curaçao, he built the drink that made 'blue' a flavor. By his own account he started putting orchids in drinks to keep chewed sugarcane out of the ashtrays, and he often gets credit for the paper parasol too, though that one is disputed. A one-man garnish revolution.",
   "Rum Runner":
-    "Holiday Isle Tiki Bar, Islamorada, Florida Keys, 1970s — legend says a surplus of banana liqueur and blackberry brandy needed moving, and the solution got named for the Prohibition boatmen who ran the same waters. Inventory management has rarely tasted better.",
+    "Holiday Isle Tiki Bar, Islamorada, Florida Keys, 1970s: legend says a surplus of banana liqueur and blackberry brandy needed moving, and the solution got named for the Prohibition boatmen who ran the same waters. Inventory management has rarely tasted better.",
   "Chi Chi":
-    "A Piña Colada with vodka in the rum's chair — the 1960s tourist circuit's answer for guests who wanted the beach without the molasses. Nobody knows for sure where the name came from. 'Chichi' is an old word for showy or fussy, but no record ties it to the drink.",
+    "A Piña Colada with vodka in the rum's chair: the 1960s tourist circuit's answer for guests who wanted the beach without the molasses. Nobody knows for sure where the name came from. 'Chichi' is an old word for showy or fussy, but no record ties it to the drink.",
   "Doctor Funk":
     "Named for Dr. Bernard Funk, Samoa's actual physician (he attended Robert Louis Stevenson), whose 'medicinal' prescription of absinthe, lime and grenadine with soda became a South Seas legend the tiki temples embalmed in rum.",
   "Cobra's Fang":
@@ -275,11 +275,11 @@ const LORE = {
   "Nui Nui":
     "Donn Beach's spice cabinet in a glass — aged rum with cinnamon, allspice, vanilla and citrus. 'Nui' is Polynesian for 'big'; doubled, it's a promise the drink keeps quietly.",
   "Halekulani":
-    "The house cocktail of Waikiki's 'House Befitting Heaven' hotel, 1930s: whiskey — unusual for the islands — with citrus, grenadine and bitters, shaken and served with the sunset. Old Hawaii before the jets arrived.",
+    "The house cocktail of Waikiki's 'House Befitting Heaven' hotel, 1930s: whiskey, unusual for the islands, with citrus, grenadine and bitters, shaken and served with the sunset. Old Hawaii before the jets arrived.",
   "Shrunken Skull":
     "A Donn-era classic of brutal simplicity: two rums, grenadine and lime, served in a skull mug because tiki understood theater. The red color and the name do the rest of the work.",
   "Tradewinds":
-    "A Caribbean cooler built on rum and coconut cream with apricot liqueur and lemon — obscure enough that sources argue over its home island, which is the most Caribbean provenance possible.",
+    "A Caribbean cooler built on rum and coconut cream with apricot liqueur and lemon: obscure enough that sources argue over its home island, which is the most Caribbean provenance possible.",
   "Yellow Bird":
     "Rum, Galliano, triple sec and lime. Nobody knows for sure where the name comes from: maybe the song 'Yellow Bird,' a Haitian tune given English words in 1957 and a No. 4 hit for Arthur Lyman, maybe just the Galliano's color. One unproven story puts its birth at the Shell Bar in Waikiki's Hawaiian Village, where Lyman's record played. The song was everywhere in 1961; the drink stayed on the beach where it belongs.",
   "Goombay Smash":
@@ -294,45 +294,45 @@ Object.assign(LORE, {
   "Bijou":
     "Harry Johnson's 1890s jewel box — gin, sweet vermouth and green Chartreuse, each standing for a gem: diamond, ruby, emerald. The rare survivor of the era's liqueur-heavy style that modern palates still forgive, because the Chartreuse earns it.",
   "Tuxedo":
-    "The Tuxedo Club of Tuxedo Park, New York — the place that named the dinner jacket — also left a Martini variant dressed with maraschino, orange bitters and an absinthe whisper. Formal wear, liquid edition.",
+    "The Tuxedo Club of Tuxedo Park, New York, the place that named the dinner jacket, also left a Martini variant dressed with maraschino, orange bitters and an absinthe whisper. Formal wear, liquid edition.",
   "Alaska":
     "Gin and yellow Chartreuse, nothing else structural — a 'cocktail' by 1900s standards and a dare by ours. Craddock's Savoy note joked that it was no Eskimo staple and was 'probably first thought of in South Carolina, hence its name.' Nobody knows where it really came from.",
   "Bronx":
     "The Waldorf-Astoria's Johnnie Solon claimed it, allegedly named after visiting the new Bronx Zoo because customers kept telling him about the strange animals they saw when drinking. A Perfect Martini with orange juice, it was once America's third-most-famous cocktail before it fell hard from favor after Repeal.",
   "Income Tax":
-    "A Bronx with bitters, named — with gallows humor — for the new American levy. The joke aged better than the drink's fame: you pay a little more, you get a little more.",
+    "A Bronx with bitters, named, with gallows humor, for the new American levy. The joke aged better than the drink's fame: you pay a little more, you get a little more.",
   "Ward 8":
     "Boston, 1898, Locke-Ober's bar — by most tellings, built to toast Martin Lomasney's election win in the city's Eighth Ward: a whiskey sour rouged with grenadine and orange. Lomasney, a temperance man, reportedly hated having a drink named for him, which improves the story.",
   "Jack Rose":
-    "Applejack, lemon and grenadine — pre-Prohibition New Jersey's great gift, famous enough that Jake Barnes drinks one in The Sun Also Rises. The name's origin (a gangster? the rose color? a bartender?) is a permanent bar argument, which is half its charm.",
+    "Applejack, lemon and grenadine: pre-Prohibition New Jersey's great gift, famous enough that Jake Barnes drinks one in The Sun Also Rises. The name's origin (a gangster? the rose color? a bartender?) is a permanent bar argument, which is half its charm.",
   "Pegu Club":
     "The house cocktail of the British officers' club outside Rangoon: gin, orange curaçao, lime and two kinds of bitters — colonial refreshment engineered for heat. Audrey Saunders named her seminal New York bar after it, closing a century-long loop.",
   "Twentieth Century":
-    "Named for the 20th Century Limited, the glamour train from New York to Chicago, in 1937: gin, Lillet, lemon — and white crème de cacao, the spec's famous surprise. It tastes like an Art Deco poster looks.",
+    "Named for the 20th Century Limited, the glamour train from New York to Chicago, in 1937: gin, Lillet, lemon, and white crème de cacao, the spec's famous surprise. It tastes like an Art Deco poster looks.",
   "Monkey Gland":
     "Harry MacElhone's 1920s Paris headline-grab: gin, orange juice, grenadine and absinthe, named for Serge Voronoff's genuinely real monkey-gland rejuvenation surgeries then scandalizing Europe. The drink outlived the science, mercifully.",
   "Mary Pickford":
     "Prohibition-era Havana, named for the silent-film star. Eddie Woelke or Fred Kaufman of the Sevilla Hotel usually gets the credit, and the tale that she drank it there with Douglas Fairbanks is legend, since no Cuba trip of hers is on record in those years. The build: white rum, pineapple, grenadine, maraschino. Sweet, blushing, and stronger than it lets on — a fair portrait of the era's stardom.",
   "El Presidente":
-    "Havana's aristocrat of the 1920s, toasted to a succession of Cuban presidents: white rum, blanc vermouth, orange curaçao and a grenadine tint. The blanc vermouth is the secret most modern remakes miss — dry vermouth wrecks it.",
+    "Havana's aristocrat of the 1920s, toasted to a succession of Cuban presidents: white rum, blanc vermouth, orange curaçao and a grenadine tint. The blanc vermouth is the secret most modern remakes miss; dry vermouth wrecks it.",
   "Between the Sheets":
     "A Sidecar with white rum crashing the cognac's party, from the 1920s, though nobody can prove whose it is. Its earliest known printing (1929) uses gin instead of cognac, and the cognac-and-rum version we pour comes from the Savoy Cocktail Book in 1930. Harry MacElhone in Paris, a Mr. Polly at London's Berkeley Hotel and Johnny Brooks at a New Rochelle speakeasy have all been credited with it, and none of those claims is proven. The name was the point: Prohibition-era drinking was flirtation by other means.",
   "Blood and Sand":
     "Named for Valentino's 1922 bullfighter film: scotch, sweet vermouth, cherry brandy and orange juice in equal parts — on paper a catastrophe, in the glass a strange velvet. One of the only classic cocktails built on scotch, and the best argument that rules are guidelines.",
   "Scofflaw":
-    "In 1924 a Boston contest coined 'scofflaw' for those who drank in defiance of Prohibition; within weeks Harry's New York Bar in Paris had a cocktail mocking the whole affair — rye, dry vermouth, lemon, grenadine. Journalism has never moved faster.",
+    "In 1924 a Boston contest coined 'scofflaw' for those who drank in defiance of Prohibition; within weeks Harry's New York Bar in Paris had a cocktail mocking the whole affair: rye, dry vermouth, lemon, grenadine. Journalism has never moved faster.",
   "Brooklyn":
-    "The Manhattan's overshadowed sibling, circa 1908: rye, dry vermouth, maraschino and Amer Picon — the French bitter that vanished from America, orphaning the drink for decades. The craft revival rebuilt it with substitutes and then named half the borough's neighborhoods in apology.",
+    "The Manhattan's overshadowed sibling, circa 1908: rye, dry vermouth, maraschino and Amer Picon, the French bitter that vanished from America, orphaning the drink for decades. The craft revival rebuilt it with substitutes and then named half the borough's neighborhoods in apology.",
   "Algonquin":
     "Named, it's said, for the hotel of the famous Round Table, though owner Frank Case had closed its bar in 1917, so the wits did their drinking elsewhere and no record puts this drink at their table. The build: rye, dry vermouth and pineapple juice — an odd trio that reads like one of Dorothy Parker's kinder reviews. Best very cold, like the wit.",
   "Chrysanthemum":
-    "The Savoy's gentlest classic: dry vermouth led, Bénédictine following, absinthe perfuming — no base spirit at all. A low-proof drink from an age that didn't have the phrase, perfect for the first round or the last.",
+    "The Savoy's gentlest classic: dry vermouth led, Bénédictine following, absinthe perfuming, no base spirit at all. A low-proof drink from an age that didn't have the phrase, perfect for the first round or the last.",
   "Bamboo":
     "Credited by Boothby in 1908 to Louis Eppinger, who ran the bar at Yokohama's Grand Hotel from 1889, though American papers were already calling it a new drink in New York bars in 1886, introduced by an unnamed Englishman. The build: sherry and dry vermouth with bitters — a cocktail with no spirit, built for a port city's long afternoons. Not a Japanese invention, then, but Yokohama made it famous, a century before Japan's own bartenders conquered the craft.",
   "Adonis":
-    "Named for the 1884 Broadway musical that ran a then-record 603 performances: sweet vermouth and sherry with orange bitters — the Bamboo's rosier twin. Proof the 1880s understood session drinking better than we do.",
+    "Named for the 1884 Broadway musical that ran a then-record 603 performances: sweet vermouth and sherry with orange bitters, the Bamboo's rosier twin. Proof the 1880s understood session drinking better than we do.",
   "Coronation":
-    "A family of drinks raised for royal occasions; the standard bearer is sherry and dry vermouth with maraschino and bitters. The empire made drinks the way it made stamps — commemoratively.",
+    "A family of drinks raised for royal occasions; the standard bearer is sherry and dry vermouth with maraschino and bitters. The empire made drinks the way it made stamps, commemoratively.",
   "Diamondback":
     "Rye, applejack and yellow Chartreuse — the house drink of the Diamondback Lounge in Baltimore's Lord Baltimore Hotel, first printed in Ted Saucier's Bottoms Up (1951), named for the local terrapin, revived by the craft era as one of the strongest stirred drinks in the book. Handle accordingly.",
   "Widow's Kiss":
@@ -340,17 +340,17 @@ Object.assign(LORE, {
   "Japanese Cocktail":
     "Jerry Thomas, around 1860: cognac, orgeat and bitters, likely named for the first Japanese diplomatic mission then touring America — nothing Japanese in the glass, everything Japanese in the timing. One of the first cocktails ever named for a news event.",
   "East India":
-    "A colonial trade-route cocktail from the 1880s: cognac with curaçao, pineapple, maraschino and bitters — the whole cargo manifest in one glass. Rich as the company it was named for.",
+    "A colonial trade-route cocktail from the 1880s: cognac with curaçao, pineapple, maraschino and bitters: the whole cargo manifest in one glass. Rich as the company it was named for.",
   "Brandy Crusta":
     "Joseph Santini, New Orleans, 1850s: cognac with curaçao, lemon and bitters in a glass fully lined with a citrus peel and crusted with sugar — the garnish AS architecture. The Sidecar and the Margarita are its great-grandchildren.",
   "Improved Whiskey Cocktail":
-    "The 1870s 'improvement' on the original spirit-sugar-bitters formula: add maraschino and absinthe. The name is a fossil of the exact moment cocktails began to evolve — and the drink the Old Fashioned crowd was protesting against.",
+    "The 1870s 'improvement' on the original spirit-sugar-bitters formula: add maraschino and absinthe. The name is a fossil of the exact moment cocktails began to evolve, and the drink the Old Fashioned crowd was protesting against.",
   "Morning Glory Fizz":
-    "A scotch fizz with absinthe and egg white from the 1880s, prescribed unapologetically as breakfast — the era's hangover medicine drawer in a small cold glass. Modern brunch has no idea how tame it is.",
+    "A scotch fizz with absinthe and egg white from the 1880s, prescribed unapologetically as breakfast: the era's hangover medicine drawer in a small cold glass. Modern brunch has no idea how tame it is.",
   "Rattlesnake":
     "The Savoy's rye-absinthe-egg-white sour, with Craddock's immortal footnote: so called because 'it will either cure rattlesnake bite, or kill rattlesnakes, or make you see them.' The best cocktail copy ever written.",
   "Seelbach":
-    "Louisville's 'lost 1917 hotel classic' — bourbon, Cointreau, two full teaspoons of bitters, champagne — was actually invented in 1995 by the hotel's restaurant director, who confessed the hoax in 2016 after decades in respected cocktail books. Now it's famous twice: once as history, once as the craft world's favorite con.",
+    "Louisville's 'lost 1917 hotel classic' (bourbon, Cointreau, two full teaspoons of bitters, champagne) was actually invented in 1995 by the hotel's restaurant director, who confessed the hoax in 2016 after decades in respected cocktail books. Now it's famous twice: once as history, once as the craft world's favorite con.",
   "Boothby":
     "'Cocktail Bill' Boothby of San Francisco is credited with crowning a Manhattan with a champagne float around the turn of the century. It wears his name, but the recipe wasn't printed until 1934, four years after he died, as 'Manhattan, Boothby'. Politician, author, bartender — the champagne was the least of his self-promotion.",
   "Deshler":
@@ -362,13 +362,13 @@ Object.assign(LORE, {
   "Old Pal":
     "Harry MacElhone credited sportswriter William 'Sparrow' Robertson, whose greeting for everyone was 'old pal' — rye, dry vermouth, Campari: the Boulevardier's leaner, drier drinking buddy from the same 1920s Paris barroom.",
   "Pink Lady":
-    "A 1910s gin sour blushed with grenadine and silked with egg white, later burdened by decades of 'ladies' drink' condescension it never deserved — made honestly, it's a Clover Club cousin with applejack backbone in the better specs.",
+    "A 1910s gin sour blushed with grenadine and silked with egg white, later burdened by decades of 'ladies' drink' condescension it never deserved: made honestly, it's a Clover Club cousin with applejack backbone in the better specs.",
   "Corpse Reviver #1":
     "The Savoy's morning drink nobody orders: cognac, calvados and sweet vermouth — Craddock prescribed it 'before 11 a.m., or whenever steam and energy are needed.' The #2 got the fame; the #1 got the authenticity.",
   "Casino":
-    "Old Tom gin with maraschino, orange bitters and lemon — the Aviation's older cousin without the violette, from the 1900s. A reminder that most 'lost classics' are four familiar bottles in an unfamiliar order.",
+    "Old Tom gin with maraschino, orange bitters and lemon, the Aviation's older cousin without the violette, from the 1900s. A reminder that most 'lost classics' are four familiar bottles in an unfamiliar order.",
   "Delmonico":
-    "Named for the New York restaurant that invented American fine dining: gin and cognac splitting the base over both vermouths — a Perfect Martini with a brandy accent, as expense-account as its address.",
+    "Named for the New York restaurant that invented American fine dining: gin and cognac splitting the base over both vermouths, a Perfect Martini with a brandy accent, as expense-account as its address.",
   "Fourth Degree":
     "A heavier Martini variant — gin, both vermouths, absinthe — in print by the 1920s and in Craddock's Savoy. Nobody wrote down why it's called the Fourth Degree; a nod to the Third Degree or to lodge-room degrees is a guess, not a fact.",
 
@@ -378,53 +378,53 @@ Object.assign(LORE, {
   "Greyhound":
     "Vodka (originally gin) and grapefruit juice, in print under this name by 1945, allegedly named for the bus-terminal restaurants that served it. Cheap transit, honest drink.",
   "Salty Dog":
-    "A Greyhound with a salt rim — and the salt is doing real chemistry, taming grapefruit's bitterness rather than seasoning it. The rare garnish that's actually an ingredient.",
+    "A Greyhound with a salt rim, and the salt is doing real chemistry, taming grapefruit's bitterness rather than seasoning it. The rare garnish that's actually an ingredient.",
   "Sea Breeze":
     "Vodka, cranberry and grapefruit : a younger cousin of the Cape Codder. Ocean Spray's postwar push was the 1945 Red Devil, later the Harpoon and then the Cape Codder. The name had been used on an older gin drink. This version turned up in the 1960s, caught on in the 1970s and peaked with the 1990s vodka boom. Ocean Spray did more for vodka highballs than any bartender.",
   "Bay Breeze":
     "The Sea Breeze gone tropical: pineapple replacing grapefruit against the cranberry. Same beach, sweeter postcard.",
   "Cape Codder":
-    "Vodka-cranberry with a lime squeeze, named for the bogs that grew it — the base model of the whole cranberry family and a masterclass in how marketing builds a canon.",
+    "Vodka-cranberry with a lime squeeze, named for the bogs that grew it: the base model of the whole cranberry family and a masterclass in how marketing builds a canon.",
   "Madras":
-    "Vodka, cranberry and orange, named for the bleeding madras plaid its layers resemble — a 1970s preppy uniform in a glass.",
+    "Vodka, cranberry and orange, named for the bleeding madras plaid its layers resemble, a 1970s preppy uniform in a glass.",
   "Screwdriver":
     "Vodka and orange juice, legendarily named for American oil workers in the Persian Gulf stirring it with the nearest tool. It carried vodka through the 1950s the way the Mule carried it through the 40s.",
   "Harvey Wallbanger":
-    "A Screwdriver with a Galliano float, pushed to fame by one of the great 1970s marketing campaigns — a sandal-wearing surfer mascot named Harvey banging into walls. The ad campaign is the origin story; anything earlier is legend.",
+    "A Screwdriver with a Galliano float, pushed to fame by one of the great 1970s marketing campaigns: a sandal-wearing surfer mascot named Harvey banging into walls. The ad campaign is the origin story; anything earlier is legend.",
   "Tequila Sunrise":
     "The modern grenadine-sinking version came from Sausalito's Trident in the early 1970s, went on tour with the Rolling Stones, and got an Eagles song. The original 1930s Agua Caliente version was tequila, lime, grenadine and a touch of crème de cassis, lengthened with soda, with no orange juice at all. Two sunrises, same tequila.",
   "Long Island Iced Tea":
     "Robert 'Rosebud' Butt claims he invented it for a 1972 contest at the Oak Beach Inn on Long Island; a rival story credits a Tennessee community called Long Island in the 1920s. Either way: five white spirits conspiring to taste like iced tea, and the most efficient drink in the book at what it does.",
   "Whiskey Highball":
-    "The 1890s drink that named the entire category — whiskey and soda in a tall glass, possibly named for the railroad ball signal for 'proceed at speed.' Japan later perfected it into a ritual of ice, ratio and reverence; the drink rewards that respect.",
+    "The 1890s drink that named the entire category: whiskey and soda in a tall glass, possibly named for the railroad ball signal for 'proceed at speed.' Japan later perfected it into a ritual of ice, ratio and reverence; the drink rewards that respect.",
   "Presbyterian":
-    "Whiskey with ginger ale AND soda splitting the top — drier than a ginger highball, named (the joke goes) for drinkers who wanted their whiskey with plausible moderation.",
+    "Whiskey with ginger ale AND soda splitting the top, drier than a ginger highball, named (the joke goes) for drinkers who wanted their whiskey with plausible moderation.",
   "Horse's Neck":
-    "The whole lemon peel cut in one unbroken spiral, hooked over the rim like its namesake — originally a soft drink, whiskey climbed in around 1910. The garnish IS the drink's identity; everything else is brandy (or bourbon) and ginger ale.",
+    "The whole lemon peel cut in one unbroken spiral, hooked over the rim like its namesake. Originally a soft drink, whiskey climbed in around 1910. The garnish IS the drink's identity; everything else is brandy (or bourbon) and ginger ale.",
   "Mamie Taylor":
-    "Scotch, lime and ginger beer, a smash hit of 1899 named for a Broadway soprano — briefly as famous as she was, then forgotten with her. The Moscow Mule is this drink wearing vodka's postwar suit.",
+    "Scotch, lime and ginger beer, a smash hit of 1899 named for a Broadway soprano: briefly as famous as she was, then forgotten with her. The Moscow Mule is this drink wearing vodka's postwar suit.",
   "El Diablo":
     "Trader Vic, 1940s: tequila and crème de cassis under ginger beer and lime — devil-red and one of the first respectable tequila drinks in print. Vic got there twenty years before the margarita boom.",
   "Gin Rickey":
     "Shoomaker's bar, Washington D.C., 1880s, named for lobbyist 'Colonel' Joe Rickey — who drank his with bourbon and famously despised sugar in drinks. Gin took over the spec: lime, soda, no sweetener, no apologies — the driest drink in the canon.",
   "Ranch Water":
-    "West Texas folk spec: blanco tequila, lime, and Topo Chico — ideally drunk from the Topo bottle with a swallow poured out to make room. It resisted attribution for decades because nobody in Far West Texas thought it needed a name.",
+    "West Texas folk spec: blanco tequila, lime, and Topo Chico: ideally drunk from the Topo bottle with a swallow poured out to make room. It resisted attribution for decades because nobody in Far West Texas thought it needed a name.",
   "Batanga":
     "Don Javier Delgado Corona poured it at La Capilla in Tequila town from 1961: tequila, Coke, lime, salt rim — stirred with the same knife he cut limes with, which regulars swore was the actual secret ingredient. The most beloved dive-bar spec in Mexico.",
   "Hugo Spritz":
     "Roland Gruber, a South Tyrolean bartender, invented it in 2005 with lemon balm syrup, prosecco, mint and soda — elderflower took over when the lemon balm proved hard to source, and he reportedly almost named it Otto. It conquered the Alps, then the Aperol-fatigued world.",
   "Limoncello Spritz":
-    "The Amalfi lemon liqueur lengthened with prosecco and soda — a spritz that tastes like the postcard looks. Serve it very cold; limoncello warm is a different and worse drink.",
+    "The Amalfi lemon liqueur lengthened with prosecco and soda, a spritz that tastes like the postcard looks. Serve it very cold; limoncello warm is a different and worse drink.",
   "Negroni Sbagliato":
     "Bar Basso, Milan, around 1970 (1972 is the usual date, some say 1968): the house story is that Mirko Stocchetto reached for the gin and grabbed sparkling wine instead. 'Sbagliato' means 'mistaken.' His son Maurizio says it was no mistake, just a great name, so tell the accident as legend. Either way it became the house drink, and fifty years later a viral video made it the world's mistake too.",
   "Tinto de Verano":
-    "Spain's actual summer drink while tourists order sangria: red wine and lemon soda over ice. 'Summer red wine' — the name is the recipe, and the humility is the point.",
+    "Spain's actual summer drink while tourists order sangria: red wine and lemon soda over ice. 'Summer red wine': the name is the recipe, and the humility is the point.",
   "Kalimotxo":
     "Basque country, famously codified at a 1972 fiesta in Algorta when the wine turned out bad and cola hid the evidence: half red wine, half cola, over ice. It sounds like vandalism and drinks like a secret.",
   "Michelada":
     "Mexico's beer cocktail — lime, salt, hot sauce and often clamato in the beer — with an origin claimed by (among others) a San Luis Potosí sports club member named Michel. 'Mi chela helada': my cold beer. The cure and the party in one glass.",
   "Shandy":
-    "Beer and lemonade (or ginger beer — the Victorian 'shandygaff'), the drinking world's oldest compromise between refreshment and responsibility. Germany's Radler — 'cyclist' — was allegedly invented for thirsty riders; every culture reinvents the compromise because every culture needs it.",
+    "Beer and lemonade (or ginger beer, the Victorian 'shandygaff'), the drinking world's oldest compromise between refreshment and responsibility. Germany's Radler ('cyclist') was allegedly invented for thirsty riders; every culture reinvents the compromise because every culture needs it.",
   "Pimm's Cup":
     "James Pimm's 1840s London oyster-house digestif became the drink of English summer — the No. 1 gin cup under lemonade with a garden of cucumber, strawberry and mint. New Orleans's Napoleon House adopted it and made it a Creole institution; both cities claim the ideal pour.",
   "Bellini":
@@ -436,49 +436,49 @@ Object.assign(LORE, {
   "Death in the Afternoon":
     "Hemingway's contribution to a 1935 celebrity cocktail book: absinthe topped with champagne, with instructions to 'drink three to five of these slowly' — advice no one should take from Hemingway. Named for his bullfighting book; drinks like the six o'clock shadow of one.",
   "Kamikaze":
-    "Vodka, triple sec and lime in equal parts — the 1970s disco-era shot-and-cocktail that is, structurally, a vodka Margarita nobody salutes. Made fresh and cold it's honestly good, which surprises everyone involved.",
+    "Vodka, triple sec and lime in equal parts: the 1970s disco-era shot-and-cocktail that is, structurally, a vodka Margarita nobody salutes. Made fresh and cold it's honestly good, which surprises everyone involved.",
   "Lemon Drop":
     "Norman Hobday's fern-bar San Francisco creation of the 1970s: vodka, fresh lemon and sugar with a sugared rim — the sour rebuilt for the vodka age. The candy came later; the drink was always better than its reputation.",
   "Green Tea Shot":
-    "Contains no green tea: Jameson, peach schnapps, sour and a splash of lemon-lime — an American bar call that took off in the early 2010s, named for its color. It is poured with Jameson by habit, but no brand campaign is on record behind it. The bar's most successful bait-and-switch since the Monkey Gland.",
+    "Contains no green tea: Jameson, peach schnapps, sour and a splash of lemon-lime, an American bar call that took off in the early 2010s, named for its color. It is poured with Jameson by habit, but no brand campaign is on record behind it. The bar's most successful bait-and-switch since the Monkey Gland.",
   "Sex on the Beach":
-    "The peach-schnapps boom of the 1980s produced it — vodka, peach, orange and cranberry — and spring break named it. A drink engineered to be ordered out loud, which was always the actual product.",
+    "The peach-schnapps boom of the 1980s produced it (vodka, peach, orange and cranberry) and spring break named it. A drink engineered to be ordered out loud, which was always the actual product.",
   "Fuzzy Navel":
-    "Peach schnapps and orange juice, coined in the mid-1980s when DeKuyper's Peachtree launched — the 'fuzzy' is the peach, the 'navel' the orange, and the name did more sales work than the recipe.",
+    "Peach schnapps and orange juice, coined in the mid-1980s when DeKuyper's Peachtree launched: the 'fuzzy' is the peach, the 'navel' the orange, and the name did more sales work than the recipe.",
   "Blue Lagoon":
     "Andy MacElhone — Harry's son — at Harry's New York Bar, sometime in the 1960s or in 1972 (accounts differ), just as blue curaçao, bottled since the 1920s, was finally having its moment. His is recorded as a frozen drink blended with ice; nobody claims the simple built vodka-and-lemonade version poured today. The dynasty's second act went technicolor.",
   "Midori Sour":
-    "Midori launched at Studio 54 in 1978 — the melon liqueur's electric green was disco lighting in a bottle — and the sour became its vehicle. Fresh lemon rescues it from the sour-mix decades; the color needs no rescue.",
+    "Midori launched at Studio 54 in 1978, the melon liqueur's electric green was disco lighting in a bottle, and the sour became its vehicle. Fresh lemon rescues it from the sour-mix decades; the color needs no rescue.",
   "Kentucky Mule":
     "The Moscow Mule's bourbon passport: whiskey warms what vodka left neutral, and the ginger bites back. Same copper mug, better conversation.",
   "Mexican Mule":
-    "Tequila in the mule's saddle — agave and ginger being natural allies. Add a pinch of salt and it converses with the Paloma across the bar.",
+    "Tequila in the mule's saddle: agave and ginger being natural allies. Add a pinch of salt and it converses with the Paloma across the bar.",
   "Irish Mule":
-    "The mule ridden by Irish whiskey — soft, cereal-sweet, and the gentlest of the mule family. A gateway ginger drink for the whiskey-shy.",
+    "The mule ridden by Irish whiskey: soft, cereal-sweet, and the gentlest of the mule family. A gateway ginger drink for the whiskey-shy.",
   "Gin Buck":
-    "The buck — spirit, citrus, ginger — predates the Mule by decades; the gin version was Prohibition's friend because ginger ale forgave bathtub gin almost anything. The Mule is just this drink with better postwar marketing.",
+    "The buck (spirit, citrus, ginger) predates the Mule by decades; the gin version was Prohibition's friend because ginger ale forgave bathtub gin almost anything. The Mule is just this drink with better postwar marketing.",
   "John Collins":
     "Today it's the Tom Collins's whiskey brother, but the name is the older one: the first Collins, credited to John Collins, headwaiter at Limmer's in London, was a gin drink, and whiskey took the name later in America. How John became Tom is disputed. Old Tom gin is one story, and the 1874 'Tom Collins' hoax is another. Bourbon, lemon, sugar, soda: a sour with its collar open.",
   "Whiskey Ginger":
-    "The two-ingredient handshake of every neighborhood bar — whiskey and ginger ale doing more work with less ceremony than half the canon. The upgrade path is real ginger beer and a real lime.",
+    "The two-ingredient handshake of every neighborhood bar: whiskey and ginger ale doing more work with less ceremony than half the canon. The upgrade path is real ginger beer and a real lime.",
   "Chelada":
-    "The michelada's minimalist parent: cold beer, fresh lime, salt — Mexico's argument that a beer cocktail needs exactly three moves. On a hot day it needs none of your improvements.",
+    "The michelada's minimalist parent: cold beer, fresh lime, salt, Mexico's argument that a beer cocktail needs exactly three moves. On a hot day it needs none of your improvements.",
   "Adios":
-    "Also answering to AMF: the Long Island's electric-blue cousin — four white spirits and blue curaçao under lemon-lime soda. The name is the drink's honest assessment of your evening.",
+    "Also answering to AMF: the Long Island's electric-blue cousin: four white spirits and blue curaçao under lemon-lime soda. The name is the drink's honest assessment of your evening.",
 
   /* ---- Dessert, Hot & After-Dinner ---- */
   "Grasshopper":
     "Tujague's, New Orleans, says owner Philibert Guichet created it and took second place with it at a New York cocktail contest around 1918, but no record of that contest has turned up. The name and the pairing are older: Boothby's World's Drinks (1908) prints a layered Grasshopper of menthe and cacao, credited to Harry O'Brien of San Francisco's Palace Hotel. Who first shook it with cream is unknown. Today's drink is green crème de menthe, white cacao and cream. It became the after-dinner drink of the American mid-century and never left the Gulf South's banquet halls.",
   "Golden Cadillac":
-    "Poor Red's, a tiny gold-country roadhouse in El Dorado, California, 1952 — legend says a couple celebrating a new gold Cadillac asked for a drink to match: Galliano, white cacao, cream. The bar still sells more Galliano than almost anywhere in America.",
+    "Poor Red's, a tiny gold-country roadhouse in El Dorado, California, 1952: legend says a couple celebrating a new gold Cadillac asked for a drink to match: Galliano, white cacao, cream. The bar still sells more Galliano than almost anywhere in America.",
   "Pink Squirrel":
-    "Bryant's Cocktail Lounge, Milwaukee — crème de noyaux (the pink, almond-flavored one) with white cacao and cream. Wisconsin kept the flame for the ice-cream-drink tradition; this is its blushing standard-bearer.",
+    "Bryant's Cocktail Lounge, Milwaukee: crème de noyaux (the pink, almond-flavored one) with white cacao and cream. Wisconsin kept the flame for the ice-cream-drink tradition; this is its blushing standard-bearer.",
   "Brandy Milk Punch":
-    "New Orleans's breakfast tipple with 18th-century roots: brandy shaken with milk, sugar and vanilla, nutmeg over the top — the unclarified, immediate cousin of the clarified antique. Brennan's pours them like coffee.",
+    "New Orleans's breakfast tipple with 18th-century roots: brandy shaken with milk, sugar and vanilla, nutmeg over the top: the unclarified, immediate cousin of the clarified antique. Brennan's pours them like coffee.",
   "Mudslide":
-    "The Wreck Bar on Grand Cayman, 1970s: vodka, coffee liqueur and Irish cream — a Black Russian that ordered dessert. The blender found it later and never gave it back.",
+    "The Wreck Bar on Grand Cayman, 1970s: vodka, coffee liqueur and Irish cream, a Black Russian that ordered dessert. The blender found it later and never gave it back.",
   "Toasted Almond":
-    "Amaretto, coffee liqueur and cream — the suburban after-dinner standard of the 1970s cordial boom. Add vodka and it's 'roasted'; either way it's pie in a rocks glass.",
+    "Amaretto, coffee liqueur and cream, the suburban after-dinner standard of the 1970s cordial boom. Add vodka and it's 'roasted'; either way it's pie in a rocks glass.",
   "Black Russian":
     "Gustave Tops at Brussels's Hôtel Métropole, 1949, built it for Perle Mesta, the American ambassador to Luxembourg famed as Washington's 'hostess with the mostest': vodka and coffee liqueur, named for the color and the spirit's supposed homeland. Cream came along in the 1960s and stole the fame — but the parent drink is the cleaner nightcap.",
   "Bushwacker":
@@ -490,49 +490,49 @@ Object.assign(LORE, {
   "Godfather":
     "Scotch and amaretto, surfacing in the early 1970s with a name riding the Coppola wave — marketing claimed it was Marlon Brando's drink, a claim exactly as verifiable as it sounds. The formula works regardless of the cinema.",
   "Godmother":
-    "The Godfather with vodka in the scotch's chair — smoother, quieter, and arguably more dangerous, like the title suggests.",
+    "The Godfather with vodka in the scotch's chair: smoother, quieter, and arguably more dangerous, like the title suggests.",
   "French Connection":
-    "Cognac and amaretto, named for the 1971 film — the Godfather's formula with a French passport. Two bottles, one glass, zero technique: the whole after-dinner genre in miniature.",
+    "Cognac and amaretto, named for the 1971 film, the Godfather's formula with a French passport. Two bottles, one glass, zero technique: the whole after-dinner genre in miniature.",
   "Chocolate Martini":
-    "A 1990s martini-glass-era invention — vodka and chocolate liqueur dressed in cocktail clothes. The craft world sneered for twenty years, then quietly admitted that made with good cacao liqueur and cream it's a Brandy Alexander with a stage name.",
+    "A 1990s martini-glass-era invention: vodka and chocolate liqueur dressed in cocktail clothes. The craft world sneered for twenty years, then quietly admitted that made with good cacao liqueur and cream it's a Brandy Alexander with a stage name.",
   "Sgroppino":
     "Venice's palate-cleanser-turned-cocktail: lemon sorbet whisked loose with prosecco and a little vodka until it pours like sea foam. Traditionally served between courses; universally finished before the next one arrives.",
   "Spanish Coffee":
     "Huber's Café in Portland, Oregon made it a table-side ritual: a sugared-rim glass, 151 flamed to caramelize the rim, coffee liqueur, coffee, whipped cream. The show is mandatory; Huber's burns through more Kahlúa than any account in the country.",
   "Mexican Coffee":
-    "Coffee with tequila or Kahlúa (usually both), sugar and cream — the border cantina's answer to the Irish original. The tequila's earthiness against coffee is an underrated pairing the coffee-cocktail revival keeps rediscovering.",
+    "Coffee with tequila or Kahlúa (usually both), sugar and cream: the border cantina's answer to the Irish original. The tequila's earthiness against coffee is an underrated pairing the coffee-cocktail revival keeps rediscovering.",
   "Keoke Coffee":
     "George 'Keoke' Bullington's San Diego creation from the 1960s: brandy, Kahlúa and dark cacao in hot coffee — 'Keoke' being George in Hawaiian. A steakhouse standard wherever red booths survive.",
   "Hot Buttered Rum":
-    "Colonial America's winter medicine — rum, butter, sugar and spice in hot water, descended from England's buttered ales. The butter is the point: it rounds the rum and coats the throat, which 1700s medicine counted as a cure.",
+    "Colonial America's winter medicine: rum, butter, sugar and spice in hot water, descended from England's buttered ales. The butter is the point: it rounds the rum and coats the throat, which 1700s medicine counted as a cure.",
   "Tom & Jerry":
     "Eggnog's frothier cousin, served hot from its own named punch bowl — attributed variously to 1820s London journalist Pierce Egan (whose characters were named Tom and Jerry) and, inevitably, to Jerry Thomas. Wisconsin and Minnesota never stopped making it; every December the bowls come down.",
   "Eggnog":
     "Descended from the medieval posset through colonial planters with surplus eggs, dairy and rum — a ferociously strong house recipe attributed to George Washington still circulates, and it is stronger than yours. Aging it for weeks (safely, high-proof) transforms it; the carton version is a rumor of the real thing.",
   "Coquito":
-    "Puerto Rico's Christmas gift: coconut cream and condensed milk with rum and cinnamon, no eggs in most family specs — and every family's spec is the correct one. Bottles get gifted, hoarded, and judged across generations.",
+    "Puerto Rico's Christmas gift: coconut cream and condensed milk with rum and cinnamon, no eggs in most family specs, and every family's spec is the correct one. Bottles get gifted, hoarded, and judged across generations.",
   "Mulled Wine":
-    "Wine heated with spice and citrus — the Romans wrote recipes (conditum), the Victorians codified it, Scandinavia perfected it as glögg with almonds and raisins in the cup. Never boil it; you're warming a drink, not cooking off your investment.",
+    "Wine heated with spice and citrus: the Romans wrote recipes (conditum), the Victorians codified it, Scandinavia perfected it as glögg with almonds and raisins in the cup. Never boil it; you're warming a drink, not cooking off your investment.",
   "Café Brûlot":
     "Antoine's, New Orleans, circa 1890: brandy, spices and a full orange peel studded with cloves, flamed table-side in a special bowl, then doused with coffee — Jules Alciatore's theater, by the house's own account. The story that it hid the brandy during Prohibition is legend: without the spirit there is nothing to flame. The most dramatic legal thing you can order in the French Quarter.",
   "Sherry Flip":
-    "A whole egg shaken with sherry and sugar, nutmeg over — the flip family's gentlest member, once prescribed to invalids and now the bar's best-kept low-proof secret. Oloroso makes it taste like liquid flan.",
+    "A whole egg shaken with sherry and sugar, nutmeg over, the flip family's gentlest member, once prescribed to invalids and now the bar's best-kept low-proof secret. Oloroso makes it taste like liquid flan.",
   "Porto Flip":
     "Jerry Thomas's 1887 Bar-Tender's Guide, published after his death, printed it as the Coffee Cocktail, named for its color since there's no coffee in it: port, a pony of brandy, a whole egg. The Porto Flip name came later. It's dessert, protein shake and nightcap in one Victorian gesture. Ruby port for fruit, tawny for caramel; either way, grate the nutmeg fresh.",
   "Alexander":
-    "The original was GIN — cacao and cream over London dry, circa 1915 — before brandy took the name and the fame. The gin version drinks like chocolate botanicals and deserves its slow rediscovery.",
+    "The original was GIN (cacao and cream over London dry, circa 1915) before brandy took the name and the fame. The gin version drinks like chocolate botanicals and deserves its slow rediscovery.",
   "Velvet Hammer":
-    "Cointreau, cacao and cream — the late-1960s cordial-lounge special whose name promises exactly what it delivers: soft impact, delayed consequences.",
+    "Cointreau, cacao and cream: the late-1960s cordial-lounge special whose name promises exactly what it delivers: soft impact, delayed consequences.",
   "Dirty Banana":
-    "The Caribbean resort blender standard: rum, banana, coffee liqueur and cream — Jamaica's poolside answer to the Mudslide. Fresh banana or nothing; the liqueur alone is a confession.",
+    "The Caribbean resort blender standard: rum, banana, coffee liqueur and cream, Jamaica's poolside answer to the Mudslide. Fresh banana or nothing; the liqueur alone is a confession.",
   "Nutty Irishman":
-    "Frangelico and Baileys — hazelnut meets Irish cream, in coffee or over ice. The 1980s liqueur boom's most durable two-bottle handshake.",
+    "Frangelico and Baileys: hazelnut meets Irish cream, in coffee or over ice. The 1980s liqueur boom's most durable two-bottle handshake.",
   "Snowball":
-    "Advocaat — Dutch egg liqueur — with sparkling lemonade and a squeeze of lime: Britain's retro Christmas glass, mocked for decades and revived with sincere affection. It tastes like custard learned to fizz.",
+    "Advocaat, Dutch egg liqueur, with sparkling lemonade and a squeeze of lime: Britain's retro Christmas glass, mocked for decades and revived with sincere affection. It tastes like custard learned to fizz.",
   "Ferrari":
-    "Fernet-Branca and Campari, equal parts — the name is the brand portmanteau, the drink is the industry's bitter secret handshake in shot form. Italian engineering: no sugar added, none survives.",
+    "Fernet-Branca and Campari, equal parts: the name is the brand portmanteau, the drink is the industry's bitter secret handshake in shot form. Italian engineering: no sugar added, none survives.",
   "Brave Bull":
-    "Tequila under coffee liqueur — a Black Russian gone to Jalisco, on record since the 1950s. Add cream and it's a White Bull; add nothing and respect the name.",
+    "Tequila under coffee liqueur: a Black Russian gone to Jalisco, on record since the 1950s. Add cream and it's a White Bull; add nothing and respect the name.",
 
   /* ---- Drinks of the World ---- */
   "Caesar":
@@ -540,81 +540,81 @@ Object.assign(LORE, {
   "Toronto":
     "Fernet-Branca and rye with sugar and bitters — recorded by Robert Vermeire in 1922 as popular with 'the Canadians of Toronto.' The city took a century to notice it owns a classic; the fernet drinkers always knew.",
   "Brandy Old Fashioned":
-    "Wisconsin consumes more brandy than nearly anywhere on earth — a legacy, the story goes, of German settlers and an 1893 World's Fair Korbel stand — and its supper clubs muddle fruit into a Brandy Old Fashioned as the state cocktail. Order it 'sweet' (7-Up) or 'sour' (Squirt); those are the official dialects.",
+    "Wisconsin consumes more brandy than nearly anywhere on earth (a legacy, the story goes, of German settlers and an 1893 World's Fair Korbel stand) and its supper clubs muddle fruit into a Brandy Old Fashioned as the state cocktail. Order it 'sweet' (7-Up) or 'sour' (Squirt); those are the official dialects.",
   "Pisco Punch":
     "Duncan Nicol's legendary pour at San Francisco's Bank Exchange saloon — pisco, pineapple, lemon and a secret (gum arabic, probably more) he took to his grave in 1926, closing the recipe with Prohibition. Rudyard Kipling praised a San Francisco punch 'compounded of the shavings of cherubs' wings' — words near-universally taken to mean Nicol's. We reconstruct; we don't replicate.",
   "Chilcano":
-    "Peru's everyday pisco highball — pisco, lime, ginger ale, bitters — named, the story goes, for a restorative fish broth of similar powers. The Pisco Sour is for visitors; the Chilcano is for Tuesdays.",
+    "Peru's everyday pisco highball (pisco, lime, ginger ale, bitters) named, the story goes, for a restorative fish broth of similar powers. The Pisco Sour is for visitors; the Chilcano is for Tuesdays.",
   "Piscola":
-    "Chile's national reflex: pisco and Coca-Cola, mixed to personal ratio, no further instructions. The drink is a unit of social measurement — parties are planned in piscolas.",
+    "Chile's national reflex: pisco and Coca-Cola, mixed to personal ratio, no further instructions. The drink is a unit of social measurement: parties are planned in piscolas.",
   "Terremoto":
-    "Chile again: sweet young pipeño wine with a scoop of pineapple ice cream and a grenadine bleed — named 'earthquake' after the 1985 quake, when a shaken visitor to El Hoyo reportedly declared the drink hit harder. The refill, half-size, is called the aftershock.",
+    "Chile again: sweet young pipeño wine with a scoop of pineapple ice cream and a grenadine bleed: named 'earthquake' after the 1985 quake, when a shaken visitor to El Hoyo reportedly declared the drink hit harder. The refill, half-size, is called the aftershock.",
   "Caipiroska":
-    "The Caipirinha with vodka standing in for cachaça — Brazil's concession to the international well, muddled the same, forgiven locally on hot enough days.",
+    "The Caipirinha with vodka standing in for cachaça: Brazil's concession to the international well, muddled the same, forgiven locally on hot enough days.",
   "Batida":
-    "Brazil's beach-shack blender family: cachaça whipped with fruit — passion fruit, coconut, lime — and often condensed milk. 'Batida' means 'shaken' or 'beaten'; the coconut version is a national institution.",
+    "Brazil's beach-shack blender family: cachaça whipped with fruit (passion fruit, coconut, lime) and often condensed milk. 'Batida' means 'shaken' or 'beaten'; the coconut version is a national institution.",
   "Rabo de Galo":
-    "Brazil's 'rooster's tail' — literally 'cocktail' translated: cachaça stirred with sweet vermouth or Cynar, the working man's Manhattan, born when vermouth salesmen met cachaça counters in the 1950s. São Paulo's bar scene has lately dressed it up with pride.",
+    "Brazil's 'rooster's tail', literally 'cocktail' translated: cachaça stirred with sweet vermouth or Cynar, the working man's Manhattan, born when vermouth salesmen met cachaça counters in the 1950s. São Paulo's bar scene has lately dressed it up with pride.",
   "Fernet con Coca":
-    "Argentina — especially Córdoba — drinks most of the world's Fernet-Branca, nearly all of it in this: fernet over Coke in a cut-down bottle or tall glass. Nicknamed 'Fernandito,' it is less a cocktail than a citizenship requirement.",
+    "Argentina, especially Córdoba, drinks most of the world's Fernet-Branca, nearly all of it in this: fernet over Coke in a cut-down bottle or tall glass. Nicknamed 'Fernandito,' it is less a cocktail than a citizenship requirement.",
   "Carajillo":
-    "Spain spikes espresso with brandy; Mexico rebuilt it on Licor 43 over ice and made it the after-dinner drink of the 2010s. The folk etymology — soldiers taking coffee with 'coraje' (courage) — is unproven and universally repeated, as the best etymologies are.",
+    "Spain spikes espresso with brandy; Mexico rebuilt it on Licor 43 over ice and made it the after-dinner drink of the 2010s. The folk etymology, soldiers taking coffee with 'coraje' (courage), is unproven and universally repeated, as the best etymologies are.",
   "Cantarito":
-    "Jalisco's roadside citrus tequila cooler — orange, lime and grapefruit with grapefruit soda and salt — served in a clay cantarito jug that keeps it cold and tastes faintly of rain. The clay is not optional; the clay is the drink.",
+    "Jalisco's roadside citrus tequila cooler (orange, lime and grapefruit with grapefruit soda and salt) served in a clay cantarito jug that keeps it cold and tastes faintly of rain. The clay is not optional; the clay is the drink.",
   "Vampiro":
-    "Tequila with sangrita's spicy tomato-citrus blood and grapefruit soda — Mexico's brunch-red highball, named for what it looks like it drank. Roadside stands sell it in plastic bags with a straw, which is the correct format.",
+    "Tequila with sangrita's spicy tomato-citrus blood and grapefruit soda, Mexico's brunch-red highball, named for what it looks like it drank. Roadside stands sell it in plastic bags with a straw, which is the correct format.",
   "Mexican Firing Squad":
     "Charles H. Baker found it at a Mexico City bar in the 1930s and wrote it into The Gentleman's Companion: tequila, lime, grenadine and bitters — a margarita that chose bitters over orange liqueur. Baker's souvenir became a craft-era darling.",
   "Rebujito":
-    "Andalusia's feria fuel: dry fino or manzanilla sherry lengthened with lemon-lime soda over ice, drunk by the pitcher through week-long fairs. Bone-dry sherry plus sweet soda equals dangerous sessionability — which is the entire design brief.",
+    "Andalusia's feria fuel: dry fino or manzanilla sherry lengthened with lemon-lime soda over ice, drunk by the pitcher through week-long fairs. Bone-dry sherry plus sweet soda equals dangerous sessionability, which is the entire design brief.",
   "Agua de Valencia":
     "Café Madrid, Valencia, 1959: Constante Gil answered regulars bored of ordering 'Agua de Bilbao' — the house's best cava — with cava, gin, vodka and fresh Valencian orange juice. Served by the pitcher, named like a soft drink, built like a delegation of regrets.",
   "Sangria":
-    "Iberian wine punch as old as watered wine itself — 'sangría' for the blood-red color — codified for Americans at the 1964 World's Fair Spanish pavilion. The rule every tourist bar breaks: good enough wine, real fruit, and hours of rest before the first pour.",
+    "Iberian wine punch as old as watered wine itself, 'sangría' for the blood-red color, codified for Americans at the 1964 World's Fair Spanish pavilion. The rule every tourist bar breaks: good enough wine, real fruit, and hours of rest before the first pour.",
   "Ti' Punch":
-    "Martinique's ritual: rhum agricole, a coin of lime, a spoon of cane syrup, no ice in the traditional order — assembled by the drinker, because 'chacun prépare sa propre mort': each prepares his own death. The French islands' entire philosophy in a four-ounce glass.",
+    "Martinique's ritual: rhum agricole, a coin of lime, a spoon of cane syrup, no ice in the traditional order: assembled by the drinker, because 'chacun prépare sa propre mort': each prepares his own death. The French islands' entire philosophy in a four-ounce glass.",
   "Jamaican Rum Punch":
-    "The island's standing rhyme made liquid — one of sour, two of sweet, three of strong, four of weak — with Wray & Nephew doing the strong's work and every bar's 'weak' a house secret. Punch as folk memory.",
+    "The island's standing rhyme made liquid (one of sour, two of sweet, three of strong, four of weak) with Wray & Nephew doing the strong's work and every bar's 'weak' a house secret. Punch as folk memory.",
   "Canchánchara":
     "Cuba's independence-war field ration, as tradition tells it: aguardiente, honey, lime, drunk by mambí guerrillas in the east. Now served to visitors in clay cups in Trinidad, the town that revived it and claims it. History you can order.",
   "Wray & Ting":
-    "Jamaica's national shorthand: overproof Wray & Nephew white rum and Ting grapefruit soda. Two brand names, one drink, no recipe card required — the island's hi-hat in a glass.",
+    "Jamaica's national shorthand: overproof Wray & Nephew white rum and Ting grapefruit soda. Two brand names, one drink, no recipe card required, the island's hi-hat in a glass.",
   "Chu-Hai":
-    "Japan's shochu highball — the name contracts 'shochu highball' — canned in a hundred flavors and poured fresh in izakayas with real fruit. The lemon sour version is practically a food group in Tokyo.",
+    "Japan's shochu highball, the name contracts 'shochu highball', canned in a hundred flavors and poured fresh in izakayas with real fruit. The lemon sour version is practically a food group in Tokyo.",
   "Somaek":
     "Korea's arithmetic: soju + maekju (beer), poured to personal ratio, often to a chanted count, sometimes bombed glass-into-glass. Less a recipe than a team-building exercise.",
   "Snakebite":
-    "Half lager, half cider — a British student institution with a folk reputation for chaos so strong some pubs refuse to pour it. With a blackcurrant dash it becomes the Snakebite & Black, which changes the color and nothing else about the outcome.",
+    "Half lager, half cider: a British student institution with a folk reputation for chaos so strong some pubs refuse to pour it. With a blackcurrant dash it becomes the Snakebite & Black, which changes the color and nothing else about the outcome.",
   "Suze Tonic":
     "France's gentian aperitif — Picasso painted the bottle — lengthened with tonic: two kinds of bitterness agreeing beautifully. The alpine root does what Campari does, but in yellow and in French.",
   "Pastis":
     "Marseille's anise ritual, grown out of the anise drinks that filled the gap after the 1915 absinthe ban, and named in 1932 when Paul Ricard sold his as 'the real pastis of Marseille': one part pastis, five parts cold water, poured table-side as it louches to cloud. The dilution is the ceremony; the afternoon is the point.",
   "Lemon Sour":
-    "The izakaya standard: shochu, fresh lemon, soda — Japan's working answer to the highball, often with a frozen lemon half in the glass. Tokyo bars compete on lemon prep the way New Orleans competes on Sazeracs.",
+    "The izakaya standard: shochu, fresh lemon, soda, Japan's working answer to the highball, often with a frozen lemon half in the glass. Tokyo bars compete on lemon prep the way New Orleans competes on Sazeracs.",
   "Porto Tónico":
-    "Portugal's summer correction to port's stuffy reputation: white port and tonic with a citrus twist — the Douro's answer to the spritz, drunk by the river that grew it.",
+    "Portugal's summer correction to port's stuffy reputation: white port and tonic with a citrus twist, the Douro's answer to the spritz, drunk by the river that grew it.",
   "Caribou":
-    "Québec's winter carnival blood-warmer: red wine fortified with whisky and maple — descended, legend insists, from voyageurs cutting caribou blood with alcohol. Sold by the plastic cane-full at Carnaval; regretted by the same measure.",
+    "Québec's winter carnival blood-warmer: red wine fortified with whisky and maple, descended, legend insists, from voyageurs cutting caribou blood with alcohol. Sold by the plastic cane-full at Carnaval; regretted by the same measure.",
   "Bicicletta":
-    "Campari and dry white wine with a soda splash — named, the Italians say, for the old men who wobble home on bicycles after a few. The spritz's drier, more honest uncle.",
+    "Campari and dry white wine with a soda splash, named, the Italians say, for the old men who wobble home on bicycles after a few. The spritz's drier, more honest uncle.",
   "Guinness Punch":
-    "Jamaica's stout tradition: Guinness blended with condensed milk, vanilla and nutmeg into something between a flip and a milkshake — the island's Sunday-afternoon institution, no eggs required.",
+    "Jamaica's stout tradition: Guinness blended with condensed milk, vanilla and nutmeg into something between a flip and a milkshake, the island's Sunday-afternoon institution, no eggs required.",
   "Tatanka":
-    "Poland's bison-grass signature: Żubrówka vodka and apple juice — the grass's coumarin vanilla against orchard sweetness. Also answers to 'szarlotka,' the apple pie, which is exactly what it tastes like.",
+    "Poland's bison-grass signature: Żubrówka vodka and apple juice, the grass's coumarin vanilla against orchard sweetness. Also answers to 'szarlotka,' the apple pie, which is exactly what it tastes like.",
   "Bombardino":
-    "The Italian Alps' ski-hut depth charge: hot advocaat-style egg liqueur with brandy under whipped cream — named, the story goes, when a customer cried 'it's a bomb!' Après-ski in its purest form.",
+    "The Italian Alps' ski-hut depth charge: hot advocaat-style egg liqueur with brandy under whipped cream: named, the story goes, when a customer cried 'it's a bomb!' Après-ski in its purest form.",
   "Caffè Corretto":
-    "Espresso 'corrected' with a shot of grappa or sambuca — the Italian bar's deadpan masterpiece of naming. The coffee was never wrong; the correction is philosophical.",
+    "Espresso 'corrected' with a shot of grappa or sambuca, the Italian bar's deadpan masterpiece of naming. The coffee was never wrong; the correction is philosophical.",
   "Rosita":
     "The tequila Negroni with both vermouths and a bitters dash — an obscure 1970s spec that Gaz Regan pulled back into print, after which the craft era adopted it as agave's answer to the stirred-and-bitter question.",
   "Bloody Maria":
     "The Bloody Mary's Mexican passport: tequila under the tomato, where the vegetal agave actually argues better with the spice than vodka ever did. Sangrita, the chile-spiked chaser from 1920s Lake Chapala, got there first.",
   "Charro Negro":
-    "Tequila, Coke and lime with a salted rim — Mexico's black-clad horseman version of the Batanga family. The salt is what separates it from a mere mixed drink; small moves, real difference.",
+    "Tequila, Coke and lime with a salted rim: Mexico's black-clad horseman version of the Batanga family. The salt is what separates it from a mere mixed drink; small moves, real difference.",
   "Rossini":
-    "The Bellini's strawberry sibling from the same Venetian family of sparklers named for Italian masters — purée and prosecco, this one for the man who wrote The Barber of Seville. Strawberries in season or don't bother.",
+    "The Bellini's strawberry sibling from the same Venetian family of sparklers named for Italian masters: purée and prosecco, this one for the man who wrote The Barber of Seville. Strawberries in season or don't bother.",
   "Chuflay":
-    "Bolivia's national highball: singani — the country's aromatic grape brandy — with ginger ale and lime. The name allegedly descends from the English railway builders' 'short fly', slang for a temporary track laid around an obstacle; the drink outlasted the railways.",
+    "Bolivia's national highball: singani, the country's aromatic grape brandy, with ginger ale and lime. The name allegedly descends from the English railway builders' 'short fly', slang for a temporary track laid around an obstacle; the drink outlasted the railways.",
 
   /* ---- The Bartender's Obscura ---- */
   "Blue Blazer":
@@ -622,7 +622,7 @@ Object.assign(LORE, {
   "Absinthe Frappé":
     "Cayetano Ferrer's 1870s creation at what became New Orleans's Old Absinthe House: absinthe whipped over shaved ice with a little sugar and soda — the morning drink of the French Quarter until the 1912 ban. A hit Broadway song of 1904 celebrated it as the morning-after's salvation.",
   "Roffignac":
-    "Named for an 1820s New Orleans mayor: cognac (or whiskey) with raspberry shrub and soda — a red, vinegar-bright refresher that vanished for a century until the shrub revival brought the mayor back to office.",
+    "Named for an 1820s New Orleans mayor: cognac (or whiskey) with raspberry shrub and soda: a red, vinegar-bright refresher that vanished for a century until the shrub revival brought the mayor back to office.",
   "Cocktail à la Louisiane":
     "The house drink of Restaurant de la Louisiane, printed in Stanley Clisby Arthur's 1937 book: rye, sweet vermouth and Bénédictine with absinthe and Peychaud's — a Vieux Carré and a Sazerac negotiating in one glass. New Orleans's deepest cut.",
   "Remember the Maine":
@@ -630,31 +630,31 @@ Object.assign(LORE, {
   "Army & Navy":
     "The gin sour running on orgeat instead of syrup — almond depth under juniper, codified in David Embury's cranky 1948 classic The Fine Art of Mixing Drinks. Embury's own overdry spec is universally corrected; his book's opinions, never.",
   "Lion's Tail":
-    "Bourbon, allspice dram, lime and bitters — from the 1937 Café Royal Cocktail Book, London's Empire-era shelf raiding the Caribbean spice cabinet. 'Twisting the lion's tail' was the era's phrase for provoking Britain; the drink provokes nothing but repeat orders.",
+    "Bourbon, allspice dram, lime and bitters: from the 1937 Café Royal Cocktail Book, London's Empire-era shelf raiding the Caribbean spice cabinet. 'Twisting the lion's tail' was the era's phrase for provoking Britain; the drink provokes nothing but repeat orders.",
   "Cameron's Kick":
     "Harry MacElhone's genre outlaw: scotch AND Irish whiskey over orgeat and lemon — two rival whiskies forced to waltz. No one knows who Cameron was; the kick is well documented.",
   "Champs-Élysées":
-    "The Savoy's cognac-and-green-Chartreuse sour — France's grandest avenue rendered as a drink: brandy foundation, herbal spire, lemon light. One of the book's quiet masterpieces that never got the Corpse Reviver's press.",
+    "The Savoy's cognac-and-green-Chartreuse sour, France's grandest avenue rendered as a drink: brandy foundation, herbal spire, lemon light. One of the book's quiet masterpieces that never got the Corpse Reviver's press.",
   "Brown Derby":
-    "Hollywood, 1930s — named for the hat-shaped restaurant, built at the Vendome Club: bourbon, grapefruit and honey. The studio era's three-ingredient proof that California could do classics too.",
+    "Hollywood, 1930s, named for the hat-shaped restaurant, built at the Vendome Club: bourbon, grapefruit and honey. The studio era's three-ingredient proof that California could do classics too.",
   "Blinker":
     "Rye, grapefruit and grenadine from Patrick Gavin Duffy's 1934 book — a Prohibition-exit spec that reads strange and drinks bright. The craft revival's favorite example of 'trust the old books.'",
   "Fish House Punch":
     "The Schuylkill Fishing Company of Pennsylvania, a private angling club founded in 1732, has poured punch since its early days. Club tradition dates this rum-cognac-peach-brandy recipe to the founding, though the oldest written version is thought to date only to the 1790s. Washington is said to have gone quiet in his diary for days after a visit. Very likely America's oldest punch still poured by the club that made it, and still a heavyweight.",
   "Chatham Artillery Punch":
-    "Savannah's militia punch — rum, brandy, whiskey and champagne fortified in quantity — with a reputation for leveling visiting dignitaries that survives in newspaper accounts going back over a century. Approach as you would the artillery.",
+    "Savannah's militia punch (rum, brandy, whiskey and champagne fortified in quantity) with a reputation for leveling visiting dignitaries that survives in newspaper accounts going back over a century. Approach as you would the artillery.",
   "Millionaire":
-    "A name attached to several Prohibition-era drinks; the survivor is rye with orange liqueur, grenadine and an absinthe whisper, egg white optional — wealth as a color: sunset gold-pink, served up.",
+    "A name attached to several Prohibition-era drinks; the survivor is rye with orange liqueur, grenadine and an absinthe whisper, egg white optional, wealth as a color: sunset gold-pink, served up.",
   "Palmetto":
-    "The rum Manhattan — aged rum and sweet vermouth with bitters, in print by 1930 in the Savoy, its name presumably taken from the palmetto palm (nobody recorded why). Rum drinkers' proof that their spirit sits in whiskey's chairs without adjusting a thing.",
+    "The rum Manhattan: aged rum and sweet vermouth with bitters, in print by 1930 in the Savoy, its name presumably taken from the palmetto palm (nobody recorded why). Rum drinkers' proof that their spirit sits in whiskey's chairs without adjusting a thing.",
   "Stone Fence":
     "Rum or whiskey in hard cider — the drink Ethan Allen's Green Mountain Boys allegedly fortified themselves with before taking Fort Ticonderoga in 1775. America's oldest highball, older than America.",
   "Prescription Julep":
-    "From an 1857 Harper's account: cognac and a rye float over the standard mint-and-crushed-ice architecture — the julep as written by a doctor's hand, when brandy was the julep's aristocratic base and whiskey the afterthought.",
+    "From an 1857 Harper's account: cognac and a rye float over the standard mint-and-crushed-ice architecture: the julep as written by a doctor's hand, when brandy was the julep's aristocratic base and whiskey the afterthought.",
   "Creole Cocktail":
-    "Rye and sweet vermouth with Bénédictine and Amer Picon accents — New Orleans by way of the pre-Prohibition books, the Vieux Carré's leaner ancestor from the same block of ideas.",
+    "Rye and sweet vermouth with Bénédictine and Amer Picon accents: New Orleans by way of the pre-Prohibition books, the Vieux Carré's leaner ancestor from the same block of ideas.",
   "Angel Face":
-    "The Savoy's equal-parts gamble: gin, apricot brandy, calvados — no citrus net, all fruit and nerve. It shouldn't balance; on the right cold night it does, angelically.",
+    "The Savoy's equal-parts gamble: gin, apricot brandy, calvados, no citrus net, all fruit and nerve. It shouldn't balance; on the right cold night it does, angelically.",
   "Fancy Free":
     "Bourbon or rye stirred with maraschino and both bitters: an Old Fashioned that lets cherry liqueur do most of the sweetening, from the 1940s. The name undersells the engineering.",
   "Monte Carlo":
@@ -664,31 +664,31 @@ Object.assign(LORE, {
   "Bobby Burns":
     "The Rob Roy with a Bénédictine accent. Craddock's Savoy book printed it that way in 1930 and called it a fast mover on St. Andrew's Day. The old Waldorf's version, the 'Robert Burns,' took absinthe and orange bitters instead. Its bar book allowed the name might honor the poet but bet on a cigar salesman who drank at the Old Bar. Address it on January 25th with a verse.",
   "Harvard":
-    "Cognac and sweet vermouth with bitters — the Ivy League cocktail series' brandy chair, circa 1895. Crimson in color, clubby in temperament, better than its rivals (a Harvard opinion, but correct).",
+    "Cognac and sweet vermouth with bitters: the Ivy League cocktail series' brandy chair, circa 1895. Crimson in color, clubby in temperament, better than its rivals (a Harvard opinion, but correct).",
   "Princeton":
     "Old Tom gin and orange bitters with port. The old books poured the port in last so it sank to the bottom in a red layer, and the modern bar stirs it all together. Either way, the port is the diploma.",
   "Saratoga":
     "First printed in the 1887 edition of Jerry Thomas's guide, which came out after his death, and named, by all appearances, for the Saratoga Springs resort: cognac and rye splitting the base of a Manhattan-shaped drink — the sporting compromise of a town that bet on everything.",
   "Gin Daisy":
-    "The daisy template — spirit, citrus, grenadine or cordial, soda splash — in its gin original, served over crushed ice with fruit. Margarita is Spanish for daisy, and the leading theory says the Margarita began as a tequila daisy. That is a theory, not settled fact: its origin is still argued, with rival claims from the 1930s and 1940s.",
+    "The daisy template (spirit, citrus, grenadine or cordial, soda splash) in its gin original, served over crushed ice with fruit. Margarita is Spanish for daisy, and the leading theory says the Margarita began as a tequila daisy. That is a theory, not settled fact: its origin is still argued, with rival claims from the 1930s and 1940s.",
   "Knickerbocker":
     "First printed by Jerry Thomas in 1862, and likely older: rum with raspberry syrup, curaçao and lime or lemon over crushed ice — the century-early prototype of tiki, complete with fruit garnish excess. The name is old slang for a New Yorker, so the drink is probably a New York one, but nobody wrote down who first made it.",
   "Coffee Cocktail":
-    "Contains no coffee — port and cognac shaken with a whole egg until it pours coffee-colored, the name a Victorian visual joke printed with a shrug in the 1887 edition of Jerry Thomas's guide. The best breakfast-adjacent drink no brunch menu dares list.",
+    "Contains no coffee: port and cognac shaken with a whole egg until it pours coffee-colored, the name a Victorian visual joke printed with a shrug in the 1887 edition of Jerry Thomas's guide. The best breakfast-adjacent drink no brunch menu dares list.",
   "Bensonhurst":
     "Chad Solomon's 2006 entry in the Brooklyn-neighborhood cycle: rye, dry vermouth, maraschino and a teaspoon of Cynar — the Brooklyn rebuilt with the amaro era's toolkit. The family tree's newest strong branch.",
   "Preakness":
     "Named for the Baltimore race in a 1936 contest: the Manhattan formula with a Bénédictine seam. The middle jewel of the Triple Crown got the middleweight classic.",
   "Fourth Regiment":
-    "An 1889 spec revived from the old books: rye and sweet vermouth with THREE bitters — orange, celery, Peychaud's — each dash a different instrument. The celery bitters are the reason to bother; the drink is the argument for owning them.",
+    "An 1889 spec revived from the old books: rye and sweet vermouth with THREE bitters (orange, celery, Peychaud's), each dash a different instrument. The celery bitters are the reason to bother; the drink is the argument for owning them.",
   "Metropole":
     "Named for New York's Hotel Metropole on Broadway near 42nd Street and printed by George Kappeler in 1895, before anyone called the corner Times Square: cognac and dry vermouth with two bitters — the Harvard's drier city cousin, drunk where Broadway's sporting crowd settled its evenings.",
   "Waldorf":
-    "The hotel's namesake from the old bar book: rye, sweet vermouth and absinthe in earnest quantity — pre-Prohibition New York's heavier hand, when absinthe was an ingredient, not a rumor.",
+    "The hotel's namesake from the old bar book: rye, sweet vermouth and absinthe in earnest quantity, pre-Prohibition New York's heavier hand, when absinthe was an ingredient, not a rumor.",
   "Rock and Rye":
-    "Rye whiskey bottled over rock candy with citrus and horehound — sold in pharmacies as a cough remedy well into the 20th century, taxed as medicine, drunk as neither. The bottled old-fashioned your great-grandfather's druggist prescribed.",
+    "Rye whiskey bottled over rock candy with citrus and horehound: sold in pharmacies as a cough remedy well into the 20th century, taxed as medicine, drunk as neither. The bottled old-fashioned your great-grandfather's druggist prescribed.",
   "Twelve Mile Limit":
-    "Prohibition arithmetic: when the dry law's reach extended from three miles offshore to twelve, the booze cruises sailed further and the drink got named — white rum, whiskey AND brandy under grenadine and lemon, because on a ship past the limit, why choose?",
+    "Prohibition arithmetic: when the dry law's reach extended from three miles offshore to twelve, the booze cruises sailed further and the drink got named: white rum, whiskey AND brandy under grenadine and lemon, because on a ship past the limit, why choose?",
   "Hop Toad":
     "Apricot brandy and citrus from the old books (Bullock's 1917 Leaping Frog, the Savoy's Hop Toad), with a dash of bitters here; Crockett's 1935 Waldorf book adds Jamaica rum. Three ingredients, a silly name, and a surprisingly serious sour underneath. The apricot does the sugar's job; the name does the marketing's.",
   "Bishop":
@@ -702,35 +702,35 @@ Object.assign(LORE, {
   "Dirty Martini":
     "Olive brine in the Martini — traceable to 1901 New York, made presidential by FDR, who shook them badly and enthusiastically for visiting dignitaries. 'Extra dirty' is a legitimate order; 'filthy' is a personality.",
   "Vodka Martini":
-    "Born as the 'Kangaroo Cocktail' in the 1950s — the name nobody kept — and made cultural furniture by Bond's shaken order. The gin drinker's sneer is traditional; the drink, made cold and wet with good vermouth, is better than the sneer.",
+    "Born as the 'Kangaroo Cocktail' in the 1950s, the name nobody kept, and made cultural furniture by Bond's shaken order. The gin drinker's sneer is traditional; the drink, made cold and wet with good vermouth, is better than the sneer.",
   "Perfect Martini":
-    "'Perfect' meaning split vermouth — half dry, half sweet — not a boast. Rounder than a dry Martini, drier than a Martinez: the diplomatic middle of the whole family.",
+    "'Perfect' meaning split vermouth (half dry, half sweet), not a boast. Rounder than a dry Martini, drier than a Martinez: the diplomatic middle of the whole family.",
   "Fifty-Fifty Martini":
-    "Equal parts gin and dry vermouth — the pre-war ratio the dry decades buried, revived by bartenders who kept whispering that vermouth is wine and wine is good. The lowest-proof Martini and the one that tastes most like a conversation.",
+    "Equal parts gin and dry vermouth: the pre-war ratio the dry decades buried, revived by bartenders who kept whispering that vermouth is wine and wine is good. The lowest-proof Martini and the one that tastes most like a conversation.",
   "Smoky Martini":
-    "A Martini with a whisper of scotch where the vermouth might be — peat as perfume. A drink invented by whoever first cleaned a mixing glass insufficiently, then perfected on purpose.",
+    "A Martini with a whisper of scotch where the vermouth might be, peat as perfume. A drink invented by whoever first cleaned a mixing glass insufficiently, then perfected on purpose.",
   "Dukes Martini":
     "The Dukes Hotel, London: frozen gin poured table-side from a trolley into a frozen glass over a vermouth rinse — no stirring, no dilution, a two-drink house limit that is enforced and earned. Fleming, the hotel swears, drank at Dukes; the trolley is the closest thing the Martini has to a shrine.",
   "Obituary Cocktail":
-    "Lafitte's Blacksmith Shop, New Orleans: a Martini with an absinthe shadow — a quarter ounce clouding the gin, a fitting gloom. The oldest bar building in the Quarter serves it by candlelight, which is the correct lighting for the name.",
+    "Lafitte's Blacksmith Shop, New Orleans: a Martini with an absinthe shadow, a quarter ounce clouding the gin, a fitting gloom. The oldest bar building in the Quarter serves it by candlelight, which is the correct lighting for the name.",
   "Blue Moon":
     "Two drinks share the name. Hugo Ensslin's 1917 Blue Moon was a dry Martini with a dash each of Crème Yvette and orange bitters, topped with claret. The gin, violette and lemon sour poured here is the later one, printed by Crosby Gaige in 1941, colored like its name and lost for the same decades as the Aviation, for the same supply reasons. The violette returns; the moon rises.",
   "Turf Cocktail":
     "A Martini variant printed by Harry Johnson in 1888 (the name points to the racetrack, but nobody recorded why): gin and dry vermouth with maraschino, absinthe and bitters — everything the era could dress a Martini in. Old Tom gin makes it historical; dry gin makes it drinkable.",
   "Astoria":
-    "The Waldorf-Astoria's inverted Martini — vermouth leading gin, orange bitters seasoning — from the hotel's pre-Prohibition bar book. The hotel's other tower got the Waldorf cocktail; this is the better half.",
+    "The Waldorf-Astoria's inverted Martini (vermouth leading gin, orange bitters seasoning) from the hotel's pre-Prohibition bar book. The hotel's other tower got the Waldorf cocktail; this is the better half.",
   "Bradford":
-    "A Martini, shaken — that's the whole recipe and the whole controversy, named in the old books as its own drink because the technique changes the texture that much. Cloudier, colder, softer; order it when you want the fight.",
+    "A Martini, shaken: that's the whole recipe and the whole controversy, named in the old books as its own drink because the technique changes the texture that much. Cloudier, colder, softer; order it when you want the fight.",
   "French Martini":
-    "Vodka, Chambord and pineapple — born in the 1980s–90s New York bar world and inescapable by the millennium. No vermouth, no France beyond the raspberry liqueur, and no shame: shaken hard, the pineapple foams like a fizz.",
+    "Vodka, Chambord and pineapple: born in the 1980s–90s New York bar world and inescapable by the millennium. No vermouth, no France beyond the raspberry liqueur, and no shame: shaken hard, the pineapple foams like a fizz.",
   "Breakfast Martini":
     "Salvatore Calabrese, London's Library Bar, 1996: gin, orange marmalade, triple sec, lemon — invented, he says, after his wife made him actually eat breakfast. A knowing revival of the Savoy's Marmalade Cocktail with better press.",
   "Appletini":
-    "Lola's, West Hollywood, 1996 — born the 'Adam's Apple' and renamed by the decade that suffixed everything with -tini: vodka and sour-apple liqueur in electric green. The craft era's favorite punching bag, and still the best-selling drink at half the bars that mock it.",
+    "Lola's, West Hollywood, 1996, born the 'Adam's Apple' and renamed by the decade that suffixed everything with -tini: vodka and sour-apple liqueur in electric green. The craft era's favorite punching bag, and still the best-selling drink at half the bars that mock it.",
   "Lychee Martini":
     "The pan-Asian restaurant boom of 2000s New York produced it: vodka, lychee liqueur and syrup from the can, a Martini-glassed perfume that outlived every trend piece written against it.",
   "Pomegranate Martini":
-    "The POM-juice era's contribution, mid-2000s: vodka, pomegranate and citrus in a Martini glass — antioxidant marketing's finest cocktail hour. Fresh juice and real measurement redeem it completely.",
+    "The POM-juice era's contribution, mid-2000s: vodka, pomegranate and citrus in a Martini glass, antioxidant marketing's finest cocktail hour. Fresh juice and real measurement redeem it completely.",
 
   /* ---- Frozen & Blended ---- */
   "Frozen Margarita":
@@ -738,27 +738,27 @@ Object.assign(LORE, {
   "Frozen Daiquiri":
     "El Floridita's Constantino Ribalaigua met the electric blender in the 1930s and built the frappé daiquiri empire Hemingway drank through — shaved ice, precise sugar, a machine-cold masterpiece that the beach-bar slushy both descends from and betrays.",
   "Strawberry Daiquiri":
-    "The frozen daiquiri's most popular costume — fresh strawberries redeem it; mix from a jug indicts it. Somewhere between those poles, every beach vacation finds its level.",
+    "The frozen daiquiri's most popular costume: fresh strawberries redeem it; mix from a jug indicts it. Somewhere between those poles, every beach vacation finds its level.",
   "Banana Daiquiri":
-    "Claimed by the Mountain Top bar on St. Thomas, allegedly for a 1950s naval visit — rum, banana and lime blended to custard. The banana rounds the rum like butter; the view did the rest of the marketing.",
+    "Claimed by the Mountain Top bar on St. Thomas, allegedly for a 1950s naval visit: rum, banana and lime blended to custard. The banana rounds the rum like butter; the view did the rest of the marketing.",
   "Frozen Piña Colada":
     "The Piña Colada the Caribe Hilton credits to Monchito Marrero in 1954 (Barrachina in Old San Juan claims it too) in its blended, machine-age form — the version the world actually orders. Coco López, pineapple, rum, ice: the sound of a resort pool rendered in texture.",
   "Miami Vice":
-    "Half frozen Piña Colada, half frozen Strawberry Daiquiri, layered white over red like the show's pastel blazers — the 1980s in a hurricane glass. Order one ironically; finish it sincerely.",
+    "Half frozen Piña Colada, half frozen Strawberry Daiquiri, layered white over red like the show's pastel blazers, the 1980s in a hurricane glass. Order one ironically; finish it sincerely.",
   "Lava Flow":
-    "The Miami Vice's Hawaiian cousin: strawberry purée 'erupting' up through a coconut-banana colada as it's poured. Resort-bar stagecraft at its most literal — the garnish is geology.",
+    "The Miami Vice's Hawaiian cousin: strawberry purée 'erupting' up through a coconut-banana colada as it's poured. Resort-bar stagecraft at its most literal: the garnish is geology.",
   "Frosé":
-    "Bar Primi, New York, summer 2016: rosé frozen with strawberry and vermouth into the drink of a single inescapable season — the fastest a cocktail has ever gone from invention to ubiquity to eye-roll to quiet permanent menu residence.",
+    "Bar Primi, New York, summer 2016: rosé frozen with strawberry and vermouth into the drink of a single inescapable season: the fastest a cocktail has ever gone from invention to ubiquity to eye-roll to quiet permanent menu residence.",
   "Frozen Painkiller":
-    "The Soggy Dollar's spec surrendered to the blender — coconut, pineapple, orange and rum as weather. Purists object; the beach overrules them.",
+    "The Soggy Dollar's spec surrendered to the blender: coconut, pineapple, orange and rum as weather. Purists object; the beach overrules them.",
   "Frozen Irish Coffee":
-    "New Orleans's improbable perfection — Erin Rose and Molly's at the Market pour a frozen-machine take on the Irish coffee, brandy-spiked and coffee-dark, that outdrinks the hot original in ninety-degree heat. Coffee, cream, brandy, machine: the Quarter's best air conditioning.",
+    "New Orleans's improbable perfection: Erin Rose and Molly's at the Market pour a frozen-machine take on the Irish coffee, brandy-spiked and coffee-dark, that outdrinks the hot original in ninety-degree heat. Coffee, cream, brandy, machine: the Quarter's best air conditioning.",
   "Frozen Mudslide":
-    "The Grand Cayman original gone full milkshake — vodka, Kahlúa, Irish cream and ice cream logic. Dessert that requires ID.",
+    "The Grand Cayman original gone full milkshake: vodka, Kahlúa, Irish cream and ice cream logic. Dessert that requires ID.",
   "Frozen Negroni":
-    "The craft slushy-machine era's flex: the equal-parts classic frozen without falling apart, usually with orange juice mediating the Campari's argument with the cold. Bitterness at brain-freeze temperature — somehow, it works.",
+    "The craft slushy-machine era's flex: the equal-parts classic frozen without falling apart, usually with orange juice mediating the Campari's argument with the cold. Bitterness at brain-freeze temperature. Somehow, it works.",
   "Frozen Aperol Spritz":
-    "The spritz surrendered to the frozen-drink machine — Aperol, prosecco reduced or fortified, citrus — the 2010s patio drink completing its final form. The bubbles die; the orange sunset survives.",
+    "The spritz surrendered to the frozen-drink machine (Aperol, prosecco reduced or fortified, citrus), the 2010s patio drink completing its final form. The bubbles die; the orange sunset survives.",
 });
 
 function loreOf(c){ return LORE[c.name] || null; }
@@ -773,72 +773,72 @@ function loreFootnote(c){
 
 const GLOSSARY = [
   { term:"ABV", def:"Alcohol by volume. Spirits run 40–50%, vermouth 15–18%, most finished shaken cocktails land near 15–20% after dilution." },
-  { term:"Amaro", def:"Italian for 'bitter' — a family of bittersweet herbal liqueurs (Campari, Nonino, Averna, Fernet) drunk as aperitifs and digestifs and mixed into modern classics." },
-  { term:"Aperitivo", def:"A before-dinner drink meant to wake the appetite — lower proof, bitter, often sparkling. Also the Italian evening ritual built around them." },
+  { term:"Amaro", def:"Italian for 'bitter': a family of bittersweet herbal liqueurs (Campari, Nonino, Averna, Fernet) drunk as aperitifs and digestifs and mixed into modern classics." },
+  { term:"Aperitivo", def:"A before-dinner drink meant to wake the appetite: lower proof, bitter, often sparkling. Also the Italian evening ritual built around them." },
   { term:"Bar spoon", def:"Long spiral-handled spoon; also a unit of measure, about 1/6 oz (5 ml)." },
   { term:"Batching", def:"Pre-mixing the shelf-stable ingredients of a drink in quantity for speed or parties. Add citrus and bubbles only at service." },
-  { term:"Bitters", def:"High-proof botanical tinctures dosed in dashes — the salt and pepper of the bar. Angostura, Peychaud's and orange are the working trio." },
-  { term:"Build", def:"To make a drink directly in its serving glass, no shaker or mixing glass — the method of most highballs." },
-  { term:"Cordial", def:"A sweetened, acidified fruit or botanical syrup (lime cordial being the classic) — sweet and sour in one bottle." },
-  { term:"Crusta", def:"A 19th-century style served in a glass fully lined with a citrus peel and a sugared rim — ancestor of the Sidecar's sugar rim." },
-  { term:"Dash", def:"The unit of a bitters bottle's throw — roughly 0.9 ml, but bottles vary. Count dashes, then taste." },
+  { term:"Bitters", def:"High-proof botanical tinctures dosed in dashes, the salt and pepper of the bar. Angostura, Peychaud's and orange are the working trio." },
+  { term:"Build", def:"To make a drink directly in its serving glass, no shaker or mixing glass, the method of most highballs." },
+  { term:"Cordial", def:"A sweetened, acidified fruit or botanical syrup (lime cordial being the classic), sweet and sour in one bottle." },
+  { term:"Crusta", def:"A 19th-century style served in a glass fully lined with a citrus peel and a sugared rim, ancestor of the Sidecar's sugar rim." },
+  { term:"Dash", def:"The unit of a bitters bottle's throw, roughly 0.9 ml, but bottles vary. Count dashes, then taste." },
   { term:"Dirty", def:"With olive brine (a Dirty Martini). 'Extra dirty' means more brine than most bartenders think is wise." },
-  { term:"Double strain", def:"Straining through both the Hawthorne and a fine mesh to catch ice shards and herb flecks — standard for shaken drinks served up." },
+  { term:"Double strain", def:"Straining through both the Hawthorne and a fine mesh to catch ice shards and herb flecks, standard for shaken drinks served up." },
   { term:"Dry", def:"Less sweet. In a Martini, less vermouth; in general, the opposite of cloying. 'Bone dry' approaches zero." },
-  { term:"Dry shake", def:"Shaking without ice first — usually for egg-white drinks — to emulsify and build foam before the cold dilution shake." },
+  { term:"Dry shake", def:"Shaking without ice first, usually for egg-white drinks, to emulsify and build foam before the cold dilution shake." },
   { term:"Expressing", def:"Snapping a citrus peel skin-side down over the drink to spray its oils across the surface, then (usually) dropping it in or discarding." },
-  { term:"Fat wash", def:"Infusing a spirit with a melted fat (bacon, brown butter, coconut oil), then chilling and skimming — flavor stays, fat leaves." },
+  { term:"Fat wash", def:"Infusing a spirit with a melted fat (bacon, brown butter, coconut oil), then chilling and skimming: flavor stays, fat leaves." },
   { term:"Fizz", def:"A sour shaken and topped with soda, served without ice in a small glass, meant to be drunk while still foaming." },
-  { term:"Flip", def:"A drink shaken with a whole egg — rich, dense, dessert-adjacent. The Golden Fizz's decadent cousin." },
-  { term:"Float", def:"Layering a small pour on a drink's surface without mixing — the red wine on a New York Sour, the scotch on a Penicillin." },
+  { term:"Flip", def:"A drink shaken with a whole egg: rich, dense, dessert-adjacent. The Golden Fizz's decadent cousin." },
+  { term:"Float", def:"Layering a small pour on a drink's surface without mixing: the red wine on a New York Sour, the scotch on a Penicillin." },
   { term:"Hawthorne strainer", def:"The spring-rimmed strainer that fits a shaking tin. The spring is the filter; your finger controls the gate." },
   { term:"Highball", def:"Spirit plus a larger measure of a carbonated mixer over ice in a tall glass. The world's most-poured drink format." },
   { term:"Jigger", def:"The hourglass measuring cup. Jiggering honestly is the fastest way to make every drink taste the same twice." },
-  { term:"Julep", def:"Spirit, sugar and mint over crushed ice, no citrus — one of the oldest American drink families, served in metal so it frosts." },
-  { term:"Lengthen", def:"To make a drink taller and weaker with mixer — turning a sour into a Collins, a Daiquiri into a highball." },
+  { term:"Julep", def:"Spirit, sugar and mint over crushed ice, no citrus: one of the oldest American drink families, served in metal so it frosts." },
+  { term:"Lengthen", def:"To make a drink taller and weaker with mixer: turning a sour into a Collins, a Daiquiri into a highball." },
   { term:"Mother drink", def:"A template drink (Old Fashioned, Manhattan, Daiquiri, Highball) from which families of variations descend by substitution." },
   { term:"Muddle", def:"Pressing fruit or herbs in the glass to release juice and oils. Press mint gently; grind citrus firmly; never pulverize either." },
   { term:"Neat", def:"Spirit poured at room temperature, no ice, no dilution. Different from 'up,' which means chilled first." },
-  { term:"Nick & Nora", def:"A small stemmed bell glass for drinks served up — named for the cocktail-fluent couple of the Thin Man films. Spill-resistant, elegant, correct." },
-  { term:"Orgeat", def:"Almond syrup brightened with orange flower water — the almond backbone of the Mai Tai and much of tiki." },
-  { term:"Perfect", def:"Split vermouth, half sweet and half dry — a Perfect Manhattan, a Perfect Rob Roy." },
+  { term:"Nick & Nora", def:"A small stemmed bell glass for drinks served up, named for the cocktail-fluent couple of the Thin Man films. Spill-resistant, elegant, correct." },
+  { term:"Orgeat", def:"Almond syrup brightened with orange flower water, the almond backbone of the Mai Tai and much of tiki." },
+  { term:"Perfect", def:"Split vermouth, half sweet and half dry: a Perfect Manhattan, a Perfect Rob Roy." },
   { term:"Proof", def:"Twice the ABV, an old gunpowder-test term. 100 proof = 50% alcohol. 'Overproof' rums run far past it." },
-  { term:"Rinse", def:"Coating a chilled glass with a few drops of a strong ingredient (absinthe, fernet) and dumping the excess — perfume, not a pour." },
-  { term:"Rolling", def:"Pouring a drink back and forth between tins to mix with minimal aeration — the Bloody Mary's method, since shaking foams tomato." },
-  { term:"Shrub", def:"A vinegar-based fruit syrup — colonial-era preservation turned modern acid source for zero-proof builds." },
+  { term:"Rinse", def:"Coating a chilled glass with a few drops of a strong ingredient (absinthe, fernet) and dumping the excess: perfume, not a pour." },
+  { term:"Rolling", def:"Pouring a drink back and forth between tins to mix with minimal aeration: the Bloody Mary's method, since shaking foams tomato." },
+  { term:"Shrub", def:"A vinegar-based fruit syrup: colonial-era preservation turned modern acid source for zero-proof builds." },
   { term:"Sour", def:"The great template: spirit, citrus, sweetener, usually 2 : 3/4 : 3/4. Half the canon is a sour wearing a costume." },
   { term:"Split base", def:"Dividing a drink's spirit between two bottles (rye + cognac, rum + mezcal) for complexity neither carries alone." },
   { term:"Swizzle", def:"A crushed-ice drink churned with a swizzle stick (traditionally a branch of the Caribbean swizzlestick tree) until the glass frosts." },
-  { term:"Tiki", def:"The mid-century American school of faux-Polynesian rum drinks — multiple rums, multiple sweets and sours, theatrical garnish, serious balance math underneath." },
+  { term:"Tiki", def:"The mid-century American school of faux-Polynesian rum drinks: multiple rums, multiple sweets and sours, theatrical garnish, serious balance math underneath." },
   { term:"Twist", def:"A strip of citrus peel, expressed and often curled over the drink. Ask for it 'no pith' and mean it." },
   { term:"Up", def:"Chilled by stirring or shaking, then strained into a stemmed glass with no ice. Compare 'neat' (no chill) and 'on the rocks.'" },
-  { term:"Well", def:"The bar's default pouring bottles — and the station where drinks are made. 'Well drinks' are the house baseline." },
-  { term:"Wheel", def:"A full round slice of citrus, slit to sit on the rim — the garnish of Collinses and sours on the rocks." },
+  { term:"Well", def:"The bar's default pouring bottles, and the station where drinks are made. 'Well drinks' are the house baseline." },
+  { term:"Wheel", def:"A full round slice of citrus, slit to sit on the rim, the garnish of Collinses and sours on the rocks." },
   { term:"Beer-clean", def:"A glass with no fat, protein or detergent film left on it. Test it wet: water sheets off a clean glass and beads up on a dirty one, and a dirty glass kills the head, flattens the aroma and leaves bubbles stuck to the wall." },
-  { term:"Head", def:"The foam collar on a poured beer — an inch to an inch and a half on most styles. It is where the aroma lives, so a headless pint is an underpoured pint, not a generous one." },
-  { term:"Lacing", def:"The rings of foam left clinging to the glass as a pint goes down — the mark of a beer-clean glass and a well-retained head. Not to be confused with bubbles stuck to the side of a full glass, which mean the opposite." },
+  { term:"Head", def:"The foam collar on a poured beer: an inch to an inch and a half on most styles. It is where the aroma lives, so a headless pint is an underpoured pint, not a generous one." },
+  { term:"Lacing", def:"The rings of foam left clinging to the glass as a pint goes down, the mark of a beer-clean glass and a well-retained head. Not to be confused with bubbles stuck to the side of a full glass, which mean the opposite." },
   { term:"Coupler", def:"The valve that mates a draught line to a keg. American Sankey (D system) runs nearly all domestic and craft beer; Guinness and most Irish stout use the U system, and the wrong coupler simply will not lock on." },
   { term:"Half-barrel", def:"The standard American keg: 15.5 gallons, roughly 124 sixteen-ounce pours before waste. A quarter is 7.75 gallons, a sixtel 5.16 in a tall narrow shell one person can actually carry." },
-  { term:"Applied pressure", def:"The CO2 pressure set at the regulator to push beer up the line and hold its carbonation. It is matched to the beer, the line length and the rise — too low and it pours flat, too high and it pours foam, and it is never a speed control." },
+  { term:"Applied pressure", def:"The CO2 pressure set at the regulator to push beer up the line and hold its carbonation. It is matched to the beer, the line length and the rise: too low and it pours flat, too high and it pours foam, and it is never a speed control." },
   { term:"Beer gas", def:"Roughly 70-75% nitrogen to 25-30% CO2, pushed hard through a restrictor plate for nitro pours. Nitrogen barely dissolves, which is what makes the cascade and the dense, low-carbonation head." },
   { term:"Direct draw", def:"A draught system where the kegs sit in a cooler right behind the faucets on a short line, with no glycol chase. Cooler temperature is line temperature, which is why the box lives at 38F and stays there." },
-  { term:"FOB", def:"Foam-on-beer detector — an inline float that seals the line the instant a keg blows, so you can change it without pushing a column of foam through. Reset it after every change or that tap stays dead." },
+  { term:"FOB", def:"Foam-on-beer detector: an inline float that seals the line the instant a keg blows, so you can change it without pushing a column of foam through. Reset it after every change or that tap stays dead." },
   { term:"Diacetyl", def:"A fermentation byproduct that tastes like butterscotch or movie popcorn. If the same beer is clean out of the can, suspect bacteria in a dirty line before you blame the keg." },
   { term:"BTG", def:"By the glass. The wine you sell without selling the bottle, which means you own every bottle you open until it either sells out or turns." },
-  { term:"TCA", def:"The cork-taint compound behind a corked bottle. It will not hurt anyone — it strips the fruit out of a wine and leaves wet cardboard and damp basement, and the wine gets more muted the longer it sits." },
-  { term:"Volatile acidity", def:"Acetic acid and ethyl acetate in a wine — vinegar and nail polish remover, with a sting at the back of the throat. A trace adds lift; past that the bottle is dying." },
-  { term:"Reduction", def:"Sulfur compounds trapped in a wine that saw no oxygen: struck match, burnt rubber, sometimes worse. Not a fault — swirl it hard or decant, and it usually blows off in a few minutes." },
+  { term:"TCA", def:"The cork-taint compound behind a corked bottle. It will not hurt anyone: it strips the fruit out of a wine and leaves wet cardboard and damp basement, and the wine gets more muted the longer it sits." },
+  { term:"Volatile acidity", def:"Acetic acid and ethyl acetate in a wine: vinegar and nail polish remover, with a sting at the back of the throat. A trace adds lift; past that the bottle is dying." },
+  { term:"Reduction", def:"Sulfur compounds trapped in a wine that saw no oxygen: struck match, burnt rubber, sometimes worse. Not a fault: swirl it hard or decant, and it usually blows off in a few minutes." },
   { term:"Brett", def:"Brettanomyces, a wild yeast reading as barnyard, band-aid or saddle leather. A little is house style in some regions; a lot is a flaw everywhere." },
   { term:"Ullage", def:"The gap between the wine and the closure in an open bottle. It is the air that actually kills your by-the-glass stock, which is why you either shrink it, gas it, or sell it." },
-  { term:"Brut", def:"The middle rung of the sparkling sweetness ladder, which lies to you: Brut Nature, Extra Brut, Brut, then Extra Dry — which is sweeter than Brut — then Sec, Demi-Sec, Doux." },
+  { term:"Brut", def:"The middle rung of the sparkling sweetness ladder, which lies to you: Brut Nature, Extra Brut, Brut, then Extra Dry, which is sweeter than Brut, then Sec, Demi-Sec, Doux." },
   { term:"Capsule", def:"The foil sleeve over a wine bottle's neck. Cut it cleanly below the lower lip so the pour never crosses metal, and pocket the ring rather than leaving it on the bar." },
   { term:"Oxidation", def:"What air does to an open bottle: fruit flattens, the rim browns, and the nose goes to bruised apple, walnut and sherry. Irreversible, and the reason every open bottle has a clock on it." },
-  { term:"Standard drink", def:"In the US, 0.6 oz of pure alcohol — 12 oz of 5% beer, 5 oz of 12% wine, or 1.5 oz of 40% spirit. The point is that those three are the same drink, and a 16 oz pour of a 7% IPA is nearly two of them." },
+  { term:"Standard drink", def:"In the US, 0.6 oz of pure alcohol: 12 oz of 5% beer, 5 oz of 12% wine, or 1.5 oz of 40% spirit. The point is that those three are the same drink, and a 16 oz pour of a 7% IPA is nearly two of them." },
   { term:"Over-service", def:"Continuing to pour past the point the cues said stop. It is the phrase that appears in the lawsuit, and it is judged on what a reasonable bartender should have noticed, not on what the guest told you." },
-  { term:"BAC", def:"Blood alcohol concentration. Most US states set the per se driving limit at 0.08%, and 'per se' means the number convicts on its own — no further proof of impairment required." },
+  { term:"BAC", def:"Blood alcohol concentration. Most US states set the per se driving limit at 0.08%, and 'per se' means the number convicts on its own: no further proof of impairment required." },
   { term:"De-escalation", def:"Lowering the temperature of a confrontation instead of winning it. Drop your volume under theirs, stand at an angle rather than square up, agree with whatever you honestly can, and leave him a way out that doesn't look like losing." },
-  { term:"86 (a guest)", def:"To bar a person from the room, as opposed to 86ing an item off the menu — same word, very different night. Log the name and the date, because the next shift has to enforce it and cannot read your mind." },
-  { term:"Thermal shock", def:"Cracking a glass by moving it too fast between temperatures — hot coffee into a cold glass, or a glass straight out of the washer into the freezer. Pre-rinse hot-drink glasses with hot water and let hot glass cool before you chill it." },
+  { term:"86 (a guest)", def:"To bar a person from the room, as opposed to 86ing an item off the menu, same word, very different night. Log the name and the date, because the next shift has to enforce it and cannot read your mind." },
+  { term:"Thermal shock", def:"Cracking a glass by moving it too fast between temperatures: hot coffee into a cold glass, or a glass straight out of the washer into the freezer. Pre-rinse hot-drink glasses with hot water and let hot glass cool before you chill it." },
   { term:"Pour line", def:"The fill mark, etched or agreed, that a wine or beer pour comes up to. It is your consistency, your pour cost, and in a certified-glass jurisdiction, your compliance." },
   /* On Tap. Beer, cider, sake and mead each brought their own vocabulary,
      and a term the tab uses and never defines is exactly what this list is
