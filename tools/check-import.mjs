@@ -2946,7 +2946,7 @@ houseDescribe('the House behind the menu', () => {
 	   stub the document hands back by id. Every new input id the pane
 	   mints must be in that function, by grep, or a render between typing
 	   and Save eats the edit. */
-	const APP_SRC = readFileSync(join(JS, 'app.js'), 'utf8');
+	const APP_SRC = readFileSync(join(JS, 'app.js'), 'utf8').replace(/\r\n/g, '\n');
 	const captureSrc = (() => {
 		const at = APP_SRC.indexOf('\nfunction captureLiveInputs(){');
 		expect(at > 0).toBe(true);
@@ -3370,7 +3370,7 @@ houseDescribe('the House behind the menu', () => {
 		await withBarAsync(async () => {
 			await W.houseSyncIn();
 			expect(W.housePackPanelHTML()).not.toMatch(/llergen/);
-			const bar = readFileSync(join(JS, 'house-bar.js'), 'utf8');
+			const bar = readFileSync(join(JS, 'house-bar.js'), 'utf8').replace(/\r\n/g, '\n');
 			const from = bar.indexOf('READ AND KEEP, NO KEY');
 			expect(from > 0).toBe(true);
 			const strings = bar.slice(from).split('\n').filter((l) => /llergen/.test(l) && !/^\s*(\/\*|\*|\/\/)/.test(l) && !/^\s+an allergen: the note/.test(l));

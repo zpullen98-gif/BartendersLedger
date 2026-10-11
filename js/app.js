@@ -232,6 +232,7 @@ document.getElementById('view').addEventListener('click', e => {
 
 /* ---------------- KEYBOARD SHORTCUTS ---------------- */
 document.addEventListener('keydown', e => {
+  if(typeof LedgerTeaching !== 'undefined' && LedgerTeaching.isViewerOpen && LedgerTeaching.isViewerOpen()) return;
   const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName);
   if(search.open){
     if(e.key === 'Escape'){ closeSearch(); e.preventDefault(); }
@@ -255,6 +256,7 @@ document.addEventListener('keydown', e => {
     e.preventDefault(); return;
   }
   if(typing) return;
+  if(typeof methodStudyOwnsKey === 'function' && methodStudyOwnsKey(e)) return;
   if(e.key === '/'){ openSearch(); e.preventDefault(); return; }
   if(e.key === 'Escape' && state.sheet){ state.sheet = null; render(); return; }
   const click = sel => { const b = document.querySelector(sel); if(b){ b.click(); e.preventDefault(); return true; } return false; };

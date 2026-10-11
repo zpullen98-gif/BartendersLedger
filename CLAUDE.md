@@ -354,7 +354,11 @@ for tool identities; and Dave Arnold's
 for the distinction between surface meltwater and size alone. The latter
 supports the narrowed Ice notes, not a universal promise for every method.
 
-An opened reference offers a keyboard-accessible full-image link in a new tab.
+An opened reference offers an in-app modal viewer with its live numbered key,
+notes, review context and sources. The raw-image new-tab link remains a fallback.
+`LedgerTeaching.isViewerOpen()` guards app shortcuts; native dialog inertness,
+Tab containment, Escape and close restore focus without grading the underlying
+card. Offline status is based on validated cache readback, not on image load.
 Closing and reopening retries an illustration only after both size choices fail;
 successful images stay in place and unopened references request nothing.
 
@@ -377,5 +381,25 @@ gates, and phone/offline browser QA after art integration. `tools/load-wing.mjs`
 supplies the browser URL primitive so existing engine gates load this layer.
 The current masthead remains the original picture, with a 768 by 512 WebP
 variant selected below 640px. Regenerate that size from the original without
-changing its composition. New image folders require explicit copying during
-public integration because `sync-wing` skips new `img/` paths.
+changing its composition. The public sync tool accepts new web images under
+`img/`; verify all four method sequences arrive with their data module.
+
+## Methods of service
+
+`js/data-method-studies.js` holds four unscored method studies. The renderer in
+`js/ui-method-studies.js` uses the existing Notes routes: `#/notes/studies` and
+`#/notes/studies/{id}`. Library and My restaurant open the collection; exact house
+and component IDs connect relevant study cards and revealed flashcard answers.
+The original `img/studies/*-v1.svg` sequences are small shell-cached diagrams,
+with live A/B/C steps, recall, guest language, sources and house checkpoints.
+`tools/make-method-art.mjs` records their original construction. New editions
+must use new image paths. They are general methods, never a measured house build.
+
+Keep references off blind fronts. Build, cloze and service modes show optional
+studies only after checking; inline disclosures never grade or change a card.
+`methodStudyOwnsKey` protects native disclosure and link keyboard behaviour.
+Run `check-method-studies.mjs`, `check-art-viewer.mjs` and the isolated browser
+check `check-method-studies-browser.mjs` alongside the existing gates. The browser
+check accepts `LEDGER_PREVIEW_URL`, `LEDGER_PLAYWRIGHT` and `LEDGER_QA_OUTPUT`.
+The legacy foam drill retains its old units and history, explicitly separated
+from current service-quality observations; do not reinterpret its stored seconds.
