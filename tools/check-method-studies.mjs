@@ -1,5 +1,5 @@
-/* Data, exact joins, reveal boundaries and route semantics for the four
-   unscored method studies. Uses the shipped rendering functions. */
+/* Data, exact joins, reveal boundaries and route semantics for the two
+   unscored teaching collections. Uses the shipped rendering functions. */
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
@@ -17,19 +17,35 @@ function setup(){
   return box;
 }
 const hasStudy=html=>/class="method-(?:inline|feedback)|data-teaching-reference=/.test(html);
-test('four explicit studies have three live steps, honest provenance and real exact joins',()=>{
+const methodIds=['stir-rinse','shake-texture','coffee-cream','build-bubbles'];
+const familyIds=['spirit-forward','sour-structure','long-sparkling','zero-proof'];
+const studyIds=[...methodIds,...familyIds];
+test('both collections have three live panels, honest provenance and real exact joins',()=>{
   const b=setup(), studies=b.get('methodStudies')(), cocktails=b.get('COCKTAILS');
-  assert.deepEqual(Array.from(studies,s=>s.id),['stir-rinse','shake-texture','coffee-cream','build-bubbles']);
+  assert.deepEqual(Array.from(studies,s=>s.id),studyIds);
+  assert.equal(new Set(studies.map(s=>s.id)).size,8,'addresses remain unique');
   for(const s of studies){
     assert.equal(s.steps.length,3,s.id);
     assert.ok(s.checks.length>=3 && s.recall && s.answer && s.guest && s.confirm,s.id);
-    assert.equal(s.reviewedOn,'2026-10-10');
+    assert.match(s.reviewedOn,/^2026-10-\d{2}$/);
     assert.ok(s.sources.length>=2 && s.sources.every(x=>/^https:\/\//.test(x[1])));
     assert.equal(s.image,'img/studies/'+s.id+'-v1.svg');
     for(const name of s.canonNames)assert.ok(cocktails.some(c=>c.name===name),name);
+    for(const name of s.zeroProofNames||[])assert.ok(b.get('NA_DRINKS').some(c=>c.name===name),name);
+    for(const name of s.families||[])assert.ok(Object.hasOwn(b.get('FAMILIES'),name),name);
     for(const id of s.references)assert.ok(b.get('LedgerTeaching').entries[id],id);
     assert.ok(!/\u2014/.test(JSON.stringify(s)),'no publication dash');
+    assert.ok(existsSync(join(ROOT,s.image)),s.id+' drawing exists');
+    for(const [label,hash] of s.reading){
+      assert.equal(b.get('applyRoute')(hash),true,s.id+' '+label+' route resolves');
+      assert.equal(b.get('routeNow')().hash,hash,s.id+' '+label+' route is not a fallback');
+    }
   }
+  assert.deepEqual(Array.from(studies.filter(s=>s.collection==='families'),s=>s.id),familyIds);
+  assert.deepEqual(Array.from(studies.find(s=>s.id==='spirit-forward').families),['Old Fashioned','Spirit & Vermouth']);
+  assert.deepEqual(Array.from(studies.find(s=>s.id==='sour-structure').families),['Sour']);
+  assert.deepEqual(Array.from(studies.find(s=>s.id==='long-sparkling').families),['Highball']);
+  assert.equal(studies.find(s=>s.id==='zero-proof').families.length,0,'zero-proof is not assigned an alcoholic family');
   const optionalPack=process.env.OOT_SHARED ? join(process.env.OOT_SHARED,'packs/brennans-new-orleans.v1.oothouse.json') : 'C:/Users/zpull/OutsideOfTime/_release-merge/shared/packs/brennans-new-orleans.v1.oothouse.json';
   if(existsSync(optionalPack)){
     const h=JSON.parse(readFileSync(optionalPack,'utf8')).house;
@@ -76,10 +92,11 @@ test('collection and lesson changes push once; disclosure rendering changes no r
 });
 test('existing study door is in Library and restaurant section, never an extra home card',()=>{
   const b=setup();
-  assert.match(b.get('renderLibrary')(),/Explore the methods of service/);
+  assert.match(b.get('renderLibrary')(),/class="method-door" href="#\/notes\/studies"/);
   assert.doesNotMatch(b.get('homeHTML')(),/method-door/);
   assert.match(read('js/ui-nav.js'),/methodStudyDoorHTML\(true\)/);
-  assert.match(b.get('renderMethodStudies')(),/Four unscored studies/);
+  const index=b.get('renderMethodStudies')();
+  for(const id of studyIds)assert.ok(index.includes('#/notes/studies/'+id),id+' is discoverable');
 });
 test('both source and public Garnish headings get their intended direct reference',()=>{
   const b=setup(),state=b.get('state'),sec=b.get('STUDY').find(x=>x.title==='Technique: The Mechanics');
@@ -93,15 +110,42 @@ test('exact mappings do not infer a house build from a classic name or unrelated
   const b=setup(), ids=b.get('methodIdsForRecord');
   assert.equal(ids('My Bar','unknown','Sazerac').length,0);
   assert.equal(ids('Producers','c-70rdihwo','Sazerac rye whiskey').length,0);
-  assert.deepEqual(Array.from(ids('My Bar','b-olsmh04y','anything')),['stir-rinse']);
-  assert.deepEqual(Array.from(ids('Components','c-9o8x4d6n','anything')),['stir-rinse']);
+  assert.ok(ids('My Bar','b-olsmh04y','anything').includes('stir-rinse'));
+  assert.ok(ids('Components','c-9o8x4d6n','anything').includes('stir-rinse'));
+  assert.equal(ids('My Bar','unknown','Daiquiri').length,0,'classic family cannot guess a house recipe');
+  assert.equal(ids('My Bar','unknown','Nojito').length,0,'zero-proof name cannot guess a house recipe');
   assert.equal(b.get('methodFeedbackHTML')({src:'My Bar',name:'Unknown',ref:{id:'unknown'},glass:'',garnish:'',method:''},'service'),'');
 });
-function setCard(b,mode,src='Cocktails'){
+test('family connections require an actual family or canonical drink, never a supplied group or a house name',()=>{
+  const b=setup(),ids=b.get('methodIdsForRecord'),familyIdsFor=b.get('methodIdsForFamily');
+  assert.deepEqual(Array.from(familyIdsFor('Old Fashioned')),['spirit-forward']);
+  assert.deepEqual(Array.from(familyIdsFor('Spirit & Vermouth')),['spirit-forward']);
+  assert.deepEqual(Array.from(familyIdsFor('Sour')),['sour-structure']);
+  assert.deepEqual(Array.from(familyIdsFor('Highball')),['long-sparkling']);
+  assert.equal(familyIdsFor('Not a family').length,0);
+  assert.equal(ids('Cocktails',null,'Invented Highball').length,0);
+  assert.equal(ids('Zero Proof',null,'Invented Nojito').length,0);
+  assert.equal(ids('Producers',null,'Daiquiri').length,0);
+  const fake={src:'Cocktails',name:'Invented Sour',group:'Sour',family:'Sour',spec:[]};
+  assert.equal(b.get('methodFeedbackHTML')(fake,'spec2name'),'');
+  for(const family of ['Old Fashioned','Spirit & Vermouth','Sour','Highball']){
+    b.get('state').famOpen=family;
+    assert.match(b.get('renderFamilies')(),/class="method-inline"/);
+  }
+  for(const s of b.get('methodStudies')().filter(s=>s.collection==='families')){
+    for(const name of s.canonNames)assert.ok(ids('Cocktails',null,name).includes(s.id),name+' canonical join');
+    for(const name of s.zeroProofNames||[]){
+      assert.ok(ids('Zero Proof',null,name).includes(s.id),name+' zero-proof join');
+      assert.equal(ids('My Bar','unknown',name).length,0,name+' is not a house ID');
+    }
+  }
+});
+function setCard(b,mode,src='Cocktails',name='Sazerac'){
   const state=b.get('state'),fc=state.fc;
   const c=src==='Components' ? {src,name:'What is the rinse?',back:'Aromatic coating.',group:'Techniques',ref:{id:'c-9o8x4d6n'}}
     : src==='My Bar' ? {src,name:'Classic Sazerac',spec:[],glass:'',garnish:'',method:'',ref:{id:'b-olsmh04y'}}
-    : Object.assign({},b.get('allDrinks')().find(x=>x.src==='Cocktails'&&x.name==='Sazerac'));
+    : Object.assign({},b.get('allDrinks')().find(x=>x.src===src&&x.name===name));
+  assert.ok(c.name,'a real card exists for '+src+' '+name);
   Object.assign(fc,{stage:'run',mode,deck:[c],idx:0,flipped:false,checked:false,picked:null,deckId:'everything',right:0,wrong:0,missed:[],pool:[{l:c.spec?.[0]||'',ok:true}],sel:[],opts:c.spec?.slice(0,2)||[],clozeIdx:0,svc:{fields:['glass'],opts:{glass:[c.glass,'Other glass']},picked:{}}});
   state.tab='flashcards'; return {fc,c};
 }
@@ -125,6 +169,38 @@ test('build, cloze and service feedback wait until the answer is complete',()=>{
     assert.equal(hasStudy(html),true,mode+' feedback');
     assert.match(html,/data-act="fc-next"/);
     assert.equal(JSON.stringify(b.get('progress')),before);
+  }
+});
+test('each new family lesson is absent from blind answers and appears only after reveal without changing the record',()=>{
+  for(const id of familyIds){
+    for(const mode of ['name2spec','spec2name']){
+      const b=setup(),study=b.get('methodStudy')(id);
+      const src=id==='zero-proof'?'Zero Proof':'Cocktails';
+      const name=(id==='zero-proof'?study.zeroProofNames:study.canonNames)[0];
+      assert.ok(name,id+' has a real teaching example');
+      const {fc}=setCard(b,mode,src,name),before=JSON.stringify(b.get('progress'));
+      const blind=b.get('renderFlashcards')();
+      assert.equal(hasStudy(blind),false,id+' '+mode+' stays blind');
+      assert.ok(!blind.includes(study.image),id+' has no image hint');
+      fc.flipped=true;
+      const revealed=b.get('renderFlashcards')();
+      assert.ok(revealed.includes(study.title)&&revealed.includes(study.image),id+' illustration on revealed answer');
+      assert.match(revealed,/data-act="fc-grade"/);
+      assert.equal(JSON.stringify(b.get('progress')),before,id+' cannot alter learning record');
+    }
+  }
+});
+test('zero-proof teaching opens with a named reference entry and stays off the closed list and blind drill',()=>{
+  const b=setup(),s=b.get('methodStudy')('zero-proof'),state=b.get('state');
+  state.na.view='list';state.na.cat='All';state.na.open=null;state.na.drill=false;
+  assert.equal(hasStudy(b.get('renderNA')()),false,'closed list reveals no teaching answer');
+  for(const name of s.zeroProofNames){
+    const idx=b.get('NA_DRINKS').findIndex(x=>x.name===name);
+    state.na.open=idx;
+    assert.ok(b.get('renderNA')().includes(s.title),name+' reference entry has study');
+    state.na.drill=true;state.na.order=[idx];state.na.idx=0;state.na.revealed=false;
+    assert.equal(hasStudy(b.get('renderNA')()),false,name+' blind drill');
+    state.na.drill=false;
   }
 });
 test('unknown cards get no invented study; known component and drill references resolve',()=>{

@@ -11,6 +11,7 @@ const {chromium,expect}=require(process.env.LEDGER_PLAYWRIGHT||'@playwright/test
 const root=process.env.LEDGER_ROOT||path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const site=process.env.LEDGER_SITE_ROOT||root;
 const prefix=process.env.LEDGER_SITE_ROOT?'/ledger/':'/';
+const studyIds=['stir-rinse','shake-texture','coffee-cream','build-bubbles','spirit-forward','sour-structure','long-sparkling','zero-proof'];
 const mime={'.js':'text/javascript','.css':'text/css','.html':'text/html','.svg':'image/svg+xml','.webp':'image/webp','.json':'application/json','.webmanifest':'application/manifest+json'};
 const server=http.createServer((req,res)=>{
  const url=new URL(req.url,'http://local');let name=decodeURIComponent(url.pathname);
@@ -32,7 +33,7 @@ try{
   const keys=await caches.keys();const key=keys.find(k=>/^(oot-)?ledger-v/.test(k));
   const c=await caches.open(key);return {key,files:(await c.keys()).map(r=>new URL(r.url).pathname)};
  });
- for(const id of ['stir-rinse','shake-texture','coffee-cream','build-bubbles'])assert.ok(shell.files.includes(prefix+'img/studies/'+id+'-v1.svg'));
+ for(const id of studyIds)assert.ok(shell.files.includes(prefix+'img/studies/'+id+'-v1.svg'),id+' is available before going offline');
  await page.locator('[data-teaching-reference="bar-tools"]>summary').click();
  await page.locator('[data-teaching-open="bar-tools"]').click();
  await page.locator('[data-teaching-save]').click();
@@ -54,8 +55,15 @@ try{
  await expect(page.locator('dialog .teaching-image-key li')).toHaveCount(10);
  await expect(page.locator('[data-teaching-save-status]')).toContainText('Full illustration saved for offline');
  await page.keyboard.press('Escape');
- await page.goto(base+'#/notes/studies/coffee-cream');
- await expect(page.locator('.method-study')).toContainText('Coffee, cream and texture');
- await expect.poll(()=>page.locator('.method-figure img').evaluate(i=>i.complete&&i.naturalWidth>0)).toBe(true);
- console.log(JSON.stringify({offline:'passed with HTTP server stopped',shell:shell.key,diagrams:4,retainedKey:10,unopenedArt:'not downloaded'}));
+ for(const id of studyIds.slice(1)){
+  await page.goto(base+'#/notes/studies/'+id);
+  await expect(page.locator('.method-study')).toBeVisible();
+  await expect(page.locator('.method-figure img')).toHaveAttribute('src','img/studies/'+id+'-v1.svg');
+  await expect.poll(()=>page.locator('.method-figure img').evaluate(i=>i.complete&&i.naturalWidth>0)).toBe(true);
+  await page.locator('.method-recall summary').click();
+  await expect(page.locator('.method-recall details')).toHaveAttribute('open','');
+ }
+ await page.goto(base+'#/notes/studies');
+ for(const id of ['methods','families'])await expect(page.locator('[data-study-collection="'+id+'"] .method-card')).toHaveCount(4);
+ console.log(JSON.stringify({offline:'passed with HTTP server stopped',shell:shell.key,diagrams:studyIds.length,collections:2,retainedKey:10,unopenedArt:'not downloaded'}));
 }finally{if(browser)await browser.close();if(!stopped){server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}}

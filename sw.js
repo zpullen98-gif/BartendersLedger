@@ -1,6 +1,6 @@
 /* The Bartender's Ledger — service worker.
    Bump CACHE on every deploy; that string is the whole update mechanism. */
-const CACHE = 'ledger-v81';
+const CACHE = 'ledger-v82';
 /* Optional pictures have their own exact inventory and bounded cache. */
 importScripts('./js/data-teaching-images.js', './js/teaching-images.js');
 
@@ -17,6 +17,10 @@ const ASSETS = [
   './img/studies/shake-texture-v1.svg',
   './img/studies/coffee-cream-v1.svg',
   './img/studies/build-bubbles-v1.svg',
+  './img/studies/spirit-forward-v1.svg',
+  './img/studies/sour-structure-v1.svg',
+  './img/studies/long-sparkling-v1.svg',
+  './img/studies/zero-proof-v1.svg',
   './manifest.webmanifest',
   './css/ledger.css',
   './css/house.css',
