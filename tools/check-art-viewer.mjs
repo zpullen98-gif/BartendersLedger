@@ -9,7 +9,7 @@ import {fileURLToPath} from 'node:url';
 import {createRequire} from 'node:module';
 import http from 'node:http';
 import vm from 'node:vm';
-const root=process.env.LEDGER_ROOT || path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const root=path.resolve(process.env.LEDGER_ROOT || path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'));
 const read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const code=read('js/teaching-images.js');
 const data={}; vm.runInNewContext(read('js/data-teaching-images.js'),data);
