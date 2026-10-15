@@ -2463,7 +2463,7 @@ houseDescribe('the House behind the menu', () => {
 				const card = pool.find((d) => d.name === 'Verjus and Tonic');
 				expect(card.draft).toBe(true);
 				const fits = Object.fromEntries(W.FC_MODES.map((m) => [m[0], !!m[3](card)]));
-				expect(fits).toEqual({ fall: false, name2spec: false, spec2name: false, build: false, cloze: false, service: false, line10: true, line20: false, line45: false, parts: false, upsell: false, study: true, word: false, component: false, producer: false });
+				expect(fits).toEqual({ compass: false, fall: false, name2spec: false, spec2name: false, build: false, cloze: false, service: false, line10: true, line20: false, line45: false, parts: false, upsell: false, study: true, word: false, component: false, producer: false });
 				/* the fixture's Collins carries a spec AND kept lines: every mode fits it */
 				const collins = pool.find((d) => d.name === 'The Lantern Collins');
 				expect(W.FC_MODES.find((m) => m[0] === 'name2spec')[3](collins)).toBe(true);

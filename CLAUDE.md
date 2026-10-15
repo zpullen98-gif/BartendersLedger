@@ -147,7 +147,36 @@ When a house with cocktails is current and "Edit the menu" is off, the Menu tab'
 
 ## What a drink is made of (5 October 2026)
 
-The House carries components (ingredients, techniques, stories, one card each, shared by every item) and each item's comparisons (WorldTable CLAUDE.md, "The components and the comparisons"). On the study card, after the build: **What it's made of** (`hsMadeOfHTML`, the kinds as eyebrows, each component a closed `hs-more` disclosure with its say, explanation, card and videos, then Flash these components, `hs-comp-cards`) and **Compare with** (`hsCompareHTML`: a Ledger cocktail opens `#/library/<slug>` here, a Table recipe or technique and a Codex door are links into their rooms through `hsRoomLink` on the suite's path, a classic is words). The Flashcards tab gains the decks `components`, `components:{kind}` and `item-components:{id}` (`componentCards` in ui-nav.js, `FC_MODES` row `component`, cards graded under `Components · {front}`, a key the orphan sweep never touches); `item-components` deals in the card's order (`DECK_BASE.ordered`). The engine's door puts `buildFlashcards` on `houseLib` itself, not under `drills`: read both (`menuWordCards` reads only `drills` and so deals nothing today). check-import holds the card, the order and the decks over the pack with components put on the Classic Sazerac.
+The House carries components (ingredients, techniques, stories, one card each, shared by every item) and each item's comparisons (WorldTable CLAUDE.md, "The components and the comparisons"). On the study card, after the build: **What it's made of** (`hsMadeOfHTML`, the kinds as eyebrows, each component a closed `hs-more` disclosure with its say, explanation, card and videos, then Flash these components, `hs-comp-cards`) and **Compare with** (`hsCompareHTML`: a Ledger cocktail opens `#/library/<slug>` here, a Table recipe or technique and a Codex door are links into their rooms through `hsRoomLink` on the suite's path, a classic is words). The Flashcards tab gains the decks `components`, `components:{kind}` and `item-components:{id}` (`componentCards` in ui-nav.js, `FC_MODES` row `component`, cards graded under `Components · {front}`, a key the orphan sweep never touches); `item-components` deals in the card's order (`DECK_BASE.ordered`). The engine's door puts `buildFlashcards` on `houseLib` itself, not under `drills`: both `menuWordCards` and `componentCards` read either location. The menu word deck was repaired on 15 October 2026; its existing `Words · {front}` progress keys remain unchanged. check-import holds the card, the order and the decks over the pack with components put on the Classic Sazerac.
+
+## The Bar Compass (15 October 2026)
+
+`js/data-bar-compass.js` is an authored teaching collection; `js/ui-bar-compass.js`
+renders it at `#/menu/compass`, a drink at `#/menu/compass/<house-id>`, and an
+unscored workshop at `#/menu/compass/workshop/<id>`. Today's study and My restaurant
+both offer a direct entry. The 32 profiles cover 26 alcoholic cocktails, two
+temperance drinks and four coffee or juice refreshments. Nine are the existing fall
+cocktails, linked to their ingredient studies rather than duplicated as new drinks.
+Family assignments explain a structural interpretation; missing house measures,
+methods, glasses and garnishes stay missing. Every comparison explains both a
+connection and a difference. Availability and historical menu evidence stay distinct.
+
+Each profile has four recall prompts, keyed `Bar Compass · <house-id>/<recall-id>`.
+Keep those IDs stable when editing prose. The `compass` flashcard mode uses the
+existing scheduler, card records and backups, outside the academic level pools.
+`compass:today` deals ten prompts, spreading them across drinks and moving prompts
+already answered today behind the others. `compass:all`, `compass:again`,
+`compass:item:<id>` and `compass:family:<id>` offer explicit scopes. Blind fronts
+show no teaching pictures or answers; grading requires a flip. Reading or opening
+an unscored workshop never writes study progress.
+
+Current-house links require an exact saved ID and name. The authored guide never
+overwrites personal menu edits, and it identifies itself as a reviewed snapshot.
+Library links require an exact canon name. Source URLs accept HTTPS; an uploaded
+sheet without a public URL remains a provenance note. New assets belong in both
+index.html and the worker shell. Run `node tools/check-bar-compass.mjs` and
+`node tools/check-bar-compass-browser.mjs`; the latter accepts `LEDGER_URL` for
+the published preview. The existing navigation and import gates remain required.
 
 ## Dev gotchas (hard-won)
 
