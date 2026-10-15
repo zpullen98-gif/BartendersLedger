@@ -441,3 +441,23 @@ the existing home, nav, import and engine gates. The browser gate accepts
 `LEDGER_PLAYWRIGHT`, `LEDGER_PREVIEW_URL` and `LEDGER_QA_OUTPUT`; it uses an
 isolated profile and checks cold routes, reading, recall, Back, keyboard
 ownership, 320/390/1120 layouts, both service palettes and offline reload.
+
+### Fall teaching artwork
+
+`js/data-fall-menu-art.js` is generated from World Table's reviewed fall art
+catalogue. The page and worker load it before `teaching-images.js`, which adapts
+its 17 entries to the existing exact-path optional artwork registry. Each has
+one full image and a smaller thumbnail under `img/fall-2026/`. New editions
+need new versioned paths. Keep every file under the registry's 512 KB limit;
+the shared 64-entry and 16 MB bounds still accommodate the complete catalogue.
+Images are never shell precached. List cards request only lazy thumbnails;
+reading cards show the plate with its caption and three to five teaching cues.
+
+Recall fronts contain no picture, image URL, cue or reference. Revealed answers
+offer a closed disclosure that requests artwork only after opening. Enlarging,
+saving, reading and returning never grade a card or alter personal records.
+`fallOwnsKey` protects the disclosure's keyboard controls and the shared native
+dialog isolates its own shortcuts. The guide describes illustrative ingredients,
+not confirmed plating, garnishes, glassware, quantities or house techniques.
+Run `tools/check-fall-art.mjs` and `tools/check-fall-art-browser.mjs` alongside
+the existing artwork, fall menu and navigation gates.

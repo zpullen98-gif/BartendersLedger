@@ -13,6 +13,10 @@ from pathlib import Path
 
 
 class NoCacheHandler(SimpleHTTPRequestHandler):
+    # Windows' MIME registry does not always know WebP. The artwork cache
+    # deliberately rejects octet-stream responses, so serve the actual type.
+    extensions_map = {**SimpleHTTPRequestHandler.extensions_map, ".webp": "image/webp"}
+
     def end_headers(self):
         self.send_header("Cache-Control", "no-cache")
         super().end_headers()

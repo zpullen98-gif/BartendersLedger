@@ -31,18 +31,18 @@ function storage() {
     async delete(name) { return stores.delete(name); }
   };
 }
-function harness({base='https://example.test/ledger/', manifest={example:entry()}, caches=storage(), fetcher,
+function harness({base='https://example.test/ledger/', manifest={example:entry()}, fallCatalog, caches=storage(), fetcher,
   document, navigator, immediateTimeout=false, worker=false} = {}) {
   const requests = [], events = {};
   const context = { URL, Request, Response, Uint8Array, DataView, AbortController, Map, Set, Promise,
-    LEDGER_TEACHING_IMAGES:manifest, caches, location:new URL(base + 'sw.js'), document, navigator,
+    LEDGER_TEACHING_IMAGES:manifest, FALL_MENU_ART:fallCatalog, caches, location:new URL(base + 'sw.js'), document, navigator,
     fetch: async (url, options) => { requests.push({url, options}); return fetcher ? fetcher(url, options) : new Response(picture, {headers:{'Content-Type':'image/webp'}}); },
     setTimeout: immediateTimeout ? (fn => setTimeout(fn, 5)) : setTimeout, clearTimeout,
     addEventListener(type, fn) { events[type] = fn; }, clients:{claim:async()=>{}}, skipWaiting(){} };
   context.self = context;
   vm.createContext(context);
   context.importScripts = (...paths) => paths.forEach(path => {
-    if (path.endsWith('data-teaching-images.js')) return; // fixture stands in for the reviewed registry
+    if (path.endsWith('data-teaching-images.js') || path.endsWith('data-fall-menu-art.js')) return; // fixtures stand in for the reviewed registry
     vm.runInContext(read(path.replace('./','')), context);
   });
   vm.runInContext(worker ? swSource : moduleSource, context);
@@ -80,7 +80,7 @@ test('phone image preserves the composition and all shell dependencies are cache
   }
   assert.ok(html.indexOf('js/data-teaching-images.js') < html.indexOf('js/teaching-images.js'));
   assert.ok(html.indexOf('js/teaching-images.js') < html.indexOf('js/app.js'));
-  assert.match(swSource,/importScripts\('\.\/js\/data-teaching-images.js', '\.\/js\/teaching-images.js'\)/);
+  assert.match(swSource,/importScripts\('\.\/js\/data-teaching-images.js', '\.\/js\/data-fall-menu-art.js', '\.\/js\/teaching-images.js'\)/);
   assert.match(read('js/app.js'),/register\('sw\.js',\s*\{\s*updateViaCache:\s*'none'\s*\}\)/);
 });
 
@@ -105,6 +105,37 @@ test('only exact registered GET paths are eligible, with no guessed remote or si
   for (const path of ['img/cards/unregistered-v1.webp','img/plates/example-v1.webp?v=2','../codex/img/plates/example-v1.webp','https://elsewhere.test/ledger/img/plates/example-v1.webp']) assert.equal(api.handles(request(path)),false,path);
   assert.equal(api.handles(new Request(request().url,{method:'POST'})),false);
   assert.equal(requests.length,0,'loading the module must not download images');
+});
+
+test('seasonal metadata joins the same bounded registry without mutating the older catalogue', () => {
+  const row = {...entry('img/fall-2026/example-v1.webp'),itemId:'example',
+    width:1200,height:800,thumbnailSrc:'img/fall-2026/example-v1.thumb.webp',thumbnailWidth:420,thumbnailHeight:280,
+    cues:[{label:'A',text:'First ingredient'},{label:'B',text:'Second ingredient'},{label:'C',text:'House check'}]};
+  const manifest = {old:entry()};
+  const {api,requests} = harness({manifest,fallCatalog:{version:1,items:[row]}});
+  assert.deepEqual(Object.keys(manifest),['old']);
+  assert.deepEqual(Object.keys(api.entries),['old','fall-art-example']);
+  assert.equal(api.entries['fall-art-example'].keyTitle,'Study the ingredient cues');
+  assert.equal(api.entries['fall-art-example'].notes[2],'House check');
+  assert.ok(api.handles(request(row.src)) && api.handles(request(row.thumbnailSrc)));
+  assert.ok(api.owns(request('img/fall-2026/unknown-v1.webp')));
+  assert.ok(!api.handles(request('img/fall-2026/unknown-v1.webp')));
+  assert.ok(!api.disclosure('fall-art-example','Study').includes('<img'));
+  assert.equal(requests.length,0);
+});
+
+test('incomplete or nonlocal seasonal artwork cannot enter the optional cache', () => {
+  const good = {...entry('img/fall-2026/example-v1.webp'),itemId:'example',
+    cues:[{label:'A',text:'First'},{label:'B',text:'Second'},{label:'C',text:'Third'}]};
+  const bad = [
+    {...good,itemId:'missing-cues',cues:[]},
+    {...good,itemId:'empty-cue',cues:[...good.cues,{label:'D',text:''}]},
+    {...good,itemId:'remote',src:'https://example.test/remote.webp'},
+    {...good,itemId:'unversioned',src:'img/fall-2026/example.webp'},
+    {...good,itemId:'bad-thumb',thumbnailSrc:'img/fall-2026/example-v1.thumb.webp',thumbnailWidth:420,thumbnailHeight:280}
+  ];
+  const {api} = harness({manifest:{},fallCatalog:{version:1,items:bad}});
+  assert.equal(Object.keys(api.entries).length,0);
 });
 
 test('real worker caches a requested picture and serves it offline without shell or sibling writes', async () => {
