@@ -184,7 +184,8 @@ for (let n = 1; n <= 4; n++) {
 	const order = [at(/>Today’s study<\/h3>/), at(/>My restaurant<\/h3>/), at(/>Search<\/h3>/), at(/<details class="lv-holds">/), at(/>Another level<\/h3>/), at(/<nav class="lv-switch"/)];
 	if (order.some((x) => x < 0) || order.some((x, i) => i && x < order[i - 1])) fail(`${where}: does not read Today's study, My restaurant, Search, what it holds, then Another level (${order.join(',')})`);
 	const rows = [...page.matchAll(/<nav class="quiet rows today"[^>]*>([\s\S]*?)<\/nav>/g)].map((m) => [...m[1].matchAll(/<span class="door-name">([^<]*)<\/span>/g)].map((x) => x[1]))[0] || [];
-	if (rows.join('|') !== 'Due today|Quick quiz|Fall menu practice|Next reading|Tonight’s session') fail(`${where}: Today's study reads ${JSON.stringify(rows)}`);
+	if (rows.join('|') !== 'Due today|Quick quiz|Your culinary terms|Fall menu practice|Next reading|Tonight’s session') fail(`${where}: Today's study reads ${JSON.stringify(rows)}`);
+	if (!page.includes('href="/table/foundations"')) fail(`${where}: culinary terms do not reach the World Table Fieldbook`);
 	if (!/<input class="input" id="lv-q"/.test(page)) fail(`${where}: no search box`);
 	if (!page.includes(`<span class="when-closed">Show what ${LEVELS[n - 1].name} holds</span>`)) fail(`${where}: what it holds is not a disclosure that says Show`);
 	if (/data-act="train"/.test(page)) fail(`${where}: a training door is still on the page`);
