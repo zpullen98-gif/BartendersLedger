@@ -403,3 +403,41 @@ check `check-method-studies-browser.mjs` alongside the existing gates. The brows
 check accepts `LEDGER_PREVIEW_URL`, `LEDGER_PLAYWRIGHT` and `LEDGER_QA_OUTPUT`.
 The legacy foam drill retains its old units and history, explicitly separated
 from current service-quality observations; do not reinterpret its stored seconds.
+
+## Fall 2026 menu study
+
+`#/menu/fall` opens the curated food and cocktail collection; `#/menu/fall/{id}`
+opens a reading card. My restaurant, Menu, search and Today's study provide
+doors. Ledger starts on Cocktails; Food remains one tap away. The existing
+service palette applies to both collections and all four reading panels.
+
+The canonical content is `WorldTable/src/lib/data/fall-menu-2026.json`.
+Run that repo's `node tools/port-fall-menu.mjs` to generate Ledger's
+`js/data-fall-menu.js`, or add `--check` to verify parity. Edit the canonical
+file, never its generated copy. The collection includes the eight supplied
+dishes, nine unmeasured cocktails, source links, pronunciation where useful,
+ingredient notes, origins, service checks and seven recall prompts per item.
+House ingredients come from the uploaded sheets; general research does not
+establish a Brennan's recipe. Preserve unresolved dietary terms and the
+distinction between sheet notes and actual service clearance.
+
+`js/ui-fall-menu.js` adapts the collection to the existing Flashcards machine.
+Its keys are `Fall 2026 · {itemId}/{drillId}`: keep IDs stable when editing
+wording. Reading never writes personal House, My Bar, stock or kept notes, and
+the collection never enters measured builds or `allDrinks()`. Grading writes
+only the existing flashcard record. Sources and full-card links appear after
+Flip. Opening a full card retains the revealed question for Back, including
+when the same reading card originally launched practice.
+
+Decks are `fall`, `fall:food` (also `fall:dish`), `fall:cocktail`,
+`fall:tableside`, `fall:again`, `fall:today` and `fall:item:{id}`.
+Today's separate fall door deals ten prompts: last missed first, unseen next,
+then oldest learned. New questions are interleaved across dishes and cocktails.
+The ordinary Due today pool and count stay unchanged. No new storage format or
+import approval mark is created. The data and renderer are shell cached.
+
+Run `tools/check-fall-menu.mjs` and `tools/check-fall-menu-browser.mjs` alongside
+the existing home, nav, import and engine gates. The browser gate accepts
+`LEDGER_PLAYWRIGHT`, `LEDGER_PREVIEW_URL` and `LEDGER_QA_OUTPUT`; it uses an
+isolated profile and checks cold routes, reading, recall, Back, keyboard
+ownership, 320/390/1120 layouts, both service palettes and offline reload.

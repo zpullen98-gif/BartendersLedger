@@ -159,6 +159,7 @@ function render(kind){
   if(typeof houseAfterRender === 'function') houseAfterRender();
   /* the sticky Back's observer and the level page's search box (js/ui-nav.js) */
   if(typeof navAfterRender === 'function') navAfterRender();
+  if(typeof fallAfterRender === 'function') fallAfterRender();
   /* Guarded on the element, not on state.tab, like every other post-paint
      hook in this function. It asks YouTube about the ONE film the reader
      opened, and nothing at all on any other tab. */
@@ -257,6 +258,7 @@ document.addEventListener('keydown', e => {
   }
   if(typing) return;
   if(typeof methodStudyOwnsKey === 'function' && methodStudyOwnsKey(e)) return;
+  if(typeof fallOwnsKey === 'function' && fallOwnsKey(e)) return;
   if(e.key === '/'){ openSearch(); e.preventDefault(); return; }
   if(e.key === 'Escape' && state.sheet){ state.sheet = null; render(); return; }
   const click = sel => { const b = document.querySelector(sel); if(b){ b.click(); e.preventDefault(); return true; } return false; };
@@ -414,6 +416,7 @@ document.getElementById('view').addEventListener('click', e => {
     prepCard(); }
   else if(act==='fc-flip'){ fc.flipped = true; }
   else if(act==='fc-grade'){
+    if(fc.deck[fc.idx] && fc.deck[fc.idx].src === 'Fall 2026' && !fc.flipped) return;
     say(el.dataset.ok==='1' ? 'Marked correct.' : 'Marked missed.');
     recordCard(el.dataset.ok==='1');
     fc.idx++; prepCard(); }
@@ -981,6 +984,7 @@ document.getElementById('view').addEventListener('click', e => {
       importMaybeTaken(true);
     } }
   else if(act==='menu-view'){ state.menu.view = el.dataset.v; state.menu.err = null;
+    if(el.dataset.v === 'fall' && typeof fallOpen === 'function') fallOpen('');
     /* leaving the review list by any route closes whichever row was open, or
        menu-save keeps taking the importer branch for an ordinary edit and
        splices a row out of a list the user is no longer looking at */
@@ -1108,6 +1112,7 @@ function captureLiveInputs(){
     const el2 = document.getElementById(id);
     if(el2 && el2.value !== undefined) obj[key] = el2.value;
   };
+  if(state.fallMenu) grab('fall-menu-q', state.fallMenu, 'q');
   grab('spill-what', state.tools, 'spillWhat');
   grab('spill-cost', state.tools, 'spillCost');
   grab('ob-name',    state.tools, 'obName');
