@@ -23,7 +23,11 @@
  *     where it is read and resolves to a real tab; no training door is left on
  *     it; the switch between the four by their names is at its foot, under
  *     "Another level"; its test is the last thing on Quizzes, by name ("The
- *     Barback test")
+ *     Barback test"); My restaurant offers one lead door to the house's page
+ *     (where the Study the menu rows stood until 18 October 2026)
+ *   - the Practise root reads Due today, Quick quiz, My restaurant, the level
+ *     (with its row to The {Level} rounds), Reference cards, Hands on, and the
+ *     level's test last, by name
  *   - every level test deals seventeen questions; sat wrong, it ends on "What
  *     got away" with no percentage, no score (no "n / m"), none of the quiz
  *     round's verdicts, and without adding a row to progress.quizzes; sat
@@ -212,6 +216,48 @@ for (let n = 1; n <= 4; n++) {
 	if (last.length !== 1 || last[0][2] !== `The ${LEVELS[n - 1].name} test` || Number(last[0][1]) !== n) fail(`Quizzes at ${LEVELS[n - 1].name}: does not end on the ${LEVELS[n - 1].name} test`);
 	if (NUMERAL.test(q)) fail(`Quizzes at ${LEVELS[n - 1].name}: names a level by a numeral`);
 	if (q.includes(EMDASH)) fail(`Quizzes at ${LEVELS[n - 1].name}: carries an em dash`);
+}
+/* the Practise root (the five words, 18 October 2026): Due today, the quick
+   quiz, My restaurant, the level with its row to the level's rounds, What
+   it's made of and Words where they hold cards, Reference cards, Hands on,
+   and the level's test last, by the chosen level's name */
+for (let n = 1; n <= 4; n++) {
+	setProgress(fresh);
+	run(`localStorage.getItem = (k) => k === 'oot-level-ledger-v1' ? '${n}' : null; state.lt = null; state.tab = 'flashcards'; state.fc.stage = 'pick'; state.scopeAll.flashcards = false;`);
+	const p = g('renderFlashcards')();
+	const L = LEVELS[n - 1].name;
+	const where = `Practise at ${L}`;
+	if (!p.includes('<h2 class="lv-title" tabindex="-1">Practise</h2>')) fail(`${where}: not headed Practise`);
+	const heads = [...p.matchAll(/<h3 class="sub-head" id="fc-[a-z]+-h">([^<]*)<\/h3>/g)].map((m) => m[1]).filter((h) => h !== 'What it’s made of' && h !== 'Words');
+	const want = ['Due today', 'Quick quiz', 'My restaurant', L, 'Reference cards', 'Hands on', `The ${L} test`];
+	if (heads.join('|') !== want.join('|')) fail(`${where}: reads ${JSON.stringify(heads)}, not ${JSON.stringify(want)}`);
+	const tests = [...p.matchAll(/<button class="btn btn-brass leveltest" data-act="lt-start" data-n="(\d)"[^>]*>([^<]*)<\/button>/g)];
+	if (tests.length !== 1 || tests[0][2] !== `The ${L} test` || Number(tests[0][1]) !== n) fail(`${where}: does not carry the ${L} test once`);
+	if (!/<button class="btn btn-brass leveltest"[^>]*>[^<]*<\/button><\/section><\/div>$/.test(p)) fail(`${where}: the test is not the last thing on the page`);
+	const lvl = (p.match(/<h3 class="sub-head" id="fc-level-h">[\s\S]*?<\/section>/) || [''])[0];
+	if (!lvl.includes(`data-act="quiz-root"><span class="door-name">The ${L} rounds</span>`)) fail(`${where}: the level's decks carry no row to The ${L} rounds`);
+	if (NUMERAL.test(p)) fail(`${where}: names a level by a numeral`);
+	if (p.includes(EMDASH)) fail(`${where}: carries an em dash`);
+}
+/* the level page's My restaurant: one lead door to the house's page, after
+   the Fall 2026 and Bar Compass doors and before the Menu Desk, where the
+   Study the menu rows stood until 18 October 2026 */
+{
+	const own = blank();
+	own.bar = [{ id: 'b-own00001', name: 'My Own Sour', spec: ['2 oz gin', '1 oz lemon', '3/4 oz syrup'], method: 'Shake', glass: 'Coupe', garnish: '', family: '', spirit: '', price: '', note: '', ts: 1 }];
+	setProgress(own);
+	run('state.lt = null; state.level.n = 2;');
+	const page = g('renderLevel')();
+	const mine = (page.match(/<section class="lv-block" aria-labelledby="lv-house-h">[\s\S]*?<div class="row lv-quiet">/) || [''])[0];
+	const leads = [...mine.matchAll(/data-act="lv-menu"/g)].length;
+	if (leads !== 1) fail(`the level page's My restaurant carries ${leads} doors to the house's page, not one`);
+	if (/Study the whole menu|Flashcards for the menu|data-act="lv-producers"|data-m="mybar"|data-deck="menu"/.test(mine)) fail('the level page\'s My restaurant still carries the Study the menu rows');
+	const at = (s) => mine.indexOf(s);
+	if (at('class="fall-door"') >= 0 && at('class="fall-door"') > at('data-act="lv-menu"')) fail('the level page\'s lead door comes before the Fall 2026 door');
+	if (at('class="bc-door"') >= 0 && at('class="bc-door"') > at('data-act="lv-menu"')) fail('the level page\'s lead door comes before The Bar Compass door');
+	setProgress(fresh);
+	run('state.level.n = 2;');
+	if (/data-act="lv-menu"/.test(g('renderLevel')())) fail('the level page offers a door to the house\'s page with no house and no drinks of the person\'s own');
 }
 run('localStorage.getItem = () => null;');
 

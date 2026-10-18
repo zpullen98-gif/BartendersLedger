@@ -2186,8 +2186,9 @@ function stubDocument() {
 	return { head: new StubNode('element', 'head', ''), body: new StubNode('element', 'body', ''),
 		createElement: (tag) => new StubNode('element', tag, ''), createTextNode: (s) => new StubNode('text', '#text', String(s)) };
 }
-/* the app's own escaper, for a label pinned through it */
+/* the app's own escaper, for a label pinned through it, and its own slugify, for an id */
 const W_esc = vm.runInThisContext('esc');
+const W_slug = vm.runInThisContext('slugify');
 
 /* ---- the House ---------------------------------------------------------
    The engine is loaded into this realm over a Map (no IndexedDB in node, so
@@ -3671,7 +3672,7 @@ houseDescribe('the House behind the menu', () => {
 		globalThis.location = { hash: '', pathname: '/ledger/' };
 		globalThis.history = { replaceState(s, t, h) { globalThis.location.hash = h; }, pushState(s, t, h) { pushed.push(h); globalThis.location.hash = h; } };
 		W.state.menu.view = 'menu'; W.state.menu.open = null;
-		W.state.menu.study = { q: '', sec: '', open: null, editAll: false, deck: null, y: 0, jump: null, pushed: false, l20: false, l45: false, lastId: null };
+		W.state.menu.study = { q: '', sec: '', open: null, editAll: false, deck: null, y: 0, jump: null, pushed: false, lastId: null };
 		try { return await fn(pushed); } finally {
 			W.state.tab = tab; Object.assign(W.state.menu, menu); W.state.menu.study = null; Object.assign(W.state.fc, fc);
 			if (locWas === undefined) delete globalThis.location; else globalThis.location = locWas;
@@ -3706,6 +3707,14 @@ houseDescribe('the House behind the menu', () => {
 				expect(secs).toEqual(want);
 				expect(secs).toHaveLength(want.length);
 				expect(secs.length).toBeGreaterThan(1);
+				/* the drink list as the house prints it (18 October 2026): the menus'
+				   own headings in the menus' order, the cocktail list a guest is
+				   handed first */
+				expect(secs).toEqual(['Billboard Songs from 1946', 'Temperance, 1946', 'Sazerac Selections', 'Classic Eye Openers', 'Coffee', 'Cold Pressed Juices', 'Bubbles at Brennan\'s', 'Dessert Cocktails', 'Coffee Cocktails', 'Luxury Roost Bar Cocktails'].map(W_esc));
+				/* each section a place a jump lands on: its id the section's slug */
+				const ids = [...html.matchAll(/<section class="panel hs-sec" id="([^"]+)" aria-label="([^"]+)">/g)];
+				expect(ids.map((m) => m[2])).toEqual(want);
+				expect(ids.map((m) => m[1])).toEqual([...new Set(cur.cocktails.map((c) => c.section))].map((x) => 'hs-s-' + W_slug(x)));
 				expect(html).not.toMatch(/<[^>]*\schecked[\s>=]/);
 				/* every control a button of the study view, none under its height rule by class */
 				expect(html).toContain('Menus read ' + READ_ON(cur.menusReadOn));
@@ -3902,7 +3911,7 @@ houseDescribe('the House behind the menu', () => {
 		});
 	});
 
-	packIt('the Producers tab opens on the house\'s bar: every kept producer that reaches a drink and never the kitchen\'s alone, each opening its whole profile with its drinks as chips to their cards, then the library as before, with the level page\'s door and its count', async () => {
+	packIt('the Producers tab opens on the house\'s bar: every kept producer that reaches a drink and never the kitchen\'s alone, each opening its whole profile with its drinks as chips to their cards, then the library as before, with the house page\'s door and its count', async () => {
 		counted();
 		await withBarAsync(async () => {
 			await withStudy(async () => {
@@ -3954,9 +3963,15 @@ houseDescribe('the House behind the menu', () => {
 					expect(W.state.menu.study.open).toBe(SAZ);
 					expect(W.renderMenu()).toContain('>Classic Sazerac</h2>');
 					expect(W.state.prod.house).toBe(PROD_IDS.bitters);
-					/* the level page's door, with its count */
+					/* the house's page's door, with its count (on the level page until
+					   the five words of 18 October 2026, which give the level page one
+					   lead door to the house's page) */
+					W.state.menu.study.open = null;
+					const page = W.renderMenu();
+					expect(page).toContain('<h3 class="hs-h3" id="hs-producers-h" tabindex="-1">Producers</h3><nav class="quiet rows" aria-label="Producers"><button class="door" data-act="lv-producers"><span class="door-name">The producers</span><span class="door-line">4 producers behind 4 drinks on the menu.</span>');
 					const lv = W.myRestaurantHTML();
-					expect(lv).toContain('data-act="lv-producers"><span class="door-name">The producers</span><span class="door-line">4 producers behind 4 drinks on the menu.</span>');
+					expect(lv).not.toContain('data-act="lv-producers"');
+					expect((lv.match(/data-act="lv-menu"/g) || []).length).toBe(1);
 					/* the shipped pack as it stands: the house group is exactly its kept producers that reach a drink, and names nobody */
 					counted();
 					await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
@@ -4308,6 +4323,147 @@ houseDescribe('the House behind the menu', () => {
 		});
 	});
 
+	/* The drink card's top (the five words, 18 October 2026, as the Table's dish card and the Codex's
+	   wine card): the ten, twenty and forty-five second lines open, with no button, under a visually
+	   hidden heading; the guest line after them where it differs from the twenty; then Offer next.
+	   Over every drink of the shipped pack, so a polished edition needs no edit here. */
+	packIt('every drink card opens on its three lines with no button: In ten seconds, In twenty seconds and In forty-five seconds under a hidden heading, after Say it, then the guest line where it differs, then Offer next and About it', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async () => {
+				await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
+				const cur = OOT.house.current();
+				let guests = 0, offers = 0;
+				for (const c of cur.cocktails) {
+					W.houseStudyAct('hs-open', { id: c.id });
+					const card = W.renderMenu();
+					const l = (c.lines && c.lines.by === 'person' && c.lines.value) || {};
+					expect([c.name, Boolean(l.s10 && l.s20 && l.s45)]).toEqual([c.name, true]);
+					const lines = '<section class="hs-lines" aria-labelledby="hs-lines-h"><h3 class="sr-only" id="hs-lines-h">The lines</h3>'
+						+ '<div class="hs-block"><div class="eyebrow">In ten seconds</div><p class="hs-ten">' + W_esc(l.s10.trim()) + '</p></div>'
+						+ '<div class="hs-block"><div class="eyebrow">In twenty seconds</div><p class="hs-line hs-twenty">' + W_esc(l.s20.trim()) + '</p></div>'
+						+ '<div class="hs-block"><div class="eyebrow">In forty-five seconds</div><p class="hs-line hs-fortyfive">' + W_esc(l.s45.trim()) + '</p></div></section>';
+					const at = card.indexOf(lines);
+					expect([c.name, at > 0]).toEqual([c.name, true]);
+					expect(card).not.toContain('data-act="hs-toggle"');
+					expect(card).not.toMatch(/>(Hide )?(Twenty|Forty-five) seconds</);
+					const end = at + lines.length;
+					/* Say it above the lines, as on the Table's card */
+					const say = card.indexOf('<div class="eyebrow">Say it</div>');
+					if (say >= 0) expect([c.name, say < at]).toEqual([c.name, true]);
+					/* the guest line straight after them where it says something the twenty does not */
+					const guest = c.guest && c.guest.by === 'person' && typeof c.guest.value === 'string' ? c.guest.value.trim() : '';
+					if (guest && guest !== l.s20.trim()) {
+						guests++;
+						expect([c.name, card.slice(end, end + 200).indexOf('<p class="hs-line">' + W_esc(guest).slice(0, 120))]).toEqual([c.name, 0]);
+					} else expect([c.name, card.slice(end).indexOf('<p class="hs-line">')]).not.toEqual([c.name, 0]);
+					/* then Offer next, then About it */
+					const offer = card.indexOf('<p class="hs-offer">');
+					if (offer >= 0) { offers++; expect([c.name, offer >= end]).toEqual([c.name, true]); }
+					const about = card.indexOf('>About it</h3>');
+					if (about >= 0) expect([c.name, about > Math.max(end, offer)]).toEqual([c.name, true]);
+					W.houseStudyAct('hs-back', {});
+				}
+				expect(offers > 0).toBe(true);
+				expect(guests > 0).toBe(true);
+				/* the toggle act is inert: the card draws the same before and after
+				   (drawn once first, since the first paint marks the heading to focus) */
+				W.houseStudyAct('hs-open', { id: SAZ });
+				W.renderMenu();
+				const before = W.renderMenu();
+				expect(W.houseStudyAct('hs-toggle', { l: 's45' })).toBe(false);
+				expect(W.renderMenu()).toBe(before);
+				expect(W.state.menu.study.l20 === undefined && W.state.menu.study.l45 === undefined).toBe(true);
+			});
+		});
+	});
+
+	/* The Brennan's page's jump row (the five words, 18 October 2026): one button per place on the page,
+	   under the header and above the sticky search, each naming an id the page draws; the house's own
+	   sections by the words a server goes by, keyed by the menus' headings with the house's name read
+	   from the house; any other house one button per section under its own name. */
+	packIt('the house\'s page carries a jump row under its header: the cocktail list, eye openers and coffee, Bubbles, after dinner and the Roost Bar, then the producers and the videos, each to a place the page draws, writing nothing; another house gets one button per section', async () => {
+		counted();
+		await withBarAsync(async () => {
+			await withStudy(async (pushed) => {
+				await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
+				const cur = OOT.house.current();
+				const jumps = (html) => {
+					const nav = (html.match(/<nav class="hs-jumps" aria-label="On this page">([\s\S]*?)<\/nav>/) || [])[1];
+					return nav === undefined ? null : [...nav.matchAll(/<button class="chip hs-chip" data-act="hs-jump" data-to="([^"]+)"( hidden)?>([^<]*)<\/button>/g)].map((m) => ({ to: m[1], hidden: Boolean(m[2]), label: m[3] }));
+				};
+				const html = W.renderMenu();
+				const row = jumps(html);
+				expect(row).not.toBe(null);
+				/* under the header, above the sticky search */
+				expect(html.indexOf('<nav class="hs-jumps"')).toBeLessThan(html.indexOf('<div class="hs-bar">'));
+				expect(html.indexOf('<nav class="hs-jumps"')).toBeGreaterThan(html.indexOf('class="hs-house"'));
+				const first = cur.cocktails[0].section;
+				const want = [['The cocktail list', 'hs-s-' + W_slug(first)], ['Eye openers and coffee', 'hs-s-classic-eye-openers'], ['Bubbles', 'hs-s-' + W_slug('Bubbles at Brennan\'s')],
+					['After dinner', 'hs-s-dessert-cocktails'], ['The Roost Bar', 'hs-s-luxury-roost-bar-cocktails']];
+				if (W.hsProducersLine(cur)) want.push(['Producers', 'hs-producers-h']);
+				if (html.includes('id="hs-videos-h"')) want.push(['Videos', 'hs-videos-h']);
+				expect(row.map((j) => [j.label, j.to])).toEqual(want);
+				expect(row.every((j) => !j.hidden)).toBe(true);
+				/* every button names a place the page draws */
+				for (const j of row) expect([j.to, html.includes('id="' + j.to + '"')]).toEqual([j.to, true]);
+				/* a jump writes nothing: no address, no entry, no state */
+				const st = JSON.stringify(W.state.menu.study), hash = globalThis.location.hash;
+				W.houseStudyAct('hs-jump', { to: 'hs-s-classic-eye-openers' });
+				expect(pushed).toEqual([]);
+				expect(globalThis.location.hash).toBe(hash);
+				expect(JSON.stringify(W.state.menu.study)).toBe(st);
+				/* a chosen section hides the buttons whose sections it takes off the page */
+				W.houseStudyAct('hs-sec', { s: 'Classic Eye Openers' });
+				const one = jumps(W.renderMenu());
+				expect(one.filter((j) => /^hs-s-/.test(j.to) && !j.hidden).map((j) => j.to)).toEqual(['hs-s-classic-eye-openers']);
+				W.houseStudyAct('hs-sec', { s: '' });
+				/* a shift: every jump names the place it names on the whole menu, and one whose section the
+				   shift leaves off the page is hidden, never lent to another section */
+				const allDay = Object.fromEntries(row.map((j) => [j.label, j.to]));
+				const meals = [...new Set((cur.meals || []).map((x) => x && x.name).filter(Boolean))];
+				expect(meals.length).toBeGreaterThan(1);
+				let narrower = 0;
+				const ls = globalThis.localStorage;
+				const store = {};
+				globalThis.localStorage = { getItem: (k) => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = String(v); }, removeItem: (k) => { delete store[k]; } };
+				try {
+					for (const m of meals) {
+						W.houseStudyAct('hs-meal', { m });
+						const shifted = W.renderMenu();
+						/* the shift took: its chip is the one pressed */
+						expect([m, (shifted.match(/<button class="chip hs-chip on" aria-pressed="true" data-act="hs-meal" data-m="([^"]*)">/) || [])[1]]).toEqual([m, W_esc(m)]);
+						if (jumps(shifted).some((j) => j.hidden)) narrower++;
+						for (const j of jumps(shifted)) {
+							expect([m, j.label, j.to]).toEqual([m, j.label, allDay[j.label]]);
+							expect([m, j.to, j.hidden]).toEqual([m, j.to, !shifted.includes('id="' + j.to + '"')]);
+						}
+					}
+					W.houseStudyAct('hs-meal', { m: '' });
+				} finally { globalThis.localStorage = ls; }
+				/* at least one shift leaves a section off, so the case is not empty */
+				expect(narrower).toBeGreaterThan(0);
+				/* the house's name is read from the house: renamed, its Bubbles heading is no longer the house's own */
+				const renamed = JSON.parse(PACK_TEXT);
+				renamed.house.name = 'The Fixture Room';
+				counted();
+				await withFetch(JSON.stringify(renamed), async () => { await W.houseAutoLoad(); });
+				const r = jumps(W.renderMenu());
+				expect(r.map((j) => j.label).slice(0, 4)).toEqual(['The cocktail list', 'Eye openers and coffee', 'After dinner', 'The Roost Bar']);
+				/* another house: one button per section, under the section's own name */
+				const other = JSON.parse(PACK_TEXT);
+				for (const c of other.house.cocktails) c.section = 'The ' + c.section + ' list';
+				counted();
+				await withFetch(JSON.stringify(other), async () => { await W.houseAutoLoad(); });
+				const oh = W.renderMenu();
+				const o = jumps(oh);
+				const osecs = [...new Set(other.house.cocktails.map((c) => c.section))];
+				expect(o.filter((j) => /^hs-s-/.test(j.to)).map((j) => j.label)).toEqual(osecs.map(W_esc));
+				for (const j of o) expect([j.to, oh.includes('id="' + j.to + '"')]).toEqual([j.to, true]);
+			});
+		});
+	});
+
 	/* The house's videos: the shipped pack with four put on it here (one on the Sazerac, one about the
 	   house itself on a dish, one through a term that reaches the Sazerac, one with a link the engine
 	   refuses), so the cases need no edition that carries videos. Links out, never a player. */
@@ -4511,12 +4667,12 @@ houseDescribe('the House behind the menu', () => {
 				expect(all.length > 10).toBe(true);
 				/* the house card deals house drinks alone, never the person's own */
 				expect(all.every((id) => houseIds.has(id))).toBe(true);
-				W.houseStudyAct('hs-cards', { s: 'Signature drinks' });
-				expect(W.state.fc.deckId).toBe('menu:signature-drinks');
+				W.houseStudyAct('hs-cards', { s: 'Sazerac Selections' });
+				expect(W.state.fc.deckId).toBe('menu:sazerac-selections');
 				expect(W.startDeckRun('study')).toBe(true);
 				const sig = W.state.fc.deck.map((d) => d.ref.id);
 				expect(sig.length > 0).toBe(true);
-				expect(sig.every((id) => W.houseStudySectionOf(id) === 'Signature drinks')).toBe(true);
+				expect(sig.every((id) => W.houseStudySectionOf(id) === 'Sazerac Selections')).toBe(true);
 				/* one drink's card: Got it and Again come after Flip */
 				W.houseStudyAct('hs-cards', { id: SAZ });
 				expect(W.state.fc.deckId).toBe('drink:' + SAZ);
@@ -4546,10 +4702,10 @@ houseDescribe('the House behind the menu', () => {
 				expect(W.fcPool().map((d) => d.ref.id)).toEqual(['b-xid4q2qi']);
 				W.state.fc.special = 'All'; W.state.fc.deckId = null;
 				/* the Flashcards tab's own deck, the house card mode and a section */
-				W.state.fc.src = 'My Bar'; W.state.fc.section = 'Signature drinks';
+				W.state.fc.src = 'My Bar'; W.state.fc.section = 'Sazerac Selections';
 				const pool = W.fcPool();
 				expect(pool.length > 0).toBe(true);
-				expect(pool.every((d) => d.src === 'My Bar' && W.houseStudySectionOf(d.ref.id) === 'Signature drinks')).toBe(true);
+				expect(pool.every((d) => d.src === 'My Bar' && W.houseStudySectionOf(d.ref.id) === 'Sazerac Selections')).toBe(true);
 				expect(W.FC_MODES.find((m) => m[0] === 'study')[3](pool[0])).toBe(true);
 			});
 		});
@@ -4569,6 +4725,14 @@ houseDescribe('the House behind the menu', () => {
 		expect(readFileSync(join(JS, 'ui-menu.js'), 'utf8')).toContain("(typeof houseStudyOn === 'function' && houseStudyOn()) ? houseStudyHTML() : menuListHTML()");
 		expect(/[\u2013\u2014]| -{2} /.test(study)).toBe(false);
 		expect(/\b(colou?r|favorite|practice|Lizzy|Brennan)\b/.test(study.replace(/\/\*[\s\S]*?\*\//g, ''))).toBe(false);
+		/* the card's lines open with no button (18 October 2026): no toggle is
+		   drawn, the act is kept inert, the Hide words are gone */
+		expect(study).not.toContain('data-act="hs-toggle"');
+		expect(study).not.toMatch(/twentyHide|fortyFiveHide|st\.l20|st\.l45/);
+		expect(W.houseStudyAct('hs-toggle', { l: 's20' })).toBe(false);
+		/* a jump scrolls and focuses and is answered before any render */
+		expect(study.indexOf("if(act === 'hs-jump') return hsJump(")).toBeGreaterThan(-1);
+		expect(study.indexOf("if(act === 'hs-jump') return hsJump(")).toBeLessThan(study.indexOf("if(typeof captureLiveInputs === 'function') captureLiveInputs();", study.indexOf('function houseStudyAct(')));
 	});
 
 	/* ---- VERIFIER (study view): a card opened under a shift that hides its drink ----
@@ -4739,6 +4903,8 @@ houseDescribe('the House behind the menu', () => {
 				const c = cur.cocktails.find((x) => x.id === i.id);
 				if (PEOPLE.test(JSON.stringify(c.lines && c.lines.value))) bad.push(c.name);
 			}
+			/* and every drink's three lines and guest line, which the card now opens on */
+			for (const c of cur.cocktails) if (PEOPLE.test(JSON.stringify([c.lines && c.lines.value, c.guest && c.guest.value]))) bad.push(c.name);
 			expect(bad).toEqual([]);
 		});
 	});

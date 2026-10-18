@@ -1,5 +1,5 @@
 /**
- * The four tabs, Back and the history, gated. Run: `node tools/check-nav.mjs`
+ * The five words, Back and the history, gated. Run: `node tools/check-nav.mjs`
  * (exits non-zero on any problem). `--mutations` also proves the gate can
  * fail: it copies js/ to a scratch folder, breaks one rule at a time, and
  * expects this gate to go red on each.
@@ -13,31 +13,42 @@
  * real tap makes, on the element found in the rendered markup. So what is
  * checked is the SHIPPED router, render() and the acts.
  *
- *   - the nav is exactly Home, Flashcards, Quizzes, Library, then More; every
- *     TABS id sits in exactly one cluster; TABS still holds every id it held
- *     before the consolidation (a frozen list, so deleting one fails here)
+ *   - the nav is exactly Home, the house's word, Practise, Library, then More
+ *     (the five words of 18 October 2026; the second is the literal Brennan’s
+ *     before a house loads and the house's own name, escaped, once one has),
+ *     keyed home, brennans, practise, library and more; the house's word holds
+ *     every #/menu address, Practise the decks, the rounds, the drills, the
+ *     riffs and the level test, each lit by its word; every TABS id sits in
+ *     exactly one cluster; TABS still holds every id it held before the
+ *     consolidation (a frozen list, so deleting one fails here)
  *   - every route round-trips: a screen's address, read back by applyRoute,
  *     is the same screen (its key), and every address the design adds parses
  *   - the parent map is total over TABS, every deck, every practice and tools
  *     view, and never returns the screen itself; only Home has none
- *   - the push model: Home, a level, Flashcards, a deck, Start makes four
- *     pushes carrying ootd 1 to 4; a flip and the next card replace; four
- *     Backs walk down to Home, where no Back is drawn; a cold deep link has
- *     depth 0 and Back replaces up to Home without growing the history
+ *   - the push model: Home, a level, Practise (#/practise), a deck, Start
+ *     makes four pushes carrying ootd 1 to 4; a flip and the next card
+ *     replace; four Backs walk down to Home, where no Back is drawn; a cold
+ *     deep link has depth 0 and Back replaces up to Home without growing the
+ *     history; #/practise[/all] and #/flashcards[/all] read as the Practise
+ *     root and print #/practise[/all]
  *   - one action, one entry: a link inside the view (a search hit, a hash
  *     link) is one push one deeper, and an entry the browser made for a hash
  *     link is adopted, never doubled; one Back returns
- *   - a pop onto a finished round draws its results from memory, and with no
- *     round in memory falls to Quizzes with a replace
+ *   - Practise's row to the level's rounds is one push to the Quizzes page
+ *     (#/quiz), whose Back is the Practise root; the quick quiz from either
+ *     is one push and Back returns; a pop onto a finished round draws its
+ *     results from memory, and with no round in memory falls to Quizzes with
+ *     a replace; a cold #/quiz walks up Practise, then Home
  *   - every old address lands: #/mybar/<slug>, #/service/beer, #/level,
  *     #/level/<slug>, #drink=<id>, #/mine, #/menu, #/flashcards, #/quiz,
- *     #/tools, #/practice, each with one Back whose first press goes to the
- *     screen's logical parent
+ *     #/tools, #/practice, #/practise, each with one Back whose first press
+ *     goes to the screen's logical parent (#/menu's is Home, as every tab
+ *     root's; #/quiz's the Practise root)
  *   - the home is the four cards and nothing else; one Back on every screen
  *     but Home and no "Back to" anywhere; on the new screens no level by a
  *     numeral, no dash and no mark at or above U+2190
- *   - Due today's figure is one number in the pill, the level page's row and
- *     the Flashcards root, is due plus new under the caps, and is above zero
+ *   - Due today's figure is one number in the pill on Practise, the level
+ *     page's row and the Practise root, is due plus new under the caps, and is above zero
  *     on a fresh record; #/menu/section/<slug> never opens a drink; the level
  *     page's switch is after what the level holds; More has no Search row and
  *     the Library root has Search everything
@@ -46,8 +57,13 @@
  *     last showed never inherits the old depth (Back would leave the app)
  *   - with the House engine beside this checkout: a #drink= link held until
  *     the house wakes opens its card in place of the arrival (depth 0, one
- *     entry, the line naming the room it came from), and a cold
- *     #/menu/section/<slug> keeps its section and its address through the wake
+ *     entry, the line naming the room it came from), Back from it is the
+ *     house's page and then Home, a cold #/menu/section/<slug> keeps its
+ *     section and its address through the wake and walks up to the page and
+ *     then Home, the house's word reads a renamed house's name on the bar and
+ *     the level page's one lead door, a tap on it from a card or The Bar
+ *     Compass is the page with nothing open, on the page writes nothing, and
+ *     a jump on the page writes no address and no entry
  *   - Print cards is a screen of its own, #/library/print, with the one Back
  *     and no second way back; Back closes it onto the Library
  *   - with the House engine beside this checkout, the bar's producers: the
@@ -55,7 +71,7 @@
  *     screen (#/producers/house/<component id>, one push, closed by its own
  *     header with no dead entry), a drink chip opens the card and Back
  *     returns to the open producer, a card's All producers and Flash these
- *     producers and the level page's door are one push each with one Back,
+ *     producers and the house's page's door are one push each with one Back,
  *     a cold profile keeps its address through the wake and walks up with
  *     replaces, and one the woken house lacks is dropped by a replace
  *
@@ -245,7 +261,17 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	await settle();
 	const clusters = A.g('NAV_CLUSTERS');
 	const words = clusters.map((c) => c[1]).join(' · ');
-	if (words !== 'Home · Flashcards · Quizzes · Library · More') fail(`the nav reads ${words}, not Home · Flashcards · Quizzes · Library · More`);
+	if (words !== 'Home · Brennan’s · Practise · Library · More') fail(`the nav reads ${words}, not Home · Brennan’s · Practise · Library · More`);
+	/* the five words' keys, and what the first three own (18 October 2026):
+	   the house's word every #/menu address, Practise the decks, the rounds
+	   and the drills */
+	const ids = clusters.map((c) => c[0]).join('|');
+	if (ids !== 'home|brennans|practise|library|more') fail(`the nav's keys read ${ids}, not home|brennans|practise|library|more`);
+	const owns = (k) => ((clusters.find((c) => c[0] === k) || [])[2] || []).join('|');
+	if (owns('home') !== 'home|level') fail(`Home holds ${owns('home')}, not home|level`);
+	if (owns('brennans') !== 'menu') fail(`the house's word holds ${owns('brennans')}, not menu`);
+	if (owns('practise') !== 'flashcards|quiz|practice|riffs') fail(`Practise holds ${owns('practise')}, not flashcards|quiz|practice|riffs`);
+	if (owns('more') !== 'mine|record|tools') fail(`More holds ${owns('more')}, not mine|record|tools`);
 	const tabs = A.g('TABS').map((t) => t[0]);
 	for (const t of tabs) {
 		const n = clusters.filter((c) => c[2].includes(t)).length;
@@ -256,12 +282,28 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	for (const t of WAS) if (!tabs.includes(t)) fail(`TABS lost "${t}", which an old address names`);
 	/* the bar drawn: four tab words, then More, one row of five */
 	const bar = [...A.nav().matchAll(/<button class="bnav-btn([^"]*)"[^>]*data-cluster="(\w+)"><span>([^<]*)/g)];
-	if (bar.map((b) => b[3].trim()).join('|') !== 'Home|Flashcards|Quizzes|Library|More') fail(`the bottom bar reads ${JSON.stringify(bar.map((b) => b[3].trim()))}`);
+	if (bar.map((b) => b[3].trim()).join('|') !== 'Home|Brennan’s|Practise|Library|More') fail(`the bottom bar reads ${JSON.stringify(bar.map((b) => b[3].trim()))}`);
+	if (bar.map((b) => b[2]).join('|') !== 'home|brennans|practise|library|more') fail(`the bottom bar's keys read ${bar.map((b) => b[2]).join('|')}`);
 	if (!bar[4] || !/bnav-more/.test(bar[4][1])) fail('More is not drawn quiet (bnav-more) in the bottom bar');
 	if (/data-search/.test(A.nav())) fail('the bottom bar still carries Search');
 	if (!/aria-current="page"[^>]*data-cluster="home"/.test(A.nav())) fail('the lit word on Home carries no aria-current="page"');
 	A.tabTap('more'); await settle();
 	if (!/bnav-more active" aria-current="page"/.test(A.nav())) fail('More is not lit with aria-current="page" on a More screen');
+	/* the lit word, screen by screen: every #/menu address the house's, every
+	   deck, round, drill, riff and the level test Practise's */
+	const lit = () => (A.nav().match(/class="bnav-btn[^"]* active" aria-current="page"[^>]*data-cluster="(\w+)"/) || [])[1];
+	const lights = [
+		["state.tab='menu'; state.menu.view='menu'", 'brennans'], ["state.tab='menu'; state.menu.view='stock'", 'brennans'], ["state.tab='menu'; state.menu.view='add'", 'brennans'],
+		["state.tab='menu'; state.menu.view='compass'", 'brennans'], ["state.tab='menu'; state.menu.view='fall'", 'brennans'],
+		["state.tab='flashcards'; state.fc.stage='pick'", 'practise'], ["openDeck('cocktails')", 'practise'], ["openDeck('cocktails'); startDeckRun()", 'practise'],
+		["state.tab='quiz'; state.quiz.stage='setup'", 'practise'], ["startRound('quick')", 'practise'], ["state.tab='practice'; state.practice.view='rail'", 'practise'],
+		["state.tab='riffs'", 'practise'], ["ltStart(2); state.tab='level'", 'practise'], ["state.lt = null; openLevel(2)", 'home'],
+	];
+	for (const [code, want] of lights) {
+		A.run('state.lt = null; state.menu.view = "menu";'); A.run(code); A.run('render()'); await settle();
+		if (lit() !== want) fail(`${code}: the lit word is ${lit()}, not ${want}`);
+	}
+	A.run('state.lt = null;');
 }
 
 /* ---- 2. the push model, the owner's flashcard chain ------------------------ */
@@ -273,10 +315,12 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	if (backs(A.view()) !== 0) fail('Home draws a Back');
 	const chain = [];
 	A.tap({ 'data-act': 'level-open', 'data-n': '2' }); await settle(); chain.push(A.state());
-	A.tabTap('flashcards'); await settle(); chain.push(A.state());
+	A.tabTap('practise'); await settle(); chain.push(A.state());
 	A.tap({ 'data-act': 'deck', 'data-deck': 'menu' }); await settle(); chain.push(A.state());
 	A.tap({ 'data-act': 'fc-start' }); await settle(); chain.push(A.state());
-	const want = ['level/bartender', 'flashcards', 'flashcards/menu', 'flashcards/menu/card'];
+	/* the Practise root has its own address and key; a deck and its card keep theirs */
+	const want = ['level/bartender', 'practise', 'flashcards/menu', 'flashcards/menu/card'];
+	if (chain[1] && chain[1].hash !== '#/practise') fail(`the Practise root's address is ${chain[1].hash}, not #/practise`);
 	chain.forEach((s, i) => {
 		if (s.key !== want[i]) fail(`the chain's step ${i + 1} is ${s.key}, not ${want[i]}`);
 		if (s.d !== i + 1) fail(`the chain's step ${i + 1} carries ootd ${s.d}, not ${i + 1}`);
@@ -291,17 +335,17 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 		if (backs(A.view()) !== 1) fail(`${A.state().key}: ${backs(A.view())} Back controls, not one`);
 		A.tap({ 'data-act': 'back' }); await settle(); down.push(A.state());
 	}
-	const wantDown = ['flashcards/menu', 'flashcards', 'level/bartender', 'home'];
+	const wantDown = ['flashcards/menu', 'practise', 'level/bartender', 'home'];
 	down.forEach((s, i) => {
 		if (s.key !== wantDown[i]) fail(`Back ${i + 1} lands on ${s.key}, not ${wantDown[i]}`);
 		if (s.d !== 3 - i) fail(`Back ${i + 1} lands at depth ${s.d}, not ${3 - i}`);
 	});
 	if (backs(A.view()) !== 0) fail('Back is drawn on Home after the walk down');
 	/* in-screen changes write no history: the scope chip, show all and back, a level search */
-	A.tabTap('flashcards'); await settle();
+	A.tabTap('practise'); await settle();
 	const l2 = A.history.length;
 	A.tap({ 'data-act': 'scope-all', 'data-for': 'flashcards' }); await settle();
-	if (A.state().hash !== '#/flashcards/all') fail(`show all levels left the address at ${A.state().hash}, not #/flashcards/all`);
+	if (A.state().hash !== '#/practise/all') fail(`show all levels left the address at ${A.state().hash}, not #/practise/all`);
 	A.tap({ 'data-act': 'scope-one', 'data-for': 'flashcards' }); await settle();
 	A.tap({ 'data-act': 'scope-open', 'data-for': 'flashcards' }); await settle();
 	if (!/data-act="scope-pick"/.test(A.view())) fail('the level name on the scope chip opens no list of levels');
@@ -311,7 +355,7 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	A.tabTap('home'); await settle();
 	if (!/<button class="level on" data-act="level-open" data-n="3"/.test(A.view())) fail('the level chosen from the chip is not Home\'s "Your level"');
 	/* the depth survives a reload of the same address */
-	A.tabTap('flashcards'); await settle();
+	A.tabTap('practise'); await settle();
 	A.tap({ 'data-act': 'deck', 'data-deck': 'everything' }); await settle();
 	const before = A.state();
 	/* a browser keeps the entry's state across a reload */
@@ -333,7 +377,7 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	const fi = F.H.i, fl = F.history.length;
 	F.tap({ 'data-act': 'back' }); await settle();
 	if (F.H.i !== fi || F.history.length !== fl) fail('Back on a fresh arrival at the mirrored address left its entry (history.back), not a replace onto the parent');
-	if (F.state().key !== 'flashcards') fail(`Back on a fresh arrival at ${before.hash} lands on ${F.state().key}, not its parent flashcards`);
+	if (F.state().key !== 'practise') fail(`Back on a fresh arrival at ${before.hash} lands on ${F.state().key}, not its parent, the Practise root`);
 }
 
 /* ---- 3. a cold deep link walks up with replaces --------------------------- */
@@ -388,8 +432,13 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 {
 	const A = boot({ local: { [KEY]: JSON.stringify(ownMenu()) } });
 	await settle();
-	A.tabTap('quizzes'); await settle();
-	if (A.state().key !== 'quiz') fail(`the Quizzes tab lands on ${A.state().key}`);
+	/* Practise holds the rounds (18 October 2026): its row to the level's
+	   rounds is one push to the Quizzes page, which keeps #/quiz */
+	A.tabTap('practise'); await settle();
+	const p0 = A.state();
+	if (p0.key !== 'practise') fail(`the Practise word lands on ${p0.key}`);
+	A.tap({ 'data-act': 'quiz-root' }); await settle();
+	if (A.state().key !== 'quiz' || A.state().hash !== '#/quiz' || A.state().at !== p0.at + 1) fail(`Practise's row to the rounds lands on ${A.state().key} at ${A.state().hash}, entry ${p0.at} to ${A.state().at}, not the Quizzes page by one push`);
 	A.tap({ 'data-act': 'quiz-go', 'data-m': 'quick' }); await settle();
 	if (A.state().key !== 'quiz/quick') fail(`Start the quick quiz lands on ${A.state().key}`);
 	const n = A.run('state.quiz.round.length');
@@ -423,6 +472,19 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	if (A.state().hash !== '#/quiz/quick/done') fail(`Back from the misses' run lands on ${A.state().hash}`);
 	A.tap({ 'data-act': 'back' }); await settle();
 	if (A.state().key !== 'quiz') fail(`Back from the results lands on ${A.state().key}, not Quizzes`);
+	A.tap({ 'data-act': 'back' }); await settle();
+	if (A.state().key !== 'practise' || A.state().at !== p0.at) fail(`Back from Quizzes lands on ${A.state().key} at entry ${A.state().at}, not the Practise root at ${p0.at}`);
+	/* the quick quiz from the Practise root: one push, and Back returns there */
+	A.tap({ 'data-act': 'quiz-go', 'data-m': 'quick' }); await settle();
+	if (A.state().key !== 'quiz/quick' || A.state().at !== p0.at + 1) fail(`the Practise root's quick quiz lands on ${A.state().key} at entry ${A.state().at}, not quiz/quick by one push`);
+	A.tap({ 'data-act': 'back' }); await settle();
+	if (A.state().key !== 'practise' || A.state().at !== p0.at) fail(`Back from the Practise root's quick quiz lands on ${A.state().key} at entry ${A.state().at}, not the Practise root`);
+	/* a cold #/quiz walks up through the Practise root to Home, by replaces */
+	const Q = boot({ hash: '#/quiz' });
+	await settle();
+	const qkeys = [];
+	for (let i = 0; i < 3 && backs(Q.view()); i++) { Q.tap({ 'data-act': 'back' }); await settle(); qkeys.push(Q.state().key + ' ' + Q.state().hash); }
+	if (qkeys.join('|') !== 'practise #/practise|home #/home' || Q.history.length !== 1) fail(`a cold #/quiz walks up ${qkeys.join(' > ')} with ${Q.history.length} entries, not the Practise root then Home by replaces`);
 	/* a cold address of a finished round: Quizzes, with a replace */
 	const C = boot({ hash: '#/quiz/mixed/done' });
 	await settle();
@@ -495,6 +557,17 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 		if (r3.key === r1.key) fail(`${r1.key}'s parent is itself`);
 	}
 	for (const t of A.g('TABS').map((x) => x[0])) if (!seenTabs.has(t)) fail(`the round trip never visits TABS id "${t}"`);
+	/* the Practise root's addresses (18 October 2026): #/practise and
+	   #/practise/all read and print as themselves; #/flashcards and
+	   #/flashcards/all still read as the root and print the new form */
+	for (const [from, to] of [['#/practise', '#/practise'], ['#/practise/all', '#/practise/all'], ['#/flashcards', '#/practise'], ['#/flashcards/all', '#/practise/all']]) {
+		A.run("state.tab = 'home'; state.lt = null; state.fc.stage = 'setup';");
+		if (!A.g('applyRoute')(from)) { fail(`${from} is not an address applyRoute reads`); continue; }
+		A.run('navNormalise()');
+		const r = A.g('routeNow')();
+		if (r.key !== 'practise' || r.hash !== to || A.run('state.tab') !== 'flashcards' || A.run('state.fc.stage') !== 'pick') fail(`${from} reads as ${r.key} at ${r.hash}, not the Practise root at ${to}`);
+	}
+	A.run('state.scopeAll.flashcards = false;');
 	/* every deck id the picker draws has a definition and a parent */
 	A.run("state.tab='flashcards'; state.fc.stage='pick'; render();"); await settle();
 	for (const m of A.view().matchAll(/data-act="deck" data-deck="([^"]+)"/g)) {
@@ -511,15 +584,17 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 /* ---- 7. old addresses land, each with one Back to its parent ---------------- */
 {
 	const cases = [
-		['#/mybar/rum-sour-house', 'menu', 'level'],
+		['#/mybar/rum-sour-house', 'menu', 'home'],
 		['#/service/beer', 'ontap', 'library'],
 		['#/level', 'level', 'home'],
 		['#/level/head-bartender', 'level', 'home'],
 		['#drink=b-zzzzzzzz', 'home', null],
 		['#/mine', 'mine', 'home'],
-		['#/menu', 'menu', 'level'],
+		['#/menu', 'menu', 'home'],
 		['#/flashcards', 'flashcards', 'home'],
-		['#/quiz', 'quiz', 'home'],
+		['#/practise', 'flashcards', 'home'],
+		['#/practise/all', 'flashcards', 'home'],
+		['#/quiz', 'quiz', 'flashcards'],
 		['#/tools', 'tools', 'mine'],
 		['#/practice', 'practice', 'quiz'],
 	];
@@ -552,8 +627,8 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	const screens = [
 		['the Barback page', "openLevel(1)", true],
 		['the Bar Manager page', "openLevel(4)", true],
-		['Flashcards', "state.tab='flashcards'; state.fc.stage='pick'", true],
-		['Flashcards, every level', "state.tab='flashcards'; state.fc.stage='pick'; state.scopeAll.flashcards=true", true],
+		['Practise', "state.tab='flashcards'; state.fc.stage='pick'", true],
+		['Practise, every level', "state.tab='flashcards'; state.fc.stage='pick'; state.scopeAll.flashcards=true", true],
 		['a deck', "openDeck('cocktails')", true],
 		['the menu deck', "openDeck('menu')", true],
 		['a card', "openDeck('cocktails'); startDeckRun('name2spec')", false],
@@ -609,15 +684,16 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	if (t.deck.length !== want) fail(`Due today deals ${t.deck.length}, not due plus new under the caps (${want})`);
 	if (!(t.deck.length > 0)) fail('Due today is empty on a fresh record');
 	if (t.house < 1) fail('Due today deals no card from the menu first on a fresh record with a menu');
-	const pill = (A.nav().match(/data-cluster="flashcards"><span>Flashcards <span class="font-tix nav-pill">(\d+)/) || [])[1];
+	const pill = (A.nav().match(/data-cluster="practise"><span>Practise <span class="font-tix nav-pill">(\d+)/) || [])[1];
 	A.run('openLevel(1); render()'); await settle();
 	const row = A.view().match(/data-d="due"><span class="door-name">Due today<\/span><span class="door-line">([^<]*)/);
 	A.run("state.tab='flashcards'; state.fc.stage='pick'; render()"); await settle();
 	const root = A.view().match(/id="fc-due-h">Due today<\/h3><p class="door-line">([^<]*)/);
 	const line = A.run('dueTodayLine()');
-	if (String(pill) !== String(t.deck.length)) fail(`the Flashcards pill says ${pill}, not ${t.deck.length}`);
+	if (String(pill) !== String(t.deck.length)) fail(`the Practise pill says ${pill}, not ${t.deck.length}`);
+	if ((A.nav().match(/nav-pill/g) || []).length !== 1) fail(`the bar draws ${(A.nav().match(/nav-pill/g) || []).length} due pills, not one on Practise`);
 	if (!row || row[1].replace(/&#39;|&rsquo;/g, "'") !== line.replace(/\u2019/g, "'") && row[1] !== line) fail(`the level page's Due today says ${row && row[1]}, not ${line}`);
-	if (!root || root[1] !== row[1]) fail(`the Flashcards root's Due today says ${root && root[1]}, not the level page's ${row && row[1]}`);
+	if (!root || root[1] !== row[1]) fail(`the Practise root's Due today says ${root && root[1]}, not the level page's ${row && row[1]}`);
 	/* the run starts at once, on the card screen, from the level page */
 	A.run('openLevel(1); render()'); await settle();
 	const before = A.state().at;
@@ -668,17 +744,85 @@ else {
 	if (!/Opened from The World Table/.test(A.view())) fail('a #drink= link held until the wake does not say it was opened from The World Table');
 	A.tap({ 'data-act': 'back' }); await settle();
 	if (A.state().key !== 'menu' || A.history.length !== 1 || A.H.i !== 0) fail(`Back from a card held until the wake lands on ${A.state().key} with ${A.history.length} entries, not the menu list by a replace`);
+	/* the house's page is a tab root: its Back is Home, by a replace */
+	A.tap({ 'data-act': 'back' }); await settle();
+	if (A.state().key !== 'home' || A.history.length !== 1 || A.H.i !== 0) fail(`Back from the house's page reached cold lands on ${A.state().key} with ${A.history.length} entries, not Home by a replace`);
 	/* a cold section before the wake keeps its section and its address */
-	const S = boot({ hash: '#/menu/section/eye-openers', house: true });
+	const S = boot({ hash: '#/menu/section/classic-eye-openers', house: true });
 	await settle();
-	if (S.state().hash !== '#/menu/section/eye-openers') fail(`a cold #/menu/section/eye-openers before the wake rewrote its address to ${S.state().hash}`);
+	if (S.state().hash !== '#/menu/section/classic-eye-openers') fail(`a cold #/menu/section/classic-eye-openers before the wake rewrote its address to ${S.state().hash}`);
 	await wake(S);
-	if (S.run('state.menu.study && state.menu.study.sec') !== 'Eye openers' || S.state().hash !== '#/menu/section/eye-openers' || S.history.length !== 1) fail(`a cold #/menu/section/eye-openers after the wake shows section "${S.run('state.menu.study && state.menu.study.sec')}" at ${S.state().hash} with ${S.history.length} entries`);
+	if (S.run('state.menu.study && state.menu.study.sec') !== 'Classic Eye Openers' || S.state().hash !== '#/menu/section/classic-eye-openers' || S.history.length !== 1) fail(`a cold #/menu/section/classic-eye-openers after the wake shows section "${S.run('state.menu.study && state.menu.study.sec')}" at ${S.state().hash} with ${S.history.length} entries`);
+	/* and walks up to the whole list, then Home, by replaces */
+	const skeys = [];
+	for (let i = 0; i < 3 && backs(S.view()); i++) { S.tap({ 'data-act': 'back' }); await settle(); skeys.push(S.state().hash); }
+	if (skeys.join('|') !== '#/menu|#/home' || S.history.length !== 1 || S.run('state.menu.study.sec')) fail(`a cold section walks up ${skeys.join(' > ')} with ${S.history.length} entries, not #/menu then #/home by replaces`);
 	/* a section the house does not hold is dropped once it has answered */
 	const N = boot({ hash: '#/menu/section/no-such-section', house: true });
 	await settle();
 	await wake(N);
 	if (N.state().hash !== '#/menu') fail(`a section the woken house lacks leaves the address at ${N.state().hash}, not #/menu`);
+	/* the house's word (18 October 2026): the house's own name, read from the
+	   house at every draw and escaped, on the bar and on the level page's one
+	   lead door to its page */
+	const word = (X) => (X.nav().match(/data-cluster="brennans"><span>([^<]*)<\/span>/) || [])[1];
+	const renamed = JSON.parse(pack);
+	renamed.house.name = 'The Fixture Room & Bar';
+	const R = boot({ house: true });
+	await settle();
+	if (word(R) !== 'Brennan’s') fail(`before a house loads the house's word reads ${word(R)}, not the literal Brennan’s`);
+	await R.run('OOT.house').importPack(JSON.stringify(renamed), { mode: 'new' });
+	await R.run('houseSyncIn()');
+	R.run('houseRepaint()');
+	await settle();
+	if (word(R) !== 'The Fixture Room &amp; Bar') fail(`with a house named "The Fixture Room & Bar" the house's word reads ${word(R)}`);
+	R.run('openLevel(1); render()'); await settle();
+	const leads = [...R.view().matchAll(/data-act="lv-menu"><span class="door-name">([^<]*)<\/span>/g)].map((m) => m[1]);
+	if (leads.join('|') !== 'The Fixture Room &amp; Bar') fail(`the level page's lead door to the house's page reads ${JSON.stringify(leads)}, not the house's name once`);
+	if (/Study the whole menu|Flashcards for the menu|data-act="lv-producers"/.test(R.view())) fail('the level page still carries the old Study the menu rows');
+	/* the house's word from anywhere lands on its page with nothing open; a
+	   tap on the lit word from a card or a sub-view is the page (the card's
+	   entry taken back when the page is beneath it, the router's rule, else
+	   one push); a tap on the page itself writes nothing */
+	const T = boot({ house: true });
+	await settle();
+	await wake(T);
+	T.tap({ 'data-act': 'level-open', 'data-n': '1' }); await settle();
+	const t0 = T.state();
+	T.tabTap('brennans'); await settle();
+	const t1 = T.state();
+	if (t1.key !== 'menu' || t1.hash !== '#/menu' || t1.at !== t0.at + 1) fail(`the house's word lands on ${t1.key} at ${t1.hash}, entry ${t0.at} to ${t1.at}, not #/menu by one push`);
+	T.tap({ 'data-act': 'hs-open', 'data-id': 'b-olsmh04y' }); await settle();
+	const t2 = T.state();
+	if (t2.key !== 'menu/card' || t2.at !== t1.at + 1) fail(`a drink from the house's page opens ${t2.key} at entry ${t2.at}, not its card by one push`);
+	T.tabTap('brennans'); await settle();
+	const t3 = T.state();
+	if (t3.key !== 'menu' || t3.hash !== '#/menu' || t3.at !== t1.at || T.run('state.menu.study.open')) fail(`the lit house's word on a card opened from the page lands on ${t3.key} at ${t3.hash}, entry ${t2.at} to ${t3.at}, not the page's own entry ${t1.at} with nothing open`);
+	const tl = T.history.length;
+	T.tabTap('brennans'); await settle();
+	if (T.state().key !== 'menu' || T.history.length !== tl || T.state().at !== t3.at) fail('the house\'s word tapped on its own page wrote an entry');
+	/* a jump on the page scrolls and focuses: no address, no entry */
+	T.tap({ 'data-act': 'hs-jump', 'data-to': 'hs-s-classic-eye-openers' }); await settle();
+	if (T.state().hash !== '#/menu' || T.history.length !== tl) fail(`a jump on the house's page left ${T.state().hash} with ${T.history.length} entries, not #/menu and ${tl}`);
+	/* a sub-view (The Bar Compass): the lit word returns to the page */
+	T.run("state.tab = 'menu'; state.menu.view = 'compass'; render()"); await settle();
+	if (word(T) !== 'Brennan’s' || !/bnav-btn active" aria-current="page" data-cluster="brennans"/.test(T.nav())) fail('The Bar Compass is not lit by the house\'s word');
+	T.tabTap('brennans'); await settle();
+	if (T.state().hash !== '#/menu' || T.run('state.menu.view') !== 'menu') fail(`the house's word from The Bar Compass lands on ${T.state().hash} with the view ${T.run('state.menu.view')}, not the page`);
+	/* a search and a section left on the page: the level page's lead door,
+	   like the house's word, lands on the whole list */
+	T.run("state.menu.study.q = 'espresso'; state.menu.study.sec = 'Coffee'; openLevel(1); render()"); await settle();
+	T.tap({ 'data-act': 'lv-menu' }); await settle();
+	if (T.state().hash !== '#/menu' || T.run('state.menu.study.q') || T.run('state.menu.study.sec')) fail(`the level page's lead door after a search lands on ${T.state().hash} with the search ${JSON.stringify(T.run('state.menu.study.q'))} and the section ${JSON.stringify(T.run('state.menu.study.sec'))}, not the whole list`);
+	/* a card reached cold (a #drink= link from another room): the lit word is the page by one push */
+	const K = boot({ hash: '#drink=b-olsmh04y', referrer: 'http://localhost/table/menu', house: true });
+	await settle();
+	await wake(K);
+	const k0 = K.state();
+	if (k0.key !== 'menu/card' || k0.d !== 0) fail(`a #drink= link held until the wake is ${k0.key} at depth ${k0.d}`);
+	K.tabTap('brennans'); await settle();
+	const k1 = K.state();
+	if (k1.key !== 'menu' || k1.hash !== '#/menu' || k1.at !== k0.at + 1 || k1.d !== 1 || K.run('state.menu.study.open')) fail(`the house's word on a cold card lands on ${k1.key} at ${k1.hash}, entry ${k0.at} to ${k1.at} at depth ${k1.d}, not the page by one push`);
 }
 
 /* ---- 12. the bar's producers: the house group, a profile, a drink's card, and Back ----
@@ -766,12 +910,14 @@ else {
 	if (B.state().key !== 'flashcards/item-producers:' + SAZ + '/card' || B.state().at !== c0.at + 1) fail(`Flash these producers opens ${B.state().key}, not the drink's producers on the card screen by one push`);
 	B.tap({ 'data-act': 'back' }); await settle();
 	if (B.state().key !== 'menu/card') fail(`Back from Flash these producers lands on ${B.state().key}, not the card`);
-	/* the level page's door: one push to the Producers tab, Back to the level */
-	B.run('openLevel(1); render()'); await settle();
+	/* the house's page's door (the level page's until the five words of 18
+	   October 2026): one push to the Producers tab, Back to the page */
+	B.tabTap('brennans'); await settle();
 	const l0 = B.state();
-	if (!/data-act="lv-producers"><span class="door-name">The producers<\/span><span class="door-line">2 producers behind 2 drinks on the menu\.<\/span>/.test(B.view())) fail('the level page\'s My restaurant has no door to the producers with its count');
+	if (l0.key !== 'menu') fail(`the house's word lands on ${l0.key}, not its page`);
+	if (!/<h3 class="hs-h3" id="hs-producers-h" tabindex="-1">Producers<\/h3><nav class="quiet rows" aria-label="Producers"><button class="door" data-act="lv-producers"><span class="door-name">The producers<\/span><span class="door-line">2 producers behind 2 drinks on the menu\.<\/span>/.test(B.view())) fail('the house\'s page has no door to the producers with its count');
 	B.tap({ 'data-act': 'lv-producers' }); await settle();
-	if (B.state().key !== 'producers' || B.state().at !== l0.at + 1) fail(`the level page's door opens ${B.state().key} at entry ${B.state().at}, not the Producers tab by one push`);
+	if (B.state().key !== 'producers' || B.state().at !== l0.at + 1) fail(`the house's page's door opens ${B.state().key} at entry ${B.state().at}, not the Producers tab by one push`);
 	B.tap({ 'data-act': 'back' }); await settle();
 	if (B.state().key !== l0.key) fail(`Back from the producers' door lands on ${B.state().key}, not ${l0.key}`);
 	/* a cold profile before the wake keeps its address, opens once the house holds it, and walks up with replaces */
@@ -832,7 +978,7 @@ if (problems.length) {
 	for (const p of problems.slice(0, 60)) console.error(`    ${p}`);
 	process.exit(1);
 }
-console.log('  ✓ the four tabs and More, every route round-trips, the parents are total, every screen change is one entry and every Back one step, the old addresses land, one Back on every screen but Home');
+console.log('  ✓ the five words (Home, the house, Practise, Library, More), every route round-trips, the parents are total, every screen change is one entry and every Back one step, the old addresses land, one Back on every screen but Home');
 
 /* ---- the gate proves it can fail ---------------------------------------------
    Each mutation breaks one rule in a scratch copy of js/; this gate run on it
@@ -851,6 +997,9 @@ async function mutations(){
 		['Print cards not a screen', 'ui-nav.js', "    if(t === 'library' && state.lib.print){ hash = '#/library/print'; key = 'library/print'; }\n", ""],
 		['a Back to crumb restored', 'ui-levels.js', "  return back;\n}", "  return back + '<div class=\"crumb\"><button class=\"chip\" data-act=\"go\" data-tab=\"home\">Back to Home</button></div>';\n}"],
 		['a house producer not its own screen', 'ui-nav.js', "  } else if(t === 'producers' && state.prod.house){", "  } else if(false){"],
+		['the house\'s page climbing to the level again', 'ui-nav.js', "    state.tab = 'home';\n    return true;\n  }\n  if(t === 'flashcards'){", "    openLevel(chosenLevel());\n    return true;\n  }\n  if(t === 'flashcards'){"],
+		['the house\'s word drawn as the literal', 'ui-new.js', "(ck === 'brennans' ? esc(houseTabWord()) : label)", "label"],
+		['the Practise root printed as #/flashcards', 'ui-nav.js', "hash = '#/practise' + (navScope().flashcards ? '/all' : ''); key = 'practise';", "if(navScope().flashcards) hash += '/all';"],
 	];
 	let held = 0;
 	for (const [name, file, from, to] of MUT) {
