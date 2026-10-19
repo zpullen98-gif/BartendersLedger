@@ -1,0 +1,15 @@
+{
+  "id": "latte",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=SiefJJv-Qho",
+  "videoId": "SiefJJv-Qho",
+  "title": "Latte Art For Beginners: How To Pour Heart (Latte Art Tutorial) 🖤",
+  "channel": "European Coffee Trip",
+  "channelKind": "company",
+  "queries": [],
+  "verifiedBy": "coffee-films",
+  "checkedOn": "2026-10-18",
+  "checkedBy": "checker",
+  "note": "The plan names the Library film milk/the-heart-is-floated-not-drawn; id, title and channel copied exactly from that COFFEE_FILMS row (sec milk, row the-heart-is-floated-not-drawn). No search spent. The title as YouTube gives it ends in U+1F5A4 (a black heart emoji), which the style’s language rule refuses at or above U+2190; copied exactly all the same, as the VIDEOS rule and the schema’s coffee-films check require.",
+  "checkerNote": "Confirmed by the checker on 2026-10-19: id SiefJJv-Qho, title and channel \"European Coffee Trip\" equal the COFFEE_FILMS row milk/the-heart-is-floated-not-drawn exactly, title’s closing U+1F5A4 included, and the plan names that film; the fragment’s url, id, title and channel match. A coffee magazine and media company, so company. No search spent. The emoji the finder flagged no longer stands in the way: schema.mjs (as of 05:36 on 2026-10-19) skips video.title in its language checks, because the title is copied exactly and never drawn, and ui-brew.js shows only our label, the channel (when on companies.json) and watchFor. Left for others: the channel is not yet on companies.json."
+}

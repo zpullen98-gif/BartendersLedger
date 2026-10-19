@@ -1,0 +1,47 @@
+{
+  "id": "arnold-palmer",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=KGOsNM6iygw",
+  "videoId": "KGOsNM6iygw",
+  "title": "Iced Tea Lemonade Recipe - (Pinterest @LifesLilSweets ) - Life's Little Sweets",
+  "channel": "Life's Little Sweets",
+  "channelKind": "person",
+  "queries": [
+    {
+      "q": "Arnold Palmer iced tea lemonade recipe Allrecipes OR Delish OR \"Food Network\" youtube",
+      "returned": "https://www.youtube.com/watch?v=KGOsNM6iygw \"Iced Tea Lemonade Recipe - (Pinterest @LifesLilSweets ) - Life's Little Sweets - YouTube\" (fourth result); summary: \"The Life's Little Sweets video links to a printable recipe for what it calls an Iced Tea Lemonade, also known as an Arnold Palmer drink (get the full, printable recipe at lifeslittlesweets.com).\" Also p7pvgV8AXnQ, Fvslx7u6BTY (the first pass’s candidate, again no channel), u2IxG3ZRVLE (spiked), 3-9tn6Dg1n0, HlMZvx_KyTc, XsM97Cd-Css (spiked), Kz9Bbmpmsd8 (a strawberry variation) and a Short."
+    },
+    {
+      "q": "\"Iced Tea Lemonade Recipe - (Pinterest @LifesLilSweets ) - Life's Little Sweets\"",
+      "returned": "https://www.youtube.com/watch?v=KGOsNM6iygw \"Iced Tea Lemonade Recipe - (Pinterest @LifesLilSweets ) - Life's Little Sweets - YouTube\" (first result, same id and exact title); summary: \"Its description links to a printable recipe on the Life's Little Sweets site and describes the drink as an Arnold Palmer-style iced tea lemonade\"; about 1,500 days old."
+    }
+  ],
+  "checkerQueries": [],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-19",
+  "checkedBy": "checker",
+  "note": "Accepted KGOsNM6iygw: both searches returned the same id with the same exact title; the channel is named in the video’s own title and both summaries tie the video to the Life’s Little Sweets site its description links to. It is one baker’s recipe channel and blog, so channelKind person: the fragment ships with title and channel empty. It teaches the unspiked drink, iced tea with lemonade, under its other name. The @ in the title is a Pinterest handle, not a YouTube one; checker to confirm the uploader by oEmbed if egress allows. Budget: two searches. Every search in this pass was restricted to youtube.com (allowed_domains) in standard mode.",
+  "checkerNote": "Confirmed by the checker without a search. The two finder searches are different queries and both returned KGOsNM6iygw with the same exact title; the channel names itself in that title (\"Life’s Little Sweets\") and both summaries call it the Life’s Little Sweets video, its description linking to lifeslittlesweets.com, so the uploader is named, not a presenter’s first name. One baker’s recipe channel and blog: channelKind person stays and the fragment ships with title and channel empty. It teaches the unspiked iced tea lemonade, the Arnold Palmer by its other name; a watch link, not a Short, playlist or advert. Budget: none spent.",
+  "firstPass": {
+    "id": "arnold-palmer",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make an arnold palmer drink youtube [allowed_domains: youtube.com]",
+        "returned": "https://www.youtube.com/watch?v=Fvslx7u6BTY&pp=ygUQI2Fybm9sZHBhbG1lcnRlYQ%3D%3D \"How to Make the Perfect Arnold Palmer - YouTube\"; no channel named for this id."
+      },
+      {
+        "q": "\"How to Make the Perfect Arnold Palmer\" [allowed_domains: youtube.com]",
+        "returned": "https://www.youtube.com/watch?v=Fvslx7u6BTY \"How to Make the Perfect Arnold Palmer - YouTube\" (top result; also https://m.youtube.com/watch?v=Fvslx7u6BTY), but no result title or summary named its channel. Summary quoted its listing: \"2 Parts Unsweetened Iced Tea 1 Part Your Favorite Lemonade Fresh Mint Fresh Lemon Ice\"."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Nothing passed: the id and title came back twice but the channel was never named. Spiked versions, Shorts and a golfer endorsement video were passed over. No spare budget remained. The page offers the search link alone."
+  }
+}

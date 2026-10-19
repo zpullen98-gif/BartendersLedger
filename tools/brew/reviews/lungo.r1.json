@@ -1,0 +1,13 @@
+{
+  "id": "lungo",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps[3]",
+      "problem": "\"Taste the far end first\" comes after step 3 has already stopped the shot, so the steps contradicted their own order.",
+      "change": "Now reads \"Set the yield by tasting the far end: stop before the cup turns hollow and drying.\""
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

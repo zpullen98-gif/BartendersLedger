@@ -1,0 +1,48 @@
+{
+  "id": "ginger-lemon",
+  "found": false,
+  "url": "",
+  "videoId": "",
+  "title": "",
+  "channel": "",
+  "channelKind": "",
+  "queries": [
+    {
+      "q": "Allrecipes lemon ginger tea how to make youtube [allowed_domains: youtube.com]",
+      "returned": "No Allrecipes result. qTCrP_H3g5o \"How to make Lemon & Ginger Tea\" again (watch?v= with a pp parameter), N2viH4aJWdc \"How To Make Lemon and Ginger Tea\", We9p9Yjj0ow \"Ginger Lemon Tea Recipe\", and several titles sold as cold remedies; no channel named for any of them."
+    },
+    {
+      "q": "fresh ginger lemon honey tea recipe Food Network Bon Appetit Tasty youtube [allowed_domains: youtube.com]",
+      "returned": "None from Food Network, Bon Appetit or Tasty. lVS18W8ZWAk \"Shōgayu (Japanese Ginger Tea) with Honey and Lemon\", HRS_F_2YDu0 \"How To Make Homemade Ginger Tea From Fresh Ginger\" (m.youtube.com), RVzGNYGM9Hs, and remedy and immune titles; no channel named."
+    },
+    {
+      "q": "\"Shōgayu (Japanese Ginger Tea) with Honey and Lemon\" [allowed_domains: youtube.com]",
+      "returned": "Shōgayu (Japanese Ginger Tea) with Honey and Lemon - YouTube | https://www.youtube.com/watch?v=lVS18W8ZWAk (first), but the summary names no uploader for it: it says only that a Just One Cookbook recipe \"is linked from one of the videos\", and it frames the drink as a cold and flu remedy."
+    }
+  ],
+  "verifiedBy": "",
+  "checkedOn": "2026-10-19",
+  "note": "Nothing passed. lVS18W8ZWAk came back twice with the same exact title, but no result names its channel as the uploader (a recipe site linked from \"one of the videos\" is not a channel tied to this id), so it fails the channel test. qTCrP_H3g5o, refused by the first pass for the same reason, came back again with still no channel. Titles that sell the drink as a remedy were passed over under the facts rule. The page offers the search link alone. Three searches spent.",
+  "firstPass": {
+    "id": "ginger-lemon",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make fresh ginger lemon tea youtube [allowed_domains: youtube.com]",
+        "returned": "https://www.youtube.com/watch?v=qTCrP_H3g5o \"How to make Lemon & Ginger Tea - YouTube\"; no channel named for this id. Most other results were framed as cold or immune remedies."
+      },
+      {
+        "q": "\"How to make Lemon & Ginger Tea\" [allowed_domains: youtube.com]",
+        "returned": "https://www.youtube.com/watch?v=qTCrP_H3g5o \"How to make Lemon & Ginger Tea - YouTube\" (top result), but no result title or summary named its channel."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Nothing passed: the id and title came back twice but the channel was never named, so it fails the channel test. Candidates whose titles sold the drink as a remedy (coughs, colds, immune booster) were passed over under the facts rule. No spare budget remained. The page offers the search link alone."
+  }
+}

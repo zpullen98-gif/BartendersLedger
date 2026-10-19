@@ -1,0 +1,23 @@
+{
+  "id": "affogato",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "house.ask",
+      "problem": "The ask covered only the espresso. The drink needs ice cream as well, so a server could get a yes and promise an affogato the kitchen cannot send.",
+      "change": "Now asks whether the bar will pull an espresso, at what price, and whether the kitchen will send vanilla ice cream for it (29 words; askId a-zr8ze4mu unchanged)."
+    },
+    {
+      "field": "serve",
+      "problem": "\"Offer it as dessert menus go down\" told the server to offer an off-menu drink before lineup had confirmed it.",
+      "change": "Added: once lineup confirms the bar and kitchen can make it."
+    },
+    {
+      "field": "quiz[2]",
+      "problem": "\"Which addition has precedent?\" had more than one defensible answer: whipped cream (affogato con panna) and sea salt both have precedent in cafés.",
+      "change": "Reframed as a question about liqueurs: amaretto against Campari, limoncello and crème de menthe, all with the same stem shape. The explain is rewritten from the World Table list; a stays 1."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

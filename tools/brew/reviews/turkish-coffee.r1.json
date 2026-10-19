@@ -1,0 +1,48 @@
+{
+  "id": "turkish-coffee",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "what",
+      "problem": "\"Simmered\" contradicted the method, which takes it off as the foam rises, before the boil.",
+      "change": "Now \"heated slowly\"."
+    },
+    {
+      "field": "make.dose",
+      "problem": "It named the ingredients with no weight or volume, which the style requires.",
+      "change": "Now: 7 g powdered coffee, 2 oz (60 mL) cold water, sugar to order. A search confirms 7 g a cup into a 50 to 70 mL cup, on two sites (Cooking Gorgeous, Turkey’s For Life)."
+    },
+    {
+      "field": "serve; guest",
+      "problem": "Called the house chicory coffee \"strong\"; the pack calls it dark, roasty and smooth.",
+      "change": "Now \"roasty\"."
+    },
+    {
+      "field": "serve",
+      "problem": "\"Or a date\" has no source: dates go with Arabic coffee, and Turkish coffee comes with water and Turkish delight.",
+      "change": "Removed \"or a date\"."
+    },
+    {
+      "field": "watch[1]",
+      "problem": "\"Sugar cannot go in afterwards\" overstates it: the custom, confirmed by search, is to add the sugar before brewing.",
+      "change": "Now \"Sugar is not added afterwards\". The plain, medium or sweet choice (sade, orta, şekerli) is confirmed on two sites."
+    },
+    {
+      "field": "story",
+      "problem": "Nothing on where the drink comes from, which the style asks a story to give.",
+      "change": "Added: the coffee houses of Istanbul under the Ottomans, open by the 1550s, and UNESCO’s listing of Turkish coffee culture as intangible heritage in 2013. Both are confirmed by two search results (Travel Atelier, Pera Palace); sources added."
+    },
+    {
+      "field": "quiz[1].options",
+      "problem": "The answer was the longest option and the only one that gave a reason.",
+      "change": "Now \"A silt of settled grounds\"."
+    },
+    {
+      "field": "sources; aka",
+      "problem": "Four search links were missing, and nothing in the sources stood behind the aka \"Greek coffee\".",
+      "change": "Added the four search links, and the World Table kitchen pairing that calls a Greek coffee thick and unfiltered as the in-app support for the aka."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "english-breakfast",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=x0xskenfLWQ",
+  "videoId": "x0xskenfLWQ",
+  "title": "English Breakfast",
+  "channel": "Revival Tea Company",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "Twinings Foodservice how to make English Breakfast tea youtube [allowed_domains: youtube.com]",
+      "returned": "No Twinings Foodservice English Breakfast video. 2HPIzyzbewM \"How to make \\\"TWININGS\\\" English Breakfast Tea\" (summary: \"uploaded by an individual\", channel not named); Avj5F485uxg \"How to Make the Perfect Cup of English Breakfast Tea Easy\" (no channel); the rest adverts, reviews and a travel segment."
+    },
+    {
+      "q": "Revival Tea Company English Breakfast youtube [allowed_domains: youtube.com]",
+      "returned": "English Breakfast - YouTube | https://www.youtube.com/watch?v=x0xskenfLWQ (first); Revival Tea Company - YouTube | https://www.youtube.com/@revivalteacompany/videos (second); also Irish Breakfast 7CxmRy1ZOLo, Earl Grey Tea 1_xerlDIr84 | summary: \"The top result is an official Revival Tea Company video on YouTube, titled 'English Breakfast,' where Revival Tea Company Teamaker and Founder ... walks you through how to make a cup of our English Breakfast Tea.\""
+    },
+    {
+      "q": "\"English Breakfast\" Revival Tea Company how to make a cup youtube [allowed_domains: youtube.com]",
+      "returned": "English Breakfast - YouTube | https://www.youtube.com/watch?v=x0xskenfLWQ (first) | summary: \"The top result is the Revival Tea Company's own video, 'English Breakfast,' on YouTube ... Their teamaker and founder ... walks viewers through making a cup of their English Breakfast Tea\"; it adds that Avj5F485uxg \"is from a different channel and is not affiliated with Revival\"."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedBy": "checker",
+  "checkedOn": "2026-10-19",
+  "note": "Accepted on the second and third searches: both returned x0xskenfLWQ with the same exact title, \"English Breakfast\", and both summaries name Revival Tea Company as the uploader (\"an official Revival Tea Company video\", \"the Revival Tea Company's own video\"); the channel page /@revivalteacompany came back beside it. It teaches making a cup of the company's own blend; the presenter is named in the description, the channel is the company. The first pass's vEXxEAemIyQ (no channel) was not retried; the first pass had already seen x0xskenfLWQ \"English Breakfast\" on its second search and its Earl Grey spare. The exact channel string is as the results name it; an oEmbed read should confirm it. Three searches spent. Checker: confirmed on the finder's searches, no checker search spent. The second and third queries differ, both returned the www id x0xskenfLWQ with the exact title \"English Breakfast\", both summaries name Revival Tea Company as the uploader, and the channel's own page came back as \"Revival Tea Company - YouTube\" at /@revivalteacompany, which fixes the channel string. The description says the company's teamaker walks you through making a cup of its English Breakfast: it teaches the drink. Not a Short, a playlist or an advert. The presenter is named only in the description; channelKind company is right.",
+  "firstPass": {
+    "id": "english-breakfast",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make english breakfast tea youtube (site youtube.com)",
+        "returned": "How to Brew a Perfect Cup of English Breakfast Tea - YouTube | https://www.youtube.com/watch?v=vEXxEAemIyQ | summary names \"Revival Tea Company: The founder walks through brewing their own English Breakfast blend\" and a Birchall tutorial, without tying either to a link."
+      },
+      {
+        "q": "\"How to Brew a Perfect Cup of English Breakfast Tea\" (site youtube.com)",
+        "returned": "How to Brew a Perfect Cup of English Breakfast Tea - YouTube | https://www.youtube.com/watch?v=vEXxEAemIyQ | summary: \"Revival Tea Company video: The founder walks through how to make a cup of its English Breakfast blend\", again not tied to a link; English Breakfast - YouTube | x0xskenfLWQ also listed."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "vEXxEAemIyQ came back twice with the same exact title, but no result ties a channel to it. A later Earl Grey search on Revival Tea Company returned that company's videos as bare tea names (English Breakfast x0xskenfLWQ, Irish Breakfast, Earl Grey Tea), so the Revival video is most likely x0xskenfLWQ, not this one. Channel unproven: does not pass."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "espresso",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "story",
+      "problem": "The line that lever machines \"raised the crema guests know today\" stated as settled a claim the author drew from one search summary. A refuter search found Google Arts and Culture crediting the lever process with crema, while Barista Hustle disputes it: earlier machines and pulls at about 3 bar also made crema.",
+      "change": "Now reads \"the spring lever machines that came around the Second World War are widely credited with the crema guests know today, though the trade argues the point\". Both pages added to sources."
+    },
+    {
+      "field": "quiz[2].q",
+      "problem": "The stem called crema \"the tan foam\", and only one option speaks of foam (\"foaming out\"), so the stem gave the answer away.",
+      "change": "The stem now says \"the tan layer on a fresh shot\"."
+    },
+    {
+      "field": "watch[0]",
+      "problem": "The line \"Asked which espresso we use\" took for granted a house espresso programme that the pack leaves open: lineup question a-zr8ze4mu asks whether there is a machine at all.",
+      "change": "Now reads \"Asked which espresso the bar uses\"."
+    },
+    {
+      "field": "make.steps[3]",
+      "problem": "The step moved the grind without tasting the shot. The dialling-in lesson says to taste first, then move one step.",
+      "change": "Now reads \"Taste it: sour and fast, grind a step finer; harsh and slow, a step coarser.\""
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

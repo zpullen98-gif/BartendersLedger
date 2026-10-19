@@ -1,0 +1,137 @@
+{
+  "id": "cold-brew",
+  "name": "Cold brew",
+  "respell": "",
+  "aka": [
+    "cold brew coffee",
+    "mizudashi"
+  ],
+  "group": "cold",
+  "kind": "coffee",
+  "caffeine": "All from the coffee: a concentrate carries more per ounce than drip, so the cut decides the dose.",
+  "house": {
+    "printed": true,
+    "packIds": [
+      "b-r69tzqly"
+    ]
+  },
+  "what": "Coffee that never meets heat: coarse grounds steeped 12 to 24 hours in cold or room temperature water, then filtered. Cold water pulls different compounds, so it reads round and quiet, not bright. On our menu, chicory cold brew is the base of the Café Glacé de la Maison, with cardamom-clove syrup under an orange flower cold foam.",
+  "taste": "Round and smooth, low in perceived sourness, with cocoa, dried fruit and a long finish; heavier from a steep, cleaner from a drip tower.",
+  "make": {
+    "steps": [
+      "Grind coarse, at least as coarse as for a press, and weigh coffee and water.",
+      "Combine 1:4 to 1:8 by weight for a concentrate, or near 1:15 to pour straight.",
+      "Stir until every ground is wet, cover, and steep 12 to 24 hours, in the cooler if the health code asks.",
+      "Filter slowly through paper or cloth so the fines stay behind.",
+      "Bottle, date and refrigerate it, and work through it inside about a week.",
+      "Cut the concentrate with water, one to one from the weak end up to one to three from the strong, and pour over ice."
+    ],
+    "ratio": "Concentrate 1:4 to 1:8, cut 1:1 to 1:3; or about 1:15 straight",
+    "dose": "For a 1:8 concentrate, 125 g coarse coffee to 1 litre water",
+    "temp": "Never heated: about 68F (20C), or 38F (3C) refrigerated",
+    "time": "12 to 24 hours steep; keep cold and use within about a week",
+    "cup": "Tall glass over ice, or rocks with one large cube, 8 to 12 oz"
+  },
+  "serve": "Chill the glass and use fresh, hard ice; cream or syrup goes on the side only if asked. For the Café Glacé, carry it level so the orange flower cold foam stays whole, set it down at the guest's right, and suggest the first sip through the foam. Offer it on a warm day, at breakfast to the guest skipping the milk punch, or beside dessert.",
+  "story": "The names are Japanese: mizudashi for the steep, Kyoto style for the drip tower, which percolates rather than steeps. The belief to correct is that smooth means weak or low acid: its pH sits close to hot coffee. Our version leans on New Orleans: chicory, the roasted root the city kept after blockades made coffee scarce, and clove in the syrup, a nod to the flamed café brûlot.",
+  "guest": "Our Café Glacé is chicory cold brew with cardamom-clove syrup under an orange flower cold foam: cold, roasty, gently spiced and spirit-free.",
+  "watch": [
+    "Smooth is not weak: a concentrate poured straight over ice is a heavy dose of caffeine. Cut it, and say so to a guest ordering late.",
+    "A guest who wants plain cold brew, without the syrup and foam: ask at lineup whether the bar will pour it.",
+    "Bitter, silty cold brew usually means a grind too fine, or a filter that lets the fines through.",
+    "Cold brew is not iced coffee: iced coffee is brewed hot straight onto ice and drinks brighter."
+  ],
+  "library": {
+    "ref": "Cold Brew",
+    "study": [
+      [
+        "filter",
+        "Cold brew and iced coffee are different drinks"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make cold brew",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Cold brew: how is it made and served?",
+      "answer": "Coarse coffee steeped cold 12 to 24 hours and filtered; the concentrate cut with water over ice in a tall glass. Round, smooth, cocoa and dried fruit."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "A guest calls cold brew gentle for late at night. What is true of a straight concentrate?",
+      "options": [
+        "Cold water pulls no caffeine",
+        "It is a heavy dose of caffeine",
+        "It has far less acid",
+        "Ice strips out the caffeine"
+      ],
+      "a": 1,
+      "explain": "Caffeine tracks dose and contact more than temperature, so concentrate beats drip per ounce."
+    },
+    {
+      "id": "q2",
+      "q": "What does the menu print for the Café Glacé de la Maison?",
+      "options": [
+        "Espresso, vanilla bean syrup, crushed ice and whipped cream",
+        "Cold brew, cinnamon syrup, sweet cream and an orange peel",
+        "Chicory coffee, clove syrup, crushed ice and whipped cream",
+        "Chicory cold brew, cardamom-clove syrup, orange flower foam"
+      ],
+      "a": 3,
+      "explain": "The menu prints chicory cold brew, cardamom-clove syrup and orange flower cold foam; the clove nods to café brûlot."
+    },
+    {
+      "id": "q3",
+      "q": "Which two names describe the ways to make cold brew?",
+      "options": [
+        "Mizudashi steep, Kyoto drip tower",
+        "Flash brew, Japanese iced coffee",
+        "Turkish cezve, Vietnamese phin",
+        "Moka pot, AeroPress"
+      ],
+      "a": 0,
+      "explain": "Mizudashi is immersion, Kyoto a slow drip tower; flash brew is iced coffee."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: Cold brew and iced coffee lesson",
+      "url": ""
+    },
+    {
+      "title": "Library: Cold Brew card",
+      "url": ""
+    },
+    {
+      "title": "Pack: Café Glacé de la Maison",
+      "url": ""
+    },
+    {
+      "title": "Pack: Cold brew and Chicory components",
+      "url": ""
+    },
+    {
+      "title": "Pack: lineup question on brewing",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=sw3ZhWyb6cY",
+    "id": "sw3ZhWyb6cY",
+    "title": "The Ultimate guide to Cold Brew Coffee",
+    "channel": "Seven Miles Coffee Roasters",
+    "channelKind": "company",
+    "label": "How to brew and filter cold brew",
+    "watchFor": "How coarse the grind is beside a press grind, and how slowly the batch filters at the end. A grind too fine and a filter too fast cause most cold brew faults on a bar.",
+    "verifiedBy": "coffee-films",
+    "checkedOn": "2026-10-18"
+  }
+}

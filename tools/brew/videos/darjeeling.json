@@ -1,0 +1,23 @@
+{
+  "id": "darjeeling",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=hfh_hQGERIg",
+  "videoId": "hfh_hQGERIg",
+  "title": "How to Brew Darjeeling Tea The Correct Way? - Darjeeling Tea Direct",
+  "channel": "Darjeeling Tea Direct",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "how to brew darjeeling tea youtube (site youtube.com)",
+      "returned": "How to Brew Darjeeling Tea The Correct Way? - Darjeeling Tea Direct - YouTube | https://www.youtube.com/watch?v=hfh_hQGERIg | summary: \"Darjeeling Tea Direct: A how-to that covers a teapot and an infuser\"."
+    },
+    {
+      "q": "\"How to Brew Darjeeling Tea The Correct Way?\" (site youtube.com)",
+      "returned": "How to Brew Darjeeling Tea The Correct Way? - Darjeeling Tea Direct - YouTube | https://www.youtube.com/watch?v=hfh_hQGERIg (first) | summary: \"The top result is a YouTube video from Darjeeling Tea Direct ... roughly 95C water, steeping for about 3 to 4 minutes (never more than 5), and about a teaspoon (2 to 2.5 g) of leaves per cup ... alternating pours between cups\"."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedBy": "checker",
+  "checkedOn": "2026-10-18",
+  "note": "Same id and exact title on both searches; the channel is named in the result title and the summary. A tea seller's channel. Its 95C and 3 to 4 minutes sit inside the fragment's second flush range and time. The title carries a spaced hyphen, which schema.mjs reads as a dash in video.title."
+}

@@ -1,0 +1,13 @@
+{
+  "id": "cafe-bombon",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "quiz[2].options",
+      "problem": "\"A cortadito\" could be defended as a cousin made with condensed milk: some cafés make it that way, as the Cuban coffee entry says. That left two defensible answers.",
+      "change": "Replaced it with \"A latte macchiato\", which is layered and so still plausible, but carries no condensed milk."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

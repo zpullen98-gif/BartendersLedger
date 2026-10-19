@@ -1,0 +1,33 @@
+{
+  "id": "drip-coffee",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps",
+      "problem": "The three steps never seated a filter, put the coffee in the basket, read the spent grounds or set a holding window, so a trained person could not make the pot from them in order.",
+      "change": "Six steps: rinse the airpot hot and seat a paper filter; weigh about 60 g a litre into the filter and level the bed; brew the basket's size; run it into the sealed airpot and write the brew time; read the spent grounds; sell within 30 to 60 minutes and never top an old pot up (Library: Batch brew is the one that pays; Batch Brew card)."
+    },
+    {
+      "field": "serve",
+      "problem": "Said nothing of when it goes to the table.",
+      "change": "Added: It is the coffee for brunch, a banquet or a whole table at once (Batch Brew card, Sells to)."
+    },
+    {
+      "field": "story",
+      "problem": "\"A guest who says burnt is usually tasting a pot left on heat\" contradicts the Library: the faults lesson \"Sour, and the word the guest will use instead\" says an under-extracted cup comes back called burnt, while the Over-extracted card ties \"stewed\" and \"bottom of the pot\" to a held pot.",
+      "change": "burnt changed to stewed."
+    },
+    {
+      "field": "recall[0].answer",
+      "problem": "A temperature in Fahrenheit without Celsius (style; schema languageProblems).",
+      "change": "Added (90 to 96C)."
+    },
+    {
+      "field": "quiz[1].options",
+      "problem": "The answer \"60 g per litre, just under 1:17\" was the longest option and the only one with two figures, a length clue; \"About 33 g per litre\" is not a choice a trained person makes.",
+      "change": "Options now \"18 g in, 36 g out\", \"About 45 g per litre\", \"About 60 g per litre\", \"About 80 g per litre\"; the explanation names 18 g in, 36 g out as espresso."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "sencha",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=Oc2M784kB60",
+  "videoId": "Oc2M784kB60",
+  "title": "Sazen Tea Sencha Brewing Tutorial",
+  "channel": "Sazen Tea",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "how to brew sencha youtube (site youtube.com)",
+      "returned": "Sazen Tea Sencha Brewing Tutorial - YouTube | https://www.youtube.com/watch?v=Oc2M784kB60 | summary: \"Sazen Tea tutorial: A step-by-step guide that teaches how to brew a delicious cup of Japanese sencha\"."
+    },
+    {
+      "q": "\"Sazen Tea Sencha Brewing Tutorial\" (site youtube.com)",
+      "returned": "Sazen Tea Sencha Brewing Tutorial - YouTube | https://www.youtube.com/watch?v=Oc2M784kB60 (first) | summary: \"The top result matches your query exactly ... a step-by-step tutorial on brewing Japanese sencha\"; \"The other results are general sencha tutorials from other sellers and channels, not Sazen Tea.\""
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedBy": "checker",
+  "checkedOn": "2026-10-18",
+  "note": "Same id and exact title on both searches; Sazen Tea is named in the title and both summaries. A Japanese tea seller. The exact channel string should be confirmed by an oEmbed read. The runs \"Sazen Tea\" and the title are not on proper-nouns.json."
+}

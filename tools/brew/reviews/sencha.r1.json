@@ -1,0 +1,13 @@
+{
+  "id": "sencha",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "story",
+      "problem": "\"Tencha is shaded, never rolled and milled\" can be read as never milled.",
+      "change": "Now \"shaded, dried flat without rolling and milled\", as the Matcha card has it."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "espresso-martini",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=Rq2257amkAo",
+  "videoId": "Rq2257amkAo",
+  "title": "Espresso Martini 3 Ways: Home/Standard/Pro",
+  "channel": "Anders Erickson",
+  "channelKind": "person",
+  "queries": [],
+  "verifiedBy": "pack",
+  "checkedOn": "2026-10-18",
+  "note": "The plan names no Library film. The pack carries two videos whose itemIds hold b-z5ckwig5, the house Espresso Martini: v-fnz9xnfm \"Espresso Martini 3 Ways: Home/Standard/Pro\" and v-9ss9e4gf \"Why people hate the Espresso Martini\", both on the same channel. The first is taken because it teaches making the drink; the second is about faults. Url, id, title and channel are copied exactly from the pack record. A bartender’s own channel (Anders Erickson is on people.json), so channelKind person and the fragment ships title and channel empty. No search spent.",
+  "checkedBy": "checker",
+  "checkerNote": "Confirmed by the checker on 2026-10-19: url, id Rq2257amkAo, title and channel equal the pack record v-fnz9xnfm exactly, and that record’s itemIds hold b-z5ckwig5, the printed Espresso Martini. Of the pack’s two videos for that record it is the one that teaches making the drink; v-9ss9e4gf is about faults. A bartender’s own channel, so person is right and the fragment ships title and channel empty. No search spent."
+}

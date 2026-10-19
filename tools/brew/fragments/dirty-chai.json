@@ -1,0 +1,115 @@
+{
+  "id": "dirty-chai",
+  "name": "Dirty chai",
+  "respell": "DUR-tee CHY",
+  "aka": [
+    "dirty chai latte",
+    "filthy chai"
+  ],
+  "group": "cocoa",
+  "kind": "tea",
+  "caffeine": "Caffeine comes from both the espresso and the black tea, more than a chai latte alone.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on the menus: ask at lineup whether the bar can pull an espresso and steam milk, and whether any chai is kept to build it on."
+  },
+  "what": "A chai latte with espresso through it: spiced black tea and steamed milk with a single shot pulled in, a double for the guest who orders it filthy. The coffee's roast and bitterness cut the chai's sweetness and give the spice something to lean on. It is built from two bases, so both have to be right.",
+  "taste": "Spiced and sweet like a chai latte, with roasty coffee bitterness beneath that dries the finish.",
+  "make": {
+    "steps": [
+      "Pour the chai concentrate into a warmed cup.",
+      "Pull a fresh shot, a double for a filthy, straight into the chai.",
+      "Steam the milk to latte texture while the shot runs.",
+      "Pour the steamed milk through at once, and sweeten if the base is unsweetened."
+    ],
+    "ratio": "",
+    "dose": "Chai base, one shot of espresso, steamed milk to fill",
+    "temp": "Milk 140 to 155F (60 to 68C)",
+    "time": "Pull the shot as the milk steams; pour at once",
+    "cup": "Warmed 8 to 12 oz latte cup or mug"
+  },
+  "serve": "On a saucer with a spoon, handle to the guest's right, named as it lands, since it looks like a chai latte. Bring it at once, while the shot is fresh, and mention the coffee to a guest ordering late.",
+  "story": "The name is café slang: a dirty chai is a chai latte with espresso through it, and some bars call the double a filthy. Chai itself means tea, the word that reached Hindi and Urdu overland from Chinese, so the order asks for spiced tea with coffee in it. It suits the chai lover who wants coffee's backbone.",
+  "guest": "A dirty chai is a chai latte with a shot of espresso: spiced, sweet and creamy, with coffee underneath. Let me check the bar can make one.",
+  "watch": [
+    "Two sources of caffeine, the tea and the shot: say so to a guest ordering late.",
+    "A shot left standing loses its aromatics: pull it to order, as the milk steams.",
+    "Ask whether they want one shot or two, and whether the chai is sweetened."
+  ],
+  "library": {
+    "ref": "Masala Chai",
+    "study": [
+      [
+        "matcha",
+        "Chai is a recipe, not an ingredient"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make dirty chai",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a dirty chai made, and what is in it?",
+      "answer": "Chai concentrate in a warmed cup, a fresh shot of espresso pulled in, then steamed milk poured through; a double shot makes it a filthy. Spiced and sweet with roasty coffee beneath."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What turns a chai latte into a dirty chai?",
+      "options": [
+        "A splash of rum",
+        "Chocolate sauce",
+        "A shot of espresso",
+        "Extra black pepper"
+      ],
+      "a": 2,
+      "explain": "A dirty chai is a chai latte with espresso through it."
+    },
+    {
+      "id": "q2",
+      "q": "What do some bars call a double-shot dirty chai?",
+      "options": [
+        "A filthy",
+        "A red eye",
+        "A muddy",
+        "A black chai"
+      ],
+      "a": 0,
+      "explain": "Some bars call the double a filthy; a red eye is drip coffee with a shot."
+    },
+    {
+      "id": "q3",
+      "q": "Why is the espresso for a dirty chai pulled to order?",
+      "options": [
+        "Hot espresso would curdle the chai",
+        "Its aroma fades as it stands",
+        "The tea must cool first",
+        "Espresso mixes better cold"
+      ],
+      "a": 1,
+      "explain": "Every shot is made to order because its aromatics leave the moment it is pulled."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: Chai is a recipe, not an ingredient",
+      "url": ""
+    },
+    {
+      "title": "Library: Masala Chai; Latte",
+      "url": ""
+    },
+    {
+      "title": "Library: Running coffee and tea through a bar shift",
+      "url": ""
+    }
+  ],
+  "video": null
+}

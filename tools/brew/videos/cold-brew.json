@@ -1,0 +1,14 @@
+{
+  "id": "cold-brew",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=sw3ZhWyb6cY",
+  "videoId": "sw3ZhWyb6cY",
+  "title": "The Ultimate guide to Cold Brew Coffee",
+  "channel": "Seven Miles Coffee Roasters",
+  "channelKind": "company",
+  "queries": [],
+  "verifiedBy": "coffee-films",
+  "checkedOn": "2026-10-18",
+  "note": "The plan names the Library film filter/cold-brew-and-iced-coffee-are-different-drinks; id, title and channel copied exactly from that COFFEE_FILMS row, no search spent. The pack also carries v-19rzwfyf (AB0QLjroFss, a person’s channel) tied to b-r69tzqly and c-rhunrgiz, but the Library film comes first. Seven Miles Coffee Roasters is a roaster, channelKind company; it is not yet on tools/brew/companies.json (empty), which the validator requires for a company channel, and this role may not write that file. Checker, 2026-10-19: id, title and channel equal the COFFEE_FILMS row filter/cold-brew-and-iced-coffee-are-different-drinks exactly, and channelKind company (a roaster) is right. Confirmed.",
+  "checkedBy": "checker"
+}

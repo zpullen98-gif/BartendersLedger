@@ -1,0 +1,147 @@
+{
+  "id": "chamomile",
+  "name": "Chamomile",
+  "respell": "KAM-uh-meel",
+  "aka": [
+    "camomile",
+    "chamomile tea"
+  ],
+  "group": "herbal",
+  "kind": "tea",
+  "caffeine": "None of its own: chamomile is a dried flower, not the tea plant, but a blend can carry other plants, so read the box.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup whether the bar keeps chamomile, which brand, loose or bagged, how it goes out and the price."
+  },
+  "what": "Chamomile is a tisane, an infusion of the dried flower heads of a plant in the daisy family, and not tea at all: no Camellia sinensis goes in, so the oxidation ladder that sorts a tea list does not apply. It wants water at a full boil and a long steep. A straight chamomile carries one botanical where a blend can carry a dozen, and it is one of the five herbals that cover nearly every ask at a bar.",
+  "taste": "Apple and honey, soft and round, with almost no drying grip, because a flower has little astringency to give. Left to sit on the bag it grows fuller rather than harsh, which is the one way it forgives a busy server.",
+  "make": {
+    "steps": [
+      "Draw fresh cold water and bring it to a full boil.",
+      "Warm the glass pot or mug with hot water and tip the rinse out.",
+      "Weigh the flowers, 2 to 3 g per 6 to 8 oz, or use one bag; a fluffy flower makes a spoon unreliable.",
+      "Pour on the boiling water and cover, so the aroma stays in the pot rather than leaving the cup.",
+      "Steep 5 to 10 minutes, then strain, or send the bag with a dish and say the time."
+    ],
+    "ratio": "2 to 3 g flowers per 6 to 8 oz water",
+    "dose": "One bag or 2 to 3 g dried flowers per cup",
+    "temp": "208 to 212F (98 to 100C), a full boil",
+    "time": "5 to 10 minutes, covered",
+    "cup": "Warmed glass pot or glass mug, 8 to 10 oz"
+  },
+  "serve": "Warm the glass first, because it takes boiling water, and set it on a saucer with a spoon and a small dish for the bag or basket. Honey or sugar goes beside the cup, never in it, and the milk and lemon caddy stays back unless asked. It belongs at the end of the meal, to the guest who is done drinking but not done sitting.",
+  "story": "Guests say herbal tea and will keep saying it; the trade word is tisane, and the move is to correct the answer, not the guest. Chamomile is a daisy-family flower, and a bartender meets its smell elsewhere: it is a botanical in some gins and a tasting note in dry manzanilla sherry and in aged Chenin Blanc. What a guest likes to hear is short: apple and honey, no tea plant, a warm cup to close the night.",
+  "guest": "Chamomile is a flower rather than tea, so it has no caffeine of its own; it tastes of apple and honey, and I’ll bring honey on the side.",
+  "watch": [
+    "Chamomile is in the daisy family, so a guest with a ragweed allergy has a real cross-reaction risk: hand over the box and leave the decision with them.",
+    "Herbal often means no caffeine, sometimes because of a pregnancy or a medication. Do not guess and do not reassure: name what is in it.",
+    "Water from a kettle set for green tea leaves the cup weak: a dried flower wants the full boil and the full time.",
+    "A blend sold as chamomile can carry a dozen botanicals; read the ingredient list rather than answering from memory."
+  ],
+  "library": {
+    "ref": "Herbal Tisane",
+    "study": [
+      [
+        "leaf",
+        "Tisanes are not tea"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to brew chamomile tea",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Chamomile: how is it made, and what goes in the cup?",
+      "answer": "One bag or 2 to 3 g of dried flowers per 6 to 8 oz, boiling water at 208 to 212F (98 to 100C), covered for 5 to 10 minutes, into a warmed glass pot or mug of 8 to 10 oz. It tastes of apple and honey, soft, with almost no grip."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "A guest calls chamomile a mild green tea. What is it, botanically?",
+      "options": [
+        "The dried flower head of a daisy-family plant",
+        "A lightly oxidised leaf of Camellia sinensis",
+        "The dried, oxidised leaf of a South African shrub",
+        "The dried red calyx of the roselle plant"
+      ],
+      "a": 0,
+      "explain": "Chamomile is a flower and a tisane, not tea: no Camellia sinensis goes in. The South African shrub is rooibos, and the red calyx is hibiscus."
+    },
+    {
+      "id": "q2",
+      "q": "What water temperature does the Library give for chamomile and nearly every other herbal infusion?",
+      "options": [
+        "160 to 175F (71 to 79C), as for sencha",
+        "185 to 205F (85 to 96C), as for oolong",
+        "208 to 212F (98 to 100C), a full boil",
+        "175F (79C), as for a white tea"
+      ],
+      "a": 2,
+      "explain": "Herbal infusions want a full boil and a long steep. The cooler figures belong to green, white and oolong leaf, where boiling water pulls bitterness."
+    },
+    {
+      "id": "q3",
+      "q": "A guest who wants chamomile mentions a ragweed allergy. What is the right move?",
+      "options": [
+        "Reassure them, since it carries no caffeine",
+        "Hand over the box and let the guest decide",
+        "Steep it shorter so less pollen reaches the cup",
+        "Offer a blend, since straight chamomile is the risk"
+      ],
+      "a": 1,
+      "explain": "Chamomile sits in the daisy family, so ragweed carries a real cross-reaction risk. Caffeine free is not the same as safe, and that call is the guest’s, not the server’s."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ledger Library: The Leaf, Tisanes are not tea",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library card: Herbal Tisane",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library: Tea Service, Water for tea",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library: Tea Service, The steep, and what over-steeping actually is",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library: Tea Service, The service itself",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library: Tea Service, Caffeine, and the questions guests ask",
+      "url": ""
+    },
+    {
+      "title": "World Table lexicon: Chenin Blanc",
+      "url": ""
+    },
+    {
+      "title": "House pack components: Hendrick’s gin; La Cigarrera",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=p4eJRxTDtEA",
+    "id": "p4eJRxTDtEA",
+    "title": "How to Brew the Perfect Cup of Chamomile Tea",
+    "channel": "Crafters & Co.",
+    "channelKind": "company",
+    "label": "How to brew a cup of chamomile",
+    "watchFor": "A tea seller's four easy steps to a cup of chamomile. Whatever the steps, chamomile wants water at a full boil, a covered steep of 5 to 10 minutes, then the flowers strained out.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

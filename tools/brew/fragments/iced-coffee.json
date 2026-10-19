@@ -1,0 +1,139 @@
+{
+  "id": "iced-coffee",
+  "name": "Iced coffee",
+  "respell": "",
+  "aka": [
+    "Japanese iced coffee",
+    "flash brew"
+  ],
+  "group": "cold",
+  "kind": "coffee",
+  "caffeine": "All from the beans, as in a hot cup at the same dose.",
+  "house": {
+    "printed": false,
+    "askId": "a-dy8vzoly",
+    "ask": "Not printed on the menus: ask at lineup how the bar brews hot coffee and whether it pours plain iced coffee, without the Café Glacé's syrup and foam."
+  },
+  "what": "Hot coffee served cold. Done properly it is flash brewed, also called Japanese iced coffee: a third to a half of the water waits in the server as ice and the rest is brewed hot onto it. Hot extraction and an instant chill keep the aromatics, so it drinks bright and acidic, made to order. Coffee brewed hot and left to cool is a different, flatter drink.",
+  "taste": "Bright, clean and lively, the bean's fruit and acidity intact, lighter in body than cold brew: a good pour-over, only cold.",
+  "make": {
+    "steps": [
+      "Weigh about 60 g of coffee per litre of total water, counting ice and hot water together.",
+      "Put a third to a half of that water into the server as ice.",
+      "Grind a little finer than for a hot cup, since less hot water passes through the bed.",
+      "Brew the rest at 195 to 205F (90 to 96C) through a cone straight onto the ice.",
+      "Swirl until the coffee is cold and most of the ice has melted.",
+      "Pour over fresh ice in a chilled glass and serve at once."
+    ],
+    "ratio": "60 g a litre; a third to a half as ice",
+    "dose": "30 g coffee, 200 g ice, 300 g hot water",
+    "temp": "195 to 205F (90 to 96C)",
+    "time": "2.5 to 3.5 minutes through a cone",
+    "cup": "Chilled tall glass, fresh ice, 10 to 12 oz"
+  },
+  "serve": "A chilled glass and fresh ice, never a cup off the top of the machine. Cream, milk and simple syrup ride on the side, syrup because packets dissolve slowly in a cold glass. The cold coffee the menu prints is the Café Glacé.",
+  "story": "Iced coffee and cold brew are not one drink. Iced coffee is brewed hot and chilled at once, so it keeps its bright top notes; cold brew never meets heat and reads round. The old shortcut, a pot left to cool, tastes flat, because held coffee loses its aromatics. The Japanese method answers that by brewing onto the ice and counting it as water.",
+  "guest": "Our cold coffee is the Café Glacé, chicory cold brew with cardamom-clove syrup; I can ask whether the bar pours a plain iced coffee.",
+  "watch": [
+    "A guest ordering iced coffee may mean cold brew, or the reverse: ask whether they want it bright and light or round and smooth.",
+    "Hot coffee poured over a glass of ice without counting the ice comes out thin and watery; the ice is part of the recipe.",
+    "Which has more caffeine depends on dose and cut, not temperature, so never promise a guest that either is milder."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "filter",
+        "Cold brew and iced coffee are different drinks"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make japanese iced coffee",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Japanese iced coffee: how is it made?",
+      "answer": "60 g of coffee a litre, a third to a half of the water as ice in the server, the rest brewed hot onto it, swirled cold, poured over fresh ice. Bright and clean."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "In Japanese iced coffee, how much of the water waits in the server as ice?",
+      "options": [
+        "None of it",
+        "About three quarters",
+        "About a tenth",
+        "A third to a half"
+      ],
+      "a": 3,
+      "explain": "The ice counts as brew water; the rest is brewed hot onto it."
+    },
+    {
+      "id": "q2",
+      "q": "Why does flash brew taste brighter than cold brew?",
+      "options": [
+        "It is always brewed from a lighter roast",
+        "Hot extraction, then an instant chill",
+        "Ice draws acid from the grounds",
+        "It steeps for longer"
+      ],
+      "a": 1,
+      "explain": "Hot water pulls the bright compounds and the chill holds the aromatics; cold brew never sees heat."
+    },
+    {
+      "id": "q3",
+      "q": "A pot brewed an hour ago is poured over ice. How does it taste beside a flash brew?",
+      "options": [
+        "Brighter, its acids sharpened",
+        "Sweeter, its edges rounded",
+        "Flat, its aromatics gone",
+        "The same, once it is chilled"
+      ],
+      "a": 2,
+      "explain": "Held coffee loses its aromatics, so iced coffee is brewed to order."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: Cold brew and iced coffee lesson",
+      "url": ""
+    },
+    {
+      "title": "Library: Pour-over and Batch brew lessons",
+      "url": ""
+    },
+    {
+      "title": "Temple Coffee: flash brew",
+      "url": "https://templecoffee.com/blogs/blog/flash-brew"
+    },
+    {
+      "title": "Volcanica Coffee: how to make Japanese flash brew coffee",
+      "url": "https://volcanicacoffee.com/blogs/news/video-guide-how-to-make-japanese-flash-brew-coffee-better-than-cold-brew-in-minutes"
+    },
+    {
+      "title": "Pack: Café Glacé de la Maison",
+      "url": ""
+    },
+    {
+      "title": "Pack: lineup question on brewing",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=ep3ATbyXLEA",
+    "id": "ep3ATbyXLEA",
+    "title": "",
+    "channel": "Big Island Coffee Roasters",
+    "channelKind": "company",
+    "label": "How to brew Japanese iced coffee",
+    "watchFor": "Hot coffee brewed straight onto ice so it chills at once. Watch how much ice goes in against hot water: the ice counts as part of the water, so the brew starts stronger and the melt brings it back.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

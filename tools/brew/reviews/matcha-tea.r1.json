@@ -1,0 +1,13 @@
+{
+  "id": "matcha-tea",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "quiz[1].options",
+      "problem": "The right answer was the longest option (44 characters against 33).",
+      "change": "Two wrong options lengthened: \"The whisk was not soaked in warm water first\" and \"Only cheap culinary grade powder ever clumps\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

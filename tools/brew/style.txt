@@ -1,0 +1,95 @@
+The Coffee and tea page: how an entry is written (18 October 2026)
+
+WHO READS IT
+The owner works the floor at Brennan's, New Orleans, and studies to master bartender. The page sits
+under the Brennan's tab of the Bartender's Ledger. Brennan's own coffees come first, drawn live from
+the house pack; every other entry is the general craft a server or bartender needs when a guest asks.
+
+ONE ENTRY = ONE FRAGMENT
+tools/brew/fragments/<id>.json, the id from tools/brew/plan.json. Fields, all required unless marked:
+  id          the plan's id
+  name        the plan's name (at most 40 characters)
+  respell     how to say it, capitals for the stressed syllable, hyphens between syllables
+              (kor-TAH-doh); "" for a plain English name (at most 40 characters)
+  aka         other names a guest uses, a list (may be empty)
+  group, kind the plan's
+  caffeine    one plain sentence on how much caffeine and from where (at most 25 words)
+  house       copied from the plan, never invented: { printed:true, packIds } or
+              { printed:false, askId, ask } with optional uses; when printed is false and the plan's
+              ask is empty, write ask as one sentence (at most 30 words) that says it is not printed on
+              the menus and what to ask at lineup
+  what        what it is: the drink, where it comes from, what makes it itself (35 to 90 words)
+  taste       how it tastes and feels in the mouth (15 to 60 words)
+  make        how to make it, the general method:
+                steps   3 to 8 numbered steps in order, each at most 30 words, imperative
+                ratio   the proportion (at most 14 words), "" if none
+                dose    what goes in, by weight or volume (at most 14 words)
+                temp    the temperatures, "195 to 205F (90 to 96C)" style (at most 14 words), "" if none
+                time    how long (at most 14 words), "" if none
+                cup     the cup or glass and its size (at most 14 words)
+  serve       how it goes to the table: the cup warmed or chilled, the saucer and spoon, what rides
+              with it, when to bring it (25 to 80 words)
+  story       where it comes from and what a guest likes to hear (30 to 110 words)
+  guest       one or two sentences a server says to a guest (12 to 40 words)
+  watch       2 to 4 things that go wrong or that a guest asks, each at most 30 words
+  library     copied from the plan (the renderer resolves it)
+  table       copied from the plan
+  search      copied from the plan
+  recall      [{ id:'make', prompt, answer }]: prompt at most 25 words (the drink by name, asking how it
+              is made or what is in it), answer 15 to 70 words (the build, the cup, the taste)
+  quiz        exactly 3 questions [{ id:'q1'|'q2'|'q3', q, options:[4 strings], a:0..3, explain }]:
+              the stem at most 30 words and never containing the answer, each option at most 12 words,
+              one correct answer, three wrong ones a trained person might pick, no "all of the above",
+              no option much longer than the others, explain at most 45 words
+  sources     [{ title, url }] https links the author read in a search result, plus the in-app
+              sources as { title, url:"" } (for example the Library lesson or the World Table entry)
+  video       filled by the video finder, not the author (see VIDEOS); the author writes null
+Whole entry at most 600 words.
+
+THE HOUSE
+Never state how Brennan's makes anything. House facts come only from the pack: the printed names,
+prices, sections and ingredients of the six house records, their components and their lineup
+questions. Every method is "a general method, not the house build"; the page says so once on every
+detail. When an entry is printed (chicory coffee, single origin, cold brew, Irish coffee, espresso
+martini, coffee with liqueur and cream), say in "what" or "serve" how the house's version relates to
+the general drink, only from the pack (for example the Café Glacé starts from the house's chicory
+cold brew). Never name the house in the fragment: the renderer names it from the pack. Write "our"
+or "the house" if you must.
+
+FACTS
+A fact rests on an in-app source (the Ledger's Library lessons and cards in js/data-coffee.js, the
+Library cocktails and zero-proof drinks, the World Table's Cuisine entries "Chicory coffee" and
+"Café brûlot", its recipes and lexicon, the Brennan's pack), or on two search results from different
+sites. Where the Library gives a number (a ratio, a temperature, a time), use it or reconcile with it;
+never contradict it silently. Where sources disagree, give the range. No measures invented for a
+house drink. No health claims, no caffeine promises, no allergen verdicts ("dairy free", "safe for").
+Never name a person, living or dead, and never a business but a product or brand a guest orders by
+name (Tullamore Dew, Kahlua, Frangelico are fine; a café, a barista, a writer, an inventor are not):
+"an Irish airport chef in the 1940s", not his name.
+
+LANGUAGE
+British spelling (flavour, colour, favourite, savoury, centre, litre, practise as the verb, -ise).
+No em dash, no en dash, no spaced hyphen or double hyphen used as a dash: use a comma, a colon or a
+full stop. Ranges with "to": "25 to 30 seconds". Temperatures Fahrenheit first with Celsius in
+brackets. Nothing at or above U+2190: no arrows, no degree sign ("F" and "C" alone), no fractions
+glyphs (write "a half"), no emoji, no "≈". Curly quotes and the accented letters of names (café,
+brûlot, frappé) are fine. Plain, warm, exact; no superlatives ("the best", "perfect", "amazing",
+"delicious", "unique"), no marketing.
+
+VIDEOS (the video finder and the video refuter, not the author)
+A video is an external link the owner taps; nothing is embedded. Order of preference:
+1. a Library film already checked (js/data-coffee-films.js; the plan's "film" names the lesson): copy
+   its id, title and channel exactly, verifiedBy "coffee-films";
+2. a video the house pack already carries for this drink (house.videos): verifiedBy "pack";
+3. a new one found by WebSearch: one search for the plan's search phrase on youtube.com, a second for
+   the exact title found; it counts only when both searches return the same www.youtube.com/watch?v=
+   id with the same exact title, and the channel is named in a result's title or summary. No Shorts,
+   no playlists, no music videos. Record both queries and what each returned in
+   tools/brew/videos/<id>.json. verifiedBy "websearch".
+The fragment's video: { url, id, title, channel, channelKind:'company'|'person', label, watchFor,
+verifiedBy, checkedOn:'2026-10-18' }. label is our own few words (at most 8: "How to steam milk for a
+cappuccino"); watchFor what to watch for in it (at most 40 words). A channel that is a person's (a
+barista, a writer, anyone named) is channelKind 'person': the shipped fragment keeps title and channel
+empty and the real ones stay only in tools/brew/videos/<id>.json. A company channel (a roaster, a
+tea house, a machine maker, a magazine) is 'company' and its name may show. When no video passes,
+video is null and the page offers the search link alone.

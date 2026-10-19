@@ -1,0 +1,33 @@
+{
+  "id": "cafe-au-lait",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=e4dW5MM36KE",
+  "videoId": "e4dW5MM36KE",
+  "title": "Cafe au lait Recipe (French-Inspired, American Style) - Life's Little Sweets",
+  "channel": "Life's Little Sweets",
+  "channelKind": "person",
+  "queries": [
+    {
+      "q": "how to make cafe au lait youtube",
+      "filter": "allowed_domains youtube.com",
+      "returned": "“Cafe au lait Recipe (French-Inspired, American Style) - Life's Little Sweets - YouTube” https://www.youtube.com/watch?v=e4dW5MM36KE; summary: “The ‘Life's Little Sweets’ video links to a written recipe.”"
+    },
+    {
+      "q": "\"Cafe au lait Recipe (French-Inspired, American Style) - Life's Little Sweets\"",
+      "filter": "allowed_domains youtube.com",
+      "returned": "“Cafe au lait Recipe (French-Inspired, American Style) - Life's Little Sweets - YouTube” https://www.youtube.com/watch?v=e4dW5MM36KE; summary: “The only direct match is a YouTube video of that recipe, which says the full printable recipe is on the blog’s café au lait page ... hot, full-bodied, and easy to make” (lifeslittlesweets.com)."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-18",
+  "checkedBy": "checker",
+  "note": "Same id and same exact title in both searches; the channel is named in both result titles and the summary names the blog. A home cook’s food blog, so person: the fragment ships title and channel empty. The title carries a spaced hyphen, which never reaches the fragment. Not watched: the American style named in the title is brewed coffee with hot milk, the drink the fragment describes.",
+  "checkerNote": "Confirmed by the checker on 2026-10-19: two different searches on youtube.com returned the same watch id e4dW5MM36KE under the same exact title, and the channel, Life’s Little Sweets, is named in the result titles and the summaries. A fresh search in new wording returned the same id and title first, from Life’s Little Sweets, with a description that points to the written recipe on the blog. It teaches making café au lait; a watch link, not a Short (the one Short in the results, H6A2n3stkDQ, is another video at /shorts/), a playlist or an advert. A home cook’s food blog run by one person (its other uploads credit a personal Pinterest handle), so person is right whatever the business name, and the fragment ships title and channel empty.",
+  "checkerQueries": [
+    {
+      "q": "Life's Little Sweets cafe au lait recipe French-inspired American style video",
+      "filter": "allowed_domains youtube.com",
+      "returned": "First result “Cafe au lait Recipe (French-Inspired, American Style) - Life's Little Sweets - YouTube” https://www.youtube.com/watch?v=e4dW5MM36KE; summary: a video from Life’s Little Sweets, posted about four and a half years ago, its description pointing to a printable recipe at lifeslittlesweets.com/cafe-au-lait/. Other uploads from the channel: YRDLlJm_aiw (soy milk coffee, “Pinterest @LifesLilSweets”), HEhVCaTaP_Y (bubble coffee)."
+    }
+  ]
+}

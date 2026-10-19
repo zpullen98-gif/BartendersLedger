@@ -1,0 +1,131 @@
+{
+  "id": "cafe-bombon",
+  "name": "Café bombón",
+  "respell": "kah-FEH bom-BON",
+  "aka": [
+    "bombón"
+  ],
+  "group": "world",
+  "kind": "coffee",
+  "caffeine": "One espresso shot: small in volume, a full shot's caffeine, and the condensed milk adds none.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on the menus: ask at lineup whether there is an espresso machine and whether the bar will pull a shot on request, at what price."
+  },
+  "what": "A Spanish café drink: espresso and sweetened condensed milk in a small glass, in roughly equal parts or less milk to taste. The thick milk sits below and the coffee above, so the glass shows two layers, dark over pale, until the guest stirs. It is the hot, espresso cousin of Vietnamese iced coffee.",
+  "taste": "Very sweet and rich: syrupy espresso bitterness over thick, caramel-sweet milk; once stirred, a soft sweet in a glass.",
+  "make": {
+    "steps": [
+      "Spoon condensed milk into a small clear glass, about as much as the espresso will be.",
+      "Pull a single espresso and pour it slowly over the back of a spoon onto the milk.",
+      "Let the layers show, dark over pale, and set a spoon beside it.",
+      "Ask the guest to stir before drinking."
+    ],
+    "ratio": "Roughly equal parts espresso and condensed milk, or less milk",
+    "dose": "One espresso shot and about as much condensed milk",
+    "temp": "Espresso brewed 195 to 205F (90 to 96C)",
+    "time": "",
+    "cup": "Small clear glass, 3 to 4 oz, on a saucer"
+  },
+  "serve": "A small clear glass so the layers show, on a saucer with a spoon, straight from the machine. Tell the guest to stir first, because the milk sits thick underneath; a glass of water suits the sweetness. It works as a small sweet coffee after dessert, or instead of one.",
+  "story": "The bombón belongs to Spanish café counters, where the glass is the show: the dense, sugared milk below, the espresso above, until a spoon goes in. The physics are the Irish coffee's cream turned upside down: dissolved sugar makes a liquid denser, so the milk sinks. A guest who knows Vietnamese iced coffee will recognise the pairing, here hot and small.",
+  "guest": "Espresso over sweetened condensed milk in a small glass, dark over pale; stir it and it drinks like a sweet. I can ask whether the bar will pull a shot.",
+  "watch": [
+    "Stir before drinking: the condensed milk sits in a thick layer, and without it the first sips are only bitter.",
+    "It is very sweet; a guest who wants a little milk without the sugar wants a cortado instead.",
+    "Condensed milk is dairy and sugar: a milk or allergen question goes to the house procedure, never an answer from memory."
+  ],
+  "library": {
+    "ref": "",
+    "study": [],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make cafe bombon",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Café bombón: what is in it, and how is it built?",
+      "answer": "Condensed milk in a small clear glass, a fresh espresso poured gently over it in roughly equal parts so the layers show dark over pale, with a spoon to stir. Rich, sweet, syrupy."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What is the milk in a café bombón?",
+      "options": [
+        "Steamed whole milk",
+        "Unsweetened evaporated milk",
+        "Lightly whipped cream",
+        "Sweetened condensed milk"
+      ],
+      "a": 3,
+      "explain": "Condensed milk, sweet and thick, roughly equal to the espresso, settling below it."
+    },
+    {
+      "id": "q2",
+      "q": "Why does the milk stay below the espresso?",
+      "options": [
+        "Its sugar makes it denser",
+        "It is chilled colder",
+        "The crema holds it down",
+        "It is poured in last"
+      ],
+      "a": 0,
+      "explain": "Dissolved sugar makes a liquid denser, the physics that floats cream on an Irish coffee."
+    },
+    {
+      "id": "q3",
+      "q": "A guest loves Vietnamese iced coffee. Which drink is its hot, espresso cousin?",
+      "options": [
+        "A café de olla",
+        "A café bombón",
+        "A latte macchiato",
+        "A Turkish coffee"
+      ],
+      "a": 1,
+      "explain": "Both pair coffee with condensed milk; the bombón is hot espresso, the Vietnamese a phin drip over ice."
+    }
+  ],
+  "sources": [
+    {
+      "title": "10 coffees from around the world",
+      "url": "https://www.insightguides.com/inspire-me/blog/10-coffees-from-around-the-world"
+    },
+    {
+      "title": "15 Coffee Traditions Across The Globe",
+      "url": "https://amexessentials.com/top-coffee-traditions-around-the-world-interesting-coffee-drinks"
+    },
+    {
+      "title": "The Best Coffee around the World",
+      "url": "https://holidaysafe.co.uk/blog/best-coffee-around-world"
+    },
+    {
+      "title": "Library: Espresso card",
+      "url": ""
+    },
+    {
+      "title": "Library: cream float lesson",
+      "url": ""
+    },
+    {
+      "title": "World Table: Ca Phe Sua Da",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=qPez5fPeyNE",
+    "id": "qPez5fPeyNE",
+    "title": "Cómo hacer el mejor café bombón. Receta paso a paso Escuela Superior de Hostelería Bilbao",
+    "channel": "Escuela Superior de Hostelería Bilbao",
+    "channelKind": "company",
+    "label": "How to layer a café bombón, in Spanish",
+    "watchFor": "A film in Spanish from a hospitality school. Watch the condensed milk go in first as the base, the espresso laid over it, and the clear glass chosen so the two layers show.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

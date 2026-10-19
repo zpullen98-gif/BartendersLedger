@@ -1,0 +1,18 @@
+{
+  "id": "nitro-cold-brew",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps[4]",
+      "problem": "Step 5 cascaded the drink and then served it, but the Library card and the entry’s own serve set it down to settle in front of the guest.",
+      "change": "Now: set it down in front of the guest and let it cascade 30 to 60 seconds until the head sets."
+    },
+    {
+      "field": "quiz[0].options",
+      "problem": "The answer was 10 characters longer than the next option, and the only specific one.",
+      "change": "Lengthened the distractors (a faint sweetness from the gas, a soda’s sharp prickle and acidity, a small lift in caffeine). The answer is unchanged."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

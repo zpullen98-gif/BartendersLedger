@@ -1,0 +1,55 @@
+{
+  "id": "black-tea",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=g4lMXvgZ46U",
+  "videoId": "g4lMXvgZ46U",
+  "title": "How to Make Black Tea",
+  "channel": "Twinings Foodservice",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "Twinings Foodservice how to make black tea youtube [allowed_domains: youtube.com]",
+      "returned": "How to Make Black Tea - YouTube | https://www.youtube.com/watch?v=g4lMXvgZ46U (second; first was How to make the Perfect Twinings Iced Tea - Twinings Foodservice | L0r0ZDuXdbo) | summary: \"The top match is a Twinings Foodservice video titled 'How to Make Black Tea,' which is a guide to making the perfect black tea, from brewing temperatures to brewing times and serving recommendations.\""
+    },
+    {
+      "q": "\"How to Make Black Tea\" Twinings Foodservice [allowed_domains: youtube.com]",
+      "returned": "How to Make Black Tea - YouTube | https://www.youtube.com/watch?v=g4lMXvgZ46U (second again, after the Twinings Foodservice iced tea video) | summary: the video \"is described as a guide to making the perfect black tea, covering brewing temperatures, brewing times and serving recommendations\", then \"Other Twinings Foodservice results are also videos: an iced tea brewing guide ...\""
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedBy": "checker",
+  "checkedOn": "2026-10-19",
+  "note": "Same id and exact title, \"How to Make Black Tea\", on two different searches; the first summary names Twinings Foodservice as the publisher (\"a Twinings Foodservice video titled ...\"), and the second calls the other Twinings items \"other Twinings Foodservice results\". Its description wording matches the Twinings Foodservice green tea guide already accepted (3uaHkFMslds). The tea maker's trade channel. The first pass's Red Blossom candidate EIXX-p88XOQ was not retried. The exact channel string is as the results name it; an oEmbed read should confirm it. Two searches spent.",
+  "checkerQueries": [
+    {
+      "q": "\"How to Make Black Tea\" brewing temperatures brewing times serving recommendations video [allowed_domains: youtube.com]",
+      "returned": "How to Make Black Tea - YouTube | https://www.youtube.com/watch?v=g4lMXvgZ46U (second, after the first pass's rejected EIXX-p88XOQ) | summary: \"A video titled 'How to Make Black Tea' (youtube.com/watch?v=g4lMXvgZ46U) is described as covering brewing temperatures, brewing times, and serving suggestions\"; this query named no company and the summary named no channel. The same id and exact title a third time, with the description wording of the Twinings Foodservice series (the green tea guide 3uaHkFMslds). The finder's two searches already meet the rule: different queries, the same www id and exact title, and the first summary names Twinings Foodservice as the publisher (\"a Twinings Foodservice video titled ...\"), the channel string the series titles carry. It teaches brewing black tea; not a Short, a playlist or an advert. Confirmed."
+    }
+  ],
+  "firstPass": {
+    "id": "black-tea",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to brew black tea properly youtube (site youtube.com)",
+        "returned": "How to Brew Black Tea - YouTube | https://www.youtube.com/watch?v=EIXX-p88XOQ | summary: \"A video titled 'How to Brew Black Tea' demonstrates this technique ... Alice teaches the Red Blossom method for brewing black tea.\""
+      },
+      {
+        "q": "\"How to Brew Black Tea\" youtube Red Blossom",
+        "returned": "No youtube.com result: teabloom.com, teatimemagazine.com, redrosetea.com and mirror pages; summary: \"I didn't find a direct YouTube page for a Red Blossom black tea video.\""
+      },
+      {
+        "q": "\"How to Brew Black Tea\" (site youtube.com; batch spare)",
+        "returned": "EIXX-p88XOQ absent. Top results: How to Brew: Black Tea - YouTube | https://www.youtube.com/watch?v=nLB6PrDs9Bc; EDC Brew Series: How to Brew Black Tea | onJgrqhnCY0; no channel named for any of them."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Candidate EIXX-p88XOQ, \"How to Brew Black Tea\" (a tea house's own method, channel named only as Red Blossom in the first summary), never came back on a quoted title search, so it does not pass. Three searches spent, one of them the batch spare."
+  }
+}

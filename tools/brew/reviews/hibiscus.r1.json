@@ -1,0 +1,53 @@
+{
+  "id": "hibiscus",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "taste",
+      "problem": "Tied wringing to the dry, dusty finish. The World Table Bissap note ties that finish to boiling (seed fragments giving up tannin); its Sorrel note ties pressing to cloud and grit.",
+      "change": "Dropped “or wrung out”: “Boiled hard, it picks up a dry, dusty finish from the seed fragments.”"
+    },
+    {
+      "field": "make.steps[4]",
+      "problem": "The same conflation: wringing said to pull a dusty tannin.",
+      "change": "Now “which clouds the liquid and leaves grit”."
+    },
+    {
+      "field": "make.steps[5]",
+      "problem": "“Sweeten while warm, then chill hard” read as applying to the hot cup, which goes out with sugar beside it.",
+      "change": "Now opens “For a batch,”."
+    },
+    {
+      "field": "make.dose",
+      "problem": "No weight or volume, which the style requires of dose.",
+      "change": "Now “2 to 3 g calyces per cup; sweetener to taste; lime for iced”."
+    },
+    {
+      "field": "story",
+      "problem": "“China, Sudan and Thailand grow most of it” overstates the pack’s Hibiscus component, which calls them the big growers.",
+      "change": "Now “are the big growers today”."
+    },
+    {
+      "field": "watch[1]",
+      "problem": "Tied wringing to the dull, dusty finish (as in taste).",
+      "change": "Now: a long rolling boil can add a dry, dusty finish, and wringing adds cloud and grit."
+    },
+    {
+      "field": "quiz[2].q",
+      "problem": "“Careful recipes” called the Library’s full boil and the pack’s agua de Jamaica (calyces boiled eight to ten minutes) careless, taking one side of a disagreement the fragment otherwise gives as a range.",
+      "change": "Now “some recipes”."
+    },
+    {
+      "field": "quiz[2].options",
+      "problem": "The right option tied wringing to the dusty finish, which the explanation itself contradicts (wringing adds cloud and grit).",
+      "change": "Now “Boiling adds a dusty finish; wringing adds grit” (47 characters, not the longest)."
+    },
+    {
+      "field": "make.temp",
+      "problem": "Checked: the Library card says a full boil, the World Table Bissap and Sorrel steep near 195F (90C) and warn against boiling, and the pack boils agua de Jamaica eight to ten minutes.",
+      "change": "None. The range 195 to 212F (90 to 100C) and the watch line on the rolling boil reconcile them. Bissap sweetens warm and Sorrel after cooling; the fragment follows Bissap and says to taste again cold, which covers both."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

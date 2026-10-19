@@ -1,0 +1,54 @@
+{
+  "id": "dirty-chai",
+  "found": false,
+  "url": "",
+  "videoId": "",
+  "title": "",
+  "channel": "",
+  "channelKind": "",
+  "queries": [
+    {
+      "q": "dirty chai latte how to make Artisti OR \"Seven Miles Coffee\" OR \"Whole Latte Love\" youtube (allowed_domains youtube.com)",
+      "returned": "{\"title\":\"How to Make Chai Latte (The Different Options and How to Prepare Each Drink) - YouTube\",\"url\":\"https://youtube.com/watch?v=1_yLJVO_BMM\"}, named in the summary to Artisti Coffee Roastery, but a chai latte with four chai products and, per the summary, no dirty chai; a Whole Latte Love channel page and a latte art video. Nothing from Seven Miles."
+    },
+    {
+      "q": "\"dirty chai\" latte recipe Allrecipes OR Delish OR \"Bon Appetit\" OR \"Tasting Table\" youtube (allowed_domains youtube.com)",
+      "returned": "None of the four. qJzcKgnsw_M \"Dirty Chai Latte - YouTube\", Z-1PhkIo_AE, Bwn4YduJS_M \"Homemade Dirty Chai Latte Recipe - YouTube\", bLHswXizKyc, a6lLbqyjQCQ (iced), {\"title\":\"How to Make a Dirty Chai Latte at Home! Only 5 Ingredients! - YouTube\",\"url\":\"https://www.youtube.com/watch?v=h8_eJdd1PkA\"}, gfmWXcPB05M (a fat-burning claim), agkKC51hLK8 (cinnamon rolls), imuv21fn6G4 (iced), a Short. No channel named."
+    },
+    {
+      "q": "\"How to Make a Dirty Chai Latte at Home! Only 5 Ingredients!\" (allowed_domains youtube.com)",
+      "returned": "h8_eJdd1PkA (first) under the same exact title; summary: a chai tea latte with a shot of espresso, five ingredients; no channel named. Also empfh0CVBtw (chai only), 4uhq0pZVWJc, qJzcKgnsw_M, x3Ru-lPMsyw, Z-1PhkIo_AE (a chain in the title), XZsTinW1Avk \"How to Brew: Iced Dirty Chai Latte\" (iced), and two Shorts."
+    }
+  ],
+  "verifiedBy": "",
+  "checkedOn": "2026-10-19",
+  "note": "Three searches spent. h8_eJdd1PkA came back twice with the same id and exact title (and in the first pass’s first search), but no result named its channel, so it fails. 1_yLJVO_BMM is named to a roaster but teaches the chai latte, not the dirty chai. The first pass’s Bwn4YduJS_M came back again with its channel still unnamed. Video stays null.",
+  "firstPass": {
+    "id": "dirty-chai",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make dirty chai youtube",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=Bwn4YduJS_M \"Homemade Dirty Chai Latte Recipe - YouTube\"; no channel named for any id. Also listed: h8_eJdd1PkA, E63PzGMGKCU (a chai brand’s own film), BWYzB3kmQdE \"Most Delicious Dirty Chai Latte\", 0UJ3zMqXevc (oat milk), Z-1PhkIo_AE (a chain in the title), bLHswXizKyc \"What is a Dirty Chai Latte?\", noUT-HuYHgg and two Shorts."
+      },
+      {
+        "q": "\"Homemade Dirty Chai Latte Recipe\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=Bwn4YduJS_M \"Homemade Dirty Chai Latte Recipe - YouTube\" (second result, same id and exact title); no result title or summary named its channel."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Candidate Bwn4YduJS_M came back twice with the same id and exact title, but its channel was never named, so it fails. The others were Shorts, a brand’s advert, superlative or chain titles, or an explainer rather than a how-to. No spare remained. Video null; the page offers the search link alone."
+  }
+}

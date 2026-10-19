@@ -1,0 +1,23 @@
+{
+  "id": "english-breakfast",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "story",
+      "problem": "The line that some accounts put the start of the name in America rested on one site (Wikipedia). The facts rule wants two sites.",
+      "change": "Checked by search: goldenmoontea.com also gives the New York account. Text unchanged; added that page to sources."
+    },
+    {
+      "field": "watch[3]",
+      "problem": "Stated that lemon and milk together curdle. The Library makes it conditional on enough acid.",
+      "change": "\"curdle\" became \"can curdle\"."
+    },
+    {
+      "field": "quiz[2].options",
+      "problem": "The answer \"Maltier, not dependably stronger\" was the longest and the only hedged option, and two wrong options (green tea, bergamot) would fool no trained person.",
+      "change": "The three wrong options are now \"Stronger by law, with more caffeine\", \"Lighter, built on Darjeeling\" and \"Brisker, built only on Kenyan CTC\". The answer and explain are unchanged."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

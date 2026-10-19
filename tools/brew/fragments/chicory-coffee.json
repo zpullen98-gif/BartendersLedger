@@ -1,0 +1,123 @@
+{
+  "id": "chicory-coffee",
+  "name": "Coffee with chicory",
+  "respell": "KOF-ee with CHICK-uh-ree",
+  "aka": [
+    "New Orleans coffee",
+    "coffee and chicory"
+  ],
+  "group": "brewed",
+  "kind": "coffee",
+  "caffeine": "Caffeine comes from the coffee alone; the chicory root has none, so a cup holds less than straight coffee, never none.",
+  "house": {
+    "printed": true,
+    "packIds": [
+      "b-zxkf4bzw"
+    ]
+  },
+  "what": "Coffee with chicory is coffee, usually a dark roast, blended with roasted, ground chicory root, which holds no coffee and turns dark and bittersweet. Our printed New Orleans-style coffee with chicory is a blend of chicory and dark roast, and the breakfast tasting pours a private chicory blend from a roaster across the river.",
+  "taste": "Dark, roasty and smooth, with a gentle, cocoa-like bitterness and fuller body. That bitterness balances a sweet plate.",
+  "make": {
+    "steps": [
+      "Weigh about 50 g of blend per litre, a little under straight coffee’s 60 g.",
+      "Grind medium for drip or pour-over, coarse for a press.",
+      "Brew at 195 to 205F (90 to 96C) and hold it sealed, never on a hotplate.",
+      "For café au lait, add equal parts milk heated until it steams, never boiled."
+    ],
+    "ratio": "About 1:20; chicory gives up colour and body fast",
+    "dose": "About 50 g blend to 1 litre water",
+    "temp": "195 to 205F (90 to 96C)",
+    "time": "Whatever the brewer asks, as for straight coffee",
+    "cup": "Pre-heated cup on its saucer, 6 to 8 oz"
+  },
+  "serve": "Ours is poured at the table from the right, the cup on its saucer, handle towards the guest, a finger below the rim so cream has room. Offer cream and sugar, top up before it is empty, and offer it with every dessert.",
+  "story": "Chicory stretched coffee in France after 1806, when a British blockade and a French embargo on British trade made coffee scarce, and the French kept the taste. New Orleans, a French city and by 1840 the country’s second largest coffee importer, kept it too. The city’s story is the Civil War blockade from 1861: tell it as tradition, because France came first.",
+  "guest": "Our New Orleans coffee is blended with chicory, a roasted root, so it drinks dark and smooth with a gentle, cocoa-like bitterness. Cream or sugar?",
+  "watch": [
+    "Asked whether chicory has caffeine: the root has none, the coffee does. Never promise a caffeine free cup.",
+    "Asked for decaf with chicory: do not guess; it is a lineup question for the bar."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "filter",
+        "Ratio, and the number to actually hold"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "new orleans chicory coffee how to brew",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Coffee with chicory: what is in it, and how is it brewed?",
+      "answer": "Coffee, usually dark roast, blended with roasted chicory root, about 50 g a litre at 195 to 205F (90 to 96C), poured into a warmed cup: dark, roasty and smooth, gently bitter."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Where does the caffeine in coffee with chicory come from?",
+      "options": [
+        "Mostly the chicory root",
+        "The coffee alone",
+        "Coffee and chicory equally",
+        "Nowhere, it has none"
+      ],
+      "a": 1,
+      "explain": "Chicory root has no caffeine, so all of it comes from the coffee: less than straight coffee, never none."
+    },
+    {
+      "id": "q2",
+      "q": "New Orleans kept a French habit. What first made coffee scarce in France, so chicory stretched it?",
+      "options": [
+        "The Union naval blockade of 1861",
+        "A coffee leaf blight in the Caribbean",
+        "A royal tax on Paris coffee houses",
+        "The 1806 blockade and trade embargo"
+      ],
+      "a": 3,
+      "explain": "From 1806 a British blockade and France’s embargo on British trade made imported coffee scarce, and chicory filled the gap. New Orleans kept the French habit; the 1861 blockade is the city’s later story."
+    },
+    {
+      "id": "q3",
+      "q": "How should the dose of a chicory blend compare with straight coffee for the same water?",
+      "options": [
+        "A little less",
+        "About double",
+        "Exactly the same",
+        "Much more"
+      ],
+      "a": 0,
+      "explain": "Chicory gives up colour and body faster than coffee, so a blend brews strong: about 50 g a litre against 60."
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Table Cuisine: Chicory coffee",
+      "url": ""
+    },
+    {
+      "title": "Library: Ratio, and the number to actually hold",
+      "url": ""
+    },
+    {
+      "title": "House pack: b-zxkf4bzw",
+      "url": ""
+    },
+    {
+      "title": "House pack: components Chicory, Chicory coffee, New Orleans, a coffee city",
+      "url": ""
+    },
+    {
+      "title": "House pack: lineup question a-qr0si1vx",
+      "url": ""
+    }
+  ],
+  "video": null
+}

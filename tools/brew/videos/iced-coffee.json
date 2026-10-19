@@ -1,0 +1,29 @@
+{
+  "id": "iced-coffee",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=ep3ATbyXLEA",
+  "videoId": "ep3ATbyXLEA",
+  "title": "How to Make Japanese Iced Coffee - Big Island Coffee Roasters",
+  "channel": "Big Island Coffee Roasters",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "how to make japanese iced coffee youtube",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=ep3ATbyXLEA \"How to Make Japanese Iced Coffee - Big Island Coffee Roasters - YouTube\" (tenth result); summary: \"Roaster guide: Big Island Coffee Roasters has a tutorial on making your own Japanese iced coffee or flash brew.\""
+    },
+    {
+      "q": "\"How to Make Japanese Iced Coffee - Big Island Coffee Roasters\"",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=ep3ATbyXLEA \"How to Make Japanese Iced Coffee - Big Island Coffee Roasters - YouTube\" (first result); summary: \"their YouTube video, which teaches you how to make Japanese iced coffee, also known as flash brew, using their Maui Mellow coffee.\""
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-18",
+  "note": "Same watch id and same exact title in both searches; the channel is named in the result title and in both summaries. Big Island Coffee Roasters is a roaster, channelKind company; it is not yet on tools/brew/companies.json. The exact title carries a spaced hyphen, which the brew schema’s dash rule refuses in any fragment string, so the fragment’s video.title is left \"\" (the renderer never shows a title; the exact one stays here). If a company title must ship, the integrator decides. Checker to confirm title and channel by oEmbed. Checker, 2026-10-19: the two queries are different searches, both returned ep3ATbyXLEA with the same exact title, and the channel is named in the video’s own title and in both summaries. It teaches Japanese iced coffee (flash brew), the plan’s search phrase; a watch link, no sign of a Short, a playlist or an advert. channelKind company (a roaster) is right. The oEmbed check could not run: this session’s egress proxy denies www.youtube.com (403 on CONNECT). No checker search spent. Confirmed. The current schema skips video.title in the dash rule when the video is an object, so the exact title could ship if the integrator wants it.",
+  "checkedBy": "checker"
+}

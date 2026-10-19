@@ -1,0 +1,28 @@
+{
+  "id": "white-tea",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "what",
+      "problem": "\"Neither weak nor low in caffeine\" goes too far. The caffeine lesson says white sits anywhere across the spread; only a bud-heavy white can beat a black.",
+      "change": "Now \"it is not weak, nor dependably low in caffeine\"."
+    },
+    {
+      "field": "make.steps[3]",
+      "problem": "No step put the water on the leaf.",
+      "change": "Now begins \"Pour the water on and steep 3 to 5 minutes\"."
+    },
+    {
+      "field": "quiz[1].q",
+      "problem": "The stem ended \"oxidises lightly across a long wither\", which ruled out the option \"Withering\" for free.",
+      "change": "Stem now: \"Which processing step does white tea skip, so that it oxidises lightly before drying?\""
+    },
+    {
+      "field": "quiz[2].options",
+      "problem": "The right answer was the longest option (42 characters against 34).",
+      "change": "Two wrong options lengthened: \"The long wither drives off most caffeine\" and \"A pale liquor means less caffeine than black\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

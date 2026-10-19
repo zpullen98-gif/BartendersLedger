@@ -1,0 +1,24 @@
+{
+  "id": "rooibos",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=pOnoNRAVniQ",
+  "videoId": "pOnoNRAVniQ",
+  "title": "How to Brew the Perfect Cup of Rooibos Tea: Cooking with Kimberly",
+  "channel": "Cooking with Kimberly",
+  "channelKind": "person",
+  "queries": [
+    {
+      "q": "how to brew rooibos tea youtube [allowed_domains: youtube.com]",
+      "returned": "https://www.youtube.com/watch?v=pOnoNRAVniQ&pp=0gcJCRsBo7VqN5tD \"How to Brew the Perfect Cup of Rooibos Tea: Cooking with Kimberly - YouTube\" (also https://m.youtube.com/watch?v=pOnoNRAVniQ); summary: \"A video from Cooking with Kimberly covers the ideal steeping time and techniques for loose leaf tea.\""
+    },
+    {
+      "q": "\"How to Brew the Perfect Cup of Rooibos Tea: Cooking with Kimberly\" [allowed_domains: youtube.com]",
+      "returned": "https://www.youtube.com/watch?v=pOnoNRAVniQ \"How to Brew the Perfect Cup of Rooibos Tea: Cooking with Kimberly - YouTube\" (top result), and https://www.youtube.com/c/CookingWithKimberly/videos \"CookingWithKimberly - YouTube\"; summary: a web chef from CookingWithKimberly.com \"shares with you the tips to brew the perfect cup of Rooibos Tea using loose leaf tea.\""
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-18",
+  "note": "Same watch id and exact title in both searches; the channel, CookingWithKimberly, is named in the video title, in a result title for the channel page and in both summaries. A person’s channel: the fragment ships title and channel empty. The first search’s www link carried a tracking parameter (&pp=); the id is the same.",
+  "checkedBy": "checker",
+  "checkerNote": "Confirmed by the checker: two different queries, both returned watch id pOnoNRAVniQ (the first link carried a &pp= tracking parameter, the id is the same) with the same exact title \"How to Brew the Perfect Cup of Rooibos Tea: Cooking with Kimberly\", and the channel is named in the video title, in a result title for the channel page (CookingWithKimberly) and in both summaries. It teaches brewing rooibos from loose leaf, the steep time and method; a watch link, not a Short, playlist or advert. A web chef presenting under her own name, so channelKind person, and the fragment ships title and channel empty. No search spent."
+}

@@ -1,0 +1,136 @@
+{
+  "id": "cortado",
+  "name": "Cortado",
+  "respell": "kor-TAH-doh",
+  "aka": [
+    "café cortado",
+    "Gibraltar"
+  ],
+  "group": "espresso",
+  "kind": "coffee",
+  "caffeine": "All from the espresso, a single in the Spanish cut or a double in a Gibraltar; the milk adds none.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on the menus: ask at lineup whether there is an espresso machine, whether the bar will make a cortado on request, and the price."
+  },
+  "what": "A cortado is espresso cut with a little warm milk, barely textured and steamed cooler than a latte. The name is Spanish, from cortar, to cut: the milk cuts the acid rather than burying it. The Spanish cut is a single with its own volume of milk; the American build fills a Gibraltar glass over a double.",
+  "taste": "Espresso still in front, the milk rounding the acid rather than covering it: sweet, short, no cap to chew through.",
+  "make": {
+    "steps": [
+      "Pull a double into a 4.5 oz Gibraltar, or a single into a smaller glass.",
+      "Steam the milk to 130 to 140F (54 to 60C) with barely any air: wet, glossy, a skin of foam.",
+      "Pour it flat, 2.5 to 3 oz behind a double or 1 to 1.5 oz behind a single."
+    ],
+    "ratio": "Near 1:1 Spanish, near 1:2 in a Gibraltar",
+    "dose": "Double, 18 to 20 g in; 2.5 to 3 oz milk",
+    "temp": "Milk 130 to 140F (54 to 60C), cooler than a latte",
+    "time": "25 to 30 second shot; milk steamed briefly",
+    "cup": "4.5 oz Gibraltar glass, no handle"
+  },
+  "serve": "Straight to the guest in the glass, no saucer. The milk is cooler on purpose, so it goes down in three or four mouthfuls while it is right: the afternoon drink for milk without a cap of foam.",
+  "story": "Cortado comes from Spain, where the cut is a single with about its own volume of milk in a small glass. American speciality bars set it in the 4.5 oz Gibraltar tumbler, so the glass sets the milk and the drink grew to a double. In San Francisco the drink took the glass's name, and some guests still order it as a Gibraltar.",
+  "guest": "A cortado is espresso cut with a little warm, barely foamed milk in a small glass: coffee forward, sweet, gone in a few sips.",
+  "watch": [
+    "Steam it to latte heat and foam and you have built a small latte in a nice glass.",
+    "It is not a piccolo: the piccolo is a small latte with foam and pattern, the cortado flatter and cooler.",
+    "Spanish and American builds differ by a whole shot; ask which one the guest knows."
+  ],
+  "library": {
+    "ref": "Cortado",
+    "study": [
+      [
+        "milk",
+        "Stretch, then spin"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make cortado",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a cortado made, and what goes in it?",
+      "answer": "A double in a 4.5 oz Gibraltar glass, cut with 2.5 to 3 oz of barely textured milk at 130 to 140F (54 to 60C): coffee forward, sweet, no cap."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Beyond size, what separates a cortado from a latte?",
+      "options": [
+        "Barely any foam, and cooler milk",
+        "A thick, dry cap of foam",
+        "Milk steamed hotter, to 160F (71C)",
+        "A ristretto base and cocoa"
+      ],
+      "a": 0,
+      "explain": "A skin of foam, not a layer, and milk at 130 to 140F (54 to 60C) against a latte's 140 to 150F (60 to 66C)."
+    },
+    {
+      "id": "q2",
+      "q": "What glass does the American cortado build usually arrive in?",
+      "options": [
+        "A 12 oz handled mug",
+        "A 4.5 oz Gibraltar",
+        "A tall latte glass",
+        "A 2 oz demitasse"
+      ],
+      "a": 1,
+      "explain": "A double under milk fills the small straight tumbler, so the glass sets the milk."
+    },
+    {
+      "id": "q3",
+      "q": "What does the name cortado say the milk is doing?",
+      "options": [
+        "Staining the crema",
+        "Stretching the shot",
+        "Cutting the acid",
+        "Cooling it for ice"
+      ],
+      "a": 2,
+      "explain": "From the Spanish cortar, to cut: the milk cuts the acid rather than burying it."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Card: Cortado",
+      "url": ""
+    },
+    {
+      "title": "Lesson: Stretch, then spin",
+      "url": ""
+    },
+    {
+      "title": "Card: Piccolo",
+      "url": ""
+    },
+    {
+      "title": "House pack: lineup question a-zr8ze4mu",
+      "url": ""
+    },
+    {
+      "title": "Gibraltar Vs Cortado: Is There A Difference Between Coffee Drinks?",
+      "url": "https://www.tastingtable.com/1833770/gibraltar-vs-cortado-difference"
+    },
+    {
+      "title": "What is a Gibraltar",
+      "url": "https://baristalife.co/blogs/blog/what-is-a-gibraltar"
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=qkxKUQPacAs",
+    "id": "qkxKUQPacAs",
+    "title": "Easy Cortado Recipe - How To Make A Cortado Coffee At Home",
+    "channel": "Carabello Coffee",
+    "channelKind": "company",
+    "label": "How to make a cortado",
+    "watchFor": "Espresso cut with a small amount of warm steamed milk, close to equal parts, in a small glass. Watch how little air goes into the milk: a thin glossy layer, no tall cap of foam.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "cafe-au-lait",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "story",
+      "problem": "\"In New Orleans the words mean chicory coffee\" leaves out the milk; the World Table Chicory coffee entry makes the New Orleans café au lait equal parts chicory coffee and hot milk.",
+      "change": "\"chicory coffee and hot milk\"."
+    },
+    {
+      "field": "quiz[1].options",
+      "problem": "The answer was the longest option.",
+      "change": "\"Too much stiff foam\" became \"It whips into a stiff foam\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

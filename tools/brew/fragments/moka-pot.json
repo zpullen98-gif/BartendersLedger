@@ -1,0 +1,145 @@
+{
+  "id": "moka-pot",
+  "name": "Moka pot",
+  "respell": "MOH-kuh pot",
+  "aka": [
+    "stovetop espresso",
+    "macchinetta"
+  ],
+  "group": "brewed",
+  "kind": "coffee",
+  "caffeine": "Caffeine comes from the coffee alone; the dose in the basket, not the strong taste, decides how much.",
+  "house": {
+    "printed": false,
+    "askId": "",
+    "ask": "Not printed on the menus and not poured at the house: know it for the guest who asks, and offer the nearest drink we pour."
+  },
+  "what": "The moka pot is a stovetop brewer in three parts: a water base, a funnel basket of coffee and a top chamber. Steam pressure in the base pushes hot water up through the coffee at about 1 to 2 bar, against espresso’s nine, so it makes strong, short coffee, not espresso.",
+  "taste": "Strong, dark and heavy, thicker than filter and thinner than espresso, with a roasty edge and little crema.",
+  "make": {
+    "steps": [
+      "Fill the base with hot water to just below the safety valve.",
+      "Fill the basket level with fine coffee, a shade coarser than espresso, and do not tamp.",
+      "Screw it together, holding the hot base in a cloth, and set it on medium heat, lid open.",
+      "Take it off as the stream pales and sputters, and cool the base.",
+      "Pour at once into warmed small cups."
+    ],
+    "ratio": "Set by the pot: a full basket, water to the valve",
+    "dose": "A level, untamped basket of fine coffee",
+    "temp": "Water just off the boil, near 212F (100C)",
+    "time": "A few minutes on medium heat, until it sputters",
+    "cup": "Warmed demitasse or small cup, 2 to 3 oz"
+  },
+  "serve": "At home it goes straight from the pot into small warmed cups, sugar on the side. It is not on our menus, so name what it is and offer the nearest drink we pour, after checking with the bar.",
+  "story": "It is an Italian design of 1933, an aluminium pot for the home stove, and hundreds of millions have been sold. For many guests it is the coffee of home, and they enjoy hearing why it is not quite espresso: about 1 to 2 bar, where a machine works near nine.",
+  "guest": "A moka pot isn’t on our menus. If you’d like something strong and short like it, let me ask the bar what comes closest.",
+  "watch": [
+    "Water above the safety valve floods the basket; fill to just below it.",
+    "Left on the heat after it sputters, the cup turns harsh and burnt."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "filter",
+        "Grind, and why it changes per method"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make moka pot",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Moka pot: how is it made?",
+      "answer": "Hot water to just below the valve, a level untamped basket of fine coffee, medium heat until it sputters, then off the heat, the base cooled, poured into warmed small cups: strong, short and dark, at about 1 to 2 bar."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Roughly what pressure does a moka pot build as it brews?",
+      "options": [
+        "About 9 bar",
+        "About 15 bar",
+        "About 1 to 2 bar",
+        "None, gravity alone"
+      ],
+      "a": 2,
+      "explain": "Steam in the base pushes the water up at about 1 to 2 bar; an espresso machine works near nine."
+    },
+    {
+      "id": "q2",
+      "q": "When should a moka pot come off the heat?",
+      "options": [
+        "When it pales and sputters",
+        "When the first coffee appears",
+        "When the top chamber boils over",
+        "After ten minutes on the heat"
+      ],
+      "a": 0,
+      "explain": "Take it off as the stream pales and sputters, then cool the base, or the last water turns the cup harsh."
+    },
+    {
+      "id": "q3",
+      "q": "How should the coffee be packed into a moka pot’s basket?",
+      "options": [
+        "Tamped hard, as for espresso",
+        "Level and loose, never tamped",
+        "Half full, to swell",
+        "Heaped above the rim"
+      ],
+      "a": 1,
+      "explain": "Fill it level and leave it untamped: the pot’s low pressure cannot push through a packed bed."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: Grind, and why it changes per method",
+      "url": ""
+    },
+    {
+      "title": "Library card: Espresso",
+      "url": ""
+    },
+    {
+      "title": "Moka pot",
+      "url": "https://en.wikipedia.org/wiki/Moka_pot"
+    },
+    {
+      "title": "Moka Express, a masterpiece of design and communication",
+      "url": "https://domusweb.it/en/design/2023/02/12/moka-express-a-masterpiece-of-design-and-communication.html"
+    },
+    {
+      "title": "Moka pots: equipment review",
+      "url": "https://www.americastestkitchen.com/equipment_reviews/1350-moka-pots"
+    },
+    {
+      "title": "How do moka pots work?",
+      "url": "https://www.howitworksdaily.com/?p=29535"
+    },
+    {
+      "title": "Moka Pot Grind Size",
+      "url": "https://batchcoffee.co.uk/stories/moka-pot-grind-size/"
+    },
+    {
+      "title": "Moka pot coffee grind sizes from fine to coarse comparison",
+      "url": "https://instacuppastore.com/blogs/main-page/moka-pot-grind-size-the-setting-that-separates-bitter-from-bold"
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=zzlFOkD4Kz4",
+    "id": "zzlFOkD4Kz4",
+    "title": "Bialetti - How to Moka",
+    "channel": "Bialetti",
+    "channelKind": "company",
+    "label": "How to brew in a moka pot",
+    "watchFor": "Water filled into the base and coffee spooned into the funnel without pressing, then the pot on the stove until the brewing sound says it is done. Take it off as soon as it gurgles.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "hibiscus",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=iuxvz7bmwzQ",
+  "videoId": "iuxvz7bmwzQ",
+  "title": "HOW TO MAKE HIBISCUS ICED TEA |HOW TO MAKE JAMAICA |Cooking With Carolyn",
+  "channel": "Cooking With Carolyn",
+  "channelKind": "person",
+  "queries": [
+    {
+      "q": "how to brew hibiscus tea youtube [allowed_domains: youtube.com]",
+      "returned": "https://www.youtube.com/watch?v=iuxvz7bmwzQ \"HOW TO MAKE HIBISCUS ICED TEA |HOW TO MAKE JAMAICA |Cooking With Carolyn - YouTube\"; summary: \"One video uses 2 cups of hibiscus flowers, 4 cups of hot water, and sweetener to taste, then adds cool water after steeping.\""
+    },
+    {
+      "q": "\"Agua de Jamaica (Hibiscus Tea)\" [allowed_domains: youtube.com]",
+      "returned": "https://www.youtube.com/watch?v=esUhQgE7MYI \"Agua de Jamaica (Hibiscus Tea) - YouTube\" (top result), but no result title or summary named its channel, so this first pick failed."
+    },
+    {
+      "q": "\"HOW TO MAKE HIBISCUS ICED TEA |HOW TO MAKE JAMAICA |Cooking With Carolyn\" [allowed_domains: youtube.com]",
+      "returned": "https://www.youtube.com/watch?v=iuxvz7bmwzQ \"HOW TO MAKE HIBISCUS ICED TEA |HOW TO MAKE JAMAICA |Cooking With Carolyn - YouTube\" (top result); summary: \"Its listing calls for 2 cups of hibiscus flowers, 4 cups of hot water, and a sweetener of your choice.\""
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-18",
+  "note": "The first pick, esUhQgE7MYI, came back with its title but no channel named, so it failed. The second pick, iuxvz7bmwzQ, was in the plan-phrase search; its exact title search (from the spare budget) returned the same id and the same exact title, and the channel, Cooking With Carolyn, is named in the title. It teaches the iced batch, agua de Jamaica, which matches the Library’s Iced Hibiscus Tea. A person’s channel: the fragment ships title and channel empty.",
+  "checkedBy": "checker",
+  "checkerQueries": [
+    {
+      "q": "Cooking With Carolyn hibiscus iced tea Jamaica \"HOW TO MAKE HIBISCUS ICED TEA\"",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=iuxvz7bmwzQ \"HOW TO MAKE HIBISCUS ICED TEA |HOW TO MAKE JAMAICA |Cooking With Carolyn - YouTube\" (first result; the same id again at youtube.com/watch?pp=...&v=iuxvz7bmwzQ), the same id and exact title a third time; the summary calls it \"the Cooking With Carolyn video\" and gives its listing: 2 cups hibiscus flowers, 4 cups hot water, sweetener to taste, then 4 cups cool water to let it down. esUhQgE7MYI \"Agua de Jamaica (Hibiscus Tea)\" came back again with no channel named."
+    }
+  ],
+  "checkerNote": "Confirmed by the checker: two different queries (the plan phrase and the exact title; the esUhQgE7MYI title search between them is a third, different search) both returned watch id iuxvz7bmwzQ with the same exact title, and the channel, Cooking With Carolyn, is named in that title; the checker’s fresh search returned the same id and title again and its summary names the Cooking With Carolyn video. It teaches making hibiscus iced tea, agua de Jamaica: a strong hot steep let down with cool water, as the fragment’s watchFor says. A watch link, not a Short, playlist or advert. A cook presenting under her own name, so channelKind person, and the fragment ships title and channel empty."
+}

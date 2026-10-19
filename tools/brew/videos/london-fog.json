@@ -1,0 +1,54 @@
+{
+  "id": "london-fog",
+  "found": false,
+  "url": "",
+  "videoId": "",
+  "title": "",
+  "channel": "",
+  "channelKind": "",
+  "queries": [
+    {
+      "q": "\"London Fog\" Earl Grey latte how to make Twinings OR \"Art of Tea\" OR Adagio OR \"Harney\"",
+      "returned": "No tea house film. AkJcesyt0MY, 3kwWsFGJev0 \"How To Make A London Fog Latte\", bs_BTgaDSc4, WEEvAC-Gocs, M611AwimsJU, u31e6-ByoBg and Shorts; no channel named for any id."
+    },
+    {
+      "q": "Whole Latte Love London Fog tea latte youtube",
+      "returned": "No Whole Latte Love film. ibML5vD1Pb4, -Are42_cUuw (iced), u31e6-ByoBg, 3kwWsFGJev0, bs_BTgaDSc4, bjJ0vzFfm-w, M611AwimsJU, AkJcesyt0MY and Shorts; no channel named."
+    },
+    {
+      "q": "\"How To Make A London Fog Latte\" youtube channel",
+      "returned": "3kwWsFGJev0 did not come back. Results: -Are42_cUuw, bs_BTgaDSc4, YCdwy-GdTFw \"Vanilla London Fog Latte\" (a presenter named by first name only, in the description), 2igngAIO1SQ, AkJcesyt0MY, u31e6-ByoBg, TeKzhOFKH5g, F17j3CH1JpM, BJVzTex-lpI (a copycat of a chain’s drink), nFF_qLmuaMs; no channel named for any id."
+    }
+  ],
+  "verifiedBy": "",
+  "checkedOn": "2026-10-19",
+  "note": "Nothing passed: no result in three searches tied a channel to an id, and 3kwWsFGJev0 did not return on its exact title. The first pass’s mfZFvmFq11Q was not retried. Budget: three searches. Video null; the page offers the search link alone. Every search in this pass was restricted to youtube.com (allowed_domains) in standard mode.",
+  "firstPass": {
+    "id": "london-fog",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make a london fog tea latte youtube",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://m.youtube.com/watch?v=mfZFvmFq11Q \"The Easiest London Fog Recipe You'll Ever Try!\"; summary: \"A Brew Better video steeps Earl Grey for 4 minutes for deeper flavor, then uses honey and frothed milk\", tied to that link. Also listed: bs_BTgaDSc4, -Are42_cUuw (iced), 3kwWsFGJev0 \"How To Make A London Fog Latte\", BJVzTex-lpI, 2igngAIO1SQ, F17j3CH1JpM, u31e6-ByoBg and a Short, none with a channel named."
+      },
+      {
+        "q": "\"The Easiest London Fog Recipe You'll Ever Try!\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "mfZFvmFq11Q did not come back; the summary said no page with that exact title was found. Results: auKCMWS-gis, 10_D7aPlIfU, WUBw2pJqMtM, M611AwimsJU, SMteTr292dE, 3kwWsFGJev0, bs_BTgaDSc4, WEEvAC-Gocs, u31e6-ByoBg, -Are42_cUuw, none with a channel named."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Candidate mfZFvmFq11Q (Brew Better named) did not return on its exact title, so it fails. No other result carried a named channel. No spare remained. Video null; the page offers the search link alone."
+  }
+}

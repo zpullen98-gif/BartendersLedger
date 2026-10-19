@@ -1,0 +1,123 @@
+{
+  "id": "cafe-brulot",
+  "name": "Café brûlot",
+  "respell": "ka-FAY broo-LOH",
+  "aka": [
+    "café brûlot diabolique"
+  ],
+  "group": "spiked",
+  "kind": "coffee",
+  "caffeine": "Caffeine comes from the strong coffee; the spirits, spice and peel add none.",
+  "house": {
+    "printed": false,
+    "askId": "",
+    "ask": "Not a drink on the current menus: at Brennan’s today café brûlot is the name of a cake. Know the flamed coffee for the guest who asks for it.",
+    "uses": [
+      "d-husneh7o"
+    ]
+  },
+  "what": "New Orleans' flaming after-dinner coffee: brandy and orange liqueur warmed in a wide bowl with sugar, spice and citrus peel, set alight, then strong coffee ladled in until the flame dies. Brûlot comes from brûler, to burn. It is not on our list; the Café Brûlot Coffee Cake carries its flavours instead.",
+  "taste": "Strong, dark coffee perfumed with orange oil, clove and cinnamon, the brandy warm beneath, sweet but not syrupy.",
+  "make": {
+    "steps": [
+      "Brew strong coffee and have it hot before anything is lit.",
+      "Put sugar, cinnamon, cloves and lemon peel in the unlit bowl, then the measured spirits.",
+      "Warm them on a low burner, light them with a long match and stir.",
+      "Ladle flaming brandy down a clove-studded orange spiral held over the bowl.",
+      "Ladle in the coffee until the flame dies, and serve without the spice and peel."
+    ],
+    "ratio": "1 part spirit to 2 to 5 parts coffee",
+    "dose": "4 oz brandy, 1 oz orange liqueur, 3 cups coffee",
+    "temp": "",
+    "time": "",
+    "cup": "Demitasse cups; one bowl serves six to eight"
+  },
+  "serve": "A tableside ritual: the bowl over a small burner, a long ladle, demitasse cups and the coffee ready first. Measure the spirit into a jug, never pour from a bottle near the flame, and keep a lid in reach.",
+  "story": "Tradition credits an old French Quarter restaurant in the late nineteenth century, where the founder's son is said to have created café brûlot diabolique, the devilish version. The tale that it hid brandy in Prohibition is legend: without spirit there is nothing to flame. Tell it as tradition.",
+  "guest": "Café brûlot is New Orleans' flaming coffee: brandy, orange peel and spice set alight, then coffee poured in. It isn't on today's menus, but our coffee cake carries its flavours.",
+  "watch": [
+    "Spirit that will not light is too cold: warm it in the bowl first.",
+    "A leaping flame means too much spirit or heat: measure first.",
+    "Bitter means pith or boiled coffee; thin and sweet means weak coffee."
+  ],
+  "library": {
+    "ref": "",
+    "study": [],
+    "cocktail": "Café Brûlot",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "cafe brulot flaming coffee new orleans",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is café brûlot made, and what goes in it?",
+      "answer": "Brandy and orange liqueur warmed with sugar, spice and citrus peel, lit, ladled down a clove-studded orange spiral, then strong coffee ladled in until the flame dies, served in demitasse cups: spiced and orange-scented."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What does the word brûlot point to?",
+      "options": [
+        "Brewing, an old word for coffee",
+        "Burning, from the French brûler",
+        "Bitterness, from the chicory",
+        "Brown, the colour of the cup"
+      ],
+      "a": 1,
+      "explain": "Brûlot comes from brûler, to burn: the spirit is lit before the coffee goes in."
+    },
+    {
+      "id": "q2",
+      "q": "When does the coffee go into the brûlot bowl?",
+      "options": [
+        "First, so the spirit can float",
+        "Before the sugar melts",
+        "Last, after the spirit flames",
+        "Never: it comes in a pot"
+      ],
+      "a": 2,
+      "explain": "The spirit is lit first; the coffee goes in last and puts the flame out."
+    },
+    {
+      "id": "q3",
+      "q": "The brandy in the bowl will not catch. Why?",
+      "options": [
+        "The brandy is too cold",
+        "The bowl is silver",
+        "The peel holds cloves",
+        "The coffee is too strong"
+      ],
+      "a": 0,
+      "explain": "Cold brandy gives off too little vapour; warm it gently first."
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Table Cuisine: Café brûlot; Chicory coffee",
+      "url": ""
+    },
+    {
+      "title": "Library: Café Brûlot, with its lore",
+      "url": ""
+    },
+    {
+      "title": "House pack: component Café brûlot; the coffee cake",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=DyKhvsAPO9I",
+    "id": "DyKhvsAPO9I",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "Lighting a spirit safely, before any tableside flame",
+    "watchFor": "The pan taken off the heat before the spirit goes in, the spirit warmed and lit away from the face, and nothing poured from the bottle near a flame. The same habits hold over the brûlot bowl.",
+    "verifiedBy": "pack",
+    "checkedOn": "2026-10-18"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "flat-white",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "guest",
+      "problem": "\"more coffee than a latte\" reads as more coffee or caffeine, but both drinks are built on the same double (Library cards): a caffeine promise by implication.",
+      "change": "\"more coffee forward than a latte\"."
+    },
+    {
+      "field": "watch[2], quiz[1].q, quiz[1].explain",
+      "problem": "The watch said chains sell it bigger (no source) while the q2 stem said the cup stays constant across countries and chains, so the entry contradicted itself; the Flat White card only says chains define it by shot count instead.",
+      "change": "Watch now follows the card: \"Some chains define it by shot count rather than cup size; the small cup is the classic.\" Stem asks what the trade holds constant in the classic flat white; explain says the classic's constant."
+    },
+    {
+      "field": "quiz[2].options",
+      "problem": "The answer \"Sydney, early 1980s\" was the longest option and the only one qualified by \"early\".",
+      "change": "\"Melbourne, 1990s\" became \"Melbourne, early 1990s\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

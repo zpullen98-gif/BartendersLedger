@@ -1,0 +1,158 @@
+{
+  "id": "jasmine-tea",
+  "name": "Jasmine tea",
+  "respell": "",
+  "aka": [
+    "jasmine green tea",
+    "mo li hua cha"
+  ],
+  "group": "leaf",
+  "kind": "tea",
+  "caffeine": "From the tea underneath, usually green, so commonly 20 to 45 mg per 8 oz cup; the caffeine is the tea's, not the flower's.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup whether the bar pours a jasmine tea, which one, bag or loose leaf, and the price."
+  },
+  "what": "Jasmine tea is tea scented with fresh jasmine blossoms, usually a green tea, and Fujian is the traditional home of the scenting. The flowers are picked closed by day and go in with the dry tea at night as they open; the leaf takes up the scent, the spent flowers come out and the tea is dried again. Better grades go through several rounds. The flower is a scent laid on the leaf, not a separate herbal tea.",
+  "taste": "Light and sweet, the green tea's body under a heady floral perfume. Brewed too hot or too long, the green base turns bitter and drying under the flower.",
+  "make": {
+    "steps": [
+      "Boil fresh water and let it fall to 160 to 180F (71 to 82C), since the base is usually green tea.",
+      "Warm a small pot and tip the water out.",
+      "Weigh 2 to 3 g of leaf per 6 to 8 oz; rolled leaf is dense, so weigh rather than spoon.",
+      "Pour the water on, steep 1 to 2 minutes, then pour off completely.",
+      "Re-steep on fresh hot water; good scented whole leaf gives a second pot."
+    ],
+    "ratio": "2 to 3 g of leaf per 6 to 8 oz of water",
+    "dose": "2 to 3 g loose leaf, weighed, or one bag",
+    "temp": "160 to 180F (71 to 82C), as for green tea",
+    "time": "1 to 2 minutes; whole leaf re-steeps",
+    "cup": "Glass or porcelain pot into a small cup, 4 to 6 oz"
+  },
+  "serve": "Send it plain in a warmed small pot, glass if the leaf is worth watching, with a small cup, a dish for the basket and the time said aloud. No milk, which the trade calls wrong on green tea. Bring fresh hot water for a second steep. Like green tea, it suits the end of a rich or fried dish.",
+  "story": "Scenting is the craft. The blossoms are picked in the day while tightly closed and held until evening, when they begin to open and give up their scent; then they go in with the dry tea overnight. Fresh blossoms go in for each round, the spent ones come out, and the top grades get the most rounds. Fujian, home of the scenting, also smokes its lapsang souchong: both are a scent laid onto the leaf, not a blend of tea and something else.",
+  "guest": "Jasmine tea is green tea scented with fresh jasmine blossoms, so it smells of the flower and drinks light and sweet; it carries the caffeine of the tea underneath.",
+  "watch": [
+    "The Jasmine cocktail is gin, lemon, Campari and Cointreau, with no tea or flower in it; ask which the guest means.",
+    "Jasmine is not a tisane: the base is tea, so it carries caffeine.",
+    "Too hot or too long and the green base turns bitter under the perfume; brew it as a green tea."
+  ],
+  "library": {
+    "ref": "Green Tea",
+    "study": [
+      [
+        "leaf",
+        "One plant, six teas"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to brew jasmine tea",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "What is jasmine tea, and how is it brewed?",
+      "answer": "Usually green tea scented with fresh jasmine blossoms over several rounds. Brew 2 to 3 g per 6 to 8 oz at 160 to 180F (71 to 82C) for 1 to 2 minutes in a warmed pot. Light, sweet and floral."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "When do fresh jasmine blossoms go in with the tea during scenting?",
+      "options": [
+        "At dawn, while still tightly closed",
+        "After drying in the sun",
+        "At night, as they open",
+        "During the kill-green step"
+      ],
+      "a": 2,
+      "explain": "The flowers are picked closed by day and held; they open and give up their scent in the evening, and that is when they meet the dry tea."
+    },
+    {
+      "id": "q2",
+      "q": "Which tea most often forms the base of jasmine tea?",
+      "options": [
+        "Ripe pu-erh",
+        "Assam black tea",
+        "Roasted oolong",
+        "Green tea"
+      ],
+      "a": 3,
+      "explain": "Jasmine tea is usually a scented green tea, so it brews like one: cooler water, a short steep, no milk."
+    },
+    {
+      "id": "q3",
+      "q": "A guest asks whether jasmine tea is free of caffeine, like a herbal infusion. What do you say?",
+      "options": [
+        "No: the base is tea, so it carries caffeine",
+        "Yes: the blossom replaces the leaf",
+        "Yes: the scenting rounds draw the caffeine out",
+        "Only if it steeps under a minute"
+      ],
+      "a": 0,
+      "explain": "Jasmine scents real tea, usually green, so the caffeine of that tea comes with it. A guest avoiding caffeine is better served a tisane."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library card: Green Tea",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, One plant, six teas",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, Where the leaf comes from",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Tea is not one temperature and one timer",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, The service itself",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Caffeine, and the questions guests ask",
+      "url": ""
+    },
+    {
+      "title": "Library cocktail: Jasmine",
+      "url": ""
+    },
+    {
+      "title": "Jasmine tea (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Jasmine_tea"
+    },
+    {
+      "title": "What is Jasmine Tea? (TeaSource)",
+      "url": "https://www.teasource.com/blogs/beyond-the-leaf/what-is-jasmine-tea"
+    },
+    {
+      "title": "Jasmine tea (ahmadtea.com)",
+      "url": "https://www.ahmadtea.com/jasmine-tea/"
+    },
+    {
+      "title": "From Bud to Cup: Making Jasmine Tea (harney.com)",
+      "url": "https://www.harney.com/blogs/news/from-bud-to-cup-making-jasmine-tea"
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=cGD0amH03lc",
+    "id": "cGD0amH03lc",
+    "title": "Jasmine Tea",
+    "channel": "Revival Tea Company",
+    "channelKind": "company",
+    "label": "How to make a cup of jasmine tea",
+    "watchFor": "A tea company makes a cup of its own jasmine tea. Note its water temperature and steep time: on a green base, jasmine wants water well off the boil, 160 to 180F (71 to 82C), and 1 to 2 minutes.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

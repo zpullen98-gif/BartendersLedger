@@ -1,0 +1,135 @@
+{
+  "id": "red-eye",
+  "name": "Red eye",
+  "respell": "",
+  "aka": [],
+  "group": "long",
+  "kind": "coffee",
+  "caffeine": "A full cup of filter coffee plus the whole espresso shot poured into it, so more than either alone.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on the menus: ask at lineup whether there is an espresso machine, whether the bar will add a shot to brewed coffee, and the price."
+  },
+  "what": "A red eye is a cup of drip or batch brewed coffee with one shot of espresso poured into it; two shots make a black eye and three a dead eye. It is filter coffee first, so the brew must be fresh: a shot cannot rescue a stewed pot.",
+  "taste": "Filter coffee with more weight: the shot adds body, a roastier edge and a touch more bitterness, while the brew keeps it long.",
+  "make": {
+    "steps": [
+      "Confirm the count: one shot red eye, two black eye, three dead eye.",
+      "Pour 8 to 10 oz of fresh coffee from a sealed airpot into a warmed mug.",
+      "Pull the shot and pour it in, leaving room for milk."
+    ],
+    "ratio": "One shot to a mug of filter coffee",
+    "dose": "8 to 10 oz brewed coffee; one espresso shot",
+    "temp": "195 to 205F (90 to 96C) for both",
+    "time": "Coffee under an hour in the airpot; shot 25 to 30 seconds",
+    "cup": "Warmed 12 oz mug"
+  },
+  "serve": "In a warmed mug with room at the top, milk and sugar offered as for any filter coffee. The brew comes from a sealed airpot inside its window, never a hotplate, and the shot goes in last.",
+  "story": "Sources differ on the name: some tie it to the jolt, others to the sleepless, red-eyed drinker who orders it. Its siblings simply count the shots, two for a black eye, three for a dead eye.",
+  "guest": "A red eye is brewed coffee with a shot of espresso added, fuller and roastier than the cup alone. Let me check the bar can add one.",
+  "watch": [
+    "Black eye is two shots, dead eye three; confirm the count before you ring it in.",
+    "A shot does not fix a stale pot: coffee held on a hotplate stays flat and drying.",
+    "If the bar pulls no espresso, offer the single origin or our chicory coffee instead."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "filter",
+        "Batch brew is the one that pays"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make a red eye coffee",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a red eye made, and what goes in it?",
+      "answer": "A warmed mug of 8 to 10 oz of fresh brewed coffee with one espresso shot poured in: filter coffee with more body and a roasty edge."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "A guest orders a black eye. How many espresso shots go into the coffee?",
+      "options": [
+        "One",
+        "Three",
+        "Four",
+        "Two"
+      ],
+      "a": 3,
+      "explain": "A red eye takes one shot, a black eye two and a dead eye three."
+    },
+    {
+      "id": "q2",
+      "q": "Why should the coffee under the shot come from a sealed airpot?",
+      "options": [
+        "A hotplate makes it weak",
+        "A hotplate cooks it flat",
+        "An airpot brews it stronger",
+        "The shot curdles otherwise"
+      ],
+      "a": 1,
+      "explain": "Hot is not fresh: a hotplate drives off aroma and turns acids harsher, and a shot cannot rescue that."
+    },
+    {
+      "id": "q3",
+      "q": "What ratio should the batch brew under a red eye follow?",
+      "options": [
+        "About 1:15 to 1:18",
+        "About 1:2 to 1:3",
+        "About 1:5 to 1:8",
+        "About 1:30 to 1:35"
+      ],
+      "a": 0,
+      "explain": "Batch brew runs about 55 to 65 g per litre, roughly 1:15 to 1:18; 1:2 is espresso."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lesson: Batch brew is the one that pays",
+      "url": ""
+    },
+    {
+      "title": "Card: Batch Brew",
+      "url": ""
+    },
+    {
+      "title": "House pack: the chicory coffee and the single origin",
+      "url": ""
+    },
+    {
+      "title": "House pack: lineup question a-zr8ze4mu",
+      "url": ""
+    },
+    {
+      "title": "Red eye, black eye and dead eye coffee",
+      "url": "https://www.tastingtable.com/2109431/dead-black-and-red-eye-coffee"
+    },
+    {
+      "title": "What is a red eye coffee",
+      "url": "https://honestcoffeeguide.com/what-is-a-red-eye-coffee/"
+    },
+    {
+      "title": "Red eye coffee",
+      "url": "https://breville.com/us/en/blog/coffee-and-espresso/red-eye-coffee.html"
+    },
+    {
+      "title": "Red eye coffee",
+      "url": "https://www.homegrounds.co/red-eye-coffee/"
+    },
+    {
+      "title": "Red eye coffee",
+      "url": "https://www.acouplecooks.com/red-eye-coffee/"
+    }
+  ],
+  "video": null
+}

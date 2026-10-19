@@ -1,0 +1,33 @@
+{
+  "id": "irish-coffee",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps[1]",
+      "problem": "The coffee never goes into the glass: step 2 stirs sugar into coffee that no step has poured.",
+      "change": "Opens with \"Pour in the hot coffee\", as the World Table recipe builds it (coffee and sugar in, stir, whiskey in)."
+    },
+    {
+      "field": "make.steps[3]",
+      "problem": "\"About half an inch thick\" has no source; the Library lesson \"The cream float\" says fill to about half an inch below the rim, then pour slowly over a spoon.",
+      "change": "Step now fills to about half an inch below the rim before the float, as the lesson has it."
+    },
+    {
+      "field": "quiz[0].options",
+      "problem": "The right option was the longest of the four (a length clue).",
+      "change": "Distractor lengthened to \"It stops the whiskey from evaporating\"."
+    },
+    {
+      "field": "quiz[1].options",
+      "problem": "The right option (\"The flying-boat terminal at Foynes\") was the longest of the four.",
+      "change": "Shortened to \"A flying-boat base at Foynes\"."
+    },
+    {
+      "field": "quiz[2]",
+      "problem": "Two defensible answers: the Library lesson says stiff cream still floats (a service fault, not a flotation fault), so it also gives \"a lasting float\"; the right option was also the longest.",
+      "change": "Stem now asks for a float the guest drinks through (stiff cream lands as a scoop eaten off the top); stiff-cream distractor lengthened."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

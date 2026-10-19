@@ -1,0 +1,60 @@
+{
+  "id": "lungo",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=AokZP_ja4tw",
+  "videoId": "AokZP_ja4tw",
+  "title": "LUNGO- How to make a lungo (cafe créme)",
+  "channel": "Pelican Rouge Coffee Roasters",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "Whole Latte Love lungo youtube",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "No lungo video: the Whole Latte Love channel pages and general espresso videos (LTkpOtRdsPM, 8HAkgiBzs9s, 4RVnnbJU-zc and others); the summary said no lungo video was found."
+    },
+    {
+      "q": "\"how to make a lungo\" espresso tutorial",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=AokZP_ja4tw \"LUNGO- How to make a lungo (cafe créme) - YouTube\" among v06KJdlQNMY, 6PV-LPsJOr4, z0kCPeiEvd4, __26pWOmz8g and U2XRM_epFTQ (capsule machines), sDJfxvwL7nM, f2WPJiueWgY, UT-OGENo62A, WifLRJZKs9A; summary: \"A Pelican Rouge video shows a barista making a lungo or café crème using lungo-roast beans\" (no id printed)."
+    },
+    {
+      "q": "\"LUNGO- How to make a lungo (cafe créme)\"",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=AokZP_ja4tw \"LUNGO- How to make a lungo (cafe créme) - YouTube\" (same id and exact title); summary: \"The top result for your query is a YouTube video titled LUNGO- How to make a lungo (cafe créme), from Pelican Rouge Coffee Roasters\", quoting its description: \"Our barista of Pelican Rouge Coffee Roasters shows how to make an excellent Lungo or Cafe Créme with high quality Pelican Rouge lungo beans.\""
+    }
+  ],
+  "checkerQueries": [
+    {
+      "q": "Pelican Rouge Coffee Roasters barista lungo cafe créme how to make video (allowed_domains youtube.com; checker)",
+      "returned": "First result https://www.youtube.com/watch?v=AokZP_ja4tw \"LUNGO- How to make a lungo (cafe créme) - YouTube\" (same id and exact title); summary: \"The top hit is the Pelican Rouge video itself. The roaster's barista demonstrates how to pull an excellent Lungo or Café Crème using Pelican Rouge's lungo beans\", posted about six years ago. The same channel name heads its other uploads in the results (gBV9Rz7W11w \"Pelican Rouge Coffee Roasters Instant products ENG\", _bvffyXBI4Y). Others: z0kCPeiEvd4, iDGXKaMlHOg, ZXNA61HKY6o, s-PU2YqZJQs, muZ8lJlAhag and two Shorts (3nKj7igEFE4, JMKIcts39qM)."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-19",
+  "checkedBy": "checker",
+  "note": "Same watch id and exact title in the second and third searches; the third search’s summary ties that title to Pelican Rouge Coffee Roasters as the uploader, with its own description in the roaster’s voice. A coffee roaster, so company. It teaches pulling a lungo (also called café crème); the description names the roaster’s own lungo beans, so the checker may judge whether that makes it an advert, though the film itself is a barista demonstration. The title is the channel’s own, copied exactly, with its hyphen and \"créme\"; the page shows our label, not the title. Left for others: Pelican Rouge Coffee Roasters is not yet on companies.json. Searches spent: 3. Checked by the checker on 2026-10-19: the second and third queries are different and returned the same id and exact title; the third summary names Pelican Rouge Coffee Roasters as the uploader, and one fresh search returned the id and title again as \"the Pelican Rouge video itself\", with the same name heading the channel's other uploads. The film is the roaster's barista pulling a lungo; naming its own beans in the description makes it a roaster's tutorial, not a product advert. A watch link, not a Short or playlist. A coffee roaster, so company is right. One search spent. Confirmed.",
+  "firstPass": {
+    "id": "lungo",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make lungo youtube",
+        "returned": "No www.youtube.com/watch?v= result: written guides (coffeeatthree.com, masterclass.com, tea-and-coffee.com, completehomebarista.com, coffeegeek.com, acouplecooks.com, lorespresso.com, nespresso.com); the summary said the search returned no YouTube videos, only written guides."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "No Library film in the plan and no lungo video in the pack. The one search (unrestricted) returned no YouTube watch result. The spares went to macchiato and cortado; a find and a confirmation need two more searches and only one remained for this entry, so none was made. Video null; the page offers the search link alone."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "pour-over",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps",
+      "problem": "No step put the coffee in: the rinse went straight to the bloom.",
+      "change": "Inserted \"Add the coffee, level the bed with a tap and start a timer.\" (Library: Pour-over, as a procedure, step 2)."
+    },
+    {
+      "field": "make.time",
+      "problem": "2.5 to 3.5 minutes followed the card and the grind lesson but left the procedure lesson's \"a small cone usually clears in two to three minutes\" unreconciled.",
+      "change": "\"2 to 3.5 minutes a cup, bloom included\", the range of all three."
+    },
+    {
+      "field": "recall[0].answer",
+      "problem": "Fahrenheit without Celsius, the old time, and no cup.",
+      "change": "Added (90 to 96C), 2 to 3.5 minutes and \"into a warmed cup\"."
+    },
+    {
+      "field": "quiz[2].q",
+      "problem": "\"a paper pour-over\" put the key word of the answer \"Paper strips oils and fines\" in the stem.",
+      "change": "Stem now \"Why does a pour-over drink lighter in body than a French press?\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

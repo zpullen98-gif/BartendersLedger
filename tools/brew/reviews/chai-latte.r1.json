@@ -1,0 +1,23 @@
+{
+  "id": "chai-latte",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps, recall[0].answer",
+      "problem": "The last step sweetens the finished cup with syrup, against the entry’s own serve (\"sugar goes in the brew\") and the Library’s Masala Chai card (\"Sugar goes in the pot, not the cup\").",
+      "change": "The sugar goes into the batch at the strain (\"Strain and sweeten\"), matching the Library’s sweetened concentrate; the cup-syrup step is gone; recall matches."
+    },
+    {
+      "field": "watch[2]",
+      "problem": "Offering any tisane to a caffeine-avoiding guest skips the Library’s warning (Herbal Tisane card, Tisanes are not tea) that yerba mate, guayusa and guarana blends carry caffeine.",
+      "change": "Adds \"and read its tin: some herbals carry caffeine\"."
+    },
+    {
+      "field": "quiz[2]",
+      "problem": "Option and explanation temperatures without Celsius, failing the schema. \"With the milk in\" contradicts the stem’s \"milk-free\", so no one would pick it. The right option was also the longest.",
+      "change": "Celsius added. \"With the milk in\" replaced by \"On a warmer near 120F (49C)\", a plausible wrong hold below 135F."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

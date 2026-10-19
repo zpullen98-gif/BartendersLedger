@@ -1,0 +1,24 @@
+{
+  "id": "peppermint",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=93sUpwYKdYY",
+  "videoId": "93sUpwYKdYY",
+  "title": "Birchall Tea - How To Make The Perfect Peppermint Tea Tutorial",
+  "channel": "Birchall Tea",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "how to brew peppermint tea youtube [allowed_domains: youtube.com]",
+      "returned": "https://www.youtube.com/watch?v=93sUpwYKdYY \"Birchall Tea - How To Make The Perfect Peppermint Tea Tutorial - YouTube\"; summary: \"Birchall Tea offers a short instructional brew guide for a cup of peppermint tea.\""
+    },
+    {
+      "q": "\"Birchall Tea - How To Make The Perfect Peppermint Tea Tutorial\" [allowed_domains: youtube.com]",
+      "returned": "https://www.youtube.com/watch?v=93sUpwYKdYY \"Birchall Tea - How To Make The Perfect Peppermint Tea Tutorial - YouTube\" (top result); summary: \"a YouTube upload from Birchall Tea ... one of the company’s tasting specialists demonstrates how to prepare peppermint tea in this short instructional brew guide.\""
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-18",
+  "note": "Restored by the integrator on 19 October 2026: the checker found the evidence sound (two different queries, the same watch id and exact title, the channel named, a brewing guide) and rejected it only because the published title carries a spaced hyphen and a superlative; the shipped data no longer carries any video title, and Birchall Tea is on companies.json. rejected by the checker: the evidence holds (two different queries, the same watch id and the same exact title, the channel named, and it teaches brewing a cup of peppermint tea), but the fragment cannot carry it. Birchall Tea is a company, so the fragment must show the real title and channel, and the exact title carries a spaced hyphen and \"Perfect\", which the language rules refuse in any fragment string; Birchall Tea is also not on companies.json or proper-nouns.json, which this role may not write, and adding it would still leave the dash and the superlative. Rewording the title is not allowed and calling the channel a person’s would be false. So the fragment’s video is null and the page offers the search link alone. Candidate kept for the record: https://www.youtube.com/watch?v=93sUpwYKdYY \"Birchall Tea - How To Make The Perfect Peppermint Tea Tutorial\" (channel Birchall Tea, a company). No search spent by the checker. Finder’s note, kept: Same watch id and the same exact title in both searches; the channel, Birchall Tea, a British tea company, is named in the title and in both summaries. For the checker: the exact title carries a spaced hyphen and \"Perfect\", which schema.mjs refuses in a company video.title, and Birchall Tea is not yet on companies.json (empty) or proper-nouns.json, so the fragment as set fails validation until those are settled.",
+  "checkerQueries": [],
+  "checkedBy": "checker"
+}

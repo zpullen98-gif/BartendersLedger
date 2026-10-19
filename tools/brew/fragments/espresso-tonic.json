@@ -1,0 +1,118 @@
+{
+  "id": "espresso-tonic",
+  "name": "Espresso tonic",
+  "respell": "",
+  "aka": [
+    "coffee tonic"
+  ],
+  "group": "cold",
+  "kind": "coffee",
+  "caffeine": "One shot of espresso; the tonic brings bitterness from quinine, not caffeine.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on the menus: ask at lineup whether the bar will pull an espresso on request and at what price, since this drink needs a fresh shot."
+  },
+  "what": "A long drink without alcohol: tonic over ice in a highball, a fresh shot of espresso floated on top as a dark layer over the clear tonic, and an expressed orange peel. Bitter meets bitter, the roast against the tonic's quinine, with just enough sweetness from the tonic to hold them. It is a Scandinavian café drink.",
+  "taste": "Cold, fizzy and bitter: the espresso's roast and body over the tonic's dry quinine bite, a little sweet, the orange lifting the nose.",
+  "make": {
+    "steps": [
+      "Fill a highball with ice and add 4 oz (120 mL) tonic, plus a quarter ounce of simple syrup if wanted.",
+      "Pull a single shot of espresso fresh.",
+      "Pour the espresso slowly over the back of a spoon onto the tonic so it floats as a layer.",
+      "Express an orange peel over the top.",
+      "Serve at once, before the layers blend and the fizz fades."
+    ],
+    "ratio": "One shot of espresso to 4 oz tonic",
+    "dose": "1 shot espresso, 4 oz tonic, quarter ounce syrup optional",
+    "temp": "Espresso brewed 195 to 205F (90 to 96C); tonic cold",
+    "time": "",
+    "cup": "Highball, 10 to 12 oz, filled with ice"
+  },
+  "serve": "Fresh ice, the layer intact, the peel expressed over the top, and a straw on the side so the guest can sip through the layers or stir. It suits the guest who wants an aperitif without alcohol, and it goes out the moment it is built.",
+  "story": "Its logic is two bitter things, roast and quinine, set against each other. Quinine is the bitter British officers in colonial India took against malaria and cut with sugar, soda and gin, which a gin and tonic drinker enjoys hearing. The layer is the show: hot espresso floats on the colder, sugared tonic until the guest stirs.",
+  "guest": "Tonic over ice with a fresh espresso floated on top and an orange peel: bitter, fizzy and refreshing, with no alcohol. I can ask whether the bar will pull a shot.",
+  "watch": [
+    "Pour the espresso slowly: a fast pour onto fizzy tonic foams up and over the rim.",
+    "It needs a fresh shot, because a shot comes apart the moment it is made; a held one floats flat and dull.",
+    "Tonic is sweetened: a guest asking for no sugar can skip the syrup, but the tonic still carries some."
+  ],
+  "library": {
+    "ref": "",
+    "study": [],
+    "cocktail": "",
+    "na": "Espresso Tonic"
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make an espresso tonic",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Espresso tonic: how is it built?",
+      "answer": "Four ounces of tonic over ice in a highball, a little syrup if wanted, then a fresh espresso floated slowly on top and an orange peel expressed over it. Bitter, fizzy and cold."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "In an espresso tonic, which liquid goes into the glass last?",
+      "options": [
+        "The tonic, over the espresso",
+        "The espresso, floated slowly",
+        "The ice, into the finished drink",
+        "The syrup, stirred through"
+      ],
+      "a": 1,
+      "explain": "Tonic over ice first, espresso floated last, so it sits as a dark layer."
+    },
+    {
+      "id": "q2",
+      "q": "Which garnish finishes a classic espresso tonic?",
+      "options": [
+        "An expressed orange peel",
+        "A squeezed wedge of lime",
+        "Three floating coffee beans",
+        "A fresh sprig of mint"
+      ],
+      "a": 0,
+      "explain": "An orange peel expressed over the top; three beans belong on an espresso martini."
+    },
+    {
+      "id": "q3",
+      "q": "What makes the tonic side of the drink bitter?",
+      "options": [
+        "Gentian root",
+        "Grapefruit pith",
+        "Quinine",
+        "Hop extract"
+      ],
+      "a": 2,
+      "explain": "Tonic carries quinine, the bitter once taken against malaria, so the drink sets roast against quinine."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: Espresso Tonic, zero proof list",
+      "url": ""
+    },
+    {
+      "title": "Library: Espresso card",
+      "url": ""
+    },
+    {
+      "title": "Library lore: Gin & Tonic",
+      "url": ""
+    },
+    {
+      "title": "Library: cream float lesson",
+      "url": ""
+    },
+    {
+      "title": "Pack: lineup question on espresso",
+      "url": ""
+    }
+  ],
+  "video": null
+}

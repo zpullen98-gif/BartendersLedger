@@ -1,0 +1,33 @@
+{
+  "id": "latte-macchiato",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=IUuCU5fFm4U",
+  "videoId": "IUuCU5fFm4U",
+  "title": "How to make Latte Macchiato Coffee . Beautiful Latte Macchiato recipe by Malaysia Barista",
+  "channel": "Malaysia Barista",
+  "channelKind": "person",
+  "queries": [
+    {
+      "q": "how to make latte macchiato youtube",
+      "filter": "allowed_domains youtube.com",
+      "returned": "“(173) How to make Latte Macchiato Coffee . Beautiful Latte Macchiato recipe by Malaysia Barista - YouTube” https://www.youtube.com/watch?v=IUuCU5fFm4U; summary: “A Malaysian barista tutorial emphasizes the layers, noting that you will find at least 3 layers of color in a good Latte Macch...”"
+    },
+    {
+      "q": "\"How to make Latte Macchiato Coffee . Beautiful Latte Macchiato recipe by Malaysia Barista\"",
+      "filter": "allowed_domains youtube.com",
+      "returned": "“(173) How to make Latte Macchiato Coffee . Beautiful Latte Macchiato recipe by Malaysia Barista - YouTube” https://www.youtube.com/watch?v=IUuCU5fFm4U; summary: “Other results from the same channel cover related drinks”, those titled “... by Malaysia Barista” (EaBlKVjhZBw) and “... by MalaysiaBarista” (lInszzDTCNQ)."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-18",
+  "checkedBy": "checker",
+  "note": "Same id and same title in both searches. Both result lines carry a “(173) ” prefix that looks like a crawler’s notification count (other videos show (174), (176), (312)); the title recorded leaves it off. The channel is named only as “by Malaysia Barista” in the titles (once “MalaysiaBarista”), and the summary ties those videos to one channel; the exact channel spelling is unconfirmed. A barista’s channel, so person: the fragment ships title and channel empty. Not watched; content judged from titles and snippets (milk first, espresso last, three layers).",
+  "checkerNote": "Confirmed by the checker on 2026-10-19: two different searches on youtube.com returned the same watch id IUuCU5fFm4U under the same title, and the channel is named in that title (“recipe by Malaysia Barista”). A fresh search in new wording returned the same id and title a third time, with the same “(173) ” prefix, while its summary gives the title without it, so the prefix is the crawled page’s notification count and the title recorded here, without it, stands. The summary quotes the description: it shows how to make a latte macchiato at home with an espresso machine and looks for at least three layers of colour. It teaches the drink; a watch link, not a Short (the Shorts in the results sit at /shorts/), a playlist or an advert. A barista’s channel, so person is right whatever the exact spelling of the name, and the fragment ships title and channel empty.",
+  "checkerQueries": [
+    {
+      "q": "Malaysia Barista latte macchiato beautiful recipe how to make latte macchiato coffee",
+      "filter": "allowed_domains youtube.com",
+      "returned": "“(173) How to make Latte Macchiato Coffee . Beautiful Latte Macchiato recipe by Malaysia Barista - YouTube” https://www.youtube.com/watch?v=IUuCU5fFm4U (fourth result); summary: “the Malaysia Barista video”, titled “How to make Latte Macchiato Coffee. Beautiful Latte Macchiato recipe by Malaysia Barista”; its description says it shows how to make a beautiful latte macchiato at home with a coffee or espresso machine and that a good one shows at least three layers of colour."
+    }
+  ]
+}

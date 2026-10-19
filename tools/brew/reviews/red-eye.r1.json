@@ -1,0 +1,18 @@
+{
+  "id": "red-eye",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps[1], make.dose, recall[0].answer",
+      "problem": "\"6 to 10 oz\" of brewed coffee was the author's own estimate and no source gave it. A refuter search found Homegrounds (8 oz with one shot) and A Couple Cooks (10 oz).",
+      "change": "Now \"8 to 10 oz\" in all three places, with both pages added to sources. It still fits the warmed 12 oz mug, inside the Batch Brew card's 6 to 12 oz."
+    },
+    {
+      "field": "story",
+      "problem": "\"Red eyed drinker\" is a compound adjective missing its hyphen. A hyphen inside a word is not a dash.",
+      "change": "Now reads \"red-eyed\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

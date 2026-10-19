@@ -64,6 +64,14 @@
  *     the level page's one lead door, a tap on it from a card or The Bar
  *     Compass is the page with nothing open, on the page writes nothing, and
  *     a jump on the page writes no address and no entry
+ *   - Coffee and tea, the house's page (18 October 2026): its index and an
+ *     entry lit by the house's word, the index, an entry and its deck each
+ *     round-tripping at #/menu/brew[/<id>] (and #/menu/view/brew read as the
+ *     index), both screens in the sweep (one Back, no dash, no glyph), the
+ *     sub-nav, an entry by its row and Back to the index, the menu and Home,
+ *     a cold entry walking up the same way by replaces, and, with the House
+ *     engine, the house's word from the page landing on the house's page and
+ *     the page naming a renamed house
  *   - Print cards is a screen of its own, #/library/print, with the one Back
  *     and no second way back; Back closes it onto the Library
  *   - with the House engine beside this checkout, the bar's producers: the
@@ -295,6 +303,7 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	const lights = [
 		["state.tab='menu'; state.menu.view='menu'", 'brennans'], ["state.tab='menu'; state.menu.view='stock'", 'brennans'], ["state.tab='menu'; state.menu.view='add'", 'brennans'],
 		["state.tab='menu'; state.menu.view='compass'", 'brennans'], ["state.tab='menu'; state.menu.view='fall'", 'brennans'],
+		["state.tab='menu'; state.menu.view='brew'; brewOpen('')", 'brennans'], ["brewOpen(brewEntries()[0].id)", 'brennans'],
 		["state.tab='flashcards'; state.fc.stage='pick'", 'practise'], ["openDeck('cocktails')", 'practise'], ["openDeck('cocktails'); startDeckRun()", 'practise'],
 		["state.tab='quiz'; state.quiz.stage='setup'", 'practise'], ["startRound('quick')", 'practise'], ["state.tab='practice'; state.practice.view='rail'", 'practise'],
 		["state.tab='riffs'", 'practise'], ["ltStart(2); state.tab='level'", 'practise'], ["state.lt = null; openLevel(2)", 'home'],
@@ -532,6 +541,8 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 		...['drills', 'rail', 'hold', 'pour', 'tasting', 'flights', 'method'].map((v) => `state.tab='practice'; state.practice.view='${v}'`),
 		"state.tab='riffs'",
 		"state.tab='menu'; state.menu.view='menu'", "state.tab='menu'; state.menu.view='stock'", "state.tab='menu'; state.menu.view='add'",
+		/* Coffee and tea (18 October 2026): the index, an entry and its deck */
+		"brewOpen('')", "brewOpen(brewEntries()[0].id)", "openDeck('brew')",
 	];
 	const seenTabs = new Set();
 	for (const code of setups) {
@@ -568,6 +579,17 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 		if (r.key !== 'practise' || r.hash !== to || A.run('state.tab') !== 'flashcards' || A.run('state.fc.stage') !== 'pick') fail(`${from} reads as ${r.key} at ${r.hash}, not the Practise root at ${to}`);
 	}
 	A.run('state.scopeAll.flashcards = false;');
+	/* Coffee and tea's addresses: the index and an entry print and read as
+	   themselves, #/menu/view/brew reads as the index, an unknown entry falls
+	   to the index, and #/menu leaves the page */
+	const brewId = A.run('brewEntries()[0].id');
+	for (const [from, to] of [['#/menu/brew', '#/menu/brew'], ['#/menu/brew/' + brewId, '#/menu/brew/' + brewId], ['#/menu/view/brew', '#/menu/brew'], ['#/menu/brew/no-such-entry', '#/menu/brew'], ['#/menu', '#/menu']]) {
+		A.run("state.tab = 'home';");
+		if (!A.g('applyRoute')(from)) { fail(`${from} is not an address applyRoute reads`); continue; }
+		A.run('navNormalise()');
+		const r = A.g('routeNow')();
+		if (r.hash !== to) fail(`${from} reads back as ${r.hash}, not ${to}`);
+	}
 	/* every deck id the picker draws has a definition and a parent */
 	A.run("state.tab='flashcards'; state.fc.stage='pick'; render();"); await settle();
 	for (const m of A.view().matchAll(/data-act="deck" data-deck="([^"]+)"/g)) {
@@ -614,6 +636,29 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	const L = boot({ hash: '#/level', local: { 'oot-level-ledger-v1': '3' } });
 	await settle();
 	if (L.state().key !== 'level/head-bartender') fail(`#/level with Head Bartender chosen lands on ${L.state().key}`);
+	/* Coffee and tea (18 October 2026): the sub-nav, an entry by its row, and
+	   three Backs to the index, the menu and Home; a cold entry walks up the
+	   same chain by replaces */
+	const B = boot({ hash: '#/menu' });
+	await settle();
+	const b0 = B.state();
+	const id = B.run('brewEntries()[0].id');
+	if (!B.tap({ 'data-act': 'menu-view', 'data-v': 'brew' })) fail('the menu\'s sub-nav has no Coffee and tea');
+	await settle();
+	const b1 = B.state();
+	if (b1.key !== 'menu/brew' || b1.hash !== '#/menu/brew' || b1.at !== b0.at + 1) fail(`Coffee and tea from the sub-nav is ${b1.key} at ${b1.hash}, entry ${b0.at} to ${b1.at}, not #/menu/brew by one push`);
+	if (!B.tap({ class: 'brew-row', href: '#/menu/brew/' + id })) fail(`the Coffee and tea index draws no row for ${id}`);
+	await settle();
+	if (B.state().key !== 'menu/brew/' + id || B.state().at !== b1.at + 1) fail(`an entry's row opens ${B.state().key} at entry ${B.state().at}, not the entry by one push`);
+	const bk = [];
+	for (let i = 0; i < 3 && backs(B.view()); i++) { B.tap({ 'data-act': 'back' }); await settle(); bk.push(B.state().key); }
+	if (bk.join('|') !== 'menu/brew|menu|home') fail(`Back from a Coffee and tea entry walks ${bk.join(' > ')}, not menu/brew > menu > home`);
+	const BC = boot({ hash: '#/menu/brew/' + id });
+	await settle();
+	if (BC.state().key !== 'menu/brew/' + id || BC.state().d !== 0) fail(`a cold #/menu/brew/${id} is ${BC.state().key} at depth ${BC.state().d}`);
+	const bc = [];
+	for (let i = 0; i < 3 && backs(BC.view()); i++) { BC.tap({ 'data-act': 'back' }); await settle(); bc.push(BC.state().key); }
+	if (bc.join('|') !== 'menu/brew|menu|home' || BC.history.length !== 1) fail(`a cold Coffee and tea entry walks up ${bc.join(' > ')} with ${BC.history.length} entries, not menu/brew > menu > home by replaces`);
 }
 
 /* ---- 8. the screens: one Back, Home four cards, words and no glyphs --------- */
@@ -641,6 +686,8 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 		['Batching', "state.tab='tools'; state.tools.view='batch'", false],
 		['the drills', "state.tab='practice'; state.practice.view='drills'", false],
 		['the menu', "state.tab='menu'; state.menu.view='menu'", false],
+		['Coffee and tea', "state.tab='menu'; state.menu.view='brew'; brewOpen('')", true],
+		['a coffee or a tea', "state.tab='menu'; brewOpen(brewEntries()[0].id)", true],
 		['a level test', "ltStart(1); state.tab='level'", false],
 	];
 	for (const [name, code, own] of screens) {
@@ -779,6 +826,9 @@ else {
 	R.run('openLevel(1); render()'); await settle();
 	const leads = [...R.view().matchAll(/data-act="lv-menu"><span class="door-name">([^<]*)<\/span>/g)].map((m) => m[1]);
 	if (leads.join('|') !== 'The Fixture Room &amp; Bar') fail(`the level page's lead door to the house's page reads ${JSON.stringify(leads)}, not the house's name once`);
+	/* Coffee and tea reads the house's name from the house too, on the bar and on the page */
+	R.run("state.tab = 'menu'; state.menu.view = 'brew'; brewOpen(''); render()"); await settle();
+	if (word(R) !== 'The Fixture Room &amp; Bar' || !R.view().includes('<div class="eyebrow">The Fixture Room &amp; Bar · Coffee and tea</div>')) fail(`on Coffee and tea the house's word reads ${word(R)} and the page does not name the renamed house`);
 	if (/Study the whole menu|Flashcards for the menu|data-act="lv-producers"/.test(R.view())) fail('the level page still carries the old Study the menu rows');
 	/* the house's word from anywhere lands on its page with nothing open; a
 	   tap on the lit word from a card or a sub-view is the page (the card's
@@ -809,6 +859,11 @@ else {
 	if (word(T) !== 'Brennan’s' || !/bnav-btn active" aria-current="page" data-cluster="brennans"/.test(T.nav())) fail('The Bar Compass is not lit by the house\'s word');
 	T.tabTap('brennans'); await settle();
 	if (T.state().hash !== '#/menu' || T.run('state.menu.view') !== 'menu') fail(`the house's word from The Bar Compass lands on ${T.state().hash} with the view ${T.run('state.menu.view')}, not the page`);
+	/* Coffee and tea, an entry open: the house's word is lit and returns to the page with nothing open */
+	T.run("state.tab = 'menu'; state.menu.view = 'brew'; brewOpen(brewEntries()[0].id); render()"); await settle();
+	if (word(T) !== 'Brennan’s' || !/bnav-btn active" aria-current="page" data-cluster="brennans"/.test(T.nav())) fail('a Coffee and tea entry is not lit by the house\'s word');
+	T.tabTap('brennans'); await settle();
+	if (T.state().hash !== '#/menu' || T.run('state.menu.view') !== 'menu' || T.run('state.menu.study.open')) fail(`the house's word from a Coffee and tea entry lands on ${T.state().hash} with the view ${T.run('state.menu.view')}, not the page with nothing open`);
 	/* a search and a section left on the page: the level page's lead door,
 	   like the house's word, lands on the whole list */
 	T.run("state.menu.study.q = 'espresso'; state.menu.study.sec = 'Coffee'; openLevel(1); render()"); await settle();
@@ -1000,6 +1055,7 @@ async function mutations(){
 		['the house\'s page climbing to the level again', 'ui-nav.js', "    state.tab = 'home';\n    return true;\n  }\n  if(t === 'flashcards'){", "    openLevel(chosenLevel());\n    return true;\n  }\n  if(t === 'flashcards'){"],
 		['the house\'s word drawn as the literal', 'ui-new.js', "(ck === 'brennans' ? esc(houseTabWord()) : label)", "label"],
 		['the Practise root printed as #/flashcards', 'ui-nav.js', "hash = '#/practise' + (navScope().flashcards ? '/all' : ''); key = 'practise';", "if(navScope().flashcards) hash += '/all';"],
+		['a Coffee and tea entry climbing past its index', 'ui-nav.js', "    if(state.menu.view === 'brew' && typeof brewState === 'function' && brewState().item){ brewState().item = ''; return true; }\n", ""],
 	];
 	let held = 0;
 	for (const [name, file, from, to] of MUT) {

@@ -1,0 +1,56 @@
+{
+  "id": "cafe-con-leche",
+  "found": false,
+  "url": "",
+  "videoId": "",
+  "title": "",
+  "channel": "",
+  "channelKind": "",
+  "queries": [
+    {
+      "q": "Carabello Coffee cafe con leche recipe youtube",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "No channel named for any café con leche video: 6xh1TIdCw2w \"Coffee with Milk (Café con Leche) - YouTube\", 5wxKLGnys3g, asFhP91MIzk, 7N3mnM1GDf0, JwSFqwYRUaY, r5pBFzQE5tY, o3OU2D2V8Bo and QqBLovvDtTQ (the first pass’s); the only Carabello result was its americano video."
+    },
+    {
+      "q": "\"Coffee with Milk (Café con Leche)\"",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "6xh1TIdCw2w \"Coffee with Milk (Café con Leche) - YouTube\" (same id and exact title), beside xCzwNixDCb8 \"GoodCook Cafe Con Leche\", YP9N897HUkM, LAATZ4F0qtE (an iced version naming a sponsor’s product), Gp1_Suc_Bds, JwSFqwYRUaY, uEH1NUq_C-k; no channel named for 6xh1TIdCw2w."
+    },
+    {
+      "q": "\"Coffee with Milk (Café con Leche)\" recipe video",
+      "returned": "Unrestricted: written recipes only (combinegoodflavors.com, mexicoinmykitchen.com, sweetlifebake.com, abeautifulmess.com, shoprite.com and others); no YouTube result and no channel tied to 6xh1TIdCw2w."
+    }
+  ],
+  "verifiedBy": "",
+  "checkedOn": "2026-10-19",
+  "note": "6xh1TIdCw2w came back twice with the same id and exact title, but its channel was never named (a recipe blog uses the same words for its page, which ties nothing to the video). The first pass’s o3OU2D2V8Bo stays rejected. Searches spent: 3. Video null; the page offers the search link alone.",
+  "firstPass": {
+    "id": "cafe-con-leche",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make café con leche youtube",
+        "filter": "allowed_domains youtube.com",
+        "returned": "“How to make an authentic Spanish Café con Leche - YouTube” https://www.youtube.com/watch?v=o3OU2D2V8Bo; summary: “shows the process with a stovetop espresso maker”; channel not named. Others: 6xh1TIdCw2w, asFhP91MIzk, WES0z3y9UT4 (Cuban), nEJGhjJmyZ0 (a generic explainer channel, spaced hyphen in the title)."
+      },
+      {
+        "q": "\"How to make an authentic Spanish Café con Leche\"",
+        "filter": "allowed_domains youtube.com",
+        "returned": "“How to make an authentic Spanish Café con Leche - YouTube” https://www.youtube.com/watch?v=o3OU2D2V8Bo, beside its Part 2 (QqBLovvDtTQ) and a cortado episode (gk4WP-tdTok); no channel named in any title or the summary."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "o3OU2D2V8Bo returned the same id and the same exact title in both searches, but its channel was never named in a result title or summary, so it does not count. Two searches spent; no spare left."
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "id": "rooibos",
+  "name": "Rooibos",
+  "respell": "ROY-boss",
+  "aka": [
+    "red bush",
+    "redbush",
+    "red tea"
+  ],
+  "group": "herbal",
+  "kind": "tea",
+  "caffeine": "None: rooibos is a South African shrub, not the tea plant, so a straight cup carries no caffeine; flavoured blends can add other plants.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup whether the bar keeps rooibos, which brand, loose or bagged, how it goes out and the price."
+  },
+  "what": "Rooibos is a tisane from a South African shrub, Aspalathus linearis, and not tea: the name is Afrikaans for red bush. The plant is native to the winter rainfall country of the Western Cape and is grown chiefly in the Cederberg mountains. The leaf is oxidised to turn red, the way a black tea darkens, and green rooibos is the same plant left unoxidised. It takes a full boil and can sit long without turning harsh.",
+  "taste": "Sweet wood, soft and round, with very little drying grip, so a long steep deepens it rather than roughening it. The cup pours a clear red, as the name promises.",
+  "make": {
+    "steps": [
+      "Draw fresh cold water and bring it to a full boil.",
+      "Warm the glass pot or mug with hot water and tip the rinse out.",
+      "Weigh 2 to 3 g leaf per 6 to 8 oz, or use one bag; use a fine basket for loose leaf.",
+      "Pour on the boiling water and steep 5 to 10 minutes; it will not turn harsh if it runs long.",
+      "Strain into the cup, or send the basket on a dish and say the time."
+    ],
+    "ratio": "2 to 3 g leaf per 6 to 8 oz water",
+    "dose": "One bag or 2 to 3 g rooibos per cup",
+    "temp": "208 to 212F (98 to 100C), a full boil",
+    "time": "5 to 10 minutes; it forgives a longer steep",
+    "cup": "Warmed glass pot or glass mug, 8 to 10 oz"
+  },
+  "serve": "Warm the glass first and send the pot or mug on a saucer with a spoon and a small dish for the bag or basket. Sugar and honey go beside the cup, never in it, and milk and lemon stay back unless the guest asks. It sells late, to the guest who wants a red, tea-like cup without the tea plant.",
+  "story": "The name is Afrikaans, rooi bos, red bush, and the plant is native to the Cape of South Africa, where the Cederberg mountains are its main source. The trap is the English. A guest who asks for red tea may mean rooibos, while in Chinese red tea, hong cha, is the leaf a tea list calls black, named for the colour of the liquor. What a guest likes to hear: it pours red, tastes of sweet wood and carries no caffeine of its own.",
+  "guest": "Rooibos is a South African red bush rather than tea, so it has no caffeine of its own; it pours a deep red and tastes of sweet wood.",
+  "watch": [
+    "Red tea can mean rooibos to one guest and Chinese hong cha, the black tea, to another. Ask before you brew.",
+    "A flavoured rooibos blend can carry a dozen botanicals; hand over the box rather than answering what is in it from memory.",
+    "Green rooibos is the same plant left unoxidised, not a green tea, and it still carries no tea leaf.",
+    "Herbal often means no caffeine for a reason: name what is in it and leave the decision with the guest."
+  ],
+  "library": {
+    "ref": "Herbal Tisane",
+    "study": [
+      [
+        "leaf",
+        "Tisanes are not tea"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to brew rooibos tea",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Rooibos: how is it made, and how does it taste?",
+      "answer": "One bag or 2 to 3 g of leaf per 6 to 8 oz, water at a full boil, 208 to 212F (98 to 100C), steeped 5 to 10 minutes in a warmed glass pot or mug of 8 to 10 oz. It pours red and tastes of sweet wood, smooth even after a long steep."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What is rooibos, and where does it grow?",
+      "options": [
+        "A tea bush of the Assam valley",
+        "A flower grown across Sudan and Mexico",
+        "A shrub of South Africa’s Western Cape",
+        "A highland Chinese tea, the true red tea"
+      ],
+      "a": 2,
+      "explain": "Rooibos, Afrikaans for red bush, is a South African shrub grown chiefly in the Cederberg. No Camellia sinensis goes in, so it is a tisane, not tea."
+    },
+    {
+      "id": "q2",
+      "q": "What turns the rooibos leaf red?",
+      "options": [
+        "Microbes working in warm, damp heaps",
+        "Oxidation of the cut leaf",
+        "Roasting over a wood fire",
+        "A red calyx blended into it"
+      ],
+      "a": 1,
+      "explain": "Rooibos is oxidised to go red, the way a black tea darkens; green rooibos is the same plant left unoxidised. Heaped microbial fermentation belongs to ripe pu-erh."
+    },
+    {
+      "id": "q3",
+      "q": "A guest asks for red tea. What should you do before brewing?",
+      "options": [
+        "Ask whether they mean rooibos or black tea",
+        "Brew rooibos, since red tea always means it",
+        "Brew hibiscus, since it pours the reddest",
+        "Brew a Chinese black tea, the original red tea"
+      ],
+      "a": 0,
+      "explain": "Hong cha, Chinese for red tea, is what a tea list calls black, while an English-speaking guest may mean rooibos by the same words. Ask, then brew."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ledger Library: The Leaf, Tisanes are not tea",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library: The Leaf, One plant, six teas",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library card: Herbal Tisane",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library card: Black Tea",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library: Tea Service, Water for tea",
+      "url": ""
+    },
+    {
+      "title": "Rooibos",
+      "url": "https://en.wikipedia.org/wiki/Rooibos"
+    },
+    {
+      "title": "Aspalathus linearis",
+      "url": "https://pza.sanbi.org/node/9774"
+    },
+    {
+      "title": "The Botany of Rooibos",
+      "url": "https://www.klipopmekaar.co.za/history-and-botany-of-rooibos/"
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=pOnoNRAVniQ",
+    "id": "pOnoNRAVniQ",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "How to brew loose leaf rooibos",
+    "watchFor": "How much loose leaf goes in, how hot the water is and how long it steeps. Rooibos takes a full boil and forgives a long steep, so set the timing shown against the 5 to 10 minutes here.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

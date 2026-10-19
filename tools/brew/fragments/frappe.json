@@ -1,0 +1,118 @@
+{
+  "id": "frappe",
+  "name": "Frappé",
+  "respell": "fra-PAY",
+  "aka": [
+    "Greek frappé"
+  ],
+  "group": "cold",
+  "kind": "coffee",
+  "caffeine": "From instant coffee, a spoonful or two in a tall glass; the water, ice and milk add none.",
+  "house": {
+    "printed": false,
+    "askId": "",
+    "ask": "Not printed on the menus and not poured at the house: know it for the guest who asks, and offer the nearest drink we pour."
+  },
+  "what": "The Greek iced coffee: instant coffee shaken or frothed with sugar and a splash of cold water into a thick, pale foam, then poured over ice and lengthened with cold water, and milk if wanted. It is a fixture of café life in Greece and Cyprus. The name is French, for a drink chilled with ice.",
+  "taste": "Light, frothy and cold: a sweet, airy foam over a long, thin coffee with instant's roasty bitterness, softened by milk.",
+  "make": {
+    "steps": [
+      "Ask how sweet, then put 1 to 2 teaspoons of instant coffee, the sugar and a splash of cold water in a shaker.",
+      "Shake hard, or use a hand frother, until a thick, pale foam forms.",
+      "Pour it into a tall glass over ice.",
+      "Top with cold water, and milk if wanted, until the foam rises to the rim.",
+      "Serve with a straw and a glass of water."
+    ],
+    "ratio": "",
+    "dose": "1 to 2 tsp instant coffee, sugar, cold water, ice, milk",
+    "temp": "",
+    "time": "A short, hard shake until the foam is thick",
+    "cup": "Tall glass, 10 to 12 oz, with a straw"
+  },
+  "serve": "Not made here: offer the Café Glacé, chicory cold brew under an orange flower cold foam, as the nearest cold coffee with a foam. A frappé goes out in a tall glass with a straw, the sugar already shaken in.",
+  "story": "The frappé is dated to 1957, at an international trade fair in Thessaloniki, where a coffee company's representative, finding no hot water on a break, shook instant coffee with cold water and ice. Another telling credits a shaken chocolate drink shown at the same fair. Either way it took hold across Greece. One caution: in much of New England a frappe, without the accent, is a milkshake.",
+  "guest": "We do not make a frappé, but our Café Glacé is a cold coffee under an orange flower foam: chicory cold brew, lightly sweet and spirit-free.",
+  "watch": [
+    "In New England a frappe can mean a coffee milkshake: ask whether the guest wants ice cream or the Greek iced coffee.",
+    "The sugar is shaken in with the coffee at the start, so ask how sweet before it is made, not after.",
+    "A guest wanting it with brewed coffee or espresso is asking for a different drink; the classic is instant."
+  ],
+  "library": {
+    "ref": "",
+    "study": [],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make a greek frappe coffee",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Greek frappé: how is it made?",
+      "answer": "Instant coffee, sugar and a splash of cold water shaken into a thick foam, poured over ice in a tall glass and topped with cold water, and milk if wanted. Light, sweet and frothy, with a straw."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What is the coffee base of a classic Greek frappé?",
+      "options": [
+        "Instant coffee",
+        "Espresso over ice",
+        "Cold brew concentrate",
+        "Strained Turkish coffee"
+      ],
+      "a": 0,
+      "explain": "The 1957 story is instant coffee shaken with cold water and ice, and instant is still its base."
+    },
+    {
+      "id": "q2",
+      "q": "Where and when is the frappé usually said to have been first made?",
+      "options": [
+        "An Athens hotel bar, 1923",
+        "A Cyprus army base, 1960",
+        "A Thessaloniki fair, 1957",
+        "A Crete harbour café, 1948"
+      ],
+      "a": 2,
+      "explain": "It is dated to the Thessaloniki International Fair in 1957."
+    },
+    {
+      "id": "q3",
+      "q": "A guest from Boston orders a coffee frappe. What do you check?",
+      "options": [
+        "Whether they want it hot",
+        "Whether they mean a milkshake",
+        "Whether they want decaf",
+        "Whether they want whiskey in it"
+      ],
+      "a": 1,
+      "explain": "In much of New England a frappe is a milkshake, so the guest may expect ice cream."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Frappé coffee",
+      "url": "https://en.wikipedia.org/wiki/Frapp%C3%A9_coffee"
+    },
+    {
+      "title": "The story of the frappe",
+      "url": "https://www.almyra.com/news-press/the-story-of-the-frappe"
+    },
+    {
+      "title": "Frappe Coffee",
+      "url": "https://visit-centralmacedonia.gr/en/what-to-do/80/gastronomy/1077/frappe-coffee"
+    },
+    {
+      "title": "World Table: Coffee Cabinet",
+      "url": ""
+    },
+    {
+      "title": "Pack: Café Glacé de la Maison",
+      "url": ""
+    }
+  ],
+  "video": null
+}

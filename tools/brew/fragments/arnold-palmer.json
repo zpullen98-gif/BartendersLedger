@@ -1,0 +1,138 @@
+{
+  "id": "arnold-palmer",
+  "name": "Arnold Palmer",
+  "respell": "",
+  "aka": [
+    "half and half",
+    "iced tea lemonade"
+  ],
+  "group": "iced",
+  "kind": "tea",
+  "caffeine": "From the black tea alone, so less than a full glass of iced tea; the lemonade carries none.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup whether the bar keeps lemonade and iced tea to build one, which tea, and the price."
+  },
+  "what": "An Arnold Palmer is cold black tea and lemonade over ice, a zero proof classic built in the glass. The Library spec is 4 oz of cold black tea to 3 oz of fresh lemonade in a Collins, with a lemon wheel and mint, so the tea leads. The tannin gives it grip and the lemon its sour spine; many bars simply pour it half and half.",
+  "taste": "Tart and brisk: lemon’s sour lift and sugar over black tea’s malt and drying grip, so it drinks less sweet than lemonade and rounder than plain iced tea. Too much lemonade and it becomes a sweet lemonade with a tea colour.",
+  "make": {
+    "steps": [
+      "Fill a Collins glass with fresh ice.",
+      "Pour in 4 oz of cold, unsweetened black tea.",
+      "Top with 3 oz of fresh lemonade.",
+      "Give it one stir to mix.",
+      "Garnish with a lemon wheel and a sprig of mint, and add a straw."
+    ],
+    "ratio": "4 parts black tea to 3 parts lemonade",
+    "dose": "4 oz cold black tea, 3 oz fresh lemonade",
+    "temp": "",
+    "time": "",
+    "cup": "Collins glass over fresh ice"
+  },
+  "serve": "Build it in a Collins over fresh ice, with a lemon wheel and mint, a straw and a napkin under it, and send it at once, before the ice thins it. It suits a brunch or lunch table and the guest who is not drinking. A guest who wants it sweeter gets more lemonade; one who wants it drier gets more tea.",
+  "story": "The drink carries the name of the American golfer who made it his own: he mixed iced tea and lemonade at home, and the usual story has a guest at a Palm Springs restaurant overhearing his order and asking for the same drink by his name. Many bars pour it half and half, but in interviews he said the tea should dominate, and the Library pours 4 to 3, tea leading.",
+  "guest": "An Arnold Palmer is cold black tea topped with lemonade over ice, the tea leading: tart, brisk and not too sweet, with no alcohol.",
+  "watch": [
+    "Half and half means this drink to one guest and cream for coffee to another; ask before you pour.",
+    "Lead with the tea: too much lemonade makes it a sweet lemonade, and the drink’s namesake wanted the tea to dominate.",
+    "Built on sweet tea it turns very sweet; use unsweetened tea unless the guest asks for sweet.",
+    "With vodka or any spirit it is a cocktail, not a zero proof drink: ring it and count it as one."
+  ],
+  "library": {
+    "ref": "",
+    "study": [],
+    "cocktail": "",
+    "na": "Arnold Palmer"
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make an arnold palmer drink",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Arnold Palmer: what goes in it, and how is it built?",
+      "answer": "4 oz of cold black tea and 3 oz of fresh lemonade, built over fresh ice in a Collins and stirred once, with a lemon wheel and mint. Tea leads: tart and brisk, the tannin’s grip under lemon’s sour spine, no alcohol."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What does the Library’s Arnold Palmer spec pour into the Collins?",
+      "options": [
+        "4 oz cold black tea, 3 oz fresh lemonade",
+        "3 oz cold black tea, 4 oz fresh lemonade",
+        "4 oz sweet tea, 3 oz fresh lemon juice",
+        "4 oz green tea, 3 oz sparkling lemonade"
+      ],
+      "a": 0,
+      "explain": "Tea leads, 4 oz to 3 oz of fresh lemonade, over ice with a lemon wheel and mint: the tannin gives grip and the lemon the sour spine."
+    },
+    {
+      "id": "q2",
+      "q": "According to the drink’s namesake, which part of it should dominate?",
+      "options": [
+        "The lemonade",
+        "Neither: always exact equal parts",
+        "The iced tea",
+        "The fresh lemon and the mint"
+      ],
+      "a": 2,
+      "explain": "He said in interviews that the tea should be the star. Many bars pour half and half, and the Library spec of 4 to 3 keeps the tea in front."
+    },
+    {
+      "id": "q3",
+      "q": "A guest asks for an Arnold Palmer with vodka. What changes for you?",
+      "options": [
+        "Nothing: the drink stays zero proof",
+        "It becomes a cocktail, rung as one",
+        "The black tea is swapped for sweet tea",
+        "The lemonade is swapped for lime juice"
+      ],
+      "a": 1,
+      "explain": "Any spirit makes it a cocktail: ring it as one and count it toward the guest’s drinks, whatever the glass looks like."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ledger zero proof: Arnold Palmer",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library card: Black Tea",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library: Tea Service, Iced tea, and the cloudy pot",
+      "url": ""
+    },
+    {
+      "title": "Drink In The History Of The Great Arnold Palmer",
+      "url": "https://www.tastingtable.com/drinks/national/arnold-palmer-drink-history-iced-tea-lemonade"
+    },
+    {
+      "title": "How Arnold Palmer hit a hole-in-one with his signature drink",
+      "url": "https://www.mprnews.org/story/2016/09/27/npr-how-arnold-palmer-hit-a-hole-in-one-with-his-signature-drink"
+    },
+    {
+      "title": "How Arnold Palmer Created One Of The Most Iconic Drink Combinations In The World",
+      "url": "https://www.thetakeout.com/1926311/arnold-palmer-iconic-drink-origins/"
+    },
+    {
+      "title": "What Is an Arnold Palmer Drink and Who Was Arnold Palmer?",
+      "url": "https://sporked.com/article/what-is-an-arnold-palmer/"
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=KGOsNM6iygw",
+    "id": "KGOsNM6iygw",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "Mixing iced tea with lemonade",
+    "watchFor": "Tea brewed and chilled before it meets the lemonade, then the two mixed over ice. Watch how much of each goes in, and set it against the method above: 4 parts tea to 3 lemonade.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

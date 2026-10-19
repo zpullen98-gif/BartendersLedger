@@ -1,0 +1,28 @@
+{
+  "id": "jasmine-tea",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "story",
+      "problem": "Said the blossoms are kept cool until evening. Sources disagree: ahmadtea.com and harney.com describe holding them warm to bring on the bloom, and another site describes refrigeration.",
+      "change": "\"kept cool until evening\" became \"held until evening\". Added the harney.com jasmine page to sources."
+    },
+    {
+      "field": "quiz[0].explain",
+      "problem": "Repeated \"kept cool\".",
+      "change": "\"picked closed by day and kept cool\" became \"picked closed by day and held\"."
+    },
+    {
+      "field": "make.steps[3]",
+      "problem": "No step put the water on the leaf: the steps went from weighing straight to \"Steep 1 to 2 minutes\".",
+      "change": "Now \"Pour the water on, steep 1 to 2 minutes, then pour off completely.\""
+    },
+    {
+      "field": "quiz[2].options[2]",
+      "problem": "The right answer was the longest option.",
+      "change": "Wrong option lengthened to \"Yes: the scenting rounds draw the caffeine out\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

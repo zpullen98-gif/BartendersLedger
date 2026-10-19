@@ -1,0 +1,123 @@
+{
+  "id": "matcha-latte",
+  "name": "Matcha latte",
+  "respell": "MAH-chah LAH-tay",
+  "aka": [],
+  "group": "cocoa",
+  "kind": "tea",
+  "caffeine": "Caffeine comes from the whole leaf, higher than brewed green tea because you drink the leaf.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus, which print no tea: ask at lineup which teas the bar pours, and whether matcha and steamed milk are on hand."
+  },
+  "what": "Matcha whisked with a little water into a base of thin tea, usucha, then topped with steamed milk: a latte built on green instead of espresso. Matcha is shaded tencha leaf, dried flat, destemmed and traditionally stone ground, and it never dissolves. It is suspended, so the powder you whisk sets the strength, and it settles if left.",
+  "taste": "Sweet grass and a savoury, seaweed-like weight under creamy milk, with a late, gentle bitterness. Unsweetened, most guests read it as grassy milk.",
+  "make": {
+    "steps": [
+      "Sift about 2 g of matcha into the cup.",
+      "Paste it with a splash of water around 175F (79C).",
+      "Add the rest of the water and whisk in a fast W until it foams.",
+      "Sweeten with syrup; granulated sugar will not go in.",
+      "Pour in milk steamed a shade under latte temperature."
+    ],
+    "ratio": "2 g matcha to 2 oz water, then 6 to 8 oz milk",
+    "dose": "2 g matcha, 2 oz water, 6 to 8 oz milk, syrup",
+    "temp": "Water near 175F (79C), within 160 to 180F (71 to 82C)",
+    "time": "Whisk 15 to 30 seconds",
+    "cup": "Warmed latte cup, or a tall glass over ice"
+  },
+  "serve": "Out as soon as it is poured, since matcha settles; pour the milk into the green so any art sits on the base, and send a spoon. Iced, it separates, so walk it fast.",
+  "story": "Matcha starts in the field, the bushes covered for weeks before picking to build chlorophyll and keep the sweet theanine. Ceremonial and culinary are marketing words with no law behind them, so buy on harvest date and taste it in milk. The calmer lift guests ask about is reported rather than proven, so say so.",
+  "guest": "A matcha latte is powdered green tea whisked smooth, then topped with steamed milk: sweet, grassy and creamy. Let me check whether we have matcha tonight.",
+  "watch": [
+    "Clumps mean the powder was not sifted or met milk dry: sift and paste it first.",
+    "Water at a boil pulls more bitter catechins: keep it off the boil.",
+    "Dull yellow-brown powder is old or heat-damaged."
+  ],
+  "library": {
+    "ref": "Matcha",
+    "study": [
+      [
+        "matcha",
+        "The matcha latte on a bar"
+      ],
+      [
+        "matcha",
+        "Whisking, and why it clumps"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make matcha latte",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a matcha latte made, and what is in it?",
+      "answer": "Sifted matcha pasted with 175F (79C) water, whisked in 2 oz of water to a foam, sweetened with syrup, then topped with steamed milk in a warmed cup. Sweet, grassy and creamy."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Why does a standing matcha latte go gritty?",
+      "options": [
+        "The steamed milk curdles",
+        "The sugar crystallises",
+        "Matcha never dissolves",
+        "The foam collapses"
+      ],
+      "a": 2,
+      "explain": "Matcha is leaf ground fine and held in suspension, so it settles out; whisk late and serve at once."
+    },
+    {
+      "id": "q2",
+      "q": "About how much matcha makes one latte base?",
+      "options": [
+        "Half a gram",
+        "About 2 grams",
+        "About 10 grams",
+        "About 5 grams"
+      ],
+      "a": 1,
+      "explain": "About 2 g, a level teaspoon, whisked into two ounces of water around 175F (79C)."
+    },
+    {
+      "id": "q3",
+      "q": "What does ceremonial grade on a matcha tin guarantee?",
+      "options": [
+        "First harvest leaf",
+        "Nothing a law defines",
+        "Four weeks of shading",
+        "Stone-ground powder"
+      ],
+      "a": 1,
+      "explain": "Ceremonial and culinary are marketing words that no law defines; buy on harvest date and taste."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: The matcha latte on a bar; Whisking; Grades of matcha",
+      "url": ""
+    },
+    {
+      "title": "Library card: Matcha; lesson: Caffeine",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=7xtNFKjO8KI",
+    "id": "7xtNFKjO8KI",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "Sifting and whisking matcha without clumps",
+    "watchFor": "The sifting before any water touches it, and the fast W of the wrist rather than a circular stir. A matcha latte starts from the same whisked base, with the steamed milk poured in after.",
+    "verifiedBy": "coffee-films",
+    "checkedOn": "2026-10-18"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "black-tea",
+  "name": "Black tea",
+  "respell": "",
+  "aka": ["hot tea", "hongcha"],
+  "group": "leaf",
+  "kind": "tea",
+  "caffeine": "From the leaf itself: roughly 40 to 70 mg in an 8 oz cup, below drip coffee; more leaf and a longer steep raise it.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup which black teas the house pours, loose leaf or bags, and whether milk and lemon go with them."
+  },
+  "what": "Black tea is the leaf of the tea plant, Camellia sinensis, rolled and fully oxidised before it is fired, which turns it dark and gives the liquor its colour, body and brisk edge. It is the tea most guests mean by a cup of tea: Assam, Ceylon, Darjeeling and the breakfast blends are all black. Whole leaf suits a pot; machine cut leaf fills most bags.",
+  "taste": "Malty and brisk, with dried fruit and cocoa notes, and a drying grip down the sides of the tongue. It has the backbone to take milk and sugar.",
+  "make": {
+    "steps": [
+      "Boil fresh cold water, warm the pot with a splash of it, and tip the rinse out.",
+      "Put in about 2 to 3 grams of leaf, a level teaspoon or one bag, for each 6 to 8 oz cup.",
+      "Pour on the water straight off the boil, 205 to 212F (96 to 100C), and cover the pot.",
+      "Steep 3 to 5 minutes, then lift out the bag or basket so the tea stops steeping.",
+      "Pour, and offer milk, lemon and sugar on the side, never milk and lemon together."
+    ],
+    "ratio": "About 2 to 3 g of leaf to 6 to 8 oz of water",
+    "dose": "One level teaspoon of leaf, or one bag, per cup",
+    "temp": "205 to 212F (96 to 100C), freshly boiled",
+    "time": "3 to 5 minutes",
+    "cup": "A warmed pot into a 6 to 8 oz cup or mug"
+  },
+  "serve": "Warm the pot first, then send it with the cup, a saucer, a spoon and a small dish for the bag or basket, and say the steep time out loud so the guest owns the finish. Milk goes with black leaf by default; lemon goes on request and never with milk, which it curdles.",
+  "story": "Black tea was first made in China, where it is still called red tea after the colour of the liquor. In the nineteenth century British planters grew it in Assam and later in Ceylon, and the strong, malty cup that takes milk became the everyday tea of Britain and much of the English speaking world. A guest likes to hear that black, green, white and oolong all come from one plant and differ in how far the leaf is oxidised.",
+  "guest": "Black tea is malty and brisk, and it takes milk well. Shall I check which teas the bar has tonight, and bring milk or lemon with it?",
+  "watch": [
+    "A bag left in past five minutes makes the cup more bitter and drying, not better; for a stronger cup, add leaf, not time.",
+    "Strong black tea can turn cloudy as it chills: that is tea cream, a sign of strength, not of spoilage.",
+    "A guest who asks for red tea may mean rooibos rather than the Chinese name for black tea; ask before you pour."
+  ],
+  "library": { "ref": "Black Tea", "study": [["leaf", "Oxidation is the axis"], ["tea", "The service itself"]], "cocktail": "", "na": "" },
+  "table": { "recipe": "" },
+  "search": "how to brew black tea properly",
+  "recall": [
+    { "id": "make", "prompt": "How do you make a pot of black tea, and what goes out with it?",
+      "answer": "About 2 to 3 grams of leaf per 6 to 8 oz cup in a warmed pot, water straight off the boil at 205 to 212F (96 to 100C), 3 to 5 minutes, then the leaf out. Malty and brisk; milk by default, lemon on request, never both." }
+  ],
+  "quiz": [
+    { "id": "q1", "q": "What water does a pot of black tea want?",
+      "options": ["Freshly boiled, 205 to 212F (96 to 100C)", "Well off the boil, 160 to 175F (71 to 79C)", "Hand warm, 100 to 110F (38 to 43C)", "Cold water, steeped overnight"], "a": 0,
+      "explain": "Black leaf takes a full boil and 3 to 5 minutes. The cooler water belongs to green tea, which turns bitter and drying in boiling water." },
+    { "id": "q2", "q": "A guest wants their black tea stronger. What is the better fix?",
+      "options": ["More leaf, the same steep time", "The same leaf, steeped much longer", "Stirring the bag hard for a minute", "A squeeze of lemon in the pot"], "a": 0,
+      "explain": "After the first few minutes, a longer steep adds mostly bitterness and grip. Two bags at three minutes, never one bag at seven." },
+    { "id": "q3", "q": "Why should milk and lemon not go into black tea together?",
+      "options": ["The acid curdles the milk", "The lemon turns the tea green", "The milk hides the lemon’s scent", "Together they make it too sweet"], "a": 0,
+      "explain": "Enough acid brings the milk’s casein out of solution, so it curdles in the cup. Offer milk or lemon, and warn the table if they ask for both." }
+  ],
+  "sources": [
+    { "title": "The Ledger’s Library: the Black Tea card", "url": "" },
+    { "title": "The Ledger’s Library: Oxidation is the axis", "url": "" },
+    { "title": "The Ledger’s Library: The service itself", "url": "" },
+    { "title": "The Ledger’s Library: The steep, and what over-steeping actually is", "url": "" },
+    { "title": "The Ledger’s Library: Caffeine, and the questions guests ask", "url": "" },
+    { "title": "British colonization and development of black tea industry in India in the 19th century", "url": "https://brewminate.com/british-colonization-and-development-of-black-tea-industry-in-india-in-the-19th-century/" },
+    { "title": "What emojis tell us about the history of tea", "url": "https://www.smithsonianmag.com/history/what-emojis-tell-us-about-the-history-of-tea-180983128/" }
+  ],
+  "video": null
+}

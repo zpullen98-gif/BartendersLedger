@@ -1,0 +1,23 @@
+{
+  "id": "ristretto",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps",
+      "problem": "The grind step came third, after the pull, so the steps did not make the drink in order. The pull step also never locked the portafilter in.",
+      "change": "Reordered: grind as for espresso, or a step finer for the full 25 to 30 seconds; dose and tamp; \"Lock in, pull onto a scale and stop at 18 to 30 g\"; taste."
+    },
+    {
+      "field": "guest",
+      "problem": "\"The first, sweetest part\" is a superlative said to a guest. It is also loose: by the extraction lesson acids come out first and sweetness after them.",
+      "change": "Now reads \"the first part of an espresso, cut short: thicker, sweeter, less bitter, two sips\"."
+    },
+    {
+      "field": "quiz[1]",
+      "problem": "The answer sat in the same position as q1's (index 2), against the batch's stated rule that the key moves from question to question.",
+      "change": "Options reordered so the answer, \"About 1:1 to 1:1.5\", is at index 3. Answer keys now run 2, 3, 0."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

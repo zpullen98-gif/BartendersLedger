@@ -1,0 +1,61 @@
+{
+  "id": "cuban-coffee",
+  "found": false,
+  "url": "",
+  "videoId": "",
+  "title": "",
+  "channel": "",
+  "channelKind": "",
+  "queries": [
+    {
+      "q": "\"how to make cuban coffee\" cafecito Bon Appetit OR Epicurious OR \"Cafe Bustelo\" OR \"Tasting Table\"",
+      "returned": "Four results only: KA4q5ebhP18 \"CAFE BUSTELO\", pgiwAklm_cU \"How do I make Cuban Coffee w/Cafe Bustelo? Coffee Talk at The Drum Shop - Episode 1\", KFZsy5WCLmo \"How to make Cuban Coffee - Aeropress Tutorial\", Uwe0139dOHs \"CAFE BUSTELO: How to Cafe Bustelo-(The Daily Ritual)\". No publisher video; no channel named for any id."
+    },
+    {
+      "q": "cafe cubano espuma moka pot tutorial Whole Latte Love OR Bialetti OR \"America's Test Kitchen\" youtube",
+      "returned": "gkNSTxPZDvg \"How to Make Cuban Coffee - Cafe Cubano Recipe (Cuban Café 'Espresso' with Faux Crema / Espuma)\", RLkdUgbUEpU, lrV88Y53gpI, vTJt57O2FA4, QkSAfYjuphY, mTv3Ei-YQpY, dTFupUE8Io8 \"Taka Taka Time: How to Make Cuban Coffee with KILLER Espuma\", jHYMevlBqPs, pVw0tcTB5Eg and a Short. No Whole Latte Love or Test Kitchen video; no channel named for any id."
+    },
+    {
+      "q": "\"How to Make Cuban Coffee - Cafe Cubano Recipe (Cuban Café 'Espresso' with Faux Crema / Espuma)\"",
+      "returned": "https://www.youtube.com/watch?v=gkNSTxPZDvg came back first with the same exact title, but the summary named no channel for it (a near twin, yGNJz2yDv1Q, carries a variant title). Others: HSYCraXMNN0, 2jrUGf0cU-Y, RiIhM2i4ozw, dTFupUE8Io8, 5yYIxVlDi_M, V5Q--FRIPoY, QmzCcboPWfQ and a Short; none with a channel named."
+    }
+  ],
+  "verifiedBy": "",
+  "checkedOn": "2026-10-19",
+  "note": "Nothing passed. gkNSTxPZDvg came back twice in this pass with the same id and exact title, but no result title, URL path or summary named its channel, so it does not count. The Café Bustelo results are a brand’s or a shop’s videos with no tie to a channel. Budget: three searches. Video null; the page offers the search link alone. Every search in this pass was restricted to youtube.com (allowed_domains) in standard mode.",
+  "firstPass": {
+    "id": "cuban-coffee",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make cuban coffee cafecito espumita youtube",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "Candidates: RiIhM2i4ozw (Spanish), 5yYIxVlDi_M \"Café Cubano in an Electric Espresso Maker\", gkNSTxPZDvg, IxL4rejaMbg, ruD7XLK236M, RvIoa3ztxpo (a Short), 2jrUGf0cU-Y, Xbi3V7soUPE \"How to Make Cuban Coffee with Espuma\", vTJt57O2FA4, 1u6Q1evXHBM. The summary described the electric maker video’s espumita steps but named no channel."
+      },
+      {
+        "q": "\"Café Cubano in an Electric Espresso Maker\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=5yYIxVlDi_M came back first, but titled \"Authentic Cuban Coffee Recipe\", not the same exact title; no channel named. First candidate failed."
+      },
+      {
+        "q": "\"How to Make Cuban Coffee with Espuma\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "Spare search. https://www.youtube.com/watch?v=Xbi3V7soUPE \"How to Make Cuban Coffee with Espuma - YouTube\" (second result); the summary pointed to \"the Easy Cooking Cuban tutorial\" without tying it to any id, so no channel is named for Xbi3V7soUPE."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "First candidate 5yYIxVlDi_M returned under a different title; the spare candidate Xbi3V7soUPE matched id and title but no result named its channel. Both fail. Budget: two for the entry and one batch spare. Video null."
+  }
+}

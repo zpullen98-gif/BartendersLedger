@@ -1,0 +1,82 @@
+{
+  "id": "cafe-bombon",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=qPez5fPeyNE",
+  "videoId": "qPez5fPeyNE",
+  "title": "Cómo hacer el mejor café bombón. Receta paso a paso Escuela Superior de Hostelería Bilbao",
+  "channel": "Escuela Superior de Hostelería Bilbao",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "café bombón espresso condensed milk layered Spanish coffee recipe video",
+      "returned": "https://www.youtube.com/watch?v=qPez5fPeyNE \"Cómo hacer el mejor café bombón. Receta paso a paso Escuela Superior de Hostelería Bilbao - YouTube\" (ninth result); summary: \"A Spanish-language video from Escuela Superior de Hostelería Bilbao uses a condensed milk base with traditional espresso, and recommends a clear glass so the layers show.\" Also spZozOSNPxA, lzrmU6sKCXg, 6f6acyCmxk4 \"How To Make Café Bombón At Home Using Moka Pot\", jyGF6kSOjOs (the first pass’s candidate, again no channel), kc7l5tq7wVc, qDUwsxlTlbI (a La Lechera brand film), ULIGtxpNVE0 and two Shorts."
+    },
+    {
+      "q": "\"How To Make Café Bombón At Home Using Moka Pot\"",
+      "returned": "https://www.youtube.com/watch?v=6f6acyCmxk4 came back first with the same exact title, but no result named its channel, so the English candidate failed. Others: ULIGtxpNVE0, spZozOSNPxA, lzrmU6sKCXg, qDUwsxlTlbI, N2tfYMTSyhA and moka pot films."
+    },
+    {
+      "q": "\"Cómo hacer el mejor café bombón. Receta paso a paso Escuela Superior de Hostelería Bilbao\"",
+      "returned": "https://www.youtube.com/watch?v=qPez5fPeyNE \"Cómo hacer el mejor café bombón. Receta paso a paso Escuela Superior de Hostelería Bilbao - YouTube\" (first result, same id and exact title); summary: \"El buscador encontró el vídeo de la Escuela Superior de Hostelería de Bilbao\"; description: base of condensed milk and traditional espresso, served in a clear glass to show the layers; \"el mismo centro tiene un vídeo sobre el café Belmonte\" (AK239c8x89g, its title also carrying the school’s name)."
+    }
+  ],
+  "checkerQueries": [
+    {
+      "q": "Escuela Superior de Hostelería Bilbao canal youtube café bombón receta paso a paso qPez5fPeyNE",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "qPez5fPeyNE did not come back on this wording. The school’s own films did: ZgUud8Cwz48 \"Conoce la Escuela Superior de Hostelería Bilbao - YouTube\" and LaKs4sdSJl8 \"Cursos de Cocina en Bilbao. ¡Cocina con un profesor de la Escuela Superior de Hostelería Bilbao ! - YouTube\", both naming the school as \"Escuela Superior de Hostelería Bilbao\", the form in qPez5fPeyNE’s title. Also spZozOSNPxA, qDUwsxlTlbI, 6f6acyCmxk4, a Short and others; no channel page."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-19",
+  "checkedBy": "checker",
+  "note": "Accepted qPez5fPeyNE: the first and third searches returned the same id with the same exact title; the school is named in the title and, in the third summary, as the maker of the video, with a second film of its own in the same results. A hospitality school is a company channel (like a coffee school). The channel name is copied as the title gives it; the summary spells it \"Escuela Superior de Hostelería de Bilbao\", so the checker should confirm the exact channel name by oEmbed before it shows. Not yet on tools/brew/companies.json (which is empty). The film is in Spanish; the title carries a superlative, which is the source’s own and never shown (the page shows our label). The first pass’s jyGF6kSOjOs was not revived: it came back again with no channel named. Budget: three searches. Every search in this pass was restricted to youtube.com (allowed_domains) in standard mode.",
+  "checkerNote": "Confirmed by the checker. The first and third finder searches are different queries and both returned qPez5fPeyNE with the same exact title; the school is named in the video’s own title and, in the third summary, as the maker (\"el vídeo de la Escuela Superior de Hostelería de Bilbao\"), with a second film of its own (AK239c8x89g) in the same results. The checker’s search did not return the id again, which does not undo the finder’s pair, and it returned two more of the school’s films whose titles give its name as \"Escuela Superior de Hostelería Bilbao\", the form it publishes in its own titles; that name is kept. The channel page itself was not seen and oEmbed could not run (403 on CONNECT to www.youtube.com). A hospitality school: channelKind company. It teaches the layered café bombón, in Spanish; a watch link, not a Short, playlist or advert. Budget: one search.",
+  "firstPass": {
+    "id": "cafe-bombon",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "candidate": {
+      "url": "https://www.youtube.com/watch?v=jyGF6kSOjOs",
+      "videoId": "jyGF6kSOjOs",
+      "title": "HOW TO MAKE BOMBON CAFE: HOT & ICED",
+      "channel": "Chao Cafe",
+      "channelKind": "company",
+      "finderVerifiedBy": "websearch"
+    },
+    "queries": [
+      {
+        "q": "how to make cafe bombon youtube",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=jyGF6kSOjOs \"HOW TO MAKE BOMBON CAFE: HOT & ICED - YouTube\" (second result); summary: \"lists a 20 ml condensed milk base with a double shot of espresso in a 6 oz cup.\""
+      },
+      {
+        "q": "\"HOW TO MAKE BOMBON CAFE: HOT & ICED\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=jyGF6kSOjOs \"HOW TO MAKE BOMBON CAFE: HOT & ICED - YouTube\" (first result, and again as an m.youtube link); summary: \"The video titled “HOW TO MAKE BOMBON CAFE: HOT & ICED” is a Chao Cafe recipe video, and its written recipe is in the search results.\""
+      }
+    ],
+    "checkerQueries": [
+      {
+        "q": "\"BOMBON CAFE: HOT & ICED\" how to make video jyGF6kSOjOs",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=jyGF6kSOjOs \"HOW TO MAKE BOMBON CAFE: HOT & ICED - YouTube\" (first result) and again https://m.youtube.com/watch?pp=ygUPI2JvZ2Fjb2ZmZXJlc3Rv&v=jyGF6kSOjOs; the summary quoted the description’s specs (hot: about 20 ml condensed milk, double shot, 6 oz cup; two iced versions) and named no channel."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "rejected by the checker: the channel is not settled, and a company channel’s name would show on the page. The checker’s search, in fresh wording with the id, returned jyGF6kSOjOs with the same exact title and named no channel. The m.youtube link’s pp parameter decodes to the hashtag search #bogacofferesto, so the video carries that hashtag, which points to a different business as the uploader. The finder’s one naming (“a Chao Cafe recipe video, and its written recipe is in the search results”) reads as the source of a written recipe page, not the channel. A company name that may be wrong cannot ship. The oEmbed check could not run: this session’s egress proxy denies www.youtube.com (403 on CONNECT). Fragment video set to null. Finder’s note: Same watch id and same exact title in both searches; the second summary names Chao Cafe against that exact title. Read as a café’s channel, channelKind company; it is not yet on tools/brew/companies.json. Caution: the m.youtube link carried a hashtag search parameter for a different name (#bogacofferesto), so \"Chao Cafe\" may be the recipe’s source rather than the channel: checker to confirm the channel by oEmbed before sign-off. The video’s hot cup uses about 20 ml condensed milk to a double shot, less than equal parts. The all-capitals title may trip the schema’s capitalised-run check."
+  }
+}

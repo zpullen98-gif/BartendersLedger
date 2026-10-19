@@ -1,0 +1,118 @@
+{
+  "id": "spanish-coffee",
+  "name": "Spanish coffee",
+  "respell": "",
+  "aka": [],
+  "group": "spiked",
+  "kind": "coffee",
+  "caffeine": "Caffeine comes from the hot coffee and a little from the coffee liqueur.",
+  "house": {
+    "printed": false,
+    "askId": "",
+    "ask": "Not printed on the menus and not poured at the house: know it for the guest who asks, and offer the nearest drink we pour."
+  },
+  "what": "A flamed coffee: overproof rum lit in a sugar-rimmed footed glass so the flame caramelises the rim, then triple sec and coffee liqueur, hot coffee to put out the fire, and lightly whipped cream with nutmeg. The show is part of the order, and so is the burnt-sugar rim against sweet, creamy coffee.",
+  "taste": "Hot, sweet coffee through cool cream, orange and coffee liqueur beneath, warm rum, and a toasted caramel edge from the rim.",
+  "make": {
+    "steps": [
+      "Rim a footed glass mug with sugar.",
+      "Measure the overproof rum into the glass, then light it; never pour from a bottle near the flame.",
+      "On a flat surface, tilt and turn the glass so the flame caramelises the rim.",
+      "Add triple sec and coffee liqueur with short, low pours, then hot coffee to put out the flame.",
+      "Float lightly whipped cream over a spoon and grate nutmeg on top."
+    ],
+    "ratio": "About 2 oz spirits to 4 oz hot coffee",
+    "dose": "0.75 oz overproof rum, 0.5 oz triple sec, 0.75 oz coffee liqueur",
+    "temp": "",
+    "time": "",
+    "cup": "Footed glass mug with a caramelised sugar rim"
+  },
+  "serve": "Flamed on a flat surface, the spirit measured first and the fire out before the glass crosses to the guest. Set it down on a napkin, warn that the glass is hot, and suggest sipping through the cream. Ring it in like a shot.",
+  "story": "Despite the name, its famous home is a Portland, Oregon, restaurant that made it a nightly tableside ritual, pouring coffee liqueur by the case. It counts for more than it looks: the flamed rum is commonly a 151, nearly a standard drink in three quarters of an ounce, so a round adds up fast.",
+  "guest": "A Spanish coffee is flamed rum caramelising a sugared rim, then orange and coffee liqueurs, hot coffee and cream. We don't pour it, but our Irish coffee is close.",
+  "watch": [
+    "Never pour from the bottle near a flame: measure the rum into the glass, then light it.",
+    "Never hand a guest a lit glass.",
+    "Count it like a shot: three bottles and an overproof rum."
+  ],
+  "library": {
+    "ref": "",
+    "study": [],
+    "cocktail": "Spanish Coffee",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make a spanish coffee flamed",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a Spanish coffee made, and what is in it?",
+      "answer": "Overproof rum lit in a sugar-rimmed footed glass to caramelise the rim, then triple sec, coffee liqueur and hot coffee to put out the flame, topped with whipped cream and nutmeg. Sweet, toasty and creamy."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Which bottle is lit to caramelise a Spanish coffee's rim?",
+      "options": [
+        "Triple sec",
+        "Coffee liqueur",
+        "Overproof rum",
+        "Spanish brandy"
+      ],
+      "a": 2,
+      "explain": "Overproof rum, commonly a 151, is lit in the sugared glass; the liqueurs follow with short, low pours."
+    },
+    {
+      "id": "q2",
+      "q": "What puts the flame out in a Spanish coffee?",
+      "options": [
+        "A saucer laid over the glass",
+        "The hot coffee poured in",
+        "The cream on top",
+        "Blowing it out"
+      ],
+      "a": 1,
+      "explain": "With the rim caramelised and the liqueurs in, the hot coffee puts the flame out; the cream comes last."
+    },
+    {
+      "id": "q3",
+      "q": "Why count Spanish coffees carefully?",
+      "options": [
+        "The overproof rum is strong",
+        "Coffee liqueur outproofs whiskey",
+        "The flame adds alcohol",
+        "Caffeine boosts the alcohol"
+      ],
+      "a": 0,
+      "explain": "Its two ounces come off three bottles, and a 151 is nearly a standard drink in three quarters of an ounce."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: Spanish Coffee, with its lore",
+      "url": ""
+    },
+    {
+      "title": "Library: Counting a spiked coffee",
+      "url": ""
+    },
+    {
+      "title": "Library: Flaming Lamborghini fire rules",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=LK3D240xKmU",
+    "id": "LK3D240xKmU",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "Flaming a Spanish coffee in the glass",
+    "watchFor": "How the overproof spirit is lit in the glass, how long it burns, and the moment the coffee goes in to put the flame out. Measure the spirit first; never pour from a bottle near a flame.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

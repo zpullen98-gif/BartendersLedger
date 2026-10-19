@@ -1,0 +1,39 @@
+{
+  "id": "piccolo",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=aFG-aFzjcBs",
+  "videoId": "aFG-aFzjcBs",
+  "title": "Here Is How to Make a PERFECT Piccolo coffee like a Pro! Barista Training for Beginners",
+  "channel": "Dero_De_Barista",
+  "channelKind": "person",
+  "queries": [
+    {
+      "q": "how to make a piccolo latte youtube",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=aFG-aFzjcBs \"Here Is How to Make a PERFECT Piccolo coffee like a Pro! Barista Training for Beginners - YouTube\"; summary: \"This is beginner barista training video on how to make a piccolo coffee using the espresso machine and coffee grinder like a pro barista step by step\" and \"The Dero_de_Barista espresso-machine video\"."
+    },
+    {
+      "q": "\"Here Is How to Make a PERFECT Piccolo coffee like a Pro! Barista Training for Beginners\"",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=aFG-aFzjcBs&pp=0gcJCfwAo7VqN5tD \"Here Is How to Make a PERFECT Piccolo coffee like a Pro! Barista Training for Beginners - YouTube\" (first result; also m.youtube.com/watch?v=aFG-aFzjcBs); summary: \"The top result is the YouTube video you searched for, posted on the channel Dero_de_Barista.\""
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-18",
+  "note": "Same watch id and same exact title in both searches (the \" - YouTube\" suffix is the page title’s, not the video’s); the channel is named in the second summary. The summary spells it Dero_de_Barista; the Library’s oEmbed-recorded film on the vortex (milk/the-vortex-and-what-it-is-for) spells the same channel Dero_De_Barista, used here. A barista’s own channel, so channelKind person: the fragment ships title and channel empty. Awaits the checker’s sign-off.",
+  "checkedBy": "checker",
+  "checkerQueries": [
+    {
+      "q": "Dero_De_Barista piccolo coffee \"Barista Training for Beginners\"",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=aFG-aFzjcBs&pp=0gcJCfwAo7VqN5tD \"Here Is How to Make a PERFECT Piccolo coffee like a Pro! Barista Training for Beginners - YouTube\" (first result, same id and exact title a third time); summary: a beginner barista training video on how to make a piccolo coffee with the espresso machine, posted about 1,364 days ago; the snippet showed no uploader, so it neither confirms nor contradicts the channel."
+    }
+  ],
+  "checkerNote": "Confirmed by the checker: two different queries, both returned watch id aFG-aFzjcBs with the same exact title, and the finder’s second summary names the poster as Dero_de_Barista (recorded as Dero_De_Barista, the spelling of the Library’s oEmbed-checked film). The checker’s fresh search returned the same id and title again. It teaches making a piccolo from grinder to glass; a watch link, not a Short (no #shorts tag, unlike another result in the same search), not a playlist or an advert. A barista’s own channel, so channelKind person, and the fragment ships title and channel empty."
+}

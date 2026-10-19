@@ -1,0 +1,147 @@
+{
+  "id": "earl-grey",
+  "name": "Earl Grey",
+  "respell": "",
+  "aka": [
+    "Earl Grey tea",
+    "bergamot tea"
+  ],
+  "group": "leaf",
+  "kind": "tea",
+  "caffeine": "From the black tea under the bergamot: commonly 40 to 70 mg per 8 oz cup, moved by leaf, heat and steep time.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed as a hot tea: ask at lineup whether the bar pours Earl Grey by the pot, which brand, bag or loose leaf, and the price.",
+    "uses": [
+      "b-0ro4u0qk"
+    ]
+  },
+  "what": "Earl Grey is black tea scented with oil of bergamot, a fragrant citrus grown mostly in Calabria in southern Italy. The bergamot lays a floral, perfumed citrus note over the tannic black tea, and the strength of that scent changes by brand. Brew it as a black tea. On our fall list the tea also goes into the Prisoner of Love, a gin drink with clarified heavy cream and orange flower water.",
+  "taste": "Brisk black tea under a lifted, perfumed citrus that smells sweeter than it tastes: floral more than sour, with the usual drying grip if the leaf sits too long.",
+  "make": {
+    "steps": [
+      "Bring fresh cold water to a full boil, once.",
+      "Warm the pot and tip the rinse out.",
+      "Weigh 2 to 3 g of leaf per 6 to 8 oz, or one bag per cup.",
+      "Pour the water on at 200 to 212F (93 to 100C) and start a timer.",
+      "Steep 3 to 5 minutes and pull the leaf: more time adds grip, not perfume.",
+      "Send lemon or milk on the side, never both together."
+    ],
+    "ratio": "2 to 3 g of leaf per 6 to 8 oz of water",
+    "dose": "One bag, about 2 g, or 2 to 3 g loose leaf per cup",
+    "temp": "200 to 212F (93 to 100C), freshly boiled",
+    "time": "3 to 5 minutes",
+    "cup": "Warmed pot into a cup or mug, 6 to 8 oz"
+  },
+  "serve": "Warm the pot and the cup, and pull the leaf on time, because the scent comes out early and the extra minutes bring only grip. Lemon or milk rides on the side. It sits well beside a cream dessert. In the Prisoner of Love the tea meets gin, clarified heavy cream and orange flower water; the measures and method are not printed, so they are the bar's to explain.",
+  "story": "The blend takes its name from a British prime minister of the 1830s, and the stories of how it came by that name are uncertain, so tell them lightly if at all. Bergamot is a fragrant citrus grown mostly in Calabria, and its oil is the whole perfume. Pairing follows the scent: bergamot with cream desserts, and in our gin drink bergamot meeting orange flower water, which is why that glass smells so fragrant.",
+  "guest": "Earl Grey is black tea scented with bergamot, a fragrant Italian citrus, so it smells floral and lifted; would you like lemon or milk on the side?",
+  "watch": [
+    "Bergamot is a citrus, not a flower or a herb; its oil gives the perfume.",
+    "Scent strength varies by brand; taste the one the bar pours before describing it.",
+    "Milk and lemon together can curdle; send one or the other.",
+    "The Prisoner of Love prints no measures, method, glass or garnish, and lists cream; confirm with the bar before describing it."
+  ],
+  "library": {
+    "ref": "Black Tea",
+    "study": [
+      [
+        "tea",
+        "The steep, and what over-steeping actually is"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to brew earl grey tea",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "What is Earl Grey tea, and how is it brewed?",
+      "answer": "Black tea scented with oil of bergamot, brewed like any black: 2 to 3 g or one bag per 6 to 8 oz at 200 to 212F (93 to 100C) for 3 to 5 minutes. Brisk tea under a floral citrus perfume."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What gives Earl Grey tea its perfume?",
+      "options": [
+        "Dried jasmine blossoms",
+        "Orange flower water",
+        "Lavender buds",
+        "Oil of bergamot"
+      ],
+      "a": 3,
+      "explain": "Earl Grey is black tea scented with oil of bergamot, a fragrant citrus. Orange flower water belongs to the Prisoner of Love, not the tea."
+    },
+    {
+      "id": "q2",
+      "q": "Where is most of the bergamot grown?",
+      "options": [
+        "Calabria, in southern Italy",
+        "Seville, in Spain",
+        "Fujian, in China",
+        "The hills of West Bengal"
+      ],
+      "a": 0,
+      "explain": "Bergamot is grown mostly in Calabria. Fujian is a tea province, and West Bengal is where Darjeeling grows."
+    },
+    {
+      "id": "q3",
+      "q": "In the Prisoner of Love on our fall list, which spirit does the Earl Grey tea join?",
+      "options": [
+        "Brandy",
+        "Bourbon",
+        "Gin",
+        "Rum"
+      ],
+      "a": 2,
+      "explain": "The Prisoner of Love lists gin, Earl Grey tea, clarified heavy cream and orange flower water. Measures and method are not printed: confirm with the bar."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library card: Black Tea",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, The steep, and what over-steeping actually is",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, The service itself",
+      "url": ""
+    },
+    {
+      "title": "House pack component: Earl Grey tea",
+      "url": ""
+    },
+    {
+      "title": "House pack record: Prisoner of Love (b-0ro4u0qk)",
+      "url": ""
+    },
+    {
+      "title": "House pack lineup question a-wt01gt1b",
+      "url": ""
+    },
+    {
+      "title": "WorldTable lexicon: Tea Service & Pairing",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=1_xerlDIr84",
+    "id": "1_xerlDIr84",
+    "title": "Earl Grey Tea",
+    "channel": "Revival Tea Company",
+    "channelKind": "company",
+    "label": "How to make a cup of Earl Grey",
+    "watchFor": "A tea company makes a cup of its own Earl Grey. Brew it as a black tea: water at a full boil, a timed 3 to 5 minute steep, the leaf out on time, since longer adds only grip.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

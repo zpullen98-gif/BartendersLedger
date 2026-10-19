@@ -1,0 +1,23 @@
+{
+  "id": "cortado",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps[1], recall[0].answer, quiz[0].options[2], quiz[0].explain",
+      "problem": "Four temperatures were in Fahrenheit with no Celsius, failing the shipped validator four times.",
+      "change": "Added \"(54 to 60C)\" to 130 to 140F, \"(71C)\" to 160F and \"(60 to 66C)\" to the latte's 140 to 150F."
+    },
+    {
+      "field": "aka",
+      "problem": "No in-app source names a drink called \"Gibraltar\": the card names a glass and an \"American Gibraltar build\", and the author inferred the aka from that. A refuter search found Tasting Table and Barista Life both describe the Gibraltar as the San Francisco cortado, named after its glass.",
+      "change": "The aka stays. Both pages added to sources, and one story sentence explains the name: \"In San Francisco the drink took the glass's name, and some guests still order it as a Gibraltar.\""
+    },
+    {
+      "field": "serve",
+      "problem": "\"The afternoon drink for milk without foam\" contradicted the fragment's own \"a skin of foam\" and the card's \"not a mouthful of foam\".",
+      "change": "Now reads \"milk without a cap of foam\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

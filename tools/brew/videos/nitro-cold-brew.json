@@ -1,0 +1,54 @@
+{
+  "id": "nitro-cold-brew",
+  "found": false,
+  "url": "",
+  "videoId": "",
+  "title": "",
+  "channel": "",
+  "channelKind": "",
+  "queries": [
+    {
+      "q": "nitro cold brew at home \"Whole Latte Love\" OR \"Prima Coffee\" OR \"Clive Coffee\" youtube (allowed_domains youtube.com)",
+      "returned": "{\"title\":\"Prima Coffee on Periscope: Flash-chilled Nitro Coffee - YouTube\",\"url\":\"https://www.youtube.com/watch?v=aWflQe3mvbo\"} (a livestream rebroadcast on flash-chilled, not cold brewed, nitro coffee), {\"title\":\"NitroPress Recipes - YouTube\",\"url\":\"https://www.youtube.com/watch?v=GEZYNBYkNEI\"}, channel pages for Clive Coffee and Prima Coffee, and unrelated Whole Latte Love videos. Summary listed the NitroPress video under Prima Coffee’s hits, \"with more on their blog\"."
+    },
+    {
+      "q": "\"NitroPress Recipes\" Prima Coffee nitro cold brew (allowed_domains youtube.com)",
+      "returned": "{\"title\":\"NitroPress Recipes - YouTube\",\"url\":\"https://www.youtube.com/watch?v=GEZYNBYkNEI\"} (first; also an m.youtube copy titled \"NitroPress Recipes\"), {\"title\":\"NitroPress Cold Brew Brew Guide - YouTube\",\"url\":\"https://www.youtube.com/watch?v=nvXwb-BUVWQ\"}, mSXXtg68ksc, DxWr9GZV_gc, -1uUcktPHB4, Wo3AJHwpJT4 (the device maker’s product film), KpG4tj80Yf4 (a product overview), a Short. Summary: \"Prima Coffee’s NitroPress recipe content, mostly through YouTube videos that link back to the Prima blog\"; the description reads \"More recipes on our blog: prima-coffee.com/...\" and sells the device through Prima’s shop; method: fill the canister to the max line, attach a nitrogen cartridge, shake, invert, dispense."
+    },
+    {
+      "q": "\"NitroPress Cold Brew Brew Guide\" (allowed_domains youtube.com)",
+      "returned": "{\"title\":\"NitroPress Cold Brew Brew Guide - YouTube\",\"url\":\"https://www.youtube.com/watch?v=nvXwb-BUVWQ\"} (first); summary: \"a comprehensive nitro cold brew brewing guide for the Hatfields London NitroPress\", about 1,200 days old, with a related Short \"from the same Cold Brewed Brew Guide series\"; it names the device’s maker, not the uploader. Also YZt1XzyeGGw, wtyJkzELbUE, tVwHq4gmVVs, WMqGiix7KLg, -1uUcktPHB4, mSXXtg68ksc (a Seven Miles overview per the summary, but the title does not carry the name and the id was seen once)."
+    }
+  ],
+  "verifiedBy": "",
+  "checkedOn": "2026-10-19",
+  "note": "Three searches spent; none passes. GEZYNBYkNEI came back twice with the same id and title and is the nearest: the summary calls it Prima Coffee’s content and its description says \"our blog\" at prima-coffee.com, but the uploader is inferred from that link rather than named, and it is a set of recipes for a whipping-siphon device the uploader sells, not shown to teach nitro cold brew itself, so it is not accepted. nvXwb-BUVWQ came back twice with the same title, but its channel is not named (the summary names only the device’s maker) and it is a guide to one product. A checker with oEmbed could settle GEZYNBYkNEI’s author and content. Video stays null.",
+  "firstPass": {
+    "id": "nitro-cold-brew",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make nitro cold brew youtube",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "Candidates: wtyJkzELbUE \"How To Make Nitro Cold Brew At Home\", YZt1XzyeGGw, -1uUcktPHB4 \"The trick to making nitro cold brew coffee at home\", tVwHq4gmVVs, VMQrwQHkyuI, WMqGiix7KLg, mSXXtg68ksc, ubUUdDYNgqQ, gVw2w9mMu2I (a Short by its title), Q_p6dmg2Epo (a Short). The summary spoke of a whipping siphon, a dedicated nitro maker, a kegerator and a Nitropress, naming no channel against any id."
+      },
+      {
+        "q": "\"The trick to making nitro cold brew coffee at home\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=-1uUcktPHB4 \"The trick to making nitro cold brew coffee at home - YouTube\" (second result; first was wtyJkzELbUE). The summary named devices (Nitro Whip, N2Dup) but no channel for any id."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Candidate -1uUcktPHB4 came back with the same id and the same exact title, but no result named its channel, so it fails. Budget: two searches for the entry. Video null."
+  }
+}

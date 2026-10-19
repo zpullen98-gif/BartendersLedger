@@ -1,0 +1,14 @@
+{
+  "id": "matcha-tea",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=7xtNFKjO8KI",
+  "videoId": "7xtNFKjO8KI",
+  "title": "How To Sift, Whisk & Enjoy Matcha Tea, by Matcha Source",
+  "channel": "Alissa White",
+  "channelKind": "person",
+  "queries": [],
+  "verifiedBy": "coffee-films",
+  "checkedBy": "checker",
+  "checkedOn": "2026-10-18",
+  "note": "The plan's film matcha/whisking-and-why-it-clumps: id, title and channel copied exactly from the COFFEE_FILMS row. No search spent. The channel is a person's (on people.json), so the fragment ships with title and channel empty."
+}

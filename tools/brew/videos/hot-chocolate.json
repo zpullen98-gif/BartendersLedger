@@ -1,0 +1,53 @@
+{
+  "id": "hot-chocolate",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=EEMLQRWWZKo",
+  "videoId": "EEMLQRWWZKo",
+  "title": "4 Levels of Hot Chocolate: Amateur to Food Scientist",
+  "channel": "Epicurious",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "Epicurious OR \"America's Test Kitchen\" hot chocolate from real chocolate youtube",
+      "returned": "https://www.youtube.com/watch?v=EEMLQRWWZKo \"4 Levels of Hot Chocolate: Amateur to Food Scientist\" (first result). Also 7o1adQ3Ld8A \"50 People Try To Make Hot Chocolate\", G1nseMiYc0o (instant mix), 7A7OChSzItE, 7FYbHkg_Gfs, 8Sv3TpunYgU, tGlPy_L-kLs, the America’s Test Kitchen channel page and others; the summary credited other hot chocolate videos to Epicurious but named no channel for EEMLQRWWZKo."
+    },
+    {
+      "q": "\"4 Levels of Hot Chocolate: Amateur to Food Scientist\" Epicurious",
+      "returned": "https://www.youtube.com/watch?v=EEMLQRWWZKo \"4 Levels of Hot Chocolate: Amateur to Food Scientist\" (first result, same id and exact title); summary: \"a YouTube video titled “4 Levels of Hot Chocolate: Amateur to Food Scientist,” which is part of Epicurious’s series\", in which an amateur, a home cook and a professional chef were asked to make hot chocolate. The other results were the same series on other dishes."
+    }
+  ],
+  "checkerQueries": [],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-19",
+  "checkedBy": "checker",
+  "note": "Accepted EEMLQRWWZKo: both searches returned the same id with the same exact title, and the second summary names it as part of Epicurious’s series, the food publisher’s own channel format. channelKind company. Not yet on tools/brew/companies.json (which is empty). It shows hot chocolate made by three cooks with a scientist’s explanation; the fragment’s watchFor names none of them. Budget: two searches. Every search in this pass was restricted to youtube.com (allowed_domains) in standard mode.",
+  "checkerNote": "Confirmed by the checker without a search. The two finder searches are different queries and both returned EEMLQRWWZKo with the same exact title; the second summary names it as \"part of Epicurious’s series\", the publisher’s own 4 Levels format, which names the channel as the maker, not a presenter. A food publisher: channelKind company, \"Epicurious\". Three cooks make hot chocolate and a food scientist explains the choices, so it teaches making the drink; a watch link, not a Short, playlist or advert. Budget: none spent.",
+  "firstPass": {
+    "id": "hot-chocolate",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make hot chocolate from real chocolate youtube",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=jxIK9gQmXeM \"Hot Chocolate Recipe - AMERICAN VS ITALIAN HOT CHOCOLATE - YouTube\" (first result; summary: two versions, both built on real chocolate and cocoa powder); no channel tied to it. Also listed: tiXSS_x-WWI, G1nseMiYc0o (an instant cocoa mix), 68WEzJKSJ3U, FZl9TmCTmWc, JkqfHN9UkUI \"How to make Hot Chocolate\", and Shorts. The summary named \"Chef Anupa\" for a tutorial without printing its id."
+      },
+      {
+        "q": "\"Hot Chocolate Recipe - AMERICAN VS ITALIAN HOT CHOCOLATE\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=jxIK9gQmXeM \"Hot Chocolate Recipe - AMERICAN VS ITALIAN HOT CHOCOLATE - YouTube\" (top result, same id and exact title); no result title or summary named its channel."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Candidate jxIK9gQmXeM came back twice with the same id and exact title, but its channel was never named, so it fails. The others carried superlatives, were Shorts, or taught an instant mix rather than melting real chocolate. No spare remained. Video null; the page offers the search link alone."
+  }
+}

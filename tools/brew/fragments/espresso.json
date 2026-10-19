@@ -1,0 +1,162 @@
+{
+  "id": "espresso",
+  "name": "Espresso",
+  "respell": "ess-PRESS-oh",
+  "aka": [
+    "caffè",
+    "a shot",
+    "a double"
+  ],
+  "group": "espresso",
+  "kind": "coffee",
+  "caffeine": "All from the ground coffee: a double carries about twice a single.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on the menus: ask at lineup whether there is an espresso machine, whether the bar will pull an espresso on request, and the price."
+  },
+  "what": "Espresso is an Italian method, not a bean or a roast: hot water forced at about nine bar through a fine, tamped bed of coffee, giving a short, dense shot under crema. The modern double is 18 to 20 g in for 36 to 40 g out, about 1:2.",
+  "taste": "Syrupy under the crema, sweet through the middle, bitter at the back: citrus and berry from a light roast, cocoa and nut from a dark.",
+  "make": {
+    "steps": [
+      "Dose 18 to 20 g of fresh ground coffee into a warm double basket.",
+      "Distribute evenly and tamp level; level matters more than force.",
+      "Lock in and pull onto a scale, stopping at 36 to 40 g.",
+      "Taste it: sour and fast, grind a step finer; harsh and slow, a step coarser."
+    ],
+    "ratio": "About 1:2; houses run 1:1.5 to 1:2.5",
+    "dose": "18 to 20 g coffee, double basket",
+    "temp": "195 to 205F (90 to 96C)",
+    "time": "25 to 30 seconds, a readout, not a target",
+    "cup": "Warmed demitasse, 2 to 3 oz"
+  },
+  "serve": "A hot demitasse off the machine, on a saucer with the spoon, still water beside it. Walk it out at once: crema is a foam and thins as it stands.",
+  "story": "Espresso grew up in Italy: a bulk steam brewer was patented in Turin in 1884, single serving machines followed in Milan from 1901, and the spring lever machines that came around the Second World War are widely credited with the crema guests know today, though the trade argues the point. At an Italian counter it is simply caffè.",
+  "guest": "Espresso is a short, concentrated shot, sweet and a little bitter under the crema. Let me check the bar can pull one.",
+  "watch": [
+    "Asked which espresso the bar uses, answer with the bean: its origin and roast.",
+    "Crema thins as the shot stands, so pull it last and walk it straight out.",
+    "Our printed espresso martini lists chicory, vodka, Frangelico and Kahlua: ask the bar before saying it holds a shot."
+  ],
+  "library": {
+    "ref": "Espresso",
+    "study": [
+      [
+        "shot",
+        "Dose, yield and ratio"
+      ],
+      [
+        "shot",
+        "Dialling in, as a procedure"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to pull a shot of espresso",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is an espresso made, and what goes into a double?",
+      "answer": "18 to 20 g of fine, tamped coffee, 36 to 40 g out in 25 to 30 seconds, in a warmed demitasse: syrupy, sweet, bitter at the back."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "A double takes 18 g of coffee. Roughly what yield lands in the cup?",
+      "options": [
+        "About 18 g by weight",
+        "About 36 g by weight",
+        "About 72 g by weight",
+        "Two ounces by volume"
+      ],
+      "a": 1,
+      "explain": "A normale runs about 1:2. Weigh it: crema makes the cup look fuller than it is."
+    },
+    {
+      "id": "q2",
+      "q": "A new bag runs fast and tastes sour. What changes first?",
+      "options": [
+        "Grind one step coarser",
+        "Add three grams of dose",
+        "Tamp much harder",
+        "Grind one step finer"
+      ],
+      "a": 3,
+      "explain": "Fast and sour is under extracted: hold the dose, move the grind finer, taste again."
+    },
+    {
+      "id": "q3",
+      "q": "What is crema, the tan layer on a fresh shot?",
+      "options": [
+        "Roast carbon dioxide foaming out",
+        "Fine grounds through the basket",
+        "A sign of top quality beans",
+        "Sugars burnt by the water"
+      ],
+      "a": 0,
+      "explain": "Pressure dissolves roast carbon dioxide, which foams out as the pressure drops: it reads freshness, not quality."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Card: Espresso",
+      "url": ""
+    },
+    {
+      "title": "Lesson: Dose, yield and ratio",
+      "url": ""
+    },
+    {
+      "title": "Lesson: Dialling in, as a procedure",
+      "url": ""
+    },
+    {
+      "title": "Lesson: What the machine actually does",
+      "url": ""
+    },
+    {
+      "title": "House pack: Espresso Martini",
+      "url": ""
+    },
+    {
+      "title": "House pack: lineup question a-zr8ze4mu",
+      "url": ""
+    },
+    {
+      "title": "Espresso machine",
+      "url": "https://en.wikipedia.org/wiki/Espresso_machine"
+    },
+    {
+      "title": "History of the espresso machine",
+      "url": "https://perfectdailygrind.com/2018/08/discovering-the-history-of-the-espresso-machine-at-mumac-italy/"
+    },
+    {
+      "title": "The Birth of Espresso",
+      "url": "https://www.openculture.com/2026/01/the-birth-of-espresso-the-story-behind-the-coffee-shots-that-fuel-modern-life.html"
+    },
+    {
+      "title": "Passione Italiana: The Art of Espresso",
+      "url": "https://artsandculture.google.com/story/YgVxzyyXKVR5Iw"
+    },
+    {
+      "title": "The Lever Machine",
+      "url": "https://www.baristahustle.com/?p=359646"
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=W2HtvGv-Lk4",
+    "id": "W2HtvGv-Lk4",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "How to dial in an espresso shot",
+    "watchFor": "One variable moved at a time and the scale left on the drip tray for every shot. The discipline is the lesson, not the numbers: taste, adjust one thing, pull again.",
+    "verifiedBy": "coffee-films",
+    "checkedOn": "2026-10-18"
+  }
+}

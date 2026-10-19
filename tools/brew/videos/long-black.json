@@ -1,0 +1,37 @@
+{
+  "id": "long-black",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=-Bo-hkS5ftY",
+  "videoId": "-Bo-hkS5ftY",
+  "title": "How to make an easy Long Black",
+  "channel": "Easy Coffeehouse",
+  "channelKind": "person",
+  "queries": [
+    {
+      "q": "how to make long black youtube",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=-Bo-hkS5ftY \"How to make an easy Long Black - YouTube\"; summary: \"Logan for Easy Coffeehouse shows how to make an easy Long Black and explains the difference between an americano and a long black.\""
+    },
+    {
+      "q": "\"How to make an easy Long Black\"",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=-Bo-hkS5ftY \"How to make an easy Long Black - YouTube\" (first result); summary: \"the 'How to make an easy Long Black' video from Easy Coffeehouse\"."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-18",
+  "note": "Same watch id and same exact title in both searches; the channel is named in both summaries. The first summary names a presenter (Logan) for the channel and neither says what kind of business Easy Coffeehouse is, so it is taken as a person’s channel and ships with title and channel empty. If the checker finds it a company, it must go on companies.json before its name can show. Awaits the checker’s sign-off.",
+  "checkedBy": "checker",
+  "checkerQueries": [
+    {
+      "q": "Easy Coffeehouse \"How to make an easy Long Black\" channel",
+      "allowedDomains": [],
+      "returned": "No YouTube result: written guides only (masterclass.com, leafbeanmachine.com.au, nespresso.com, yourdreamcoffee.com, lavazzausa.com, caffeatlas.com, lavazza.com.au); the summary could not find the video or say what kind of business Easy Coffeehouse is."
+    }
+  ],
+  "checkerNote": "Confirmed by the checker: two different queries, both returned watch id -Bo-hkS5ftY with the same exact title \"How to make an easy Long Black\", and both summaries name the channel Easy Coffeehouse. It teaches building a long black and sets it against an americano; a watch link, not a Short, playlist or advert. The checker’s search (unrestricted, to learn what kind of channel it is) found nothing on the channel. A presenter is named for it and nothing shows it to be a roaster, maker or other company, so channelKind person stands under the style (anyone named), and the fragment ships title and channel empty."
+}

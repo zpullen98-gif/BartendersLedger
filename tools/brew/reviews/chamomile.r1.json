@@ -1,0 +1,23 @@
+{
+  "id": "chamomile",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "quiz[0].options",
+      "problem": "The right option (45 characters) was the longest of the four, a length clue even if by one character.",
+      "change": "Lengthened the rooibos distractor to “The dried, oxidised leaf of a South African shrub” (49), still wrong and still pointing at rooibos."
+    },
+    {
+      "field": "make.time",
+      "problem": "The Library contradicts itself on herbal steep time: the Tea Service lesson “Tea is not one temperature and one timer” groups herbal infusions with black tea at “the full boil and three to five minutes”, while the Herbal Tisane card gives 5 to 10 minutes infused and the steep lesson says the herbal bag can sit. A brew guide (Black Oak Coffee) also gives chamomile 5 to 10 minutes.",
+      "change": "None to the fragment, which follows the card. The lesson sentence is loose and should be fixed in js/data-coffee.js (for example “three to five minutes for black, longer for herbal infusions”); left for the integrator."
+    },
+    {
+      "field": "make.dose",
+      "problem": "The 2 to 3 g per 6 to 8 oz figure is the Library’s tea dose applied to a tisane; the app has no herbal figure.",
+      "change": "None. Checked by search: brew guides give rooibos about 3 g per 8 to 10 oz and about 2 to 2.7 g a cup, chamomile about 2 g per 12 oz and a peppermint rooibos 7 g per 12 oz, so the Library figure sits inside the trade spread."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

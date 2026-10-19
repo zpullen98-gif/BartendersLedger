@@ -1,0 +1,33 @@
+{
+  "id": "sweet-tea",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=28VYlDkbxzE",
+  "videoId": "28VYlDkbxzE",
+  "title": "Love & Best Dishes: How to Make Sweet Tea Southern Style",
+  "channel": "Paula Deen",
+  "channelKind": "person",
+  "queries": [
+    {
+      "q": "how to make southern sweet tea youtube [allowed_domains: youtube.com]",
+      "returned": "https://www.youtube.com/watch?v=28VYlDkbxzE \"Love & Best Dishes: How to Make Sweet Tea Southern Style - YouTube\""
+    },
+    {
+      "q": "\"Love & Best Dishes: How to Make Sweet Tea Southern Style\" [allowed_domains: youtube.com]",
+      "returned": "https://www.youtube.com/watch?v=28VYlDkbxzE \"Love & Best Dishes: How to Make Sweet Tea Southern Style - YouTube\" (top result); summary: \"Its description says Paula is sharing how to make sweet tea with tea bags.\""
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-18",
+  "note": "Same watch id and exact title in both searches. The channel test is met by the series name in the title, Love & Best Dishes, and the summary naming the host, Paula; no result spelled out the full channel name, so the checker should judge whether that counts. A person’s channel: the fragment ships title and channel empty.",
+  "checkedBy": "checker",
+  "checkerQueries": [
+    {
+      "q": "Paula Deen \"How to Make Sweet Tea Southern Style\" Love & Best Dishes",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=28VYlDkbxzE \"Love & Best Dishes: How to Make Sweet Tea Southern Style - YouTube\" (first result), the same id and exact title a third time, with the channel page https://www.youtube.com/c/PaulaDeen/videos \"Paula Deen - YouTube\" among the results; the summary: \"It’s on Paula Deen’s YouTube channel under the Love & Best Dishes series\", showing how to make sweet tea with tea bags."
+    }
+  ],
+  "checkerNote": "Confirmed by the checker: two different queries, both returned watch id 28VYlDkbxzE with the same exact title \"Love & Best Dishes: How to Make Sweet Tea Southern Style\". The finder’s results named only the series and the host’s first name, which alone would not have named the channel; the checker’s fresh search returned the same id and title again, a result title for the channel page \"Paula Deen - YouTube\", and a summary placing the video on Paula Deen’s YouTube channel, so the channel is named. It teaches making Southern sweet tea with tea bags; a watch link, not a Short, playlist or advert (the series playlist in the results was not taken). A named person’s channel, so channelKind person, and the fragment ships title and channel empty."
+}

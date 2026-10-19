@@ -1,0 +1,18 @@
+{
+  "id": "espresso-martini",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "quiz[1].q",
+      "problem": "The stem calls chicory a \"coffee element\", but the pack’s chicory cards say chicory is a roasted root, not coffee, and the printed Kahlua is the coffee element.",
+      "change": "Stem reworded to \"Which of these does our printed espresso martini name?\"; options and answer unchanged."
+    },
+    {
+      "field": "what, quiz[0]",
+      "problem": "The Library disagrees with itself here. The Espresso Martini card note (\"Fresh espresso’s crema builds the foam\"), its lore, the NA Espresso Martini (\"Espresso crema builds the foam\") and the pack’s espresso martini story (\"the coffee’s oils whip into a fine tan foam\") all contradict the lesson \"Espresso in a cocktail\": shaking destroys the crema, and the head is air held by the espresso’s dissolved solids and the sugar.",
+      "change": "None to the fragment, which follows the lesson. The Library card note, the lore, the NA spec and the pack component should be corrected to match the lesson."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

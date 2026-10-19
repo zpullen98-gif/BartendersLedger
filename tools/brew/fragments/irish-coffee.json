@@ -1,0 +1,127 @@
+{
+  "id": "irish-coffee",
+  "name": "Irish coffee",
+  "respell": "",
+  "aka": [],
+  "group": "spiked",
+  "kind": "coffee",
+  "caffeine": "Caffeine comes from the brewed coffee alone; the whiskey, sugar and cream add none.",
+  "house": {
+    "printed": true,
+    "packIds": [
+      "b-xs168hf4"
+    ]
+  },
+  "what": "Hot coffee sweetened with sugar, spiked with Irish whiskey and capped with lightly whipped cream that the guest drinks through, never stirs. The sugar is structural: it makes the coffee dense enough to hold the cream up. Ours is printed with dark roast chicory coffee, brown sugar, Tullamore Dew and whipped cream: the classic shape over New Orleans coffee.",
+  "taste": "Hot, sweet, roasty coffee through a cool, soft layer of cream, the whiskey warm behind it. Hot and cold in one sip is the point.",
+  "make": {
+    "steps": [
+      "Pre-heat the glass with hot water, then empty it and dry the outside.",
+      "Pour in the hot coffee, stir in the sugar until no grit remains, then add the whiskey.",
+      "Whip cold cream until a ribbon off the whisk holds a second.",
+      "With the glass filled to about half an inch below the rim, float it slowly over a spoon; do not stir."
+    ],
+    "ratio": "About 1 part whiskey to 3 parts coffee",
+    "dose": "1.5 oz Irish whiskey, 4 oz coffee, 2 tsp brown sugar, cream",
+    "temp": "Cream kept under 50F (10C)",
+    "time": "",
+    "cup": "Pre-heated stemmed Irish coffee glass"
+  },
+  "serve": "Carry it level by the stem so the cap stays whole, set it down rather than hand it over, and say hot. Tell the guest to sip through the cream. With dessert, fire it to land with the plates, never after.",
+  "story": "It is credited to the chef at the flying-boat terminal at Foynes, County Limerick, in the winter of 1942 to 1943, warming passengers off a flight turned back by weather; asked if it was Brazilian coffee, he said it was Irish. A San Francisco bar recreated it in 1952 and has poured thousands a day since; today it pours Tullamore Dew.",
+  "guest": "Our Irish coffee is chicory coffee with brown sugar and Tullamore Dew under cool cream: sip it through the cream, and please don't stir.",
+  "watch": [
+    "A cold glass sinks the float and finishes cold: pre-heat every time.",
+    "Cream sinks when the sugar was skipped; half-and-half never floats, and stiff cream lands as a scoop.",
+    "For no alcohol, offer our plain chicory coffee, which still carries caffeine."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "spiked",
+        "The cream float, and why it fails"
+      ],
+      [
+        "spiked",
+        "The pre-heat, and handing it over"
+      ]
+    ],
+    "cocktail": "Irish Coffee",
+    "na": "Sober Irish Coffee"
+  },
+  "table": {
+    "recipe": "irish-coffee"
+  },
+  "search": "how to make irish coffee",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is an Irish coffee made, and what is in it?",
+      "answer": "Brown sugar stirred into hot coffee in a pre-heated glass, Irish whiskey added, lightly whipped cream floated over a spoon, never stirred: hot, sweet coffee through cool cream."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Why does an Irish coffee need its sugar, beyond sweetness?",
+      "options": [
+        "It stops the whiskey from evaporating",
+        "It keeps the cream from souring",
+        "It lets the coffee float the cream",
+        "It thickens the cream on contact"
+      ],
+      "a": 2,
+      "explain": "Hot coffee is lighter than cold cream; dissolved sugar makes it denser."
+    },
+    {
+      "id": "q2",
+      "q": "Where is Irish coffee credited with first being served?",
+      "options": [
+        "A flying-boat base at Foynes",
+        "A distillery in County Offaly",
+        "A San Francisco waterfront bar",
+        "A Dublin hotel after the war"
+      ],
+      "a": 0,
+      "explain": "A chef at Foynes, County Limerick, is credited with it around 1943."
+    },
+    {
+      "id": "q3",
+      "q": "Which cream gives an Irish coffee a float the guest drinks through?",
+      "options": [
+        "Half-and-half from the jug",
+        "Cold cream whipped to a ribbon",
+        "Cream whipped stiff enough to pipe",
+        "Aerosol cream from the can"
+      ],
+      "a": 1,
+      "explain": "Lightly whipped cream floats; half-and-half never does, aerosol collapses and stiff cream lands as a scoop."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: The cream float; The pre-heat; Irish Coffee",
+      "url": ""
+    },
+    {
+      "title": "World Table: irish-coffee; Hot Drinks lexicon",
+      "url": ""
+    },
+    {
+      "title": "House pack: Irish coffee record",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=sJsY1LokABA",
+    "id": "sJsY1LokABA",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "Floating the cream on an Irish coffee",
+    "watchFor": "How loosely the cream is whipped, the slow pour over the back of a spoon onto a filled, pre-heated glass, and that it is never stirred in. The cold version at the end is a variation, not the classic.",
+    "verifiedBy": "pack",
+    "checkedOn": "2026-10-18"
+  }
+}

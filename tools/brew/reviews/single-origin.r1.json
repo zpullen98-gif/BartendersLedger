@@ -1,0 +1,28 @@
+{
+  "id": "single-origin",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "guest",
+      "problem": "\"comes from one estate\" claims every rotating origin is single estate; the pack says only the printed Papua New Guinea is single estate-grown and that origins rotate.",
+      "change": "\"comes from one place\"."
+    },
+    {
+      "field": "make.time",
+      "problem": "2.5 to 3.5 minutes by pour-over, out of step with the Library's procedure lesson (two to three minutes for a small cone).",
+      "change": "\"2 to 3.5 minutes by pour-over\", as the pour-over entry now has it."
+    },
+    {
+      "field": "make.steps[2], recall[0].answer",
+      "problem": "Fahrenheit without Celsius.",
+      "change": "Added (90 to 96C)."
+    },
+    {
+      "field": "quiz[1].options",
+      "problem": "The answer \"Read today’s origin from the card\" was the longest and the only specific option; \"Ask the guest to check\" is not a choice a trained person makes.",
+      "change": "Options now \"Read it off the coffee card\" (answer), \"Name the origin the menu prints\", \"Call it the house blend instead\", \"Guess it from the cup’s taste\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

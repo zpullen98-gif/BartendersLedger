@@ -1,0 +1,136 @@
+{
+  "id": "cafe-au-lait",
+  "name": "Café au lait",
+  "respell": "ka-FAY oh LAY",
+  "aka": [
+    "coffee with hot milk"
+  ],
+  "group": "milk",
+  "kind": "coffee",
+  "caffeine": "From the brewed coffee, which is half the cup; the hot milk adds none.",
+  "house": {
+    "printed": false,
+    "askId": "a-4s0iqehy",
+    "ask": "Not printed on our menus: ask at lineup whether the bar makes one from our chicory coffee and hot milk, and at what price."
+  },
+  "what": "French for coffee with milk: strong brewed coffee, not espresso, with an equal measure of milk heated until it steams. It carries little or no foam, so it is plain and soft rather than textured, and it needs no espresso machine. The New Orleans version, with chicory, has its own entry.",
+  "taste": "Soft, round and mild: the roast comes through, gentled by the milk, with none of a latte's airy foam.",
+  "make": {
+    "steps": [
+      "Brew coffee strong, about 60 to 65 g per litre, by drip or press.",
+      "Heat an equal measure of milk until it steams, about 149F (65C); never boil it.",
+      "Pour the coffee and the milk into a warmed cup together, in equal parts.",
+      "Offer sugar on the side and serve at once."
+    ],
+    "ratio": "Equal parts strong brewed coffee and hot milk",
+    "dose": "60 to 65 g coffee per litre; equal milk",
+    "temp": "Brew 195 to 205F (90 to 96C); milk about 149F (65C)",
+    "time": "Batch 4 to 8 minutes; sell within 30 to 60 minutes sealed",
+    "cup": "Warmed cup or mug, 6 to 12 oz"
+  },
+  "serve": "On a saucer with a teaspoon, sugar offered on the side. It is the milky coffee to suggest when no espresso drink is on offer, since it needs only brewed coffee.",
+  "story": "The name is plain French, and the drink needs only a pot of coffee and a pan of milk. Guests confuse it with a latte: the difference is brewed coffee against espresso, milk heated against textured. In New Orleans the words mean chicory coffee and hot milk, so ask a visitor which.",
+  "guest": "Brewed coffee with an equal measure of hot milk: softer and plainer than a latte, with almost no foam.",
+  "watch": [
+    "Boiled milk gives a skin and a cooked taste; heat it only until it steams.",
+    "Coffee held on a hotplate goes flat; pour from a fresh pot or a sealed airpot.",
+    "Weak coffee makes a thin cup; brew at the strong end rather than cutting the milk."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "filter",
+        "Batch brew is the one that pays"
+      ],
+      [
+        "milk",
+        "What steaming actually does to milk"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make cafe au lait",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "What is in a café au lait, and how is it made?",
+      "answer": "Strong brewed coffee, about 60 to 65 g per litre, with an equal measure of milk heated until it steams, about 149F (65C), poured together into a warmed cup. Soft, round, no foam."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What coffee is the base of a classic café au lait?",
+      "options": [
+        "A double espresso",
+        "Strong brewed coffee",
+        "Cold brew concentrate",
+        "A single ristretto"
+      ],
+      "a": 1,
+      "explain": "Brewed coffee, drip or press, with hot milk; espresso under milk makes a latte or café con leche."
+    },
+    {
+      "id": "q2",
+      "q": "Why should café au lait milk never boil?",
+      "options": [
+        "It whips into a stiff foam",
+        "It sours the coffee",
+        "Skin and a cooked taste",
+        "It loses its fat"
+      ],
+      "a": 2,
+      "explain": "Boiled milk grows a skin and tastes cooked; heat it only until it steams, about 149F (65C)."
+    },
+    {
+      "id": "q3",
+      "q": "What proportion of coffee to milk is classic?",
+      "options": [
+        "Equal parts",
+        "One to five",
+        "Two to one",
+        "One shot to a glass"
+      ],
+      "a": 0,
+      "explain": "Equal parts, which is why the coffee is brewed strong enough to stand up to the milk."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library lesson: Batch brew is the one that pays",
+      "url": ""
+    },
+    {
+      "title": "Library card: Batch Brew",
+      "url": ""
+    },
+    {
+      "title": "World Table Cuisine: Chicory coffee",
+      "url": ""
+    },
+    {
+      "title": "Milk coffee",
+      "url": "https://en.wikipedia.org/wiki/Milk_coffee"
+    },
+    {
+      "title": "Cafe con leche vs latte",
+      "url": "https://majestycoffee.com/blogs/posts/cafe-con-leche-vs-latte"
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=e4dW5MM36KE",
+    "id": "e4dW5MM36KE",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "How to make café au lait at home",
+    "watchFor": "Brewed coffee rather than espresso, met by hot milk in about equal measure. Compare the video’s milk with the method above: steaming hot but never boiled, with little or no foam.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

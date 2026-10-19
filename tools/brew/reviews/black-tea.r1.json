@@ -1,0 +1,28 @@
+{
+  "id": "black-tea",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "serve",
+      "problem": "Said whole leaf takes a second steep on fresh hot water. The Black Tea card says 3 to 5 minutes Western style is \"your one good steep in a pot\", four or five only gongfu style. The Tea Service lesson \"The service itself\" states the general second steep, so the Library disagrees with itself; the card is the specific source for black.",
+      "change": "Last sentence now: \"In a pot, black leaf gives one good steep; brewed gongfu style, short and often, whole leaf gives four or five.\""
+    },
+    {
+      "field": "watch[1]",
+      "problem": "Stated that milk and lemon together curdle. The Library says enough acid drags the cup towards pH 4.6, where casein coagulates: it is conditional.",
+      "change": "\"curdle\" became \"can curdle\"."
+    },
+    {
+      "field": "watch[2]",
+      "problem": "Stated that cloudy iced tea is tea cream and not spoilage, without the qualifier. The iced tea lesson says \"usually\", and haze that will not clear on warming is a dirty urn.",
+      "change": "Now: \"Cloudy iced black tea is usually tea cream, not spoilage: warm a glass and true cream clears, while haze that stays means a dirty urn.\""
+    },
+    {
+      "field": "quiz[1].options[2]",
+      "problem": "The right answer was the longest option and the only one with a time range (41 characters against 35 for the next longest).",
+      "change": "Shortened to \"More leaf, the same steep time\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

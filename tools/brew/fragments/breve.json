@@ -1,0 +1,129 @@
+{
+  "id": "breve",
+  "name": "Breve",
+  "respell": "BREH-vay",
+  "aka": [
+    "breve latte",
+    "café breve"
+  ],
+  "group": "milk",
+  "kind": "coffee",
+  "caffeine": "From the espresso alone; half-and-half adds richness, not caffeine.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on our menus: ask at lineup whether there is an espresso machine, whether the bar will make a breve, and whether half-and-half is stocked."
+  },
+  "what": "A latte made with steamed half-and-half in place of milk: espresso, usually a double, under milk and cream at 10.5 to under 18 percent milkfat. Fat lends body but builds no foam structure and costs volume, so it rises less and the foam comes out smaller, denser and heavier.",
+  "taste": "Rich, round and sweet, the espresso softened well into the background and a creamy finish that coats the mouth.",
+  "make": {
+    "steps": [
+      "Pull a double, 18 to 20 g in, 36 to 40 g out, into a warmed cup.",
+      "Steam cold half-and-half, a little more than you would milk, since it rises less.",
+      "Stretch briefly while the pitcher is cool, then spin glossy; cut near 135 to 140F (57 to 60C).",
+      "Swirl and pour into the shot as for a latte; serve at once."
+    ],
+    "ratio": "1 part espresso to 5 or more parts half-and-half",
+    "dose": "18 to 20 g coffee; half-and-half to fill",
+    "temp": "Half-and-half 140 to 150F (60 to 66C)",
+    "time": "Shot 25 to 30 seconds",
+    "cup": "Warmed 8 to 12 oz cup, as for a latte"
+  },
+  "serve": "On a saucer with a teaspoon, like a latte, straight out while the foam holds. Tell the guest it is far richer than a latte; it sits well beside dessert.",
+  "story": "The breve rests on half-and-half, a mix of milk and cream. It is the latte for the guest who takes cream in drip coffee. Guests like hearing why it foams less: protein holds a bubble open, while fat only adds body.",
+  "guest": "A latte made with steamed half-and-half instead of milk: much richer and creamier, the espresso softened behind it.",
+  "watch": [
+    "Past 160F (71C) half-and-half cooks like milk, and a cooked pitcher cannot be rescued.",
+    "Half-and-half neither whips nor floats, so it never replaces the cream on an Irish coffee.",
+    "If a guest asks for another drink breve, confirm they mean half-and-half for the milk."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "milk",
+        "What steaming actually does to milk"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make a breve latte",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "What is in a breve, and how is it made?",
+      "answer": "A double espresso under steamed half-and-half instead of milk, stretched briefly, spun glossy and kept under 160F (71C), in a warmed latte cup. Rich and creamy, with a smaller, denser foam."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What replaces the milk in a breve?",
+      "options": [
+        "Condensed milk",
+        "Whipped cream",
+        "Half-and-half",
+        "Evaporated milk"
+      ],
+      "a": 2,
+      "explain": "A breve uses steamed half-and-half, milk and cream at 10.5 to under 18 percent milkfat."
+    },
+    {
+      "id": "q2",
+      "q": "Why does a breve foam smaller and denser than a skimmed milk latte?",
+      "options": [
+        "Cream carries no protein at all",
+        "Fat adds body, not structure",
+        "It is steamed hotter",
+        "Espresso collapses the foam"
+      ],
+      "a": 1,
+      "explain": "Whey proteins build the bubble walls; fat lends body and costs volume, which is why skimmed milk foams bigger."
+    },
+    {
+      "id": "q3",
+      "q": "Why can half-and-half not replace the cream floated on an Irish coffee?",
+      "options": [
+        "It neither whips nor floats",
+        "It curdles against the whiskey",
+        "It is far too sweet",
+        "It must be steamed first"
+      ],
+      "a": 0,
+      "explain": "A float needs cream whipped at about 30 percent milkfat or more; half-and-half is under 18 percent and sinks."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library lesson: What steaming actually does to milk",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The cream float, and why it fails",
+      "url": ""
+    },
+    {
+      "title": "What makes breve different from a café latte?",
+      "url": "https://tastingtable.com/1206431/what-makes-breve-different-from-a-cafe-latte"
+    },
+    {
+      "title": "Breve vs. latte",
+      "url": "https://breville.com/us/en/blog/coffee-and-espresso/breve-vs-latte.html"
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=ZDTbuolCQSI",
+    "id": "ZDTbuolCQSI",
+    "title": "How To Make A Breve Latte At Home| Lifeboost Coffee",
+    "channel": "Lifeboost Coffee",
+    "channelKind": "company",
+    "label": "How to make a breve at home",
+    "watchFor": "Watch how half-and-half behaves when steamed in place of milk: it rises less, and its foam comes out smaller and denser. The video likens the drink to a cappuccino; the trade usually builds it as a latte.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

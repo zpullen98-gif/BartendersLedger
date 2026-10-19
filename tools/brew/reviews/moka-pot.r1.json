@@ -1,0 +1,38 @@
+{
+  "id": "moka-pot",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "what, story, recall[0].answer, quiz[0]",
+      "problem": "\"About 1.5 to 2 bar\" dropped the low end the sources give: Wikipedia says 1 to 2 bar, Cook's Country (America's Test Kitchen) 1.5 to 2, How It Works 1.5. Where sources disagree the style gives the range.",
+      "change": "\"about 1 to 2 bar\" in all four places; the option reads \"About 1 to 2 bar\"."
+    },
+    {
+      "field": "serve, guest",
+      "problem": "\"We do not pour it\" and \"We don’t brew in a moka pot here\" state a house fact no pack record holds (only the plan's ask says it; the pack prints three coffees and asks a-dy8vzoly how hot coffee is brewed).",
+      "change": "\"It is not on our menus, so name what it is\" and \"A moka pot isn’t on our menus.\"; house.ask stays the plan's, word for word."
+    },
+    {
+      "field": "make.steps",
+      "problem": "The grind was given no place against espresso, the pot was screwed together over a base of hot water with no guard, and no step poured the coffee.",
+      "change": "\"fine coffee, a shade coarser than espresso\" (two search results: batchcoffee.co.uk, instacuppastore.com); \"holding the hot base in a cloth\"; added \"Pour at once into warmed small cups.\""
+    },
+    {
+      "field": "recall[0].answer",
+      "problem": "No cup.",
+      "change": "Added \"then off the heat, the base cooled, poured into warmed small cups\"."
+    },
+    {
+      "field": "quiz[1].options",
+      "problem": "The answer \"As the stream pales and sputters\" was the longest option.",
+      "change": "Options now \"When it pales and sputters\", \"When the first coffee appears\", \"When the top chamber boils over\", \"After ten minutes on the heat\"."
+    },
+    {
+      "field": "sources",
+      "problem": "https://wikipedia.com/wiki/Moka_pot is not the article's address, and the grind had no source.",
+      "change": "https://en.wikipedia.org/wiki/Moka_pot; added the batchcoffee.co.uk and instacuppastore.com grind pages."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

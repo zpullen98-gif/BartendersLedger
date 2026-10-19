@@ -1,0 +1,63 @@
+{
+  "id": "steamer",
+  "found": false,
+  "url": "",
+  "videoId": "",
+  "title": "",
+  "channel": "",
+  "channelKind": "",
+  "queries": [
+    {
+      "q": "how to make a vanilla steamer drink barista tutorial",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "No channel named: ZQHaZRAl-Lo \"How to Make the Vanilla Steamer : How to Make the Vanilla Steamer: What You Need - YouTube\", KFW6-9ypo9I (a chain’s copycat, rejected by the first pass), NEq9dTFPzVk, wtJIeiBrElc \"How to Assemble & Serve a Vanilla Steamer - YouTube\" (\"Part of the series: How to Make the Vanilla Steamer\"), a Short (qvu2ZTXJpZM), z4-BQwWrKEc, and milk steaming films."
+    },
+    {
+      "q": "\"How to Assemble & Serve a Vanilla Steamer\"",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "wtJIeiBrElc \"How to Assemble & Serve a Vanilla Steamer - YouTube\" (same id and exact title), with ZQHaZRAl-Lo, z4-BQwWrKEc and XVhk_FjyaMY \"How to Steam Milk for a Vanilla Steamer\"; the summary named only the series, no channel."
+    },
+    {
+      "q": "eHow \"How to Make the Vanilla Steamer\" series",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "wtJIeiBrElc, z4-BQwWrKEc and ZQHaZRAl-Lo again with the same titles; the summary said no eHow page came back and it could not confirm the series’ channel; it named a barista host for ZQHaZRAl-Lo, a person, not a channel."
+    }
+  ],
+  "verifiedBy": "",
+  "checkedOn": "2026-10-19",
+  "note": "wtJIeiBrElc (and ZQHaZRAl-Lo) came back in all three searches with the same id and exact title, but no result title, URL path or summary named the uploading channel; the series name and a presenter’s name are not a channel, so neither counts. The first pass’s 9TiiaOUVXmA stays rejected. Searches spent: 3. Video null; the page offers the search link alone.",
+  "firstPass": {
+    "id": "steamer",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make a steamer steamed milk drink youtube",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=9TiiaOUVXmA \"How to Make a Milk Steamer - YouTube\"; summary: \"a free drink tutorial in a gourmet tea and coffee series\", no channel named. The rest taught steaming milk for espresso drinks (sIeEtBUaE88, SswxZZlgEyg, QP8vsFTXTmc, cRsT4WhFTHo, MTjXqCzIgf0) or a chain’s vanilla steamer made with a frother (KFW6-9ypo9I)."
+      },
+      {
+        "q": "\"How to Make a Milk Steamer\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=9TiiaOUVXmA \"How to Make a Milk Steamer - YouTube\" (second result, same id and exact title; the first was HgQCUMhtk0U, building a steamer device); no result title or summary named its channel."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Candidate 9TiiaOUVXmA came back twice with the same id and exact title, but its channel was never named, so it fails. The milk steaming films teach the wand for lattes, not this drink, and the steamer at home film uses a chain’s name and a handheld frother. No spare remained. Video null; the page offers the search link alone."
+  }
+}

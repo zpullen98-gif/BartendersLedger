@@ -1,0 +1,51 @@
+{
+  "id": "moka-pot",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=zzlFOkD4Kz4",
+  "videoId": "zzlFOkD4Kz4",
+  "title": "Bialetti - How to Moka",
+  "channel": "Bialetti",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "Bialetti Moka Express how to make coffee youtube (allowed_domains youtube.com)",
+      "returned": "{\"title\":\"Bialetti - How to Moka - YouTube\",\"url\":\"https://www.youtube.com/watch?v=zzlFOkD4Kz4\"} (second result), beside other Moka Express tutorials (oVwtNYd3eQU, D9Xs77nDoKU, sWUw6yOxjNw, d9NTSV1RMvs and a Short); summary gave the usual steps (base filled to the valve, basket filled without pressing, medium heat, off the heat once it gurgles) and named no channel against any other id."
+    },
+    {
+      "q": "\"Bialetti - How to Moka\" (allowed_domains youtube.com)",
+      "returned": "{\"title\":\"Bialetti - How to Moka - YouTube\",\"url\":\"https://www.youtube.com/watch?v=zzlFOkD4Kz4\"} (first result), and {\"title\":\"Bialetti - How to Moka (sub fr) - YouTube\",\"url\":\"https://www.youtube.com/watch?v=wKs8OH575sQ\"}, the same film with French subtitles; summary: \"The search turned up the official Bialetti video... describes the basic process: filling the boiler with water, adding the coffee, and heating it on the stove until the brewing sound signals it’s done.\""
+    }
+  ],
+  "checkerQueries": [
+    {
+      "q": "\"How to Moka\" Bialetti official channel video (allowed_domains youtube.com; checker)",
+      "returned": "{\"title\":\"Bialetti - How to Moka - YouTube\",\"url\":\"https://www.youtube.com/watch?v=zzlFOkD4Kz4\"}, the only result: the same id under the same exact title a third time; summary: its description covers the brewing steps in a Moka Express and it was posted about 1,930 days ago; the summary could not see the channel page itself, but nothing contradicted the maker as the uploader."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-19",
+  "checkedBy": "checker",
+  "note": "Same id and exact title in both searches; the maker names itself at the head of the title and the second summary calls it the official Bialetti video, so the uploader is the moka pot’s maker: company. A how-to for the pot this entry teaches, a watch link, not a Short, playlist or advert. The exact channel string is as the results give it (\"Bialetti\"); an oEmbed read should confirm it. The fragment will fail schema.mjs until \"Bialetti\" is on companies.json (empty today), which is not the finder’s file to write, and it still wants the checker’s sign-off. The first pass’s candidate QoLs_Zttmcg was not revisited: no new evidence names its channel. Checked by the checker on 2026-10-19: two different searches returned the same id and the exact title \"Bialetti - How to Moka\", and the uploader is named: the maker names itself at the head of its own title, the way company channels title their films, and the second summary calls it \"the official Bialetti video\". The checker's fresh search returned the same id and exact title a third time and contradicted nothing (it could not see the channel page, and the egress proxy denies www.youtube.com, so oEmbed cannot run here). The French subtitled copy wKs8OH575sQ is the same film under its own title and does not unsettle this id. It teaches brewing in the moka pot this entry is about; a watch link, not a Short, playlist, music video or advert. The maker of the pot is a company, so company is right and the channel string is \"Bialetti\" as the results give it. Confirmed. Left for the integrator: \"Bialetti\" goes on companies.json.",
+  "firstPass": {
+    "id": "moka-pot",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make moka pot youtube (allowed_domains youtube.com)",
+        "returned": "{\"title\":\"How to Make Moka Pot Coffee & Espresso - The BEST Way (Tutorial) - YouTube\",\"url\":\"https://www.youtube.com/watch?v=QoLs_Zttmcg\"}; no channel named for any result."
+      },
+      {
+        "q": "\"How to Make Moka Pot Coffee & Espresso - The BEST Way (Tutorial)\" (allowed_domains youtube.com)",
+        "returned": "{\"title\":\"How to Make Moka Pot Coffee & Espresso - The BEST Way (Tutorial) - YouTube\",\"url\":\"https://www.youtube.com/watch?v=QoLs_Zttmcg\"}; summary: a Moka Pot guide for making coffee with espresso-like flavour at home; no channel named."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Candidate QoLs_Zttmcg (\"How to Make Moka Pot Coffee & Espresso - The BEST Way (Tutorial)\"): the same id and exact title came back twice, but no result named its channel, so it does not count. The batch’s spare searches went to drip coffee and chicory coffee. Video stays null; the page offers the search link."
+  }
+}

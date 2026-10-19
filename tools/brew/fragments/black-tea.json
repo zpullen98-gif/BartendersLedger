@@ -1,0 +1,161 @@
+{
+  "id": "black-tea",
+  "name": "Black tea",
+  "respell": "",
+  "aka": [
+    "hot tea",
+    "orange pekoe",
+    "hong cha"
+  ],
+  "group": "leaf",
+  "kind": "tea",
+  "caffeine": "From the leaf itself: commonly 40 to 70 mg in an 8 oz cup, less than drip coffee, moved by leaf, heat and steep time.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Tea is not printed on the menus: ask at lineup whether the bar pours a black tea, which brand, bag or loose leaf, pot or cup, and the price."
+  },
+  "what": "Black tea is the leaf of Camellia sinensis rolled and carried to full oxidation before firing ends it: the leaf's own enzymes, meeting air, give it colour, body and a brisk edge. Orthodox whole leaf goes in the pot; CTC, crush, tear and curl, fills most bags and suits anything taken with milk. It is what most guests mean by a hot tea, and the base of the iced tea programme.",
+  "taste": "Malt, dried fruit and cocoa, a drying astringency down the sides of the tongue, and enough backbone to take milk and sugar without falling apart.",
+  "make": {
+    "steps": [
+      "Draw fresh cold water and bring it to a full boil once; never reboil a topped up kettle.",
+      "Warm the pot with hot water and tip the rinse out.",
+      "Weigh 2 to 3 g of leaf per 6 to 8 oz of water, or one bag per cup and two for a 12 oz pot.",
+      "Pour the water on at 200 to 212F (93 to 100C) and start a timer.",
+      "Steep 3 to 5 minutes, then pull the bag or basket.",
+      "Send milk, lemon and sugar on the side, and warn the table before milk and lemon go in together."
+    ],
+    "ratio": "2 to 3 g of leaf per 6 to 8 oz of water",
+    "dose": "One bag, about 2 g, or 2 to 3 g loose leaf per cup",
+    "temp": "200 to 212F (93 to 100C), freshly boiled",
+    "time": "3 to 5 minutes",
+    "cup": "Warmed pot into a cup or mug, 6 to 8 oz"
+  },
+  "serve": "Warm the pot and the cup. Send pot, cup and saucer, a spoon, a small dish for the bag or basket, and the steep time said aloud or a timer on the table. Milk from the fridge, lemon and sugar ride on the side, never in the cup. In a pot, black leaf gives one good steep; brewed gongfu style, short and often, whole leaf gives four or five.",
+  "story": "In Chinese it is hong cha, red tea, named for the colour of the liquor, while hei cha, literally black tea, is the dark family that microbes ferment. A black leaf darkens because its own enzymes meet air: oxidation, not fermentation. Assam gives malt and body, high grown Ceylon brightness, Kenya the brisk CTC of the tea bag. A guest who orders orange pekoe means plain black tea: the words grade leaf size and tip, not flavour, and have nothing to do with citrus.",
+  "guest": "A black tea is malty and brisk and takes milk well; would you like milk or lemon on the side, and shall I pull the bag for you?",
+  "watch": [
+    "For a stronger cup give more leaf, not more time: two bags at three minutes, never one at seven, which only adds the drying grip.",
+    "Milk and lemon together can curdle in the cup; warn the table or send one of them.",
+    "Cloudy iced black tea is usually tea cream, not spoilage: warm a glass and true cream clears, while haze that stays means a dirty urn.",
+    "To some guests red tea means rooibos, which is not tea at all; ask which they mean."
+  ],
+  "library": {
+    "ref": "Black Tea",
+    "study": [
+      [
+        "leaf",
+        "Oxidation is the axis"
+      ],
+      [
+        "tea",
+        "The service itself"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to brew black tea properly",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a pot of black tea made?",
+      "answer": "Fresh water at a full boil, 200 to 212F (93 to 100C), over 2 to 3 g of leaf per 6 to 8 oz in a warmed pot, steeped 3 to 5 minutes and pulled. Malty and brisk, it takes milk, lemon or sugar on the side."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What turns a black tea leaf dark during processing?",
+      "options": [
+        "Fermentation by yeast",
+        "Oxidation by the leaf's own enzymes",
+        "Roasting over charcoal",
+        "Years of ageing in pressed cakes"
+      ],
+      "a": 1,
+      "explain": "Rolling bruises the leaf so its enzymes meet air: oxidation. Microbes do the work only in dark tea, hei cha, such as ripe pu-erh."
+    },
+    {
+      "id": "q2",
+      "q": "A guest asks for a stronger pot of black tea. What is the right fix?",
+      "options": [
+        "The same leaf steeped seven minutes",
+        "Leave the bag in the cup",
+        "More leaf, the same steep time",
+        "Top the pot up with boiling water"
+      ],
+      "a": 2,
+      "explain": "After the first minutes, extra time pulls mostly polyphenols, the drying grip. More leaf at the same time gives strength in the right ratio: two bags at three minutes, never one at seven."
+    },
+    {
+      "id": "q3",
+      "q": "A guest orders an orange pekoe. What are they asking for?",
+      "options": [
+        "Plain black tea",
+        "A black tea flavoured with orange",
+        "A green tea with citrus peel",
+        "A herbal blend with dried orange"
+      ],
+      "a": 0,
+      "explain": "Orange pekoe grades the dry leaf by size and tip. It is not a flavour or a type, and the orange has nothing to do with citrus."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library card: Black Tea",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, Oxidation is the axis",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, One plant, six teas",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, Where the leaf comes from",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, Grades, and what they do not tell you",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, The service itself",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, The steep, and what over-steeping actually is",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Water for tea",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Iced tea, and the cloudy pot",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Caffeine, and the questions guests ask",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=g4lMXvgZ46U",
+    "id": "g4lMXvgZ46U",
+    "title": "How to Make Black Tea",
+    "channel": "Twinings Foodservice",
+    "channelKind": "company",
+    "label": "How to brew black tea for service",
+    "watchFor": "The tea maker's foodservice guide: brewing temperature, brewing time and serving advice. Set its numbers beside the method on this page: water freshly boiled, a 3 to 5 minute steep, then the leaf out.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

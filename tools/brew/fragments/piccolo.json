@@ -1,0 +1,127 @@
+{
+  "id": "piccolo",
+  "name": "Piccolo",
+  "respell": "PICK-oh-loh",
+  "aka": [
+    "piccolo latte"
+  ],
+  "group": "espresso",
+  "kind": "coffee",
+  "caffeine": "All from the shot, traditionally a single ristretto; a bar pulling a short double puts in more.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on the menus: ask at lineup whether there is an espresso machine, whether the bar will make a piccolo on request, and the price."
+  },
+  "what": "A piccolo is a small latte: textured and poured exactly like one, foam and pattern included, scaled down to a 3 to 4 oz glass over a single ristretto. It is a trade name from Australian cafés with no fixed spec, so ask what the bar's glass holds.",
+  "taste": "A latte compressed: milky and sweet, the coffee still readable underneath, finished in four sips.",
+  "make": {
+    "steps": [
+      "Pull a single ristretto, 9 to 10 g in for about 15 g out, into a warmed glass, or split a short double.",
+      "Steam a small jug to 140 to 150F (60 to 66C), stretching briefly for glossy microfoam.",
+      "Free pour 2.5 to 3 oz over the shot with a small pattern."
+    ],
+    "ratio": "Single ristretto under 2.5 to 3 oz of textured milk",
+    "dose": "9 to 10 g coffee, about 15 g out",
+    "temp": "Milk 140 to 150F (60 to 66C)",
+    "time": "Shot 20 to 25 seconds",
+    "cup": "Warmed 3 to 4 oz latte glass, no handle"
+  },
+  "serve": "In a warmed glass with no handle, the pattern facing the guest, out immediately. Its surface is large against the liquid, so it cools fast: a walk, not a wait, on the pass.",
+  "story": "Piccolo is a trade name from Australian cafés, and it is still a barista's drink: a way to taste the espresso through milk without a full latte. It suits the guest testing a bar's coffee before a bigger cup.",
+  "guest": "A piccolo is a small latte, silky milk and a little pattern over a short shot: milky, sweet and gone in four sips.",
+  "watch": [
+    "Guests often take a piccolo and a cortado for twins: the piccolo has latte foam, the cortado is flatter and cooler.",
+    "Run the single on to 18 to 20 g and it is a normale, not a ristretto.",
+    "Steam only what this small glass needs and dump the rest."
+  ],
+  "library": {
+    "ref": "Piccolo",
+    "study": [
+      [
+        "milk",
+        "Pitcher, volume and the pour window"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make a piccolo latte",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a piccolo made, and what goes in it?",
+      "answer": "A single ristretto, 9 to 10 g in for about 15 g out, under 2.5 to 3 oz of latte textured milk in a warmed 3 to 4 oz glass: a small, sweet latte."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Which espresso is the traditional base of a piccolo?",
+      "options": [
+        "A double lungo",
+        "A triple normale",
+        "A single lungo",
+        "A single ristretto"
+      ],
+      "a": 3,
+      "explain": "About 9 to 10 g in for about 15 g out; bars with double baskets only split a short double."
+    },
+    {
+      "id": "q2",
+      "q": "How does a piccolo's milk differ from a cortado's?",
+      "options": [
+        "Barely textured and steamed cooler",
+        "Hot water in place of milk",
+        "Full latte texture with a pattern",
+        "Dry, stiff foam spooned on top"
+      ],
+      "a": 2,
+      "explain": "The piccolo is poured like a latte, glossy microfoam and a small pattern; the cortado is flatter and cooler."
+    },
+    {
+      "id": "q3",
+      "q": "Why does a piccolo leave the pass at once?",
+      "options": [
+        "Its ristretto sours if it waits",
+        "Its milk is steamed above 160F (71C)",
+        "Its pattern dissolves in seconds",
+        "Its small body cools fast"
+      ],
+      "a": 3,
+      "explain": "At this size the surface is large against the liquid under it, so it loses heat fast."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Card: Piccolo",
+      "url": ""
+    },
+    {
+      "title": "Lesson: Pitcher, volume and the pour window",
+      "url": ""
+    },
+    {
+      "title": "Card: Cortado",
+      "url": ""
+    },
+    {
+      "title": "House pack: lineup question a-zr8ze4mu",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=aFG-aFzjcBs",
+    "id": "aFG-aFzjcBs",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "How to make a piccolo",
+    "watchFor": "The whole run from grinder to glass at a small scale. Watch how little milk goes in, which is what keeps it a piccolo rather than a latte, and how the small glass changes the pour.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

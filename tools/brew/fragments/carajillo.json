@@ -1,0 +1,108 @@
+{
+  "id": "carajillo",
+  "name": "Carajillo",
+  "respell": "kah-rah-HEE-yoh",
+  "aka": [],
+  "group": "spiked",
+  "kind": "coffee",
+  "caffeine": "Caffeine comes from the single shot of espresso.",
+  "house": {
+    "printed": false,
+    "askId": "",
+    "ask": "Not printed on the menus and not poured at the house: know it for the guest who asks, and offer the nearest drink we pour."
+  },
+  "what": "Espresso and a spirit or liqueur in one small glass. In Spain it is hot coffee spiked with brandy. Mexico rebuilt it on Licor 43, a sweet vanilla and citrus liqueur from Cartagena in Spain, with the espresso poured over it on ice or shaken with it, and made it an after-dinner drink of the 2010s.",
+  "taste": "The Licor 43 version is sweet, vanilla-led and creamy from the shake, the espresso's bitterness keeping it from cloying; the Spanish one is hot coffee warmed by brandy.",
+  "make": {
+    "steps": [
+      "Fill a rocks glass with ice.",
+      "Measure the Licor 43 into it.",
+      "Pull a fresh shot of espresso.",
+      "Pour the hot shot over the liqueur, or shake both hard on ice and strain over fresh ice.",
+      "For the Spanish serve, pour brandy into hot espresso in a small glass, no ice."
+    ],
+    "ratio": "About 1.5 oz liqueur to one shot of espresso",
+    "dose": "1.5 oz Licor 43 and one fresh shot of espresso",
+    "temp": "",
+    "time": "",
+    "cup": "Rocks glass over ice, or a small glass served hot"
+  },
+  "serve": "Straight from the pour or the shake, since the foam settles and the hot version cools. It suits the end of lunch or dinner, for the guest who wants coffee and a digestif in one glass: no flame, no float.",
+  "story": "Spain claims the original, espresso with brandy, and Mexico City made the Licor 43 version an after-lunch institution. A folk story ties the name to coraje, courage, with soldiers taking their coffee spiked; it is unproven. Licor 43 is named for its 43 ingredients, of which only a handful are disclosed, vanilla, citrus and tea among them.",
+  "guest": "A carajillo is espresso and Licor 43 over ice, sweet vanilla and coffee. We don't make it, but our espresso martini is the nearest coffee cocktail.",
+  "watch": [
+    "Ask which the guest means: hot with brandy, the Spanish way, or Licor 43 on ice.",
+    "Pull the shot last: a standing espresso loses its aromatics.",
+    "Licor 43 is sweet, at 31 percent: a guest expecting a bitter digestif may find it dessert-like."
+  ],
+  "library": {
+    "ref": "",
+    "study": [],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make a carajillo licor 43",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a carajillo made, and what is in it?",
+      "answer": "In Mexico, 1.5 oz Licor 43 with a fresh shot of espresso, poured over ice or shaken and strained into a rocks glass; in Spain, hot espresso with brandy. Sweet, vanilla-led and bittersweet."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Which liqueur does the Mexican carajillo use?",
+      "options": [
+        "Kahlua",
+        "Licor 43",
+        "Frangelico",
+        "Triple sec"
+      ],
+      "a": 1,
+      "explain": "Mexico rebuilt the drink on Licor 43, a sweet vanilla and citrus liqueur from Cartagena, with espresso over ice."
+    },
+    {
+      "id": "q2",
+      "q": "In Spain, what is a carajillo traditionally spiked with?",
+      "options": [
+        "Licor 43, over ice",
+        "Sherry and lemon",
+        "Orange liqueur and cream",
+        "Brandy, in hot coffee"
+      ],
+      "a": 3,
+      "explain": "Spain claims the original: hot espresso spiked with brandy."
+    },
+    {
+      "id": "q3",
+      "q": "Where does the name Licor 43 come from?",
+      "options": [
+        "Its 43 percent alcohol",
+        "Its launch year, 1943",
+        "Its 43 ingredients",
+        "A 43-day rest"
+      ],
+      "a": 2,
+      "explain": "It is named for its 43 ingredients; it is bottled at 31 percent and was first made in Cartagena in 1946."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: Carajillo, with its lore",
+      "url": ""
+    },
+    {
+      "title": "House pack: Licor 43 component",
+      "url": ""
+    },
+    {
+      "title": "Library: Running coffee and tea through a bar shift",
+      "url": ""
+    }
+  ],
+  "video": null
+}

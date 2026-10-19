@@ -1,0 +1,38 @@
+{
+  "id": "decaf",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "taste",
+      "problem": "\"a shade softer\" rests on no source.",
+      "change": "Removed."
+    },
+    {
+      "field": "make.steps[0]",
+      "problem": "\"decaf often carries a medical reason\" goes beyond the Library, which says only that it is the order most likely to.",
+      "change": "\"decaf is the order most likely to carry a medical reason.\""
+    },
+    {
+      "field": "make.steps[3]",
+      "problem": "Fahrenheit without Celsius.",
+      "change": "Added (90 to 96C)."
+    },
+    {
+      "field": "recall[0].answer",
+      "problem": "No cup and no taste, which the style asks for.",
+      "change": "Added \"poured into a warmed cup: it tastes like coffee\"."
+    },
+    {
+      "field": "quiz[0].options",
+      "problem": "The answer \"Nearly none, never zero\" was the longest option.",
+      "change": "\"About half of regular\" now \"About half of a regular cup\"."
+    },
+    {
+      "field": "quiz[1].options",
+      "problem": "The answer \"Decaffeinated with water and green extract\" was the longest by 11 characters, a length clue.",
+      "change": "Now \"Water took out the caffeine\"; the explanation already names the green coffee extract."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

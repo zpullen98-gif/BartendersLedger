@@ -1,0 +1,116 @@
+{
+  "id": "cafe-con-leche",
+  "name": "Café con leche",
+  "respell": "ka-FAY kohn LEH-chay",
+  "aka": [],
+  "group": "milk",
+  "kind": "coffee",
+  "caffeine": "From the espresso or strong coffee, roughly half the cup; the milk adds none.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on our menus: ask at lineup whether there is an espresso machine, whether the bar will make a café con leche, and at what price."
+  },
+  "what": "Spanish for coffee with milk: strong coffee, usually espresso, with about an equal measure of milk heated rather than textured, carrying little or no foam. It takes espresso like a latte and the equal measure of a café au lait. Without a machine it is made with strong dark brewed coffee.",
+  "taste": "Round, milky and mellow, more coffee than a latte, smooth rather than airy since the milk carries so little foam.",
+  "make": {
+    "steps": [
+      "Pull a double, 18 to 20 g in, 36 to 40 g out, or brew strong dark roast.",
+      "Heat about an equal measure of milk, adding little air and spinning it smooth, without a cap of foam.",
+      "Cut the steam near 135 to 140F (57 to 60C); it serves at 140 to 150F (60 to 66C).",
+      "Pour it into the coffee in a warmed cup, stir once, and offer sugar."
+    ],
+    "ratio": "About equal parts coffee and hot milk",
+    "dose": "18 to 20 g coffee; milk about equal",
+    "temp": "Milk 140 to 150F (60 to 66C)",
+    "time": "Shot 25 to 30 seconds",
+    "cup": "Warmed 4 to 8 oz cup on a saucer"
+  },
+  "serve": "On a saucer with a teaspoon and sugar on the side. It suits breakfast, and the guest who wants a milky coffee without a latte's foam.",
+  "story": "Café con leche is the Spanish-speaking world's coffee with milk, and the name is the whole recipe: espresso where there is a machine, strong brewed coffee where there is not, the milk heated in a pan or steamed. A guest who orders it by name knows how they like it, so ask.",
+  "guest": "Strong coffee with about an equal measure of hot milk and almost no foam: smoother than espresso, more coffee forward than a latte.",
+  "watch": [
+    "Built tall with a foam cap it becomes a latte; keep the milk smooth and the measure near equal.",
+    "Ask how the guest takes it: espresso or brewed, stronger or milkier, sweet or not.",
+    "Past 160F (71C) the milk tastes cooked and loses its sweetness."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "milk",
+        "What steaming actually does to milk"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make café con leche",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a café con leche made?",
+      "answer": "A double espresso or strong dark brewed coffee in a warmed cup, with about an equal measure of milk heated to 140 to 150F (60 to 66C), smooth and nearly foamless. Round and milky."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What sets a café con leche apart from a latte?",
+      "options": [
+        "Cold milk poured over a ristretto",
+        "A chocolate base",
+        "Condensed milk",
+        "Near equal parts, little foam"
+      ],
+      "a": 3,
+      "explain": "It runs close to half coffee, half milk, heated rather than textured; a latte carries far more milk and a foam layer."
+    },
+    {
+      "id": "q2",
+      "q": "Translated from Spanish, café con leche means what?",
+      "options": [
+        "Coffee with cream",
+        "Coffee with milk",
+        "Stained milk",
+        "Cut coffee"
+      ],
+      "a": 1,
+      "explain": "Con leche means with milk. Stained milk is the latte macchiato; cut coffee is the cortado."
+    },
+    {
+      "id": "q3",
+      "q": "With no espresso machine, what is café con leche made from?",
+      "options": [
+        "Strong dark brewed coffee",
+        "Cold brew, served cold",
+        "Weak filter coffee",
+        "Chicory coffee, by definition"
+      ],
+      "a": 0,
+      "explain": "Strong dark brewed coffee and hot milk in about equal parts. Chicory belongs to the New Orleans café au lait, not to this drink."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library lesson: What steaming actually does to milk",
+      "url": ""
+    },
+    {
+      "title": "Library card: Cortado",
+      "url": ""
+    },
+    {
+      "title": "Milk coffee",
+      "url": "https://en.wikipedia.org/wiki/Milk_coffee"
+    },
+    {
+      "title": "Cafe con leche vs latte",
+      "url": "https://majestycoffee.com/blogs/posts/cafe-con-leche-vs-latte"
+    }
+  ],
+  "video": null
+}

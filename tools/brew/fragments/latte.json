@@ -1,0 +1,129 @@
+{
+  "id": "latte",
+  "name": "Latte",
+  "respell": "LAH-tay",
+  "aka": [
+    "caffè latte",
+    "café latte"
+  ],
+  "group": "milk",
+  "kind": "coffee",
+  "caffeine": "All of it comes from the double shot; a bigger cup tastes weaker but holds the same caffeine.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on our menus: ask at lineup whether there is an espresso machine, whether the bar will make a latte, and at what price."
+  },
+  "what": "A double espresso filled with steamed milk in an 8 to 12 oz cup. The milk is stretched briefly and rolled long: glossy, with about a quarter inch of foam, less air than a cappuccino and enough to hold a pattern. It is the base under nearly every flavoured coffee.",
+  "taste": "Mild and sweet, milk in front and the coffee behind it; weaker in taste as the cup grows.",
+  "make": {
+    "steps": [
+      "Pull a double, 18 to 20 g in, 36 to 40 g out, into a warmed cup.",
+      "Steam 6.5 to 10.5 oz cold milk, stretched briefly, then spun glossy; cut near 135 to 140F (57 to 60C).",
+      "Tilt the cup and pour from height into the centre, so the milk mixes under the crema.",
+      "At half to two thirds full, drop the spout to the surface to float a heart or rosetta."
+    ],
+    "ratio": "1 part espresso to 5 or more parts milk",
+    "dose": "18 to 20 g coffee; 6.5 to 10.5 oz milk",
+    "temp": "Milk 140 to 150F (60 to 66C)",
+    "time": "Shot 25 to 30 seconds",
+    "cup": "Warmed 8 to 12 oz cup or tall glass"
+  },
+  "serve": "On a saucer with a teaspoon, poured to the rim, art facing the guest, sugar on the side. For extra hot, warm the cup and take the milk no further than 160F (71C).",
+  "story": "Caffè latte is Italian for coffee and milk, and in Italy the single word latte brings a glass of milk, which a travelled guest enjoys hearing. The bar lesson is honesty about art: a clean rosetta proves the milk, never the shot.",
+  "guest": "A double espresso with plenty of silky steamed milk and a thin foam: mild and creamy, the coffee in the background.",
+  "watch": [
+    "Taste the shot before you pour: a pattern on a sour double is still a bad drink.",
+    "Past 160F (71C) the milk cooks, smells eggy and loses its sweetness; re-steaming cannot fix it.",
+    "Plant milks foam differently; send any allergy question to a manager."
+  ],
+  "library": {
+    "ref": "Latte",
+    "study": [
+      [
+        "milk",
+        "The pour: height, flow and the wiggle"
+      ],
+      [
+        "milk",
+        "Rosetta and tulip"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make latte",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a latte made?",
+      "answer": "A double espresso in a warmed 8 to 12 oz cup, filled with milk stretched briefly and rolled long, about a quarter inch of foam, poured with a pattern. Mild and sweet, milk in front."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "A guest at a bar in Milan asks for 'a latte'. What arrives?",
+      "options": [
+        "Espresso with steamed milk",
+        "Espresso marked with foam",
+        "A glass of milk",
+        "A milky iced coffee"
+      ],
+      "a": 2,
+      "explain": "Latte is Italian for milk. The espresso drink is caffè latte."
+    },
+    {
+      "id": "q2",
+      "q": "Off one double shot, why does a 12 oz latte taste weaker than an 8 oz?",
+      "options": [
+        "Hotter milk in a big cup",
+        "More milk dilutes the shot",
+        "A thicker foam cap mutes it",
+        "Foam absorbs the crema"
+      ],
+      "a": 1,
+      "explain": "The shot stays the same and the milk grows, so the cup tastes milder with the same caffeine."
+    },
+    {
+      "id": "q3",
+      "q": "What does a clean rosetta prove about a latte?",
+      "options": [
+        "The milk was well textured",
+        "The shot was well extracted",
+        "The beans were freshly roasted",
+        "The milk reached 160F (71C)"
+      ],
+      "a": 0,
+      "explain": "Art proves the milk was well textured, never the shot: taste the espresso first."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library card: Latte",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The pour: height, flow and the wiggle",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Rosetta and tulip",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=SiefJJv-Qho",
+    "id": "SiefJJv-Qho",
+    "title": "Latte Art For Beginners: How To Pour Heart (Latte Art Tutorial) 🖤",
+    "channel": "European Coffee Trip",
+    "channelKind": "company",
+    "label": "How to pour a heart on a latte",
+    "watchFor": "The pitcher dropping close to the surface before any white appears, and the cut straight through at the end. A latte’s thinner foam lets a circle float and then split; nothing is drawn.",
+    "verifiedBy": "coffee-films",
+    "checkedOn": "2026-10-18"
+  }
+}

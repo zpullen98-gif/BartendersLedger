@@ -1,0 +1,116 @@
+{
+  "id": "steamer",
+  "name": "Steamer",
+  "respell": "",
+  "aka": [
+    "steamed milk",
+    "vanilla steamer"
+  ],
+  "group": "cocoa",
+  "kind": "cocoa",
+  "caffeine": "No coffee or tea, so none from either; read any flavoured syrup's label before promising none.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on the menus: ask at lineup whether there is an espresso machine with a steam wand, and whether the bar will steam milk on request."
+  },
+  "what": "Steamed milk flavoured with a syrup or spice and no coffee: a latte without the espresso. Vanilla and caramel are common. It is the drink for a child, for the guest off caffeine and for anyone who wants something warm and sweet late, and it rests entirely on milk steamed well.",
+  "taste": "Warm, sweet and silky, the milk reading sweetest in the right band, the syrup in front, under glossy microfoam.",
+  "make": {
+    "steps": [
+      "Pump the syrup into a warmed cup.",
+      "Purge the wand and set the tip just under the surface of cold milk, off centre.",
+      "Stretch briefly while the pitcher feels cool, then sink the tip and spin the milk.",
+      "Cut the steam near 135 to 140F (57 to 60C); carryover finishes it.",
+      "Tap, swirl until glossy and pour over the syrup."
+    ],
+    "ratio": "",
+    "dose": "Cold milk to fill the cup, plus syrup to taste",
+    "temp": "Serve at 140 to 155F (60 to 68C), never past 160F (71C)",
+    "time": "",
+    "cup": "Warmed 8 to 12 oz cup; smaller for a child"
+  },
+  "serve": "On a saucer with a spoon, handle to the guest's right. For a child, ask whether it should come warm rather than hot. Extra hot goes to the same ceiling and no further, in a handled cup.",
+  "story": "The steamer is café shorthand for a latte without the espresso, often sold to children. It is the plainest test of milk on the bar, since nothing hides it: the sweetness that reads highest at 140 to 155F (60 to 68C), the eggy note past 160F (71C), and the gloss that comes only from stretching early and spinning long.",
+  "guest": "A steamer is steamed milk with a flavour, vanilla say, and no coffee or tea: warm, sweet and silky. Let me check the bar can steam milk tonight.",
+  "watch": [
+    "Never steam more than you will pour: re-steamed milk is coarse and cooked.",
+    "Past 160F (71C) milk turns flat and eggy for good: dump it.",
+    "Allergy questions are medical: read the carton and ask a manager."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "milk",
+        "What steaming actually does to milk"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make a steamer steamed milk drink",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a steamer made, and what is in it?",
+      "answer": "Syrup in a warmed cup, cold milk stretched briefly then spun to glossy microfoam, steam cut near 135 to 140F (57 to 60C), served at 140 to 155F (60 to 68C). No coffee or tea: warm, sweet and silky."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What separates a steamer from a latte?",
+      "options": [
+        "It is made with cream",
+        "It has no espresso",
+        "It is served iced",
+        "Its milk is not foamed"
+      ],
+      "a": 1,
+      "explain": "A steamer is steamed milk flavoured with syrup or spice and no coffee."
+    },
+    {
+      "id": "q2",
+      "q": "Past roughly what temperature does steamed milk turn eggy?",
+      "options": [
+        "120F (49C)",
+        "140F (60C)",
+        "160F (71C)",
+        "200F (93C)"
+      ],
+      "a": 2,
+      "explain": "Past roughly 160F (71C) the whey protein cross-links, the foam coarsens and an eggy note arrives for good."
+    },
+    {
+      "id": "q3",
+      "q": "When does the air go into the milk?",
+      "options": [
+        "Early, while the jug is cool",
+        "Late, once it is too hot to hold",
+        "Throughout, tip at the surface",
+        "After the steam is off"
+      ],
+      "a": 0,
+      "explain": "Stop the air near 100F (38C) at the palm, so the spin can break the bubbles small."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Steamer drinks, Tasting Table",
+      "url": "https://tastingtable.com/1364787/milk-steamer-drink-flavor-customization"
+    },
+    {
+      "title": "Cinnamon maple steamer recipe",
+      "url": "https://www.berlyskitchen.com/cinnamon-maple-steamer/"
+    },
+    {
+      "title": "Library: What steaming does to milk; The temperature ceiling; Stretch, then spin",
+      "url": ""
+    }
+  ],
+  "video": null
+}

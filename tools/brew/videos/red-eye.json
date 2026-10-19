@@ -1,0 +1,63 @@
+{
+  "id": "red-eye",
+  "found": false,
+  "url": "",
+  "videoId": "",
+  "title": "",
+  "channel": "",
+  "channelKind": "",
+  "queries": [
+    {
+      "q": "Carabello Coffee red eye coffee how to make youtube",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "No channel named for any red eye video: Tsc21Wqkyvs \"Red Eye Coffee how to Make - YouTube\", _aQ_bpjRzoc (rejected by the first pass, no espresso machine), 9FbdTpglm6M, Bt7UmUi7XS8 (rejected by the first pass), Cc6Cj0ENGG0, LmR78g7ELHg, a Short (4D3vikF3SwI); the summary said no Carabello red eye video was found."
+    },
+    {
+      "q": "red eye black eye coffee drip coffee espresso shot tutorial",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "No channel named: SYxbWP1yS-8, _aQ_bpjRzoc, a Short (I0NBlXldCpE), Tsc21Wqkyvs \"Red Eye Coffee how to Make - YouTube\" (same id and title again), LmR78g7ELHg, car4-Mg3Bt0, 9FbdTpglm6M; the summary described methods only."
+    },
+    {
+      "q": "\"Red Eye Coffee how to Make\"",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "Tsc21Wqkyvs \"Red Eye Coffee how to Make - YouTube\" again, beside SYxbWP1yS-8, _aQ_bpjRzoc, LmR78g7ELHg, 9FbdTpglm6M, Cc6Cj0ENGG0, Bt7UmUi7XS8; no channel named in any title or the summary."
+    }
+  ],
+  "verifiedBy": "",
+  "checkedOn": "2026-10-19",
+  "note": "Tsc21Wqkyvs came back three times with the same id and exact title, but no result title, URL path or summary named its channel, so it does not count. The first pass’s Bt7UmUi7XS8 and _aQ_bpjRzoc stay rejected. Searches spent: 3. Video null; the page offers the search link alone.",
+  "firstPass": {
+    "id": "red-eye",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make a red eye coffee youtube",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=Bt7UmUi7XS8 \"How to Make a Red Eye - YouTube\"; the summary called it \"portafilter basics\" and named no channel."
+      },
+      {
+        "q": "\"How to Make a Red Eye\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=Bt7UmUi7XS8 \"How to Make a Red Eye - YouTube\" (first result, same id and title); summary: \"One guide starts by filling your portafilter with fresh grounds to pull an espresso shot\"; no channel named."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Candidate Bt7UmUi7XS8 came back twice with the same exact title, but no result title or summary named its channel, so it does not count. The other candidates were an AeroPress and Chemex build (_aQ_bpjRzoc, no espresso machine) and a V60 version (Cc6Cj0ENGG0). The entry’s two searches were spent and the spares had gone to macchiato and cortado. Video null."
+  }
+}

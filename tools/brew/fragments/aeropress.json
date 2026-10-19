@@ -1,0 +1,131 @@
+{
+  "id": "aeropress",
+  "name": "AeroPress",
+  "respell": "AIR-oh-press",
+  "aka": [
+    "inverted AeroPress"
+  ],
+  "group": "brewed",
+  "kind": "coffee",
+  "caffeine": "Caffeine comes from the coffee alone; lengthening a concentrate adds water, not caffeine.",
+  "house": {
+    "printed": false,
+    "askId": "a-dy8vzoly",
+    "ask": "Not printed on the menus: ask at lineup how the house brews its hot coffee, and whether the bar keeps a hand brewer."
+  },
+  "what": "The AeroPress is a plastic hand brewer: a chamber, a plunger and a paper filter in a screw-on cap. Coffee steeps briefly, then your arm presses it through the paper at well under one bar, against espresso’s nine. It makes a strong, clean cup or a concentrate, never espresso.",
+  "taste": "Clean like paper filter coffee but thicker and sweeter, low in perceived acidity, with a short finish.",
+  "make": {
+    "steps": [
+      "Rinse the paper in the cap with hot water, screw the cap on and stand the chamber on a warmed cup.",
+      "Add medium-fine coffee, finer than drip and coarser than espresso, at 1:14 to 1:16.",
+      "Pour in the water, stir until every ground is wet, and steep briefly.",
+      "Press slowly and evenly for 20 to 30 seconds into the cup."
+    ],
+    "ratio": "1:14 to 1:16 as it comes; about 1:8 as concentrate",
+    "dose": "About 15 g medium-fine coffee to 225 g water",
+    "temp": "175 to 205F (79 to 96C): light roasts high, dark lower",
+    "time": "1 to 2.5 minutes, including a 20 to 30 second press",
+    "cup": "Pre-heated cup or mug, 4 to 8 oz"
+  },
+  "serve": "Press it straight into a warmed cup and send it on a saucer with a spoon, or lengthen a concentrate with hot water. It is one fast cup where there is no brewer: sell it as strong black coffee, never espresso.",
+  "story": "An American engineer already known for a flying ring toy worked it out to brew one good cup, and it was first shown in 2005. Owners like to talk about the inverted build, stood upside down so nothing drips through before the press.",
+  "guest": "This is pressed by hand through paper, one cup at a time: a strong, clean black coffee, though not an espresso.",
+  "watch": [
+    "Called espresso, it is not: under one bar against about nine, so no real crema and no milk pattern.",
+    "Pressing hard forces channels and strains the paper; press for 20 to 30 seconds."
+  ],
+  "library": {
+    "ref": "AeroPress",
+    "study": [
+      [
+        "filter",
+        "Immersion against percolation"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make aeropress coffee",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "AeroPress: how is it made?",
+      "answer": "Medium-fine coffee at 1:14 to 1:16, water at 175 to 205F (79 to 96C) by roast, a short steep and a slow 20 to 30 second press through paper into a warmed cup: clean, thick and sweet, never espresso."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "A guest asks whether the AeroPress makes real espresso. What is the accurate answer?",
+      "options": [
+        "Yes, about nine bar",
+        "No, well under one bar",
+        "Yes, with a fine grind",
+        "No, it has no filter"
+      ],
+      "a": 1,
+      "explain": "An arm makes well under one bar; an espresso machine works at about nine. It makes a concentrate, with no real crema."
+    },
+    {
+      "id": "q2",
+      "q": "Roughly what ratio does the Library give for an AeroPress concentrate?",
+      "options": [
+        "About 1:2",
+        "About 1:17",
+        "About 1:8",
+        "About 1:30"
+      ],
+      "a": 2,
+      "explain": "About 1:8 to lengthen with hot water, or 1:14 to 1:16 for a cup as it comes. The 1:2 ratio is espresso."
+    },
+    {
+      "id": "q3",
+      "q": "How should the water temperature move for a dark roast on the AeroPress?",
+      "options": [
+        "Lower in the band",
+        "Up to a rolling boil",
+        "The top of the band",
+        "The same for every roast"
+      ],
+      "a": 0,
+      "explain": "The band is 175 to 205F (79 to 96C): light roasts want the top of it, and dark roasts turn harsh there."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library card: AeroPress",
+      "url": ""
+    },
+    {
+      "title": "AeroPress",
+      "url": "https://en.wikipedia.org/wiki/AeroPress"
+    },
+    {
+      "title": "How the AeroPress Inventor Went from Flying Rings to Coffee",
+      "url": "https://wishpond.com/blog/aeropress-inventor/"
+    },
+    {
+      "title": "Who is the inventor of AeroPress",
+      "url": "https://www.homegrounds.co/who-is-inventor-of-aeropress/"
+    },
+    {
+      "title": "AeroPress: about",
+      "url": "https://www.aeropress.co.uk/pages/about"
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=j6VlT_jUVPc",
+    "id": "j6VlT_jUVPc",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "How to brew with an AeroPress",
+    "watchFor": "The plunger set in straight after the pour so nothing drips through early, the swirl before pressing, and how slow and gentle the press is. The steep does the work; the press only pushes the brew through the paper.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

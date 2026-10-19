@@ -1,0 +1,120 @@
+{
+  "id": "vietnamese-iced-coffee",
+  "name": "Vietnamese iced coffee",
+  "respell": "",
+  "aka": [
+    "cà phê sữa đá"
+  ],
+  "group": "world",
+  "kind": "coffee",
+  "caffeine": "Strong: dark roast, traditionally robusta, about twice arabica's caffeine, dripped dense through a phin.",
+  "house": {
+    "printed": false,
+    "askId": "",
+    "ask": "Not printed on the menus and not poured at the house: know it for the guest who asks, and offer the nearest drink we pour."
+  },
+  "what": "Dark roast coffee, traditionally robusta, dripped slowly through a phin, a small filter set on the glass, onto sweetened condensed milk, then stirred hard and poured over ice. The slow drip makes it nearly as dense as espresso, strong enough to argue with the milk. Vietnam grows robusta almost entirely, and tinned milk stood in where fresh was scarce.",
+  "taste": "Intensely sweet and bitter together: thick, chocolatey dark roast against caramel-sweet milk, cold and creamy, long and roasty.",
+  "make": {
+    "steps": [
+      "Spoon 2 to 3 tablespoons of sweetened condensed milk into a glass.",
+      "Set the phin on top with 3 tablespoons of coarse dark roast coffee and pour in hot water.",
+      "Let it drip slowly onto the milk for 4 to 5 minutes.",
+      "Lift off the phin and stir hard until coffee and milk are one colour.",
+      "Pour over a glass of ice and serve."
+    ],
+    "ratio": "About 3 tbsp coffee to 2 to 3 tbsp condensed milk",
+    "dose": "3 tbsp coarse dark roast; 2 to 3 tbsp condensed milk",
+    "temp": "Water just off the boil, about 200F (93C)",
+    "time": "4 to 5 minutes of drip",
+    "cup": "Brewing glass, then a tall glass of ice, 10 to 12 oz"
+  },
+  "serve": "Not poured here: the nearest is the Café Glacé, a lightly sweet, roasty cold coffee, though chicory cold brew with spiced syrup and orange flower foam, not condensed milk. Where it is served, it is stirred hard before the ice and sent with a long spoon.",
+  "story": "French colonists brought coffee to Vietnam, and the country now grows robusta almost exclusively, twice arabica's caffeine and none of its manners. Fresh milk was scarce, so tinned condensed milk stood in, and the workaround outlived the empire. The house notes draw the comparison themselves: the Café Glacé is also a sweetened dark coffee served cold.",
+  "guest": "We do not make it, but our Café Glacé is close in spirit: a lightly sweet, roasty cold coffee, chicory cold brew under an orange flower foam.",
+  "watch": [
+    "Stir hard before the ice: left unstirred, the bottom is dessert and the top is bitter.",
+    "It is strong: robusta carries about twice arabica's caffeine, so mention it to a guest ordering late.",
+    "Condensed milk is dairy: a milk or allergen question goes to the house procedure, never an answer from memory."
+  ],
+  "library": {
+    "ref": "",
+    "study": [],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": "ca-phe-sua-da"
+  },
+  "search": "how to make vietnamese iced coffee phin",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Vietnamese iced coffee: how is it made?",
+      "answer": "Condensed milk in a glass, coarse dark roast, traditionally robusta, dripped through a phin on top for 4 to 5 minutes, stirred hard and poured over ice. Sweet, bitter, thick and cold."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What goes into the glass first for a Vietnamese iced coffee?",
+      "options": [
+        "Crushed ice",
+        "Hot water",
+        "Condensed milk",
+        "Evaporated milk"
+      ],
+      "a": 2,
+      "explain": "Sweetened condensed milk first; the coffee drips through the phin onto it, then it is stirred and poured over ice."
+    },
+    {
+      "id": "q2",
+      "q": "Which coffee is traditional in it?",
+      "options": [
+        "Light roast arabica",
+        "Dark roast robusta",
+        "Medium roast liberica",
+        "Decaffeinated arabica"
+      ],
+      "a": 1,
+      "explain": "Vietnam grows robusta almost exclusively: about twice arabica's caffeine, strong enough for condensed milk."
+    },
+    {
+      "id": "q3",
+      "q": "What is a phin?",
+      "options": [
+        "A clay pot for simmering coffee",
+        "A small pot for powdered coffee",
+        "A stovetop pot brewing by steam",
+        "A drip filter set on the glass"
+      ],
+      "a": 3,
+      "explain": "The phin sits on the glass and drips the coffee slowly, 4 to 5 minutes. The clay pot is an olla."
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Table: Ca Phe Sua Da",
+      "url": ""
+    },
+    {
+      "title": "Pack: Café Glacé de la Maison",
+      "url": ""
+    },
+    {
+      "title": "Library: press lesson, water off the boil",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=9GSDe9WIs1k",
+    "id": "9GSDe9WIs1k",
+    "title": "How to Brew Phin Drip Coffee Over Ice",
+    "channel": "Nguyen Coffee Supply",
+    "channelKind": "company",
+    "label": "How to brew a phin over ice",
+    "watchFor": "How the phin sits on the glass, the small first pour that wets the grounds, and the slow drip. This one drips straight over ice; the method on this page drips onto condensed milk, stirs, then pours over ice.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

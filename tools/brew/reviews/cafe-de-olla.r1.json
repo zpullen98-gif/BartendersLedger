@@ -1,0 +1,23 @@
+{
+  "id": "cafe-de-olla",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "story",
+      "problem": "\"Everything goes in together\" contradicted the make steps and watch[1], where the coffee goes in last.",
+      "change": "Now: water, cinnamon and piloncillo, then the coffee."
+    },
+    {
+      "field": "recall[0].answer",
+      "problem": "The answer gave no cup, which the style asks for.",
+      "change": "Added \"into a warmed mug\"."
+    },
+    {
+      "field": "quiz[2].options",
+      "problem": "The answer was the longest option.",
+      "change": "Now \"No spirit; that is a Mexican Coffee\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

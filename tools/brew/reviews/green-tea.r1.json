@@ -1,0 +1,18 @@
+{
+  "id": "green-tea",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "what",
+      "problem": "Said the leaf is heated soon after picking. The Green Tea card says that is commonly true of Japanese leaf only: Chinese leaf is often withered first.",
+      "change": "\"heated soon after picking\" became \"heated early\", the wording of the lesson \"Oxidation is the axis\" (green is killed early)."
+    },
+    {
+      "field": "quiz[2].options",
+      "problem": "The right answer was much the longest and the only specific option (49 characters against 32), and the wrong options would fool no trained person.",
+      "change": "The wrong options are now full specs of the same length: \"Vodka, peach schnapps, lemon, simple syrup, soda\" (the White Tea shooter), \"Matcha liqueur, Irish whiskey, lemon, honey, soda\" and \"Green Chartreuse, gin, lime juice, syrup, soda\". The explain adds \"Vodka in place of the whiskey makes a White Tea.\""
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

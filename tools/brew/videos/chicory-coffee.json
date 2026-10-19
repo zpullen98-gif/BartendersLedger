@@ -1,0 +1,52 @@
+{
+  "id": "chicory-coffee",
+  "found": false,
+  "url": "",
+  "videoId": "",
+  "title": "",
+  "channel": "",
+  "channelKind": "",
+  "queries": [
+    {
+      "q": "chicory coffee how to brew \"Community Coffee\" OR \"French Market Coffee\" OR \"America’s Test Kitchen\" youtube (allowed_domains youtube.com)",
+      "returned": "None of the three. vwj9l9LUrlQ \"New Orleans Chicory Coffee Recipe - YouTube\" again; 1Uv_x4zkngE \"How to Make Chicory Coffee\" (chicory alone, a coffee substitute), roast-your-own chicory films (z9HUb6gwj74, ZcMWhsimNYQ), CF1YY2XKRn8 (a benefits title), -O_grmmvK24, Z152NYxAV-k, Shorts. No channel named."
+    },
+    {
+      "q": "coffee and chicory New Orleans style how to make \"James Hoffmann\" OR \"Kevin Belton\" OR \"Food Wishes\" youtube (allowed_domains youtube.com)",
+      "returned": "None of the three. vwj9l9LUrlQ again; {\"title\":\"Blue Bottle Coffee\",\"url\":\"https://www.youtube.com/watch?v=1gr6P7s4lL4\"} (the roaster’s New Orleans-style blend film, its description linking an iced coffee kit and the blend: a product film for the iced drink, and the result title is the channel, not the video’s own title); v7Xs53eYJs4 (iced), 3C5nsddY1eI and KtBwmUIB-yI (explainers), aI0uPx4pSMY (a review of a café’s canned blend), a Short."
+    },
+    {
+      "q": "New Orleans Chicory Coffee Recipe \"Subscribe To Our Channel\" (allowed_domains youtube.com)",
+      "returned": "{\"title\":\"New Orleans Chicory Coffee Recipe - YouTube\",\"url\":\"https://www.youtube.com/watch?v=vwj9l9LUrlQ\"} (first); summary: uploaded October 2017, the description links to a coffee retailer’s site and asks viewers to subscribe; the retailer and the channel are not named. Two unrelated results."
+    }
+  ],
+  "verifiedBy": "",
+  "checkedOn": "2026-10-19",
+  "note": "Three searches spent. vwj9l9LUrlQ came back in every search with the same id and exact title, but still no result names its channel (the description only links an unnamed coffee retailer), so it fails as in the first pass. 1gr6P7s4lL4 is named to Blue Bottle Coffee, but no result printed its own title and it is a product film for an iced chicory blend, not the hot brewed cup. Video stays null.",
+  "firstPass": {
+    "id": "chicory-coffee",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "new orleans chicory coffee how to brew youtube (allowed_domains youtube.com)",
+        "returned": "{\"title\":\"New Orleans Chicory Coffee Recipe - YouTube\",\"url\":\"https://www.youtube.com/watch?v=vwj9l9LUrlQ\"}; summary names no channel (\"Subscribe To Our Channel\"); a commenter says the style is meant to be taken with milk."
+      },
+      {
+        "q": "\"New Orleans Chicory Coffee Recipe\" (allowed_domains youtube.com)",
+        "returned": "{\"title\":\"New Orleans Chicory Coffee Recipe - YouTube\",\"url\":\"https://www.youtube.com/watch?v=vwj9l9LUrlQ\"}; no channel named."
+      },
+      {
+        "q": "\"New Orleans Chicory Coffee Recipe\" youtube vwj9l9LUrlQ (no domain filter; the batch’s second spare)",
+        "returned": "No youtube.com result: written recipes only (calphalon.com, driftaway.coffee, imbibemagazine.com and others); no channel named."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Candidate vwj9l9LUrlQ (\"New Orleans Chicory Coffee Recipe\"): the same id and exact title came back twice, but no result named its channel, and a spare search for it found none, so it does not count. The other results were iced or cold brew versions, a roast-your-own chicory film, or an explainer rather than the hot brewed cup. The pack carries no video tied to b-zxkf4bzw or the chicory components. Video stays null."
+  }
+}

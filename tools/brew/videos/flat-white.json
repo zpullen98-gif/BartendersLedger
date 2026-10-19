@@ -1,0 +1,15 @@
+{
+  "id": "flat-white",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=TzsdPlaYHks",
+  "videoId": "TzsdPlaYHks",
+  "title": "Steaming Perfect Milk on Your Espresso Machine (Barista Guide)",
+  "channel": "Artisti Coffee Roasters.",
+  "channelKind": "company",
+  "queries": [],
+  "verifiedBy": "coffee-films",
+  "checkedOn": "2026-10-18",
+  "checkedBy": "checker",
+  "note": "The plan names the Library film milk/stretch-then-spin; id, title and channel copied exactly from that COFFEE_FILMS row (sec milk, row stretch-then-spin). No search spent.",
+  "checkerNote": "Confirmed by the checker on 2026-10-19: id TzsdPlaYHks, title \"Steaming Perfect Milk on Your Espresso Machine (Barista Guide)\" and channel \"Artisti Coffee Roasters.\" (with the full stop) equal the COFFEE_FILMS row milk/stretch-then-spin exactly, and the plan names that film; the fragment’s url, id, title and channel match. A roaster, so company. No search spent. \"Perfect\" in the title is the channel’s own word: schema.mjs skips video.title in its language checks and the page never draws it (it shows our label). Left for others: the channel is not yet on companies.json."
+}

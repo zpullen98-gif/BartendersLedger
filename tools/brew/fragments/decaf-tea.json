@@ -1,0 +1,137 @@
+{
+  "id": "decaf-tea",
+  "name": "Decaf tea",
+  "respell": "",
+  "aka": [
+    "decaffeinated tea",
+    "decaf"
+  ],
+  "group": "leaf",
+  "kind": "tea",
+  "caffeine": "Reduced, not removed: decaf tea keeps a trace of caffeine, so a guest avoiding it on medical advice is better served a tisane.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup whether the bar pours a decaffeinated tea, which brand and which base tea, and the price."
+  },
+  "what": "Decaf tea is real tea, Camellia sinensis, with most of its caffeine taken out by carbon dioxide under high pressure, by a solvent such as ethyl acetate or methylene chloride, or by water passed through carbon. It is reduced, not emptied, and a trace remains. It brews like the tea it was made from, black or green, and for a guest who wants no caffeine at all a tisane is the better answer.",
+  "taste": "Like its base tea, a little thinner and flatter. Carbon dioxide is generally credited with keeping the most flavour, while ethyl acetate is sometimes said to leave a chemical note.",
+  "make": {
+    "steps": [
+      "Read the box and brew decaf the way its base tea brews, black or green.",
+      "Bring fresh water to a full boil for a black, or let it fall to 160 to 180F (71 to 82C) for a green.",
+      "Warm the pot and put in one bag per cup, or 2 to 3 g per 6 to 8 oz.",
+      "Pour the water on and steep 3 to 5 minutes for black, 1 to 2 for green, then pull the bag.",
+      "Send milk, lemon and sugar on the side as the base tea calls for."
+    ],
+    "ratio": "2 to 3 g of leaf per 6 to 8 oz of water",
+    "dose": "One bag, about 2 g, or 2 to 3 g loose leaf",
+    "temp": "Black 200 to 212F (93 to 100C); green 160 to 180F (71 to 82C)",
+    "time": "3 to 5 minutes black; 1 to 2 minutes green",
+    "cup": "Warmed pot into a cup or mug, 6 to 8 oz"
+  },
+  "serve": "Serve it as the base tea: a warmed pot or cup, a dish for the bag, and milk, lemon and sugar on the side for a black. Say decaf aloud at the pass and mark the saucer, because it looks exactly like the regular pot. For a guest who wants none at all, offer a tisane before the decaf.",
+  "story": "Tea is decaffeinated in four main ways: carbon dioxide under high pressure, which pulls the small caffeine molecule and leaves larger flavour molecules; ethyl acetate, sometimes sold as natural because of its natural origin; methylene chloride; and water run through a carbon filter, used for only a few teas. None reaches zero. And a thirty second rinse at the table does nothing useful: it does not decaffeinate a leaf.",
+  "guest": "Decaf tea still carries a trace of caffeine; if you would rather avoid it altogether, a herbal infusion such as peppermint or rooibos comes from another plant entirely.",
+  "watch": [
+    "Decaffeinated is not caffeine free: say trace, not none, and offer a tisane to a guest avoiding caffeine on medical advice.",
+    "A thirty second rinse does not decaffeinate a leaf; never offer it as a fix.",
+    "Decaf and regular pots look alike: mark the decaf at the pass so it reaches the right seat.",
+    "Not every tisane is caffeine free: yerba mate, guayusa and cascara carry caffeine of their own."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "tea",
+        "Caffeine, and the questions guests ask"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how is tea decaffeinated",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is decaf tea made, and how do you brew it?",
+      "answer": "Most caffeine is removed by carbon dioxide, ethyl acetate, methylene chloride or water and carbon, leaving a trace. Brew it as its base tea: a decaf black at a full boil, one bag per cup, 3 to 5 minutes, milk on the side."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Which decaffeination method works with a gas under high pressure?",
+      "options": [
+        "Ethyl acetate",
+        "Carbon dioxide",
+        "A hot water rinse",
+        "Methylene chloride"
+      ],
+      "a": 1,
+      "explain": "Under high pressure, carbon dioxide acts as a solvent that pulls the small caffeine molecule and leaves larger flavour molecules, which is why it is credited with keeping flavour."
+    },
+    {
+      "id": "q2",
+      "q": "A guest avoiding caffeine on medical advice asks for decaf tea. What do you tell them?",
+      "options": [
+        "Decaf is caffeine free",
+        "A long steep removes the rest",
+        "Green decaf has none; black has some",
+        "It keeps a trace; offer a tisane"
+      ],
+      "a": 3,
+      "explain": "Decaffeinated tea is reduced, not emptied. Say trace, not none, and offer a tisane such as peppermint or rooibos, which is not the tea plant."
+    },
+    {
+      "id": "q3",
+      "q": "Does a thirty second rinse in hot water decaffeinate tea leaf?",
+      "options": [
+        "No, it does not",
+        "Yes, most caffeine leaves at once",
+        "Only for green tea",
+        "Only for whole leaf"
+      ],
+      "a": 0,
+      "explain": "A quick rinse does not decaffeinate a leaf. Decaf is made at the factory by carbon dioxide, a solvent or water and carbon, and even that leaves a trace."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library lesson: Tea Service, Caffeine, and the questions guests ask",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, Tisanes are not tea",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, The service itself",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Water for tea",
+      "url": ""
+    },
+    {
+      "title": "Library card: Black Tea",
+      "url": ""
+    },
+    {
+      "title": "How is tea decaffeinated? (artoftea.com)",
+      "url": "https://www.artoftea.com/blogs/health-lifestyle/how-is-tea-decaffeinated"
+    },
+    {
+      "title": "Tea decaffeination process (harney.com)",
+      "url": "https://www.harney.com/blogs/news/tea-decaffeination-process"
+    },
+    {
+      "title": "Decaffeination (Britannica)",
+      "url": "https://britannica.com/topic/decaffeination"
+    }
+  ],
+  "video": null
+}

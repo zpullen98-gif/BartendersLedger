@@ -1,0 +1,130 @@
+{
+  "id": "coffee-with-liqueur",
+  "name": "Coffee with liqueur and cream",
+  "respell": "",
+  "aka": [
+    "spiked coffee",
+    "liqueur coffee"
+  ],
+  "group": "spiked",
+  "kind": "coffee",
+  "caffeine": "Caffeine comes from the hot coffee, plus a few milligrams an ounce from any coffee liqueur; no mainstream bottle is decaf.",
+  "house": {
+    "printed": true,
+    "packIds": [
+      "b-strzgc5a"
+    ]
+  },
+  "what": "The family of hot coffees built on a liqueur, sometimes with a spirit, under lightly whipped cream: the keoke coffee with brandy, coffee liqueur and dark crème de cacao, the Mexican coffee with añejo tequila and coffee liqueur. Ours, under Coffee Cocktails, is dark roast coffee with chicory, Frangelico and Nocello, two nut liqueurs, under whipped cream.",
+  "taste": "Hot, roasty coffee softened by the liqueur's sugar, hazelnut, walnut, chocolate or vanilla by the bottle, sipped through cool cream.",
+  "make": {
+    "steps": [
+      "Pre-heat a mug or footed glass with hot water, then empty and dry it.",
+      "Jigger the liqueur, and any spirit, into it.",
+      "Add the hot coffee to about half an inch below the rim and stir.",
+      "Whip cold cream to a soft ribbon and float it slowly over a spoon."
+    ],
+    "ratio": "About 2 oz liqueur and spirit to 4 oz coffee",
+    "dose": "2 oz liqueur and spirit in all, 4 oz coffee, cream",
+    "temp": "Cream kept under 50F (10C)",
+    "time": "",
+    "cup": "Pre-heated mug or footed glass"
+  },
+  "serve": "Carry it level so the cap stays whole, handle to the guest's right, and name it as it lands so it is never taken for the Irish coffee. Ask the guest not to stir. Offer it as dessert arrives, to the guest who wants coffee with a little something but not whiskey.",
+  "story": "Every bar has its own: the keoke coffee is a San Diego creation of the 1960s, the Mexican coffee the cantina's answer to the Irish. Coffee liqueur is not coffee, though: it is a sweetened spirit, most bottles 20 to 25 percent alcohol, so swapping it for coffee changes sweetness, strength and caffeine at once.",
+  "guest": "Our coffee cocktail is chicory coffee with Frangelico and Nocello, hazelnut and walnut, under whipped cream: nutty, roasty and comforting with dessert.",
+  "watch": [
+    "Ask three things: hot or cold, sweet and creamy or strong and bitter, and whether they want the caffeine.",
+    "Nut questions: ours prints two nut liqueurs and cream; read the service note and confirm at lineup.",
+    "Jigger every mug: hot, sweet and creamy hides the total."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "spiked",
+        "Coffee liqueur is not coffee"
+      ],
+      [
+        "spiked",
+        "Counting a spiked coffee"
+      ]
+    ],
+    "cocktail": "Keoke Coffee",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make a spiked coffee with whipped cream",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a coffee with liqueur and cream made, and what is in it?",
+      "answer": "Liqueur, sometimes with a spirit, jiggered into a pre-heated mug, hot coffee stirred in, then lightly whipped cream floated over a spoon. Sweet, roasty coffee sipped through cool cream."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Besides brandy, what goes into a keoke coffee?",
+      "options": [
+        "Irish cream and Frangelico",
+        "Añejo tequila and cinnamon",
+        "Triple sec and flamed overproof rum",
+        "Coffee liqueur and crème de cacao"
+      ],
+      "a": 3,
+      "explain": "The keoke is brandy, coffee liqueur and dark crème de cacao under whipped cream; tequila makes the Mexican coffee."
+    },
+    {
+      "id": "q2",
+      "q": "How strong is a typical coffee liqueur?",
+      "options": [
+        "20 to 25 percent",
+        "40 to 45 percent",
+        "5 to 10 percent",
+        "55 to 60 percent"
+      ],
+      "a": 0,
+      "explain": "Most bottles run 20 to 25 percent, about half the strength of whiskey."
+    },
+    {
+      "id": "q3",
+      "q": "Which two nut liqueurs does our printed coffee cocktail name?",
+      "options": [
+        "Amaretto and Frangelico",
+        "Nocino and amaretto",
+        "Frangelico and Nocello",
+        "Amaretto and Nocello"
+      ],
+      "a": 2,
+      "explain": "The menu prints chicory coffee, Frangelico, a hazelnut liqueur, Nocello, a walnut liqueur, and whipped cream."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: Coffee liqueur is not coffee; Counting a spiked coffee",
+      "url": ""
+    },
+    {
+      "title": "Library: Keoke Coffee; Mexican Coffee",
+      "url": ""
+    },
+    {
+      "title": "House pack: coffee cocktail record",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=jRZO5Vdr440",
+    "id": "jRZO5Vdr440",
+    "title": "",
+    "channel": "ExpertVillage Leaf Group",
+    "channelKind": "company",
+    "label": "Building a hot coffee with liqueurs and cream",
+    "watchFor": "The order of the build: the spirits measured into the glass first, the hot coffee on top, the whipped cream last. The liqueurs change from drink to drink; the build stays the same.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "sweet-tea",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "taste",
+      "problem": "“Held cold it can haze without tasting any different”: no source says tea cream leaves the taste unchanged.",
+      "change": "Cut to “held cold it can haze”; the watch line carries the tea cream test."
+    },
+    {
+      "field": "quiz[2].options",
+      "problem": "The right option was 56 characters against 42 to 44 and the only “No”: a length clue.",
+      "change": "Lengthened two distractors: “Yes: the sugar in the brine candies the skin like a glaze” (57) and “Faintly: the tea leaves a lemony sweetness in the meat” (54)."
+    },
+    {
+      "field": "make.dose",
+      "problem": "The lower bound of 1 to 2 cups sugar per gallon rested on one forum post, not two sites.",
+      "change": "Checked by search: a magazine recipe reprinted on a forum gives 1 to 1 and three quarter cups and a sugar guide gives 1 to 2 cups, so the range stands; the forum thread is added to sources."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

@@ -1,0 +1,163 @@
+{
+  "id": "sweet-tea",
+  "name": "Sweet tea",
+  "respell": "",
+  "aka": [
+    "Southern sweet tea",
+    "sweet iced tea"
+  ],
+  "group": "iced",
+  "kind": "tea",
+  "caffeine": "From the black tea: roughly what a hot cup carries, commonly 40 to 70 mg per 8 oz, varying with leaf and steep.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Printed only as the brine on the dinner menu’s Cornish hen, never as a drink: ask at lineup whether the bar pours sweet tea, how sweet and the price.",
+    "uses": [
+      "d-l5877hs6"
+    ]
+  },
+  "what": "Sweet tea is the table drink of the American South: black tea brewed strong, sugared while it is hot, then poured over ice. Sugaring it hot is the whole difference from iced tea with sugar on the side, because sugar dissolves readily in hot tea and poorly in a cold glass. It is brewed at double strength so the melting ice brings it down to drinking strength, and it reaches the table already sweet.",
+  "taste": "Sweet first, then the malt and brisk grip of black tea, cooled and softened by the melt; a squeeze of lemon sharpens it. Steeped too long it turns drying and bitter under the sugar, and held cold it can haze.",
+  "make": {
+    "steps": [
+      "Weigh leaf for the full finished volume, 2 to 3 g per 6 to 8 oz, and brew it in half that water at a full boil.",
+      "Steep 3 to 5 minutes, then pull the leaf; more leaf, not more time, makes it stronger.",
+      "Stir the sugar into the hot tea until it dissolves completely.",
+      "Weigh ice equal to the hot tea, in a metal vessel, and pour the sweet tea over it.",
+      "Taste once the melt is done, then serve or move it straight to the cooler.",
+      "Hold it only as your local code allows, and keep the urn and spigot on a cleaning schedule."
+    ],
+    "ratio": "Double strength, poured over an equal weight of ice",
+    "dose": "Leaf for the full volume; 1 to 2 cups sugar per gallon",
+    "temp": "Brew at 200 to 212F (93 to 100C); serve ice cold",
+    "time": "3 to 5 minutes steeped; cold once the ice melts",
+    "cup": "Collins glass over fresh ice"
+  },
+  "serve": "It goes out in a Collins over fresh ice with a lemon wedge on the rim or on the side, and a long spoon or a straw. Bring it already sweet, because that is what the guest ordered, and keep unsweetened iced tea close for the guest who asks for it lighter.",
+  "story": "The oldest printed sweet tea recipe is in a Virginia community cookbook of 1879, made with green tea and poured over ice, with sugar in each goblet and a squeeze of lemon suggested. A Boston cookbook of 1884 is cited as the first iced tea made with black tea, and black tea is what the South drinks now, brewed strong and sweetened while hot. Before that, cold tea in America was punch, laced with spirits or wine. On our dinner menu sweet tea appears only as the brine for the fried Cornish hen.",
+  "guest": "Sweet tea comes already sweetened, brewed strong and sugared hot; if you would like it less sweet, I can bring unsweetened iced tea with syrup on the side.",
+  "watch": [
+    "Sugar will not come back out: a guest who wants it less sweet gets unsweetened tea and syrup, never a top up of water.",
+    "Cloudiness in the cooler is tea cream, not spoilage: warm a glass and true cream clears. Haze that stays, or smells sour or pours slick, means a dirty urn.",
+    "A guest may ask about the sweet tea-brined Cornish hen on the dinner menu: the brine seasons and browns the bird, and it eats savoury, not sweet.",
+    "Some cooks add a pinch of baking soda to soften the tannin; it is optional, and a pinch, not a spoonful."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "tea",
+        "Iced tea, and the cloudy pot"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make southern sweet tea",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Sweet tea: how is it made, and what goes in?",
+      "answer": "Black tea brewed double strength, leaf for the full volume in half the water, 3 to 5 minutes, sugar stirred in while hot, 1 to 2 cups per gallon, then poured over an equal weight of ice. Served in a Collins over fresh ice with lemon: sweet first, then malty black tea."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Why is sweet tea sugared while the tea is still hot?",
+      "options": [
+        "Hot sugar caramelises and deepens the colour",
+        "Sugar stops the leaf from extracting further",
+        "Sugar dissolves fully only in the hot tea",
+        "Heat drives off caffeine as the sugar melts"
+      ],
+      "a": 2,
+      "explain": "Sugar dissolves readily in hot tea and poorly in a cold glass, which is the whole difference between sweet tea and iced tea with sugar on the side."
+    },
+    {
+      "id": "q2",
+      "q": "The oldest printed sweet tea recipe, in a Virginia cookbook of 1879, was made with which tea?",
+      "options": [
+        "Black tea",
+        "Green tea",
+        "Rooibos",
+        "Oolong"
+      ],
+      "a": 1,
+      "explain": "Housekeeping in Old Virginia, 1879, steeped green tea and poured it over ice with sugar. A Boston cookbook of 1884 is cited for the first black tea version, and black tea is what the South drinks now."
+    },
+    {
+      "id": "q3",
+      "q": "A guest asks whether the sweet tea-brined Cornish hen on the dinner menu will taste sweet. What do you say?",
+      "options": [
+        "Yes: the sugar in the brine candies the skin like a glaze",
+        "Faintly: the tea leaves a lemony sweetness in the meat",
+        "Yes: a sweet brine always makes a sweet bird",
+        "No: the brine seasons and browns it, and it eats savoury"
+      ],
+      "a": 3,
+      "explain": "A sweet tea brine is strong tea, sugar and salt: the salt seasons the bird and keeps it juicy, and the tea and sugar help the skin brown. The fried hen eats savoury."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ledger Library: Tea Service, Iced tea, and the cloudy pot",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library: Tea Service, Water for tea",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library: Tea Service, Caffeine, and the questions guests ask",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library: Tea Service, Tea on a bar programme",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library card: Black Tea",
+      "url": ""
+    },
+    {
+      "title": "House pack components: Sweet tea; Sweet tea brine and frying",
+      "url": ""
+    },
+    {
+      "title": "House pack dish: Poussin à la Moutarde",
+      "url": ""
+    },
+    {
+      "title": "Southern Sweet Tea Recipe",
+      "url": "https://addapinch.com/southern-sweet-tea/"
+    },
+    {
+      "title": "Southern Sweet Tea",
+      "url": "https://intentionalhospitality.com/southern-sweet-tea/"
+    },
+    {
+      "title": "Sweet Tea Southern Style",
+      "url": "https://southernfoodandfun.com/wprm_print/sweet-tea-southern-style-2"
+    },
+    {
+      "title": "Sweet tea",
+      "url": "https://forums.welltrainedmind.com/topic/413009-sweet-tea/"
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=28VYlDkbxzE",
+    "id": "28VYlDkbxzE",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "How to make Southern sweet tea",
+    "watchFor": "Watch when the sugar goes in: stirred into the tea while it is hot, it dissolves, which is the difference from iced tea sugared at the table. Note how strong the tea bags are brewed before the ice.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "cold-brew",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "what",
+      "problem": "Said the Café Glacé de la Maison is our cold brew; the pack has the Café Glacé starting from chicory cold brew, so plain cold brew and the house drink were run together.",
+      "change": "Now: chicory cold brew is the base of the Café Glacé de la Maison, with cardamom-clove syrup under an orange flower cold foam (the pack’s spec)."
+    },
+    {
+      "field": "watch[2]",
+      "problem": "\"A filter run too fast\" rests on no source; the Library says paper strips fines and mesh passes them.",
+      "change": "Now: a grind too fine, or a filter that lets the fines through."
+    },
+    {
+      "field": "quiz[0].explain",
+      "problem": "\"Caffeine tracks dose and contact, not temperature\" overstates the Library lesson, which says \"more than temperature\".",
+      "change": "Changed \"not temperature\" to \"more than temperature\"."
+    },
+    {
+      "field": "quiz[1].options",
+      "problem": "The answer was 20 characters longer than any other option, and the only one with three specific ingredients: a length and specificity clue.",
+      "change": "Rewrote the three distractors as specs of the same length and shape (espresso and vanilla; cold brew and cinnamon; chicory coffee and clove). The answer and a are unchanged."
+    },
+    {
+      "field": "quiz[1].explain",
+      "problem": "\"Those three\" no longer pointed at anything once the options were rebalanced.",
+      "change": "Now names the three printed parts: chicory cold brew, cardamom-clove syrup and orange flower cold foam."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

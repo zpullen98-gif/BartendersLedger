@@ -1,0 +1,1941 @@
+{
+  "about": "The roster of the Coffee and tea page under the Brennan’s tab (18 October 2026): every entry the owner asked for, its group, its kind, how the house serves it (printed with the pack ids of the house’s own records, or not printed with the lineup question that asks), the Library links (a COFFEE_REF card name, COFFEE_STUDY [section, lesson title] pairs, a cocktail or zero-proof name), a World Table recipe slug, the YouTube search phrase, and the Library film to reuse where one teaches it. Authors read it; build-brew.mjs and check-brew.mjs hold the fragments to it.",
+  "groups": [
+    {
+      "id": "house",
+      "title": "At the house"
+    },
+    {
+      "id": "espresso",
+      "title": "Espresso and the short drinks"
+    },
+    {
+      "id": "long",
+      "title": "Long blacks and americanos"
+    },
+    {
+      "id": "milk",
+      "title": "With milk"
+    },
+    {
+      "id": "brewed",
+      "title": "Brewed coffee"
+    },
+    {
+      "id": "cold",
+      "title": "Cold coffee"
+    },
+    {
+      "id": "world",
+      "title": "Coffee around the world"
+    },
+    {
+      "id": "spiked",
+      "title": "Spiked and tableside"
+    },
+    {
+      "id": "cocoa",
+      "title": "Chocolate, chai and other lattes"
+    },
+    {
+      "id": "leaf",
+      "title": "Tea from the tea plant"
+    },
+    {
+      "id": "herbal",
+      "title": "Herbal teas"
+    },
+    {
+      "id": "iced",
+      "title": "Iced tea and the South"
+    }
+  ],
+  "house": {
+    "ids": [
+      "b-zxkf4bzw",
+      "b-9evy10yg",
+      "b-r69tzqly",
+      "b-xs168hf4",
+      "b-z5ckwig5",
+      "b-strzgc5a"
+    ],
+    "teaAsk": "a-wt01gt1b"
+  },
+  "asks": {
+    "espresso": "a-zr8ze4mu",
+    "cafeAuLait": "a-4s0iqehy",
+    "tea": "a-wt01gt1b",
+    "hotChocolate": "a-vme0bxmm",
+    "decaf": "a-qr0si1vx",
+    "brewing": "a-dy8vzoly"
+  },
+  "entries": [
+    {
+      "id": "espresso",
+      "name": "Espresso",
+      "group": "espresso",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Espresso",
+        "study": [
+          [
+            "shot",
+            "Dose, yield and ratio"
+          ],
+          [
+            "shot",
+            "Dialling in, as a procedure"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to pull a shot of espresso",
+      "film": "shot/dialling-in-as-a-procedure"
+    },
+    {
+      "id": "ristretto",
+      "name": "Ristretto",
+      "group": "espresso",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Ristretto",
+        "study": [
+          [
+            "shot",
+            "Ristretto, normale, lungo"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make ristretto",
+      "film": ""
+    },
+    {
+      "id": "lungo",
+      "name": "Lungo",
+      "group": "espresso",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Lungo",
+        "study": [
+          [
+            "shot",
+            "Ristretto, normale, lungo"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make lungo",
+      "film": ""
+    },
+    {
+      "id": "macchiato",
+      "name": "Macchiato",
+      "group": "espresso",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Macchiato",
+        "study": [
+          [
+            "milk",
+            "Pitcher, volume and the pour window"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make an espresso macchiato",
+      "film": ""
+    },
+    {
+      "id": "cortado",
+      "name": "Cortado",
+      "group": "espresso",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Cortado",
+        "study": [
+          [
+            "milk",
+            "Stretch, then spin"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make cortado",
+      "film": ""
+    },
+    {
+      "id": "piccolo",
+      "name": "Piccolo",
+      "group": "espresso",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Piccolo",
+        "study": [
+          [
+            "milk",
+            "Pitcher, volume and the pour window"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make a piccolo latte",
+      "film": ""
+    },
+    {
+      "id": "americano",
+      "name": "Americano",
+      "group": "long",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Americano",
+        "study": [
+          [
+            "shot",
+            "Dose, yield and ratio"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make americano",
+      "film": ""
+    },
+    {
+      "id": "long-black",
+      "name": "Long black",
+      "group": "long",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Long Black",
+        "study": [
+          [
+            "shot",
+            "Dose, yield and ratio"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make long black",
+      "film": ""
+    },
+    {
+      "id": "red-eye",
+      "name": "Red eye",
+      "group": "long",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "filter",
+            "Batch brew is the one that pays"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make a red eye coffee",
+      "film": ""
+    },
+    {
+      "id": "flat-white",
+      "name": "Flat white",
+      "group": "milk",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Flat White",
+        "study": [
+          [
+            "milk",
+            "Reading finished milk"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make flat white",
+      "film": "milk/stretch-then-spin"
+    },
+    {
+      "id": "cappuccino",
+      "name": "Cappuccino",
+      "group": "milk",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Cappuccino",
+        "study": [
+          [
+            "milk",
+            "Stretch, then spin"
+          ],
+          [
+            "milk",
+            "The heart is floated, not drawn"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make cappuccino",
+      "film": "milk/what-steaming-actually-does-to-milk"
+    },
+    {
+      "id": "latte",
+      "name": "Latte",
+      "group": "milk",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Latte",
+        "study": [
+          [
+            "milk",
+            "The pour: height, flow and the wiggle"
+          ],
+          [
+            "milk",
+            "Rosetta and tulip"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make latte",
+      "film": "milk/the-heart-is-floated-not-drawn"
+    },
+    {
+      "id": "breve",
+      "name": "Breve",
+      "group": "milk",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "milk",
+            "What steaming actually does to milk"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make a breve latte",
+      "film": ""
+    },
+    {
+      "id": "mocha",
+      "name": "Mocha",
+      "group": "milk",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Mocha",
+        "study": [
+          [
+            "milk",
+            "Stretch, then spin"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make mocha",
+      "film": ""
+    },
+    {
+      "id": "latte-macchiato",
+      "name": "Latte macchiato",
+      "group": "milk",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "milk",
+            "Pitcher, volume and the pour window"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make latte macchiato",
+      "film": ""
+    },
+    {
+      "id": "cafe-au-lait",
+      "name": "Café au lait",
+      "group": "milk",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-4s0iqehy",
+        "ask": ""
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "filter",
+            "Batch brew is the one that pays"
+          ],
+          [
+            "milk",
+            "What steaming actually does to milk"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make cafe au lait",
+      "film": ""
+    },
+    {
+      "id": "cafe-au-lait-new-orleans",
+      "name": "New Orleans café au lait",
+      "group": "milk",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-4s0iqehy",
+        "ask": "",
+        "uses": [
+          "b-zxkf4bzw"
+        ]
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "filter",
+            "Ratio, and the number to actually hold"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": "beignets"
+      },
+      "search": "new orleans cafe au lait chicory how to make",
+      "film": ""
+    },
+    {
+      "id": "cafe-con-leche",
+      "name": "Café con leche",
+      "group": "milk",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "milk",
+            "What steaming actually does to milk"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make café con leche",
+      "film": ""
+    },
+    {
+      "id": "drip-coffee",
+      "name": "Drip coffee",
+      "group": "brewed",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-dy8vzoly",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Batch Brew",
+        "study": [
+          [
+            "filter",
+            "Batch brew is the one that pays"
+          ],
+          [
+            "filter",
+            "Ratio, and the number to actually hold"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to brew drip coffee batch brewer",
+      "film": ""
+    },
+    {
+      "id": "pour-over",
+      "name": "Pour-over",
+      "group": "brewed",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-dy8vzoly",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Pour-over",
+        "study": [
+          [
+            "filter",
+            "Pour-over, as a procedure"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make pour-over",
+      "film": "filter/pour-over-as-a-procedure"
+    },
+    {
+      "id": "french-press",
+      "name": "French press",
+      "group": "brewed",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-dy8vzoly",
+        "ask": ""
+      },
+      "library": {
+        "ref": "French Press",
+        "study": [
+          [
+            "filter",
+            "The press, and what the plunge does not do"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make french press",
+      "film": "filter/the-press-and-what-the-plunge-does-not-do"
+    },
+    {
+      "id": "aeropress",
+      "name": "AeroPress",
+      "group": "brewed",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-dy8vzoly",
+        "ask": ""
+      },
+      "library": {
+        "ref": "AeroPress",
+        "study": [
+          [
+            "filter",
+            "Immersion against percolation"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make aeropress coffee",
+      "film": ""
+    },
+    {
+      "id": "moka-pot",
+      "name": "Moka pot",
+      "group": "brewed",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "",
+        "ask": "Not printed on the menus and not poured at the house: know it for the guest who asks, and offer the nearest drink we pour."
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "filter",
+            "Grind, and why it changes per method"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make moka pot",
+      "film": ""
+    },
+    {
+      "id": "chicory-coffee",
+      "name": "Coffee with chicory",
+      "group": "brewed",
+      "kind": "coffee",
+      "house": {
+        "printed": true,
+        "packIds": [
+          "b-zxkf4bzw"
+        ]
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "filter",
+            "Ratio, and the number to actually hold"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "new orleans chicory coffee how to brew",
+      "film": ""
+    },
+    {
+      "id": "single-origin",
+      "name": "Single origin coffee",
+      "group": "brewed",
+      "kind": "coffee",
+      "house": {
+        "printed": true,
+        "packIds": [
+          "b-9evy10yg"
+        ]
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "shot",
+            "Freshness, degassing and the bag date"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "what is single origin coffee",
+      "film": ""
+    },
+    {
+      "id": "decaf",
+      "name": "Decaf coffee",
+      "group": "brewed",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-qr0si1vx",
+        "ask": ""
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "shot",
+            "Decaf is not an afterthought"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how is decaf coffee made swiss water process",
+      "film": ""
+    },
+    {
+      "id": "cold-brew",
+      "name": "Cold brew",
+      "group": "cold",
+      "kind": "coffee",
+      "house": {
+        "printed": true,
+        "packIds": [
+          "b-r69tzqly"
+        ]
+      },
+      "library": {
+        "ref": "Cold Brew",
+        "study": [
+          [
+            "filter",
+            "Cold brew and iced coffee are different drinks"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make cold brew",
+      "film": "filter/cold-brew-and-iced-coffee-are-different-drinks"
+    },
+    {
+      "id": "nitro-cold-brew",
+      "name": "Nitro cold brew",
+      "group": "cold",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "",
+        "ask": "Not printed on the menus and not poured at the house: know it for the guest who asks, and offer the nearest drink we pour."
+      },
+      "library": {
+        "ref": "Nitro Cold Brew",
+        "study": [
+          [
+            "filter",
+            "Cold brew and iced coffee are different drinks"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make nitro cold brew",
+      "film": ""
+    },
+    {
+      "id": "iced-coffee",
+      "name": "Iced coffee",
+      "group": "cold",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-dy8vzoly",
+        "ask": ""
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "filter",
+            "Cold brew and iced coffee are different drinks"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make japanese iced coffee",
+      "film": ""
+    },
+    {
+      "id": "frappe",
+      "name": "Frappé",
+      "group": "cold",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "",
+        "ask": "Not printed on the menus and not poured at the house: know it for the guest who asks, and offer the nearest drink we pour."
+      },
+      "library": {
+        "ref": "",
+        "study": [],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make a greek frappe coffee",
+      "film": ""
+    },
+    {
+      "id": "affogato",
+      "name": "Affogato",
+      "group": "cold",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "",
+        "study": [],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": "affogato-al-caffe"
+      },
+      "search": "how to make an affogato",
+      "film": ""
+    },
+    {
+      "id": "espresso-tonic",
+      "name": "Espresso tonic",
+      "group": "cold",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "",
+        "study": [],
+        "cocktail": "",
+        "na": "Espresso Tonic"
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make an espresso tonic",
+      "film": ""
+    },
+    {
+      "id": "turkish-coffee",
+      "name": "Turkish coffee",
+      "group": "world",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "",
+        "ask": "Not printed on the menus and not poured at the house: know it for the guest who asks, and offer the nearest drink we pour."
+      },
+      "library": {
+        "ref": "",
+        "study": [],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make turkish coffee cezve",
+      "film": ""
+    },
+    {
+      "id": "cuban-coffee",
+      "name": "Cuban coffee",
+      "group": "world",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "",
+        "study": [],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make cuban coffee cafecito espumita",
+      "film": ""
+    },
+    {
+      "id": "vietnamese-iced-coffee",
+      "name": "Vietnamese iced coffee",
+      "group": "world",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "",
+        "ask": "Not printed on the menus and not poured at the house: know it for the guest who asks, and offer the nearest drink we pour."
+      },
+      "library": {
+        "ref": "",
+        "study": [],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": "ca-phe-sua-da"
+      },
+      "search": "how to make vietnamese iced coffee phin",
+      "film": ""
+    },
+    {
+      "id": "cafe-de-olla",
+      "name": "Café de olla",
+      "group": "world",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "",
+        "ask": "Not printed on the menus and not poured at the house: know it for the guest who asks, and offer the nearest drink we pour."
+      },
+      "library": {
+        "ref": "",
+        "study": [],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make cafe de olla",
+      "film": ""
+    },
+    {
+      "id": "cafe-bombon",
+      "name": "Café bombón",
+      "group": "world",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "",
+        "study": [],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make cafe bombon",
+      "film": ""
+    },
+    {
+      "id": "irish-coffee",
+      "name": "Irish coffee",
+      "group": "spiked",
+      "kind": "coffee",
+      "house": {
+        "printed": true,
+        "packIds": [
+          "b-xs168hf4"
+        ]
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "spiked",
+            "The cream float, and why it fails"
+          ],
+          [
+            "spiked",
+            "The pre-heat, and handing it over"
+          ]
+        ],
+        "cocktail": "Irish Coffee",
+        "na": "Sober Irish Coffee"
+      },
+      "table": {
+        "recipe": "irish-coffee"
+      },
+      "search": "how to make irish coffee",
+      "film": ""
+    },
+    {
+      "id": "cafe-brulot",
+      "name": "Café brûlot",
+      "group": "spiked",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "",
+        "ask": "Not a drink on the current menus: at Brennan’s today café brûlot is the name of a cake. Know the flamed coffee for the guest who asks for it.",
+        "uses": [
+          "d-husneh7o"
+        ]
+      },
+      "library": {
+        "ref": "",
+        "study": [],
+        "cocktail": "Café Brûlot",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "cafe brulot flaming coffee new orleans",
+      "film": ""
+    },
+    {
+      "id": "espresso-martini",
+      "name": "Espresso martini",
+      "group": "spiked",
+      "kind": "coffee",
+      "house": {
+        "printed": true,
+        "packIds": [
+          "b-z5ckwig5"
+        ]
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "spiked",
+            "Espresso in a cocktail"
+          ]
+        ],
+        "cocktail": "Espresso Martini",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make espresso martini",
+      "film": ""
+    },
+    {
+      "id": "spanish-coffee",
+      "name": "Spanish coffee",
+      "group": "spiked",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "",
+        "ask": "Not printed on the menus and not poured at the house: know it for the guest who asks, and offer the nearest drink we pour."
+      },
+      "library": {
+        "ref": "",
+        "study": [],
+        "cocktail": "Spanish Coffee",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make a spanish coffee flamed",
+      "film": ""
+    },
+    {
+      "id": "carajillo",
+      "name": "Carajillo",
+      "group": "spiked",
+      "kind": "coffee",
+      "house": {
+        "printed": false,
+        "askId": "",
+        "ask": "Not printed on the menus and not poured at the house: know it for the guest who asks, and offer the nearest drink we pour."
+      },
+      "library": {
+        "ref": "",
+        "study": [],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make a carajillo licor 43",
+      "film": ""
+    },
+    {
+      "id": "coffee-with-liqueur",
+      "name": "Coffee with liqueur and cream",
+      "group": "spiked",
+      "kind": "coffee",
+      "house": {
+        "printed": true,
+        "packIds": [
+          "b-strzgc5a"
+        ]
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "spiked",
+            "Coffee liqueur is not coffee"
+          ],
+          [
+            "spiked",
+            "Counting a spiked coffee"
+          ]
+        ],
+        "cocktail": "Keoke Coffee",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make a spiked coffee with whipped cream",
+      "film": ""
+    },
+    {
+      "id": "hot-chocolate",
+      "name": "Hot chocolate",
+      "group": "cocoa",
+      "kind": "cocoa",
+      "house": {
+        "printed": false,
+        "askId": "a-vme0bxmm",
+        "ask": ""
+      },
+      "library": {
+        "ref": "",
+        "study": [],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make hot chocolate from real chocolate",
+      "film": ""
+    },
+    {
+      "id": "steamer",
+      "name": "Steamer",
+      "group": "cocoa",
+      "kind": "cocoa",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "milk",
+            "What steaming actually does to milk"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make a steamer steamed milk drink",
+      "film": ""
+    },
+    {
+      "id": "chai-latte",
+      "name": "Chai latte",
+      "group": "cocoa",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Masala Chai",
+        "study": [
+          [
+            "matcha",
+            "Chai is a recipe, not an ingredient"
+          ],
+          [
+            "matcha",
+            "Making chai properly, and the shortcut"
+          ]
+        ],
+        "cocktail": "",
+        "na": "Spiced Chai Toddy"
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make chai latte",
+      "film": "matcha/making-chai-properly-and-the-shortcut"
+    },
+    {
+      "id": "dirty-chai",
+      "name": "Dirty chai",
+      "group": "cocoa",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-zr8ze4mu",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Masala Chai",
+        "study": [
+          [
+            "matcha",
+            "Chai is a recipe, not an ingredient"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make dirty chai",
+      "film": ""
+    },
+    {
+      "id": "matcha-latte",
+      "name": "Matcha latte",
+      "group": "cocoa",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Matcha",
+        "study": [
+          [
+            "matcha",
+            "The matcha latte on a bar"
+          ],
+          [
+            "matcha",
+            "Whisking, and why it clumps"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make matcha latte",
+      "film": "matcha/whisking-and-why-it-clumps"
+    },
+    {
+      "id": "london-fog",
+      "name": "London Fog",
+      "group": "cocoa",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": "",
+        "uses": [
+          "b-0ro4u0qk"
+        ]
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "tea",
+            "The steep, and what over-steeping actually is"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make a london fog tea latte",
+      "film": ""
+    },
+    {
+      "id": "black-tea",
+      "name": "Black tea",
+      "group": "leaf",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Black Tea",
+        "study": [
+          [
+            "leaf",
+            "Oxidation is the axis"
+          ],
+          [
+            "tea",
+            "The service itself"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to brew black tea properly",
+      "film": ""
+    },
+    {
+      "id": "english-breakfast",
+      "name": "English breakfast tea",
+      "group": "leaf",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Black Tea",
+        "study": [
+          [
+            "tea",
+            "The service itself"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make english breakfast tea",
+      "film": ""
+    },
+    {
+      "id": "earl-grey",
+      "name": "Earl Grey",
+      "group": "leaf",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": "",
+        "uses": [
+          "b-0ro4u0qk"
+        ]
+      },
+      "library": {
+        "ref": "Black Tea",
+        "study": [
+          [
+            "tea",
+            "The steep, and what over-steeping actually is"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to brew earl grey tea",
+      "film": ""
+    },
+    {
+      "id": "darjeeling",
+      "name": "Darjeeling",
+      "group": "leaf",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Black Tea",
+        "study": [
+          [
+            "leaf",
+            "Where the leaf comes from"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to brew darjeeling tea",
+      "film": ""
+    },
+    {
+      "id": "green-tea",
+      "name": "Green tea",
+      "group": "leaf",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Green Tea",
+        "study": [
+          [
+            "tea",
+            "Tea is not one temperature and one timer"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to brew green tea temperature",
+      "film": ""
+    },
+    {
+      "id": "sencha",
+      "name": "Sencha",
+      "group": "leaf",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Green Tea",
+        "study": [
+          [
+            "leaf",
+            "Where the leaf comes from"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to brew sencha",
+      "film": ""
+    },
+    {
+      "id": "jasmine-tea",
+      "name": "Jasmine tea",
+      "group": "leaf",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Green Tea",
+        "study": [
+          [
+            "leaf",
+            "One plant, six teas"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to brew jasmine tea",
+      "film": ""
+    },
+    {
+      "id": "white-tea",
+      "name": "White tea",
+      "group": "leaf",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "White Tea",
+        "study": [
+          [
+            "leaf",
+            "One plant, six teas"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to brew white tea",
+      "film": ""
+    },
+    {
+      "id": "oolong",
+      "name": "Oolong",
+      "group": "leaf",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Oolong",
+        "study": [
+          [
+            "leaf",
+            "Oxidation is the axis"
+          ],
+          [
+            "tea",
+            "Loose leaf against the bag, honestly"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to brew oolong tea",
+      "film": "tea/loose-leaf-against-the-bag-honestly"
+    },
+    {
+      "id": "pu-erh",
+      "name": "Pu-erh",
+      "group": "leaf",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Pu-erh",
+        "study": [
+          [
+            "leaf",
+            "Pu-erh and the genuinely fermented teas"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to brew pu erh tea",
+      "film": ""
+    },
+    {
+      "id": "matcha-tea",
+      "name": "Matcha",
+      "group": "leaf",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Matcha",
+        "study": [
+          [
+            "matcha",
+            "Matcha is not green tea put through a grinder"
+          ],
+          [
+            "matcha",
+            "Grades of matcha, and the one you buy"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to whisk matcha",
+      "film": "matcha/whisking-and-why-it-clumps"
+    },
+    {
+      "id": "decaf-tea",
+      "name": "Decaf tea",
+      "group": "leaf",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "tea",
+            "Caffeine, and the questions guests ask"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how is tea decaffeinated",
+      "film": ""
+    },
+    {
+      "id": "chamomile",
+      "name": "Chamomile",
+      "group": "herbal",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Herbal Tisane",
+        "study": [
+          [
+            "leaf",
+            "Tisanes are not tea"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to brew chamomile tea",
+      "film": ""
+    },
+    {
+      "id": "peppermint",
+      "name": "Peppermint tea",
+      "group": "herbal",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Herbal Tisane",
+        "study": [
+          [
+            "leaf",
+            "Tisanes are not tea"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to brew peppermint tea",
+      "film": ""
+    },
+    {
+      "id": "rooibos",
+      "name": "Rooibos",
+      "group": "herbal",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Herbal Tisane",
+        "study": [
+          [
+            "leaf",
+            "Tisanes are not tea"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to brew rooibos tea",
+      "film": ""
+    },
+    {
+      "id": "hibiscus",
+      "name": "Hibiscus tea",
+      "group": "herbal",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Herbal Tisane",
+        "study": [
+          [
+            "leaf",
+            "Tisanes are not tea"
+          ]
+        ],
+        "cocktail": "",
+        "na": "Iced Hibiscus Tea"
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to brew hibiscus tea",
+      "film": ""
+    },
+    {
+      "id": "ginger-lemon",
+      "name": "Ginger and lemon tea",
+      "group": "herbal",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "Herbal Tisane",
+        "study": [
+          [
+            "leaf",
+            "Tisanes are not tea"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make fresh ginger lemon tea",
+      "film": ""
+    },
+    {
+      "id": "sweet-tea",
+      "name": "Sweet tea",
+      "group": "iced",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": "",
+        "uses": [
+          "d-l5877hs6"
+        ]
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "tea",
+            "Iced tea, and the cloudy pot"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make southern sweet tea",
+      "film": ""
+    },
+    {
+      "id": "iced-tea",
+      "name": "Iced tea",
+      "group": "iced",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "",
+        "study": [
+          [
+            "tea",
+            "Iced tea, and the cloudy pot"
+          ]
+        ],
+        "cocktail": "",
+        "na": ""
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make iced tea that does not cloud",
+      "film": ""
+    },
+    {
+      "id": "arnold-palmer",
+      "name": "Arnold Palmer",
+      "group": "iced",
+      "kind": "tea",
+      "house": {
+        "printed": false,
+        "askId": "a-wt01gt1b",
+        "ask": ""
+      },
+      "library": {
+        "ref": "",
+        "study": [],
+        "cocktail": "",
+        "na": "Arnold Palmer"
+      },
+      "table": {
+        "recipe": ""
+      },
+      "search": "how to make an arnold palmer drink",
+      "film": ""
+    }
+  ]
+}

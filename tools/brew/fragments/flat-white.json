@@ -1,0 +1,126 @@
+{
+  "id": "flat-white",
+  "name": "Flat white",
+  "respell": "",
+  "aka": [],
+  "group": "milk",
+  "kind": "coffee",
+  "caffeine": "All of it comes from the double shot underneath; the milk adds none.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on our menus: ask at lineup whether there is an espresso machine, whether the bar will make a flat white, and at what price."
+  },
+  "what": "A double espresso under silky textured milk in a small 5 to 6 oz cup, filled to the rim. Flat means no dry cap, not no foam: a thin glossy layer is folded through. The small cup is the one constant, so the coffee sits further forward than in a latte; many New Zealand bars build it on a double ristretto.",
+  "taste": "Coffee forward and sweet, velvety rather than airy: the milk carries the shot instead of burying it.",
+  "make": {
+    "steps": [
+      "Pull a double, 18 to 20 g in, 36 to 40 g out, into a warmed cup.",
+      "Stretch about 4 oz cold milk only briefly, while the pitcher still feels cool.",
+      "Sink the tip and spin until glossy; cut the steam near 135 to 140F (57 to 60C).",
+      "Tap, swirl until it looks like wet paint, pour from height, then drop low for a small pattern."
+    ],
+    "ratio": "1 part espresso to 3 or 4 parts milk",
+    "dose": "18 to 20 g coffee; 4 to 4.5 oz milk",
+    "temp": "Milk 140 to 150F (60 to 66C)",
+    "time": "Shot 25 to 30 seconds",
+    "cup": "Warmed 5 to 6 oz tulip cup with handle"
+  },
+  "serve": "On a saucer with a teaspoon, filled to the rim, the art facing the guest and the handle towards their right hand. Carry it level: a full cup with no cap spills easily.",
+  "story": "Australia and New Zealand both claim it, and guests from either enjoy the argument. The paper trail leans Australian: a Sydney café review names it in 1983 and a Sydney menu by 1985. Wellington answers with a 1989 story of a cappuccino that would not foam.",
+  "guest": "A double espresso with silky steamed milk in a small cup: more coffee forward than a latte, smoother than a cappuccino.",
+  "watch": [
+    "Flat is not foamless: milk with no air pours thin. Fold a thin glossy layer through.",
+    "A stiff dry cap makes it a small cappuccino; stop the air early and roll longer.",
+    "Some chains define it by shot count rather than cup size; the small cup is the classic."
+  ],
+  "library": {
+    "ref": "Flat White",
+    "study": [
+      [
+        "milk",
+        "Reading finished milk"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make flat white",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a flat white made?",
+      "answer": "A double espresso in a warmed 5 to 6 oz cup, under about 4 oz of milk stretched briefly and rolled glossy, a thin foam folded through. Coffee forward, sweet and velvety."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What does flat describe in a flat white?",
+      "options": [
+        "No foam at all",
+        "No dry cap of foam",
+        "A shot poured flat",
+        "Milk steamed cooler"
+      ],
+      "a": 1,
+      "explain": "Flat means no dry cap: a thin layer of microfoam is folded through the milk instead of sitting on top."
+    },
+    {
+      "id": "q2",
+      "q": "Which part of the classic flat white does the trade hold constant?",
+      "options": [
+        "The ristretto base",
+        "The shot count",
+        "The small cup",
+        "The cocoa dusting"
+      ],
+      "a": 2,
+      "explain": "The 5 to 6 oz cup is the classic's constant; the ristretto base and the shot count move with country and chain."
+    },
+    {
+      "id": "q3",
+      "q": "Where does the earliest paper trail for the name point?",
+      "options": [
+        "Wellington, 1989",
+        "Sydney, early 1980s",
+        "Milan, 1950s",
+        "Melbourne, early 1990s"
+      ],
+      "a": 1,
+      "explain": "A 1983 Sydney café review and a 1985 Sydney menu hold the trail; Wellington's story dates from 1989."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library card: Flat White",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Reading finished milk",
+      "url": ""
+    },
+    {
+      "title": "Flat white",
+      "url": "https://en.wikipedia.org/wiki/Flat_white"
+    },
+    {
+      "title": "The disputed history of the flat white",
+      "url": "https://charfoodguide.com/news/the-disputed-history-of-the-flat-white/"
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=TzsdPlaYHks",
+    "id": "TzsdPlaYHks",
+    "title": "Steaming Perfect Milk on Your Espresso Machine (Barista Guide)",
+    "channel": "Artisti Coffee Roasters.",
+    "channelKind": "company",
+    "label": "How to steam milk for a flat white",
+    "watchFor": "Where the tip sits in the short air phase against the long spin, and the change in sound between them. For a flat white, stop the air early so the milk turns glossy with no dry cap.",
+    "verifiedBy": "coffee-films",
+    "checkedOn": "2026-10-18"
+  }
+}

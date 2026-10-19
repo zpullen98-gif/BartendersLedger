@@ -1,0 +1,134 @@
+{
+  "id": "cappuccino",
+  "name": "Cappuccino",
+  "respell": "kap-oo-CHEE-noh",
+  "aka": [],
+  "group": "milk",
+  "kind": "coffee",
+  "caffeine": "From the espresso alone, usually a double; the milk and foam add none.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on our menus: ask at lineup whether there is an espresso machine, whether the bar will make a cappuccino, and at what price."
+  },
+  "what": "Espresso under milk stretched longer, so it wears a real cap of foam, a third to a half inch deep, in a 5 to 6 oz cup. Equal thirds of espresso, milk and foam is a teaching phrase, not a measure. Against a flat white of the same size, the difference is air.",
+  "taste": "Sweet and airy, the coffee cutting through the middle; lighter than a flat white because of the air.",
+  "make": {
+    "steps": [
+      "Pull a double, 18 to 20 g in, 36 to 40 g out, into a warmed cup.",
+      "Start with 3 to 3.5 oz cold milk, less than for a flat white, since it gains volume.",
+      "Stretch longer, a steady tearing hiss, then sink the tip and spin until glossy.",
+      "Cut the steam near 135 to 140F (57 to 60C), swirl, and pour so the foam domes to the rim."
+    ],
+    "ratio": "Italian single spec: 0.8 oz espresso to 3.4 oz cold milk",
+    "dose": "18 to 20 g coffee; 3 to 3.5 oz milk",
+    "temp": "Milk 140 to 150F (60 to 66C)",
+    "time": "Shot 25 to 30 seconds; serve at once",
+    "cup": "Warmed 5 to 6 oz cup on a saucer"
+  },
+  "serve": "In a warmed cup on a saucer with a teaspoon, the handle towards the guest's right hand. Out fast, because the cap dries the moment the drink stops moving; cocoa only if the bar does it.",
+  "story": "The name comes from the Capuchin friars, whose brown habits matched coffee lightened with milk. Vienna's coffee houses called a coffee with cream a Kapuziner, possibly in the eighteenth century, and the Italian name followed later. In Italy it is a morning drink, which travelled guests like to mention.",
+  "guest": "Espresso with steamed milk and a deeper cap of foam: lighter and airier than a latte, in a smaller cup.",
+  "watch": [
+    "Big dry bubbles and foam separating from the milk are the fault, not a thick cap.",
+    "A dry cappuccino means more foam, less milk: the older stiff style, which holds no pattern.",
+    "Never re-steam leftover milk: the foam will not come back and it tastes cooked."
+  ],
+  "library": {
+    "ref": "Cappuccino",
+    "study": [
+      [
+        "milk",
+        "Stretch, then spin"
+      ],
+      [
+        "milk",
+        "The heart is floated, not drawn"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make cappuccino",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a cappuccino made?",
+      "answer": "A double espresso in a warmed 5 to 6 oz cup, under about 3 oz of milk stretched longer into a third to a half inch of glossy foam. Sweet and airy, the coffee through the middle."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Against a flat white of the same size, what mainly sets a cappuccino apart?",
+      "options": [
+        "A ristretto base",
+        "Milk steamed to 170F (77C)",
+        "More air in less milk",
+        "A dusting of cocoa"
+      ],
+      "a": 2,
+      "explain": "Less milk and a longer stretch: the difference is air. Milk at 170F (77C) is cooked."
+    },
+    {
+      "id": "q2",
+      "q": "The name is usually traced to what?",
+      "options": [
+        "Capuchin friars' brown habits",
+        "A small Neapolitan espresso cup",
+        "A hooded steam wand",
+        "A Viennese cream pastry"
+      ],
+      "a": 0,
+      "explain": "Coffee lightened with milk matched the friars' brown habits; Vienna's Kapuziner came before the Italian name."
+    },
+    {
+      "id": "q3",
+      "q": "A guest orders a dry cappuccino. What do they want?",
+      "options": [
+        "Espresso with no milk",
+        "More foam, less milk",
+        "Milk steamed cooler",
+        "Skimmed milk only"
+      ],
+      "a": 1,
+      "explain": "Dry means more foam and less milk, the older stiff style. It is a request, not a fault."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library card: Cappuccino",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Stretch, then spin",
+      "url": ""
+    },
+    {
+      "title": "Library card: Macchiato",
+      "url": ""
+    },
+    {
+      "title": "Cappuccino",
+      "url": "https://en.wikipedia.org/wiki/Cappuccino"
+    },
+    {
+      "title": "The etymology of cappuccinos",
+      "url": "https://www.altalang.com/beyond-words/etymology-of-cappuccinos/"
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=cRsT4WhFTHo",
+    "id": "cRsT4WhFTHo",
+    "title": "How to Steam Milk Like a Barista | Microfoam, Latte Art & Common Mistakes Explained",
+    "channel": "Smalltown Coffee Roasters",
+    "channelKind": "company",
+    "label": "How to steam milk for a cappuccino",
+    "watchFor": "The common mistakes section, where stiff froth and silky microfoam sit side by side. A cappuccino takes more air than a latte, but its foam should still be glossy enough to pour and dome to the rim.",
+    "verifiedBy": "coffee-films",
+    "checkedOn": "2026-10-18"
+  }
+}

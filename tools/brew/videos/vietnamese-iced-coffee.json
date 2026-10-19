@@ -1,0 +1,29 @@
+{
+  "id": "vietnamese-iced-coffee",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=9GSDe9WIs1k",
+  "videoId": "9GSDe9WIs1k",
+  "title": "How to Brew Phin Drip Coffee Over Ice",
+  "channel": "Nguyen Coffee Supply",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "how to make vietnamese iced coffee phin youtube",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=9GSDe9WIs1k \"How to Brew Phin Drip Coffee Over Ice\" (seventh result); summary: \"Sahra Nguyen (Nguyen Coffee Supply): Two results are her tutorials\" and \"Good starting points are the Sahra Nguyen video (2-1 / 9GSDe9WIs1k) for a dedicated iced-coffee walkthrough\"."
+    },
+    {
+      "q": "\"How to Brew Phin Drip Coffee Over Ice\"",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=9GSDe9WIs1k \"How to Brew Phin Drip Coffee Over Ice\" (first result); summary: \"Nguyen Coffee Supply’s tutorial (Sahra Nguyen): a video showing how to use a phin filter to make Vietnamese iced coffee. Sahra Nguyen, Founder of Nguyen Coffee Supply, shows us how to use a phin filter...\""
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-18",
+  "note": "Same watch id and same exact title in both searches; the first summary ties this id to the presenter by name, and the second names Nguyen Coffee Supply, a coffee company, as the tutorial’s maker. channelKind company; it is not yet on tools/brew/companies.json. The company carries its founder’s family name: if the integrator would rather not show it, switch to person and empty title and channel. Checker to confirm the channel by oEmbed. Checker, 2026-10-19: the two queries are different searches, both returned 9GSDe9WIs1k with the same exact title, and both summaries name Nguyen Coffee Supply as the tutorial’s maker against this id and title. It teaches the phin dripped over ice; a watch link, no sign of a Short, a playlist or an advert. channelKind company is right for a coffee company’s channel, though its founder presents; switching to person stays the integrator’s choice. The oEmbed check could not run: this session’s egress proxy denies www.youtube.com (403 on CONNECT). Since the company name ships, confirm author_name by oEmbed when youtube.com is reachable. No checker search spent. Confirmed. The fragment’s watchFor says “our method drips onto condensed milk”: the drink is not poured at the house, so “our” may read as a house build; the page’s general method is meant.",
+  "checkedBy": "checker"
+}

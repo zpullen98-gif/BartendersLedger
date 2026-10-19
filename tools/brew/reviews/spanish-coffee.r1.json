@@ -1,0 +1,13 @@
+{
+  "id": "spanish-coffee",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "quiz[1].options",
+      "problem": "The right option (\"The hot coffee poured in\") was the longest of the four.",
+      "change": "Distractor lengthened to \"A saucer laid over the glass\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

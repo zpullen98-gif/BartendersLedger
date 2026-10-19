@@ -1,0 +1,126 @@
+{
+  "id": "espresso-martini",
+  "name": "Espresso martini",
+  "respell": "ess-PRESS-oh mar-TEE-nee",
+  "aka": [
+    "vodka espresso"
+  ],
+  "group": "spiked",
+  "kind": "coffee",
+  "caffeine": "Caffeine comes from the espresso, plus a few milligrams from the coffee liqueur; never call it caffeine free.",
+  "house": {
+    "printed": true,
+    "packIds": [
+      "b-z5ckwig5"
+    ]
+  },
+  "what": "A shaken after-dinner cocktail of vodka, fresh espresso, coffee liqueur and a little syrup under a fine tan head. The head is air whipped in by the ice, held by the espresso's solids and the sugar; crema does not survive the shake. Ours is printed with chicory, vodka, Frangelico and Kahlua and no espresso, so ask the bar how the coffee goes in.",
+  "taste": "Cold, roasty and bittersweet, coffee in front, liqueur rounding it, clean vodka beneath a light, creamy foam.",
+  "make": {
+    "steps": [
+      "Chill the coupe, and measure vodka, coffee liqueur and syrup into the tin.",
+      "Pull the espresso last, straight into the tin.",
+      "Shake hard on plenty of hard ice.",
+      "Fine strain into the coupe and leave it while the foam climbs.",
+      "Lay three coffee beans on the foam."
+    ],
+    "ratio": "4 parts vodka, 2 espresso, 1 liqueur, a half syrup",
+    "dose": "2 oz vodka, 1 oz espresso, 0.5 oz coffee liqueur, 0.25 oz syrup",
+    "temp": "",
+    "time": "",
+    "cup": "Chilled coupe, with room for the foam"
+  },
+  "serve": "Straight from the shake to the table, set down by the stem so the foam stays whole. It sells as dessert menus go down, to a vodka drinker who wants coffee and a nightcap at once. Ask whether they want the caffeine.",
+  "story": "A London drink of the 1980s, often dated to 1983 and credited to a Soho bartender who shook vodka, espresso, coffee liqueur and sugar for a guest who wanted waking up. It began as the vodka espresso; the martini name came with the glass. It returned as a defining drink of the 2020s; the three beans are said to mean health, wealth and happiness.",
+  "guest": "Our espresso martini is vodka with chicory, Frangelico and Kahlua: roasty, nutty and smooth, a dessert and a nightcap at once.",
+  "watch": [
+    "A flat head means a stale shot, a weak shake or no sugar: shake harder on fresh ice.",
+    "Do not promise espresso in ours: the menu prints chicory.",
+    "Nut or caffeine questions: Frangelico is hazelnut and Kahlua carries caffeine; confirm at lineup."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "spiked",
+        "Espresso in a cocktail"
+      ]
+    ],
+    "cocktail": "Espresso Martini",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make espresso martini",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is an espresso martini made, and what is in it?",
+      "answer": "Vodka, coffee liqueur and a little syrup, fresh espresso pulled in last, shaken hard on ice and fine strained into a chilled coupe. Cold, roasty and bittersweet under a light foam."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What builds the head on a shaken espresso martini?",
+      "options": [
+        "Crema that survives the shake",
+        "Air held by solids and sugar",
+        "Egg white shaken in hard",
+        "Cream floated on the top"
+      ],
+      "a": 1,
+      "explain": "Shaking destroys crema; ice whips in air, and the espresso's solids with the sugar hold the bubbles."
+    },
+    {
+      "id": "q2",
+      "q": "Which of these does our printed espresso martini name?",
+      "options": [
+        "Fresh espresso",
+        "Cold brew",
+        "Chicory",
+        "Instant coffee"
+      ],
+      "a": 2,
+      "explain": "The menu prints chicory, vodka, Frangelico and Kahlua, and no espresso: confirm the coffee with the bar."
+    },
+    {
+      "id": "q3",
+      "q": "What was the espresso martini first called?",
+      "options": [
+        "The vodka espresso",
+        "The coffee cosmopolitan",
+        "The Soho sour",
+        "The midnight martini"
+      ],
+      "a": 0,
+      "explain": "It began in 1980s London as the vodka espresso; the martini name came later, with the glass."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: Espresso in a cocktail; Coffee liqueur is not coffee",
+      "url": ""
+    },
+    {
+      "title": "Library: Espresso Martini, with its lore",
+      "url": ""
+    },
+    {
+      "title": "House pack: Espresso Martini record; Kahlua, Frangelico",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=Rq2257amkAo",
+    "id": "Rq2257amkAo",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "Shaking an espresso martini for its foam",
+    "watchFor": "Why fresh coffee, a hard shake on plenty of ice and the right dilution build the foam, and how the three versions trade convenience for quality. Ours prints chicory, so watch the technique, not the recipe.",
+    "verifiedBy": "pack",
+    "checkedOn": "2026-10-18"
+  }
+}

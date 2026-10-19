@@ -1,0 +1,28 @@
+{
+  "id": "piccolo",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps[0], make.dose, recall[0].answer, quiz[0].explain",
+      "problem": "The fragment called \"9 to 10 g in for 15 to 20 g out\" a ristretto. That runs 1:1.5 to 1:2.2, which reaches the shot lesson's normale (1:2) and contradicts this batch's ristretto entry (1:1 to 1:1.5). The Library's Piccolo card is wrong here by the Library's own lesson. It should read about 10 to 15 g by weight, or give the yield as 0.5 to 0.7 oz in the cup.",
+      "change": "Now \"9 to 10 g in for about 15 g out\" in all four places: the point where the card (low end) and the lesson (top of 1:1.5) agree."
+    },
+    {
+      "field": "watch[1]",
+      "problem": "\"Pull a full ounce from the single and it is a normale\" copies the card. By weight a full ounce (about 28 g) from 9 to 10 g is 1:3, which the lesson calls a lungo. The card's line holds only as volume with crema, and this fragment gives yields in grams.",
+      "change": "Now reads \"Run the single on to 18 to 20 g and it is a normale, not a ristretto.\" That is 1:2, the lesson's normale."
+    },
+    {
+      "field": "make.steps[1], quiz[2].options[1]",
+      "problem": "Two temperatures had no Celsius, failing the shipped validator twice.",
+      "change": "Added \"(60 to 66C)\" to 140 to 150F and \"(71C)\" to 160F."
+    },
+    {
+      "field": "make.steps",
+      "problem": "The shot was never put into a glass, yet step 3 poured the milk \"into a warmed glass\", so the steps did not build the drink.",
+      "change": "Step 1 now pulls the shot \"into a warmed glass\", and step 3 pours \"over the shot\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

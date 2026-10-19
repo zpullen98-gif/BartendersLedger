@@ -1,0 +1,38 @@
+{
+  "id": "hot-chocolate",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "caffeine, sources",
+      "problem": "The caffeine claim rested on no source, as the author flagged.",
+      "change": "Searched: The Takeout and Healthline both give hot chocolate a small amount of caffeine, single digits to about 25 mg a cup against about 95 mg for coffee. The claim stands, now with \"far less than coffee\", and both pages are in sources."
+    },
+    {
+      "field": "make.temp",
+      "problem": "The World Table’s Dark chocolate entry gives 93F (34C) as where cocoa butter melts, not chocolate; it melts dark chocolate at up to 122F (50C).",
+      "change": "\"chocolate melts\" corrected to \"cocoa butter melts\"."
+    },
+    {
+      "field": "make.steps",
+      "problem": "Out of order: step 3 adds cornstarch \"as it heats\" after step 2 has already heated the milk, and starch dropped into hot milk lumps; step 5 says \"first\" after the drink is built.",
+      "change": "Cornstarch now goes into the cold milk before heating; the heat step covers both styles; the cocoa route is marked as the alternative and says where the hot milk goes."
+    },
+    {
+      "field": "story, sources",
+      "problem": "\"Colombia makes it with water or milk\" rested on no listed source.",
+      "change": "Searched: the Smithsonian Folklife Festival recipe and Atlas Obscura both make chocolate santafereño with water, milk or both. The clause stands and both are in sources."
+    },
+    {
+      "field": "quiz[0]",
+      "problem": "On a bar page, \"from a bar\" reads as a drinks bar. The right option was also the longest and the only one in a different form.",
+      "change": "Stem now says \"made from a chocolate bar\"; options rewritten in one form, the answer (\"It keeps its cocoa butter\") no longer the longest."
+    },
+    {
+      "field": "quiz[2].options",
+      "problem": "The right option (\"It wants a cooked milk flavour\") was the longest of the four.",
+      "change": "Two distractors lengthened. The premise and explanation stand on the Library’s Scalded milk card, which says hot chocolate wants a cooked milk flavour."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

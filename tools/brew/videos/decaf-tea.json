@@ -1,0 +1,44 @@
+{
+  "id": "decaf-tea",
+  "found": false,
+  "url": "",
+  "videoId": "",
+  "title": "",
+  "channel": "",
+  "channelKind": "",
+  "queries": [
+    {
+      "q": "decaf tea how it is decaffeinated tea company Twinings Yorkshire Tea Tetley youtube [allowed_domains: youtube.com]",
+      "returned": "No tea company video on the process. 3PR1srTBuYk \"How Do You Decaffeinate Tea?\" and KOgfOd9j01U \"How Is Tea Decaffeinated?\" with no channel named; a Yorkshire against Tetley decaf review; a-n85w2aX6E (the home rinse the first pass refused)."
+    },
+    {
+      "q": "how tea is decaffeinated carbon dioxide process tea company video youtube [allowed_domains: youtube.com]",
+      "returned": "No youtube.com result at all: patent PDFs from the USPTO only."
+    },
+    {
+      "q": "\"How Do You Decaffeinate Tea?\" OR \"How Is Tea Decaffeinated?\" youtube [allowed_domains: youtube.com]",
+      "returned": "The tool said it ran this as \"how is tea decaffeinated youtube\" (operators unsupported). How Is Tea Decaffeinated? | https://www.youtube.com/watch?v=KOgfOd9j01U (second), no channel named; a-n85w2aX6E again; t5D49bIPIQ0 \"Brewing Decaffeinated Tea\" with no channel; Nilgiri product videos."
+    }
+  ],
+  "verifiedBy": "",
+  "checkedOn": "2026-10-19",
+  "note": "Nothing passed. KOgfOd9j01U came back twice with the same title but no result names its channel, so it fails the channel test. The process searches returned patents or unnamed channels, and the home rinse video stays refused under the Library lesson. The third search was rewritten by the tool into a phrase close to the first pass's plan phrase. The page offers the search link alone. Three searches spent.",
+  "firstPass": {
+    "id": "decaf-tea",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how is tea decaffeinated youtube (site youtube.com)",
+        "returned": "Mostly patent PDFs; the one YouTube result: How to Decaffeinate Your Tea: Come For Tea #10 - YouTube | https://www.youtube.com/watch?v=a-n85w2aX6E, a home method; summary also calls it \"Here's an easy way to decaffeinate your tea!\"."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "The only video teaches decaffeinating at home by a short rinse, which the Library lesson \"Caffeine, and the questions guests ask\" says does not work (\"a thirty second rinse does not decaffeinate a leaf\"), so it was not confirmed. No instructive video on the commercial process came back. One search spent."
+  }
+}

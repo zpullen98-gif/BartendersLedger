@@ -1,0 +1,140 @@
+{
+  "id": "turkish-coffee",
+  "name": "Turkish coffee",
+  "respell": "",
+  "aka": [
+    "Greek coffee"
+  ],
+  "group": "world",
+  "kind": "coffee",
+  "caffeine": "Strong per sip: a small cup of unfiltered, finely ground coffee; the grounds left in the cup are not drunk.",
+  "house": {
+    "printed": false,
+    "askId": "",
+    "ask": "Not printed on the menus and not poured at the house: know it for the guest who asks, and offer the nearest drink we pour."
+  },
+  "what": "Coffee ground to a powder and heated slowly with water, and sugar if wanted, in a small pot called a cezve, usually copper or brass. It is never filtered: the grounds go into the cup and settle, and the guest drinks down to them and stops. It is served black, sometimes with cardamom brewed in, often with Turkish delight beside it.",
+  "taste": "Thick, intense and velvety, a soft foam on top, a fine silt below, a heavy roasty body; sweet or bitter as the sugar was brewed.",
+  "make": {
+    "steps": [
+      "Ask how sweet first: the sugar goes in the pot.",
+      "Put cold water, the powdered coffee and any sugar or cardamom in the cezve; stir once.",
+      "Heat slowly, without stirring again, until a foam rises towards the rim.",
+      "Take it off the heat before it boils over, and pour slowly into a small cup so the foam goes with it.",
+      "Let it stand a minute so the grounds settle before the guest drinks."
+    ],
+    "ratio": "About 7 g coffee to 2 oz (60 mL) water a cup",
+    "dose": "7 g powdered coffee, 2 oz (60 mL) cold water, sugar to order",
+    "temp": "Heated slowly, off just before the boil",
+    "time": "A few minutes on low heat, then a minute to settle",
+    "cup": "Small cup, 2 to 3 oz, on a saucer"
+  },
+  "serve": "Not poured here: offer our chicory coffee, the nearest dark, roasty cup, or an espresso if the bar will pull one. Where it is served, it comes in a small cup on a saucer with a glass of water and often Turkish delight.",
+  "story": "It comes from the coffee houses of Istanbul under the Ottomans, open by the 1550s, and UNESCO has listed Turkish coffee culture as intangible heritage since 2013. It needs no filter and no machine: a small pot, low heat and coffee ground to a powder. The sugar goes in before the heat, so the guest chooses sweetness when ordering, and cardamom sometimes joins it. The foam on top marks a careful hand, and knowing to stop before the grounds marks a guest who has drunk it before.",
+  "guest": "We do not make Turkish coffee, but our chicory coffee is dark and roasty; if you would like something closer, I can ask whether the bar will pull an espresso.",
+  "watch": [
+    "Warn a first time guest that the grounds settle in the cup: drink down to the silt and stop.",
+    "Sugar is not added afterwards: it is brewed in, so ask plain, medium or sweet before it is made.",
+    "Boiling it hard breaks the foam and scorches the taste; it comes off the heat as the foam rises."
+  ],
+  "library": {
+    "ref": "",
+    "study": [],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make turkish coffee cezve",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Turkish coffee: how is it made and served?",
+      "answer": "Powdered coffee, cold water and any sugar or cardamom heated slowly in a cezve until the foam rises, poured unfiltered into a small cup. Thick and intense, grounds settling below, with water and often Turkish delight."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Why ask about sugar before a Turkish coffee is made?",
+      "options": [
+        "Sugar is never offered with it",
+        "The cup is too small to stir",
+        "Sugar stops the grounds settling",
+        "The sugar is brewed in the pot"
+      ],
+      "a": 3,
+      "explain": "Sugar goes into the cezve before it heats, so sweetness is fixed when it is made."
+    },
+    {
+      "id": "q2",
+      "q": "What does a guest find at the bottom of the cup?",
+      "options": [
+        "A layer of condensed milk",
+        "Undissolved sugar crystals",
+        "A silt of settled grounds",
+        "Whole cardamom pods"
+      ],
+      "a": 2,
+      "explain": "The powder goes into the cup with the coffee and settles; the guest stops before it."
+    },
+    {
+      "id": "q3",
+      "q": "What is the small pot Turkish coffee is made in called?",
+      "options": [
+        "A cezve",
+        "A phin",
+        "An olla",
+        "A moka"
+      ],
+      "a": 0,
+      "explain": "A cezve, usually copper or brass. A phin is the Vietnamese drip filter, an olla the Mexican clay pot."
+    }
+  ],
+  "sources": [
+    {
+      "title": "6 Unique Ways Coffee Is Made Around The World",
+      "url": "https://www.hunker.com/13770521/how-coffee-made-around-the-world/"
+    },
+    {
+      "title": "7 unique ways people drink coffee around the world",
+      "url": "https://matadornetwork.com/read/7-unique-ways-people-drink-coffee-around-world"
+    },
+    {
+      "title": "Cooking Gorgeous: how to make Turkish coffee the traditional way",
+      "url": "https://cookingorgeous.com/blog/how-to-make-turkish-coffee-traditional-way/"
+    },
+    {
+      "title": "Turkey’s For Life: how to make Turkish coffee",
+      "url": "https://www.turkeysforlife.com/wprm_print/how-to-make-turkish-coffee"
+    },
+    {
+      "title": "Turkish coffee is in UNESCO",
+      "url": "https://travelatelier.com/blog/turkish-coffee-unesco/"
+    },
+    {
+      "title": "History of Turkish Coffee and Its Characteristics",
+      "url": "https://perapalace.com/en/history-of-turkish-coffee-and-its-characteristics/"
+    },
+    {
+      "title": "World Table kitchen: Greek coffee, thick and unfiltered",
+      "url": ""
+    },
+    {
+      "title": "Pack: New Orleans-Style Coffee with Chicory",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=2UiKDkxc9as",
+    "id": "2UiKDkxc9as",
+    "title": "Specialty Turkish Coffee Masterclass",
+    "channel": "Mill City Roasters®",
+    "channelKind": "company",
+    "label": "Brewing Turkish coffee in a cezve",
+    "watchFor": "An in-depth class on advanced cezve, or ibrik, brewing. Watch the heat kept low, the foam rising towards the rim, the pot taken off before it boils, and the slow pour that carries the foam into the cup.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

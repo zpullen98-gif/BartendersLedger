@@ -1,0 +1,133 @@
+{
+  "id": "ristretto",
+  "name": "Ristretto",
+  "respell": "ree-STRET-toh",
+  "aka": [
+    "restricted shot",
+    "short shot"
+  ],
+  "group": "espresso",
+  "kind": "coffee",
+  "caffeine": "The same dose as an espresso cut early, so slightly less total caffeine than a full shot, not more.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on the menus: ask at lineup whether there is an espresso machine, whether the bar will pull a ristretto on request, and the price."
+  },
+  "what": "A ristretto is an espresso cut short: the same 18 to 20 g dose stopped at 18 to 30 g, before the bitter, drying end of the shot arrives. The name is Italian for restricted, and it means concentrated, not stronger.",
+  "taste": "Thick and sweet up front, bright acidity, a short finish and noticeably less bitter than a full shot: syrup rather than coffee.",
+  "make": {
+    "steps": [
+      "Grind as for espresso, or a step finer if the bar wants the full 25 to 30 seconds.",
+      "Dose 18 to 20 g into a warm double basket and tamp level.",
+      "Lock in, pull onto a scale and stop at 18 to 30 g.",
+      "Taste for syrup; sour and thin means a step finer."
+    ],
+    "ratio": "About 1:1 to 1:1.5, against 1:2 for a normale",
+    "dose": "18 to 20 g coffee, double basket",
+    "temp": "195 to 205F (90 to 96C)",
+    "time": "20 to 25 seconds cut early, 25 to 30 ground finer",
+    "cup": "Warmed demitasse, 2 to 3 oz, a third full"
+  },
+  "serve": "On a saucer with a spoon, straight over; it sits barely a third full, and it is meant to. No water back unless asked: it is two swallows.",
+  "story": "Ristretto is Italian for restricted. In speciality bars it is a base as much as a drink: the traditional piccolo sits on a single ristretto, and some bars in Australia and New Zealand build a flat white on it.",
+  "guest": "A ristretto is the first part of an espresso, cut short: thicker, sweeter, less bitter, two sips. I will check the bar can pull one.",
+  "watch": [
+    "Stronger is the trap word: it is more concentrated per sip but carries slightly less caffeine.",
+    "The trade disagrees on the words; confirm what the bar means by ristretto.",
+    "Send the guest who finds espresso too bitter here, never to a lungo."
+  ],
+  "library": {
+    "ref": "Ristretto",
+    "study": [
+      [
+        "shot",
+        "Ristretto, normale, lungo"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make ristretto",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a ristretto made, and how does it differ from an espresso?",
+      "answer": "The same 18 to 20 g dose cut short at 18 to 30 g, about 1:1 to 1:1.5, in a warmed demitasse: thick, sweet, bright, less bitter."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "From the same dose, how does a ristretto's total caffeine compare with a normale's?",
+      "options": [
+        "About double",
+        "Exactly the same",
+        "Slightly less",
+        "Much more"
+      ],
+      "a": 2,
+      "explain": "Less water through the puck takes slightly less out. It tastes intense only because it is concentrated."
+    },
+    {
+      "id": "q2",
+      "q": "Which dose to yield ratio describes a ristretto?",
+      "options": [
+        "About 1:2 to 1:2.5",
+        "About 1:3 to 1:4",
+        "About 1:15 to 1:18",
+        "About 1:1 to 1:1.5"
+      ],
+      "a": 3,
+      "explain": "A normale runs about 1:2, a lungo 1:3 to 1:4, and 1:15 to 1:18 is filter coffee."
+    },
+    {
+      "id": "q3",
+      "q": "Why does a ristretto taste less bitter than a full shot?",
+      "options": [
+        "It stops before the drying compounds",
+        "It uses a darker roast",
+        "It is pulled with cooler water",
+        "It is diluted after pulling"
+      ],
+      "a": 0,
+      "explain": "Acids and sweetness come out first, the bitter, drying compounds last; cutting early leaves those in the puck."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Card: Ristretto",
+      "url": ""
+    },
+    {
+      "title": "Lesson: Ristretto, normale, lungo",
+      "url": ""
+    },
+    {
+      "title": "Lesson: Sour and bitter are the two directions of extraction",
+      "url": ""
+    },
+    {
+      "title": "Cards: Piccolo and Flat White",
+      "url": ""
+    },
+    {
+      "title": "House pack: lineup question a-zr8ze4mu",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=fBPKhQadPB4",
+    "id": "fBPKhQadPB4",
+    "title": "How to Make a Basic Single Ristretto from Whole Latte Love",
+    "channel": "Whole Latte Love",
+    "channelKind": "company",
+    "label": "How to pull a ristretto",
+    "watchFor": "How the shot is cut short of a full espresso: a similar dose in the basket, far less in the cup. Watch where the flow is stopped, before the stream thins and turns pale.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

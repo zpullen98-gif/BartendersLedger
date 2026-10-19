@@ -1,0 +1,28 @@
+{
+  "id": "vietnamese-iced-coffee",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "serve; guest",
+      "problem": "Called the Café Glacé \"sweet\"; the pack says lightly sweet.",
+      "change": "Now \"lightly sweet\"."
+    },
+    {
+      "field": "story",
+      "problem": "\"Our menu draws the comparison itself\" is false: the menus print no comparison. It is the pack’s compare note on the Café Glacé.",
+      "change": "Now \"The house notes draw the comparison themselves\"."
+    },
+    {
+      "field": "quiz[0].options",
+      "problem": "The answer was twice the length of the other options.",
+      "change": "Options are now crushed ice, hot water, condensed milk and evaporated milk; the explain names sweetened condensed milk."
+    },
+    {
+      "field": "quiz[2].options",
+      "problem": "The answer was the longest option.",
+      "change": "Now \"A drip filter set on the glass\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

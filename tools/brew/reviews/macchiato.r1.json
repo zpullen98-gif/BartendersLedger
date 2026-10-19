@@ -1,0 +1,18 @@
+{
+  "id": "macchiato",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps[1]",
+      "problem": "The temperature had no Celsius, which fails the shipped validator (\"a temperature not in the 195 to 205F (90 to 96C) form\"). Stretching the milk after the pull also left the shot standing, against the card's \"the shot fresh underneath it\".",
+      "change": "Now reads \"While it pulls, stretch a little milk in the smallest jug to 140 to 150F (60 to 66C), silky, never stiff.\""
+    },
+    {
+      "field": "quiz[2].options[2]",
+      "problem": "The distractor \"A cappuccino needs a single\" is not a reason a trained person would choose.",
+      "change": "Replaced with \"Bars stop steaming milk at noon\": it sounds plausible, and it is plainly wrong because the macchiato itself carries steamed milk."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

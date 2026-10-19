@@ -1,0 +1,29 @@
+{
+  "id": "aeropress",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=j6VlT_jUVPc",
+  "videoId": "j6VlT_jUVPc",
+  "title": "The Ultimate AeroPress Technique (Episode #3)",
+  "channel": "James Hoffmann",
+  "channelKind": "person",
+  "queries": [
+    {
+      "q": "how to make aeropress coffee youtube (allowed_domains youtube.com)",
+      "returned": "{\"title\":\"The Ultimate AeroPress Technique (Episode #3) - YouTube\",\"url\":\"https://www.youtube.com/watch?v=j6VlT_jUVPc\"}; summary: includes a written summary of the technique, starting with 11g of coffee ground at the finer end of medium."
+    },
+    {
+      "q": "\"The Ultimate AeroPress Technique (Episode #3)\" (allowed_domains youtube.com)",
+      "returned": "{\"title\":\"The Ultimate AeroPress Technique (Episode #3) - YouTube\",\"url\":\"https://www.youtube.com/watch?v=j6VlT_jUVPc\"}; beside it {\"title\":\"James Hoffmann AeroPress Video Series - YouTube\",\"url\":\"https://www.youtube.com/playlist?list=PLHa5dV86kCCYp32bla6ZCODs_gVsOz-_C\"}; summary: a separate video, which links back to the same j6VlT_jUVPc video, credits James Hoffmann, the 2007 World Barista Champion, as the source."
+    }
+  ],
+  "checkerQueries": [
+    {
+      "q": "James Hoffmann Ultimate AeroPress Technique Episode 3 video (allowed_domains youtube.com; checker)",
+      "returned": "The same id j6VlT_jUVPc under the same exact title; summary: his own later AeroPress video links to \"AeroPress Episode #3 (The Ultimate Technique)\", so the episode is part of his AeroPress series; the series playlist again, and third party demonstrations of his technique."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-18",
+  "checkedBy": "checker",
+  "note": "The same id and exact title came back in both searches, and the channel is named in a result title (his own AeroPress series playlist) and in the summary tying that id to him. An established educator’s channel, the same one the Library already uses for pour-over and the press; a person, so the fragment ships title and channel empty. The video’s dose (11 g) is smaller than the card’s; the watchFor speaks to the method only. Checked by the checker on 2026-10-19: two different searches with the same id and exact title, and a fresh search named the channel directly through his own series. It teaches the AeroPress method step by step; a watch link, not a Short, playlist or advert; a person, so person is right and the fragment ships title and channel empty. Confirmed."
+}

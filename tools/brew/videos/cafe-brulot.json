@@ -1,0 +1,15 @@
+{
+  "id": "cafe-brulot",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=DyKhvsAPO9I",
+  "videoId": "DyKhvsAPO9I",
+  "title": "How To Flambe Safely | 1 Minute Tips | French Guy Cooking",
+  "channel": "Jamie Oliver",
+  "channelKind": "person",
+  "queries": [],
+  "verifiedBy": "pack",
+  "checkedOn": "2026-10-18",
+  "note": "The plan names no Library film. The pack carries v-t6labnta (topic \"Tableside and flambé\"), whose componentIds hold c-7soj4g71, the component named Café brûlot (and c-e6cqj26y, Flambé at the table); no pack item is the drink, since it is not printed and the plan’s uses point to the cake d-husneh7o. By the style’s order (a pack video before a search) it is taken, verifiedBy pack, with url, id, title and channel copied exactly from the pack record. Caveat for the refuter: it teaches the safety habits of any flambé (spirit warmed, lit away from you, never poured from the bottle near a flame), not the brûlot bowl itself, and the label says so. The task’s list of pack ties named only the Irish coffee, the espresso martini and cold brew; if the componentIds tie is judged too loose, the entry falls to a search, which was not spent here. The channel is Jamie Oliver’s, on people.json, so channelKind person and the fragment ships title and channel empty. No search spent.",
+  "checkedBy": "checker",
+  "checkerNote": "Confirmed by the checker on 2026-10-19: url, id DyKhvsAPO9I, title and channel equal the pack record v-t6labnta exactly. The tie is the pack’s own: its componentIds hold c-7soj4g71, the component named Café brûlot, and the style puts a pack video before a search, so it stands. Judgement recorded: it teaches the safety habits of any flambé, not the brûlot bowl, and the fragment’s label and watchFor say so rather than claiming the drink. A person’s channel, so person is right and the fragment ships title and channel empty. No search spent."
+}

@@ -1,0 +1,125 @@
+{
+  "id": "long-black",
+  "name": "Long black",
+  "respell": "",
+  "aka": [],
+  "group": "long",
+  "kind": "coffee",
+  "caffeine": "Only the caffeine of its double: less water than an americano makes it denser, not more caffeinated.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on the menus: ask at lineup whether there is an espresso machine, whether the bar will make a long black on request, and the price."
+  },
+  "what": "A long black is hot water first, then a double pulled straight onto it, so the crema lands as a layer the guest drinks through instead of being broken by the pour. It takes less water than an americano, so it stays denser. It comes from Australian and New Zealand practice.",
+  "taste": "Fuller and more aromatic than an americano on the first sip, through the crema; the bitterness arrives later as it settles.",
+  "make": {
+    "steps": [
+      "Fill a warmed 6 oz cup with 3 to 4 oz of hot water.",
+      "Pull a double straight onto it, 18 to 20 g in for 36 to 40 g out.",
+      "Send it at once while the crema is whole; never stir it first."
+    ],
+    "ratio": "A double onto 3 to 4 oz of water",
+    "dose": "18 to 20 g coffee; 3 to 4 oz water",
+    "temp": "Brew 195 to 205F (90 to 96C); the tap runs hotter",
+    "time": "25 to 30 second shot, then out at once",
+    "cup": "Warmed 6 oz cup"
+  },
+  "serve": "On a saucer with a spoon, out while the crema is whole. It arrives very hot, since the tap runs hotter than brew temperature on most machines, so never rush the first sip.",
+  "story": "The long black comes from Australian and New Zealand cafés, and guests from there mostly arrive with a fixed idea of it: smaller and denser than an americano, crema on top. How much crema survives the first sip is argued, so taste both side by side.",
+  "guest": "A long black is a double espresso pulled onto a little hot water, so the crema stays on top: fuller than an americano, and very hot at first.",
+  "watch": [
+    "Pour the shot onto the water, never the water onto the shot, or you have built an americano.",
+    "Where the bar pulls ristretto for it, the same dose gives 25 to 30 g and a denser cup.",
+    "Keep it smaller than an americano: 3 to 4 oz of water, not 4 to 6."
+  ],
+  "library": {
+    "ref": "Long Black",
+    "study": [
+      [
+        "shot",
+        "Dose, yield and ratio"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make long black",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a long black made, and what goes in it?",
+      "answer": "3 to 4 oz of hot water in a warmed 6 oz cup, then a double pulled straight onto it: crema on top, fuller and denser than an americano."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "In a long black, what goes into the cup first?",
+      "options": [
+        "Hot water",
+        "The shot",
+        "Steamed milk",
+        "Ice"
+      ],
+      "a": 0,
+      "explain": "Water first, shot onto it, keeps the crema as a layer; water onto a finished shot is an americano."
+    },
+    {
+      "id": "q2",
+      "q": "How does a long black's size compare with an americano's?",
+      "options": [
+        "Larger, more water",
+        "The same, but iced",
+        "Twice the size",
+        "Smaller, less water"
+      ],
+      "a": 3,
+      "explain": "A long black takes 3 to 4 oz of water against an americano's 4 to 6 oz, so it stays denser."
+    },
+    {
+      "id": "q3",
+      "q": "Why does a long black taste fuller on the first sip?",
+      "options": [
+        "It is made with a darker roast",
+        "It is always pulled as a lungo",
+        "The guest drinks through whole crema",
+        "Sugar is dissolved in the water"
+      ],
+      "a": 2,
+      "explain": "The crema arrives whole, so the first sip comes through it; the bitterness shows later as it settles."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Card: Long Black",
+      "url": ""
+    },
+    {
+      "title": "Lesson: Dose, yield and ratio",
+      "url": ""
+    },
+    {
+      "title": "Card: Americano",
+      "url": ""
+    },
+    {
+      "title": "House pack: lineup question a-zr8ze4mu",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=-Bo-hkS5ftY",
+    "id": "-Bo-hkS5ftY",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "How to build a long black",
+    "watchFor": "Hot water into the cup first and the shot on top, then the part that explains how this differs from an americano. That difference is the question guests ask.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "matcha-latte",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "what",
+      "problem": "\"Matcha whisked into a small base of thin tea\" means whisking it into tea already made. The Library lesson (The matcha latte on a bar) whisks the powder with two ounces of water, and that is the usucha base.",
+      "change": "Now \"whisked with a little water into a base of thin tea\"."
+    },
+    {
+      "field": "recall[0].answer",
+      "problem": "Temperature without Celsius, failing the schema.",
+      "change": "Added (79C)."
+    },
+    {
+      "field": "quiz[0].options",
+      "problem": "The right option was much the longest (34 characters against 22 at most).",
+      "change": "Answer shortened to \"Matcha never dissolves\"; one distractor lengthened."
+    },
+    {
+      "field": "quiz[1].explain",
+      "problem": "Temperature without Celsius, failing the schema.",
+      "change": "Added (79C)."
+    },
+    {
+      "field": "quiz[2].options",
+      "problem": "The right option was the longest of the four.",
+      "change": "Answer reworded to \"Nothing a law defines\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

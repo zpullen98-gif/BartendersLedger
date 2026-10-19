@@ -1,0 +1,125 @@
+{
+  "id": "chai-latte",
+  "name": "Chai latte",
+  "respell": "CHY LAH-tay",
+  "aka": [
+    "chai",
+    "chai tea latte"
+  ],
+  "group": "cocoa",
+  "kind": "tea",
+  "caffeine": "Caffeine comes from the black tea in the base, less than drip coffee; it varies with the brew.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus, which print no tea: ask at lineup which teas the bar pours, and whether it can make a chai with steamed milk."
+  },
+  "what": "The café cousin of masala chai: spiced black tea, from a sweetened concentrate or a milk-free batch, cut to order with steamed milk. Masala chai itself is a decoction, strong CTC Assam boiled with milk, sugar and whole spice, cardamom leading. A pump of syrup into steamed milk is another drink again, so ask which one the guest means.",
+  "taste": "Sweet, warm and spiced, cardamom and cinnamon over malty black tea, rounded by milk, with pepper and ginger in the finish.",
+  "make": {
+    "steps": [
+      "Crack whole spices and simmer them in water a few minutes.",
+      "Add strong black tea and simmer two or three minutes more.",
+      "Strain and sweeten; hold this milk-free concentrate at or above 135F (57C), or at or below 41F (5C).",
+      "To order, steam milk to latte texture and pour it over the concentrate in a warmed cup."
+    ],
+    "ratio": "",
+    "dose": "Chai concentrate and steamed milk to fill the cup",
+    "temp": "Concentrate at or above 135F (57C); milk 140 to 155F (60 to 68C)",
+    "time": "Spices a few minutes, then tea two or three minutes",
+    "cup": "Warmed 8 to 12 oz latte cup or mug"
+  },
+  "serve": "On a saucer with a spoon, handle to the guest's right. Chai is sweet by design, so sugar goes in the brew, not on the side, and a cinnamon dusting only if the house does one. It suits winter afternoons and the guest who wants something warm that is not coffee.",
+  "story": "Chai simply means tea: the Chinese word travelled overland into Hindi, Urdu, Russian, Turkish and Swahili, while English tea is the same word arriving by sea. So chai tea says tea twice. Masala chai shifts by household and by street like a family sauce, with no single correct version.",
+  "guest": "A chai latte is spiced black tea with steamed milk, sweet and warming. Let me check with the bar which teas we have tonight.",
+  "watch": [
+    "Never hold the batch with milk in it: hold the concentrate and add milk to order.",
+    "Powdered spice goes gritty: crack whole spices.",
+    "For a guest avoiding caffeine, offer a tisane, and read its tin: some herbals carry caffeine."
+  ],
+  "library": {
+    "ref": "Masala Chai",
+    "study": [
+      [
+        "matcha",
+        "Chai is a recipe, not an ingredient"
+      ],
+      [
+        "matcha",
+        "Making chai properly, and the shortcut"
+      ]
+    ],
+    "cocktail": "",
+    "na": "Spiced Chai Toddy"
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make chai latte",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a chai latte made, and what is in it?",
+      "answer": "Whole spices simmered, black tea added, strained and sweetened into a milk-free concentrate, cut to order with steamed milk in a warmed cup. Sweet, spiced and creamy."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What does the word chai mean?",
+      "options": [
+        "Spice",
+        "Tea",
+        "Milk",
+        "Sweet"
+      ],
+      "a": 1,
+      "explain": "Chai is tea in Hindi, Urdu, Russian, Turkish and Swahili; the spiced drink is masala chai."
+    },
+    {
+      "id": "q2",
+      "q": "Which tea suits a masala chai base?",
+      "options": [
+        "A first flush Darjeeling",
+        "Japanese sencha",
+        "White silver needle",
+        "Strong CTC Assam"
+      ],
+      "a": 3,
+      "explain": "Brisk CTC Assam gives colour and grip enough to stand up to milk and a boil."
+    },
+    {
+      "id": "q3",
+      "q": "How is a milk-free chai concentrate held through a shift?",
+      "options": [
+        "Hot or cold, never warm",
+        "At room temperature",
+        "Warm, near 100F (38C)",
+        "On a warmer near 120F (49C)"
+      ],
+      "a": 0,
+      "explain": "Hold it at or above 135F (57C) or at or below 41F (5C), and add the milk to order."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: Chai is a recipe; Making chai properly; Masala Chai",
+      "url": ""
+    },
+    {
+      "title": "Library: Spiced Chai Toddy; Caffeine",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=8fQAxZahx_U",
+    "id": "8fQAxZahx_U",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "Making masala chai from whole spices",
+    "watchFor": "The spices going into the pan before the milk, and how long the whole thing simmers. A chai latte keeps that simmer in the concentrate and adds the steamed milk to order.",
+    "verifiedBy": "coffee-films",
+    "checkedOn": "2026-10-18"
+  }
+}

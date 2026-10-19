@@ -1,0 +1,71 @@
+{
+  "id": "espresso-tonic",
+  "found": false,
+  "url": "",
+  "videoId": "",
+  "title": "",
+  "channel": "",
+  "channelKind": "",
+  "queries": [
+    {
+      "q": "espresso tonic European Coffee Trip OR \"Seven Miles Coffee\" how to make youtube (allowed_domains youtube.com)",
+      "returned": "Nothing from either channel. {\"title\":\"How to Make an Espresso Tonic at Home\",\"url\":\"https://www.youtube.com/watch?v=OTaTySNFvNw\"} first; also y0u10Lm1x7Y (the first pass’s candidate), -W2S5WJzDHk, jKL-xiz0Te4 (moka pot), 4itfUHZqmaA, 64yG5aP6stM, VY2eu9ePyMw, {\"title\":\"How Make an Espresso Tonic - YouTube\",\"url\":\"https://www.youtube.com/watch?v=RH6WtIq_4v0\"} (\"from the How to Coffee show\", a show name, not an uploader), ZoFCb36yTxs (yuzu) and a Short."
+    },
+    {
+      "q": "\"How Make an Espresso Tonic\" (allowed_domains youtube.com)",
+      "returned": "RH6WtIq_4v0 again under the same title, but this summary named no channel or show for it; OTaTySNFvNw again under the same title; also y0u10Lm1x7Y (a Prague barista, unnamed channel), 4x92J4gQwzM (a from-scratch tonic, attributed to a named person in the summary, not a how-to for the drink), IcCU4JYAsDo, ff89UgMio7M."
+    },
+    {
+      "q": "\"How to Make an Espresso Tonic at Home\" OTaTySNFvNw (allowed_domains youtube.com)",
+      "returned": "{\"title\":\"How to Make an Espresso Tonic at Home\",\"url\":\"https://www.youtube.com/watch?v=OTaTySNFvNw\"} (first result); summary: a short \"Coffee Corner\" segment walking through a simple espresso tonic recipe. \"Coffee Corner\" is a segment name; no channel named as the uploader."
+    }
+  ],
+  "verifiedBy": "",
+  "checkedOn": "2026-10-19",
+  "note": "Three searches spent. OTaTySNFvNw came back in all three with the same id and exact title, but no result named its channel (\"Coffee Corner\" is a segment title), so it fails. RH6WtIq_4v0 came back twice with the same title; the only attribution was \"the How to Coffee show\" in one summary, a show, not an uploader. The first pass’s y0u10Lm1x7Y was not revived: no new result named its channel. Video stays null; the page offers the search link.",
+  "firstPass": {
+    "id": "espresso-tonic",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "candidate": {
+      "url": "https://www.youtube.com/watch?v=y0u10Lm1x7Y",
+      "videoId": "y0u10Lm1x7Y",
+      "title": "How To Make Espresso Tonic (and Cold-Brew Tonic Recipe)",
+      "channel": "Tomo Laca",
+      "channelKind": "person",
+      "finderVerifiedBy": "websearch"
+    },
+    "queries": [
+      {
+        "q": "how to make an espresso tonic youtube",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=y0u10Lm1x7Y \"How To Make Espresso Tonic (and Cold-Brew Tonic Recipe) - YouTube\" (second result); summary: \"A video from a Prague barista covers his favourite Espresso Tonic recipe and also a cold-brew tonic variation.\""
+      },
+      {
+        "q": "\"How To Make Espresso Tonic (and Cold-Brew Tonic Recipe)\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=y0u10Lm1x7Y \"How To Make Espresso Tonic (and Cold-Brew Tonic Recipe) - YouTube\" (first result); summary: \"A Prague barista’s demonstration is also listed, per Tomo Laca will explain and demonstrate his favourite Espresso Tonic recipe.\""
+      }
+    ],
+    "checkerQueries": [
+      {
+        "q": "\"Espresso Tonic (and Cold-Brew Tonic Recipe)\" video y0u10Lm1x7Y",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=y0u10Lm1x7Y \"How To Make Espresso Tonic (and Cold-Brew Tonic Recipe) - YouTube\" (first result); summary: \"listed as a lesson on making Espresso Tonic from a professional barista in Prague. The description adds that Tomo Laca will explain and demonstrate his favourite Espresso Tonic recipe. A roundup video from the same channel also links to it.\" No channel named."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "rejected by the checker: the channel is not settled. The checker’s search, in fresh wording with the id, returned y0u10Lm1x7Y with the same exact title and ties the presenter to this id, so the finder’s inference holds; but the name is the presenter’s, from a third person line in the video’s own description, and the summary spoke of “the same channel” without naming it. No result names the uploading channel, so neither the channel nor channelKind can be confirmed (a company channel featuring a guest barista fits the description as well as a personal one). This is the standard the batch applied to nitro-cold-brew, affogato and cafe-de-olla. The oEmbed check could not run: this session’s egress proxy denies www.youtube.com (403 on CONNECT). A checker who can reach oEmbed may revive it from its author_name. Fragment video set to null. Finder’s note: Same watch id and same exact title in both searches. The presenter, a Prague barista, is named in the second summary from the video’s description; neither summary printed the id beside that line, but y0u10Lm1x7Y is the only listed title that carries both the espresso tonic and the cold brew tonic the first summary describes, so the tie is an inference and the channel name itself is unconfirmed. channelKind person, so the fragment ships with title and channel empty. Checker to confirm the channel by oEmbed before sign-off."
+  }
+}

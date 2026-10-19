@@ -1,0 +1,152 @@
+{
+  "id": "english-breakfast",
+  "name": "English breakfast tea",
+  "respell": "",
+  "aka": [
+    "breakfast tea",
+    "builder's tea"
+  ],
+  "group": "leaf",
+  "kind": "tea",
+  "caffeine": "From its black teas: commonly 40 to 70 mg per 8 oz cup, more with a second bag in the pot.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup whether the bar pours an English breakfast, which brand, bags or loose leaf, how it is served and the price."
+  },
+  "what": "English breakfast is a blend of black teas, not a place: commonly Assam for malt and body, Ceylon for brightness and Kenyan CTC for colour and strength. The name has no legal meaning, so each blender sets its own recipe and the cup changes by brand. It is built strong and brisk to take milk and sugar, and in a bag its small grades brew fast and dark.",
+  "taste": "Full, malty and brisk, with a drying grip that milk rounds off. Plain it reads strong and a little bitter; with milk it turns round and soft.",
+  "make": {
+    "steps": [
+      "Bring fresh cold water to a full boil, once.",
+      "Warm the pot and tip the rinse out.",
+      "Put in one bag per cup, or 2 to 3 g loose blend per 6 to 8 oz; two bags for a 12 oz pot.",
+      "Pour the water on at 200 to 212F (93 to 100C) and start a timer.",
+      "Steep 3 to 5 minutes, the shorter end for bags, which give up colour fast, then pull the leaf.",
+      "Send cold milk and sugar on the side for the guest to add."
+    ],
+    "ratio": "2 to 3 g of leaf per 6 to 8 oz of water",
+    "dose": "One bag, about 2 g, or 2 to 3 g loose blend per cup",
+    "temp": "200 to 212F (93 to 100C), freshly boiled",
+    "time": "3 to 5 minutes",
+    "cup": "Warmed pot into a cup or mug, 6 to 8 oz"
+  },
+  "serve": "Warm the pot and the cup. Send pot, cup and saucer, a spoon, a dish for the bags, and cold milk in a jug with sugar beside it, because this is the blend built for milk. Lemon only if asked, and never with the milk. It belongs to breakfast and brunch, and to anyone who wants a strong cup.",
+  "story": "Breakfast tea is an old trade name, and who first called it English is argued; some accounts put its start in America rather than England. What is settled is the logic of the blend: Assam from a hot river valley for malt, Ceylon graded by elevation for brightness, and East African CTC, the machine cut that fills tea bags, for strength. Irish breakfast leans maltier rather than dependably stronger, and neither name is legally defined.",
+  "guest": "English breakfast is a strong black tea blend made to take milk; shall I bring milk and sugar on the side?",
+  "watch": [
+    "Irish breakfast is conventionally maltier, not dependably stronger; neither name is defined, so taste the brand before describing it.",
+    "A guest who wants it stronger gets a second bag, not a longer steep.",
+    "Milk first or tea first: send the milk on the side and let the guest choose.",
+    "Lemon and milk together can curdle; ask before sending both."
+  ],
+  "library": {
+    "ref": "Black Tea",
+    "study": [
+      [
+        "tea",
+        "The service itself"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make english breakfast tea",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "What is in an English breakfast tea, and how is it brewed?",
+      "answer": "A blend of black teas, commonly Assam, Ceylon and Kenyan, brewed at 200 to 212F (93 to 100C), one bag or 2 to 3 g per 6 to 8 oz, for 3 to 5 minutes in a warmed pot. Strong and malty, made for milk."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Which three origins most commonly make up an English breakfast blend?",
+      "options": [
+        "Darjeeling, Nilgiri and Yunnan",
+        "Keemun, Lapsang and Assam",
+        "Assam, Ceylon and Kenya",
+        "Ceylon, Darjeeling and Fujian"
+      ],
+      "a": 2,
+      "explain": "Assam brings malt, Ceylon brightness and Kenyan CTC colour and strength. The recipe is the blender's, so the proportions vary."
+    },
+    {
+      "id": "q2",
+      "q": "What legal protection does the name English breakfast carry?",
+      "options": [
+        "A protected geographical indication",
+        "None: each blender sets its own recipe",
+        "At least half Assam by weight",
+        "Only CTC leaf from Kenya"
+      ],
+      "a": 1,
+      "explain": "English and Irish breakfast are blend recipes with no legal meaning. Darjeeling, by contrast, is a geographical indication."
+    },
+    {
+      "id": "q3",
+      "q": "How does an Irish breakfast blend conventionally differ from an English one?",
+      "options": [
+        "Stronger by law, with more caffeine",
+        "Lighter, built on Darjeeling",
+        "Brisker, built only on Kenyan CTC",
+        "Maltier, not dependably stronger"
+      ],
+      "a": 3,
+      "explain": "The Irish blend is conventionally maltier. Strength depends on the leaf, the dose and the steep, not the name on the box."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library card: Black Tea",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, Where the leaf comes from",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, The service itself",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, The steep, and what over-steeping actually is",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Water for tea",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Loose leaf against the bag, honestly",
+      "url": ""
+    },
+    {
+      "title": "English breakfast tea (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/English_breakfast_tea"
+    },
+    {
+      "title": "English breakfast tea, all you need to know (tea-and-coffee.com)",
+      "url": "https://tea-and-coffee.com/blog/english-breakfast-tea-all-you-need-to-know"
+    },
+    {
+      "title": "English Breakfast Tea, New York's finest (goldenmoontea.com)",
+      "url": "https://www.goldenmoontea.com/blogs/tea/106692743-english-breakfast-tea-new-york-s-finest"
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=x0xskenfLWQ",
+    "id": "x0xskenfLWQ",
+    "title": "English Breakfast",
+    "channel": "Revival Tea Company",
+    "channelKind": "company",
+    "label": "How to make a cup of English breakfast",
+    "watchFor": "A tea company makes a cup of its own English breakfast blend. Whatever the brand, the essentials hold: water at a full boil, a timed 3 to 5 minute steep, the leaf out before milk.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

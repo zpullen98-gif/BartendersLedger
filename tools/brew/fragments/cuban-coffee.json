@@ -1,0 +1,118 @@
+{
+  "id": "cuban-coffee",
+  "name": "Cuban coffee",
+  "respell": "",
+  "aka": [
+    "cafecito",
+    "café cubano"
+  ],
+  "group": "world",
+  "kind": "coffee",
+  "caffeine": "A small, strong shot of dark roast with an espresso's caffeine; a shared colada spreads several shots across small cups.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on the menus: ask at lineup whether there is an espresso machine and whether the bar will pull a shot on request, at what price."
+  },
+  "what": "Dark roast espresso sweetened as it brews. The first, strongest drops are beaten hard with sugar, usually demerara, into a thick, caramel-coloured foam, the espumita, and the rest of the shot is stirred in so the foam rises. At home it comes from a moka pot. A colada is three to six shots in one cup with small cups for sharing.",
+  "taste": "Very sweet and very strong: a thick, light brown foam over a syrupy dark roast shot, caramel from the beaten sugar, bitter roast beneath.",
+  "make": {
+    "steps": [
+      "Put 1 to 2 teaspoons of sugar a cup, demerara if you have it, in a small jug.",
+      "Brew dark roast coffee in a moka pot or espresso machine.",
+      "Beat the first few drops into the sugar until pale and thick.",
+      "Stir in the rest gently so the foam rises, and pour into small cups."
+    ],
+    "ratio": "1 to 2 teaspoons of sugar a cup",
+    "dose": "One shot of dark roast espresso, 1 to 2 tsp sugar",
+    "temp": "",
+    "time": "",
+    "cup": "Small demitasse, 2 to 3 oz, or a colada cup"
+  },
+  "serve": "Small warmed cups, the foam on top, served the moment it is made; a colada comes with a stack of small cups so a table can share. If the bar pulls a plain shot, sugar rides on the side, though the beaten foam is the point.",
+  "story": "What sets it apart is the foam. Beating the first, most concentrated drops with sugar makes a thick crown that comes from the sugar and coffee together, not from ordinary crema. The colada is the social version, passed round with small cups, common at workplaces. Milk makes it a cortadito, cut about half and half, or a café con leche, mostly milk.",
+  "guest": "Espresso with sugar beaten in as it brews, sweet under a thick foam. I can ask whether the bar will pull a shot.",
+  "watch": [
+    "It comes sweet: the sugar is beaten in at the start, so a guest who wants it unsweetened is asking for a plain espresso.",
+    "A colada is several shots meant for sharing, not one large coffee; say so before a single guest orders one.",
+    "A cortadito is cut with steamed milk, about half and half; some cafés use evaporated or condensed milk instead, so ask which the guest expects."
+  ],
+  "library": {
+    "ref": "",
+    "study": [],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make cuban coffee cafecito espumita",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Cuban cafecito: how is it made?",
+      "answer": "Dark roast espresso from a moka pot or machine, the first drops beaten with 1 to 2 teaspoons of sugar into a thick espumita, the rest stirred in. Small cups: very sweet, very strong, foam on top."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What makes the espumita on a cafecito?",
+      "options": [
+        "The first drops beaten with sugar",
+        "Steamed milk spooned over the top",
+        "Crema from a freshly roasted bean",
+        "Condensed milk whipped until stiff"
+      ],
+      "a": 0,
+      "explain": "The first, most concentrated drops beaten with sugar make the foam, not ordinary crema."
+    },
+    {
+      "id": "q2",
+      "q": "A guest orders a colada for the table. What arrives?",
+      "options": [
+        "One large milky coffee in a mug",
+        "Several shots in one cup to share",
+        "A single shot cut with equal milk",
+        "An iced coffee with condensed milk"
+      ],
+      "a": 1,
+      "explain": "Three to six shots in one cup, poured into small cups to share. The shot cut with milk is a cortadito."
+    },
+    {
+      "id": "q3",
+      "q": "What is a Cuban cortadito?",
+      "options": [
+        "A sweet shot under whipped cream",
+        "A sweet shot over vanilla gelato",
+        "A sweet shot floated on cold tonic",
+        "A sweet shot cut with steamed milk"
+      ],
+      "a": 3,
+      "explain": "A sweetened Cuban shot cut with steamed milk, usually about half and half."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cuban espresso",
+      "url": "https://en.wikipedia.org/wiki/Cuban_espresso"
+    },
+    {
+      "title": "Café cubano",
+      "url": "https://www.britannica.com/topic/Cafe-Cubano"
+    },
+    {
+      "title": "How to Make Cafecito with Cuban Sugar Foam",
+      "url": "https://completehomebarista.com/guides/how-to-make-cafecito-with-cuban-sugar-foam/"
+    },
+    {
+      "title": "Cortadito (Cuban)",
+      "url": "https://en.wikipedia.org/wiki/Cortadito_(Cuban)"
+    },
+    {
+      "title": "Pack: lineup question on espresso",
+      "url": ""
+    }
+  ],
+  "video": null
+}

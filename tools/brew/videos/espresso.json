@@ -1,0 +1,15 @@
+{
+  "id": "espresso",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=W2HtvGv-Lk4",
+  "videoId": "W2HtvGv-Lk4",
+  "title": "How to Dial In Espresso - Fundamentals",
+  "channel": "David Anderson Show",
+  "channelKind": "person",
+  "queries": [],
+  "verifiedBy": "coffee-films",
+  "checkedOn": "2026-10-18",
+  "note": "The plan names the Library film shot/dialling-in-as-a-procedure. Id, title and channel are copied exactly from that COFFEE_FILMS row (sec shot, row dialling-in-as-a-procedure), whose values were recorded from oEmbed. The channel is a person’s (David Anderson is on people.json), so the fragment ships title and channel empty. No search spent.",
+  "checkedBy": "checker",
+  "checkerNote": "Confirmed by the checker: id W2HtvGv-Lk4, title \"How to Dial In Espresso - Fundamentals\" and channel \"David Anderson Show\" equal the COFFEE_FILMS row shot/dialling-in-as-a-procedure exactly; the plan names that film; a person’s channel, so the fragment ships title and channel empty. No search spent."
+}

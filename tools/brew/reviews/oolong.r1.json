@@ -1,0 +1,18 @@
+{
+  "id": "oolong",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.dose",
+      "problem": "Gave no weight or volume (\"Loose leaf, weighed; a high load in a small gaiwan\"), though the style asks for one.",
+      "change": "Now \"2 to 3 g a cup Western; a high load in a small gaiwan\"."
+    },
+    {
+      "field": "quiz[2].options[3]",
+      "problem": "The right answer was the longest and the only option with an extra clause (\"then longer\").",
+      "change": "Trimmed to \"20 to 45 seconds\". The explain still covers stretching each steep."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

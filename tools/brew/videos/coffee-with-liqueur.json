@@ -1,0 +1,63 @@
+{
+  "id": "coffee-with-liqueur",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=jRZO5Vdr440",
+  "videoId": "jRZO5Vdr440",
+  "title": "Video Bartending Guide : Keoke Coffee Recipe - Hot Drinks",
+  "channel": "ExpertVillage Leaf Group",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "how to make a spiked coffee with whipped cream youtube",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "No film teaching a hot coffee with liqueur under cream: cWPgrPQo6xs \"How To Make Spiked Whipped Cream\" (the topping only), 94xSzoArFUo \"Spiked Iced Coffee\" (iced, a Tipsy Bartender video), dalgona and whipped coffee films, and a Short."
+    },
+    {
+      "q": "how to make a Keoke coffee with whipped cream youtube",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=jRZO5Vdr440 \"Video Bartending Guide : Keoke Coffee Recipe - Hot Drinks - YouTube\"; the summary described \"A recipe video from an Austin, Texas cafe, titled \\\"How to Make a Keoke Coffee - Recipe and Ingredients.\\\"\" Also listed: _D6Di6qX2xQ (a hotel bar’s film), XTf4l8xwAxs \"Keoke Coffee Recipe\", E8PAAIp-eRA \"Good Libations\", a Short."
+    },
+    {
+      "q": "\"Video Bartending Guide : Keoke Coffee Recipe - Hot Drinks\"",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "spare": true,
+      "returned": "https://www.youtube.com/watch?v=jRZO5Vdr440 \"Video Bartending Guide : Keoke Coffee Recipe - Hot Drinks - YouTube\" (top result, same id and exact title); summary: the video is \"How to Make a Keoke Coffee - Recipe and Ingredients\", from the same Video Bartending Guide series as oVLhWZztG5w \"Video Bartending Guide : Barbados Coffee Recipe - Hot Drinks\"."
+    },
+    {
+      "q": "\"Video Bartending Guide\" Keoke Coffee Recipe Hot Drinks channel uploaded by",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "spare": true,
+      "returned": "https://www.youtube.com/watch?v=jRZO5Vdr440 \"Video Bartending Guide : Keoke Coffee Recipe - Hot Drinks - YouTube\" (same id and exact title a third time); summary: \"Expert: Cool River Cafe\" and \"The uploader appears to be ExpertVillage Leaf Group. That name shows up in the metadata for the result, but the snippet doesn’t explicitly say \\\"uploaded by\\\"\"; listed as uploaded 6913 days ago."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-18",
+  "note": "The plan’s phrase returned no film of this drink, so the entry’s second search used the Library’s own example of it, the Keoke Coffee, and the batch’s two spares went to the exact title and the channel. Same watch id and same exact title in the second, third and fourth searches; the channel, ExpertVillage Leaf Group, is named in the fourth summary from the result’s metadata, which the summary itself hedged, so the checker must confirm it (oEmbed) before sign-off. \"Cool River Cafe\" is the featured bar, not the uploader, and is never named in the fragment. A how-to publisher, so company; it is not yet on companies.json and the name check will refuse the channel until it is added there and allowed as a name, which this role may not write. The title carries a spaced hyphen, so the fragment keeps title empty. Caveats: an old, low resolution upload (about 19 years), and it builds a Keoke coffee, brandy and liqueurs, rather than the house’s nut liqueurs; the label and watchFor teach the build, which is the same. A watch link, not a Short, playlist or advert.",
+  "checkedBy": "checker",
+  "checkerNote": "Confirmed by the checker on 2026-10-19, with one file left for others. The finder’s Keoke query and exact title query are different searches and both returned watch id jRZO5Vdr440 under the same exact title; the checker’s two fresh searches returned the same id and title twice more, with the description’s expert (a bar in Austin, Texas) and an upload about 19 years old. The finder’s fourth summary read ExpertVillage Leaf Group from the result’s metadata, hedged; the checker’s third search named the expertvillage channel for a sister clip of the same Video Bartending Guide series (INFwdcNpE1U, the same featured bar, posted November 2007), which settles the uploader. ExpertVillage Leaf Group is that channel’s display name. A how-to video publisher, so company is right and its name may show. It teaches making a Keoke coffee, the Library cocktail the plan names for this entry; a watch link from 2007, before Shorts existed, not a playlist or advert. Left for others: the fragment still fails schema.mjs until \"ExpertVillage Leaf Group\" is on companies.json, which this role may not write. Not watched: the snippets never gave the steps, so the build order in the watchFor rests on the drink, not on a viewing, and the series’ clips can be very short (the sister clip runs 23 seconds).",
+  "checkerQueries": [
+    {
+      "q": "ExpertVillage \"Keoke Coffee Recipe\" Video Bartending Guide Hot Drinks youtube",
+      "filter": "allowed_domains youtube.com; checker",
+      "returned": "First result https://www.youtube.com/watch?v=jRZO5Vdr440 \"Video Bartending Guide : Keoke Coffee Recipe - Hot Drinks - YouTube\" (same id and exact title); summary: listed as \"How to Make a Keoke Coffee - Recipe and Ingredients\", and \"The result doesn’t mention ExpertVillage by name, but the title format matches that series\"; the companion oVLhWZztG5w Barbados Coffee clip also listed. Others: 0aVHIQ6Yr-4, cXr21y07MLc, 9TEHVGNWWAQ, XTf4l8xwAxs, E8PAAIp-eRA, _D6Di6qX2xQ, a Short and a playlist."
+    },
+    {
+      "q": "\"Keoke Coffee Recipe - Hot Drinks\" jRZO5Vdr440 channel",
+      "filter": "allowed_domains youtube.com; checker",
+      "returned": "First result https://www.youtube.com/watch?v=jRZO5Vdr440 \"Video Bartending Guide : Keoke Coffee Recipe - Hot Drinks - YouTube\" (same id and exact title); summary: \"a Video Bartending Guide upload\", the description shows how to make a Keoke coffee with a bar in Austin, Texas as the expert, about 19 years old; no channel named."
+    },
+    {
+      "q": "expertvillage youtube channel \"Video Bartending Guide\" hot drinks Cool River Cafe",
+      "filter": "allowed_domains youtube.com; checker",
+      "returned": "https://www.youtube.com/watch?v=INFwdcNpE1U \"Video Bartending Guide : Vodka and Tonic Recipe - Vodka Drinks\"; summary: the same series and the same featured bar as the expert, a 23 second clip \"posted in November 2007 under the expertvillage channel\". jRZO5Vdr440 itself did not come back on this wording."
+    }
+  ]
+}

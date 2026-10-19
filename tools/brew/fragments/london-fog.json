@@ -1,0 +1,131 @@
+{
+  "id": "london-fog",
+  "name": "London Fog",
+  "respell": "",
+  "aka": [
+    "Earl Grey latte",
+    "Earl Grey tea latte"
+  ],
+  "group": "cocoa",
+  "kind": "tea",
+  "caffeine": "Caffeine comes from the Earl Grey, a black tea, less than drip coffee; decaf keeps a trace.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus, which print no tea: ask at lineup which teas the bar pours hot, whether Earl Grey is one, and whether milk can be steamed.",
+    "uses": [
+      "b-0ro4u0qk"
+    ]
+  },
+  "what": "An Earl Grey tea latte: strong Earl Grey, black tea scented with oil of bergamot, sweetened with vanilla and topped with steamed milk and a little foam. The bergamot's floral citrus has to carry through the milk, so the steep must be strong. Earl Grey is on our list too, in the Prisoner of Love, with gin and clarified cream.",
+  "taste": "Soft, floral and creamy: perfumed bergamot over malty black tea, rounded by vanilla and milk.",
+  "make": {
+    "steps": [
+      "Warm the cup.",
+      "Steep two Earl Grey bags in a little water just off a full boil.",
+      "Pull them at 3 to 5 minutes; for strength add leaf, never time.",
+      "Stir in vanilla syrup.",
+      "Steam milk to latte texture, pour it over the tea and spoon foam on top."
+    ],
+    "ratio": "",
+    "dose": "Two Earl Grey bags, vanilla syrup, steamed milk to fill",
+    "temp": "Water 200 to 212F (93 to 100C); milk 140 to 155F (60 to 68C)",
+    "time": "Steep 3 to 5 minutes",
+    "cup": "Warmed 8 to 12 oz latte cup or mug"
+  },
+  "serve": "On a saucer with a spoon, the bags already pulled so it does not stew on the way, and sugar beside it rather than in it. A gentle choice after dinner or for the guest off coffee; bergamot sits well with cream desserts.",
+  "story": "The London Fog is usually traced to Vancouver in the 1990s, when a café guest took Earl Grey with steamed milk and a little vanilla. Nobody is sure of the year or who named it, and other places claim it. Earl Grey carries the title of a British prime minister of the 1830s.",
+  "guest": "A London Fog is Earl Grey tea with vanilla and steamed milk: floral, creamy and gently sweet. Let me check which teas the bar has tonight.",
+  "watch": [
+    "A bitter, drying cup means the tea stewed: pull it on time and add leaf, not minutes.",
+    "It is black tea, so it carries caffeine; decaf Earl Grey still holds a trace.",
+    "Never send lemon with it: acid curdles the milk."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "tea",
+        "The steep, and what over-steeping actually is"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make a london fog tea latte",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a London Fog made, and what is in it?",
+      "answer": "Strong Earl Grey steeped 3 to 5 minutes off a full boil, sweetened with vanilla syrup, topped with milk steamed to 140 to 155F (60 to 68C) and a little foam, in a warmed cup. Floral, creamy and sweet."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What gives Earl Grey its floral, citrus perfume?",
+      "options": [
+        "Dried orange peel",
+        "Oil of bergamot",
+        "Lavender flowers",
+        "Lemon verbena"
+      ],
+      "a": 1,
+      "explain": "Earl Grey is black tea scented with oil of bergamot, a citrus grown mostly in Calabria."
+    },
+    {
+      "id": "q2",
+      "q": "A guest wants a stronger London Fog. What changes?",
+      "options": [
+        "Same leaf, longer steep",
+        "More leaf, same time",
+        "Hotter milk",
+        "More vanilla syrup"
+      ],
+      "a": 1,
+      "explain": "A longer steep adds mostly astringency: two bags at three minutes, never one at seven."
+    },
+    {
+      "id": "q3",
+      "q": "Which city is the London Fog usually traced to?",
+      "options": [
+        "London",
+        "Vancouver",
+        "Seattle",
+        "San Francisco"
+      ],
+      "a": 1,
+      "explain": "It is usually traced to Vancouver in the 1990s; the name's origin is unclear."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Richmond News on the London Fog",
+      "url": "https://www.richmond-news.com/living/the-london-fog-was-invented-in-vancouver-and-we-spoke-to-the-woman-who-invented-it-3529023"
+    },
+    {
+      "title": "Imbibe on the London Fog",
+      "url": "https://imbibemagazine.com/?p=100601"
+    },
+    {
+      "title": "Food Republic on the London Fog",
+      "url": "https://www.foodrepublic.com/1521487/origin-london-fog-latte-drink/"
+    },
+    {
+      "title": "London fog (drink), Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/London_fog_(drink)"
+    },
+    {
+      "title": "Library: The steep; The service itself; Black Tea",
+      "url": ""
+    },
+    {
+      "title": "House pack: Earl Grey tea; Prisoner of Love",
+      "url": ""
+    }
+  ],
+  "video": null
+}

@@ -1,0 +1,121 @@
+{
+  "id": "cafe-au-lait-new-orleans",
+  "name": "New Orleans café au lait",
+  "respell": "ka-FAY oh LAY",
+  "aka": [
+    "café au lait with chicory"
+  ],
+  "group": "milk",
+  "kind": "coffee",
+  "caffeine": "From the coffee alone: chicory root carries no caffeine, and the hot milk adds none.",
+  "house": {
+    "printed": false,
+    "askId": "a-4s0iqehy",
+    "ask": "Not printed on our menus: ask at lineup whether the bar will make one from our coffee with chicory and hot milk, and its price.",
+    "uses": [
+      "b-zxkf4bzw"
+    ]
+  },
+  "what": "Dark roast coffee blended with roasted chicory root, brewed strong and poured with an equal measure of hot milk. Chicory gives a darker, more bitter cup with a full body; the milk softens it. Our printed New Orleans-style coffee with chicory is the cup it would start from.",
+  "taste": "Roasty and smooth, with a gentle cocoa-like bitterness from the chicory, rounded and sweetened by the hot milk.",
+  "make": {
+    "steps": [
+      "Brew the chicory blend by drip or press at about 50 g per litre, since chicory brews strong.",
+      "Heat an equal measure of milk until it steams, about 149F (65C); never boil it.",
+      "Pour the hot coffee and milk into a warmed cup together, in equal parts.",
+      "Offer sugar and serve at once, while both are hot."
+    ],
+    "ratio": "Equal parts strong chicory coffee and hot milk",
+    "dose": "About 50 g chicory blend per litre; equal milk",
+    "temp": "Brew 195 to 205F (90 to 96C); milk about 149F (65C)",
+    "time": "Batch 4 to 8 minutes; sell within 30 to 60 minutes sealed",
+    "cup": "Warmed cup or mug, 6 to 12 oz"
+  },
+  "serve": "On a saucer, the handle towards the guest's right hand, sugar offered. It belongs beside dessert: our chicory coffee is the zero-proof pairing for six sweet plates, Bananas Foster among them.",
+  "story": "Chicory stretched coffee in France during the blockades of the early 1800s, and New Orleans, a French city and a great coffee port, kept the habit. The city credits the Union blockade of 1861; tell that as tradition. A French Market coffee stand has poured it with chicory beside beignets since 1862.",
+  "guest": "Chicory coffee with an equal measure of hot milk: roasty and smooth, with a soft, cocoa-like bitterness.",
+  "watch": [
+    "Chicory has no caffeine, but the coffee does: never sell it as a decaf.",
+    "Boiled milk brings a skin and a cooked taste.",
+    "A guest who finds black chicory coffee bitter may prefer it with hot milk."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "filter",
+        "Ratio, and the number to actually hold"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": "beignets"
+  },
+  "search": "new orleans cafe au lait chicory how to make",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a New Orleans café au lait made?",
+      "answer": "Coffee and chicory brewed strong, about 50 g per litre, poured in equal parts into a warmed cup with milk heated until it steams, never boiled. Roasty, smooth, softly bitter."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What does chicory bring to a New Orleans café au lait?",
+      "options": [
+        "Caffeine and bright acidity",
+        "Sweetness and a hint of vanilla",
+        "Body and cocoa-like bitterness",
+        "A smoky tea note"
+      ],
+      "a": 2,
+      "explain": "Roasted chicory root adds body, colour and a roasty, cocoa-like bitterness, with no caffeine of its own."
+    },
+    {
+      "id": "q2",
+      "q": "Why does a chicory blend take a lighter dose than straight coffee?",
+      "options": [
+        "It gives up body fast",
+        "It has more caffeine",
+        "The milk would curdle",
+        "It soaks up water"
+      ],
+      "a": 0,
+      "explain": "Chicory gives up colour and body fast, so a blend brews strong at about 50 g per litre."
+    },
+    {
+      "id": "q3",
+      "q": "Which shortage does the city's own chicory story credit?",
+      "options": [
+        "Rationing in the 1940s",
+        "The Civil War blockade",
+        "The Great Depression",
+        "A 1970s coffee frost"
+      ],
+      "a": 1,
+      "explain": "The city tells the Union blockade from 1861, but France used chicory in the early 1800s first."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library lesson: Ratio, and the number to actually hold",
+      "url": ""
+    },
+    {
+      "title": "Library card: Batch Brew",
+      "url": ""
+    },
+    {
+      "title": "World Table Cuisine: Chicory coffee",
+      "url": ""
+    },
+    {
+      "title": "House pack: New Orleans-Style Coffee with Chicory",
+      "url": ""
+    }
+  ],
+  "video": null
+}

@@ -1,0 +1,129 @@
+{
+  "id": "french-press",
+  "name": "French press",
+  "respell": "",
+  "aka": [
+    "cafetière",
+    "plunger pot",
+    "press pot"
+  ],
+  "group": "brewed",
+  "kind": "coffee",
+  "caffeine": "Full caffeine, all from the coffee; the dose and cup size decide how much.",
+  "house": {
+    "printed": false,
+    "askId": "a-dy8vzoly",
+    "ask": "Not printed on the menus: ask at lineup how the house brews its hot coffee, and whether a press can go to a table."
+  },
+  "what": "The French press, cafetière or plunger pot, is full immersion: coarse coffee steeps in all the water for about four minutes, then a mesh screen presses the grounds down. The mesh passes oils and fine silt that paper strips, so the cup is heavy. It is a brewer, not a carafe.",
+  "taste": "Heavy and round, oily, with fine sediment, low clarity and a long finish; a shade darker than the same coffee through paper.",
+  "make": {
+    "steps": [
+      "Warm the press, then add coarse coffee, like rough sea salt, at 1:15 to 1:16.",
+      "Pour water just off the boil over all the grounds; at a minute, stir the crust down.",
+      "At four to five minutes skim the foam, then press slowly, stopping as the screen meets the bed.",
+      "Decant the whole pot at once into warmed cups or a warmed vessel."
+    ],
+    "ratio": "1:15 to 1:16, about 63 to 67 g per litre",
+    "dose": "About 63 to 67 g coarse coffee per litre",
+    "temp": "200 to 205F (93 to 96C), just off the boil",
+    "time": "Steep 4 to 5 minutes, then plunge and decant",
+    "cup": "Pre-heated mug or cup, 6 to 8 oz"
+  },
+  "serve": "Decant at the station, or plunge at the table and pour every cup at once. Warmed cups on saucers with spoons, cream and sugar alongside. It suits two at a table after a heavy meal.",
+  "story": "The name points to France, but the press with a sealed mesh screen was patented in Italy in 1929. Guests like learning that plunging ends nothing: the grounds under the screen keep extracting, so a second cup left in the press pours bitter and lukewarm, and the roast gets the blame.",
+  "guest": "A press keeps the coffee’s oils, so it drinks heavy and round. I’ll pour it all off the grounds, so the last cup tastes like the first.",
+  "watch": [
+    "A plunger that fights you means too fine; one that drops like a stone, too coarse.",
+    "Pressing hard drives fines through the mesh. Press slowly and stop at the bed."
+  ],
+  "library": {
+    "ref": "French Press",
+    "study": [
+      [
+        "filter",
+        "The press, and what the plunge does not do"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make french press",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "French press: how is it made?",
+      "answer": "Coarse coffee at 1:15 to 1:16, water at 200 to 205F (93 to 96C), the crust stirred down at a minute, a slow plunge at four to five minutes, decanted at once into warmed cups: heavy, round and oily."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "A table leaves a plunged French press standing for ten minutes. How does the second cup taste?",
+      "options": [
+        "Weaker and sour",
+        "Bitter and lukewarm",
+        "Unchanged after plunging",
+        "Sweeter and rounder"
+      ],
+      "a": 1,
+      "explain": "Plunging ends nothing: the grounds under the screen keep extracting as the pot cools. Decant the lot the moment you plunge."
+    },
+    {
+      "id": "q2",
+      "q": "Why does French press coffee carry more body than the same coffee through paper?",
+      "options": [
+        "Immersion extracts more",
+        "It is brewed hotter",
+        "Mesh passes oils and silt",
+        "It needs a darker roast"
+      ],
+      "a": 2,
+      "explain": "The filter decides body: mesh passes what paper strips. Held equal, percolation actually extracts more than immersion."
+    },
+    {
+      "id": "q3",
+      "q": "The plunger drops through the pot like a stone. What does that tell you?",
+      "options": [
+        "Ground too fine",
+        "Water too hot",
+        "The coffee is stale",
+        "Ground too coarse"
+      ],
+      "a": 3,
+      "explain": "No resistance means too coarse; a plunger that fights you means too fine."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: The press, and what the plunge does not do",
+      "url": ""
+    },
+    {
+      "title": "Library card: French Press",
+      "url": ""
+    },
+    {
+      "title": "10 Coffee Brewing Methods And The History Behind Them",
+      "url": "https://www.tastingtable.com/1923397/coffee-brewing-methods-history"
+    },
+    {
+      "title": "History of the French Press",
+      "url": "https://brooklynroasting.com/coffee-lesson-week-history-french-press/"
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=st571DYYTR8",
+    "id": "st571DYYTR8",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "How to brew in a French press",
+    "watchFor": "The crust being broken and skimmed rather than stirred down, and how gently the plunger is finally pushed. The plunge is a lid, not an extraction, and this is what that looks like.",
+    "verifiedBy": "coffee-films",
+    "checkedOn": "2026-10-18"
+  }
+}

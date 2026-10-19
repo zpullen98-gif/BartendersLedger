@@ -1,0 +1,49 @@
+{
+  "id": "jasmine-tea",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=cGD0amH03lc",
+  "videoId": "cGD0amH03lc",
+  "title": "Jasmine Tea",
+  "channel": "Revival Tea Company",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "Teavivre how to brew jasmine tea youtube [allowed_domains: youtube.com]",
+      "returned": "Brew Marigold Jasmine Flower Tea by Teavivre | E8twJ7a0yg4 (a flowering tea, not plain jasmine tea); Jasmine Tea - YouTube | https://www.youtube.com/watch?v=cGD0amH03lc (second); Jasmine Green Tea | LKJCSGhYuuk; tWrxRTqCLQU and others; no channel named for cGD0amH03lc."
+    },
+    {
+      "q": "Rishi Tea jasmine pearls how to brew youtube [allowed_domains: youtube.com]",
+      "returned": "No Rishi Tea video. 2KFtRZKcxsk \"How to Brew Jasmine Pearl Tea\" and others; the summary names a few uploaders (a NYC tea seller, Ecovessels, Top Creamery) without tying any to an id."
+    },
+    {
+      "q": "Revival Tea Company \"Jasmine Tea\" how to make a cup youtube [allowed_domains: youtube.com]",
+      "returned": "Jasmine Tea - YouTube | https://www.youtube.com/watch?v=cGD0amH03lc (first); Jasmine Pearls | zceXwlWoMWs (second) | summary: \"The best match is Revival Tea Company's own video, 'Jasmine Tea,' on YouTube ... founder ... demonstrates how to brew a cup of their jasmine tea ... Revival Tea Company Teamaker and Founder ... walks you through how to make a cup of our Jasmine Tea!\""
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedBy": "checker",
+  "checkedOn": "2026-10-19",
+  "note": "cGD0amH03lc came back with the same exact title, \"Jasmine Tea\", on the first and third searches, and the third summary names Revival Tea Company as the uploader. The same id and title also came back on two other searches of this pass (the English breakfast confirming search and the second Earl Grey search, whose summary lists Jasmine among Revival's walkthrough videos). The first pass's _VZS6yGBlTE (no channel) was not retried. The presenter is named in the description; the channel is the company. The results do not give its temperature or time, so watchFor gives the method's own. An oEmbed read should confirm the channel string. Three searches spent. Checker: confirmed on the finder's searches, no checker search spent. The first query (Teavivre, naming no Revival) and the third (Revival) differ, both returned the www id cGD0amH03lc with the exact title \"Jasmine Tea\", and the third summary names Revival Tea Company as the uploader, quoting the description the company's other walkthroughs carry; the channel string is the one its own channel page shows on the English breakfast and Earl Grey searches. It teaches making a cup of jasmine tea. Not a Short, a playlist or an advert; channelKind company is right. The results give no temperature or time, so watchFor rightly gives the method's own.",
+  "firstPass": {
+    "id": "jasmine-tea",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to brew jasmine tea youtube (site youtube.com)",
+        "returned": "Snow Jasmine Tea Brewing in Gaiwan, Jasmine Tea Recipe - YouTube | https://www.youtube.com/watch?v=_VZS6yGBlTE | summary: \"A video showing how we brew our premium Snow Jasmine tea in a gaiwan, with a recipe for steeping time, amount of tea, and temperature\", no channel named."
+      },
+      {
+        "q": "\"Snow Jasmine Tea Brewing in Gaiwan, Jasmine Tea Recipe\" (site youtube.com)",
+        "returned": "Snow Jasmine Tea Brewing in Gaiwan, Jasmine Tea Recipe - YouTube | https://www.youtube.com/watch?v=_VZS6yGBlTE (first) | summary quotes the description but names no channel."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "_VZS6yGBlTE came back with the same exact title, but no result title or summary names its channel, so it does not pass. Two searches spent."
+  }
+}

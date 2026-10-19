@@ -1,0 +1,18 @@
+{
+  "id": "french-press",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps[1], make.steps[2]",
+      "problem": "Skimming sat with the one-minute stir, but the Library skims after the steep, just before the press; the plunge \"at four minutes\" sat against the time field's 4 to 5 minutes.",
+      "change": "Step 2 ends at the stir; step 3 reads \"At four to five minutes skim the foam, then press slowly, stopping as the screen meets the bed.\""
+    },
+    {
+      "field": "recall[0].answer",
+      "problem": "Fahrenheit without Celsius, plunge at four minutes against the 4 to 5 the card gives, and no cup.",
+      "change": "Added (93 to 96C), \"four to five minutes\" and \"into warmed cups\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

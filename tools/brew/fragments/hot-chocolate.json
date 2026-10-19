@@ -1,0 +1,145 @@
+{
+  "id": "hot-chocolate",
+  "name": "Hot chocolate",
+  "respell": "",
+  "aka": [
+    "hot cocoa",
+    "cocoa"
+  ],
+  "group": "cocoa",
+  "kind": "cocoa",
+  "caffeine": "A little caffeine from the cocoa solids, far less than coffee; do not offer it as caffeine free.",
+  "house": {
+    "printed": false,
+    "askId": "a-vme0bxmm",
+    "ask": "Not printed on the menus: ask at lineup whether hot chocolate is available, for children and for adults, and whether it is made from cocoa, chocolate or a mix."
+  },
+  "what": "Chocolate melted into hot milk, or cocoa powder whisked in with sugar. Melted chocolate keeps its cocoa butter, so the cup is richer and less sweet; cocoa powder has most of that fat removed, needs sugar and can clump. Many boxed hot chocolate mixes are cocoa. Spain makes it thick enough to dip a churro.",
+  "taste": "Warm, sweet and chocolatey, with real body when made from chocolate; cocoa is lighter and sweeter. Bitterness follows the chocolate's percentage.",
+  "make": {
+    "steps": [
+      "Chop the chocolate fine.",
+      "For the thick Spanish style, whisk a little cornstarch into the cold milk first.",
+      "Heat the milk, stirring, until it steams, or thickens if starched; a cooked milk flavour suits this drink.",
+      "Whisk in the chocolate off the heat until smooth and glossy.",
+      "For cocoa instead, whisk powder and sugar to a paste in a splash of milk, then add the hot milk."
+    ],
+    "ratio": "Spanish thick style: 1 part chocolate to 2 parts milk",
+    "dose": "Thick style: 200 g dark chocolate, 400 ml milk, 1 tsp cornstarch",
+    "temp": "Milk steaming; cocoa butter melts near 93F (34C)",
+    "time": "",
+    "cup": "Warmed mug, 8 to 12 oz"
+  },
+  "serve": "Bring it at once in a warmed mug on a saucer with a spoon, stirred as it leaves, since chocolate sinks. Cream or a dusting only if the house does them; for a child, ask whether warm rather than hot.",
+  "story": "Cacao is a tree of the Americas; the oldest known trace of its use, about 5,300 years old, is on pottery from the Ecuadorian Amazon, and the smooth bar came only in the nineteenth century. Madrid takes it thick with churros, and Colombia makes it with water or milk.",
+  "guest": "Hot chocolate is chocolate melted into hot milk, rich and smooth. Let me check with the bar whether we can make one tonight.",
+  "watch": [
+    "Never promise it: confirm at lineup first.",
+    "Grit or clumps mean cocoa dumped straight in: whisk it smooth in a little milk first.",
+    "Dairy or allergy questions go to the service note and the kitchen."
+  ],
+  "library": {
+    "ref": "",
+    "study": [],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make hot chocolate from real chocolate",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is hot chocolate made, and how does it differ from cocoa?",
+      "answer": "Chopped chocolate whisked into steaming milk until glossy, served in a warmed mug. Chocolate keeps its cocoa butter, so it is richer and less sweet than cocoa, which has most fat removed and needs sugar."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Why is hot chocolate made from a chocolate bar richer than cocoa?",
+      "options": [
+        "It carries more caffeine",
+        "Its cocoa is more finely ground",
+        "It keeps its cocoa butter",
+        "It is thickened with starch"
+      ],
+      "a": 2,
+      "explain": "A bar keeps its cocoa butter, which gives body; cocoa powder has most of that fat removed."
+    },
+    {
+      "id": "q2",
+      "q": "What thickens the Spanish chocolate served with churros?",
+      "options": [
+        "Egg yolks",
+        "A little cornstarch",
+        "Reduced double cream",
+        "Ground almonds"
+      ],
+      "a": 1,
+      "explain": "Dark chocolate is melted into milk thickened with a little cornstarch, so it coats a spoon."
+    },
+    {
+      "id": "q3",
+      "q": "Why can hot chocolate take hotter milk than a latte?",
+      "options": [
+        "It wants a cooked milk flavour",
+        "Melted chocolate cools the milk down",
+        "Cocoa butter stops the milk scalding",
+        "Its milk is never steamed"
+      ],
+      "a": 0,
+      "explain": "Hot chocolate, like masala chai, wants a cooked milk flavour and reads thin without it."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Hot cocoa vs hot chocolate, The Takeout",
+      "url": "https://www.thetakeout.com/1769320/hot-cocoa-vs-hot-chocolate-difference/"
+    },
+    {
+      "title": "Hot chocolate and hot cocoa, Food Republic",
+      "url": "https://www.foodrepublic.com/1770577/hot-chocolate-vs-hot-cocoa-differences"
+    },
+    {
+      "title": "Hot cocoa vs hot chocolate, MasterClass",
+      "url": "https://www.masterclass.com/articles/hot-cocoa-vs-hot-chocolate-explained"
+    },
+    {
+      "title": "Caffeine in hot chocolate, The Takeout",
+      "url": "https://www.thetakeout.com/1774051/caffeine-in-hot-chocolate/"
+    },
+    {
+      "title": "Hot chocolate and caffeine, Healthline",
+      "url": "https://www.healthline.com/health/food-nutrition/does-hot-chocolate-have-caffeine/"
+    },
+    {
+      "title": "Onces santafereños, Smithsonian Folklife Festival",
+      "url": "https://festival.si.edu/blog/2011/colombia-recipe-of-the-day-onces-santaferenos/"
+    },
+    {
+      "title": "Chocolate santafereño, Atlas Obscura",
+      "url": "https://atlasobscura.com/foods/chocolate-santafereno-cheese"
+    },
+    {
+      "title": "World Table: Dark chocolate; churros-con-chocolate recipe",
+      "url": ""
+    },
+    {
+      "title": "Library: Scalded milk; Mocha",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=EEMLQRWWZKo",
+    "id": "EEMLQRWWZKo",
+    "title": "4 Levels of Hot Chocolate: Amateur to Food Scientist",
+    "channel": "Epicurious",
+    "channelKind": "company",
+    "label": "Hot chocolate made three ways, then explained",
+    "watchFor": "Three cooks, an amateur, a home cook and a professional chef, each make hot chocolate, and a food scientist explains their choices. Set each against the method above: chopped chocolate whisked into hot milk off the heat.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

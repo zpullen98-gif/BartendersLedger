@@ -1,0 +1,65 @@
+{
+  "id": "cafe-de-olla",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=6zEutgpks5o",
+  "videoId": "6zEutgpks5o",
+  "title": "Mexican Café de Olla Recipe",
+  "channel": "Villa Cocina",
+  "channelKind": "person",
+  "queries": [
+    {
+      "q": "café de olla recipe video Bon Appetit OR Epicurious OR \"Muy Delish\" OR \"Serious Eats\" youtube",
+      "returned": "Only Bon Appétit channel pages and unrelated videos (zWVD5fGh48E, ZxUdJALkIKg, mvDj7DF1jsk); no café de olla video from any named publisher."
+    },
+    {
+      "q": "Mexican café de olla piloncillo cinnamon clay pot how to make video",
+      "returned": "https://www.youtube.com/watch?v=6zEutgpks5o \"Mexican Café de Olla Recipe\" (fifth result, and as an m.youtube link fourth); summary: \"Villa Cocina’s “Mexican Café de Olla Recipe” is the most detailed. Its description notes that the drink is traditionally brewed in a clay pot and offers substitutes for tools and ingredients. Its listed recipe uses 10 cups of water, a cinnamon stick, star anise, cloves, brown sugar or piloncillo, and ground coffee.\" Also vHmXEiWW0MY, nyd4B9YCVGU, 2wDzl96Hye0, oghM4sJWmP8, YV1YNBvk_Q0, P6EJ7D5BYdk, X7np8l-7b64, zYqoxBo4Huo."
+    },
+    {
+      "q": "\"Mexican Café de Olla Recipe\" Villa Cocina youtube",
+      "returned": "https://www.youtube.com/watch?v=6zEutgpks5o&pp=0gcJCfcAhR29_xXO \"Mexican Café de Olla Recipe\" (and the m.youtube link); summary: \"The search found the Villa Cocina video titled “Mexican Café de Olla Recipe” (video ID 6zEutgpks5o)\"; \"The host makes Café de Olla\"; the description links to a printable recipe on villacocina.com. Also two Villa Cocina Shorts and other café de olla videos; XNEfw7vl7QM did not appear."
+    }
+  ],
+  "checkerQueries": [
+    {
+      "q": "Villa Cocina youtube channel café de olla recipe 6zEutgpks5o",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=6zEutgpks5o&pp=0gcJCfcAhR29_xXO \"Mexican Café de Olla Recipe\" and the m.youtube link with the same id and title; summary: \"The video you asked about (6zEutgpks5o) is titled “Mexican Café de Olla Recipe” on Villa Cocina’s channel\", traditionally brewed in a clay pot with the host suggesting other tools and ingredients; the printable recipe is on villacocina.com. Also two Shorts and other café de olla films (2wDzl96Hye0, oghM4sJWmP8, YV1YNBvk_Q0, nyd4B9YCVGU, P6EJ7D5BYdk, bdGyMzMrhYA)."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-19",
+  "checkedBy": "checker",
+  "note": "Accepted 6zEutgpks5o, which the first pass rejected only for want of a named channel. That evidence is now in hand: two searches in this pass returned the same id with the same exact title, and the third summary ties the channel to the id in so many words (\"the Villa Cocina video ... (video ID 6zEutgpks5o)\"), with the description linking to the channel’s own recipe site; the first pass’s worry about a second video with the same title is settled by that tie. Villa Cocina is one host’s own recipe channel and site, so channelKind person: the fragment ships with title and channel empty. If the checker reads it as a food publisher instead, it may be moved to company. Budget: three searches. Every search in this pass was restricted to youtube.com (allowed_domains) in standard mode.",
+  "checkerNote": "Confirmed by the checker. The second and third finder searches are different queries and both returned 6zEutgpks5o with the same exact title; the third summary ties the id to Villa Cocina. The checker’s search, in fresh wording, returned the same id and exact title and put the video \"on Villa Cocina’s channel\" in so many words, so the uploader is named, not a presenter’s first name. Villa Cocina is one host’s own recipe channel, so channelKind person stays and the fragment ships with title and channel empty. It teaches café de olla itself; a watch link, not a Short, playlist or advert. Budget: one search.",
+  "firstPass": {
+    "id": "cafe-de-olla",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make cafe de olla youtube",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "Candidates: z44Yskdwq-s, 6zEutgpks5o \"Mexican Café de Olla Recipe\", JejlwAlCeHY, 2wDzl96Hye0, 49yU5uBqLNw, ILUSdc9XQS4, fxHw84vBdKc, X7np8l-7b64, CkGCCsH2Meo, oghM4sJWmP8; no channel named."
+      },
+      {
+        "q": "\"Mexican Café de Olla Recipe\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://m.youtube.com/watch?v=6zEutgpks5o \"Mexican Café de Olla Recipe\" (seventh result; XNEfw7vl7QM carries the same title). The summary named a recipe site, Villa Cocina, for a written page, but tied no channel to any id."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Candidate 6zEutgpks5o came back with the same id and exact title, but no result named its channel (a second video shares the title), so it fails. Budget: two searches for the entry. Video null."
+  }
+}

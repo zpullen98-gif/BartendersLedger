@@ -1,0 +1,132 @@
+{
+  "id": "drip-coffee",
+  "name": "Drip coffee",
+  "respell": "",
+  "aka": [
+    "batch brew",
+    "filter coffee",
+    "auto-drip",
+    "the pot"
+  ],
+  "group": "brewed",
+  "kind": "coffee",
+  "caffeine": "Full caffeine, all from the coffee; the dose and cup size decide how much.",
+  "house": {
+    "printed": false,
+    "askId": "a-dy8vzoly",
+    "ask": "Not printed on the menus as its own drink: ask at lineup how the house brews its hot coffee, by batch brewer, pour-over or press."
+  },
+  "what": "Drip coffee is filter coffee made by machine: hot water sprays over medium ground coffee in a basket and drains through paper into a pot or airpot. The trade calls it batch brew or just the pot, and it is two jobs: brewing it well, then holding it well.",
+  "taste": "Even and middle of the road: medium body, clean, no single note forward. Kept on a hotplate it turns flat and drying.",
+  "make": {
+    "steps": [
+      "Rinse the airpot hot and seat a paper filter in the basket.",
+      "Weigh about 60 g of medium ground coffee per litre into the filter and level the bed; a scoop swings the ratio.",
+      "Brew the size the basket was built for, or use the half batch setting.",
+      "Run it into the sealed airpot, never onto an open hotplate, and write the brew time on it.",
+      "Read the spent grounds: level and evenly soaked, not cratered on one side and dry on the other.",
+      "Sell it within 30 to 60 minutes, and never top an old pot up with fresh."
+    ],
+    "ratio": "About 55 to 65 g per litre, roughly 1:15 to 1:18",
+    "dose": "About 60 g medium ground coffee to 1 litre water",
+    "temp": "195 to 205F (90 to 96C) in the basket",
+    "time": "4 to 8 minute cycle; 30 to 60 minutes sealed",
+    "cup": "Pre-heated mug or cup, 6 to 12 oz"
+  },
+  "serve": "Pour from the airpot into a warmed mug or cup on a saucer with a spoon, cream and sugar as the guest takes them. Top up before the cup runs dry. It is the coffee for brunch, a banquet or a whole table at once.",
+  "story": "The urn is where the coffee money is: brunch, banquets, forty cups without stopping. Guests notice age, not the machine. A hotplate keeps cooking coffee, so the aromatics leave and the acids turn harsher, flat and drying rather than weaker. A guest who says stewed is usually tasting a pot left on heat.",
+  "guest": "Filter coffee is brewed through paper, so it drinks clean and even. How do you take it: cream, sugar, or black?",
+  "watch": [
+    "Half a batch in a full basket runs straight through a shallow bed: thin and sour.",
+    "A guest says burnt or stewed: ask how long the pot has stood before touching the grinder."
+  ],
+  "library": {
+    "ref": "Batch Brew",
+    "study": [
+      [
+        "filter",
+        "Batch brew is the one that pays"
+      ],
+      [
+        "filter",
+        "Ratio, and the number to actually hold"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to brew drip coffee batch brewer",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Drip coffee: how is it made?",
+      "answer": "About 60 g of medium ground coffee a litre, a full basket brewed through paper at 195 to 205F (90 to 96C) into a sealed airpot, poured into a warmed mug: clean, even and medium bodied."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Half a pot is brewed in a full-size basket on the full setting. How will it drink?",
+      "options": [
+        "Heavy and bitter",
+        "Thin and sour",
+        "Half as strong",
+        "Stale and papery"
+      ],
+      "a": 1,
+      "explain": "The small dose makes a shallow bed that water runs straight through, under-extracting it. Use the half batch setting or the small basket."
+    },
+    {
+      "id": "q2",
+      "q": "What filter ratio does the Library tell you to hold?",
+      "options": [
+        "18 g in, 36 g out",
+        "About 45 g per litre",
+        "About 60 g per litre",
+        "About 80 g per litre"
+      ],
+      "a": 2,
+      "explain": "Sixty grams a litre is just under 1:17; most bars sit between 1:16 and 1:18. 18 g in, 36 g out is espresso."
+    },
+    {
+      "id": "q3",
+      "q": "Why does brewed coffee on an open hotplate taste worse after half an hour?",
+      "options": [
+        "The paper releases bitterness",
+        "Heat keeps cooking it",
+        "The grounds keep extracting",
+        "It slowly grows weaker"
+      ],
+      "a": 1,
+      "explain": "Aromatics evaporate and the acids turn harsher: flat and drying, not weaker. A sealed airpot holds it longer."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: Batch brew is the one that pays",
+      "url": ""
+    },
+    {
+      "title": "Library: Ratio, and the number to actually hold",
+      "url": ""
+    },
+    {
+      "title": "Library card: Batch Brew",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=YbsIBHKxg4E",
+    "id": "YbsIBHKxg4E",
+    "title": "",
+    "channel": "Stumptown Coffee Roasters",
+    "channelKind": "company",
+    "label": "How to brew drip coffee by machine",
+    "watchFor": "The coffee weighed rather than scooped, the grind set for the filter, and the finished pot swirled before the first cup is poured. A batch brewer on a bar keeps the same rules, only larger.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

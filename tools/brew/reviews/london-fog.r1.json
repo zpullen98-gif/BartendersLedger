@@ -1,0 +1,28 @@
+{
+  "id": "london-fog",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "story, sources",
+      "problem": "Searched: the accounts (Wikipedia, Imbibe, Richmond News, Food Republic) put vanilla in the first cup, as vanilla sugar with the milk, so \"the vanilla came later\" is wrong. They also date it anywhere from the mid to late 1990s, 1996 or 1997, so \"mid-1990s\" is too exact.",
+      "change": "Now \"in the 1990s, when a café guest took Earl Grey with steamed milk and a little vanilla\", with the year marked uncertain; Wikipedia added to sources."
+    },
+    {
+      "field": "quiz[2]",
+      "problem": "Explanation repeated \"mid-1990s\"; the right option (\"Vancouver\") was also the longest.",
+      "change": "Explanation says the 1990s; distractor \"Boston\" replaced by \"San Francisco\"."
+    },
+    {
+      "field": "quiz[1].options",
+      "problem": "The right option was the longest and the only one in the \"X, same Y\" form.",
+      "change": "Distractors now \"Same leaf, longer steep\" and \"More vanilla syrup\"."
+    },
+    {
+      "field": "recall[0].answer",
+      "problem": "Temperature without Celsius, failing the schema.",
+      "change": "Added (60 to 68C)."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

@@ -1,0 +1,116 @@
+{
+  "id": "nitro-cold-brew",
+  "name": "Nitro cold brew",
+  "respell": "",
+  "aka": [
+    "nitro",
+    "nitro coffee"
+  ],
+  "group": "cold",
+  "kind": "coffee",
+  "caffeine": "All from the cold brew, served long and undiluted; the nitrogen adds no caffeine and no sugar.",
+  "house": {
+    "printed": false,
+    "askId": "",
+    "ask": "Not printed on the menus and not poured at the house: know it for the guest who asks, and offer the nearest drink we pour."
+  },
+  "what": "Cold brew charged with nitrogen and poured through a stout faucet's restrictor plate, which breaks the gas out as very fine bubbles. It cascades like a stout and settles under a dense head. The base is brewed near 1:15 to be poured straight, with no ice. Nitrogen adds no flavour or sweetness; the creaminess is texture.",
+  "taste": "Reads sweeter and creamier than the same coffee poured flat, without being sweeter: soft and round under a fine head, with no prickle.",
+  "make": {
+    "steps": [
+      "Brew coarse cold brew near 1:15, steep 12 to 24 hours, and filter it clean.",
+      "Chill the batch to 34 to 38F (1 to 3C) before it goes near the gas.",
+      "Charge the keg with nitrogen, usually straight nitrogen rather than beer gas, and rest it cold.",
+      "Pour through the restrictor plate into a straight glass held upright, with no ice.",
+      "Set it down in front of the guest and let it cascade 30 to 60 seconds until the head sets."
+    ],
+    "ratio": "About 1:15, to pour straight",
+    "dose": "About 65 g coarse coffee a litre",
+    "temp": "Held and poured at 34 to 38F (1 to 3C)",
+    "time": "12 to 24 hour steep; 30 to 60 second cascade",
+    "cup": "Straight pint or footed tulip, 10 to 12 oz, no ice or straw"
+  },
+  "serve": "Not poured here, so offer the nearest cold coffee: the Café Glacé, chicory cold brew under an orange flower cold foam. Where nitro is poured, it goes out with no ice and no straw, set down to settle in front of the guest.",
+  "story": "Nitro takes its look from the stout tap, and it sells itself across the room because it looks like a pint. That is its guest too: the one who wants a beer and cannot have one. The trick is physics. Nitrogen barely dissolves in water, so unlike carbon dioxide it makes no carbonic acid and no prickle; it leaves as tiny bubbles the tongue reads as cream.",
+  "guest": "We do not pour nitro, but our Café Glacé is chicory cold brew under an orange flower cold foam: cold, smooth and spirit-free.",
+  "watch": [
+    "A guest may ask whether it has cream or sugar in it: neither. The creaminess is fine bubbles from the nitrogen.",
+    "Warm product breaks the gas out in the line and pours as foam, so it is held at 34 to 38F (1 to 3C).",
+    "No ice and no straw: it is brewed to be drunk straight and undiluted, through its own head."
+  ],
+  "library": {
+    "ref": "Nitro Cold Brew",
+    "study": [
+      [
+        "filter",
+        "Cold brew and iced coffee are different drinks"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make nitro cold brew",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Nitro cold brew: what is it, and how is it poured?",
+      "answer": "Cold brew near 1:15, chilled to 34 to 38F (1 to 3C), charged with nitrogen and poured through a stout faucet into a straight glass, no ice. It cascades, sets a dense head and drinks creamy without being sweeter."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What does the nitrogen add to nitro cold brew?",
+      "options": [
+        "A faint sweetness from the gas",
+        "A soda’s sharp prickle and acidity",
+        "Creamy texture from fine bubbles",
+        "A small lift in caffeine"
+      ],
+      "a": 2,
+      "explain": "Nitrogen barely dissolves and adds no flavour; it breaks out as fine bubbles read as cream."
+    },
+    {
+      "id": "q2",
+      "q": "Why is nitro's base brewed near 1:15, not as a concentrate?",
+      "options": [
+        "It is poured straight, no ice",
+        "Nitrogen needs weak coffee",
+        "Concentrate freezes in the keg",
+        "Strong coffee clogs the faucet"
+      ],
+      "a": 0,
+      "explain": "Nothing dilutes it in the glass, so it is kegged at drinking strength."
+    },
+    {
+      "id": "q3",
+      "q": "Nitro gushes foam instead of cascading. What is the likeliest cause?",
+      "options": [
+        "Coffee brewed too strong",
+        "Glass chilled too long",
+        "Too little gas in the keg",
+        "Coffee too warm in the line"
+      ],
+      "a": 3,
+      "explain": "Warm product breaks gas out in the line, so nitro is held at 34 to 38F (1 to 3C)."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: Nitro Cold Brew card",
+      "url": ""
+    },
+    {
+      "title": "Library: Cold Brew card",
+      "url": ""
+    },
+    {
+      "title": "Pack: Café Glacé de la Maison",
+      "url": ""
+    }
+  ],
+  "video": null
+}

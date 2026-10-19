@@ -1,0 +1,149 @@
+{
+  "id": "matcha-tea",
+  "name": "Matcha",
+  "respell": "MAH-chah",
+  "aka": [
+    "usucha",
+    "koicha",
+    "powdered green tea"
+  ],
+  "group": "leaf",
+  "kind": "tea",
+  "caffeine": "Higher than brewed green tea, because you swallow the powdered leaf rather than an extract of it; the amount of powder sets it.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup whether the bar keeps matcha, which grade, whether it is whisked to order or only used in lattes, and the price."
+  },
+  "what": "Matcha is shaded green tea leaf, tencha, ground to a fine powder and whisked into water, so you drink the leaf itself rather than an infusion of it. The bushes are covered for roughly three to four weeks before picking; the leaf is steamed, dried flat without rolling, stripped of stem and vein and traditionally stone ground. Ground sencha is powder, not matcha, and ceremonial and culinary are marketing words with no law behind them.",
+  "taste": "Sweet grass and seaweed over a savoury weight, a thick, stable foam, and a bitterness that arrives late and is meant to be there. Cheap or old powder reads khaki and bitter, and water too hot tips it harsh.",
+  "make": {
+    "steps": [
+      "Soak the bamboo whisk, the chasen, in warm water so the tines flex; warm the bowl and tip it out.",
+      "Sift about 2 g of matcha, a level teaspoon, through fine mesh into the chawan.",
+      "Add a splash of water at about 175F (79C) and work it into a smooth paste against the side.",
+      "Pour in the rest, 2 to 3 oz in all, and whisk 15 to 30 seconds from the wrist in a brisk W, just off the floor.",
+      "Finish with one slow circle at the surface to sink coarse bubbles, and serve at once.",
+      "Rinse the whisk in water only, never soap or the machine, and stand it to dry."
+    ],
+    "ratio": "Usucha 2 g to 2 to 3 oz; koicha double powder, half water",
+    "dose": "About 2 g sifted powder, a level teaspoon",
+    "temp": "About 175F (79C); guidance runs 160 to 180F (71 to 82C)",
+    "time": "Whisk 15 to 30 seconds; no steep",
+    "cup": "Chawan, the tea bowl, 2 to 3 oz for usucha"
+  },
+  "serve": "Straight from the whisk, because it is a suspension, not a solution: a standing bowl settles and goes gritty, and iced matcha separates on the way to the table, so whisk late and walk fast. Send the bowl with nothing in it but the tea; milk and syrup belong to the matcha latte, a separate drink.",
+  "story": "Matcha starts in the field. Covered bushes, starved of light, build chlorophyll and keep theanine, so the leaf reads darker, sweeter and more savoury than astringent. Gyokuro is shaded too, but rolled and steeped; tencha is dried flat and milled, traditionally on a slow granite stone that is much of the price. The top grades exist for usucha, thin tea, and koicha, thick tea, which is kneaded rather than whisked and leaves a lesser powder nowhere to hide.",
+  "guest": "Matcha is shaded green tea ground fine and whisked into water, so you drink the whole leaf: sweet, grassy and savoury, with more caffeine than a brewed green.",
+  "watch": [
+    "It clumps because the fine powder pulls moisture, not from weak whisking: sift every time and make a paste first.",
+    "Water too hot dissolves more of the bitter catechins; keep it near 175F (79C).",
+    "Ceremonial grade guarantees nothing; dull yellow brown powder is old or heat damaged, whatever the tin says.",
+    "It settles fast: a standing bowl goes gritty, so whisk late and walk fast."
+  ],
+  "library": {
+    "ref": "Matcha",
+    "study": [
+      [
+        "matcha",
+        "Matcha is not green tea put through a grinder"
+      ],
+      [
+        "matcha",
+        "Grades of matcha, and the one you buy"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to whisk matcha",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a bowl of matcha made?",
+      "answer": "About 2 g sifted into a warmed chawan, pasted with a splash of water at about 175F (79C), topped to 2 to 3 oz and whisked 15 to 30 seconds in a brisk W with a soaked chasen. Sweet, grassy, foamy; serve at once."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What is the leaf milled into matcha called?",
+      "options": [
+        "Sencha",
+        "Gyokuro",
+        "Tencha",
+        "Maocha"
+      ],
+      "a": 2,
+      "explain": "Tencha is shaded, steamed, dried flat without rolling and destemmed. Sencha and gyokuro are rolled and steeped; maocha is the raw leaf for pu-erh."
+    },
+    {
+      "id": "q2",
+      "q": "Why does matcha clump in the bowl?",
+      "options": [
+        "The whisk was not soaked in warm water first",
+        "The water was poured too cool",
+        "Only cheap culinary grade powder ever clumps",
+        "Fine powder lumps, sealing dry powder inside"
+      ],
+      "a": 3,
+      "explain": "Ground so fine, the powder is cohesive and pulls moisture, so lumps wet outside and stay dry within. Sift, make a paste, then whisk."
+    },
+    {
+      "id": "q3",
+      "q": "What does the word ceremonial on a tin of matcha guarantee?",
+      "options": [
+        "Nothing: no law defines it",
+        "First harvest leaf",
+        "Stone ground powder",
+        "At least four weeks of shade"
+      ],
+      "a": 0,
+      "explain": "Ceremonial and culinary are marketing words that no law defines and no body certifies. Buy on harvest date and taste, and treat dull colour as a veto."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library card: Matcha",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Matcha & Chai, Matcha is not green tea put through a grinder",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Matcha & Chai, Grades of matcha, and the one you buy",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Matcha & Chai, Whisking, and why it clumps",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Matcha & Chai, The matcha latte on a bar",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Caffeine, and the questions guests ask",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, Oxidation is the axis",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=7xtNFKjO8KI",
+    "id": "7xtNFKjO8KI",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "Sifting and whisking a bowl of matcha",
+    "watchFor": "The powder sifted before any water touches it, then the wrist moving in a brisk W rather than a circular stir. Both are the answer to a clumped bowl.",
+    "verifiedBy": "coffee-films",
+    "checkedOn": "2026-10-18"
+  }
+}

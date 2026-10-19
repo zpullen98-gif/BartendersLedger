@@ -1,0 +1,29 @@
+{
+  "id": "green-tea",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=3uaHkFMslds",
+  "videoId": "3uaHkFMslds",
+  "title": "How to make the Perfect Green Tea - Twinings Foodservice",
+  "channel": "Twinings Foodservice",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "how to brew green tea temperature youtube (site youtube.com)",
+      "returned": "How to make the Perfect Green Tea - Twinings Foodservice - YouTube | https://www.youtube.com/watch?v=3uaHkFMslds"
+    },
+    {
+      "q": "\"How to make the Perfect Green Tea - Twinings Foodservice\" (site youtube.com)",
+      "returned": "How to make the Perfect Green Tea - Twinings Foodservice - YouTube | https://www.youtube.com/watch?v=3uaHkFMslds (first) | summary: \"The top result is a Twinings Foodservice YouTube video, a guide to making the perfect Green Tea, from brewing temperatures to brewing times and serving recommendations.\""
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedBy": "checker",
+  "checkedOn": "2026-10-18",
+  "note": "Same id and exact title on both searches; the channel is named in the title and the summary. The tea maker's trade channel, written for restaurants. The exact channel string is as the results name it; an oEmbed read should confirm it. The title carries \"Perfect\" and a spaced hyphen, which schema.mjs flags in video.title.",
+  "checkerQueries": [
+    {
+      "q": "Twinings Foodservice YouTube \"How to make the Perfect Green Tea\"",
+      "returned": "No youtube.com page; an aggregator page lists the same exact title, \"How to make the Perfect Green Tea - Twinings Foodservice\", as a guide to brewing temperatures, brewing times and serving recommendations, which agrees with the finder's second summary. The finder's two searches already meet the rule; confirmed."
+    }
+  ]
+}

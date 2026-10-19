@@ -1,0 +1,89 @@
+{
+  "id": "turkish-coffee",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=2UiKDkxc9as",
+  "videoId": "2UiKDkxc9as",
+  "title": "Specialty Turkish Coffee Masterclass",
+  "channel": "Mill City Roasters®",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "James Hoffmann turkish coffee cezve youtube",
+      "returned": "No Hoffmann video on Turkish coffee. Listed BCOg3hAp1h8 \"Make Turkish Coffee Like A Boss\", Ycpms18A7xw, K_-TyRAVZdw, qDfLAS57_sU, rphZghSGYjQ \"Traditional brew method - Turkish Cezve\", VTWpEsFYKpk (same title as before), WT-kQO1kj4A and a Short; the summary named no channel for any cezve video."
+    },
+    {
+      "q": "European Coffee Trip turkish coffee ibrik world champion youtube",
+      "returned": "https://www.youtube.com/watch?v=2UiKDkxc9as \"Specialty Turkish Coffee Masterclass - YouTube\" (ninth result); summary: \"a “Specialty Turkish Coffee Masterclass” with Mill City Roasters\". Also VTWpEsFYKpk (same title, again no channel), WtRx_pVrfDA \"How To Make Turkish Coffee\" (description names European Coffee Trip only as a partner, uploader unconfirmed), I5PtWraNRTY, ocEk0RFkmIk, aEPQ33boQkk, PqJo2Up9Wqo \"Introduction to Specialty Turkish Coffee\", a French film and a Short."
+    },
+    {
+      "q": "\"Specialty Turkish Coffee Masterclass\" Mill City Roasters",
+      "returned": "https://www.youtube.com/watch?v=2UiKDkxc9as \"Specialty Turkish Coffee Masterclass - YouTube\" (first result, same id and exact title); the channel page https://www.youtube.com/millcityroastersmn \"Mill City Roasters® - YouTube\" came back third. Summary: \"The search turned up YouTube videos from Mill City Roasters about specialty Turkish coffee\" and the video \"describes an in depth examination of advanced Ibrik brewing techniques with Mill City Roasters Lead Instructor\" and the 2013 World Cezve/Ibrik Champion; about eight years old."
+    }
+  ],
+  "checkerQueries": [
+    {
+      "q": "Mill City Roasters youtube channel Turkish coffee masterclass ibrik cezve champion lead instructor",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=2UiKDkxc9as \"Specialty Turkish Coffee Masterclass - YouTube\" (first result, same id and exact title); summary: \"The search turned up several Mill City Roasters videos that pair their lead instructor with a champion\", naming the roaster’s lead instructor and the 2013 World Cezve/Ibrik Champion. Also PqJo2Up9Wqo \"Introduction to Specialty Turkish Coffee\" (the same pairing), VTWpEsFYKpk, I5PtWraNRTY, aEPQ33boQkk, ocEk0RFkmIk and a Short, which the summary put on other channels."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-19",
+  "checkedBy": "checker",
+  "note": "Accepted 2UiKDkxc9as: two searches in this pass (the second and third) returned the same www.youtube.com/watch?v= id with the same exact title, and the third summary names Mill City Roasters as the source of the videos, with its channel page in the same results; the description names the roaster’s lead instructor and a world cezve champion as the teachers. Mill City Roasters is a roaster maker and roasting school, so channelKind company; the channel name is copied as its channel page titles it, with the registered sign, and is not yet on tools/brew/companies.json (which is empty). It teaches brewing in the cezve; it is a long class, not an advert. Checker to confirm the uploader by oEmbed if egress allows. The first pass’s VTWpEsFYKpk and ZCZz1SEfSnU were not revived: neither gained a named channel here. Budget: three searches. Every search in this pass was restricted to youtube.com (allowed_domains) in standard mode.",
+  "checkerNote": "Confirmed by the checker. The second and third finder searches are different queries and both returned 2UiKDkxc9as with the same exact title; the third returned the channel page /millcityroastersmn titled \"Mill City Roasters® - YouTube\" and a summary naming Mill City Roasters as the source of the videos. The checker’s search, in fresh wording, returned the same id and exact title first and again called it one of several Mill City Roasters videos, so the uploader is the roaster, not a presenter. A roaster maker and roasting school: channelKind company, name as its channel page gives it, \"Mill City Roasters®\". It is a long class on brewing in the cezve, a watch link, not a Short, playlist or advert. oEmbed could not run: the egress proxy denies www.youtube.com (403 on CONNECT). Budget: one search.",
+  "firstPass": {
+    "id": "turkish-coffee",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "candidate": {
+      "url": "https://www.youtube.com/watch?v=ZCZz1SEfSnU",
+      "videoId": "ZCZz1SEfSnU",
+      "title": "Cezve / Ibrik Coffee Brewing Recipe",
+      "channel": "Alexandra",
+      "channelKind": "person",
+      "finderVerifiedBy": "websearch"
+    },
+    "queries": [
+      {
+        "q": "how to make turkish coffee cezve youtube",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=ZCZz1SEfSnU \"Cezve / Ibrik Coffee Brewing Recipe - YouTube\" (tenth result). Also listed: TvNWLrRzIAM, WT-kQO1kj4A, xGUPMGoppk4 (a Short), YscPebWv4kM, 1iJXuviLgL4, ocEk0RFkmIk, aEPQ33boQkk, 2rbpghXKPv0, VTWpEsFYKpk \"Turkish Coffee explained by the WORLD CHAMPION (ibrik coffee)\"."
+      },
+      {
+        "q": "\"Turkish Coffee explained by the WORLD CHAMPION (ibrik coffee)\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=VTWpEsFYKpk came back with the same exact title (first result), but the summary said \"The search didn’t confirm which world champion appears in that video\" and named no channel for it. First candidate failed on the channel."
+      },
+      {
+        "q": "\"Cezve / Ibrik Coffee Brewing Recipe\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "Spare search. https://www.youtube.com/watch?v=ZCZz1SEfSnU \"Cezve / Ibrik Coffee Brewing Recipe - YouTube\" (first result); summary: \"“Cezve / Ibrik Coffee Brewing Recipe” by Alexandra, which describes an efficient and professional approach to brewing cezve (ibrik). This is likely the video your query matches.\""
+      }
+    ],
+    "checkerQueries": [
+      {
+        "q": "\"Cezve / Ibrik Coffee Brewing Recipe\" youtube channel ZCZz1SEfSnU",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=ZCZz1SEfSnU \"Cezve / Ibrik Coffee Brewing Recipe - YouTube\" (first result); summary: \"In this video Alexandra demonstrates an efficient and professional approach to brewing cezve (ibrik)\", posted about 4.5 years ago. No channel named."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "rejected by the checker: the channel is not settled. The checker’s search, in fresh wording with the id, returned ZCZz1SEfSnU with the same exact title, but again gave the maker by first name only, and as the presenter in the video’s own description (“In this video Alexandra demonstrates”), not as the uploading channel; the finder’s “by Alexandra” reads as the same line. A first name from a third person description settles neither the channel nor its kind, the standard the batch applied to nitro-cold-brew, affogato and cafe-de-olla. The oEmbed check could not run: this session’s egress proxy denies www.youtube.com (403 on CONNECT). A checker who can reach oEmbed may revive it from its author_name. The first candidate, VTWpEsFYKpk, stays failed. Fragment video set to null. Finder’s note: First candidate VTWpEsFYKpk matched id and title but no channel was named, so it failed. With one batch spare, ZCZz1SEfSnU from the plan-phrase search came back on its exact title with the same id and title, and the summary names its maker, by first name only, against that exact title. channelKind person (a named individual), so the fragment ships with title and channel empty. The channel’s full name is unconfirmed: checker to confirm by oEmbed before sign-off. Budget: two for the entry and one batch spare."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "frappe",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps[0]",
+      "problem": "Step 1 said to shake and step 2 said to shake again, so the order was unclear.",
+      "change": "Step 1 now puts the instant coffee, the sugar and a splash of cold water in a shaker, and step 2 shakes."
+    },
+    {
+      "field": "make.time",
+      "problem": "\"About a minute of shaking\" was an invented measure with no source.",
+      "change": "Now: a short, hard shake until the foam is thick."
+    },
+    {
+      "field": "story; quiz[2].explain",
+      "problem": "\"In New England a frappe is a milkshake\" overstates the World Table coffee-cabinet note, which makes Rhode Island, a New England state, the exception.",
+      "change": "Now \"in much of New England\". The Boston question stands: the note puts the frappe everywhere outside Rhode Island."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

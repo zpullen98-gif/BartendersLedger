@@ -1,0 +1,30 @@
+{
+  "id": "spanish-coffee",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=LK3D240xKmU",
+  "videoId": "LK3D240xKmU",
+  "title": "How To Make A Spanish Coffee Cocktail - Booze On The Rocks",
+  "channel": "Booze On The Rocks",
+  "channelKind": "person",
+  "queries": [
+    {
+      "q": "how to make a spanish coffee flamed youtube",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=LK3D240xKmU \"How To Make A Spanish Coffee Cocktail - Booze On The Rocks - YouTube\"; summary: \"\\\"How To Make A Spanish Coffee Cocktail\\\" from Booze On The Rocks is a general walkthrough\". Also listed: w-llGOiXy8Q \"Spanish Coffee Flaming Drink Recipe\", p3X7_-TVIDs \"The FLAMING Spanish Coffee!\", tOmI3IQGsw8 \"Flaming Spanish Coffee\", 6eSLJg9FWCU \"Spanish Coffee\" and two Shorts, none with a channel named."
+    },
+    {
+      "q": "\"How To Make A Spanish Coffee Cocktail - Booze On The Rocks\"",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=LK3D240xKmU \"How To Make A Spanish Coffee Cocktail - Booze On The Rocks - YouTube\" (top result); summary: \"The search returned the Booze On The Rocks video you named as the top result\" and \"The episode shows how to make a flaming Spanish coffee cocktail\"; it quotes the description: \"Your typical Spanish coffee is just coffee, booze, and heavy cream.\""
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-18",
+  "note": "Same watch id and the same exact title in both searches (the \" - YouTube\" suffix is the page title’s, not the video’s); the channel, Booze On The Rocks, is named in the video’s own title and in both summaries, and the second summary says the episode makes the flamed drink this entry teaches. A watch link, not a Short, playlist, music video or advert. Channel kind: Booze On The Rocks is one home bartender’s cocktail channel under a show name, not a roaster, tea house, machine maker or magazine, so it is recorded as person, which ships nothing named in the fragment; if the checker rules it a company, it must go on companies.json, and the title would still ship empty because it carries a spaced hyphen. Awaits the checker’s sign-off.",
+  "checkedBy": "checker",
+  "checkerNote": "Confirmed by the checker on 2026-10-19: two different searches (the plan’s phrase and the exact title, each on youtube.com) returned the same watch id LK3D240xKmU under the same exact title, and the channel, Booze On The Rocks, is named in the video’s own title and in both summaries. The second summary says the episode makes the flaming Spanish coffee and quotes its description, so it teaches making this drink; a watch link and an episode of a long-form show, not a Short, playlist, music video or advert. One home bartender’s show channel, so person is right whatever the show name, and the fragment ships title and channel empty. No checker search spent: nothing here was doubtful. Not watched; the watchFor is judged from the summaries."
+}

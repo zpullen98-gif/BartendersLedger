@@ -1,0 +1,54 @@
+{
+  "id": "frappe",
+  "found": false,
+  "url": "",
+  "videoId": "",
+  "title": "",
+  "channel": "",
+  "channelKind": "",
+  "queries": [
+    {
+      "q": "Greek frappe Akis Petretzikis how to make youtube (allowed_domains youtube.com)",
+      "returned": "No frappé: ten other recipes from that cook’s channel (moussaka, meatballs, fritters and so on)."
+    },
+    {
+      "q": "Greek frappe coffee recipe \"Dimitras Dishes\" OR \"My Greek Dish\" OR Tasty youtube (allowed_domains youtube.com)",
+      "returned": "None of the three channels. {\"title\":\"How to Make a Greek Frappe Coffee\",\"url\":\"https://www.youtube.com/watch?v=z9vZ7A6i-Pk\"}, {\"title\":\"How to make a Greek Frappé Coffee\",\"url\":\"https://www.youtube.com/watch?v=70EPMaRr-io\"}, IkqtTj_c4Nk, JkcdLxQAEHA, yINeU-88Siw (French), -SaGhMl_8U4, 0nT48uZcr7w, Kl50khpw8rM, SGZ_K_OYQw0, L0ieImY8XGc; no channel named for any."
+    },
+    {
+      "q": "\"How to Make a Greek Frappe Coffee\" (allowed_domains youtube.com)",
+      "returned": "z9vZ7A6i-Pk and 70EPMaRr-io again under the same titles; IkqtTj_c4Nk; {\"title\":\"frappenation animation -- how to make a greek frappé coffee - YouTube\",\"url\":\"https://www.youtube.com/watch?v=mFKtVKJMgLs\"} (an animated, hand-shaken frappé from two teaspoons of instant coffee and sugar); 0nT48uZcr7w, -SaGhMl_8U4, nR_00ZpcAuM, Byy-c_y_mHk, 0icO9BDavbc. No channel named in any summary."
+    }
+  ],
+  "verifiedBy": "",
+  "checkedOn": "2026-10-19",
+  "note": "Three searches spent; none passes. z9vZ7A6i-Pk and 70EPMaRr-io have now come back under the same titles in four searches across both passes, but no result has ever named their channels. mFKtVKJMgLs carries \"frappenation\" in its title (the first pass’s summary also named frappenation against it), but only this search printed its exact title, so the same exact title is not yet shown twice; one more exact-title search that returns it, and a check that frappenation is the uploader, could carry it. Video stays null.",
+  "firstPass": {
+    "id": "frappe",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make a greek frappe coffee youtube",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "Candidates: z9vZ7A6i-Pk \"How to Make a Greek Frappe Coffee\", lbmWtPtZIZA \"How To Make A (Real) Nescafé Frappé Coffee (the Greek one)\", 70EPMaRr-io, mFKtVKJMgLs, 0icO9BDavbc, 1J6Ec-8eaZs, KkqYECIoYBA, IkqtTj_c4Nk, 6FcOEwIPyEM, Od3eKZU5sbQ. The summary named frappenation against mFKtVKJMgLs (an animation) and no other channel."
+      },
+      {
+        "q": "\"How To Make A (Real) Nescafé Frappé Coffee (the Greek one)\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "lbmWtPtZIZA did not come back. Results: 70EPMaRr-io, z9vZ7A6i-Pk, IkqtTj_c4Nk, AthsPFyO-lU, YANi7lTUnME, I0rQVogZsM8, l1bIyRLQIAU, wNgPdk0Cxp0, SgkLnmdBAKo, 3emCRFeAoP0 (a Short); no channel named."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Candidate lbmWtPtZIZA did not return on its exact title, so it fails. Budget: two searches for the entry. Video null."
+  }
+}

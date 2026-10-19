@@ -1,0 +1,15 @@
+{
+  "id": "chai-latte",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=8fQAxZahx_U",
+  "videoId": "8fQAxZahx_U",
+  "title": "MASTERCLASS IN CHAI | How to make the perfect masala chai | Indian style tea | Food with Chetna",
+  "channel": "Food with Chetna",
+  "channelKind": "person",
+  "queries": [],
+  "verifiedBy": "coffee-films",
+  "checkedOn": "2026-10-18",
+  "note": "The plan names the Library film matcha/making-chai-properly-and-the-shortcut. Id, title and channel are copied exactly from that COFFEE_FILMS row (sec matcha, row making-chai-properly-and-the-shortcut), whose values were recorded from oEmbed. The channel is a person’s (Chetna Makan is on people.json), so the fragment ships title and channel empty. No search spent.",
+  "checkedBy": "checker",
+  "checkerNote": "Confirmed by the checker on 2026-10-19: id 8fQAxZahx_U, title and channel equal the COFFEE_FILMS row matcha/making-chai-properly-and-the-shortcut exactly, the plan’s named film. A person’s channel, so person is right and the fragment ships title and channel empty. No search spent."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "carajillo",
+  "found": false,
+  "url": "",
+  "videoId": "",
+  "title": "",
+  "channel": "",
+  "channelKind": "",
+  "queries": [
+    {
+      "q": "carajillo cocktail Licor 43 espresso shaken tutorial Educated Barfly OR \"Anders Erickson\" OR \"Liquor.com\"",
+      "returned": "No result from any named channel. mFdil9vC6wE \"SHAKEN CARAJILLO 43 GLOBAL ENGLISH\" (called \"the official Licor 43 video\"), FqfbQdrr32A (its Spanish twin), 5TdCzLEDfbw, kLmyrNkzroo \"The Coffee Cocktail Taking Over the World (The Carajillo)\", DM6ar6ncbeA, 2EO2imtv2BY, KF2tR5IzOaY, UqCe8Q8tIDA \"How to Make a Carajillo Cocktail with Licor 43 and Coffee\", Gg5vqV6Zv2k and a Short."
+    },
+    {
+      "q": "\"The Coffee Cocktail Taking Over the World (The Carajillo)\"",
+      "returned": "https://www.youtube.com/watch?v=kLmyrNkzroo came back first with the same exact title, but no result named its channel. Others: QXNPI7Ucivo, fUh96Z9S0Ic, eCyQFbz5tFY, w2n43dq_fxE, jlbjhEdv00A \"Campfire Carajillo with Licor 43\", 4wAm1GLmu1M, 4rdkkHuRvy0, fjn8fBi-1X8 and a Short."
+    },
+    {
+      "q": "Difford's Guide carajillo how to make youtube",
+      "returned": "No Difford’s carajillo film (only its Aviation and Affinity films). eCyQFbz5tFY, fjn8fBi-1X8, yPvN7lE5iyQ, pW5L1Lmjg50, w2n43dq_fxE, 7O_ml6GNM9Q, 5TdCzLEDfbw and a Short; the summary named \"the Crown Lounge short\" again without tying it to an id."
+    }
+  ],
+  "verifiedBy": "",
+  "checkedOn": "2026-10-19",
+  "note": "Nothing passed. kLmyrNkzroo came back twice with the same id and exact title but no channel was named. The brand’s own shaken serve (mFdil9vC6wE) was left aside as the first pass left it, as a product film. Budget: three searches. Video null; the page offers the search link alone. Every search in this pass was restricted to youtube.com (allowed_domains) in standard mode.",
+  "firstPass": {
+    "id": "carajillo",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make a carajillo licor 43 youtube",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=GLJ1PONV0BY \"How to make a Licor 43 Carajillo cocktail\" (second result); no channel tied to it. Also listed: jwkT6XhN-E0 \"How To Make The Best Carajillo Ever!\", 5TdCzLEDfbw, kLmyrNkzroo \"The Coffee Cocktail Taking Over the World (The Carajillo)\", JyTTQV1_7gQ \"How to Make a Classic Carajillo Cocktail\", mFdil9vC6wE \"SHAKEN CARAJILLO 43 GLOBAL ENGLISH\", a Short and Spanish and Portuguese films. The summary named \"a Crown Lounge channel\" for a Licor 43 and fresh coffee tutorial without printing its id."
+      },
+      {
+        "q": "\"How to make a Licor 43 Carajillo cocktail\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=GLJ1PONV0BY \"How to make a Licor 43 Carajillo cocktail\" (top result, same id and exact title); the summary named no channel for it (it gave Licor 43 and espresso, 45 ml each, from a Portuguese listing)."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Candidate GLJ1PONV0BY came back twice with the same id and exact title, but no result title or summary named its channel, so it does not count. The Crown Lounge mention was never tied to an id. Other picks were passed over: a superlative title, a brand channel’s shaken serve that reads as an advert, a Short, and films not in English. The batch’s two spare searches went to the coffee with liqueur entry, which is printed. Video null; the page offers the search link alone."
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "id": "pour-over",
+  "name": "Pour-over",
+  "respell": "",
+  "aka": [
+    "hand pour",
+    "filter cone",
+    "V60",
+    "Chemex"
+  ],
+  "group": "brewed",
+  "kind": "coffee",
+  "caffeine": "Full caffeine, all from the coffee; the dose and cup size decide how much.",
+  "house": {
+    "printed": false,
+    "askId": "a-dy8vzoly",
+    "ask": "Not printed on the menus: ask at lineup how the house brews its hot coffee, and whether the bar will make a pour-over."
+  },
+  "what": "A pour-over is filter coffee brewed by hand: hot water poured in slow circles over medium ground coffee in a paper-lined cone or flat-bottomed dripper. Each pour passes through the bed and leaves, and the paper holds back the oils and fines.",
+  "taste": "Clean and light in body, acidity and aroma forward, the finish short and bright. It shows a coffee’s origin plainly.",
+  "make": {
+    "steps": [
+      "Rinse the paper with hot water, dump the rinse, and warm the cup.",
+      "Add the coffee, level the bed with a tap and start a timer.",
+      "Bloom: wet the grounds with two to three times their weight, then wait 30 to 45 seconds.",
+      "Pour in slow circles from the centre, off the paper, keeping the bed covered.",
+      "Swirl as the last water lands, then read the bed: flat and on time is right."
+    ],
+    "ratio": "1:16 to 1:17, about 59 to 63 g per litre",
+    "dose": "About 15 g medium ground coffee to 250 g water",
+    "temp": "195 to 205F (90 to 96C), by thermometer",
+    "time": "2 to 3.5 minutes a cup, bloom included",
+    "cup": "Pre-heated ceramic cup, 6 to 10 oz"
+  },
+  "serve": "Bring it in a warmed cup on a saucer with a spoon, or pour the first cup from a carafe at the table. Suggest a sip black first, cream and sugar beside it. Fire it as plates clear, since it takes minutes.",
+  "story": "Guests read the bloom as theatre, a pause to let the aroma rise. It is degassing: fresh coffee is full of carbon dioxide, which pushes water away, so an unbloomed bed brews in channels and comes out thin and sour. A coffee that barely blooms is often an old bag.",
+  "guest": "This is brewed by hand through paper, so it drinks clean and bright. Would you like a sip black first?",
+  "watch": [
+    "Water poured down the paper skips the bed and strands grounds dry: thin and sour.",
+    "A stalled, soupy bed means too fine, and it drinks bitter and drying. Coarsen a step."
+  ],
+  "library": {
+    "ref": "Pour-over",
+    "study": [
+      [
+        "filter",
+        "Pour-over, as a procedure"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make pour-over",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Pour-over: how is it made?",
+      "answer": "About 15 g medium ground coffee to 250 g water at 195 to 205F (90 to 96C), a 30 to 45 second bloom, slow circles from the centre, done in 2 to 3.5 minutes, into a warmed cup: clean, light and bright."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What is the bloom at the start of a pour-over actually doing?",
+      "options": [
+        "Releasing aroma for the guest",
+        "Letting carbon dioxide escape",
+        "Cooling the water down",
+        "Rinsing out the paper taste"
+      ],
+      "a": 1,
+      "explain": "Gas in fresh coffee pushes water off the grounds. A 30 to 45 second wait lets it escape, so the bed wets evenly."
+    },
+    {
+      "id": "q2",
+      "q": "A pour-over drains fast, the bed cratered and ringed with dry grounds. What went wrong?",
+      "options": [
+        "Ground too fine for the cone",
+        "Water too cool off the kettle",
+        "Too much coffee in the bed",
+        "Too coarse, or a channel"
+      ],
+      "a": 3,
+      "explain": "Fast, cratered or ringed means too coarse, a channel, or stranded grounds. Too little is extracted, so it drinks thin and sour."
+    },
+    {
+      "id": "q3",
+      "q": "Why does a pour-over drink lighter in body than a French press?",
+      "options": [
+        "Paper strips oils and fines",
+        "It uses less coffee",
+        "The water is cooler",
+        "Percolation extracts less"
+      ],
+      "a": 0,
+      "explain": "The filter decides body: paper strips fines and oil, mesh passes them. Held equal, percolation actually extracts more."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: Pour-over, as a procedure",
+      "url": ""
+    },
+    {
+      "title": "Library card: Pour-over",
+      "url": ""
+    },
+    {
+      "title": "Library: Immersion against percolation",
+      "url": ""
+    },
+    {
+      "title": "World Table lexicon: the espresso and coffee entry",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=AI4ynXzkSQo",
+    "id": "AI4ynXzkSQo",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "How to brew a pour-over by hand",
+    "watchFor": "The bloom going in and the bed staying flat through every pour. Watch the water land on coffee rather than on the paper, which is the whole difference between an even bed and a channelled one.",
+    "verifiedBy": "coffee-films",
+    "checkedOn": "2026-10-18"
+  }
+}

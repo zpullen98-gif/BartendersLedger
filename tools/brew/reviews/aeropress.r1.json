@@ -1,0 +1,28 @@
+{
+  "id": "aeropress",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps[0]",
+      "problem": "The cap was never screwed on and the chamber never stood on the cup, so the press in step 4 had nowhere to go.",
+      "change": "\"Rinse the paper in the cap with hot water, screw the cap on and stand the chamber on a warmed cup.\""
+    },
+    {
+      "field": "make.steps[2]",
+      "problem": "\"Pour\" named nothing.",
+      "change": "\"Pour in the water, stir until every ground is wet, and steep briefly.\""
+    },
+    {
+      "field": "recall[0].answer",
+      "problem": "Fahrenheit without Celsius, and no cup.",
+      "change": "Added (79 to 96C) and \"into a warmed cup\"."
+    },
+    {
+      "field": "quiz[2]",
+      "problem": "The option \"Exactly 205F, always\" and the explanation carried Fahrenheit without Celsius; \"Down to cold\" is not a choice a trained person makes.",
+      "change": "Options now \"Lower in the band\", \"Up to a rolling boil\", \"The top of the band\", \"The same for every roast\"; the explanation reads 175 to 205F (79 to 96C)."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

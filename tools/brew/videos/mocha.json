@@ -1,0 +1,66 @@
+{
+  "id": "mocha",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=83b_w85rBuU",
+  "videoId": "83b_w85rBuU",
+  "title": "Coffee Recipes",
+  "channel": "Breville",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "Carabello Coffee how to make a mocha at home",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "No Carabello result tied to an id: kr1YIU2MFqM, M4bqjmdCwRY, g94Qi0iLJYw, a9IPQywWb60 (rejected by the first pass), NJyfclmOddk, xhQurQELfuM, aokbZsBUS5g and others; the summary said one result features the Carabello barista without printing which."
+    },
+    {
+      "q": "\"How To Make A Mocha At Home - Simple Chocolate + Espresso Drink Recipe\"",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "kr1YIU2MFqM did not come back. Results: M4bqjmdCwRY, a9IPQywWb60, a Short (CagWOmrkKoc), g86JjlpegIM \"How to make a Mocha\", https://m.youtube.com/watch?v=83b_w85rBuU&pp=ygUPI2hvdG1vY2hhcmVjaXBl \"Coffee Recipes\", KrosTL76DZw and others; summary: \"One Breville video adds two teaspoons of drinking chocolate to the shot, stirs it in, then pours in the steamed milk\", and a Pact Coffee video lists its ingredients (neither id printed)."
+    },
+    {
+      "q": "Breville \"How to make a Mocha\" youtube",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://m.youtube.com/watch?v=83b_w85rBuU&pp=ygUPI2hvdG1vY2hhcmVjaXBl \"Coffee Recipes\" and https://youtube.com/watch?pp=ygUPI2hvdG1vY2hhcmVjaXBl&v=83b_w85rBuU \"Coffee Recipes\" (same id and exact title as the second search); summary: \"The most direct match is the official Breville Coffee Recipes video, which walks through how to make a mocha coffee with the Bambino Plus and the Smart Grinder Pro. Its method is to combine espresso with chocolate drinking powder, then add textured milk.\" Others: LysvLUg82Ak, QMcQV9Yov4M, qxh58zVV3VA, 8xZDHqVvqNA, Zt7yXMNQt8Y and owners’ machine videos."
+    }
+  ],
+  "checkerQueries": [
+    {
+      "q": "Breville \"Coffee Recipes\" mocha Bambino Plus Smart Grinder Pro video (allowed_domains youtube.com; checker)",
+      "returned": "First result https://www.youtube.com/watch?v=83b_w85rBuU \"Coffee Recipes\" (same id and exact title, now on the www host with no parameter); summary: \"The search turned up a Breville video titled Coffee Recipes that shows how to make a mocha\", posted about five years ago; the snippet did not say which machine it uses. Others: Breville's own generic titles (Y9uzgeh5JTU, TJgBw0bDT7E, aP6mn9lEXOs \"the Smart Grinder™ Pro\"), a Breville \"Coffee Guide\" playlist, 6A9LKVf2phY, aL1PISOqqTM, TT9LI2gfAdo, 5JwXWextUUs, lxTBVk-9vPc. No /shorts/ link for 83b_w85rBuU."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-19",
+  "checkedBy": "checker",
+  "note": "Same watch id (83b_w85rBuU, m.youtube.com and bare youtube.com normalised to www) and the same exact title \"Coffee Recipes\" in the second and third searches; the third summary names it, by that title, as the official Breville video and says it teaches a mocha. A machine maker, so company. For the checker: the title is generic and the URLs carry a hashtag search parameter, so confirm it is a standard video and not a Short (every result was a /watch?v= link, never /shorts/), and judge whether showing the maker’s own machines makes it an advert; the method it teaches is the general mocha. kr1YIU2MFqM failed its title search and a9IPQywWb60 stays rejected. Left for others: Breville is not yet on companies.json. Searches spent: 3. Checked by the checker on 2026-10-19: the second and third queries are different and returned the same id and exact title \"Coffee Recipes\", and the third summary names it as the official Breville video teaching a mocha; one fresh search returned the same id and exact title on the plain www watch link, again as \"a Breville video titled Coffee Recipes that shows how to make a mocha\". Every link was /watch?v=, never /shorts/, and the summaries describe a walk through of the method; Breville gives its own uploads generic titles (\"the Smart Grinder™ Pro\"), so the short title is the channel's own. A machine maker's recipe film on its own machines teaches the general mocha and is not a product advert. Company is right. Residual doubt, recorded: no result printed a running time and YouTube itself was not reached. One search spent. Confirmed.",
+  "firstPass": {
+    "id": "mocha",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make mocha youtube",
+        "filter": "allowed_domains youtube.com",
+        "returned": "“How to Make a Mocha (Home Barista Guide) - YouTube” https://www.youtube.com/watch?v=a9IPQywWb60; channel not named. Others: jPHxNeiEn_w, kr1YIU2MFqM (a spaced hyphen in its title), HSCEvGvCc2w and several Shorts; the summary mentions a Pact Coffee video without saying which id."
+      },
+      {
+        "q": "\"How to Make a Mocha (Home Barista Guide)\"",
+        "filter": "allowed_domains youtube.com",
+        "returned": "“How to Make a Mocha (Home Barista Guide) - YouTube” https://www.youtube.com/watch?v=a9IPQywWb60; summary: “its description says making a cafe mocha is rather simple, it’s basically a latte with chocolate in it”; no channel named anywhere."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Candidate a9IPQywWb60 returned the same id and the same exact title in both searches, but neither search named its channel in a result title or summary, so it does not count. Two searches spent; no spare left for a third."
+  }
+}

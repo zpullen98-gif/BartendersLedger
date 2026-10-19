@@ -1,0 +1,46 @@
+{
+  "id": "cafe-au-lait-new-orleans",
+  "found": false,
+  "url": "",
+  "videoId": "",
+  "title": "",
+  "channel": "",
+  "channelKind": "",
+  "queries": [
+    {
+      "q": "New Orleans café au lait recipe hot milk chicory coffee \"Kevin Belton\" OR \"Bon Appetit\" OR \"Tasting Table\" OR \"Food & Wine\" youtube (allowed_domains youtube.com)",
+      "returned": "vwj9l9LUrlQ again (channel unnamed); v7Xs53eYJs4 (iced); {\"title\":\"Cafe au lait Recipe (French-Inspired, American Style) - Life's Little Sweets - YouTube\",\"url\":\"https://www.youtube.com/watch?v=e4dW5MM36KE\"} (channel in the title, but an American-style café au lait, no chicory); F4mguZpjIHI (a visit to a named café); HTIJO099xb0 \"How to Make a Cafe Au Lait\" (plain); HvJQVBshlD0 (salted caramel); Shorts, among them a food magazine clip about a named chef’s café au lait."
+    },
+    {
+      "q": "Community Coffee cafe au lait how to make coffee and chicory with hot milk youtube (allowed_domains youtube.com)",
+      "returned": "bopZY8NVjQs (Vietnamese coffee made with a chicory blend, not this drink), vwj9l9LUrlQ again, YeejwEq078E \"Café au Lait: A Simple Guide\" (plain), MJ_UnYEtYYc (instant coffee), Z152NYxAV-k (chicory latte, no coffee), e4dW5MM36KE again under the same title, ccXzB5CikDo (plain), jIr6MNByUmc (a brands list), two Shorts (one a roaster’s spiced café au lait). No channel named for a New Orleans build."
+    }
+  ],
+  "verifiedBy": "",
+  "checkedOn": "2026-10-19",
+  "note": "Two searches spent; the third was held back because nothing left to confirm could pass. e4dW5MM36KE came back twice with the same id and exact title and its channel is in the title, but it is an American-style café au lait without chicory, not this drink (the plain café au lait has its own entry). vwj9l9LUrlQ came back again, its channel still unnamed and nothing showing it adds the milk. Video stays null; the page offers the search link alone.",
+  "firstPass": {
+    "id": "cafe-au-lait-new-orleans",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "new orleans cafe au lait chicory how to make youtube",
+        "filter": "allowed_domains youtube.com",
+        "returned": "“New Orleans Chicory Coffee Recipe - YouTube” https://www.youtube.com/watch?v=vwj9l9LUrlQ; channel not named. Others: a New Orleans iced coffee (v7Xs53eYJs4), a visit to a named French Quarter café (F4mguZpjIHI, not a how-to and names a business), roaster blend videos (1gr6P7s4lL4, Rr1LF_FYcA0), Shorts."
+      },
+      {
+        "q": "\"New Orleans Chicory Coffee Recipe\"",
+        "filter": "allowed_domains youtube.com",
+        "returned": "“New Orleans Chicory Coffee Recipe - YouTube” https://www.youtube.com/watch?v=vwj9l9LUrlQ; summary quotes only a viewer comment that chicory coffee “is specifically made to be taken with milk”; no channel named."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "vwj9l9LUrlQ returned the same id and title twice, but no result named its channel, and nothing showed it builds the café au lait rather than black chicory coffee. Two searches spent. An earlier search for the plain café au lait also listed a New Orleans beignets and café au lait video (piH7ws6Hjcc), but its title names a chef, its channel was never named and it came from another entry’s search, so it was not tried."
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "decaf",
+  "found": false,
+  "url": "",
+  "videoId": "",
+  "title": "",
+  "channel": "",
+  "channelKind": "",
+  "queries": [
+    {
+      "q": "how decaf coffee is made \"European Coffee Trip\" OR \"James Hoffmann\" OR Insider youtube (allowed_domains youtube.com)",
+      "returned": "No how-to: a participant’s taste test of a decaf project (RFDfh0XtE7Y), a roaster cupping it (8VbbExmqHtw), interviews and a channel page. Nothing from European Coffee Trip or Insider."
+    },
+    {
+      "q": "decaffeination how decaf coffee is made video \"Swiss Water\" OR \"Counter Culture\" OR \"Food Insider\" OR \"Bon Appetit\" youtube (allowed_domains youtube.com)",
+      "returned": "{\"title\":\"How Decaf Coffee is Made: Methods, pros and cons - YouTube\",\"url\":\"https://www.youtube.com/watch?v=pvmRx935nks\"} first; also toQOkKkxnTQ and 2qIo9hPOvdU (two ids under one title, set aside), FI7nPsTY9Xo, mRk3cmJZ7CE (a CO2 plant), EEuX7FC1ceo, yNQgJAv1W_4, VL4HNZqkBe0 (\"Our Approach to Decaffeinated Coffee\"), 4gUb6fct5Vw (a skull emoji title), a Short. None of the named channels; no channel named for any id."
+    },
+    {
+      "q": "\"How Decaf Coffee is Made: Methods, pros and cons\" (allowed_domains youtube.com)",
+      "returned": "{\"title\":\"How Decaf Coffee is Made: Methods, pros and cons - YouTube\",\"url\":\"https://www.youtube.com/watch?v=pvmRx935nks\"} (first) and 2XciADvyFzU \"How Decaf Coffee Is Made\", the rest patents; the summary quoted the description (caffeine removed from green beans, mostly by a solvent or similar extraction) and named no channel."
+    }
+  ],
+  "verifiedBy": "",
+  "checkedOn": "2026-10-19",
+  "note": "Three searches spent. pvmRx935nks came back twice with the same id and exact title and explains how decaf is made, but no result named its channel, so it fails. The first pass’s tAEQ4G-1jTQ was not revisited: no new evidence names its uploader. Video stays null.",
+  "firstPass": {
+    "id": "decaf",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how is decaf coffee made swiss water process youtube (allowed_domains youtube.com)",
+        "returned": "{\"title\":\"SWISS WATER® Process animation video - YouTube\",\"url\":\"https://www.youtube.com/watch?v=tAEQ4G-1jTQ\"}; also {\"title\":\"SwissWater Decaf - YouTube\",\"url\":\"https://www.youtube.com/channel/UCKTpcqnWcu5FLRNyyebyaOA\"} (a channel page, not tied to the id); one id (4Utv57RkKmE) came back under two different titles and was set aside."
+      },
+      {
+        "q": "\"SWISS WATER® Process animation video\" (allowed_domains youtube.com)",
+        "returned": "{\"title\":\"SWISS WATER® Process animation video - YouTube\",\"url\":\"https://youtube.com/watch?amp=&hd=1&v=tAEQ4G-1jTQ\"}; summary: the search results don’t confirm who published it."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Candidate tAEQ4G-1jTQ (\"SWISS WATER® Process animation video\"): the same id and exact title came back twice, but no result named the channel that uploaded it (the summary says so outright), so it does not count. The batch’s spare searches were already spent. Video stays null."
+  }
+}

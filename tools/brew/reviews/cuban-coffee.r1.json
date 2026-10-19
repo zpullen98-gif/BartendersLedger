@@ -1,0 +1,18 @@
+{
+  "id": "cuban-coffee",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "watch[2]",
+      "problem": "Declared evaporated or condensed milk \"not Cuban tradition\", a contested point the batch does not need to rule on.",
+      "change": "Now: some cafés use evaporated or condensed milk instead, so ask which the guest expects."
+    },
+    {
+      "field": "quiz[0].options; quiz[1].options; quiz[2].options",
+      "problem": "In all three questions the answer was the longest option, by 6, 7 and 8 characters.",
+      "change": "Rebalanced the options to within one character of each other. The answers and their positions are unchanged."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

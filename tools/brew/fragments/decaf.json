@@ -1,0 +1,115 @@
+{
+  "id": "decaf",
+  "name": "Decaf coffee",
+  "respell": "",
+  "aka": [
+    "decaffeinated",
+    "unleaded",
+    "Swiss Water decaf"
+  ],
+  "group": "brewed",
+  "kind": "coffee",
+  "caffeine": "Most caffeine is removed, not all: at least 97 per cent is the standard commonly quoted, so say nearly none.",
+  "house": {
+    "printed": false,
+    "askId": "a-qr0si1vx",
+    "ask": "Not printed on the menus: ask at lineup whether decaf is poured, and whether there is a decaf with chicory."
+  },
+  "what": "Decaf is coffee with most of its caffeine taken out while the beans are green. The wetted beans give it up to a solvent such as methylene chloride or ethyl acetate, to pressurised carbon dioxide, or to water and green coffee extract, as in the Swiss Water process. Then it is roasted and brewed like any coffee.",
+  "taste": "Well made, it tastes like coffee; tired, it reads flat and papery, and it stales fast once opened.",
+  "make": {
+    "steps": [
+      "Check the ticket and the pot twice: decaf is the order most likely to carry a medical reason.",
+      "If one grinder does both, grind a dose and bin it first.",
+      "Dial it in on its own; the brittle bean makes more fines.",
+      "Brew at about 60 g per litre and 195 to 205F (90 to 96C)."
+    ],
+    "ratio": "About 60 g per litre, as for regular",
+    "dose": "About 15 g medium ground decaf to 250 g water",
+    "temp": "195 to 205F (90 to 96C)",
+    "time": "As the brewer asks, as for regular coffee",
+    "cup": "Pre-heated cup on its saucer, 6 to 8 oz"
+  },
+  "serve": "Carry it straight to the guest who ordered it and say decaf as it lands, so cups never swap. Warmed cup, saucer and spoon, cream and sugar as they take it; offer it with dessert to the late diner.",
+  "story": "Decaf gets pulled last by somebody who has stopped caring, yet it is the order most likely to carry a medical reason. Guests ask if it is chemical: some decaf uses a solvent, some carbon dioxide, some only water and green coffee extract, which is what Swiss Water means. Then the line that matters: nearly none, never zero.",
+  "guest": "This is decaf: most of the caffeine is gone, though never all, so nearly none rather than zero. Cream or sugar?",
+  "watch": [
+    "A guest avoiding caffeine on medical advice hears nearly none, never zero.",
+    "Asked for decaf with chicory: do not guess; it is a lineup question."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "shot",
+        "Decaf is not an afterthought"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how is decaf coffee made swiss water process",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Decaf coffee: how is it made, and how much caffeine is left?",
+      "answer": "Green beans are wetted and the caffeine taken by a solvent, carbon dioxide, or water and green coffee extract, then roasted, brewed like any coffee and poured into a warmed cup: it tastes like coffee, with nearly none left, never zero."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "A guest asks whether decaf is caffeine free. What is the accurate answer?",
+      "options": [
+        "Yes, entirely",
+        "About half of a regular cup",
+        "Nearly none, never zero",
+        "Only Swiss Water is"
+      ],
+      "a": 2,
+      "explain": "The standard commonly quoted is at least 97 per cent removed, so say nearly none, never zero."
+    },
+    {
+      "id": "q2",
+      "q": "What does Swiss Water on a bag of decaf tell you?",
+      "options": [
+        "Water took out the caffeine",
+        "The beans grew in Switzerland",
+        "Ethyl acetate took the caffeine",
+        "It was brewed with spring water"
+      ],
+      "a": 0,
+      "explain": "Swiss Water is a water process: the green beans give up their caffeine to water and green coffee extract."
+    },
+    {
+      "id": "q3",
+      "q": "One grinder handles both regular and decaf. What comes before grinding a decaf order?",
+      "options": [
+        "Grind two steps finer than regular",
+        "Wipe out the hopper first",
+        "Nothing, since the burrs are empty",
+        "Grind a dose and bin it"
+      ],
+      "a": 3,
+      "explain": "The grinder holds a retained dose from the last order. Grind one to waste, or the first decaf is not decaf."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: Decaf is not an afterthought",
+      "url": ""
+    },
+    {
+      "title": "Library: The complaint at the pass",
+      "url": ""
+    },
+    {
+      "title": "House pack: lineup question a-qr0si1vx",
+      "url": ""
+    }
+  ],
+  "video": null
+}

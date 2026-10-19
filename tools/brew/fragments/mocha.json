@@ -1,0 +1,125 @@
+{
+  "id": "mocha",
+  "name": "Mocha",
+  "respell": "MOH-kuh",
+  "aka": [
+    "caffè mocha",
+    "café mocha"
+  ],
+  "group": "milk",
+  "kind": "coffee",
+  "caffeine": "Mostly from the double espresso under the chocolate; treat it as a full coffee drink, never caffeine free.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on our menus: ask at lineup whether there is an espresso machine, whether the bar will make a mocha, with which chocolate, and at what price."
+  },
+  "what": "A latte with chocolate: chocolate sauce or powder stirred into a hot double espresso, then steamed milk to fill an 8 to 12 oz cup. The milk runs a little wetter than a latte's, because the chocolate brings body of its own. Whipped cream goes on only if the bar does it.",
+  "taste": "Sweet and rich, cocoa in front and coffee underneath, with a finish set by how bitter the chocolate is.",
+  "make": {
+    "steps": [
+      "Measure 0.75 to 1 oz chocolate sauce into a warmed cup and pull a double onto it.",
+      "Stir the chocolate into the hot shot until smooth, before any milk, or it sets at the bottom.",
+      "Steam 6 to 9.5 oz cold milk to latte texture, a little wetter; cut near 135 to 140F (57 to 60C).",
+      "Pour to the rim, add whipped cream only if the bar does, and send it at once."
+    ],
+    "ratio": "0.75 to 1 oz sauce to a double, milk to fill",
+    "dose": "18 to 20 g coffee; 0.75 to 1 oz sauce",
+    "temp": "Milk 140 to 150F (60 to 66C)",
+    "time": "Shot 25 to 30 seconds",
+    "cup": "Warmed 8 to 12 oz cup or clear glass"
+  },
+  "serve": "On a saucer with a teaspoon, out quickly because chocolate sinks. Late in the evening it is dessert in a cup, so offer it as dessert menus go down.",
+  "story": "The name is a place, not a flavour. Mokha was the Yemeni port that shipped coffee for centuries, and its beans carried a cocoa note, so mocha meant coffee long before chocolate joined it. It sells to the guest who does not really like coffee.",
+  "guest": "A latte with chocolate stirred into the espresso: sweet and rich, cocoa first and the coffee underneath.",
+  "watch": [
+    "Chocolate added after the milk sets in the cup; stir it into the hot shot first.",
+    "Sauces differ widely in sugar; taste yours neat and set the dose to your cup.",
+    "It carries a double espresso's caffeine; never offer it as a hot chocolate."
+  ],
+  "library": {
+    "ref": "Mocha",
+    "study": [
+      [
+        "milk",
+        "Stretch, then spin"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make mocha",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a mocha made, and in what order?",
+      "answer": "Chocolate sauce in a warmed 8 to 12 oz cup, a double pulled onto it and stirred smooth, then milk steamed a little wetter than a latte's, poured to the rim. Sweet, cocoa first."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "The word mocha first named what?",
+      "options": [
+        "A Mexican chocolate drink",
+        "A Yemeni coffee port",
+        "A Viennese coffee house",
+        "A dark Italian roast"
+      ],
+      "a": 1,
+      "explain": "Mokha was the Yemeni port that shipped coffee with a cocoa note; chocolate joined the drink much later."
+    },
+    {
+      "id": "q2",
+      "q": "When does the chocolate go into a mocha?",
+      "options": [
+        "Over the foam at the end",
+        "Stirred in at the table",
+        "After the milk is poured",
+        "Into the hot shot first"
+      ],
+      "a": 3,
+      "explain": "Stir it into the hot espresso before the milk; added later, it sinks and sets in the cup."
+    },
+    {
+      "id": "q3",
+      "q": "Why is mocha milk steamed a little wetter than a latte's?",
+      "options": [
+        "Chocolate brings its own body",
+        "Wet milk hides a sour shot",
+        "Chocolate needs hotter milk",
+        "Dry foam turns the cocoa bitter"
+      ],
+      "a": 0,
+      "explain": "Chocolate thickens the drink, and a stiff cap sitting on sauce eats like pudding."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library card: Mocha",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Stretch, then spin",
+      "url": ""
+    },
+    {
+      "title": "House pack: Coffee service at the table",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=83b_w85rBuU",
+    "id": "83b_w85rBuU",
+    "title": "Coffee Recipes",
+    "channel": "Breville",
+    "channelKind": "company",
+    "label": "How to make a mocha",
+    "watchFor": "Chocolate stirred into the hot espresso first, until smooth, then textured milk poured in to fill the cup. Stirring before the milk goes in keeps the chocolate from settling at the bottom.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "id": "lungo",
+  "name": "Lungo",
+  "respell": "LOON-goh",
+  "aka": [
+    "caffè lungo",
+    "long shot"
+  ],
+  "group": "espresso",
+  "kind": "coffee",
+  "caffeine": "The same dose as an espresso, but more water through the puck pulls out a little more total caffeine.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on the menus: ask at lineup whether there is an espresso machine, whether the bar will pull a lungo on request, and the price."
+  },
+  "what": "A lungo is an espresso run long: the same 18 to 20 g dose pushed out to 50 to 72 g, about 1:3 to 1:4. Every drop goes through the bed under pressure, so it is thinner and more extracted. The name is Italian for long; it is not an americano.",
+  "taste": "Thinner and longer than espresso, more bitter, with a drying, papery finish and the bean's darker notes pulled over its fruit.",
+  "make": {
+    "steps": [
+      "Dose 18 to 20 g into a warm double basket, ground a little coarser.",
+      "Tamp level, lock in and pull onto a scale.",
+      "Stop at 50 to 60 g, or as far as about 72 g.",
+      "Set the yield by tasting the far end: stop before the cup turns hollow and drying."
+    ],
+    "ratio": "About 1:3 to 1:4, against 1:2 for a normale",
+    "dose": "18 to 20 g coffee, double basket",
+    "temp": "195 to 205F (90 to 96C)",
+    "time": "Roughly 30 to 45 seconds",
+    "cup": "Warmed 3 oz demitasse, filled higher than an espresso"
+  },
+  "serve": "On a saucer with a spoon, in a warmed cup at the 3 oz end of the range. It goes out alone; there is enough liquid that no water back is expected.",
+  "story": "Lungo is Italian for long, and many guests know it from capsule machines, where a button is marked lungo. It suits the guest who wants espresso to last past two sips but will not take an americano.",
+  "guest": "A lungo is an espresso pulled long: a few more sips, but more bitter. If you would like it milder, an americano is gentler.",
+  "watch": [
+    "A guest wanting milder goes to the americano, never the lungo: more water through the puck means more bitterness.",
+    "Thinner per sip is not less coffee: it carries a little more caffeine than an espresso.",
+    "Some bars call a watered shot a lungo; confirm what the house means."
+  ],
+  "library": {
+    "ref": "Lungo",
+    "study": [
+      [
+        "shot",
+        "Ristretto, normale, lungo"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make lungo",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a lungo made, and how does it differ from an americano?",
+      "answer": "The same 18 to 20 g dose pushed to 50 to 72 g, every drop under pressure; an americano adds water after. Thin, bitter, drying, in a warmed demitasse."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "A guest wants an espresso that is milder and longer. What do you suggest?",
+      "options": [
+        "A lungo",
+        "A ristretto",
+        "A double espresso",
+        "An americano"
+      ],
+      "a": 3,
+      "explain": "Water added after the shot dilutes without pulling bitterness; a lungo forces more water through the puck, so it reads harsher."
+    },
+    {
+      "id": "q2",
+      "q": "From 18 g of coffee, about how much does a lungo yield?",
+      "options": [
+        "About 36 g",
+        "54 to 72 g",
+        "18 to 27 g",
+        "150 to 220 g"
+      ],
+      "a": 1,
+      "explain": "A lungo runs 1:3 to 1:4. About 36 g is a normale, 18 to 27 g a ristretto."
+    },
+    {
+      "id": "q3",
+      "q": "From the same dose, how does a lungo's total caffeine compare with an espresso's?",
+      "options": [
+        "A little less",
+        "About half",
+        "Exactly the same",
+        "A little more"
+      ],
+      "a": 3,
+      "explain": "More water through the same puck extracts further, caffeine included. Thinner per sip is not less coffee."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Card: Lungo",
+      "url": ""
+    },
+    {
+      "title": "Lesson: Ristretto, normale, lungo",
+      "url": ""
+    },
+    {
+      "title": "Card: Americano",
+      "url": ""
+    },
+    {
+      "title": "House pack: lineup question a-zr8ze4mu",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=AokZP_ja4tw",
+    "id": "AokZP_ja4tw",
+    "title": "LUNGO- How to make a lungo (cafe créme)",
+    "channel": "Pelican Rouge Coffee Roasters",
+    "channelKind": "company",
+    "label": "How to pull a lungo",
+    "watchFor": "How the shot runs on past a normal espresso into a longer cup, and where it is stopped. Any good lungo stops before the stream turns pale and the cup turns hollow and bitter.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

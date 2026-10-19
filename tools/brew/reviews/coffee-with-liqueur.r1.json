@@ -1,0 +1,33 @@
+{
+  "id": "coffee-with-liqueur",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.ratio, make.dose",
+      "problem": "The 1 oz floor has no source: the Library’s Keoke Coffee (1 + 0.5 + 0.5 oz) and Mexican Coffee (1 + 1 oz) both put 2 oz of liqueur and spirit to 4 oz coffee.",
+      "change": "Ratio and dose now say 2 oz to 4 oz coffee."
+    },
+    {
+      "field": "make.steps[2], make.steps[3]",
+      "problem": "Step 4 floats the cream \"half an inch below the rim\", which is where the lesson fills the coffee, not where the cream goes.",
+      "change": "The half inch moved to the coffee fill in step 3; step 4 floats the cream slowly over a spoon."
+    },
+    {
+      "field": "quiz[0].options",
+      "problem": "The right option (\"Coffee liqueur and crème de cacao\") was the longest of the four.",
+      "change": "Distractor lengthened to \"Triple sec and flamed overproof rum\" (the Spanish coffee’s pair)."
+    },
+    {
+      "field": "quiz[1].options",
+      "problem": "The right option was the longest and the only range among single figures (a form clue).",
+      "change": "All four options are now ranges of the same shape; the answer stays first."
+    },
+    {
+      "field": "quiz[2].options",
+      "problem": "The stem asks for two nut liqueurs, so the options pairing crème de cacao or Kahlua rule themselves out: only one plausible distractor was left.",
+      "change": "Two distractors replaced with nut pairs, \"Nocino and amaretto\" and \"Amaretto and Nocello\"; the answer stays third."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

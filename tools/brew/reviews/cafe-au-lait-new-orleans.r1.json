@@ -1,0 +1,18 @@
+{
+  "id": "cafe-au-lait-new-orleans",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "recall[0].answer",
+      "problem": "The answer named no cup; the style asks for the build, the cup and the taste.",
+      "change": "\"poured in equal parts into a warmed cup with milk heated until it steams\"."
+    },
+    {
+      "field": "quiz[0].options",
+      "problem": "The answer was the longest option.",
+      "change": "\"Sweetness and vanilla\" became \"Sweetness and a hint of vanilla\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

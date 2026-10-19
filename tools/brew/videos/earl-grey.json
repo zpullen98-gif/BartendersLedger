@@ -1,0 +1,53 @@
+{
+  "id": "earl-grey",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=1_xerlDIr84",
+  "videoId": "1_xerlDIr84",
+  "title": "Earl Grey Tea",
+  "channel": "Revival Tea Company",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "Twinings Earl Grey how to make youtube [allowed_domains: youtube.com]",
+      "returned": "No Twinings brewing video: Twinings adverts, a cocktail, reviews; OCtXlNpb1Dk \"How to make the perfect cup of tea using earl grey\" with no channel named."
+    },
+    {
+      "q": "Revival Tea Company \"Earl Grey Tea\" how to make a cup youtube [allowed_domains: youtube.com]",
+      "returned": "Earl Grey Tea - YouTube | https://www.youtube.com/watch?v=1_xerlDIr84 (first) | summary: \"The top result is the Revival Tea Company's own how-to video for its Earl Grey ... a walkthrough by the company's teamaker and founder ... showing how to make a cup\", and \"Revival Tea's Earl Grey video (youtube.com/watch?v=1_xerlDIr84): the official one\"; SIO9Ui58WvQ \"How To Brew Earl Grey Tea\" is called \"a general tutorial, not from Revival Tea\"."
+    },
+    {
+      "q": "\"Earl Grey Tea\" Revival Tea teamaker founder walks you through youtube [allowed_domains: youtube.com]",
+      "returned": "Earl Grey Tea - YouTube | https://youtube.com/watch?pp=0gcJCfwAo7VqN5tD&v=1_xerlDIr84 (first); Revival Tea Company - YouTube | https://www.youtube.com/channel/UCORdDgXoHVq4OeDulwvlFuA (third) | summary: \"a Revival Tea Company video matching your description. Its title is 'Earl Grey Tea,' and the description says Revival Tea Company Teamaker and Founder ... walks you through how to make a cup of our Earl Grey Tea! The link is https://youtube.com/watch?v=1_xerlDIr84.\""
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedBy": "checker",
+  "checkedOn": "2026-10-19",
+  "note": "1_xerlDIr84 came back with the same exact title, \"Earl Grey Tea\", on the second and third searches (the third on youtube.com without www and with a pp parameter, the same watch id), and both summaries name Revival Tea Company as the uploader; the channel's /channel/ page came back beside it. The www form also came back with that title on the first pass's second search and on two English breakfast searches of this pass (\"Revival Tea Company English Breakfast youtube\" and \"\\\"English Breakfast\\\" Revival Tea Company how to make a cup youtube\"), and this pass's second Earl Grey search returned it in the www form. The missing evidence the first pass lacked, which id the company owns, is now in two summaries; SIO9Ui58WvQ stays rejected and is named \"not from Revival Tea\". The presenter is named in the description; the channel is the company. An oEmbed read should confirm the channel string. Three searches spent. Checker: confirmed on the finder's searches, no checker search spent. The pair stands without the bare youtube.com link: this pass's second Earl Grey search returned the www id 1_xerlDIr84 with the exact title \"Earl Grey Tea\" and a summary naming Revival Tea Company as the uploader (\"the official one\"), and the first pass's second search, a different query, returned the same www id and exact title. The third search's pp link carries the same id and title and the channel's /channel/ page titled \"Revival Tea Company - YouTube\". The description says the teamaker walks you through making a cup of the company's Earl Grey: it teaches the drink. Not a Short, a playlist or an advert; channelKind company is right.",
+  "firstPass": {
+    "id": "earl-grey",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to brew earl grey tea youtube (site youtube.com)",
+        "returned": "How To Brew Earl Grey Tea - YouTube | https://www.youtube.com/watch?v=SIO9Ui58WvQ | summary: \"Revival Tea Company's founder demonstrates making a cup of their Earl Grey tea\", not tied to a link; Earl Grey Tea - YouTube | 1_xerlDIr84 also listed."
+      },
+      {
+        "q": "\"How To Brew Earl Grey Tea\" (site youtube.com)",
+        "returned": "SIO9Ui58WvQ absent; Earl Grey Tea - YouTube | https://www.youtube.com/watch?v=1_xerlDIr84 and others, no channel named."
+      },
+      {
+        "q": "\"How To Brew Earl Grey Tea\" Revival Tea Company (site youtube.com; batch spare)",
+        "returned": "Earl Grey Tea - YouTube | https://youtube.com/watch?pp=0gcJCfwAo7VqN5tD&v=1_xerlDIr84 (first); How To Brew Earl Grey Tea - YouTube | https://www.youtube.com/watch?v=SIO9Ui58WvQ (second); English Breakfast | x0xskenfLWQ; Irish Breakfast | 7CxmRy1ZOLo; summary: \"a Revival Tea Company video on YouTube where founder ... walks you through how to make a cup of our Earl Grey Tea\"."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "SIO9Ui58WvQ returned with its exact title on the spare search but not on the plain quoted one, and the Revival Tea Company the summaries name most likely owns 1_xerlDIr84 (\"Earl Grey Tea\", in a run of bare tea-name titles), which was never searched by its own title. No candidate meets all three conditions. Three searches spent, one of them the batch spare."
+  }
+}

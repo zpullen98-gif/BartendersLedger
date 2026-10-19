@@ -1,0 +1,13 @@
+{
+  "id": "earl-grey",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "watch[2]",
+      "problem": "Stated that milk and lemon together curdle. The Library makes it conditional on enough acid.",
+      "change": "\"curdle\" became \"can curdle\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

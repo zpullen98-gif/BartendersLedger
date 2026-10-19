@@ -1,0 +1,155 @@
+{
+  "id": "white-tea",
+  "name": "White tea",
+  "respell": "",
+  "aka": [
+    "bai cha",
+    "Silver Needle",
+    "White Peony"
+  ],
+  "group": "leaf",
+  "kind": "tea",
+  "caffeine": "Anywhere across the range of the other teas: bud is the most caffeinated part of the plant, so a bud-heavy white can beat a black.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup whether the bar pours a white tea, which one, bag or loose leaf, pot or glass, and the price."
+  },
+  "what": "White tea is Camellia sinensis withered and dried and almost nothing else: no kill-green step and no rolling, so it oxidises lightly across a long wither. Fujian is its home. Silver Needle, bai hao yinzhen, is buds only; White Peony, bai mudan, is a bud with two leaves. Pale in the cup, it is not weak, nor dependably low in caffeine, because the bud is the most caffeinated part of the plant.",
+  "taste": "Hay, melon and honey, almost no astringency, thin on arrival and then surprisingly long. Aged white goes towards dried apricot and warm spice.",
+  "make": {
+    "steps": [
+      "Boil fresh water and let it fall to 175 to 195F (79 to 90C), the top of that range for a bud-heavy tea.",
+      "Warm a glass pot or tall glass and tip the water out.",
+      "Weigh 2 to 3 g per 6 to 8 oz; fluffy white leaf fills a spoon long before it makes the weight.",
+      "Pour the water on and steep 3 to 5 minutes, longer than most expect, then pour off completely.",
+      "Re-steep three or four times; it often opens up on the second."
+    ],
+    "ratio": "2 to 3 g of leaf per 6 to 8 oz of water",
+    "dose": "2 to 3 g loose leaf, weighed, not spooned",
+    "temp": "175 to 195F (79 to 90C); many charts say cooler",
+    "time": "3 to 5 minutes; re-steeps three or four times",
+    "cup": "Glass pot or tall glass into a small cup, 4 to 6 oz"
+  },
+  "serve": "In a warmed glass pot or tall glass so the buds show, with a small cup, a dish for the basket and the steep time said aloud. No milk, no lemon. Tell the table the leaf takes three or four steeps and bring fresh hot water for each. It sells on being looked at, so let the pot reach the table before the first pour.",
+  "story": "The trade still argues over white tea: whether to call its long, slow wither oxidation at all, and how hot to brew it. Many charts say cool water and a short steep, which is how a guest pays top price for hot water, because dense buds give little up; the specialist side says heat and time. Fujian makes the classics, and pressed white cakes are among the few teas built to age.",
+  "guest": "White tea is simply withered and dried, often just the buds, and tastes of hay, melon and honey; the same leaf takes three or four steeps.",
+  "watch": [
+    "Do not sell it as the low caffeine choice: bud carries the highest caffeine concentration on the plant, so a bud-heavy white can beat a black.",
+    "Cool water and a short steep under-extract dense buds; give it heat and time.",
+    "The White Tea shooter is vodka, peach schnapps, lemon, syrup and a splash of soda, with no tea in it."
+  ],
+  "library": {
+    "ref": "White Tea",
+    "study": [
+      [
+        "leaf",
+        "One plant, six teas"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to brew white tea",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a pot of white tea, such as Silver Needle, brewed?",
+      "answer": "2 to 3 g of leaf, weighed, per 6 to 8 oz of water at 175 to 195F (79 to 90C), steeped 3 to 5 minutes in a warmed glass pot, then re-steeped three or four times. Hay, melon and honey, barely astringent."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What goes into a Silver Needle white tea?",
+      "options": [
+        "A bud with two leaves",
+        "Buds only",
+        "Large mature leaves",
+        "Rolled leaf and stem"
+      ],
+      "a": 1,
+      "explain": "Silver Needle, bai hao yinzhen, is buds only. A bud with two leaves is White Peony, bai mudan."
+    },
+    {
+      "id": "q2",
+      "q": "Which processing step does white tea skip, so that it oxidises lightly before drying?",
+      "options": [
+        "Withering",
+        "Drying",
+        "Sorting the buds",
+        "The kill-green step"
+      ],
+      "a": 3,
+      "explain": "White tea is withered and dried, never rolled and never given a kill-green step, so it oxidises lightly across its long wither."
+    },
+    {
+      "id": "q3",
+      "q": "A guest wants the lowest caffeine tea and points at the Silver Needle. What should you know?",
+      "options": [
+        "Bud carries the most caffeine on the plant",
+        "White tea has no caffeine at all",
+        "The long wither drives off most caffeine",
+        "A pale liquor means less caffeine than black"
+      ],
+      "a": 0,
+      "explain": "The bud is the most caffeinated part of the plant, so a bud-heavy white can carry more than a black. Offer a tisane to a guest avoiding caffeine."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library card: White Tea",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, One plant, six teas",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, Oxidation is the axis",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, Where the leaf comes from",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Tea is not one temperature and one timer",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Water for tea",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Caffeine, and the questions guests ask",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Tea on a bar programme",
+      "url": ""
+    },
+    {
+      "title": "WorldTable lexicon: Tea Service & Pairing",
+      "url": ""
+    },
+    {
+      "title": "Library shooter: White Tea",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=OoqQwPLq4wM",
+    "id": "OoqQwPLq4wM",
+    "title": "How to Brew Green & White Tea",
+    "channel": "Red Blossom Tea Company",
+    "channelKind": "company",
+    "label": "How to brew green and white tea",
+    "watchFor": "A tea house's method for green and white tea together, two styles its description calls challenging. For white, this page's method wants 175 to 195F (79 to 90C), the leaf weighed, not spooned, and a longer steep than green.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

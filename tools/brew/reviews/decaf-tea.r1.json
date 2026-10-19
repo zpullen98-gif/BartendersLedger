@@ -1,0 +1,13 @@
+{
+  "id": "decaf-tea",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps[3]",
+      "problem": "No step put the water on the leaf: the steps went from bag in pot straight to \"Steep\".",
+      "change": "Now begins \"Pour the water on and steep 3 to 5 minutes for black\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

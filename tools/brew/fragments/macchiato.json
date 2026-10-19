@@ -1,0 +1,129 @@
+{
+  "id": "macchiato",
+  "name": "Macchiato",
+  "respell": "mah-kee-AH-toh",
+  "aka": [
+    "espresso macchiato",
+    "caffè macchiato"
+  ],
+  "group": "espresso",
+  "kind": "coffee",
+  "caffeine": "All from the espresso; the spoonful of foam adds none, and a double carries about twice a single.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on the menus: ask at lineup whether there is an espresso machine, whether the bar will make a macchiato on request, and the price."
+  },
+  "what": "A macchiato is an espresso marked with a spoonful of milk foam. The name is Italian for stained: the espresso is stained, not the milk. Bars often build it on a double; in Italy it is usually a single. The latte macchiato and the chain syrup drink are different things.",
+  "taste": "Espresso with the sharp edge knocked off: a soft dairy note through the middle, a finish still clearly coffee.",
+  "make": {
+    "steps": [
+      "Pull a double, 18 to 20 g in, 36 to 40 g out, into a warmed demitasse.",
+      "While it pulls, stretch a little milk in the smallest jug to 140 to 150F (60 to 66C), silky, never stiff.",
+      "Let it settle, then spoon one dollop onto the middle of the shot.",
+      "Send it within thirty seconds and dump what is left in the jug."
+    ],
+    "ratio": "A double marked with 0.5 to 1 oz of foam",
+    "dose": "18 to 20 g coffee; 0.5 to 1 oz milk",
+    "temp": "Milk 140 to 150F (60 to 66C)",
+    "time": "25 to 30 second shot, out within thirty seconds",
+    "cup": "Warmed 3 oz demitasse"
+  },
+  "serve": "On a saucer with a spoon, out inside thirty seconds so the mark is still a mark, not a cloud. Ask which macchiato the guest means first: the three come in different glasses.",
+  "story": "Macchiato is Italian for stained or marked. In Italy it is the usual way to take milk after a meal, since a cappuccino belongs to the morning. The latte macchiato turns it over, and chain menus added a sweet third drink, so one word now orders three things.",
+  "guest": "A macchiato is an espresso with a spoonful of foam on top, small and still clearly coffee. Is that the one you mean, or the tall latte macchiato?",
+  "watch": [
+    "Ask which macchiato: the marked espresso, the tall latte macchiato, or the syrup drink from a chain menu.",
+    "A double with a full ounce of milk crowds a 2 oz cup; use the 3 oz demitasse.",
+    "The foam should be silky and wet, a visible mark, never a stiff dry cap."
+  ],
+  "library": {
+    "ref": "Macchiato",
+    "study": [
+      [
+        "milk",
+        "Pitcher, volume and the pour window"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make an espresso macchiato",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a macchiato made, and what goes in it?",
+      "answer": "A double, 18 to 20 g in and 36 to 40 g out, marked with one dollop of silky foam in a warmed 3 oz demitasse: espresso with its edge softened."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What does the Italian word macchiato mean, as the drink uses it?",
+      "options": [
+        "Cut",
+        "Restricted",
+        "Stained",
+        "Long"
+      ],
+      "a": 2,
+      "explain": "The espresso is marked with milk. Cortado means cut, ristretto restricted and lungo long."
+    },
+    {
+      "id": "q2",
+      "q": "How much milk goes onto a macchiato built on a double?",
+      "options": [
+        "2.5 to 3 oz, steamed flat",
+        "0.5 to 1 oz, mostly foam",
+        "4 oz of glossy microfoam",
+        "None, only cocoa dust"
+      ],
+      "a": 1,
+      "explain": "One dollop of silky foam, sitting as a visible mark rather than stirring itself in."
+    },
+    {
+      "id": "q3",
+      "q": "Why might an Italian guest take a macchiato, not a cappuccino, after lunch?",
+      "options": [
+        "A cappuccino is a morning drink",
+        "A macchiato has more caffeine",
+        "Bars stop steaming milk at noon",
+        "A macchiato is served iced"
+      ],
+      "a": 0,
+      "explain": "In Italy the cappuccino belongs to the morning, so the macchiato is how milk is taken after a meal."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Card: Macchiato",
+      "url": ""
+    },
+    {
+      "title": "Lesson: Pitcher, volume and the pour window",
+      "url": ""
+    },
+    {
+      "title": "Lesson: The temperature ceiling",
+      "url": ""
+    },
+    {
+      "title": "House pack: lineup question a-zr8ze4mu",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=dnGTNh3aDLQ",
+    "id": "dnGTNh3aDLQ",
+    "title": "Quick Tip: How to Make a Latte Macchiato and Espresso Macchiato",
+    "channel": "Whole Latte Love",
+    "channelKind": "company",
+    "label": "Espresso macchiato against latte macchiato",
+    "watchFor": "The espresso macchiato: a shot marked with a spoonful of milk foam. The latte macchiato turns it over, espresso poured into a glass of milk. Watch how little milk the first one takes.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

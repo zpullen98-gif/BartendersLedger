@@ -1,0 +1,28 @@
+{
+  "id": "cappuccino",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "quiz[0].options[1], quiz[0].explain",
+      "problem": "\"170F\" with no Celsius; schema.mjs refuses it (a temperature not in the \"195 to 205F (90 to 96C)\" form).",
+      "change": "\"Milk steamed to 170F (77C)\"; explain \"Milk at 170F (77C) is cooked.\""
+    },
+    {
+      "field": "make.ratio",
+      "problem": "Gave the Italian single spec beside steps and a dose built on a double, so the ratio did not describe the drink the steps make.",
+      "change": "\"Italian single spec: 0.8 oz espresso to 3.4 oz cold milk\" (the card measures the milk before frothing)."
+    },
+    {
+      "field": "story",
+      "problem": "\"the Italian name followed in the early twentieth century\" is contradicted by Wikipedia (the Italian form is in writing in the nineteenth century), and Wikipedia dates the Kapuziner only \"possibly\" to the eighteenth century.",
+      "change": "\"Vienna's coffee houses called a coffee with cream a Kapuziner, possibly in the eighteenth century, and the Italian name followed later.\""
+    },
+    {
+      "field": "quiz[1].options",
+      "problem": "The answer was much the longest and the only specific option (29 characters against 17 to 22).",
+      "change": "Distractors lengthened: \"A small Neapolitan espresso cup\", \"A Viennese cream pastry\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

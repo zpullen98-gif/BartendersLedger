@@ -1,0 +1,23 @@
+{
+  "id": "chicory-coffee",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "story, quiz[1].explain",
+      "problem": "\"Continental System\" fails the name check (proper-nouns.json does not allow the run).",
+      "change": "\"a British blockade and a French embargo on British trade\", as the World Table's Cuisine entry \"Chicory coffee\" tells it."
+    },
+    {
+      "field": "quiz[1]",
+      "problem": "Two answers were defensible: chicory mixtures were sold as coffee in Britain before 1861, so \"Britain, in its coffee houses\" can be argued, and \"Germany, in the First World War\" was ruled out by the stem's own \"Before\".",
+      "change": "Re-asked as what first made coffee scarce in France; options \"The Union naval blockade of 1861\", \"A coffee leaf blight in the Caribbean\", \"A royal tax on Paris coffee houses\", \"The 1806 blockade and trade embargo\" (answer)."
+    },
+    {
+      "field": "make.steps[2], recall[0].answer",
+      "problem": "Fahrenheit without Celsius.",
+      "change": "Added (90 to 96C)."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

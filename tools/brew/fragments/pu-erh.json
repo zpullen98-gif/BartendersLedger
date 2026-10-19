@@ -1,0 +1,146 @@
+{
+  "id": "pu-erh",
+  "name": "Pu-erh",
+  "respell": "POO-air",
+  "aka": [
+    "puer",
+    "sheng",
+    "shu",
+    "hei cha"
+  ],
+  "group": "leaf",
+  "kind": "tea",
+  "caffeine": "It is tea, so it carries caffeine; leaf load, heat, steep time and serving size move it more than the colour of the leaf.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup whether the bar pours a pu-erh, raw or ripe, cake or loose, how it is served, and the price."
+  },
+  "what": "Pu-erh is dark tea, hei cha, from Yunnan, made from large-leaf Camellia sinensis var. assamica: sun-dried green leaf, maocha, then worked by microbes, the one tea family where fermented is the right word, though for aged raw the trade argues it. Sheng, raw, is usually pressed into cakes and changes over years; shu, ripe, is piled warm and damp for weeks, wo dui, and arrives tasting of the cellar by design. It comes as cakes, bricks, nests and loose leaf.",
+  "taste": "Ripe: wet earth, damp wood and cocoa, thick, soft and sweet, with almost no astringency. Young raw: bitter and astringent, vegetal, apricot, smoky in some. Aged raw is where the two meet.",
+  "make": {
+    "steps": [
+      "Break a piece from the cake gently, keeping the leaf whole rather than crumbling it.",
+      "Warm the gaiwan or small clay pot and the cups.",
+      "Rinse the leaf with boiling water for 5 to 10 seconds and pour that away.",
+      "Brew short and often: 10 to 30 seconds a steep at 212F (100C), a touch cooler for young raw.",
+      "Stretch each steep as the session goes; ten or more off one piece is ordinary.",
+      "For a Western pot of ripe pu-erh, steep 3 to 5 minutes at a full boil after the rinse."
+    ],
+    "ratio": "Western 2 to 3 g per 6 to 8 oz; more gongfu",
+    "dose": "Cake or loose leaf, weighed: 2 to 3 g a cup Western",
+    "temp": "212F (100C); young raw 195 to 205F (90 to 96C)",
+    "time": "Rinse 5 to 10 seconds, then 10 to 30 second steeps",
+    "cup": "Gaiwan or small clay pot into thimble cups, 1 to 2 oz"
+  },
+  "serve": "After a heavy meal, as a digestif: a warmed gaiwan or small pot and thimble cups, with the rinse poured away before the first steep. No milk, no lemon. Describe it as forest floor, damp wood and dark chocolate, never musty. Offer it to the whisky drinker, and beside rich, fatty food, as dim sum houses do.",
+  "story": "Fermentation is the wrong word for black tea and the right one here: in pu-erh, microbes really do the work. Raw cakes age for years from astringent and green towards woody and dried fruit, and whether that is microbes or slow oxidation is argued. Ripe is the modern shortcut, heaped damp and warm for weeks, and the undisputed case. Sell the funk as you would an aged rum, and do not pay aged money for ripe, which arrives finished.",
+  "guest": "Pu-erh is a fermented, often aged tea from Yunnan, earthy like forest floor and dark chocolate; it drinks like a digestif after a big meal.",
+  "watch": [
+    "Ammonia or wet cardboard is bad storage, not age: that cake stays in the tin.",
+    "Never say musty; say forest floor, damp wood, dark chocolate.",
+    "Ripe arrives finished and settles rather than changes; raw is the one that transforms. Do not pay aged money for ripe.",
+    "Rinse first, 5 to 10 seconds, and tip that water out."
+  ],
+  "library": {
+    "ref": "Pu-erh",
+    "study": [
+      [
+        "leaf",
+        "Pu-erh and the genuinely fermented teas"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to brew pu erh tea",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is pu-erh brewed?",
+      "answer": "A piece of cake in a warmed gaiwan or small pot, rinsed 5 to 10 seconds with boiling water and poured away, then steeps of 10 to 30 seconds at 212F (100C), ten or more off one piece. Earthy, soft and sweet."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What makes pu-erh genuinely fermented, unlike black tea?",
+      "options": [
+        "The leaf's own enzymes meet air",
+        "Microbes work the leaf",
+        "It is roasted over charcoal",
+        "It is shaded before picking"
+      ],
+      "a": 1,
+      "explain": "Black tea and oolong only oxidise. In dark tea, hei cha, microbes really do the work, most plainly in ripe pu-erh piled damp and warm for weeks."
+    },
+    {
+      "id": "q2",
+      "q": "Which pu-erh transforms over years of ageing?",
+      "options": [
+        "Shu, the ripe one",
+        "Both, at the same pace",
+        "Neither: pu-erh does not age",
+        "Sheng, the raw one"
+      ],
+      "a": 3,
+      "explain": "Raw pu-erh changes over years or decades. Ripe arrives finished and settles rather than changes, so do not pay aged money for it."
+    },
+    {
+      "id": "q3",
+      "q": "A pu-erh cake smells of ammonia. What does that tell you?",
+      "options": [
+        "Bad storage, not age",
+        "Well aged and ready to pour",
+        "A ripe pile finished correctly",
+        "It needs a longer rinse"
+      ],
+      "a": 0,
+      "explain": "Ammonia or wet cardboard means bad storage, not age, and that cake stays in the tin. Good pu-erh reads as forest floor and damp wood."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library card: Pu-erh",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, Pu-erh and the genuinely fermented teas",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, One plant, six teas",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Tea is not one temperature and one timer",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Water for tea",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Tea on a bar programme",
+      "url": ""
+    },
+    {
+      "title": "WorldTable lexicon: Tea Service & Pairing",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=1UyM3tL27Xo",
+    "id": "1UyM3tL27Xo",
+    "title": "How to Brew Pu-erh Tea",
+    "channel": "Red Blossom Tea Company",
+    "channelKind": "company",
+    "label": "How to brew pu-erh",
+    "watchFor": "A tea house's method for pu-erh, a style its description calls diverse and forgiving. Any good session rinses the leaf briefly, pours that away, then brews short steeps, stretching each as the session goes.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

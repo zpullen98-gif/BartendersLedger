@@ -1,0 +1,33 @@
+{
+  "id": "drip-coffee",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=YbsIBHKxg4E",
+  "videoId": "YbsIBHKxg4E",
+  "title": "Automatic Drip Machine Brew Guide - Stumptown Coffee Roasters",
+  "channel": "Stumptown Coffee Roasters",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "how to brew drip coffee batch brewer youtube (allowed_domains youtube.com)",
+      "returned": "{\"title\":\"Automatic Drip Machine Brew Guide - Stumptown Coffee Roasters - YouTube\",\"url\":\"https://www.youtube.com/watch?v=YbsIBHKxg4E\"}; summary: Stumptown’s \"Automatic Drip Machine Brew Guide\" is described as super basic and easy instructions for the best results."
+    },
+    {
+      "q": "\"Automatic Drip Machine Brew Guide - Stumptown Coffee Roasters\" (no domain filter)",
+      "returned": "No youtube.com result: the top result was {\"title\":\"brew guide automatic drip\",\"url\":\"https://www.stumptowncoffee.com/pages/brew-guide-automatic-drip\"}, the roaster’s written guide (70 g, medium grind for cone filters, swirl and serve). Did not confirm the watch id."
+    },
+    {
+      "q": "\"Automatic Drip Machine Brew Guide - Stumptown Coffee Roasters\" (allowed_domains youtube.com; the batch’s first spare)",
+      "returned": "{\"title\":\"Automatic Drip Machine Brew Guide - Stumptown Coffee Roasters - YouTube\",\"url\":\"https://www.youtube.com/watch?v=YbsIBHKxg4E\"}, beside the same series: \"Kalita Wave Brew Guide - Stumptown Coffee Roasters\", \"French Press Brew Guide - Stumptown Coffee Roasters\", \"Chemex Brew Guide - Stumptown Coffee Roasters\"; summary: basic, easy instructions for brewing with any automatic coffee brewer."
+    }
+  ],
+  "checkerQueries": [
+    {
+      "q": "Stumptown Coffee Roasters YouTube channel Automatic Drip Machine Brew Guide video (allowed_domains youtube.com; checker)",
+      "returned": "The same id YbsIBHKxg4E under the same exact title, beside the roaster’s own brew guide series (French Press, Kalita Wave, Espresso, Chemex), each titled with the roaster’s name; summary: \"the Stumptown video\" and \"several other Stumptown brew guides on YouTube\"."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-18",
+  "checkedBy": "checker",
+  "note": "The same id and exact title came back in the first and third searches; the channel is named in the title and in the titles of its own brew guide series. A roaster, so company. The exact title carries a spaced hyphen, which the fragment’s dash rule refuses, so the fragment keeps title empty (the renderer never shows a title) and the exact title stays here. Stumptown Coffee Roasters is not yet on companies.json, so the channel line will not show and schema.mjs will refuse the channel until it is added there and allowed as a name. Checked by the checker on 2026-10-19: the finder’s first and third searches are different searches with the same id and exact title, and a fresh search returned them again with the summary tying the video and its series to the roaster. A brew guide for an automatic drip machine, the method this entry teaches; a watch link, not a Short, playlist or advert; company is right. Confirmed. The fragment still fails schema.mjs until \"Stumptown Coffee Roasters\" is on companies.json and the name check admits it (proper-nouns.json or the schema); neither file is the checker’s to write."
+}

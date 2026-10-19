@@ -1,0 +1,57 @@
+{
+  "id": "pu-erh",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=1UyM3tL27Xo",
+  "videoId": "1UyM3tL27Xo",
+  "title": "How to Brew Pu-erh Tea",
+  "channel": "Red Blossom Tea Company",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "Red Blossom Tea Company youtube channel how to brew tea videos [allowed_domains: youtube.com] (one search serving white-tea and pu-erh)",
+      "returned": "How to Brew Pu-erh Tea - YouTube | https://www.youtube.com/live/1UyM3tL27Xo (second; the same id in the /live/ form) | summary: \"several Red Blossom Tea Company YouTube videos that teach brewing ... There are 'How to Brew' videos for pu-erh, black tea, Formosa oolong, and Anxi tieguanyin. Each one presents the company's own brewing method for that style ... Each video description links to the company's site (redblossomtea.com)\"."
+    },
+    {
+      "q": "Red Blossom Tea pu-erh brewing Alice youtube [allowed_domains: youtube.com]",
+      "returned": "How to Brew Pu-erh Tea - YouTube | https://www.youtube.com/watch?v=1UyM3tL27Xo (first) | summary: \"a Red Blossom Tea video that matches your query directly. [The presenter]'s video 'How to Brew Pu-erh Tea' (youtube.com/watch?v=1UyM3tL27Xo) teaches the Red Blossom method for brewing pu-erh, which it describes as a diverse and forgiving tea style\", then \"Related ... videos from the same channel: What is Pu-erh Tea? ... Jingmai Raw Pu-erh ...\"."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedBy": "checker",
+  "checkedOn": "2026-10-19",
+  "note": "The first pass had the id and exact title twice and was rejected only for the channel. That missing evidence is now in hand: this pass's second search returned 1UyM3tL27Xo in the www watch form with the same exact title, first, and its summary calls it \"a Red Blossom Tea video\"; the first search returned the same id and title in the /live/ form and its summary names \"Red Blossom Tea Company YouTube videos\" including a \"How to Brew\" video for pu-erh, with descriptions linking to redblossomtea.com. The pair that meets the rule is the first pass's \"\\\"How to Brew Pu-erh Tea\\\" (site youtube.com)\" and this pass's second search (both www, same title). Both queries carried the company's words, so an oEmbed read should confirm the exact channel string (\"Red Blossom Tea Company\" or \"Red Blossom Tea\") before it ships. The presenter is named; the channel is the company. Two searches spent, the first shared with white-tea.",
+  "checkerQueries": [
+    {
+      "q": "\"How to Brew Pu-erh Tea\" diverse forgiving tea style Alice teaches channel [allowed_domains: youtube.com]",
+      "returned": "How to Brew Pu-erh Tea - YouTube | https://www.youtube.com/watch?v=1UyM3tL27Xo (first) | summary: \"Its description says [the presenter] teaches you the Red Blossom method for brewing pu-erh tea, a diverse and forgiving tea style to brew. The snippet doesn't name the channel\". A query with no company name: the same www id and exact title again, its description tied to the company's method, no channel named. The finder's pair still meets the rule: the first pass's quoted title search and this pass's second search, both www with the exact title, the second summary naming the publisher (\"a Red Blossom Tea video ... Related ... videos from the same channel\"), and the shared search naming the series, this id among them in its /live/ form, as \"Red Blossom Tea Company YouTube videos\" whose descriptions link to redblossomtea.com. It teaches brewing pu-erh; it ran first as a live upload but is an ordinary watch page, not a Short or a playlist. Confirmed, with the same caveat as white-tea: \"Red Blossom Tea\" and \"Red Blossom Tea Company\" both appear; the fragment keeps the full company name. No oEmbed read was possible (youtube.com refused through the proxy, 403)."
+    }
+  ],
+  "firstPass": {
+    "id": "pu-erh",
+    "found": false,
+    "url": "https://www.youtube.com/watch?v=1UyM3tL27Xo",
+    "videoId": "1UyM3tL27Xo",
+    "title": "How to Brew Pu-erh Tea",
+    "channel": "Red Blossom Tea Company",
+    "channelKind": "company",
+    "queries": [
+      {
+        "q": "how to brew pu erh tea youtube (site youtube.com)",
+        "returned": "How to Brew Pu-erh Tea - YouTube | https://www.youtube.com/watch?v=1UyM3tL27Xo (first) | summary: \"General method: A Red Blossom-style guide covers pu-erh as a forgiving tea style that suits beginners. [1-1]\", the citation pointing at the first result."
+      },
+      {
+        "q": "\"How to Brew Pu-erh Tea\" (site youtube.com)",
+        "returned": "How to Brew Pu-erh Tea - YouTube | https://www.youtube.com/watch?v=1UyM3tL27Xo (first, the only result with that exact title) | summary: \"another teaches the Red Blossom method, which the presenter calls a forgiving style of brewing\"."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "rejected by the checker: no result names the channel. The finder's summaries say \"A Red Blossom-style guide\" and \"the Red Blossom method\", a brewing method, never a channel, and the string \"Red Blossom Tea Company\" the fragment would show appears in no result. The checker's re-search of the exact title returned no youtube.com result, only a scraped page naming a presenter and the method, and an oEmbed read could not be made from here (youtube.com is not reachable). Channel unproven, so it does not pass; the fragment's video is null. Finder's note: Same id and exact title on both searches, and the first summary ties Red Blossom to this result by citation. The results say \"Red Blossom\"; the full channel string \"Red Blossom Tea Company\" is the finder's reading and an oEmbed read must confirm it before it ships.",
+    "checkerQueries": [
+      {
+        "q": "\"How to Brew Pu-erh Tea\" YouTube Red Blossom Tea Company channel",
+        "returned": "No youtube.com result and no channel for 1UyM3tL27Xo; one scraped third-party page lists a video titled \"How to Brew Pu-erh Tea\" and says \"Alice teaches you the Red Blossom method for brewing\", with no link or channel."
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "darjeeling",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps[3]",
+      "problem": "\"Just off the boil, 200 to 212F\" contradicts itself, because 212F is the boil.",
+      "change": "\"just off the boil\" became \"near the boil\"."
+    },
+    {
+      "field": "recall[0].answer",
+      "problem": "Had the same \"just off the boil\" wording for a 200 to 212F second flush.",
+      "change": "Now \"near the boil\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

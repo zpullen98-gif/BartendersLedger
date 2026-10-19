@@ -1,0 +1,33 @@
+{
+  "id": "latte-macchiato",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps[1]",
+      "problem": "\"Stretch briefly\" gives a latte's thin foam, but the drink wants a cap of foam for the shot to settle beneath; search results (coffeeness, lifeboost and others) describe three layers and more foam than a latte.",
+      "change": "\"Stretch a little longer than for a latte, spin glossy, ...\"."
+    },
+    {
+      "field": "make.steps[2]",
+      "problem": "The shot is pulled and then poured, but no vessel is named, so a trainee could pull it into the glass.",
+      "change": "\"pull a single or a double into a small jug.\""
+    },
+    {
+      "field": "quiz[2].options",
+      "problem": "The answer was the longest option and the only one about the definition.",
+      "change": "\"Built on a ristretto base\", \"Always served over ice\", \"Caramel syrup by definition\"."
+    },
+    {
+      "field": "quiz[0].options",
+      "problem": "The answer was the longest option.",
+      "change": "\"Short or small\" became \"Short or restricted\" (ristretto's meaning, a real confusion)."
+    },
+    {
+      "field": "sources",
+      "problem": "The three layers and the milk-first build rested only on the Macchiato card's \"layered and pale\".",
+      "change": "Added the coffeeness and lifeboost pages read in a search result."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

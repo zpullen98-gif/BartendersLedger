@@ -1,0 +1,66 @@
+{
+  "id": "espresso",
+  "name": "Espresso",
+  "respell": "es-PRESS-oh",
+  "aka": ["caffè", "short black", "a shot"],
+  "group": "espresso",
+  "kind": "coffee",
+  "caffeine": "All of it from the coffee: a double carries roughly twice a single’s, and the bean and the dose move it.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on the menus: ask at lineup whether the bar has an espresso machine and pulls espresso on request, and at what price."
+  },
+  "what": "Espresso is a method, not a bean or a roast: hot water is forced at about nine bar of pressure through a fine, tamped bed of coffee, so a small, dense shot comes out under a layer of crema. A modern double takes 18 to 20 grams of ground coffee and yields about twice that weight in liquid. It is the base of every drink on an espresso menu.",
+  "taste": "Syrupy and dense under the crema, sweet through the middle, with a bitter edge at the back. Light roasts lean towards citrus and berry, darker roasts towards cocoa and nut.",
+  "make": {
+    "steps": [
+      "Purge the group head and wipe the basket dry, then dose 18 to 20 grams of freshly ground coffee into a double basket.",
+      "Distribute the grounds evenly, tamp level, and lock the portafilter into the group.",
+      "Start the shot at once, with a warmed demitasse standing on a scale under the spouts.",
+      "Stop at about twice the dose in liquid, 36 to 40 grams, in 25 to 30 seconds.",
+      "Taste it: sour and fast means one step finer on the grinder; harsh and slow means one step coarser.",
+      "Send it straight away, before the crema thins."
+    ],
+    "ratio": "About 1:2, dose to yield, both weighed in grams",
+    "dose": "18 to 20 g of fine, fresh ground coffee in a double basket",
+    "temp": "Brew water at 195 to 205F (90 to 96C)",
+    "time": "25 to 30 seconds from starting the pump",
+    "cup": "A warmed demitasse, 2 to 3 oz"
+  },
+  "serve": "Take the demitasse from the top of the machine so it is warm, set it on a saucer with a small spoon, and bring sugar and a glass of still water beside it. Walk it out the moment it is pulled, because crema is a foam and thins as it stands. After dinner it goes out with dessert or just after it.",
+  "story": "Espresso grew up in Italian cafés in the early twentieth century, when steam machines first made coffee to order in under a minute. The spring lever machines that followed the Second World War pushed the water through at far higher pressure and gave the shot its crema, and the short cup drunk standing at the bar became the Italian caffè. A guest likes to hear that espresso names the way the coffee is made, not a bean or a roast, so any coffee can be pulled as espresso.",
+  "guest": "Espresso is a short, dense shot, sweet in the middle with a bitter edge. Let me check with the bar whether we can pull one for you.",
+  "watch": [
+    "A shot that gushes or sprays points to an uneven or channelled puck before the grinder: pull it again before changing the grind.",
+    "A guest asking which espresso you use is asking about the bean: answer with the origin and the roast.",
+    "Crema thins as it stands, so a shot left waiting on the pass is pulled again, not sent."
+  ],
+  "library": { "ref": "Espresso", "study": [["shot", "Dose, yield and ratio"], ["shot", "Dialling in, as a procedure"]], "cocktail": "", "na": "" },
+  "table": { "recipe": "" },
+  "search": "how to pull a shot of espresso",
+  "recall": [
+    { "id": "make", "prompt": "How do you pull a double espresso, and what goes into it?",
+      "answer": "18 to 20 grams of fine, freshly ground coffee in a double basket, tamped level, then about twice that weight in liquid, 36 to 40 grams, in 25 to 30 seconds, into a warmed demitasse. Syrupy and sweet, with a bitter edge." }
+  ],
+  "quiz": [
+    { "id": "q1", "q": "A double espresso starts with 18 grams of dry coffee. Roughly what weight of liquid should end up in the cup?",
+      "options": ["36 grams", "18 grams", "54 grams", "72 grams"], "a": 0,
+      "explain": "A modern normale runs about 1:2, dose to yield by weight, so 18 grams in gives about 36 grams out. Houses run anywhere from 1:1.5 to 1:2.5." },
+    { "id": "q2", "q": "A shot ran fast and tastes sour. What is the first change to make?",
+      "options": ["Grind one step finer", "Grind one step coarser", "Tamp much harder", "Put more coffee in the basket"], "a": 0,
+      "explain": "Sour and fast means under-extracted, so grind finer to slow the water. A bigger dose changes the drink you sold, and tamp force matters less than a level bed." },
+    { "id": "q3", "q": "What is the tan foam on a freshly pulled espresso?",
+      "options": ["Roast gas foamed out of the coffee by pressure", "Milk fat whipped into the shot by steam", "Oil pressed out of the beans as they are ground", "Sugar in the coffee caramelised by the water"], "a": 0,
+      "explain": "Roasting leaves carbon dioxide in the bean. Pressure drives it into solution and it foams out as the shot leaves the basket, so crema reads freshness, not quality." }
+  ],
+  "sources": [
+    { "title": "The Ledger’s Library: the Espresso card", "url": "" },
+    { "title": "The Ledger’s Library: Dose, yield and ratio", "url": "" },
+    { "title": "The Ledger’s Library: Dialling in, as a procedure", "url": "" },
+    { "title": "The Ledger’s Library: What the machine actually does", "url": "" },
+    { "title": "Espresso machine (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Espresso_machine" },
+    { "title": "Short History of Espresso", "url": "https://www.home-barista.com/espresso-guide-short-history.html" }
+  ],
+  "video": null
+}

@@ -1,0 +1,135 @@
+{
+  "id": "americano",
+  "name": "Americano",
+  "respell": "ah-meh-ree-KAH-noh",
+  "aka": [
+    "caffè americano"
+  ],
+  "group": "long",
+  "kind": "coffee",
+  "caffeine": "Only the caffeine of its shots: a bigger cup adds water, not caffeine, so sell another shot instead.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on the menus: ask at lineup whether there is an espresso machine, whether the bar will make an americano on request, and the price."
+  },
+  "what": "An americano is an espresso lengthened with hot water poured onto it, which breaks the crema. A double with 4 to 6 oz of water runs about one part espresso to three of water in a small cup, one to four or five in a large. The name is Italian for American coffee, and it is not a lungo.",
+  "taste": "Clean and long, closer to filter coffee than espresso, the shot's body still under it and the crema broken by the pour.",
+  "make": {
+    "steps": [
+      "Pull a double, 18 to 20 g in and 36 to 40 g out, into a warmed 8 oz cup.",
+      "Pour 4 to 6 oz of hot water from the machine tap onto the shot.",
+      "Leave half an inch of headroom, with milk or cream on the side."
+    ],
+    "ratio": "About 1:3 espresso to water, 1:4 to 1:5 large",
+    "dose": "Double, 18 to 20 g; 4 to 6 oz water",
+    "temp": "Brew 195 to 205F (90 to 96C); the tap runs hotter",
+    "time": "25 to 30 second shot, water at once",
+    "cup": "Warmed 8 oz cup or mug"
+  },
+  "serve": "In a warmed cup or mug on a saucer, milk and cream on the side. The tap on many machines runs near boiling, so it lands hotter than any milk drink; tell the guest it may need a minute.",
+  "story": "The popular story credits American soldiers in Italy during the Second World War, watering espresso down towards the coffee of home. It is widely told and not firmly documented, so offer it as a story.",
+  "guest": "An americano is a double espresso lengthened with hot water, clean and close to filter coffee. Milk or cream on the side?",
+  "watch": [
+    "A bigger americano is not stronger; offer an extra shot instead of a bigger cup.",
+    "At the bar an Americano is also Campari, sweet vermouth and soda; ask which one the guest means.",
+    "Iced, it goes into a cold glass with plenty of ice, never a cup off the machine."
+  ],
+  "library": {
+    "ref": "Americano",
+    "study": [
+      [
+        "shot",
+        "Dose, yield and ratio"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make americano",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is an americano made, and what goes in it?",
+      "answer": "A double, 18 to 20 g in and 36 to 40 g out, with 4 to 6 oz of hot water poured onto it in a warmed 8 oz cup: clean, long, crema broken."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What separates an americano from a long black?",
+      "options": [
+        "The shot is a ristretto",
+        "Water goes onto the shot",
+        "Milk is added last",
+        "The water is cold"
+      ],
+      "a": 1,
+      "explain": "Water poured onto a finished shot breaks the crema; a long black pulls the shot onto the water, keeping it whole."
+    },
+    {
+      "id": "q2",
+      "q": "A guest wants a large americano because it is stronger. What is true?",
+      "options": [
+        "It holds only its shots' caffeine",
+        "It holds twice a small's caffeine",
+        "Extra water pulls more caffeine",
+        "It is stronger built on a lungo"
+      ],
+      "a": 0,
+      "explain": "Water after the shot lowers concentration and adds no caffeine; sell another shot instead."
+    },
+    {
+      "id": "q3",
+      "q": "What is the popular story behind the name americano?",
+      "options": [
+        "A Campari highball renamed for coffee",
+        "American soldiers in Italy thinning espresso",
+        "A blend first roasted in New York",
+        "An Australian name for long coffee"
+      ],
+      "a": 1,
+      "explain": "Widely told about the Second World War, but not firmly documented, so tell it as a story."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Card: Americano",
+      "url": ""
+    },
+    {
+      "title": "Lesson: Dose, yield and ratio",
+      "url": ""
+    },
+    {
+      "title": "Cocktail: Americano",
+      "url": ""
+    },
+    {
+      "title": "House pack: lineup question a-zr8ze4mu",
+      "url": ""
+    },
+    {
+      "title": "Caffè americano",
+      "url": "https://en.wikipedia.org/wiki/Caff%C3%A8_americano"
+    },
+    {
+      "title": "Caffè Americano",
+      "url": "https://caffeatlas.com/coffee/caffe-americano"
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=kqbw6bVB01I",
+    "id": "kqbw6bVB01I",
+    "title": "Americano Coffee Recipe: The Easy Way To Make An Americano At Home",
+    "channel": "Carabello Coffee",
+    "channelKind": "company",
+    "label": "How to make an americano",
+    "watchFor": "An espresso lengthened with hot water into a full cup. Watch how much water goes in against the shot: that ratio, not a longer pull, sets the strength, and it keeps the cup clean rather than bitter.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

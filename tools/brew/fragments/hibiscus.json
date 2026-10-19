@@ -1,0 +1,148 @@
+{
+  "id": "hibiscus",
+  "name": "Hibiscus tea",
+  "respell": "hih-BIS-kus",
+  "aka": [
+    "agua de Jamaica",
+    "flor de Jamaica",
+    "bissap",
+    "karkadé",
+    "sorrel"
+  ],
+  "group": "herbal",
+  "kind": "tea",
+  "caffeine": "None: hibiscus is the dried calyx of roselle, not the tea plant, though a blend may add black tea or other plants.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup whether the bar keeps hibiscus, hot or iced, which brand, loose or bagged, and the price."
+  },
+  "what": "Hibiscus tea is a tisane of the dried red calyx of roselle, Hibiscus sabdariffa, the fleshy cup around the seed pod: not the garden flower and not tea. Steeped, it gives a ruby liquid sharp with fruit acids and tasting of cranberry. Mexico drinks it as agua de Jamaica, West Africa as bissap, Egypt as karkadé and Jamaica as sorrel, and on a bar it doubles as a tart, red zero proof base.",
+  "taste": "Tart and bright, cranberry-sour with a floral thread, and close to sour unsweetened, so most cups want sugar, honey or agave. Boiled hard, it picks up a dry, dusty finish from the seed fragments.",
+  "make": {
+    "steps": [
+      "Rinse the dried calyces briefly in cold water to shift dust, and drain them at once.",
+      "Weigh 2 to 3 g per 6 to 8 oz for a cup, or about 45 g per litre for a strong batch.",
+      "Bring fresh water to the boil; for a concentrate, let it settle just off the boil, near 195F (90C).",
+      "Pour it over and steep 5 to 10 minutes for a hot cup, or about 20 minutes off the heat for a concentrate.",
+      "Strain without pressing or wringing, which clouds the liquid and leaves grit.",
+      "For a batch, sweeten while warm, then chill hard, and taste again cold, because cold flattens sugar.",
+      "Iced, shake 5 oz of chilled strong hibiscus with a half ounce each of lime and agave, and pour over ice."
+    ],
+    "ratio": "2 to 3 g per 6 to 8 oz; about 45 g per litre",
+    "dose": "2 to 3 g calyces per cup; sweetener to taste; lime for iced",
+    "temp": "195 to 212F (90 to 100C); off the boil keeps the perfume",
+    "time": "5 to 10 minutes hot; about 20 minutes for a concentrate",
+    "cup": "Warmed glass mug, 8 to 10 oz; iced, a Collins"
+  },
+  "serve": "Hot, it goes in a warmed glass pot or mug, because the colour is half the sale, with sugar or honey beside it and a dish for the bag. Iced, the Library build is shaken with lime and agave and poured into a Collins over ice, with a lime wheel and mint. Pour with care: it reddens anything it touches.",
+  "story": "Hibiscus is drunk on three continents. Its origin is argued between Sudan and West Africa; China, Sudan and Thailand are the big growers today, and Mexico’s crop is rising. Every culture that grows it drinks it: agua de Jamaica in Mexico, sweet and iced; bissap in West Africa, sometimes with mint and orange blossom water; karkadé in Egypt; sorrel in Jamaica, spiced with ginger and pimento. A guest who knows any of those names already knows the taste.",
+  "guest": "Hibiscus is a dried red flower calyx rather than tea, so it has no caffeine of its own; it tastes tart, like cranberry, and works hot or over ice.",
+  "watch": [
+    "It stains: the red marks linen, white shirts and anything it touches, so pour with care and wipe the station at once.",
+    "A long rolling boil, as some agua de Jamaica recipes use, can add a dry, dusty finish, and wringing adds cloud and grit; strain without pressing.",
+    "A guest asking for sorrel may mean this Caribbean hibiscus drink, not the sour green leaf of the kitchen; ask which.",
+    "Sweeten an iced batch a shade past correct, because cold flattens sugar on the tongue, and taste it cold before it goes out."
+  ],
+  "library": {
+    "ref": "Herbal Tisane",
+    "study": [
+      [
+        "leaf",
+        "Tisanes are not tea"
+      ]
+    ],
+    "cocktail": "",
+    "na": "Iced Hibiscus Tea"
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to brew hibiscus tea",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Hibiscus tea: how is it brewed, and how does the Library build it iced?",
+      "answer": "Dried calyces steeped in water from just off the boil to a full boil, 5 to 10 minutes for a cup or about 20 for a concentrate, strained without pressing. Iced: 5 oz chilled strong hibiscus, a half ounce each of lime and agave, shaken and poured over ice in a Collins. Tart and cranberry-red."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Which part of which plant goes into hibiscus tea?",
+      "options": [
+        "The petals of the garden hibiscus",
+        "The leaf of a red Camellia sinensis",
+        "The cut leaf of a South African shrub",
+        "The dried red calyx of roselle"
+      ],
+      "a": 3,
+      "explain": "It is Hibiscus sabdariffa, roselle: the fleshy red calyx around the seed pod, dried. The garden flower is grown for show, no tea leaf goes in, and the South African shrub is rooibos."
+    },
+    {
+      "id": "q2",
+      "q": "A guest from Jamaica asks the bar for sorrel. What do they most likely mean?",
+      "options": [
+        "A purée of sour green leaves",
+        "A tisane of the sorrel leaf",
+        "A spiced hibiscus drink",
+        "A ginger beer with lime"
+      ],
+      "a": 2,
+      "explain": "In Jamaica, sorrel is the hibiscus calyx steeped with ginger, pimento and spice. The sour green leaf of the kitchen is another plant; sorrel sold dried or as a drink is hibiscus."
+    },
+    {
+      "id": "q3",
+      "q": "Why do some recipes steep hibiscus just off the boil and strain it without pressing?",
+      "options": [
+        "Boiling adds a dusty finish; wringing adds grit",
+        "Pressing the seeds releases caffeine into the drink",
+        "Boiling water makes the fruit acids taste sweet",
+        "Gentler heat stops the drink staining linen"
+      ],
+      "a": 0,
+      "explain": "Colour and tartness leave the calyces fast near 195F (90C). A hard boil drives off the perfume and seed fragments give up tannin; wringing adds cloud and grit."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ledger Library: The Leaf, Tisanes are not tea",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library card: Herbal Tisane",
+      "url": ""
+    },
+    {
+      "title": "Ledger zero proof: Iced Hibiscus Tea",
+      "url": ""
+    },
+    {
+      "title": "World Table recipe: Bissap",
+      "url": ""
+    },
+    {
+      "title": "World Table recipe: Sorrel",
+      "url": ""
+    },
+    {
+      "title": "World Table lexicon: Sorrel",
+      "url": ""
+    },
+    {
+      "title": "House pack component: Hibiscus",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=iuxvz7bmwzQ",
+    "id": "iuxvz7bmwzQ",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "How to make iced hibiscus, agua de Jamaica",
+    "watchFor": "A strong hot steep made first and then let down with cold water, the batch method behind agua de Jamaica. Watch how much dried hibiscus goes in and when the sweetener is added.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

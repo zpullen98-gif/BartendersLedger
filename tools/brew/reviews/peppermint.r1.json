@@ -1,0 +1,33 @@
+{
+  "id": "peppermint",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "quiz[0].options",
+      "problem": "The right option was 57 characters against 45 to 47 and the only specific one (the nerve receptor): a length clue.",
+      "change": "Shortened it to “Menthol triggers the nerve receptor for cold” (44)."
+    },
+    {
+      "field": "quiz[1].options",
+      "problem": "The right option (Spearmint, 43 characters) was the longest of the four.",
+      "change": "Lengthened option A to “Peppermint, the same leaf that is dried for tea” (47)."
+    },
+    {
+      "field": "quiz[1].explain",
+      "problem": "“Pennyroyal never goes near food” is not true as history; the World Table Mint lexicon gives it as a rule, never cook with pennyroyal.",
+      "change": "Now “pennyroyal is never cooked with”."
+    },
+    {
+      "field": "watch[1]",
+      "problem": "The World Table Mint lexicon says to steep mint below the boil because boiled mint goes bitter, against the Library card’s full boil for herbals; the fragment left that disagreement silent. “The bar’s mojito sprigs” also implied house stock.",
+      "change": "The fresh sprig line now says to steep it below the boil (the lexicon’s rule, written for the fresh herb); dried peppermint keeps the Library’s full boil. Dropped “the bar’s”."
+    },
+    {
+      "field": "make.time",
+      "problem": "The Library contradicts itself on herbal steep time: the Tea Service lesson “Tea is not one temperature and one timer” groups herbal infusions with black tea at “the full boil and three to five minutes”, while the Herbal Tisane card gives 5 to 10 minutes infused and the steep lesson says the herbal bag can sit. A brew guide (Black Oak Coffee) also gives chamomile 5 to 10 minutes.",
+      "change": "None to the fragment, which follows the card. The lesson sentence is loose and should be fixed in js/data-coffee.js (for example “three to five minutes for black, longer for herbal infusions”); left for the integrator."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

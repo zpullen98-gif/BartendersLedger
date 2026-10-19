@@ -1,0 +1,15 @@
+{
+  "id": "irish-coffee",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=sJsY1LokABA",
+  "videoId": "sJsY1LokABA",
+  "title": "Irish Coffee - hot AND cold",
+  "channel": "Anders Erickson",
+  "channelKind": "person",
+  "queries": [],
+  "verifiedBy": "pack",
+  "checkedOn": "2026-10-18",
+  "note": "The plan names no Library film. The pack carries v-y9e6n5ra, whose itemIds hold b-xs168hf4, the house Irish coffee this entry maps to, and whose componentIds hold c-ceqt4nz5 (Irish coffee) and c-q898v0k9 (Floating the cream). Url, id, title and channel are copied exactly from that pack record. A bartender’s own channel (Anders Erickson is on people.json), so channelKind person and the fragment ships title and channel empty. The pack also tags no other video to b-xs168hf4. No search spent.",
+  "checkedBy": "checker",
+  "checkerNote": "Confirmed by the checker on 2026-10-19: url, id sJsY1LokABA, title and channel equal the pack record v-y9e6n5ra exactly, and that record’s itemIds hold b-xs168hf4, the printed Irish coffee this entry maps to. It teaches the drink and its cream float. A bartender’s own channel, so person is right and the fragment ships title and channel empty. No search spent."
+}

@@ -1,0 +1,13 @@
+{
+  "id": "cafe-brulot",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "quiz[1].options",
+      "problem": "The right option (\"Last, after the spirit flames\") was the longest of the four.",
+      "change": "Distractor lengthened to \"First, so the spirit can float\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

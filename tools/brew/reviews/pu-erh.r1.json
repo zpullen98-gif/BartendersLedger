@@ -1,0 +1,23 @@
+{
+  "id": "pu-erh",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "what",
+      "problem": "Said flatly that all pu-erh is \"worked by microbes\", while the story (and the Library) say that for aged raw it is argued whether this is microbes or slow oxidation. Also said sheng \"is pressed into cakes\", where the lesson says \"usually\".",
+      "change": "Added \", though for aged raw the trade argues it\", and \"is pressed\" became \"is usually pressed\"."
+    },
+    {
+      "field": "make.steps[5]",
+      "problem": "Gave a Western 3 to 5 minutes at a full boil for all pu-erh. The Library gives that only for ripe pu-erh (\"Tea is not one temperature\"); young raw wants cooler water (card).",
+      "change": "Now \"For a Western pot of ripe pu-erh, steep 3 to 5 minutes at a full boil after the rinse.\""
+    },
+    {
+      "field": "make.dose",
+      "problem": "Gave no weight.",
+      "change": "Now \"Cake or loose leaf, weighed: 2 to 3 g a cup Western\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

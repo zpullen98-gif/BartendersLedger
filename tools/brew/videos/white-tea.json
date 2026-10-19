@@ -1,0 +1,57 @@
+{
+  "id": "white-tea",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=OoqQwPLq4wM",
+  "videoId": "OoqQwPLq4wM",
+  "title": "How to Brew Green & White Tea",
+  "channel": "Red Blossom Tea Company",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "Red Blossom Tea Company youtube channel how to brew tea videos [allowed_domains: youtube.com] (one search serving white-tea and pu-erh)",
+      "returned": "OoqQwPLq4wM absent. Master the Art of Tea Brewing ol3xxRDnTCY; How to Brew Pu-erh Tea | https://www.youtube.com/live/1UyM3tL27Xo; How to Brew Black Tea | EIXX-p88XOQ; How to Brew Formosa Oolong; How to Use a Gaiwan; How to Re-steep Your Tea; How to Brew Anxi Oolong (Tieguanyin) | summary: \"several Red Blossom Tea Company YouTube videos that teach brewing, mostly hosted by [the presenter] ... Each one presents the company's own brewing method for that style ... Each video description links to the company's site (redblossomtea.com)\"."
+    },
+    {
+      "q": "Red Blossom Tea green and white tea brewing Alice youtube [allowed_domains: youtube.com]",
+      "returned": "How to Brew Green & White Tea - YouTube | https://www.youtube.com/watch?v=OoqQwPLq4wM (first) | summary: \"The most relevant result is a Red Blossom Tea video titled 'How to Brew Green & White Tea,' where [the presenter] demonstrates the company's method for these two styles. The description says the styles can be a bit challenging to brew but are rewarding once mastered.\" and \"Related Red Blossom videos from the same channel: Master the Art of Tea Brewing ... Our Tea Brewing Guides ... Bai Mu Dan (White Peony) ...\"."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedBy": "checker",
+  "checkedOn": "2026-10-19",
+  "note": "The first pass had the id and exact title twice (its own plan-phrase and quoted-title searches) and was rejected only for the channel. That missing evidence is now in hand: this pass's second search returned OoqQwPLq4wM with the same exact title, first, and its summary names the publisher (\"a Red Blossom Tea video ... the company's method ... Related Red Blossom videos from the same channel\"); the first search's summary calls the series \"Red Blossom Tea Company YouTube videos\" whose descriptions link to redblossomtea.com. The pair that meets the rule is the first pass's \"\\\"How to Brew Green & White Tea\\\" (site youtube.com)\" and this pass's second search. One summary says \"Red Blossom Tea\", the other \"Red Blossom Tea Company\"; both queries carried those words, so an oEmbed read should confirm the exact channel string before it ships. The presenter is named; the channel is the company. Two searches spent, the first shared with pu-erh.",
+  "checkerQueries": [
+    {
+      "q": "\"How to Brew Green & White Tea\" challenging rewarding redblossomtea.com [allowed_domains: youtube.com]",
+      "returned": "How to Brew Green & White Tea - YouTube | https://www.youtube.com/watch?v=OoqQwPLq4wM (first); Master the Art of Tea Brewing ol3xxRDnTCY (second) | summary: \"It turned up a Red Blossom video that covers this topic ... [the presenter] demonstrates the company's method for green and white tea, which the video describes as two delicate styles that can be a bit challenging to brew\". The same www id and exact title a fourth time, the publisher again Red Blossom, beside a video the finder's shared search placed among \"Red Blossom Tea Company YouTube videos\". The finder's pair meets the rule: the first pass's quoted title search and this pass's second search, both www with the exact title, the second summary naming the publisher (\"a Red Blossom Tea video ... Related Red Blossom videos from the same channel\"). The channel is the company, the presenter only presents. It teaches brewing white tea (with green); not a Short, a playlist or an advert. Confirmed, with one caveat: the results name the company as both \"Red Blossom Tea\" and \"Red Blossom Tea Company\"; the fragment keeps the full company name from the shared summary. No oEmbed read was possible (youtube.com refused through the proxy, 403)."
+    }
+  ],
+  "firstPass": {
+    "id": "white-tea",
+    "found": false,
+    "url": "https://www.youtube.com/watch?v=OoqQwPLq4wM",
+    "videoId": "OoqQwPLq4wM",
+    "title": "How to Brew Green & White Tea",
+    "channel": "Red Blossom Tea Company",
+    "channelKind": "company",
+    "queries": [
+      {
+        "q": "how to brew white tea youtube (site youtube.com)",
+        "returned": "How to Brew Green & White Tea - YouTube | https://www.youtube.com/watch?v=OoqQwPLq4wM | summary: \"Red Blossom method: Alice's video applies that method to both green and white tea, which can be tricky to brew.\""
+      },
+      {
+        "q": "\"How to Brew Green & White Tea\" (site youtube.com)",
+        "returned": "How to Brew Green & White Tea - YouTube | https://www.youtube.com/watch?v=OoqQwPLq4wM (first) | summary: \"Red Blossom method: One video demonstrates this technique for green and white tea\"; it is the only result that covers green and white together."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "rejected by the checker: no result names the channel. The finder's two summaries say only \"Red Blossom method\" and \"Alice's video\", a brewing method and a presenter, and the string \"Red Blossom Tea Company\" the fragment would show appears in no result. The checker's re-search of the exact title returned no youtube.com result and no channel, and an oEmbed read could not be made from here (youtube.com is not reachable). Channel unproven, so it does not pass; the fragment's video is null. Finder's note: Same id and exact title on both searches. Both summaries name Red Blossom, a tea house, and tie it to the one green and white video. The results say \"Red Blossom\"; the full channel string \"Red Blossom Tea Company\" is the finder's reading and an oEmbed read must confirm it before it ships. The presenter is named in a summary; the channel is the company.",
+    "checkerQueries": [
+      {
+        "q": "\"How to Brew Green & White Tea\" Red Blossom Tea Company YouTube video",
+        "returned": "No youtube.com result and no channel for OoqQwPLq4wM; only redblossomtea.com product pages and unrelated brewing guides. Summary: \"I couldn't find the Red Blossom Tea Company YouTube video\"."
+      }
+    ]
+  }
+}

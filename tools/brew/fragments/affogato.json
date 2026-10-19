@@ -1,0 +1,114 @@
+{
+  "id": "affogato",
+  "name": "Affogato",
+  "respell": "ah-foh-GAH-toh",
+  "aka": [
+    "affogato al caffè"
+  ],
+  "group": "cold",
+  "kind": "coffee",
+  "caffeine": "The caffeine of one or two espresso shots, served as dessert, so mention it to a late diner.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on the menus: ask at lineup whether the bar will pull an espresso, at what price, and whether the kitchen will send vanilla ice cream for it."
+  },
+  "what": "Italian for drowned: two scoops of vanilla or fior di latte gelato in a chilled glass, hot espresso poured over them at the table. Hot and cold, bitter and sweet, drink and dessert in one glass, lasting only as long as the gelato holds. Italy files it under coffee as much as dessert; the scoop and the shot are the whole recipe.",
+  "taste": "Hot, bitter espresso against cold, sweet cream: the edge melts into coffee cream, the centre stays frozen, and the end drinks like sweet, milky coffee.",
+  "make": {
+    "steps": [
+      "Chill the glasses or small bowls, scoop in two generous balls of gelato, and hold them in the freezer.",
+      "Pull a double espresso at the last moment, 36 to 40 g out.",
+      "Carry the gelato and the hot shot to the table separately.",
+      "Pour the espresso over the gelato in front of the guest.",
+      "Add a thimble of amaretto or Frangelico, crumbled amaretti or shaved dark chocolate only if the guest asks."
+    ],
+    "ratio": "Two scoops of gelato to one double espresso",
+    "dose": "2 scoops vanilla gelato; a double espresso, 36 to 40 g",
+    "temp": "Espresso brewed 195 to 205F (90 to 96C)",
+    "time": "Poured within seconds; eaten in about four minutes",
+    "cup": "Chilled glass or small bowl, 5 to 6 oz, small spoon"
+  },
+  "serve": "The glass arrives chilled with the gelato in, the espresso beside it in a warmed demitasse, a small spoon alongside. Pour at the table: the drowning is the ceremony, and poured in the kitchen it lands as coffee-flavoured milk. Offer it as dessert menus go down, once lineup confirms the bar and kitchen can make it.",
+  "story": "Affogato means drowned, and the dish is the drowning: about the shortest recipe a kitchen can send and still a whole course, inside a two-minute window. The one rule is simultaneity. Guests enjoy hearing that Italians count it a coffee as much as a dessert, and that amaretto, Frangelico, crumbled amaretti or dark chocolate each has precedent beside it.",
+  "guest": "Hot espresso poured over cold vanilla gelato at the table: dessert and coffee in one glass. I can ask whether the bar will pull a shot for it.",
+  "watch": [
+    "Never pour it in the kitchen and walk it out: by the time it lands, the gelato has melted into the coffee.",
+    "It carries a shot's caffeine; for a late diner, ask the bar whether a decaf shot is possible.",
+    "Gelato, amaretti and liqueur raise dairy, nut and alcohol questions: follow the house allergen procedure, never answer from memory."
+  ],
+  "library": {
+    "ref": "",
+    "study": [],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": "affogato-al-caffe"
+  },
+  "search": "how to make an affogato",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Affogato: how is it made and served?",
+      "answer": "Two scoops of vanilla or fior di latte gelato in a chilled glass, a fresh double espresso poured over at the table. Hot and bitter over cold and sweet, eaten at once with a small spoon."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What does the Italian name affogato mean?",
+      "options": [
+        "Frozen",
+        "Stained",
+        "Drowned",
+        "Sweetened"
+      ],
+      "a": 2,
+      "explain": "Affogato means drowned. Macchiato, stained, is espresso marked with milk."
+    },
+    {
+      "id": "q2",
+      "q": "Why is the espresso poured at the table, not in the kitchen?",
+      "options": [
+        "A hot shot cracks a chilled glass",
+        "The crema forms only after it lands",
+        "The shot must cool first",
+        "The gelato melts within moments"
+      ],
+      "a": 3,
+      "explain": "The contrast lasts minutes; poured early it arrives as coffee-flavoured milk, and the pour is the ceremony."
+    },
+    {
+      "id": "q3",
+      "q": "Which liqueur has precedent beside an affogato?",
+      "options": [
+        "A thimble of Campari",
+        "A thimble of amaretto",
+        "A thimble of limoncello",
+        "A thimble of crème de menthe"
+      ],
+      "a": 1,
+      "explain": "Amaretto or Frangelico, crumbled amaretti and shaved dark chocolate are the additions with precedent; the other three are not among them."
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Table: Affogato al Caffè",
+      "url": ""
+    },
+    {
+      "title": "World Table lexicon: espresso and coffee",
+      "url": ""
+    },
+    {
+      "title": "Library: Espresso card",
+      "url": ""
+    },
+    {
+      "title": "Pack: lineup question on espresso",
+      "url": ""
+    }
+  ],
+  "video": null
+}

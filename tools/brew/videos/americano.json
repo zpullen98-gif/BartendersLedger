@@ -1,0 +1,66 @@
+{
+  "id": "americano",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=kqbw6bVB01I",
+  "videoId": "kqbw6bVB01I",
+  "title": "Americano Coffee Recipe: The Easy Way To Make An Americano At Home",
+  "channel": "Carabello Coffee",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "\"Americano Coffee Recipe: The Easy Way To Make An Americano At Home\"",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=kqbw6bVB01I \"Americano Coffee Recipe: The Easy Way To Make An Americano At Home - YouTube\" (first result, exact title); summary: \"a YouTube video in which [the barista] from Carabello Coffee shows you how to make an Americano\", linking a full recipe card. Others: eJBWVNrlsnk, TIroArvJy30, kIa_fRaBb2A, vXZUOmxlvAk and several Shorts."
+    },
+    {
+      "q": "Carabello Coffee americano recipe youtube",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://youtube.com/watch?pp=ygULI2VzcHJlc3NvdXM%3D&v=kqbw6bVB01I \"Americano Coffee Recipe: The Easy Way To Make An Americano At Home - YouTube\" (first result, same id and exact title; the bare youtube.com host normalises to www); summary: \"The top result is a Carabello Coffee video\", whose description says \"their barista ... returns to demonstrate how to make an Americano\". Also Carabello’s Dx1SM5darbI and OB4hz6hpjPI (another channel, unnamed)."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-19",
+  "checkedBy": "checker",
+  "note": "Same watch id and exact title in two different searches of this pass, and a third time in the first pass’s checker query (www.youtube.com/watch?v=kqbw6bVB01I, named there as the Carabello Coffee video); every summary ties that id and title to Carabello Coffee, a roaster, as the uploader. Company. This is the evidence the first pass lacked for kqbw6bVB01I (seen once); OB4hz6hpjPI, which the checker rejected, stays rejected. It teaches making an americano; not a Short, playlist or advert. \"The Easy Way\" is the channel’s own title, never drawn on the page. Left for others: Carabello Coffee is not yet on companies.json. Searches spent: 2. Checked by the checker on 2026-10-19: the two queries of this pass are different and returned the same id and exact title (the bare youtube.com host with a pp parameter normalises to www), matching the first pass's checker query, and every summary names Carabello Coffee as the uploader. OB4hz6hpjPI stays rejected. It teaches making an americano; a watch link, not a Short, playlist or advert. A coffee roaster, so company is right; \"The Easy Way\" is the channel's own title and video.title is never drawn. No search spent. Confirmed.",
+  "firstPass": {
+    "id": "americano",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make americano youtube",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=OB4hz6hpjPI \"How to Make an Americano\" (first result); summary: \"A video from Carabello Coffee shows how to make an Americano, and its description links a full recipe card.\""
+      },
+      {
+        "q": "\"How to Make an Americano\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=OB4hz6hpjPI \"How to Make an Americano\" (second result; the first was 6uBQiAdqo0U \"How to make an Americano - YouTube\"); the summary named no channel."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "rejected by the checker: the channel is not named for this video. The finder tied Carabello Coffee to OB4hz6hpjPI \"How to Make an Americano\" by elimination only; the checker’s search shows the Carabello Coffee video the first summary described is a different one, kqbw6bVB01I (its description links the recipe card), and OB4hz6hpjPI belongs to another, unnamed channel. Same id and title in two searches is not enough without the channel, so the fragment’s video is null and the page offers the search link alone. Candidate kept for the record: https://www.youtube.com/watch?v=OB4hz6hpjPI \"How to Make an Americano\". (kqbw6bVB01I was seen only once and its title carries \"The Easy Way\"; it was not confirmed.) Finder’s note, kept: Same watch id and same exact title in both searches. The channel rests on the first summary, which names Carabello Coffee for a barista-led \"how to make an Americano\" video without printing its id; of the listed titles only OB4hz6hpjPI fits that line, but the tie is an inference, so the checker must confirm the channel (oEmbed) before sign-off. Carabello Coffee is a roaster, channelKind company; it is not yet on tools/brew/companies.json, which the validator requires for a company channel, and this role may not write that file.",
+    "checkerQueries": [
+      {
+        "q": "Carabello Coffee \"How to Make an Americano\" video",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "First result https://www.youtube.com/watch?v=kqbw6bVB01I \"Americano Coffee Recipe: The Easy Way To Make An Americano At Home - YouTube\", which the summary names as the Carabello Coffee video (with a recipe card linked from its description), plus Carabello’s Dx1SM5darbI \"Americano vs. Coffee: The Differences In Taste & How It’s Prepared\". OB4hz6hpjPI \"How to Make an Americano\" came back (m.youtube.com and www.youtube.com) but the summary put it among the results from other channels and named no channel for it."
+      }
+    ]
+  }
+}

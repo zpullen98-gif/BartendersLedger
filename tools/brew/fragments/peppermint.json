@@ -1,0 +1,139 @@
+{
+  "id": "peppermint",
+  "name": "Peppermint tea",
+  "respell": "",
+  "aka": [
+    "mint tea",
+    "peppermint tisane"
+  ],
+  "group": "herbal",
+  "kind": "tea",
+  "caffeine": "None of its own: peppermint is a mint leaf, not the tea plant, but a blend can carry other plants, so read the box.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup whether the bar keeps peppermint tea, which brand, loose or bagged, how it goes out and the price."
+  },
+  "what": "Peppermint tea is a tisane of dried peppermint leaves, and not tea at all: a leaf, but not the leaf of Camellia sinensis. Peppermint is the mint with far more menthol than spearmint, the cooking mint, which is why it tastes cold and sharp rather than sweet and grassy. It takes a full boil and a long steep, carries no caffeine of its own, and is one of the five herbals that cover nearly every ask.",
+  "taste": "Cold and sharp: menthol tells the mouth it has been chilled while the cup is still hot, so it drinks cooling and clean. There is little grip to pull, so a long steep makes it stronger rather than harsh.",
+  "make": {
+    "steps": [
+      "Draw fresh cold water and bring it to a full boil.",
+      "Warm the glass pot or mug with hot water and tip it out.",
+      "Weigh 2 to 3 g dried leaf per 6 to 8 oz, or use one bag.",
+      "Pour on the boiling water and cover at once, because heat drives the menthol off fast from an open cup.",
+      "Steep 5 to 10 minutes, then strain or lift the bag, or send a dish for it and say the time."
+    ],
+    "ratio": "2 to 3 g dried leaf per 6 to 8 oz water",
+    "dose": "One bag or 2 to 3 g dried peppermint per cup",
+    "temp": "208 to 212F (98 to 100C), a full boil",
+    "time": "5 to 10 minutes, covered",
+    "cup": "Warmed glass pot or glass mug, 8 to 10 oz"
+  },
+  "serve": "Warm the glass and send it on a saucer with a spoon and a small dish for the bag. Sugar or honey sits beside the cup, never in it; milk stays back, and so does lemon unless asked. It suits the close of the meal, after dessert, for a guest who wants a clean, cool finish and no caffeine.",
+  "story": "Peppermint is the mint for the teacup, not the stockpot. The kitchen cooks with spearmint, whose carvone reads sweet and grassy, while peppermint’s heavy menthol reads medicinal in food and right in a cup, in chocolate and in sweets. What a guest likes to hear is why it feels cold: menthol binds the nerve receptor that reports cold, so the mouth is told it has been chilled while nothing has changed. Guests call it herbal tea; the trade word is tisane.",
+  "guest": "Peppermint is a mint leaf rather than tea, so it has no caffeine of its own; it drinks cool and clean, a good close after dessert.",
+  "watch": [
+    "A guest who asks for mint tea may mean a spearmint blend, sweeter and grassier; ask which, and read the box for anything else in it.",
+    "Fresh mint tea from mojito sprigs is usually spearmint, milder than dried peppermint: steep it below the boil and call it fresh mint tea.",
+    "Left uncovered, the menthol leaves with the steam; cover the pot and the cup keeps its cold edge.",
+    "Herbal often means no caffeine for a reason, a pregnancy or a medication: name what is in it and leave the decision with the guest."
+  ],
+  "library": {
+    "ref": "Herbal Tisane",
+    "study": [
+      [
+        "leaf",
+        "Tisanes are not tea"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to brew peppermint tea",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Peppermint tea: how is it made, and what does it taste like?",
+      "answer": "One bag or 2 to 3 g of dried peppermint per 6 to 8 oz, water at a full boil, 208 to 212F (98 to 100C), covered 5 to 10 minutes, in a warmed glass pot or mug of 8 to 10 oz. It tastes cold and sharp, from the menthol, with little grip."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Why does a cup of peppermint tea feel cool in the mouth even when it is served hot?",
+      "options": [
+        "Its tannins tighten the tongue and read as cold",
+        "Menthol triggers the nerve receptor for cold",
+        "The carvone in the leaf lowers the cup’s heat",
+        "Its oils evaporate on the tongue and chill it"
+      ],
+      "a": 1,
+      "explain": "Menthol binds TRPM8, the nerve receptor that reports cold, so the mouth is told it has been chilled while the cup stays hot. Carvone is spearmint’s sweet, grassy compound."
+    },
+    {
+      "id": "q2",
+      "q": "A cook reaches for mint for tabbouleh or a mojito. Which mint is that?",
+      "options": [
+        "Peppermint, the same leaf that is dried for tea",
+        "Pennyroyal, the common garden mint",
+        "Chocolate mint, a sweet spearmint cultivar",
+        "Spearmint, sweet and grassy, low in menthol"
+      ],
+      "a": 3,
+      "explain": "Spearmint, led by carvone, is the cooking mint. Peppermint carries far more menthol and belongs in tea, chocolate and sweets; chocolate mint is a peppermint cultivar, and pennyroyal is never cooked with."
+    },
+    {
+      "id": "q3",
+      "q": "What water and steep time does the Library give for a peppermint infusion?",
+      "options": [
+        "A full boil, 5 to 10 minutes",
+        "175F (79C), 2 to 3 minutes",
+        "195F (91C), 1 minute, then re-steep",
+        "A full boil, 30 seconds only"
+      ],
+      "a": 0,
+      "explain": "Nearly every tisane wants 208 to 212F (98 to 100C) and 5 to 10 minutes. A dried herb with little astringency can sit; the short, cool steeps belong to green and white tea."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ledger Library: The Leaf, Tisanes are not tea",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library card: Herbal Tisane",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library: Tea Service, Water for tea",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library: Tea Service, The steep, and what over-steeping actually is",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library: Tea Service, The service itself",
+      "url": ""
+    },
+    {
+      "title": "World Table lexicon: Mint",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=93sUpwYKdYY",
+    "id": "93sUpwYKdYY",
+    "title": "Birchall Tea - How To Make The Perfect Peppermint Tea Tutorial",
+    "channel": "Birchall Tea",
+    "channelKind": "company",
+    "label": "Brewing a cup of peppermint tea",
+    "watchFor": "How much leaf goes into the cup, the water taken just off the boil, and how long it steeps before the leaves come out.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

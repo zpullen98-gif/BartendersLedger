@@ -1,0 +1,55 @@
+{
+  "id": "iced-tea",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=i1OnUEbj33U",
+  "videoId": "i1OnUEbj33U",
+  "title": "How to Brew Fresh Iced Tea from Harney",
+  "channel": "Harney & Sons",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "Harney & Sons how to make iced tea youtube",
+      "returned": "https://www.youtube.com/watch?v=i1OnUEbj33U \"How to Brew Fresh Iced Tea from Harney - YouTube\" (first result); summary: \"The top match is a Harney & Sons video titled “How to Brew Fresh Iced Tea from Harney,” which says to follow these 5 easy steps to the perfect pitcher of iced tea.\" Also iG7Ca2lv90w, RrICXbpWIIQ, k-6kbqAD8hg, XeBJ_sT9OGE (bottled teas), HssKIJiR4Wc (pouches), _6n32_UPIyw and others."
+    },
+    {
+      "q": "\"How to Brew Fresh Iced Tea from Harney\"",
+      "returned": "https://www.youtube.com/watch?v=i1OnUEbj33U \"How to Brew Fresh Iced Tea from Harney - YouTube\" (first result, same id and exact title); summary: \"The search turned up mostly Harney & Sons YouTube videos\"; the video \"promises a five-step method for turning any Harney blend, including hot teas, into iced tea\"; \"Harney’s own videos point to its Fresh Brew Iced Tea pouches\"."
+    }
+  ],
+  "checkerQueries": [
+    {
+      "q": "Harney & Sons Fine Teas youtube channel \"How to Brew Fresh Iced Tea\" pitcher five steps",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=i1OnUEbj33U \"How to Brew Fresh Iced Tea from Harney - YouTube\" (the only result, same id and exact title); summary quotes the description: \"follow these 5 easy steps to the perfect pitcher of iced tea and you can turn every Harney tea blend, even your favorite hot teas, into a refreshing summer drink\"; about eight years old. No channel page and no channel name in this summary."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-19",
+  "checkedBy": "checker",
+  "note": "Accepted i1OnUEbj33U: both searches returned the same id with the same exact title, and both summaries name Harney & Sons as the maker (the title names Harney too). A tea house, channelKind company; the exact channel name (perhaps \"Harney & Sons Fine Teas\") is for the checker to confirm by oEmbed before it shows, and it is not yet on tools/brew/companies.json (which is empty). It teaches brewing a pitcher of iced tea from the house’s teas rather than advertising one product; the pouch films (HssKIJiR4Wc, k-6kbqAD8hg) were left aside as product films. The first pass’s Rj9iUI13EfM and 84UADOS7RsA were not revived. Budget: two searches. Every search in this pass was restricted to youtube.com (allowed_domains) in standard mode.",
+  "checkerNote": "Confirmed by the checker. The two finder searches are different queries and both returned i1OnUEbj33U with the same exact title; both summaries name it a Harney & Sons video and the title names Harney. The checker’s search, in fresh wording, returned the same id and exact title, and its description shows a general method for any of the house’s teas, hot blends included, so it teaches brewing iced tea and is not a product advert (the pouch films stay aside). It did not settle a longer display name such as \"Harney & Sons Fine Teas\"; the name the results give the maker is \"Harney & Sons\", kept as the channel. oEmbed could not run (403 on CONNECT to www.youtube.com). A tea house: channelKind company. Budget: one search.",
+  "firstPass": {
+    "id": "iced-tea",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make iced tea that does not cloud youtube [allowed_domains: youtube.com]",
+        "returned": "https://www.youtube.com/watch?v=Rj9iUI13EfM \"How to Make the Smoothest Iced Tea (Cold Brew) - YouTube\"; summary: \"One video describes a super-smooth, tannin-free (no bitterness), refreshing cold brew method.\" No channel named."
+      },
+      {
+        "q": "\"How to Make the Smoothest Iced Tea (Cold Brew)\" [allowed_domains: youtube.com]",
+        "returned": "https://www.youtube.com/watch?v=Rj9iUI13EfM \"How to Make the Smoothest Iced Tea (Cold Brew) - YouTube\" (top result), but no result title or summary named its channel."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Nothing passed: the cold brew pick, chosen because the Library names cold brewing as the clarity method, came back with the same id and title but no channel named. The title search also returned https://www.youtube.com/watch?v=84UADOS7RsA \"Avoid the Bitter Bite - Cold Brew Tea - Kitchen Conundrums with Thomas Joseph\", which the plan-phrase search had not returned, so it could not count. No spare budget remained. The page offers the search link alone."
+  }
+}

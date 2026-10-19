@@ -1,0 +1,23 @@
+{
+  "id": "carajillo",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "what, quiz[1].explain",
+      "problem": "\"Taken hot after a meal\" for the Spanish carajillo has no source: the Library’s Carajillo card and lore say only that Spain spikes espresso with brandy. The after-lunch and after-dinner lines are about Mexico.",
+      "change": "Now \"In Spain it is hot coffee spiked with brandy\"; the explanation drops \"after a meal\"."
+    },
+    {
+      "field": "what",
+      "problem": "\"From Cartagena\" alone reads as Cartagena, Colombia, in an entry about a Mexican drink.",
+      "change": "Now \"from Cartagena in Spain\", as the pack’s Licor 43 card has it."
+    },
+    {
+      "field": "sources[1]",
+      "problem": "The 31 percent strength, the 1946 start and the disclosed ingredients (vanilla, citrus, tea) come from the pack’s Licor 43 component, not a Library producer entry; the Library carries only its citrus and vanilla tasting note.",
+      "change": "Source retitled \"House pack: Licor 43 component\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

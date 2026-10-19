@@ -1,0 +1,14 @@
+{
+  "id": "oolong",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=0NdHQdbbQaE",
+  "videoId": "0NdHQdbbQaE",
+  "title": "Gongfu Tea Tutorial (a Beginner's Guide to Gong Fu Cha)",
+  "channel": "Wu Mountain Tea",
+  "channelKind": "company",
+  "queries": [],
+  "verifiedBy": "coffee-films",
+  "checkedBy": "checker",
+  "checkedOn": "2026-10-18",
+  "note": "The plan's film tea/loose-leaf-against-the-bag-honestly: id, title and channel copied exactly from the COFFEE_FILMS row (oEmbed values). No search spent. A tea seller's channel, so company."
+}

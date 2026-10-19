@@ -1,0 +1,18 @@
+{
+  "id": "dirty-chai",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps, make.time, watch[1]",
+      "problem": "Steaming the milk and then pulling the shot leaves the pitcher parked for the length of the shot. The Library’s milk lessons (Reading finished milk, The pour) say never park the pitcher, and they build the shot in the cup before the milk.",
+      "change": "The shot goes into the chai first, the milk steams while it runs, and the milk is poured at once; time and watch now say the same."
+    },
+    {
+      "field": "quiz[2]",
+      "problem": "The stem matched the old \"pull it last\" order. The right option was also the longest.",
+      "change": "Stem now asks why the shot is pulled to order; answer shortened and one distractor lengthened."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

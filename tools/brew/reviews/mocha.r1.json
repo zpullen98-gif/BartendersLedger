@@ -1,0 +1,18 @@
+{
+  "id": "mocha",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "caffeine",
+      "problem": "\"From the double espresso\" implies the chocolate adds none, while the hot chocolate entry on the same page says cocoa solids carry a little; no in-app source gives a figure.",
+      "change": "\"Mostly from the double espresso under the chocolate\"."
+    },
+    {
+      "field": "quiz[2].options",
+      "problem": "The answer was the longest option.",
+      "change": "\"Dry foam turns the cocoa bitter\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

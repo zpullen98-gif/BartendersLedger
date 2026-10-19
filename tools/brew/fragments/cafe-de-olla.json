@@ -1,0 +1,129 @@
+{
+  "id": "cafe-de-olla",
+  "name": "Café de olla",
+  "respell": "kah-FEH deh OH-yah",
+  "aka": [],
+  "group": "world",
+  "kind": "coffee",
+  "caffeine": "From the coffee alone; the cinnamon and piloncillo add none.",
+  "house": {
+    "printed": false,
+    "askId": "",
+    "ask": "Not printed on the menus and not poured at the house: know it for the guest who asks, and offer the nearest drink we pour."
+  },
+  "what": "Mexican coffee made in a clay pot, the olla, with cinnamon and piloncillo, an unrefined cane sugar. Coffee, sugar and spice cook together rather than going into a finished cup, and some versions add orange peel, star anise or chocolate. It arrives sweet, spiced and earthy, and it belongs on the Day of the Dead table beside pan de muerto.",
+  "taste": "Sweet and warm: cinnamon on the nose, the molasses depth of piloncillo, a soft rustic body, sometimes orange or anise.",
+  "make": {
+    "steps": [
+      "Simmer water in a clay pot with a cinnamon stick and piloncillo until the sugar dissolves.",
+      "Add orange peel or star anise if using.",
+      "Stir in coarse dark coffee, simmer briefly, then rest it off the heat a few minutes.",
+      "Strain into warmed mugs."
+    ],
+    "ratio": "About 60 g coffee a litre, piloncillo to taste",
+    "dose": "Per litre: 60 g coarse coffee, a cinnamon stick, piloncillo",
+    "temp": "A simmer; the coffee rested just off it",
+    "time": "A brief simmer, then a few minutes' rest",
+    "cup": "Clay cup or warmed mug, 6 to 8 oz"
+  },
+  "serve": "Not poured here: the nearest is our chicory coffee, dark and roasty; the Café Glacé's cardamom and clove syrup is the closest spice, served cold. Café de olla comes in a warmed mug already sweet, so no sugar rides with it.",
+  "story": "It takes its name from the clay pot, and everything cooks in it: water, cinnamon and piloncillo, then the coffee. It is often told that women soldiers of the Mexican Revolution made it to keep the troops going, a story repeated more than proven, so tell it lightly. On the Day of the Dead it sits beside pan de muerto and hot chocolate.",
+  "guest": "We do not make café de olla, but our chicory coffee is dark and roasty, and the Café Glacé carries cardamom and clove if you would like spice.",
+  "watch": [
+    "It comes already sweet: the piloncillo cooks in, so ask before it is made if the guest wants it less sweet.",
+    "Boiling the coffee hard pulls a harsh, drying cup; the grounds go in last and simmer only briefly.",
+    "A guest may expect tequila, as in a Mexican Coffee: café de olla carries no spirit at all."
+  ],
+  "library": {
+    "ref": "",
+    "study": [],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make cafe de olla",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Café de olla: how is it made?",
+      "answer": "Water simmered in a clay pot with cinnamon and piloncillo, coarse coffee stirred in, simmered briefly, rested and strained into a warmed mug. Sweet, spiced, earthy."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What is piloncillo in café de olla?",
+      "options": [
+        "A small clay cup",
+        "Unrefined cane sugar",
+        "Mexican cinnamon bark",
+        "A dark roast blend"
+      ],
+      "a": 1,
+      "explain": "Unrefined cane sugar, simmered in with the cinnamon so the coffee comes out sweet."
+    },
+    {
+      "id": "q2",
+      "q": "What does the olla in the name refer to?",
+      "options": [
+        "The stick used to stir it",
+        "The region it comes from",
+        "The chocolate sometimes added",
+        "The clay pot it is made in"
+      ],
+      "a": 3,
+      "explain": "Olla is the clay pot; water, cinnamon, piloncillo and coffee cook together in it."
+    },
+    {
+      "id": "q3",
+      "q": "A guest orders café de olla expecting tequila. What do you say?",
+      "options": [
+        "The tequila simmers with the cinnamon",
+        "It is finished with mezcal",
+        "No spirit; that is a Mexican Coffee",
+        "Coffee liqueur replaces the sugar"
+      ],
+      "a": 2,
+      "explain": "Café de olla has no alcohol. The Mexican Coffee is añejo tequila, coffee liqueur and hot coffee under cream."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Coffee Culture Around the World: A Visual Guide",
+      "url": "https://www.cruise1st.co.uk/blog/coffee-culture-around-world/"
+    },
+    {
+      "title": "7 unique ways people drink coffee around the world",
+      "url": "https://matadornetwork.com/read/7-unique-ways-people-drink-coffee-around-world"
+    },
+    {
+      "title": "15 Coffee Traditions Across The Globe",
+      "url": "https://amexessentials.com/top-coffee-traditions-around-the-world-interesting-coffee-drinks"
+    },
+    {
+      "title": "World Table: Pan de Muerto",
+      "url": ""
+    },
+    {
+      "title": "Library: Mexican Coffee",
+      "url": ""
+    },
+    {
+      "title": "Pack: New Orleans-Style Coffee with Chicory",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=6zEutgpks5o",
+    "id": "6zEutgpks5o",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "How to make café de olla",
+    "watchFor": "The spices and piloncillo, or brown sugar, simmered in the water before the coffee goes in. The video says the clay pot is traditional and offers other pots and ingredients for a kitchen without one.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "single-origin",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=UWGgAjjBkXM",
+  "videoId": "UWGgAjjBkXM",
+  "title": "Coffee Break ep.20: What is Single Origin?",
+  "channel": "Transcend Coffee",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "what is single origin coffee youtube (allowed_domains youtube.com)",
+      "returned": "{\"title\":\"Coffee Break ep.20: What is Single Origin? - YouTube\",\"url\":\"https://www.youtube.com/watch?v=UWGgAjjBkXM\"}; summary: the \"Coffee Break ep.20\" video from Transcend Coffee discusses the term directly."
+    },
+    {
+      "q": "\"Coffee Break ep.20: What is Single Origin?\" (allowed_domains youtube.com)",
+      "returned": "{\"title\":\"Coffee Break ep.20: What is Single Origin? - YouTube\",\"url\":\"https://www.youtube.com/watch?v=UWGgAjjBkXM\"}; summary: a YouTube video from Transcend Coffee in which two of its people discuss the term \"Single Origin\" in the speciality trade."
+    }
+  ],
+  "checkerQueries": [
+    {
+      "q": "Transcend Coffee \"Coffee Break\" episode 20 what is single origin (allowed_domains youtube.com; checker)",
+      "returned": "The same id UWGgAjjBkXM under the same exact title, beside the roaster’s own channel page (youtube.com/user/transcendcoffee) and its Coffee Break playlist; summary: two of the roaster’s people discuss the term in the speciality trade."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-18",
+  "checkedBy": "checker",
+  "note": "The same id and exact title came back in both searches, and both summaries name the channel. A roaster, so company. It teaches what the term means rather than a brew, which is what this entry needs (single origin is a way of buying, not brewing). The summary names two people; neither is carried anywhere. The exact title’s \"Single Origin\" is a capitalised run the fragment’s name rule refuses, so the fragment keeps title empty (the renderer never shows a title) and the exact title stays here. Transcend Coffee is not yet on companies.json, so the channel line will not show and schema.mjs will refuse the channel until it is added there and allowed as a name. Checked by the checker on 2026-10-19: two different searches with the same id and exact title, both naming the channel, and a fresh search returned them again beside the roaster’s own channel page. It explains the term this entry teaches (a way of buying, not a brew); a watch link, not a Short, playlist or advert; the channel is the roaster’s, so company is right (the two people on screen are carried nowhere). No result showed the video’s content, so the watchFor rests on the term, not on a viewing. Confirmed. The fragment still fails schema.mjs until \"Transcend Coffee\" is on companies.json and the name check admits it (proper-nouns.json or the schema); neither file is the checker’s to write."
+}

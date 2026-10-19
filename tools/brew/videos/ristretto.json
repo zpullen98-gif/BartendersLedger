@@ -1,0 +1,47 @@
+{
+  "id": "ristretto",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=fBPKhQadPB4",
+  "videoId": "fBPKhQadPB4",
+  "title": "How to Make a Basic Single Ristretto from Whole Latte Love",
+  "channel": "Whole Latte Love",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "Whole Latte Love ristretto youtube",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=fBPKhQadPB4 \"How to Make a Basic Single Ristretto from Whole Latte Love - YouTube\" (first result, beside the channel page https://www.youtube.com/WholeLatteLove); summary: \"The top result is a Whole Latte Love video titled How to Make a Basic Single Ristretto\", a presenter demonstrating ristretto brewing on a home machine, \"A ristretto is a short shot of espresso typically no more tha...\" (snippet cut)."
+    },
+    {
+      "q": "\"How to Make a Basic Single Ristretto from Whole Latte Love\"",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=fBPKhQadPB4 \"How to Make a Basic Single Ristretto from Whole Latte Love - YouTube\" (first result, same id and exact title); summary: \"a YouTube tutorial from Whole Latte Love\", the presenter \"from Whole Latte Love shows you the basics of brewing a ristretto\". Others: 8X2_aZvgyno, jgMmPty5-YY, 1X8sgra2K6Y, f3RabdVE5qg, a Short (D3TdW90DyPY)."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-19",
+  "checkedBy": "checker",
+  "note": "Same watch id and exact title in two different searches; the channel is named in the title itself (\"from Whole Latte Love\"), in the first search’s channel page result and in both summaries as the uploader. An espresso machine retailer’s tutorial channel, so company. It teaches pulling a single ristretto; not a Short, playlist or advert. The presenter is named in the description by first name only and is not the channel; nobody is named in the fragment. Left for others: Whole Latte Love is not yet on companies.json. Searches spent: 2. Checked by the checker on 2026-10-19: two different queries returned the same id and exact title, and the channel is named in the title itself (\"from Whole Latte Love\"), in the channel page result and in both summaries as the uploader; the presenter's first name is not the channel. It teaches pulling a single ristretto; a watch link, not a Short, playlist or advert. An espresso machine retailer's tutorial channel, so company is right. No search spent. Confirmed.",
+  "firstPass": {
+    "id": "ristretto",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make ristretto youtube",
+        "returned": "No www.youtube.com/watch?v= result: nine written guides (coffeeatthree.com, wholelattelove.com, caffeatlas.com, illy.com.tr, protothema.gr, delonghi.com); the summary said the search did not return any YouTube videos."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "No Library film in the plan and no ristretto video in the pack. The one search (unrestricted) returned no YouTube watch result. The batch’s two spare searches went to macchiato and cortado; a find and a title confirmation need two more searches and only one remained for this entry, so none was made. Video null; the page offers the search link alone."
+  }
+}

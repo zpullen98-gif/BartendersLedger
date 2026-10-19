@@ -1,0 +1,28 @@
+{
+  "id": "breve",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "story",
+      "problem": "\"the carton of milk and cream beside the coffee on American tables\" rests on no source (the author's own wording).",
+      "change": "\"The breve rests on half-and-half, a mix of milk and cream.\""
+    },
+    {
+      "field": "watch[2]",
+      "problem": "\"A breve cappuccino or mocha means the same swap\" is stated as a definition with no source.",
+      "change": "Turned into a service check: \"If a guest asks for another drink breve, confirm they mean half-and-half for the milk.\""
+    },
+    {
+      "field": "make.ratio",
+      "problem": "Same as the latte: the 8 to 12 oz cup is 1 to 5 or more on the Latte card, not 1 to 4.",
+      "change": "\"1 part espresso to 5 or more parts half-and-half\"."
+    },
+    {
+      "field": "quiz[1].options, quiz[2].options",
+      "problem": "The answer was the longest option in both questions.",
+      "change": "\"Cream carries no protein at all\"; \"It curdles against the whiskey\" (plausible, since the Split milk card names alcohol as a curdler)."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

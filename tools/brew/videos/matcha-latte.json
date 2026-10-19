@@ -1,0 +1,15 @@
+{
+  "id": "matcha-latte",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=7xtNFKjO8KI",
+  "videoId": "7xtNFKjO8KI",
+  "title": "How To Sift, Whisk & Enjoy Matcha Tea, by Matcha Source",
+  "channel": "Alissa White",
+  "channelKind": "person",
+  "queries": [],
+  "verifiedBy": "coffee-films",
+  "checkedOn": "2026-10-18",
+  "note": "The plan names the Library film matcha/whisking-and-why-it-clumps. Id, title and channel are copied exactly from that COFFEE_FILMS row (sec matcha, row whisking-and-why-it-clumps), whose values were recorded from oEmbed. The channel is a person’s (Alissa White is on people.json), so the fragment ships title and channel empty. It teaches the whisked base, not the milk; the label says so. No search spent.",
+  "checkedBy": "checker",
+  "checkerNote": "Confirmed by the checker on 2026-10-19: id 7xtNFKjO8KI, title and channel equal the COFFEE_FILMS row matcha/whisking-and-why-it-clumps exactly, the plan’s named film. A person’s channel, so person is right and the fragment ships title and channel empty. It teaches the whisked base, not the milk, and the label says so. No search spent."
+}

@@ -1,0 +1,68 @@
+{
+  "id": "cortado",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=qkxKUQPacAs",
+  "videoId": "qkxKUQPacAs",
+  "title": "Easy Cortado Recipe - How To Make A Cortado Coffee At Home",
+  "channel": "Carabello Coffee",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "Whole Latte Love cortado youtube",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "No cortado video: Whole Latte Love cupping, latte art and espresso basics videos (MVVJgCWJh2I, DrDl52aCTv8, 8HAkgiBzs9s and others); the summary said no cortado video was found."
+    },
+    {
+      "q": "Carabello Coffee how to make a cortado at home",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=qkxKUQPacAs \"Easy Cortado Recipe - How To Make A Cortado Coffee At Home - YouTube\" (first result); summary: \"The top result is a Carabello Coffee video\", the roaster’s barista \"of Carabello Coffee demonstrates a simple cortado recipe that anyone can make at home\". Others: a Short (Hf5iwj2NeK8), SmnrhwH61SY, -kHO4IfZm2M, 0JfZQkhHoiY, PjbsolJpmdc, OXOY3gTfWpc, VECCwN_0b2s."
+    },
+    {
+      "q": "\"Easy Cortado Recipe - How To Make A Cortado Coffee At Home\"",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=qkxKUQPacAs \"Easy Cortado Recipe - How To Make A Cortado Coffee At Home - YouTube\" (first result, same id and exact title); summary: the barista \"of Carabello Coffee shows a simple cortado recipe that anyone can make at home\". Others: OXOY3gTfWpc, kQHJ8JLd_Ys, SmnrhwH61SY, 0JfZQkhHoiY, dFIx3Fp9Gu4, a Short (Hf5iwj2NeK8)."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-19",
+  "checkedBy": "checker",
+  "note": "Same watch id and exact title in the second and third searches; both summaries name Carabello Coffee, a roaster, as the channel. Company. It teaches a cortado; not a Short, playlist or advert. The first pass’s zgI1DHEDR6E and dFIx3Fp9Gu4 stay rejected. The title is the channel’s own, copied exactly with its spaced hyphen; the page shows our label. The barista is named in the description; nobody is named in the fragment. Left for others: Carabello Coffee is not yet on companies.json. Searches spent: 3 (the first, for Whole Latte Love, found nothing). Checked by the checker on 2026-10-19: the second and third queries are different and returned the same id and exact title, and both summaries name Carabello Coffee as the uploader (the exact title search too, so the name does not rest on the query). It teaches a cortado; a watch link, not a Short, playlist or advert. A coffee roaster, so company is right. No search spent. Confirmed.",
+  "firstPass": {
+    "id": "cortado",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make cortado youtube",
+        "returned": "No www.youtube.com/watch?v= result: written guides (emilylaurae.com, homecoffeeexpert.com, masterclass.com, combinegoodflavors.com, goodreads.com, coffeeatthree.com); the summary said the search did not return any YouTube videos."
+      },
+      {
+        "q": "how to make cortado youtube",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=zgI1DHEDR6E \"How To Make A Cortado\"; the summary named \"a TAMP Coffee video\" and \"a Carabello Coffee video\" without tying either to an id. Also listed dFIx3Fp9Gu4 \"How to Make a Perfect Cortado\"."
+      },
+      {
+        "q": "\"How To Make A Cortado\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "zgI1DHEDR6E did not come back. Results: Hf5iwj2NeK8 (a Short), OXOY3gTfWpc, H-_Q10qiSb4 (a Short), dFIx3Fp9Gu4 \"How to Make a Perfect Cortado\", hWOgDmMtqWQ, 2VF_o33S-do, -kHO4IfZm2M, SmnrhwH61SY, FNC2CX83Bwo, VECCwN_0b2s; the summary pointed to \"the TAMP Coffee guide\" with no id."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Candidate zgI1DHEDR6E did not return on its exact title, so it fails. dFIx3Fp9Gu4 appeared in both searches but was never searched by its own title, no result tied a channel to it, and its title carries \"Perfect\", which a shipped company title may not. Budget spent: two for the entry and one spare. Video null."
+  }
+}

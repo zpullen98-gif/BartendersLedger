@@ -1,0 +1,23 @@
+{
+  "id": "cafe-con-leche",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps[1], make.steps[2]",
+      "problem": "Step 2 heated the milk to 140 to 150F and step 3 then spun it on the wand, which carries it past the band; the spin happens during the steam, and the Library cuts the steam near 135 to 140F.",
+      "change": "Step 2: \"Heat about an equal measure of milk, adding little air and spinning it smooth, without a cap of foam.\" Step 3: \"Cut the steam near 135 to 140F (57 to 60C); it serves at 140 to 150F (60 to 66C).\""
+    },
+    {
+      "field": "quiz[0].options",
+      "problem": "The answer was the longest option.",
+      "change": "\"Cold milk poured over a ristretto\"."
+    },
+    {
+      "field": "quiz[2].options[3], quiz[2].explain",
+      "problem": "\"A lever machine ristretto\" is ruled out by the stem's \"no espresso machine\", a trick no trained person picks.",
+      "change": "\"Chicory coffee, by definition\"; explain: \"Chicory belongs to the New Orleans café au lait, not to this drink.\""
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

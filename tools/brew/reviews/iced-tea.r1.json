@@ -1,0 +1,13 @@
+{
+  "id": "iced-tea",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps[3]",
+      "problem": "The cold brew step did not say how much water; after a hot method brewed in half the volume, a reader could cold brew in half the water and end at double strength.",
+      "change": "Now “steep the leaf in the full volume of cold water in the cooler overnight”."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "breve",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=ZDTbuolCQSI",
+  "videoId": "ZDTbuolCQSI",
+  "title": "How To Make A Breve Latte At Home| Lifeboost Coffee",
+  "channel": "Lifeboost Coffee",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "how to make a breve latte youtube",
+      "filter": "none",
+      "returned": "No www.youtube.com/watch?v= result. Top link was socialcounts.org/youtube-video-live-view-count/-OWofPLMkLs (“How to make a breve latte”), channel not named; the rest were recipe sites."
+    },
+    {
+      "q": "how to make a breve latte youtube",
+      "filter": "allowed_domains youtube.com",
+      "returned": "“How To Make A Breve Latte At Home| Lifeboost Coffee - YouTube” https://www.youtube.com/watch?v=ZDTbuolCQSI; summary: “Lifeboost Coffee’s ‘How To Make A Breve Latte At Home’ is a quick walkthrough that compares the drink to a cappuccino.”"
+    },
+    {
+      "q": "\"How To Make A Breve Latte At Home| Lifeboost Coffee\"",
+      "filter": "none",
+      "returned": "The watch id did not come back: recipe sites and lifeboostcoffee.com/blogs/lifeboost/what-is-a-breve-coffee only. Not counted."
+    },
+    {
+      "q": "\"How To Make A Breve Latte At Home| Lifeboost Coffee\"",
+      "filter": "allowed_domains youtube.com",
+      "returned": "“How To Make A Breve Latte At Home| Lifeboost Coffee - YouTube” https://www.youtube.com/watch?v=ZDTbuolCQSI; summary: “The top result is the Lifeboost Coffee YouTube video ... a breve is similar to a cappuccino and is a quick and easy way to make one at home.”"
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-18",
+  "checkedBy": "checker",
+  "note": "Four searches (two of the batch’s spares). The first unfiltered phrase search returned no youtube.com link, so it was rerun on youtube.com; the first exact-title search, unfiltered, did not return the id, so it was rerun on youtube.com, where the same id came back with the same exact title. The channel is named in both result titles and in the summary. Lifeboost Coffee is a coffee roaster and seller, so company. Judged from titles and descriptions, not watched: the video likens the breve to a cappuccino, where the fragment builds it as a latte.",
+  "checkerNote": "Confirmed by the checker on 2026-10-19: two different searches (the plan’s phrase and the exact title, each on youtube.com) returned the same watch id ZDTbuolCQSI under the same exact title, and the channel, Lifeboost Coffee, is named in the result titles and summaries. A fresh search in new wording returned the same id and title again, and its summary names Lifeboost Coffee’s YouTube channel and quotes the description (“This video will show you a quick and easy way to mak...”). It teaches making a breve latte at home; a watch link, not a Short (the channel tags its Shorts “#shorts”), a playlist or an advert, one of the roaster’s run of brewing tutorials (cold brew, pour over, iced coffee). Lifeboost Coffee is a coffee roaster and seller, so company is right. Left for others: the channel is not yet on companies.json.",
+  "checkerQueries": [
+    {
+      "q": "Lifeboost Coffee breve latte at home video half and half steamed",
+      "filter": "allowed_domains youtube.com",
+      "returned": "First result “How To Make A Breve Latte At Home| Lifeboost Coffee - YouTube” https://www.youtube.com/watch?v=ZDTbuolCQSI; summary: from Lifeboost Coffee’s YouTube channel, the description calls the breve rich, sweet and bold and says the video shows a quick, easy method. Other Lifeboost results were tutorials (7pgISXUskpQ cold brew, 4tvlz0vO_Ac pour over, ogrO1ryfW_o iced coffee) and one tagged #shorts (V7p9DsXeUKM)."
+    }
+  ]
+}

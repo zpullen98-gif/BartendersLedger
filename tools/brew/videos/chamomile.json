@@ -1,0 +1,55 @@
+{
+  "id": "chamomile",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=p4eJRxTDtEA",
+  "videoId": "p4eJRxTDtEA",
+  "title": "How to Brew the Perfect Cup of Chamomile Tea",
+  "channel": "Crafters & Co.",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "Revival Tea Company chamomile tea youtube [allowed_domains: youtube.com]",
+      "returned": "No Revival chamomile video: the company's channel pages and story videos; Z4OIqXdFjnI \"How to Make Chamomile Tea\" and mWYBDFW79SE, \"neither from Revival Tea\", no channel named."
+    },
+    {
+      "q": "\"How to Brew the Perfect Cup of Chamomile Tea\" Crafters [allowed_domains: youtube.com]",
+      "returned": "How to Brew the Perfect Cup of Chamomile Tea - YouTube | https://www.youtube.com/watch?v=p4eJRxTDtEA (first) | summary: \"The top result is a YouTube video from Crafters & Co. that promises four easy steps to a good cup ... the page text is mostly the video's intro and a link to the company's tea collection\"; jtngjidGSiI also listed, tied to a Basilur Tea Exports taster."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedBy": "checker",
+  "checkedOn": "2026-10-19",
+  "note": "The first pass's plan-phrase search filtered to youtube.com returned p4eJRxTDtEA, first, with this exact title and a summary naming \"the experts at Crafters & Co.\"; it was left unchecked when that batch ran out. This pass's second search, the exact title, returned the same id and exact title, first, and its summary names Crafters & Co. as the uploader, a company selling tea. That pair meets the rule. The title carries \"Perfect\", a video title the schema copies and does not hold to the voice rules (as with the Twinings green tea title). The first pass's rejected jtngjidGSiI was not retried. An oEmbed read should confirm the channel string. Two searches spent.",
+  "checkerQueries": [
+    {
+      "q": "\"How to Brew the Perfect Cup of Chamomile Tea\" four easy steps tea collection [allowed_domains: youtube.com]",
+      "returned": "How to Brew the Perfect Cup of Chamomile Tea - YouTube | https://www.youtube.com/watch?v=p4eJRxTDtEA (first) | summary: \"The closest match is a video from Crafters & Co. that shows how to brew the perfect cup in four easy steps. The same listing points to the company's tea collection\". This query did not name the company, and the summary named Crafters & Co. as the uploader on its own: the third search to return this www id and exact title, the third summary to name the same channel string. It teaches brewing chamomile in four steps; it links the company's tea but is a how to, not a product advert; not a Short or a playlist. Confirmed."
+    }
+  ],
+  "firstPass": {
+    "id": "chamomile",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to brew chamomile tea youtube",
+        "returned": "No www.youtube.com/watch result: written guides only (ohhowcivilized.com, buddhascup.com, theteamakers.co.uk, masalaherb.com, wetrinifood.com)."
+      },
+      {
+        "q": "how to brew chamomile tea youtube [allowed_domains: youtube.com]",
+        "returned": "https://www.youtube.com/watch?v=jtngjidGSiI \"How to make Chamomile tea with fresh or dried flowers\"; the summary named no channel for this id (it named Crafters & Co. and Basilur Tea without tying either to an id beyond the first result, https://www.youtube.com/watch?v=p4eJRxTDtEA \"How to Brew the Perfect Cup of Chamomile Tea - YouTube\", described as \"the experts at Crafters & Co.\")."
+      },
+      {
+        "q": "\"How to make Chamomile tea with fresh or dried flowers\"",
+        "returned": "No www.youtube.com/watch result: written recipes only (theviewfromgreatisland.com, alphafoodie.com, simpleseasonal.com, scottsmiraclegro.com, aerogarden.com, wetrinifood.com)."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Nothing passed. The first search ran without a domain filter and returned no video; the second, filtered to youtube.com, gave candidates; the title search for jtngjidGSiI (taken from the spare budget) returned no YouTube page, so the id never came back twice. The remaining candidate, p4eJRxTDtEA from Crafters & Co., was left unchecked when the batch budget ran out; its title also carries \"Perfect\", which the fragment language rule refuses in a company title. The page offers the search link alone."
+  }
+}

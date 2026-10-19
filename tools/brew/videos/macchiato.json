@@ -1,0 +1,61 @@
+{
+  "id": "macchiato",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=dnGTNh3aDLQ",
+  "videoId": "dnGTNh3aDLQ",
+  "title": "Quick Tip: How to Make a Latte Macchiato and Espresso Macchiato",
+  "channel": "Whole Latte Love",
+  "channelKind": "company",
+  "queries": [
+    {
+      "q": "Whole Latte Love how to make a macchiato",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=dnGTNh3aDLQ \"Quick Tip: How to Make a Latte Macchiato and Espresso Macchiato - YouTube\" (first result); summary: \"The search found a Whole Latte Love video on making a macchiato\", its two presenters \"from Whole Latte Love compare a latte macchiato with an espresso macchiato and offer a quick technique tip\". Also the same channel’s caramel macchiato (72dwX37Ne2I) and latte macchiato videos from other channels."
+    },
+    {
+      "q": "\"Quick Tip: How to Make a Latte Macchiato and Espresso Macchiato\"",
+      "allowedDomains": [
+        "youtube.com"
+      ],
+      "returned": "https://www.youtube.com/watch?v=dnGTNh3aDLQ \"Quick Tip: How to Make a Latte Macchiato and Espresso Macchiato - YouTube\" (first result, same id and exact title); summary: \"Its description says [the presenters] from Whole Latte Love explain each and give you a quick tip.\" Others: rX93vPbs1WE, lZeJOgIytTs, RmyoF3ag0o4 (named in this summary as a Carabello Coffee video), oJ_geXVgfRE."
+    }
+  ],
+  "verifiedBy": "websearch",
+  "checkedOn": "2026-10-19",
+  "checkedBy": "checker",
+  "note": "Same watch id and exact title in two different searches; both summaries name Whole Latte Love as the channel. An espresso machine retailer’s tutorial channel, so company. It teaches the espresso macchiato beside the latte macchiato, which suits the entry’s advice to ask which macchiato the guest means; the first pass’s asoV2U6o0Hc stays rejected (no channel). Not a Short, playlist or advert. RmyoF3ag0o4 was seen once only and not pursued. Left for others: Whole Latte Love is not yet on companies.json. Searches spent: 2. Checked by the checker on 2026-10-19: two different queries returned the same id and exact title, and both summaries name Whole Latte Love as the uploader. It teaches the espresso macchiato (this entry; the latte macchiato has its own) beside the latte macchiato; a watch link, not a Short, playlist or advert. A retailer's tutorial channel, so company is right. No search spent. Confirmed.",
+  "firstPass": {
+    "id": "macchiato",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make an espresso macchiato youtube",
+        "returned": "No www.youtube.com/watch?v= result: written guides (acouplecooks.com, masterclass.com and near-duplicate pages); the summary said the search returned no YouTube videos, only written guides."
+      },
+      {
+        "q": "how to make an espresso macchiato youtube",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=asoV2U6o0Hc \"How to Make Espresso Macchiato at Home\"; the summary named no channel for it (it mentioned a \"How to Coffee\" series Short and videos on Smeg and DeLonghi machines)."
+      },
+      {
+        "q": "\"How to Make Espresso Macchiato at Home\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=asoV2U6o0Hc \"How to Make Espresso Macchiato at Home\" (first result, same id and title); the summary named no channel for it (it said RmyoF3ag0o4 \"is from a coffee roaster\", unnamed)."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Candidate asoV2U6o0Hc came back twice with the same exact title, but no result title or summary named its channel, so it does not count. Budget spent: the entry’s two searches (the first, unrestricted, found no YouTube result) and one spare. Video null."
+  }
+}

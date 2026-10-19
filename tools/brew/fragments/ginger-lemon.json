@@ -1,0 +1,127 @@
+{
+  "id": "ginger-lemon",
+  "name": "Ginger and lemon tea",
+  "respell": "",
+  "aka": [
+    "ginger tea",
+    "lemon and ginger",
+    "hot ginger and lemon"
+  ],
+  "group": "herbal",
+  "kind": "tea",
+  "caffeine": "None of its own: ginger and lemon carry no caffeine, but a bagged blend can add other plants, so read the box.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup whether the bar makes ginger and lemon from fresh ginger or a bag, how it goes out and the price."
+  },
+  "what": "Ginger and lemon tea is a tisane of fresh ginger simmered in water and finished with lemon and, often, honey; there is no tea plant in it. Ginger is a rhizome, an aromatic underground stem rather than a root, and because it is hard it wants a decoction, a real simmer, rather than a steep. It is the hot toddy template with the spirit left out, and a warm answer for a guest who wants bite without caffeine or alcohol.",
+  "taste": "Ginger’s burn under a sour lift of lemon, with honey rounding the edge. More ginger or a longer simmer gives more heat, and there is little astringency, so it never dries the mouth.",
+  "make": {
+    "steps": [
+      "Peel fresh ginger with the edge of a spoon rather than a knife, losing little of the flesh, then slice it thin.",
+      "Simmer the slices in fresh water, covered, 10 to 20 minutes; more ginger and more time give more heat.",
+      "Warm the glass mug with hot water and tip it out.",
+      "Strain the ginger water into the mug and let it fall just below the boil.",
+      "Squeeze in fresh lemon and stir in honey off the boil, so the heat does not flatten the honey.",
+      "Taste and adjust: lemon for brightness, honey for roundness, a longer simmer next time for more bite."
+    ],
+    "ratio": "",
+    "dose": "5 oz ginger water, a half ounce honey, a quarter ounce lemon",
+    "temp": "Simmer for the ginger; just below 212F (100C) for the honey",
+    "time": "10 to 20 minutes simmered",
+    "cup": "Warmed glass mug, 8 to 10 oz"
+  },
+  "serve": "Warm the mug first, because it takes near-boiling water. Send it on a saucer with a spoon, a lemon wedge on the side and more honey in a small pot, so the guest sets the sweetness. Strain the ginger out, or leave a slice in for show and say so. It suits a cold night, the end of the meal and a guest who has stopped drinking.",
+  "story": "This is the hot toddy template with the spirit taken out: hot water, honey or sugar and lemon, with fresh ginger standing in for the whisky’s warmth. Bartenders reach for ginger in zero proof work because its burn stands in for alcohol’s heat. Ginger itself is a rhizome, kin in the kitchen to turmeric and galangal, grated and pounded into the flavour bases of Asia. A guest likes to hear where the heat comes from: real ginger, simmered.",
+  "guest": "Ginger and lemon is hot, bright and sharp, with honey to round it; there is no tea in it and no caffeine of its own.",
+  "watch": [
+    "Sliced ginger steeped for three minutes gives a thin cup: a hard rhizome needs a simmer before it gives its heat.",
+    "Boiling water poured onto honey flattens it: stir the honey in once the water is just off the boil.",
+    "A bagged lemon and ginger blend can carry a dozen botanicals; hand over the box rather than answering what is in it from memory.",
+    "A guest who wants it with whisky has ordered a hot toddy: ask which whisky, and ring it as a cocktail."
+  ],
+  "library": {
+    "ref": "Herbal Tisane",
+    "study": [
+      [
+        "leaf",
+        "Tisanes are not tea"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make fresh ginger lemon tea",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Ginger and lemon tea: how is it made, and what goes in the mug?",
+      "answer": "Fresh ginger, peeled with a spoon and sliced, simmered 10 to 20 minutes, strained into a warmed glass mug of 8 to 10 oz, then lemon juice and honey stirred in just off the boil. Hot, bright and sharp, with ginger’s burn and no tea."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Why does fresh ginger want a simmer rather than a three minute steep?",
+      "options": [
+        "Its caffeine dissolves only at a rolling boil",
+        "A hard rhizome gives up its heat slowly",
+        "A short steep turns ginger bitter and drying",
+        "Simmering softens the sourness of the skin"
+      ],
+      "a": 1,
+      "explain": "Leaves and flowers infuse; roots, bark and hard rhizomes like ginger want a decoction, 10 to 20 minutes at a real simmer. Ginger carries no caffeine."
+    },
+    {
+      "id": "q2",
+      "q": "When should the honey go into a hot ginger and lemon?",
+      "options": [
+        "Once the water is just off the boil",
+        "Into the simmering pot along with the ginger",
+        "Before the ginger, so it dissolves fully",
+        "Only once the drink has cooled to warm"
+      ],
+      "a": 0,
+      "explain": "Water hot but below a boil keeps honey’s nuance, and boiling water scalds it. That is the toddy rule, and this drink is the toddy template without the spirit."
+    },
+    {
+      "id": "q3",
+      "q": "A guest wants a ginger and lemon with whisky in it. What have they ordered?",
+      "options": [
+        "An Irish coffee without the coffee",
+        "A spiced chai toddy",
+        "A zero proof drink with a dash",
+        "A hot toddy, rung as a cocktail"
+      ],
+      "a": 3,
+      "explain": "The toddy template is spirit, honey or sugar, lemon and hot water, tea optional. Add whisky to ginger and lemon and it is a toddy, rung and counted as a cocktail."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ledger Library: The Leaf, Tisanes are not tea",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library card: Herbal Tisane",
+      "url": ""
+    },
+    {
+      "title": "Ledger zero proof: Ginger Lime Rickey; NA Moscow Mule; Spiced Chai Toddy",
+      "url": ""
+    },
+    {
+      "title": "World Table lexicon: Tubers, Roots & Rhizomes",
+      "url": ""
+    },
+    {
+      "title": "World Table lexicon: Hot Drinks: Toddy, Irish Coffee & the Warm Service",
+      "url": ""
+    }
+  ],
+  "video": null
+}

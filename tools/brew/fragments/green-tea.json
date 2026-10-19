@@ -1,0 +1,156 @@
+{
+  "id": "green-tea",
+  "name": "Green tea",
+  "respell": "",
+  "aka": [
+    "lu cha",
+    "Chinese green",
+    "Japanese green"
+  ],
+  "group": "leaf",
+  "kind": "tea",
+  "caffeine": "Commonly 20 to 45 mg per 8 oz cup, partly because it is brewed cooler and shorter; the bands overlap with black.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup whether the bar pours a green tea, which one, bag or loose leaf, how hot the water runs, and the price."
+  },
+  "what": "Green tea is Camellia sinensis heated early to kill the enzyme that would oxidise it, so it stays green: steamed in Japan, pan fired in China, and that one choice sets the style. Japanese greens taste grassy and marine, Chinese greens nutty and toasted, towards chestnut. It is unoxidised, not raw, and it wants much cooler water than black tea, which is where most bars go wrong.",
+  "taste": "Light body with real savoury weight: grassy and marine if Japanese, nutty and toasted if Chinese. Sweet when brewed cool, bitter and drying the moment the water is too hot or the steep too long.",
+  "make": {
+    "steps": [
+      "Boil fresh water, then let it fall to 160 to 180F (71 to 82C), or set a variable temperature kettle.",
+      "Warm the pot and cup with hot water, then tip it out.",
+      "Weigh 2 to 3 g of leaf per 6 to 8 oz of water.",
+      "Pour the cooled water over the leaf; the more shaded the leaf, the cooler you go.",
+      "Steep 1 to 2 minutes, then pour off every drop so the leaf stops working.",
+      "Re-steep two or three times: the second short, the third stretched longer."
+    ],
+    "ratio": "2 to 3 g of leaf per 6 to 8 oz of water",
+    "dose": "2 to 3 g loose leaf, weighed, or one bag",
+    "temp": "160 to 180F (71 to 82C); cooler for shaded leaf",
+    "time": "1 to 2 minutes; re-steeps two or three times",
+    "cup": "Small pot or kyusu into a small cup, 4 to 6 oz"
+  },
+  "serve": "Warm the pot, then let the water cool before it meets the leaf. Send a small pot and a small cup, no milk and no lemon, with a dish for the basket and the time said aloud. Pour off completely and offer more hot water for a second steep. It sits well after sushi or anything fried.",
+  "story": "The guest who says they hate green tea has usually been served it from a boiling kettle. A full boil pulls catechins and caffeine fast and the bitterness swamps the cup, while the sweet, savoury amino acids come out readily in cooler water. Heat is also what keeps it green: the kill-green step, shaqing in China, done by steam in Japan. Green tea travels, too: Morocco's mint tea is brewed on rolled Chinese gunpowder green, rinsed first, with fresh spearmint and plenty of sugar.",
+  "guest": "Green tea brews cooler and shorter than black, so it stays sweet and grassy rather than bitter, and the same leaf will give a second pot.",
+  "watch": [
+    "Boiling water does not burn the leaf; it extracts too fast and turns the cup bitter. Let it fall to 160 to 180F (71 to 82C).",
+    "A Green Tea ordered at the bar may mean the shot: Irish whiskey, peach schnapps, lemon, syrup and a splash of lemon-lime soda, with no tea in it.",
+    "Green fades fastest in the tin and tastes tired inside a year; keep it airtight, dark and away from coffee."
+  ],
+  "library": {
+    "ref": "Green Tea",
+    "study": [
+      [
+        "tea",
+        "Tea is not one temperature and one timer"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to brew green tea temperature",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a pot of green tea made?",
+      "answer": "Water boiled then cooled to 160 to 180F (71 to 82C), 2 to 3 g of leaf per 6 to 8 oz in a warmed small pot, steeped 1 to 2 minutes and poured off completely. Grassy or nutty, sweet, and good for two or three steeps."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Why does green tea brewed at a full boil taste bitter?",
+      "options": [
+        "The leaf scorches and burns",
+        "Catechins and caffeine extract too fast",
+        "Boiling water ferments the leaf",
+        "The amino acids turn bitter in heat"
+      ],
+      "a": 1,
+      "explain": "Heat pulls the bitter, drying catechins and caffeine quickest, while the sweet amino acids come out even in cool water. The cooler steep changes the balance; it is not a weaker cup."
+    },
+    {
+      "id": "q2",
+      "q": "How does most Japanese green tea stop oxidation, compared with most Chinese green tea?",
+      "options": [
+        "Pan fired in place of steaming",
+        "Sun dried with no heat",
+        "Smoked over pine fires",
+        "Steamed in place of pan firing"
+      ],
+      "a": 3,
+      "explain": "Japan steams nearly all its green tea, which keeps a marine edge; China mostly pan fires, which browns the leaf towards toasted chestnut. That is processing, not latitude."
+    },
+    {
+      "id": "q3",
+      "q": "A guest at the bar orders a Green Tea shot. What goes in it?",
+      "options": [
+        "Irish whiskey, peach schnapps, lemon, syrup, soda",
+        "Vodka, peach schnapps, lemon, simple syrup, soda",
+        "Matcha liqueur, Irish whiskey, lemon, honey, soda",
+        "Green Chartreuse, gin, lime juice, syrup, soda"
+      ],
+      "a": 0,
+      "explain": "The shooter is named for its colour and holds no tea: Irish whiskey, peach schnapps, lemon and syrup, with a splash of lemon-lime soda. Vodka in place of the whiskey makes a White Tea."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library card: Green Tea",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Tea is not one temperature and one timer",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Water for tea",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Tea on a bar programme",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, Oxidation is the axis",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, Where the leaf comes from",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Caffeine, and the questions guests ask",
+      "url": ""
+    },
+    {
+      "title": "WorldTable lexicon: Tea Service & Pairing",
+      "url": ""
+    },
+    {
+      "title": "WorldTable recipe: atay-moroccan-mint-tea",
+      "url": ""
+    },
+    {
+      "title": "Library cocktail: Green Tea Shot; Library shooter: Green Tea",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=3uaHkFMslds",
+    "id": "3uaHkFMslds",
+    "title": "How to make the Perfect Green Tea - Twinings Foodservice",
+    "channel": "Twinings Foodservice",
+    "channelKind": "company",
+    "label": "Brewing green tea for restaurant service",
+    "watchFor": "How far below the boil the water is brought, how short the steep is kept, and the serving advice at the end, written for a restaurant rather than a kitchen at home.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

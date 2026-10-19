@@ -1,0 +1,140 @@
+{
+  "id": "iced-tea",
+  "name": "Iced tea",
+  "respell": "",
+  "aka": [
+    "unsweet tea",
+    "unsweetened iced tea"
+  ],
+  "group": "iced",
+  "kind": "tea",
+  "caffeine": "From the tea, usually black: roughly what a hot cup carries, commonly 40 to 70 mg per 8 oz, varying with leaf and steep.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup whether the bar pours iced tea, which tea, sweet or unsweetened, how it is held and the price."
+  },
+  "what": "Iced tea is tea, usually black, brewed and chilled and served over ice without sugar, which goes on the side. There are two honest methods: hot at double strength over an equal weight of ice, which is fast, or cold brewed overnight in the cooler, which stays clearer and draws less astringency. Small particle grades suit the urn, because they give up colour and strength fast, and black tea is the base under much of a zero proof list.",
+  "taste": "Brisk and clean: black tea’s malt and drying grip, sharpened by cold and softened by the melt, with no sweetness to hide behind. Cold brewed it tastes rounder and gentler; hot brewed over ice it keeps more of the grip.",
+  "make": {
+    "steps": [
+      "Weigh leaf for the finished volume, 2 to 3 g per 6 to 8 oz; smaller grades brew faster and stronger.",
+      "For speed, brew it in half the finished volume of water at a full boil, 3 to 5 minutes, then pull the leaf.",
+      "Pour it over the same weight of ice, in metal rather than glass: 16 oz of double strength over about a pound.",
+      "For clarity, steep the leaf in the full volume of cold water in the cooler overnight instead, then strain.",
+      "Taste the batch after the melt, because the tail of the melt is what people misjudge.",
+      "Hold it cold, as your local code sets, and clean the urn and spigot on a schedule."
+    ],
+    "ratio": "Double strength over an equal weight of ice, or cold brewed",
+    "dose": "Leaf for the full volume, 2 to 3 g per 6 to 8 oz",
+    "temp": "200 to 212F (93 to 100C), or cold water in the cooler",
+    "time": "3 to 5 minutes hot; overnight cold",
+    "cup": "Collins glass over fresh ice"
+  },
+  "serve": "Pour it into a Collins over fresh ice, with a lemon wedge on the side and simple syrup beside it, because syrup mixes into a cold glass where granulated sugar sinks. Add a long spoon or a straw, and leave the milk back. It can go down with the menus, and on a hot afternoon the glass wants watching.",
+  "story": "Cold tea in America began as punch: the oldest printed recipes are green tea punches laced with spirits or wine, such as one in a Kentucky cookbook of 1839. Tea poured over ice is in print in Virginia by 1879, still green, and a Boston cookbook of 1884 is cited for the first black tea version. A guest who sees haze in the glass likes to hear the truth: it is tea cream, polyphenols and caffeine binding as the tea cools, and it says the tea was strong, not spoiled.",
+  "guest": "Iced tea comes unsweetened over ice, with lemon and syrup on the side so you can set the sweetness yourself.",
+  "watch": [
+    "Cloudy is usually tea cream, not spoilage: heat a glass and true cream clears. Haze that stays, smells sour or pours slick means a dirty urn, and the batch goes.",
+    "Hard water makes the haze worse, and the colder and longer a batch is held, the more cream you see.",
+    "Granulated sugar sinks in a cold glass; offer simple syrup, or sweet tea if the guest wanted it sweet all along.",
+    "Room temperature holding keeps an urn clear, but it is a timed hold your local code may forbid: know the hours and the discard."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "tea",
+        "Iced tea, and the cloudy pot"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make iced tea that does not cloud",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Iced tea: how is it made by the fast method, and what goes in the glass?",
+      "answer": "Leaf for the full volume, 2 to 3 g per 6 to 8 oz, brewed at a full boil in half the water for 3 to 5 minutes, then poured over an equal weight of ice in metal. Served unsweetened in a Collins over fresh ice, lemon and syrup on the side: brisk and clean."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "For 32 oz of finished iced tea by the hot method, how much double strength tea goes over how much ice?",
+      "options": [
+        "16 oz over about a pound of ice",
+        "32 oz over about a pound of ice",
+        "8 oz over about two pounds of ice",
+        "24 oz over about half a pound of ice"
+      ],
+      "a": 0,
+      "explain": "Water near boiling melts roughly its own weight of ice, so brew half the finished volume at the full leaf load and pour it over the same weight of ice, weighed, into metal."
+    },
+    {
+      "id": "q2",
+      "q": "Which method gives the clearest iced tea, with the least astringency?",
+      "options": [
+        "Brewing double strength and chilling it slowly",
+        "Steeping longer at a full boil",
+        "Using whole leaf rather than fannings",
+        "Cold brewing in the cooler overnight"
+      ],
+      "a": 3,
+      "explain": "Cold brewed tea never gets hot, so it barely creams and draws less astringency. Hot double strength over ice is a speed method, not a clarity cure."
+    },
+    {
+      "id": "q3",
+      "q": "Why do tea bags and iced tea urns use small particle grades rather than whole leaf?",
+      "options": [
+        "Small grades carry less caffeine than whole leaf",
+        "Small particles give up colour and strength fast",
+        "Whole leaf cannot take a full boil",
+        "Small grades never cloud when chilled"
+      ],
+      "a": 1,
+      "explain": "Smaller particles carry more surface, so they brew fast and strong, which is what a bag and an urn want. Any strong tea can still cream as it cools."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ledger Library: Tea Service, Iced tea, and the cloudy pot",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library: Tea Service, Tea on a bar programme",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library: Tea Service, Caffeine, and the questions guests ask",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library: The Leaf, Grades, and what they do not tell you",
+      "url": ""
+    },
+    {
+      "title": "Ledger Library card: Black Tea",
+      "url": ""
+    },
+    {
+      "title": "House pack component: Sweet tea",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=i1OnUEbj33U",
+    "id": "i1OnUEbj33U",
+    "title": "How to Brew Fresh Iced Tea from Harney",
+    "channel": "Harney & Sons",
+    "channelKind": "company",
+    "label": "Brewing a pitcher of iced tea",
+    "watchFor": "A tea company's five steps to a pitcher of freshly brewed iced tea. Set its strength and chilling against the method above, where a double strength brew goes over an equal weight of ice.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-19"
+  }
+}

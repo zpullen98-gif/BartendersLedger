@@ -1,0 +1,15 @@
+{
+  "id": "cappuccino",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=cRsT4WhFTHo",
+  "videoId": "cRsT4WhFTHo",
+  "title": "How to Steam Milk Like a Barista | Microfoam, Latte Art & Common Mistakes Explained",
+  "channel": "Smalltown Coffee Roasters",
+  "channelKind": "company",
+  "queries": [],
+  "verifiedBy": "coffee-films",
+  "checkedOn": "2026-10-18",
+  "checkedBy": "checker",
+  "note": "The plan names the Library film milk/what-steaming-actually-does-to-milk; id, title and channel copied exactly from that COFFEE_FILMS row (sec milk, row what-steaming-actually-does-to-milk). No search spent.",
+  "checkerNote": "Confirmed by the checker on 2026-10-19: id cRsT4WhFTHo, title \"How to Steam Milk Like a Barista | Microfoam, Latte Art & Common Mistakes Explained\" and channel \"Smalltown Coffee Roasters\" equal the COFFEE_FILMS row milk/what-steaming-actually-does-to-milk exactly, and the plan names that film; the fragment’s url, id, title and channel match. A roaster, so company. No search spent. Left for others: the channel is not yet on companies.json. The title carries no dash and nothing at or above U+2190."
+}

@@ -1,0 +1,133 @@
+{
+  "id": "single-origin",
+  "name": "Single origin coffee",
+  "respell": "",
+  "aka": [
+    "single estate",
+    "single farm"
+  ],
+  "group": "brewed",
+  "kind": "coffee",
+  "caffeine": "Full caffeine, all from the coffee; the dose and cup size decide how much.",
+  "house": {
+    "printed": true,
+    "packIds": [
+      "b-9evy10yg"
+    ]
+  },
+  "what": "Single origin means the beans come from one place, a country, region or estate, not a blend, so the cup tastes of that place. It is a way of buying, not brewing. Ours is a single estate-grown coffee roasted for the house by a local roaster, with no chicory; the menu prints Papua New Guinea, but origins rotate.",
+  "taste": "Cleaner and brighter than a chicory blend: lighter roasts lean to citrus and berry, darker ones to cocoa and nut.",
+  "make": {
+    "steps": [
+      "Check the roast date and write the opening date on the bag.",
+      "Grind to order, medium, at about 60 g per litre.",
+      "Brew at 195 to 205F (90 to 96C) through paper, so the origin shows.",
+      "Taste it black before service against the card’s notes."
+    ],
+    "ratio": "About 60 g per litre, just under 1:17",
+    "dose": "About 15 g medium ground coffee to 250 g water",
+    "temp": "195 to 205F (90 to 96C)",
+    "time": "2 to 3.5 minutes by pour-over",
+    "cup": "Pre-heated cup on its saucer, 6 to 10 oz"
+  },
+  "serve": "Pour at the table from the right, handle towards the guest, naming today’s origin from the coffee card. Fill a finger below the rim, offer cream and sugar on the side, and suggest a sip black first.",
+  "story": "A guest asking where the coffee is from is asking about the bean: answer with the origin and the roast. Guests enjoy the wine comparison, one place with a character a blend smooths over. Coffee wants a rest after roasting, then holds for weeks, and an opened bag stales fastest.",
+  "guest": "Today’s single origin comes from one place, so it tastes of that place: clean and bright, with no chicory. A sip black first?",
+  "watch": [
+    "The printed origin rotates: read today’s from the coffee card before you name it.",
+    "A bag’s printed date may be the roast date plus an offset; ask for the roast date."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "shot",
+        "Freshness, degassing and the bag date"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "what is single origin coffee",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "Single origin coffee: what is it, and how is it brewed?",
+      "answer": "Beans from one place, not a blend, brewed at about 60 g a litre and 195 to 205F (90 to 96C), often through paper, in a warmed cup: clean and bright, no chicory."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What does single origin tell a guest about the coffee?",
+      "options": [
+        "Brewed one cup at a time",
+        "Roasted lighter than blends",
+        "Beans from one place",
+        "Its caffeine taken out"
+      ],
+      "a": 2,
+      "explain": "Single origin is a way of buying: beans from one country, region or estate, so the cup tastes of that place."
+    },
+    {
+      "id": "q2",
+      "q": "The menu prints one origin, but the roaster rotates them. What should a server do?",
+      "options": [
+        "Read it off the coffee card",
+        "Name the origin the menu prints",
+        "Call it the house blend instead",
+        "Guess it from the cup’s taste"
+      ],
+      "a": 0,
+      "explain": "The printed origin may not be in the pot. Read the current one from the coffee card, never from memory."
+    },
+    {
+      "id": "q3",
+      "q": "Which way of brewing shows a single origin most plainly?",
+      "options": [
+        "Espresso under milk",
+        "A long press steep",
+        "Filter through paper",
+        "Cold brew with syrup"
+      ],
+      "a": 2,
+      "explain": "Filter and pour-over reward single origins: paper strips oils and fines, so acidity and aroma come forward."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library: Freshness, degassing and the bag date",
+      "url": ""
+    },
+    {
+      "title": "Library card: Espresso",
+      "url": ""
+    },
+    {
+      "title": "World Table lexicon: the espresso and coffee entry",
+      "url": ""
+    },
+    {
+      "title": "House pack: b-9evy10yg",
+      "url": ""
+    },
+    {
+      "title": "House pack: roaster component c-s4jum9vg",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=UWGgAjjBkXM",
+    "id": "UWGgAjjBkXM",
+    "title": "",
+    "channel": "Transcend Coffee",
+    "channelKind": "company",
+    "label": "What single origin coffee means",
+    "watchFor": "Listen for how wide the term runs, from a whole country down to one farm, and how that differs from a blend. That range is what to explain when a guest asks what single origin means.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

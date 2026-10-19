@@ -1,0 +1,23 @@
+{
+  "id": "iced-coffee",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "make.steps[2]",
+      "problem": "\"Grind a little finer\" rested on no source.",
+      "change": "Two search results from different sites (Temple Coffee, Volcanica Coffee) confirm a finer grind to make up for less hot water. Added both to sources; the step is unchanged."
+    },
+    {
+      "field": "quiz[1].options",
+      "problem": "The answer was the longest option.",
+      "change": "Lengthened one distractor to \"It is always brewed from a lighter roast\"."
+    },
+    {
+      "field": "quiz[2].options",
+      "problem": "The answer was the longest option and the only one that gave a reason.",
+      "change": "Gave all four options the same \"quality, reason\" shape. The answer is unchanged."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

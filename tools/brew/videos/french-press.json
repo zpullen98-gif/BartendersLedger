@@ -1,0 +1,14 @@
+{
+  "id": "french-press",
+  "found": true,
+  "url": "https://www.youtube.com/watch?v=st571DYYTR8",
+  "videoId": "st571DYYTR8",
+  "title": "The Ultimate French Press Technique",
+  "channel": "James Hoffmann",
+  "channelKind": "person",
+  "queries": [],
+  "verifiedBy": "coffee-films",
+  "checkedOn": "2026-10-18",
+  "checkedBy": "checker",
+  "note": "The plan names the Library film filter/the-press-and-what-the-plunge-does-not-do; id, title and channel copied exactly from COFFEE_FILMS (js/data-coffee-films.js), no search spent. The channel is a person’s, so the fragment ships title and channel empty. Checked by the checker on 2026-10-19: id, title and channel equal the COFFEE_FILMS row filter/the-press-and-what-the-plunge-does-not-do exactly, the watchFor is the row’s word for word, and the fragment ships title and channel empty for a person’s channel. Confirmed."
+}

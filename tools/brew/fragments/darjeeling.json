@@ -1,0 +1,140 @@
+{
+  "id": "darjeeling",
+  "name": "Darjeeling",
+  "respell": "dar-JEE-ling",
+  "aka": [
+    "first flush",
+    "second flush",
+    "muscatel Darjeeling"
+  ],
+  "group": "leaf",
+  "kind": "tea",
+  "caffeine": "A black tea, so commonly 40 to 70 mg per 8 oz cup, though leaf, heat and steep time move it more than the label.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup whether the bar pours a Darjeeling, which flush and brand, bag or loose leaf, and the price."
+  },
+  "what": "Darjeeling is black tea from the hills of West Bengal in India, and the name carries a geographical indication, so the word is legally defined. It is picked in flushes, the growth spurts of the year: first flush thin and floral, second flush rounder and grapey, the note the trade calls muscatel, with later flushes after that. Lighter than an Assam, it is the black tea for a guest who wants perfume over malt.",
+  "taste": "First flush: thin, bright and floral. Second flush: rounder and fuller, with the grapey muscatel note. Lighter in body than Assam, and the trade drinks a first flush plain.",
+  "make": {
+    "steps": [
+      "Draw fresh cold water and boil it once.",
+      "Warm the pot and tip the rinse out.",
+      "Weigh 2 to 3 g of leaf per 6 to 8 oz of water.",
+      "Pour at about 195F (90C) for a first flush, or near the boil, 200 to 212F (93 to 100C), for a second.",
+      "Steep 3 to 5 minutes, tasting a first flush at three, then pull the leaf.",
+      "Send it plain, with milk only if the guest asks."
+    ],
+    "ratio": "2 to 3 g of leaf per 6 to 8 oz of water",
+    "dose": "2 to 3 g loose leaf, or one bag, per cup",
+    "temp": "About 195F (90C) first flush; 200 to 212F (93 to 100C) second",
+    "time": "3 to 5 minutes; taste a first flush at three",
+    "cup": "Warmed pot into a cup, 6 to 8 oz"
+  },
+  "serve": "Warm the pot and the cup, and send it plain with a small dish for the leaf or bag and the steep time said aloud. Name the flush when the tin does, as a wine list names a vintage. Milk on a first flush is against trade convention, though not a law, so bring it only if the guest asks, and never with lemon.",
+  "story": "Darjeeling's name is protected like a wine region's: a geographical indication defines it. The tea grows in the West Bengal hills, and each flush of the year tastes different, which is why a good list names the flush. The muscatel of a second flush is the note guests have heard of; the first flush is the delicate one, which the trade says should go without milk, though that is convention, not chemistry.",
+  "guest": "Darjeeling is a light, fragrant black tea from the Indian hills; the second flush has a grapey note the trade calls muscatel, and it drinks well plain.",
+  "watch": [
+    "Darjeeling is a geographical indication, so the word should mean tea from those hills; the flush tells you the style.",
+    "A first flush at a hard boil for five minutes turns sharp; nearer 195F (90C) suits it.",
+    "Milk on a first flush is convention against, not a rule; bring it if the guest asks."
+  ],
+  "library": {
+    "ref": "Black Tea",
+    "study": [
+      [
+        "leaf",
+        "Where the leaf comes from"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to brew darjeeling tea",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a Darjeeling brewed, and how do its flushes differ?",
+      "answer": "Black tea from West Bengal, 2 to 3 g per 6 to 8 oz for 3 to 5 minutes: about 195F (90C) for a thin, floral first flush, near the boil for a rounder, grapey second flush. Served plain."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What is the grapey note of a second flush Darjeeling commonly called?",
+      "options": [
+        "Malty",
+        "Muscatel",
+        "Brisk",
+        "Smoky"
+      ],
+      "a": 1,
+      "explain": "Second flush Darjeeling is known for a grapey note the trade calls muscatel. Malt belongs to Assam, smoke to lapsang souchong."
+    },
+    {
+      "id": "q2",
+      "q": "What legal status does the name Darjeeling carry?",
+      "options": [
+        "None: it is a blend name",
+        "A grade like orange pekoe",
+        "A geographical indication",
+        "A trademark of a single estate"
+      ],
+      "a": 2,
+      "explain": "Darjeeling carries a geographical indication, so the word is legally defined. English breakfast, by contrast, is a blend recipe with no legal meaning."
+    },
+    {
+      "id": "q3",
+      "q": "Which water suits a delicate first flush Darjeeling?",
+      "options": [
+        "Nearer 195F (90C)",
+        "A hard boil, 212F (100C), held",
+        "160F (71C), as for sencha",
+        "Cold, steeped overnight"
+      ],
+      "a": 0,
+      "explain": "Black tea takes a full boil, but delicate first flush leaf is better nearer 195F (90C). Sencha temperatures under-extract a black tea."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library card: Black Tea",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, Where the leaf comes from",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, One plant, six teas",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, The service itself",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Water for tea",
+      "url": ""
+    },
+    {
+      "title": "WorldTable lexicon: Tea Service & Pairing",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=hfh_hQGERIg",
+    "id": "hfh_hQGERIg",
+    "title": "How to Brew Darjeeling Tea The Correct Way? - Darjeeling Tea Direct",
+    "channel": "Darjeeling Tea Direct",
+    "channelKind": "company",
+    "label": "Brewing a pot or cup of Darjeeling",
+    "watchFor": "How much leaf goes in for each cup, the lid kept on through the steep, and the tea poured off the leaf once the time is up so it does not stew.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

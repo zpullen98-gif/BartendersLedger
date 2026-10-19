@@ -1,0 +1,28 @@
+{
+  "id": "latte",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "quiz[2].options[3]",
+      "problem": "\"160F\" with no Celsius; schema.mjs refuses it.",
+      "change": "\"The milk reached 160F (71C)\"."
+    },
+    {
+      "field": "make.ratio",
+      "problem": "\"1 part espresso to 4 or more\" is the Latte card's 6 oz figure; for the entry's 8 to 12 oz cup the card gives 1 to 5 or more.",
+      "change": "\"1 part espresso to 5 or more parts milk\"."
+    },
+    {
+      "field": "serve",
+      "problem": "\"For extra hot, warm the cup, not the milk\" contradicts the temperature ceiling lesson (take it to the ceiling and no further) and the Latte card (never past 160F).",
+      "change": "\"For extra hot, warm the cup and take the milk no further than 160F (71C).\""
+    },
+    {
+      "field": "quiz[1].options[2]",
+      "problem": "\"A single for the big size\" is ruled out by the stem's \"one double shot\", so no trained person picks it; the answer was also the longest option.",
+      "change": "\"A thicker foam cap mutes it\"."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

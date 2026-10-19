@@ -1,0 +1,68 @@
+{
+  "id": "affogato",
+  "found": false,
+  "url": "",
+  "videoId": "",
+  "title": "",
+  "channel": "",
+  "channelKind": "",
+  "candidate": {
+    "url": "https://www.youtube.com/watch?v=QUVRM3gAkXk",
+    "videoId": "QUVRM3gAkXk",
+    "title": "How to Make Every Affogato & Vanilla Affogato Order - Good Coffee Great Coffee",
+    "channel": "Good Coffee Great Coffee",
+    "channelKind": "person",
+    "finderVerifiedBy": "websearch"
+  },
+  "queries": [
+    {
+      "q": "\"how to make an affogato\" Lavazza OR Breville OR \"Whole Latte Love\" youtube (allowed_domains youtube.com)",
+      "returned": "{\"title\":\"How to make an Affogato!\",\"url\":\"https://www.youtube.com/watch?v=BD5oBLiM1uM\"} first; the rest were latte and espresso videos on a Breville machine and a Whole Latte Love playlists page. Summary: the affogato video’s description links to a machine sold by ECS Coffee; no channel named for it."
+    },
+    {
+      "q": "\"How to make an Affogato!\" ECS Coffee youtube (allowed_domains youtube.com)",
+      "returned": "BD5oBLiM1uM again under the same title, the summary saying only that its description link \"suggests ECS made it\" (not named as the uploader, so it fails). Also listed: {\"title\":\"How to Make Every Affogato & Vanilla Affogato Order - Good Coffee Great Coffee\",\"url\":\"https://www.youtube.com/watch?v=QUVRM3gAkXk\"}, beside HeFv5mjC2Q0, iNj1l09W1Oo, m7WtezHUmEc, SlWn2fH4JSI and two Shorts."
+    },
+    {
+      "q": "\"How to Make Every Affogato & Vanilla Affogato Order\" (allowed_domains youtube.com)",
+      "returned": "{\"title\":\"How to Make Every Affogato & Vanilla Affogato Order - Good Coffee Great Coffee\",\"url\":\"https://www.youtube.com/watch?v=QUVRM3gAkXk\"} (first result); summary: \"a Good Coffee Great Coffee YouTube video that teaches how to do the affogato and vanilla affogato related drinks. The listing describes it as perfect for beginners, and it was posted about 585 days ago.\""
+    }
+  ],
+  "checkerQueries": [
+    {
+      "q": "Good Coffee Great Coffee game \"Every Affogato\" order guide (allowed_domains youtube.com; checker)",
+      "returned": "{\"title\":\"How to Make Every Affogato & Vanilla Affogato Order - Good Coffee Great Coffee\",\"url\":\"https://www.youtube.com/watch?v=QUVRM3gAkXk\"}, the only result; summary: it opens by saying it will show how to make the affogato and vanilla affogato \"related drinks\", the listing calls it perfect for beginners, posted about 585 days ago; the summary could not confirm the steps, the recipe or what the drinks are, and named no uploader beyond echoing the title."
+    }
+  ],
+  "verifiedBy": "",
+  "checkedOn": "2026-10-19",
+  "note": "rejected by the checker: neither the uploader nor the drink is settled. Two different searches did return QUVRM3gAkXk under the same exact title, but \"Good Coffee Great Coffee\" appears only as the suffix of that title, and the summaries that call it \"a Good Coffee Great Coffee YouTube video\" only echo the title. Good Coffee, Great Coffee is, to the checker's knowledge, the name of a café management game for phones, and \"How to Make Every <drink> Order - <game>\" is the shape of a game guide's title; \"every ... order\", the \"related drinks\" and \"perfect for beginners\" all fit a walkthrough of the game's orders as well as a lesson. The checker spent its one search on that doubt (the title's words with \"game\"): the same id and title came back, and the summary could see neither the steps nor the uploader. So no result shows the video teaching a real affogato, and no result names a channel as the uploader apart from a suffix that is most likely a game's name; channelKind could not be settled either (oEmbed cannot run: the egress proxy denies www.youtube.com). Fragment video set to null; the page offers the search link alone. BD5oBLiM1uM and the first pass's iNj1l09W1Oo stay rejected. Finder's note: QUVRM3gAkXk came back in the second and third searches with the same id and the same exact title, and the channel is named twice: at the end of the title and in the summary as the uploader (\"a Good Coffee Great Coffee YouTube video\"). It teaches the affogato and a vanilla variation, for beginners; a watch link, not a Short, playlist, music video or advert. channelKind is unsettled: no result says whether a person or a business runs the channel, and \"Every ... Order\" reads like a café’s training series. It is filed as person so the fragment ships with title and channel empty and no business is named on the page; the checker should settle the kind by oEmbed (author_name, author_url) and, if it is a café or chain, keep the fragment nameless as it is. BD5oBLiM1uM (the same title twice, channel only inferred from an ECS Coffee shop link) and the first pass’s iNj1l09W1Oo (channel never named) were not accepted.",
+  "firstPass": {
+    "id": "affogato",
+    "found": false,
+    "url": "",
+    "videoId": "",
+    "title": "",
+    "channel": "",
+    "channelKind": "",
+    "queries": [
+      {
+        "q": "how to make an affogato youtube",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "Candidates: J3cqPBepcZo \"How to Make an Affogato\", m7WtezHUmEc, tvH-WdtbeZY, FIzDUOHag4Q, iNj1l09W1Oo \"HOW TO MAKE AFFOGATO 2 WAYS: ESPRESSO & FRENCH PRESS BREWED COFFEE\", x5K_JnIT7ew (a Short), -6Uc7Mt5hkA, vyIS0PSBJ0w, cxfMACDHnbI, JrRrUfEuIkc; no channel named."
+      },
+      {
+        "q": "\"HOW TO MAKE AFFOGATO 2 WAYS: ESPRESSO & FRENCH PRESS BREWED COFFEE\"",
+        "allowedDomains": [
+          "youtube.com"
+        ],
+        "returned": "https://www.youtube.com/watch?v=iNj1l09W1Oo \"HOW TO MAKE AFFOGATO 2 WAYS: ESPRESSO & FRENCH PRESS BREWED COFFEE - YouTube\" (first result); the summary quoted its description (French press 1:10, 7 g to 70 ml; espresso 9 g, one shot 25 to 30 ml) but named no channel."
+      }
+    ],
+    "verifiedBy": "",
+    "checkedOn": "2026-10-18",
+    "note": "Candidate iNj1l09W1Oo came back with the same id and the same exact title, but no result named its channel, so it fails. Budget: two searches for the entry. Video null."
+  }
+}

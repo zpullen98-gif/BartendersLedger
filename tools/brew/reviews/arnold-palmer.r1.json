@@ -1,0 +1,18 @@
+{
+  "id": "arnold-palmer",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "quiz[2].options",
+      "problem": "The right option (46 characters) was the longest and the only specific one.",
+      "change": "Now “It becomes a cocktail, rung as one” (34)."
+    },
+    {
+      "field": "story",
+      "problem": "“In interviews he said the tea should dominate” (also quiz[1] and watch[1]) rested on one site, NPR as syndicated.",
+      "change": "Checked by search: NPR quotes a 2012 interview (iced tea dominates the drink), Golf News Net describes his tea heavy build and Sporked gives three parts tea to one. Kept; Sporked added to sources as the second site."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

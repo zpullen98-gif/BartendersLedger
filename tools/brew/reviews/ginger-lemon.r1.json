@@ -1,0 +1,38 @@
+{
+  "id": "ginger-lemon",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "taste",
+      "problem": "“The most direct stand-in for alcohol’s heat” is a superlative and was said twice in the entry (taste and story).",
+      "change": "Cut from taste: “Ginger’s burn under a sour lift of lemon, with honey rounding the edge.”"
+    },
+    {
+      "field": "story",
+      "problem": "The same superlative.",
+      "change": "Now “because its burn stands in for alcohol’s heat”."
+    },
+    {
+      "field": "make.dose",
+      "problem": "“All to taste” gives no weight or volume, which the style requires of dose.",
+      "change": "Now “5 oz ginger water, a half ounce honey, a quarter ounce lemon”, the Library’s zero proof Spiced Chai Toddy (5 oz base, a half ounce honey, a quarter ounce lemon), the toddy template the entry names; the source title now lists it."
+    },
+    {
+      "field": "serve",
+      "problem": "Step 5 stirs the honey in, while serve sent “honey in a small pot, so the guest sets the sweetness”.",
+      "change": "Now “more honey in a small pot”."
+    },
+    {
+      "field": "watch[3]",
+      "problem": "The guest asked for whisky and the line said to ask which spirit.",
+      "change": "Now “ask which whisky”."
+    },
+    {
+      "field": "quiz[0].options",
+      "problem": "The right option (50 characters) was the longest and the only specific one.",
+      "change": "Now “A hard rhizome gives up its heat slowly” (39)."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

@@ -1,0 +1,146 @@
+{
+  "id": "sencha",
+  "name": "Sencha",
+  "respell": "SEN-chah",
+  "aka": [
+    "Japanese green tea"
+  ],
+  "group": "leaf",
+  "kind": "tea",
+  "caffeine": "A green tea: commonly 20 to 45 mg per 8 oz cup, set as much by the cooler, shorter steep as by the leaf.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup whether the bar pours a sencha or any Japanese green, bag or loose leaf, and the price."
+  },
+  "what": "Sencha is a Japanese green tea: the leaf is steamed soon after picking, mushi, to stop oxidation, then rolled and dried. Steaming rather than pan firing keeps a marine, grassy edge where a Chinese green browns towards toasted chestnut. It is brewed cool and short, often in a small pot, the kyusu, and the same leaf gives two more steeps. Gyokuro is the shaded leaf, brewed cooler still.",
+  "taste": "Grassy and marine, cut grass and seaweed over a savoury, brothy weight, with a clean bitter edge that turns harsh if the water is too hot or the steep too long.",
+  "make": {
+    "steps": [
+      "Boil fresh water, then cool it to 160 to 175F (71 to 79C) in the cups or a cooling bowl, the yuzamashi.",
+      "Warm the kyusu or small pot, then tip the water out.",
+      "Weigh 2 to 3 g of leaf per 6 to 8 oz of water into the pot.",
+      "Pour the cooled water over the leaf and steep about 60 seconds in a kyusu, 1 to 2 minutes in a Western pot.",
+      "Pour off completely, to the last drops, so the leaf does not sit in water.",
+      "Re-steep: the second pour short, because the leaf is open, the third stretched back out."
+    ],
+    "ratio": "2 to 3 g of leaf per 6 to 8 oz of water",
+    "dose": "2 to 3 g loose leaf, weighed",
+    "temp": "160 to 175F (71 to 79C)",
+    "time": "About 60 seconds in a kyusu; 1 to 2 minutes Western",
+    "cup": "Kyusu or small pot into small cups, 4 to 6 oz"
+  },
+  "serve": "Warm the kyusu and the cups, then cool the water in the cups or a cooling bowl before it meets the leaf. Send it plain, no milk and no lemon, with small cups and a word that the leaf takes two more steeps. It goes after sushi, after anything fried, and to the guest who wants something light.",
+  "story": "Japan steams nearly all its green tea rather than pan firing it, and that processing, not latitude, gives sencha its marine edge. Sencha also explains matcha by contrast: matcha's tencha is shaded, dried flat without rolling and milled, while sencha is rolled and steeped, so powdered sencha sold as matcha is a different product under the same word. A cold brewed sencha poured beside crudo is a modern zero-proof pairing.",
+  "guest": "Sencha is Japan's steamed green tea, grassy and a little marine; it brews cooler and quicker than black, and the leaf takes a second steep.",
+  "watch": [
+    "Boiling water turns sencha bitter and drying; cool it to 160 to 175F (71 to 79C) first.",
+    "Powdered sencha sold as matcha is not matcha: matcha is shaded tencha, dried flat and stone ground.",
+    "The second steep is the short one, because the leaf is already open; the third goes longer."
+  ],
+  "library": {
+    "ref": "Green Tea",
+    "study": [
+      [
+        "leaf",
+        "Where the leaf comes from"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to brew sencha",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a pot of sencha made?",
+      "answer": "Water cooled to 160 to 175F (71 to 79C), 2 to 3 g of leaf per 6 to 8 oz in a warmed kyusu, about 60 seconds, poured off to the last drop. Grassy and marine, and good for two more steeps."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "How is the leaf for sencha stopped from oxidising?",
+      "options": [
+        "Pan fired in a wok",
+        "Steamed soon after picking",
+        "Withered slowly in the sun",
+        "Piled damp for weeks"
+      ],
+      "a": 1,
+      "explain": "Japan does the kill-green step by steam, mushi, which keeps sencha green and marine. Pan firing is the Chinese way; damp piling makes ripe pu-erh."
+    },
+    {
+      "id": "q2",
+      "q": "What water temperature suits sencha?",
+      "options": [
+        "200 to 212F (93 to 100C)",
+        "120 to 140F (49 to 60C)",
+        "160 to 175F (71 to 79C)",
+        "185 to 205F (85 to 96C)"
+      ],
+      "a": 2,
+      "explain": "Sencha wants roughly 160 to 175F (71 to 79C) for one to two minutes. The cooler 120 to 140F (49 to 60C) belongs to gyokuro, the shaded leaf."
+    },
+    {
+      "id": "q3",
+      "q": "What separates sencha from the tencha milled into matcha?",
+      "options": [
+        "Sencha is rolled; tencha is dried flat",
+        "Sencha is pan fired; tencha is steamed",
+        "Sencha is oxidised; tencha is not",
+        "Sencha comes from a different plant"
+      ],
+      "a": 0,
+      "explain": "Both are steamed Japanese leaf from the same plant. Tencha is shaded, dried without rolling and milled; sencha is rolled and steeped, so ground sencha is powder, not matcha."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library card: Green Tea",
+      "url": ""
+    },
+    {
+      "title": "Library card: Matcha",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Tea is not one temperature and one timer",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, Where the leaf comes from",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, Oxidation is the axis",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Matcha & Chai, Matcha is not green tea put through a grinder",
+      "url": ""
+    },
+    {
+      "title": "WorldTable lexicon: Tea Service & Pairing",
+      "url": ""
+    },
+    {
+      "title": "WorldTable lexicon: the non-alcoholic pairing entry",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=Oc2M784kB60",
+    "id": "Oc2M784kB60",
+    "title": "Sazen Tea Sencha Brewing Tutorial",
+    "channel": "Sazen Tea",
+    "channelKind": "company",
+    "label": "Brewing sencha step by step",
+    "watchFor": "How far the water is cooled before it reaches the leaf, the short steep, and the tea poured off completely so the leaf is not left sitting in water.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

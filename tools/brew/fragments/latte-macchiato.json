@@ -1,0 +1,130 @@
+{
+  "id": "latte-macchiato",
+  "name": "Latte macchiato",
+  "respell": "LAH-tay mah-kee-AH-toh",
+  "aka": [],
+  "group": "milk",
+  "kind": "coffee",
+  "caffeine": "From the espresso marked into the milk, a single or a double; the milk adds none.",
+  "house": {
+    "printed": false,
+    "askId": "a-zr8ze4mu",
+    "ask": "Not printed on our menus: ask at lineup whether there is an espresso machine, whether the bar will make a latte macchiato, and at what price."
+  },
+  "what": "Milk stained with coffee, the reverse of a caffè macchiato. Steamed milk goes into a tall glass first and the espresso last, poured slowly, so it sits in layers: pale milk, a band of coffee, a cap of foam. Milkier than a latte, and served in glass so the layers show.",
+  "taste": "Mostly warm, sweet milk, the coffee arriving in waves as you drink down through the layers.",
+  "make": {
+    "steps": [
+      "Size the pitcher to a warmed tall glass and steam only the milk you will pour.",
+      "Stretch a little longer than for a latte, spin glossy, cut near 135 to 140F (57 to 60C), and fill the glass.",
+      "Let it settle a moment so the foam rises, and pull a single or a double into a small jug.",
+      "Pour the shot slowly through the centre of the foam, so it settles in a band beneath."
+    ],
+    "ratio": "More milk than a latte; the shot only marks it",
+    "dose": "One or two shots of espresso; milk to fill",
+    "temp": "Milk 140 to 150F (60 to 66C)",
+    "time": "Shot 25 to 30 seconds; serve before layers blur",
+    "cup": "Warmed tall glass, 8 to 12 oz, on a saucer"
+  },
+  "serve": "On a saucer with a long spoon and a napkin, since the glass is hot to hold. Bring it straight from the machine so the layers show, and let the guest stir.",
+  "story": "Macchiato means stained or marked. The caffè macchiato is espresso marked with milk; the latte macchiato turns it round. Chain menus sell a sweet syrup drink by a similar name, closer to a vanilla latte, so ask which a guest means: the three come in different glasses.",
+  "guest": "A tall glass of steamed milk with espresso poured in last, so it sits in layers: milkier and gentler than a latte.",
+  "watch": [
+    "Ask which macchiato the guest means: the short espresso, this tall glass, or the syrup drink.",
+    "A fast pour, or one from height, mixes the shot through and no layers form.",
+    "A guest who wants more coffee is better served by a latte or a flat white."
+  ],
+  "library": {
+    "ref": "",
+    "study": [
+      [
+        "milk",
+        "Pitcher, volume and the pour window"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to make latte macchiato",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is a latte macchiato built, and in what order?",
+      "answer": "Steamed milk into a warmed tall glass first, left to settle, then a single or double espresso poured slowly through the foam to rest in a band beneath it. Milky, sweet and layered."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What does the Italian word macchiato mean?",
+      "options": [
+        "Short or restricted",
+        "Milky or pale",
+        "Stained or marked",
+        "Layered or tall"
+      ],
+      "a": 2,
+      "explain": "Macchiato means stained: espresso stained with milk, or here, milk stained with espresso."
+    },
+    {
+      "id": "q2",
+      "q": "In a latte macchiato, what goes into the glass last?",
+      "options": [
+        "The espresso",
+        "The steamed milk",
+        "Spooned foam",
+        "A syrup drizzle"
+      ],
+      "a": 0,
+      "explain": "Milk first, then the shot poured slowly through the foam, which is what makes the layers."
+    },
+    {
+      "id": "q3",
+      "q": "How does a latte macchiato differ from a caffè macchiato?",
+      "options": [
+        "Built on a ristretto base",
+        "Milk marked with espresso",
+        "Always served over ice",
+        "Caramel syrup by definition"
+      ],
+      "a": 1,
+      "explain": "The caffè macchiato is a short espresso with a mark of milk; the latte macchiato reverses it."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library lesson: Pitcher, volume and the pour window",
+      "url": ""
+    },
+    {
+      "title": "Library card: Macchiato",
+      "url": ""
+    },
+    {
+      "title": "Library card: Latte",
+      "url": ""
+    },
+    {
+      "title": "How to Make Latte Macchiato: Three Layers of Perfect Bliss",
+      "url": "https://www.coffeeness.de/en/how-to-make-latte-macchiato/"
+    },
+    {
+      "title": "What Is a Latte Macchiato? Origins, Recipe & Key Fact",
+      "url": "https://lifeboostcoffee.com/blogs/lifeboost/what-is-a-latte-macchiato-origins-recipe-key-fact"
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=IUuCU5fFm4U",
+    "id": "IUuCU5fFm4U",
+    "title": "",
+    "channel": "",
+    "channelKind": "person",
+    "label": "How to layer a latte macchiato",
+    "watchFor": "Milk into the glass first and the espresso last, poured slowly, then the layers settling: pale milk, a band of coffee, foam on top. The maker looks for at least three.",
+    "verifiedBy": "websearch",
+    "checkedOn": "2026-10-18"
+  }
+}

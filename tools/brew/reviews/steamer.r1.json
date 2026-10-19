@@ -1,0 +1,43 @@
+{
+  "id": "steamer",
+  "verdict": "fixed",
+  "findings": [
+    {
+      "field": "taste",
+      "problem": "\"At its sweetest\" says the milk gets sweeter; the Library (The temperature ceiling) says steaming makes no sugar and only perception moves: \"reads is the honest word\".",
+      "change": "Now \"the milk reading sweetest in the right band\"."
+    },
+    {
+      "field": "story",
+      "problem": "Temperatures not in the \"140 to 155F (60 to 68C)\" form, failing the schema; \"peaks\" again claims real sweetness rather than perceived.",
+      "change": "Now \"reads highest at 140 to 155F (60 to 68C), the eggy note past 160F (71C)\"."
+    },
+    {
+      "field": "watch[1]",
+      "problem": "Temperature without Celsius, failing the schema.",
+      "change": "Added (71C)."
+    },
+    {
+      "field": "recall[0].answer",
+      "problem": "Temperatures without Celsius, failing the schema.",
+      "change": "Added (57 to 60C) and (60 to 68C)."
+    },
+    {
+      "field": "quiz[1].explain",
+      "problem": "Temperature without Celsius, failing the schema.",
+      "change": "Added (71C)."
+    },
+    {
+      "field": "quiz[2]",
+      "problem": "Explanation temperature without Celsius, failing the schema; the right option was also the longest.",
+      "change": "Added (38C); answer shortened to \"Early, while the jug is cool\"."
+    },
+    {
+      "field": "make.temp",
+      "problem": "The World Table lexicon (Espresso & the Coffee Program) steams milk to 55 to 65C (131 to 149F), lower at the top than the Library’s serving band of 140 to 155F (60 to 68C).",
+      "change": "None. The Library number stands, as the style asks. The steam cut, 135 to 140F (57 to 60C), sits inside both sources and the bands overlap from 140F to 149F."
+    }
+  ],
+  "reviewer": "refuter",
+  "date": "2026-10-18"
+}

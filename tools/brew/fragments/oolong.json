@@ -1,0 +1,159 @@
+{
+  "id": "oolong",
+  "name": "Oolong",
+  "respell": "OO-long",
+  "aka": [
+    "wulong",
+    "qing cha",
+    "blue-green tea"
+  ],
+  "group": "leaf",
+  "kind": "tea",
+  "caffeine": "Commonly 25 to 55 mg per 8 oz cup, between green and black, though leaf, heat and steep time move it more than oxidation does.",
+  "house": {
+    "printed": false,
+    "askId": "a-wt01gt1b",
+    "ask": "Not printed on the menus: ask at lineup whether the bar pours an oolong, which one, pot or gaiwan, bag or loose leaf, and the price."
+  },
+  "what": "Oolong is Camellia sinensis bruised at the leaf edge and stopped partway through oxidation, commonly published as 10 to 80 per cent. Roast is a second axis, just as important: a lightly oxidised, ball rolled leaf taken through heavy charcoal drinks dark, while a highly oxidised strip left unroasted drinks bright. Anxi and Wuyi in Fujian, and the high mountains of Taiwan, are its benchmarks. It is made to be steeped again and again.",
+  "taste": "At the green end, orchid, cream and butter; at the dark end, roasted nut, stone fruit and caramel. At both ends texture is the point, and each steep shifts the flavour.",
+  "make": {
+    "steps": [
+      "Heat fresh water to 185 to 212F (85 to 100C), hotter for darker, more roasted leaf.",
+      "Warm the gaiwan or small pot and the cups, then tip the water out.",
+      "Add the leaf, a high load for gongfu, and give it a quick rinse, poured away.",
+      "Steep 20 to 45 seconds gongfu, or 2 to 3 minutes in a Western pot, and pour off every drop.",
+      "Steep again and again, stretching each infusion as the leaf tires: six to eight gongfu, two Western."
+    ],
+    "ratio": "Western 2 to 3 g per 6 to 8 oz; far more gongfu",
+    "dose": "2 to 3 g a cup Western; a high load in a small gaiwan",
+    "temp": "185 to 212F (85 to 100C); hotter for darker, roasted leaf",
+    "time": "Gongfu 20 to 45 seconds a steep; Western 2 to 3 minutes",
+    "cup": "Gaiwan or clay pot into thimble cups, 1 to 2 oz; or a mug"
+  },
+  "serve": "Gongfu at the bar: a warmed gaiwan or small pot and thimble cups, poured in stages through the session. In a dining room, a pot and a cup, with fresh hot water offered for the next steep. No milk, no lemon. It suits the table that will sit for an hour and the guest who already knows tea.",
+  "story": "In Chinese it is wulong, filed as qing cha, blue-green tea, between green and black. Shape follows region more than oxidation: ball rolled in Anxi and much of Taiwan, where high mountain oolong is called gaoshan, and twisted into strips at Wuyi and Phoenix. Some roasted oolong is among the few teas built to age. The guest who knows tea will ask how it was fired, not just how far it was oxidised, and will expect the leaf back for another steep.",
+  "guest": "Oolong sits between green and black, floral or roasted depending on the leaf; it is made to be steeped several times, so the same leaf keeps giving.",
+  "watch": [
+    "Do not throw the leaf out after one steep: six to eight gongfu infusions, or two Western ones, come off the same leaf.",
+    "The oxidation number on the tin will not tell you what is in the cup; ask how it was roasted.",
+    "Oolong milk teas sell all day, but the trade calls milk wrong on a fine oolong; ask before sending it."
+  ],
+  "library": {
+    "ref": "Oolong",
+    "study": [
+      [
+        "leaf",
+        "Oxidation is the axis"
+      ],
+      [
+        "tea",
+        "Loose leaf against the bag, honestly"
+      ]
+    ],
+    "cocktail": "",
+    "na": ""
+  },
+  "table": {
+    "recipe": ""
+  },
+  "search": "how to brew oolong tea",
+  "recall": [
+    {
+      "id": "make",
+      "prompt": "How is oolong brewed, gongfu and Western style?",
+      "answer": "Water at 185 to 212F (85 to 100C), hotter for roasted leaf. Gongfu: a high leaf load in a warmed gaiwan, a quick rinse, then 20 to 45 second steeps, six to eight of them. Western: 2 to 3 minutes, twice."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Roughly how far is oolong oxidised, as commonly published?",
+      "options": [
+        "Not at all",
+        "Fully, like black tea",
+        "About 10 to 80 per cent",
+        "Only after ten years of ageing"
+      ],
+      "a": 2,
+      "explain": "Oolong is partly oxidised, commonly published as about 10 to 80 per cent, with both edges argued over. That is why the number alone tells you little."
+    },
+    {
+      "id": "q2",
+      "q": "Besides oxidation, what second axis decides how dark an oolong drinks?",
+      "options": [
+        "Roast",
+        "Shading",
+        "Altitude",
+        "Leaf grade"
+      ],
+      "a": 0,
+      "explain": "A lightly oxidised leaf taken through heavy charcoal roast drinks dark, and a highly oxidised strip left unroasted drinks bright. Ask how it was fired."
+    },
+    {
+      "id": "q3",
+      "q": "How long is each gongfu infusion of oolong?",
+      "options": [
+        "3 to 5 minutes",
+        "Overnight in the cooler",
+        "10 minutes at a boil",
+        "20 to 45 seconds"
+      ],
+      "a": 3,
+      "explain": "Gongfu uses a high leaf load and short infusions of 20 to 45 seconds, stretched as the leaf tires, six to eight off one leaf."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Library card: Oolong",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, Oxidation is the axis",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, One plant, six teas",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: The Leaf, Where the leaf comes from",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Loose leaf against the bag, honestly",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, The service itself",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Water for tea",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Caffeine, and the questions guests ask",
+      "url": ""
+    },
+    {
+      "title": "Library lesson: Tea Service, Tea on a bar programme",
+      "url": ""
+    },
+    {
+      "title": "WorldTable lexicon: Tea Service & Pairing",
+      "url": ""
+    }
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=0NdHQdbbQaE",
+    "id": "0NdHQdbbQaE",
+    "title": "Gongfu Tea Tutorial (a Beginner's Guide to Gong Fu Cha)",
+    "channel": "Wu Mountain Tea",
+    "channelKind": "company",
+    "label": "Brewing oolong gongfu style in a gaiwan",
+    "watchFor": "How much leaf goes into the small vessel, how short each steep is, and how many times the same leaf goes again. It shows what a bag of oolong cannot do.",
+    "verifiedBy": "coffee-films",
+    "checkedOn": "2026-10-18"
+  }
+}
