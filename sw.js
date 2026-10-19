@@ -1,6 +1,6 @@
 /* The Bartender's Ledger — service worker.
    Bump CACHE on every deploy; that string is the whole update mechanism. */
-const CACHE = 'ledger-v89';
+const CACHE = 'ledger-v90';
 /* Optional pictures have their own exact inventory and bounded cache. */
 importScripts('./js/data-teaching-images.js', './js/data-fall-menu-art.js', './js/teaching-images.js');
 
