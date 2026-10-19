@@ -1341,7 +1341,7 @@ function dashboardHTML(){
   }).join('');
 
   /* replays only re-ask what you already missed, so they would read as a
-     spike exactly when you were struggling — keep them out of the trend */
+     spike exactly when you were struggling: keep them out of the trend */
   /* a Coffee and tea round (mode brew, js/ui-brew.js) shows under Recent
      rounds and is no level's, so it stays out of the trend as a replay does */
   const quizzes = (progress.quizzes || []).filter(q => !q.replay && q.mode !== 'brew');
