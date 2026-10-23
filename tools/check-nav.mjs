@@ -302,6 +302,7 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	const lit = () => (A.nav().match(/class="bnav-btn[^"]* active" aria-current="page"[^>]*data-cluster="(\w+)"/) || [])[1];
 	const lights = [
 		["state.tab='menu'; state.menu.view='menu'", 'brennans'], ["state.tab='menu'; state.menu.view='stock'", 'brennans'], ["state.tab='menu'; state.menu.view='add'", 'brennans'],
+		...['studies', 'rehearsal', 'reference'].map((v) => [`state.tab='menu'; state.menu.view='${v}'`, 'brennans']),
 		["state.tab='menu'; state.menu.view='compass'", 'brennans'], ["state.tab='menu'; state.menu.view='fall'", 'brennans'],
 		["state.tab='menu'; state.menu.view='brew'; brewOpen('')", 'brennans'], ["brewOpen(brewEntries()[0].id)", 'brennans'],
 		["state.tab='flashcards'; state.fc.stage='pick'", 'practise'], ["openDeck('cocktails')", 'practise'], ["openDeck('cocktails'); startDeckRun()", 'practise'],
@@ -541,7 +542,8 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 		...['drills', 'rail', 'hold', 'pour', 'tasting', 'flights', 'method'].map((v) => `state.tab='practice'; state.practice.view='${v}'`),
 		"state.tab='riffs'",
 		"state.tab='menu'; state.menu.view='menu'", "state.tab='menu'; state.menu.view='stock'", "state.tab='menu'; state.menu.view='add'",
-		/* Coffee and tea (18 October 2026): the index, an entry and its deck */
+		...['studies', 'rehearsal', 'reference'].map((v) => `state.tab='menu'; state.menu.view='${v}'`),
+		/* Coffee and tea: the index, an entry and its deck */
 		"brewOpen('')", "brewOpen(brewEntries()[0].id)", "openDeck('brew')",
 	];
 	const seenTabs = new Set();
@@ -641,6 +643,8 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	   same chain by replaces */
 	const B = boot({ hash: '#/menu' });
 	await settle();
+	if (!B.tap({ 'data-act': 'menu-view', 'data-v': 'studies' })) fail('the menu has no Bar studies destination');
+	await settle();
 	const b0 = B.state();
 	const id = B.run('brewEntries()[0].id');
 	if (!B.tap({ 'data-act': 'menu-view', 'data-v': 'brew' })) fail('the menu\'s sub-nav has no Coffee and tea');
@@ -651,14 +655,14 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	await settle();
 	if (B.state().key !== 'menu/brew/' + id || B.state().at !== b1.at + 1) fail(`an entry's row opens ${B.state().key} at entry ${B.state().at}, not the entry by one push`);
 	const bk = [];
-	for (let i = 0; i < 3 && backs(B.view()); i++) { B.tap({ 'data-act': 'back' }); await settle(); bk.push(B.state().key); }
-	if (bk.join('|') !== 'menu/brew|menu|home') fail(`Back from a Coffee and tea entry walks ${bk.join(' > ')}, not menu/brew > menu > home`);
+	for (let i = 0; i < 4 && backs(B.view()); i++) { B.tap({ 'data-act': 'back' }); await settle(); bk.push(B.state().key); }
+	if (bk.join('|') !== 'menu/brew|menu/view/studies|menu|home') fail(`Back from a Coffee and tea entry walks ${bk.join(' > ')}, not menu/brew > Bar studies > menu > home`);
 	const BC = boot({ hash: '#/menu/brew/' + id });
 	await settle();
 	if (BC.state().key !== 'menu/brew/' + id || BC.state().d !== 0) fail(`a cold #/menu/brew/${id} is ${BC.state().key} at depth ${BC.state().d}`);
 	const bc = [];
-	for (let i = 0; i < 3 && backs(BC.view()); i++) { BC.tap({ 'data-act': 'back' }); await settle(); bc.push(BC.state().key); }
-	if (bc.join('|') !== 'menu/brew|menu|home' || BC.history.length !== 1) fail(`a cold Coffee and tea entry walks up ${bc.join(' > ')} with ${BC.history.length} entries, not menu/brew > menu > home by replaces`);
+	for (let i = 0; i < 4 && backs(BC.view()); i++) { BC.tap({ 'data-act': 'back' }); await settle(); bc.push(BC.state().key); }
+	if (bc.join('|') !== 'menu/brew|menu/view/studies|menu|home' || BC.history.length !== 1) fail(`a cold Coffee and tea entry walks up ${bc.join(' > ')} with ${BC.history.length} entries, not menu/brew > Bar studies > menu > home by replaces`);
 }
 
 /* ---- 8. the screens: one Back, Home four cards, words and no glyphs --------- */
@@ -686,6 +690,7 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 		['Batching', "state.tab='tools'; state.tools.view='batch'", false],
 		['the drills', "state.tab='practice'; state.practice.view='drills'", false],
 		['the menu', "state.tab='menu'; state.menu.view='menu'", false],
+		...['studies', 'rehearsal', 'reference'].map((v) => [v, `state.tab='menu'; state.menu.view='${v}'`, true]),
 		['Coffee and tea', "state.tab='menu'; state.menu.view='brew'; brewOpen('')", true],
 		['a coffee or a tea', "state.tab='menu'; brewOpen(brewEntries()[0].id)", true],
 		['a level test', "ltStart(1); state.tab='level'", false],
@@ -852,7 +857,7 @@ else {
 	T.tabTap('brennans'); await settle();
 	if (T.state().key !== 'menu' || T.history.length !== tl || T.state().at !== t3.at) fail('the house\'s word tapped on its own page wrote an entry');
 	/* a jump on the page scrolls and focuses: no address, no entry */
-	T.tap({ 'data-act': 'hs-jump', 'data-to': 'hs-s-classic-eye-openers' }); await settle();
+	T.run("houseStudyAct('hs-jump', {to:'hs-s-classic-eye-openers'})"); await settle();
 	if (T.state().hash !== '#/menu' || T.history.length !== tl) fail(`a jump on the house's page left ${T.state().hash} with ${T.history.length} entries, not #/menu and ${tl}`);
 	/* a sub-view (The Bar Compass): the lit word returns to the page */
 	T.run("state.tab = 'menu'; state.menu.view = 'compass'; render()"); await settle();
@@ -968,9 +973,12 @@ else {
 	/* the house's page's door (the level page's until the five words of 18
 	   October 2026): one push to the Producers tab, Back to the page */
 	B.tabTap('brennans'); await settle();
+	if (B.state().key !== 'menu') fail(`the house's word lands on ${B.state().key}, not its page`);
+	if (!B.tap({ 'data-act': 'menu-view', 'data-v': 'reference' })) fail('the menu has no House reference destination');
+	await settle();
 	const l0 = B.state();
-	if (l0.key !== 'menu') fail(`the house's word lands on ${l0.key}, not its page`);
-	if (!/<h3 class="hs-h3" id="hs-producers-h" tabindex="-1">Producers<\/h3><nav class="quiet rows" aria-label="Producers"><button class="door" data-act="lv-producers"><span class="door-name">The producers<\/span><span class="door-line">2 producers behind 2 drinks on the menu\.<\/span>/.test(B.view())) fail('the house\'s page has no door to the producers with its count');
+	if (l0.key !== 'menu/view/reference') fail(`House reference lands on ${l0.key}`);
+	if (!B.view().includes('id="hs-producers-h">The producers</h3>') || !B.view().includes('data-act="lv-producers"') || !B.view().includes('2 producers behind 2 drinks on the menu.')) fail('House reference has no producer door with the complete count');
 	B.tap({ 'data-act': 'lv-producers' }); await settle();
 	if (B.state().key !== 'producers' || B.state().at !== l0.at + 1) fail(`the house's page's door opens ${B.state().key} at entry ${B.state().at}, not the Producers tab by one push`);
 	B.tap({ 'data-act': 'back' }); await settle();

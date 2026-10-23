@@ -608,6 +608,8 @@ await test('W3 addresses: every entry round-trips, its parent is the index, the 
     g('applyParent')();
     assert.equal(g('routeNow')().hash, '#/menu/brew');
     g('applyParent')();
+    assert.equal(g('routeNow')().hash, '#/menu/view/studies');
+    g('applyParent')();
     assert.equal(g('routeNow')().hash, '#/menu');
   }
   for (const bad of ['#/menu/brew/no-such-entry', '#/menu/brew/%E0%A4%A', '#/menu/brew/', '#/menu/view/brew']) {
@@ -621,8 +623,11 @@ await test('W3 addresses: every entry round-trips, its parent is the index, the 
 await test('W3 Back: the menu, the page, an entry by its row, then Back three times to the menu and Home; a cold entry walks up by replaces', async () => {
   const B = boot({ hash: '#/menu' });
   await settle();
+  assert.equal(B.state().key, 'menu');
+  assert.ok(B.tap({ 'data-act': 'menu-view', 'data-v': 'studies' }), 'the menu has no Bar studies');
+  await settle();
   const s0 = B.state();
-  assert.equal(s0.key, 'menu');
+  assert.equal(s0.key, 'menu/view/studies');
   assert.ok(B.tap({ 'data-act': 'menu-view', 'data-v': 'brew' }), 'the sub-nav has no Coffee and tea');
   await settle();
   const s1 = B.state();
@@ -634,14 +639,14 @@ await test('W3 Back: the menu, the page, an entry by its row, then Back three ti
   eq([s2.key, s2.at], ['menu/brew/' + id, s1.at + 1]);
   assert.equal(count(B.view(), /data-act="back"/g), 1, 'one Back on the entry');
   const walk = [];
-  for (let i = 0; i < 3; i++) { B.tap({ 'data-act': 'back' }); await settle(); walk.push(B.state().key); }
-  eq(walk, ['menu/brew', 'menu', 'home']);
+  for (let i = 0; i < 4; i++) { B.tap({ 'data-act': 'back' }); await settle(); walk.push(B.state().key); }
+  eq(walk, ['menu/brew', 'menu/view/studies', 'menu', 'home']);
   const C = boot({ hash: '#/menu/brew/' + id });
   await settle();
   eq([C.state().key, C.state().d], ['menu/brew/' + id, 0]);
   const up = [];
-  for (let i = 0; i < 3; i++) { C.tap({ 'data-act': 'back' }); await settle(); up.push(C.state().key); }
-  eq(up, ['menu/brew', 'menu', 'home']);
+  for (let i = 0; i < 4; i++) { C.tap({ 'data-act': 'back' }); await settle(); up.push(C.state().key); }
+  eq(up, ['menu/brew', 'menu/view/studies', 'menu', 'home']);
   assert.equal(C.history.length, 1, 'walking up a cold entry grew the history');
   const N = boot({ hash: '#/menu/brew/no-such-entry' });
   await settle();
@@ -799,9 +804,11 @@ await test('W6 the quiz: through the real click, one Recent rounds row in mode b
 await test('W7 doors: the sub-nav after Fall 2026, the Practise rows after The Bar Compass, the search index, every door landing', () => {
   run("state.tab = 'menu'; state.menu.view = 'menu';");
   const menu = g('renderMenu')();
-  const tabs = menu.slice(menu.indexOf('<nav class="tabs'), menu.indexOf('</nav>'));
-  const subs = [...tabs.matchAll(/data-act="menu-view" data-v="(\w+)">([^<]*)</g)].map((m) => m[1] + ':' + m[2]);
-  eq(subs, ['menu:The menu', 'compass:The Bar Compass', 'fall:Fall 2026', 'brew:Coffee and tea', 'stock:The stock', 'add:Add drinks']);
+  const tabs = (menu.match(/<nav class="house-sections"[^>]*>([\s\S]*?)<\/nav>/) || [])[1] || '';
+  const subs = [...tabs.matchAll(/data-act="menu-view" data-v="(\w+)"[^>]*>([^<]*)</g)].map((m) => m[1] + ':' + m[2]);
+  eq(subs, ['menu:Menu', 'studies:Bar studies', 'rehearsal:Service rehearsal', 'reference:House reference']);
+  run("state.menu.view = 'studies'");
+  assert.ok(g('renderMenu')().includes('data-act="menu-view" data-v="brew"'), 'Bar studies does not offer Coffee and tea');
   const pick = g('fcPickHTML')();
   const navs = [...pick.matchAll(/<nav class="quiet rows" aria-label="([^"]+)">/g)].map((m) => m[1]);
   assert.equal(navs[navs.indexOf('The Bar Compass') + 1], 'Coffee and tea', 'the Coffee and tea rows are not right after The Bar Compass: ' + navs.join(' | '));
@@ -896,20 +903,20 @@ else {
       for (const id of e.house.uses) assert.ok(out.includes(esc(items.find((x) => x.id === id).name)), e.id + ': the record it appears in, ' + id);
     }
   });
-  await test('H3 the door: on the house\u2019s page between The Bar Compass and the producers, in the jump row too', () => {
-    B.run("state.tab = 'menu'; state.menu.view = 'menu'; render();");
+  await test('H3 the door: Bar studies keeps Coffee and tea beside The Bar Compass, with producers in House reference', () => {
+    B.run("state.tab = 'menu'; state.menu.view = 'studies'; render();");
     const v = B.view();
-    const at = ['hs-compass-h', 'hs-brew-h', 'hs-producers-h'].map((id) => v.indexOf('id="' + id + '"'));
-    assert.ok(at.every((i) => i >= 0) && at[0] < at[1] && at[1] < at[2], 'the doors stand at ' + at.join(', '));
-    assert.ok(v.slice(at[1], at[2]).includes('class="brew-door" href="#/menu/brew"'), 'the door is not the Coffee and tea door');
-    const jumps = [...v.matchAll(/data-act="hs-jump" data-to="([^"]+)"/g)].map((m) => m[1]);
-    const j = ['hs-compass-h', 'hs-brew-h', 'hs-producers-h'].map((id) => jumps.indexOf(id));
-    assert.ok(j[0] >= 0 && j[1] === j[0] + 1 && j[2] === j[1] + 1, 'the jump row reads ' + jumps.join(', '));
+    assert.ok(v.includes('class="brew-door" href="#/menu/brew"'), 'Bar studies has no Coffee and tea door');
+    assert.ok(v.indexOf('class="bc-door"') < v.indexOf('class="brew-door"'), 'Coffee and tea is not after The Bar Compass');
+    assert.ok(!v.includes('class="hs-jumps"'), 'Bar studies still carries the scattered jump row');
+    B.run("state.menu.view = 'reference'; render();");
+    assert.ok(B.view().includes('data-act="lv-producers"'), 'House reference has no producer door');
   });
   await test('H3 the house card: Open the house card opens it by one push, and Back returns to the page', async () => {
     const C = boot({ house: true, hash: '#/menu' });
     await settle();
     await wake(C, packText);
+    C.tap({ 'data-act': 'menu-view', 'data-v': 'studies' }); await settle();
     C.tap({ 'data-act': 'menu-view', 'data-v': 'brew' }); await settle();
     const s0 = C.state();
     assert.equal(s0.key, 'menu/brew');

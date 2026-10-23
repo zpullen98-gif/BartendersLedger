@@ -70,9 +70,9 @@ try {
   /* the cold addresses */
   await expect(page.locator('#view h2')).toHaveText('Coffee and tea'); checks++;
   await expect(page.locator('#view [data-act="back"]')).toHaveCount(1); checks++;
-  const subs = await page.locator('.brew-menu-tabs .tab-btn').evaluateAll((els) => els.map((el) => ({ t: el.textContent.trim(), on: el.getAttribute('aria-current') === 'true', h: el.getBoundingClientRect().height })));
-  ok(subs.map((s) => s.t).join('|') === 'The menu|The Bar Compass|Fall 2026|Coffee and tea|The stock|Add drinks', 'the sub-nav reads ' + subs.map((s) => s.t).join('|'));
-  ok(subs[3].on && subs.filter((s) => s.on).length === 1, 'Coffee and tea is not the one current sub-view');
+  const subs = await page.locator('.house-sections .tab-btn').evaluateAll((els) => els.map((el) => ({ t: el.textContent.trim(), on: el.getAttribute('aria-current') === 'page', h: el.getBoundingClientRect().height })));
+  ok(subs.map((s) => s.t).join('|') === 'Menu|Bar studies|Service rehearsal|House reference', 'the sub-nav reads ' + subs.map((s) => s.t).join('|'));
+  ok(subs[1].on && subs.filter((s) => s.on).length === 1, 'Bar studies is not the current learning section for Coffee and tea');
   ok(subs.every((s) => s.h >= 43.5), 'a sub-nav button under 44px');
   await expect(page.locator('#brew-results .brew-row')).toHaveCount(data.entries.length); checks++;
   for (const e of data.entries) {
@@ -121,7 +121,8 @@ try {
 
   /* the Back chain */
   await go('#/menu');
-  await page.locator('[data-act="menu-view"][data-v="brew"]').click();
+  await page.locator('.house-sections [data-v="studies"]').click();
+  await page.locator('.house-subsections [data-v="brew"]').click();
   await expect(page).toHaveURL(/#\/menu\/brew$/); checks++;
   await page.locator('#brew-q').fill(first.name);
   await page.locator('#brew-results a.brew-row[href="#/menu/brew/' + first.id + '"]').click();
@@ -130,6 +131,8 @@ try {
   await expect(page).toHaveURL(/#\/menu\/brew$/); checks++;
   await expect(page.locator('#brew-q')).toHaveValue(first.name); checks++;
   await page.locator('#brew-q').fill('');
+  await page.locator('#view [data-act="back"]').click();
+  await expect(page).toHaveURL(/#\/menu\/view\/studies$/); checks++;
   await page.locator('#view [data-act="back"]').click();
   await expect(page).toHaveURL(/#\/menu$/); checks++;
   await page.locator('#view [data-act="back"]').click();
@@ -254,15 +257,10 @@ try {
   /* the house's word lands on its page with nothing open */
   await page.locator('#bnav [data-cluster="brennans"]').click();
   await expect(page).toHaveURL(/#\/menu$/); checks++;
-  await expect(page.locator('#hs-brew-h')).toHaveText('Coffee and tea'); checks++;
-  const doors = await page.evaluate(() => ['hs-compass-h', 'hs-brew-h', 'hs-producers-h'].map((id) => { const el = document.getElementById(id); return el ? el.getBoundingClientRect().top + scrollY : -1; }));
-  ok(doors.every((t) => t >= 0) && doors[0] < doors[1] && doors[1] < doors[2], 'the door does not stand between The Bar Compass and the producers: ' + doors.join(', '));
-  const jumps = await page.locator('.hs-jumps [data-act="hs-jump"]').evaluateAll((els) => els.map((el) => el.dataset.to));
-  ok(jumps.indexOf('hs-brew-h') === jumps.indexOf('hs-compass-h') + 1 && jumps.indexOf('hs-producers-h') === jumps.indexOf('hs-brew-h') + 1, 'the jump row reads ' + jumps.join(', '));
-  const len2 = await page.evaluate(() => history.length);
-  await page.locator('.hs-jumps [data-act="hs-jump"][data-to="hs-brew-h"]').click();
-  ok(await page.evaluate(() => document.activeElement && document.activeElement.id === 'hs-brew-h'), 'the jump did not focus the Coffee and tea heading');
-  ok(await page.evaluate(() => history.length) === len2 && /#\/menu$/.test(page.url()), 'the jump wrote an address or an entry');
+  await page.locator('.house-sections [data-v="studies"]').click();
+  await expect(page).toHaveURL(/#\/menu\/view\/studies$/); checks++;
+  await expect(page.locator('a.brew-door')).toHaveCount(1); checks++;
+  ok(await page.locator('.hs-jumps').count() === 0, 'the old jump row is absent from the focused studies page');
   await page.locator('a.brew-door').click();
   await expect(page).toHaveURL(/#\/menu\/brew$/); checks++;
   ok(!outside.length, 'a render asked YouTube or its pictures: ' + outside.slice(0, 3).join(' '));

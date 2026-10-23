@@ -101,7 +101,7 @@ globalThis.FileReader = class { readAsText(text){ this.result = text; if (this.o
    declares; srs.js is here because the backup import calls srsMigrate. */
 const APP = ['data-core.js', 'data-lore.js', 'data-ontap.js', 'data-coffee.js', 'data-service.js', 'data-ingredients.js',
 	'ingredients.js', 'engine.js', 'srs.js', 'ui-study.js', 'ui-practice.js', 'ui-reference.js', 'ui-prep.js', 'ui-new.js',
-	'menu-drinks.js', 'ui-menu.js', 'ui-import.js', 'data-levels.js', 'levels.js', 'ui-levels.js', 'house-bar.js', 'house-study.js', 'ui-nav.js'];
+	'menu-drinks.js', 'ui-menu.js', 'ui-import.js', 'data-levels.js', 'levels.js', 'ui-levels.js', 'house-bar.js', 'house-study.js', 'ui-nav.js', 'house-flow.js'];
 const W = vm.runInThisContext(APP.map((f) => readFileSync(join(JS, f), 'utf8')).join(';\n') +
 	';({menuDrinkFromDeskItem,menuDraftsFromDesk,menuDraftFromText,menuCanonMeasures,unmeasuredReason,measureReport,' +
 	'MD_isIngredientList,MD_listParts,MD_spiritOf,lineOz,COCKTAILS,progress,state,' +
@@ -117,7 +117,7 @@ const W = vm.runInThisContext(APP.map((f) => readFileSync(join(JS, f), 'utf8')).
 	'houseAutoLoad,houseDrillAct,houseDrillHTML,houseDrillDoorsHTML,houseSayItems,houseRoleDeck,houseSayPick,houseRowForm,' +
 	'houseStudyOn,houseStudyHTML,houseStudyAct,openDeck,startDeckRun,deckDef,houseStudyDeepLink,houseStudyRoute,houseStudySectionOf,hsCanonFor,hsProducersFor,hsVideoUrlOk,hsVideosForLocal,hsVideoGroupsLocal,hsVideosFor,hsVideoGroups,hsVideoLI,hsVideoOrdinals,applyRoute,currentRoute,deckNameNow,cardByKey,componentCards,' +
 	'hsWhoMakesHTML,hsDrinkProducers,hsProducersLine,producerCards,renderProducers,houseProducerQuestions,studyHashOf,missCardKey,myRestaurantHTML,navAct,PRODUCERS,hsProducerCardsLocal,hsDealProducerLocal,hsDrinkProducerHouse,' +
-	'hsLibraryProducer,hsFoundedSentence,houseStudyAfterRender,PROD_CATS})');
+	'hsLibraryProducer,hsFoundedSentence,houseStudyAfterRender,houseFlowHTML,PROD_CATS})');
 
 /* The House engine, ../shared/oot-house.js, for the house cases below: the
    wing layout keeps it two folders up, the source repo reads WorldTable's
@@ -3967,8 +3967,10 @@ houseDescribe('the House behind the menu', () => {
 					   the five words of 18 October 2026, which give the level page one
 					   lead door to the house's page) */
 					W.state.menu.study.open = null;
-					const page = W.renderMenu();
-					expect(page).toContain('<h3 class="hs-h3" id="hs-producers-h" tabindex="-1">Producers</h3><nav class="quiet rows" aria-label="Producers"><button class="door" data-act="lv-producers"><span class="door-name">The producers</span><span class="door-line">4 producers behind 4 drinks on the menu.</span>');
+					const page = W.houseFlowHTML('reference');
+					expect(page).toContain('id="hs-producers-h">The producers</h3>');
+					expect(page).toContain('data-act="lv-producers"');
+					expect(page).toContain('4 producers behind 4 drinks on the menu.');
 					const lv = W.myRestaurantHTML();
 					expect(lv).not.toContain('data-act="lv-producers"');
 					expect((lv.match(/data-act="lv-menu"/g) || []).length).toBe(1);
@@ -4006,7 +4008,7 @@ houseDescribe('the House behind the menu', () => {
 				const view = { addEventListener(type, fn, capture) { heard.push({ type, fn, capture }); } };
 				globalThis.document = { getElementById: (id) => (id === 'view' ? view : null), querySelector: () => null, querySelectorAll: () => [] };
 				const toggle = (open, row, own) => {
-					const target = { tagName: 'DETAILS', open, getAttribute: (n) => (n === 'data-keep' ? own || null : null), parentNode: { getAttribute: (n) => (row && n === row[0] ? row[1] : null) } };
+					const target = { tagName: 'DETAILS', isConnected: true, open, getAttribute: (n) => (n === 'data-keep' ? own || null : null), parentNode: { getAttribute: (n) => (row && n === row[0] ? row[1] : null) } };
 					for (const h of heard) if (h.type === 'toggle') h.fn({ target });
 				};
 				const openIn = (html, attr) => { const i = html.indexOf(attr); return i >= 0 && /^<details[^>]* open>/.test(html.slice(html.indexOf('<details', i))); };
@@ -4378,88 +4380,67 @@ houseDescribe('the House behind the menu', () => {
 		});
 	});
 
-	/* The Brennan's page's jump row (the five words, 18 October 2026): one button per place on the page,
-	   under the header and above the sticky search, each naming an id the page draws; the house's own
-	   sections by the words a server goes by, keyed by the menus' headings with the house's name read
-	   from the house; any other house one button per section under its own name. */
-	packIt('the house\'s page carries a jump row under its header: the cocktail list, eye openers and coffee, Bubbles, after dinner and the Roost Bar, then the producers and the videos, each to a place the page draws, writing nothing; another house gets one button per section', async () => {
+	/* Four focused destinations preserve the complete house record. Menu sections
+	   keep their stable ids and native disclosures; the old jump helper remains
+	   callable for existing integrations but is no longer printed. */
+	packIt('the house menu keeps every drink in ordered collapsed sections, search and section filters reveal their results, and other houses use their own headings', async () => {
 		counted();
 		await withBarAsync(async () => {
 			await withStudy(async (pushed) => {
 				await withFetch(PACK_TEXT, async () => { await W.houseAutoLoad(); });
 				const cur = OOT.house.current();
-				const jumps = (html) => {
-					const nav = (html.match(/<nav class="hs-jumps" aria-label="On this page">([\s\S]*?)<\/nav>/) || [])[1];
-					return nav === undefined ? null : [...nav.matchAll(/<button class="chip hs-chip" data-act="hs-jump" data-to="([^"]+)"( hidden)?>([^<]*)<\/button>/g)].map((m) => ({ to: m[1], hidden: Boolean(m[2]), label: m[3] }));
-				};
+				const categories = (html) => [...html.matchAll(/<details class="hs-category" data-section="([^"]+)"([^>]*)>/g)].map((m) => ({ name: m[1], open: /\bopen\b/.test(m[2]) }));
+				const rows = (html) => [...html.matchAll(/<button class="hs-row" data-act="hs-open" data-id="([^"]+)"/g)].map((m) => m[1]);
 				const html = W.renderMenu();
-				const row = jumps(html);
-				expect(row).not.toBe(null);
-				/* under the header, above the sticky search */
-				expect(html.indexOf('<nav class="hs-jumps"')).toBeLessThan(html.indexOf('<div class="hs-bar">'));
-				expect(html.indexOf('<nav class="hs-jumps"')).toBeGreaterThan(html.indexOf('class="hs-house"'));
-				const first = cur.cocktails[0].section;
-				const want = [['The cocktail list', 'hs-s-' + W_slug(first)], ['Eye openers and coffee', 'hs-s-classic-eye-openers'], ['Bubbles', 'hs-s-' + W_slug('Bubbles at Brennan\'s')],
-					['After dinner', 'hs-s-dessert-cocktails'], ['The Roost Bar', 'hs-s-luxury-roost-bar-cocktails']];
-				if (W.hsProducersLine(cur)) want.push(['Producers', 'hs-producers-h']);
-				if (html.includes('id="hs-videos-h"')) want.push(['Videos', 'hs-videos-h']);
-				expect(row.map((j) => [j.label, j.to])).toEqual(want);
-				expect(row.every((j) => !j.hidden)).toBe(true);
-				/* every button names a place the page draws */
-				for (const j of row) expect([j.to, html.includes('id="' + j.to + '"')]).toEqual([j.to, true]);
-				/* a jump writes nothing: no address, no entry, no state */
-				const st = JSON.stringify(W.state.menu.study), hash = globalThis.location.hash;
-				W.houseStudyAct('hs-jump', { to: 'hs-s-classic-eye-openers' });
-				expect(pushed).toEqual([]);
-				expect(globalThis.location.hash).toBe(hash);
-				expect(JSON.stringify(W.state.menu.study)).toBe(st);
-				/* a chosen section hides the buttons whose sections it takes off the page */
+				const sections = [...new Set(cur.cocktails.map((c) => c.section))];
+				expect(rows(html)).toEqual(cur.cocktails.map((c) => c.id));
+				expect(categories(html).map((c) => c.name)).toEqual(sections.map(W_esc));
+				expect(categories(html).every((c) => !c.open)).toBe(true);
+				expect(html).toContain('id="hs-section"');
+				expect(html).not.toContain('class="hs-jumps"');
+				expect(html).not.toContain('id="hs-videos-h"');
+				expect(html).not.toContain('id="hs-producers-h"');
+				for (const sec of sections) expect(html).toContain('id="hs-s-' + W_slug(sec) + '"');
+				const record = JSON.stringify(W.progress);
+				/* A search reveals results instead of hiding a match in a closed section. */
+				W.state.menu.study.q = 'Sazerac';
+				const searched = W.renderMenu();
+				expect(categories(searched).length).toBeGreaterThan(0);
+				expect(categories(searched).every((c) => c.open)).toBe(true);
+				expect(rows(searched)).toContain(SAZ);
+				W.state.menu.study.q = '';
 				W.houseStudyAct('hs-sec', { s: 'Classic Eye Openers' });
-				const one = jumps(W.renderMenu());
-				expect(one.filter((j) => /^hs-s-/.test(j.to) && !j.hidden).map((j) => j.to)).toEqual(['hs-s-classic-eye-openers']);
+				const one = W.renderMenu();
+				expect(categories(one)).toEqual([{ name: 'Classic Eye Openers', open: true }]);
+				expect(rows(one)).toEqual(cur.cocktails.filter((c) => c.section === 'Classic Eye Openers').map((c) => c.id));
 				W.houseStudyAct('hs-sec', { s: '' });
-				/* a shift: every jump names the place it names on the whole menu, and one whose section the
-				   shift leaves off the page is hidden, never lent to another section */
-				const allDay = Object.fromEntries(row.map((j) => [j.label, j.to]));
-				const meals = [...new Set((cur.meals || []).map((x) => x && x.name).filter(Boolean))];
-				expect(meals.length).toBeGreaterThan(1);
-				let narrower = 0;
-				const ls = globalThis.localStorage;
-				const store = {};
-				globalThis.localStorage = { getItem: (k) => (k in store ? store[k] : null), setItem: (k, v) => { store[k] = String(v); }, removeItem: (k) => { delete store[k]; } };
-				try {
-					for (const m of meals) {
-						W.houseStudyAct('hs-meal', { m });
-						const shifted = W.renderMenu();
-						/* the shift took: its chip is the one pressed */
-						expect([m, (shifted.match(/<button class="chip hs-chip on" aria-pressed="true" data-act="hs-meal" data-m="([^"]*)">/) || [])[1]]).toEqual([m, W_esc(m)]);
-						if (jumps(shifted).some((j) => j.hidden)) narrower++;
-						for (const j of jumps(shifted)) {
-							expect([m, j.label, j.to]).toEqual([m, j.label, allDay[j.label]]);
-							expect([m, j.to, j.hidden]).toEqual([m, j.to, !shifted.includes('id="' + j.to + '"')]);
-						}
-					}
-					W.houseStudyAct('hs-meal', { m: '' });
-				} finally { globalThis.localStorage = ls; }
-				/* at least one shift leaves a section off, so the case is not empty */
-				expect(narrower).toBeGreaterThan(0);
-				/* the house's name is read from the house: renamed, its Bubbles heading is no longer the house's own */
-				const renamed = JSON.parse(PACK_TEXT);
-				renamed.house.name = 'The Fixture Room';
-				counted();
-				await withFetch(JSON.stringify(renamed), async () => { await W.houseAutoLoad(); });
-				const r = jumps(W.renderMenu());
-				expect(r.map((j) => j.label).slice(0, 4)).toEqual(['The cocktail list', 'Eye openers and coffee', 'After dinner', 'The Roost Bar']);
-				/* another house: one button per section, under the section's own name */
+				/* Expanded sections survive a repaint and a card round trip. */
+				W.state.menu.study.expanded = { [sections[0]]: true };
+				expect(categories(W.renderMenu())[0].open).toBe(true);
+				W.houseStudyAct('hs-open', { id: cur.cocktails[0].id });
+				W.houseStudyAct('hs-back', {});
+				expect(categories(W.renderMenu())[0].open).toBe(true);
+				expect(JSON.stringify(W.progress)).toBe(record);
+				/* Every former appended reference remains in a focused destination. */
+				const studies = W.houseFlowHTML('studies'), reference = W.houseFlowHTML('reference');
+				if ((cur.videos || []).length) expect(studies).toContain('id="hs-videos-h"');
+				if (W.hsProducersLine(cur)) expect(reference).toContain('data-act="lv-producers"');
+				/* Legacy jump calls still write no navigation entry. */
+				const n = pushed.length, hash = globalThis.location.hash;
+				W.houseStudyAct('hs-jump', { to: 'hs-s-classic-eye-openers' });
+				expect(pushed.length).toBe(n);
+				expect(globalThis.location.hash).toBe(hash);
 				const other = JSON.parse(PACK_TEXT);
+				other.house.name = 'The Fixture Room & Bar';
 				for (const c of other.house.cocktails) c.section = 'The ' + c.section + ' list';
 				counted();
 				await withFetch(JSON.stringify(other), async () => { await W.houseAutoLoad(); });
+				W.state.menu.study.expanded = {};
 				const oh = W.renderMenu();
-				const o = jumps(oh);
 				const osecs = [...new Set(other.house.cocktails.map((c) => c.section))];
-				expect(o.filter((j) => /^hs-s-/.test(j.to)).map((j) => j.label)).toEqual(osecs.map(W_esc));
-				for (const j of o) expect([j.to, oh.includes('id="' + j.to + '"')]).toEqual([j.to, true]);
+				expect(categories(oh).map((c) => c.name)).toEqual(osecs.map(W_esc));
+				expect(rows(oh)).toEqual(other.house.cocktails.map((c) => c.id));
+				for (const sec of osecs) expect(oh).toContain('id="hs-s-' + W_slug(sec) + '"');
 			});
 		});
 	});
@@ -4490,13 +4471,13 @@ houseDescribe('the House behind the menu', () => {
 				const cur = OOT.house.current();
 				/* the engine dropped the link it refuses; three stand */
 				expect(cur.videos.map((v) => v.id)).toEqual(['v-sazerac1', 'v-houseone', 'v-termone1']);
-				const list = W.renderMenu();
+				const list = W.houseFlowHTML('studies');
 				expect(list).toContain('<h3 class="eyebrow hs-sec-name" id="hs-videos-h">Videos (3)</h3>');
 				expect(list).toContain('Each video opens on YouTube or Vimeo in a new tab, and needs a connection.');
-				const topics = [...list.matchAll(/<details class="hs-more"><summary>([^<]+) \((\d+)\)<\/summary><ul class="hs-vlist">/g)].map((m) => m[1]);
+				const topics = [...list.matchAll(/<details class="hs-more"[^>]*><summary[^>]*>([^<]+) \((\d+)\)<\/summary><ul class="hs-vlist">/g)].map((m) => m[1]);
 				expect(topics).toEqual(['The house', 'The Sazerac', 'The bar']);
 				/* every link a new tab with rel noopener, on a video host, and no player anywhere */
-				const links = [...list.matchAll(/<a class="hs-vlink" href="([^"]+)" target="_blank" rel="noopener">/g)].map((m) => m[1]);
+				const links = [...list.matchAll(/<a class="hs-vlink" href="([^"]+)" target="_blank" rel="noopener"[^>]*>/g)].map((m) => m[1]);
 				expect(links).toEqual(['https://youtu.be/bbbbbbbbbbb', 'https://www.youtube.com/watch?v=aaaaaaaaaaa', 'https://vimeo.com/123456']);
 				expect(list).not.toMatch(/<iframe|<video[\s>]|autoplay/i);
 				expect(list).not.toContain('ccccccccccc');
@@ -4545,7 +4526,7 @@ houseDescribe('the House behind the menu', () => {
 				/* the living people the shipped pack's video titles, channels and whys name today */
 				const PEOPLE = /Ralph Brennan|Anders|Erickson|P[e\u00e9]pin|Kenji|L[o\u00f3]pez|Jean-Pierre|Jamie Oliver/;
 				const section = (html, open) => { const at = html.indexOf(open); return at < 0 ? '' : html.slice(at, html.indexOf('</section>', at)); };
-				const list = W.renderMenu();
+				const list = W.houseFlowHTML('studies');
 				expect(list).toContain('id="hs-videos-h">Videos (' + cur.videos.length + ')</h3>');
 				const videos = section(list, '<section class="panel hs-sec hs-videos"');
 				expect(videos.length).toBeGreaterThan(0);
@@ -4696,7 +4677,7 @@ houseDescribe('the House behind the menu', () => {
 				W.recordCard(false);
 				expect(W.progress.cards['My Bar · Bloody Bull']).toMatchObject({ r: 0, w: 1 });
 				W.state.tab = 'menu';
-				expect(W.renderMenu()).toContain('My weak ones (1)');
+				expect(W.houseFlowHTML('rehearsal')).toContain('data-act="deck" data-deck="menu-weak"><span class="door-name">My weak ones</span>');
 				W.houseStudyAct('hs-cards', { weak: '1' });
 				expect(W.state.fc.deckId).toBe('menu-weak');
 				expect(W.fcPool().map((d) => d.ref.id)).toEqual(['b-xid4q2qi']);
@@ -4715,10 +4696,10 @@ houseDescribe('the House behind the menu', () => {
 		const study = readFileSync(join(JS, 'house-study.js'), 'utf8');
 		const ids = new Set();
 		for (const m of study.matchAll(/<(?:textarea|input|select)\b[^>]*id="([a-z0-9-]+)"/g)) ids.add(m[1]);
-		expect([...ids]).toEqual(['hs-q']);
+		expect([...ids]).toEqual(['hs-q', 'hs-section']);
 		const ui = readFileSync(join(JS, 'ui-study.js'), 'utf8');
 		expect(ui).toContain('id="fc-section"');
-		for (const id of ['hs-q', 'fc-section']) expect(captureSrc.includes("'" + id + "'")).toBe(true);
+		for (const id of ['hs-q', 'hs-section', 'fc-section']) expect(captureSrc.includes("'" + id + "'")).toBe(true);
 		expect(APP_SRC).toContain("else if(act.indexOf('hs-')===0){ houseStudyAct(act, el.dataset); return; }");
 		const boot = APP_SRC.slice(APP_SRC.indexOf('(async () => {'));
 		expect(boot.indexOf('houseStudyDeepLink()') > 0 && boot.indexOf('houseStudyDeepLink()') < boot.indexOf('applyRoute()')).toBe(true);

@@ -120,6 +120,7 @@ try {
   ok(await page.evaluate(()=>JSON.stringify(progress))===readProgress,'All32 profiles and workshops preserve the user record');
   await go('#/menu/compass/'+first.id);
   await page.locator('[data-act="back"]').click(); await expect(page).toHaveURL(/#\/menu\/compass$/); checks++;
+  await page.locator('[data-act="back"]').click(); await expect(page).toHaveURL(/#\/menu\/view\/studies$/); checks++;
   await page.locator('[data-act="back"]').click(); await expect(page).toHaveURL(/#\/menu$/); checks++;
   for(const width of [320,390,1120]) for(const service of ['day','night']){
     await page.setViewportSize({width,height:844}); await go('#/menu/compass');

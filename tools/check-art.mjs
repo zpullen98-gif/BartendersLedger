@@ -295,7 +295,7 @@ test('the shipped reading surfaces show vessel vocabulary without changing recor
   const files=[...read('index.html').matchAll(/<script src="js\/([^"?]+)/g)].map(m=>m[1]).filter(f=>f!=='storage-alarm.js');
   const wing=loadWing(files), run=code=>vm.runInContext(code,wing);
   const before=run('JSON.stringify(progress)');
-  run('state.menu.view="menu"; state.svc.dom="glassware"');
+  run('state.menu.view="reference"; state.svc.dom="glassware"');
   const title='Glass shapes: a service reference';
   assert.ok(wing.get('renderMenu')().includes(title));
   assert.ok(wing.get('renderService')().includes(title));
@@ -304,9 +304,10 @@ test('the shipped reading surfaces show vessel vocabulary without changing recor
   run('state.svc.dom="wine"'); assert.ok(!wing.get('renderService')().includes(title));
   assert.ok(!wing.get('renderFlashcards')().includes(title));
   assert.equal(run('JSON.stringify(progress)'),before);
-  run('houseStudyOn=()=>true; hsState=()=>({open:"fixture"}); houseStudyHTML=()=>"OPEN HOUSE CARD"');
+  run('state.menu.view="menu"; houseStudyOn=()=>true; hsState=()=>({open:"fixture"}); houseStudyHTML=()=>"OPEN HOUSE CARD"');
   assert.ok(!wing.get('renderMenu')().includes(title));
-  run('hsState=()=>({open:null})'); assert.ok(wing.get('renderMenu')().includes(title));
+  run('hsState=()=>({open:null})'); assert.ok(!wing.get('renderMenu')().includes(title));
+  run('state.menu.view="reference"'); assert.ok(wing.get('renderMenu')().includes(title));
 });
 
 test('an offline size change can use the other saved size before showing a readable fallback', () => {

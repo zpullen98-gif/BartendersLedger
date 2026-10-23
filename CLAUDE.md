@@ -88,6 +88,39 @@ exactly one cocktail, the Nojito, which is a real mocktail. Honour
 
 ## Update discipline (deploying a change)
 
+### Brennan's learning flow, 23 October 2026
+
+The house tab now groups its reading and practice into **Menu**, **Bar studies**,
+**Service rehearsal** and **House reference**. `js/house-flow.js` and
+`css/house-flow.css` render this navigation and the three learning hubs.
+The Menu keeps the existing `#/menu` address, its drink cards and its section
+addresses. The hubs use `#/menu/view/studies`, `#/menu/view/rehearsal` and
+`#/menu/view/reference`. Fall stays with Menu; Compass and Coffee and tea sit
+under Bar studies; Stock and Add drinks sit under House reference. Every old
+collection and card address still works. A cold Back climbs through the owning
+group; an in-app Back returns to the actual opener.
+
+`hsListHTML` is now the menu alone: a search, a labelled section selector and
+native category disclosures, closed initially. Search or a selected section
+reveals its matching rows. `study.expanded` remembers manually opened categories
+in memory; `study.q`, `study.sec`, the exact opening row and scroll remain through
+card visits and practice. The old jump helpers remain callable for compatibility,
+but their duplicate jump row and chip row are no longer drawn.
+
+Bar studies holds the Compass, 69-entry coffee and tea guide, illustrated method
+studies, wider craft references and all house videos. Service rehearsal presents
+recall, description and guest conversation in that order, plus today's study and
+focused rounds. House reference holds producers, the existing house lists,
+glassware and menu management. No house data, deck ID or progress key changes.
+Reading disclosures live in `state.menu.flowKept`, keyed by house and view, never
+in saved progress. Exact opener signatures include `data-deck` and `data-mode`.
+
+`tools/check-house-flow-browser.mjs` verifies the compact menu, relocated content,
+filters, old links, Back/focus/scroll, unmodified progress, custom and empty
+houses, day/night service and mobile layouts. Run alongside the existing
+navigation, import, brew, Compass, fall, artwork and shell gates. The older
+descriptions of jump rows and six menu buttons below describe the prior layout.
+
 1. Edit files.
 2. Bump `?v=N` on the changed files' URLs in `index.html` (any new number).
 3. **Bump `CACHE` in `sw.js`** (`ledger-v2` → `ledger-v3`). This is the whole update

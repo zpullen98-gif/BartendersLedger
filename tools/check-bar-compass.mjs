@@ -30,6 +30,7 @@ test('every detail, family and workshop has a valid cold route and parent',()=>{
     get('applyParent')(); assert.equal(get('routeNow')().hash,'#/menu/compass');
   }
   for(const w of data.workshops){ get('applyRoute')(get('barCompassWorkshopHref')(w.id)); assert.equal(get('routeNow')().hash,get('barCompassWorkshopHref')(w.id)); get('applyParent')(); assert.equal(get('routeNow')().hash,'#/menu/compass'); }
+  get('applyParent')(); assert.equal(get('routeNow')().hash,'#/menu/view/studies');
   get('applyParent')(); assert.equal(get('routeNow')().hash,'#/menu');
   for(const f of data.families) assert.equal(get('deckDef')('compass:family:'+f.id).preset.only.length,drinks.filter(d=>d.familyId===f.id).length*4);
   get('applyRoute')('#/menu/compass/unknown'); assert.equal(get('routeNow')().hash,'#/menu/compass');
