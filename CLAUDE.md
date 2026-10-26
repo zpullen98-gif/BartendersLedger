@@ -88,6 +88,33 @@ exactly one cocktail, the Nojito, which is a real mocktail. Honour
 
 ## Update discipline (deploying a change)
 
+### Read after answering, 26 October 2026
+
+`js/quiz-learning.js` supplies the shared **Learn why** disclosure after an
+answer in multiple choice rounds, missed-answer review, revealed flashcards,
+Say it back and Guest at the table. `css/quiz-learning.css` uses the service
+theme tokens, 16px reading and 44px controls. Load the helper before `app.js`.
+Question adapters preserve exact `houseItemId` and `ckey` instead of inferring
+the source from the prompt. The reader consumes existing records and kept
+person marks only; it does not add facts, specifications or progress writes.
+Dish and wine pairing context uses each kind's own formula labels. Wine
+readings include the kept profile, food connections and serving advice.
+
+Native disclosure keeps the answered screen in place. Full study links use the
+existing Back history; the card, chosen answer and score remain in memory.
+`quizLearnOwnsKey` prevents the global quiz/flashcard shortcuts from treating
+Enter, Space or arrows inside the reading as another answer or grade. Fall,
+Bar Compass and Brew already had exact reading links after reveal; their labels
+now begin with Learn why. General service feedback says "Service details
+matched" because a record may supply fewer than three service fields.
+
+Run `tools/check-quiz-learning-browser.mjs` with `LEDGER_PLAYWRIGHT` pointing to
+Playwright and `LEDGER_URL` to the running source (default port 8787). It uses
+an isolated browser profile and the canonical pack from `OOT_SHARED`, never
+the user's study record. See `docs/quiz-learning-review-2026-10-26.txt` for the
+coverage and remaining source limits. Keep this browser gate alongside the
+existing navigation, import, house-flow, Fall, Compass and Brew checks.
+
 ### Brennan's learning flow, 23 October 2026
 
 The house tab now groups its reading and practice into **Menu**, **Bar studies**,

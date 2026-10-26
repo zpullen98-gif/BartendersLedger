@@ -110,7 +110,7 @@ test('front is blind; sources and full learning appear only after Flip', () => {
   get('state').fc.flipped = true;
   rendered = get('renderFlashcards')();
   assert.ok(rendered.includes(get('esc')(card.back)));
-  assert.ok(rendered.includes('Read the full study card'));
+  assert.ok(rendered.includes('Learn why: read the full study card'));
   assert.ok(rendered.includes('data-act="fc-grade"'));
 });
 test('grading keeps the house and existing records intact, and misses can replay', () => {

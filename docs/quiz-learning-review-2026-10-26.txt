@@ -1,0 +1,96 @@
+BARTENDER'S LEDGER: BRENNAN'S QUIZ LEARNING REVIEW
+26 October 2026
+
+Purpose
+After trying a question, understand its answer without losing the current
+question, answer, score or card. Existing learning stays in its familiar rooms.
+
+Coverage
+Family                         Reveal                   Fuller reading
+Menu: name / specification     Pick an option           Exact house drink
+Menu: line / parts / offer     Pick an option           Exact house drink
+Pair the menu: wine            Pick an option           Dish + kept wine + why
+Pair the menu: zero proof      Pick an option           Dish + kept drink + why
+Producer: who / where / used   Pick an option           Complete saved profile
+Coffee and tea questions       Pick an option           Entry, taste and service
+Quick / library questions      Pick an option           Exact card or lesson
+Missed-answer review           Round finished           Same answer reader
+House study / parts / upsell   Flip                     Full house drink context
+Ten / twenty / forty-five sec  Flip                     Full house drink context
+Name to spec / spec to name    Flip                     Exact drink context
+Assemble the ticket            Check build              Exact drink context
+Fill missing line             Pick an option           Exact drink context
+Service details               Finish field choices     Recorded service context
+Words                         Flip                     Kept meaning + components
+Components                    Flip                     Full kept explanation
+Producer recall               Flip                     Complete saved profile
+Fall collection               Flip                     Full original study card
+Bar Compass collection        Flip                     Full original study card
+Coffee and tea recall         Flip                     Full original entry
+Say it back                   Check spoken response    Kept lines + drink context
+Guest at the table            Check response           Answer, principle, items
+
+Every new reader starts with Learn why. The multiple-choice and general recall
+readers expand beside the answer. Their full reading links use existing routes;
+Back restores the same answered screen and position. Fall, Compass and Brew
+recall already linked to complete entries; those links now share the label.
+The reader never records an attempt. Spoken exercises still require Record it.
+
+Accuracy and accessibility changes
+- House quiz adapters preserve exact item IDs and card keys. An overlapping
+  drink name cannot silently send this new reader to a different house drink.
+- Pairing context includes the actual dish description and ingredients, the
+  wine's kept profile, serving advice and food connections, and the appropriate
+  wine or zero-proof reason. Formula labels follow dish, wine or cocktail kind.
+- Kept house offers are recommendations to discuss with the guest. The correct
+  option does not imply that every alternative pairing is intrinsically wrong.
+- Say it back and guest exercises explain the limits of keyword checking; an
+  accurate paraphrase should be compared with the underlying service principle.
+- Low-score feedback invites explanation and practice. Service feedback no
+  longer says all three when fewer than three service fields were recorded.
+- New body text is at least 16px; disclosure and link targets are at least 44px.
+  Native disclosures support keyboard use. Quiz Enter/Space/arrow shortcuts
+  do not advance or grade while focus is inside the explanation.
+- Imported text is escaped, and AI drafts are excluded from kept explanations.
+
+Source limits
+No house recipe, measure, glassware, garnish, allergen conclusion, historical
+claim or producer fact was invented or changed in this pass. The current pack
+does not supply glassware for the 32 house drinks, so no glassware questions
+are added. Five drinks have a recorded method or garnish and can still use
+Service details. Empty service fields remain unavailable; library standards
+are explicitly distinguished from the current house's specifications.
+The current records are the source of these descriptions, not a new independent
+verification of every statement in the house pack. Updates remain the team's
+responsibility. Learning and allergy decisions should use current house notes.
+
+Automated content audit
+The browser audit deals every eligible item once per generated family, with a
+fixed random stream for shared-engine families. It is not every possible
+combination of stems and distractors.
+- 160 house drink templates: 32 each name, specification, tableside line,
+  offer-next and parts.
+- 86 pairing questions: 43 wine and 43 zero-proof.
+- 95 producer questions: 23 producer-of, 36 place, 36 used-in.
+- 207 coffee/tea questions from all 69 entries.
+- 548 generated/entry questions total: no repeated choices within a question,
+  missing answer readers or lost pairing IDs.
+- Recall inventory: 362 word cards, 824 component cards, 108 producer cards,
+  119 Fall cards, 128 Compass cards and 69 Brew cards.
+- Spoken inventory: 32 house drinks and 23 guest/mix-up exercises.
+
+Verification
+tools/check-quiz-learning-browser.mjs passed 161 assertions, exercising correct
+and incorrect answers,
+hidden explanations before reveal, keyboard disclosure, read/Back state and
+progress preservation, 320px day/night layout, seven recall collections and
+all available house recall modes. Logs and settled screenshots are emitted
+when LEDGER_QA_OUTPUT is set. Existing gates also passed: import (212), Fall
+(84), Compass (12), Brew (105), house-flow browser (147), navigation,
+shell/cache and home.
+
+Integration
+New: js/quiz-learning.js and css/quiz-learning.css, both v1 in index.html and
+pre-cached. Source worker: ledger-v92. No shared engine, house pack, progress
+schema, deck IDs or card keys changed. The public wing must receive these
+assets and its own existing deployment/cache discipline before publication.

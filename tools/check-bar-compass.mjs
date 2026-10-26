@@ -77,7 +77,7 @@ test('one recall mode, blind front, answer-only references and normal persisted 
   get('openDeck')('compass:item:'+drinks[0].id); assert.ok(get('startDeckRun')('compass'));
   const fc=get('state').fc,c=fc.deck[0], key=get('cardKey')(c);
   let out=get('renderFlashcards')(); assert.ok(!out.includes(get('esc')(c.back))); assert.ok(!out.includes('data-act="fc-grade"')); assert.ok(!out.includes('<img'));
-  fc.flipped=true; out=get('renderFlashcards')(); assert.ok(out.includes(get('esc')(c.back))); assert.ok(out.includes('Read the full Bar Compass study'));
+  fc.flipped=true; out=get('renderFlashcards')(); assert.ok(out.includes(get('esc')(c.back))); assert.ok(out.includes('Learn why: read the full Bar Compass study'));
   get('recordCard')(false); assert.equal(get('progress').cards[key].w,1); assert.ok(get('progress').cards[key].last>0);
   assert.equal(get('progress').cards['My Bar · Existing'].r,17); assert.equal(JSON.stringify(get('progress').bar),before);
   assert.ok(get('startMisses')([key])); assert.equal(fc.mode,'compass'); assert.equal(fc.deck[0].bcKey,c.bcKey);
