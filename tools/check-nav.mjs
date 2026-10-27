@@ -269,15 +269,16 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	await settle();
 	const clusters = A.g('NAV_CLUSTERS');
 	const words = clusters.map((c) => c[1]).join(' · ');
-	if (words !== 'Home · Brennan’s · Practise · Library · More') fail(`the nav reads ${words}, not Home · Brennan’s · Practise · Library · More`);
+	if (words !== 'Home · Brennan’s · Whisky & Brandy · Practise · Library · More') fail(`the nav reads ${words}, not Home · Brennan’s · Whisky & Brandy · Practise · Library · More`);
 	/* the five words' keys, and what the first three own (18 October 2026):
 	   the house's word every #/menu address, Practise the decks, the rounds
 	   and the drills */
 	const ids = clusters.map((c) => c[0]).join('|');
-	if (ids !== 'home|brennans|practise|library|more') fail(`the nav's keys read ${ids}, not home|brennans|practise|library|more`);
+	if (ids !== 'home|brennans|casks|practise|library|more') fail(`the nav's keys read ${ids}, not home|brennans|casks|practise|library|more`);
 	const owns = (k) => ((clusters.find((c) => c[0] === k) || [])[2] || []).join('|');
 	if (owns('home') !== 'home|level') fail(`Home holds ${owns('home')}, not home|level`);
 	if (owns('brennans') !== 'menu') fail(`the house's word holds ${owns('brennans')}, not menu`);
+	if (owns('casks') !== 'casks') fail(`Whisky & Brandy holds ${owns('casks')}, not casks`);
 	if (owns('practise') !== 'flashcards|quiz|practice|riffs') fail(`Practise holds ${owns('practise')}, not flashcards|quiz|practice|riffs`);
 	if (owns('more') !== 'mine|record|tools') fail(`More holds ${owns('more')}, not mine|record|tools`);
 	const tabs = A.g('TABS').map((t) => t[0]);
@@ -290,9 +291,9 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	for (const t of WAS) if (!tabs.includes(t)) fail(`TABS lost "${t}", which an old address names`);
 	/* the bar drawn: four tab words, then More, one row of five */
 	const bar = [...A.nav().matchAll(/<button class="bnav-btn([^"]*)"[^>]*data-cluster="(\w+)"><span>([^<]*)/g)];
-	if (bar.map((b) => b[3].trim()).join('|') !== 'Home|Brennan’s|Practise|Library|More') fail(`the bottom bar reads ${JSON.stringify(bar.map((b) => b[3].trim()))}`);
-	if (bar.map((b) => b[2]).join('|') !== 'home|brennans|practise|library|more') fail(`the bottom bar's keys read ${bar.map((b) => b[2]).join('|')}`);
-	if (!bar[4] || !/bnav-more/.test(bar[4][1])) fail('More is not drawn quiet (bnav-more) in the bottom bar');
+	if (bar.map((b) => b[3].trim()).join('|') !== 'Home|Brennan’s|Whisky & Brandy|Practise|Library|More') fail(`the bottom bar reads ${JSON.stringify(bar.map((b) => b[3].trim()))}`);
+	if (bar.map((b) => b[2]).join('|') !== 'home|brennans|casks|practise|library|more') fail(`the bottom bar's keys read ${bar.map((b) => b[2]).join('|')}`);
+	if (!bar[5] || !/bnav-more/.test(bar[5][1])) fail('More is not drawn quiet (bnav-more) in the bottom bar');
 	if (/data-search/.test(A.nav())) fail('the bottom bar still carries Search');
 	if (!/aria-current="page"[^>]*data-cluster="home"/.test(A.nav())) fail('the lit word on Home carries no aria-current="page"');
 	A.tabTap('more'); await settle();
@@ -301,6 +302,7 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	   deck, round, drill, riff and the level test Practise's */
 	const lit = () => (A.nav().match(/class="bnav-btn[^"]* active" aria-current="page"[^>]*data-cluster="(\w+)"/) || [])[1];
 	const lights = [
+		["caskOpen('')", 'casks'], ["caskOpen(caskChapters()[0].id)", 'casks'],
 		["state.tab='menu'; state.menu.view='menu'", 'brennans'], ["state.tab='menu'; state.menu.view='stock'", 'brennans'], ["state.tab='menu'; state.menu.view='add'", 'brennans'],
 		...['studies', 'rehearsal', 'reference'].map((v) => [`state.tab='menu'; state.menu.view='${v}'`, 'brennans']),
 		["state.tab='menu'; state.menu.view='compass'", 'brennans'], ["state.tab='menu'; state.menu.view='fall'", 'brennans'],
@@ -524,6 +526,9 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	await settle();
 	const setups = [
 		"state.tab='home'",
+		"caskOpen('')", "caskOpen(caskChapters()[0].id)",
+		"caskAct('cask-practice',{id:caskChapters()[0].id})",
+		"caskStart('cards','all')", "caskStart('quiz',caskChapters()[0].id)",
 		"openLevel(1)", "openLevel(4)",
 		"state.tab='flashcards'; state.fc.stage='pick'",
 		"openDeck('cocktails')", "openDeck('cocktails:1')", "openDeck('shots')", "openDeck('zero-proof')", "openDeck('on-tap')", "openDeck('coffee')",
@@ -615,6 +620,7 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 		['#drink=b-zzzzzzzz', 'home', null],
 		['#/mine', 'mine', 'home'],
 		['#/menu', 'menu', 'home'],
+		['#/casks', 'casks', 'home'],
 		['#/flashcards', 'flashcards', 'home'],
 		['#/practise', 'flashcards', 'home'],
 		['#/practise/all', 'flashcards', 'home'],
@@ -677,6 +683,8 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 		['the Barback page', "openLevel(1)", true],
 		['the Bar Manager page', "openLevel(4)", true],
 		['Practise', "state.tab='flashcards'; state.fc.stage='pick'", true],
+		['The Cask Atlas', "caskOpen('')", true],
+		['a Cask Atlas chapter', "caskOpen(caskChapters()[0].id)", false],
 		['Practise, every level', "state.tab='flashcards'; state.fc.stage='pick'; state.scopeAll.flashcards=true", true],
 		['a deck', "openDeck('cocktails')", true],
 		['the menu deck', "openDeck('menu')", true],
@@ -1041,7 +1049,7 @@ if (problems.length) {
 	for (const p of problems.slice(0, 60)) console.error(`    ${p}`);
 	process.exit(1);
 }
-console.log('  ✓ the five words (Home, the house, Practise, Library, More), every route round-trips, the parents are total, every screen change is one entry and every Back one step, the old addresses land, one Back on every screen but Home');
+console.log('  ✓ six destinations including Whisky & Brandy, every route round-trips, the parents are total, every screen change is one entry and every Back one step, the old addresses land, one Back on every screen but Home');
 
 /* ---- the gate proves it can fail ---------------------------------------------
    Each mutation breaks one rule in a scratch copy of js/; this gate run on it
@@ -1050,7 +1058,7 @@ async function mutations(){
 	const MUT = [
 		['a replaceState put back in the push path', 'ui-nav.js', "try { h.pushState({ ootd: NAV.d, ootk: r.key, ootp: NAV.key }, '', r.hash); } catch (e) {}", "try { h.replaceState({ ootd: NAV.d, ootk: r.key, ootp: NAV.key }, '', r.hash); } catch (e) {}"],
 		['a missing parent', 'ui-nav.js', "if(t === 'record' || t === 'tools') return 'mine';", "if(t === 'record') return 'mine';"],
-		['a sixth word', 'ui-new.js', "['more', 'More', ['mine','record','tools']],", "['more', 'More', ['mine','record']],\n  ['tools', 'Tools', ['tools']],"],
+		['an extra navigation word', 'ui-new.js', "['more', 'More', ['mine','record','tools']],", "['more', 'More', ['mine','record']],\n  ['tools', 'Tools', ['tools']],"],
 		['a Back drawn twice', 'ui-levels.js', "  return back;\n}", "  return back + back;\n}"],
 		['location.hash put back in gotoHash', 'ui-new.js', "  if(applyRoute(h)) render();", "  if(location.hash === h){ applyRoute(); render(); } else location.hash = h;"],
 		['the new-card top-up taken out', 'ui-nav.js', "const fresh = p.newDeck.slice(0, Math.min(10, 20 - due.length));", "const fresh = [];"],

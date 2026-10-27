@@ -1,0 +1,974 @@
+[
+  {
+    "id": "production",
+    "title": "From grain to spirit",
+    "category": "Foundations",
+    "summary": "Follow flavour through malting, mashing, fermentation and distillation. Learn to explain the process without turning one distillery's method into a universal rule.",
+    "facts": [
+      {
+        "label": "Raw material",
+        "value": "Whisky begins with cereals; Cognac begins with grapes and Calvados with apples or pears."
+      },
+      {
+        "label": "Fermentation",
+        "value": "Yeast makes alcohol from fermentable sugars. Distillation concentrates and separates the resulting mixture."
+      },
+      {
+        "label": "Three strengths",
+        "value": "Distillation, cask-entry and bottling strengths describe different stages."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Read a bottle as a sequence of decisions",
+        "paragraphs": [
+          "Start with five questions: what was fermented, where was it distilled, how was it distilled, what happened in wood, and how was it bottled? This gives you a repeatable route through an unfamiliar label. A brand story is useful only after you can answer those questions, or identify which answers the producer has not disclosed.",
+          "Whisky and brandy share fermentation, distillation and, often, maturation. Their raw materials and protected identities differ. Cognac is grape brandy; calling it a whisky obscures the most basic distinction. Spelling alone cannot settle legal identity. Preserve the producer's whisky or whiskey spelling, then read the actual category."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Grain, malt and the mash",
+        "paragraphs": [
+          "Cereal starch must become fermentable sugar. Malting starts germination under controlled conditions, developing enzymes; drying stops that growth. Milling and mashing make the grain accessible and allow starch conversion. A mash bill describes the grain proportions, not the final mixture of finished whiskies.",
+          "Peat smoke, when used in drying malt, can contribute smoky character. Malted does not mean peated. Nor does a malt flavour establish a Scotch origin. Keep the raw material separate from the drying fuel, and both separate from the cask."
+        ],
+        "bullets": [
+          "Ask whether the producer ferments clear wort or a grain-containing mash; different traditions use different methods.",
+          "Do not translate a grain percentage directly into a flavour percentage. Yeast, still operation and wood also matter."
+        ]
+      },
+      {
+        "title": "Fermentation creates more than ethanol",
+        "paragraphs": [
+          "Yeast turns fermentable sugars into alcohol and contributes aroma compounds. Time, yeast strain, temperature and the surrounding production conditions influence the fermented wash or mash. A longer fermentation can be a deliberate style choice, but duration alone is not a quality score.",
+          "Springbank documents a fermentation period of up to 110 hours. Use that as a concrete example of one distillery's process, not a minimum for Scotch or a recipe for every producer. The useful training question is what a process choice contributes, not whether a marketing number is larger."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Still design, cuts and character",
+        "paragraphs": [
+          "A pot still works in batches; a column system can separate spirit through repeated vapour-liquid contact. Equipment labels alone do not prove quality. Copper contact, reflux, charge, heating and collection decisions all influence the spirit. The distiller selects usable fractions rather than simply collecting everything that evaporates.",
+          "Heads, hearts and tails are practical fraction names. Different production systems manage them differently, and some fractions are recycled. This is an explanation of flavour selection, not an operating guide to distilling.",
+          "Never say distillation creates the original alcohol. Fermentation does that. Distillation changes concentration and composition. Likewise, triple distillation is a process fact for a particular product, not a guarantee of lightness or a requirement for all Irish whiskey."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Build your production notebook",
+        "paragraphs": [
+          "For each bottle, write a chain: grain or fruit; fermentation; still; wood; bottling. Mark each item as printed, producer-confirmed, or unknown. Then add one sensory observation and a competing explanation: vanilla might reflect oak, but it cannot identify a specific distillery.",
+          "Practise a twenty-second explanation using one cause and one consequence. Follow it with a question that helps the guest choose. Technical fluency becomes useful when you can connect it to a person's preference."
+        ],
+        "bullets": []
+      }
+    ],
+    "service": {
+      "ask": "Do you prefer a lighter, fruit-led spirit, or something with more grain, wood or smoke?",
+      "say": "The flavour starts before the barrel: grain, fermentation and the way the spirit is distilled all shape its character. I can help you compare two different approaches.",
+      "pairing": "Begin with the dish's dominant flavour and texture; production history alone does not establish a pairing."
+    },
+    "pitfalls": [
+      "Malt does not automatically mean smoke.",
+      "Single does not count barrels or distillation passes.",
+      "A still type is not a quality ranking."
+    ],
+    "recall": [
+      {
+        "id": "sequence",
+        "q": "Explain the production chain in five steps.",
+        "a": "Prepare and mash grain; ferment sugars into alcohol; distil and select spirit; mature as required for the category; select, reduce and bottle. Fruit brandies begin with fruit rather than cereal starch conversion."
+      },
+      {
+        "id": "distillation",
+        "q": "What does distillation do that fermentation does not?",
+        "a": "Fermentation produces alcohol from sugars. Distillation separates and concentrates the fermented mixture, shaping strength and congeners."
+      },
+      {
+        "id": "malt-peat",
+        "q": "Does malted barley imply peated whisky?",
+        "a": "No. Malting concerns germination and enzymes; peat concerns a possible drying fuel and smoke contribution."
+      },
+      {
+        "id": "evidence",
+        "q": "How should an unknown fermentation or mash detail be presented?",
+        "a": "Identify it as undisclosed. Do not infer an exact production specification from a flavour note, region or neighbouring producer."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "alcohol",
+        "q": "A guest asks where the alcohol first develops. What is the accurate answer?",
+        "options": [
+          "During fermentation of available sugars",
+          "During extraction of flavour from oak",
+          "During dilution before final bottling",
+          "During filtration of the mature spirit"
+        ],
+        "answer": 0,
+        "why": "Yeast produces alcohol during fermentation. The still concentrates and separates that alcohol; the barrel and bottling stages do not replace fermentation."
+      },
+      {
+        "id": "still",
+        "q": "A colleague says every column-distilled whisky is inferior. How do you correct this?",
+        "options": [
+          "Agree, because batch size defines quality",
+          "Compare operation, maturation and the finished spirit",
+          "Agree, because columns always make neutral alcohol",
+          "Judge only whether the bottle says single"
+        ],
+        "answer": 1,
+        "why": "A column is equipment, not a verdict. Its operation, the distillate and subsequent choices all matter."
+      },
+      {
+        "id": "smoke",
+        "q": "A bottle is labelled single malt but gives no peat information. What can you conclude?",
+        "options": [
+          "It necessarily contains heavily smoked malt",
+          "It must have been distilled three times",
+          "Its smoke level is not established by that phrase",
+          "Its maturation must have used a single cask"
+        ],
+        "answer": 2,
+        "why": "Single malt is a category statement. It does not establish smoke level, number of distillations or number of casks."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Scotch Whisky Association: how Scotch is made",
+        "url": "https://www.scotch-whisky.org.uk/discover-scotch/how-its-made/",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "Springbank: production process",
+        "url": "https://www.springbank.scot/about/process/",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "UK Government: Scotch Whisky technical file",
+        "url": "https://assets.publishing.service.gov.uk/media/5fd36667e90e07662ed92c85/Scotch_Whisky_Technical_File_-_June_2019.pdf",
+        "checked": "2026-10-27"
+      }
+    ],
+    "related": [
+      "maturation",
+      "american-single-malt",
+      "scotch",
+      "cognac"
+    ]
+  },
+  {
+    "id": "maturation",
+    "title": "Oak, time and the warehouse",
+    "category": "Foundations",
+    "summary": "Distinguish extraction, interaction and time. Read cask histories carefully and explain why older, darker or hotter is not automatically better.",
+    "facts": [
+      {
+        "label": "Age",
+        "value": "Time in the relevant maturation regime, not years since bottling."
+      },
+      {
+        "label": "Finish",
+        "value": "A later maturation stage in a different cask; not a universal duration."
+      },
+      {
+        "label": "Cask history",
+        "value": "Wood species, treatment, previous contents and number of fills all matter."
+      }
+    ],
+    "sections": [
+      {
+        "title": "What the cask changes",
+        "paragraphs": [
+          "Maturation is not just colouring liquid. Spirit extracts compounds from wood, interacts with the cask and its previous contents, and changes over time. Evaporation and the warehouse environment also matter. Distillate character and cask influence must be assessed together.",
+          "A useful tasting record separates fruit and cereal, wood sweetness and spice, texture, drying tannin, smoke and finish. Then ask whether these elements support one another. More oak can mean more structure or more drying dominance; the amount of oak flavour does not establish excellence."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "New, used, charred and toasted",
+        "paragraphs": [
+          "New oak has not previously matured another spirit or wine. A used cask carries a different history. Charring burns the inner surface; toasting applies heat without the same degree of surface combustion. Do not use those words interchangeably.",
+          "The legal category decides which choices are allowed. Bourbon requires new charred oak; Scotch permits a range of oak cask histories within its rules. An ex-bourbon cask in Scotland does not turn the whisky into bourbon, and an ex-sherry cask does not turn whisky into sherry.",
+          "In Scotch usage, first fill means a cask's first use to mature Scotch after earlier contents such as bourbon or sherry. Changing producers does not reset that history. Refill indicates subsequent use for Scotch. First fill need not mean virgin wood, and neither term supplies a precise intensity score."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Finishing is a question about sequence",
+        "paragraphs": [
+          "Record the main maturation first, then the finishing cask and any disclosed duration. A port finish and full maturation in port-seasoned wood are different statements. The producer may disclose both, just one, or neither duration.",
+          "Ask what the label actually guarantees. Do not infer a particular fruit flavour, sweetness level or sugar addition solely from a former cask occupant. A cask's history suggests possible influences; the finished liquid supplies the tasting evidence."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Climate and time are not interchangeable",
+        "paragraphs": [
+          "Temperature, humidity, warehouse construction and position can change the path of maturation. Warmer conditions can accelerate some interactions, but there is no reliable universal formula converting tropical years into Scottish years.",
+          "A younger whisky from a warm location is not automatically equivalent to an older one from a cool location. Compare integration, texture, aromatic development and finish. Wood extraction can race ahead of other desirable changes. Age is evidence about time, not a complete description of maturity.",
+          "Diageo's account of maturation emphasises cask quality and cooperage; Buffalo Trace describes experiments involving grain, wood and warehouse conditions. These are useful producer examples of multiple interacting variables, not proof of one perfect warehouse model."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Bottle condition and honest service",
+        "paragraphs": [
+          "Scotch does not keep gaining its cask age after bottling. A bottle labelled twelve years does not become a twenty-year whisky after eight years on a shelf. Keep the stated age separate from bottling date, release date and vintage.",
+          "For service, record the actual bottle's condition and opening date according to house policy. Protect stock from heat and strong light, keep closures sound, and investigate unexpected aroma changes against a known sound reference. Do not promise that every open bottle lasts the same number of months.",
+          "At a tasting, compare two cask expressions at similar strength where possible. If both cask and ABV change, acknowledge that the experiment has more than one variable."
+        ],
+        "bullets": []
+      }
+    ],
+    "service": {
+      "ask": "Would you like brighter distillery character, or a richer style with more cask influence?",
+      "say": "This cask history helps explain the whisky's direction, but the age and colour alone do not tell us whether you will enjoy it. Let me describe the balance in this particular bottle.",
+      "pairing": "Try a small comparison with toasted or roasted flavours. Check whether oak tannin becomes drying alongside the dish rather than assuming every barrel-aged spirit suits grilled food."
+    },
+    "pitfalls": [
+      "First fill is not necessarily virgin oak.",
+      "A darker whisky does not prove greater age.",
+      "A finishing cask does not change the spirit's original category by itself."
+    ],
+    "recall": [
+      {
+        "id": "finish",
+        "q": "What information makes a finish description useful?",
+        "a": "The original spirit category, main maturation, subsequent cask type and any disclosed finishing duration. Leave undisclosed durations unknown."
+      },
+      {
+        "id": "first-fill",
+        "q": "Why is first-fill ex-bourbon different from new oak?",
+        "a": "In Scotch usage, the former already held bourbon before its first filling with Scotch. New oak has not had that prior maturation use. Changing producers does not reset a cask's history."
+      },
+      {
+        "id": "age",
+        "q": "What happens to a Scotch age statement after bottling?",
+        "a": "Its stated cask age does not increase. Shelf time is not further cask maturation."
+      },
+      {
+        "id": "climate",
+        "q": "Why should you reject a fixed tropical-to-Scottish age multiplier?",
+        "a": "Heat, humidity, cask and spirit alter multiple processes differently. Years do not convert reliably across climates."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "first-fill",
+        "q": "A guest sees first-fill ex-bourbon. Which explanation is best?",
+        "options": [
+          "The oak was unused before this whisky",
+          "The cask had already held bourbon before this fill",
+          "The bottle contains half bourbon and half Scotch",
+          "The cask can legally be filled only once"
+        ],
+        "answer": 1,
+        "why": "In Scotch usage, first fill means the first use for Scotch after the cask's previous contents. Ex-bourbon explicitly indicates earlier bourbon use; a change of producer does not reset the history."
+      },
+      {
+        "id": "bottle-age",
+        "q": "A twelve-year Scotch was bottled ten years ago. How should it be described?",
+        "options": [
+          "A twenty-two-year Scotch by elapsed time",
+          "A ten-year Scotch by bottle storage",
+          "A twelve-year Scotch with ten years since bottling",
+          "A vintage Scotch with no stated age"
+        ],
+        "answer": 2,
+        "why": "The original maturation age remains twelve. Bottle storage does not add cask age."
+      },
+      {
+        "id": "comparison",
+        "q": "Two whiskies differ in both ABV and cask finish. What is the sound tasting conclusion?",
+        "options": [
+          "Any difference proves the finish alone caused it",
+          "The older expression must be better integrated",
+          "The darker expression must contain more sugar",
+          "Both strength and cask history may affect the result"
+        ],
+        "answer": 3,
+        "why": "A useful comparison acknowledges all changed variables rather than assigning causation to one label detail."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Diageo: the craft of whisky maturation",
+        "url": "https://www.diageo.com/en/news-and-media/stories/2025/turning-time-into-liquid-gold-the-deliberate-patient-craft-behind-whisky-maturation",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "Buffalo Trace: Experimental Collection",
+        "url": "https://www.buffalotracedistillery.com/brands/experimental-collection/",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "Scotch Whisky Association: finishing and bottle age",
+        "url": "https://www.scotch-whisky.org.uk/discover-scotch/faqs/",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "The Glenlivet: oak whisky casks",
+        "url": "https://www.theglenlivet.com/en/our-community/articles/the-importance-of-oak-whisky-casks/",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "Arran: first-fill definition (2021 cask guide, page 2)",
+        "url": "https://www.arranwhisky.com/assets/000/000/943/Arran_Cask_Purchase_2021_original.pdf?1609953617=",
+        "checked": "2026-10-27"
+      }
+    ],
+    "related": [
+      "production",
+      "bourbon",
+      "world-whisky",
+      "blending"
+    ]
+  },
+  {
+    "id": "blending",
+    "title": "Blending and the language of the label",
+    "category": "Foundations",
+    "summary": "Separate origin, composition, cask selection and bottling strength. Learn to read a label before accepting the story built around it.",
+    "facts": [
+      {
+        "label": "Single malt",
+        "value": "In Scotch, one distillery and malted barley with the required pot-distillation method; not necessarily one cask."
+      },
+      {
+        "label": "Blended malt Scotch",
+        "value": "Malt whiskies from more than one distillery, without grain whisky."
+      },
+      {
+        "label": "Blended Scotch",
+        "value": "One or more single malts combined with one or more single grains."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Four different questions on one label",
+        "paragraphs": [
+          "Country tells you where a protected spirit belongs. Category tells you its production identity. Age or cask information describes maturation. ABV tells you the strength of this bottled expression. Read these in that order, then look at brand, release and marketing language.",
+          "A label can be precise about one question and silent on another. Single malt does not disclose a fermentation length. Single barrel does not tell you the grain recipe. Non-age-stated does not mean unaged; it means no numerical age statement is supplied."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Blending is a production skill",
+        "paragraphs": [
+          "A blender can combine casks to maintain an established style or create a new one. The practical task involves proportion, aromatic balance, texture and the relationship between spirit and wood. Calling a blend inferior because it is a blend mistakes a category for a judgement.",
+          "Compass Box describes combining whisky from different distilleries and casks. That supplies a useful real example of a creative approach, not a reason to assume every product follows the same recipe. Producer transparency can vary by release.",
+          "Within Scotch, keep blended malt, blended grain and blended Scotch separate. A collection of malt casks from one distillery can remain single malt. A collection of malts from different distilleries belongs to blended malt. Adding single grain to single malt leads to blended Scotch, subject to the category rules."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Cask selection is not category",
+        "paragraphs": [
+          "Single cask or single barrel usually describes a selected container, while a batch joins more than one. Read the producer's actual disclosure. Do not invent a universal barrel count for small batch or treat the phrase as a guarantee of age.",
+          "A single-cask release can show interesting individuality, but one cask is not automatically more balanced than a carefully composed batch. For hospitality, consistency, flavour suitability, price and the guest's expectations all matter."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Strength and filtration need context",
+        "paragraphs": [
+          "Cask-strength and barrel-proof expressions direct attention to strength, not age or production origin. Verify the bottle's ABV and the applicable producer or jurisdictional explanation rather than treating every phrase as globally identical.",
+          "Chill filtration concerns removal of compounds that can produce haze under some conditions. Non-chill-filtered is a process disclosure, not a flavour score you can award without tasting. Some categories permit colour adjustment within their rules. Colour by itself therefore cannot prove cask type or maturity.",
+          "Offer water or ice as choices. A guest who prefers a lower serving strength is expressing a preference, not failing a knowledge test."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "An evidence exercise for the back bar",
+        "paragraphs": [
+          "Choose three bottles and make two columns: established by the label, and not established. Put category, ABV and printed age in the first. Put undisclosed mash bill, precise cask proportions and founding myths in the second until you verify them.",
+          "Then practise a substitution. Name the guest's desired feature, one credible alternative and one difference. For example, moving from a fruit-led malt to a blended malt may preserve a broad aromatic direction while changing texture or smoke. The recommendation depends on the expressions actually available, not a blanket rule about the categories.",
+          "Finally, explain why a bottle could be a sensible choice without relying on rarity. A confident professional can discuss quality, suitability and value without confusing them."
+        ],
+        "bullets": []
+      }
+    ],
+    "service": {
+      "ask": "Is the important part the distillery, a particular flavour, the age, or the strength?",
+      "say": "Single malt tells us where and how the whisky was made. It can still bring together several casks. A blend can be equally deliberate; the useful comparison is the style in your glass.",
+      "pairing": "Select for the dish and guest, not for prestige wording. A balanced blend can serve a pairing better than an intensely woody single cask."
+    },
+    "pitfalls": [
+      "Single malt does not mean single barrel.",
+      "Non-age-stated does not mean unaged.",
+      "Small batch is not a universal numerical standard.",
+      "Cask strength does not establish age or quality."
+    ],
+    "recall": [
+      {
+        "id": "single",
+        "q": "What does single count in single malt Scotch?",
+        "a": "A single distillery. It does not count barrels, vintages or the number of distillation passes."
+      },
+      {
+        "id": "blend",
+        "q": "Distinguish blended malt from blended Scotch.",
+        "a": "Blended malt combines single malts from different distilleries. Blended Scotch combines one or more single malts with one or more single grains."
+      },
+      {
+        "id": "unknown",
+        "q": "What should you do when a label omits the mash bill or cask proportions?",
+        "a": "Check a reliable product specification; if it remains undisclosed, say so. Do not reverse-engineer exact percentages from taste."
+      },
+      {
+        "id": "substitute",
+        "q": "What makes a useful spirit substitution explanation?",
+        "a": "A shared feature the guest values, a meaningful difference, and confirmation of the actual expression, availability, serve and price."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "malt-batch",
+        "q": "Several malt casks from one Scottish distillery are combined. Which statement is sound?",
+        "options": [
+          "It automatically becomes blended Scotch",
+          "It can remain single malt Scotch",
+          "It automatically becomes single grain Scotch",
+          "It must lose its distillery identity"
+        ],
+        "answer": 1,
+        "why": "Single malt refers to the distillery and production category, not a single container. Blended Scotch requires the malt-and-grain combination."
+      },
+      {
+        "id": "nas",
+        "q": "A whisky has no numerical age statement. What can you infer?",
+        "options": [
+          "It has never been matured in wood",
+          "It is younger than every age-stated whisky",
+          "Its numerical age is not disclosed on that label",
+          "It must be a blend of different countries"
+        ],
+        "answer": 2,
+        "why": "No age statement is an absence of a number, not proof of no maturation or a universal comparative age."
+      },
+      {
+        "id": "value",
+        "q": "Which recommendation best shows professional judgement?",
+        "options": [
+          "Choose whichever bottle has the oldest number",
+          "Choose whichever says single cask on the label",
+          "Choose whichever is hardest to find at retail",
+          "Choose the verified expression that fits taste and budget"
+        ],
+        "answer": 3,
+        "why": "Suitability requires the actual spirit, the guest's preference and the agreed spend. Category or rarity alone cannot answer that."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Scotch Whisky Association: five categories",
+        "url": "https://www.scotch-whisky.org.uk/discover-scotch/enjoying-scotch/scotch-whisky-categories/",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "Compass Box: blending questions",
+        "url": "https://www.compassboxwhisky.com/en-jp/pages/faq",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "Springbank: bottling and filtration practice",
+        "url": "https://www.springbank.scot/about/process/",
+        "checked": "2026-10-27"
+      }
+    ],
+    "related": [
+      "scotch",
+      "american-labels",
+      "japanese",
+      "tasting"
+    ]
+  },
+  {
+    "id": "tasting",
+    "title": "The tasting compass",
+    "category": "Service",
+    "summary": "Build a disciplined sensory vocabulary, test dilution, and separate what you observe from what you can prove.",
+    "facts": [
+      {
+        "label": "Observe first",
+        "value": "Describe aroma, structure and finish before guessing a category."
+      },
+      {
+        "label": "Compare fairly",
+        "value": "Use comparable glassware, measured samples and recorded strengths."
+      },
+      {
+        "label": "Confidence",
+        "value": "An aroma is evidence, not a certificate of origin."
+      }
+    ],
+    "sections": [
+      {
+        "title": "A repeatable tasting order",
+        "paragraphs": [
+          "Use a clean, odour-free glass and a modest measured sample. Record the bottle, batch when known, ABV, date and tasting conditions. At a structured training tasting, use water, breaks and a spit cup; completing a learning exercise does not require finishing the samples.",
+          "Observe appearance without converting colour into an age verdict. Approach the aroma gently rather than taking one deep inhalation at the rim. Record intensity, broad families and specific examples only when you perceive them. Taste a small amount, then assess texture, heat, flavour development and persistence.",
+          "Finish with a reasoned conclusion: balanced or dominated, simple or layered, integrated or disjointed, and suitable for which purpose? Separate your preference from the quality judgement. You may respect a well-made smoky whisky while preferring an unpeated style."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Give flavour a useful vocabulary",
+        "paragraphs": [
+          "Build from broad families to detail: cereal and bread; fresh and dried fruit; floral and herbal; vanilla and wood spice; nuts and chocolate; smoke and earthy notes. Avoid forcing every sample into every category. Two accurate descriptors are more useful than ten borrowed from the bottle's advertising.",
+          "Distinguish aroma resemblance from ingredients. A vanilla note does not mean vanilla was added. A caramel-like aroma does not establish sugar content. A saline impression is not a laboratory measurement of salt.",
+          "Record texture separately: oily, light, creamy, drying or coating are different from flavour words. Heat and bitterness can affect the finish, but duration alone does not make a finish pleasant or complex."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Water as an experiment",
+        "paragraphs": [
+          "First record your initial impression, then add a little water in a controlled way and reassess. Keep a note of the amount so the comparison can be repeated. Ice changes both temperature and dilution over time; that is a valid serve but a different experiment.",
+          "Research on guaiacol in water-ethanol mixtures models one possible molecular contribution to dilution effects. It does not prove that one water ratio makes every whisky taste better. Your task is to observe this sample, not recite a universal optimum.",
+          "For a training approximation, alcohol volume is starting volume multiplied by ABV as a decimal. Final ABV is that alcohol volume divided by total volume. Thus 30 ml at 60% ABV plus 10 ml water gives approximately 45% ABV, ignoring volume contraction. Do not use that arithmetic as an official measurement of a commercial product."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Blind tasting and competing explanations",
+        "paragraphs": [
+          "Write observations before hypotheses. If you smell smoke, consider peated malt, cask influence and the actual production evidence; do not jump directly to Islay. If you find vanilla and coconut-like notes, oak may help explain them, but those aromas do not identify a country on their own.",
+          "Use a comparison ladder: broad raw material, possible production influence, maturation influence, likely family, then expression only if evidence supports it. State what would change your mind. Honest uncertainty is a professional skill.",
+          "A useful practice flight changes one main variable. Compare related cask expressions, then different strengths, then different traditions. If several variables change at once, label the exercise exploratory rather than causal."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Turn the note into a recommendation",
+        "paragraphs": [
+          "Reduce your written note to a style sentence, a serving choice and one question. Replace vague words such as smooth with what you mean: less alcohol heat, a rounded texture, gentle smoke or a sweeter aromatic impression.",
+          "At Brennan's, confirm the actual available bottle and current pour price. The examples in this atlas teach how to analyse spirits; they do not establish the restaurant's current stock."
+        ],
+        "bullets": []
+      }
+    ],
+    "service": {
+      "ask": "When you say smooth, do you mean gentle alcohol heat, no smoke, or a rounder texture?",
+      "say": "I find fresh fruit, light wood spice and a drying finish in this sample. A little water changes the balance, so I would offer it alongside and let you decide.",
+      "pairing": "Taste the spirit and the food separately, then together. Record whether the pairing improves texture and flavour rather than relying on an aromatic resemblance alone."
+    },
+    "pitfalls": [
+      "Legs or colour do not prove age, origin or quality.",
+      "Aroma resemblance is not an ingredient declaration.",
+      "No single dilution ratio suits every whisky or guest."
+    ],
+    "recall": [
+      {
+        "id": "order",
+        "q": "Give a disciplined tasting sequence.",
+        "a": "Record conditions and ABV; observe appearance; nose gently; taste a small amount; assess texture, balance and finish; state a conclusion with appropriate confidence."
+      },
+      {
+        "id": "dilution",
+        "q": "Approximate 30 ml of 60% spirit plus 10 ml water.",
+        "a": "There are approximately 18 ml of alcohol in 40 ml total, giving 45% ABV. This ignores contraction and is a training estimate."
+      },
+      {
+        "id": "blind",
+        "q": "Why is peat smoke insufficient to identify Islay?",
+        "a": "Smoke is a sensory clue found in products from multiple places; not every Islay expression is heavily peated. Origin requires more evidence."
+      },
+      {
+        "id": "smooth",
+        "q": "How do you clarify a guest's request for smooth whisky?",
+        "a": "Ask whether they mean lower heat, less smoke, softer texture or a sweeter aromatic impression, then compare actual expressions."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "aroma",
+        "q": "A whisky smells of vanilla. What is the defensible observation?",
+        "options": [
+          "Vanilla flavouring has definitely been added",
+          "The whisky contains a measurable sugar level",
+          "Its distillery must be in Kentucky",
+          "It has a vanilla-like aroma; the cause needs evidence"
+        ],
+        "answer": 3,
+        "why": "A sensory resemblance does not establish added flavouring, sugar or origin. Oak is a plausible contributor, but verify production claims."
+      },
+      {
+        "id": "water",
+        "q": "For training, 30 ml at 60% ABV plus 10 ml water is approximately what strength?",
+        "options": [
+          "45% ABV",
+          "40% ABV",
+          "50% ABV",
+          "55% ABV"
+        ],
+        "answer": 0,
+        "why": "30 × 0.60 gives 18 ml alcohol. Divide by 40 ml total: 0.45. This is an approximation that ignores contraction."
+      },
+      {
+        "id": "flight",
+        "q": "Which flight best tests cask influence?",
+        "options": [
+          "Unrelated spirits at different strengths and ages",
+          "Related expressions with other variables controlled",
+          "Only bottles arranged from cheapest to dearest",
+          "Only bottles arranged from palest to darkest"
+        ],
+        "answer": 1,
+        "why": "Controlling other variables makes the cask comparison more informative. Price and colour do not isolate production causes."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Scotch Whisky Association: tasting toolkit",
+        "url": "https://www.scotch-whisky.org.uk/media/1714/swa-tasting-toolkit_2020.pdf",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "Karlsson and Friedman: Dilution of whisky, the molecular perspective",
+        "url": "https://www.nature.com/articles/s41598-017-06423-5.pdf",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "The Glenlivet: whisky and water",
+        "url": "https://www.theglenlivet.com/en/our-community/articles/whisky-and-water/",
+        "checked": "2026-10-27"
+      }
+    ],
+    "related": [
+      "production",
+      "maturation",
+      "service",
+      "scotch-regions"
+    ]
+  },
+  {
+    "id": "service",
+    "title": "The professional pour",
+    "category": "Service",
+    "summary": "Practise discovery, presentation, measured service, food pairing and an informed substitution. Make technical knowledge useful at the table.",
+    "facts": [
+      {
+        "label": "Confirm",
+        "value": "Exact expression, serve, pour size, availability and price before pouring."
+      },
+      {
+        "label": "Offer",
+        "value": "Neat, water, ice or a suitable mixed serve according to the guest's preference."
+      },
+      {
+        "label": "Distinguish",
+        "value": "A suggested pairing is a tested possibility, not a guarantee or a house recipe."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Start with the guest, not the lecture",
+        "paragraphs": [
+          "Ask what they already enjoy, how they want to drink it and the price range they are comfortable with. One focused question usually helps more than an uninterrupted history. Translate terms only as far as the guest wants: a specialist may want still and cask details, while another guest needs a clear flavour comparison.",
+          "Use three anchors in a recommendation: identity, sensory direction and a reason it fits. For example, identify the spirit category, describe fruit, oak or smoke, then connect that to the stated preference. Say what you know about the actual expression; do not borrow a tasting note from a different release."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Confirm, present and pour",
+        "paragraphs": [
+          "Read back the exact bottle, including age or release where relevant. Confirm neat, rocks, water alongside, or cocktail, and confirm the house pour and current price. A familiar brand may have several very different expressions.",
+          "Present the label so the guest can recognise the selection. Use clean, appropriate glassware, handle it away from the rim, measure to the house standard and leave space for nosing or ice as needed. Avoid theatrically warming a spirit without the guest's request.",
+          "A tulip-shaped glass is useful for focused aroma study. A rocks glass or highball serves a different purpose. Neither makes a guest's preference incorrect. Ask before adding water; offer it alongside when useful."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Pair through intensity, texture and flavour",
+        "paragraphs": [
+          "Treat pairing as a hypothesis you can test with a small sample. Compare the intensity of the spirit with the dominant part of the dish, including sauce, seasoning and cooking method. A delicate fish and a heavily peated spirit create a very different challenge from smoked food and a gentler smoky whisky.",
+          "Look for bridges such as toasted nuts, caramelised surfaces, dried fruit or baking spice. Then test the contrast: does the combination refresh the palate, or make the spirit hotter, more bitter or more drying? Similar aromas alone do not guarantee a successful match.",
+          "As training ideas, compare an orchard-fruit style with an apple-based dessert, a nutty mature brandy with a restrained nut dessert, and a lightly smoky whisky with a smoked savoury component. These are proposed experiments, not claims about Brennan's current dishes or bottle inventory. A very sweet dessert may make a dry spirit seem harsher; taste before recommending confidently."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Substitute without losing trust",
+        "paragraphs": [
+          "If a requested spirit is unavailable, explain that first. Offer an alternative that shares one meaningful feature, name one important difference and confirm the price. Do not substitute silently because two bottles share a country or brand owner.",
+          "For a guest moving from bourbon to Scotch, ask whether they value oak sweetness, body, fruit or proof. An unpeated, oak-influenced Scotch may be a more useful comparison than a heavily peated expression, but judge the actual bottle. For a Cognac request, explain that Armagnac is a different protected grape brandy, not simply a cheaper Cognac."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "A service rehearsal you can repeat",
+        "paragraphs": [
+          "Run a sixty-second scenario: discover preference, offer two credible options, explain the difference, confirm the serve and price, then respond to one follow-up. Assess whether each factual claim is supported and each recommendation answers the guest.",
+          "At lineup, check stock, house measures, tasting permissions, approved descriptions and any changed prices. When a guest raises an allergy or other restriction, confirm the actual product and the restaurant's procedure rather than promising safety from a general category description.",
+          "Keep tasting notes and recommendations separate from consumption targets. Training can use aromas, written cases and small samples; knowledge is demonstrated through accurate explanations and sound service decisions."
+        ],
+        "bullets": []
+      }
+    ],
+    "service": {
+      "ask": "What do you usually enjoy, and would you like something familiar or a different direction?",
+      "say": "This option shares the rounded oak character you enjoy, while the second is drier and more aromatic. I will confirm the current pour and price before you decide.",
+      "pairing": "Describe a pairing as a reasoned suggestion, test it where permitted, and check the actual dish and expression rather than promising a match from category alone."
+    },
+    "pitfalls": [
+      "Never infer current Brennan's inventory from this educational atlas.",
+      "Do not silently change a requested expression or serve.",
+      "General spirit-category knowledge cannot resolve a guest's specific restriction."
+    ],
+    "recall": [
+      {
+        "id": "confirm",
+        "q": "What must be confirmed before a premium pour?",
+        "a": "Exact expression, actual availability, current price, house pour size and the guest's preferred serve."
+      },
+      {
+        "id": "substitute",
+        "q": "Explain an unavailable-bottle substitution professionally.",
+        "a": "Acknowledge unavailability, offer a shared feature and a meaningful difference, confirm price, and obtain the guest's choice before pouring."
+      },
+      {
+        "id": "pair",
+        "q": "What should you assess beyond matching aromas in a pairing?",
+        "a": "Intensity, texture, heat, bitterness, sweetness, sauce and seasoning, then the combined result on the palate."
+      },
+      {
+        "id": "lineup",
+        "q": "Which atlas information needs a live house check?",
+        "a": "Bottle availability, prices, pour measures, house builds, approved service procedures and any product-specific restriction."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "premium",
+        "q": "A guest requests a brand with several expensive releases. What comes first?",
+        "options": [
+          "Pour the oldest expression the bar carries",
+          "Confirm the exact expression, serve and current price",
+          "Choose the bartender's preferred release silently",
+          "Use the last price you remember from training"
+        ],
+        "answer": 1,
+        "why": "The brand alone does not identify a release or authorise a price. Clarify before pouring."
+      },
+      {
+        "id": "pair",
+        "q": "A dessert and whisky both suggest caramel. What follows?",
+        "options": [
+          "The pairing is automatically successful",
+          "The whisky must contain added caramel sugar",
+          "Taste the combination for balance and texture",
+          "Only the dessert's name needs checking"
+        ],
+        "answer": 2,
+        "why": "An aromatic bridge is a starting hypothesis. Sweetness, heat, bitterness and texture can still make the pairing unsuccessful."
+      },
+      {
+        "id": "guest",
+        "q": "A guest wants ice with an older whisky. Which response shows hospitality?",
+        "options": [
+          "Explain that an expert would refuse ice",
+          "Add water first to teach the preferred method",
+          "Replace the whisky with a younger one silently",
+          "Confirm the preference and offer the requested serve"
+        ],
+        "answer": 3,
+        "why": "Knowledge supports the guest's choice. Explain effects if invited, but do not impose your preference or change the bottle."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Scotch Whisky Association: serving and tasting guidance",
+        "url": "https://www.scotch-whisky.org.uk/media/1714/swa-tasting-toolkit_2020.pdf",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "The Glenlivet: service preferences",
+        "url": "https://theglenlivet.zendesk.com/hc/en-us/articles/20213453829908-How-should-I-drink-The-Glenlivet",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "The Glenlivet: food-pairing examples",
+        "url": "https://www.theglenlivet.com/en-us/our-community/articles/whisky-food-pairings-101/",
+        "checked": "2026-10-27"
+      }
+    ],
+    "related": [
+      "tasting",
+      "whisky-cocktails",
+      "cognac",
+      "bourbon"
+    ]
+  },
+  {
+    "id": "whisky-cocktails",
+    "title": "From the tasting glass to the mixing glass",
+    "category": "Service",
+    "summary": "Choose spirits by cocktail structure, then connect whisky and brandy to the Ledger's existing recipes and Brennan's current builds.",
+    "facts": [
+      {
+        "label": "Old Fashioned family",
+        "value": "Spirit, sweetening, bitters and dilution put the base spirit in the foreground."
+      },
+      {
+        "label": "Manhattan family",
+        "value": "Spirit and aromatised wine create a different balance from a simple sweetener."
+      },
+      {
+        "label": "Sour family",
+        "value": "Spirit, citrus and sweetness; liqueurs and foaming ingredients create further distinctions."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Choose a role for the spirit",
+        "paragraphs": [
+          "Begin with the drink's structure. In an Old Fashioned-style serve, the spirit remains prominent, so proof, oak and texture matter. A Manhattan introduces vermouth's wine, herbal and sweet-bitter character. A sour introduces acidity and a different balance problem.",
+          "These are teaching frameworks, not a licence to rewrite a restaurant recipe. Use the approved house build for service. When practising a variation, name it as a variation and record the exact changes so you can compare results."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Four useful reference points",
+        "paragraphs": [
+          "The IBA Old Fashioned uses bourbon or rye with sugar, bitters and water. Its Manhattan reference uses rye, sweet red vermouth and aromatic bitters. Its Whiskey Sour pairs bourbon with lemon and syrup, with optional egg white. Its Sidecar combines Cognac, orange liqueur and lemon.",
+          "Those references show four distinct structures. They are not evidence of Brennan's quantities, garnishes or current base brands. Open the existing Ledger recipe or current house card for the appropriate build instead of importing an unrelated specification.",
+          "Whisky and Cognac can both work in mixed drinks, but they are not interchangeable without a flavour change. A Cognac sour can emphasise grape-spirit fruit and oak, while a rye sour may move towards cereal and spice. Actual expressions can vary substantially."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Proof, dilution and balance",
+        "paragraphs": [
+          "Changing from a 40% bottle to a 55% bottle changes the alcohol contribution even if the volume is identical. That can change perceived heat, body and the balance against sweet and bitter ingredients. Record strength when comparing a riff.",
+          "Cold temperature and dilution are part of the recipe outcome. Do not evaluate a stirred drink solely by counting stirring seconds: ice condition, mixing volume and equipment affect the result. Train against the intended temperature, dilution and flavour using the house method.",
+          "For a highball, the whisky, mixer, temperature, carbonation and ice must work together. A delicate base can disappear behind a forceful mixer; a smoky base can dominate. Select deliberately rather than assuming a famous label automatically makes a better drink."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "Build a comparison ladder",
+        "paragraphs": [
+          "Old Fashioned to Manhattan changes the sweetening structure by introducing vermouth. Manhattan to a Scotch-based Rob Roy changes the base category while retaining a related template. Bourbon Sour to a Cognac Sidecar changes both base spirit and sweetening, so it is not a one-variable experiment.",
+          "For a Sazerac discussion, identify the actual house base, rinse, sweetening and bitters. Historical and contemporary recipes differ. Do not insist on one base spirit merely because a reference recipe or a story uses it.",
+          "When a guest likes a house cocktail, name the feature they enjoy: dryness, fruit, spice, smoke or weight. Suggest a comparable drink and explain one difference. The most useful comparison is specific enough to help them choose."
+        ],
+        "bullets": []
+      },
+      {
+        "title": "A practical study exercise",
+        "paragraphs": [
+          "Select one verified house cocktail and write its family, base expression, supporting ingredients, method and final serve. Then explain the role of each component without inventing missing quantities.",
+          "Next, propose one training variation. Change one element where possible, taste against the original under the same conditions, and write the result. Keep the original approved spec intact. Finally, deliver a fifteen-second guest description that states flavour and texture, not a shopping list.",
+          "For guests who prefer no alcohol, offer a properly identified alternative from the house's temperance selection. A tiny splash, rinse or liqueur does not make an alcoholic build alcohol-free."
+        ],
+        "bullets": []
+      }
+    ],
+    "service": {
+      "ask": "Do you want the spirit itself to lead, something bright with citrus, or a longer refreshing drink?",
+      "say": "An Old Fashioned keeps the whiskey at the centre. A Manhattan brings in vermouth's herbal character, while a sour gives you a brighter citrus balance.",
+      "pairing": "Judge the completed cocktail, including sugar, acidity, bitters and dilution. A pairing for neat whisky does not automatically suit a whisky sour."
+    },
+    "pitfalls": [
+      "IBA references are not Brennan's house specifications.",
+      "A change of proof can change balance without changing measured volume.",
+      "A similar cocktail should be explained with both its connection and its difference."
+    ],
+    "recall": [
+      {
+        "id": "families",
+        "q": "Distinguish Old Fashioned, Manhattan and sour structures.",
+        "a": "Old Fashioned: spirit, sweetener, bitters and dilution. Manhattan: spirit, vermouth and bitters. Sour: spirit, citrus and sweetness; particular recipes add liqueurs or other elements."
+      },
+      {
+        "id": "proof",
+        "q": "Why record bottle ABV during a recipe comparison?",
+        "a": "The same volume at different ABV contributes different alcohol, affecting heat, texture and perceived balance."
+      },
+      {
+        "id": "spec",
+        "q": "Does an IBA reference establish Brennan's build?",
+        "a": "No. It is a named general reference. The current approved house recipe establishes the restaurant's measures, brand, method and garnish."
+      },
+      {
+        "id": "compare",
+        "q": "Give a useful Old Fashioned-to-Manhattan comparison.",
+        "a": "Both can foreground whiskey, but the Manhattan adds vermouth's wine and herbal character instead of relying only on simple sweetening."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "manhattan",
+        "q": "What most clearly distinguishes a Manhattan structure from an Old Fashioned structure?",
+        "options": [
+          "Its use of aromatised wine in the balance",
+          "Its requirement for a smoky whisky base",
+          "Its complete absence of any dilution",
+          "Its requirement for fresh citrus juice"
+        ],
+        "answer": 0,
+        "why": "Vermouth changes the structure through wine, sweetness and botanicals. Both drinks require thoughtful dilution; neither inherently requires smoke."
+      },
+      {
+        "id": "house",
+        "q": "An IBA recipe differs from the current house spec. What should you pour during service?",
+        "options": [
+          "The online reference because it is international",
+          "The approved house spec after resolving any uncertainty",
+          "A midpoint between the two quantities",
+          "A personal variation without telling the guest"
+        ],
+        "answer": 1,
+        "why": "References support learning; the verified current house build governs the ordered house drink."
+      },
+      {
+        "id": "substitution",
+        "q": "A higher-proof whiskey replaces a lower-proof bottle in a training riff. What must be evaluated?",
+        "options": [
+          "Only whether the label looks similar",
+          "Only whether the bottle is more expensive",
+          "The changed alcohol contribution and overall balance",
+          "Only whether the two names share a country"
+        ],
+        "answer": 2,
+        "why": "Equal volumes can carry different alcohol. Compare flavour, heat, sweetness, bitterness, temperature and dilution."
+      }
+    ],
+    "sources": [
+      {
+        "title": "International Bartenders Association: Old Fashioned",
+        "url": "https://iba-world.com/iba-cocktail/old-fashioned/",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "International Bartenders Association: Manhattan",
+        "url": "https://iba-world.com/iba-cocktail/manhattan/",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "International Bartenders Association: Whiskey Sour",
+        "url": "https://iba-world.com/iba-cocktail/whiskey-sour/",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "International Bartenders Association: Sidecar",
+        "url": "https://iba-world.com/iba-cocktail/sidecar/",
+        "checked": "2026-10-27"
+      },
+      {
+        "title": "International Bartenders Association: Sazerac reference",
+        "url": "https://iba-world.com/iba-cocktail/sazerac/",
+        "checked": "2026-10-27"
+      }
+    ],
+    "related": [
+      "bourbon",
+      "american-rye",
+      "cognac",
+      "service"
+    ]
+  }
+]

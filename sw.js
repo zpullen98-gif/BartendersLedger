@@ -1,6 +1,6 @@
 /* The Bartender's Ledger — service worker.
    Bump CACHE on every deploy; that string is the whole update mechanism. */
-const CACHE = 'ledger-v93';
+const CACHE = 'ledger-v94';
 /* Optional pictures have their own exact inventory and bounded cache. */
 importScripts('./js/data-teaching-images.js', './js/data-fall-menu-art.js', './js/teaching-images.js');
 
@@ -20,6 +20,9 @@ const ASSETS = [
   './js/ui-brew.js',
   './js/quiz-learning.js',
   './css/quiz-learning.css',
+  './css/casks.css',
+  './js/data-casks.js',
+  './js/ui-casks.js',
   './js/data-fall-menu.js',
   './js/data-fall-menu-art.js',
   './js/ui-fall-menu.js',

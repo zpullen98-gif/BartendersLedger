@@ -200,9 +200,9 @@ for (const [label, arr, key] of [
 	   is the literal the bar shows before a house loads, and each word's key
 	   is its own) */
 	const navWords = lit(uiNew, 'NAV_CLUSTERS').map((g) => g[1]).join(' · ');
-	if (navWords !== 'Home · Brennan’s · Practise · Library · More') problems.push(`the nav reads ${navWords}; the three apps share Home · Brennan’s · Practise · Library, then More, in that order`);
+	if (navWords !== 'Home · Brennan’s · Whisky & Brandy · Practise · Library · More') problems.push(`the nav reads ${navWords}; the Ledger's dedicated Whisky & Brandy tab belongs between Brennan’s and Practise`);
 	const navKeys = lit(uiNew, 'NAV_CLUSTERS').map((g) => g[0]).join(' · ');
-	if (navKeys !== 'home · brennans · practise · library · more') problems.push(`the nav's keys read ${navKeys}, not home · brennans · practise · library · more`);
+	if (navKeys !== 'home · brennans · casks · practise · library · more') problems.push(`the nav's keys read ${navKeys}, not home · brennans · casks · practise · library · more`);
 	const grab = (src, re, pick) => [...((src.match(re) || [''])[0]).matchAll(pick)].map((m) => m[1]);
 	const views = grab(app, /const views = \{[\s\S]*?\};/, /(\w+):render/g);
 	const routed = grab(uiNew, /const ROUTE_SOURCES = \{[\s\S]*?\n\};/, /^\s*(\w+):\s*\{/gm);

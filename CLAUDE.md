@@ -3,6 +3,53 @@
 Installable, offline-first bartending study app. Vanilla JS, no frameworks, no build step.
 Split from a single-file claude.ai artifact into this project (Aug 2026).
 
+## The Cask Atlas (27 October 2026)
+
+The primary bar now reads Home, Brennan's (the live house name), Whisky &
+Brandy, Practise, Library, More. The new `casks` destination sits immediately
+after the house. At phone widths it is a three-column, two-row bar with full
+labels; this supersedes the older five-word navigation notes below. Today's
+study, Practise, the Brennan's learning view and global search also lead here.
+
+The Cask Atlas has 18 full chapters, 72 recall prompts and 54 scenario questions.
+Production, maturation and blending lead into American, Canadian, Irish,
+Scottish, Japanese and world whisky; Cognac, Armagnac and Calvados are correctly
+identified as brandies. Tasting, guest service, food pairing and cocktail
+structure finish the course. Facts, deeper explanations, tableside wording,
+pitfalls, related chapters and dated primary sources stay together. These are
+general study examples, not claims about the house's current stock or recipes.
+
+Edit the three reviewed `tools/casks/chapters-*.json` fragments, then run
+`node tools/casks/build-casks.mjs`. Never hand-edit `js/data-casks.js`.
+`--check` validates structure, IDs, answer keys, links and generated parity.
+Source dates are evidence of review, not a promise of automatic rule updates.
+In particular, preserve the distinction between Japanese association standards
+and legislation, the American single malt transition, Cognac's updated 73.7%
+distillation limit, and first fill in Scotch usage. The older reference primers
+were brought into line with those distinctions.
+
+`js/ui-casks.js` owns `#/casks`, `#/casks/<chapter>`,
+`#/casks/practice/<scope>` and the `/cards` or `/quiz` run suffix. Scope is `all`
+or a chapter ID. Cold run URLs open practice setup. A chapter detour preserves
+the exact live run and Back restores it. A new round explicitly replaces the
+in-memory run. Source links are HTTPS-only and all content is escaped.
+
+Study keys are `Cask Atlas · <chapter>/<recall|quiz>/<prompt>`; keep these IDs
+stable. The existing card scheduler and backup/merge machinery hold progress.
+Today deals up to ten due/new recall cards, with unseen material interleaved
+across chapters. Revealing alone never grades. Quiz options shuffle with their
+answer keys; each response records once and each completed quiz saves one
+`mode: 'casks'` result. Missed-question retries carry `replay: true`. Academic
+level pools and marks are independent. The three atlas assets are shell cached;
+external sources require a connection.
+
+Run `tools/check-casks-browser.mjs` for real-control journey, search, all chapter
+routes, quiz and recall guards, chapter detours, retry, backup recovery, day/night,
+phone/desktop fit and scoped accessibility. `LEDGER_URL` can target the public
+candidate; `LEDGER_PLAYWRIGHT` overrides the local Playwright module and
+`LEDGER_QA_OUTPUT` saves evidence. Existing home, navigation, import and release
+gates remain required. The source worker was bumped to ledger-v94.
+
 ## Run it
 
 ```bash

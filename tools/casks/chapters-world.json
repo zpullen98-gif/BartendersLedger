@@ -1,0 +1,397 @@
+[
+  {
+    "id": "scotch",
+    "title": "Scotch: grain, still and cask",
+    "category": "Scotch",
+    "summary": "Separate legal identity from flavour expectation. Follow Scotch from cereal and fermentation through its five categories, then use cask history and bottling details to make a precise recommendation.",
+    "facts": [
+      {"label": "Origin", "value": "Distilled and matured in Scotland; maturation is at least three years in oak casks no larger than 700 litres."},
+      {"label": "Strength", "value": "Distillation below 94.8% ABV; bottling at least 40% ABV."},
+      {"label": "Permitted additions", "value": "Water and plain caramel colouring; Scotch cannot be flavoured or sweetened."},
+      {"label": "Age statement", "value": "The youngest whisky in the bottle determines the stated age."}
+    ],
+    "sections": [
+      {
+        "title": "A five-part classification",
+        "paragraphs": ["Read the category before the distillery story. Single describes a single distillery, not a single barrel, vintage or grain variety. Malt and grain are legal production distinctions. Neither category is a quality ranking, and blending is an act of composition rather than evidence of inferiority."],
+        "bullets": [
+          "Single Malt Scotch Whisky: water and malted barley, distilled in batches in pot stills at one distillery.",
+          "Single Grain Scotch Whisky: Scotch from one distillery that is neither single malt nor blended Scotch. Other whole cereal grains can accompany malted barley.",
+          "Blended Malt Scotch Whisky: single malts from more than one distillery, without grain whisky.",
+          "Blended Grain Scotch Whisky: single grain whiskies from more than one distillery.",
+          "Blended Scotch Whisky: one or more single malts combined with one or more single grain whiskies."
+        ]
+      },
+      {
+        "title": "Follow the production decisions",
+        "paragraphs": ["Malting develops the barley enzymes used to convert starch into fermentable sugars. Mashing extracts and converts; fermentation creates alcohol and aromatic compounds; distillation concentrates and selects. For Scotch, conversion uses the cereal's own enzyme systems and fermentation uses yeast. Do not confuse a cereal's agricultural origin with the legally required location of distilling and maturation.", "For a useful distillery comparison, ask about fermentation length, still configuration, distillation regime, cut decisions and condensation. These are investigative questions, not a formula that lets you predict a bottle from one engineering detail. A small still does not by itself prove a heavy spirit, and pot distillation alone does not establish quality."],
+        "bullets": []
+      },
+      {
+        "title": "Peat is a production choice",
+        "paragraphs": ["Peat smoke used in malting can contribute smoky phenolic aromas. Distinguish smoke from oak toast, char, roasted cereal and alcohol heat when taking notes. Peated and unpeated releases can come from the same place, so an island address is not a peat declaration. Bruichladdich's own range is a useful counterexample: its Bruichladdich line is unpeated, while Port Charlotte and Octomore explore peated styles.", "Treat a published peat measurement cautiously: ask whether it describes malt before distillation or the finished spirit. A larger number is not a calibrated prediction of how smoky the guest will perceive the drink after distillation, maturation, blending and dilution."],
+        "bullets": []
+      },
+      {
+        "title": "Translate the cask language",
+        "paragraphs": ["Full maturation in a cask and a later finish in another cask describe different histories. A sherry finish does not mean the whisky spent its whole life in sherry-seasoned oak, nor that sherry was poured into the finished Scotch. Ask for the producer's actual sequence, duration where disclosed, previous contents and refill status.", "Compare spirit character with oak influence instead of equating darkness with age. An age-stated blend can contain older whisky, but its youngest component sets the number. A bottle without an age statement still must meet Scotch's minimum maturation period. Single cask, cask strength and single malt answer different questions; never use them interchangeably."],
+        "bullets": []
+      },
+      {
+        "title": "Build an evidence-based tasting",
+        "paragraphs": ["Record category, ABV, stated age, cask information and disclosed peat regime before practice. Taste blind first when possible, then reconcile your observations with those facts. Describe aroma families, texture, heat, oak structure and finish. Fruit, smoke or a maritime association can guide a hypothesis, but cannot prove a distillery or country. The skill is making a defensible recommendation while admitting what remains unknown."],
+        "bullets": []
+      }
+    ],
+    "service": {
+      "ask": "Would you prefer fruit and malt, dry oak and spice, or pronounced smoke? What whisky have you enjoyed, and would you like it neat, with water or over ice?",
+      "say": "I would choose by the actual bottling's smoke level, cask character and strength. Single malt tells us how and where it was made; it does not promise that it will be smoky.",
+      "pairing": "Training hypothesis: try a restrained smoky malt with a small bite of roasted mushroom, then compare a fruit-led malt. Judge whether smoke complements the savoury notes or overwhelms them; confirm the actual dish and guest preference."
+    },
+    "pitfalls": ["Calling single grain whisky a whisky made from only one grain.", "Treating blended malt as a malt-and-grain blend.", "Assigning a whisky's age from its colour or the oldest component.", "Assuming every Scotch, or every Islay Scotch, is peated."],
+    "recall": [
+      {"id": "scotch-r1", "q": "Explain the difference between single malt, blended malt and blended Scotch without ranking their quality.", "a": "Single malt is malted-barley Scotch batch-distilled in pot stills at one distillery. Blended malt combines single malts from different distilleries. Blended Scotch combines malt and grain Scotch. These are production and composition categories, not quality grades."},
+      {"id": "scotch-r2", "q": "A label says single grain. What does single establish, and what does it fail to establish?", "a": "It establishes one distillery. It does not establish one cereal variety, one barrel, one vintage, a particular age or a light flavour. Check the grain recipe, production details and bottling separately."},
+      {"id": "scotch-r3", "q": "Compare a sherry-matured whisky with a sherry-finished whisky. What further information is useful?", "a": "Matured indicates a maturation history in the stated cask type; finished indicates a later cask stage. Verify the full sequence, duration if disclosed, seasoning, refill status and strength. The words alone do not quantify flavour or prove that one is superior."},
+      {"id": "scotch-r4", "q": "Why can a smoky blind sample not prove Islay origin?", "a": "Peating is a production choice used beyond Islay, and Islay also produces unpeated whisky. Oak treatment and other aromas can further complicate the impression. A sensory hypothesis needs label and producer evidence to establish origin."}
+    ],
+    "quiz": [
+      {"id": "scotch-q1", "q": "A producer combines single malt Scotch from three distilleries, with no grain whisky. Which category belongs on the label?", "options": ["Blended Malt Scotch Whisky", "Blended Scotch Whisky", "Single Grain Scotch Whisky", "Single Malt Scotch Whisky"], "answer": 0, "why": "More than one distillery excludes single malt, while the absence of grain whisky excludes blended Scotch. The relevant category is blended malt; the number of constituent casks does not change that definition."},
+      {"id": "scotch-q2", "q": "A blend contains 12-, 18- and 25-year-old Scotch. Which age statement is defensible?", "options": ["25 years, because it contains that vintage", "18 years, if that is the largest component", "12 years, reflecting the youngest whisky", "18 years, as the rounded average age"], "answer": 2, "why": "Scotch's age statement refers to the youngest whisky. Neither an arithmetic average, the largest proportion nor an especially old component can raise the stated age above the youngest constituent."},
+      {"id": "scotch-q3", "q": "A guest dislikes smoke and asks whether single malt is unsuitable. What is the most helpful response?", "options": ["Recommend grain whisky because all malts are smoky", "Recommend an older malt because age removes peat", "Recommend a mainland malt because islands require peat", "Ask about flavour and select a verified unpeated bottling"], "answer": 3, "why": "Single malt is a production category, not a smoke level. Verify the specific bottling's style. Age and geography cannot replace that check, and the guest's preference should guide the recommendation."}
+    ],
+    "sources": [
+      {"title": "UK legislation: Scotch Whisky Regulations 2009", "url": "https://www.legislation.gov.uk/uksi/2009/2890/body/made", "checked": "2026-10-27"},
+      {"title": "Scotch Whisky Association: five categories", "url": "https://www.scotch-whisky.org.uk/discover-scotch/enjoying-scotch/scotch-whisky-categories/", "checked": "2026-10-27"},
+      {"title": "Scotch Whisky Association: frequently asked questions", "url": "https://www.scotch-whisky.org.uk/discover-scotch/faqs/", "checked": "2026-10-27"},
+      {"title": "Bruichladdich: production and range questions", "url": "https://www.bruichladdich.com/pages/faqs", "checked": "2026-10-27"}
+    ],
+    "related": ["scotch-regions", "production", "maturation", "tasting", "japanese"]
+  },
+  {
+    "id": "scotch-regions",
+    "title": "Scotland: map the place, question the stereotype",
+    "category": "Scotch",
+    "summary": "Use Scotland's protected geography as a map of origin, then explore the distillery and cask choices that make a bottle individual. Regional familiarity should improve questions, not replace tasting.",
+    "facts": [
+      {"label": "Five protected names", "value": "Highland, Lowland and Speyside are protected regions; Islay and Campbeltown are protected localities."},
+      {"label": "Islands", "value": "A useful informal grouping, not a sixth protected region in the Scotch Whisky Regulations."},
+      {"label": "Meaning of origin", "value": "A protected regional or locality name identifies where the whisky was distilled. It does not require every maturation stage to occur there."},
+      {"label": "Sensory discipline", "value": "Region is evidence of geography, not proof of peat level, cask type or flavour."}
+    ],
+    "sections": [
+      {
+        "title": "Read the map before the flavour wheel",
+        "paragraphs": ["Locate the five protected names before memorising tasting shorthand. The Highland region is extensive and includes islands other than the separately protected Islay. Speyside follows the River Spey area in the north-east and has its own protected boundary. Lowland covers southern Scotland below the legally defined dividing line. Campbeltown is a protected locality on the Kintyre peninsula; Islay is a protected island locality.", "The SWA commonly presents all five together as whisky regions, which is convenient for learning. For a precise examination answer, distinguish the legal words region and locality. Do not turn an informal merchant's Islands category into a sixth legal region."],
+        "bullets": []
+      },
+      {
+        "title": "Highland and Speyside: a route through variety",
+        "paragraphs": ["Highland is too geographically broad to function as a single flavour specification. When a guest asks for a Highland style, ask which bottle they mean. Their reference might be fruit-led, waxy, smoky, coastal or prominently oak-influenced. A map should lead you to a producer and bottling, where those expectations can be checked.", "Speyside is densely populated with distilleries and often associated with fruit-led malts and sherry-cask influence. Use that as an initial research lead, not a condition of the designation. A Speyside name does not mean every cask previously held sherry or that the malt must be unpeated. Compare two releases from one producer before claiming to understand the whole region."],
+        "bullets": []
+      },
+      {
+        "title": "Lowland, Campbeltown and Islay: test the familiar shortcuts",
+        "paragraphs": ["Lowland geography does not impose triple distillation, delicate flavour or an absence of peat. Campbeltown's reputation for characterful malts is useful cultural context, but the legal locality does not specify brine, oiliness or smoke. These terms belong in your observation column only when you actually perceive them.", "Islay's peat reputation is strong, yet Bruichladdich demonstrates why the stereotype is incomplete. The same distillery produces an unpeated Bruichladdich range alongside peated Port Charlotte and Octomore. Thus, place alone cannot answer a guest who wants no smoke. Nor does the word coastal prove that seawater, iodine or sea salt has physically entered a whisky."],
+        "bullets": []
+      },
+      {
+        "title": "Keep distillation, maturation and bottling separate",
+        "paragraphs": ["A regional label concerns the whisky's distillation origin. Casks may mature elsewhere in Scotland under the Scotch rules. A brand office, visitor centre, bottling plant and maturation warehouse therefore need not share the distillery's location. When explaining a label, state only the location the evidence supports.", "This distinction improves travel-style storytelling: identify the place, then discuss the producer's disclosed decisions. A romantic coastal landscape can introduce the bottle, but it should not become an invented chemical explanation. The most convincing hospitality combines an evocative setting with an accurate account of what is in the glass."],
+        "bullets": []
+      },
+      {
+        "title": "Design a regional comparison with controls",
+        "paragraphs": ["Begin with two bottlings at reasonably comparable strength and record age, cask history and peat regime. Change one factor at a time where practical. A heavily peated, cask-strength Islay alongside an unpeated, lower-strength sherry-finished Speyside changes several variables at once; it cannot isolate geography.", "Use three columns: verified bottle facts, sensory observations and hypotheses. After revealing the labels, retain observations that were sound and revise unsupported conclusions. Aim to explain why two whiskies differ without claiming that your palate can authenticate their birthplace."],
+        "bullets": []
+      }
+    ],
+    "service": {
+      "ask": "When you say Islay or Highland, is there a favourite bottle you have in mind? Is the attraction smoke, texture, fruit or cask richness?",
+      "say": "That region gives us the distillation origin. I can narrow the choice further by the particular whisky's peat level, cask style and strength.",
+      "pairing": "Training hypothesis: compare two malts with the same restrained bite of roasted food, changing the whisky rather than the dish. Record intensity and finish before attaching a regional explanation."
+    },
+    "pitfalls": ["Teaching Islands as a sixth protected Scotch region.", "Teaching that Lowland requires triple distillation.", "Equating an Islay address with a compulsory smoky profile.", "Assuming a region on the label proves where every cask matured."],
+    "recall": [
+      {"id": "scotch-regions-r1", "q": "Name the five protected Scotch geographical names and separate regions from localities.", "a": "Highland, Lowland and Speyside are protected regions. Islay and Campbeltown are protected localities. They are often grouped together as five whisky regions in teaching. Islands is informal rather than a sixth protected region."},
+      {"id": "scotch-regions-r2", "q": "Why is an unpeated Islay whisky a useful training example?", "a": "It separates geographical origin from a production choice. Islay protects a place of distillation, not a mandatory peat regime. Bruichladdich's unpeated and peated ranges make that distinction concrete."},
+      {"id": "scotch-regions-r3", "q": "What does a protected regional name establish, and what remains to be researched?", "a": "It establishes distillation origin. Research maturation locations, cask history, age, peat use, strength and bottling details separately. None of those is fully answered by the regional name."},
+      {"id": "scotch-regions-r4", "q": "Design a fair comparison intended to investigate regional differences.", "a": "Select bottlings with similar strength and, where possible, comparable age, cask history and peat regime. Record remaining differences. Taste blind, distinguish observations from hypotheses and avoid claiming the region caused every contrast."}
+    ],
+    "quiz": [
+      {"id": "scotch-regions-q1", "q": "A training map lists Islands as a sixth legally protected Scotch region. What correction is needed?", "options": ["Keep it because island distilleries share one peat rule", "Label it an informal grouping rather than a sixth protected region", "Replace Highland with Islands to retain five legal regions", "Combine Islay and Campbeltown into one protected region"], "answer": 1, "why": "The protected names are Highland, Lowland, Speyside, Islay and Campbeltown. Islands is useful informal geography, but it is not a sixth protected region. Shared peat rules do not define the geographical categories."},
+      {"id": "scotch-regions-q2", "q": "A guest assumes a Lowland whisky must be triple-distilled. Which response is accurate?", "options": ["The designation establishes geography; check the producer's process", "The designation requires three distillations for every malt", "The designation requires two distillations and no grain whisky", "The designation establishes maturation, but never distillation origin"], "answer": 0, "why": "Lowland is a geographical designation, not a compulsory distillation count. A distillery's actual production information is needed. Regional origin concerns distillation, although maturation must still satisfy the overall Scotch rules."},
+      {"id": "scotch-regions-q3", "q": "A blind sample is smoky and seems maritime. Which conclusion is most defensible?", "options": ["It must be Islay because salt proves island maturation", "It must be Highland because sea notes exclude Islay", "It may fit several origins; verify the bottle before asserting one", "It must have matured beside the sea for its entire life"], "answer": 2, "why": "Sensory associations support possibilities, not geographical authentication. Peat is used in different places, and maritime descriptors do not establish seawater content or a warehouse address."}
+    ],
+    "sources": [
+      {"title": "UK legislation: Scotch Whisky Regulations 2009", "url": "https://www.legislation.gov.uk/uksi/2009/2890/body/made", "checked": "2026-10-27"},
+      {"title": "Scotch Whisky Association: regional overview", "url": "https://www.scotch-whisky.org.uk/discover-scotch/enjoying-scotch/scotch-whisky-regions/", "checked": "2026-10-27"},
+      {"title": "Scotch Whisky Association: geography and labelling questions", "url": "https://www.scotch-whisky.org.uk/discover-scotch/faqs/", "checked": "2026-10-27"},
+      {"title": "Bruichladdich: unpeated and peated ranges", "url": "https://www.bruichladdich.com/pages/faqs", "checked": "2026-10-27"}
+    ],
+    "related": ["scotch", "maturation", "tasting", "service"]
+  },
+  {
+    "id": "japanese",
+    "title": "Japanese whisky: identity beyond the label design",
+    "category": "Japanese",
+    "summary": "Understand the Japan Spirits & Liqueurs Makers Association standard, distinguish production origin from brand nationality, and compare Japanese whisky through actual production evidence rather than a single national flavour stereotype.",
+    "facts": [
+      {"label": "Status", "value": "The JSLMA Japanese whisky labelling standard is an association standard, not a universal statutory definition for every producer."},
+      {"label": "Timeline", "value": "Established in 2021; the transition for existing products ended on 31 March 2024."},
+      {"label": "Under that standard", "value": "Production and at least three years' maturation in Japan, in wooden casks up to 700 litres; bottling in Japan at 40% ABV or more."},
+      {"label": "Material distinction", "value": "Malted grains must be used; other cereals are permitted. Water must be extracted in Japan, but the grains need not be grown there."}
+    ],
+    "sections": [
+      {
+        "title": "Start with the authority behind the words",
+        "paragraphs": ["The JSLMA published its Japanese whisky labelling standard in 2021, with a transition for existing products ending in March 2024. Japan's National Tax Agency described it as a voluntary industry standard. That is an important distinction from the national legal protection studied for Scotch. Do not present association compliance as a universal rule governing every Japanese-looking bottle.", "When researching a bottle, look for an explicit current producer statement about compliance and identify the producer. Japanese ownership, a Japanese address or Japanese lettering alone cannot establish where all the whisky was distilled and matured. An imported component may be completely legitimate in another product category while preventing a claim under this particular standard."],
+        "bullets": []
+      },
+      {
+        "title": "Track the required chain",
+        "paragraphs": ["Under the standard, saccharification, fermentation and distillation take place in Japan, with distillation below 95% ABV. The spirit matures in Japan for at least three years in wooden casks no larger than 700 litres and is bottled there at a minimum of 40% ABV. Plain caramel colouring is allowed. Notice wooden, rather than importing Scotch's oak-only wording.", "Water must be extracted in Japan; cereals can be sourced elsewhere, and some malted grain is required. Consequently, a statement that all Japanese whisky must use Japanese-grown barley would be false. Record what the standard guarantees separately from additional agricultural or cask claims made for a particular release."],
+        "bullets": []
+      },
+      {
+        "title": "Follow the producer, not a national flavour formula",
+        "paragraphs": ["Suntory's portfolio illustrates useful category contrasts: Yamazaki and Hakushu are single malt brands, Chita is single grain, and Hibiki is a blend. Suntory explicitly identifies its Chita bottling as meeting the Japanese whisky standard. These are study examples, not a statement of Brennan's stock or a promise that every market offers the same releases.", "Japan's whisky tradition includes varied spirit and cask styles. Avoid teaching Japanese whisky as invariably delicate, unpeated, mizunara-aged or single malt. Instead, ask the same technical questions used elsewhere: cereal recipe, fermentation, still type, peating, maturation sequence, blend composition and bottling strength. Check each release rather than generalising from the flagship bottle."],
+        "bullets": []
+      },
+      {
+        "title": "Read maturation claims narrowly",
+        "paragraphs": ["A named oak species or finishing cask is meaningful only within the disclosed maturation history. Do not turn a mention of mizunara into a claim that the entire blend spent its entire life in that wood. Likewise, a Japanese whisky can use casks whose previous contents originated elsewhere without changing the required location of its own maturation.", "Age, cask selection and blending can create overlapping aromas across countries. A fragrant or incense-like note is an observation; it is not proof of mizunara or Japanese origin. Write the sensory evidence first and confirm the production story afterwards."],
+        "bullets": []
+      },
+      {
+        "title": "Make the highball a technical exercise",
+        "paragraphs": ["A highball is a useful service comparison because dilution, temperature, carbonation and whisky character all matter. Keep glass, ice, soda, ratio and mixing method consistent while comparing two bottles. Record which flavours remain clear and whether the finish becomes fresher, thinner or more bitter. This is a training experiment, not a universal Japanese recipe or an unverified house specification.", "For a guest, translate evidence into a choice: a light grain-led profile may suit one preference, while a more structured malt or blend suits another. Discuss price and serving style before suggesting a scarce bottle. Origin should add context, not substitute for an explanation of why the guest might enjoy it."],
+        "bullets": []
+      }
+    ],
+    "service": {
+      "ask": "Are you seeking a Japanese-produced whisky specifically, or a particular style such as a crisp highball, gentle fruit or a fuller neat pour?",
+      "say": "I will check the producer's origin and standard-compliance statement for this release. Then we can choose by its actual flavour and the way you want it served.",
+      "pairing": "Training hypothesis: compare a controlled whisky highball with a lightly fried savoury bite. Evaluate carbonation, dilution and aromatic intensity; do not infer that national origin alone makes the pairing successful."
+    },
+    "pitfalls": ["Calling the JSLMA standard a universal national whisky law.", "Assuming a Japanese brand name proves all components were distilled in Japan.", "Replacing wooden casks with oak-only when reciting this standard.", "Assuming the standard requires Japanese-grown cereals or a specific oak species."],
+    "recall": [
+      {"id": "japanese-r1", "q": "Explain both the authority and timeline of the JSLMA Japanese whisky standard.", "a": "It is an association labelling standard established in 2021, described by the National Tax Agency as voluntary industry action. The transition for existing products ended on 31 March 2024. It should not be recited as a universal statutory definition for every producer."},
+      {"id": "japanese-r2", "q": "Trace the location requirements and distinguish water from cereal sourcing.", "a": "The standard requires Japanese water and Japanese saccharification, fermentation, distillation, maturation and bottling. Malted grain must be used, but cereals need not have been grown in Japan. Maturation is at least three years in wooden casks of up to 700 litres."},
+      {"id": "japanese-r3", "q": "What evidence would you seek before describing a bottle as Japanese whisky under the standard?", "a": "Identify the producer and exact release, check its current compliance statement and verify production, maturation and bottling provenance. Brand nationality and label design cannot establish the origin of every component."},
+      {"id": "japanese-r4", "q": "Why is an incense-like aroma insufficient evidence of Japanese origin or mizunara maturation?", "a": "Aromas overlap across spirits and can arise from different production and maturation histories. It is a valid sensory observation but does not identify a country or wood species. A producer's release-specific cask information is needed."}
+    ],
+    "quiz": [
+      {"id": "japanese-q1", "q": "A bottle is sold by a Japanese company but includes imported whisky. What should you establish before claiming JSLMA Japanese whisky status?", "options": ["Whether the label uses Japanese calligraphy", "Whether the company has traded for three years", "Whether the final blend was bottled above 40%", "Whether this release satisfies the standard's full origin requirements"], "answer": 3, "why": "Bottling strength, brand ownership and visual design cannot establish the required chain of Japanese production and maturation. Imported whisky components do not satisfy that chain simply because blending or bottling occurs in Japan."},
+      {"id": "japanese-q2", "q": "Which summary correctly distinguishes the JSLMA rule from Scotch's maturation wording?", "options": ["Japan requires new charred oak; Scotch permits any wood", "Japan specifies wooden casks; Scotch specifies oak casks", "Japan has no cask size limit; Scotch has no age minimum", "Japan requires imported oak; Scotch requires Scottish oak"], "answer": 1, "why": "The JSLMA standard specifies wooden casks up to 700 litres and at least three years in Japan. Scotch specifies oak, also with a 700-litre maximum and three-year minimum in Scotland. Do not silently transfer one definition into another."},
+      {"id": "japanese-q3", "q": "Imported barley is used with Japanese water and all required Japanese production stages. Does the barley origin alone prevent compliance?", "options": ["No; the standard does not require Japanese-grown cereals", "Yes; every agricultural input must come from Japan", "Yes; imported barley is allowed only in grain whisky", "No; because maturation location is never relevant"], "answer": 0, "why": "The standard requires water extracted in Japan and specified production locations, but not Japanese-grown cereals. Malted grain must still be used and all other conditions remain relevant; this answer does not certify the release without checking them."}
+    ],
+    "sources": [
+      {"title": "JSLMA: Standards for Labeling Japanese Whisky", "url": "https://www.yoshu.or.jp/files/libs/552/202303291555304944.pdf", "checked": "2026-10-27"},
+      {"title": "Japan National Tax Agency: 2021 report on voluntary labelling standards", "url": "https://www.nta.go.jp/english/Report_pdf/2021e_08.pdf", "checked": "2026-10-27"},
+      {"title": "Nikka: whisky labelling standards", "url": "https://www.nikka.com/en/brands/labelingstandards/", "checked": "2026-10-27"},
+      {"title": "House of Suntory: Chita single grain whisky", "url": "https://house.suntory.com/chita-whisky/chita-single-grain-whisky", "checked": "2026-10-27"},
+      {"title": "Suntory Global Spirits: whisky portfolio", "url": "https://www.suntoryglobalspirits.com/our-brands/whiskey", "checked": "2026-10-27"}
+    ],
+    "related": ["scotch", "world-whisky", "maturation", "service"]
+  },
+  {
+    "id": "world-whisky",
+    "title": "World whisky: four journeys beyond the familiar",
+    "category": "World",
+    "summary": "Explore Taiwan, India, Australia and New Zealand through verified producer examples. Learn to compare climate, cereal, process and cask without inventing national rules or converting tropical years into Scottish years.",
+    "facts": [
+      {"label": "Taiwan example", "value": "Kavalan produces single malt in Yilan, where a subtropical climate is part of its maturation context."},
+      {"label": "India example", "value": "Paul John produces single malt in Goa, using Indian six-row barley and offering different peat expressions."},
+      {"label": "Australia example", "value": "LARK's Tasmanian production includes local barley and cask programmes drawing on fortified-wine heritage."},
+      {"label": "New Zealand example", "value": "Cardrona describes South Island barley, double distillation in copper pot stills and ex-bourbon, ex-sherry and ex-Pinot Noir casks."}
+    ],
+    "sections": [
+      {
+        "title": "Taiwan: climate as context, not an age calculator",
+        "paragraphs": ["Kavalan's Yilan distillery provides a concrete Taiwanese example of single malt made in a subtropical environment. Study a specific expression's cask type and strength alongside that setting. Two Kavalan releases need not show the same oak or fruit profile, and one distillery's practice is not a definition of every Taiwanese whisky.", "Warmth can alter the pace of spirit-wood interaction, while humidity, warehouse conditions, cask size and previous use complicate the result. Do not claim that three tropical years equal twelve Scottish years. Extraction, evaporation and the development of aromatic balance are different processes; elapsed time remains elapsed time."],
+        "bullets": []
+      },
+      {
+        "title": "India: separate a producer example from a vast country",
+        "paragraphs": ["Paul John describes production in tropical Goa and the use of Indian six-row barley. Its range includes different peat styles, so neither Indian nor Goan whisky is a reliable synonym for unpeated whisky. Record the particular release, cask history and ABV before deciding which guest it might suit.", "Use the barley detail to ask better questions rather than to assign a fixed taste to an agricultural variety. Malting, fermentation, distillation and maturation mediate what reaches the glass. India is geographically and commercially diverse; do not use one malt producer to make universal claims about every product marketed as Indian whisky."],
+        "bullets": []
+      },
+      {
+        "title": "Australia: distinguish Tasmania from a continent",
+        "paragraphs": ["LARK's own process account connects its Tasmanian whisky to local barley and a cask programme that includes fortified-wine influences. This is a useful route into how a region's wine and cooperage resources can inform whisky production. It is not evidence that all Australian whisky is wine-cask matured or that every Australian warehouse shares Tasmania's climate.", "For a fortified-wine cask, investigate what the cask actually held, whether it was seasoned, its size, and whether the whisky spent its whole maturation there or only a later finish. Do not infer added wine, sweetness or a complete maturation history from an attractive cask name."],
+        "bullets": []
+      },
+      {
+        "title": "New Zealand: agricultural and cask provenance",
+        "paragraphs": ["Cardrona describes barley grown on New Zealand's South Island, double distillation in bespoke copper pot stills, and maturation using ex-bourbon, ex-sherry or ex-Pinot Noir casks. Compare those cask pathways within one producer to investigate maturation while holding more of the underlying spirit story constant.", "A local wine-cask connection is a compelling hospitality detail when the exact bottle supports it. The distillery's choices are not universal New Zealand legal requirements. If teaching national definitions, identify the current authority and whether a document is legislation, a geographical indication or an industry guideline before quoting a minimum age."],
+        "bullets": []
+      },
+      {
+        "title": "A passport for every new bottle",
+        "paragraphs": ["Build a compact research record: country of distillation, producer versus bottler, cereal recipe, conversion and fermentation, still type, maturation location, wood, previous contents, age, ABV and permitted additions. Mark unknowns explicitly. A distillery-owned source is strong evidence of its stated process; use legal authorities for legal definitions.", "Then create a comparison by flavour and service purpose. A guest who enjoys fruit-led Scotch might appreciate a world malt with a similar intensity, but the match must be based on the bottle rather than nationality. Blind tasting develops observation and discrimination; it cannot certify origin. Keep purchase price, awards and exotic geography out of the initial sensory assessment."],
+        "bullets": []
+      }
+    ],
+    "service": {
+      "ask": "Would you like to explore a new country while staying near a flavour you already enjoy, or would you prefer a stronger contrast in peat, oak or texture?",
+      "say": "This producer gives us a different setting and cask history to explore. I would compare the actual release with your favourite whisky rather than promise a single national style.",
+      "pairing": "Training hypothesis: compare a fruit-led world malt and an oak-led expression with the same small portion of roasted pear or an unsweetened savoury course. Record intensity and bitterness; check the actual dish and serving strength before recommending."
+    },
+    "pitfalls": ["Converting tropical maturation into a claimed equivalent number of Scottish years.", "Applying one producer's production method to an entire country.", "Confusing the country of the brand owner with the origin of the spirit.", "Presenting an industry guideline as law without checking its status."],
+    "recall": [
+      {"id": "world-whisky-r1", "q": "Why is a claim that tropical whisky ages four times faster unsuitable for precise training?", "a": "Maturation has several interacting processes, including extraction, evaporation and chemical development. Climate affects them differently, alongside cask and warehouse variables. There is no universal conversion from tropical years to Scottish years."},
+      {"id": "world-whisky-r2", "q": "Give one verified producer example each from Taiwan, India, Australia and New Zealand.", "a": "Kavalan in Yilan illustrates subtropical Taiwanese single malt; Paul John in Goa uses Indian six-row barley; LARK illustrates Tasmanian barley and fortified-wine cask connections; Cardrona describes South Island barley, copper pot distillation and several cask pathways. These are producer examples, not universal national rules."},
+      {"id": "world-whisky-r3", "q": "What should you verify when a bottle emphasises a local wine cask?", "a": "Check the exact prior contents, wood, size, seasoning where disclosed, and whether the cask was used for full maturation or a finish. Confirm the production and maturation location separately. The cask description alone does not establish added wine or a guaranteed flavour."},
+      {"id": "world-whisky-r4", "q": "How would you research an unfamiliar country's whisky definition?", "a": "Find the current competent authority, identify the scope of the rule, distinguish legislation from an association guideline and verify raw materials, production locations, maturation, strength and labelling. Use producer pages for release-specific facts, not as a substitute for national law."}
+    ],
+    "quiz": [
+      {"id": "world-whisky-q1", "q": "A supplier says a four-year tropical whisky is legally equivalent to sixteen-year Scotch. What is the best correction?", "options": ["Accept the equivalence whenever the whisky is darker", "Accept the equivalence if the producer uses small casks", "Age remains four years; climate does not create that legal equivalence", "Age becomes sixteen years if evaporation is four times higher"], "answer": 2, "why": "A maturation environment can change development but does not multiply chronological age. Colour, evaporation and cask size are not legal age-conversion systems, nor are they a complete measure of sensory maturity."},
+      {"id": "world-whisky-q2", "q": "Cardrona describes a Pinot Noir cask release. Which next question most improves the training note?", "options": ["Does this prove all New Zealand whisky uses wine casks?", "Does Pinot Noir mean the bottle contains red table wine?", "Does local wine wood guarantee a sweet finished whisky?", "Was this full maturation or a finish, and what does this release disclose?"], "answer": 3, "why": "The cask sequence and release-specific evidence clarify what happened. A single release does not define a country, imply added table wine or guarantee a sweet taste."},
+      {"id": "world-whisky-q3", "q": "A guest enjoys an unpeated fruit-led Scotch and wants a world-whisky comparison. What should guide the choice?", "options": ["Choose the oldest bottle regardless of its peat and strength", "Match the actual bottling's profile and service style to the preference", "Choose any Indian whisky because all share one flavour profile", "Choose the darkest bottle because colour establishes complexity"], "answer": 1, "why": "A useful comparison follows verified bottling information and the guest's preferences. Age, colour or nationality alone cannot guarantee a suitable flavour, smoke level or intensity."}
+    ],
+    "sources": [
+      {"title": "Kavalan: Yilan distillery and subtropical maturation", "url": "https://www.kavalanwhisky.eu/en/distillery-kavalan-2/", "checked": "2026-10-27"},
+      {"title": "Paul John: producer story and Indian barley", "url": "https://www.pauljohnwhisky.com/our-story.php", "checked": "2026-10-27"},
+      {"title": "Paul John: production questions", "url": "https://pauljohnwhisky.com/faqs.php", "checked": "2026-10-27"},
+      {"title": "LARK: Tasmanian production process", "url": "https://larkdistillery.com/pages/our-process", "checked": "2026-10-27"},
+      {"title": "Cardrona: barley, distillation and casks", "url": "https://www.cardronadistillery.co.nz/pages/distillery", "checked": "2026-10-27"}
+    ],
+    "related": ["japanese", "scotch", "maturation", "tasting", "service"]
+  },
+  {
+    "id": "cognac",
+    "title": "Cognac: vineyard, Charentais still and cellar",
+    "category": "Brandy",
+    "summary": "Cognac is grape brandy, not whisky. Follow a protected French wine spirit through its six crus, seasonal double distillation, cellar decisions and age designations, then translate the detail into confident service.",
+    "facts": [
+      {"label": "Raw material", "value": "Wine from grapes in the Cognac delimited area; Ugni Blanc is the dominant variety."},
+      {"label": "Distillation", "value": "Charentais double distillation, completed by 31 March following the harvest. Current maximum is 73.7% ABV at 20°C in the daily collection vessel."},
+      {"label": "Youngest component", "value": "VS: 2 years; VSOP: 4; XO: 10; XXO: 14. These are minimum ages, not average ages."},
+      {"label": "Fine Champagne", "value": "Only Grande Champagne and Petite Champagne eaux-de-vie, with at least 50% Grande Champagne. It is not sparkling wine."}
+    ],
+    "sections": [
+      {
+        "title": "Begin in the vineyard",
+        "paragraphs": ["Cognac starts with wine, placing it in the grape-brandy family rather than the cereal-based whisky family. The protected area covers Charente, Charente-Maritime and defined parts of Dordogne and Deux-Sèvres. Ugni Blanc dominates, while varieties including Folle Blanche and Colombard provide further study. The aim is a suitable distilling wine, not a finished table wine intended for service.", "The region's low-alcohol, high-acid base wines provide the starting material for concentration through distillation. Keep grape identity, growing area and cellar style separate in your notes. A Cognac house may assemble eaux-de-vie with different origins and ages; the house name alone does not identify a single vineyard, vintage or cru."],
+        "bullets": []
+      },
+      {
+        "title": "Six crus and one easily confused phrase",
+        "paragraphs": ["Learn the six growing areas: Grande Champagne, Petite Champagne, Borderies, Fins Bois, Bons Bois and Bois Ordinaires. Their soils and locations form a meaningful origin framework, but a cru name is not an age or an automatic quality score. Use a producer's details to connect the particular blend with its stated origin.", "Fine Champagne has a precise composition: exclusively Grande Champagne and Petite Champagne, with at least half from Grande Champagne. It does not mean Champagne wine was used, nor that the spirit is sparkling. Grande Champagne and Petite Champagne here are Cognac growing areas, not the northern French sparkling-wine region."],
+        "bullets": []
+      },
+      {
+        "title": "A seasonal double distillation",
+        "paragraphs": ["The Charentais process is batch double distillation. The first chauffe produces brouillis; the bonne chauffe redistils it and separates the desired wine spirit from other fractions. Production must finish by 31 March after the harvest. Explain the sequence before reciting numbers: wine becomes a first distillate, then a selected spirit for maturation.", "A useful correction for older study notes: the approved 2023 specification amendment raised the maximum strength after distillation from 72.4% to 73.7% ABV, measured at 20°C in the daily collection vessel. This is a distillation limit, not the bottle's serving strength. Cognac released for consumption is at least 40% ABV."],
+        "bullets": []
+      },
+      {
+        "title": "Read time through the youngest eau-de-vie",
+        "paragraphs": ["Cognac matures in oak. VS requires at least two years, VSOP four, XO ten and XXO fourteen, with the youngest component controlling the designation. A blend can contain older spirits without changing what the minimum guarantees. Do not calculate an average from components or claim that every drop is exactly the label's minimum age.", "Blending across ages and origins is common but not compulsory. Wood choice, cask history, cellar conditions, maturation and final assembly influence style. Bottling ends the accumulation of cask age: keeping an XO bottle another decade does not make it a twenty-year-old Cognac. Storage still matters for preserving the bottle's condition."],
+        "bullets": []
+      },
+      {
+        "title": "Serve the guest's purpose",
+        "paragraphs": ["Compare fruit, floral character, oak spice, texture, heat and persistence. A more mature expression may show dried fruit and savoury complexity, but neither the oldest designation nor darkest colour guarantees the guest's preferred style. Neat service and cocktails are both valid contexts; choose the particular Cognac and price deliberately.", "For a Sidecar or Vieux Carré discussion, explain the brandy's contribution rather than treating Cognac as interchangeable with bourbon. The raw material and structure differ. Follow the confirmed house recipe and inventory: the study examples here do not establish Brennan's current pour, quantities or substitutions."],
+        "bullets": []
+      }
+    ],
+    "service": {
+      "ask": "Would you like a brighter fruit-led Cognac for a cocktail, or a more contemplative neat pour with deeper oak and dried-fruit character? What price range feels comfortable?",
+      "say": "Cognac is a protected French grape brandy. This age designation tells us the minimum age of the youngest eau-de-vie; the actual blend and house style give us the rest of the story.",
+      "pairing": "Training hypothesis: try a small pour with a modest bite of dark chocolate or roasted fruit, checking sweetness and alcohol intensity. A pairing should be demonstrated with the exact Cognac and dish, not promised from XO alone."
+    },
+    "pitfalls": ["Classifying Cognac as whisky because it is an amber aged spirit.", "Confusing Fine Champagne with sparkling wine or a finish in Champagne casks.", "Using the former 72.4% distillation maximum as the current rule.", "Using average blend age, or years in bottle, as the labelled age."],
+    "recall": [
+      {"id": "cognac-r1", "q": "Explain Cognac's raw material and double-distillation sequence, including its seasonal deadline.", "a": "Cognac is made from wine produced from grapes in its delimited area. Charentais batch distillation first produces brouillis, then the bonne chauffe selects the wine spirit. Distillation must finish by 31 March after the harvest. It is grape brandy, not cereal whisky."},
+      {"id": "cognac-r2", "q": "State the current distillation strength maximum and distinguish it from bottling strength.", "a": "The current maximum is 73.7% ABV at 20°C in the daily collection vessel after double distillation, following the approved 2023 amendment. Older 72.4% notes are outdated. Cognac for consumption is bottled at a minimum of 40% ABV."},
+      {"id": "cognac-r3", "q": "Recite the VS, VSOP, XO and XXO minimum ages and explain what the number measures.", "a": "VS is at least two years, VSOP four, XO ten and XXO fourteen. The youngest eau-de-vie in the blend controls the designation. Older components can be present; the rule is not an average or a statement that all components are exactly that age."},
+      {"id": "cognac-r4", "q": "What are the six Cognac crus, and how does Fine Champagne differ from a single cru?", "a": "The six are Grande Champagne, Petite Champagne, Borderies, Fins Bois, Bons Bois and Bois Ordinaires. Fine Champagne combines only the first two, with at least 50% Grande Champagne. It is a specified combination, not another cru or sparkling-wine category."}
+    ],
+    "quiz": [
+      {"id": "cognac-q1", "q": "A blend is 60% Grande Champagne, 30% Petite Champagne and 10% Borderies. Can it be called Fine Champagne?", "options": ["Yes, because Grande Champagne exceeds half", "Yes, because all components come from Cognac", "Yes, if its youngest component is at least ten", "No, because Fine Champagne excludes Borderies"], "answer": 3, "why": "Fine Champagne must consist only of Grande Champagne and Petite Champagne, with at least 50% Grande Champagne. Meeting that percentage does not permit an additional cru. Age is a separate requirement."},
+      {"id": "cognac-q2", "q": "A newly prepared training sheet lists Cognac's maximum after distillation as 72.4% ABV. What edit is appropriate?", "options": ["Change it to 73.7% and cite the approved 2023 amendment", "Keep 72.4% because it is the minimum bottling strength", "Change it to 94.8% because Cognac follows Scotch rules", "Remove the limit because double distillation has no maximum"], "answer": 0, "why": "The approved specification amendment raised the limit to 73.7% ABV at 20°C in the daily collection vessel. It is distinct from the minimum bottling strength and from whisky distillation limits."},
+      {"id": "cognac-q3", "q": "A Cognac blend contains eaux-de-vie aged 8, 15 and 25 years. Which proposed claim fails on the youngest component?", "options": ["It meets the VSOP minimum age requirement", "It qualifies for XO because its average exceeds ten", "It can contain spirits older than its youngest component", "Its youngest eau-de-vie has aged for eight years"], "answer": 1, "why": "XO requires the youngest eau-de-vie to be at least ten years old. An eight-year component prevents XO qualification, regardless of the average or the oldest spirit. The blend does exceed the VSOP minimum."}
+    ],
+    "sources": [
+      {"title": "BNIC: Cognac production", "url": "https://www.cognac.fr/en/discover/expertise/production/", "checked": "2026-10-27"},
+      {"title": "BNIC: protected origin and age designations", "url": "https://www.cognac.fr/en/discover/a-unique-spirit/a-protected-origin/", "checked": "2026-10-27"},
+      {"title": "BNIC: grape varieties and diversity", "url": "https://www.cognac.fr/en/press/celebrate-the-diversity-of-cognac-on-national-cognac-day-4th-june-2023/", "checked": "2026-10-27"},
+      {"title": "EUR-Lex: approved 2023 Cognac specification amendment", "url": "https://eur-lex.europa.eu/legal-content/FR/ALL/?uri=CELEX%3A52023XC0405%2801%29", "checked": "2026-10-27"},
+      {"title": "French DREETS: Cognac distillery controls and 73.7% maximum", "url": "https://nouvelle-aquitaine.dreets.gouv.fr/sites/nouvelle-aquitaine.dreets.gouv.fr/IMG/pdf/focus_2_bilan_tracabilite-cognac_fa_180823.pdf", "checked": "2026-10-27"},
+      {"title": "Michel Forgeron: six Cognac crus and Fine Champagne", "url": "https://www.cognacforgeron.com/fr/content/41-les-six-crus-du-cognac", "checked": "2026-10-27"}
+    ],
+    "related": ["armagnac-calvados", "maturation", "tasting", "service"]
+  },
+  {
+    "id": "armagnac-calvados",
+    "title": "Armagnac and Calvados: Gascon vineyards, Norman orchards",
+    "category": "Brandy",
+    "summary": "Distinguish two French brandy traditions by raw material, geography, still and label. Armagnac comes from grape wine; Calvados comes from cider and perry. Neither is whisky, and shared age initials do not guarantee shared rules.",
+    "facts": [
+      {"label": "Armagnac", "value": "Grape wine spirit from Gascony; Bas-Armagnac, Armagnac-Ténarèze and Haut-Armagnac are geographical names to recognise."},
+      {"label": "Armagnac distillation", "value": "Continuous Armagnac distillation predominates; permitted double distillation also exists. Do not say all Armagnac is once-distilled."},
+      {"label": "Calvados", "value": "Norman apple and pear spirit, with three AOCs: Calvados, Calvados Pays d'Auge and Calvados Domfrontais."},
+      {"label": "Age comparison", "value": "VSOP minimum: four years for both. XO minimum: ten years for Armagnac, six years for Calvados. The youngest component determines the claim."}
+    ],
+    "sections": [
+      {
+        "title": "Armagnac: follow the wine into the still",
+        "paragraphs": ["Armagnac is a protected wine spirit from Gascony in south-western France. Learn the geographical names Bas-Armagnac, Armagnac-Ténarèze and Haut-Armagnac rather than treating the category as a generic alternative word for Cognac. Grape variety, distillation and the producer's cellar decisions are useful next questions when comparing bottles.", "Continuous distillation in the Armagnac still is characteristic, but double distillation is also permitted and practised. Janneau explicitly describes both methods in its production. Therefore, the common contrast of Cognac twice versus Armagnac once is a useful first approximation with an important exception, not a universal definition. A continuous still also does not automatically imply a neutral spirit."],
+        "bullets": []
+      },
+      {
+        "title": "Read Armagnac ages and vintages carefully",
+        "paragraphs": ["For present-day age terminology, VSOP indicates a youngest eau-de-vie aged at least four years and XO at least ten. Older reference material can carry obsolete XO thresholds, so date the source before turning it into a flashcard. A producer may use substantially older components than the minimum; only its disclosure establishes that additional detail.", "A vintage identifies a harvest year rather than the bottle's current cask age. Ask when it was bottled and what maturation history is documented. Time spent in glass does not add years of wood ageing. A birth-year bottle can make a thoughtful service story, but subtracting the vintage from today's year can give a false age."],
+        "bullets": []
+      },
+      {
+        "title": "Calvados: fruit, fermentation and three appellations",
+        "paragraphs": ["Calvados begins with cider apples and perry pears rather than grapes or cereal. Fermentation precedes distillation. The three appellations differ in geography and production requirements, so read the full designation before assuming the still or the fruit balance."],
+        "bullets": [
+          "Calvados AOC: column or pot distillation is possible; maturation is at least two years in oak.",
+          "Calvados Pays d'Auge: pot-still double distillation is required; the cider for distillation contains no more than 30% perry pears; maturation is at least two years in oak.",
+          "Calvados Domfrontais: continuous column distillation, at least 30% perry pears in the cider for distillation and at least three years in oak."
+        ]
+      },
+      {
+        "title": "The initials do not travel unchanged",
+        "paragraphs": ["Calvados VSOP has a four-year minimum, while Calvados XO or Hors d'Age has a six-year minimum. Compare that with the ten-year XO minimum in Cognac and current Armagnac terminology. The same initials do not create a universal age ladder for every brandy.", "The youngest component controls a blend's age designation. Distinguish that minimum from a producer's actual recipe, and distinguish an appellation from an age class: Domfrontais describes an origin and production framework, not a synonym for XO. Keep these two axes separate when arranging a study shelf."],
+        "bullets": []
+      },
+      {
+        "title": "Recommend by structure, not by rustic stereotypes",
+        "paragraphs": ["Do not teach Armagnac as inevitably rough or Calvados as inevitably sweet. Evaluate the actual bottling's fruit, oak, texture, alcohol integration and finish. Apple aroma is not a sugar measurement; a grape origin does not guarantee that a guest will recognise fresh grapes in an aged spirit.", "For a controlled exercise, compare Cognac, Armagnac and Calvados at similar bottling strengths. Identify which contrasts can reasonably relate to raw material and which might reflect age, oak or producer style. Make a sensory hypothesis first and check the facts afterwards. At the table, offer an accessible description, then deepen the explanation if the guest is interested."],
+        "bullets": []
+      }
+    ],
+    "service": {
+      "ask": "Would you like to explore a grape brandy with a different distillation tradition, or an apple-and-pear spirit from Normandy? Do you prefer fresher fruit or deeper oak character?",
+      "say": "Armagnac and Cognac begin with wine, while Calvados begins with cider and perry. I can compare the actual bottles by texture and fruit rather than assume they share the same taste or age rules.",
+      "pairing": "Training hypothesis: compare Calvados with a restrained apple dessert and Armagnac with roasted nuts or dried fruit. Check the precise food, allergies, sweetness and pour strength; a shared ingredient is a starting point, not a guaranteed match."
+    },
+    "pitfalls": ["Describing either category as whisky.", "Saying every Armagnac uses only one distillation.", "Applying Cognac's ten-year XO minimum to Calvados.", "Calculating a vintage spirit's cask age by subtracting the vintage from the current year."],
+    "recall": [
+      {"id": "armagnac-calvados-r1", "q": "Compare the raw materials, broad origins and characteristic still choices of Armagnac and Calvados.", "a": "Armagnac is Gascon grape wine spirit, characteristically made in a continuous Armagnac still, with double distillation also permitted. Calvados is Norman cider and perry spirit; still requirements depend on whether the appellation is Calvados, Pays d'Auge or Domfrontais."},
+      {"id": "armagnac-calvados-r2", "q": "How do Pays d'Auge and Domfrontais differ in pear proportion, still and minimum ageing?", "a": "Pays d'Auge uses pot-still double distillation, a maximum of 30% perry pears in the cider, and at least two years in oak. Domfrontais uses continuous column distillation, at least 30% perry pears and at least three years in oak."},
+      {"id": "armagnac-calvados-r3", "q": "Compare VSOP and XO across Armagnac, Calvados and Cognac.", "a": "VSOP has a four-year minimum in all three. Current Armagnac and Cognac XO have ten-year minima; Calvados XO has a six-year minimum. The youngest component controls the designation, so these terms must be learned within their own category."},
+      {"id": "armagnac-calvados-r4", "q": "A 1990 vintage Armagnac was bottled in 2010. Why should it not be described as 36 years old in 2026?", "a": "The vintage identifies the harvest year, not an automatically increasing age. Time in bottle does not add wood maturation. Verify the documented cask history and bottling details rather than subtracting the vintage from the current year."}
+    ],
+    "quiz": [
+      {"id": "armagnac-calvados-q1", "q": "Which Calvados profile correctly matches Domfrontais?", "options": ["Double pot distillation, no pears, two years in oak", "Continuous column distillation, at least 30% pears, three years in oak", "Continuous column distillation, grapes only, four years in oak", "Double pot distillation, at most 30% pears, six years in oak"], "answer": 1, "why": "Domfrontais requires continuous column distillation, at least 30% perry pears in the cider for distillation and at least three years in oak. Pays d'Auge has different pear and still requirements; age categories such as XO are a separate axis."},
+      {"id": "armagnac-calvados-q2", "q": "A guest compares Calvados XO with Cognac XO. Which explanation correctly handles their minimum ages?", "options": ["Both guarantee exactly ten years for every component", "Both guarantee a six-year average across the blend", "Calvados guarantees ten years; Cognac guarantees six", "Calvados XO starts at six; Cognac XO starts at ten"], "answer": 3, "why": "Calvados XO has a six-year minimum and Cognac XO a ten-year minimum, each referring to the youngest component. The designation is not an average and does not mean every component is exactly the minimum age."},
+      {"id": "armagnac-calvados-q3", "q": "A producer describes a double-distilled Armagnac. What is the best response during study?", "options": ["Reject the description because Armagnac can never be double-distilled", "Reclassify it as Cognac because the still determines the appellation", "Recognise a permitted method and verify the producer's specific account", "Assume the spirit must contain grain because two distillations require it"], "answer": 2, "why": "Continuous Armagnac distillation predominates, but double distillation is also permitted. The raw material and appellation remain relevant; a distillation method alone does not turn Armagnac into Cognac or whisky."}
+    ],
+    "sources": [
+      {"title": "French Ministry of Agriculture: Armagnac specification", "url": "https://info.agriculture.gouv.fr/boagri/document_administratif-22aec213-de3a-450a-b4bb-5d17b539e5a9/telechargement", "checked": "2026-10-27"},
+      {"title": "Janneau: the two permitted Armagnac distillation methods", "url": "https://www.armagnac-janneau.com/savoir-faire/", "checked": "2026-10-27"},
+      {"title": "Calvados France: comparing Calvados, Cognac and Armagnac", "url": "https://drinkcalvados.com/en/news/calvados-vs-cognac-vs-armagnac-vs-whisky-whats-the-difference/", "checked": "2026-10-27"},
+      {"title": "Calvados France: three appellations", "url": "https://drinkcalvados.com/en/discover/the-calvados-appellations/", "checked": "2026-10-27"},
+      {"title": "Calvados France: understanding the label", "url": "https://drinkcalvados.com/en/discover/understanding-the-label/", "checked": "2026-10-27"},
+      {"title": "Calvados France: production", "url": "https://drinkcalvados.com/en/discover/how-to-made-calvados/", "checked": "2026-10-27"},
+      {"title": "Domaine d'Ognoas: Armagnac classifications and vintage meaning", "url": "https://www.domaine-ognoas.com/les-classifications", "checked": "2026-10-27"}
+    ],
+    "related": ["cognac", "production", "maturation", "tasting", "service"]
+  }
+]
