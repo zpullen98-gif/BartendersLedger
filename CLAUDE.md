@@ -50,7 +50,7 @@ routes, quiz and recall guards, chapter detours, retry, backup recovery, day/nig
 phone/desktop fit and scoped accessibility. `LEDGER_URL` can target the public
 candidate; `LEDGER_PLAYWRIGHT` overrides the local Playwright module and
 `LEDGER_QA_OUTPUT` saves evidence. Existing home, navigation, import and release
-gates remain required. The source worker was bumped to ledger-v94.
+gates remain required. The source worker was bumped to ledger-v95.
 
 ## Run it
 
