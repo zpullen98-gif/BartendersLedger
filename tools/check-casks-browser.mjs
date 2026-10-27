@@ -56,7 +56,7 @@ try{
  await page.locator('[data-act="cask-grade"][data-k="no"]').click();const graded=await runState();await page.evaluate(()=>caskGrade(false));
  ok('one recall attempt writes exactly one spaced-repetition mark',await runState()===graded&&await page.evaluate(()=>{const r=caskState().run;return progress.cards[r.rows[r.idx].key].w===1;}));
  await page.evaluate(()=>{caskOpen('bourbon');render();});
- await page.locator('[data-act="cask-practice"]').first().click();await page.locator('[data-act="cask-start"][data-mode="quiz"]').click();
+ await page.locator('[data-act="cask-practice"]').first().click();await page.locator('[data-act="cask-start"][data-mode="quiz"]:not([data-s])').click();
  ok('chapter quiz is scoped with four distinct options and no answer reading',await page.evaluate(()=>caskState().run.rows.every(r=>r.chapter==='bourbon'&&r.choices.length===4&&new Set(r.choices.map(o=>o.value)).size===4))&&await page.locator('.cask-answer').count()===0);
  const wrong=await page.evaluate(()=>caskState().run.rows[0].choices.findIndex(o=>!o.correct));
  await page.locator('[data-act="cask-pick"]').nth(wrong).click();
@@ -79,13 +79,24 @@ try{
  await page.locator('[data-act="cask-next"]').click();
  ok('retry records separately without manufacturing another first sitting',await page.evaluate(()=>progress.quizzes.filter(q=>q.mode==='casks'&&q.replay).length===1));
  ok('new practice leaves existing academic requirements and marks untouched',academic===await page.evaluate(()=>JSON.stringify({levels:progress.levels,qa:progress.qa,bank:LEVEL_ITEMS})));
+ const weakRecall=await page.evaluate(()=>{const row=caskEntries('all','cards').find(r=>progress.cards[r.key]?.w>0);state.tab='record';render();return row.key;});
+ await page.locator('[data-act="fc-drill-weak"]').filter({hasText:weakRecall}).click();
+ ok('Record weakest recall opens its exact Cask Atlas prompt',await page.evaluate(key=>{const r=caskState().run;return state.tab==='casks'&&r.mode==='cards'&&r.rows.length===1&&r.rows[0].key===key;},weakRecall));
+ const weakQuiz=await page.evaluate(()=>{const row=caskEntries('cognac','quiz')[0];gradeCardKey(row.key,false);state.tab='record';render();return row.key;});
+ await page.locator('[data-act="fc-drill-weak"]').filter({hasText:weakQuiz}).click();
+ ok('Record weakest quiz opens its exact Cask Atlas question',await page.evaluate(key=>{const r=caskState().run;return state.tab==='casks'&&r.mode==='quiz'&&r.rows.length===1&&r.rows[0].key===key;},weakQuiz));
+ const earlyQuiz=await runState();await page.evaluate(()=>caskGrade(true));
+ ok('quiz cannot be graded before an option is selected',await runState()===earlyQuiz);
+ await page.evaluate(()=>{caskAct('cask-practice',{id:'cognac'});render();});
+ await page.locator('[data-act="cask-start"][data-mode="quiz"][data-s="due"]').click();
+ ok('scheduled quiz review includes only due or currently missed questions',await page.evaluate(key=>{const r=caskState().run;return r.mode==='quiz'&&r.rows.some(x=>x.key===key)&&r.rows.every(x=>caskRecord(x).due||caskRecord(x).missed);},weakQuiz));
  const stored=await page.evaluate(()=>Object.keys(progress.cards).filter(k=>k.startsWith('Cask Atlas · ')));
  const restored=await page.evaluate(()=>{const backup={app:'bartenders-ledger',progress:JSON.parse(JSON.stringify(progress))};const key=Object.keys(backup.progress.cards).find(k=>k.startsWith('Cask Atlas · '));delete progress.cards[key];saveProgress();dataImport(new File([JSON.stringify(backup)],'atlas-backup.json',{type:'application/json'}));return key;});
  await page.waitForFunction(key=>!!progress.cards[key],restored);
  await page.reload();await page.waitForFunction(()=>typeof caskState==='function');
  ok('backup merge and reload preserve every stable Cask Atlas key',await page.evaluate(keys=>keys.every(k=>!!progress.cards[k]),stored));
  await page.goto(base+'?nosw&qa=cold#/casks/practice/scotch/quiz');
- ok('cold drill address safely opens chapter practice without inventing an active run',await page.locator('[data-act="cask-start"][data-mode="quiz"]').isVisible());
+ ok('cold drill address safely opens chapter practice without inventing an active run',await page.locator('[data-act="cask-start"][data-mode="quiz"]:not([data-s])').isVisible());
  await page.locator('#view [data-act="back"]').click();ok('cold Back opens the chapter parent',page.url().endsWith('#/casks/scotch'));
  const axe='C:/Users/zpull/WorldTable/node_modules/axe-core/axe.min.js';await page.addScriptTag({path:axe});
  for(const width of [320,390,1280])for(const theme of ['day','night']){

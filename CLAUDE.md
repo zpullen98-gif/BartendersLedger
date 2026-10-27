@@ -39,7 +39,9 @@ stable. The existing card scheduler and backup/merge machinery hold progress.
 Today deals up to ten due/new recall cards, with unseen material interleaved
 across chapters. Revealing alone never grades. Quiz options shuffle with their
 answer keys; each response records once and each completed quiz saves one
-`mode: 'casks'` result. Missed-question retries carry `replay: true`. Academic
+`mode: 'casks'` result. Both recall and quiz setup offer due/missed reviews;
+Record's weakest-question shortcuts open the exact atlas prompt in its own
+mode. Missed-question retries carry `replay: true`. Academic
 level pools and marks are independent. The three atlas assets are shell cached;
 external sources require a connection.
 

@@ -117,7 +117,8 @@ function caskIndexHTML(){
 }
 function caskPracticeHTML(){
   const s=caskState(),c=caskChapter(s.scope),daily=caskDaily(),cards=caskEntries(s.scope,'cards'),qs=caskEntries(s.scope,'quiz'),due=cards.filter(function(r){const a=caskRecord(r);return a.due||a.missed;});
-  return '<section class="cask-atlas"><header class="cask-heading"><p class="eyebrow">The Cask Atlas · Practice</p><h2 tabindex="-1">'+esc(c?c.title:'Whisky and brandy practice')+'</h2><p>Recall the detail, explain the distinction and apply it at the table.</p></header>' + (!c?'<section class="cask-section"><h3>Today\u2019s cask study</h3><p>'+daily.length+' due and new cards across the atlas.</p><button class="btn btn-brass" data-act="cask-start" data-mode="cards" data-s="today" data-id="all"'+(!daily.length?' disabled':'')+'>Start today\u2019s study</button></section>':'') + '<div class="cask-grid"><section class="cask-tile"><h3>Recall cards</h3><p>'+cards.length+' prompts. Answer out loud, reveal the explanation, then assess your recall.</p><button class="btn btn-brass" data-act="cask-start" data-mode="cards" data-id="'+esc(s.scope)+'">Practise all cards</button><button class="btn btn-ghost" data-act="cask-start" data-mode="cards" data-s="due" data-id="'+esc(s.scope)+'"'+(!due.length?' disabled':'')+'>Due or missed ('+due.length+')</button></section><section class="cask-tile"><h3>Knowledge check</h3><p>A shuffled round of up to ten questions, with full explanations and a route back to the chapter after every answer.</p><button class="btn btn-brass" data-act="cask-start" data-mode="quiz" data-id="'+esc(s.scope)+'"'+(!qs.length?' disabled':'')+'>Start knowledge check</button></section></div><p class="cask-muted">Your recall and quiz results are saved with your study record. The atlas is an independent course alongside the four academic levels.</p>'+caskButton(c?c.id:'',c?'Read this chapter':'Explore the atlas')+'</section>';
+  const dueQuiz=qs.filter(function(r){const a=caskRecord(r);return a.due||a.missed;});
+  return '<section class="cask-atlas"><header class="cask-heading"><p class="eyebrow">The Cask Atlas · Practice</p><h2 tabindex="-1">'+esc(c?c.title:'Whisky and brandy practice')+'</h2><p>Recall the detail, explain the distinction and apply it at the table.</p></header>' + (!c?'<section class="cask-section"><h3>Today\u2019s cask study</h3><p>'+daily.length+' due and new cards across the atlas.</p><button class="btn btn-brass" data-act="cask-start" data-mode="cards" data-s="today" data-id="all"'+(!daily.length?' disabled':'')+'>Start today\u2019s study</button></section>':'') + '<div class="cask-grid"><section class="cask-tile"><h3>Recall cards</h3><p>'+cards.length+' prompts. Answer out loud, reveal the explanation, then assess your recall.</p><button class="btn btn-brass" data-act="cask-start" data-mode="cards" data-id="'+esc(s.scope)+'">Practise all cards</button><button class="btn btn-ghost" data-act="cask-start" data-mode="cards" data-s="due" data-id="'+esc(s.scope)+'"'+(!due.length?' disabled':'')+'>Due or missed ('+due.length+')</button></section><section class="cask-tile"><h3>Knowledge check</h3><p>A shuffled round of up to ten questions, with full explanations and a route back to the chapter after every answer.</p><button class="btn btn-brass" data-act="cask-start" data-mode="quiz" data-id="'+esc(s.scope)+'"'+(!qs.length?' disabled':'')+'>Start knowledge check</button><button class="btn btn-ghost" data-act="cask-start" data-mode="quiz" data-s="due" data-id="'+esc(s.scope)+'"'+(!dueQuiz.length?' disabled':'')+'>Due or missed checks ('+dueQuiz.length+')</button></section></div><p class="cask-muted">Your recall and quiz results are saved with your study record. The atlas is an independent course alongside the four academic levels.</p>'+caskButton(c?c.id:'',c?'Read this chapter':'Explore the atlas')+'</section>';
 }
 function caskRunHTML(){
   const run=caskState().run;if(!run)return caskPracticeHTML();
@@ -135,6 +136,13 @@ function caskRunHTML(){
 }
 function renderCasks(){const s=caskState();if(s.page==='chapter'&&caskChapter(s.item))return caskChapterHTML(caskChapter(s.item));if(s.page==='run')return caskRunHTML();if(s.page==='practice')return caskPracticeHTML();return caskIndexHTML();}
 function caskAct(act,data){
+  if(act==='fc-drill-weak'){
+    const card=caskEntries('all','cards').find(function(r){return r.key===data.k;});
+    const quiz=card ? null : caskEntries('all','quiz').find(function(r){return r.key===data.k;});
+    const row=card || quiz;
+    if(!row)return null;
+    return caskStart(card?'cards':'quiz',row.chapter,'review',[row])?'render':'done';
+  }
   if(act.indexOf('cask-')!==0)return null;
   const s=caskState(),run=s.run;
   if(act==='cask-jump'){
