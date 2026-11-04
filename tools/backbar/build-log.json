@@ -1,10 +1,10 @@
 {
   "edition": "2026-11-04",
-  "bottles": 25,
+  "bottles": 26,
   "planned": 29,
   "confirm": 12,
   "words": {
-    "total": 14071,
+    "total": 14626,
     "perEntry": {
       "luxardo-fernet": 549,
       "lazzaroni-maraschino": 584,
@@ -24,6 +24,7 @@
       "don-julio-1942": 560,
       "patron-reposado": 530,
       "dobel-special-edition": 542,
+      "lunazul": 555,
       "agave-de-cortes": 591,
       "el-gobernador": 569,
       "rabbit-hole-cavehill": 576,
@@ -52,6 +53,7 @@
     "Back Bar · don-julio-1942/recall",
     "Back Bar · patron-reposado/recall",
     "Back Bar · dobel-special-edition/recall",
+    "Back Bar · lunazul/recall",
     "Back Bar · agave-de-cortes/recall",
     "Back Bar · el-gobernador/recall",
     "Back Bar · rabbit-hole-cavehill/recall",
@@ -60,8 +62,8 @@
     "Back Bar · weller-12/recall",
     "Back Bar · george-t-stagg/recall"
   ],
-  "questions": 75,
-  "sources": 176,
+  "questions": 78,
+  "sources": 184,
   "house": {
     "luxardo-fernet": {
       "uses": [],
@@ -121,7 +123,6 @@
     }
   },
   "missing": [
-    "lunazul",
     "ofc-2005",
     "thomas-h-handy",
     "stagg"
