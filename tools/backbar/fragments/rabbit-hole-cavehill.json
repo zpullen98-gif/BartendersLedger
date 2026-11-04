@@ -1,0 +1,83 @@
+{
+  "id": "rabbit-hole-cavehill",
+  "name": "Rabbit Hole Cavehill",
+  "respell": "",
+  "aka": ["Cavehill", "Rabbit Hole Four Grain"],
+  "group": "american-whiskey",
+  "producer": "Rabbit Hole Distillery",
+  "place": "Louisville, Kentucky",
+  "photo": 5,
+  "confidence": "clear",
+  "facts": {
+    "base": "70% corn, with 10% each of malted wheat, malted barley and honey malted barley",
+    "age": "No age statement on the front label; as straight bourbon, at least two years",
+    "cask": "New American oak barrels, toasted and then charred",
+    "abv": "47.5% ABV (95 proof)",
+    "law": "Kentucky straight bourbon: at least 51 per cent corn, new charred oak, at least two years"
+  },
+  "made": "Rabbit Hole Distillery makes Cavehill in Louisville from four grains: 70 per cent corn and three malts, malted wheat, malted barley and honey malted barley, ten per cent each. That is what Four Grain Triple Malt on the label means. The spirit rests in new American oak barrels that are toasted before they are charred, as a Kentucky straight bourbon, so at least two years, with no age statement on the front label. It is bottled at 47.5 per cent, 95 proof.",
+  "taste": "Honey and vanilla on the nose, with baked apple, orange peel and a breath of mint. The palate is soft and rounded: honeyed grain, toasted bread, cinnamon and light oak. The finish is of medium length, warm and gently spiced.",
+  "lines": {
+    "s10": "Rabbit Hole Cavehill is a Louisville bourbon of four grains, three of them malted: soft, honeyed and gently spiced, at 95 proof.",
+    "s20": "Cavehill is the four grain bourbon of Rabbit Hole in Louisville: corn with malted wheat, malted barley and honey malted barley, rested in toasted and charred new oak and bottled at 95 proof. Expect honey, vanilla and baked apple, then a soft, warm finish.",
+    "s45": "This is Rabbit Hole Cavehill, a Kentucky straight bourbon made by Rabbit Hole Distillery in Louisville. The label reads Four Grain Triple Malt: corn, with malted wheat, malted barley and honey malted barley, rested in new American oak that is toasted before it is charred, and bottled at 95 proof. It opens on honey and vanilla, baked apple and a breath of mint, then a soft palate of honeyed grain and cinnamon, warm and gentle at the end. We pour it neat or over one large cube, and it makes a mellow Old Fashioned. The name honours Cave Hill Cemetery, where generations of Louisville distillers rest.",
+    "sale": "Cavehill is a soft, honeyed Louisville bourbon made from four grains, three of them malted. Try it neat, or in an Old Fashioned where the honey comes through."
+  },
+  "serve": {
+    "neat": "Neat, about an ounce and a half, at room temperature; a drop of water opens the honey.",
+    "rocks": "Over one large cube; its sweetness holds up well as it chills.",
+    "glass": "A Glencairn or a small tulip neat; a rocks glass for the cube.",
+    "classic": "An Old Fashioned; also a Gold Rush, where the honey syrup meets the honey malt."
+  },
+  "guest": "Cavehill is a Kentucky straight bourbon from Rabbit Hole in Louisville, made from corn and three malted grains, one of them honey malted barley: soft, honeyed and lightly spiced, at 95 proof.",
+  "story": "Cavehill takes its name from Cave Hill Cemetery in Louisville, chartered in 1848 as a rural garden cemetery on an old farm east of the city, and the resting place of generations of the city's distillers. It was the distillery's original bourbon, sold as Rabbit Hole Kentucky Straight Bourbon until the range was renamed in 2019, when each bottle took a name from Louisville's history. Its high rye sister, Heigold, honours a German stonemason of the 1850s.",
+  "watch": [
+    "Not Heigold, the bottle beside it with the blue band: Heigold is the high rye, spicier one; Cavehill the softer, honeyed one.",
+    "Not Dareringer, the Rabbit Hole bourbon finished in sherry casks: a guest who asks for Rabbit Hole may mean either, so ask which.",
+    "Honey malted barley is a malt that tastes of honey; straight bourbon allows nothing added, so there is no honey in it.",
+    "Asked its age: no age statement on the front label; as a straight bourbon it has rested at least two years."
+  ],
+  "asks": [],
+  "house": { "match": ["Rabbit Hole Cavehill", "Cavehill"], "family": ["Rabbit Hole"] },
+  "library": { "producer": "rabbit-hole", "cask": "bourbon", "canon": ["old-fashioned", "whiskey-sour", "gold-rush", "mint-julep"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Rabbit Hole Cavehill made from, and how strong is it?",
+      "answer": "A Kentucky straight bourbon from Rabbit Hole in Louisville: 70 per cent corn with malted wheat, malted barley and honey malted barley at ten per cent each, four grains and three malts, rested in toasted and charred new oak and bottled at 47.5% ABV, 95 proof."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Besides malted wheat and malted barley, which third malt goes into Rabbit Hole Cavehill?",
+      "options": ["Malted rye", "Honey malted barley", "Peated malted barley", "Malted oats"],
+      "a": 1,
+      "explain": "Honey malted barley, ten per cent of the mash beside malted wheat and malted barley; the other 70 per cent is corn."
+    },
+    {
+      "id": "q2",
+      "q": "Rabbit Hole Cavehill takes its name from what kind of Louisville landmark?",
+      "options": ["A racecourse", "A riverboat", "A stonemason's house", "A cemetery"],
+      "a": 3,
+      "explain": "Cave Hill Cemetery, chartered in 1848, where generations of Louisville distillers rest. The stonemason's house is Heigold's."
+    },
+    {
+      "id": "q3",
+      "q": "At what proof is Rabbit Hole Cavehill bottled?",
+      "options": ["95 proof", "90 proof", "100 proof", "86 proof"],
+      "a": 0,
+      "explain": "95 proof, 47.5% ABV, the same strength as Heigold, its high rye sister."
+    }
+  ],
+  "sources": [
+    { "title": "Rabbit Hole Distillery: Go Beyond the Label", "url": "https://www.rabbitholedistillery.com/pages/beyond-the-label" },
+    { "title": "The Spirits Educator: What's the Difference? Rabbit Hole Heigold vs Rabbit Hole Cavehill", "url": "https://www.thespiritseducator.com/whats-the-difference/rabbit-hole-heigold-cavehill" },
+    { "title": "Distiller: Rabbit Hole Cavehill Kentucky Straight Bourbon", "url": "https://distiller.com/spirits/rabbit-hole-cavehill-kentucky-straight-bourbon" },
+    { "title": "Spirit Radar: Rabbit Hole Cavehill 47.5% 750ml", "url": "https://www.spiritradar.com/whisky-db/rabbit-hole-cavehill-47.5-percent-750ml/" },
+    { "title": "Whisky Advocate: Amid full whiskey rebrand, Rabbit Hole Distillery launches new bourbon", "url": "https://whiskyadvocate.com/rabbit-hole-heigold-bourbon-redesign/" },
+    { "title": "Cave Hill Cemetery: Early History", "url": "https://www.cavehillcemetery.com/early-history/" },
+    { "title": "Wikipedia: Cave Hill Cemetery", "url": "https://en.wikipedia.org/wiki/Cave_Hill_Cemetery" },
+    { "title": "Cask Atlas: Bourbon", "url": "" }
+  ]
+}
