@@ -1,6 +1,6 @@
 {
-  "about": "Every card key of the liquor shelf, one per bottle: 'Back Bar · <id>/recall', in plan order. Written from the roster at the specification (4 November 2026) and NOT yet frozen: a probable bottle the authors turn into a confirm row leaves this list. At freeze the integrator rewrites it from the full build and sets frozen to true, and from then on check-backbar allows new keys and refuses the loss of any here, because a key is a person’s saved record.",
-  "frozen": false,
+  "about": "Every card key of the liquor shelf, one per bottle: 'Back Bar · <id>/recall', in plan order. Written from the roster at the specification (4 November 2026) and frozen the same day from the whole build (29 bottles, 12 to confirm): from now on check-backbar allows new keys and refuses the loss of any here, because a key is a person’s saved record.",
+  "frozen": true,
   "keys": [
     "Back Bar · luxardo-fernet/recall",
     "Back Bar · lazzaroni-maraschino/recall",

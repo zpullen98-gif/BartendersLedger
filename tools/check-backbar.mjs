@@ -61,9 +61,9 @@ const readJSON = (p) => JSON.parse(readFileSync(p, 'utf8'));
 
 /* The counts pinned at freeze, from tools/backbar/build-log.json of the whole
    build: the bottles written, the bottles to confirm, one recall card each and
-   three questions each. null until the integrator freezes; a frozen keys file
-   with a count unpinned fails. */
-const FROZEN = { bottles: null, confirm: null, recall: null, questions: null };
+   three questions each. Pinned on 4 November 2026 from the whole shelf (29 of
+   29 bottles, 12 to confirm); a frozen keys file with a count unpinned fails. */
+const FROZEN = { bottles: 29, confirm: 12, recall: 29, questions: 87 };
 const KEYS_FILE = join(BB, 'keys.v1.json');
 const KEY = (id) => 'Back Bar \u00b7 ' + id + '/recall';
 
