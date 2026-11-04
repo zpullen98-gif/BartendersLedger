@@ -115,7 +115,7 @@ function backbarUseRowHTML(h, item){
 function backbarFamilyRowHTML(h, row){
   const items = row.itemIds.map(function(id){ return backbarHouseItem(h, id); }).filter(function(x){ return x && typeof x.name === 'string' && x.name.trim(); });
   return '<article class="backbar-family-row" data-component-id="' + esc(row.id) + '"><p class="backbar-family-name">' + esc(row.name) + '</p>'
-    + '<p class="backbar-soft"><span class="backbar-label">Made by</span> ' + esc(row.who) + '</p>'
+    + '<p class="backbar-soft"><span class="backbar-label">Who makes it</span> ' + esc(row.who) + '</p>'
     + (items.length ? '<p class="backbar-label">On the menu in</p><div class="backbar-links">' + items.map(function(it){ return backbarItemDoor(h, it, it.name); }).join('') + '</div>' : '')
     + '</article>';
 }
@@ -293,7 +293,7 @@ function backbarIndexHTML(){
     + '<div class="backbar-practice"><button class="btn btn-brass" data-act="backbar-practise" data-deck="backbar">Practise the cards</button>'
     + '<button class="btn btn-ghost" data-act="quiz-go" data-m="backbar">Take the quiz</button>'
     + '<button class="btn btn-ghost" data-act="deck" data-deck="backbar:again">Due or missed</button></div>'
-    + '<div class="backbar-search"><label for="backbar-q">Find a bottle</label><input class="input" type="search" id="backbar-q" value="' + esc(s.q || '') + '" placeholder="A name, a maker, or a word like rye or agave" autocomplete="off"></div>'
+    + '<div class="backbar-search"><label for="backbar-q">Find a bottle</label><input class="input" type="search" id="backbar-q" value="' + esc(s.q || '') + '" placeholder="A name, a maker, rye, agave" autocomplete="off"></div>'
     + '<div id="backbar-results">' + backbarResultsHTML() + '</div>'
     + '<p class="backbar-caption">The cards and the quiz keep their own record: they change no level, no Due today and no menu card.</p></div>';
 }

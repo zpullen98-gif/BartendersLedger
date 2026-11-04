@@ -47,6 +47,9 @@ p.backbar-label{display:block;margin:14px 0 6px}
 .backbar-facts{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;margin:0 0 16px}
 .backbar-facts dt{font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--brass-2);font-weight:600;padding-top:3px}
 .backbar-facts dd{margin:0}
+/* a fact the schema writes in lower case (a yearly bottle's "varies by release", a place that opens on "the") still starts its line with a capital */
+.backbar-facts dd::first-letter{text-transform:uppercase}
+.backbar-panel>.backbar-facts:last-child,.backbar-facts dd:last-child{margin-bottom:0}
 .backbar-use-rows{display:grid;gap:12px;margin:12px 0}
 .backbar-use-row .backbar-links,.backbar-family-row .backbar-links{margin:6px 0 0}
 .backbar-printed{font-size:.95rem!important;line-height:1.7;margin:0!important}
@@ -61,7 +64,7 @@ p.backbar-label{display:block;margin:14px 0 6px}
 .backbar-recall summary,.backbar-sources summary{cursor:pointer;padding:12px 0;min-height:44px;line-height:1.6;color:var(--brass-2)}
 .backbar-recall+.backbar-recall{border-top:1px solid var(--house-line)}
 .backbar-sources{padding:0 22px;border:1px solid var(--house-line);background:var(--felt-2)}
-.backbar-sources li{margin-bottom:10px;line-height:1.6}
+.backbar-sources ul{margin:0;padding-left:24px}.backbar-sources li{margin-bottom:10px;line-height:1.6}
 .backbar-question{font:500 clamp(1.2rem,3vw,1.5rem)/1.6 var(--house-display,Georgia,serif);color:var(--brass-2);max-width:720px;text-align:center}
 .backbar-answer{max-width:720px;font-size:1.05rem;line-height:1.8}.backbar-answer p{margin:0 0 12px}
 .backbar-empty{padding:20px 0;line-height:1.8}
