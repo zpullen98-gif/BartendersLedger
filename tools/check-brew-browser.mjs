@@ -255,7 +255,7 @@ try {
   await page.locator('#view [data-act="back"]').click();
   await expect(page).toHaveURL(/#\/menu\/brew$/); checks++;
   /* the house's word lands on its page with nothing open */
-  await page.locator('#bnav [data-cluster="brennans"]').click();
+  await page.locator('#tabs [data-cluster="brennans"]').click();
   await expect(page).toHaveURL(/#\/menu$/); checks++;
   await page.locator('.house-sections [data-v="studies"]').click();
   await expect(page).toHaveURL(/#\/menu\/view\/studies$/); checks++;
