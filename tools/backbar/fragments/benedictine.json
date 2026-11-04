@@ -15,7 +15,7 @@
     "abv": "40% ABV (80 proof)",
     "law": "A French herbal liqueur; the recipe is a trade secret and the name a trademark since 1864"
   },
-  "made": "Four separate blends of plants and spices are macerated and distilled in copper pot stills at the Palais Bénédictine in Fécamp. The distillates rest in large oak casks for about eight months, are married together, then sweetened with honey and coloured with saffron, warmed and rested again for some months before filtering and bottling. The house names 27 plants and spices and keeps the full list secret.",
+  "made": "Four separate blends of plants and spices are macerated and distilled in copper pot stills at the Palais Bénédictine in Fécamp. The distillates rest in large oak casks for about eight months, are married together, then sweetened with honey and coloured with saffron, warmed and rested again for some months before filtering and bottling. The makers name 27 plants and spices and keep the full list secret.",
   "taste": "Honeyed and herbal: saffron, citrus peel and warm baking spice on the nose. The palate is rich and soft, sweet first, then gentle herbs, a little pine and a faint bitter edge, finishing long on honey and spice.",
   "lines": {
     "s10": "Bénédictine D.O.M. is a French herbal liqueur from Fécamp: 27 plants and spices, honey and saffron, sweet, soft and gently spiced.",
@@ -64,10 +64,10 @@
     },
     {
       "id": "q3",
-      "q": "How many plants and spices does the house say go into Bénédictine?",
+      "q": "How many plants and spices do the makers say go into Bénédictine?",
       "options": ["12", "130", "43", "27"],
       "a": 3,
-      "explain": "The house names 27 plants and spices. 130 is the figure Chartreuse gives for its recipe."
+      "explain": "The makers name 27 plants and spices. 130 is the figure Chartreuse gives for its recipe."
     }
   ],
   "sources": [

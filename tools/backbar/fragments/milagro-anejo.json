@@ -50,14 +50,14 @@
   "quiz": [
     {
       "id": "q1",
-      "q": "What is the shortest time a tequila must rest in oak to be labelled añejo?",
+      "q": "What is the minimum time a tequila must rest in oak to be labelled añejo?",
       "options": ["Two months", "Six months", "One year", "Three years"],
       "a": 2,
       "explain": "One year. Two months is the reposado minimum and three years the extra añejo minimum."
     },
     {
       "id": "q2",
-      "q": "What is the largest cask the añejo rule allows?",
+      "q": "Up to what cask size does the añejo rule allow?",
       "options": ["250 litres", "400 litres", "1,000 litres", "600 litres"],
       "a": 3,
       "explain": "600 litres: an añejo rests at least a year in oak casks no larger than that, so the wood stays in close touch with the spirit."

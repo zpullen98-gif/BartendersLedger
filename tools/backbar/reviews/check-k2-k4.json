@@ -1,0 +1,317 @@
+{
+  "checked": [
+    "drambuie",
+    "grand-marnier",
+    "chambord",
+    "martell-xo",
+    "ambrosia-aperitivo",
+    "dobel-special-edition",
+    "lunazul",
+    "agave-de-cortes",
+    "el-gobernador",
+    "rabbit-hole-cavehill",
+    "rabbit-hole-heigold"
+  ],
+  "fixed": [
+    {
+      "id": "drambuie",
+      "field": "place",
+      "what": "1909 was stated as settled; the makers say 1909, Wikipedia and The Scotsman's history say 1910: now about 1909"
+    },
+    {
+      "id": "drambuie",
+      "field": "lines.s20",
+      "what": "1909 was stated as settled; the makers say 1909, Wikipedia and The Scotsman's history say 1910: now about 1909"
+    },
+    {
+      "id": "drambuie",
+      "field": "watch[2]",
+      "what": "1909 was stated as settled; the makers say 1909, Wikipedia and The Scotsman's history say 1910: now about 1909"
+    },
+    {
+      "id": "drambuie",
+      "field": "recall[0].answer",
+      "what": "1909 was stated as settled; the makers say 1909, Wikipedia and The Scotsman's history say 1910: now about 1909"
+    },
+    {
+      "id": "drambuie",
+      "field": "quiz[0].explain",
+      "what": "1909 was stated as settled; the makers say 1909, Wikipedia and The Scotsman's history say 1910: now about 1909"
+    },
+    {
+      "id": "drambuie",
+      "field": "story",
+      "what": "both dates given (1909 by the makers' account, 1910 by others) and Malcolm MacKinnon, not Eleanor Ross, named as the one who began production in Edinburgh, as the makers tell it"
+    },
+    {
+      "id": "chambord",
+      "field": "story",
+      "what": "launched in 1982 was stated as settled; Difford's Guide says 1981: now the early 1980s, 1982 in most accounts"
+    },
+    {
+      "id": "martell-xo",
+      "field": "story",
+      "what": "Jean Martell did not set up at Gatebourse in 1715 (Difford's: the estate was bought in 1728): now in Cognac, on the Charente, in 1715; the house that carries his name is the firm"
+    },
+    {
+      "id": "martell-xo",
+      "field": "story",
+      "what": "superlative 'the smallest of the Cognac crus' now 'a small Cognac cru'; 'so well known that' (selling) cut, the arch nickname kept (Martell's press release)"
+    },
+    {
+      "id": "martell-xo",
+      "field": "made",
+      "what": "'The house distils' used the house for Martell; in a fragment the house is ours: now Martell"
+    },
+    {
+      "id": "martell-xo",
+      "field": "lines.s45",
+      "what": "'The house distils' and 'the house's mark' now Martell"
+    },
+    {
+      "id": "martell-xo",
+      "field": "facts.law",
+      "what": "superlative 'the youngest eau-de-vie': now every eau-de-vie at least ten years old"
+    },
+    {
+      "id": "martell-xo",
+      "field": "watch[2]",
+      "what": "'Two round decanters stand beside it on the top shelf' stated the shelf, and the plan says the second decanter may be the first seen twice: now read the small label at the decanter's foot"
+    },
+    {
+      "id": "martell-xo",
+      "field": "watch[3]",
+      "what": "superlative 'the youngest': now at least ten years of every eau-de-vie"
+    },
+    {
+      "id": "martell-xo",
+      "field": "recall[0].answer",
+      "what": "'from the house founded in 1715' now from Martell"
+    },
+    {
+      "id": "martell-xo",
+      "field": "quiz[1].q",
+      "what": "superlative 'the youngest eau-de-vie' now the minimum age of every eau-de-vie"
+    },
+    {
+      "id": "martell-xo",
+      "field": "quiz[2].explain",
+      "what": "superlative 'the smallest cru' now 'a small cru'"
+    },
+    {
+      "id": "grand-marnier",
+      "field": "quiz[0].q",
+      "what": "the stem carried q2's key (cognac): now asks the year he first made the liqueur that became Grand Marnier"
+    },
+    {
+      "id": "ambrosia-aperitivo",
+      "field": "quiz[2]",
+      "what": "three keys: the Library's Hugo Spritz and Limoncello Spritz share the Prosecco and soda build of the Aperol Spritz; replaced by the 2019 launch year (BevNET, Washingtonian)"
+    },
+    {
+      "id": "dobel-special-edition",
+      "field": "quiz[1].q",
+      "what": "the stem ('a cristalino such as Maestro Dobel Diamante') gave q1's key away: reworded"
+    },
+    {
+      "id": "dobel-special-edition",
+      "field": "lines.s10",
+      "what": "'from the house that made the first cristalino' used the house for the maker: now 'from the makers of'"
+    },
+    {
+      "id": "dobel-special-edition",
+      "field": "guest",
+      "what": "same: 'from the makers of the first cristalino'"
+    },
+    {
+      "id": "dobel-special-edition",
+      "field": "sources",
+      "what": "the producer's own product sheets moved ahead of Wikipedia"
+    },
+    {
+      "id": "dobel-special-edition",
+      "field": "library.canon",
+      "what": "empty, so no In the Ledger panel and check-backbar W4 failed: the Paloma, the classic the fragment names (plan row and note changed with it)"
+    },
+    {
+      "id": "lunazul",
+      "field": "library.canon",
+      "what": "empty, so no In the Ledger panel (W4): the Margarita, the Paloma and the Ranch Water the fragment names (plan row and note changed with it)"
+    },
+    {
+      "id": "lunazul",
+      "field": "sources[0].title",
+      "what": "'premium' rendered on the page and failed W4 (sells): dropped from the title"
+    },
+    {
+      "id": "lunazul",
+      "field": "lines.sale",
+      "what": "'bright with lime and pepper' described the blanco while which expression is open is the lineup ask (the liquid cannot be read on photo 3): now cooked agave and black pepper"
+    },
+    {
+      "id": "lunazul",
+      "field": "guest",
+      "what": "same: now cooked agave and pepper, bright when unaged and softer with vanilla when rested"
+    },
+    {
+      "id": "agave-de-cortes",
+      "field": "quiz[0].explain",
+      "what": "superlative 'most widely planted' now 'the agave behind most mezcal'"
+    },
+    {
+      "id": "agave-de-cortes",
+      "field": "asks[0]",
+      "what": "the label on photo 3 shows AGAVE DE CORTES / MEZCAL / 100% but no expression: the ask now confirms it is the joven as well as the strength"
+    },
+    {
+      "id": "el-gobernador",
+      "field": "facts.age",
+      "what": "'a few months to a year' in steel confirmed by no source: dropped"
+    },
+    {
+      "id": "el-gobernador",
+      "field": "quiz[0].explain",
+      "what": "'Gran Pisco 43% or more' (ProChile gives 45): now Especial 35%, Reservado 40%, where the sources agree"
+    },
+    {
+      "id": "rabbit-hole-cavehill",
+      "field": "watch[0]",
+      "what": "'the bottle beside it' read the shelf, not the bottle: now the Rabbit Hole with the blue High Rye Double Malt band"
+    },
+    {
+      "id": "rabbit-hole-heigold",
+      "field": "watch[0]",
+      "what": "'the taller bottle beside it' read the shelf and the height (the two share one bottle shape): now the Rabbit Hole labelled Four Grain Triple Malt"
+    },
+    {
+      "id": "benedictine",
+      "field": "made",
+      "what": "sweep: the house used for the maker, now the makers"
+    },
+    {
+      "id": "benedictine",
+      "field": "quiz[2].q",
+      "what": "sweep: the house used for the maker, now the makers"
+    },
+    {
+      "id": "benedictine",
+      "field": "quiz[2].explain",
+      "what": "sweep: the house used for the maker, now the makers"
+    },
+    {
+      "id": "chartreuse-green",
+      "field": "story",
+      "what": "sweep: the house used for the maker, now the makers"
+    },
+    {
+      "id": "chartreuse-yellow",
+      "field": "story",
+      "what": "sweep: the house used for the maker, now the makers"
+    },
+    {
+      "id": "chartreuse-yellow",
+      "field": "watch[2]",
+      "what": "sweep: the house used for the maker, now the makers"
+    },
+    {
+      "id": "chartreuse-yellow",
+      "field": "quiz[0].q",
+      "what": "sweep: the house used for the maker, now the makers"
+    },
+    {
+      "id": "chartreuse-yellow",
+      "field": "quiz[0].explain",
+      "what": "sweep: the house used for the maker, now the makers"
+    },
+    {
+      "id": "lazzaroni-maraschino",
+      "field": "lines.s45",
+      "what": "sweep: 'The house archive' now the Lazzaroni archive"
+    },
+    {
+      "id": "luxardo-fernet",
+      "field": "made",
+      "what": "sweep: the house used for the maker, now Luxardo or the family"
+    },
+    {
+      "id": "luxardo-fernet",
+      "field": "lines.s45",
+      "what": "sweep: the house used for the maker, now Luxardo or the family"
+    },
+    {
+      "id": "luxardo-fernet",
+      "field": "story",
+      "what": "sweep: the house used for the maker, now Luxardo or the family"
+    },
+    {
+      "id": "luxardo-fernet",
+      "field": "watch[2]",
+      "what": "sweep: the house used for the maker, now Luxardo or the family"
+    },
+    {
+      "id": "luxardo-fernet",
+      "field": "quiz[0].explain",
+      "what": "sweep: the house used for the maker, now Luxardo or the family"
+    },
+    {
+      "id": "mathilde-cassis",
+      "field": "made",
+      "what": "sweep: 'The house names its berries' now Mathilde"
+    },
+    {
+      "id": "milagro-silver",
+      "field": "made",
+      "what": "sweep: 'The house distils' now Milagro"
+    },
+    {
+      "id": "weller-12",
+      "field": "quiz[2].q",
+      "what": "sweep: 'the house style' now the distillery's style"
+    },
+    {
+      "id": "weller-12",
+      "field": "made",
+      "what": "sweep: superlative 'the youngest whiskey' now 'no whiskey in the bottle is younger'"
+    },
+    {
+      "id": "weller-12",
+      "field": "watch[1]",
+      "what": "sweep: same"
+    },
+    {
+      "id": "thomas-h-handy",
+      "field": "quiz[2].explain",
+      "what": "sweep: superlative 'the youngest whiskey of the Antique Collection' now younger than the rest of it"
+    },
+    {
+      "id": "don-julio-reposado",
+      "field": "quiz[2].q",
+      "what": "sweep: superlative 'the shortest time' now the minimum time"
+    },
+    {
+      "id": "don-julio-reposado",
+      "field": "quiz[0].explain",
+      "what": "sweep: gave q3's key (two months): now 'well beyond the minimum the reposado rule asks'"
+    },
+    {
+      "id": "milagro-anejo",
+      "field": "quiz[0].q",
+      "what": "sweep: superlative 'the shortest time' now the minimum time"
+    },
+    {
+      "id": "milagro-anejo",
+      "field": "quiz[1].q",
+      "what": "sweep: superlative 'the largest cask' now 'up to what cask size'"
+    },
+    {
+      "id": "stagg",
+      "field": "quiz[2].q",
+      "what": "sweep: the stem carried q1's key (Stagg Jr.): now asks when Stagg took its present name"
+    },
+    {
+      "id": "stagg",
+      "field": "quiz[0].explain",
+      "what": "sweep: gave q3's key (2022): cut"
+    }
+  ]
+}

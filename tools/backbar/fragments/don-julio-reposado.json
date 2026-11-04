@@ -53,7 +53,7 @@
       "q": "How long does Don Julio Reposado rest in oak?",
       "options": ["Two months", "Four months", "Eight months", "Eighteen months"],
       "a": 2,
-      "explain": "Eight months in American white oak, four times the two months the reposado rule asks."
+      "explain": "Eight months in American white oak, well beyond the minimum the reposado rule asks."
     },
     {
       "id": "q2",
@@ -64,7 +64,7 @@
     },
     {
       "id": "q3",
-      "q": "What is the shortest time a tequila must rest in oak to be called reposado?",
+      "q": "What is the minimum time a tequila must rest in oak to be called reposado?",
       "options": ["Two months", "Six months", "One year", "Three years"],
       "a": 0,
       "explain": "Two months. A year in oak makes an añejo, and three years an extra añejo."

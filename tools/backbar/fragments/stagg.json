@@ -53,7 +53,7 @@
       "q": "Under what name did Buffalo Trace first release Stagg in 2013?",
       "options": ["Stagg Reserve", "Stagg Select", "Stagg Jr.", "Stagg Single Barrel"],
       "a": 2,
-      "explain": "Stagg Jr., the younger counterpart of George T. Stagg; the Jr. left the label in 2022."
+      "explain": "Stagg Jr., the younger counterpart of George T. Stagg, from the same recipe."
     },
     {
       "id": "q2",
@@ -64,7 +64,7 @@
     },
     {
       "id": "q3",
-      "q": "In which year did Stagg Jr. become simply Stagg on the label?",
+      "q": "In which year did Stagg take its present name on the label?",
       "options": ["2013", "2018", "1999", "2022"],
       "a": 3,
       "explain": "2022. It launched as Stagg Jr. in 2013; 1999 is the year the Frankfort distillery became Buffalo Trace."

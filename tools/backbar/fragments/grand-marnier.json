@@ -50,7 +50,7 @@
   "quiz": [
     {
       "id": "q1",
-      "q": "In which year did Louis-Alexandre Marnier Lapostolle first blend his cognac and orange liqueur?",
+      "q": "In which year did Louis-Alexandre Marnier Lapostolle first make the liqueur that became Grand Marnier?",
       "options": ["1827", "1880", "1863", "1910"],
       "a": 1,
       "explain": "1880. In 1827 Jean-Baptiste Lapostolle founded the family distillery at Neauphle-le-Château, near Paris."
