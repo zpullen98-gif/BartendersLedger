@@ -331,8 +331,8 @@
     {
       "id": "confirm-milagro-amber", "name": "Leyenda del Milagro, amber", "group": "confirm", "photo": 1,
       "where": "The shelf below the liqueurs, the right of photo 1: a tall bottle of amber tequila beside a blue bottle.",
-      "read": "Leyenda del Milagro in white script over amber tequila; no expression legible.",
-      "ask": "Which Leyenda del Milagro is the amber bottle below the liqueurs: a reposado, or a second añejo?"
+      "read": "Leyenda del Milagro in white script over amber tequila; an orange neck label, where the Añejo on the tequila shelf has a black one reading AÑEJO; no expression legible.",
+      "ask": "Which Leyenda del Milagro is the amber bottle with the orange neck label below the liqueurs: the reposado, or another expression?"
     },
     {
       "id": "confirm-behind-handy", "name": "Bottle behind Thomas H. Handy", "group": "confirm", "photo": 5,
