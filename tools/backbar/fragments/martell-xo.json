@@ -1,0 +1,85 @@
+{
+  "id": "martell-xo",
+  "name": "Martell XO",
+  "respell": "mar-TELL ex-OH",
+  "aka": ["Martell XO Cognac"],
+  "group": "cognac",
+  "producer": "Martell",
+  "place": "Cognac, in the Charente, France",
+  "photo": 2,
+  "confidence": "clear",
+  "facts": {
+    "base": "White wine of the Grande Champagne and Borderies crus, twice distilled in copper pot stills",
+    "age": "XO: every eau-de-vie in the blend at least ten years old",
+    "cask": "French oak casks of fine grain, from the Tronçais forest",
+    "abv": "40% ABV (80 proof)",
+    "law": "Cognac AOC: double distillation in Charentais copper stills; XO means the youngest eau-de-vie is ten years old"
+  },
+  "made": "Martell's eaux-de-vie come from white wine of the Grande Champagne and the Borderies, two of the Cognac crus. The house distils clear wine, with the lees taken off first, twice in copper Charentais pot stills, for a fine and fruity spirit. The eaux-de-vie age in fine-grained Tronçais oak casks, and the XO is blended from ones aged ten years and many far longer, then reduced to 40 per cent.",
+  "taste": "Ripe fig, dried apricot and candied orange on the nose, with sandalwood and warm spice. The palate is round and silky, plum, fig and walnut over soft oak, with a little pepper and cinnamon, and the finish is long and gently dry.",
+  "lines": {
+    "s10": "Martell XO is an extra old cognac from the house Jean Martell founded in 1715: Grande Champagne and Borderies, round, silky and spiced.",
+    "s20": "Martell XO is a cognac blended from eaux-de-vie of the Grande Champagne and the Borderies, every one at least ten years in Tronçais oak. It is fig, dried apricot and sandalwood, round and silky, a cognac for sipping slowly after dinner.",
+    "s45": "This is Martell XO, from the cognac house that Jean Martell, a merchant from Jersey, founded in Cognac in 1715. The house distils clear wine from the Grande Champagne and the Borderies twice in copper pot stills, ages the eaux-de-vie in fine-grained Tronçais oak, and blends the XO from ones at least ten years old and many far older. In the glass it is ripe fig, dried apricot and sandalwood, round and silky, with walnut, a little pepper and a long, gently dry finish. We pour it neat at room temperature, in a tulip or a snifter. The arched decanter is the house's mark.",
+    "sale": "Martell XO is cognac of ten years and more, fig and sandalwood from the Grande Champagne and the Borderies. We pour it neat at room temperature, to sip slowly after dinner."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, about an ounce and a half, given a minute in the glass.",
+    "rocks": "Neat is the pour; one large cube on request, never crushed ice.",
+    "glass": "A tulip or a snifter, cupped in the hand to warm it a little.",
+    "classic": "Kept for sipping: no classic asks for an XO, and a Sidecar takes a younger cognac."
+  },
+  "guest": "Martell XO is an extra old cognac, every eau-de-vie aged at least ten years in oak: fig, dried apricot and sandalwood, round and silky, for sipping neat.",
+  "story": "Jean Martell, a young merchant from the island of Jersey, set up his trading house at Gatebourse, on the river at Cognac, in 1715, and the house has carried his name ever since. Martell built its style on the Borderies, the smallest of the Cognac crus, whose eaux-de-vie are round and floral, and on clear wine distilled without its lees. The XO comes in an arched decanter, the house's mark, so well known that in some markets guests ask for it simply as the arch.",
+  "watch": [
+    "XO means extra old: every eau-de-vie at least ten years. A guest asking for the XO wants this, not a VS or VSOP.",
+    "A cocktail that calls for cognac takes the bar's mixing cognac, never this, unless a guest asks for it by name.",
+    "Two round decanters stand beside it on the top shelf: confirm which bottle a guest points to before pouring.",
+    "Asked how old it is: there is no single age. The law makes ten years the youngest, and many are older."
+  ],
+  "asks": [],
+  "house": { "match": ["Martell XO"], "family": ["Martell"] },
+  "library": { "producer": "", "cask": "cognac", "canon": [] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Martell XO, and how is it poured?",
+      "answer": "An extra old cognac from the house founded in 1715: eaux-de-vie of the Grande Champagne and the Borderies, distilled from clear wine, aged in Tronçais oak, every one at least ten years old, at 40% ABV. Neat at room temperature in a tulip or a snifter."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "In which year did Jean Martell found his cognac house?",
+      "options": ["1715", "1765", "1805", "1880"],
+      "a": 0,
+      "explain": "1715, when Jean Martell, a merchant from Jersey, set up his trading house in Cognac."
+    },
+    {
+      "id": "q2",
+      "q": "Since 2018, how old must the youngest eau-de-vie in an XO cognac be?",
+      "options": ["Four years", "Six years", "Ten years", "Twenty years"],
+      "a": 2,
+      "explain": "Ten years, since 1 April 2018; before that an XO needed six. Six years is still the Napoléon minimum."
+    },
+    {
+      "id": "q3",
+      "q": "Which small Cognac cru, known for round, floral eaux-de-vie, is the signature of the Martell style?",
+      "options": ["Fins Bois", "Borderies", "Bons Bois", "Petite Champagne"],
+      "a": 1,
+      "explain": "The Borderies, the smallest cru, north of the town of Cognac. Martell XO blends it with the Grande Champagne."
+    }
+  ],
+  "sources": [
+    { "title": "Martell: XO", "url": "https://www.martell.com/en-ca/collection/xo/" },
+    { "title": "Martell: every cognac bottle tells a story", "url": "https://www.martell.com/en/news/maison-martell/every-cognac-bottle-tells-a-story/" },
+    { "title": "Martell press room: a defining moment, the new Martell XO", "url": "https://digitalpressroom.martell.com/2019/10/a-defining-moment-maison-martell-presents-the-daring-new-martell-xo/" },
+    { "title": "Difford's Guide: Martell XO Cognac", "url": "https://www.diffordsguide.com/en-au/beer-wine-spirits/1436/martell-xo-cognac" },
+    { "title": "The Whisky Exchange: Martell XO Cognac", "url": "https://thewhiskyexchange.com/p/1747/martell-xo-cognac" },
+    { "title": "Difford's Guide: Martell, the tricentenaire celebrations", "url": "https://www.diffordsguide.com/producers/613/cognac-martell-societe-martell-and-co-sa/tricentenaire-celebrations" },
+    { "title": "Master of Malt: Martell distillery", "url": "https://www.masterofmalt.com/distilleries/martell-distillery/" },
+    { "title": "Harpers: Cognac XO age classification increases to 10 years", "url": "https://harpers.co.uk/news/fullstory.php/aid/22934/Cognac_XO_age_classification_increases_to_10_years.html" },
+    { "title": "Drinks International: Cognac XO classification to rise to 10 years", "url": "https://drinksint.com/news/fullstory.php/aid/7503/.html" },
+    { "title": "Cask Atlas: Cognac, vineyard, Charentais still and cellar", "url": "" }
+  ]
+}
