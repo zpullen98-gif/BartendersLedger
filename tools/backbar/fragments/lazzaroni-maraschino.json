@@ -1,0 +1,83 @@
+{
+  "id": "lazzaroni-maraschino",
+  "name": "Lazzaroni Maraschino",
+  "respell": "lad-zah-ROH-nee mah-rah-SKEE-noh",
+  "aka": ["Maraschino Autentico"],
+  "group": "liqueurs-amari",
+  "producer": "Paolo Lazzaroni & Figli",
+  "place": "Saronno, Lombardy, Italy",
+  "photo": 1,
+  "confidence": "clear",
+  "facts": {
+    "base": "Marasca sour cherries, the whole fruit with the stones crushed in",
+    "age": "No age statement",
+    "cask": "No cask or wood ageing is stated; it is bottled clear",
+    "abv": "24% ABV (48 proof)",
+    "law": "A maraschino, a European spirit drink category of its own for marasca cherry liqueur; no place appellation"
+  },
+  "made": "Lazzaroni makes it in Saronno, north of Milan, from marasca cherries, the small sour cherry of the Dalmatian coast that gives the style its name. The whole fruit goes in with the stones crushed, which is where the faint bitter almond note comes from. The fruit is infused in alcohol, the liqueur is sweetened and it is bottled clear at 24 per cent; no wood ageing is stated.",
+  "taste": "Clear and fragrant: cherry stone, marzipan and a floral, faintly grassy lift on the nose. The palate is lightly sweet and drier than most cherry liqueurs, sour cherry first, then soft bitter almond, finishing clean and fairly short.",
+  "lines": {
+    "s10": "Lazzaroni Maraschino is an Italian cherry liqueur from Saronno, made from sour marasca cherries and their stones: clear, floral and gently bitter.",
+    "s20": "Lazzaroni Maraschino is made in Saronno, near Milan, from whole marasca cherries with their stones crushed in, which gives it a faint bitter almond note. It is clear, lightly sweet and floral, the quiet cherry voice in a Last Word, an Aviation or a Martinez.",
+    "s45": "This is Lazzaroni Maraschino, from a family liqueur house in Saronno, north of Milan, making liqueurs since 1851. It starts with marasca cherries, the small sour cherry of the Dalmatian coast, infused whole with their stones crushed in, then sweetened and bottled clear at 24 per cent. On the nose it is cherry stone and marzipan with a floral lift; on the palate lightly sweet, sour cherry first, then a soft bitter almond finish. We pour it neat and lightly chilled in a small glass, or measure it into a Last Word or a Martinez. The house archive keeps its maraschino recipes and labels from 1860.",
+    "sale": "Lazzaroni Maraschino is the clear sour cherry liqueur behind the Last Word and the Aviation, with a soft bitter almond edge. Try a small chilled pour after dinner, or let us shake it into a Last Word."
+  },
+  "serve": {
+    "neat": "Neat and lightly chilled, a small pour of about an ounce; it is sweet and fragrant.",
+    "rocks": "Seldom on ice: a cube mutes its perfume, so pour it chilled and neat instead.",
+    "glass": "A small cordial or tulip glass neat; a chilled coupe for a Last Word or an Aviation.",
+    "classic": "The Last Word, with gin, Green Chartreuse and lime; also the Aviation, the Martinez and the Hemingway Daiquiri."
+  },
+  "guest": "Lazzaroni Maraschino is an Italian liqueur made from sour marasca cherries and their stones: clear, floral and lightly sweet, with a soft bitter almond finish, nothing like a red cocktail cherry.",
+  "story": "Maraschino takes its name from the marasca, a small sour cherry of the Dalmatian coast, and the liqueur grew up at Zara, now Zadar in Croatia. Saronno, north of Milan, is better known for amaretto and amaretti biscuits, and the Lazzaroni family's firm, Paolo Lazzaroni & Figli, has made liqueurs there since 1851. Maraschino came early in the range: recipes and labels for it survive in the company archive from 1860. Autentico on the label is Italian for authentic.",
+  "watch": [
+    "Guests picture the bright red jarred cherry: say first that this is clear, drier and almond edged, not a sweet red liqueur.",
+    "Maraschino is loud in a drink: measure it by the quarter or half ounce, because a free pour swamps a Last Word or an Aviation.",
+    "Lazzaroni and Luxardo are different houses: a recipe that prints Luxardo maraschino names another bottle, so check before swapping one for the other."
+  ],
+  "asks": [
+    "Read the strength on our bottle's back label at lineup: the American import states 24% ABV, while some European listings give 25%."
+  ],
+  "house": { "match": ["Lazzaroni Maraschino"], "family": ["Lazzaroni"] },
+  "library": { "producer": "", "cask": "", "canon": ["last-word", "aviation", "martinez", "hemingway-daiquiri", "brooklyn", "tuxedo", "mary-pickford", "brandy-crusta"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Lazzaroni Maraschino, and how is it made?",
+      "answer": "An Italian cherry liqueur from Saronno: whole marasca sour cherries infused with their stones crushed in, sweetened and bottled clear at 24% ABV. Floral and lightly sweet with a bitter almond edge; neat and chilled, or measured into a Last Word, an Aviation or a Martinez."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "From which cherry is maraschino liqueur made?",
+      "options": ["Marasca, a small sour cherry", "Bing, a large sweet cherry", "Morello, a dark sour cherry", "Rainier, a pale sweet cherry"],
+      "a": 0,
+      "explain": "Maraschino is named for the marasca, a small sour cherry of the Dalmatian coast; Lazzaroni uses the whole fruit with its stones."
+    },
+    {
+      "id": "q2",
+      "q": "In which Italian town is Lazzaroni Maraschino made?",
+      "options": ["Torreglia, near Padua", "Saronno, near Milan", "Bassano, in the Veneto", "Asti, in Piedmont"],
+      "a": 1,
+      "explain": "Lazzaroni has made liqueurs in Saronno, north of Milan, since 1851. Torreglia is where Luxardo makes its maraschino."
+    },
+    {
+      "id": "q3",
+      "q": "What gives maraschino its faint bitter almond note?",
+      "options": ["Almond extract in the blend", "Resting in ash wood vats", "Gentian root in the infusion", "The crushed cherry stones"],
+      "a": 3,
+      "explain": "The cherries go in with their stones crushed, and the stones give the soft bitter almond note."
+    }
+  ],
+  "sources": [
+    { "title": "Laird & Company: Lazzaroni Maraschino", "url": "https://www.lairdandcompany.com/products/lazzaroni-maraschino" },
+    { "title": "Laird & Company: Lazzaroni Maraschino, product notes", "url": "https://lairdandcompany.com/?p=1532" },
+    { "title": "Amathus Drinks: Lazzaroni Maraschino", "url": "https://www.amathusdrinks.com/b2c/lazzaroni-maraschino" },
+    { "title": "Inn Express: Lazzaroni Maraschino Cherry Liqueur", "url": "https://www.inn-express.com/product-ranges/spirits-liqueurs/lazzaroni-maraschino-cherry-liqueur" },
+    { "title": "Bottle of Italy: Lazzaroni, liqueur producer", "url": "https://bottleofitaly.com/en/pages/produttore-lazzaroni" },
+    { "title": "The Whisky Exchange: Lazzaroni Maraschino Liqueur", "url": "https://www.thewhiskyexchange.com/p/43315" },
+    { "title": "Zadarski maraschino: geographical indication specification", "url": "https://www.dfat.gov.au/sites/default/files/26s.docx" }
+  ]
+}
