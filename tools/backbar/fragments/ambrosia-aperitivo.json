@@ -1,0 +1,84 @@
+{
+  "id": "ambrosia-aperitivo",
+  "name": "Ambrosia Aperitivo",
+  "respell": "am-BROH-zhuh ah-peh-ree-TEE-voh",
+  "aka": ["Ambrosia", "Don Ciccio Ambrosia"],
+  "group": "liqueurs-amari",
+  "producer": "Don Ciccio & Figli",
+  "place": "Washington, D.C., in the United States",
+  "photo": 2,
+  "confidence": "probable",
+  "facts": {
+    "base": "Blood orange, cantaloupe, carrot and turmeric with nine further botanicals, steeped in alcohol and sweetened",
+    "age": "No age statement",
+    "cask": "No wood ageing is stated",
+    "abv": "15% ABV (30 proof)",
+    "law": "An aperitivo, a lightly bitter liqueur in the Italian style, made in the United States"
+  },
+  "made": "Don Ciccio & Figli makes Ambrosia at its distillery in Washington, D.C., working from Italian family recipes. Blood orange, cantaloupe, carrot and turmeric, with nine further botanicals, are steeped in alcohol, and the liqueur is sweetened before it is bottled at about 15 per cent. It is a sweeter, brighter aperitivo than the bitter red Italian kind, and no wood ageing is stated.",
+  "taste": "Blood orange and candied peel on the nose, with sweet melon and a warm, earthy note of turmeric. The palate is sweet first, bright orange and carrot, then a gentle bitter edge, and the finish is short, juicy and lightly bitter.",
+  "lines": {
+    "s10": "Ambrosia Aperitivo is a bittersweet orange aperitivo from Washington, D.C.: blood orange, cantaloupe, carrot and turmeric, made for the spritz.",
+    "s20": "Ambrosia is the aperitivo of Don Ciccio & Figli, a Washington, D.C. distillery working from Italian family recipes: blood orange, cantaloupe, carrot, turmeric and nine more botanicals, sweet and gently bitter at about 15 per cent. It is built for a spritz with Prosecco and soda.",
+    "s45": "This is Ambrosia Aperitivo, made by Don Ciccio & Figli at their distillery in Washington, D.C., from Italian family recipes. Blood orange, cantaloupe, carrot and turmeric are steeped in alcohol with nine further botanicals, then sweetened and bottled at about 15 per cent. It tastes of blood orange and candied peel, sweet melon and a warm, earthy turmeric note, with a gentle bitter edge at the end. We pour it as a spritz, with Prosecco and a splash of soda over ice and a slice of orange, or chilled on the rocks. Its name is the food of the gods in Greek myth.",
+    "sale": "Ambrosia is a bittersweet blood orange aperitivo, made in Washington, D.C. from Italian family recipes. Try it as a spritz, with Prosecco and a splash of soda over ice."
+  },
+  "serve": {
+    "neat": "Chilled, about two ounces, as a light aperitivo before dinner.",
+    "rocks": "Over ice with a slice of orange, or long with soda water.",
+    "glass": "A large wine glass for the spritz; a rocks glass on ice.",
+    "classic": "The spritz: Ambrosia with Prosecco and soda, built the way of the Aperol Spritz."
+  },
+  "guest": "Ambrosia is a bittersweet aperitivo made in Washington, D.C. from blood orange, cantaloupe, carrot and turmeric: bright, sweet and gently bitter, lovely as a spritz.",
+  "story": "Don Ciccio & Figli is a distillery in Washington, D.C. that revives the liqueurs of an Italian family's past, and Ambrosia joined its range in 2019 as a sweeter, brighter aperitivo. Its name is the food of the gods in Greek myth. Like the Italian aperitivi it follows, it is made to be poured before dinner, long with sparkling wine and soda.",
+  "watch": [
+    "Not Aperol: a guest who calls for an Aperol Spritz wants Aperol. Offer this as the same kind of drink, and say so.",
+    "It is sweet and low in strength: a spritz built on it reads lighter and fruitier than one built on a bitter red aperitivo.",
+    "Asked where it is from: Washington, D.C., not Italy, though the recipes and the style are Italian."
+  ],
+  "asks": [
+    "Confirm at lineup that the aperitivo beside the Green Chartreuse is Don Ciccio and Figli's Ambrosia, the strength its label states, and how the bar pours it."
+  ],
+  "house": { "match": ["Ambrosia Aperitivo", "Don Ciccio Ambrosia"], "family": ["Don Ciccio"] },
+  "library": { "producer": "", "cask": "", "canon": ["aperol-spritz"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Ambrosia Aperitivo, and how is it poured?",
+      "answer": "A bittersweet aperitivo from Don Ciccio & Figli in Washington, D.C.: blood orange, cantaloupe, carrot and turmeric with nine further botanicals, sweetened, at about 15% ABV. Poured as a spritz with Prosecco and soda over ice, or chilled on the rocks."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Where is Ambrosia Aperitivo made?",
+      "options": ["Milan, Italy", "Washington, D.C.", "Turin, Italy", "Portland, Oregon"],
+      "a": 1,
+      "explain": "Don Ciccio & Figli makes it at its distillery in Washington, D.C., from Italian family recipes."
+    },
+    {
+      "id": "q2",
+      "q": "Which spice gives Ambrosia its warm, earthy note beside the blood orange?",
+      "options": ["Ginger", "Liquorice", "Turmeric", "Galangal"],
+      "a": 2,
+      "explain": "Turmeric, with blood orange, cantaloupe and carrot and nine further botanicals."
+    },
+    {
+      "id": "q3",
+      "q": "Which canon drink's build does an Ambrosia spritz with Prosecco and soda follow?",
+      "options": ["Aperol Spritz", "Hugo Spritz", "Limoncello Spritz", "Negroni Sbagliato"],
+      "a": 0,
+      "explain": "The Aperol Spritz: aperitivo, Prosecco and a splash of soda over ice. The Hugo takes elderflower; the Sbagliato is Campari and sweet vermouth with Prosecco."
+    }
+  ],
+  "sources": [
+    { "title": "BevNET: Don Ciccio & Figli launches Ambrosia Aperitivo", "url": "https://www.bevnet.com/news/2019/don-ciccio-figli-launches-ambrosia-aperitivo" },
+    { "title": "Bar Business: Don Ciccio & Figli launches Ambrosia", "url": "https://www.barbizmag.com/featured-products/don-ciccio-figli-launches-ambrosia/" },
+    { "title": "Distiller: Don Ciccio & Figli Ambrosia", "url": "https://distiller.com/spirits/don-ciccio-figli-ambrosia" },
+    { "title": "Washingtonian: Love the Aperol Spritz? Try the DC-made Ambrosia Spritz", "url": "https://www.washingtonian.com/2019/06/03/love-the-aperol-spritz-try-the-dc-made-ambrosia-spritz" },
+    { "title": "Bevvy: Don Ciccio & Figli Ambrosia review", "url": "https://bevvy.co/articles/don-ciccio-figli-ambrosia-review/18349" },
+    { "title": "Cream Wine: Don Ciccio & Figli Ambrosia Aperitivo (30 proof)", "url": "https://creamwine.com/product.php?id=15485" },
+    { "title": "DCist: First look, the new Don Ciccio distillery", "url": "https://dcist.com/story/19/05/14/first-look-the-new-don-ciccio-distillery-can-help-you-figure-out-which-liqueur-to-turn-into-a-spritz" },
+    { "title": "Packaging of the World: Don Ciccio & Figli cordials", "url": "https://packagingoftheworld.com/2022/08/cordials.html" }
+  ]
+}
