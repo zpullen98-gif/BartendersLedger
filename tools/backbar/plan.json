@@ -1,0 +1,356 @@
+{
+  "about": "The roster of the liquor shelf under the house tab (4 November 2026): every bottle the owner photographed on the back bar, read from tools/backbar/photos/shelf-2026-11-04-1.jpg to -5.jpg. A bottle row carries its id, the name as the label prints it, its group, the photograph it stands in, how sure the reading is (clear: the label is legible; probable: part of the label is legible and research names it, so the author confirms it or keeps the ask), its authoring chunk, where it stands and what the label reads, the house terms (match: exact product names looked for in the pack's printed specs, ingredients and linked component names, so At the house claims only a drink that pours THIS bottle; family: the producer names the pack's producer profiles use, for a line on the same house), and the Ledger links (a PRODUCERS slug, a Cask Atlas chapter id, canon cocktail slugs, each through the app's own slugify). A confirm row is a bottle no label on the photographs names: where it stands, what can be read and the lineup question. Authors read this file; schema.mjs and build-backbar.mjs hold the fragments to it. A fragment copies house and library from its row; an author who finds a better term or link changes the row and the fragment together.",
+  "edition": "2026-11-04",
+  "groups": [
+    { "id": "liqueurs-amari", "title": "Liqueurs and amari" },
+    { "id": "cognac", "title": "Cognac" },
+    { "id": "tequila-mezcal-pisco", "title": "Tequila, mezcal and pisco" },
+    { "id": "american-whiskey", "title": "American whiskey" },
+    { "id": "confirm", "title": "To confirm at the bar" }
+  ],
+  "photos": [
+    { "n": 1, "file": "shelf-2026-11-04-1.jpg", "shows": "The liqueur bay, left half: the top shelf's right end, the liqueur shelf from Luxardo Fernet to Yellow Chartreuse, and the tops of the shelf below." },
+    { "n": 2, "file": "shelf-2026-11-04-2.jpg", "shows": "The liqueur bay, right half: the top shelf with Martell XO, the liqueur shelf from Green Chartreuse to Chambord, and the tops of the tequila shelf below." },
+    { "n": 3, "file": "shelf-2026-11-04-3.jpg", "shows": "The tequila shelf: Leyenda del Milagro, Maestro Dobel, Don Julio, Patrón, Lunazul, Agave de Cortés, El Gobernador and the black figural bottle, glassware below." },
+    { "n": 4, "file": "shelf-2026-11-04-4.jpg", "shows": "The whiskey shelf, left: Weller Special Reserve, Weller Aged 12 Years and O.F.C. Vintage 2005, decorative plates above." },
+    { "n": 5, "file": "shelf-2026-11-04-5.jpg", "shows": "The whiskey shelf, right: a decanter, Thomas H. Handy, George T. Stagg and Stagg; below, the Rabbit Hole bottles and the wax-topped bottles." }
+  ],
+  "chunks": {
+    "k1": "Lazzaroni Maraschino; Mathilde Cassis; Bénédictine D.O.M.; Yellow Chartreuse; Green Chartreuse; Luxardo Fernet Amaro (probable)",
+    "k2": "Drambuie; Grand Marnier Cordon Rouge; Chambord; Martell XO; Ambrosia Aperitivo (probable)",
+    "k3": "Leyenda del Milagro Silver and Añejo; Don Julio Blanco, Reposado and 1942; Patrón Reposado",
+    "k4": "Maestro Dobel Special Edition (probable); Lunazul (probable); Agave de Cortés Mezcal; El Gobernador Pisco; Rabbit Hole Cavehill and Heigold",
+    "k5": "Weller Special Reserve; Weller Aged 12 Years; O.F.C. Vintage 2005; Thomas H. Handy Sazerac; George T. Stagg; Stagg"
+  },
+  "entries": [
+    {
+      "id": "luxardo-fernet", "name": "Luxardo Fernet Amaro", "group": "liqueurs-amari", "photo": 1, "confidence": "probable", "chunk": "k1",
+      "where": "Liqueur shelf, the left end, cut by the frame: a tall clear bottle with a red capsule and a dark liquid.",
+      "read": "...XARDO / ...RNET / ...MARO on a white label; the capsule is red.",
+      "ask": "Confirm at lineup that the amaro at the left end of the liqueur shelf is Luxardo Fernet, and whether the bar pours it as a digestivo.",
+      "house": { "match": ["Luxardo Fernet"], "family": ["Luxardo"] },
+      "library": { "producer": "luxardo", "cask": "", "canon": ["toronto", "hanky-panky", "fernet-con-coca", "ferrari"] },
+      "yearly": false,
+      "note": "The canon drinks print Fernet-Branca; this is the same style from another house, so say so where a drink names the other brand. The pack's Cherries Jubilee prints a Luxardo sauce: that is the same house, never this bottle."
+    },
+    {
+      "id": "lazzaroni-maraschino", "name": "Lazzaroni Maraschino", "group": "liqueurs-amari", "photo": 1, "confidence": "clear", "chunk": "k1",
+      "where": "Liqueur shelf, second from the left: a clear square-shouldered bottle with a red capsule.",
+      "read": "LAZZARONI LIQUORI 1851 in a red roundel; MARASCHINO; AUTENTICO.",
+      "house": { "match": ["Lazzaroni Maraschino"], "family": ["Lazzaroni"] },
+      "library": { "producer": "", "cask": "", "canon": ["last-word", "aviation", "martinez", "hemingway-daiquiri", "brooklyn", "tuxedo", "mary-pickford", "brandy-crusta"] },
+      "yearly": false,
+      "note": "Not Luxardo: the pack's Cherries Jubilee prints a Luxardo sauce, another house's maraschino, and never claims this bottle."
+    },
+    {
+      "id": "mathilde-cassis", "name": "Mathilde Cassis", "group": "liqueurs-amari", "photo": 1, "confidence": "clear", "chunk": "k1",
+      "where": "Liqueur shelf, third from the left: a tall clear bottle, the liqueur dark purple, a blackcurrant drawing on the label.",
+      "read": "Mathilde LIQUEUR CASSIS on a cream label with a sprig of blackcurrants.",
+      "house": { "match": ["Mathilde Cassis"], "family": ["Mathilde"] },
+      "library": { "producer": "", "cask": "", "canon": ["el-diablo", "kir-royale", "bourbon-renewal"] },
+      "yearly": false,
+      "note": "The house makes other fruit liqueurs under the same name, so the match term is the cassis alone. The canon drinks print creme de cassis."
+    },
+    {
+      "id": "benedictine", "name": "Bénédictine D.O.M.", "group": "liqueurs-amari", "photo": 1, "confidence": "clear", "chunk": "k1",
+      "where": "Liqueur shelf, centre: the squat dark green bottle with a red wax seal and a long neck.",
+      "read": "D.O.M. BÉNÉDICTINE on a round cream label; red wax seal on the shoulder.",
+      "house": { "match": ["Bénédictine"], "family": ["Bénédictine"] },
+      "library": { "producer": "b-n-dictine", "cask": "", "canon": ["vieux-carr", "cocktail-la-louisiane", "singapore-sling", "widow-s-kiss", "monte-carlo", "bobby-burns", "chrysanthemum", "creole-cocktail"] },
+      "yearly": false,
+      "note": "B and B is the same house's blend with brandy, a different bottle: never claim it. The pack's Origin Story names the Vieux Carré only as a comparison."
+    },
+    {
+      "id": "chartreuse-yellow", "name": "Yellow Chartreuse", "group": "liqueurs-amari", "photo": 1, "confidence": "clear", "chunk": "k1",
+      "where": "Liqueur shelf, the right end of photo 1: the clear Chartreuse bottle with the yellow label and yellow liqueur.",
+      "read": "CHARTREUSE on a yellow label, the order's seal embossed on the shoulder.",
+      "house": { "match": ["Yellow Chartreuse", "Chartreuse Jaune"], "family": ["Chartreuse"] },
+      "library": { "producer": "chartreuse", "cask": "", "canon": ["naked-and-famous", "alaska", "greenpoint", "widow-s-kiss", "diamondback"] },
+      "yearly": false,
+      "note": "The pack's Five Minutes More pours Green Chartreuse: a family line here, never a use."
+    },
+    {
+      "id": "chartreuse-green", "name": "Green Chartreuse", "group": "liqueurs-amari", "photo": 2, "confidence": "clear", "chunk": "k1",
+      "where": "Liqueur shelf, the left end of photo 2: the clear Chartreuse bottle with the green label and green liqueur.",
+      "read": "CHARTREUSE on a green label, the order's seal embossed on the shoulder.",
+      "house": { "match": ["Green Chartreuse", "Chartreuse Verte"], "family": ["Chartreuse"] },
+      "library": { "producer": "chartreuse", "cask": "", "canon": ["last-word", "bijou", "champs-lys-es", "tipperary", "final-ward", "chartreuse-swizzle", "nuclear-daiquiri", "art-of-choke"] },
+      "yearly": false,
+      "note": "The pack's Five Minutes More prints Green Chartreuse, so At the house claims it."
+    },
+    {
+      "id": "drambuie", "name": "Drambuie", "group": "liqueurs-amari", "photo": 2, "confidence": "clear", "chunk": "k2",
+      "where": "Liqueur shelf, centre left of photo 2: the dark amber bottle with a red capsule.",
+      "read": "DRAMBUIE / THE ISLE OF SKYE LIQUEUR on a cream label.",
+      "house": { "match": ["Drambuie"], "family": ["Drambuie"] },
+      "library": { "producer": "", "cask": "scotch", "canon": ["rusty-nail"] },
+      "yearly": false
+    },
+    {
+      "id": "grand-marnier", "name": "Grand Marnier Cordon Rouge", "group": "liqueurs-amari", "photo": 2, "confidence": "clear", "chunk": "k2",
+      "where": "Liqueur shelf, right of centre on photo 2: the round amber bottle with the red ribbon and wax seal.",
+      "read": "Grand Marnier, LIQUEUR, on a red label; red ribbon and seal on the neck.",
+      "house": { "match": ["Grand Marnier"], "family": ["Grand Marnier", "Marnier Lapostolle"] },
+      "library": { "producer": "", "cask": "cognac", "canon": ["millionaire", "leap-year", "satan-s-whiskers"] },
+      "yearly": false,
+      "note": "The pack's Chandon Garden Spritz prints a bitter orange liqueur with no brand: never a use."
+    },
+    {
+      "id": "chambord", "name": "Chambord", "group": "liqueurs-amari", "photo": 2, "confidence": "clear", "chunk": "k2",
+      "where": "Liqueur shelf, the right end of photo 2: the round orb bottle with the gold crown cap and dark red liqueur.",
+      "read": "CHAMBORD on the gold band around the orb.",
+      "house": { "match": ["Chambord"], "family": ["Chambord"] },
+      "library": { "producer": "", "cask": "", "canon": ["french-martini"] },
+      "yearly": false
+    },
+    {
+      "id": "ambrosia-aperitivo", "name": "Ambrosia Aperitivo", "group": "liqueurs-amari", "photo": 2, "confidence": "probable", "chunk": "k2",
+      "where": "Liqueur shelf, between Green Chartreuse and Drambuie, half hidden: a clear bottle with a white label and a red and black diamond.",
+      "read": "...ROSIA / ...ITIVO above a red and black harlequin diamond.",
+      "ask": "Confirm at lineup that the aperitivo beside the Green Chartreuse is Don Ciccio and Figli's Ambrosia, and how the bar pours it.",
+      "house": { "match": ["Ambrosia Aperitivo", "Don Ciccio Ambrosia"], "family": ["Don Ciccio"] },
+      "library": { "producer": "", "cask": "", "canon": ["aperol-spritz"] },
+      "yearly": false,
+      "note": "Research points to Ambrosia, the bittersweet aperitivo of Don Ciccio and Figli, Washington, D.C.; confirm the label against the producer's own bottle picture. The canon drink prints Aperol: say it is the same family of drink, not the same bottle."
+    },
+    {
+      "id": "martell-xo", "name": "Martell XO", "group": "cognac", "photo": 2, "confidence": "clear", "chunk": "k2",
+      "where": "Top shelf, centre of photo 2: the arched crystal decanter with a small label at its foot.",
+      "read": "MARTELL XO on the small label at the foot of the decanter.",
+      "house": { "match": ["Martell XO"], "family": ["Martell"] },
+      "library": { "producer": "", "cask": "cognac", "canon": [] },
+      "yearly": false,
+      "note": "Poured neat; no canon drink asks for an XO. The pack's Brandy Milk Punch prints brandy with no house: never a use."
+    },
+    {
+      "id": "milagro-silver", "name": "Leyenda del Milagro Silver", "group": "tequila-mezcal-pisco", "photo": 3, "confidence": "clear", "chunk": "k3",
+      "where": "Tequila shelf, the left end of photo 3: the tall blue bottle.",
+      "read": "SILVER on the neck; Leyenda del Milagro in white script; 100% AGAVE near the foot.",
+      "house": { "match": ["Milagro Silver", "Leyenda del Milagro Silver"], "family": ["Milagro"] },
+      "library": { "producer": "", "cask": "", "canon": ["margarita", "paloma", "tommy-s-margarita", "el-diablo", "ranch-water"] },
+      "yearly": false,
+      "note": "A second Leyenda del Milagro bottle with amber tequila stands on the shelf below photo 1's liqueurs: that one is a confirm row."
+    },
+    {
+      "id": "milagro-anejo", "name": "Leyenda del Milagro Añejo", "group": "tequila-mezcal-pisco", "photo": 3, "confidence": "clear", "chunk": "k3",
+      "where": "Tequila shelf, second from the left on photo 3: the tall clear bottle with golden tequila.",
+      "read": "AÑEJO on the neck; Leyenda del Milagro in white script.",
+      "house": { "match": ["Milagro Añejo", "Leyenda del Milagro Añejo"], "family": ["Milagro"] },
+      "library": { "producer": "", "cask": "", "canon": ["mexican-coffee"] },
+      "yearly": false
+    },
+    {
+      "id": "don-julio-blanco", "name": "Don Julio Blanco", "group": "tequila-mezcal-pisco", "photo": 3, "confidence": "clear", "chunk": "k3",
+      "where": "Tequila shelf, front row left on photo 3: the squat clear bottle with the blue band.",
+      "read": "TEQUILA DON JULIO around the shoulder; Don Julio 1942 crest; TEQUILA BLANCO.",
+      "house": { "match": ["Don Julio Blanco"], "family": ["Don Julio"] },
+      "library": { "producer": "", "cask": "", "canon": ["margarita", "paloma", "tommy-s-margarita", "ranch-water", "spicy-margarita"] },
+      "yearly": false
+    },
+    {
+      "id": "don-julio-reposado", "name": "Don Julio Reposado", "group": "tequila-mezcal-pisco", "photo": 3, "confidence": "clear", "chunk": "k3",
+      "where": "Tequila shelf, front row right on photo 3: the squat bottle with amber tequila and the copper band.",
+      "read": "Don Julio; TEQUILA REPOSADO.",
+      "house": { "match": ["Don Julio Reposado"], "family": ["Don Julio"] },
+      "library": { "producer": "", "cask": "", "canon": ["oaxaca-old-fashioned", "rosita"] },
+      "yearly": false
+    },
+    {
+      "id": "don-julio-1942", "name": "Don Julio 1942", "group": "tequila-mezcal-pisco", "photo": 3, "confidence": "clear", "chunk": "k3",
+      "where": "Tequila shelf, centre back on photo 3: the tall slender bottle with the gold neck.",
+      "read": "1942 on the neck; the Don Julio crest on a gold medallion.",
+      "house": { "match": ["Don Julio 1942"], "family": ["Don Julio"] },
+      "library": { "producer": "", "cask": "", "canon": [] },
+      "yearly": false,
+      "note": "An añejo poured neat; no canon drink asks for it."
+    },
+    {
+      "id": "patron-reposado", "name": "Patrón Reposado", "group": "tequila-mezcal-pisco", "photo": 3, "confidence": "clear", "chunk": "k3",
+      "where": "Tequila shelf, front row centre on photo 3: the squat Patrón bottle with the cork stopper and pale gold tequila.",
+      "read": "PATRÓN / REPOSADO, the bee on the label.",
+      "house": { "match": ["Patrón Reposado"], "family": ["Patrón"] },
+      "library": { "producer": "", "cask": "", "canon": ["oaxaca-old-fashioned", "rosita"] },
+      "yearly": false
+    },
+    {
+      "id": "dobel-special-edition", "name": "Maestro Dobel Special Edition", "group": "tequila-mezcal-pisco", "photo": 3, "confidence": "probable", "chunk": "k4",
+      "where": "Tequila shelf, third from the left on photo 3, behind Don Julio Blanco: a tall clear bottle with lettering moulded in the glass.",
+      "read": "MAESTRO DOBEL TEQUILA and SPECIAL EDITION on the white neck label; RESERVA DEL MAESTRO TEQUILERO, TEQUILA, AGAVE SELECTO moulded in the glass; the tequila looks clear.",
+      "ask": "Which Maestro Dobel is the special edition bottle on the tequila shelf (the neck label says SPECIAL EDITION), and is it a cristalino or a silver?",
+      "house": { "match": [], "family": ["Dobel"] },
+      "library": { "producer": "", "cask": "", "canon": [] },
+      "yearly": false,
+      "note": "Name the expression only from the producer's page or two sources that show this neck label; otherwise write the bottle as the Maestro Dobel range and keep the ask. Add match terms and canon drinks to this row once the expression is known."
+    },
+    {
+      "id": "lunazul", "name": "Lunazul", "group": "tequila-mezcal-pisco", "photo": 3, "confidence": "probable", "chunk": "k4",
+      "where": "Tequila shelf, front row, between Don Julio Blanco and Patrón Reposado: a square-shouldered bottle with a black stopper and a black label.",
+      "read": "LUN... in white capitals on a black label; 100% below; an agave mark on the neck; TEQUI... at the foot.",
+      "ask": "Confirm at lineup that the black-labelled bottle in the tequila front row is Lunazul, and which expression it is.",
+      "house": { "match": [], "family": ["Lunazul"] },
+      "library": { "producer": "", "cask": "", "canon": [] },
+      "yearly": false,
+      "note": "Confirm the bottle shape and the black label against the producer's own pictures; add the expression's match term and canon drinks to this row once known."
+    },
+    {
+      "id": "agave-de-cortes", "name": "Agave de Cortés Mezcal", "group": "tequila-mezcal-pisco", "photo": 3, "confidence": "clear", "chunk": "k4",
+      "where": "Tequila shelf, right of centre on photo 3: the tall clear bottle with a white label.",
+      "read": "AGAVE DE CORTÉS / MEZCAL / 100% AGAVE.",
+      "house": { "match": ["Agave de Cortés"], "family": ["Agave de Cortés"] },
+      "library": { "producer": "", "cask": "", "canon": ["oaxaca-old-fashioned", "naked-and-famous", "mezcal-negroni", "division-bell"] },
+      "yearly": false,
+      "note": "Read the label for the expression (the spirit looks clear, so probably the joven) and say which agave the producer names."
+    },
+    {
+      "id": "el-gobernador", "name": "El Gobernador Pisco", "group": "tequila-mezcal-pisco", "photo": 3, "confidence": "clear", "chunk": "k4",
+      "where": "Tequila shelf, front row right of Patrón on photo 3: the clear bottle with the cork stopper and a lime green label.",
+      "read": "EL GOBERNADOR on a lime green label with the drawing of a man in a hat; ...RVADO below, probably RESERVADO.",
+      "house": { "match": ["El Gobernador"], "family": ["El Gobernador"] },
+      "library": { "producer": "", "cask": "", "canon": ["pisco-sour", "chilcano", "piscola", "pisco-punch"] },
+      "yearly": false,
+      "note": "A Chilean pisco: say how Chilean pisco differs from Peruvian. Name the producing company, never a living member of its family."
+    },
+    {
+      "id": "rabbit-hole-cavehill", "name": "Rabbit Hole Cavehill", "group": "american-whiskey", "photo": 5, "confidence": "clear", "chunk": "k4",
+      "where": "Lower whiskey shelf, the left of photo 5: the square clear bottle with the round shoulders.",
+      "read": "FOUR GRAIN TRIPLE MALT on the label; Rabbit Hole in script at the foot.",
+      "house": { "match": ["Rabbit Hole Cavehill", "Cavehill"], "family": ["Rabbit Hole"] },
+      "library": { "producer": "rabbit-hole", "cask": "bourbon", "canon": ["old-fashioned", "whiskey-sour", "gold-rush", "mint-julep"] },
+      "yearly": false,
+      "note": "The pack's Birdcage pours Rabbit Hole Dareringer: a family line here, never a use."
+    },
+    {
+      "id": "rabbit-hole-heigold", "name": "Rabbit Hole Heigold", "group": "american-whiskey", "photo": 5, "confidence": "clear", "chunk": "k4",
+      "where": "Lower whiskey shelf, beside Cavehill on photo 5: the shorter bottle with the blue label band.",
+      "read": "HIGH RYE DOUBLE MALT on a blue band.",
+      "house": { "match": ["Rabbit Hole Heigold", "Heigold"], "family": ["Rabbit Hole"] },
+      "library": { "producer": "rabbit-hole", "cask": "bourbon", "canon": ["old-fashioned", "boulevardier", "brown-derby", "whiskey-sour"] },
+      "yearly": false,
+      "note": "The pack's Birdcage pours Rabbit Hole Dareringer: a family line here, never a use."
+    },
+    {
+      "id": "weller-special-reserve", "name": "Weller Special Reserve", "group": "american-whiskey", "photo": 4, "confidence": "clear", "chunk": "k5",
+      "where": "Whiskey shelf, the left of photo 4: the tall bottle with the gold capsule and green label.",
+      "read": "Weller, THE ORIGINAL WHEATED BOURBON, SPECIAL RESERVE on a green and gold label.",
+      "house": { "match": ["Weller Special Reserve"], "family": ["Buffalo Trace", "Sazerac Company"] },
+      "library": { "producer": "buffalo-trace", "cask": "bourbon", "canon": ["old-fashioned", "mint-julep", "whiskey-sour", "gold-rush"] },
+      "yearly": false
+    },
+    {
+      "id": "weller-12", "name": "Weller Aged 12 Years", "group": "american-whiskey", "photo": 4, "confidence": "clear", "chunk": "k5",
+      "where": "Whiskey shelf, centre of photo 4: the tall bottle with the black capsule and black label.",
+      "read": "Weller, THE ORIGINAL WHEATED BOURBON, AGED 12 YEARS on a black and gold label.",
+      "house": { "match": ["Weller 12", "Weller Aged 12"], "family": ["Buffalo Trace", "Sazerac Company"] },
+      "library": { "producer": "buffalo-trace", "cask": "bourbon", "canon": ["old-fashioned"] },
+      "yearly": false
+    },
+    {
+      "id": "ofc-2005", "name": "O.F.C. Vintage 2005", "group": "american-whiskey", "photo": 4, "confidence": "clear", "chunk": "k5",
+      "where": "Whiskey shelf, right of centre on photo 4: the clear bottle with the copper capsule.",
+      "read": "O.F.C. in large copper letters; OLD FASHIONED COPPER, VINTAGE, DISTILLED IN THE YEAR 2005.",
+      "house": { "match": ["O.F.C.", "Old Fashioned Copper"], "family": ["Buffalo Trace", "Sazerac Company"] },
+      "library": { "producer": "buffalo-trace", "cask": "bourbon", "canon": [] },
+      "yearly": true,
+      "note": "A vintage release: the label states its own proof and age, and every vintage differs. Poured neat."
+    },
+    {
+      "id": "thomas-h-handy", "name": "Thomas H. Handy Sazerac Straight Rye", "group": "american-whiskey", "photo": 5, "confidence": "clear", "chunk": "k5",
+      "where": "Whiskey shelf, left of centre on photo 5: the tall bottle with the orange label and red capsule.",
+      "read": "THOMAS H. HANDY SAZERAC, STRAIGHT RYE WHISKEY, a portrait on an orange label; the proof is printed on a small label below.",
+      "house": { "match": ["Thomas H. Handy"], "family": ["Sazerac Company", "Buffalo Trace"] },
+      "library": { "producer": "buffalo-trace", "cask": "american-rye", "canon": ["sazerac", "manhattan", "vieux-carr", "cocktail-la-louisiane"] },
+      "yearly": true,
+      "note": "A yearly Antique Collection release: each year's proof differs and the label gives it. The pack's Classic Sazerac pours Sazerac Rye, a different bottle from the same house: a family line, never a use."
+    },
+    {
+      "id": "george-t-stagg", "name": "George T. Stagg", "group": "american-whiskey", "photo": 5, "confidence": "clear", "chunk": "k5",
+      "where": "Whiskey shelf, centre of photo 5: the tall clear bottle with the antlers and the dark bourbon.",
+      "read": "GEORGE T. STAGG, KENTUCKY STRAIGHT BOURBON WHISKEY, gold antlers; the proof is printed on a small label below.",
+      "house": { "match": ["George T. Stagg"], "family": ["Buffalo Trace", "Sazerac Company"] },
+      "library": { "producer": "buffalo-trace", "cask": "bourbon", "canon": ["old-fashioned"] },
+      "yearly": true,
+      "note": "A yearly Antique Collection release: each year's proof and age differ and the label gives them."
+    },
+    {
+      "id": "stagg", "name": "Stagg", "group": "american-whiskey", "photo": 5, "confidence": "clear", "chunk": "k5",
+      "where": "Whiskey shelf, right of George T. Stagg on photo 5: the shorter bottle with the antlers and a black capsule.",
+      "read": "S... with the gold antlers, the rest of the word turned from the camera.",
+      "house": { "match": ["Stagg", "Stagg Jr"], "family": ["Buffalo Trace", "Sazerac Company"] },
+      "library": { "producer": "buffalo-trace", "cask": "bourbon", "canon": ["old-fashioned"] },
+      "yearly": true,
+      "note": "Released in batches, each at its own barrel proof, which the label gives. Its match term sits inside George T. Stagg's, so the longer term wins (style.txt, THE HOUSE)."
+    },
+    {
+      "id": "confirm-decanter-top-left", "name": "Round crystal decanter, top shelf", "group": "confirm", "photo": 1,
+      "where": "Top shelf above the liqueurs, the right end of photo 1: a round, faceted crystal decanter.",
+      "read": "No label visible; a dark amber spirit behind cut glass.",
+      "ask": "Which cognac is in the round crystal decanter on the top shelf, and does the bar pour it by the glass?"
+    },
+    {
+      "id": "confirm-decanter-beside-martell", "name": "Round decanter beside the Martell XO", "group": "confirm", "photo": 2,
+      "where": "Top shelf, the left end of photo 2, left of the Martell XO: a round decanter with a dark amber spirit.",
+      "read": "No label visible. It may be the same decanter as on photo 1, seen from the next frame.",
+      "ask": "Is the round decanter left of the Martell XO a second cognac, and which one?"
+    },
+    {
+      "id": "confirm-whiskey-decanter", "name": "Etched whiskey decanter", "group": "confirm", "photo": 5,
+      "where": "Whiskey shelf, the left end of photo 5, left of Thomas H. Handy: a stoppered decanter etched with a figure, about a third full.",
+      "read": "No label visible; an etched design on the glass. Probably the same round bottle cut by the right edge of photo 4.",
+      "ask": "Which whiskey is in the etched decanter left of the Thomas H. Handy?"
+    },
+    {
+      "id": "confirm-figural-tequila", "name": "Black figural bottle", "group": "confirm", "photo": 3,
+      "where": "Tequila shelf, the right end of photo 3: a tall black glazed figural bottle with a rounded stopper and an oval panel.",
+      "read": "No label visible.",
+      "ask": "What is the black figural bottle at the right end of the tequila shelf, and is it tequila or mezcal?"
+    },
+    {
+      "id": "confirm-wax-tops", "name": "Bottles with coloured wax tops", "group": "confirm", "photo": 5,
+      "where": "Lower whiskey shelf, right of the Rabbit Hole bottles on photo 5: bottles sealed in lime green, orange and pink wax.",
+      "read": "No label legible; the shapes may be more Rabbit Hole.",
+      "ask": "What are the bottles with the lime green, orange and pink wax tops beside the Rabbit Hole?"
+    },
+    {
+      "id": "confirm-green-red-seals", "name": "Green bottles with red capsules", "group": "confirm", "photo": 1,
+      "where": "The shelf below the liqueurs, left and centre of photo 1: green glass bottles with red capsules and seals.",
+      "read": "One label at the foot reads LUXA..., over a straw wrap, which may be Luxardo Maraschino; the others show no words.",
+      "ask": "What are the green bottles with red capsules below the liqueurs, and is one of them Luxardo Maraschino?"
+    },
+    {
+      "id": "confirm-behind-mathilde", "name": "Clear bottle behind Mathilde Cassis", "group": "confirm", "photo": 1,
+      "where": "Liqueur shelf, behind and right of Mathilde Cassis: a clear bottle with a dark cap and a white label.",
+      "read": "Small red lettering on a white label; nothing legible.",
+      "ask": "What is the clear bottle standing behind the Mathilde Cassis?"
+    },
+    {
+      "id": "confirm-behind-drambuie", "name": "Clear bottles behind Drambuie", "group": "confirm", "photo": 2,
+      "where": "Liqueur shelf, behind the Drambuie: a clear bottle with a white stopper, and between Drambuie and Grand Marnier a clear bottle with a yellow capsule.",
+      "read": "The yellow capsule's band reads ...EN DA...; nothing else legible.",
+      "ask": "What are the two clear bottles behind the Drambuie, the one with the white stopper and the one with the yellow capsule?"
+    },
+    {
+      "id": "confirm-milagro-amber", "name": "Leyenda del Milagro, amber", "group": "confirm", "photo": 1,
+      "where": "The shelf below the liqueurs, the right of photo 1: a tall bottle of amber tequila beside a blue bottle.",
+      "read": "Leyenda del Milagro in white script over amber tequila; no expression legible.",
+      "ask": "Which Leyenda del Milagro is the amber bottle below the liqueurs: a reposado, or a second añejo?"
+    },
+    {
+      "id": "confirm-behind-handy", "name": "Bottle behind Thomas H. Handy", "group": "confirm", "photo": 5,
+      "where": "Whiskey shelf, behind and right of Thomas H. Handy on photo 5: a bottle with a cream label, mostly hidden.",
+      "read": "The visible letters may read SAZ...; nothing else legible.",
+      "ask": "What is the bottle with the cream label behind the Thomas H. Handy: Sazerac Rye, or another rye?"
+    },
+    {
+      "id": "confirm-behind-chambord", "name": "Gold-stoppered bottle behind Chambord", "group": "confirm", "photo": 2,
+      "where": "Liqueur shelf, behind the Chambord: a bottle with a gold stopper and an amber spirit.",
+      "read": "No label visible.",
+      "ask": "What is the gold-stoppered bottle standing behind the Chambord?"
+    },
+    {
+      "id": "confirm-second-stagg", "name": "Second antlered bottle behind Stagg", "group": "confirm", "photo": 5,
+      "where": "Whiskey shelf, behind and left of the Stagg on photo 5: a bottle with the same gold antlers.",
+      "read": "The antlers and the figure 23 at the foot of the label.",
+      "ask": "Is the antlered bottle behind the Stagg a second Stagg batch (its label shows 23), and which batch does the bar open first?"
+    }
+  ]
+}
