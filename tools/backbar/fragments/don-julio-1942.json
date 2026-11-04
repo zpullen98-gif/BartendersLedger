@@ -1,0 +1,82 @@
+{
+  "id": "don-julio-1942",
+  "name": "Don Julio 1942",
+  "respell": "don HOO-lee-oh NINE-teen FOR-tee-TOO",
+  "aka": ["Don Julio 1942 Añejo"],
+  "group": "tequila-mezcal-pisco",
+  "producer": "Tequila Don Julio",
+  "place": "Atotonilco el Alto, in the Jalisco Highlands, Mexico",
+  "photo": 3,
+  "confidence": "clear",
+  "facts": {
+    "base": "Blue agave from the Jalisco Highlands, roasted in brick ovens and fermented with Don Julio's own yeast",
+    "age": "Añejo: at least two years in oak; Don Julio has also said two and a half",
+    "cask": "American white oak barrels that once held bourbon",
+    "abv": "40% ABV (80 proof)",
+    "law": "Tequila, 100% blue agave; añejo means at least one year in oak casks of at most 600 litres"
+  },
+  "made": "Don Julio 1942 begins as the Blanco's spirit: highland blue agave roasted slowly in brick ovens, fermented with Don Julio's own yeast and distilled twice in pot stills. It is then laid down as an añejo in American white oak barrels that once held bourbon, for at least two years, two and a half by the producer's longer account, and bottled at 40 per cent in a tall, slender bottle that stands apart from the squat Blanco and Reposado.",
+  "taste": "Caramel, chocolate and vanilla on the nose, over roasted agave. The palate is warm and rich, toffee, toasted oak and almond with a little coffee, and the finish is long, with dark chocolate and soft spice.",
+  "lines": {
+    "s10": "Don Julio 1942 is an añejo tequila aged at least two years in American white oak: caramel, chocolate and roasted agave, for sipping.",
+    "s20": "Don Julio 1942 is Don Julio's añejo, named for the year Don Julio González began making tequila. Highland agave rests at least two years in bourbon oak, and it tastes of caramel, chocolate, vanilla and toasted oak, warm and long.",
+    "s45": "This is Don Julio 1942, an añejo tequila named for the year Don Julio González began making tequila in Atotonilco el Alto, in the highlands of Jalisco. The blue agave is roasted slowly in brick ovens, fermented with Don Julio's own yeast, distilled twice, and aged at least two years in American white oak barrels that once held bourbon. In the glass it is caramel, chocolate and vanilla over roasted agave, warm and rich, with toffee, coffee and a long, dark finish. We pour it neat at room temperature, or over one large cube. It was first bottled in 2002, sixty years after his start.",
+    "sale": "Don Julio 1942 is an añejo of two years and more in bourbon oak, caramel and dark chocolate over roasted agave. Pour it neat after dinner, or over one large cube."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, about an ounce and a half, given a minute in the glass.",
+    "rocks": "Over one large cube, which Don Julio also suggests; never crushed ice.",
+    "glass": "A copita, a small snifter or a tulip; a rocks glass over the cube.",
+    "classic": "Kept for sipping: no classic asks for it; a stirred añejo Old Fashioned on request."
+  },
+  "guest": "Don Julio 1942 is an añejo tequila, aged at least two years in American white oak: caramel, chocolate and vanilla over roasted agave, made for sipping neat.",
+  "story": "Don Julio González was seventeen in 1942 when he began making tequila in Atotonilco el Alto, and this añejo carries that year as its name. It was created for the sixtieth anniversary of his start and first bottled in 2002. The tall, slender bottle, with a gold neck and the crest on a gold medallion, was made to stand apart from the squat bottle of the Blanco and the Reposado, the low shape of the first Don Julio.",
+  "watch": [
+    "1942 is the founder's start, not an age statement: the tequila itself is aged at least two years.",
+    "An añejo, not an extra añejo: three years in oak would make an extra añejo, and the label says añejo.",
+    "A guest asking for the 1942 wants this tall bottle, not the squat Blanco or Reposado that carry 1942 on their crest.",
+    "Asked for it as a shot: offer it neat in a copita to sip; the oak and chocolate are the point."
+  ],
+  "asks": [],
+  "house": { "match": ["Don Julio 1942"], "family": ["Don Julio"] },
+  "library": { "producer": "", "cask": "", "canon": [] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Don Julio 1942, and how is it poured?",
+      "answer": "An añejo tequila named for the year Don Julio González began making tequila, aged at least two years in American white oak barrels that once held bourbon, at 40% ABV. Caramel, chocolate and vanilla; neat at room temperature, or over one large cube."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What does the 1942 in the name mark?",
+      "options": ["The year the founder began making tequila", "The year the tequila rules were written", "The year the distillery was rebuilt", "The year the first agave was planted"],
+      "a": 0,
+      "explain": "1942 is the year Don Julio González, at seventeen, began making tequila in Atotonilco el Alto."
+    },
+    {
+      "id": "q2",
+      "q": "In which age category does Don Julio 1942 sit?",
+      "options": ["Blanco", "Reposado", "Añejo", "Extra añejo"],
+      "a": 2,
+      "explain": "Añejo: at least two years in American white oak, short of the three years an extra añejo needs."
+    },
+    {
+      "id": "q3",
+      "q": "Which anniversary of the founder's start was Don Julio 1942 created to mark?",
+      "options": ["Twenty-fifth", "Fortieth", "Fiftieth", "Sixtieth"],
+      "a": 3,
+      "explain": "The sixtieth: it was first bottled in 2002, sixty years after 1942."
+    }
+  ],
+  "sources": [
+    { "title": "Diageo Bar Academy: Don Julio 1942", "url": "https://www.diageobaracademy.com/en-us/home/our-brands/don-julio-1942" },
+    { "title": "Tequila Don Julio: frequently asked questions", "url": "https://www.donjulio.com/frequently-asked-questions" },
+    { "title": "Tequila Don Julio: 1942 signature serve", "url": "https://www.donjulio.com/tequila-drinks/1942-signature-serve" },
+    { "title": "Page and Sons: Don Julio 1942 Tequila", "url": "https://pageandsons.co.uk/spirits/don-julio-1942-tequila" },
+    { "title": "Mashed: the untold truth of Don Julio tequila", "url": "https://mashed.com/477438/the-untold-truth-of-don-julio-tequila" },
+    { "title": "ReserveBar: Don Julio 1942 Añejo Tequila", "url": "https://reservebar.com/products/don-julio-1942-anejo-tequila/GROUPING-33181" },
+    { "title": "Difford's Guide: tequila classifications", "url": "https://www.diffordsguide.com/g/1084/tequila/classifications" }
+  ]
+}
