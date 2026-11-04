@@ -72,6 +72,14 @@
  *     a cold entry walking up the same way by replaces, and, with the House
  *     engine, the house's word from the page landing on the house's page and
  *     the page naming a renamed house
+ *   - the liquor shelf (4 November 2026): the shelf and a bottle lit by the
+ *     house's word, the shelf, a bottle and its deck round-tripping at
+ *     #/menu/backbar[/<id>] (#/menu/view/backbar read as the shelf, an
+ *     unknown bottle falling to it), both screens in the sweep, the sub-nav
+ *     after Coffee and tea, a bottle by its row and Back to the shelf, Bar
+ *     studies, the menu and Home, a cold bottle walking up the same way by
+ *     replaces, and, with the House engine, the house's word from a bottle
+ *     landing on the house's page and the shelf naming a renamed house
  *   - Print cards is a screen of its own, #/library/print, with the one Back
  *     and no second way back; Back closes it onto the Library
  *   - with the House engine beside this checkout, the bar's producers: the
@@ -307,6 +315,7 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 		...['studies', 'rehearsal', 'reference'].map((v) => [`state.tab='menu'; state.menu.view='${v}'`, 'brennans']),
 		["state.tab='menu'; state.menu.view='compass'", 'brennans'], ["state.tab='menu'; state.menu.view='fall'", 'brennans'],
 		["state.tab='menu'; state.menu.view='brew'; brewOpen('')", 'brennans'], ["brewOpen(brewEntries()[0].id)", 'brennans'],
+		["state.tab='menu'; state.menu.view='backbar'; backbarOpen('')", 'brennans'], ["backbarOpen(backbarEntries()[0].id)", 'brennans'],
 		["state.tab='flashcards'; state.fc.stage='pick'", 'practise'], ["openDeck('cocktails')", 'practise'], ["openDeck('cocktails'); startDeckRun()", 'practise'],
 		["state.tab='quiz'; state.quiz.stage='setup'", 'practise'], ["startRound('quick')", 'practise'], ["state.tab='practice'; state.practice.view='rail'", 'practise'],
 		["state.tab='riffs'", 'practise'], ["ltStart(2); state.tab='level'", 'practise'], ["state.lt = null; openLevel(2)", 'home'],
@@ -550,6 +559,8 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 		...['studies', 'rehearsal', 'reference'].map((v) => `state.tab='menu'; state.menu.view='${v}'`),
 		/* Coffee and tea: the index, an entry and its deck */
 		"brewOpen('')", "brewOpen(brewEntries()[0].id)", "openDeck('brew')",
+		/* the liquor shelf: the shelf, a bottle and its deck */
+		"backbarOpen('')", "backbarOpen(backbarEntries()[0].id)", "openDeck('backbar')",
 	];
 	const seenTabs = new Set();
 	for (const code of setups) {
@@ -591,6 +602,17 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	   to the index, and #/menu leaves the page */
 	const brewId = A.run('brewEntries()[0].id');
 	for (const [from, to] of [['#/menu/brew', '#/menu/brew'], ['#/menu/brew/' + brewId, '#/menu/brew/' + brewId], ['#/menu/view/brew', '#/menu/brew'], ['#/menu/brew/no-such-entry', '#/menu/brew'], ['#/menu', '#/menu']]) {
+		A.run("state.tab = 'home';");
+		if (!A.g('applyRoute')(from)) { fail(`${from} is not an address applyRoute reads`); continue; }
+		A.run('navNormalise()');
+		const r = A.g('routeNow')();
+		if (r.hash !== to) fail(`${from} reads back as ${r.hash}, not ${to}`);
+	}
+	/* the liquor shelf's addresses: the shelf and a bottle print and read as
+	   themselves, #/menu/view/backbar reads as the shelf, an unknown bottle
+	   falls to the shelf, and #/menu leaves it */
+	const bbId = A.run('backbarEntries()[0].id');
+	for (const [from, to] of [['#/menu/backbar', '#/menu/backbar'], ['#/menu/backbar/' + bbId, '#/menu/backbar/' + bbId], ['#/menu/view/backbar', '#/menu/backbar'], ['#/menu/backbar/no-such-bottle', '#/menu/backbar'], ['#/menu', '#/menu']]) {
 		A.run("state.tab = 'home';");
 		if (!A.g('applyRoute')(from)) { fail(`${from} is not an address applyRoute reads`); continue; }
 		A.run('navNormalise()');
@@ -669,6 +691,34 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	const bc = [];
 	for (let i = 0; i < 4 && backs(BC.view()); i++) { BC.tap({ 'data-act': 'back' }); await settle(); bc.push(BC.state().key); }
 	if (bc.join('|') !== 'menu/brew|menu/view/studies|menu|home' || BC.history.length !== 1) fail(`a cold Coffee and tea entry walks up ${bc.join(' > ')} with ${BC.history.length} entries, not menu/brew > Bar studies > menu > home by replaces`);
+	/* the liquor shelf (4 November 2026): the sub-nav after Coffee and tea, a
+	   bottle by its row, and Backs to the shelf, Bar studies, the menu and
+	   Home; a cold bottle walks up the same chain by replaces */
+	const S = boot({ hash: '#/menu' });
+	await settle();
+	if (!S.tap({ 'data-act': 'menu-view', 'data-v': 'studies' })) fail('the menu has no Bar studies destination');
+	await settle();
+	const subs = [...S.view().matchAll(/<nav class="house-subsections"[\s\S]*?<\/nav>/g)].map((m) => m[0]).join('');
+	const order = [...subs.matchAll(/data-v="(\w+)"/g)].map((m) => m[1]);
+	if (order[order.indexOf('brew') + 1] !== 'backbar') fail(`Bar studies' pages read ${order.join(', ')}, not The liquor shelf after Coffee and tea`);
+	const s0 = S.state();
+	const sid = S.run('backbarEntries()[0].id');
+	if (!S.tap({ 'data-act': 'menu-view', 'data-v': 'backbar' })) fail('the menu\'s sub-nav has no The liquor shelf');
+	await settle();
+	const s1 = S.state();
+	if (s1.key !== 'menu/backbar' || s1.hash !== '#/menu/backbar' || s1.at !== s0.at + 1) fail(`The liquor shelf from the sub-nav is ${s1.key} at ${s1.hash}, entry ${s0.at} to ${s1.at}, not #/menu/backbar by one push`);
+	if (!S.tap({ class: 'backbar-row', href: '#/menu/backbar/' + sid })) fail(`the shelf draws no row for ${sid}`);
+	await settle();
+	if (S.state().key !== 'menu/backbar/' + sid || S.state().at !== s1.at + 1) fail(`a bottle's row opens ${S.state().key} at entry ${S.state().at}, not the bottle by one push`);
+	const sk = [];
+	for (let i = 0; i < 4 && backs(S.view()); i++) { S.tap({ 'data-act': 'back' }); await settle(); sk.push(S.state().key); }
+	if (sk.join('|') !== 'menu/backbar|menu/view/studies|menu|home') fail(`Back from a bottle walks ${sk.join(' > ')}, not menu/backbar > Bar studies > menu > home`);
+	const SC = boot({ hash: '#/menu/backbar/' + sid });
+	await settle();
+	if (SC.state().key !== 'menu/backbar/' + sid || SC.state().d !== 0) fail(`a cold #/menu/backbar/${sid} is ${SC.state().key} at depth ${SC.state().d}`);
+	const sc = [];
+	for (let i = 0; i < 4 && backs(SC.view()); i++) { SC.tap({ 'data-act': 'back' }); await settle(); sc.push(SC.state().key); }
+	if (sc.join('|') !== 'menu/backbar|menu/view/studies|menu|home' || SC.history.length !== 1) fail(`a cold bottle walks up ${sc.join(' > ')} with ${SC.history.length} entries, not menu/backbar > Bar studies > menu > home by replaces`);
 }
 
 /* ---- 8. the screens: one Back, Home four cards, words and no glyphs --------- */
@@ -701,6 +751,8 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 		...['studies', 'rehearsal', 'reference'].map((v) => [v, `state.tab='menu'; state.menu.view='${v}'`, true]),
 		['Coffee and tea', "state.tab='menu'; state.menu.view='brew'; brewOpen('')", true],
 		['a coffee or a tea', "state.tab='menu'; brewOpen(brewEntries()[0].id)", true],
+		['The liquor shelf', "state.tab='menu'; state.menu.view='backbar'; backbarOpen('')", true],
+		['a bottle on the shelf', "state.tab='menu'; backbarOpen(backbarEntries()[0].id)", true],
 		['a level test', "ltStart(1); state.tab='level'", false],
 	];
 	for (const [name, code, own] of screens) {
@@ -842,6 +894,9 @@ else {
 	/* Coffee and tea reads the house's name from the house too, on the bar and on the page */
 	R.run("state.tab = 'menu'; state.menu.view = 'brew'; brewOpen(''); render()"); await settle();
 	if (word(R) !== 'The Fixture Room &amp; Bar' || !R.view().includes('<div class="eyebrow">The Fixture Room &amp; Bar · Coffee and tea</div>')) fail(`on Coffee and tea the house's word reads ${word(R)} and the page does not name the renamed house`);
+	/* the liquor shelf reads it from the house as well */
+	R.run("state.tab = 'menu'; state.menu.view = 'backbar'; backbarOpen(''); render()"); await settle();
+	if (word(R) !== 'The Fixture Room &amp; Bar' || !R.view().includes('<div class="eyebrow">The Fixture Room &amp; Bar · The liquor shelf</div>')) fail(`on the liquor shelf the house's word reads ${word(R)} and the shelf does not name the renamed house`);
 	if (/Study the whole menu|Flashcards for the menu|data-act="lv-producers"/.test(R.view())) fail('the level page still carries the old Study the menu rows');
 	/* the house's word from anywhere lands on its page with nothing open; a
 	   tap on the lit word from a card or a sub-view is the page (the card's
@@ -877,6 +932,11 @@ else {
 	if (word(T) !== 'Brennan’s' || !/bnav-btn active" aria-current="page" data-cluster="brennans"/.test(T.nav())) fail('a Coffee and tea entry is not lit by the house\'s word');
 	T.tabTap('brennans'); await settle();
 	if (T.state().hash !== '#/menu' || T.run('state.menu.view') !== 'menu' || T.run('state.menu.study.open')) fail(`the house's word from a Coffee and tea entry lands on ${T.state().hash} with the view ${T.run('state.menu.view')}, not the page with nothing open`);
+	/* a bottle on the liquor shelf: the house's word is lit and returns to the page with nothing open */
+	T.run("state.tab = 'menu'; state.menu.view = 'backbar'; backbarOpen(backbarEntries()[0].id); render()"); await settle();
+	if (word(T) !== 'Brennan’s' || !/bnav-btn active" aria-current="page" data-cluster="brennans"/.test(T.nav())) fail('a bottle on the liquor shelf is not lit by the house\'s word');
+	T.tabTap('brennans'); await settle();
+	if (T.state().hash !== '#/menu' || T.run('state.menu.view') !== 'menu' || T.run('state.menu.study.open')) fail(`the house's word from a bottle lands on ${T.state().hash} with the view ${T.run('state.menu.view')}, not the page with nothing open`);
 	/* a search and a section left on the page: the level page's lead door,
 	   like the house's word, lands on the whole list */
 	T.run("state.menu.study.q = 'espresso'; state.menu.study.sec = 'Coffee'; openLevel(1); render()"); await settle();
@@ -1072,6 +1132,8 @@ async function mutations(){
 		['the house\'s word drawn as the literal', 'ui-new.js', "(ck === 'brennans' ? esc(houseTabWord()) : label)", "label"],
 		['the Practise root printed as #/flashcards', 'ui-nav.js', "hash = '#/practise' + (navScope().flashcards ? '/all' : ''); key = 'practise';", "if(navScope().flashcards) hash += '/all';"],
 		['a Coffee and tea entry climbing past its index', 'ui-nav.js', "    if(state.menu.view === 'brew' && typeof brewState === 'function' && brewState().item){ brewState().item = ''; return true; }\n", ""],
+		['a bottle on the liquor shelf climbing past the shelf', 'ui-nav.js', "    if(state.menu.view === 'backbar' && typeof backbarState === 'function' && backbarState().item){ backbarState().item = ''; return true; }\n", ""],
+		['the liquor shelf left out of the #/menu/view allowlist', 'ui-nav.js', ".concat(typeof backbarOpen === 'function' ? ['backbar'] : [])", ""],
 	];
 	let held = 0;
 	for (const [name, file, from, to] of MUT) {

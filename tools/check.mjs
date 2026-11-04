@@ -222,6 +222,27 @@ for (const [label, arr, key] of [
 	}
 }
 
+// ---- every page the house's sub-nav offers is drawn and keeps its address ----
+// house-flow.js names the house tab's pages (Bar studies holds The Bar Compass,
+// Coffee and tea and, since 4 November 2026, The liquor shelf); renderMenu draws
+// each, and #/menu/view/<id> reads each back through ui-nav.js's allowlist. A
+// page the nav offers that renderMenu does not draw falls to the menu in
+// silence, and one the allowlist lacks loses its address on a reload.
+{
+	const flow = read('../js/house-flow.js');
+	const menuJs = read('../js/ui-menu.js');
+	const navJs = read('../js/ui-nav.js');
+	const offered = [...new Set([...flow.matchAll(/\['(\w+)', '[^']+'\]/g)].map((m) => m[1]))].filter((v) => v !== 'menu');
+	const drawn = (menuJs.match(/function renderMenu\(\)[\s\S]*?\n\}/) || [''])[0];
+	const allowed = (navJs.match(/state\.menu\.view = \['stock'[^\n]*/) || [''])[0];
+	if (!offered.length || !drawn || !allowed) problems.push('the house sub-nav, renderMenu or the #/menu/view allowlist was not found: an extraction anchor moved');
+	for (const v of offered) {
+		if (!drawn.includes(`'${v}'`)) problems.push(`the house's sub-nav offers "${v}" but renderMenu draws no such page, so it falls silently to the menu`);
+		if (!allowed.includes(`'${v}'`)) problems.push(`the house's sub-nav offers "${v}" but #/menu/view/${v} is not in ui-nav.js's allowlist, so its address is lost on a reload`);
+	}
+	if (!offered.includes('backbar')) problems.push("the house's sub-nav does not offer The liquor shelf (backbar)");
+}
+
 // ---- section keys slug uniquely, and every card names a real section --------
 // A reference card filed under a dom that names no section renders NOWHERE and
 // searches to a dead route, which is the exact shape of a half-finished move.
