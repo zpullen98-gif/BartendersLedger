@@ -1,0 +1,82 @@
+{
+  "id": "drambuie",
+  "name": "Drambuie",
+  "respell": "dram-BOO-ee",
+  "aka": ["The Isle of Skye Liqueur"],
+  "group": "liqueurs-amari",
+  "producer": "Drambuie",
+  "place": "Scotland; made commercially in Edinburgh from 1909",
+  "photo": 2,
+  "confidence": "clear",
+  "facts": {
+    "base": "Aged Scotch whisky, heather honey and a secret blend of herbs and spices",
+    "age": "No age statement",
+    "cask": "Its Scotch whisky has rested at least three years in oak, as Scotch law requires",
+    "abv": "40% ABV (80 proof)",
+    "law": "A Scotch whisky liqueur: Scotch whisky sweetened with honey and flavoured with herbs; the recipe is secret"
+  },
+  "made": "Drambuie is not distilled as a spirit of its own. Aged Scotch whisky is blended with a syrup of heather honey and an essence of herbs and spices whose recipe the makers keep secret. The honey gives body and sweetness, the herbs a light spice, and the liqueur is bottled golden amber at 40 per cent. The whisky beneath it has rested in oak casks for at least three years, as Scotch law requires.",
+  "taste": "Heather honey and orange zest on the nose, with malted barley and soft spice behind. The palate is sweet and rounded, honey first, then warm whisky, anise, nutmeg and a little saffron, and the finish is long, honeyed and gently warming.",
+  "lines": {
+    "s10": "Drambuie is the Isle of Skye liqueur: aged Scotch whisky blended with heather honey, herbs and spices, sweet, golden and warming.",
+    "s20": "Drambuie is a Scotch whisky liqueur, aged Scotch blended with heather honey and a secret mix of herbs and spices, made commercially in Edinburgh since 1909. It is honeyed and gently spiced, lovely neat, and it is the second half of the Rusty Nail.",
+    "s45": "This is Drambuie, the Isle of Skye liqueur. It begins with aged Scotch whisky, blended in Scotland with heather honey and a secret essence of herbs and spices, and is bottled golden at 40 per cent. In the glass it is honey and orange zest first, then warm malt, anise, nutmeg and a touch of saffron, sweet and long. We pour it neat at room temperature or over one large cube, and stirred with blended Scotch it makes the Rusty Nail. The legend says the recipe was a gift from Bonnie Prince Charlie to the MacKinnons, who hid him on Skye after the rising of 1745.",
+    "sale": "Drambuie is Scotch whisky softened with heather honey and herbs, the old liqueur of the Isle of Skye. Try it neat over one large cube, or stirred with blended Scotch in a Rusty Nail."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, about an ounce, so the honey and spice show.",
+    "rocks": "Over one large cube it opens and softens; a twist of lemon peel suits it.",
+    "glass": "A rocks glass for the cube, or a small tulip glass neat.",
+    "classic": "The Rusty Nail: blended Scotch and Drambuie, stirred and served over ice."
+  },
+  "guest": "Drambuie is a Scottish liqueur of aged Scotch whisky, heather honey, herbs and spices: sweet, honeyed and warming, lovely neat or in a Rusty Nail.",
+  "story": "The legend begins with Prince Charles Edward Stuart, Bonnie Prince Charlie, who hid on the Isle of Skye after the rising of 1745. The MacKinnons sheltered him and, the story goes, were given his recipe in thanks; historians treat the gift as legend. The name is said to come from the Gaelic an dram buidheach, the drink that satisfies. What is recorded is that the Ross family of the Broadford Hotel on Skye registered the name in 1893, and that in 1909 a Ross widow, Eleanor, began making it commercially in Edinburgh with Malcolm MacKinnon, a whisky merchant.",
+  "watch": [
+    "Not a whisky: it is a sweet liqueur at 40 per cent. A guest asking for a Scotch neat wants the whisky, not this.",
+    "Rusty Nail proportions differ from book to book: ask how the bar builds it before you pour one.",
+    "Asked whether it is made on Skye: the story is Skye's, but it has been made on the mainland since 1909.",
+    "It is sweet and strongly flavoured: in a cocktail measure it, never free pour, or it buries the whisky."
+  ],
+  "asks": [],
+  "house": { "match": ["Drambuie"], "family": ["Drambuie"] },
+  "library": { "producer": "", "cask": "scotch", "canon": ["rusty-nail"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Drambuie, and what is it made from?",
+      "answer": "A Scotch whisky liqueur at 40% ABV: aged Scotch whisky blended with heather honey and a secret mix of herbs and spices, made commercially since 1909. Honeyed and gently spiced; neat, over one large cube, or stirred with blended Scotch in a Rusty Nail."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Which Scottish island does the Drambuie label name as the liqueur's home?",
+      "options": ["Islay", "Isle of Skye", "Orkney", "Isle of Arran"],
+      "a": 1,
+      "explain": "The label calls it the Isle of Skye liqueur: the legend places the recipe with the MacKinnons of Skye, though it has been made on the mainland since 1909."
+    },
+    {
+      "id": "q2",
+      "q": "Which classic stirs blended Scotch with Drambuie over ice?",
+      "options": ["Rob Roy", "Blood and Sand", "Rusty Nail", "Penicillin"],
+      "a": 2,
+      "explain": "The Rusty Nail is blended Scotch and Drambuie. The Rob Roy uses sweet vermouth, the Blood and Sand cherry liqueur and orange, and the Penicillin honey and ginger."
+    },
+    {
+      "id": "q3",
+      "q": "Which honey goes into Drambuie with the Scotch whisky, herbs and spices?",
+      "options": ["Heather honey", "Orange blossom honey", "Manuka honey", "Acacia honey"],
+      "a": 0,
+      "explain": "Heather honey, the honey of the Scottish moors, gives Drambuie its body and sweetness."
+    }
+  ],
+  "sources": [
+    { "title": "Drambuie: about us", "url": "https://www.drambuie.com/about-us" },
+    { "title": "Wikipedia: Drambuie", "url": "https://en.wikipedia.org/wiki/Drambuie" },
+    { "title": "The Scotsman: The history of Drambuie, from Bonnie Prince Charlie to modern day liqueur", "url": "https://www.scotsman.com/drink/the-history-of-drambuie-from-bonnie-prince-charlie-to-modern-day-liqueur/" },
+    { "title": "Sainsbury's: Drambuie Whisky Liqueur 50cl", "url": "https://www.sainsburys.co.uk/gol-ui/product/drambuie-whisky-liqueur-50cl" },
+    { "title": "Dan Murphy's: Drambuie Liqueur 1L", "url": "https://www.danmurphys.com.au/product/148434/drambuie-liqueur-1l" },
+    { "title": "The Daily Meal: What is Drambuie and what does it taste like?", "url": "https://www.thedailymeal.com/1357606/what-drambuie-taste-flavor/" },
+    { "title": "Cask Atlas: Scotch, grain, still and cask", "url": "" }
+  ]
+}
