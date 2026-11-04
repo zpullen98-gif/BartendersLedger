@@ -1,0 +1,82 @@
+{
+  "id": "milagro-anejo",
+  "name": "Leyenda del Milagro Añejo",
+  "respell": "lay-YEN-dah del mee-LAH-groh ahn-YEH-hoh",
+  "aka": ["Milagro Añejo"],
+  "group": "tequila-mezcal-pisco",
+  "producer": "Tequila Milagro",
+  "place": "Los Altos, the highlands of Jalisco, Mexico",
+  "photo": 3,
+  "confidence": "clear",
+  "facts": {
+    "base": "Blue agave from the Jalisco Highlands, distilled twice in pot and column stills",
+    "age": "At least a year in oak, as añejo requires; most accounts give 12 to 14 months",
+    "cask": "American oak barrels, no larger than the 600 litres the añejo rule allows",
+    "abv": "40% ABV (80 proof)",
+    "law": "Tequila, 100% blue agave; añejo means at least one year in oak casks of at most 600 litres"
+  },
+  "made": "The agave is the Silver's: blue agave from Los Altos, the highlands of Jalisco, cooked slowly, partly in brick ovens, then fermented and distilled twice, through a pot still and a column still. The new spirit goes into American oak barrels and rests for at least a year, 12 to 14 months by most accounts, before it is cut to 40 per cent and bottled. The wood turns it gold and lays caramel and vanilla over the cooked agave.",
+  "taste": "Toasted oak, caramel and vanilla on the nose, with cooked agave and a little coconut. The palate is round and soft, butterscotch, baked agave and gentle spice, and the finish is warm, of medium length and lightly dry.",
+  "lines": {
+    "s10": "Leyenda del Milagro Añejo is a highland tequila rested at least a year in American oak: caramel, vanilla and cooked agave.",
+    "s20": "Milagro Añejo is 100% blue agave tequila from the Jalisco Highlands, aged at least a year in American oak barrels. The oak gives it caramel, vanilla and toasted coconut over the cooked agave, round and soft, a tequila to sip slowly.",
+    "s45": "This is Leyenda del Milagro Añejo, an aged tequila made from 100% blue agave grown in Los Altos, the highlands of Jalisco. The agave is cooked slowly, distilled twice, through a pot still and a column still, and rested in American oak barrels for at least a year, as the añejo rule requires. In the glass it is caramel, vanilla and toasted oak over baked agave, with a little coconut and spice, round and warm. We pour it neat at room temperature in a copita or a snifter, or over one large cube. Milagro was founded in Mexico City in 1998; its name means the legend of the miracle.",
+    "sale": "Milagro Añejo is highland agave after a year and more in American oak, caramel and vanilla over the agave. Pour it neat after dinner, or try it in a Mexican Coffee."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, about an ounce and a half, given a minute in the glass.",
+    "rocks": "Over one large cube on request; the oak and caramel hold up to a little chill.",
+    "glass": "A copita, a small snifter or a tulip; a rocks glass over ice.",
+    "classic": "The Mexican Coffee, with coffee liqueur, hot coffee and cream; an añejo Old Fashioned too."
+  },
+  "guest": "Milagro Añejo is a 100% blue agave tequila rested at least a year in American oak: caramel, vanilla and toasted coconut over the agave, for sipping neat.",
+  "story": "Two university friends founded Milagro in Mexico City in 1998, wanting a tequila with something of the city's creative life in it, and took their agave from Los Altos, the highlands of Jalisco. The range stands on three: the silver, unaged; the reposado, rested a few months; and the añejo, which rests longer than either. Añejo is simply the Spanish for aged, and under the tequila rules it means at least a year in oak casks of no more than 600 litres.",
+  "watch": [
+    "Añejo means at least a year in oak; a reposado rests two months or more but under a year. Never pour one for the other.",
+    "A second, amber Leyenda del Milagro stands below the liqueurs: read the neck before pouring. This one says AÑEJO.",
+    "Asked its age: the label gives no single figure. The rule makes one year the least, and most accounts give 12 to 14 months.",
+    "Not the Select Barrel Reserve Añejo, a separate Milagro bottling aged longer in American and French oak."
+  ],
+  "asks": [],
+  "house": { "match": ["Milagro Añejo", "Leyenda del Milagro Añejo"], "family": ["Milagro"] },
+  "library": { "producer": "", "cask": "", "canon": ["mexican-coffee"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Leyenda del Milagro Añejo, and how is it aged?",
+      "answer": "A 100% blue agave tequila from the Jalisco Highlands, distilled in a pot still and a column still, then rested at least a year in American oak barrels, 12 to 14 months by most accounts, at 40% ABV. Caramel, vanilla and coconut; poured neat."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What is the shortest time a tequila must rest in oak to be labelled añejo?",
+      "options": ["Two months", "Six months", "One year", "Three years"],
+      "a": 2,
+      "explain": "One year. Two months is the reposado minimum and three years the extra añejo minimum."
+    },
+    {
+      "id": "q2",
+      "q": "What is the largest cask the añejo rule allows?",
+      "options": ["250 litres", "400 litres", "1,000 litres", "600 litres"],
+      "a": 3,
+      "explain": "600 litres: an añejo rests at least a year in oak casks no larger than that, so the wood stays in close touch with the spirit."
+    },
+    {
+      "id": "q3",
+      "q": "In which oak does Milagro Añejo rest?",
+      "options": ["French oak", "American oak", "Hungarian oak", "Spanish oak"],
+      "a": 1,
+      "explain": "American oak, which gives the caramel, vanilla and coconut. The Select Barrel Reserve Añejo adds French oak."
+    }
+  ],
+  "sources": [
+    { "title": "Milagro Tequila: our story", "url": "https://milagrotequila.com/our-story" },
+    { "title": "Tequila Matchmaker: Milagro Añejo", "url": "https://tequilamatchmaker.com/tequilas/2626-milagro-anejo" },
+    { "title": "Whiskey Caviar: Milagro Tequila Añejo", "url": "https://whiskeycaviar.com/products/milagro-tequila-anejo" },
+    { "title": "Lunds and Byerlys: Milagro Añejo Tequila", "url": "https://www.lundsandbyerlys.com/product/milagro-anejo-tequila-id-00083664868971" },
+    { "title": "Wine.com: Milagro Añejo Tequila", "url": "https://www.wine.com/product/milagro-anejo-tequila/27797" },
+    { "title": "VinePair: the Milagro tequila guide", "url": "https://vinepair.com/articles/milagro-tequila-guide-review-2019/" },
+    { "title": "Difford's Guide: tequila classifications", "url": "https://www.diffordsguide.com/g/1084/tequila/classifications" }
+  ]
+}
