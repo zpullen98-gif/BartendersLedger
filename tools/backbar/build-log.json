@@ -1,10 +1,10 @@
 {
   "edition": "2026-11-04",
-  "bottles": 14,
+  "bottles": 15,
   "planned": 29,
   "confirm": 12,
   "words": {
-    "total": 7810,
+    "total": 8348,
     "perEntry": {
       "luxardo-fernet": 549,
       "lazzaroni-maraschino": 584,
@@ -19,6 +19,7 @@
       "martell-xo": 564,
       "milagro-silver": 562,
       "milagro-anejo": 573,
+      "don-julio-blanco": 538,
       "george-t-stagg": 564
     }
   },
@@ -36,10 +37,11 @@
     "Back Bar · martell-xo/recall",
     "Back Bar · milagro-silver/recall",
     "Back Bar · milagro-anejo/recall",
+    "Back Bar · don-julio-blanco/recall",
     "Back Bar · george-t-stagg/recall"
   ],
-  "questions": 42,
-  "sources": 95,
+  "questions": 45,
+  "sources": 102,
   "house": {
     "luxardo-fernet": {
       "uses": [],
@@ -71,7 +73,6 @@
     }
   },
   "missing": [
-    "don-julio-blanco",
     "don-julio-reposado",
     "don-julio-1942",
     "patron-reposado",
