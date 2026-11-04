@@ -37,6 +37,7 @@ p.backbar-label{display:block;margin:14px 0 6px}
 .backbar-panel h3{font:500 1.2rem/1.5 var(--house-display,Georgia,serif);color:var(--brass-2);margin:0 0 14px}
 .backbar-panel p,.backbar-panel li,.backbar-panel dd{font-size:1rem;line-height:1.8}
 .backbar-panel p{margin:0 0 12px}.backbar-panel p:last-child{margin-bottom:0}
+.backbar-panel p.backbar-label{font-size:.78rem;line-height:1.5;margin:14px 0 6px}.backbar-panel p.backbar-label:first-of-type{margin-top:0}
 .backbar-panel ul{margin:0;padding-left:24px}.backbar-panel li{margin-bottom:8px}
 .backbar-panel blockquote{margin:0;padding:10px 0 10px 16px;border-left:2px solid var(--brass);font-size:1.12rem;line-height:1.8}
 .backbar-panel p.backbar-s45{font-family:var(--house-reading);font-size:1.3rem;line-height:1.6;color:var(--cream);max-width:720px;margin:0 0 18px}
