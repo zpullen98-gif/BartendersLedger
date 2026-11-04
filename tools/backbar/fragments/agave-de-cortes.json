@@ -1,0 +1,83 @@
+{
+  "id": "agave-de-cortes",
+  "name": "Agave de Cortés Mezcal",
+  "respell": "ah-GAH-veh deh kor-TESS",
+  "aka": ["Agave de Cortés", "Agave de Cortés Joven"],
+  "group": "tequila-mezcal-pisco",
+  "producer": "Agave de Cortés",
+  "place": "Santiago Matatlán, in the central valleys of Oaxaca, Mexico",
+  "photo": 3,
+  "confidence": "clear",
+  "facts": {
+    "base": "100% cultivated espadín agave, Agave angustifolia",
+    "age": "No age statement; a joven, bottled unaged",
+    "cask": "Not aged in wood",
+    "abv": "45% ABV (90 proof)",
+    "law": "Mezcal under Mexico's denomination of origin: agave only, from the protected states, Oaxaca among them; joven means unaged"
+  },
+  "made": "The Cortés family makes it in Santiago Matatlán, in the central valleys of Oaxaca, from cultivated espadín agave. The hearts are roasted with oak wood in a conical earthen pit, which gives the smoke, then crushed under a stone tahona, fermented with local water and wild yeast in open wooden vats, and distilled twice in small copper pot stills. It is bottled unaged as a joven, at 45 per cent in most bottlings; the label states the strength.",
+  "taste": "Cooked agave and a gentle wood smoke on the nose, with lime peel, green apple and a hint of flowers. The palate is clean and light: citrus, tropical fruit and a little herb, the smoke kept in the background. The finish is dry and mineral.",
+  "lines": {
+    "s10": "Agave de Cortés is an unaged espadín mezcal from Santiago Matatlán in Oaxaca: roasted agave, gentle smoke and bright citrus.",
+    "s20": "Agave de Cortés is made by the Cortés family in Santiago Matatlán, Oaxaca: espadín agave roasted in an earthen pit, crushed under a stone wheel and distilled twice in copper. Unaged, it is clean and lightly smoky, with citrus and green apple.",
+    "s45": "This is Agave de Cortés Mezcal, a joven from the Cortés family of Santiago Matatlán, in the central valleys of Oaxaca. Cultivated espadín agave is roasted with oak in a conical earthen pit, crushed under a stone tahona, fermented with wild yeast in open wooden vats and distilled twice in small copper pot stills, then bottled unaged. It smells of cooked agave and gentle wood smoke, with lime peel and green apple, and drinks clean, bright and dry. We pour it neat in a copita with a slice of orange, or stirred into a Mezcal Negroni. The family has made mezcal in Matatlán since at least 1840.",
+    "sale": "Agave de Cortés is a family mezcal from Oaxaca, roasted in an earthen pit for a gentle smoke and bright citrus. Sip it neat in a copita, or let it lead a Mezcal Negroni."
+  },
+  "serve": {
+    "neat": "Neat, about an ounce and a half, at room temperature, sipped slowly, with a slice of orange beside it.",
+    "rocks": "One large cube if asked; ice mutes the agave, so neat is our first offer.",
+    "glass": "A copita or a small tulip; a rocks glass for the cube.",
+    "classic": "A Mezcal Negroni or a Naked and Famous; it also splits the base of an Oaxaca Old Fashioned."
+  },
+  "guest": "Agave de Cortés is an unaged mezcal from a family distillery in Oaxaca: espadín agave roasted in an earthen pit, so it carries a gentle smoke, with bright citrus and a clean, dry finish.",
+  "story": "The Cortés family has made mezcal in Santiago Matatlán, a town of small family distilleries in the central valleys of Oaxaca, since at least 1840, and the craft has passed down through five or six generations. The name on the bottle is the family's own, not the conquistador's. Alongside this joven the family bottles a reposado and an añejo, and it still roasts its agave in pits dug into the ground and crushes it under a stone wheel.",
+  "watch": [
+    "Mezcal is not smoky tequila: tequila is blue agave only, from Jalisco and its neighbours; this is espadín from Oaxaca, roasted in a pit.",
+    "The name is the Cortés family's, not Hernán Cortés the conquistador; say it kor-TESS.",
+    "Joven means unaged: this bottle is clear and unrested; the family's reposado and añejo are different bottles.",
+    "Asked its strength: most bottlings state 45% ABV, a few 43%; read tonight's label rather than quote a figure."
+  ],
+  "asks": ["Confirm the strength the joven's label states: most listings give 45% ABV, a few 43%."],
+  "house": { "match": ["Agave de Cortés"], "family": ["Agave de Cortés"] },
+  "library": { "producer": "", "cask": "", "canon": ["oaxaca-old-fashioned", "naked-and-famous", "mezcal-negroni", "division-bell"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "How is Agave de Cortés Mezcal made, from the agave to the bottle?",
+      "answer": "Cultivated espadín agave is roasted with oak in a conical earthen pit, crushed under a stone tahona, fermented with wild yeast in open wooden vats and distilled twice in small copper pot stills, then bottled unaged as a joven by the Cortés family of Santiago Matatlán, Oaxaca."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Which agave is Agave de Cortés Mezcal made from?",
+      "options": ["Blue agave", "Espadín", "Tobalá", "Tepeztate"],
+      "a": 1,
+      "explain": "Cultivated espadín, Agave angustifolia, the agave most widely planted for mezcal; tequila must be blue agave."
+    },
+    {
+      "id": "q2",
+      "q": "In which Mexican state is Agave de Cortés Mezcal made?",
+      "options": ["Jalisco", "Durango", "Oaxaca", "Guerrero"],
+      "a": 2,
+      "explain": "Oaxaca: the Cortés family distils in Santiago Matatlán, in the state's central valleys."
+    },
+    {
+      "id": "q3",
+      "q": "What crushes the roasted agave for Agave de Cortés before it ferments?",
+      "options": ["A stone tahona", "A roller mill", "A diffuser", "A hydraulic press"],
+      "a": 0,
+      "explain": "A stone tahona, a heavy wheel drawn round a stone pit. A diffuser strips raw agave with water and is the industrial way."
+    }
+  ],
+  "sources": [
+    { "title": "Skurnik: Agave de Cortés", "url": "https://www.skurnik.com/producer/agave-de-cortes/" },
+    { "title": "Skurnik: Mezcal Joven, Agave de Cortés", "url": "https://www.skurnik.com/sku/mezcal-joven-agave-de-cortes/" },
+    { "title": "The Liquor Store: Agave de Cortes Mezcal Joven 750ml", "url": "https://theliquorstore.com/products/agave-de-cortes-mezcal-joven-750ml" },
+    { "title": "White Horse Wine and Spirits: Agave de Cortes Mezcal Joven", "url": "https://www.whitehorsewine.com/collections/spirits/products/25176" },
+    { "title": "VinePair: Agave de Cortes Mezcal Joven review", "url": "https://vinepair.com/review/agave-de-cortes-mezcal-joven" },
+    { "title": "Mezcal Reviews: Agave de Cortes Joven", "url": "https://www.mezcalreviews.com/mezcal/agave-de-cortes-joven/" },
+    { "title": "Imbibe: Getting to know family-made mezcal", "url": "https://imbibemagazine.com/family-made-mezcal/" },
+    { "title": "Mezcalistas: Agave de Cortés Joven", "url": "https://www.mezcalistas.com/label/agave-de-cortes-joven/" }
+  ]
+}
