@@ -1,0 +1,125 @@
+The liquor shelf: how a bottle is written (4 November 2026)
+
+WHO READS IT
+The owner works the floor at Brennan's, New Orleans, and studies to master bartender. The page sits
+under the Brennan's tab of the Bartender's Ledger, in Bar studies after Coffee and tea. It is every
+bottle the owner photographed on the back bar on 4 November 2026 (tools/backbar/photos/), each with a
+deep dive and the words to present it at the table. A reader opens a bottle because a guest asked, or
+to learn the shelf before a shift. Write as a master bartender talks to a trained colleague: plain,
+warm, exact, concrete.
+
+ONE BOTTLE = ONE FRAGMENT
+tools/backbar/fragments/<id>.json, the id from tools/backbar/plan.json. tools/backbar/schema.mjs is
+the one validator; build-backbar.mjs refuses a fragment it rejects. Fields, all required:
+  id          the plan's id
+  name        the plan's name, the bottle as its label prints it (at most 60 characters)
+  respell     how to say it, capitals for the stressed syllable, hyphens between syllables
+              (BEN-eh-dik-TEEN); "" for a name an English speaker reads as written (at most 60)
+  aka         other names a guest or a menu uses, a list, may be empty ("Chartreuse Verte")
+  group       the plan's group
+  producer    the company that makes it, as its own site names it (on companies.json; at most 60
+              characters). The maker, never the brand's current owner or parent group
+  place       where it is made: the distillery's town and region (at most 12 words)
+  photo       the plan's photograph number
+  confidence  the plan's (clear or probable). A probable bottle carries at least one ask
+  facts       five short strings, each a plain statement:
+                base   what it is distilled or made from (at most 20 words)
+                age    the age statement or how long it rests; "No age statement" where none (16)
+                cask   what it rests in, or "Not aged in wood" (20)
+                abv    as the label states it, "40% ABV (80 proof)"; for a yearly or batch release
+                       (the plan's yearly: true) it begins "varies by release" and may say how the
+                       label gives it ("varies by release; the label states each year's proof") (14)
+                law    the legal category and the rule it is made under (25)
+  made        how it is made: the base, the still, the botanicals or the secret as the house
+              admits it, the wood, the time (40 to 90 words)
+  taste       how it tastes and feels, in concrete words: nose, palate, finish (20 to 60 words)
+  lines       the tableside lines, each said aloud to a guest:
+                s10   the ten second line: names the bottle and says what it is (12 to 25 words)
+                s20   the twenty second line (25 to 50 words)
+                s45   the forty-five second line, the five-star tableside presentation: open on
+                      the bottle as the label prints it, then where and how it is made, how it
+                      tastes, how we pour it, and one line of story (90 to 110 words)
+                sale  exactly two sentences: the hook, then the pour or the drink (15 to 45 words)
+              s10 and s45 name the bottle (its name or an aka).
+  serve       how we pour it, each at most 20 words, none empty:
+                neat     the neat pour and its temperature
+                rocks    on ice, or why not
+                glass    the glass
+                classic  the classic cocktail it belongs in, by name
+  guest       one or two sentences a server says when a guest asks what it is (12 to 40 words)
+  story       where it comes from, historic founders only (30 to 110 words)
+  watch       2 to 4 lines, each at most 25 words: what guests ask and what you say, the mix-ups
+              (Yellow for Green, a reposado for a blanco), what goes wrong in the pour
+  asks        the lineup questions this bottle needs answered, each at most 30 words: what the
+              photographs and research cannot settle (which batch is open, which expression).
+              A list, may be empty for a clear bottle; a probable bottle keeps the plan's ask
+              until research settles it
+  house       copied from the plan: { match: [...], family: [...] } (see THE HOUSE)
+  library     copied from the plan: { producer, cask, canon: [...] }
+  recall      [{ id:'recall', prompt, answer }]: the prompt names the bottle and asks what it is,
+              how it is made or how it is poured (at most 25 words); the answer 15 to 70 words.
+              The card's key is 'Back Bar · <id>/recall' (keys.v1.json)
+  quiz        exactly 3 questions [{ id:'q1'|'q2'|'q3', q, options:[4 strings], a:0..3, explain }]:
+              one fact each, the stem at most 30 words and never containing the answer, four
+              options of one kind (four places, four years, four grains), each at most 12 words,
+              one right answer and three a trained person might pick, no "all of the above", no
+              option much longer than the others, the three answers not all in one position,
+              explain at most 45 words
+  sources     at least two { title, url } with https urls the author read: the producer's own
+              page first, then a second independent source; in-app sources may be added as
+              { title, url:"" } (a Cask Atlas chapter, a Library producer)
+Whole entry at most 750 reading words (made, taste, lines, serve, guest, story, watch, asks).
+
+A CONFIRM ROW
+A bottle no label on the photographs names. It lives in plan.json, never as a fragment, and carries
+only: id, name (what can be read, or a short description), group "confirm", photo, where (where it
+stands), read (what can be read on it), ask (the lineup question, at most 30 words). When an author
+cannot confirm a probable bottle from the photograph and two sources, the author moves its row to
+the confirm group in plan.json (name, where, read, ask; no chunk, house or library) and writes no
+fragment for it.
+
+THE HOUSE
+Never state what Brennan's pours, stocks, charges or builds. House facts come only from the pack,
+read live by the page: At the house lists the pack's drinks and dishes whose printed spec, printed
+ingredients, kept ingredient names or linked ingredient components name one of the bottle's
+house.match terms; From the same house lists the pack's producer profiles whose maker (the profile's
+"who") names one of its house.family terms, with the items they belong to.
+The matching rule (schema.mjs houseUses and houseFamily are the reference, the page and the gate
+use the same rule): text and term are folded (accents off, lower case, every run of other
+characters one space) and a term counts only as a whole phrase. An occurrence is dropped when it
+lies inside a longer occurrence of another bottle's match term ("Stagg" inside "George T. Stagg").
+So a match term is the product's exact name, specific enough that it can only mean THIS bottle:
+"Green Chartreuse", never "Chartreuse"; "Don Julio Reposado", never "Don Julio". A probable bottle
+whose expression is unknown has no match term until it is known. A comparison in the pack ("the
+Last Word is gin, maraschino and lime") is never a use.
+Never name the house in a fragment: the page names it from the pack. Write "we", "our" or "the
+house" where a line needs it. Nothing about the house's stock, rotation, measures or prices.
+
+FACTS
+A figure, a date, a proof, an age or a cask needs the producer's own page or two independent
+sources. A yearly or batch release (the Antique Collection, O.F.C., Stagg) says each release's proof
+differs and the label gives it: never one year's figure as the bottle's. Where sources disagree, say
+"about" or give the range; where nothing confirms it, leave it out, and turn a doubt about which
+bottle it is into an ask. Read the photograph for what the label states. Nothing volatile: no
+allocation, lottery, scarcity, release or shelf price, secondary market, current owner, parent
+group, acquisition or portfolio; no current master distiller or blender. History is fine: the year a
+distillery was built, renamed or rebuilt.
+
+PEOPLE
+Name nobody living, ever: no current distiller, blender, owner, family member, bartender or writer
+("the master distiller", "the founding family"). Historic founders and historic figures the bottle
+is named for may be named (George T. Stagg, Thomas H. Handy, Jean Martell). people.json lists
+living people never to name; schema.mjs also refuses a run of capitalised words that proper-nouns.json,
+companies.json and the app's own names do not allow, so a new place, product or historic name is
+added to proper-nouns.json with the source that shows it, and a person who may be living never is.
+
+LANGUAGE
+British spelling (flavour, colour, ageing, centre, litre, savoury, practise as the verb, -ise).
+No em dash, no en dash, no spaced hyphen or double hyphen used as a dash: use a comma, a colon or a
+full stop. Ranges with "to": "12 to 15 years". Nothing at or above U+2190: no arrows, no degree
+sign, no fraction glyphs, no emoji. Curly quotes and the accented letters of names (Bénédictine,
+Añejo, Cortés, Patrón) are fine. No superlative and nothing that sells rather than teaches ("the
+best", "finest", "smoothest", "rarest", "oldest", "legendary", "iconic", "sought-after", "perfect",
+"unique", "world-class"). No price, no currency sign, no cost. No allergen or dietary talk at all
+(the page carries the one fixed pointer), no health claim ("aids digestion", "medicinal benefits").
+Proof and ABV as the label prints them: "45% ABV (90 proof)".
