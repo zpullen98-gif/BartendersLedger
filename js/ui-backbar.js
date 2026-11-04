@@ -126,7 +126,7 @@ function backbarHouseHTML(e){
   if(!h) body = '<p class="backbar-caption">The house\u2019s drinks show here once the house has loaded on this device.</p>';
   else {
     const uses = backbarUses(h, e), fam = backbarFamily(h, e);
-    body = '<p class="backbar-caption">Read live from ' + esc(name || 'the house') + '\u2019s menus: the drinks whose printed list names this bottle.</p>'
+    body = '<p class="backbar-caption">Read live from the menus of ' + esc(name || 'the house') + ': the drinks whose printed list names this bottle.</p>'
       + (uses.length ? '<div class="backbar-use-rows">' + uses.map(function(it){ return backbarUseRowHTML(h, it); }).join('') + '</div>'
         : '<p class="backbar-not">None of the house\u2019s printed drinks names this bottle.</p>')
       + (fam.length ? '<div class="backbar-family"><h4 class="backbar-sub">From the same house</h4><p class="backbar-caption">The house\u2019s producer profiles that name this bottle\u2019s maker.</p>'
@@ -150,7 +150,7 @@ function backbarLinksHTML(e){
     });
   }
   const cask = lib.cask && typeof caskChapter === 'function' ? caskChapter(lib.cask) : null;
-  if(cask) out.push('<a class="btn btn-ghost" href="#/casks/' + esc(cask.id) + '">The Cask Atlas: ' + esc(cask.title) + '</a>');
+  if(cask) out.push('<a class="btn btn-ghost" href="#/casks/' + esc(cask.id) + '">' + esc(cask.title) + ', in the Cask Atlas</a>');
   (lib.canon || []).forEach(function(slug){
     const c = typeof COCKTAILS !== 'undefined' ? COCKTAILS.find(function(x){ return slugify(x.name) === slug; }) : null;
     if(c) out.push('<a class="btn btn-ghost backbar-canon" href="#/library/' + esc(slug) + '">' + esc(c.name) + '</a>');
