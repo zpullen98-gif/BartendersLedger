@@ -1,10 +1,10 @@
 {
   "edition": "2026-11-04",
-  "bottles": 9,
+  "bottles": 10,
   "planned": 29,
   "confirm": 12,
   "words": {
-    "total": 5058,
+    "total": 5583,
     "perEntry": {
       "luxardo-fernet": 549,
       "lazzaroni-maraschino": 584,
@@ -14,6 +14,7 @@
       "chartreuse-green": 531,
       "drambuie": 577,
       "grand-marnier": 564,
+      "chambord": 525,
       "george-t-stagg": 564
     }
   },
@@ -26,10 +27,11 @@
     "Back Bar · chartreuse-green/recall",
     "Back Bar · drambuie/recall",
     "Back Bar · grand-marnier/recall",
+    "Back Bar · chambord/recall",
     "Back Bar · george-t-stagg/recall"
   ],
-  "questions": 27,
-  "sources": 58,
+  "questions": 30,
+  "sources": 65,
   "house": {
     "luxardo-fernet": {
       "uses": [],
@@ -61,7 +63,6 @@
     }
   },
   "missing": [
-    "chambord",
     "ambrosia-aperitivo",
     "martell-xo",
     "milagro-silver",

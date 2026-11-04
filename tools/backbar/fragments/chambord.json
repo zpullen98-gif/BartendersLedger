@@ -1,0 +1,81 @@
+{
+  "id": "chambord",
+  "name": "Chambord",
+  "respell": "sham-BOR",
+  "aka": ["Chambord Liqueur"],
+  "group": "liqueurs-amari",
+  "producer": "Chambord",
+  "place": "Cour-Cheverny, in the Loire Valley, France",
+  "photo": 2,
+  "confidence": "clear",
+  "facts": {
+    "base": "Raspberries and blackberries infused in French spirit, blended with XO cognac, vanilla, citrus peel and honey",
+    "age": "No age statement",
+    "cask": "Not aged in wood itself; the XO cognac in the blend is oak aged",
+    "abv": "16.5% ABV (33 proof)",
+    "law": "A French black raspberry liqueur made with cognac; no appellation governs it"
+  },
+  "made": "Whole raspberries and blackberries are steeped in French spirit for several weeks to make a fruit infusion. That infusion is blended with black raspberries, XO cognac, Madagascan vanilla, Moroccan citrus peel and honey, then balanced and bottled a deep purple red at 16.5 per cent. It is made at Cour-Cheverny, in the Loire Valley, a short drive from the château whose name it carries. No wood ageing of the liqueur itself is stated.",
+  "taste": "Ripe black raspberry and blackberry jam on the nose, with vanilla and a little orange peel. The palate is sweet, silky and fruity, the cognac a soft warmth beneath, and the finish is jammy, with honey and vanilla.",
+  "lines": {
+    "s10": "Chambord is a French black raspberry liqueur from the Loire Valley: raspberries and blackberries, XO cognac, vanilla and honey.",
+    "s20": "Chambord is a black raspberry liqueur made in the Loire Valley: whole raspberries and blackberries steeped in French spirit, then blended with XO cognac, Madagascan vanilla, citrus peel and honey. It is sweet, silky and jammy, and it is the raspberry in a French Martini.",
+    "s45": "This is Chambord, the black raspberry liqueur of the Loire Valley, made at Cour-Cheverny, not far from the royal château it is named for. Whole raspberries and blackberries are steeped in French spirit for weeks, then blended with XO cognac, Madagascan vanilla, Moroccan citrus peel and honey, and bottled at 16.5 per cent. It tastes of ripe black raspberry and blackberry jam, silky and sweet, with vanilla and a soft cognac warmth. We pour it lightly chilled, as a splash in Champagne, or shaken with vodka and pineapple in a French Martini. The round bottle and its gold crown recall the château's royal story.",
+    "sale": "Chambord is black raspberry and vanilla over a little cognac, the Loire Valley in a gold-crowned bottle. Try a splash in Champagne, or shaken with vodka and pineapple in a French Martini."
+  },
+  "serve": {
+    "neat": "Lightly chilled, about an ounce, as a sweet sip with dessert.",
+    "rocks": "Over ice, or long with soda or sparkling wine; it is sweet enough to stretch.",
+    "glass": "A small cordial or tulip glass; a flute when it is topped with Champagne.",
+    "classic": "The French Martini, with vodka and pineapple juice; also a splash in Champagne."
+  },
+  "guest": "Chambord is a French black raspberry liqueur from the Loire Valley, raspberries and blackberries with XO cognac, vanilla and honey: sweet, silky and jammy.",
+  "story": "Chambord takes its name from the Château de Chambord, the great royal hunting lodge of the Loire Valley. Its makers tell a legend that Louis XIV, on a visit to Chambord late in the seventeenth century, was served a liqueur of wild raspberries, at a time when the nobility ended fine meals with liqueurs and cognac. The brand itself is young by comparison: it was launched in 1982, and it is made at Cour-Cheverny, a short drive from the château.",
+  "watch": [
+    "It is a liqueur at 16.5 per cent, not a spirit: sweet and low in strength, so pour it by measure.",
+    "Not crème de cassis: Chambord is raspberry. A Kir or a Kir Royale calls for cassis.",
+    "Asked whether it is made at the château: no, at Cour-Cheverny nearby; the name and the legend are the château's."
+  ],
+  "asks": [],
+  "house": { "match": ["Chambord"], "family": ["Chambord"] },
+  "library": { "producer": "", "cask": "", "canon": ["french-martini"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Chambord, and how is it poured?",
+      "answer": "A French black raspberry liqueur from Cour-Cheverny in the Loire Valley: raspberries and blackberries steeped in French spirit, blended with XO cognac, Madagascan vanilla, citrus peel and honey, at 16.5% ABV. Lightly chilled, as a splash in Champagne, or shaken in a French Martini."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "In which French region is Chambord made?",
+      "options": ["Normandy", "Burgundy", "Loire Valley", "Charente"],
+      "a": 2,
+      "explain": "Chambord is made at Cour-Cheverny in the Loire Valley, near the Château de Chambord. Burgundy is the home of crème de cassis."
+    },
+    {
+      "id": "q2",
+      "q": "Which spirit goes into Chambord with the berry infusion, vanilla, citrus peel and honey?",
+      "options": ["XO cognac", "Calvados", "Armagnac", "Kirsch"],
+      "a": 0,
+      "explain": "XO cognac gives the liqueur its soft warmth beneath the black raspberry and vanilla."
+    },
+    {
+      "id": "q3",
+      "q": "Which classic shakes vodka and pineapple juice with Chambord?",
+      "options": ["Cosmopolitan", "Bramble", "Clover Club", "French Martini"],
+      "a": 3,
+      "explain": "The French Martini. The Bramble takes blackberry liqueur, the Clover Club raspberry syrup and the Cosmopolitan cranberry."
+    }
+  ],
+  "sources": [
+    { "title": "Chambord: our magnifique process", "url": "https://www.chambordliqueur.com/our-magnifique-process/" },
+    { "title": "Difford's Guide: Chambord black raspberry liqueur", "url": "https://www.diffordsguide.com/beer-wine-spirits/877/chambord-liqueur" },
+    { "title": "Wikipedia: Chambord (liqueur)", "url": "https://en.wikipedia.org/wiki/Chambord_(liqueur)" },
+    { "title": "Ocado: Chambord Black Raspberry Liqueur 50cl", "url": "https://www.ocado.com/products/chambord-black-raspberry-liqueur-303687011" },
+    { "title": "Feast and West: Chambord liqueur 101", "url": "https://feastandwest.com/chambord-liqueur-101/" },
+    { "title": "Essentials Magazine: A spirited revolution, the story of Chambord liqueur", "url": "https://essentialsmagazine.com.au/wine/a-spirited-revolution-the-story-of-chambord-liqueur/" },
+    { "title": "Tasting Table: What is Chambord and how do you drink it?", "url": "https://tastingtable.com/1490118/what-is-chambord-how-to-drink" }
+  ]
+}
