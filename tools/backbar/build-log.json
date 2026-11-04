@@ -1,12 +1,13 @@
 {
   "edition": "2026-11-04",
-  "bottles": 4,
+  "bottles": 5,
   "planned": 29,
   "confirm": 12,
   "words": {
-    "total": 2233,
+    "total": 2783,
     "perEntry": {
       "lazzaroni-maraschino": 584,
+      "mathilde-cassis": 550,
       "benedictine": 562,
       "chartreuse-green": 523,
       "george-t-stagg": 564
@@ -14,12 +15,13 @@
   },
   "cards": [
     "Back Bar · lazzaroni-maraschino/recall",
+    "Back Bar · mathilde-cassis/recall",
     "Back Bar · benedictine/recall",
     "Back Bar · chartreuse-green/recall",
     "Back Bar · george-t-stagg/recall"
   ],
-  "questions": 12,
-  "sources": 18,
+  "questions": 15,
+  "sources": 27,
   "house": {
     "chartreuse-green": {
       "uses": [
@@ -40,7 +42,6 @@
   },
   "missing": [
     "luxardo-fernet",
-    "mathilde-cassis",
     "chartreuse-yellow",
     "drambuie",
     "grand-marnier",

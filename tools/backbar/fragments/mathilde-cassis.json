@@ -1,0 +1,83 @@
+{
+  "id": "mathilde-cassis",
+  "name": "Mathilde Cassis",
+  "respell": "mah-TEELD kah-SEESS",
+  "aka": ["Mathilde Liqueur de Cassis"],
+  "group": "liqueurs-amari",
+  "producer": "Maison Ferrand",
+  "place": "The Cognac region, Charente, France",
+  "photo": 1,
+  "confidence": "clear",
+  "facts": {
+    "base": "Blackcurrants, Noir de Bourgogne from Burgundy and Royal de Naples from the Loire, macerated in alcohol",
+    "age": "No age statement",
+    "cask": "No cask or wood ageing is stated",
+    "abv": "16% ABV (32 proof)",
+    "law": "A French fruit liqueur sold as liqueur de cassis, not under the protected Dijon or Burgundy cassis names"
+  },
+  "made": "Maison Ferrand, a house from the Cognac region, makes the Mathilde liqueurs. For the cassis it uses two blackcurrants: Noir de Bourgogne, the small, intense Burgundy berry, and Royal de Naples from the Loire Valley. The fruit macerates in alcohol for a long time to draw out its colour and flavour, then the liqueur is sweetened and bottled at 16 per cent. The house names its berries but not the length of the maceration.",
+  "taste": "Deep purple and jammy: ripe blackcurrant, bramble and a green, leafy edge on the nose. The palate is sweet and full, crushed blackcurrant from start to finish, with a tart, fresh close that keeps it from cloying.",
+  "lines": {
+    "s10": "Mathilde Cassis is a French blackcurrant liqueur made from Burgundy and Loire berries: deep purple, jammy and tart, at 16 per cent.",
+    "s20": "Mathilde Cassis is made by Maison Ferrand from Noir de Bourgogne and Loire Valley blackcurrants, long macerated in alcohol, then sweetened. It is deep purple, jammy and tart, and a spoonful turns white wine into a Kir or Champagne into a Kir Royale.",
+    "s45": "This is Mathilde Cassis, a French blackcurrant liqueur made by Maison Ferrand, a house from the Cognac region. It uses two blackcurrants, Noir de Bourgogne from Burgundy and Royal de Naples from the Loire Valley, macerated in alcohol for a long time, then sweetened and bottled at 16 per cent. It pours deep purple and tastes of ripe blackcurrant and bramble, sweet and full, with a tart finish. We pour it over ice with soda, or a spoonful under Champagne for a Kir Royale. The Kir takes its name from Canon Félix Kir, the mayor of Dijon who made white wine and cassis famous.",
+    "sale": "Mathilde Cassis is ripe blackcurrant in a glass, deep purple and tart. Let us pour a spoonful under Champagne for a Kir Royale, or into white wine for a Kir."
+  },
+  "serve": {
+    "neat": "Neat and lightly chilled in a small pour; it is sweet, so most guests prefer it lengthened.",
+    "rocks": "Over ice with soda water and a lemon twist, a long, light aperitif.",
+    "glass": "A flute for a Kir Royale, a white wine glass for a Kir, a highball with soda.",
+    "classic": "The Kir Royale, cassis topped with Champagne; also the Kir, the El Diablo and the Bourbon Renewal."
+  },
+  "guest": "Mathilde Cassis is a French blackcurrant liqueur: deep purple, sweet and jammy with a tart finish. It is lovely with a splash of soda, or under Champagne as a Kir Royale.",
+  "story": "Cassis liqueur is a Burgundy tradition. A Dijon liqueur maker and café owner, Auguste-Denis Lagoute, is credited with the first crème de cassis there in 1841. The drink that carried it round the world is the Kir: Canon Félix Kir, a priest who was mayor of Dijon from 1945 until 1968, poured white wine with cassis at civic receptions, and the blanc cassis took his name. Mathilde belongs to that family, a liqueur de cassis made with Burgundy and Loire fruit.",
+  "watch": [
+    "Cassis is sweet and dyes the glass: a small measure is enough, because too much turns a Kir Royale syrupy and purple.",
+    "Guests may call it crème de cassis: the same fruit and the same use; Mathilde's label simply says liqueur de cassis.",
+    "Mathilde makes other fruit liqueurs in matching bottles, pear and raspberry among them: check that the label says Cassis before pouring."
+  ],
+  "asks": [],
+  "house": { "match": ["Mathilde Cassis"], "family": ["Mathilde"] },
+  "library": { "producer": "", "cask": "", "canon": ["el-diablo", "kir-royale", "bourbon-renewal"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Mathilde Cassis, and how do we use it?",
+      "answer": "A French blackcurrant liqueur from Maison Ferrand: Noir de Bourgogne and Loire Valley berries macerated in alcohol, sweetened and bottled at 16% ABV. Deep purple, jammy and tart; a spoonful under Champagne makes a Kir Royale, under white wine a Kir, or long over ice with soda."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Which fruit is a liqueur de cassis made from?",
+      "options": ["Blackberry", "Black cherry", "Blackcurrant", "Blueberry"],
+      "a": 2,
+      "explain": "Cassis is French for blackcurrant. Mathilde uses Noir de Bourgogne berries from Burgundy and Royal de Naples from the Loire."
+    },
+    {
+      "id": "q2",
+      "q": "Which classic is cassis topped with Champagne?",
+      "options": ["Kir Royale", "Bellini", "French 75", "Mimosa"],
+      "a": 0,
+      "explain": "A Kir Royale is a little cassis under Champagne; with white wine instead it is a Kir."
+    },
+    {
+      "id": "q3",
+      "q": "The Kir is named for a priest who was mayor of which French city?",
+      "options": ["Lyon", "Beaune", "Reims", "Dijon"],
+      "a": 3,
+      "explain": "Canon Félix Kir was mayor of Dijon from 1945 until 1968 and poured white wine with cassis at civic receptions."
+    }
+  ],
+  "sources": [
+    { "title": "Maison Ferrand: Mathilde liqueurs, the recipes of yesteryear", "url": "https://maisonferrand.com/?p=625" },
+    { "title": "Maison Ferrand: who we are", "url": "https://maisonferrand.com/about/who-we-are/" },
+    { "title": "The Daily Pour: Mathilde Cassis Liqueur", "url": "https://thedailypour.com/spirit/mathilde-cassis-liqueur/" },
+    { "title": "Caskers: Mathilde Cassis Blackcurrant Liqueur", "url": "https://www.caskers.com/mathilde-cassis-blackcurrant-liqueur-375/" },
+    { "title": "Difford's Guide: Lejay Lagoute, history", "url": "https://www.diffordsguide.com/producers/783/lejay-lagoute-sas/history" },
+    { "title": "Escapement Magazine: Liqueurs, the finer things", "url": "https://escapementmagazine.com/articles/lejay-creme-de-cassis-drinks-feature/" },
+    { "title": "Revue Conflits: Dijon, terroir du cassis", "url": "https://www.revueconflits.com/dijon-terroir-du-cassis/" },
+    { "title": "Spec's: Mathilde Liqueurs Framboise", "url": "https://specsonline.com/shop/spirits/mathilde-liqueurs-framboise/" },
+    { "title": "Hi-Time Wine Cellars: Mathilde Pear (Poires) Liqueur", "url": "https://www.hitimewine.net/mathilde-pear-poires-liqueur-750ml-118151" }
+  ]
+}
