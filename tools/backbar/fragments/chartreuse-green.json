@@ -1,0 +1,79 @@
+{
+  "id": "chartreuse-green",
+  "name": "Green Chartreuse",
+  "respell": "shar-TROOZ",
+  "aka": ["Chartreuse Verte"],
+  "group": "liqueurs-amari",
+  "producer": "Chartreuse Diffusion",
+  "place": "Aiguenoire distillery, Entre-deux-Guiers, Isère, France",
+  "photo": 2,
+  "confidence": "clear",
+  "facts": {
+    "base": "Neutral alcohol macerated and distilled with 130 plants, then sweetened",
+    "age": "No age statement",
+    "cask": "Large old oak casks before bottling",
+    "abv": "55% ABV (110 proof)",
+    "law": "A French herbal liqueur made to the Carthusian order's secret recipe; no appellation governs it"
+  },
+  "made": "The monks dry, sort, crush and blend the 130 plants at the monastery, so the full recipe never leaves the order, and send the mixture to the Aiguenoire distillery. There the plants are macerated in alcohol and distilled, the distillates are blended and sweetened, and the liqueur rests in large oak casks before bottling. The green is the plants' own colour, not a dye.",
+  "taste": "Intense and alpine: pine, mint, sage and fennel on the nose, then sweetness and a big warmth from the 55 per cent. The palate is spiced and peppery, with liquorice and citrus peel, and the finish is long, cooling and herbal.",
+  "lines": {
+    "s10": "Green Chartreuse is the Carthusian monks' herbal liqueur from the French Alps: 130 plants, bottled strong at 55 per cent.",
+    "s20": "Green Chartreuse is made to a secret recipe of 130 plants held by the Carthusian monks, whose order traces it to a manuscript of 1605. It is intensely herbal, minty and peppery, naturally green and strong, and it is the backbone of the Last Word.",
+    "s45": "This is Green Chartreuse, the liqueur of the Carthusian monks of the Grande Chartreuse in the French Alps. The monks prepare a secret blend of 130 plants at the monastery; at their distillery it is macerated and distilled, sweetened, and rested in old oak casks, and the green colour comes from the plants alone. At 55 per cent it is bold: pine, mint and sage, then pepper, liquorice and a long, cooling finish. We pour it neat and lightly chilled, or in a Last Word. The order traces the recipe to a manuscript it was given in 1605.",
+    "sale": "Green Chartreuse is 130 plants and four centuries of monastic secrecy in one glass. Have it neat and cold after dinner, or shaken in a Last Word with gin, maraschino and lime."
+  },
+  "serve": {
+    "neat": "Neat and lightly chilled, about an ounce; it is strong, so sip it slowly.",
+    "rocks": "Over one large cube, or frappé over crushed ice after dinner.",
+    "glass": "A small cordial or tulip glass; a chilled coupe for a Last Word.",
+    "classic": "The Last Word: equal parts gin, Green Chartreuse, maraschino and lime, shaken."
+  },
+  "guest": "Green Chartreuse is a French herbal liqueur the Carthusian monks make from 130 plants: intensely herbal, minty and peppery, naturally green, and strong at 55 per cent.",
+  "story": "In 1605 a marshal of the French king's artillery, François Annibal d'Estrées, gave the Carthusian monks of Vauvert, in Paris, a manuscript for an elixir of 130 plants. It was so complex that only in 1737 did the monastery's apothecary, Brother Jérôme Maubec, set down a practical recipe, and most accounts date the milder Green Chartreuse to 1764. Expelled from France in 1903, the monks distilled in Tarragona, in Spain, and later came home; since 2018 the liqueur has been made at Aiguenoire, near Voiron.",
+  "watch": [
+    "Yellow and Green are different bottles: Yellow is 40 per cent, softer and honeyed. Never swap one for the other in a drink.",
+    "At 55 per cent it is strong: pour about an ounce neat, and count it as a full spirit in a cocktail.",
+    "Asked why it is green: the colour comes from the plants themselves, not from a dye."
+  ],
+  "asks": [],
+  "house": { "match": ["Green Chartreuse", "Chartreuse Verte"], "family": ["Chartreuse"] },
+  "library": { "producer": "chartreuse", "cask": "", "canon": ["last-word", "bijou", "champs-lys-es", "tipperary", "final-ward", "chartreuse-swizzle", "nuclear-daiquiri", "art-of-choke"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Green Chartreuse, and what makes it green?",
+      "answer": "A French herbal liqueur made to the Carthusian monks' secret recipe of 130 plants: macerated, distilled, sweetened and rested in oak, bottled at 55% ABV. The green is the plants' own colour. Pine, mint and pepper; neat and lightly chilled, or in a Last Word."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "How strong is Green Chartreuse as bottled?",
+      "options": ["40% ABV", "55% ABV", "43% ABV", "69% ABV"],
+      "a": 1,
+      "explain": "Green is bottled at 55% ABV (110 proof); Yellow is gentler at 40%."
+    },
+    {
+      "id": "q2",
+      "q": "How many plants does the Chartreuse recipe hold?",
+      "options": ["27", "43", "130", "12"],
+      "a": 2,
+      "explain": "The order's recipe is 130 plants, prepared at the monastery. 27 is the figure Bénédictine gives."
+    },
+    {
+      "id": "q3",
+      "q": "Which order of monks makes Chartreuse?",
+      "options": ["The Benedictines", "The Carthusians", "The Trappists", "The Cistercians"],
+      "a": 1,
+      "explain": "The Carthusians of the Grande Chartreuse monastery in the French Alps; Bénédictine only borrows a Benedictine legend."
+    }
+  ],
+  "sources": [
+    { "title": "Wikipedia: Chartreuse (liqueur)", "url": "https://en.wikipedia.org/wiki/Chartreuse_(liqueur)" },
+    { "title": "Difford's Guide: Distillerie Chartreuse Aiguenoire, history", "url": "https://www.diffordsguide.com/producers/14/distillerie-chartreuse-aiguenoire/history" },
+    { "title": "The History of Chartreuse", "url": "https://www.myfermentation.com/other-spirits/history-of-chartreuse-zm0z19fzsta" },
+    { "title": "House pack: the Green Chartreuse producer profile", "url": "" },
+    { "title": "Library: Producers, Chartreuse", "url": "" }
+  ]
+}

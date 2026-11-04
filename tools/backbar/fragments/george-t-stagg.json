@@ -1,0 +1,79 @@
+{
+  "id": "george-t-stagg",
+  "name": "George T. Stagg",
+  "respell": "",
+  "aka": ["GTS", "George Stagg"],
+  "group": "american-whiskey",
+  "producer": "Buffalo Trace Distillery",
+  "place": "Frankfort, Kentucky",
+  "photo": 5,
+  "confidence": "clear",
+  "facts": {
+    "base": "A corn-led bourbon mash of corn, rye and malted barley",
+    "age": "Around 15 years in most releases; each year's release differs",
+    "cask": "New charred American oak, bottled straight from the barrel",
+    "abv": "varies by release; uncut barrel proof, which the label states",
+    "law": "Kentucky straight bourbon: at least 51 per cent corn, new charred oak, at least two years"
+  },
+  "made": "Distilled at Buffalo Trace in Frankfort to a bourbon recipe led by corn, the spirit is filled into new charred oak barrels and left for around 15 years in the distillery's warehouses. Each year barrels are chosen for the Antique Collection and bottled uncut and unfiltered, at the strength they came out of the wood. So every release has its own proof, age and character, and its label states them.",
+  "taste": "Dark and dense: toffee, dark chocolate, black cherry, tobacco and old leather on the nose, then a thick, hot palate of molasses, espresso and oak spice. Water opens it into dried fruit and vanilla; the finish is long, drying and warm.",
+  "lines": {
+    "s10": "George T. Stagg is Buffalo Trace's uncut, unfiltered Kentucky bourbon, aged about 15 years and bottled at full barrel proof.",
+    "s20": "George T. Stagg is one of the five whiskeys in Buffalo Trace's yearly Antique Collection: about 15 years in new charred oak, then bottled straight from the barrel. Dark, dense and very strong, it tastes of toffee, cherry and espresso, and a few drops of water open it.",
+    "s45": "This is George T. Stagg, Kentucky straight bourbon from the Buffalo Trace Distillery in Frankfort, part of its yearly Antique Collection. It rests for around 15 years in new charred oak and goes into the bottle uncut and unfiltered, so each year's proof is its own, and the label states it. Expect toffee, dark chocolate, black cherry and espresso, thick and warm, opening with a few drops of water. We pour it neat, with water on the side, or over one large cube. It carries the name of the nineteenth century whiskey merchant who once ran this distillery.",
+    "sale": "George T. Stagg is a bourbon of around 15 years, bottled straight from the barrel at full strength. Taste it neat with a few drops of water, and let the toffee and dark cherry open in the glass."
+  },
+  "serve": {
+    "neat": "Neat, about an ounce, with a small jug of still water so the guest can open it.",
+    "rocks": "One large cube, which tames the proof slowly; never a glass full of small ice.",
+    "glass": "A Glencairn or a small tulip; a rocks glass for the cube.",
+    "classic": "An Old Fashioned, stirred with less sugar so the bourbon leads; usually poured neat."
+  },
+  "guest": "George T. Stagg is a Kentucky bourbon of around 15 years, bottled uncut and unfiltered at barrel proof: rich toffee and dark cherry, very strong, and lovely with a few drops of water.",
+  "story": "George T. Stagg was a whiskey salesman in St. Louis who bought barrels of O.F.C. bourbon from Colonel E. H. Taylor Jr. When Taylor fell into debt, Stagg bought the O.F.C. distillery in Frankfort in 1878 and moved from selling whiskey to making it. In 1904 it was renamed the George T. Stagg Distillery, a name it kept until it became Buffalo Trace in 1999. The bourbon that carries his name joined the distillery's Antique Collection in 2002, two years after the collection began.",
+  "watch": [
+    "Its proof changes every year and is always high: pour less, offer water, and read tonight's label rather than quote a figure.",
+    "Not the same bottle as Stagg, once called Stagg Jr., a younger barrel proof bourbon from the same distillery, released in batches.",
+    "Asked its age: around 15 years in most releases; the year's label and notes give the exact figure."
+  ],
+  "asks": ["Which year's release is open, and what proof does its label state?"],
+  "house": { "match": ["George T. Stagg"], "family": ["Buffalo Trace", "Sazerac Company"] },
+  "library": { "producer": "buffalo-trace", "cask": "bourbon", "canon": ["old-fashioned"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is George T. Stagg, and how is it bottled?",
+      "answer": "A Kentucky straight bourbon from Buffalo Trace's yearly Antique Collection, aged around 15 years in new charred oak and bottled uncut and unfiltered at barrel proof, so each release's proof differs and the label states it. Toffee, dark cherry and espresso; neat with water, or over one large cube."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "In which Kentucky town is George T. Stagg distilled?",
+      "options": ["Bardstown", "Frankfort", "Louisville", "Lawrenceburg"],
+      "a": 1,
+      "explain": "It is distilled at Buffalo Trace in Frankfort, the distillery that carried Stagg's own name from 1904 to 1999."
+    },
+    {
+      "id": "q2",
+      "q": "How does George T. Stagg go into the bottle?",
+      "options": ["Cut to 100 proof under bottled in bond", "Chill filtered and cut to 90 proof", "Uncut and unfiltered, at barrel proof", "Blended with younger whiskey to 107 proof"],
+      "a": 2,
+      "explain": "Straight from the barrel, uncut and unfiltered, so every year's release has its own proof."
+    },
+    {
+      "id": "q3",
+      "q": "Which yearly collection is George T. Stagg released in?",
+      "options": ["The Antique Collection", "The Experimental Collection", "The Single Oak Project", "A bottled in bond series"],
+      "a": 0,
+      "explain": "The Antique Collection, which began in 2000; George T. Stagg joined it in 2002."
+    }
+  ],
+  "sources": [
+    { "title": "Buffalo Trace Distillery: Stagg", "url": "https://buffalotracedistillery.com/craftsmen/stagg" },
+    { "title": "Kentucky Historical Society: O.F.C.-Stagg Distillery marker", "url": "https://history.ky.gov/markers/ofc-stagg-distillery" },
+    { "title": "VinePair: Need to know, the Buffalo Trace Antique Collection", "url": "https://vinepair.com/articles/ntk-buffalo-trace-antique-collection" },
+    { "title": "Tasting Table: Buffalo Trace George T. Stagg bottle guide", "url": "https://www.tastingtable.com/2205593/buffalo-trace-george-t-stagg-bottle-guide/" },
+    { "title": "Cask Atlas: Bourbon", "url": "" }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "benedictine",
+  "name": "Bénédictine D.O.M.",
+  "respell": "BEN-eh-dik-TEEN dee-oh-EM",
+  "aka": ["Bénédictine", "D.O.M."],
+  "group": "liqueurs-amari",
+  "producer": "Distillerie Bénédictine",
+  "place": "Palais Bénédictine, Fécamp, Normandy, France",
+  "photo": 1,
+  "confidence": "clear",
+  "facts": {
+    "base": "Distillates of 27 plants and spices, blended with honey and saffron",
+    "age": "No age statement; about two years from the first maceration to the bottle",
+    "cask": "Large oak casks, before and after the honey and saffron go in",
+    "abv": "40% ABV (80 proof)",
+    "law": "A French herbal liqueur; the recipe is a trade secret and the name a trademark since 1864"
+  },
+  "made": "Four separate blends of plants and spices are macerated and distilled in copper pot stills at the Palais Bénédictine in Fécamp. The distillates rest in large oak casks for about eight months, are married together, then sweetened with honey and coloured with saffron, warmed and rested again for some months before filtering and bottling. The house names 27 plants and spices and keeps the full list secret.",
+  "taste": "Honeyed and herbal: saffron, citrus peel and warm baking spice on the nose. The palate is rich and soft, sweet first, then gentle herbs, a little pine and a faint bitter edge, finishing long on honey and spice.",
+  "lines": {
+    "s10": "Bénédictine D.O.M. is a French herbal liqueur from Fécamp: 27 plants and spices, honey and saffron, sweet, soft and gently spiced.",
+    "s20": "Bénédictine is a French liqueur made at the Palais Bénédictine in Normandy from 27 plants and spices, distilled in copper, rested in oak and finished with honey and saffron. It tastes of honey, citrus peel and warm spice, and it is the herbal voice in the Vieux Carré.",
+    "s45": "This is Bénédictine D.O.M., the liqueur of the Palais Bénédictine in Fécamp, on the Normandy coast. Four blends of plants and spices, 27 in all and still a secret, are distilled in copper pot stills, rested in oak, then sweetened with honey and coloured with saffron. It pours a deep amber gold and tastes of honey and citrus peel first, then soft herbs and warm spice with a gentle bitter edge. We pour it neat at room temperature or over one large cube after dinner. The D.O.M. on the label stands for Deo Optimo Maximo, to God, most good, most great.",
+    "sale": "Bénédictine is honey and herbs from a palace on the Normandy coast, a secret recipe of 27 plants and spices. Try it neat after dinner, or in a Vieux Carré with rye and cognac."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, about an ounce, so the honey and spice show.",
+    "rocks": "Over one large cube it softens and opens; a twist of lemon peel suits it.",
+    "glass": "A small tulip or cordial glass, or a rocks glass for the cube.",
+    "classic": "The Vieux Carré, with rye, cognac, sweet vermouth and bitters; also the Singapore Sling and the Cocktail à la Louisiane."
+  },
+  "guest": "Bénédictine is a French herbal liqueur made since the 1860s to a secret recipe of 27 plants and spices: honeyed, softly spiced and lovely neat after dinner.",
+  "story": "The label honours a legend: a Benedictine monk at Fécamp, Dom Bernardo Vincelli, is said to have made an elixir there in 1510 that was lost in the Revolution. Historians think the story was largely the work of Alexandre Le Grand, a Fécamp wine merchant who launched the liqueur in 1863, registered the name in 1864 and built the Palais Bénédictine to make it. The palace still makes every bottle, and his tale of a rediscovered manuscript still travels with it.",
+  "watch": [
+    "B and B is a different bottle, Bénédictine blended with brandy: if a guest asks for B and B, check before pouring this.",
+    "It is sweet and strongly flavoured: cocktails use it by the spoon or the quarter ounce, so measure it, never free pour.",
+    "Asked whether monks still make it: no, it has been made at the Palais in Fécamp since the nineteenth century.",
+    "Asked what is in it: 27 plants and spices with honey and saffron; the full list is a secret."
+  ],
+  "asks": [],
+  "house": { "match": ["Bénédictine"], "family": ["Bénédictine"] },
+  "library": { "producer": "b-n-dictine", "cask": "", "canon": ["vieux-carr", "cocktail-la-louisiane", "singapore-sling", "widow-s-kiss", "monte-carlo", "bobby-burns", "chrysanthemum", "creole-cocktail"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Bénédictine D.O.M., and how is it made?",
+      "answer": "A French herbal liqueur from the Palais Bénédictine in Fécamp: four blends of 27 plants and spices distilled in copper pot stills, rested in oak, then sweetened with honey and coloured with saffron. Honeyed and softly spiced at 40% ABV; neat after dinner, or by the spoon in a Vieux Carré."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "In which town is Bénédictine made?",
+      "options": ["Fécamp, on the Normandy coast", "Voiron, below the Alps", "Cognac, on the Charente", "Angers, in the Loire valley"],
+      "a": 0,
+      "explain": "Every bottle is made at the Palais Bénédictine in Fécamp, Normandy. Voiron was long Chartreuse's home and Angers is Cointreau's."
+    },
+    {
+      "id": "q2",
+      "q": "D.O.M. on the Bénédictine label is a Latin dedication. What does it mean?",
+      "options": ["House of the monks of Fécamp", "To God, most good, most great", "Made under the abbey's seal", "Distilled by the order's brothers"],
+      "a": 1,
+      "explain": "D.O.M. is Deo Optimo Maximo: to God, most good, most great."
+    },
+    {
+      "id": "q3",
+      "q": "How many plants and spices does the house say go into Bénédictine?",
+      "options": ["12", "130", "43", "27"],
+      "a": 3,
+      "explain": "The house names 27 plants and spices. 130 is the figure Chartreuse gives for its recipe."
+    }
+  ],
+  "sources": [
+    { "title": "Bénédictine: heritage", "url": "https://www.benedictinedom.com/process-benedictine/heritage-benedictine/" },
+    { "title": "Bénédictine: production process", "url": "https://www.benedictinedom.com/process-benedictine/" },
+    { "title": "Difford's Guide: Distillerie Bénédictine", "url": "https://www.diffordsguide.com/producers/41/distillerie-benedictine-sa" },
+    { "title": "Wikipedia: Alexandre Le Grand (merchant)", "url": "https://en.wikipedia.org/wiki/Alexandre_Le_Grand_(merchant)" },
+    { "title": "Library: Producers, Bénédictine", "url": "" }
+  ]
+}

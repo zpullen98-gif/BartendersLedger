@@ -1,0 +1,68 @@
+{
+  "edition": "2026-11-04",
+  "bottles": 3,
+  "planned": 29,
+  "confirm": 12,
+  "words": {
+    "total": 1649,
+    "perEntry": {
+      "benedictine": 562,
+      "chartreuse-green": 523,
+      "george-t-stagg": 564
+    }
+  },
+  "cards": [
+    "Back Bar · benedictine/recall",
+    "Back Bar · chartreuse-green/recall",
+    "Back Bar · george-t-stagg/recall"
+  ],
+  "questions": 9,
+  "sources": 11,
+  "house": {
+    "chartreuse-green": {
+      "uses": [
+        "b-try910qa"
+      ],
+      "family": [
+        "c-xcjx03ic"
+      ]
+    },
+    "george-t-stagg": {
+      "uses": [],
+      "family": [
+        "c-70rdihwo",
+        "c-hexgqdzk",
+        "c-r8v9mkjs"
+      ]
+    }
+  },
+  "missing": [
+    "luxardo-fernet",
+    "lazzaroni-maraschino",
+    "mathilde-cassis",
+    "chartreuse-yellow",
+    "drambuie",
+    "grand-marnier",
+    "chambord",
+    "ambrosia-aperitivo",
+    "martell-xo",
+    "milagro-silver",
+    "milagro-anejo",
+    "don-julio-blanco",
+    "don-julio-reposado",
+    "don-julio-1942",
+    "patron-reposado",
+    "dobel-special-edition",
+    "lunazul",
+    "agave-de-cortes",
+    "el-gobernador",
+    "rabbit-hole-cavehill",
+    "rabbit-hole-heigold",
+    "weller-special-reserve",
+    "weller-12",
+    "ofc-2005",
+    "thomas-h-handy",
+    "stagg"
+  ],
+  "refused": []
+}
