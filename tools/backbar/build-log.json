@@ -1,10 +1,10 @@
 {
   "edition": "2026-11-04",
-  "bottles": 19,
+  "bottles": 20,
   "planned": 29,
   "confirm": 12,
   "words": {
-    "total": 10614,
+    "total": 11144,
     "perEntry": {
       "luxardo-fernet": 549,
       "lazzaroni-maraschino": 584,
@@ -22,6 +22,7 @@
       "don-julio-blanco": 538,
       "don-julio-reposado": 546,
       "don-julio-1942": 557,
+      "patron-reposado": 530,
       "rabbit-hole-cavehill": 576,
       "rabbit-hole-heigold": 587,
       "george-t-stagg": 564
@@ -44,12 +45,13 @@
     "Back Bar · don-julio-blanco/recall",
     "Back Bar · don-julio-reposado/recall",
     "Back Bar · don-julio-1942/recall",
+    "Back Bar · patron-reposado/recall",
     "Back Bar · rabbit-hole-cavehill/recall",
     "Back Bar · rabbit-hole-heigold/recall",
     "Back Bar · george-t-stagg/recall"
   ],
-  "questions": 57,
-  "sources": 130,
+  "questions": 60,
+  "sources": 138,
   "house": {
     "luxardo-fernet": {
       "uses": [],
@@ -93,7 +95,6 @@
     }
   },
   "missing": [
-    "patron-reposado",
     "dobel-special-edition",
     "lunazul",
     "agave-de-cortes",

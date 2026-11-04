@@ -1,0 +1,82 @@
+{
+  "id": "patron-reposado",
+  "name": "Patrón Reposado",
+  "respell": "pah-TRONE reh-poh-SAH-doh",
+  "aka": [],
+  "group": "tequila-mezcal-pisco",
+  "producer": "Patrón Spirits",
+  "place": "Hacienda Patrón, Atotonilco el Alto, in the Jalisco Highlands, Mexico",
+  "photo": 3,
+  "confidence": "clear",
+  "facts": {
+    "base": "Blue agave from the Jalisco Highlands, baked in brick ovens, crushed by tahona and roller mill",
+    "age": "At least four months in oak",
+    "cask": "Used American, French and Hungarian oak barrels, by the producer's account",
+    "abv": "40% ABV (80 proof)",
+    "law": "Tequila, 100% blue agave; reposado means rested in oak at least two months and under a year"
+  },
+  "made": "At Hacienda Patrón the agave piñas are baked in small brick ovens, then crushed two ways: part under the tahona, a two-ton wheel of volcanic stone, and part in a roller mill. The two are fermented and distilled twice in copper pot stills, apart, and then blended. For the Reposado the blend rests at least four months in used oak barrels, American, French and Hungarian, before it is cut to 40 per cent and bottled.",
+  "taste": "Pale gold. Roasted agave, light oak and vanilla on the nose, with honey and citrus. The palate is soft and lightly sweet, cooked agave, fruit and honey over gentle oak, and the finish is clean with a little pepper.",
+  "lines": {
+    "s10": "Patrón Reposado is a 100% blue agave tequila rested at least four months in oak: roasted agave, honey and light vanilla.",
+    "s20": "Patrón Reposado is made at Hacienda Patrón in the Jalisco Highlands, the agave crushed partly by a stone tahona wheel, then rested at least four months in used oak. Pale gold, it tastes of roasted agave, honey, citrus and light vanilla.",
+    "s45": "This is Patrón Reposado, made at Hacienda Patrón in Atotonilco el Alto, in the highlands of Jalisco. The blue agave is baked in small brick ovens, crushed partly by the tahona, a two-ton volcanic stone wheel, and partly by a roller mill, and the two juices are distilled twice in copper pot stills and blended. The Reposado then rests at least four months in used American, French and Hungarian oak. In the glass it is pale gold, roasted agave, honey and citrus over light oak and vanilla. We pour it neat, over one large cube, or in a Rosita. The brand began in 1989; patrón means the boss.",
+    "sale": "Patrón Reposado is highland agave, partly crushed by a stone tahona, rested at least four months in oak. Sip it over one large cube, or let it lead an Oaxaca Old Fashioned."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, about an ounce and a half, sipped slowly.",
+    "rocks": "Over one large cube, or long with soda and a wedge of lime.",
+    "glass": "A copita or a small tulip neat; a rocks glass over ice.",
+    "classic": "The Oaxaca Old Fashioned and the Rosita; a reposado Margarita on request."
+  },
+  "guest": "Patrón Reposado is a 100% blue agave tequila from the Jalisco Highlands, rested at least four months in oak: roasted agave, honey and citrus over light vanilla.",
+  "story": "Patrón began in 1989, and all of its tequila is distilled at Hacienda Patrón in Atotonilco el Alto, the distillery whose number, NOM 1492, is printed on every label. Patrón keeps the tahona at work: a two-ton wheel of volcanic stone that rolls over the baked agave, the old way of milling before machines, alongside a modern roller mill. The squat bottle with its cork stopper and the bee on the label make it easy to find on a back bar.",
+  "watch": [
+    "Reposado means rested: at least two months in oak and under a year. Patrón gives its own at least four.",
+    "Don Julio Reposado stands beside it: a guest who names a brand gets that one; ask when a guest just says reposado.",
+    "Patrón's Silver and Añejo share the squat bottle: read REPOSADO under the name before pouring."
+  ],
+  "asks": [],
+  "house": { "match": ["Patrón Reposado"], "family": ["Patrón"] },
+  "library": { "producer": "", "cask": "", "canon": ["oaxaca-old-fashioned", "rosita"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Patrón Reposado, and how is it made?",
+      "answer": "A 100% blue agave tequila from Hacienda Patrón in Atotonilco el Alto: agave baked in brick ovens, crushed by tahona and roller mill, distilled twice in copper pot stills, then rested at least four months in used oak, at 40% ABV. Neat, on one cube, or in a Rosita."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What crushes part of the baked agave at Hacienda Patrón?",
+      "options": ["A tahona of volcanic stone", "A steel hammer mill", "A hydraulic press", "A wooden screw press"],
+      "a": 0,
+      "explain": "The tahona, a two-ton wheel of volcanic stone; a roller mill crushes the rest, and the two are blended after distillation."
+    },
+    {
+      "id": "q2",
+      "q": "By the producer's account, how long at least does Patrón Reposado rest in oak?",
+      "options": ["Two months", "Four months", "Eight months", "One year"],
+      "a": 1,
+      "explain": "Four months, twice the two months the reposado rule asks. Eight months is the Don Julio Reposado's time."
+    },
+    {
+      "id": "q3",
+      "q": "In which year did the Patrón brand begin?",
+      "options": ["1942", "1974", "1989", "1998"],
+      "a": 2,
+      "explain": "1989. 1942 is Don Julio's start and 1998 Milagro's founding."
+    }
+  ],
+  "sources": [
+    { "title": "PATRÓN: Reposado", "url": "https://www.patrontequila.com/products/patron-reposado.html" },
+    { "title": "PATRÓN: about Patrón", "url": "https://www.patrontequila.com/our-story.html" },
+    { "title": "PATRÓN: what is a tahona wheel?", "url": "https://www.patrontequila.com/faqs/fun-facts/what-is-a-tahona-wheel.html" },
+    { "title": "PATRÓN: frequently asked questions", "url": "https://www.patrontequila.com/faqs.html" },
+    { "title": "Difford's Guide: how Patrón tequila is made", "url": "https://www.diffordsguide.com/producer/1118/hacienda-patrn-nom-1492/production" },
+    { "title": "Difford's Guide: Hacienda Patrón (NOM 1492)", "url": "https://www.diffordsguide.com/producer/1118/hacienda-patrn-nom-1492/location" },
+    { "title": "Difford's Guide: Patrón Reposado Tequila", "url": "https://www.diffordsguide.com/beer-wine-spirits/205/patron-reposado-tequila" },
+    { "title": "Difford's Guide: tequila classifications", "url": "https://www.diffordsguide.com/g/1084/tequila/classifications" }
+  ]
+}
