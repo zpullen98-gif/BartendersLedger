@@ -319,8 +319,8 @@
     {
       "id": "confirm-behind-mathilde", "name": "Clear bottle behind Mathilde Cassis", "group": "confirm", "photo": 1,
       "where": "Liqueur shelf, behind and right of Mathilde Cassis: a clear bottle with a dark cap and a white label.",
-      "read": "Small red lettering on a white label; nothing legible.",
-      "ask": "What is the clear bottle standing behind the Mathilde Cassis?"
+      "read": "A white back label faces the room, headed by a brown script logo much like Mathilde's; the lines below it and the barcode are illegible.",
+      "ask": "What is the clear bottle standing behind the Mathilde Cassis: another Mathilde liqueur, and which fruit?"
     },
     {
       "id": "confirm-behind-drambuie", "name": "Clear bottles behind Drambuie", "group": "confirm", "photo": 2,
