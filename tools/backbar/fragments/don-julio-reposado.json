@@ -1,0 +1,81 @@
+{
+  "id": "don-julio-reposado",
+  "name": "Don Julio Reposado",
+  "respell": "don HOO-lee-oh reh-poh-SAH-doh",
+  "aka": [],
+  "group": "tequila-mezcal-pisco",
+  "producer": "Tequila Don Julio",
+  "place": "Atotonilco el Alto, in the Jalisco Highlands, Mexico",
+  "photo": 3,
+  "confidence": "clear",
+  "facts": {
+    "base": "Blue agave from the Jalisco Highlands, roasted in brick ovens and fermented with Don Julio's own yeast",
+    "age": "Eight months in oak",
+    "cask": "American white oak barrels that once held bourbon",
+    "abv": "40% ABV (80 proof)",
+    "law": "Tequila, 100% blue agave; reposado means rested in oak at least two months and under a year"
+  },
+  "made": "The spirit begins as Don Julio Blanco: highland blue agave roasted slowly in brick ovens, fermented with Don Julio's own yeast and distilled twice in pot stills. It then rests for eight months in American white oak barrels that once held bourbon, four times the two months the reposado rule asks. The used barrels give colour, vanilla and soft spice without burying the agave, and the tequila is cut to 40 per cent and bottled.",
+  "taste": "Golden amber. Caramel, vanilla and cooked agave on the nose, with a little cinnamon and stone fruit. The palate is mellow and round, honey, light oak and dark chocolate over the agave, and the finish is soft and gently spiced.",
+  "lines": {
+    "s10": "Don Julio Reposado is highland blue agave tequila rested eight months in American white oak: caramel, vanilla and soft spice.",
+    "s20": "Don Julio Reposado begins as the Blanco, highland agave roasted in brick ovens and distilled twice, then rests eight months in American white oak that once held bourbon. It is golden and mellow, caramel, vanilla and cinnamon over cooked agave.",
+    "s45": "This is Don Julio Reposado, from the tequila house named for Don Julio González, who began making tequila in Atotonilco el Alto in 1942. The highland blue agave is roasted slowly in brick ovens, fermented with Don Julio's own yeast and distilled twice, then rested eight months in American white oak barrels that once held bourbon. In the glass it is golden and mellow: caramel, vanilla and cinnamon over cooked agave, with a little dark chocolate on the finish. We pour it neat, over one large cube, or stirred in an Oaxaca Old Fashioned. His family first put his name on a bottle in 1987; reposado means rested.",
+    "sale": "Don Julio Reposado rests eight months in bourbon oak, golden with caramel and cinnamon over the agave. Sip it over one large cube, or stir it into an Oaxaca Old Fashioned."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, about an ounce and a half, given a moment in the glass.",
+    "rocks": "Over one large cube; the oak and caramel carry the chill well.",
+    "glass": "A copita or a small tulip neat; a rocks glass over the cube.",
+    "classic": "The Oaxaca Old Fashioned and the Rosita; a reposado Margarita on request."
+  },
+  "guest": "Don Julio Reposado is a 100% blue agave tequila rested eight months in American white oak that once held bourbon: golden and mellow, caramel, vanilla and cinnamon over the agave.",
+  "story": "Don Julio González began making tequila in 1942, at seventeen, in Atotonilco el Alto, in the highlands of Jalisco. His family launched the Don Julio name in 1987, and the reposado sits between the unaged Blanco and the añejos. Where the rule asks only two months in oak, Don Julio gives its reposado eight, in barrels that held bourbon first, so the agave keeps its voice under the wood.",
+  "watch": [
+    "Reposado means rested: at least two months in oak and under a year. Not an añejo, and not the Blanco, which shares its squat bottle.",
+    "Read the band before pouring: copper for the Reposado, blue for the Blanco, on the same short bottle.",
+    "Patrón Reposado stands beside it: a guest who names a reposado gets that one; ask when a guest just says reposado.",
+    "Asked how long it rests: eight months, in American white oak barrels that once held bourbon."
+  ],
+  "asks": [],
+  "house": { "match": ["Don Julio Reposado"], "family": ["Don Julio"] },
+  "library": { "producer": "", "cask": "", "canon": ["oaxaca-old-fashioned", "rosita"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Don Julio Reposado, and how is it aged?",
+      "answer": "A 100% blue agave tequila from Atotonilco el Alto, roasted in brick ovens and distilled twice, then rested eight months in American white oak barrels that once held bourbon, at 40% ABV. Caramel, vanilla and cinnamon; neat, on one cube, or in an Oaxaca Old Fashioned."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "How long does Don Julio Reposado rest in oak?",
+      "options": ["Two months", "Four months", "Eight months", "Eighteen months"],
+      "a": 2,
+      "explain": "Eight months in American white oak, four times the two months the reposado rule asks."
+    },
+    {
+      "id": "q2",
+      "q": "What did the American white oak barrels for Don Julio Reposado hold before?",
+      "options": ["Sherry", "Bourbon", "Red wine", "Cognac"],
+      "a": 1,
+      "explain": "Bourbon: used barrels give vanilla and soft spice without burying the agave."
+    },
+    {
+      "id": "q3",
+      "q": "What is the shortest time a tequila must rest in oak to be called reposado?",
+      "options": ["Two months", "Six months", "One year", "Three years"],
+      "a": 0,
+      "explain": "Two months. A year in oak makes an añejo, and three years an extra añejo."
+    }
+  ],
+  "sources": [
+    { "title": "Diageo Bar Academy: Don Julio Reposado", "url": "https://www.diageobaracademy.com/en_zz/know-your-liquid/our-brands/donjulio/don-julio-reposado" },
+    { "title": "Difford's Guide: Don Julio Reposado Tequila", "url": "https://www.diffordsguide.com/en-au/beer-wine-spirits/1319/don-julio-reposado" },
+    { "title": "Tequila Don Julio: our tequila journey", "url": "https://www.donjulio.com/our-tequila-journey" },
+    { "title": "Wikipedia: Don Julio", "url": "https://en.wikipedia.org/wiki/Don_Julio" },
+    { "title": "LCBO: Don Julio Reposado Tequila", "url": "https://www.lcbo.com/en/don-julio-reposado-tequila-173559" },
+    { "title": "Difford's Guide: tequila classifications", "url": "https://www.diffordsguide.com/g/1084/tequila/classifications" }
+  ]
+}
