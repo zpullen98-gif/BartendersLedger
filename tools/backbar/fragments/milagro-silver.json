@@ -1,0 +1,81 @@
+{
+  "id": "milagro-silver",
+  "name": "Leyenda del Milagro Silver",
+  "respell": "lay-YEN-dah del mee-LAH-groh",
+  "aka": ["Milagro Silver"],
+  "group": "tequila-mezcal-pisco",
+  "producer": "Tequila Milagro",
+  "place": "Los Altos, the highlands of Jalisco, Mexico",
+  "photo": 3,
+  "confidence": "clear",
+  "facts": {
+    "base": "Blue agave from the Jalisco Highlands, cooked, fermented and distilled twice in pot and column stills",
+    "age": "Unaged: bottled after distillation, cut only with water",
+    "cask": "Not aged in wood",
+    "abv": "40% ABV (80 proof)",
+    "law": "Tequila, 100% blue agave, under Mexico's denomination of origin; silver or blanco means unaged or rested under two months"
+  },
+  "made": "Milagro is made only from blue agave grown in Los Altos, the highlands of Jalisco. The piñas are cooked slowly, part of them in traditional brick ovens for about a day and a half and part in modern autoclaves, then crushed and fermented. The house distils the wash twice, once through a pot still and once through a column still, and bottles the Silver unaged at 40 per cent, so nothing stands between the glass and the cooked agave.",
+  "taste": "Fresh cooked agave and lime zest on the nose, with a little white pepper and green herbs. The palate is light, clean and gently sweet, agave and citrus over pepper, and the finish is short and crisp.",
+  "lines": {
+    "s10": "Leyenda del Milagro Silver is an unaged 100% blue agave tequila from the Jalisco Highlands: bright, peppery and citrusy.",
+    "s20": "Milagro Silver is a blanco tequila made from blue agave grown in the Jalisco Highlands, cooked slowly and distilled in pot and column stills, then bottled unaged. It tastes of fresh agave, lime zest and white pepper, clean and light, a natural partner for a Margarita or a Paloma.",
+    "s45": "This is Leyenda del Milagro Silver, a tequila made from 100% blue agave grown in Los Altos, the highlands of Jalisco. The agave is cooked slowly, part of it in brick ovens, then fermented and distilled twice, through a pot still and a column still, and bottled unaged so the agave speaks plainly. In the glass it is fresh cooked agave, lime zest and white pepper, light and clean with a crisp finish. We pour it neat at room temperature, over one large cube, or in a Margarita or a Paloma. Two university friends in Mexico City founded Milagro in 1998, and its name means the legend of the miracle.",
+    "sale": "Milagro Silver is unaged highland agave, bright with lime zest and white pepper. Try it in a Paloma with grapefruit and soda, or neat to taste the agave itself."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, about an ounce and a half, sipped slowly rather than shot.",
+    "rocks": "Over one large cube for a guest who likes it cool, or long with soda and lime.",
+    "glass": "A copita or a small tulip neat; a rocks glass over ice.",
+    "classic": "The Margarita and the Paloma; also Ranch Water and El Diablo."
+  },
+  "guest": "Milagro Silver is an unaged tequila made from 100% blue agave grown in the Jalisco Highlands: fresh agave, lime zest and white pepper, light and clean.",
+  "story": "Milagro was founded in 1998 by two university friends in Mexico City, who wanted a tequila that carried something of the city's creative life into the glass. They took their agave from Los Altos, the highlands of Jalisco, and built the range on a silver, a reposado and an añejo. The full name on the label, Leyenda del Milagro, means the legend of the miracle; milagro is simply the Spanish for miracle.",
+  "watch": [
+    "Silver, blanco and plata mean the same thing: unaged, or rested under two months. A guest asking for a silver tequila can be offered this.",
+    "The shelf's bottle is the tall blue one with SILVER on the neck; the Select Barrel Reserve Silver is a different Milagro bottling.",
+    "A second, amber Leyenda del Milagro stands on the shelf below the liqueurs: confirm which bottle a guest means before pouring.",
+    "Unaged is not harsh: offer it neat to a guest who thinks blanco is only for shots."
+  ],
+  "asks": [],
+  "house": { "match": ["Milagro Silver", "Leyenda del Milagro Silver"], "family": ["Milagro"] },
+  "library": { "producer": "", "cask": "", "canon": ["margarita", "paloma", "tommy-s-margarita", "el-diablo", "ranch-water"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Leyenda del Milagro Silver, and how is it poured?",
+      "answer": "An unaged tequila of 100% blue agave from the Jalisco Highlands, cooked partly in brick ovens and distilled in a pot still and a column still, at 40% ABV. Neat at room temperature, over one large cube, or in a Margarita or a Paloma."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "In which year was Milagro tequila founded?",
+      "options": ["1974", "1989", "1998", "2005"],
+      "a": 2,
+      "explain": "1998, by two university friends in Mexico City, which makes it one of the younger names on the tequila shelf."
+    },
+    {
+      "id": "q2",
+      "q": "What does Leyenda del Milagro mean in English?",
+      "options": ["The legend of the miracle", "The house of the agave", "The land of the volcano", "The song of the highlands"],
+      "a": 0,
+      "explain": "Leyenda is legend and milagro is miracle: the legend of the miracle."
+    },
+    {
+      "id": "q3",
+      "q": "Which stills does Milagro use for its two distillations?",
+      "options": ["Two copper pot stills", "A pot still and a column still", "Two column stills", "A single continuous column"],
+      "a": 1,
+      "explain": "One pass through a pot still and one through a column still, by the producer's own account."
+    }
+  ],
+  "sources": [
+    { "title": "Milagro Tequila: our story", "url": "https://milagrotequila.com/our-story" },
+    { "title": "VinePair: the Milagro tequila guide", "url": "https://vinepair.com/articles/milagro-tequila-guide-review-2019/" },
+    { "title": "Tequila Matchmaker: Milagro Silver", "url": "https://tequilamatchmaker.com/tequilas/2624-milagro-silver" },
+    { "title": "The Whisky Exchange: Milagro Silver Tequila", "url": "https://www.thewhiskyexchange.com/p/9711" },
+    { "title": "Caskers: Milagro Tequila Silver", "url": "https://www.caskers.com/milagro-tequila-silver" },
+    { "title": "Difford's Guide: tequila classifications", "url": "https://www.diffordsguide.com/g/1084/tequila/classifications" }
+  ]
+}
