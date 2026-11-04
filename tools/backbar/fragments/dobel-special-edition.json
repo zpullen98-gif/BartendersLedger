@@ -1,0 +1,82 @@
+{
+  "id": "dobel-special-edition",
+  "name": "Maestro Dobel Special Edition",
+  "respell": "MY-ess-troh doh-BEL",
+  "aka": ["Maestro Dobel", "Dobel"],
+  "group": "tequila-mezcal-pisco",
+  "producer": "Maestro Dobel",
+  "place": "Jalisco, Mexico",
+  "photo": 3,
+  "confidence": "probable",
+  "facts": {
+    "base": "100% blue Weber agave from Jalisco",
+    "age": "Varies: unaged for the silver; Diamante blends reposado, añejo and extra añejo",
+    "cask": "Diamante rests in European white oak and is filtered clear; the silver sees no wood",
+    "abv": "40% ABV (80 proof)",
+    "law": "Tequila under Mexico's denomination of origin: blue agave from Jalisco and parts of four states; 100% agave on the label"
+  },
+  "made": "Maestro Dobel makes tequila in Jalisco from 100 per cent blue Weber agave, cooked, fermented and distilled twice. Its first bottle, Diamante, began the cristalino style: reposado, añejo and extra añejo tequilas, rested in European white oak, are blended and then filtered until the colour is gone, keeping the softness of the wood in a clear spirit. The range also has an unaged silver. The neck label here says Special Edition without naming the expression.",
+  "taste": "If it is Diamante, the cristalino: mild oak, vanilla, cinnamon and almond on the nose, then caramel, honey and citrus on a soft palate, and a clean, short finish. If it is the silver: cooked agave, caramel and light pepper, brighter and drier.",
+  "lines": {
+    "s10": "Maestro Dobel is a Jalisco tequila of 100 per cent blue agave, from the house that made the first cristalino.",
+    "s20": "This is a Maestro Dobel special edition. Dobel makes tequila of 100 per cent blue agave in Jalisco and began the cristalino style: aged tequilas blended and filtered clear, so the vanilla of the oak stays and the colour goes. Soft, lightly sweet and clean.",
+    "s45": "This is Maestro Dobel, a special edition, as the neck label says: tequila of 100 per cent blue Weber agave from Jalisco, distilled twice. Dobel began the cristalino style with its Diamante: reposado, añejo and extra añejo tequilas rested in European white oak, blended and filtered until clear, so the vanilla and softness of the wood stay but the colour goes. Expect mild oak, vanilla and almond, then caramel, honey and citrus, soft and clean. We pour it neat, over one large cube, or in a Paloma. The embossed bottle copies the sample bottles of a tequila maker's laboratory, marked Reserva del Maestro Tequilero.",
+    "sale": "Maestro Dobel made the first cristalino, an aged tequila filtered clear, soft with vanilla and caramel. Try it neat over one large cube, or long in a Paloma."
+  },
+  "serve": {
+    "neat": "Neat, about an ounce and a half, at room temperature.",
+    "rocks": "Over one large cube; a cristalino stays soft as it chills.",
+    "glass": "A small tulip neat, a rocks glass for the cube, a highball for the Paloma.",
+    "classic": "The Paloma; a silver also makes a clean Margarita."
+  },
+  "guest": "Maestro Dobel is a Jalisco tequila of 100 per cent blue agave, from the house that made the first cristalino: aged tequila filtered clear, soft with vanilla, caramel and citrus.",
+  "story": "Maestro Dobel was launched in Jalisco in the late 2000s, and its first bottle, Diamante, was the first cristalino: aged tequila filtered back to clear, a style many tequila houses have followed since. The bottle is heavily embossed after the sample bottles of a distillery laboratory, its glass marked Reserva del Maestro Tequilero, and each carries the signature of the maestro tequilero, the master tequila maker, who made it.",
+  "watch": [
+    "Which expression is open decides the description: Diamante is the clear, aged cristalino; the silver is unaged, brighter and more peppery.",
+    "A cristalino is aged tequila filtered clear, not a blanco: it tastes of oak and vanilla, though it looks like water.",
+    "Say it doh-BEL; the Maestro is the master tequila maker whose signature the bottle carries."
+  ],
+  "asks": ["Which Maestro Dobel is the special edition bottle on the tequila shelf (the neck label says SPECIAL EDITION), and is it a cristalino or a silver?"],
+  "house": { "match": [], "family": ["Dobel"] },
+  "library": { "producer": "", "cask": "", "canon": [] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Maestro Dobel known for, and what is a cristalino?",
+      "answer": "A Jalisco tequila of 100 per cent blue agave whose Diamante was the first cristalino: reposado, añejo and extra añejo tequilas rested in European white oak, blended and filtered clear, keeping the vanilla of the wood without its colour. 40% ABV; ask at lineup which expression is open."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Which style of tequila did Maestro Dobel's Diamante begin?",
+      "options": ["The cristalino", "The reposado", "The extra añejo", "The joven"],
+      "a": 0,
+      "explain": "Diamante, launched in the late 2000s, was the first cristalino: aged tequila filtered clear."
+    },
+    {
+      "id": "q2",
+      "q": "How does a cristalino such as Maestro Dobel Diamante lose its colour?",
+      "options": ["Ageing in steel tanks", "Distilling a third time", "Filtering after ageing", "Resting in glass jars"],
+      "a": 2,
+      "explain": "Filtering after ageing takes out the colour the oak gave, while keeping much of its vanilla and softness."
+    },
+    {
+      "id": "q3",
+      "q": "What is the embossed Maestro Dobel bottle modelled on?",
+      "options": ["A cognac decanter", "A clay water jug", "A wine merchant's flask", "A laboratory sample bottle"],
+      "a": 3,
+      "explain": "The sample bottles of a distillery laboratory; each bottle carries the signature of the maestro tequilero who made it."
+    }
+  ],
+  "sources": [
+    { "title": "Wikipedia: Maestro Dobel Tequila", "url": "https://en.wikipedia.org/wiki/Maestro_Dobel_Tequila" },
+    { "title": "Maestro Dobel product sheet: Diamante", "url": "https://sites.salsify.com/53eca41c-1513-44ea-afe2-50b286e550aa/815ba2ef-4008-4c60-aa22-709d91f61d14/product/XUS347/Maestro-Dobel-Diamante/" },
+    { "title": "Maestro Dobel product sheet: Blanco", "url": "https://sites.salsify.com/53eca41c-1513-44ea-afe2-50b286e550aa/d7e18c9d-bae9-4497-bfa8-ffec88317475/product/XUS310/Maestro-Dobel-Blanco/" },
+    { "title": "Drinkhacker: Review, Maestro Dobel Diamante Tequila (2023)", "url": "https://www.drinkhacker.com/2023/08/23/review-maestro-dobel-diamante-tequila-2023/" },
+    { "title": "Vinetur: Maestro Dobel reivindica su tequila Diamante", "url": "https://www.vinetur.com/20260722104647/maestro-dobel-reivindica-su-tequila-diamante-ante-la-celebracion-del-dia-mundial-del-tequila.html" },
+    { "title": "Jensen's Liquors: Maestro Dobel Special Edition Diamante Tequila", "url": "https://jensensliquors.com/maestro-dobel-special-edition-diamante-tequila-75.html" },
+    { "title": "ReserveBar: Maestro Dobel Silver Tequila", "url": "https://www.reservebar.com/products/maestro-dobel-silver-tequila/GROUPING-104743" },
+    { "title": "Distiller: Maestro Dobel Silver", "url": "https://distiller.com/spirits/maestro-dobel-silver" }
+  ]
+}
