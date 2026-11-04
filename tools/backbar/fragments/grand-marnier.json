@@ -1,0 +1,84 @@
+{
+  "id": "grand-marnier",
+  "name": "Grand Marnier Cordon Rouge",
+  "respell": "grahn mar-NYAY kor-DOHN ROOZH",
+  "aka": ["Grand Marnier", "Cordon Rouge"],
+  "group": "liqueurs-amari",
+  "producer": "Marnier Lapostolle",
+  "place": "Bourg-Charente, in the Cognac region of France",
+  "photo": 2,
+  "confidence": "clear",
+  "facts": {
+    "base": "Cognac blended with a distillate of bitter orange peel and a little sugar; about half is cognac",
+    "age": "No age statement",
+    "cask": "The cognac is aged in oak, and the blend rests in oak casks before bottling",
+    "abv": "40% ABV (80 proof)",
+    "law": "A French orange liqueur of the curaçao family, made with cognac from the Cognac appellation"
+  },
+  "made": "Bitter orange peels, from the Caribbean fruit Citrus bigaradia, are macerated and then distilled into an orange spirit. That essence is blended with cognac, about half of the whole, and a little sugar, rested in oak casks and filtered before it is bottled at 40 per cent. The recipe dates from 1880, and the cognac is what set it apart from the other orange curaçaos of its day. The cognac side of the work is done at Bourg-Charente, near Jarnac.",
+  "taste": "Bitter orange peel and candied orange on the nose, over warm cognac with vanilla and a little toasted oak. The palate is sweet but firm, marmalade and orange zest held up by the brandy, and the finish is long, warming and gently bitter.",
+  "lines": {
+    "s10": "Grand Marnier Cordon Rouge is French cognac blended with a distillate of bitter oranges: a rich orange liqueur with warm brandy beneath.",
+    "s20": "Grand Marnier Cordon Rouge is a French liqueur of cognac and bitter orange: Caribbean orange peels distilled, blended with cognac and a little sugar, and rested in oak. It is marmalade and warm brandy, sipped neat or poured where a drink wants a deeper orange.",
+    "s45": "This is Grand Marnier Cordon Rouge, the red ribbon of the Marnier Lapostolle family. Bitter orange peels from the Caribbean are macerated and distilled, then blended with cognac, about half the bottle, and a little sugar, and rested in oak before bottling at 40 per cent. It tastes of marmalade and orange zest over warm brandy, sweet but firm, with a long and gently bitter finish. We pour it neat at room temperature, over one large cube, or in a drink that wants a deeper orange than triple sec. The bottle is shaped like a cognac still, and César Ritz is said to have suggested its name.",
+    "sale": "Grand Marnier is cognac and bitter orange in one glass, rested in oak, rich and warming. Try it neat after dinner, or ask for it in a Sidecar for a deeper orange."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, about an ounce, after dinner or beside coffee.",
+    "rocks": "Over one large cube; a twist of orange peel suits it.",
+    "glass": "A small tulip or snifter neat; a rocks glass for the cube.",
+    "classic": "The Millionaire and the Leap Year; it also deepens the orange in a Sidecar or a Margarita."
+  },
+  "guest": "Grand Marnier Cordon Rouge is a French liqueur of cognac blended with distilled bitter orange and rested in oak: rich marmalade and warm brandy, lovely neat after dinner.",
+  "story": "Jean-Baptiste Lapostolle founded a distillery at Neauphle-le-Château, near Paris, in 1827. In 1880 Louis-Alexandre Marnier Lapostolle, who had married into the family, blended cognac with the bitter oranges of the Caribbean and called it Curaçao Marnier. His friend César Ritz, the hotelier, is said to have suggested a grander name, and Grand Marnier it became. The squat bottle is modelled on a cognac still, and the red ribbon and wax seal gave the original its name, Cordon Rouge.",
+  "watch": [
+    "Not Cointreau or triple sec: a guest who calls for Cointreau gets Cointreau. Offer this as a richer orange, and say so.",
+    "Asked whether it is a cognac: it is a liqueur made with cognac, sweet and orange, at 40 per cent.",
+    "Grand Marnier makes other bottles too: the red ribbon is Cordon Rouge, the cognac blend described here.",
+    "In a Sidecar or Margarita it adds weight and sweetness: follow the bar's spec and never free pour."
+  ],
+  "asks": [],
+  "house": { "match": ["Grand Marnier"], "family": ["Grand Marnier", "Marnier Lapostolle"] },
+  "library": { "producer": "", "cask": "cognac", "canon": ["millionaire", "leap-year", "satan-s-whiskers"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Grand Marnier Cordon Rouge, and how is it made?",
+      "answer": "A French orange liqueur from 1880: bitter Caribbean orange peels macerated and distilled, blended with cognac, about half the whole, and a little sugar, then rested in oak and bottled at 40% ABV. Neat after dinner, over a cube, or in the Millionaire and the Leap Year."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "In which year did Louis-Alexandre Marnier Lapostolle first blend his cognac and orange liqueur?",
+      "options": ["1827", "1880", "1863", "1910"],
+      "a": 1,
+      "explain": "1880. In 1827 Jean-Baptiste Lapostolle founded the family distillery at Neauphle-le-Château, near Paris."
+    },
+    {
+      "id": "q2",
+      "q": "Which spirit is blended with the bitter orange distillate in Grand Marnier Cordon Rouge?",
+      "options": ["Armagnac", "Calvados", "Neutral grain spirit", "Cognac"],
+      "a": 3,
+      "explain": "Cognac, about half the blend. The cognac is what set it apart from the other orange curaçaos of 1880."
+    },
+    {
+      "id": "q3",
+      "q": "What is the squat Grand Marnier bottle modelled on?",
+      "options": ["A cognac still", "A wine cask", "An apothecary flask", "A ship's decanter"],
+      "a": 0,
+      "explain": "Its round shape follows the traditional copper cognac still; the red ribbon and wax seal finish it."
+    }
+  ],
+  "sources": [
+    { "title": "Grand Marnier: Cordon Rouge", "url": "https://www.grandmarnier.com/en-ca/our-collection/cordon-rouge" },
+    { "title": "Grand Marnier: history and heritage", "url": "https://www.grandmarnier.com/en-gb/?p=2363" },
+    { "title": "Wikipedia: Grand Marnier", "url": "https://en.wikipedia.org/wiki/Grand_Marnier" },
+    { "title": "Difford's Guide: Grand Marnier Cordon Rouge", "url": "https://www.diffordsguide.com/beer-wine-spirits/114/grand-marnier-cordon-rouge" },
+    { "title": "VinePair: 10 things you should know about Grand Marnier", "url": "https://vinepair.com/articles/grand-marnier-liqueur-guide/" },
+    { "title": "VinePair: the history of the Grand Marnier bottle shape", "url": "https://vinepair.com/articles/history-grand-marnier-bottle-shape" },
+    { "title": "Gault&Millau: Grand Marnier owes part of its success to this Parisian palace", "url": "https://fr.gaultmillau.com/en/news/le-grand-marnier-doit-en-partie-son-succes-a-ce-palace-parisien-" },
+    { "title": "Cognac-ton: Marnier, liqueur manufacturer in Bourg-Charente", "url": "https://cognac-ton.nl/en/homepage/brands-and-producers/home-page-general/brand-information/pages-l-o/marnier-lapostolle/" },
+    { "title": "Cask Atlas: Cognac, vineyard, Charentais still and cellar", "url": "" }
+  ]
+}
