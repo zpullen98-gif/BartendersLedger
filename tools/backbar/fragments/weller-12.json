@@ -1,0 +1,82 @@
+{
+  "id": "weller-12",
+  "name": "Weller Aged 12 Years",
+  "respell": "",
+  "aka": ["Weller 12", "W. L. Weller 12 Year", "Weller black label"],
+  "group": "american-whiskey",
+  "producer": "Buffalo Trace Distillery",
+  "place": "Frankfort, Kentucky",
+  "photo": 4,
+  "confidence": "clear",
+  "facts": {
+    "base": "A wheated bourbon mash: corn, with wheat in place of rye, and malted barley",
+    "age": "12 years, as the label states",
+    "cask": "New charred American oak barrels",
+    "abv": "45% ABV (90 proof)",
+    "law": "Kentucky straight bourbon: at least 51 per cent corn, new charred oak, at least two years"
+  },
+  "made": "The same wheated mash as every Weller, distilled at Buffalo Trace in Frankfort: corn, then wheat where most bourbons use rye, and a little malted barley, in proportions the distillery keeps to itself. The spirit goes into new charred American oak and stays in the distillery's warehouses for twelve years, the age the label states, which under American law is the age of the youngest whiskey in the bottle. It is then cut with water to 90 proof.",
+  "taste": "Deeper than the green label: caramel, vanilla, almond and a little cherry on the nose. The palate is round and soft from the wheat, with brown sugar, toasted oak and a touch of cocoa from the long years in wood. The finish is longer, with honey and gentle spice.",
+  "lines": {
+    "s10": "Weller Aged 12 Years is Buffalo Trace's wheated bourbon given twelve years in new charred oak: soft, round and deep, at 90 proof.",
+    "s20": "Weller 12 is the wheated recipe of the Weller range, corn, wheat and malted barley, rested twelve years in new charred oak at Buffalo Trace and bottled at 90 proof. The wheat keeps it soft; the years add caramel, cherry and toasted oak.",
+    "s45": "This is Weller Aged 12 Years, a Kentucky straight bourbon from Buffalo Trace in Frankfort. It is the same wheated recipe as the green label beside it, corn, wheat and malted barley, but it rests twelve years in new charred American oak, as the label states, before it is bottled at 90 proof. The long years bring caramel, brown sugar, cherry, toasted oak and a little cocoa, while the wheat keeps it soft, with a longer finish of honey and spice. We pour it neat or over one large cube, and it makes a rich Old Fashioned. Its recipe goes back to the Stitzel-Weller Distillery of 1935.",
+    "sale": "Weller 12 is soft wheated bourbon with twelve years in oak, so the caramel and cherry run deep without any bite. Pour it neat, or ask for it in an Old Fashioned with very little sugar."
+  },
+  "serve": {
+    "neat": "Neat, about an ounce and a half, at room temperature, with water on the side if asked.",
+    "rocks": "Over one large cube, which keeps the caramel and oak without drowning them.",
+    "glass": "A Glencairn or a small tulip neat; a rocks glass for the cube.",
+    "classic": "An Old Fashioned with a light hand on the sugar, so the twelve years lead."
+  },
+  "guest": "Weller 12 is a Kentucky bourbon made with wheat instead of rye and aged twelve years, so it is soft but deep: caramel, cherry and toasted oak, at 90 proof.",
+  "story": "Wheated bourbon became a house style at the Stitzel-Weller Distillery, which opened in Shively, just outside Louisville, on Derby Day 1935. It joined the old Weller firm, whose founder William Larue Weller had sold bourbon in Louisville from 1849, with the Stitzel family's distillery, and its bourbons were made with wheat where others used rye. The distillery closed in 1992, and the Weller bourbons, the twelve year among them, are distilled today at Buffalo Trace in Frankfort.",
+  "watch": [
+    "Not Special Reserve, the green label beside it: the same recipe with no age statement. The 12 is the black label, its twelve years printed.",
+    "Twelve years on the label is the age of the youngest whiskey in the bottle; 90 proof is the strength after water.",
+    "Asked about the Van Winkle bottles: the same wheated recipe from the same distillery, with barrels chosen and aged differently.",
+    "At 90 proof it needs little water: offer it on the side rather than adding it."
+  ],
+  "asks": [],
+  "house": { "match": ["Weller 12", "Weller Aged 12"], "family": ["Buffalo Trace", "Sazerac Company"] },
+  "library": { "producer": "buffalo-trace", "cask": "bourbon", "canon": ["old-fashioned"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "How does Weller Aged 12 Years differ from Weller Special Reserve?",
+      "answer": "The same wheated bourbon recipe from Buffalo Trace, corn, wheat and malted barley, at the same 90 proof, but rested twelve years in new charred oak, as its black label states, where Special Reserve carries no age statement. Deeper: caramel, cherry, toasted oak and cocoa, still soft."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What does Weller Aged 12 Years rest in for its twelve years?",
+      "options": ["New charred American oak", "Used bourbon barrels", "Former sherry butts", "French oak casks"],
+      "a": 0,
+      "explain": "New charred American oak, as every Kentucky straight bourbon must; a used barrel would make it something other than bourbon."
+    },
+    {
+      "id": "q2",
+      "q": "At what strength is Weller Aged 12 Years bottled?",
+      "options": ["100 proof", "107 proof", "90 proof", "114 proof"],
+      "a": 2,
+      "explain": "90 proof, 45% ABV, the same strength as Special Reserve; the twelve years are the difference."
+    },
+    {
+      "id": "q3",
+      "q": "At which distillery, opened near Louisville in 1935, did wheated bourbon become the house style?",
+      "options": ["Old Taylor", "Stitzel-Weller", "Bernheim", "Old Forester"],
+      "a": 1,
+      "explain": "Stitzel-Weller, opened in Shively on Derby Day 1935, joining the Weller firm with the Stitzel distillery. It closed in 1992; Weller is distilled today at Buffalo Trace."
+    }
+  ],
+  "sources": [
+    { "title": "Sazerac Company: W. L. Weller Wheated Bourbon", "url": "https://www.sazerac.com/our-brands/sazerac-brands/w-l-weller-wheated-bourbon.html" },
+    { "title": "Difford's Guide: W.L. Weller 12 Year Old Kentucky Straight Bourbon Whiskey", "url": "https://www.diffordsguide.com/beer-wine-spirits/1380/wl-weller-12-year-old" },
+    { "title": "Whisky Advocate: Weller 12 Year Old Wheated Bourbon Brings the Sweet and the Heat", "url": "https://whiskyadvocate.com/weller-12-year-bourbon-review" },
+    { "title": "Breaking Bourbon: Weller 12 Year review", "url": "https://breakingbourbon.com/review/weller-12-year-2023" },
+    { "title": "Wikipedia: W. L. Weller", "url": "https://en.wikipedia.org/wiki/W._L._Weller" },
+    { "title": "Legal Information Institute: 27 CFR 5.74, statements of age", "url": "https://www.law.cornell.edu/cfr/text/27/5.74" },
+    { "title": "Cask Atlas: Bourbon", "url": "" }
+  ]
+}
