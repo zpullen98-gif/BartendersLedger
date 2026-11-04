@@ -47,13 +47,13 @@ export const PHOTOS = [1, 2, 3, 4, 5];
 /* the reading words a page shows: the cap on the whole entry counts these */
 export const PROSE_FIELDS = ['made', 'taste', 'lines', 'serve', 'guest', 'story', 'watch', 'asks'];
 /* a card's key is a person's saved record: frozen in keys.v1.json */
-export const KEY_PREFIX = 'Back Bar · ';
+export const KEY_PREFIX = 'Back Bar \u00b7 ';
 export function cardKey(id){ return KEY_PREFIX + id + '/recall'; }
 
 /* the dash in every form the suite refuses, and a spaced hyphen standing in for one */
-export const DASH = /[‒–—―]|&[mn]dash;|&#821[12];|&#x201[34];|\x2d\x2d| \x2d /i;
+export const DASH = /[\u2012\u2013\u2014\u2015]|&[mn]dash;|&#821[12];|&#x201[34];|\x2d\x2d| \x2d /i;
 /* glyphs below U+2190 the style still refuses: the degree sign and the fractions */
-export const GLYPH = /[°¼-¾⅐-⅟]/;
+export const GLYPH = /[\u00b0\u00bc-\u00be\u2150-\u215f]/;
 /* American spellings: the Coffee and tea list and the cellar's own words */
 export const AMERICAN_MORE = /\b(?:aging|barreled|barreling|fiber|savor(?:y|s|ed|ing)?|odors?|ardor|vigor|armor|caliber|meager|somber|aluminum|liters?|theaters?|center(?:ed|s)?|harbors?|neighbor(?:s|ing)?|honored|colored|flavored)\b/i;
 /* words that sell rather than teach: the owner's rule is no superlative at all */
@@ -61,7 +61,7 @@ export const SUPERLATIVE = /\b(?:best|finest|greatest|rarest|smoothest|purest|ri
 /* verdicts the house leaves to the kitchen, the bar and the doctor; no allergen talk at all */
 export const VERDICT = /\b(?:allerg\w*|gluten\w*|coeliac|celiac|dairy[- ]free|nut[- ]free|vegan|vegetarian|kosher|halal|sulphites?|sulfites?|safe for|healthy|healthier|detox|antioxidants?|good for you|medicinal benefits?|cures?|remed(?:y|ies)|aids? digestion|settles? the stomach|boosts? (?:your )?(?:immune|immunity|metabolism|energy))\b/i;
 /* no price anywhere */
-export const PRICE = /[$£€¥¢]|\b(?:price[ds]?|pricing|pricey|costs?|costly|dollars?|cents|cheap(?:er|est)?|expensive|bargain|value for money|affordable|msrp|retail(?:s|ing)?|resale)\b/i;
+export const PRICE = /[$\u00a3\u20ac\u00a5\u00a2]|\b(?:price[ds]?|pricing|pricey|costs?|costly|dollars?|cents|cheap(?:er|est)?|expensive|bargain|value for money|affordable|msrp|retail(?:s|ing)?|resale)\b/i;
 /* nothing volatile: allocation, scarcity, the market, the current owner or maker */
 export const VOLATILE = /\b(?:allocat\w*|lotter(?:y|ies)|secondary market|flipp\w*|sold out|hard to find|limited supply|in stock|out of stock|owned by|now owns?|now owned|owner of the brand|parent (?:company|group)|acquir\w*|acquisition|bought by|sold to|portfolio|current(?:ly)? (?:master )?(?:distiller|blender)s?)\b/i;
 /* a master distiller or blender with a name after the title is a person, and very likely living */
@@ -80,8 +80,8 @@ export function sentences(s){
     .replace(/\b(?:St|Mt|No|Dr|Mr|Mrs|Ms|Jr|Sr|vs|approx|ca)\./g, (m) => m.replace(/\./g, '\u0001'))
     .replace(/\b([A-Z])\.(?=\s+[A-Z])/g, '$1\u0001');
   if(!t) return 0;
-  const ends = t.match(/[.!?]["”’)]?(?=\s|$)/g) || [];
-  const tail = /[.!?]["”’)]?$/.test(t) ? 0 : 1;
+  const ends = t.match(/[.!?]["\u201d\u2019)]?(?=\s|$)/g) || [];
+  const tail = /[.!?]["\u201d\u2019)]?$/.test(t) ? 0 : 1;
   return ends.length + tail;
 }
 /* the reading words of an entry: what its page shows above the drill */
@@ -189,7 +189,7 @@ export function houseUses(pack, entry, roster){
   items.forEach((item) => {
     const hit = itemTexts(item, comps).some((text) => {
       const occ = occurrences(text, roster);
-      return occ.some(([s, e, id]) => id === entry.id && !occ.some(([s2, e2, id2]) => id2 !== id && s2 <= s && e2 >= e && (e2 - s2) > (e - s)));
+      return occ.some(([s, e, id]) => id === entry.id && !occ.some(([s2, e2, id2]) => id2 !== id && s2 <= s && e2 >= e && (e2-s2) > (e-s)));
     });
     if(hit) ids.push(item.id);
   });
@@ -270,7 +270,7 @@ function quizProblems(f){
     const key = q.options[q.a], fk = fold(key);
     if(isStr(q.q) && fk.length >= 4 && (' ' + fold(q.q) + ' ').indexOf(' ' + fk + ' ') >= 0) out.push(at + '.q: the stem carries the answer');
     const longest = Math.max(...q.options.filter((o, j) => j !== q.a).map((o) => o.length));
-    if(key.length > longest * 1.6 && key.length - longest >= 15) out.push(at + '.options: the answer is much the longest (a length clue)');
+    if(key.length > longest * 1.6 && key.length-longest >= 15) out.push(at + '.options: the answer is much the longest (a length clue)');
     if(!isStr(q.explain) || !q.explain.trim() || words(q.explain) > QUIZ.explain) out.push(at + '.explain: at most ' + QUIZ.explain + ' words');
   });
   const keys = f.quiz.map((q) => q && q.a);
@@ -294,15 +294,15 @@ export function validateFragment(f, ctx){
   Object.keys(f).filter((k) => FIELDS.indexOf(k) < 0).forEach((k) => out.push(k + ': not a fragment field'));
   if(out.length) return out;
 
-  if(f.name !== row.name) out.push('name: must be the plan’s "' + row.name + '"');
+  if(f.name !== row.name) out.push('name: must be the plan\u2019s "' + row.name + '"');
   if(!isStr(f.name) || f.name.length > NAME_MAX) out.push('name: at most ' + NAME_MAX + ' characters');
   if(!isStr(f.respell) || f.respell.length > NAME_MAX) out.push('respell: a string of at most ' + NAME_MAX + ' characters');
   else if(f.respell && (!/^[A-Za-z' ,-]+$/.test(f.respell) || !/[A-Z]/.test(f.respell))) out.push('respell: syllables joined by hyphens, the stressed one in capitals (BEN-eh-dik-TEEN)');
   if(!Array.isArray(f.aka) || f.aka.some((a) => !isStr(a) || !a.trim() || a.length > NAME_MAX)) out.push('aka: a list of names, each at most ' + NAME_MAX + ' characters');
   else if(new Set(f.aka.map(fold).concat(fold(f.name))).size !== f.aka.length + 1) out.push('aka: a name twice, or the name itself');
-  if(f.group !== row.group) out.push('group: must be the plan’s "' + row.group + '"');
-  if(f.photo !== row.photo) out.push('photo: must be the plan’s ' + row.photo);
-  if(f.confidence !== row.confidence) out.push('confidence: must be the plan’s "' + row.confidence + '"');
+  if(f.group !== row.group) out.push('group: must be the plan\u2019s "' + row.group + '"');
+  if(f.photo !== row.photo) out.push('photo: must be the plan\u2019s ' + row.photo);
+  if(f.confidence !== row.confidence) out.push('confidence: must be the plan\u2019s "' + row.confidence + '"');
   if(!isStr(f.producer) || !f.producer.trim() || f.producer.length > NAME_MAX) out.push('producer: the company that makes it, at most ' + NAME_MAX + ' characters');
   else if((ctx.companies || []).indexOf(f.producer) < 0) out.push('producer: "' + f.producer + '" is not on companies.json');
   capped(out, 'place', f.place, 1, PLACE_MAX);
@@ -342,8 +342,8 @@ export function validateFragment(f, ctx){
     f.asks.forEach((s, i) => capped(out, 'asks[' + i + ']', s, 1, ASK_MAX));
     if(row.confidence === 'probable' && !f.asks.length) out.push('asks: a probable bottle keeps at least one lineup question');
   }
-  if(!same(f.house, row.house)) out.push('house: must be the plan’s, copied ' + JSON.stringify(row.house));
-  if(!same(f.library, row.library)) out.push('library: must be the plan’s, copied ' + JSON.stringify(row.library));
+  if(!same(f.house, row.house)) out.push('house: must be the plan\u2019s, copied ' + JSON.stringify(row.house));
+  if(!same(f.library, row.library)) out.push('library: must be the plan\u2019s, copied ' + JSON.stringify(row.library));
 
   if(!Array.isArray(f.recall) || f.recall.length !== 1) out.push('recall: exactly one card');
   else {
