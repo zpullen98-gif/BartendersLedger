@@ -1,0 +1,84 @@
+{
+  "id": "rabbit-hole-heigold",
+  "name": "Rabbit Hole Heigold",
+  "respell": "HYE-gold",
+  "aka": ["Heigold", "Rabbit Hole High Rye"],
+  "group": "american-whiskey",
+  "producer": "Rabbit Hole Distillery",
+  "place": "Louisville, Kentucky",
+  "photo": 5,
+  "confidence": "clear",
+  "facts": {
+    "base": "70% corn, 25% malted rye and 5% malted barley",
+    "age": "No age statement on the front label; as straight bourbon, at least two years",
+    "cask": "New American oak barrels, toasted and then charred",
+    "abv": "47.5% ABV (95 proof)",
+    "law": "Kentucky straight bourbon: at least 51 per cent corn, new charred oak, at least two years"
+  },
+  "made": "Rabbit Hole Distillery makes Heigold in Louisville from a high rye mash: 70 per cent corn, 25 per cent malted rye and 5 per cent malted barley. Both small grains are malted, which is the Double Malt on the label, and the distillery names its rye as German. The spirit rests in new American oak barrels toasted before they are charred, as a Kentucky straight bourbon, so at least two years, with no age statement on the front label, and is bottled at 47.5 per cent, 95 proof.",
+  "taste": "Orange peel, baked apple and a little liquorice on the nose, with caramel underneath. The palate is buttery and sweet, then the rye arrives: cinnamon, black pepper and toasted oak. The finish is warm, with butterscotch and spice that linger.",
+  "lines": {
+    "s10": "Rabbit Hole Heigold is a high rye Louisville bourbon with both small grains malted: buttery and sweet, then cinnamon and pepper, at 95 proof.",
+    "s20": "Heigold is the high rye bourbon of Rabbit Hole in Louisville: corn with a quarter malted rye and a little malted barley, rested in toasted and charred new oak and bottled at 95 proof. Orange, apple and caramel first, then the rye's cinnamon and pepper.",
+    "s45": "This is Rabbit Hole Heigold, a Kentucky straight bourbon from Rabbit Hole Distillery in Louisville. The label reads High Rye Double Malt: 70 per cent corn, 25 per cent malted rye and a little malted barley, rested in new American oak toasted before it is charred, and bottled at 95 proof. It opens on orange peel, baked apple and caramel, buttery on the palate, then the rye brings cinnamon, pepper and toasted oak to a long, spicy finish. We pour it neat or on one large cube, and it makes a lively Boulevardier. It carries the name of Christian Heigold, a German stonemason of nineteenth century Louisville.",
+    "sale": "Heigold is a high rye bourbon from Louisville, buttery and sweet at first, then spiced with malted rye. Try it neat, or in a Boulevardier where the rye stands up to the Campari."
+  },
+  "serve": {
+    "neat": "Neat, about an ounce and a half, at room temperature; a drop of water softens the spice.",
+    "rocks": "Over one large cube, which rounds the rye without drowning it.",
+    "glass": "A Glencairn or a small tulip neat; a rocks glass for the cube.",
+    "classic": "A Boulevardier or an Old Fashioned: the rye spice stands up to bitters and Campari."
+  },
+  "guest": "Heigold is a high rye Kentucky straight bourbon from Rabbit Hole in Louisville: corn with a quarter malted rye, buttery and sweet first, then cinnamon and pepper, at 95 proof.",
+  "story": "Heigold carries the name of Christian Heigold, a German stonemason who settled in Louisville before 1850. After the anti-immigrant unrest of the 1850s he began, in 1857, to carve the front of his house with busts of American figures and mottos of loyalty to the city and the Union, and he died soon after it was finished in 1865. The carved facade still stands in Louisville. The bourbon was launched in 2019, when Rabbit Hole named its range for the city's history.",
+  "watch": [
+    "Not Cavehill, the taller bottle beside it: Cavehill is the soft, honeyed four grain bourbon; Heigold is the spicier high rye.",
+    "High rye bourbon is still bourbon, 70 per cent corn here: a guest who asks for a rye whiskey wants a different bottle.",
+    "Not Dareringer, the Rabbit Hole bourbon finished in sherry casks: ask which Rabbit Hole a guest means.",
+    "Asked its age: no age statement on the front label; as a straight bourbon it has rested at least two years."
+  ],
+  "asks": [],
+  "house": { "match": ["Rabbit Hole Heigold", "Heigold"], "family": ["Rabbit Hole"] },
+  "library": { "producer": "rabbit-hole", "cask": "bourbon", "canon": ["old-fashioned", "boulevardier", "brown-derby", "whiskey-sour"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Rabbit Hole Heigold made from, and what does High Rye Double Malt on its label mean?",
+      "answer": "A Kentucky straight bourbon from Rabbit Hole in Louisville: 70 per cent corn, 25 per cent malted rye and 5 per cent malted barley. High rye is that quarter of rye; double malt means both small grains are malted. Bottled at 47.5% ABV, 95 proof."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What share of the mash of Rabbit Hole Heigold is malted rye?",
+      "options": ["10 per cent", "51 per cent", "25 per cent", "35 per cent"],
+      "a": 2,
+      "explain": "25 per cent malted rye, with 70 per cent corn and 5 per cent malted barley: high rye, but still a bourbon."
+    },
+    {
+      "id": "q2",
+      "q": "Christian Heigold, for whom Rabbit Hole Heigold is named, worked at which trade in Louisville?",
+      "options": ["Stonemason", "Cooper", "Distiller", "Riverboat pilot"],
+      "a": 0,
+      "explain": "A German stonemason who carved the front of his own house from 1857; the facade still stands in Louisville."
+    },
+    {
+      "id": "q3",
+      "q": "What makes Rabbit Hole Heigold a bourbon rather than a rye whiskey?",
+      "options": ["It rests in used barrels", "It is bottled below 100 proof", "It is distilled in Kentucky", "Its mash is 70 per cent corn"],
+      "a": 3,
+      "explain": "Bourbon needs at least 51 per cent corn, rye whiskey at least 51 per cent rye. Heigold is 70 per cent corn, with a quarter malted rye."
+    }
+  ],
+  "sources": [
+    { "title": "Rabbit Hole Distillery: Heigold Kentucky Straight Bourbon Whiskey", "url": "https://www.rabbitholedistillery.com/products/heigold-kentucky-straight-bourbon-whiskey" },
+    { "title": "Rabbit Hole Distillery: The making of a great high rye bourbon", "url": "https://www.rabbitholedistillery.com/blogs/bourbon-101/making-of-the-best-high-rye-bourbon" },
+    { "title": "BevNET: Rabbit Hole to debut new branding with launch of Heigold Kentucky Straight Bourbon", "url": "https://www.bevnet.com/news/spirits/2019/rabbit-hole-to-debut-new-branding-with-launch-of-heigold-super-premium-kentucky-straight-bourbon/" },
+    { "title": "The Spirits Educator: What's the Difference? Rabbit Hole Heigold vs Rabbit Hole Cavehill", "url": "https://www.thespiritseducator.com/whats-the-difference/rabbit-hole-heigold-cavehill" },
+    { "title": "Difford's Guide: Rabbit Hole Heigold Kentucky Straight Bourbon Whiskey", "url": "https://www.diffordsguide.com/beer-wine-spirits/7264/rabbit-hole-heigold-bourbon" },
+    { "title": "Bartender Spirits Awards: Heigold Kentucky Straight Bourbon Whiskey", "url": "https://bartenderspiritsawards.com/en/competition-shelf-talkers/2022/medals/2207/" },
+    { "title": "National Park Service: Heigold House facade, National Register file", "url": "https://npgallery.nps.gov/AssetDetail/NRIS/78001363" },
+    { "title": "Historical Marker Database: The Heigold Facade", "url": "https://www.hmdb.org/m.asp?m=104120" },
+    { "title": "Cask Atlas: Bourbon", "url": "" }
+  ]
+}

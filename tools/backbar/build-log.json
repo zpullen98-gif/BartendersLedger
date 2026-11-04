@@ -1,10 +1,10 @@
 {
   "edition": "2026-11-04",
-  "bottles": 18,
+  "bottles": 19,
   "planned": 29,
   "confirm": 12,
   "words": {
-    "total": 10027,
+    "total": 10614,
     "perEntry": {
       "luxardo-fernet": 549,
       "lazzaroni-maraschino": 584,
@@ -23,6 +23,7 @@
       "don-julio-reposado": 546,
       "don-julio-1942": 557,
       "rabbit-hole-cavehill": 576,
+      "rabbit-hole-heigold": 587,
       "george-t-stagg": 564
     }
   },
@@ -44,10 +45,11 @@
     "Back Bar · don-julio-reposado/recall",
     "Back Bar · don-julio-1942/recall",
     "Back Bar · rabbit-hole-cavehill/recall",
+    "Back Bar · rabbit-hole-heigold/recall",
     "Back Bar · george-t-stagg/recall"
   ],
-  "questions": 54,
-  "sources": 122,
+  "questions": 57,
+  "sources": 130,
   "house": {
     "luxardo-fernet": {
       "uses": [],
@@ -75,6 +77,12 @@
         "c-o3kpe3us"
       ]
     },
+    "rabbit-hole-heigold": {
+      "uses": [],
+      "family": [
+        "c-o3kpe3us"
+      ]
+    },
     "george-t-stagg": {
       "uses": [],
       "family": [
@@ -90,7 +98,6 @@
     "lunazul",
     "agave-de-cortes",
     "el-gobernador",
-    "rabbit-hole-heigold",
     "weller-special-reserve",
     "weller-12",
     "ofc-2005",
