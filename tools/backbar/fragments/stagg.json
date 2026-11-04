@@ -1,0 +1,83 @@
+{
+  "id": "stagg",
+  "name": "Stagg",
+  "respell": "",
+  "aka": ["Stagg Jr.", "Stagg Kentucky Straight Bourbon"],
+  "group": "american-whiskey",
+  "producer": "Buffalo Trace Distillery",
+  "place": "Frankfort, Kentucky",
+  "photo": 5,
+  "confidence": "clear",
+  "facts": {
+    "base": "A corn-led bourbon mash of corn, rye and malted barley, the recipe of George T. Stagg",
+    "age": "Around eight to nine years in most batches; each batch differs",
+    "cask": "New charred American oak, bottled straight from the barrel",
+    "abv": "varies by release; uncut barrel proof, which each batch's label states",
+    "law": "Kentucky straight bourbon: at least 51 per cent corn, new charred oak, at least two years"
+  },
+  "made": "Stagg is distilled at Buffalo Trace in Frankfort to the same corn-led bourbon recipe as George T. Stagg, corn with some rye and malted barley. The spirit rests in new charred oak for around eight to nine years, roughly half the age of its namesake, and the barrels chosen for each batch are bottled uncut and unfiltered, at the strength they came out of the wood. Several batches come out each year, and each has its own proof, which the label prints beside the batch code.",
+  "taste": "Rich and hot: black cherry, caramel and brown sugar on the nose, with a little oak char. The palate is thick at barrel proof, dark chocolate, cinnamon and baked cherry over toasted oak, and a few drops of water bring out vanilla and dried fruit. The finish is long, warm and peppery.",
+  "lines": {
+    "s10": "Stagg is Buffalo Trace's barrel proof Kentucky bourbon, the younger cousin of George T. Stagg, bottled uncut and unfiltered in batches.",
+    "s20": "Stagg, once called Stagg Jr., is a Kentucky straight bourbon from Buffalo Trace, aged around eight to nine years and bottled uncut and unfiltered, so each batch has its own proof, which the label states. Black cherry, dark chocolate and cinnamon, hot and rich.",
+    "s45": "This is Stagg, a Kentucky straight bourbon from Buffalo Trace in Frankfort, made from the same corn-led recipe as George T. Stagg but given around eight to nine years in new charred oak rather than fifteen. It is bottled uncut and unfiltered, at the strength it came out of the barrel, so each batch has its own proof, and the label states it beside the batch code. Expect black cherry, caramel, dark chocolate and cinnamon, hot and rich, opening with a few drops of water. We pour it neat with water on the side, or over one large cube. It first appeared in 2013 as Stagg Jr.",
+    "sale": "Stagg is a rich, barrel proof bourbon from Buffalo Trace, the younger cousin of George T. Stagg, at full strength. Taste it neat with a few drops of water, or have it in an Old Fashioned that stands up to the bitters."
+  },
+  "serve": {
+    "neat": "Neat, about an ounce, with a small jug of still water so the guest can open it.",
+    "rocks": "One large cube, which tames the proof slowly; never a glass full of small ice.",
+    "glass": "A Glencairn or a small tulip neat; a rocks glass for the cube.",
+    "classic": "An Old Fashioned, stirred a little longer for the proof; usually poured neat."
+  },
+  "guest": "Stagg is a Kentucky bourbon from Buffalo Trace, around eight to nine years old and bottled uncut at barrel proof: black cherry, dark chocolate and cinnamon, very strong, and good with a few drops of water.",
+  "story": "The name honours George T. Stagg, the St. Louis whiskey merchant who bought the O.F.C. distillery in Frankfort in 1878; the distillery carried his name from 1904 until it became Buffalo Trace in 1999. In 2013 Buffalo Trace introduced Stagg Jr., a younger bourbon bottled uncut and unfiltered like George T. Stagg, but released in several batches a year rather than once. In 2022 the Jr. left the label, and the bourbon has been called simply Stagg since.",
+  "watch": [
+    "Not George T. Stagg, the taller bottle beside it: the same recipe, around fifteen years old and released once a year. Stagg is younger.",
+    "Its proof changes with each batch and is always high: pour less, offer water, and read the label rather than quote a figure.",
+    "A guest asking for Stagg Jr. wants this bottle: the same bourbon, renamed in 2022.",
+    "Two antlered bottles stand together on the shelf: check the batch code on the label before you name the proof."
+  ],
+  "asks": ["Which Stagg batch is open (its code is on the label), and what proof does its label state?"],
+  "house": { "match": ["Stagg", "Stagg Jr"], "family": ["Buffalo Trace", "Sazerac Company"] },
+  "library": { "producer": "buffalo-trace", "cask": "bourbon", "canon": ["old-fashioned"] },
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is Stagg, and how does it differ from George T. Stagg?",
+      "answer": "A Kentucky straight bourbon from Buffalo Trace, once called Stagg Jr., from the same recipe as George T. Stagg but aged around eight to nine years rather than about fifteen, bottled uncut and unfiltered in several batches a year, each with its own proof on the label. Neat with water, or one large cube."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Under what name did Buffalo Trace first release Stagg in 2013?",
+      "options": ["Stagg Reserve", "Stagg Select", "Stagg Jr.", "Stagg Single Barrel"],
+      "a": 2,
+      "explain": "Stagg Jr., the younger counterpart of George T. Stagg; the Jr. left the label in 2022."
+    },
+    {
+      "id": "q2",
+      "q": "Roughly how long does Stagg rest in new charred oak in most batches?",
+      "options": ["Four years", "Eight to nine years", "Fifteen years", "Twenty years"],
+      "a": 1,
+      "explain": "Around eight to nine years, roughly half the age of George T. Stagg, which rests around fifteen."
+    },
+    {
+      "id": "q3",
+      "q": "In which year did Stagg Jr. become simply Stagg on the label?",
+      "options": ["2013", "2018", "1999", "2022"],
+      "a": 3,
+      "explain": "2022. It launched as Stagg Jr. in 2013; 1999 is the year the Frankfort distillery became Buffalo Trace."
+    }
+  ],
+  "sources": [
+    { "title": "Buffalo Trace Distillery: Stagg", "url": "https://buffalotracedistillery.com/craftsmen/stagg" },
+    { "title": "Buffalo Trace Distillery: releases 15th batch of Stagg Jr. (press release, 2020)", "url": "https://www.buffalotracedistillery.com/content/dam/press-releases/2020/buffalo-trace/2020-12-15-BTD-Buffalo%20Trace%20Distillery%20Releases%2015th%20Batch%20of%20Stagg%20Jr.pdf" },
+    { "title": "The Spirits Business: Buffalo Trace releases Stagg Jr bourbon", "url": "https://www.thespiritsbusiness.com/2013/07/buffalo-trace-releases-stagg-jr-bourbon/" },
+    { "title": "Paste: Stagg Jr. name change", "url": "https://www.pastemagazine.com/drink/whiskey/stagg-jr-name-change-buffalo-trace-george-t-stagg-price-secondary" },
+    { "title": "The Daily Pour: Stagg Jr. sees a name change", "url": "https://thedailypour.com/?p=20665" },
+    { "title": "Whisky Advocate: The Mashbills of Buffalo Trace", "url": "https://whiskyadvocate.com/The-Mashbills-of-Buffalo-Trace" },
+    { "title": "Kentucky Historical Society: O.F.C.-Stagg Distillery marker", "url": "https://history.ky.gov/markers/ofc-stagg-distillery" },
+    { "title": "Cask Atlas: Bourbon", "url": "" }
+  ]
+}
