@@ -10,12 +10,12 @@
   "confidence": "clear",
   "facts": {
     "base": "Blue agave from the Jalisco Highlands, distilled twice in pot and column stills",
-    "age": "At least a year in oak, as añejo requires; most accounts give 12 to 14 months",
+    "age": "At least a year in oak, as añejo requires; accounts range from 12 to 24 months",
     "cask": "American oak barrels, no larger than the 600 litres the añejo rule allows",
     "abv": "40% ABV (80 proof)",
     "law": "Tequila, 100% blue agave; añejo means at least one year in oak casks of at most 600 litres"
   },
-  "made": "The agave is the Silver's: blue agave from Los Altos, the highlands of Jalisco, cooked slowly, partly in brick ovens, then fermented and distilled twice, through a pot still and a column still. The new spirit goes into American oak barrels and rests for at least a year, 12 to 14 months by most accounts, before it is cut to 40 per cent and bottled. The wood turns it gold and lays caramel and vanilla over the cooked agave.",
+  "made": "The agave is the Silver's: blue agave from Los Altos, the highlands of Jalisco, cooked slowly, partly in brick ovens, then fermented and distilled twice, through a pot still and a column still. The new spirit goes into American oak barrels and rests for at least a year, accounts ranging from 12 to 24 months, before it is cut to 40 per cent and bottled. The wood turns it gold and lays caramel and vanilla over the cooked agave.",
   "taste": "Toasted oak, caramel and vanilla on the nose, with cooked agave and a little coconut. The palate is round and soft, butterscotch, baked agave and gentle spice, and the finish is warm, of medium length and lightly dry.",
   "lines": {
     "s10": "Leyenda del Milagro Añejo is a highland tequila rested at least a year in American oak: caramel, vanilla and cooked agave.",
@@ -24,7 +24,7 @@
     "sale": "Milagro Añejo is highland agave after a year and more in American oak, caramel and vanilla over the agave. Pour it neat after dinner, or try it in a Mexican Coffee."
   },
   "serve": {
-    "neat": "Neat at room temperature, about an ounce and a half, given a minute in the glass.",
+    "neat": "Neat at room temperature, given a minute in the glass.",
     "rocks": "Over one large cube on request; the oak and caramel hold up to a little chill.",
     "glass": "A copita, a small snifter or a tulip; a rocks glass over ice.",
     "classic": "The Mexican Coffee, with coffee liqueur, hot coffee and cream; an añejo Old Fashioned too."
@@ -34,7 +34,7 @@
   "watch": [
     "Añejo means at least a year in oak; a reposado rests two months or more but under a year. Never pour one for the other.",
     "A second, amber Leyenda del Milagro stands below the liqueurs: read the neck before pouring. This one says AÑEJO.",
-    "Asked its age: the label gives no single figure. The rule makes one year the least, and most accounts give 12 to 14 months.",
+    "Asked its age: the label gives no single figure. The rule makes one year the least, and published accounts range from 12 to 24 months.",
     "Not the Select Barrel Reserve Añejo, a separate Milagro bottling aged longer in American and French oak."
   ],
   "asks": [],
@@ -44,7 +44,7 @@
     {
       "id": "recall",
       "prompt": "What is Leyenda del Milagro Añejo, and how is it aged?",
-      "answer": "A 100% blue agave tequila from the Jalisco Highlands, distilled in a pot still and a column still, then rested at least a year in American oak barrels, 12 to 14 months by most accounts, at 40% ABV. Caramel, vanilla and coconut; poured neat."
+      "answer": "A 100% blue agave tequila from the Jalisco Highlands, distilled in a pot still and a column still, then rested at least a year in American oak barrels, 12 to 24 months by published accounts, at 40% ABV. Caramel, vanilla and coconut; poured neat."
     }
   ],
   "quiz": [
@@ -60,7 +60,7 @@
       "q": "Up to what cask size does the añejo rule allow?",
       "options": ["250 litres", "400 litres", "1,000 litres", "600 litres"],
       "a": 3,
-      "explain": "600 litres: an añejo rests at least a year in oak casks no larger than that, so the wood stays in close touch with the spirit."
+      "explain": "600 litres: an añejo rests in oak casks no larger than that, so the wood stays in close touch with the spirit."
     },
     {
       "id": "q3",

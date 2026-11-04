@@ -24,7 +24,7 @@
     "sale": "Milagro Silver is unaged highland agave, bright with lime zest and white pepper. Try it in a Paloma with grapefruit and soda, or neat to taste the agave itself."
   },
   "serve": {
-    "neat": "Neat at room temperature, about an ounce and a half, sipped slowly rather than shot.",
+    "neat": "Neat at room temperature, sipped slowly rather than shot.",
     "rocks": "Over one large cube for a guest who likes it cool, or long with soda and lime.",
     "glass": "A copita or a small tulip neat; a rocks glass over ice.",
     "classic": "The Margarita and the Paloma; also Ranch Water and El Diablo."
@@ -53,7 +53,7 @@
       "q": "In which year was Milagro tequila founded?",
       "options": ["1974", "1989", "1998", "2005"],
       "a": 2,
-      "explain": "1998, by two university friends in Mexico City, which makes it one of the younger names on the tequila shelf."
+      "explain": "1998, by two university friends in Mexico City. 1989 is the year Patrón began."
     },
     {
       "id": "q2",
@@ -64,7 +64,7 @@
     },
     {
       "id": "q3",
-      "q": "Which stills does Milagro use for its two distillations?",
+      "q": "By the producer's own account, which stills does Milagro distil in?",
       "options": ["Two copper pot stills", "A pot still and a column still", "Two column stills", "A single continuous column"],
       "a": 1,
       "explain": "One pass through a pot still and one through a column still, by the producer's own account."

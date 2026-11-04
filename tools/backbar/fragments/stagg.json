@@ -24,7 +24,7 @@
     "sale": "Stagg is a rich, barrel proof bourbon from Buffalo Trace, the younger cousin of George T. Stagg, at full strength. Taste it neat with a few drops of water, or have it in an Old Fashioned that stands up to the bitters."
   },
   "serve": {
-    "neat": "Neat, about an ounce, with a small jug of still water so the guest can open it.",
+    "neat": "Neat, with a small jug of still water so the guest can open it.",
     "rocks": "One large cube, which tames the proof slowly; never a glass full of small ice.",
     "glass": "A Glencairn or a small tulip neat; a rocks glass for the cube.",
     "classic": "An Old Fashioned, stirred a little longer for the proof; usually poured neat."
@@ -67,7 +67,7 @@
       "q": "In which year did Stagg take its present name on the label?",
       "options": ["2013", "2018", "1999", "2022"],
       "a": 3,
-      "explain": "2022. It launched as Stagg Jr. in 2013; 1999 is the year the Frankfort distillery became Buffalo Trace."
+      "explain": "2022. It first appeared in 2013; 1999 is the year the Frankfort distillery became Buffalo Trace."
     }
   ],
   "sources": [

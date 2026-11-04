@@ -15,16 +15,16 @@
     "abv": "varies by release; uncut barrel proof, which the label states",
     "law": "Kentucky straight bourbon: at least 51 per cent corn, new charred oak, at least two years"
   },
-  "made": "Distilled at Buffalo Trace in Frankfort to a bourbon recipe led by corn, the spirit is filled into new charred oak barrels and left for around 15 years in the distillery's warehouses. Each year barrels are chosen for the Antique Collection and bottled uncut and unfiltered, at the strength they came out of the wood. So every release has its own proof, age and character, and its label states them.",
+  "made": "Distilled at Buffalo Trace in Frankfort to a bourbon recipe led by corn, the spirit is filled into new charred oak barrels and left for around 15 years in the distillery's warehouses. For each release in the yearly Antique Collection, barrels are chosen and bottled uncut and unfiltered, at the strength they came out of the wood. So every release has its own proof, age and character, and its label states them.",
   "taste": "Dark and dense: toffee, dark chocolate, black cherry, tobacco and old leather on the nose, then a thick, hot palate of molasses, espresso and oak spice. Water opens it into dried fruit and vanilla; the finish is long, drying and warm.",
   "lines": {
     "s10": "George T. Stagg is Buffalo Trace's uncut, unfiltered Kentucky bourbon, aged about 15 years and bottled at full barrel proof.",
     "s20": "George T. Stagg is one of the five whiskeys in Buffalo Trace's yearly Antique Collection: about 15 years in new charred oak, then bottled straight from the barrel. Dark, dense and very strong, it tastes of toffee, cherry and espresso, and a few drops of water open it.",
-    "s45": "This is George T. Stagg, Kentucky straight bourbon from the Buffalo Trace Distillery in Frankfort, part of its yearly Antique Collection. It rests for around 15 years in new charred oak and goes into the bottle uncut and unfiltered, so each year's proof is its own, and the label states it. Expect toffee, dark chocolate, black cherry and espresso, thick and warm, opening with a few drops of water. We pour it neat, with water on the side, or over one large cube. It carries the name of the nineteenth century whiskey merchant who once ran this distillery.",
+    "s45": "This is George T. Stagg, Kentucky straight bourbon from the Buffalo Trace Distillery in Frankfort, part of its yearly Antique Collection. It rests for around 15 years in new charred oak and goes into the bottle uncut and unfiltered, so each year's proof is its own, and the label states it. Expect toffee, dark chocolate, black cherry and espresso, thick and warm, opening with a few drops of water. We pour it neat, with water on the side, or over one large cube. It carries the name of the nineteenth century whiskey merchant who once ran the distillery.",
     "sale": "George T. Stagg is a bourbon of around 15 years, bottled straight from the barrel at full strength. Taste it neat with a few drops of water, and let the toffee and dark cherry open in the glass."
   },
   "serve": {
-    "neat": "Neat, about an ounce, with a small jug of still water so the guest can open it.",
+    "neat": "Neat, with a small jug of still water so the guest can open it.",
     "rocks": "One large cube, which tames the proof slowly; never a glass full of small ice.",
     "glass": "A Glencairn or a small tulip; a rocks glass for the cube.",
     "classic": "An Old Fashioned, stirred with less sugar so the bourbon leads; usually poured neat."
@@ -64,7 +64,7 @@
     {
       "id": "q3",
       "q": "Which yearly collection is George T. Stagg released in?",
-      "options": ["The Antique Collection", "The Experimental Collection", "The Single Oak Project", "A bottled in bond series"],
+      "options": ["The Antique Collection", "The Experimental Collection", "The Single Oak Project", "The E. H. Taylor line"],
       "a": 0,
       "explain": "The Antique Collection, which began in 2000; George T. Stagg joined it in 2002."
     }

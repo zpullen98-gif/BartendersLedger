@@ -24,7 +24,7 @@
     "sale": "Don Julio Reposado rests eight months in bourbon oak, golden with caramel and cinnamon over the agave. Sip it over one large cube, or stir it into an Oaxaca Old Fashioned."
   },
   "serve": {
-    "neat": "Neat at room temperature, about an ounce and a half, given a moment in the glass.",
+    "neat": "Neat at room temperature, given a moment in the glass.",
     "rocks": "Over one large cube; the oak and caramel carry the chill well.",
     "glass": "A copita or a small tulip neat; a rocks glass over the cube.",
     "classic": "The Oaxaca Old Fashioned and the Rosita; a reposado Margarita on request."
@@ -34,7 +34,7 @@
   "watch": [
     "Reposado means rested: at least two months in oak and under a year. Not an añejo, and not the Blanco, which shares its squat bottle.",
     "Read the band before pouring: copper for the Reposado, blue for the Blanco, on the same short bottle.",
-    "Patrón Reposado stands beside it: a guest who names a reposado gets that one; ask when a guest just says reposado.",
+    "Patrón Reposado stands beside it: pour the brand the guest names, and ask which when a guest just says reposado.",
     "Asked how long it rests: eight months, in American white oak barrels that once held bourbon."
   ],
   "asks": [],
@@ -71,6 +71,7 @@
     }
   ],
   "sources": [
+    { "title": "Tequila Don Julio: Don Julio Reposado", "url": "https://www.donjulio.com/en-us/our-tequilas/don-julio-reposado-tequila" },
     { "title": "Diageo Bar Academy: Don Julio Reposado", "url": "https://www.diageobaracademy.com/en_zz/know-your-liquid/our-brands/donjulio/don-julio-reposado" },
     { "title": "Difford's Guide: Don Julio Reposado Tequila", "url": "https://www.diffordsguide.com/en-au/beer-wine-spirits/1319/don-julio-reposado" },
     { "title": "Tequila Don Julio: our tequila journey", "url": "https://www.donjulio.com/our-tequila-journey" },

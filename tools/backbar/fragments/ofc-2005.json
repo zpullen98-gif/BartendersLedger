@@ -10,32 +10,32 @@
   "confidence": "clear",
   "facts": {
     "base": "A Kentucky bourbon mash, at least 51 per cent corn; the recipe is not published",
-    "age": "Distilled in 2005, as the label states; around 20 years in oak",
+    "age": "Distilled in 2005, as the label states; about 18 to 20 years in oak",
     "cask": "New charred American oak barrels",
     "abv": "varies by release; the label states each vintage's proof",
     "law": "Kentucky straight bourbon: at least 51 per cent corn, new charred oak, at least two years"
   },
-  "made": "O.F.C. is a vintage bourbon. Barrels filled at Buffalo Trace in one year, here 2005, rest in new charred oak in the distillery's warehouses and are tasted as they age, then bottled when the distillery judges them ready, around twenty years on for the 2005. Each bottle is dated by the year its bourbon was distilled, not the year it was bottled. Every vintage has its own age and proof, which the label states, and the distillery does not publish the grain recipe.",
-  "taste": "By the notes published for the 2005: cherry, caramel and smoked oak on the nose, then dark chocolate, tobacco leaf and dates on a dense palate. The finish is long and drying, with leather, black pepper and cinnamon from the years in wood.",
+  "made": "O.F.C. is a vintage bourbon. Barrels filled at Buffalo Trace in one year, here 2005, rest in new charred oak in the distillery's warehouses and are tasted as they age, then bottled when the distillery judges them ready, about 18 to 20 years on for the 2005. Each bottle is dated by the year its bourbon was distilled, not the year it was bottled. Every vintage has its own age and proof, which the label states, and the distillery does not publish the grain recipe.",
+  "taste": "Published notes for the 2005 differ, but they share dark cherry, honey and smoked oak on the nose, then dark chocolate, aged leather and dense oak on the palate. The finish is long and drying, with coffee, black pepper and oak tannin from the years in wood.",
   "lines": {
     "s10": "O.F.C. Vintage 2005 is a Kentucky straight bourbon from Buffalo Trace, dated by the year it was distilled, and poured neat.",
-    "s20": "O.F.C., Old Fashioned Copper, is Buffalo Trace's vintage bourbon: the 2005 was distilled that year and rested around twenty years in new charred oak in Frankfort, bottled at the proof its label states. Cherry, dark chocolate, tobacco and leather.",
-    "s45": "This is O.F.C. Vintage 2005, a Kentucky straight bourbon from Buffalo Trace in Frankfort. The initials read Old Fashioned Copper, the name Colonel E. H. Taylor Jr. gave this distillery in 1870, and the date is the year the bourbon was distilled. It rested around twenty years in new charred American oak, and its label states the age and proof of this vintage. Expect cherry, caramel and smoked oak on the nose, dark chocolate, tobacco and dates on the palate, and a long finish of leather and pepper. We pour it neat, about an ounce, with water on the side, a bourbon to take slowly.",
-    "sale": "O.F.C. 2005 is a single vintage of Buffalo Trace bourbon, distilled in 2005 and given around twenty years in oak. We pour it neat, an ounce with water on the side, to be taken slowly."
+    "s20": "O.F.C., Old Fashioned Copper, is Buffalo Trace's vintage bourbon: the 2005 was distilled that year and rested about 18 to 20 years in new charred oak in Frankfort, bottled at the proof its label states. Cherry, dark chocolate, leather and oak.",
+    "s45": "This is O.F.C. Vintage 2005, a Kentucky straight bourbon from Buffalo Trace in Frankfort. The initials read Old Fashioned Copper, the name Colonel E. H. Taylor Jr. gave the distillery in 1870, and the date is the year the bourbon was distilled. It rested about 18 to 20 years in new charred American oak, and its label states the age and proof of this vintage. Expect dark cherry, honey and smoked oak on the nose, dark chocolate and aged leather on the palate, and a long, drying finish of coffee and black pepper. We pour it neat, with water on the side, a bourbon to take slowly.",
+    "sale": "O.F.C. 2005 is a single vintage of Buffalo Trace bourbon, distilled in 2005 and given about 18 to 20 years in oak. We pour it neat with water on the side, to be taken slowly."
   },
   "serve": {
-    "neat": "Neat only, about an ounce, at room temperature, with a small jug of still water on the side.",
+    "neat": "Neat only, at room temperature, with a small jug of still water on the side.",
     "rocks": "Not on ice: a vintage of this age goes out neat, and any water is the guest's choice.",
     "glass": "A Glencairn or a small tulip.",
     "classic": "None: a vintage this old is not mixed; an Old Fashioned asks for a younger bourbon."
   },
-  "guest": "O.F.C. Vintage 2005 is a Kentucky bourbon from Buffalo Trace, distilled in 2005 and aged around twenty years: cherry, dark chocolate, tobacco and leather, poured neat.",
+  "guest": "O.F.C. Vintage 2005 is a Kentucky bourbon from Buffalo Trace, distilled in 2005 and aged about 18 to 20 years: cherry, dark chocolate, leather and oak, poured neat.",
   "story": "Colonel E. H. Taylor Jr. bought a small distillery on the Kentucky River at Frankfort in 1870 and christened it O.F.C. The label reads the initials as Old Fashioned Copper; many accounts give Old Fire Copper, for its copper stills. When Taylor fell into debt, George T. Stagg took the distillery over in 1878, and it carried Stagg's name from 1904 until it became Buffalo Trace in 1999. In 2016 the distillery brought the old initials back for a line of vintage-dated bourbons, the first of them given to charities.",
   "watch": [
     "The year on the label is when it was distilled, not bottled. Read the label for this vintage's age and proof; never quote one.",
     "Said letter by letter, O, F, C. A guest who has heard Old Fire Copper is right too: both readings of the initials are told.",
     "Poured neat only, a small measure with water on the side; never on ice and never in a cocktail.",
-    "Not George T. Stagg beside it: Stagg is bottled uncut each year; O.F.C. is dated by the year it was distilled."
+    "Not George T. Stagg, further along the shelf: that is a yearly uncut release; O.F.C. is dated by the year it was distilled."
   ],
   "asks": ["What age and proof does the label of our O.F.C. 2005 state?"],
   "house": { "match": ["O.F.C.", "Old Fashioned Copper"], "family": ["Buffalo Trace", "Sazerac Company"] },
@@ -44,7 +44,7 @@
     {
       "id": "recall",
       "prompt": "What does the year on O.F.C. Vintage 2005 record, and how do we pour it?",
-      "answer": "The year the bourbon was distilled, not bottled: Buffalo Trace dates each O.F.C. bottle by its year of distillation. A Kentucky straight bourbon of around twenty years in new charred oak; each vintage's age and proof differ and the label states them. Poured neat, with water on the side."
+      "answer": "The year the bourbon was distilled, not bottled: Buffalo Trace dates each O.F.C. bottle by its year of distillation. A Kentucky straight bourbon of about 18 to 20 years in new charred oak; each vintage's age and proof differ and the label states them. Poured neat, with water on the side."
     }
   ],
   "quiz": [
@@ -53,14 +53,14 @@
       "q": "What does the label of the vintage bourbon read the initials O.F.C. as?",
       "options": ["Original Frankfort Cask", "Old Forester Company", "Old Fine Corn", "Old Fashioned Copper"],
       "a": 3,
-      "explain": "Old Fashioned Copper on the label; many accounts give Old Fire Copper, for the copper stills of Colonel Taylor's distillery."
+      "explain": "Old Fashioned Copper on the label; many accounts give Old Fire Copper, for the distillery's copper stills."
     },
     {
       "id": "q2",
       "q": "What does the year printed on an O.F.C. vintage bottle record?",
       "options": ["The year it was bottled", "The year it was released", "The year it was distilled", "The year the barrel was charred"],
       "a": 2,
-      "explain": "Each bottle is dated by the year its bourbon was distilled, so a 2005 rested about twenty years before bottling."
+      "explain": "Each bottle is dated by the year its bourbon was distilled, so a 2005 rested about 18 to 20 years before bottling."
     },
     {
       "id": "q3",

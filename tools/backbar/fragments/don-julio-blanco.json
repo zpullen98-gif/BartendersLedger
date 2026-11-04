@@ -15,7 +15,7 @@
     "abv": "40% ABV (80 proof)",
     "law": "Tequila, 100% blue agave, under Mexico's denomination of origin; blanco means unaged or rested under two months"
   },
-  "made": "Don Julio is made from blue agave grown in the highlands around Atotonilco el Alto. The piñas are roasted slowly in brick ovens, for about three days by most accounts, then crushed, and the juice is fermented with a yeast strain of Don Julio's own. The wash is distilled twice in pot stills, and the Blanco is cut with water and bottled unaged: three ingredients, agave, water and yeast, and the base every other Don Julio is built on.",
+  "made": "Don Julio is made from blue agave grown in the highlands around Atotonilco el Alto. The piñas are roasted slowly in brick ovens over several days, then crushed, and the juice is fermented with a yeast strain of Don Julio's own. The wash is distilled twice in pot stills, and the Blanco is cut with water and bottled unaged: three ingredients, agave, water and yeast, and the base every other Don Julio is built on.",
   "taste": "Crisp cooked agave and citrus on the nose, lemon and grapefruit peel with a little green pepper. The palate is clean and lightly sweet, agave, lime and white pepper, with a fresh, peppery finish.",
   "lines": {
     "s10": "Don Julio Blanco is an unaged 100% blue agave tequila from the Jalisco Highlands: crisp agave, citrus and pepper.",
@@ -24,7 +24,7 @@
     "sale": "Don Julio Blanco is crisp highland agave with lemon peel and white pepper, the base of every Don Julio. Taste it neat, or let it lead a Margarita with fresh lime."
   },
   "serve": {
-    "neat": "Neat at room temperature, about an ounce and a half, sipped rather than shot.",
+    "neat": "Neat at room temperature, sipped rather than shot.",
     "rocks": "Over one large cube, or long with soda and a squeeze of lime.",
     "glass": "A copita or a small tulip neat; a rocks glass over ice.",
     "classic": "The Margarita, the Paloma and the Spicy Margarita; also Ranch Water."
@@ -64,9 +64,9 @@
     {
       "id": "q3",
       "q": "How long does Don Julio Blanco rest in oak?",
-      "options": ["Two months", "It is not aged in wood", "Eight months", "Two years"],
+      "options": ["Two months", "No time at all", "Eight months", "Two years"],
       "a": 1,
-      "explain": "It is bottled unaged. Eight months is the Reposado's time in American oak."
+      "explain": "None: it is bottled unaged. Eight months is the Reposado's time in American oak."
     }
   ],
   "sources": [

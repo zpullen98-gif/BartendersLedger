@@ -24,13 +24,13 @@
     "sale": "Weller 12 is soft wheated bourbon with twelve years in oak, so the caramel and cherry run deep without any bite. Pour it neat, or ask for it in an Old Fashioned with very little sugar."
   },
   "serve": {
-    "neat": "Neat, about an ounce and a half, at room temperature, with water on the side if asked.",
+    "neat": "Neat at room temperature, with water on the side if asked.",
     "rocks": "Over one large cube, which keeps the caramel and oak without drowning them.",
     "glass": "A Glencairn or a small tulip neat; a rocks glass for the cube.",
     "classic": "An Old Fashioned with a light hand on the sugar, so the twelve years lead."
   },
   "guest": "Weller 12 is a Kentucky bourbon made with wheat instead of rye and aged twelve years, so it is soft but deep: caramel, cherry and toasted oak, at 90 proof.",
-  "story": "Wheated bourbon became a house style at the Stitzel-Weller Distillery, which opened in Shively, just outside Louisville, on Derby Day 1935. It joined the old Weller firm, whose founder William Larue Weller had sold bourbon in Louisville from 1849, with the Stitzel family's distillery, and its bourbons were made with wheat where others used rye. The distillery closed in 1992, and the Weller bourbons, the twelve year among them, are distilled today at Buffalo Trace in Frankfort.",
+  "story": "Wheated bourbon became the mark of the Stitzel-Weller Distillery, which opened in Shively, just outside Louisville, on Derby Day 1935. It joined the old Weller firm, whose founder William Larue Weller had sold bourbon in Louisville from 1849, with the Stitzel family's distillery, and its bourbons were made with wheat where others used rye. The distillery stopped distilling in 1992, and the Weller bourbons, the twelve year among them, are distilled today at Buffalo Trace in Frankfort.",
   "watch": [
     "Not Special Reserve, the green label beside it: the same recipe with no age statement. The 12 is the black label, its twelve years printed.",
     "Twelve years on the label means no whiskey in the bottle is younger; 90 proof is the strength after water.",
@@ -64,10 +64,10 @@
     },
     {
       "id": "q3",
-      "q": "At which distillery, opened near Louisville in 1935, did wheated bourbon become the distillery's style?",
+      "q": "Which distillery, opened near Louisville in 1935, made wheated bourbon its own style?",
       "options": ["Old Taylor", "Stitzel-Weller", "Bernheim", "Old Forester"],
       "a": 1,
-      "explain": "Stitzel-Weller, opened in Shively on Derby Day 1935, joining the Weller firm with the Stitzel distillery. It closed in 1992; Weller is distilled today at Buffalo Trace."
+      "explain": "Stitzel-Weller, opened in Shively on Derby Day 1935, joining the Weller firm with the Stitzel distillery. It stopped distilling in 1992; Weller is distilled today at Buffalo Trace."
     }
   ],
   "sources": [

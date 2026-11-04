@@ -24,16 +24,16 @@
     "sale": "Thomas H. Handy is the rye behind the Sazerac story, bottled straight from the barrel at full strength. Taste it neat with a few drops of water, or have it in a Sazerac with real backbone."
   },
   "serve": {
-    "neat": "Neat, about an ounce, with a small jug of still water so the guest can open it.",
+    "neat": "Neat, with a small jug of still water so the guest can open it.",
     "rocks": "One large cube, which tames the proof slowly; never a glass full of small ice.",
     "glass": "A Glencairn or a small tulip neat; a rocks glass for the cube or the Sazerac.",
     "classic": "A Sazerac, much stronger than the usual build; also a bold Manhattan or Vieux Carré."
   },
   "guest": "Thomas H. Handy is a straight rye from Buffalo Trace, about six years old and bottled uncut at barrel proof: cinnamon, mint, cherry and molasses, very strong, and lovely with a few drops of water.",
-  "story": "Thomas H. Handy took over the Sazerac Coffee House in New Orleans in 1869, where the house cocktail had been made with French cognac. His business also bought and sold spirits under its own names, and the Sazerac Company grew from it. As phylloxera ruined the vineyards of France in the decades that followed and cognac grew scarce, the Sazerac turned to American rye whiskey. The uncut rye that carries his name belongs to Buffalo Trace's Antique Collection, released once a year.",
+  "story": "Thomas H. Handy took over the Sazerac Coffee House in New Orleans in 1869, where its signature cocktail had been made with French cognac. His business also bought and sold spirits under its own names, and the Sazerac Company grew from it. As phylloxera ruined the vineyards of France in the decades that followed and cognac grew scarce, the Sazerac turned to American rye whiskey. The uncut rye that carries his name belongs to Buffalo Trace's Antique Collection, released once a year.",
   "watch": [
     "Its proof changes every year and is always high: pour less, offer water, and read tonight's label rather than quote a figure.",
-    "Not Sazerac Rye, the same house's everyday rye, cut to bottling strength: Thomas H. Handy is uncut, at barrel proof.",
+    "Not Sazerac Rye, the same distillery's everyday rye, cut to bottling strength: Thomas H. Handy is uncut, at barrel proof.",
     "A guest who asks for a Sazerac made with it should hear that the drink will be far stronger than the usual one.",
     "Asked its age: around six years in most releases; the year's label and notes give the exact figure."
   ],
@@ -71,6 +71,7 @@
     }
   ],
   "sources": [
+    { "title": "Sazerac Company: our story", "url": "https://sazerac.com/our-company/our-story.html" },
     { "title": "Difford's Guide: Thomas H. Handy Sazerac Straight Rye Whiskey", "url": "https://www.diffordsguide.com/beer-wine-spirits/spirits/whiskey/BWS005406/thomas-h-handy-sazerac-rye" },
     { "title": "The Whiskey Wash: Thomas H. Handy Sazerac Rye 2021 review", "url": "https://thewhiskeywash.com/american-whiskey/whiskey-review-thomas-h-handy-sazerac-rye-2021-buffalo-trace-antique-collection/" },
     { "title": "Distiller: Thomas H. Handy Sazerac Rye (Fall 2016)", "url": "https://distiller.com/spirits/thomas-h-handy-sazerac-rye-fall-2016" },

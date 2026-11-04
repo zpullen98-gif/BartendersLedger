@@ -24,13 +24,13 @@
     "sale": "Yellow Chartreuse is the monks' honeyed, gentler Chartreuse, 130 plants with a long, sweet finish. Have it neat and cold after dinner, or shaken with mezcal, Aperol and lime in a Naked and Famous."
   },
   "serve": {
-    "neat": "Neat and lightly chilled, about an ounce, sipped slowly after dinner.",
+    "neat": "Neat and lightly chilled in a small pour, sipped slowly after dinner.",
     "rocks": "Over one large cube, or over crushed ice as a frappé.",
     "glass": "A small cordial or tulip glass; a chilled coupe for a Naked and Famous.",
     "classic": "The Naked and Famous: equal parts mezcal, Yellow Chartreuse, Aperol and lime; also the Alaska and the Widow's Kiss."
   },
   "guest": "Yellow Chartreuse is the Carthusian monks' gentler herbal liqueur: the same 130 plants as the Green, but sweeter and honeyed, with saffron and citrus, at 43 per cent.",
-  "story": "The Carthusians trace Chartreuse to a manuscript for an elixir of 130 plants, given to their Paris house in 1605. The strong Green came first. In 1838 a paler, softer and sweeter blend appeared at the monastery, and the makers date Yellow Chartreuse as a liqueur to 1840. It has been the gentler bottle ever since, following the monks through their expulsion from France in 1903 and their years of distilling in Tarragona, in Spain; since 2018 it has been made at Aiguenoire, near the monastery.",
+  "story": "The Carthusians trace Chartreuse to a manuscript for an elixir of 130 plants, given to their Paris house in 1605. The strong Green came first. In 1838 a paler, softer and sweeter blend appeared at the monastery, and the makers date Yellow Chartreuse as a liqueur to 1840. It has been the gentler bottle ever since, following the monks through their expulsion from France in 1903 and their years of distilling in Tarragona, in Spain; it is now made at Aiguenoire, near the monastery, where the distillery moved from Voiron.",
   "watch": [
     "Yellow and Green are different bottles: Green is 55 per cent and fiercer. Never swap one for the other in a drink.",
     "Older bottles and some guides give 40 per cent; current bottles state 43%, so read the label in hand.",
@@ -53,7 +53,7 @@
     {
       "id": "q1",
       "q": "Where does the colour of Yellow Chartreuse come from, as the makers tell it?",
-      "options": ["Saffron added at bottling", "The plants alone", "Caramel colouring", "Alpine honey"],
+      "options": ["A food dye added at bottling", "The plants alone", "Caramel colouring", "Alpine honey"],
       "a": 1,
       "explain": "The makers say the colour of both Chartreuses comes from the 130 plants themselves, not from a dye."
     },

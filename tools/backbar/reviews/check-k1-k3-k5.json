@@ -1,0 +1,459 @@
+{
+  "checked": [
+    "lazzaroni-maraschino",
+    "mathilde-cassis",
+    "benedictine",
+    "chartreuse-yellow",
+    "chartreuse-green",
+    "luxardo-fernet",
+    "milagro-silver",
+    "milagro-anejo",
+    "don-julio-blanco",
+    "don-julio-reposado",
+    "don-julio-1942",
+    "patron-reposado",
+    "weller-special-reserve",
+    "weller-12",
+    "ofc-2005",
+    "thomas-h-handy",
+    "george-t-stagg",
+    "stagg"
+  ],
+  "fixed": [
+    {
+      "id": "lazzaroni-maraschino",
+      "field": "serve.neat",
+      "what": "house measure: dropped the stated pour size (about an ounce): nothing about the house's measures"
+    },
+    {
+      "id": "benedictine",
+      "field": "serve.neat",
+      "what": "house measure: dropped the stated pour size (about an ounce)"
+    },
+    {
+      "id": "chartreuse-yellow",
+      "field": "serve.neat",
+      "what": "house measure: dropped the stated pour size (about an ounce)"
+    },
+    {
+      "id": "chartreuse-yellow",
+      "field": "story",
+      "what": "unconfirmed date: the Aiguenoire move dated 2018 where sources split 2017 (the move) and 2018 (the opening): the date left out"
+    },
+    {
+      "id": "chartreuse-yellow",
+      "field": "quiz[0].options",
+      "what": "quiz key: the distractor Saffron added at bottling could read as right (saffron is one of the plants many sources credit for the colour): now A food dye added at bottling"
+    },
+    {
+      "id": "chartreuse-green",
+      "field": "serve.neat",
+      "what": "house measure: dropped the stated pour size (about an ounce)"
+    },
+    {
+      "id": "chartreuse-green",
+      "field": "watch[1]",
+      "what": "house measure: pour about an ounce neat became pour a small measure neat"
+    },
+    {
+      "id": "chartreuse-green",
+      "field": "story",
+      "what": "unconfirmed date: the Aiguenoire move dated 2018 (sources split 2017 and 2018) and placed near Voiron: now Aiguenoire in Entre-deux-Guiers, where the distillery moved from Voiron, undated"
+    },
+    {
+      "id": "luxardo-fernet",
+      "field": "serve.neat",
+      "what": "house measure: dropped the stated pour size (about an ounce)"
+    },
+    {
+      "id": "luxardo-fernet",
+      "field": "made",
+      "what": "the house for a producer: the family house became the family firm (the house is our house on this page)"
+    },
+    {
+      "id": "luxardo-fernet",
+      "field": "watch[2]",
+      "what": "house claim: stated what our dessert menu prints (a Luxardo on the dessert menu); now general: a Luxardo named on a dessert"
+    },
+    {
+      "id": "luxardo-fernet",
+      "field": "quiz[0].q",
+      "what": "the house for a producer: the Luxardo house became Luxardo"
+    },
+    {
+      "id": "milagro-silver",
+      "field": "serve.neat",
+      "what": "house measure: dropped the stated pour size (about an ounce and a half)"
+    },
+    {
+      "id": "milagro-silver",
+      "field": "quiz[0].explain",
+      "what": "stock claim: one of the younger names on the tequila shelf: an unproved comparison with our shelf, replaced by Patron's date"
+    },
+    {
+      "id": "milagro-silver",
+      "field": "quiz[2].q",
+      "what": "quiz key: the stem asserted two distillations, which some sources dispute (triple distilled); now asks by the producer's own account"
+    },
+    {
+      "id": "milagro-anejo",
+      "field": "facts.age",
+      "what": "figure: most accounts give 12 to 14 months: published figures run 12 to 24 months (12 to 14, 14, 18, 14 to 24), so the range"
+    },
+    {
+      "id": "milagro-anejo",
+      "field": "made",
+      "what": "figure: 12 to 14 months by most accounts became accounts ranging from 12 to 24 months"
+    },
+    {
+      "id": "milagro-anejo",
+      "field": "watch[2]",
+      "what": "figure: most accounts give 12 to 14 months became published accounts range from 12 to 24 months"
+    },
+    {
+      "id": "milagro-anejo",
+      "field": "recall[0].answer",
+      "what": "figure: 12 to 14 months by most accounts became 12 to 24 months by published accounts"
+    },
+    {
+      "id": "milagro-anejo",
+      "field": "serve.neat",
+      "what": "house measure: dropped the stated pour size (about an ounce and a half)"
+    },
+    {
+      "id": "don-julio-blanco",
+      "field": "made",
+      "what": "figure: about three days by most accounts: no second source gave a figure, the sources say several days"
+    },
+    {
+      "id": "don-julio-blanco",
+      "field": "serve.neat",
+      "what": "house measure: dropped the stated pour size (about an ounce and a half)"
+    },
+    {
+      "id": "don-julio-blanco",
+      "field": "quiz[2].options",
+      "what": "quiz options: It is not aged in wood stood among three durations: now No time at all, four options of one kind"
+    },
+    {
+      "id": "don-julio-blanco",
+      "field": "quiz[2].explain",
+      "what": "quiz options: the explanation follows the new key"
+    },
+    {
+      "id": "don-julio-reposado",
+      "field": "serve.neat",
+      "what": "house measure: dropped the stated pour size (about an ounce and a half)"
+    },
+    {
+      "id": "don-julio-reposado",
+      "field": "watch[2]",
+      "what": "clarity: a guest who names a reposado gets that one (muddled): now pour the brand the guest names"
+    },
+    {
+      "id": "don-julio-reposado",
+      "field": "sources",
+      "what": "sources: the producer's own page, which states 8+ months in ex-bourbon American white oak, added first"
+    },
+    {
+      "id": "don-julio-1942",
+      "field": "facts.age",
+      "what": "figure: at least two years, with two and a half as an aside: the producer and the sources say a minimum of two and a half years"
+    },
+    {
+      "id": "don-julio-1942",
+      "field": "made",
+      "what": "figure: at least two years became at least two and a half years"
+    },
+    {
+      "id": "don-julio-1942",
+      "field": "lines.s10",
+      "what": "figure: aged at least two years became at least two and a half years"
+    },
+    {
+      "id": "don-julio-1942",
+      "field": "lines.s20",
+      "what": "figure: at least two years became at least two and a half years"
+    },
+    {
+      "id": "don-julio-1942",
+      "field": "lines.s45",
+      "what": "figure: aged at least two years became at least two and a half years"
+    },
+    {
+      "id": "don-julio-1942",
+      "field": "lines.sale",
+      "what": "figure: an añejo of two years and more became of at least two and a half years"
+    },
+    {
+      "id": "don-julio-1942",
+      "field": "guest",
+      "what": "figure: aged at least two years became at least two and a half years"
+    },
+    {
+      "id": "don-julio-1942",
+      "field": "story",
+      "what": "unconfirmed claim: the bottle was made to stand apart (an intent no source states): now it stands apart"
+    },
+    {
+      "id": "don-julio-1942",
+      "field": "watch[0]",
+      "what": "figure: aged at least two years became at least two and a half years"
+    },
+    {
+      "id": "don-julio-1942",
+      "field": "recall[0].answer",
+      "what": "figure: aged at least two years became at least two and a half years"
+    },
+    {
+      "id": "don-julio-1942",
+      "field": "quiz[1].explain",
+      "what": "figure: at least two years became at least two and a half years"
+    },
+    {
+      "id": "don-julio-1942",
+      "field": "serve.neat",
+      "what": "house measure: dropped the stated pour size (about an ounce and a half)"
+    },
+    {
+      "id": "patron-reposado",
+      "field": "serve.neat",
+      "what": "house measure: dropped the stated pour size (about an ounce and a half)"
+    },
+    {
+      "id": "weller-special-reserve",
+      "field": "serve.neat",
+      "what": "house measure: dropped the stated pour size (about an ounce and a half)"
+    },
+    {
+      "id": "weller-special-reserve",
+      "field": "story",
+      "what": "clarity: the Stitzel-Weller Distillery he helped found read as Weller (who died in 1899): now that Van Winkle helped found"
+    },
+    {
+      "id": "weller-12",
+      "field": "serve.neat",
+      "what": "house measure: dropped the stated pour size (about an ounce and a half)"
+    },
+    {
+      "id": "weller-12",
+      "field": "story",
+      "what": "figure: the distillery closed in 1992: the sources say distilling stopped in 1992 (the site stands)"
+    },
+    {
+      "id": "weller-12",
+      "field": "story",
+      "what": "the house for a producer: a house style became the mark"
+    },
+    {
+      "id": "weller-12",
+      "field": "quiz[2].q",
+      "what": "the house for a producer: the stem said distillery twice after the house style was taken out: now made wheated bourbon its own style"
+    },
+    {
+      "id": "weller-12",
+      "field": "quiz[2].explain",
+      "what": "figure: It closed in 1992 became It stopped distilling in 1992"
+    },
+    {
+      "id": "ofc-2005",
+      "field": "facts.age",
+      "what": "figure: around 20 years: the sources give 18, 19 and 20 years for the 2005, so the range"
+    },
+    {
+      "id": "ofc-2005",
+      "field": "made",
+      "what": "figure: around twenty years on became about 18 to 20 years on"
+    },
+    {
+      "id": "ofc-2005",
+      "field": "taste",
+      "what": "unconfirmed notes: notes presented as the published notes for the 2005, partly the 1995's text (tobacco, dates); now the notes the 2005 listings share, said to differ"
+    },
+    {
+      "id": "ofc-2005",
+      "field": "lines.s20",
+      "what": "figure: around twenty years became about 18 to 20 years; tobacco left the notes"
+    },
+    {
+      "id": "ofc-2005",
+      "field": "lines.s45",
+      "what": "house measure: about an ounce dropped; this distillery (said at our table) became the distillery; around twenty years became about 18 to 20; the notes follow the listings"
+    },
+    {
+      "id": "ofc-2005",
+      "field": "lines.sale",
+      "what": "house measure: an ounce dropped from the pour; around twenty years became about 18 to 20"
+    },
+    {
+      "id": "ofc-2005",
+      "field": "serve.neat",
+      "what": "house measure: dropped the stated pour size (about an ounce)"
+    },
+    {
+      "id": "ofc-2005",
+      "field": "guest",
+      "what": "figure: aged around twenty years became about 18 to 20 years; tobacco left the notes"
+    },
+    {
+      "id": "ofc-2005",
+      "field": "watch[3]",
+      "what": "shelf claim: George T. Stagg is not beside it (a decanter and Thomas H. Handy stand between, photos 4 and 5), and Stagg read as the other bottle: now further along the shelf, a yearly uncut release"
+    },
+    {
+      "id": "ofc-2005",
+      "field": "recall[0].answer",
+      "what": "figure: around twenty years became about 18 to 20 years"
+    },
+    {
+      "id": "ofc-2005",
+      "field": "quiz[1].explain",
+      "what": "figure: about twenty years became about 18 to 20 years"
+    },
+    {
+      "id": "thomas-h-handy",
+      "field": "serve.neat",
+      "what": "house measure: dropped the stated pour size (about an ounce)"
+    },
+    {
+      "id": "thomas-h-handy",
+      "field": "story",
+      "what": "the house for a producer: the house cocktail (the coffee house's) became its signature cocktail"
+    },
+    {
+      "id": "thomas-h-handy",
+      "field": "watch[1]",
+      "what": "the house for a producer: the same house's everyday rye became the same distillery's"
+    },
+    {
+      "id": "thomas-h-handy",
+      "field": "sources",
+      "what": "sources: the Sazerac Company's own history, which dates Handy's purchase of the coffee house to 1869, added (other accounts give 1870 or 1871)"
+    },
+    {
+      "id": "george-t-stagg",
+      "field": "serve.neat",
+      "what": "house measure: dropped the stated pour size (about an ounce)"
+    },
+    {
+      "id": "george-t-stagg",
+      "field": "lines.s45",
+      "what": "clarity: who once ran this distillery (said at our table) became the distillery"
+    },
+    {
+      "id": "george-t-stagg",
+      "field": "made",
+      "what": "figure: each year barrels are chosen: George T. Stagg has missed years, so for each release of the yearly collection"
+    },
+    {
+      "id": "george-t-stagg",
+      "field": "quiz[2].options",
+      "what": "quiz options: A bottled in bond series was not a named line like the other three options: now The E. H. Taylor line, another of the distillery's named lines"
+    },
+    {
+      "id": "stagg",
+      "field": "serve.neat",
+      "what": "house measure: dropped the stated pour size (about an ounce)"
+    },
+    {
+      "id": "luxardo-fernet",
+      "field": "watch[0]",
+      "what": "the house for a producer: another house's fernet became another maker's fernet"
+    },
+    {
+      "id": "lazzaroni-maraschino",
+      "field": "watch[2]",
+      "what": "the house for a producer: different houses became different firms"
+    },
+    {
+      "id": "agave-de-cortes",
+      "field": "serve.neat",
+      "what": "house measure: sweep: dropped the stated pour size (about an ounce and a half)"
+    },
+    {
+      "id": "ambrosia-aperitivo",
+      "field": "serve.neat",
+      "what": "house measure: sweep: dropped the stated pour size (about two ounces)"
+    },
+    {
+      "id": "chambord",
+      "field": "serve.neat",
+      "what": "house measure: sweep: dropped the stated pour size (about an ounce)"
+    },
+    {
+      "id": "dobel-special-edition",
+      "field": "serve.neat",
+      "what": "house measure: sweep: dropped the stated pour size (about an ounce and a half)"
+    },
+    {
+      "id": "drambuie",
+      "field": "serve.neat",
+      "what": "house measure: sweep: dropped the stated pour size (about an ounce)"
+    },
+    {
+      "id": "el-gobernador",
+      "field": "serve.neat",
+      "what": "house measure: sweep: dropped the stated pour size (about an ounce and a half)"
+    },
+    {
+      "id": "grand-marnier",
+      "field": "serve.neat",
+      "what": "house measure: sweep: dropped the stated pour size (about an ounce)"
+    },
+    {
+      "id": "lunazul",
+      "field": "serve.neat",
+      "what": "house measure: sweep: dropped the stated pour size (about an ounce and a half)"
+    },
+    {
+      "id": "martell-xo",
+      "field": "serve.neat",
+      "what": "house measure: sweep: dropped the stated pour size (about an ounce and a half)"
+    },
+    {
+      "id": "rabbit-hole-cavehill",
+      "field": "serve.neat",
+      "what": "house measure: sweep: dropped the stated pour size (about an ounce and a half)"
+    },
+    {
+      "id": "rabbit-hole-heigold",
+      "field": "serve.neat",
+      "what": "house measure: sweep: dropped the stated pour size (about an ounce and a half)"
+    },
+    {
+      "id": "lazzaroni-maraschino",
+      "field": "quiz[0].explain",
+      "what": "quiz giveaway: the explanation gave away q3 (the stones): cut to the marasca alone"
+    },
+    {
+      "id": "luxardo-fernet",
+      "field": "quiz[0].explain",
+      "what": "quiz giveaway: the explanation gave away q2 (Torreglia): now the founding at Zara alone"
+    },
+    {
+      "id": "milagro-anejo",
+      "field": "quiz[1].explain",
+      "what": "quiz giveaway: the explanation gave away q1 (one year): the year left out"
+    },
+    {
+      "id": "don-julio-1942",
+      "field": "quiz[2].q",
+      "what": "quiz giveaway: the stem (the founder's start) gave away q1: now which anniversary was it created to mark"
+    },
+    {
+      "id": "don-julio-1942",
+      "field": "quiz[2].explain",
+      "what": "quiz giveaway: the explanation names whose anniversary, now that the stem does not"
+    },
+    {
+      "id": "ofc-2005",
+      "field": "quiz[0].explain",
+      "what": "quiz giveaway: the explanation gave away q3 (Colonel Taylor): now the distillery's copper stills"
+    },
+    {
+      "id": "stagg",
+      "field": "quiz[2].explain",
+      "what": "quiz giveaway: the explanation gave away q1 (Stagg Jr.): now the 2013 date alone"
+    }
+  ]
+}

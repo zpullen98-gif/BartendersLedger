@@ -24,7 +24,7 @@
     "sale": "Lazzaroni Maraschino is the clear sour cherry liqueur behind the Last Word and the Aviation, with a soft bitter almond edge. Try a small chilled pour after dinner, or let us shake it into a Last Word."
   },
   "serve": {
-    "neat": "Neat and lightly chilled, a small pour of about an ounce; it is sweet and fragrant.",
+    "neat": "Neat and lightly chilled, in a small pour; it is sweet and fragrant.",
     "rocks": "Seldom on ice: a cube mutes its perfume, so pour it chilled and neat instead.",
     "glass": "A small cordial or tulip glass neat; a chilled coupe for a Last Word or an Aviation.",
     "classic": "The Last Word, with gin, Green Chartreuse and lime; also the Aviation, the Martinez and the Hemingway Daiquiri."
@@ -34,7 +34,7 @@
   "watch": [
     "Guests picture the bright red jarred cherry: say first that this is clear, drier and almond edged, not a sweet red liqueur.",
     "Maraschino is loud in a drink: measure it by the quarter or half ounce, because a free pour swamps a Last Word or an Aviation.",
-    "Lazzaroni and Luxardo are different houses: a recipe that prints Luxardo maraschino names another bottle, so check before swapping one for the other."
+    "Lazzaroni and Luxardo are different firms: a recipe that prints Luxardo maraschino names another bottle, so check before swapping one for the other."
   ],
   "asks": [
     "Read the strength on our bottle's back label at lineup: the American import states 24% ABV, while some European listings give 25%."
@@ -54,7 +54,7 @@
       "q": "From which cherry is maraschino liqueur made?",
       "options": ["Marasca, a small sour cherry", "Bing, a large sweet cherry", "Morello, a dark sour cherry", "Rainier, a pale sweet cherry"],
       "a": 0,
-      "explain": "Maraschino is named for the marasca, a small sour cherry of the Dalmatian coast; Lazzaroni uses the whole fruit with its stones."
+      "explain": "Maraschino is named for the marasca, a small sour cherry of the Dalmatian coast, which Lazzaroni uses whole."
     },
     {
       "id": "q2",

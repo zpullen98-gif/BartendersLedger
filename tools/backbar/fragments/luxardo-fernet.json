@@ -15,7 +15,7 @@
     "abv": "40% ABV (80 proof)",
     "law": "An Italian amaro in the fernet style, a bitter herbal liqueur; no appellation governs it"
   },
-  "made": "Luxardo makes it at Torreglia, in the Euganean Hills near Padua, where the family house has worked since 1947. About fifteen herbs, roots and spices, among them gentian, cardamom, liquorice and saffron, are infused in alcohol over a long maceration, and the liqueur is bottled dark at 40 per cent. The full recipe, made since 1889, stays the family's own, and no wood ageing is stated.",
+  "made": "Luxardo makes it at Torreglia, in the Euganean Hills near Padua, where the family firm has worked since 1947. About fifteen herbs, roots and spices, among them gentian, cardamom, liquorice and saffron, are infused in alcohol over a long maceration, and the liqueur is bottled dark at 40 per cent. The full recipe, made since 1889, stays the family's own, and no wood ageing is stated.",
   "taste": "Dark and bracing: liquorice, bitter gentian root and warm cardamom on the nose. The palate is dry and firmly bitter, with spice and a little saffron over a faint sweetness, and the finish is long, bitter and warming.",
   "lines": {
     "s10": "Luxardo Fernet Amaro is a dark, bitter Italian fernet from the maraschino house near Padua: herbs and roots, bottled at 40 per cent.",
@@ -24,7 +24,7 @@
     "sale": "Luxardo Fernet Amaro is a bitter after-dinner fernet from the maraschino house, dark, dry and full of herbs. Try it neat at room temperature, or stirred with rye in a Toronto."
   },
   "serve": {
-    "neat": "Neat at room temperature, about an ounce, as a digestivo after dinner.",
+    "neat": "Neat at room temperature in a small pour, as a digestivo after dinner.",
     "rocks": "Over one large cube, or long with cola, the way Argentina drinks fernet.",
     "glass": "A small tulip or cordial glass neat; a rocks glass for the cube.",
     "classic": "The Toronto, rye with fernet, sugar and bitters; also the Hanky Panky and the Fernet con Coca."
@@ -32,9 +32,9 @@
   "guest": "Luxardo Fernet Amaro is an Italian bitter herbal liqueur, a fernet, from the family that makes maraschino: dark, dry and bracing, sipped neat after dinner.",
   "story": "Girolamo Luxardo, a Genoese who settled at Zara on the Dalmatian coast, founded the family distillery there in 1821 to make maraschino from the local marasca cherry, building on the cherry liqueur his wife, Maria Canevari, had made at home. Luxardo added its fernet in 1889. The Second World War left the Zara distillery in ruins, and in 1947 the family began again at Torreglia, in the Euganean Hills near Padua, where Luxardo still makes every bottle.",
   "watch": [
-    "Not Fernet-Branca: a guest or a recipe naming Branca means another house's fernet. Offer this as the same style, and say so.",
+    "Not Fernet-Branca: a guest or a recipe naming Branca means another maker's fernet. Offer this as the same style, and say so.",
     "It is bitter and strong: pour small measures, and warn a guest who expects a sweet liqueur.",
-    "A Luxardo on the dessert menu is Luxardo's cherries or maraschino, never this fernet: the same family, a different bottle."
+    "A Luxardo named on a dessert means the family's cherries or maraschino, never this fernet: the same family, a different bottle."
   ],
   "asks": [
     "Turn the amaro at the left end of the liqueur shelf at lineup: confirm the label reads Luxardo Fernet Amaro in full, and how the bar pours it."
@@ -51,10 +51,10 @@
   "quiz": [
     {
       "id": "q1",
-      "q": "In which year did the Luxardo house add its fernet to the range?",
+      "q": "In which year did Luxardo add its fernet to the range?",
       "options": ["1821", "1889", "1947", "1765"],
       "a": 1,
-      "explain": "The fernet dates from 1889. Luxardo was founded at Zara in 1821 and moved to Torreglia in 1947."
+      "explain": "The fernet dates from 1889; the firm itself was founded at Zara in 1821."
     },
     {
       "id": "q2",
