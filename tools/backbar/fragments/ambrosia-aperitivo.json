@@ -65,10 +65,10 @@
     },
     {
       "id": "q3",
-      "q": "Which canon drink's build does an Ambrosia spritz with Prosecco and soda follow?",
-      "options": ["Aperol Spritz", "Hugo Spritz", "Limoncello Spritz", "Negroni Sbagliato"],
-      "a": 0,
-      "explain": "The Aperol Spritz: aperitivo, Prosecco and a splash of soda over ice. The Hugo takes elderflower; the Sbagliato is Campari and sweet vermouth with Prosecco."
+      "q": "In which year did Don Ciccio & Figli launch Ambrosia Aperitivo?",
+      "options": ["2012", "2016", "2023", "2019"],
+      "a": 3,
+      "explain": "2019, as a sweeter, brighter aperitivo made for the spritz, built the way of an Aperol Spritz with Prosecco and a splash of soda."
     }
   ],
   "sources": [

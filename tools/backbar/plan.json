@@ -178,9 +178,9 @@
       "read": "MAESTRO DOBEL TEQUILA and SPECIAL EDITION on the white neck label; RESERVA DEL MAESTRO TEQUILERO, TEQUILA, AGAVE SELECTO moulded in the glass; the tequila looks clear.",
       "ask": "Which Maestro Dobel is the special edition bottle on the tequila shelf (the neck label says SPECIAL EDITION), and is it a cristalino or a silver?",
       "house": { "match": [], "family": ["Dobel"] },
-      "library": { "producer": "", "cask": "", "canon": [] },
+      "library": { "producer": "", "cask": "", "canon": ["paloma"] },
       "yearly": false,
-      "note": "Name the expression only from the producer's page or two sources that show this neck label; otherwise write the bottle as the Maestro Dobel range and keep the ask. Add match terms and canon drinks to this row once the expression is known."
+      "note": "Name the expression only from the producer's page or two sources that show this neck label; otherwise write the bottle as the Maestro Dobel range and keep the ask. The Paloma is linked as the classic the fragment names, so the In the Ledger panel is drawn; add match terms once the expression is known."
     },
     {
       "id": "lunazul", "name": "Lunazul", "group": "tequila-mezcal-pisco", "photo": 3, "confidence": "probable", "chunk": "k4",
@@ -188,9 +188,9 @@
       "read": "LUN... in white capitals on a black label; 100% below; an agave mark on the neck; TEQUI... at the foot.",
       "ask": "Confirm at lineup that the black-labelled bottle in the tequila front row is Lunazul, and which expression it is.",
       "house": { "match": [], "family": ["Lunazul"] },
-      "library": { "producer": "", "cask": "", "canon": [] },
+      "library": { "producer": "", "cask": "", "canon": ["margarita", "paloma", "ranch-water"] },
       "yearly": false,
-      "note": "Confirm the bottle shape and the black label against the producer's own pictures; add the expression's match term and canon drinks to this row once known."
+      "note": "Confirm the bottle shape and the black label against the producer's own pictures; the Margarita, the Paloma and the Ranch Water are linked as the classics the fragment names, so the In the Ledger panel is drawn; add the expression's match term once known."
     },
     {
       "id": "agave-de-cortes", "name": "Agave de Cortés Mezcal", "group": "tequila-mezcal-pisco", "photo": 3, "confidence": "clear", "chunk": "k4",

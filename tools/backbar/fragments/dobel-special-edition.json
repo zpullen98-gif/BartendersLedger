@@ -18,7 +18,7 @@
   "made": "Maestro Dobel makes tequila in Jalisco from 100 per cent blue Weber agave, cooked, fermented and distilled twice. Its first bottle, Diamante, began the cristalino style: reposado, añejo and extra añejo tequilas, rested in European white oak, are blended and then filtered until the colour is gone, keeping the softness of the wood in a clear spirit. The range also has an unaged silver. The neck label here says Special Edition without naming the expression.",
   "taste": "If it is Diamante, the cristalino: mild oak, vanilla, cinnamon and almond on the nose, then caramel, honey and citrus on a soft palate, and a clean, short finish. If it is the silver: cooked agave, caramel and light pepper, brighter and drier.",
   "lines": {
-    "s10": "Maestro Dobel is a Jalisco tequila of 100 per cent blue agave, from the house that made the first cristalino.",
+    "s10": "Maestro Dobel is a Jalisco tequila of 100 per cent blue agave, from the makers of the first cristalino.",
     "s20": "This is a Maestro Dobel special edition. Dobel makes tequila of 100 per cent blue agave in Jalisco and began the cristalino style: aged tequilas blended and filtered clear, so the vanilla of the oak stays and the colour goes. Soft, lightly sweet and clean.",
     "s45": "This is Maestro Dobel, a special edition, as the neck label says: tequila of 100 per cent blue Weber agave from Jalisco, distilled twice. Dobel began the cristalino style with its Diamante: reposado, añejo and extra añejo tequilas rested in European white oak, blended and filtered until clear, so the vanilla and softness of the wood stay but the colour goes. Expect mild oak, vanilla and almond, then caramel, honey and citrus, soft and clean. We pour it neat, over one large cube, or in a Paloma. The embossed bottle copies the sample bottles of a tequila maker's laboratory, marked Reserva del Maestro Tequilero.",
     "sale": "Maestro Dobel made the first cristalino, an aged tequila filtered clear, soft with vanilla and caramel. Try it neat over one large cube, or long in a Paloma."
@@ -29,7 +29,7 @@
     "glass": "A small tulip neat, a rocks glass for the cube, a highball for the Paloma.",
     "classic": "The Paloma; a silver also makes a clean Margarita."
   },
-  "guest": "Maestro Dobel is a Jalisco tequila of 100 per cent blue agave, from the house that made the first cristalino: aged tequila filtered clear, soft with vanilla, caramel and citrus.",
+  "guest": "Maestro Dobel is a Jalisco tequila of 100 per cent blue agave, from the makers of the first cristalino: aged tequila filtered clear, soft with vanilla, caramel and citrus.",
   "story": "Maestro Dobel was launched in Jalisco in the late 2000s, and its first bottle, Diamante, was the first cristalino: aged tequila filtered back to clear, a style many tequila houses have followed since. The bottle is heavily embossed after the sample bottles of a distillery laboratory, its glass marked Reserva del Maestro Tequilero, and each carries the signature of the maestro tequilero, the master tequila maker, who made it.",
   "watch": [
     "Which expression is open decides the description: Diamante is the clear, aged cristalino; the silver is unaged, brighter and more peppery.",
@@ -38,7 +38,7 @@
   ],
   "asks": ["Which Maestro Dobel is the special edition bottle on the tequila shelf (the neck label says SPECIAL EDITION), and is it a cristalino or a silver?"],
   "house": { "match": [], "family": ["Dobel"] },
-  "library": { "producer": "", "cask": "", "canon": [] },
+  "library": { "producer": "", "cask": "", "canon": ["paloma"] },
   "recall": [
     {
       "id": "recall",
@@ -56,7 +56,7 @@
     },
     {
       "id": "q2",
-      "q": "How does a cristalino such as Maestro Dobel Diamante lose its colour?",
+      "q": "How does Maestro Dobel Diamante lose the colour its barrels gave it?",
       "options": ["Ageing in steel tanks", "Distilling a third time", "Filtering after ageing", "Resting in glass jars"],
       "a": 2,
       "explain": "Filtering after ageing takes out the colour the oak gave, while keeping much of its vanilla and softness."

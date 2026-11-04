@@ -37,7 +37,7 @@
     "Joven means unaged: this bottle is clear and unrested; the family's reposado and añejo are different bottles.",
     "Asked its strength: most bottlings state 45% ABV, a few 43%; read tonight's label rather than quote a figure."
   ],
-  "asks": ["Confirm the strength the joven's label states: most listings give 45% ABV, a few 43%."],
+  "asks": ["Confirm the bottle is the joven, as its clear spirit suggests, and the strength its label states: most listings give 45% ABV, a few 43%."],
   "house": { "match": ["Agave de Cortés"], "family": ["Agave de Cortés"] },
   "library": { "producer": "", "cask": "", "canon": ["oaxaca-old-fashioned", "naked-and-famous", "mezcal-negroni", "division-bell"] },
   "recall": [
@@ -53,7 +53,7 @@
       "q": "Which agave is Agave de Cortés Mezcal made from?",
       "options": ["Blue agave", "Espadín", "Tobalá", "Tepeztate"],
       "a": 1,
-      "explain": "Cultivated espadín, Agave angustifolia, the agave most widely planted for mezcal; tequila must be blue agave."
+      "explain": "Cultivated espadín, Agave angustifolia, the agave behind most mezcal; tequila must be blue agave."
     },
     {
       "id": "q2",

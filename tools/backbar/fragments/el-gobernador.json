@@ -10,7 +10,7 @@
   "confidence": "clear",
   "facts": {
     "base": "Wine of Moscatel of Alexandria and pink Moscatel grapes from the Limarí Valley",
-    "age": "No age statement; rested in stainless steel, a few months to a year",
+    "age": "No age statement; rested in stainless steel before bottling",
     "cask": "Not aged in wood; rested in stainless steel",
     "abv": "40% ABV (80 proof)",
     "law": "Chilean pisco under its denomination of origin: grape spirit of the Atacama and Coquimbo regions; Reservado means 40% ABV"
@@ -53,7 +53,7 @@
       "q": "On a Chilean pisco label such as El Gobernador's, what does the word Reservado state?",
       "options": ["A strength of 40% ABV", "At least a year in oak", "A single vineyard", "Grapes picked by hand"],
       "a": 0,
-      "explain": "Chile grades pisco by strength: Reservado is 40%, Gran Pisco 43% or more. El Gobernador is unaged and clear."
+      "explain": "Chile grades pisco by strength: Especial is 35%, Reservado 40%. El Gobernador is unaged and clear."
     },
     {
       "id": "q2",

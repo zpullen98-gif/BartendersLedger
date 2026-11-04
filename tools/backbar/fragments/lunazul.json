@@ -21,7 +21,7 @@
     "s10": "Lunazul is a Jalisco tequila of 100 per cent blue agave, estate grown and distilled at the Tierra de Agaves distillery.",
     "s20": "Lunazul, blue moon in Spanish, is tequila of 100 per cent blue agave, grown, distilled and bottled on one estate in Jalisco. The blanco is bright with lime and pepper; the reposado rests in old bourbon barrels for vanilla and a softer finish.",
     "s45": "This is Lunazul, tequila of 100 per cent blue Weber agave, grown on the estate, harvested by hand, then distilled and bottled at the Tierra de Agaves distillery in the heart of the tequila country of Jalisco. The blanco goes into the bottle unaged; the reposado rests at least two months in barrels that once held bourbon. The blanco tastes of cooked agave and honey, then lime and black pepper with a creamy finish; the reposado adds vanilla and soft oak. We pour it in a Margarita or a Paloma, or neat with lime. Its name is Spanish for blue moon, and its black label is its mark.",
-    "sale": "Lunazul is an estate grown Jalisco tequila of 100 per cent blue agave, bright with lime and pepper. It makes a clean, lively Margarita or Paloma."
+    "sale": "Lunazul is an estate grown Jalisco tequila of 100 per cent blue agave, cooked agave and black pepper in the glass. It makes a clean, lively Margarita or Paloma."
   },
   "serve": {
     "neat": "Neat, about an ounce and a half, at room temperature, with a wedge of lime if asked.",
@@ -29,7 +29,7 @@
     "glass": "A rocks glass, a coupe for the Margarita, a highball for the Paloma.",
     "classic": "The Margarita and the Paloma; also a Ranch Water, tequila with lime and soda."
   },
-  "guest": "Lunazul is a Jalisco tequila of 100 per cent blue agave, grown and distilled on one estate: bright with cooked agave, lime and pepper, and made for a Margarita or a Paloma.",
+  "guest": "Lunazul is a Jalisco tequila of 100 per cent blue agave, grown and distilled on one estate: cooked agave and pepper, bright when unaged and softer with vanilla when rested, and made for a Margarita or a Paloma.",
   "story": "Lunazul is Spanish for blue moon, the two words luna and azul run together. The tequila is grown, distilled and bottled on one estate, the Tierra de Agaves distillery, in the heart of the tequila country of Jalisco, from blue agave harvested by hand. Its mark is the black label, kept when the bottle was redesigned in 2015, when a wolf was blown into the glass and the bottle took a cork stopper.",
   "watch": [
     "Which expression is open decides the description: the blanco is clear and unaged; the reposado is pale gold from its bourbon barrels.",
@@ -38,7 +38,7 @@
   ],
   "asks": ["Confirm at lineup that the black-labelled bottle in the tequila front row is Lunazul, and which expression it is."],
   "house": { "match": [], "family": ["Lunazul"] },
-  "library": { "producer": "", "cask": "", "canon": [] },
+  "library": { "producer": "", "cask": "", "canon": ["margarita", "paloma", "ranch-water"] },
   "recall": [
     {
       "id": "recall",
@@ -70,7 +70,7 @@
     }
   ],
   "sources": [
-    { "title": "Heaven Hill: Lunazul 100% agave tequila unveils new premium packaging and marketing campaign", "url": "https://heavenhill.com/news-and-notes/lunazul-100-agave-tequila-unveils-new-premium-packaging-marketing-campaign/" },
+    { "title": "Heaven Hill: Lunazul 100% agave tequila unveils new packaging and marketing campaign", "url": "https://heavenhill.com/news-and-notes/lunazul-100-agave-tequila-unveils-new-premium-packaging-marketing-campaign/" },
     { "title": "The Spirits Business: Lunazul tequila packaging revamped", "url": "https://www.thespiritsbusiness.com/2015/06/heaven-hill-revamps-lunazul-tequila-packaging/" },
     { "title": "Lunazul product sheet: Reposado Tequila", "url": "https://sites.salsify.com/bdf90657-7017-4b79-9030-f3fd0c5c46cc/a533d9a1-7cc6-4bde-bc5b-e897d8b5da7d/product/422-0317/Lunazul-Reposado-Tequila/" },
     { "title": "Lunazul product sheet: Blanco", "url": "https://sites.salsify.com/bdf90657-7017-4b79-9030-f3fd0c5c46cc/a533d9a1-7cc6-4bde-bc5b-e897d8b5da7d/product/422-0353/Lunazul-Blanco/" },
