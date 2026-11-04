@@ -160,9 +160,9 @@
       "where": "Tequila shelf, centre back on photo 3: the tall slender bottle with the gold neck.",
       "read": "1942 on the neck; the Don Julio crest on a gold medallion.",
       "house": { "match": ["Don Julio 1942"], "family": ["Don Julio"] },
-      "library": { "producer": "", "cask": "", "canon": [] },
+      "library": { "producer": "", "cask": "", "canon": ["mexican-coffee"] },
       "yearly": false,
-      "note": "An añejo poured neat; no canon drink asks for it."
+      "note": "An añejo poured neat; the canon's Mexican Coffee is the one classic that asks for an añejo, so it is the link."
     },
     {
       "id": "patron-reposado", "name": "Patrón Reposado", "group": "tequila-mezcal-pisco", "photo": 3, "confidence": "clear", "chunk": "k3",

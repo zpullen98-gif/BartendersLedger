@@ -27,7 +27,7 @@
     "neat": "Neat at room temperature, about an ounce and a half, given a minute in the glass.",
     "rocks": "Over one large cube, which Don Julio also suggests; never crushed ice.",
     "glass": "A copita, a small snifter or a tulip; a rocks glass over the cube.",
-    "classic": "Kept for sipping: no classic asks for it; a stirred añejo Old Fashioned on request."
+    "classic": "Kept for sipping; the Mexican Coffee asks for an añejo, and a stirred añejo Old Fashioned suits it."
   },
   "guest": "Don Julio 1942 is an añejo tequila, aged at least two years in American white oak: caramel, chocolate and vanilla over roasted agave, made for sipping neat.",
   "story": "Don Julio González was seventeen in 1942 when he began making tequila in Atotonilco el Alto, and this añejo carries that year as its name. It was created for the sixtieth anniversary of his start and first bottled in 2002. The tall, slender bottle, with a gold neck and the crest on a gold medallion, was made to stand apart from the squat bottle of the Blanco and the Reposado, the low shape of the first Don Julio.",
@@ -39,7 +39,7 @@
   ],
   "asks": [],
   "house": { "match": ["Don Julio 1942"], "family": ["Don Julio"] },
-  "library": { "producer": "", "cask": "", "canon": [] },
+  "library": { "producer": "", "cask": "", "canon": ["mexican-coffee"] },
   "recall": [
     {
       "id": "recall",
