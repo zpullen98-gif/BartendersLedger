@@ -1,10 +1,10 @@
 {
   "edition": "2026-11-04",
-  "bottles": 27,
+  "bottles": 28,
   "planned": 29,
   "confirm": 12,
   "words": {
-    "total": 15227,
+    "total": 15845,
     "perEntry": {
       "luxardo-fernet": 549,
       "lazzaroni-maraschino": 584,
@@ -32,6 +32,7 @@
       "weller-special-reserve": 638,
       "weller-12": 584,
       "ofc-2005": 601,
+      "thomas-h-handy": 618,
       "george-t-stagg": 564
     }
   },
@@ -62,10 +63,11 @@
     "Back Bar · weller-special-reserve/recall",
     "Back Bar · weller-12/recall",
     "Back Bar · ofc-2005/recall",
+    "Back Bar · thomas-h-handy/recall",
     "Back Bar · george-t-stagg/recall"
   ],
-  "questions": 81,
-  "sources": 191,
+  "questions": 84,
+  "sources": 198,
   "house": {
     "luxardo-fernet": {
       "uses": [],
@@ -123,6 +125,14 @@
         "c-r8v9mkjs"
       ]
     },
+    "thomas-h-handy": {
+      "uses": [],
+      "family": [
+        "c-70rdihwo",
+        "c-hexgqdzk",
+        "c-r8v9mkjs"
+      ]
+    },
     "george-t-stagg": {
       "uses": [],
       "family": [
@@ -133,7 +143,6 @@
     }
   },
   "missing": [
-    "thomas-h-handy",
     "stagg"
   ],
   "refused": []
