@@ -1,0 +1,78 @@
+{
+  "id": "straight-whiskey",
+  "name": "Straight whiskey",
+  "respell": "",
+  "family": "american",
+  "law": "27 CFR 5.143, the United States standards of identity: straight bourbon, rye, wheat, malt or rye malt whisky meets the standard of its type and is stored at least two years in charred new oak, with no added colouring, flavouring or blending materials; straight corn whisky takes its two years in used or uncharred new oak. Straights of one type mixed together stay straight only when all were made in the same state. Under four years, the label states the age (27 CFR 5.74).",
+  "made": "Straight is a matter of time and purity, not of recipe. The whiskey is made to its type, bourbon or rye at least 51 per cent of its grain, filled into new charred oak at no more than 62.5% ABV and left at least two years; only water goes in at bottling. A batch may marry many barrels, and many distilleries' straights of one type, so long as all were made in one state; across states the label reads a blend of straight whiskies.",
+  "taste": "Straight promises time and purity, not one flavour. A straight bourbon reads vanilla, caramel and baking spice over sweet corn; a straight rye, pepper, mint and rye bread. Two years in new oak gives colour and a first layer of vanilla; four years and more deepen it to toffee, leather and dried fruit, with a firmer, drying finish.",
+  "lines": {
+    "s10": "Straight whiskey is American whiskey aged at least two years in new charred oak with nothing added, as in straight bourbon or straight rye.",
+    "s20": "Straight whiskey is bourbon, rye or another American type rested at least two years in new charred oak, with no colouring or flavouring added; under four years, the label states its age. Expect fuller oak, vanilla and caramel.",
+    "s45": "This is a straight whiskey, here a straight bourbon. Straight is a federal term: the whiskey meets the rule for its type, then rests at least two years in new charred oak, with no colouring, flavouring or blending materials added, and a bottle under four years must state its age. Barrels of one type can be married only from one state. The years in new oak give vanilla, caramel and toffee over the grain, with baking spice and a drying finish. We pour it neat, with a few drops of water, or in a Manhattan. Bottled-in-bond, the law of 1897, asks more: four years and 100 proof.",
+    "sale": "Straight on an American label means at least two years in new charred oak and nothing added but water. Try a straight bourbon neat, or a straight rye in a Manhattan or a Sazerac."
+  },
+  "serve": {
+    "neat": "Neat at room temperature in a Glencairn, so the oak and the grain both show.",
+    "water": "A few drops of still water open the caramel and soften the oak.",
+    "rocks": "One large cube for a guest who likes it cold; it melts slowly.",
+    "highball": "A younger straight goes long with ginger ale or soda over ice.",
+    "glass": "A Glencairn or tulip neat; a rocks glass for the cube and the Old Fashioned; a coupe for the Manhattan.",
+    "classic": "An Old Fashioned or a Manhattan with straight bourbon or rye; a Sazerac with straight rye."
+  },
+  "guest": [
+    { "q": "Does straight mean it came from one barrel?", "a": "No. Straight is about age and purity: at least two years in new charred oak, nothing added. A straight whiskey may marry many barrels; single barrel is a separate claim on the label." },
+    { "q": "How old is a straight bourbon?", "a": "At least two years in new charred oak. Under four years the label must state the age, so a straight bourbon with no age statement is at least four years old." },
+    { "q": "Can a straight whiskey be a blend?", "a": "Yes, of straights of one type from one state, and it stays straight. Straights from different states make a blend of straight whiskies, and the label must say so." }
+  ],
+  "compare": "Bottled-in-bond, 27 CFR 5.88, asks more than straight: one distilling season, one distiller at one distillery, at least four years in a bonded warehouse, exactly 100 proof and the distillery on the label. In the glass a bonded bottle is always 100 proof and four years or more; a straight can be younger, lighter or stronger.",
+  "benchmarks": ["Four Roses", "Buffalo Trace", "W. L. Weller", "Rabbit Hole", "Thomas H. Handy"],
+  "shelf": ["ofc-2005"],
+  "chapters": ["american-labels", "bourbon"],
+  "canon": ["old-fashioned", "manhattan", "sazerac"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What does straight whiskey on an American label promise, and what does it not promise?",
+      "answer": "Under 27 CFR 5.143: a whiskey of its type stored at least two years in charred new oak, used or uncharred oak for straight corn, nothing added but water, and a mix of one type only from one state. Under four years it states its age. It promises neither one barrel nor bottled-in-bond."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "How long, at the least, must a straight bourbon rest in charred new oak?",
+      "options": ["One year", "Four years", "Two years", "Three years"],
+      "a": 2,
+      "explain": "Two years, under 27 CFR 5.143. Four years is the bottled-in-bond minimum, and also the age below which a whiskey must state its age on the label."
+    },
+    {
+      "id": "q2",
+      "q": "Straight bourbons from two different states are mixed together. How must the label read?",
+      "options": ["A blend of straight whiskies", "Straight bourbon whiskey", "Bottled-in-bond bourbon", "Light whiskey"],
+      "a": 0,
+      "explain": "A blend of straight whiskies, often written blended straight bourbon whiskies. Straights of one type stay straight only when all were made in the same state."
+    },
+    {
+      "id": "q3",
+      "q": "In what kind of oak does straight corn whisky take its two years?",
+      "options": ["Charred new oak", "Used or uncharred new oak", "French oak only", "Ex-sherry casks only"],
+      "a": 1,
+      "explain": "Used or uncharred new oak. Corn whisky is never treated with charred wood, so straight corn is the one straight type kept out of charred new oak."
+    }
+  ],
+  "sources": [
+    { "title": "eCFR: 27 CFR 5.143, Whisky", "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-I/section-5.143" },
+    { "title": "Legal Information Institute: 27 CFR 5.143, Whisky", "url": "https://www.law.cornell.edu/cfr/text/27/5.143" },
+    { "title": "Legal Information Institute: 27 CFR 5.74, Statements of age", "url": "https://www.law.cornell.edu/cfr/text/27/5.74" },
+    { "title": "eCFR: 27 CFR 5.88, Bottled in bond", "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-F/section-5.88" },
+    { "title": "Whisky Advocate: Age statement", "url": "https://whiskyadvocate.com/age-statement/" },
+    { "title": "Breaking Bourbon: What is bourbon? Down the rabbit hole of America's native spirit", "url": "https://www.breakingbourbon.com/article/what-is-bourbon-down-the-rabbit-hole-of-americas-native-spirit" },
+    { "title": "Alcademics: What is a blended straight bourbon whiskey?", "url": "https://alcademics.com/?p=3056" },
+    { "title": "The Whiskey Wash: What does straight bourbon, or straight whiskey, really mean?", "url": "https://thewhiskeywash.com/american-whiskey/what-does-straight-bourbon-or-straight-whiskey-really-mean/" },
+    { "title": "Distiller magazine: What the Bottled-in-Bond Act of 1897 means today", "url": "https://distilling.com/distillermagazine/what-the-bottled-in-bond-act-of-1897-means-today/" },
+    { "title": "Distillery Trail: What is the Bottled-in-Bond Act of 1897?", "url": "https://distillerytrail.com/?p=8116" },
+    { "title": "Four Roses: Our recipes", "url": "https://fourrosesbourbon.com/our-recipes" },
+    { "title": "Cask Atlas: American Labels", "url": "" },
+    { "title": "Cask Atlas: Bourbon", "url": "" }
+  ]
+}
