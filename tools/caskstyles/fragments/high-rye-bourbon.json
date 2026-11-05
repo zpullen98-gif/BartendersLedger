@@ -1,0 +1,79 @@
+{
+  "id": "high-rye-bourbon",
+  "name": "High-rye bourbon",
+  "respell": "",
+  "family": "american",
+  "law": "No legal category of its own: high rye is a trade term for a bourbon with a larger share of rye than usual, and no rule fixes the line. The rule is bourbon's, 27 CFR 5.143: made in the United States from at least 51 per cent corn, distilled at no more than 80% ABV (160 proof), stored in charred new oak at no more than 62.5% ABV (125 proof), bottled at 40% ABV or more, nothing added. Straight bourbon adds at least two years.",
+  "made": "Corn stays the main grain, at least 51 per cent, with rye as the flavouring grain and malted barley for its enzymes. Most bourbon recipes carry about 8 to 15 per cent rye; a high-rye recipe is often put at about 20 to 35 per cent. Four Roses publishes one of 60 per cent corn, 35 rye and 5 malted barley; Rabbit Hole Heigold's is 70, 25 and 5, its rye malted. Yeast, still, char and age shape the spirit as much.",
+  "taste": "The rye shows as spice over bourbon's vanilla and caramel: black pepper, cinnamon, clove and a little mint or dill on the nose, a drier, spicier palate, and a warm, peppery finish. Often found brighter and leaner than a wheated bourbon, though barrel and age can round it.",
+  "lines": {
+    "s10": "A high-rye bourbon is bourbon with a larger share of rye beside the corn: vanilla and caramel, then pepper and cinnamon.",
+    "s20": "High-rye bourbon is still bourbon, at least 51 per cent corn in new charred oak, but its rye share runs well above the usual, often a fifth to a third. Expect caramel and vanilla, then pepper, cinnamon and a drier finish.",
+    "s45": "This is a high-rye bourbon. It is bourbon under the federal rule, made in the United States from at least 51 per cent corn and aged in new charred oak, but it carries far more rye than most recipes, often a fifth to a third of the mash where many bourbons hold less than a sixth. The rye shows as black pepper, cinnamon and clove over the corn's caramel and vanilla, with a drier, spicier finish. We pour it neat, on one large cube, or in a Boulevardier, where it stands up to the Campari. Old Grand-Dad, a Kentucky brand since 1882, is a high-rye name to know.",
+    "sale": "High-rye bourbon keeps the corn's caramel and adds the rye's pepper and cinnamon, so it reads drier and livelier. Try it in a Boulevardier or a New York Sour, where the spice holds its own."
+  },
+  "serve": {
+    "neat": "Neat at room temperature in a Glencairn, so the spice and the caramel both show.",
+    "water": "A few drops of still water soften the pepper and lift the fruit.",
+    "rocks": "One large cube rounds the rye without drowning it.",
+    "highball": "Long with ginger ale over ice, where the ginger meets the rye spice.",
+    "glass": "A Glencairn or tulip neat; a rocks glass for ice and the Old Fashioned.",
+    "classic": "A Boulevardier or Old Fashioned, where the spice stands up to bitters; a New York Sour or Paper Plane too."
+  },
+  "guest": [
+    { "q": "Is a high-rye bourbon a rye whiskey?", "a": "No. It is still bourbon, at least 51 per cent corn; rye whiskey needs at least 51 per cent rye. High rye only means a larger share of rye beside the corn." },
+    { "q": "How much rye makes it high rye?", "a": "There is no legal line. Most bourbons carry about 8 to 15 per cent rye, and the trade often calls about 20 to 35 per cent high rye. Four Roses publishes a recipe of 35 per cent." },
+    { "q": "Will it taste spicy?", "a": "Usually spicier than most bourbon: pepper, cinnamon, clove and a little mint over the corn's caramel, with a drier finish. Barrel, proof and age still shape it." }
+  ],
+  "compare": "Against a wheated bourbon the rule is the same and only the second grain changes: a large share of rye where the wheater uses wheat. The high-rye bourbon leans to pepper, cinnamon, mint and a drier finish, the wheater to honey, fresh bread and a rounder palate. Barrel and age can narrow the gap.",
+  "benchmarks": ["Four Roses", "Old Grand-Dad", "Basil Hayden", "Rabbit Hole"],
+  "shelf": ["rabbit-hole-heigold"],
+  "chapters": ["bourbon"],
+  "canon": ["old-fashioned", "boulevardier", "new-york-sour", "paper-plane"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What makes a bourbon a high-rye bourbon, and does any rule fix the line?",
+      "answer": "A larger share of rye than usual beside the corn, often about 20 to 35 per cent where most bourbons carry about 8 to 15. No rule fixes the line: it is bourbon under 27 CFR 5.143, at least 51 per cent corn, charred new oak, nothing added."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What does federal law require of a bourbon called high rye?",
+      "options": ["At least 20 per cent rye", "At least 35 per cent rye", "Nothing beyond the bourbon rule", "At least 51 per cent rye"],
+      "a": 2,
+      "explain": "High rye is a trade term with no legal line; the bourbon rule of 27 CFR 5.143 applies. At least 51 per cent rye would make it rye whiskey, not bourbon."
+    },
+    {
+      "id": "q2",
+      "q": "What share of rye does Four Roses publish for the spicier of its two bourbon recipes?",
+      "options": ["35 per cent", "20 per cent", "25 per cent", "51 per cent"],
+      "a": 0,
+      "explain": "35 per cent rye, with 60 per cent corn and 5 per cent malted barley; its other recipe is 20 per cent rye. Rabbit Hole Heigold's is 25 per cent."
+    },
+    {
+      "id": "q3",
+      "q": "In which year was Old Grand-Dad, a high-rye bourbon brand, first made in Kentucky?",
+      "options": ["1897", "1882", "1935", "1964"],
+      "a": 1,
+      "explain": "1882, when the founder named it for his grandfather, Basil Hayden. 1897 is the year of the Bottled-in-Bond Act, and 1935 the year Stitzel-Weller opened."
+    }
+  ],
+  "sources": [
+    { "title": "eCFR: 27 CFR 5.143, Whisky", "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-I/section-5.143" },
+    { "title": "A bourbon historian's blog: What do the terms high rye and low rye mean? (2011)", "url": "https://chuckcowdery.blogspot.com/2011/11/what-do-terns-high-rye-and-low-rye-mean.html" },
+    { "title": "The Whiskey Wash: What does the industry mean when they say high or low rye bourbon?", "url": "https://thewhiskeywash.com/?p=45886" },
+    { "title": "New Riff Distilling: What is high rye bourbon?", "url": "https://newriffdistilling.com/what-is-high-rye-bourbon/" },
+    { "title": "Rabbit Hole Distillery: Heigold, high rye bourbon", "url": "https://www.rabbitholedistillery.com/blogs/bourbon-101/heigold-high-rye-bourbon" },
+    { "title": "Rabbit Hole Distillery: Heigold Kentucky Straight Bourbon Whiskey", "url": "https://www.rabbitholedistillery.com/products/heigold-kentucky-straight-bourbon-whiskey" },
+    { "title": "Boozemakers: Bourbon mash bills explained", "url": "https://www.boozemakers.com/articles/bourbon-mash-bills-explained" },
+    { "title": "Four Roses: Our recipes", "url": "https://fourrosesbourbon.com/our-recipes" },
+    { "title": "The Whiskey Wash: How Four Roses' recipes create different bourbon profiles", "url": "https://thewhiskeywash.com/whiskey-articles/how-four-roses-unique-recipes-create-different-bourbon-profiles/" },
+    { "title": "VinePair: Four Roses bourbon recipe guide", "url": "https://vinepair.com/articles/four-roses-bourbon-recipe-guide/" },
+    { "title": "A bourbon historian's blog: The good and not so good of Old Grand-Dad (2015)", "url": "https://chuckcowdery.blogspot.com/2015/02/the-good-and-not-so-good-of-old-grand.html" },
+    { "title": "VinePair: Old Grand-Dad bourbon guide", "url": "https://vinepair.com/articles/ntk-old-grand-dad-bourbon-guide/" },
+    { "title": "Thirty One Whiskey: Basil Hayden's Kentucky Straight Bourbon Whiskey", "url": "https://www.thirtyonewhiskey.com/whiskey-review-basil-haydens-kentucky-straight-bourbon-whiskey/" },
+    { "title": "Cask Atlas: Bourbon", "url": "" }
+  ]
+}
