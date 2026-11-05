@@ -1,0 +1,77 @@
+{
+  "id": "american-single-malt",
+  "name": "American single malt",
+  "respell": "",
+  "family": "american",
+  "law": "27 CFR 5.143, the standard published on 18 December 2024 and in force from 19 January 2025: American single malt whisky is made from a fermented mash of 100 per cent malted barley, mashed, distilled and matured in the United States, distilled at one distillery at no more than 80% ABV (160 proof), stored in oak barrels of no more than 700 litres, new charred, new uncharred or used, and bottled at 40% ABV (80 proof) or more. Straight American single malt adds at least two years in oak.",
+  "made": "Malted barley alone is mashed, fermented and distilled at one distillery. The rule names no still, so pot stills, columns and hybrids all qualify. Then comes oak of the house's choosing: new charred barrels for vanilla and cocoa, casks that held bourbon, sherry, port or wine, or new uncharred oak. Some houses roast or smoke part of the malt. There is no minimum age, and a bottle under four years old states its age.",
+  "taste": "Malt at the centre: cereal, biscuit, toffee and honey, often with orchard fruit. New charred oak brings vanilla, caramel, cocoa and baking spice; roasted malts can bring coffee and dark chocolate, and a smoked malt brings smoke. The range is wide, from light and fruity to dense and oak-rich, so the casks on the label are the guide.",
+  "lines": {
+    "s10": "American single malt is whisky from 100 per cent malted barley, made at one distillery in the United States under a federal standard.",
+    "s20": "American single malt follows a federal standard in force since January 2025: all malted barley, one American distillery, oak barrels of no more than 700 litres. Expect malt, toffee and orchard fruit, with vanilla and cocoa where new oak is used.",
+    "s45": "This is an American single malt. Under a federal standard in force since January 2025, it is made from 100 per cent malted barley, mashed, distilled and matured in the United States, distilled at one distillery and aged in oak barrels of no more than 700 litres. Unlike Scotch, no pot still and no minimum age are required, and the oak may be new charred, new uncharred or used. Expect malt, biscuit and toffee, orchard fruit, and vanilla and cocoa where new oak is used. We pour it neat with water on the side, or long with soda. Distillers banded together in 2016 to ask for the rule.",
+    "sale": "American single malt is barley whisky made the American way, often with new oak laying vanilla and cocoa over the malt. Try it neat with a little water on the side, or long as a Whiskey Highball."
+  },
+  "serve": {
+    "neat": "Neat at room temperature in a Glencairn, so the malt, fruit and oak all show.",
+    "water": "A few drops of still water open the fruit and calm a higher strength.",
+    "rocks": "One large cube if the guest asks; colder, the malt and fruit close up.",
+    "highball": "Long with chilled soda over ice, a Whiskey Highball that keeps the malt in view.",
+    "glass": "A Glencairn neat; a highball glass long; a rocks glass for the Old Fashioned; a mug for the toddy.",
+    "classic": "A Whiskey Highball first; an Old Fashioned shows the oak, and a Hot Toddy suits a cold night."
+  },
+  "guest": [
+    { "q": "Is American single malt like Scotch?", "a": "It shares the grain, all malted barley, and the one distillery rule. It differs in freedom: no pot still and no three-year minimum are required, and new charred oak is common, so vanilla and cocoa often run stronger." },
+    { "q": "Does single mean one barrel?", "a": "No. Single means one distillery, as it does in Scotch. A single malt may marry many barrels; a single barrel bottling says so on the label." },
+    { "q": "How old is it?", "a": "The standard sets no minimum age. Straight American single malt has at least two years in oak, and any whisky under four years old must state its age on the label." }
+  ],
+  "compare": "Single malt Scotch, under the Scotch Whisky Regulations 2009, is malted barley from pot stills at one distillery in Scotland, matured there at least three years in oak. American single malt shares the grain and the one distillery but asks no pot still and no minimum age, and may use new charred oak, so its oak often speaks louder.",
+  "benchmarks": ["Westland", "Stranahan's", "Balcones"],
+  "shelf": [],
+  "chapters": ["american-single-malt"],
+  "canon": ["whiskey-highball", "old-fashioned", "hot-toddy"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What does the federal standard ask of American single malt, and when did it take effect?",
+      "answer": "27 CFR 5.143, published on 18 December 2024 and in force from 19 January 2025: 100 per cent malted barley, mashed, distilled and matured in the United States, distilled at one distillery at no more than 160 proof, oak barrels of no more than 700 litres, bottled at 80 proof or more."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Up to what barrel size does the American single malt standard allow the whisky to be stored?",
+      "options": ["250 litres", "500 litres", "700 litres", "1,000 litres"],
+      "a": 2,
+      "explain": "700 litres, the same cap the Scotch Whisky Regulations 2009 set for Scotch. The oak may be new charred, new uncharred or used, a freedom bourbon does not have."
+    },
+    {
+      "id": "q2",
+      "q": "On what date did the American single malt standard of identity take effect?",
+      "options": ["1 January 2024", "18 December 2024", "19 January 2025", "1 July 2025"],
+      "a": 2,
+      "explain": "19 January 2025. TTB proposed the standard in July 2022 and published the final rule on 18 December 2024."
+    },
+    {
+      "id": "q3",
+      "q": "Which kind of still does the American single malt standard require?",
+      "options": ["Pot stills only", "Column stills only", "A pot still and a doubler", "No particular still"],
+      "a": 3,
+      "explain": "No particular still: the rule asks for 100 per cent malted barley, one distillery and no more than 160 proof off the still. Single malt Scotch, by contrast, must come from pot stills."
+    }
+  ],
+  "sources": [
+    { "title": "eCFR: 27 CFR 5.143, Whisky", "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-I/section-5.143" },
+    { "title": "Federal Register, 18 December 2024: Establishing a standard of identity for American single malt whisky", "url": "https://www.govinfo.gov/content/pkg/FR-2024-12-18/html/2024-29938.htm" },
+    { "title": "TTB: TTB establishes American single malt whisky standard of identity", "url": "https://www.ttb.gov/public-information/featured-stories/ttb-establishes-american-single-malt-whisky-standard-identity" },
+    { "title": "Federal Register, 29 July 2022: the proposed standard, Notice No. 213", "url": "https://www.govinfo.gov/content/pkg/FR-2022-07-29/html/2022-16244.htm" },
+    { "title": "Whisky Advocate: At long last, American single malt is now an official category", "url": "https://whiskyadvocate.com/asm-ttb-news" },
+    { "title": "Difford's Guide: American single malt whiskey", "url": "https://www.diffordsguide.com/encyclopedia/4180/bws/american-single-malt-whiskey" },
+    { "title": "Distillery Trail: TTB proposes a standard of identity for American single malt whiskey", "url": "https://www.distillerytrail.com/blog/ttb-proposes-standard-of-identity-for-american-single-malt-whiskey-commenting-period-now-open/" },
+    { "title": "Alcohol Professor: Why American single malt is becoming an official designation", "url": "https://www.alcoholprofessor.com/blog-posts/american-single-malt-whiskey-designation" },
+    { "title": "Uproxx: Scotch against American single malt in a blind tasting", "url": "https://uproxx.com/life/scotch-vs-american-single-malt-whisky" },
+    { "title": "legislation.gov.uk: The Scotch Whisky Regulations 2009, regulation 3", "url": "https://www.legislation.gov.uk/uksi/2009/2890/regulation/3/made" },
+    { "title": "eCFR: 27 CFR 5.74, Statements of age", "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-E/section-5.74" },
+    { "title": "Cask Atlas: American Single Malt", "url": "" }
+  ]
+}
