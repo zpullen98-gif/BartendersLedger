@@ -1,0 +1,75 @@
+{
+  "id": "blended-scotch",
+  "name": "Blended Scotch",
+  "respell": "",
+  "family": "scotch",
+  "law": "The Scotch Whisky Regulations 2009 define blended Scotch whisky as a blend of one or more single malt Scotch whiskies with one or more single grain Scotch whiskies. The rule sets no share of malt. Every whisky in it meets the Scotch rules, distilled and matured in Scotland at least three years in oak casks of no more than 700 litres; the blend is bottled at 40% ABV or more, nothing added but water and plain caramel, and an age stated is one every whisky in it has reached.",
+  "made": "A blender marries single grain whisky, light and sweet from column stills, with single malts from many distilleries, chosen across regions and casks for a house style that holds from bottling to bottling. The share of malt varies by brand and is seldom published. The whiskies are married before bottling, and plain caramel may even out the colour.",
+  "taste": "Usually lighter and softer than a single malt: honey, vanilla, malt and soft orchard fruit over the grain's sweetness, with a gentle finish. Older blends bring dried fruit, spice and oak, and some carry a thread of peat smoke from Islay or island malts.",
+  "lines": {
+    "s10": "Blended Scotch is single malt and single grain Scotch married together: soft, honeyed and even, built for balance.",
+    "s20": "Blended Scotch marries at least one single malt with at least one single grain, all Scotch, so the grain's light sweetness carries the malts' fruit and depth. Expect honey, vanilla, malt and orchard fruit, sometimes a wisp of smoke.",
+    "s45": "This is a blended Scotch whisky. Under the Scotch Whisky Regulations it marries one or more single malts with one or more single grains, every whisky aged at least three years in oak in Scotland. A blender sets light, sweet grain whisky from column stills beside malts from many distilleries, keeping one house style from bottling to bottling. Expect honey, vanilla, malt and orchard fruit, soft and even, sometimes with a wisp of smoke. We pour it on the rocks, long with soda, or stirred in a Rob Roy. The Spirits Act of 1860 let malt and grain be blended under bond, and blends carried Scotch around the world.",
+    "sale": "Blended Scotch is malt for depth and grain for lightness, married by a blender for balance. Have it over ice or long with soda, or stirred in a Rob Roy or shaken in a Penicillin."
+  },
+  "serve": {
+    "neat": "Neat at room temperature for an older blend, so its fruit and spice show.",
+    "water": "A few drops of still water open honey and fruit in an older blend.",
+    "rocks": "Over ice suits most blends; the grain keeps it sweet as it chills.",
+    "highball": "With chilled soda or ginger ale over ice in a tall glass; with ginger beer and lime, a Mamie Taylor.",
+    "glass": "A rocks glass over ice; a highball glass for the long drinks; a coupe for the Rob Roy.",
+    "classic": "A Rob Roy, stirred; a Penicillin with an Islay float; a Rusty Nail or a Blood and Sand."
+  },
+  "guest": [
+    { "q": "Is a blend lower quality than a single malt?", "a": "No. Blend names a recipe, not a grade: malt and grain married by a blender for a set style. Some blends hold very old whiskies; the right one depends on the drink you want." },
+    { "q": "How much malt is in it?", "a": "The rule asks only for at least one single malt and one single grain, and sets no share. Brands seldom publish theirs, so we go by the label." },
+    { "q": "Why use a blend in a cocktail?", "a": "The grain makes it light and even, so it mixes without taking over. The Rob Roy, the Blood and Sand and the Penicillin are made with it." }
+  ],
+  "compare": "Against a blended malt: both marry whiskies from more than one distillery, but a blended Scotch must include single grain whisky beside its single malts, while a blended malt holds malts only. The grain makes a blended Scotch lighter, sweeter and softer; the blended malt is fuller and maltier.",
+  "benchmarks": ["Johnnie Walker", "Chivas Regal", "Dewar's", "The Famous Grouse", "Ballantine's"],
+  "shelf": [],
+  "chapters": ["blending", "scotch"],
+  "canon": ["rob-roy", "penicillin", "blood-and-sand", "rusty-nail", "bobby-burns", "mamie-taylor"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What must go into a blended Scotch under the 2009 regulations, and does the rule set a share of malt?",
+      "answer": "At least one single malt Scotch and at least one single grain Scotch, every whisky meeting the Scotch rules and the blend bottled at 40% ABV or more. The rule sets no share of malt, and brands seldom publish theirs."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Under the Scotch Whisky Regulations 2009, what must a blended Scotch hold?",
+      "options": ["Single malts from two or more distilleries", "At least one single malt and one single grain", "At least 50 per cent single malt", "Grain whisky from two or more distilleries"],
+      "a": 1,
+      "explain": "One or more single malts with one or more single grains, and no share is set. Malts alone from several distilleries make a blended malt; grains alone make a blended grain."
+    },
+    {
+      "id": "q2",
+      "q": "Which law of 1860 let malt and grain whisky be blended under bond?",
+      "options": ["The Malt Tax Act", "The Scotch Whisky Act", "The Spirits Act", "The Bottled-in-Bond Act"],
+      "a": 2,
+      "explain": "The Spirits Act of 1860 let malt and grain be blended under bond, before duty was paid, and blended Scotch grew from there. The Bottled-in-Bond Act is American, of 1897."
+    },
+    {
+      "id": "q3",
+      "q": "A blend holds 8, 12 and 25 year old Scotch. What age may its label state?",
+      "options": ["25 years", "15 years", "12 years", "8 years"],
+      "a": 3,
+      "explain": "8 years. An age statement is one every whisky in the bottle has reached, so older whiskies in the blend cannot raise it."
+    }
+  ],
+  "sources": [
+    { "title": "legislation.gov.uk: The Scotch Whisky Regulations 2009, regulation 3", "url": "https://www.legislation.gov.uk/uksi/2009/2890/regulation/3" },
+    { "title": "Wikipedia: Scotch Whisky Regulations 2009", "url": "https://en.wikipedia.org/wiki/Scotch_Whisky_Regulations_2009" },
+    { "title": "VinePair: The differences between single malt, single grain and blended Scotch, explained", "url": "https://vinepair.com/articles/differences-between-single-malt-single-grain-blended-scotch-explained/" },
+    { "title": "VinePair: The history of blended Scotch", "url": "https://vinepair.com/articles/history-blended-scotch/" },
+    { "title": "The Whisky Shop: A brief history of blended whisky", "url": "https://www.whiskyshop.com/blog/about-blended-whisky" },
+    { "title": "The Scotch Malt Whisky Society: The insect that boosted blended Scotch", "url": "https://unfiltered.smws.com/04-2021/whisky-history-phylloxera" },
+    { "title": "Scotchwhisky.com: Whisky heroes, Andrew and John Usher", "url": "https://scotchwhisky.com/magazine/whisky-heroes/14768/andrew-and-john-usher/" },
+    { "title": "Master of Malt: How to blend whisky, part one", "url": "https://www.masterofmalt.com/blog/post/how-to-blend-whisky-part-i/" },
+    { "title": "Cask Atlas: Blending and the language of the label", "url": "" },
+    { "title": "Cask Atlas: Scotch, grain, still and cask", "url": "" }
+  ]
+}
