@@ -1,0 +1,85 @@
+{
+  "id": "blended-irish",
+  "name": "Blended Irish whiskey",
+  "respell": "",
+  "family": "irish",
+  "law": "The Irish whiskey technical file defines blended Irish whiskey as a blend of two or more of its three varieties: malt, pot still and grain Irish whiskey. Every whiskey in it meets the Irish rules, distilled below 94.8% ABV and matured at least three years in wooden casks of no more than 700 litres on the island of Ireland; the blend is bottled at 40% ABV or more, with only water and plain caramel added. Triple distillation is common, never required.",
+  "made": "A blender marries whiskeys of different styles: most often light, sweet grain whiskey from column stills with pot still or malt from copper pot stills, and sometimes all three, as in Tullamore D.E.W. Many houses distil three times, Jameson and Powers among them, though the rule allows two. The whiskeys mature in ex-bourbon casks, sherry butts and refill casks and are married for one house style. Some blends hold no grain at all.",
+  "taste": "Usually light, soft and honeyed: vanilla and toffee from the grain, green apple and pear, toasted cereal, and a gentle spice where pot still whiskey is in the blend. Sherry casks add nuts and dried fruit. The finish is short to medium and clean; a blend rich in pot still is fuller and spicier.",
+  "lines": {
+    "s10": "Blended Irish whiskey marries two or more of Ireland's styles, grain, malt and pot still: light, honeyed and easy.",
+    "s20": "A blended Irish whiskey marries two or more of the three Irish styles, usually light grain whiskey with pot still or malt, often triple distilled and aged three years or more in Ireland. Expect honey, vanilla, orchard fruit and gentle spice.",
+    "s45": "This is a blended Irish whiskey. Under the Irish whiskey technical file it marries two or more of the three Irish styles, grain, malt and pot still, every whiskey aged at least three years in wooden casks on the island of Ireland. Most blends set light, sweet grain whiskey from column stills beside pot still or malt, and many are triple distilled, though the rule does not ask it. Expect honey, vanilla, green apple, toasted cereal and gentle spice. We pour it over ice, long with ginger ale, or in an Irish Coffee. In 1909 a Royal Commission declined to keep the name whiskey for pot still spirit alone.",
+    "sale": "Blended Irish marries Ireland's styles for balance: grain for lightness, pot still or malt for fruit and spice. Have it over ice, long with ginger ale, or in an Irish Coffee under a collar of cream."
+  },
+  "serve": {
+    "neat": "Neat at room temperature for an older blend or one rich in pot still, so the fruit and spice show.",
+    "water": "A few drops of still water open the honey and the orchard fruit.",
+    "rocks": "Over ice suits most blends; the grain keeps it sweet as it chills.",
+    "highball": "With chilled ginger ale and a lime wedge over ice, or ginger beer and lime as an Irish Mule.",
+    "glass": "A rocks glass over ice; a highball glass or copper mug for the long drinks; a warmed Irish coffee glass.",
+    "classic": "An Irish Coffee with brown sugar and lightly whipped cream; an Irish Mule; a Cameron's Kick; a Whiskey Ginger."
+  },
+  "guest": [
+    { "q": "Is all Irish whiskey triple distilled?", "a": "Many blends are, Jameson, Powers and Tullamore D.E.W. among them, but the technical file does not require it. Cooley distils its malt twice." },
+    { "q": "Does a blend always have grain whiskey in it?", "a": "Most do, but the rule asks only for two of the three styles. Writers' Tears Copper Pot marries pot still and malt with no grain at all." },
+    { "q": "Is a blend a lesser whiskey than a single?", "a": "No. Blend names a recipe, not a grade: two or more Irish styles married by a blender for a set house style. The right one depends on the drink you want." },
+    { "q": "Which whiskey goes in an Irish Coffee?", "a": "Any Irish whiskey, and a blend is a common choice: light and honeyed under hot coffee, brown sugar and cream. A blend rich in pot still makes a fuller, spicier one." }
+  ],
+  "compare": "Against an Irish single pot still: the single pot still is one style from one distillery, malted and unmalted barley from copper pot stills, while a blend marries two or more styles, usually with light grain whiskey from column stills. The blend is lighter, softer and sweeter; the single pot still creamier and spicier.",
+  "benchmarks": ["Jameson", "Powers", "Tullamore D.E.W.", "Bushmills", "Writers' Tears"],
+  "shelf": [],
+  "chapters": ["irish", "blending"],
+  "canon": ["irish-coffee", "irish-mule", "cameron-s-kick", "whiskey-ginger"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What goes into a blended Irish whiskey, and is triple distillation part of the rule?",
+      "answer": "Two or more of the three Irish styles, malt, pot still and grain, every whiskey aged at least three years in wooden casks in Ireland and the blend bottled at 40% ABV or more. Triple distillation is common, as at Jameson and Powers, but never required."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Under the Irish whiskey technical file, what must a blended Irish whiskey hold?",
+      "options": ["Two or more of malt, pot still and grain", "Grain whiskey with at least 30 per cent malt", "Whiskeys from two or more distilleries", "Single malts from two or more distilleries"],
+      "a": 0,
+      "explain": "Two or more of the three styles, malt, pot still and grain. No share is set and grain is not required: Writers' Tears Copper Pot marries pot still and malt alone."
+    },
+    {
+      "id": "q2",
+      "q": "Which blend marries pot still and malt Irish whiskey with no grain whiskey at all?",
+      "options": ["Jameson", "Writers' Tears Copper Pot", "Tullamore D.E.W. Original", "Bushmills Original"],
+      "a": 1,
+      "explain": "Writers' Tears Copper Pot marries single pot still and single malt. Jameson blends pot still with grain, Bushmills Original malt with grain, and Tullamore D.E.W. Original holds all three styles."
+    },
+    {
+      "id": "q3",
+      "q": "In which year did a Royal Commission decline to keep the name whiskey for pot still spirit alone?",
+      "options": ["1878", "1909", "1923", "1966"],
+      "a": 1,
+      "explain": "1909. Pot still distillers had argued that only pot still spirit was whiskey; the Commission set no such limit, so grain whiskey and blends kept the name."
+    }
+  ],
+  "sources": [
+    { "title": "European Commission, eAmbrosia: Irish Whiskey technical file", "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/55944" },
+    { "title": "Food Safety Authority of Ireland: Whiskey label guidance", "url": "https://www.fsai.ie/getmedia/09c66bb0-0973-496e-8ba9-204eb93c7608/Whiskey_Label_Guidance(2).pdf?ext=.pdf" },
+    { "title": "Difford's Guide: About Irish whiskey", "url": "https://www.diffordsguide.com/g/1144/irish-whiskey-uisce-beatha-eireannach/about" },
+    { "title": "Wikipedia: Jameson Irish Whiskey", "url": "https://en.wikipedia.org/wiki/Jameson_Irish_Whiskey" },
+    { "title": "The Whiskey Wash: Jameson Irish Whiskey, the complete guide", "url": "https://thewhiskeywash.com/irish-whiskey/jameson-irish-whiskey-the-complete-guide-and-faqs/" },
+    { "title": "The Whisky Exchange: Powers Gold Label", "url": "https://www.thewhiskyexchange.com/p/23067/powers-gold-label-irish-whiskey" },
+    { "title": "Celtic Whiskey Shop: Powers Gold Label", "url": "https://www.celticwhiskeyshop.com/powers-gold-label" },
+    { "title": "Tullamore D.E.W. brand page", "url": "https://williamgrant.com/gb/brands/tullamore-dew" },
+    { "title": "The Manual: Blended Irish whiskey with Tullamore D.E.W.", "url": "https://themanual.com/food-and-drink/blended-irish-whiskey-with-tullamore-d-e-w" },
+    { "title": "Drinks Ireland: Writers Tears Copper Pot", "url": "https://ibec.ie/drinksireland/irish-whiskey/campaigns/browse-the-brands/writers-tears-copper-pot" },
+    { "title": "Walsh Whiskey: Writers' Tears Copper Pot", "url": "https://www.walshwhiskey.com/whiskey/copper-pot/" },
+    { "title": "About Drinks: Bushmills Original and Black Bush", "url": "https://www.about-drinks.com/bushmills-original-und-black-bush-neues-jahr-neues-etikett/" },
+    { "title": "Master of Malt: Single malt Irish whiskey", "url": "https://www.masterofmalt.com/country-style/irish/single-malt-whiskey/" },
+    { "title": "Blackwater Distillery: Malty goodness", "url": "https://blackwaterdistillery.ie/malty-goodness/" },
+    { "title": "PubMed Central: The Royal Commission on Whiskey and Potable Spirits", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5335297/" },
+    { "title": "Scotchwhisky.com: What is whisky? The legal fight", "url": "https://scotchwhisky.com/magazine/features/16639/what-is-whisky-the-legal-fight/" },
+    { "title": "Mark Littler: Malt vs grain whisky", "url": "https://www.marklittler.com/malt-vs-grain-whisky/" },
+    { "title": "Cask Atlas: Irish Whiskey, pot still, malt, grain and blend", "url": "" },
+    { "title": "Cask Atlas: Blending and the language of the label", "url": "" }
+  ]
+}

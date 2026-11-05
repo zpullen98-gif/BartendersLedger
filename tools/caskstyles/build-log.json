@@ -1,6 +1,6 @@
 {
   "edition": "2026-11-05",
-  "styles": 27,
+  "styles": 29,
   "planned": 34,
   "byFamily": {
     "american": {
@@ -9,11 +9,11 @@
     },
     "scotch": {
       "planned": 10,
-      "written": 8
+      "written": 9
     },
     "irish": {
       "planned": 4,
-      "written": 3
+      "written": 4
     },
     "japanese": {
       "planned": 4,
@@ -25,7 +25,7 @@
     }
   },
   "words": {
-    "total": 17843,
+    "total": 19197,
     "perEntry": {
       "bourbon": 664,
       "wheated-bourbon": 690,
@@ -49,10 +49,12 @@
       "speyside": 651,
       "highland": 695,
       "islands": 655,
+      "lowland": 640,
       "islay": 642,
       "irish-single-pot-still": 659,
       "irish-single-malt": 641,
       "irish-single-grain": 648,
+      "blended-irish": 714,
       "canadian": 670
     }
   },
@@ -79,19 +81,19 @@
     "Cask Styles · speyside/recall",
     "Cask Styles · highland/recall",
     "Cask Styles · islands/recall",
+    "Cask Styles · lowland/recall",
     "Cask Styles · islay/recall",
     "Cask Styles · irish-single-pot-still/recall",
     "Cask Styles · irish-single-malt/recall",
     "Cask Styles · irish-single-grain/recall",
+    "Cask Styles · blended-irish/recall",
     "Cask Styles · canadian/recall"
   ],
-  "questions": 81,
-  "sources": 268,
+  "questions": 87,
+  "sources": 296,
   "shelf": 9,
   "missing": [
-    "lowland",
     "campbeltown",
-    "blended-irish",
     "japanese-whisky",
     "japanese-single-malt",
     "japanese-blended",
