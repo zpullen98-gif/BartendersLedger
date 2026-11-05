@@ -1,0 +1,79 @@
+{
+  "id": "japanese-single-malt",
+  "name": "Japanese single malt",
+  "respell": "",
+  "family": "japanese",
+  "law": "No legal category of its own. Single malt keeps its Scottish sense: malted barley alone from one distillery, usually from copper pot stills. Sold as Japanese whisky under the Japan Spirits & Liqueurs Makers Association standard, an association standard binding its members, it is also mashed and distilled in Japan with water drawn there, aged at least three years in wooden casks of no more than 700 litres in Japan and bottled there at 40% ABV or more.",
+  "made": "Malted barley, unpeated or peated, is mashed and fermented, then distilled in copper pot stills, a wash still and a spirit still, at one distillery. Because Japanese companies seldom trade spirit, one distillery may run stills of several shapes, more than one fermentation and many casks: ex-bourbon barrels, sherry butts, new oak and some Mizunara. Yoichi still heats its pot stills by coal fire. The malt ages at least three years in Japan.",
+  "taste": "Usually clean and well defined, with a wide range between houses: orchard fruit, honey and vanilla from bourbon casks; dried fruit and spice where sherry casks lead; fresh, green and herbal in a forest malt such as Hakushu; peat smoke and a heavier, bolder body in Yoichi. Mizunara casks can add sandalwood and incense.",
+  "lines": {
+    "s10": "Japanese single malt is whisky from malted barley alone, made at one Japanese distillery: clean, defined and true to its house.",
+    "s20": "Japanese single malt is malted barley from one distillery, pot distilled and aged at least three years in wood in Japan. Expect orchard fruit, honey and vanilla, dried fruit from sherry casks, sometimes peat smoke or green, herbal notes.",
+    "s45": "This is a Japanese single malt: malted barley alone, from one distillery in Japan. Single malt has no legal definition there; the term keeps its Scottish sense, and the makers' association standard asks for distilling, at least three years in wood and bottling in Japan. Because Japanese houses seldom trade spirit, one distillery runs stills of several shapes and many casks. Expect a clean, defined glass: orchard fruit, honey and vanilla, dried fruit from sherry casks, sometimes peat smoke. We pour it neat with a few drops of water, or long in a highball. Masataka Taketsuru founded Yoichi in 1934, and coal fire still heats its stills.",
+    "sale": "Japanese single malt is one distillery in a glass, clean and precise, each house its own. Taste it neat with a few drops of water, or long in a Whiskey Highball."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, so the house's fruit, cask and any smoke all show.",
+    "water": "A few drops of still water open the fruit and lift the cask notes.",
+    "rocks": "One large clear cube if asked; cold quiets a delicate malt, so offer it neat first.",
+    "highball": "With chilled soda over plenty of ice in a cold tall glass, one gentle stir.",
+    "glass": "A Glencairn or small tulip neat; a rocks glass for the cube; a chilled highball glass for soda.",
+    "classic": "A Whiskey Highball, where a single malt gives a fuller, more defined long drink than a blend."
+  },
+  "guest": [
+    { "q": "What makes it single?", "a": "One distillery. A single malt is malted barley alone from one distillery's stills, usually many casks and several years married together: single is the distillery, never the cask." },
+    { "q": "Is Japanese single malt smoky?", "a": "Some is. Yoichi often shows peat smoke and weight, Hakushu is fresh and green, and Yamazaki leans to fruit and sherry casks. The malt, the stills and the casks decide, not the country." },
+    { "q": "Why does one Japanese distillery make so many styles?", "a": "Japanese companies seldom trade spirit with one another, so a distillery runs stills of different shapes, more than one fermentation and many cask types to give its own blenders a range." }
+  ],
+  "compare": "Against a Japanese blended whisky: a single malt is malted barley alone from one distillery's pot stills, while a blend marries malt whiskies with lighter grain whisky from column stills, often from several distilleries of one company. The malt is fuller and shows its house; the blend is lighter and rounder.",
+  "benchmarks": ["Yamazaki", "Hakushu", "Yoichi", "Miyagikyo", "Chichibu", "Mars Shinshu"],
+  "shelf": [],
+  "chapters": ["japanese"],
+  "canon": ["whiskey-highball"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What makes a Japanese single malt, and what does the association standard add?",
+      "answer": "Malted barley alone from one distillery, usually pot distilled: the term's Scottish sense, with no legal definition in Japan. To be Japanese whisky under the association standard it is also distilled in Japan with water drawn there, aged at least three years in wooden casks in Japan and bottled there at 40% ABV or more."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "On a Japanese single malt label, what does the word single refer to?",
+      "options": ["One distillery", "One cask", "One year's distillation", "One variety of barley"],
+      "a": 0,
+      "explain": "One distillery. A single malt is malted barley alone from one distillery, and it may marry many casks and several years of that distillery's spirit."
+    },
+    {
+      "id": "q2",
+      "q": "Which Japanese distillery still heats its pot stills directly by coal fire?",
+      "options": ["Yamazaki", "Hakushu", "Yoichi", "Miyagikyo"],
+      "a": 2,
+      "explain": "Yoichi, founded by Masataka Taketsuru in 1934 on Hokkaido, has kept direct coal firing, a method he learnt in Scotland at Longmorn."
+    },
+    {
+      "id": "q3",
+      "q": "In which year was Hakushu founded, in the forest on the slopes of Mount Kaikoma?",
+      "options": ["1923", "1973", "1969", "1984"],
+      "a": 1,
+      "explain": "1973, fifty years after Yamazaki, in Yamanashi Prefecture. Miyagikyo, near Sendai, dates from 1969."
+    }
+  ],
+  "sources": [
+    { "title": "JSLMA: Standards for Labeling Japanese Whisky", "url": "https://www.yoshu.or.jp/files/libs/552/202303291555304944.pdf" },
+    { "title": "Nikka: Standards for labeling", "url": "https://nikka.com/eng/topics/topic_001/" },
+    { "title": "Wikipedia: Single malt whisky", "url": "https://en.wikipedia.org/wiki/Single_malt_whisky" },
+    { "title": "Highlighting Japan (Government of Japan): Yoichi Distillery", "url": "https://www.gov-online.go.jp/eng/publicity/book/hlj/html/202010/202010_12_en.html" },
+    { "title": "Master of Malt: Yoichi whisky distillery", "url": "https://www.masterofmalt.com/distilleries/yoichi-whisky-distillery/" },
+    { "title": "Mark Littler: Yoichi distillery history", "url": "https://www.marklittler.com/japan-yoichi-distillery-history/" },
+    { "title": "Wikipedia: Masataka Taketsuru", "url": "https://en.wikipedia.org/wiki/Masataka_Taketsuru" },
+    { "title": "Wikipedia: Hakushu distillery", "url": "https://en.wikipedia.org/wiki/Hakushu_distillery" },
+    { "title": "Whisky Magazine Japan: Hakushu Distillery", "url": "https://whiskymag.jp/hakushu-distillery/" },
+    { "title": "Difford's Guide: Miyagikyo Distillery, history", "url": "https://www.diffordsguide.com/producers/806/miyagikyo-distillery/history" },
+    { "title": "Whisky for Everyone: Miyagikyo Distillery", "url": "https://whiskyforeveryone.com/miyagikyo-distillery/" },
+    { "title": "Wines and Spirits: The complete guide to Japanese single malt whisky", "url": "https://winesandspirits.ch/japanese-single-malt-whisky-guide/" },
+    { "title": "Distiller: Why the world is hooked on Japanese whisky", "url": "https://distiller.com/articles/world-hooked-japanese-whisky" },
+    { "title": "Cask Atlas: Japanese whisky, identity beyond the label design", "url": "" }
+  ]
+}
