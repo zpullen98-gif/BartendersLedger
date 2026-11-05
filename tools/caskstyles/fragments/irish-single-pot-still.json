@@ -1,0 +1,73 @@
+{
+  "id": "irish-single-pot-still",
+  "name": "Irish single pot still",
+  "respell": "",
+  "family": "irish",
+  "law": "The Irish whiskey technical file defines pot still Irish whiskey: a mash of at least 30 per cent malted barley and at least 30 per cent unmalted barley, with up to 5 per cent other unmalted cereals such as oats or rye, distilled in copper pot stills below 94.8% ABV and aged at least three years in wooden casks on the island of Ireland. Single means one distillery. A 2026 consultation on raising the other cereals to 30 per cent is a proposal, not the rule.",
+  "made": "Malted and unmalted barley are milled and mashed together, sometimes with a small share of oats or rye, then fermented and distilled in copper pot stills, three times at most houses, though the rule allows two. The raw barley gives an oily, creamy spirit with a spicy edge. It matures in wood, mostly ex-bourbon casks, with ex-sherry and other wine casks for richer styles.",
+  "taste": "A creamy, almost oily texture first, then spice: pepper, clove and ginger over green apple, pear, toasted cereal and honey. Sherry casks add dried fruit, nuts and toffee. The finish is long and warming, the spice lingering, and the whole is usually fuller and spicier than a blend.",
+  "lines": {
+    "s10": "Irish single pot still is whiskey from malted and unmalted barley, pot distilled at one distillery: creamy, oily and spicy, with orchard fruit.",
+    "s20": "Single pot still is a style the Irish rules protect: malted and unmalted barley mashed together, distilled in copper pot stills at one distillery, usually three times. The raw barley gives a creamy, oily texture, with pepper, clove, green apple and honey.",
+    "s45": "This is an Irish single pot still whiskey, a style the Irish whiskey technical file protects: a mash of at least 30 per cent malted and 30 per cent unmalted barley, distilled in copper pot stills at one distillery, usually three times, and aged at least three years in wood in Ireland. The raw barley gives a creamy, oily texture, then pepper, clove and ginger over green apple, pear and honey; sherry casks add dried fruit. We pour it neat with a jug of water beside it, and it makes a fuller Irish Coffee. Before blends took over in the twentieth century, this was what Irish whiskey meant.",
+    "sale": "Single pot still is Ireland's own style: malted and raw barley together, so it is creamy and spicy at once. Taste it neat with a drop of water, or have it in an Irish Coffee that keeps its spice."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, so the cream and the spice both come through.",
+    "water": "A few drops of still water lift the green apple and the pepper.",
+    "rocks": "One large cube if asked; cold thins the creamy texture.",
+    "highball": "With chilled ginger ale over ice and a lime wedge, a long drink that keeps the spice.",
+    "glass": "A Glencairn or tulip neat; a rocks glass for the cube; an Irish coffee glass for the coffee.",
+    "classic": "An Irish Coffee, where its spice stands up to the cream; a Tipperary or a Hot Toddy too."
+  },
+  "guest": [
+    { "q": "What does pot still mean here?", "a": "In Ireland it names a style as well as a still: a mash of malted and unmalted barley, distilled in copper pot stills. Single means it all comes from one distillery." },
+    { "q": "Is it triple distilled?", "a": "Usually, at most houses, but the technical file allows double or triple distillation. What the rule insists on is the mash of malted and unmalted barley and the copper pot stills." },
+    { "q": "Why the unmalted barley?", "a": "It gives the style its creamy, oily texture and its spice. A tax on malt from 1785 is often given as the reason distillers turned to raw barley, though historians debate how much it caused." }
+  ],
+  "compare": "Against an Irish single malt: the malt is all malted barley, while single pot still adds at least 30 per cent unmalted barley, which brings a creamier, oilier texture and more spice. Both come from one distillery and copper pot stills; the malt tends to lighter fruit and cereal.",
+  "benchmarks": ["Redbreast", "Green Spot", "Yellow Spot", "Powers John's Lane", "Teeling"],
+  "shelf": [],
+  "chapters": ["irish"],
+  "canon": ["irish-coffee", "tipperary", "hot-toddy", "cameron-s-kick"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What goes into the mash of an Irish single pot still whiskey, and what does single mean?",
+      "answer": "At least 30 per cent malted and at least 30 per cent unmalted barley, with up to 5 per cent other unmalted cereals, distilled in copper pot stills, usually three times. Single means one distillery. Creamy, oily and spicy, with orchard fruit."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What minimum share of unmalted barley must a pot still Irish whiskey mash hold under the technical file?",
+      "options": ["5 per cent", "30 per cent", "51 per cent", "10 per cent"],
+      "a": 1,
+      "explain": "30 per cent, beside at least 30 per cent malted barley; other unmalted cereals may make up to 5 per cent. A 2026 consultation proposes raising those other cereals to 30 per cent, a proposal only."
+    },
+    {
+      "id": "q2",
+      "q": "Redbreast, Green Spot and Powers John's Lane are all distilled at which Irish distillery?",
+      "options": ["Bushmills", "Cooley", "Kilbeggan", "Midleton"],
+      "a": 3,
+      "explain": "Midleton, in County Cork, where the stocks behind the style's revival were laid down."
+    },
+    {
+      "id": "q3",
+      "q": "How many distillations does the technical file allow for a pot still Irish whiskey?",
+      "options": ["Once only", "Exactly three", "Two or three", "Four or more"],
+      "a": 2,
+      "explain": "Two or three: the file allows double or triple distillation. Most houses triple distil, which is why many guests think it is the rule."
+    }
+  ],
+  "sources": [
+    { "title": "European Commission, eAmbrosia: Irish Whiskey technical file", "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/55944" },
+    { "title": "Revenue: Whiskey verification checks", "url": "https://www.revenue.ie/en/companies-and-charities/documents/excise/whiskey-verification-checks.pdf" },
+    { "title": "Vinetur: Ireland opens review that could redefine Irish whiskey", "url": "https://www.vinetur.com/en/20260629103448/ireland-opens-review-that-could-redefine-irish-whiskey.html" },
+    { "title": "Wikipedia: Single pot still whiskey", "url": "https://en.wikipedia.org/wiki/Single_pot_still_whiskey" },
+    { "title": "The Whisky Exchange: Single pot still Irish whiskey, a complete guide", "url": "https://www.thewhiskyexchange.com/inspiration/article/18566/single-pot-still-irish-whiskey-history-style-revival-the-whisky-exchange" },
+    { "title": "VinePair: The history of pot still Irish whiskey", "url": "https://vinepair.com/articles/history-pot-still-irish-whiskey/" },
+    { "title": "Wikipedia: Green Spot (whiskey)", "url": "https://en.wikipedia.org/wiki/Green_Spot_(whiskey)" },
+    { "title": "Cask Atlas: Irish Whiskey, pot still, malt, grain and blend", "url": "" }
+  ]
+}

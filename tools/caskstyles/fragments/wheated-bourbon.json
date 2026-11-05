@@ -1,0 +1,73 @@
+{
+  "id": "wheated-bourbon",
+  "name": "Wheated bourbon",
+  "respell": "",
+  "family": "american",
+  "law": "No legal category of its own: a wheated bourbon is bourbon whose second grain is wheat rather than rye. The rule is bourbon's, 27 CFR 5.143: made in the United States from a mash of at least 51 per cent corn, distilled at no more than 80% ABV (160 proof), put into charred new oak at no more than 62.5% ABV (125 proof), bottled at 40% ABV or more, with no added colouring, flavouring or blending materials. Straight bourbon adds at least two years in that oak.",
+  "made": "Wheat takes the place of rye as the flavouring grain beside corn and malted barley. Published recipes run around 68 to 70 per cent corn and 16 to 20 per cent wheat, the rest malted barley: Maker's Mark's is given as 70, 16 and 14, with soft red winter wheat, and Larceny's as 68, 20 and 12. Other houses keep their figures private. Yeast, fermentation, the still, entry proof, the warehouse and age shape the spirit as much as the grain does.",
+  "taste": "Wheat is often found softer and rounder: honey, caramel, vanilla and fresh bread on the nose, soft red fruit and butterscotch on the palate, and less of the pepper and dill a rye recipe can bring. The grain is one influence among yeast, barrel, proof and age, so an older or barrel proof wheater can still run rich and hot.",
+  "lines": {
+    "s10": "A wheated bourbon is bourbon made with wheat in place of rye beside the corn: often softer and rounder, honey and caramel rather than spice.",
+    "s20": "Wheated bourbon is still bourbon by law, at least 51 per cent corn and new charred oak, but its second grain is wheat rather than rye. It is often found softer and rounder: honey, caramel, vanilla and fresh bread, with less pepper.",
+    "s45": "This is a wheated bourbon. It is bourbon under the federal rule, made in the United States from at least 51 per cent corn and aged in new charred oak, but the second grain is wheat where most recipes use rye. Wheat is often found softer and rounder: expect honey, caramel, vanilla and fresh bread, and less of the pepper a rye recipe brings, though barrel and age matter as much. We pour it neat, with a few drops of water, or over one large cube, and it makes a gentle Old Fashioned. Stitzel-Weller, opened near Louisville in 1935, made it a house style.",
+    "sale": "Wheated bourbon trades the rye for wheat, so it is often softer and rounder: honey, caramel and fresh bread rather than spice. Try it neat with a drop of water, or in an Old Fashioned for a guest who finds bourbon sharp."
+  },
+  "serve": {
+    "neat": "Neat at room temperature in a Glencairn or a small tulip, so the honey and bread come forward.",
+    "water": "A few drops of still water open the caramel and soften a higher proof.",
+    "rocks": "One large cube; small ice waters a softer whiskey down too fast.",
+    "glass": "A Glencairn or small tulip neat; a rocks glass for the cube or the Old Fashioned.",
+    "classic": "An Old Fashioned, or a Gold Rush where honey meets honey; a Whiskey Sour or Mint Julep too."
+  },
+  "guest": [
+    { "q": "Is wheated bourbon sweeter?", "a": "It is often found softer and rounder, with honey and bread rather than pepper, but nothing is added: bourbon allows only water. Barrel, proof and age can still make a wheater rich or hot." },
+    { "q": "Is it the same as wheat whiskey?", "a": "No. Wheated bourbon is at least 51 per cent corn with wheat as the second grain; wheat whiskey is at least 51 per cent wheat, a separate type under the same federal rule." },
+    { "q": "Why use wheat instead of rye?", "a": "It is the distiller's choice of character: rye brings spice and a drier edge, wheat a gentler, bready sweetness. Stitzel-Weller built its bourbons on wheat from 1935, and Maker's Mark chose soft red winter wheat." }
+  ],
+  "compare": "Against a high-rye bourbon the rule is the same and only the second grain changes: wheat in place of a large share of rye. The high-rye bourbon leans to pepper, dill and a drier finish, the wheater to honey, bread and a rounder palate. Barrel and age can narrow the gap.",
+  "benchmarks": ["Maker's Mark", "W. L. Weller", "Old Fitzgerald", "Larceny", "Stitzel-Weller"],
+  "shelf": ["weller-special-reserve", "weller-12"],
+  "chapters": ["bourbon"],
+  "canon": ["old-fashioned", "gold-rush", "whiskey-sour", "mint-julep"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What makes a bourbon a wheated bourbon, and is wheated bourbon a legal category?",
+      "answer": "Wheat replaces rye as the second grain beside corn and malted barley. It is no separate legal category: it is bourbon under 27 CFR 5.143, at least 51 per cent corn, charred new oak, nothing added. Often found softer and rounder, honey and bread rather than pepper."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "In a wheated bourbon, which grain does wheat take the place of?",
+      "options": ["Rye", "Corn", "Malted barley", "Oats"],
+      "a": 0,
+      "explain": "Rye. Corn stays the main grain, at least 51 per cent by law, and malted barley stays for its enzymes; wheat takes rye's place as the flavouring grain."
+    },
+    {
+      "id": "q2",
+      "q": "Which distillery, opened near Louisville in 1935, made wheated bourbon its house style?",
+      "options": ["Old Forester", "Heaven Hill", "Stitzel-Weller", "Four Roses"],
+      "a": 2,
+      "explain": "Stitzel-Weller, opened on Derby Day 1935 in Shively, on the edge of Louisville. Heaven Hill also opened in 1935, but in Bardstown."
+    },
+    {
+      "id": "q3",
+      "q": "Which wheat does Maker's Mark name as the flavouring grain of its bourbon?",
+      "options": ["Hard red spring wheat", "Durum wheat", "Soft white wheat", "Soft red winter wheat"],
+      "a": 3,
+      "explain": "Soft red winter wheat, in place of the usual rye. Its recipe is given as 70 per cent corn, 16 per cent wheat and 14 per cent malted barley."
+    }
+  ],
+  "sources": [
+    { "title": "eCFR: 27 CFR 5.143, Whisky", "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-I/section-5.143" },
+    { "title": "Legal Information Institute: 27 CFR 5.143, Whisky", "url": "https://www.law.cornell.edu/cfr/text/27/5.143" },
+    { "title": "Maker's Mark: Maker's Mark bourbon", "url": "https://www.makersmark.com/bourbons/makers-mark" },
+    { "title": "Uproxx: What is the Maker's Mark bourbon whiskey mash bill?", "url": "https://uproxx.com/life/what-is-makers-mark-mash-bill/" },
+    { "title": "VinePair: Larceny bourbon guide", "url": "https://vinepair.com/articles/larceny-bourbon-guide/" },
+    { "title": "The Bourbon Culture: Maker's Mark vs Larceny", "url": "https://thebourbonculture.com/whiskey-reviews/makers-mark-bourbon-vs-larceny-bourbon-review/" },
+    { "title": "Wikipedia: Stitzel-Weller Distillery", "url": "https://en.wikipedia.org/wiki/Stitzel-Weller" },
+    { "title": "Whisky Magazine: A short history of Stitzel-Weller", "url": "https://whiskymag.com/articles/short-history-of-stitzel-weller" },
+    { "title": "Cask Atlas: Bourbon", "url": "" }
+  ]
+}

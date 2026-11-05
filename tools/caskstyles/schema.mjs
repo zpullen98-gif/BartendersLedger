@@ -88,7 +88,9 @@ export function loadContext(opts = {}){
     listOf(opts.people || readJSON(join(dir, 'people.json'), { names: [] }), 'names'));
   const bbProper = readJSON(join(BB_DIR, 'proper-nouns.json'), { words: [], pairs: [] });
   const ownProper = opts.properNouns || readJSON(join(dir, 'proper-nouns.json'), { words: [], pairs: [] });
-  const proper = { words: [].concat(bbProper.words || [], ownProper.words || []), pairs: [].concat(bbProper.pairs || [], ownProper.pairs || []) };
+  const pairs = [].concat(bbProper.pairs || [], ownProper.pairs || []);
+  const proper = { words: [].concat(bbProper.words || [], ownProper.words || []),
+    pairs: pairs.concat(pairs.filter((n) => /['\u2019]s\b/.test(n)).map((n) => n.replace(/['\u2019]s\b/g, ''))) };
   const houses = listOf(opts.houses || readJSON(join(dir, 'houses.json'), { houses: [] }), 'houses');
   const bbCompanies = listOf(readJSON(join(BB_DIR, 'companies.json'), { companies: [] }), 'companies');
   let cocktails = [], producers = [], casks = [], na = [], backbar = [];
@@ -101,8 +103,10 @@ export function loadContext(opts = {}){
     na = [...src.matchAll(/\{\s*name:"([^"]+)",\s*cat:"/g)].map((m) => m[1]);
   } catch (e) {}
   const entries = Array.isArray(plan.entries) ? plan.entries : [];
-  const appNames = [].concat(cocktails, producers, na, houses, bbCompanies, entries.map((e) => e.name), casks.map((c) => c.title),
+  const named = [].concat(cocktails, producers, na, houses, bbCompanies, entries.map((e) => e.name), casks.map((c) => c.title),
     backbar.map((b) => b.name), [].concat(...backbar.map((b) => b.aka)));
+  /* the run reader drops a possessive (Maker's Mark reads as Maker Mark), so each name is allowed in that form too */
+  const appNames = named.concat(named.filter((n) => /['\u2019]s\b/.test(n)).map((n) => n.replace(/['\u2019]s\b/g, '')));
   /* the app's own lower-case vocabulary: a sentence's first word found here is an ordinary word, not a name */
   const vocab = new Set();
   ['data-core.js', 'data-lore.js', 'data-casks.js', 'data-service.js', 'data-questions.js', 'data-brew.js', 'data-backbar.js'].forEach((f) => {

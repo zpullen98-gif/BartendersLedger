@@ -1,19 +1,19 @@
 {
   "edition": "2026-11-05",
-  "styles": 0,
+  "styles": 3,
   "planned": 34,
   "byFamily": {
     "american": {
       "planned": 15,
-      "written": 0
+      "written": 1
     },
     "scotch": {
       "planned": 10,
-      "written": 0
+      "written": 1
     },
     "irish": {
       "planned": 4,
-      "written": 0
+      "written": 1
     },
     "japanese": {
       "planned": 4,
@@ -25,16 +25,23 @@
     }
   },
   "words": {
-    "total": 0,
-    "perEntry": {}
+    "total": 1991,
+    "perEntry": {
+      "wheated-bourbon": 690,
+      "islay": 642,
+      "irish-single-pot-still": 659
+    }
   },
-  "cards": [],
-  "questions": 0,
-  "sources": 0,
-  "shelf": 0,
+  "cards": [
+    "Cask Styles · wheated-bourbon/recall",
+    "Cask Styles · islay/recall",
+    "Cask Styles · irish-single-pot-still/recall"
+  ],
+  "questions": 9,
+  "sources": 21,
+  "shelf": 2,
   "missing": [
     "bourbon",
-    "wheated-bourbon",
     "high-rye-bourbon",
     "four-grain-bourbon",
     "straight-whiskey",
@@ -56,9 +63,7 @@
     "highland",
     "islands",
     "lowland",
-    "islay",
     "campbeltown",
-    "irish-single-pot-still",
     "irish-single-malt",
     "irish-single-grain",
     "blended-irish",

@@ -1,0 +1,72 @@
+{
+  "id": "islay",
+  "name": "Islay",
+  "respell": "EYE-luh",
+  "family": "scotch",
+  "law": "The Scotch Whisky Regulations 2009 protect Islay as a locality, with Campbeltown. A Scotch may carry the name only if it was wholly distilled on the island; it may mature elsewhere in Scotland, and the rule asks nothing about peat. Every Scotch rule holds: distilled and matured in Scotland, at least three years in oak casks of no more than 700 litres, bottled at 40% ABV or more, with nothing added but water and plain caramel.",
+  "made": "Islay single malt is malted barley, mashed, fermented and usually distilled twice in copper pot stills at one of the island's distilleries. Most of them dry their malt over peat smoke, and the smoke's phenols cling to the grain and carry through the stills; Bunnahabhain and Bruichladdich make unpeated spirit as well. Most of it matures in ex-bourbon casks, with sherry casks for richer styles, and Islay malt also goes into blends.",
+  "taste": "In the peated malts: peat smoke, iodine, sea salt, tar and lemon over vanilla and pear from bourbon casks, with a long, drying, smoky finish; sherry casks add dried fruit and dark chocolate. The unpeated malts are a different glass: malt, nuts, honey and a little salt. Peat level varies from house to house.",
+  "lines": {
+    "s10": "Islay is Scotch whisky distilled on the island of Islay, off Scotland's west coast: mostly peated, so smoke, iodine and sea salt.",
+    "s20": "Islay whisky is distilled on Islay, one of the two places the Scotch Whisky Regulations protect by name as a locality. Most of its distilleries dry their barley over peat, so expect smoke, iodine, sea salt and lemon; a few make unpeated malt.",
+    "s45": "This is an Islay single malt, distilled on the island of Islay in the Inner Hebrides, one of two localities the Scotch Whisky Regulations protect by name. It is malted barley, usually distilled twice in copper pot stills and aged at least three years in oak. Most of the island's distilleries dry their malt over peat smoke, so expect smoke, iodine, sea salt and lemon over vanilla from the cask, and a long, drying finish; a few make unpeated malt. We pour it neat with a jug of water on the side, and a little floats on a Penicillin. Bowmore, on Loch Indaal, dates from 1779.",
+    "sale": "Islay is the smoke and the sea in a glass: peat, iodine and salt over lemon and vanilla. Taste it neat with a few drops of water, or have it floated on a Penicillin."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, so the smoke and the fruit under it both show.",
+    "water": "A few drops of still water calm the smoke and bring out lemon, pear and vanilla.",
+    "rocks": "One large cube at most; cold mutes the fruit and leaves only the smoke.",
+    "highball": "With chilled soda in a tall glass over ice, a smoky highball with a lemon peel.",
+    "glass": "A Glencairn or nosing glass neat; a highball glass for the soda; a rocks glass for the Penicillin.",
+    "classic": "A Penicillin, as the smoky float on top; a few drops in a Smoky Martini."
+  },
+  "guest": [
+    { "q": "Are all Islay whiskies smoky?", "a": "No. Most of the island's distilleries peat their barley, but Bunnahabhain and Bruichladdich make unpeated malts too. The smoke comes from drying the barley over peat, not from the island itself." },
+    { "q": "Where does the smoke come from?", "a": "Peat burned to dry the malted barley. Its smoke leaves phenols on the grain that carry through distillation; the cask then adds vanilla and fruit around them." },
+    { "q": "How do you say it?", "a": "EYE-luh. It is an island of the Inner Hebrides, off Scotland's west coast." }
+  ],
+  "compare": "Against the Islands: Islay is a protected locality in the Scotch Whisky Regulations, while the Islands are an informal group whose whiskies are Highland in law. Both can be smoky, but most Islay houses peat their malt, while island malts such as Highland Park and Talisker range from heather and honey to pepper and smoke.",
+  "benchmarks": ["Lagavulin", "Laphroaig", "Ardbeg", "Bowmore", "Caol Ila", "Bruichladdich"],
+  "shelf": [],
+  "chapters": ["scotch-regions"],
+  "canon": ["penicillin", "smoky-martini", "whiskey-highball"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What does Islay promise on a Scotch label, and does it promise peat?",
+      "answer": "That the whisky was wholly distilled on the island of Islay, a protected locality under the Scotch Whisky Regulations 2009, with Campbeltown. It does not promise peat: most Islay distilleries peat their malt, but Bunnahabhain and Bruichladdich make unpeated spirit too. It may mature elsewhere in Scotland."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Which other place shares Islay's standing as a protected locality under the Scotch Whisky Regulations 2009?",
+      "options": ["Speyside", "Campbeltown", "Orkney", "Skye"],
+      "a": 1,
+      "explain": "Campbeltown. Highland, Lowland and Speyside are protected regions; Orkney and Skye belong to the informal Islands group, which is Highland in law."
+    },
+    {
+      "id": "q2",
+      "q": "What gives most Islay single malts their smoky character?",
+      "options": ["Malted barley dried over burning peat", "Casks charred over a peat fire", "Peaty water added at bottling", "Sea air in the warehouses"],
+      "a": 0,
+      "explain": "Peat smoke from drying the malt: its phenols cling to the grain and carry through distillation. Peaty water and sea air are popular stories, and Scotch allows only water and plain caramel to be added."
+    },
+    {
+      "id": "q3",
+      "q": "Bowmore, on the shore of Loch Indaal, dates its founding to which year?",
+      "options": ["1494", "1823", "1779", "1815"],
+      "a": 2,
+      "explain": "1779, by most accounts. The distillery stands in the village of Bowmore, on the shore of Loch Indaal."
+    }
+  ],
+  "sources": [
+    { "title": "legislation.gov.uk: The Scotch Whisky Regulations 2009, regulation 10", "url": "https://www.legislation.gov.uk/uksi/2009/2890/regulation/10" },
+    { "title": "legislation.gov.uk: The Scotch Whisky Regulations 2009, regulation 3", "url": "https://www.legislation.gov.uk/uksi/2009/2890/regulation/3" },
+    { "title": "Wikipedia: Scotch Whisky Regulations 2009", "url": "https://en.wikipedia.org/wiki/Scotch_Whisky_Regulations_2009" },
+    { "title": "Wikipedia: Islay whisky", "url": "https://en.wikipedia.org/wiki/Islay_whisky" },
+    { "title": "Wikipedia: Bowmore distillery", "url": "https://en.wikipedia.org/wiki/Bowmore_distillery" },
+    { "title": "Difford's Guide: Bowmore Distillery", "url": "https://www.diffordsguide.com/producers/221/bowmore-distillery" },
+    { "title": "Cask Atlas: Scotland, map the place, question the stereotype", "url": "" }
+  ]
+}
