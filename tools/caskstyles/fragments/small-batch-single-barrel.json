@@ -1,0 +1,75 @@
+{
+  "id": "small-batch-single-barrel",
+  "name": "Small batch and single barrel",
+  "respell": "",
+  "family": "american",
+  "law": "No legal category of its own: neither small batch nor single barrel is defined in the United States standards of identity, and no rule sets a barrel count. Small batch is the producer's word for a smaller mingling of chosen barrels; single barrel means one cask bottled alone. The whiskey still meets its type under 27 CFR 5.143, bourbon or rye, and the label's type, age and proof carry the legal facts.",
+  "made": "For small batch the producer chooses fewer barrels than its standard bottling, often from chosen warehouse floors or ages, and mingles them; the count is its own, from a few barrels to a couple of hundred. For single barrel one cask is emptied and bottled alone, cut with water to a set proof or left at barrel strength; the label often carries the barrel number, warehouse and bottling date.",
+  "taste": "Neither term names a flavour. Small batch is usually blended toward a house profile, so one bottle tastes much like the next; single barrel shows one cask, so two bottles of one brand can differ, one more vanilla and caramel, the next more oak, pepper or dark fruit.",
+  "lines": {
+    "s10": "Small batch means a chosen mingling of fewer barrels; single barrel means one cask, bottled alone, each barrel a little different.",
+    "s20": "Small batch and single barrel are producers' words, not federal rules: small batch is a smaller mingling of chosen barrels, single barrel one cask bottled alone. Expect the house character, and from a single barrel, that cask's own turn of oak and spice.",
+    "s45": "This is a single barrel bourbon, and small batch is its close relation. Neither is a legal category: the whiskey meets its type, here bourbon under 27 CFR 5.143, and the label adds how many barrels went in. Small batch mingles a chosen few barrels, the count the producer's own; single barrel bottles one cask alone, often with its barrel number on the label. Each cask reads its own way, vanilla and caramel in one, more oak, pepper and dark fruit in the next. We pour it neat with a few drops of water, or on one cube. Blanton's, from 1984, is usually named the first modern single barrel bourbon.",
+    "sale": "Single barrel is one cask in the bottle, so each barrel has its own turn of oak and spice. Try it neat with a few drops of water, or in an Old Fashioned."
+  },
+  "serve": {
+    "neat": "Neat at room temperature in a Glencairn, so one cask's character shows plainly.",
+    "water": "A few drops of still water open the caramel and soften a higher proof.",
+    "rocks": "One large cube for a guest who likes it cold; it melts slowly.",
+    "glass": "A Glencairn or tulip neat; a rocks glass for the cube and the Old Fashioned; a coupe for the Manhattan.",
+    "classic": "An Old Fashioned or a Manhattan; a single barrel is usually tasted neat first."
+  },
+  "guest": [
+    { "q": "Is small batch a legal term?", "a": "No. No federal rule defines it or sets a barrel count; it is the producer's word for a smaller mingling of chosen barrels. The type, age and proof on the label carry the facts." },
+    { "q": "Will this single barrel taste like the last bottle I had?", "a": "Not exactly. Each cask ages in its own way with its wood and its place in the warehouse, so one barrel reads sweeter, another spicier. That difference is the point of single barrel." },
+    { "q": "Is single barrel better than small batch?", "a": "Neither is better by rule. Single barrel shows one cask as it is; small batch mingles a few for a steadier house character. It comes down to which you enjoy." }
+  ],
+  "compare": "Barrel proof names a strength, the whiskey bottled at about the proof it left the cask; small batch and single barrel name how many barrels went in. They can meet, a single barrel bottled at barrel proof, but many small batch and single barrel bottles are cut with water to a set proof, so read the strength on the label.",
+  "benchmarks": ["Blanton's", "Four Roses", "Booker's", "Knob Creek", "Elijah Craig", "Eagle Rare"],
+  "shelf": [],
+  "chapters": ["american-labels", "blending"],
+  "canon": ["old-fashioned", "manhattan"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What do small batch and single barrel promise on an American whiskey label, and does the law define them?",
+      "answer": "Neither is defined in federal law. Small batch is the producer's word for a smaller mingling of chosen barrels, with no fixed count; single barrel means one cask bottled alone, so bottles differ from barrel to barrel. The type, age and proof still come from the rest of the label."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "How many barrels does federal law allow in a small batch bourbon?",
+      "options": ["No number: the law does not define it", "No more than ten barrels", "No more than twenty barrels", "No more than one hundred barrels"],
+      "a": 0,
+      "explain": "No federal rule defines small batch or sets a count. It is the producer's own word, and batches run from a few barrels to a couple of hundred."
+    },
+    {
+      "id": "q2",
+      "q": "Which brand, launched in 1984, is usually named the first modern single barrel bourbon?",
+      "options": ["Booker's", "Knob Creek", "Blanton's", "Maker's Mark"],
+      "a": 2,
+      "explain": "Blanton's, from the Frankfort distillery that is now Buffalo Trace, in 1984. Booker's and Knob Creek are small batch bourbons of the late 1980s and early 1990s."
+    },
+    {
+      "id": "q3",
+      "q": "What does single barrel on a bourbon label tell you?",
+      "options": ["It is bottled at barrel proof", "It is at least four years old", "It came from one distilling season", "Every drop came from one cask"],
+      "a": 3,
+      "explain": "One cask, bottled alone. Single barrel says nothing fixed about proof or age; one distilling season is the bottled-in-bond rule."
+    }
+  ],
+  "sources": [
+    { "title": "eCFR: 27 CFR 5.143, Whisky", "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-I/section-5.143" },
+    { "title": "Gear Patrol: This bourbon term is everywhere. But does it really mean anything?", "url": "https://www.gearpatrol.com/food/drinks/a36688708/small-batch-bourbon-whiskey/" },
+    { "title": "Paste Magazine: Small batch vs single barrel bourbon, the definitions", "url": "https://www.pastemagazine.com/drink/whiskey/small-batch-vs-single-barrel-bourbon-definition" },
+    { "title": "The Daily Meal: What the term small batch bourbon really means", "url": "https://www.thedailymeal.com/1546174/small-batch-bourbon-meaning" },
+    { "title": "Heaven Hill: Decipher a whiskey label like a pro", "url": "https://blog.heavenhilldistillery.com/decipher-whiskey-label-like-pro/" },
+    { "title": "Wikipedia: Blanton's", "url": "https://en.wikipedia.org/wiki/Blanton%27s" },
+    { "title": "The Whiskey Wash: More than a horse stopper, the history of Blanton's bourbon", "url": "https://thewhiskeywash.com/whiskey-articles/more-than-a-horse-stopper-the-revolutionary-history-of-blantons-bourbon/" },
+    { "title": "Tasting Table: How Blanton's revolutionized the bourbon industry", "url": "https://tastingtable.com/stories/how-blantons-revolutionized-the-bourbon-industry" },
+    { "title": "Knob Creek, Beam founders: the Small Batch Collection", "url": "https://founders.beamsuntory.com/dna/knobcreek" },
+    { "title": "Cask Atlas: American Labels", "url": "" },
+    { "title": "Cask Atlas: Blending and the language of the label", "url": "" }
+  ]
+}

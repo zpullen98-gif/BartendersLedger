@@ -1,11 +1,11 @@
 {
   "edition": "2026-11-05",
-  "styles": 8,
+  "styles": 9,
   "planned": 34,
   "byFamily": {
     "american": {
       "planned": 15,
-      "written": 6
+      "written": 7
     },
     "scotch": {
       "planned": 10,
@@ -25,7 +25,7 @@
     }
   },
   "words": {
-    "total": 5326,
+    "total": 5977,
     "perEntry": {
       "bourbon": 664,
       "wheated-bourbon": 690,
@@ -33,6 +33,7 @@
       "four-grain-bourbon": 635,
       "straight-whiskey": 688,
       "bottled-in-bond": 676,
+      "small-batch-single-barrel": 651,
       "islay": 642,
       "irish-single-pot-still": 659
     }
@@ -44,14 +45,14 @@
     "Cask Styles · four-grain-bourbon/recall",
     "Cask Styles · straight-whiskey/recall",
     "Cask Styles · bottled-in-bond/recall",
+    "Cask Styles · small-batch-single-barrel/recall",
     "Cask Styles · islay/recall",
     "Cask Styles · irish-single-pot-still/recall"
   ],
-  "questions": 24,
-  "sources": 74,
+  "questions": 27,
+  "sources": 83,
   "shelf": 6,
   "missing": [
-    "small-batch-single-barrel",
     "barrel-proof",
     "tennessee-whiskey",
     "kentucky-rye",
