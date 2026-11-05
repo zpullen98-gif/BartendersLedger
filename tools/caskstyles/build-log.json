@@ -1,6 +1,6 @@
 {
   "edition": "2026-11-05",
-  "styles": 15,
+  "styles": 16,
   "planned": 34,
   "byFamily": {
     "american": {
@@ -9,7 +9,7 @@
     },
     "scotch": {
       "planned": 10,
-      "written": 2
+      "written": 3
     },
     "irish": {
       "planned": 4,
@@ -25,7 +25,7 @@
     }
   },
   "words": {
-    "total": 9943,
+    "total": 10584,
     "perEntry": {
       "bourbon": 664,
       "wheated-bourbon": 690,
@@ -40,6 +40,7 @@
       "monongahela-rye": 621,
       "american-single-malt": 694,
       "scotch-single-malt": 694,
+      "single-grain-scotch": 641,
       "islay": 642,
       "irish-single-pot-still": 659
     }
@@ -58,17 +59,17 @@
     "Cask Styles · monongahela-rye/recall",
     "Cask Styles · american-single-malt/recall",
     "Cask Styles · scotch-single-malt/recall",
+    "Cask Styles · single-grain-scotch/recall",
     "Cask Styles · islay/recall",
     "Cask Styles · irish-single-pot-still/recall"
   ],
-  "questions": 45,
-  "sources": 146,
+  "questions": 48,
+  "sources": 157,
   "shelf": 9,
   "missing": [
     "corn-whiskey",
     "wheat-whiskey",
     "blended-american",
-    "single-grain-scotch",
     "blended-malt",
     "blended-scotch",
     "speyside",

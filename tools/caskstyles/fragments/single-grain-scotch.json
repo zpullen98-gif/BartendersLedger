@@ -1,0 +1,78 @@
+{
+  "id": "single-grain-scotch",
+  "name": "Single grain Scotch",
+  "respell": "",
+  "family": "scotch",
+  "law": "The Scotch Whisky Regulations 2009 define single grain Scotch whisky as a Scotch distilled at a single distillery that is neither a single malt nor a blended Scotch. Scotch is distilled from water and malted barley, to which only whole grains of other cereals may be added, so wheat or maize is allowed, and the rule names no still. Every Scotch rule holds: distilled below 94.8% ABV, at least three years in oak casks of no more than 700 litres in Scotland, bottled at 40% ABV or more.",
+  "made": "Most single grain is wheat or maize, cooked and mashed with a share of malted barley whose enzymes turn the starch to sugar, then fermented and run through a continuous column still, which gives a lighter spirit than a pot still. A few houses run malted barley alone through a column. The spirit matures in oak, mostly ex-bourbon casks, which give much of its flavour, and grain whisky is the base of most blended Scotch.",
+  "taste": "Usually light and sweet: vanilla, toffee, coconut and soft cereal from ex-bourbon casks, with a clean, gentle finish. Long-aged grain grows richer, with butterscotch, honey and polished oak, and wine casks add red fruit.",
+  "lines": {
+    "s10": "Single grain Scotch is grain whisky from one Scottish distillery, usually wheat or maize through a column still: light and sweet.",
+    "s20": "Single grain Scotch comes from one distillery in Scotland and is any Scotch that is not a single malt: usually wheat or maize with some malted barley, through a column still. Expect vanilla, toffee, coconut and soft cereal.",
+    "s45": "This is a single grain Scotch whisky. Under the Scotch Whisky Regulations it comes from one distillery in Scotland and is any Scotch that is not a single malt: usually wheat or maize with some malted barley, run through a tall column still, then aged at least three years in oak, most often ex-bourbon casks. Single means one distillery, not one grain. Expect a light, sweet glass: vanilla, toffee, coconut and soft cereal, richer with long ageing. We pour it neat, or long with chilled soda as a highball. Grain whisky is the base of most blends, made in stills descended from the one Aeneas Coffey patented about 1830.",
+    "sale": "Single grain is the light, sweet whisky at the heart of most blends, bottled on its own. Taste it neat for vanilla and toffee, or long with soda in a highball."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, so the vanilla, toffee and cereal show.",
+    "water": "A few drops of still water bring up coconut and soft cereal.",
+    "rocks": "Over ice suits it; the light, sweet spirit holds its shape as it chills.",
+    "highball": "With chilled soda or ginger ale over ice in a tall glass, light and sweet.",
+    "glass": "A Glencairn or tulip neat; a rocks glass over ice; a highball glass for the long drinks.",
+    "classic": "A Whiskey Highball; a Whiskey Ginger with a lime wedge; a Hot Toddy with honey and lemon."
+  },
+  "guest": [
+    { "q": "Is single grain made from one grain?", "a": "No. Single means one distillery. Most single grains mix wheat or maize with some malted barley, and a few run malted barley alone through a column still." },
+    { "q": "Isn't grain whisky just for blends?", "a": "It is the base of most blended Scotch, but some is bottled on its own as single grain, sometimes long aged, and it shows what the blends are built on." },
+    { "q": "Why is it lighter than a single malt?", "a": "The continuous column still makes a lighter, cleaner spirit than a copper pot still, so the cask, usually ex-bourbon, gives much of the vanilla and toffee." }
+  ],
+  "compare": "Against a single malt: both come from one distillery, but a single malt must be water and malted barley only, distilled in pot stills, while single grain is any other Scotch from one distillery, usually wheat or maize with some malted barley through a column still. The grain is lighter and sweeter, the malt fuller.",
+  "benchmarks": ["Cameronbridge", "Girvan", "North British", "Invergordon"],
+  "shelf": [],
+  "chapters": ["scotch", "blending"],
+  "canon": ["whiskey-highball", "whiskey-ginger", "hot-toddy"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What makes a Scotch a single grain, and what does single not promise there?",
+      "answer": "Distilled at one distillery in Scotland and not a single malt or a blend: usually wheat or maize with some malted barley, through a column still, aged at least three years in oak. Single means one distillery, not one grain."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "A Scottish distillery runs malted barley alone through a column still. Which category is the whisky?",
+      "options": ["Single malt Scotch", "Single grain Scotch", "Blended malt Scotch", "Blended Scotch"],
+      "a": 1,
+      "explain": "Single grain. A single malt must be distilled in pot stills, so malted barley through a column still at one distillery is a single grain under the Scotch Whisky Regulations 2009."
+    },
+    {
+      "id": "q2",
+      "q": "Which still do Scotland's grain distilleries usually run?",
+      "options": ["Copper pot stills", "Charentais alembics", "Continuous column stills", "Pot stills with a doubler"],
+      "a": 2,
+      "explain": "Continuous column stills, descended from the still Aeneas Coffey patented about 1830. The rule itself names no still for single grain; it only says it is not a single malt or a blend."
+    },
+    {
+      "id": "q3",
+      "q": "Which of these is a Scottish grain distillery?",
+      "options": ["Lagavulin", "Glenfiddich", "Springbank", "Cameronbridge"],
+      "a": 3,
+      "explain": "Cameronbridge, in Fife, makes grain whisky in column stills. Lagavulin, Glenfiddich and Springbank are malt distilleries working copper pot stills."
+    }
+  ],
+  "sources": [
+    { "title": "legislation.gov.uk: The Scotch Whisky Regulations 2009, regulation 3", "url": "https://www.legislation.gov.uk/uksi/2009/2890/regulation/3" },
+    { "title": "Wikipedia: Scotch Whisky Regulations 2009", "url": "https://en.wikipedia.org/wiki/Scotch_Whisky_Regulations_2009" },
+    { "title": "Whisky Advocate: Single grain whisky", "url": "https://whiskyadvocate.com/single-grain-whisky/" },
+    { "title": "SMWS America: Cask curriculum, single grain explained", "url": "https://smwsa.com/blog/cask-curriculum-single-grain-explained" },
+    { "title": "Milroy's of Soho: How is single grain whisky made?", "url": "https://milroysofsoho.com/blogs/the-whisky-librarian/how-is-single-grain-whisky-made" },
+    { "title": "Food Republic: The difference between single grain and single malt Scotch whisky", "url": "https://www.foodrepublic.com/1475819/difference-between-single-grain-malt-scotch-whiskey" },
+    { "title": "Master of Malt: How to blend whisky, part one", "url": "https://www.masterofmalt.com/blog/post/how-to-blend-whisky-part-i/" },
+    { "title": "whisky.de: Blended whisky", "url": "https://www.whisky.de/index.php?id=477&L=1" },
+    { "title": "Wikipedia: Aeneas Coffey", "url": "https://en.wikipedia.org/wiki/Aeneas_Coffey" },
+    { "title": "Wikipedia: Column still", "url": "https://en.wikipedia.org/wiki/Column_still" },
+    { "title": "Scotchwhisky.com: Whisky heroes, Aeneas Coffey", "url": "https://scotchwhisky.com/magazine/whisky-heroes/20740/aeneas-coffey/" },
+    { "title": "Cask Atlas: Scotch, grain, still and cask", "url": "" },
+    { "title": "Cask Atlas: Blending and the language of the label", "url": "" }
+  ]
+}
