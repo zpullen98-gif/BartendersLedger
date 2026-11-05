@@ -1,0 +1,75 @@
+{
+  "id": "blended-american",
+  "name": "Blended American and light whiskey",
+  "respell": "",
+  "family": "american",
+  "law": "27 CFR 5.143: blended whisky holds at least 20 per cent straight whisky or a blend of straight whiskies, measured in proof gallons, the rest whisky or neutral spirits, bottled at 40% ABV (80 proof) or more. Light whisky is distilled at more than 80% ABV (160 proof), below the 95% (190 proof) every whisky stays under, and stored in used or uncharred new oak. Light whisky mixed with less than 20 per cent straight whisky is blended light whisky.",
+  "made": "A blender builds it from parts. Straight whiskies, often bourbon or rye, bring the flavour and make up at least a fifth of the blend by proof gallons; the rest is younger whisky or neutral grain spirit, distilled high and light. Up to 2.5 per cent of harmless colouring, flavouring or blending materials is allowed. Light whisky is distilled above 160 proof, so it keeps less grain character, then rests in used or uncharred oak.",
+  "taste": "Light and easy: soft grain, vanilla and caramel from the straight whiskey, a little toffee and spice, and a clean, short finish. The neutral spirit thins the body, so a blend usually reads gentler and drier than a straight bourbon. Light whiskey on its own is pale and delicate, closer to a grain whisky.",
+  "lines": {
+    "s10": "A blended whiskey, or blended American, mixes at least 20 per cent straight whiskey with lighter whisky or neutral grain spirit.",
+    "s20": "Blended whiskey, under the federal rule, holds at least 20 per cent straight whiskey, the rest whisky or neutral spirits; light whiskey is distilled above 160 proof. Expect soft grain, vanilla and caramel, light and clean.",
+    "s45": "This is a blended American whiskey. Under the federal rule a blended whiskey holds at least 20 per cent straight whiskey by proof gallons, and the rest may be younger whisky or neutral grain spirit; light whiskey, a type of its own, is distilled above 160 proof and rested in used or uncharred oak. The straight whiskey brings vanilla, caramel and a little spice, and the lighter spirit keeps the body soft and the finish clean. We pour it long, with ginger ale or soda over ice, or in a Presbyterian. The light whiskey rule, written in 1968, took effect in 1972.",
+    "sale": "Blended American whiskey is made to mix: straight whiskey for flavour, lighter spirit for an easy, clean finish. Try it tall with ginger ale and soda as a Presbyterian, or simply with ginger ale."
+  },
+  "serve": {
+    "neat": "Neat at room temperature if the guest asks, though ice or a mixer suits most blends.",
+    "rocks": "On the rocks is a natural pour; one large cube keeps it from thinning fast.",
+    "highball": "Long with ginger ale, soda, or both over ice: a Whiskey Ginger or a Presbyterian.",
+    "glass": "A rocks glass for ice; a highball glass for the long drinks.",
+    "classic": "A Whiskey Ginger or a Presbyterian; a Whiskey Highball with soda alone."
+  },
+  "guest": [
+    { "q": "What is it blended with?", "a": "Straight whiskey, at least 20 per cent by proof gallons, for flavour; the rest may be younger whisky or neutral grain spirit. Seagram's 7 Crown and Kessler are blended American whiskeys." },
+    { "q": "Is anything added?", "a": "Neutral spirits may be, and up to 2.5 per cent of harmless colouring, flavouring or blending materials. A straight whiskey may hold none of these." },
+    { "q": "What is light whiskey?", "a": "Whiskey distilled above 160 proof, so lighter in grain flavour, and rested in used or uncharred oak. The rule was written in 1968 to answer lighter imported whiskies; it never caught on widely, and much went into blends." }
+  ],
+  "compare": "A straight whiskey is one type, aged at least two years in its oak with nothing added, and straights of one type mix only from one state. Straights from different states make a blend of straight whiskies; add whisky or neutral spirits and it becomes a blended whiskey, lighter and softer in the glass.",
+  "benchmarks": ["Seagram's 7 Crown", "Kessler", "High West"],
+  "shelf": [],
+  "chapters": ["american-labels", "blending"],
+  "canon": ["whiskey-ginger", "presbyterian", "whiskey-highball"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What must a blended whiskey hold under the federal rule, and what makes a light whiskey?",
+      "answer": "27 CFR 5.143: a blended whiskey is at least 20 per cent straight whiskey by proof gallons, the rest whisky or neutral spirits, bottled at 80 proof or more. Light whiskey is distilled above 160 proof, below 190, and stored in used or uncharred new oak."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What minimum share of straight whiskey must a blended whiskey hold, measured in proof gallons?",
+      "options": ["10 per cent", "20 per cent", "51 per cent", "80 per cent"],
+      "a": 1,
+      "explain": "20 per cent; the rest may be whisky or neutral spirits. Light whisky mixed with less than 20 per cent straight whisky is called blended light whisky."
+    },
+    {
+      "id": "q2",
+      "q": "Above what proof is a light whiskey distilled?",
+      "options": ["125 proof", "140 proof", "160 proof", "190 proof"],
+      "a": 2,
+      "explain": "Above 160 proof (80% ABV), the ceiling for bourbon and rye, and below the 190 proof every whisky stays under. It rests in used or uncharred new oak."
+    },
+    {
+      "id": "q3",
+      "q": "In which year did the federal light whiskey standard take effect for bottling?",
+      "options": ["1972", "1933", "1964", "1986"],
+      "a": 0,
+      "explain": "1972, for whisky distilled from January 1968, when the standard was written. It was meant to answer the lighter imported whiskies of the day."
+    }
+  ],
+  "sources": [
+    { "title": "eCFR: 27 CFR 5.143, Whisky", "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-I/section-5.143" },
+    { "title": "TTB: Beverage Alcohol Manual, distilled spirits, chapter 7", "url": "https://www.ttb.gov/images/pdfs/spirits_bam/chapter7.pdf" },
+    { "title": "The Whiskey Wash: Flavorings in whiskey, more common than you think", "url": "https://thewhiskeywash.com/whiskey-styles/american-whiskey/flavorings-whiskey-common-think/" },
+    { "title": "The Whiskey Wash: Light whiskey, the American whiskey category that arrived fifty years too early", "url": "https://thewhiskeywash.com/partner-content/light-whiskey-the-american-whiskey-category-that-arrived-fifty-years-too-early/" },
+    { "title": "Paste: How American bourbon whiskey almost disappeared in 1968", "url": "https://www.pastemagazine.com/drink/whiskey/bourbon-whiskey-definition-change-1968-light-whiskey-history-distillers" },
+    { "title": "VinePair: Light whiskey guide", "url": "https://vinepair.com/articles/light-whiskey-guide/" },
+    { "title": "Difford's Guide: Kessler American Blended Whiskey", "url": "https://www.diffordsguide.com/beer-wine-spirits/4032/kessler-american-blended-whiskey" },
+    { "title": "Wikipedia: Seagram's Seven Crown", "url": "https://en.wikipedia.org/wiki/Seagram%27s_Seven_Crown" },
+    { "title": "Breaking Bourbon: High West American Prairie, a blend of straight bourbons", "url": "https://breakingbourbon.com/review/high-west-american-prairie-bourbon" },
+    { "title": "Cask Atlas: American Labels", "url": "" },
+    { "title": "Cask Atlas: Blending and the language of the label", "url": "" }
+  ]
+}
