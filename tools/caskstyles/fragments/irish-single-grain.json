@@ -1,0 +1,83 @@
+{
+  "id": "irish-single-grain",
+  "name": "Irish single grain",
+  "respell": "",
+  "family": "irish",
+  "law": "The Irish whiskey technical file defines grain Irish whiskey: distilled in column stills from a mash of no more than 30 per cent malted barley, the rest whole unmalted cereals. Every Irish whiskey rule holds: distilled below 94.8% ABV, at least three years in wooden casks of no more than 700 litres on the island of Ireland, bottled at 40% ABV or more. Single means one distillery. A 2026 consultation weighs raising the malted barley limit to 40 per cent: a proposal, not the rule.",
+  "made": "Irish grain whiskey is usually maize with a small share of malted barley, whose enzymes turn the starch to sugar. The mash is fermented and run through continuous column stills, which give a lighter, cleaner spirit than pot stills. It matures in wood, most often ex-bourbon casks; some bottlings take a turn in other wood, as Teeling uses red wine casks and Method and Madness virgin Spanish oak.",
+  "taste": "Usually light, sweet and gentle: vanilla, toffee, honey and soft cereal, sometimes green apple or the popcorn note of maize, with a short, clean finish. Ex-bourbon casks give much of the flavour; red wine casks add berry fruit, and Spanish oak adds spice.",
+  "lines": {
+    "s10": "Irish single grain is column distilled whiskey from one Irish distillery, usually maize with some malted barley: light, sweet and gentle.",
+    "s20": "Irish single grain comes from one distillery, column distilled from a mash of no more than 30 per cent malted barley, the rest usually maize, and aged three years or more in wood. Expect vanilla, toffee, honey and soft cereal.",
+    "s45": "This is an Irish single grain whiskey. Under the Irish whiskey technical file it comes from one distillery, distilled in column stills from a mash of no more than 30 per cent malted barley with unmalted cereals, usually maize, then aged at least three years in wooden casks in Ireland. Single means one distillery, not one grain. Expect a light, sweet glass: vanilla, toffee, honey and soft cereal, with berry fruit where red wine casks were used. We pour it over ice, or long with ginger beer and lime in an Irish Mule. Grain stills descend from the one Aeneas Coffey, a Dublin distiller, patented about 1830.",
+    "sale": "Irish single grain is the light, sweet whiskey behind many Irish blends, bottled on its own. Have it over ice, long with ginger ale, or with ginger beer and lime in an Irish Mule."
+  },
+  "serve": {
+    "neat": "Neat at room temperature for an older single grain, so the vanilla and toffee show.",
+    "water": "A few drops of still water lift the honey and the soft cereal.",
+    "rocks": "Over ice suits it; the light, sweet spirit holds its shape as it chills.",
+    "highball": "With chilled soda or ginger ale over ice in a tall glass, light and sweet.",
+    "glass": "A rocks glass over ice; a highball glass for the long drinks; a copper mug for the Mule.",
+    "classic": "An Irish Mule with ginger beer and lime; a Whiskey Highball; a Whiskey Ginger."
+  },
+  "guest": [
+    { "q": "Is single grain made from one grain?", "a": "No. Single means one distillery. Irish grain whiskey is usually maize with some malted barley, no more than 30 per cent, run through column stills." },
+    { "q": "Why is it lighter than a pot still whiskey?", "a": "The column still runs continuously and makes a lighter, cleaner spirit than copper pot stills, so the cask, most often ex-bourbon, gives much of the vanilla and toffee." },
+    { "q": "Isn't grain whiskey just for blends?", "a": "It carries many Irish blends, but some is bottled on its own as single grain, by Teeling, Kilbeggan and Method and Madness among others, and it shows what the blends are built on." }
+  ],
+  "compare": "Against a blended Irish whiskey: a single grain is grain whiskey alone, column distilled at one distillery, while a blend marries two or more of the three styles, grain, malt and pot still. The single grain is lighter and sweeter; the malt or pot still in a blend adds body, fruit and spice.",
+  "benchmarks": ["Teeling", "Kilbeggan", "Greenore", "Method and Madness", "Midleton"],
+  "shelf": [],
+  "chapters": ["irish"],
+  "canon": ["irish-mule", "whiskey-highball", "whiskey-ginger"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What makes an Irish single grain, and what does single not promise?",
+      "answer": "Distilled in column stills at one distillery from a mash of no more than 30 per cent malted barley, the rest unmalted cereals, usually maize, and aged at least three years in wooden casks in Ireland. Single means one distillery, not one grain."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Under the Irish whiskey technical file, what share of malted barley may a grain Irish whiskey mash hold at most?",
+      "options": ["5 per cent", "30 per cent", "51 per cent", "70 per cent"],
+      "a": 1,
+      "explain": "30 per cent, the rest whole unmalted cereals, distilled in column stills. A 2026 consultation weighs raising the limit to 40 per cent, a proposal only."
+    },
+    {
+      "id": "q2",
+      "q": "Which kind of still makes grain Irish whiskey under the technical file?",
+      "options": ["Copper pot stills", "Pot stills with a doubler", "Column stills", "Charentais alembics"],
+      "a": 2,
+      "explain": "Column stills, which run continuously and give a lighter spirit. Pot stills make malt and pot still Irish whiskey."
+    },
+    {
+      "id": "q3",
+      "q": "Aeneas Coffey applied for his still patent in 1830 while running a distillery in which city?",
+      "options": ["Glasgow", "Dublin", "Cork", "Belfast"],
+      "a": 1,
+      "explain": "Dublin, where he ran the Dock distillery; the patent was granted in 1831, and Scotland's grain distillers took the still up."
+    }
+  ],
+  "sources": [
+    { "title": "European Commission, eAmbrosia: Irish Whiskey technical file", "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/55944" },
+    { "title": "Revenue: Whiskey verification checks", "url": "https://www.revenue.ie/en/companies-and-charities/documents/excise/whiskey-verification-checks.pdf" },
+    { "title": "Spirits and Distilling: The elegant contours of Irish whiskey", "url": "https://www.spiritsanddistilling.com/the-elegant-contours-of-irish-whiskey" },
+    { "title": "Agriland: What makes Irish whiskey Irish?", "url": "https://www.agriland.ie/farming-news/what-makes-irish-whiskey-irish/" },
+    { "title": "Difford's Guide: Irish grain whiskey", "url": "https://www.diffordsguide.com/g/1144/irish-whiskey-uisce-beatha-eireannach/grain-whiskey" },
+    { "title": "Master of Malt: Irish grain whiskey", "url": "https://www.masterofmalt.com/country-style/irish/grain-whiskey/" },
+    { "title": "The Single Malt Shop: Single grain Irish whiskey", "url": "https://thesinglemaltshop.com/product-category/irish-whiskey/single-grain-irish-whiskey/" },
+    { "title": "Scotch Noob: Teeling Single Grain Irish Whiskey", "url": "https://scotchnoob.com/2018/06/04/teeling-single-grain-irish-whiskey/" },
+    { "title": "Thirty One Whiskey: Teeling Single Grain review", "url": "https://www.thirtyonewhiskey.com/whiskey-review-teeling-single-grain-irish-whiskey/" },
+    { "title": "The Whiskey Wash: Method and Madness line unveiled", "url": "https://thewhiskeywash.com/irish-whiskey/irish-distillers-unveils-method-madness-line-irish-whiskey-world/" },
+    { "title": "The Whisky Exchange: Method and Madness", "url": "https://www.thewhiskyexchange.com/feature/methodandmadness" },
+    { "title": "Distiller: Kilbeggan 8 Year Single Grain", "url": "https://distiller.com/spirits/kilbeggan-8-year-single-grain" },
+    { "title": "Wikipedia: Aeneas Coffey", "url": "https://en.wikipedia.org/wiki/Aeneas_Coffey" },
+    { "title": "Master of Malt: Whisky heroes, Aeneas Coffey", "url": "https://www.masterofmalt.com/blog/post/whisky-heroes-aeneas-coffey-exciseman-distiller-and-inventor" },
+    { "title": "Scotchwhisky.com: Whisky heroes, Aeneas Coffey", "url": "https://scotchwhisky.com/magazine/whisky-heroes/20740/aeneas-coffey/" },
+    { "title": "Vinetur: Ireland opens review that could redefine Irish whiskey", "url": "https://www.vinetur.com/en/20260629103448/ireland-opens-review-that-could-redefine-irish-whiskey.html" },
+    { "title": "The Spirits Business: Irish whiskey technical file consultation", "url": "https://www.thespiritsbusiness.com/?p=915421" },
+    { "title": "Cask Atlas: Irish Whiskey, pot still, malt, grain and blend", "url": "" }
+  ]
+}
