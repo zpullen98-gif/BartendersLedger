@@ -47,10 +47,10 @@
     },
     {
       "id": "q2",
-      "q": "Which Irish distillery, opened in 1987, double distils its malt and makes the peated Connemara?",
+      "q": "Which Irish distillery, founded in 1987, double distils its malt and makes the peated Connemara?",
       "options": ["Bushmills", "Midleton", "Cooley", "Kilbeggan"],
       "a": 2,
-      "explain": "Cooley, opened in 1987, distils its malt twice and peats some of it for Connemara. Bushmills distils its malt three times."
+      "explain": "Cooley, founded in 1987 and distilling from 1989, distils its malt twice and peats some of it for Connemara. Bushmills distils its malt three times."
     },
     {
       "id": "q3",
@@ -67,6 +67,7 @@
     { "title": "Blackwater Distillery: Malty goodness", "url": "https://blackwaterdistillery.ie/malty-goodness/" },
     { "title": "Curraghmore Whiskey: The difference between single malt and pot still Irish whiskey", "url": "https://curraghmorewhiskey.com/blog/2022/12/whats-the-difference-between-single-malt-and-pot-still-irish-whiskey" },
     { "title": "Wikipedia: Cooley Distillery", "url": "https://en.wikipedia.org/wiki/Cooley_Distillery" },
+    { "title": "Lochs of Whisky: Cooley distillery", "url": "https://lochsofwhisky.com/distillery/cooley" },
     { "title": "Cellar Tours: Cooley Distillery guide", "url": "https://www.cellartours.com/ireland/distilleries/cooley" },
     { "title": "The Whisky Shop: Irish Bushmills whiskey", "url": "https://www.whiskyshop.com/world-whiskies/brand/bushmills" },
     { "title": "Master of Malt: Bushmills Irish whiskey", "url": "https://www.masterofmalt.com/distilleries/bushmills-whiskey-distillery/" },

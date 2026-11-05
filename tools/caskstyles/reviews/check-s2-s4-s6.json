@@ -1,0 +1,213 @@
+{
+  "checked": [
+    "bottled-in-bond",
+    "small-batch-single-barrel",
+    "barrel-proof",
+    "tennessee-whiskey",
+    "kentucky-rye",
+    "monongahela-rye",
+    "scotch-single-malt",
+    "single-grain-scotch",
+    "blended-malt",
+    "blended-scotch",
+    "speyside",
+    "irish-single-pot-still",
+    "irish-single-malt",
+    "irish-single-grain",
+    "blended-irish"
+  ],
+  "fixed": [
+    {
+      "id": "kentucky-rye",
+      "field": "lines.s45",
+      "kind": "a disputed story stated as fact",
+      "what": "'In New Orleans the Sazerac turned from cognac to American rye when cognac grew scarce' states the phylloxera story, which drinks historians dispute (Punch and Difford's report the finding that the Sazerac was a rye drink from its first record): now 'In 2008 Louisiana named the Sazerac, a rye drink, the official cocktail of New Orleans' (R.S. 33:1420.2, Acts 2008 No. 928; NPR via KNAU, 26 June 2008)"
+    },
+    {
+      "id": "kentucky-rye",
+      "field": "made, lines.s20, lines.s45, recall[0].answer",
+      "kind": "a figure two sources do not give",
+      "what": "'about 51 to 55 per cent rye' had no source for the upper figure; the producers' published recipes sit at 51 (Rittenhouse 51, 35 and 14 on its own sheet; Breaking Bourbon): now 'often 51 per cent rye or a little more' and 'at or just over 51 per cent'"
+    },
+    {
+      "id": "kentucky-rye",
+      "field": "guest[0].a",
+      "kind": "an internal contradiction",
+      "what": "'rounder and sweeter than a rye-heavy Pennsylvania or Maryland rye' called Maryland rye rye-heavy while the entry and its neighbour describe it as the softer style: now 'than a rye-heavy Pennsylvania rye'"
+    },
+    {
+      "id": "kentucky-rye",
+      "field": "law",
+      "kind": "the rule stated loosely",
+      "what": "'Straight rye adds at least two years and nothing added' (water is added): now 'with no colouring or flavouring'"
+    },
+    {
+      "id": "kentucky-rye",
+      "field": "sources",
+      "kind": "a source for a new fact",
+      "what": "the Louisiana statute, NPR via KNAU, Punch on the Sazerac and Breaking Bourbon on Rittenhouse at 51 per cent added"
+    },
+    {
+      "id": "kentucky-rye",
+      "field": "sources",
+      "kind": "a word that sells",
+      "what": "the new Punch source first carried its headline word ultimate, which check-caskstyles W4 refuses as selling: retitled 'Punch: The Sazerac, its recipe and its story'"
+    },
+    {
+      "id": "monongahela-rye",
+      "field": "benchmarks",
+      "kind": "a benchmark not of the style",
+      "what": "Pikesville is today Heaven Hill's Kentucky recipe at 51 per cent rye, the Kentucky-style rye it already stands under: replaced by Wigle (Pittsburgh, rye, wheat and malted barley, no corn) and Dad's Hat (Bristol, 80 per cent rye with malted barley and malted rye, no corn) (Distiller, The Whiskey Wash, Chilled), both added to houses.json; Old Overholt kept as the historic Pennsylvania name, its guest answer saying it is now made in Kentucky (Whisky Advocate, Wikipedia)"
+    },
+    {
+      "id": "monongahela-rye",
+      "field": "lines.s45, quiz[2].q",
+      "kind": "a date stated loosely",
+      "what": "'The Whiskey Rebellion of 1794 rose in this rye country' and the stem 'in which year did the Whiskey Rebellion rise': the protests began in 1791 and came to armed revolt in 1794; now 'came to a head in this rye country in 1794' and 'turn to armed revolt in western Pennsylvania'"
+    },
+    {
+      "id": "monongahela-rye",
+      "field": "quiz[0]",
+      "kind": "keys spread",
+      "what": "Pennsylvania moved to the fourth place (a: 3), so the entry's keys read 3, 0, 1"
+    },
+    {
+      "id": "monongahela-rye",
+      "field": "compare",
+      "kind": "a taste promised for every bottle",
+      "what": "'so it reads rounder and sweeter': now 'usually reads'"
+    },
+    {
+      "id": "kentucky-rye",
+      "field": "compare",
+      "kind": "a taste promised for every bottle",
+      "what": "'so it reads rounder and sweeter': now 'usually reads'"
+    },
+    {
+      "id": "bottled-in-bond",
+      "field": "law",
+      "kind": "the rule stated loosely",
+      "what": "'changed by nothing but pure water': 27 CFR 5.88 also allows filtration, chill proofing and other physical treatments; now 'with nothing added but pure water'"
+    },
+    {
+      "id": "bottled-in-bond",
+      "field": "compare",
+      "kind": "the rule stated loosely",
+      "what": "'Straight whiskey asks two years in new charred oak and nothing added' missed straight corn whiskey in used or uncharred oak and the water every straight takes, and 'Bonded narrows it' read bonded as a kind of straight, which its rule does not make it: now 'at least two years in oak, charred new oak for every type but corn, with nothing added but water' and 'Bonded asks one season, one distillery, four years and exactly 100 proof'"
+    },
+    {
+      "id": "barrel-proof",
+      "field": "quiz[0].explain",
+      "kind": "a rationale the rule does not give",
+      "what": "'The small allowance covers the slight drop between gauging the barrels and bottling' read the 1979 ruling's tax gauging into today's rule, which measures from dumping (27 CFR 5.87; ATF Ruling 79-9): now a worked case, 'a batch dumped at 117.5 proof may be bottled at 116, never below 115.5'"
+    },
+    {
+      "id": "barrel-proof",
+      "field": "quiz[2].options",
+      "kind": "an option no trained person would pick",
+      "what": "'It drops to 80 proof' replaced; the four now 'It falls year by year', 'It climbs year by year', 'It holds at its entry proof', 'It falls in the first year, then holds'"
+    },
+    {
+      "id": "tennessee-whiskey",
+      "field": "quiz[2].explain",
+      "kind": "a claim two sources do not give",
+      "what": "'the state's attorney general read it in 2015 as covering one distillery': the reports of the 2015 opinion say it questioned whether the exemption was constitutional, and the opinion's number could not be confirmed; now 'The exception is drawn by county and date, so only Prichard's meets it' (AP via KSL, Wikipedia), and the unconfirmed opinion link left the sources"
+    },
+    {
+      "id": "scotch-single-malt",
+      "field": "lines.s45",
+      "kind": "a story stated past its sources",
+      "what": "'In 1963 Glenfiddich began selling its single malt beyond Scotland': the sources say it began promoting it, first in England, single malt having been sold outside Scotland before: now 'began promoting' (The Whiskey Wash, the brand's release)"
+    },
+    {
+      "id": "scotch-single-malt",
+      "field": "law, quiz[1].options[1], quiz[1].explain",
+      "kind": "the rule stated loosely",
+      "what": "'bottled and labelled, ready for sale' now 'in a bottle labelled for sale', regulation 7(3) as written (the statute's 'retail' is refused by the price rule, so it is left out)"
+    },
+    {
+      "id": "single-grain-scotch",
+      "field": "made, guest[0].a",
+      "kind": "a claim two sources do not give",
+      "what": "'A few houses run malted barley alone through a column': the distillery that does it calls it very rare; now Loch Lomond by name, 100 per cent malted barley in its continuous still (Loch Lomond Whiskies, The Whiskey Wash), Loch Lomond added to houses.json, the benchmarks and the sources"
+    },
+    {
+      "id": "single-grain-scotch",
+      "field": "compare",
+      "kind": "a taste promised for every bottle",
+      "what": "'The grain is lighter and sweeter': now 'usually reads lighter and sweeter'"
+    },
+    {
+      "id": "blended-malt",
+      "field": "guest[2]",
+      "kind": "a guest answer that does not answer the question",
+      "what": "'Why don't some blended malts name the distillery?' was answered with teaspooning, which explains why a sold cask is not a single malt, not why a blend names no distillery: now 'What is a teaspooned whisky?' with the answer the SMWS and The Whisky Shop give"
+    },
+    {
+      "id": "blended-malt",
+      "field": "compare",
+      "kind": "a taste promised for every bottle",
+      "what": "'The blended malt is fuller and maltier': now 'usually reads fuller and maltier'"
+    },
+    {
+      "id": "blended-scotch",
+      "field": "compare",
+      "kind": "a taste promised for every bottle",
+      "what": "'The grain makes a blended Scotch lighter, sweeter and softer; the blended malt is fuller': now 'usually makes' and 'reads fuller'"
+    },
+    {
+      "id": "irish-single-grain",
+      "field": "benchmarks",
+      "kind": "a benchmark twice or not of the style",
+      "what": "Greenore and Kilbeggan are one whiskey, Greenore renamed Kilbeggan Single Grain in 2014 (Scotch Noob, Wikipedia), and Midleton's grain is bottled as Method and Madness: both dropped, Cooley, the grain house behind Kilbeggan, named, with Wikipedia and Scotch Noob in the sources"
+    },
+    {
+      "id": "irish-single-grain",
+      "field": "compare",
+      "kind": "a taste promised for every bottle",
+      "what": "'The single grain is lighter and sweeter': now 'usually reads lighter and sweeter'"
+    },
+    {
+      "id": "irish-single-grain",
+      "field": "quiz[2]",
+      "kind": "keys spread",
+      "what": "Dublin moved to the fourth place (a: 3), so the entry's keys read 1, 2, 3"
+    },
+    {
+      "id": "blended-irish",
+      "field": "quiz[2]",
+      "kind": "keys spread",
+      "what": "1909 moved to the fourth place (a: 3), so the entry's keys read 0, 1, 3 and the three chunks' 45 keys spread 10, 13, 12 and 10"
+    },
+    {
+      "id": "blended-irish",
+      "field": "compare",
+      "kind": "a taste promised for every bottle",
+      "what": "'The blend is lighter, softer and sweeter': now 'usually reads lighter, softer and sweeter'"
+    },
+    {
+      "id": "irish-single-pot-still",
+      "field": "guest[1].a",
+      "kind": "the register at a table",
+      "what": "'Usually, at most houses, but' said the same thing twice: now 'Usually, yes, but'"
+    },
+    {
+      "id": "irish-single-pot-still",
+      "field": "sources",
+      "kind": "a source for a stated fact",
+      "what": "Irish News added for the consultation opened on 26 June 2026 and its proposal to raise other cereals from 5 to 30 per cent, beside Vinetur"
+    },
+    {
+      "id": "irish-single-malt",
+      "field": "quiz[1].q, quiz[1].explain",
+      "kind": "a date stated loosely",
+      "what": "Cooley 'opened in 1987': founded in 1987 in a former potato alcohol plant and distilling from 1989 (Wikipedia, Lochs of Whisky), so the stem says founded and the explain gives both"
+    }
+  ],
+  "held": [
+    "Every law field against the rule itself: 27 CFR 5.87 and 5.88 and 5.1 (eCFR, LII), Tennessee Code 57-2-106 (Justia, FindLaw), the Scotch Whisky Regulations 2009 regulations 3, 7 and 10 (legislation.gov.uk, the SWA guidance), the Irish whiskey technical file (eAmbrosia, Revenue)",
+    "Dates held by two sources: the Bottled-in-Bond Act of 3 March 1897; Blanton's of 1984; Booker's of 1988; Moore County drawn from Lincoln in 1871; the Tennessee law of 2013; vatted malt off labels from 23 November 2011; single malt bottled for sale from 23 November 2012; the Spirits Act of 1860; The Glenlivet licensed in 1824; Coffey's patent applied for in 1830 and granted in 1831; Bushmills' district licence of 1608 and company of 1784; the Royal Commission of 1909; the Irish technical file consultation of June 2026 (pot still other cereals 5 to 30 per cent, grain malted barley 30 to 40 per cent), stated as proposals",
+    "The four lines' word caps, the sale's two sentences, nobody living, no superlative, price, volatile fact, allergen talk or dash, British spelling and the quiz rules: schema.mjs accepts all fifteen",
+    "The shelf: barrel proof's George T. Stagg and Stagg are bottled uncut at barrel proof, and Kentucky-style rye's Thomas H. Handy is Sazerac Rye uncut from Buffalo Trace's rye recipe; the other thirteen carry no shelf bottle and none on the shelf is of their style"
+  ]
+}
