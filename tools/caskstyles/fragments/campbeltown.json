@@ -1,0 +1,80 @@
+{
+  "id": "campbeltown",
+  "name": "Campbeltown",
+  "respell": "KAM-bul-town",
+  "family": "scotch",
+  "law": "The Scotch Whisky Regulations 2009 protect Campbeltown as a locality, with Islay, beside the regions of Highland, Lowland and Speyside. The rule defines it as the South Kintyre ward of Argyll and Bute Council, as drawn in 2006, and a Scotch may carry the name only if distilled there; it may mature elsewhere in Scotland. Every Scotch rule holds: at least three years in oak casks of no more than 700 litres, bottled at 40% ABV or more.",
+  "made": "Campbeltown single malt is malted barley, mashed, fermented and distilled in copper pot stills, then aged in oak, and each house sets its own recipe. Springbank malts its own barley and distils it two and a half times, part of the spirit taking a third distillation; under the same roof Longrow is heavily peated and distilled twice, Hazelburn unpeated and distilled three times. Glen Scotia and Glengyle, whose malt is sold as Kilkerran, work beside it.",
+  "taste": "Often described as oily and a little salty, with light smoke over pear, vanilla and malt, and a long finish. The range is wide: Longrow is heavily peated, Hazelburn unpeated and light. The locality promises none of these notes, so the bottle decides.",
+  "lines": {
+    "s10": "Campbeltown is Scotch whisky distilled in the town of Campbeltown on Kintyre: often oily and a little salty, with light smoke.",
+    "s20": "Campbeltown is one of the two protected Scotch localities, with Islay: the name means distilled in the town's ward on the Kintyre peninsula. Its malts are often oily and a little salty, with light smoke over fruit and vanilla.",
+    "s45": "This is a Campbeltown single malt, distilled in the town of Campbeltown on the Kintyre peninsula, one of two localities the Scotch Whisky Regulations protect by name, with Islay. It is malted barley distilled in copper pot stills, two, two and a half or three times as the house and range decide, and aged at least three years in oak. The style is often oily and a little salty, with light smoke over fruit and vanilla, though the law promises none of it. We pour it neat with water beside it. The town once held more than twenty distilleries; by the 1930s only Springbank and Glen Scotia were left.",
+    "sale": "Campbeltown is a small whisky town that once held more than twenty distilleries: oily, salty and gently smoky. Taste it neat with a few drops of water, or stirred into a Rob Roy."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, so the oily texture, the salt and the fruit all show.",
+    "water": "A few drops of still water open the fruit and vanilla and lift the salt.",
+    "rocks": "One large cube if asked; cold tightens the oily texture, so offer the water first.",
+    "highball": "A lighter Campbeltown makes a savoury highball with chilled soda and a lemon peel.",
+    "glass": "A Glencairn or nosing glass neat; a rocks glass for the cube; a coupe for the Rob Roy.",
+    "classic": "A Rob Roy with a Campbeltown malt in place of the blend; a Whiskey Highball; a Hot Toddy."
+  },
+  "guest": [
+    { "q": "Where is Campbeltown?", "a": "Near the southern end of the Kintyre peninsula, in the west of Scotland. The protected name covers the South Kintyre ward, and the town's distilleries stand in it." },
+    { "q": "Why are there so few distilleries there?", "a": "The town once held more than twenty. Most closed in the slump after the First World War, and by the 1930s only Springbank and Glen Scotia were left; Glengyle was revived in 2004." },
+    { "q": "Is it smoky like Islay?", "a": "Sometimes lightly, seldom as much. Most Campbeltown malt shows a little smoke and salt over fruit; Longrow is heavily peated and Hazelburn unpeated. The locality promises no peat, just as Islay's name does not." }
+  ],
+  "compare": "Against Islay: both are protected localities in the Scotch Whisky Regulations, the only two, and each name means distilled there. Islay is an island where most houses peat their malt; Campbeltown is a town whose malts are often oily and salty with lighter smoke, Longrow apart.",
+  "benchmarks": ["Springbank", "Glen Scotia", "Glengyle", "Kilkerran", "Longrow", "Hazelburn"],
+  "shelf": [],
+  "chapters": ["scotch-regions"],
+  "canon": ["rob-roy", "whiskey-highball", "hot-toddy"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What does Campbeltown promise on a Scotch label, and how does the law draw the locality?",
+      "answer": "That the whisky was distilled in Campbeltown, one of two protected localities with Islay under the Scotch Whisky Regulations 2009, drawn as the South Kintyre ward of Argyll and Bute Council. It promises no flavour, and the whisky may mature elsewhere in Scotland."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "How do the Scotch Whisky Regulations 2009 draw the boundary of the Campbeltown locality?",
+      "options": ["By a council ward, South Kintyre", "By the old burgh boundary", "By the whole Kintyre peninsula", "By a line from Clyde to Tay"],
+      "a": 0,
+      "explain": "By the South Kintyre ward of Argyll and Bute Council, as drawn in 2006. Campbeltown and Islay are the two protected localities; the line from Clyde to Tay divides Highland from Lowland."
+    },
+    {
+      "id": "q2",
+      "q": "Which malt made at Springbank is unpeated and distilled three times?",
+      "options": ["Longrow", "Kilkerran", "Hazelburn", "Glen Scotia"],
+      "a": 2,
+      "explain": "Hazelburn, first distilled in 1997. Longrow is the heavily peated malt, distilled twice, and Springbank itself two and a half times; Kilkerran comes from Glengyle, and Glen Scotia is a distillery of its own."
+    },
+    {
+      "id": "q3",
+      "q": "By the 1930s, which two Campbeltown distilleries were still working?",
+      "options": ["Springbank and Glengyle", "Springbank and Glen Scotia", "Glengyle and Glen Scotia", "Longrow and Hazelburn"],
+      "a": 1,
+      "explain": "Springbank and Glen Scotia. The town once held more than twenty distilleries, and most closed in the slump after the First World War. Glengyle was revived in 2004, its malt sold as Kilkerran."
+    }
+  ],
+  "sources": [
+    { "title": "legislation.gov.uk: The Scotch Whisky Regulations 2009, regulation 10", "url": "https://www.legislation.gov.uk/uksi/2009/2890/regulation/10" },
+    { "title": "Wikipedia: Scotch Whisky Regulations 2009", "url": "https://en.wikipedia.org/wiki/Scotch_Whisky_Regulations_2009" },
+    { "title": "Wikipedia: Campbeltown single malts", "url": "https://en.wikipedia.org/wiki/Campbeltown_single_malts" },
+    { "title": "The Whisky Exchange: Campbeltown whisky guide", "url": "https://www.thewhiskyexchange.com/inspiration/article/17616/campbeltown-whisky" },
+    { "title": "The Whiskey Wash: An introduction to Scotch whisky, the Campbeltown region", "url": "https://thewhiskeywash.com/scotch-whiskey/introduction-scotch-whisky-campbeltown/" },
+    { "title": "scotchwhisky.com: Campbeltown whisky, a long and winding road", "url": "https://scotchwhisky.com/magazine/features/13934/campbeltown-whisky-a-long-and-winding-road/" },
+    { "title": "Campbeltown Heritage Centre: Campbeltown, the whisky capital", "url": "https://campbeltownheritagecentre.co.uk/collection/whisky" },
+    { "title": "Wikipedia: Springbank (distillery)", "url": "https://en.wikipedia.org/wiki/Springbank_(distillery)" },
+    { "title": "The Whisky Exchange: A guide to Springbank", "url": "https://www.thewhiskyexchange.com/inspiration/article/19273/a-guide-to-springbank" },
+    { "title": "scotchwhisky.com Whiskypedia: Hazelburn", "url": "https://www.scotchwhisky.com/whiskypedia/2043/hazelburn/" },
+    { "title": "Wikipedia: Glengyle distillery", "url": "https://en.wikipedia.org/wiki/Glengyle_distillery" },
+    { "title": "whisky.com: Glengyle distillery", "url": "https://www.whisky.com/whisky-database/distilleries/details/glengyle.html" },
+    { "title": "Master of Malt: Campbeltown whisky guide", "url": "https://www.masterofmalt.com/guides/whisky-guides/campbeltown/" },
+    { "title": "Distiller: Campbeltown whisky, a guide", "url": "https://blog.distiller.com/campbeltown-whisky/" },
+    { "title": "Cask Atlas: Scotland, map the place, question the stereotype", "url": "" }
+  ]
+}
