@@ -1,0 +1,77 @@
+{
+  "id": "monongahela-rye",
+  "name": "Maryland and Monongahela rye",
+  "respell": "muh-NON-guh-HEE-luh",
+  "family": "american",
+  "law": "No legal category of its own: Monongahela, Pennsylvania and Maryland rye are historic regional styles, and no rule fixes their recipe. The whiskey is rye whisky under 27 CFR 5.143, the United States standards of identity: at least 51 per cent rye, distilled at no more than 80% ABV (160 proof), stored in charred new oak at no more than 62.5% ABV (125 proof) and bottled at 40% ABV (80 proof) or more.",
+  "made": "Monongahela rye, from the river valleys of western Pennsylvania, was usually made rye-heavy: rye with malted barley or malted rye and little or no corn, sometimes close to all rye. Maryland rye is often described as made lighter and rounder. Today's revivals in both states mash rye-heavy recipes or marry high-rye and lower-rye whiskeys, then age them in new charred oak like any rye.",
+  "taste": "Monongahela-style rye reads drier and spicier: black pepper, clove, fresh grass and rye bread over dark fruit, with a firm, drying finish. Maryland rye is often described as softer and sweeter, honeyed, with gentler spice. Both are rye first, with less of the corn sweetness of a Kentucky-style rye.",
+  "lines": {
+    "s10": "Monongahela and Maryland rye are the old rye styles of Pennsylvania and Maryland: one rye-heavy and peppery, one softer.",
+    "s20": "Monongahela rye, from western Pennsylvania, was made rye-heavy with little or no corn: dry, peppery, grassy. Maryland rye is often described as softer and sweeter. Neither is a legal category; both are rye whisky under the federal rule.",
+    "s45": "This is rye in the Pennsylvania manner, the old Monongahela style, with its softer Maryland cousin beside it. Neither is a legal category: both are rye whisky under 27 CFR 5.143, at least 51 per cent rye in new charred oak. Monongahela rye, from the river valleys of western Pennsylvania, was usually rye-heavy with little or no corn; Maryland rye is often described as lighter and sweeter. Expect black pepper, clove, grass and rye bread over dark fruit, dry and firm through the finish. We pour it neat, or in a Manhattan or a Brooklyn. The Whiskey Rebellion of 1794 rose in this rye country.",
+    "sale": "This is rye in the old Pennsylvania manner, rye-heavy and peppery, with little corn to soften it. Try it in a Manhattan or a Ward 8, or neat with a drop of water."
+  },
+  "serve": {
+    "neat": "Neat at room temperature in a Glencairn, so the pepper and the grain show plainly.",
+    "water": "A few drops of still water soften the spice and bring out fruit and rye bread.",
+    "rocks": "One large cube for a cooler pour; the spice holds as it melts.",
+    "glass": "A Glencairn neat; a coupe for the Manhattan and the Brooklyn; a rocks glass for the Old Fashioned.",
+    "classic": "A Manhattan or an Old Fashioned; a Brooklyn or a Ward 8 among the older rye classics."
+  },
+  "guest": [
+    { "q": "What is Monongahela?", "a": "A river in western Pennsylvania, and the name of the rye whiskey made along it in the eighteenth and nineteenth centuries: rye-heavy, with little or no corn. Today it names a style, not a rule." },
+    { "q": "How is Maryland rye different?", "a": "It is often described as softer and sweeter than Pennsylvania's rye, lighter in spice. Both traditions faded after Prohibition, and distilleries in both states make rye again." },
+    { "q": "Can I still find the old brands?", "a": "Some names live on: Old Overholt began in western Pennsylvania and Pikesville in Maryland, and both are now made in Kentucky. Newer distilleries in both states make rye in the old manner." }
+  ],
+  "compare": "Kentucky-style rye, also no legal category, sits just over the 51 per cent rye line with plenty of corn, so it reads rounder and sweeter. Monongahela rye leaned to rye with little or no corn, drier and more peppery; Maryland rye is often described as the softer of the two old styles.",
+  "benchmarks": ["Old Overholt", "Pikesville", "Sagamore Spirit"],
+  "shelf": [],
+  "chapters": ["american-rye"],
+  "canon": ["manhattan", "old-fashioned", "brooklyn", "ward-8"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What were Monongahela and Maryland rye, and what does the law say about them today?",
+      "answer": "Historic regional ryes, not legal categories: Monongahela, the rye of western Pennsylvania, usually rye-heavy with little or no corn, dry and peppery; Maryland rye, often described as softer and sweeter. Today any such bottle is rye whisky under 27 CFR 5.143: at least 51 per cent rye, aged in charred new oak."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "In which state did Monongahela rye grow up?",
+      "options": ["Kentucky", "Pennsylvania", "Maryland", "Tennessee"],
+      "a": 1,
+      "explain": "Western Pennsylvania, along the river Monongahela and its valleys. Maryland had its own rye, often described as softer; a Kentucky-style rye carries more corn."
+    },
+    {
+      "id": "q2",
+      "q": "How was Monongahela rye usually made?",
+      "options": ["Rye-heavy, with little or no corn", "Mostly corn, with a little rye", "Mostly wheat, with rye and barley", "Malted barley alone, in pot stills"],
+      "a": 0,
+      "explain": "Rye-heavy, with malted barley or malted rye and little or no corn. That is why it reads drier and more peppery than a Kentucky-style rye."
+    },
+    {
+      "id": "q3",
+      "q": "In which year did the Whiskey Rebellion rise in the rye country of western Pennsylvania?",
+      "options": ["1776", "1794", "1812", "1865"],
+      "a": 1,
+      "explain": "1794: protest at the federal tax on distilled spirits, passed in 1791, turned to open revolt that year, and a federal force marched west to end it."
+    }
+  ],
+  "sources": [
+    { "title": "eCFR: 27 CFR 5.143, Whisky", "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-I/section-5.143" },
+    { "title": "Legal Information Institute: 27 CFR 5.143, Whisky", "url": "https://www.law.cornell.edu/cfr/text/27/5.143" },
+    { "title": "Punch: The fall and rebirth of America's first great whiskey, Pennsylvania rye", "url": "https://punchdrink.com/articles/the-fall-and-rebirth-of-americas-first-great-whiskey-pennsylvania-rye/" },
+    { "title": "Tasting Table: The historic American whiskey you've probably never heard of", "url": "https://tastingtable.com/894062/the-historic-american-whiskey-youve-probably-never-heard-of" },
+    { "title": "Flaviar: No one knows what Pennsylvania rye whiskey should taste like", "url": "https://flaviar.com/blogs/flaviar-times/pennsylvania-rye-whiskey" },
+    { "title": "The Whiskey Wash: What makes Maryland rye so different?", "url": "https://thewhiskeywash.com/american-whiskey/makes-maryland-rye-different/" },
+    { "title": "Baltimore magazine: Rye whiskey makes a comeback in Maryland", "url": "https://www.baltimoremagazine.com/section/fooddrink/rye-whiskey-makes-a-comeback-in-maryland/" },
+    { "title": "VinePair: Sagamore Spirit and the Maryland rye renaissance", "url": "https://vinepair.com/articles/sagamore-spirit-maryland-rye/" },
+    { "title": "Wikipedia: Old Overholt", "url": "https://en.wikipedia.org/wiki/Old_Overholt" },
+    { "title": "VinePair: The history and legend of Old Overholt", "url": "https://vinepair.com/articles/the-history-legend-of-old-overholt" },
+    { "title": "West Virginia archives and history: the Whiskey Rebellion", "url": "https://archive.wvculture.org/History/settlement/whiskeyrebellion01.html" },
+    { "title": "Observer-Reporter: Region caught spirit of making spirits long ago", "url": "https://www.observer-reporter.com/news/2017/jul/08/region-caught-spirit-of-making-spirits-long-ago/" },
+    { "title": "Cask Atlas: American Rye", "url": "" }
+  ]
+}
