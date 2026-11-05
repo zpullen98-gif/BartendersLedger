@@ -1,0 +1,207 @@
+{
+  "checked": [
+    "bourbon",
+    "wheated-bourbon",
+    "high-rye-bourbon",
+    "four-grain-bourbon",
+    "straight-whiskey",
+    "american-single-malt",
+    "corn-whiskey",
+    "wheat-whiskey",
+    "blended-american",
+    "canadian",
+    "highland",
+    "islands",
+    "lowland",
+    "islay",
+    "campbeltown",
+    "japanese-whisky",
+    "japanese-single-malt",
+    "japanese-blended",
+    "mizunara"
+  ],
+  "fixed": [
+    {
+      "id": "straight-whiskey",
+      "field": "lines.s10, lines.s20, lines.s45, lines.sale, guest[0].a",
+      "kind": "the rule stated loosely",
+      "what": "every straight was put in new charred oak ('another American type rested at least two years in new charred oak', 'Straight on an American label means at least two years in new charred oak'), while straight corn whisky takes its two years in used or uncharred new oak, as the entry's own law and quiz say (27 CFR 5.143): now 'in oak, new charred oak for all but corn' and 'new charred for bourbon and rye'"
+    },
+    {
+      "id": "straight-whiskey",
+      "field": "lines.s45",
+      "kind": "the rule stated loosely",
+      "what": "'Barrels of one type can be married only from one state': barrels of one type from several states may be married, the mix is then a blend of straight whiskies (27 CFR 5.143); now 'It may marry many barrels of one type, all made in one state', and 'with no colouring, flavouring or blending materials added' became 'with nothing added but water' to keep the cap"
+    },
+    {
+      "id": "straight-whiskey",
+      "field": "compare, lines.s45",
+      "kind": "the rule stated loosely",
+      "what": "'Bottled-in-bond asks more than straight' and 'asks more: four years and 100 proof' read bonded as a stricter straight, which its rule does not make it: 27 CFR 5.88 asks at least four years in wood, not charred new oak (the line the s2 sweep corrected in the bonded entry); now 'is a test of its own, not a stricter straight', 'at least four years in wood in a bonded warehouse' and 'sets a different test: one season, four years, 100 proof'"
+    },
+    {
+      "id": "straight-whiskey",
+      "field": "taste",
+      "kind": "a taste promised for every bottle",
+      "what": "'four years and more deepen it to toffee, leather and dried fruit': now 'usually deepen'"
+    },
+    {
+      "id": "bourbon",
+      "field": "quiz[0].explain",
+      "kind": "the rule stated loosely",
+      "what": "'corn whiskey goes into used or uncharred oak' said corn whiskey must go into oak, while it is the one whisky that need not be stored at all (27 CFR 5.143): now 'any oak corn whiskey rests in is used or uncharred, never new charred'"
+    },
+    {
+      "id": "american-single-malt",
+      "field": "compare",
+      "kind": "the rule stated loosely",
+      "what": "'asks no pot still and no minimum age, and may use new charred oak' set new charred oak against single malt Scotch as a freedom Scotch lacks, while the Scotch Whisky Regulations 2009 allow any oak cask of no more than 700 litres (regulation 3): now 'and new charred oak is common', as the guest answer already said"
+    },
+    {
+      "id": "blended-american",
+      "field": "compare",
+      "kind": "the rule stated loosely",
+      "what": "'add whisky or neutral spirits and it becomes a blended whiskey' missed the 20 per cent of straight the rule asks, and 'straights of one type mix only from one state' missed that they may mix across states as a blend of straight whiskies (27 CFR 5.143): now 'stays straight mixed only with straights of its type from one state. Across states it becomes a blend of straight whiskies; at least 20 per cent straight with whisky or neutral spirits makes a blended whiskey, usually lighter and softer'"
+    },
+    {
+      "id": "blended-american",
+      "field": "guest[0].a",
+      "kind": "a benchmark the page did not place",
+      "what": "High West stood among the benchmarks with nothing to say that its American Prairie is a blend of straight bourbons (Breaking Bourbon), the regulation's neighbouring class, not a blended whiskey with neutral spirits; the answer now says 'High West bottles a blend of straight bourbons'. No blended American house could be sourced to replace it in this run (the web search budget was spent), so it stays, placed"
+    },
+    {
+      "id": "japanese-whisky",
+      "field": "lines.s45, guest[1].a",
+      "kind": "the rule stated loosely",
+      "what": "'a JW logo marks bottles that meet it': the logo is the association's for its members to display on bottles that meet the standard (Business Wire, Asia Food Journal), so a bottle may meet it and carry none; now 'may mark'"
+    },
+    {
+      "id": "highland",
+      "field": "lines.s45",
+      "kind": "a story stated past its sources",
+      "what": "'The line itself goes back to the Wash Act of 1784': the line of regulation 10(7) runs from the North Channel along the Firth of Clyde to Greenock and Cardross, by Earl's Seat in the Campsie Fells, Milnathort, the M90 to Bridge of Earn and the River Earn to the Firth of Tay, while the 1784 line ran from Dumbarton north of Stirling along the Ochils (Clackmannanshire history, Wikipedia on the Highland and Lowland single malts); now 'A Highland line was first drawn by the Wash Act of 1784'"
+    },
+    {
+      "id": "corn-whiskey",
+      "field": "lines.s45",
+      "kind": "a story stated past its sources",
+      "what": "'Southern moonshine was largely unaged corn whiskey, and many legal jars still are': the entry's own guest answer, from its sources (Distiller, InsideHook, Saveur), says a legal jar is often corn whiskey, sometimes unaged whiskey or neutral spirits; now 'Moonshine was often unaged corn whiskey, and some legal jars still are'"
+    },
+    {
+      "id": "japanese-single-malt",
+      "field": "quiz[1].explain",
+      "kind": "a claim two sources do not give",
+      "what": "'a method he learnt in Scotland at Longmorn': the sources give Yoichi's direct coal firing as a Scottish method Taketsuru brought home (Highlighting Japan, Master of Malt), not Longmorn as where he learnt it; now 'a method he learnt in Scotland'"
+    },
+    {
+      "id": "high-rye-bourbon",
+      "field": "quiz[2].q",
+      "kind": "a quiz stem past its sources",
+      "what": "'In which year was Old Grand-Dad first made in Kentucky?': 1882 is the year Raymond B. Hayden created the brand and named it for his grandfather, the family having distilled before it (Wikipedia, VinePair, the bourbon historian's blog on Old Grand-Dad); now 'In which year was the Old Grand-Dad brand, a high-rye bourbon, created?'"
+    },
+    {
+      "id": "campbeltown",
+      "field": "benchmarks",
+      "kind": "a benchmark twice",
+      "what": "Glengyle and Kilkerran are one malt, the distillery and the name its whisky is sold under (Wikipedia, whisky.com), as the s6 sweep found Greenore and Kilbeggan: Glengyle left the benchmarks and stays in the made line, guest answer and quiz as the distillery behind Kilkerran"
+    },
+    {
+      "id": "japanese-blended",
+      "field": "benchmarks",
+      "kind": "a benchmark not shown to be of the style",
+      "what": "Nikka stood as a house of Japanese blended whisky while the entry's own source reports that Nikka From the Barrel, its blend best known abroad, is not Japanese whisky under the association standard (Master of Malt): dropped, Hibiki, Kakubin and Toki stay, and Nikka's Coffey grain at Miyagikyo stays in the made line"
+    },
+    {
+      "id": "japanese-blended",
+      "field": "lines.sale",
+      "kind": "the register at a table",
+      "what": "'Japan made the highball its whisky for the table' called a drink a whisky: now 'Japan made the whisky highball its drink for the table'"
+    },
+    {
+      "id": "canadian",
+      "field": "lines.s10",
+      "kind": "a term of art used loosely",
+      "what": "'is grain whisky mashed, distilled and aged in Canada': grain whisky is the column spirit of the single grain styles beside it (Scotch, Irish, Japanese), while Canadian whisky may be all rye or a blend; now 'is whisky mashed, distilled and aged in Canada, at least three years in small casks'"
+    },
+    {
+      "id": "four-grain-bourbon",
+      "field": "lines.sale, compare",
+      "kind": "a taste promised for every bottle",
+      "what": "'puts the wheat's honey and bread and the rye's spice in one glass, round and gently peppered' while the shelf's own four grain, Cavehill, has no rye: now 'usually puts'; the compare's high-rye bourbon now 'usually leans to pepper'"
+    },
+    {
+      "id": "wheated-bourbon",
+      "field": "compare",
+      "kind": "a taste promised for every bottle",
+      "what": "'The high-rye bourbon leans to pepper, dill and a drier finish': now 'usually leans'"
+    },
+    {
+      "id": "high-rye-bourbon",
+      "field": "compare",
+      "kind": "a taste promised for every bottle",
+      "what": "'The high-rye bourbon leans to pepper, cinnamon, mint': now 'usually leans'"
+    },
+    {
+      "id": "corn-whiskey",
+      "field": "compare",
+      "kind": "a taste promised for every bottle",
+      "what": "'so it is paler and grainier': now 'so it usually reads paler and grainier'"
+    },
+    {
+      "id": "japanese-single-malt",
+      "field": "compare, lines.s10, lines.sale, serve.classic",
+      "kind": "a taste promised for every bottle",
+      "what": "'The malt is fuller and shows its house; the blend is lighter and rounder', 'clean, defined and true to its house', 'clean and precise' and 'a single malt gives a fuller, more defined long drink': now 'usually fuller', 'usually reads lighter and rounder', 'often clean and defined', 'often clean and precise' and 'usually gives'"
+    },
+    {
+      "id": "japanese-blended",
+      "field": "taste, lines.s10, compare",
+      "kind": "a taste promised for every bottle",
+      "what": "'Lighter and rounder than the malts', 'light, round and the usual base of the highball' and 'the blend is rounder and lighter': now 'Usually lighter and rounder', 'often light and round' and 'usually reads rounder and lighter'"
+    },
+    {
+      "id": "japanese-whisky",
+      "field": "lines.s10, lines.sale",
+      "kind": "a taste promised for every bottle",
+      "what": "'clean, precise single malts and blends' and 'made them its own: clean, fruity and precise' while the entry's taste says no single profile and some malts are peated: now 'single malts and blends, often clean and precise' and 'often clean, fruity and precise'"
+    },
+    {
+      "id": "mizunara",
+      "field": "compare",
+      "kind": "a taste promised for every bottle",
+      "what": "'the wood adds sandalwood, incense and coconut to whatever whisky it holds' while the entry's taste and guest answer say those notes need long ageing and a short finish gives a hint: now 'long ageing in the wood can add'"
+    },
+    {
+      "id": "islay",
+      "field": "lines.sale",
+      "kind": "a taste promised for every bottle",
+      "what": "'Islay is the smoke and the sea in a glass' while Bunnahabhain and Bruichladdich make unpeated malt, as the entry says: now 'Most Islay malt is the smoke and the sea in a glass'"
+    },
+    {
+      "id": "campbeltown",
+      "field": "lines.sale",
+      "kind": "a taste promised for every bottle",
+      "what": "'once held more than twenty distilleries: oily, salty and gently smoky' while Hazelburn is unpeated: now 'its malts often oily, salty and gently smoky'"
+    },
+    {
+      "id": "lowland",
+      "field": "lines.sale",
+      "kind": "a taste promised for every bottle",
+      "what": "'Lowland malt is the gentle side of Scotch': now 'is often the gentle side'"
+    },
+    {
+      "id": "high-rye-bourbon, islands, islay, japanese-whisky, japanese-blended, highland, campbeltown, japanese-single-malt",
+      "field": "quiz",
+      "kind": "keys spread",
+      "what": "the four chunks' 57 answers sat 15, 18, 17 and 7 by position; nine keys moved to the fourth place (Old Grand-Dad's 1882, Highland for Skye, Campbeltown as Islay's fellow locality, the association standard, Kakubin, the Wash Act of 1784, Hazelburn, Yoichi), so they spread 15, 13, 14 and 15 and no entry has all three in one place"
+    }
+  ],
+  "held": [
+    "Every law field against the rule itself as the entries cite it: 27 CFR 5.143 for bourbon, wheated, high rye, four grain, straight, American single malt, corn, wheat, blended and light whisky (eCFR, LII), corn whisky the one whisky the rule lets go unstored; the Canadian standard moved from Food and Drug Regulations B.02.020 into the Canadian Food Compositional Standards, volume 2, 2.1.3, confirmed this run (B.02.020(1) repealed by SOR/2024-244, s. 29, the old text in force to 17 December 2024, CFIA's regulatory references); the Scotch Whisky Regulations 2009, regulation 10, confirmed this run as far as the line goes (from the North Channel along the Firth of Clyde to Greenock and on to the Firth of Tay, so 'from the Firth of Clyde to the Firth of Tay' holds and Fife falls to the Lowland side), Campbeltown the South Kintyre ward as constituted in 2006, Islay a locality; the Japan Spirits & Liqueurs Makers Association standard stated as an association standard",
+    "Confirmed by two sources this run: Old Grand-Dad created in 1882 (Wikipedia, VinePair, the bourbon historian's blog); Woodford Reserve's Four Grain first released in Kentucky in October 2005, a second batch in 2006 (Difford's, Distiller, the Los Angeles Whiskey Society); Balcones Texas Pot Still Bourbon from four grains, roasted blue corn, Texas wheat, Texas rye and malted barley (The Whiskey Wash, Breaking Bourbon); most bourbon at about 8 to 15 per cent rye and high rye often 20 to 35 (Boozemakers, The Whiskey Wash, New Riff)",
+    "Held on the entries' cited pair of sources: Four Roses 60, 35, 5 and 75, 20, 5; Heigold 70, 25 malted rye, 5 and Cavehill 70 with 10 each of malted wheat, malted barley and honey malted barley; the concurrent resolution of 4 May 1964; Stitzel-Weller 1935; Maker's Mark 70, 16, 14 and Larceny 68, 20, 12; Bernheim Original of 2005 at 51 per cent wheat, Woodford Reserve's wheat whiskey at 52, Dry Fly at 100; the American single malt rule proposed 29 July 2022, published 18 December 2024, in force 19 January 2025; Crown Royal of 1939; Talisker 1830 (one account 1831); Auchentoshan licensed 1823; Bowmore 1779; Hazelburn first distilled 1997; Glengyle revived 2004; Yamazaki 1923, Shirofuda 1929, Yoichi 1934, Miyagikyo 1969, Hakushu 1973; Kakubin 1937 and the 2008 revival; Hibiki 1989; Bowmore's Mizunara finish of 2015",
+    "Not re-verified this run, because the turn's shared web search budget ran out after eight searches and legislation.gov.uk and en.wikipedia.org could not be fetched from this session: the light whiskey standard written in 1968 and in effect from 1972 (The Whiskey Wash, Paste, VinePair as cited), the American Single Malt Whiskey Commission of 2016 (Whisky Advocate, Alcohol Professor as cited) and the geographical indication put out for comment in October 2026 (e-Gov, the consultation itself, stated as a proposal)",
+    "The four lines' word caps, the sale's two sentences, nobody living, no superlative, price, volatile fact, allergen talk or dash, British spelling and the quiz rules: schema.mjs accepts all nineteen, build-caskstyles writes 34 of 34 and check-caskstyles passes",
+    "The shelf: O.F.C. 2005 under bourbon and straight whiskey is a Kentucky straight bourbon; Weller Special Reserve and Weller 12 under wheated bourbon are Buffalo Trace's wheated straight bourbons; Heigold under high rye is 70 per cent corn with 25 malted rye; Cavehill under four grain is corn and three malts with no rye, which the entry says plainly; the other fourteen carry no shelf bottle, and the shelf holds no Scotch, Japanese or Canadian whisky and no American single malt, corn, wheat or blended whiskey"
+  ]
+}

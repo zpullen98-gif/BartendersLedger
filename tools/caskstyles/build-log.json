@@ -25,12 +25,12 @@
     }
   },
   "words": {
-    "total": 22552,
+    "total": 22554,
     "perEntry": {
       "bourbon": 664,
       "wheated-bourbon": 691,
       "high-rye-bourbon": 673,
-      "four-grain-bourbon": 636,
+      "four-grain-bourbon": 637,
       "straight-whiskey": 698,
       "bottled-in-bond": 673,
       "small-batch-single-barrel": 651,
@@ -49,7 +49,7 @@
       "speyside": 651,
       "highland": 696,
       "islands": 655,
-      "lowland": 640,
+      "lowland": 641,
       "islay": 644,
       "campbeltown": 653,
       "irish-single-pot-still": 657,
