@@ -1,0 +1,76 @@
+{
+  "id": "islands",
+  "name": "The Islands",
+  "respell": "",
+  "family": "scotch",
+  "law": "No protected name of its own. The Scotch Whisky Regulations 2009 protect three regions, Highland, Lowland and Speyside, and two localities, Islay and Campbeltown; the islands other than Islay lie inside the Highland region, so their whiskies are Highland in law. A label may still name the island where the whisky was distilled, Orkney or Skye. Every Scotch rule holds: distilled and matured in Scotland, at least three years in oak casks of no more than 700 litres, bottled at 40% ABV or more.",
+  "made": "Island single malt is malted barley, usually distilled twice in copper pot stills and aged in oak, at houses on Orkney, Skye, Mull, Jura and Arran, with a few newer ones beside them. Peat is each house's choice, not the island's: the Tobermory distillery on Mull makes unpeated Tobermory and heavily peated Ledaig, Highland Park kilns with heather-rich Orkney peat, and Scapa and Arran's core malts are mostly unpeated.",
+  "taste": "No one island flavour, but a range: heather, honey and gentle smoke at Highland Park; pepper, sea salt and smoke at Talisker; honey, citrus and orchard fruit in unpeated Arran and Scapa; heavy peat in Ledaig. Many show a salty, coastal edge, though the cask and the peat decide more than the sea.",
+  "lines": {
+    "s10": "The Islands are the Scotch whiskies of Orkney, Skye, Mull, Jura and Arran: Highland in law, from honeyed to peppery and smoky.",
+    "s20": "Island whisky comes from Scotland's islands other than Islay. There is no protected Islands name, so in law it is Highland. The range is wide: heather and honey on Orkney, pepper and smoke on Skye, fruit on Arran.",
+    "s45": "This is an island malt, distilled on one of Scotland's islands other than Islay: Orkney, Skye, Mull, Jura or Arran. The Islands are a grouping, not a protected name, so under the Scotch Whisky Regulations these whiskies are Highland in law, though a label may name its island. It is malted barley, usually distilled twice in copper pot stills and aged at least three years in oak, and each house chooses its own peat. Expect anything from heather and honey to pepper, sea salt and smoke. We pour it neat with water beside it. Talisker, on Skye, dates from 1830.",
+    "sale": "Island malts go island by island: heather and honey on Orkney, pepper and smoke on Skye, fruit on Arran. Taste one neat with a few drops of water, or stirred into a Rusty Nail."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, so the honey, the salt and any smoke each show.",
+    "water": "A few drops of still water open the fruit and heather and calm the pepper.",
+    "rocks": "One large cube if asked; cold flattens the fruit and leaves the smoke.",
+    "highball": "A peppery or lightly smoky island malt makes a lively highball with chilled soda and a lemon peel.",
+    "glass": "A Glencairn or nosing glass neat; a highball glass for the soda; a rocks glass for the Rusty Nail.",
+    "classic": "A Rusty Nail, the malt with Drambuie; a Whiskey Highball; a Hot Toddy on a cold night."
+  },
+  "guest": [
+    { "q": "Is island whisky a region, like Speyside?", "a": "Not in law. The Scotch Whisky Regulations protect Highland, Lowland and Speyside as regions and Islay and Campbeltown as localities. The other islands sit inside the Highland region; the Islands are a teaching grouping." },
+    { "q": "Are island whiskies all smoky?", "a": "No. Talisker and Ledaig are smoky, Highland Park gently so; Scapa, Arran and Tobermory are mostly unpeated, with honey and fruit. Peat is the distillery's choice, not the island's." },
+    { "q": "Why isn't Islay one of the Islands?", "a": "Because the law names it. Islay is a protected locality of its own, so its whiskies carry Islay; the other islands have no protected name and are Highland in law." }
+  ],
+  "compare": "Against Islay: Islay is a protected locality whose name means distilled on that island, while the Islands are an informal group, Highland in law. Most Islay houses peat their malt; island malts range from unpeated honey and fruit at Arran and Scapa to peppery smoke at Talisker.",
+  "benchmarks": ["Highland Park", "Talisker", "Scapa", "Isle of Jura", "Arran", "Tobermory"],
+  "shelf": [],
+  "chapters": ["scotch-regions"],
+  "canon": ["whiskey-highball", "hot-toddy", "rusty-nail"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "Are the Islands a protected Scotch region, and how is an island malt classed in law?",
+      "answer": "No. The Scotch Whisky Regulations 2009 protect only Highland, Lowland and Speyside as regions and Islay and Campbeltown as localities. Malts from Orkney, Skye, Mull, Jura and Arran are Highland in law, though a label may name its island. The Islands are an informal grouping."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Under the Scotch Whisky Regulations 2009, which protected name covers a single malt distilled on Skye?",
+      "options": ["Islands", "Highland", "Islay", "Lowland"],
+      "a": 1,
+      "explain": "Highland. The Islands are an informal grouping, not a protected name, and Islay is a locality of its own; Skye's distilleries sit inside the Highland region."
+    },
+    {
+      "id": "q2",
+      "q": "On which island is the distillery that makes both unpeated Tobermory and heavily peated Ledaig?",
+      "options": ["Skye", "Orkney", "Mull", "Arran"],
+      "a": 2,
+      "explain": "Mull. One distillery makes both, unpeated Tobermory and heavily peated Ledaig: peat is the house's choice, not the island's."
+    },
+    {
+      "id": "q3",
+      "q": "In which year did Hugh and Kenneth MacAskill found Talisker on Skye?",
+      "options": ["1830", "1798", "1885", "1995"],
+      "a": 0,
+      "explain": "1830, by most accounts, at Carbost on Skye; one account gives 1831 for the opening."
+    }
+  ],
+  "sources": [
+    { "title": "legislation.gov.uk: The Scotch Whisky Regulations 2009, regulation 10", "url": "https://www.legislation.gov.uk/uksi/2009/2890/regulation/10" },
+    { "title": "Wikipedia: Island single malt", "url": "https://en.wikipedia.org/wiki/Island_single_malt" },
+    { "title": "Whiskybase: Orkney", "url": "https://www.whiskybase.com/nl/whiskies/brand/84297/orkney" },
+    { "title": "Master of Malt: The Islands whisky guide", "url": "https://www.masterofmalt.com/guides/whisky-guides/the-islands/" },
+    { "title": "Whisky Advocate: Go beyond Islay to Scotland's other whisky islands", "url": "https://whiskyadvocate.com/go-beyond-islay-to-scotlands-other-whisky-islands" },
+    { "title": "Distiller: Scotch islands, going beyond Islay for single malt whisky", "url": "https://distiller.com/articles/scotch-islands" },
+    { "title": "Wine Enthusiast: Exploring the whisky islands of Scotland", "url": "https://www.wineenthusiast.com/culture/travel/exploring-the-whisky-islands-of-scotland/" },
+    { "title": "Wikipedia: Talisker distillery", "url": "https://en.wikipedia.org/wiki/Talisker_distillery" },
+    { "title": "The Whisky Shop: Island hopping, island distilleries", "url": "https://www.whiskyshop.com/blog/island-hopping-best-island-distilleries" },
+    { "title": "Scotland.com: Highland Park Distillery", "url": "https://www.scotland.com/attractions/distilleries/highland-park/" },
+    { "title": "Cask Atlas: Scotland, map the place, question the stereotype", "url": "" }
+  ]
+}
