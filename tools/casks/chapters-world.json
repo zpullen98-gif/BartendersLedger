@@ -138,14 +138,14 @@
     "summary": "Understand the Japan Spirits & Liqueurs Makers Association standard, distinguish production origin from brand nationality, and compare Japanese whisky through actual production evidence rather than a single national flavour stereotype.",
     "facts": [
       {"label": "Status", "value": "The JSLMA Japanese whisky labelling standard is an association standard, not a universal statutory definition for every producer."},
-      {"label": "Timeline", "value": "Established in 2021; the transition for existing products ended on 31 March 2024."},
+      {"label": "Timeline", "value": "Established in 2021; the transition for existing products ended on 31 March 2024. In March 2025 the association added a JW logo for bottles that meet it."},
       {"label": "Under that standard", "value": "Production and at least three years' maturation in Japan, in wooden casks up to 700 litres; bottling in Japan at 40% ABV or more."},
       {"label": "Material distinction", "value": "Malted grains must be used; other cereals are permitted. Water must be extracted in Japan, but the grains need not be grown there."}
     ],
     "sections": [
       {
         "title": "Start with the authority behind the words",
-        "paragraphs": ["The JSLMA published its Japanese whisky labelling standard in 2021, with a transition for existing products ending in March 2024. Japan's National Tax Agency described it as a voluntary industry standard. That is an important distinction from the national legal protection studied for Scotch. Do not present association compliance as a universal rule governing every Japanese-looking bottle.", "When researching a bottle, look for an explicit current producer statement about compliance and identify the producer. Japanese ownership, a Japanese address or Japanese lettering alone cannot establish where all the whisky was distilled and matured. An imported component may be completely legitimate in another product category while preventing a claim under this particular standard."],
+        "paragraphs": ["The JSLMA published its Japanese whisky labelling standard in 2021, with a transition for existing products ending in March 2024. Japan's National Tax Agency described it as a voluntary industry standard. That is an important distinction from the national legal protection studied for Scotch. In March 2025 the association introduced a Japanese Whisky logo, the letters JW on a cask head, for bottles that meet the standard, and said it would seek a geographical indication and a National Tax Agency labelling standard under Japan's liquor business associations law, which would bind producers outside the association too. Those are aims, not yet law: until a binding rule is made, only the association's members are held to the standard. Do not present association compliance as a universal rule governing every Japanese-looking bottle.", "When researching a bottle, look for an explicit current producer statement about compliance and identify the producer. Japanese ownership, a Japanese address or Japanese lettering alone cannot establish where all the whisky was distilled and matured. An imported component may be completely legitimate in another product category while preventing a claim under this particular standard."],
         "bullets": []
       },
       {
@@ -188,6 +188,7 @@
     ],
     "sources": [
       {"title": "JSLMA: Standards for Labeling Japanese Whisky", "url": "https://www.yoshu.or.jp/files/libs/552/202303291555304944.pdf", "checked": "2026-10-27"},
+      {"title": "JSLMA via Business Wire: the Japanese Whisky logo and the path to a binding standard, 26 March 2025", "url": "https://www.businesswire.com/news/home/20250326387650/en", "checked": "2026-11-05"},
       {"title": "Japan National Tax Agency: 2021 report on voluntary labelling standards", "url": "https://www.nta.go.jp/english/Report_pdf/2021e_08.pdf", "checked": "2026-10-27"},
       {"title": "Nikka: whisky labelling standards", "url": "https://www.nikka.com/en/brands/labelingstandards/", "checked": "2026-10-27"},
       {"title": "House of Suntory: Chita single grain whisky", "url": "https://house.suntory.com/chita-whisky/chita-single-grain-whisky", "checked": "2026-10-27"},
@@ -266,7 +267,7 @@
     "summary": "Cognac is grape brandy, not whisky. Follow a protected French wine spirit through its six crus, seasonal double distillation, cellar decisions and age designations, then translate the detail into confident service.",
     "facts": [
       {"label": "Raw material", "value": "Wine from grapes in the Cognac delimited area; Ugni Blanc is the dominant variety."},
-      {"label": "Distillation", "value": "Charentais double distillation, completed by 31 March following the harvest. Current maximum is 73.7% ABV at 20°C in the daily collection vessel."},
+      {"label": "Distillation", "value": "Charentais double distillation, completed by 31 March following the harvest. Current maximum is 73.7% ABV at 20 degrees Celsius in the daily collection vessel."},
       {"label": "Youngest component", "value": "VS: 2 years; VSOP: 4; XO: 10; XXO: 14. These are minimum ages, not average ages."},
       {"label": "Fine Champagne", "value": "Only Grande Champagne and Petite Champagne eaux-de-vie, with at least 50% Grande Champagne. It is not sparkling wine."}
     ],
@@ -283,7 +284,7 @@
       },
       {
         "title": "A seasonal double distillation",
-        "paragraphs": ["The Charentais process is batch double distillation. The first chauffe produces brouillis; the bonne chauffe redistils it and separates the desired wine spirit from other fractions. Production must finish by 31 March after the harvest. Explain the sequence before reciting numbers: wine becomes a first distillate, then a selected spirit for maturation.", "A useful correction for older study notes: the approved 2023 specification amendment raised the maximum strength after distillation from 72.4% to 73.7% ABV, measured at 20°C in the daily collection vessel. This is a distillation limit, not the bottle's serving strength. Cognac released for consumption is at least 40% ABV."],
+        "paragraphs": ["The Charentais process is batch double distillation. The first chauffe produces brouillis; the bonne chauffe redistils it and separates the desired wine spirit from other fractions. Production must finish by 31 March after the harvest. Explain the sequence before reciting numbers: wine becomes a first distillate, then a selected spirit for maturation.", "A useful correction for older study notes: the approved 2023 specification amendment raised the maximum strength after distillation from 72.4% to 73.7% ABV, measured at 20 degrees Celsius in the daily collection vessel. This is a distillation limit, not the bottle's serving strength. Cognac released for consumption is at least 40% ABV."],
         "bullets": []
       },
       {
@@ -305,13 +306,13 @@
     "pitfalls": ["Classifying Cognac as whisky because it is an amber aged spirit.", "Confusing Fine Champagne with sparkling wine or a finish in Champagne casks.", "Using the former 72.4% distillation maximum as the current rule.", "Using average blend age, or years in bottle, as the labelled age."],
     "recall": [
       {"id": "cognac-r1", "q": "Explain Cognac's raw material and double-distillation sequence, including its seasonal deadline.", "a": "Cognac is made from wine produced from grapes in its delimited area. Charentais batch distillation first produces brouillis, then the bonne chauffe selects the wine spirit. Distillation must finish by 31 March after the harvest. It is grape brandy, not cereal whisky."},
-      {"id": "cognac-r2", "q": "State the current distillation strength maximum and distinguish it from bottling strength.", "a": "The current maximum is 73.7% ABV at 20°C in the daily collection vessel after double distillation, following the approved 2023 amendment. Older 72.4% notes are outdated. Cognac for consumption is bottled at a minimum of 40% ABV."},
+      {"id": "cognac-r2", "q": "State the current distillation strength maximum and distinguish it from bottling strength.", "a": "The current maximum is 73.7% ABV at 20 degrees Celsius in the daily collection vessel after double distillation, following the approved 2023 amendment. Older 72.4% notes are outdated. Cognac for consumption is bottled at a minimum of 40% ABV."},
       {"id": "cognac-r3", "q": "Recite the VS, VSOP, XO and XXO minimum ages and explain what the number measures.", "a": "VS is at least two years, VSOP four, XO ten and XXO fourteen. The youngest eau-de-vie in the blend controls the designation. Older components can be present; the rule is not an average or a statement that all components are exactly that age."},
       {"id": "cognac-r4", "q": "What are the six Cognac crus, and how does Fine Champagne differ from a single cru?", "a": "The six are Grande Champagne, Petite Champagne, Borderies, Fins Bois, Bons Bois and Bois Ordinaires. Fine Champagne combines only the first two, with at least 50% Grande Champagne. It is a specified combination, not another cru or sparkling-wine category."}
     ],
     "quiz": [
       {"id": "cognac-q1", "q": "A blend is 60% Grande Champagne, 30% Petite Champagne and 10% Borderies. Can it be called Fine Champagne?", "options": ["Yes, because Grande Champagne exceeds half", "Yes, because all components come from Cognac", "Yes, if its youngest component is at least ten", "No, because Fine Champagne excludes Borderies"], "answer": 3, "why": "Fine Champagne must consist only of Grande Champagne and Petite Champagne, with at least 50% Grande Champagne. Meeting that percentage does not permit an additional cru. Age is a separate requirement."},
-      {"id": "cognac-q2", "q": "A newly prepared training sheet lists Cognac's maximum after distillation as 72.4% ABV. What edit is appropriate?", "options": ["Change it to 73.7% and cite the approved 2023 amendment", "Keep 72.4% because it is the minimum bottling strength", "Change it to 94.8% because Cognac follows Scotch rules", "Remove the limit because double distillation has no maximum"], "answer": 0, "why": "The approved specification amendment raised the limit to 73.7% ABV at 20°C in the daily collection vessel. It is distinct from the minimum bottling strength and from whisky distillation limits."},
+      {"id": "cognac-q2", "q": "A newly prepared training sheet lists Cognac's maximum after distillation as 72.4% ABV. What edit is appropriate?", "options": ["Change it to 73.7% and cite the approved 2023 amendment", "Keep 72.4% because it is the minimum bottling strength", "Change it to 94.8% because Cognac follows Scotch rules", "Remove the limit because double distillation has no maximum"], "answer": 0, "why": "The approved specification amendment raised the limit to 73.7% ABV at 20 degrees Celsius in the daily collection vessel. It is distinct from the minimum bottling strength and from whisky distillation limits."},
       {"id": "cognac-q3", "q": "A Cognac blend contains eaux-de-vie aged 8, 15 and 25 years. Which proposed claim fails on the youngest component?", "options": ["It meets the VSOP minimum age requirement", "It qualifies for XO because its average exceeds ten", "It can contain spirits older than its youngest component", "Its youngest eau-de-vie has aged for eight years"], "answer": 1, "why": "XO requires the youngest eau-de-vie to be at least ten years old. An eight-year component prevents XO qualification, regardless of the average or the oldest spirit. The blend does exceed the VSOP minimum."}
     ],
     "sources": [
