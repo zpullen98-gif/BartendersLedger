@@ -32,7 +32,8 @@ p.caskstyle-label{display:block;margin:16px 0 6px}
 .caskstyle-houses{margin:0 0 12px;padding-left:24px}.caskstyle-houses li{margin-bottom:6px}
 .caskstyle-recall summary,.caskstyle-sources summary{cursor:pointer;min-height:48px;line-height:1.5}
 .caskstyle-recall+.caskstyle-recall{border-top:1px solid var(--house-line)}
-.caskstyle-sources{padding:0 24px;border:1px solid var(--house-line);background:var(--felt-2)}
+/* scoped to the page so the Atlas's own details rule (casks.css) cannot take the padding */
+.caskstyle-page .caskstyle-sources{margin:0;padding:0 24px;border:1px solid var(--house-line);background:var(--felt-2)}
 .caskstyle-sources ul{margin:0;padding-left:24px}.caskstyle-sources li{margin-bottom:10px;line-height:1.6}
 .caskstyle-sources a{display:inline-flex;align-items:center;min-height:44px}
 .caskstyle-pager{justify-content:space-between;padding-top:14px;border-top:1px solid var(--house-line)}
@@ -54,5 +55,5 @@ p.caskstyle-label{display:block;margin:16px 0 6px}
 html[data-service="night"] .caskstyle-sale{border-top-color:var(--brass-2)}
 html[data-service="night"] .caskstyle-page .caskstyle-panel p.caskstyle-s45{color:var(--cream)}
 html[data-service="night"] .cask-atlas a.caskstyle-row:hover{border-color:var(--brass-2)}
-@media(max-width:640px){.caskstyle-rows{grid-template-columns:1fr}.caskstyle-panel{padding:16px}.caskstyle-sources{padding:0 16px}.caskstyle-practice .btn,.caskstyle-links .btn,.caskstyle-door-row .btn{flex:1 1 100%}.caskstyle-page .caskstyle-panel p.caskstyle-s45{font-size:1.2em}.cask-atlas a.caskstyle-row{padding:14px 16px}}
-@media print{.caskstyle-practice,.caskstyle-pager{display:none}.caskstyle-panel,.cask-atlas a.caskstyle-row,.caskstyle-sources{background:white;color:#222;border-color:#777;break-inside:avoid}.caskstyle-panel h3,.caskstyle-row-name{color:#222}}
+@media(max-width:640px){.caskstyle-rows{grid-template-columns:1fr}.caskstyle-panel{padding:16px}.caskstyle-page .caskstyle-sources{padding:0 16px}.caskstyle-practice .btn,.caskstyle-links .btn,.caskstyle-door-row .btn{flex:1 1 100%}.caskstyle-page .caskstyle-panel p.caskstyle-s45{font-size:1.2em}.cask-atlas a.caskstyle-row{padding:14px 16px}}
+@media print{.caskstyle-practice,.caskstyle-pager{display:none}.caskstyle-panel,.cask-atlas a.caskstyle-row,.caskstyle-page .caskstyle-sources{background:white;color:#222;border-color:#777;break-inside:avoid}.caskstyle-panel h3,.caskstyle-row-name{color:#222}}
