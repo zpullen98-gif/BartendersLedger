@@ -1,0 +1,74 @@
+{
+  "id": "bottled-in-bond",
+  "name": "Bottled-in-bond",
+  "respell": "",
+  "family": "american",
+  "law": "27 CFR 5.88, the United States rule that grew from the Bottled-in-Bond Act of 1897: spirits of one kind, made in one distilling season (January to June, or July to December) by one distiller at one distillery, stored at least four years in wood in a bonded warehouse, changed by nothing but pure water and bottled at exactly 100 proof (50% ABV). The label names the distillery and, if it differs, the place of bottling.",
+  "made": "Bonded is a promise laid over a whiskey of its own type, most often bourbon or rye. Everything in the bottle was distilled in one half-year season at one distillery, filled to its type's rules and left at least four years in a bonded warehouse; many barrels from that season may be married. At bottling it is cut with water to exactly 100 proof, with no colouring or flavouring. Age beyond four years, recipe and warehouse vary by house.",
+  "taste": "Bonded promises a known strength and age, not one flavour. At 100 proof and four years or more, a bonded bourbon reads caramel, vanilla and toasted oak over baking spice; a bonded rye, pepper, mint and rye bread. Fuller and warmer than an 80 or 90 proof bottling, with a longer finish that holds through ice, sugar and citrus.",
+  "lines": {
+    "s10": "Bottled-in-bond is American whiskey of one season and one distillery, aged at least four years and bottled at exactly 100 proof.",
+    "s20": "Bottled-in-bond goes back to an 1897 law: one distilling season, one distiller at one distillery, at least four years in a bonded warehouse, bottled at exactly 100 proof. Expect caramel, oak and spice at a full, steady strength.",
+    "s45": "This is a bottled-in-bond whiskey, here a bonded bourbon. Bonded is a federal standard, 27 CFR 5.88: everything in the bottle was made in one distilling season by one distiller at one distillery, aged at least four years in a bonded warehouse and bottled at exactly 100 proof, with only water added, and the label names the distillery. At that strength it carries caramel, vanilla and toasted oak over baking spice, warm and long. We pour it neat with a few drops of water, or in an Old Fashioned. The rule began with the Bottled-in-Bond Act of 1897, when the government stood behind the bottle.",
+    "sale": "Bottled-in-bond is a promise kept since 1897: one season, one distillery, four years at least and exactly 100 proof. Try it neat with a drop of water, or in an Old Fashioned that keeps its backbone."
+  },
+  "serve": {
+    "neat": "Neat at room temperature in a Glencairn; at 100 proof the oak and spice come through whole.",
+    "water": "A few drops of still water soften the heat and open the caramel and fruit.",
+    "rocks": "One large cube; the strength holds up as it slowly melts.",
+    "highball": "Long with soda or ginger ale over ice; at 100 proof the whiskey still leads.",
+    "glass": "A Glencairn or tulip neat; a rocks glass for the cube and the Old Fashioned; a coupe for the Manhattan.",
+    "classic": "An Old Fashioned first; the strength also carries a Manhattan or a Whiskey Sour."
+  },
+  "guest": [
+    { "q": "Does bonded mean it is better?", "a": "Not by itself. Bonded guarantees how it was made: one season, one distillery, at least four years and exactly 100 proof. Whether it suits you is a matter of taste, and we can taste to find out." },
+    { "q": "Is a bonded bourbon from a single barrel?", "a": "No. It must all come from one distilling season at one distillery, but many barrels from that season may be married. Single barrel is a separate claim on the label." },
+    { "q": "How old is a bonded whiskey?", "a": "At least four years in wood. Because it is four years or more, the label need not state an age, though some bonded bottles do." }
+  ],
+  "compare": "Straight whiskey, 27 CFR 5.143, asks two years in new charred oak and nothing added, at 40% ABV or more, and may marry many seasons and distilleries of one state. Bonded narrows it: one season, one distillery, four years and exactly 100 proof. A bonded bottle is always 100 proof; a straight may be younger and softer, or stronger.",
+  "benchmarks": ["Old Fitzgerald", "Old Grand-Dad", "Evan Williams", "Rittenhouse", "E. H. Taylor", "Heaven Hill"],
+  "shelf": [],
+  "chapters": ["american-labels"],
+  "canon": ["old-fashioned", "manhattan", "whiskey-sour"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What does bottled-in-bond promise on an American whiskey label, and what does it not promise?",
+      "answer": "Under 27 CFR 5.88: one distilling season, one distiller at one distillery, at least four years in wood in a bonded warehouse, nothing added but water, bottled at exactly 100 proof, with the distillery named on the label. It promises neither a single barrel nor a better whiskey."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "At what strength must a bottled-in-bond whiskey go into the bottle?",
+      "options": ["80 proof (40% ABV)", "100 proof (50% ABV)", "90 proof (45% ABV)", "125 proof (62.5% ABV)"],
+      "a": 1,
+      "explain": "Exactly 100 proof, 50% ABV, under 27 CFR 5.88. 125 proof is the ceiling for bourbon going into its barrel, and 80 proof the floor for bottling any whiskey."
+    },
+    {
+      "id": "q2",
+      "q": "In which year did Congress pass the Bottled-in-Bond Act?",
+      "options": ["1897", "1920", "1933", "1964"],
+      "a": 0,
+      "explain": "1897, on 3 March. Prohibition began in 1920 and ended in 1933, and in 1964 Congress named bourbon a distinctive product of the United States."
+    },
+    {
+      "id": "q3",
+      "q": "A bonded whiskey must all be distilled in one distilling season. How long is a distilling season?",
+      "options": ["One calendar year, January to December", "One calendar month of distilling", "January to June, or July to December", "Any four years in a row"],
+      "a": 2,
+      "explain": "Half a year: January to June or July to December, under 27 CFR 5.1. Every drop in a bonded bottle was distilled within one of those two seasons, at one distillery."
+    }
+  ],
+  "sources": [
+    { "title": "eCFR: 27 CFR 5.88, Bottled in bond", "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-F/section-5.88" },
+    { "title": "Legal Information Institute: 27 CFR 5.88, Bottled in bond", "url": "https://www.law.cornell.edu/cfr/text/27/5.88" },
+    { "title": "eCFR: 27 CFR 5.1, Definitions (distilling season)", "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-A/section-5.1" },
+    { "title": "Legal Information Institute: 27 CFR 5.74, Statements of age", "url": "https://www.law.cornell.edu/cfr/text/27/5.74" },
+    { "title": "Distiller magazine: What the Bottled-in-Bond Act of 1897 means today", "url": "https://distilling.com/distillermagazine/what-the-bottled-in-bond-act-of-1897-means-today/" },
+    { "title": "Distillery Trail: What is the Bottled-in-Bond Act of 1897?", "url": "https://www.distillerytrail.com/blog/what-is-bottled-in-bond/" },
+    { "title": "Wikipedia: Bottled in bond", "url": "https://en.wikipedia.org/wiki/Bottled_in_bond" },
+    { "title": "Whisky Advocate: Bottled in bond bourbon (and Tennessee whiskey) is back", "url": "https://whiskyadvocate.com/bottled-in-bond-bourbon-whisky-list/" },
+    { "title": "Cask Atlas: American Labels", "url": "" }
+  ]
+}
