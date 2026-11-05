@@ -1,0 +1,73 @@
+{
+  "id": "canadian",
+  "name": "Canadian whisky",
+  "respell": "",
+  "family": "canadian",
+  "law": "Canada's Food and Drug Regulations, through the Canadian Food Compositional Standards they incorporate (volume 2, section 2.1.3, moved from section B.02.020 in December 2024): Canadian whisky, Canadian rye whisky or rye whisky is distilled from a fermented mash of cereal grain, mashed, distilled and aged in Canada, aged at least three years in small wood, casks of no more than 700 litres, and at least 40% ABV. It may contain caramel and flavouring. No share of rye is set.",
+  "made": "Many houses distil and age grains apart, then blend: a base whisky, often corn distilled high in column stills for a light, clean body, and flavouring whiskies of rye or malted grain distilled lower. Canadian Club describes a corn-based whisky with rye, rye malt and barley malt; Crown Royal blends many whiskies of different recipes and stills. The small wood is often barrels that once held bourbon.",
+  "taste": "Most are light to medium in body: vanilla, caramel and toffee, soft grain and a touch of rye spice, with a clean, gentle finish. Rye-led bottles bring pepper, clove and dried herbs; older and stronger ones more oak and dried fruit. The word rye on the label is no guide to the spice; the recipe is.",
+  "lines": {
+    "s10": "Canadian whisky, often called Canadian rye, is grain whisky mashed, distilled and aged in Canada for at least three years in small casks.",
+    "s20": "Canadian whisky is made in Canada from cereal grain and aged at least three years in casks of no more than 700 litres; the word rye promises no rye share. Expect vanilla, caramel and soft spice, often light and clean.",
+    "s45": "This is a Canadian whisky, often called Canadian rye. Canada's compositional standard asks that it be mashed, distilled and aged in Canada from cereal grain, rest at least three years in casks of no more than 700 litres, and reach 40% ABV; caramel and flavouring are allowed, and the word rye sets no rye share. Many houses distil grains apart and blend them, a light corn base with spicier rye. Expect vanilla, caramel and toffee with soft rye spice. We pour it neat, on the rocks, long with ginger ale, or in a Toronto. Crown Royal was first blended in 1939, for the royal tour of Canada.",
+    "sale": "Canadian whisky is often a blender's whisky, corn for lightness and rye for spice, aged at least three years in small casks. Try it long with ginger ale, or stirred with fernet in a Toronto."
+  },
+  "serve": {
+    "neat": "Neat at room temperature in a Glencairn, so the vanilla, toffee and spice show.",
+    "water": "A few drops of still water open a rye-led or higher strength bottle.",
+    "rocks": "On the rocks is a natural pour; one large cube keeps a lighter blend from thinning.",
+    "highball": "Long with ginger ale over ice, a Whiskey Ginger; soda for a drier glass.",
+    "glass": "A Glencairn neat; a rocks glass for ice, the Toronto and the Old Fashioned; a highball glass long.",
+    "classic": "A Toronto, an Old Fashioned with fernet; a Whiskey Ginger, or a Caribou with red wine and maple."
+  },
+  "guest": [
+    { "q": "Does Canadian rye have to be made from rye?", "a": "No. Canadian whisky, Canadian rye whisky and rye whisky are one standard, and it sets no rye share. Many blends are mostly corn; a producer may also make one from rye alone." },
+    { "q": "Why is it lighter than bourbon?", "a": "Many Canadian blends lean on a corn base distilled high and aged in used barrels, so grain and oak sit lighter. Rye-led and older bottles run richer and spicier." },
+    { "q": "Is anything added?", "a": "The standard allows caramel and flavouring, but permission is not proof of use; the producer's own page is the guide. It must still be mashed, distilled and aged in Canada, three years in small wood." }
+  ],
+  "compare": "Kentucky-style rye is American rye whisky: at least 51 per cent rye by law, aged in charred new oak. Canadian rye whisky sets no rye share, ages at least three years in small wood, often used barrels, and may carry caramel and flavouring, so most reads lighter and softer, though a rye-led Canadian can run spicy.",
+  "benchmarks": ["Crown Royal", "Canadian Club", "Wiser's", "Forty Creek", "Lot No. 40"],
+  "shelf": [],
+  "chapters": ["canadian"],
+  "canon": ["toronto", "caribou", "whiskey-ginger", "old-fashioned"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What does Canada's standard ask of Canadian whisky, and what does the word rye promise?",
+      "answer": "Mashed, distilled and aged in Canada from cereal grain; at least three years in small wood, casks of no more than 700 litres; at least 40% ABV; caramel and flavouring allowed. Canadian rye whisky and rye whisky are the same standard, with no rye share required."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What minimum share of rye does the Canadian standard require of a Canadian rye whisky?",
+      "options": ["51 per cent", "No set share", "80 per cent", "100 per cent"],
+      "a": 1,
+      "explain": "No set share: Canadian whisky, Canadian rye whisky and rye whisky are one standard. American rye whisky, by contrast, must be at least 51 per cent rye."
+    },
+    {
+      "id": "q2",
+      "q": "For how long, at the least, must Canadian whisky age in small wood?",
+      "options": ["Three years", "Two years", "Four years", "Six months"],
+      "a": 0,
+      "explain": "Three years, in small wood: casks of no more than 700 litres. It must also be mashed, distilled and aged in Canada and bottled at 40% ABV or more."
+    },
+    {
+      "id": "q3",
+      "q": "In which year was Crown Royal first blended, for the royal tour of Canada?",
+      "options": ["1858", "1920", "1939", "1964"],
+      "a": 2,
+      "explain": "1939, for the royal tour of that year, the first visit of a reigning monarch to Canada."
+    }
+  ],
+  "sources": [
+    { "title": "CFIA: Summary of changes to compositional standards, regulatory references", "url": "https://inspection.canada.ca/en/food-labels/labelling/summary-changes-compositional-standards/regulatory-references" },
+    { "title": "CFIA: Canadian Food Compositional Standards, incorporated by reference", "url": "https://inspection.canada.ca/en/about-cfia/acts-and-regulations/list-acts-and-regulations/documents-incorporated-reference/canadian-food-compositional-standards-0" },
+    { "title": "Justice Laws: Food and Drug Regulations, section B.02.020 as it stood before 2024", "url": "https://laws-lois.justice.gc.ca/eng/regulations/C.R.C.,_c._870/section-B.02.020-20060322.html" },
+    { "title": "Justice Laws: Food and Drug Regulations, Division 2, small wood", "url": "https://laws-lois.justice.gc.ca/eng/regulations/C.R.C.,_c._870/page-19.html" },
+    { "title": "Canadian Club: our process", "url": "https://www.canadianclub.com/our-process" },
+    { "title": "Wikipedia: Crown Royal", "url": "https://en.wikipedia.org/wiki/Crown_Royal" },
+    { "title": "The Whiskey Wash: Five things you didn't know about Crown Royal", "url": "https://thewhiskeywash.com/canadian-whiskey/5-things-you-didnt-know-about-crown-royal-whisky/" },
+    { "title": "Cask Atlas: Canadian Whisky: The Blender's Map", "url": "" }
+  ]
+}

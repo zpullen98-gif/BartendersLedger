@@ -1,6 +1,6 @@
 {
   "edition": "2026-11-05",
-  "styles": 22,
+  "styles": 23,
   "planned": 34,
   "byFamily": {
     "american": {
@@ -21,11 +21,11 @@
     },
     "canadian": {
       "planned": 1,
-      "written": 0
+      "written": 1
     }
   },
   "words": {
-    "total": 14534,
+    "total": 15204,
     "perEntry": {
       "bourbon": 664,
       "wheated-bourbon": 690,
@@ -48,7 +48,8 @@
       "blended-scotch": 649,
       "speyside": 651,
       "islay": 642,
-      "irish-single-pot-still": 659
+      "irish-single-pot-still": 659,
+      "canadian": 670
     }
   },
   "cards": [
@@ -73,10 +74,11 @@
     "Cask Styles · blended-scotch/recall",
     "Cask Styles · speyside/recall",
     "Cask Styles · islay/recall",
-    "Cask Styles · irish-single-pot-still/recall"
+    "Cask Styles · irish-single-pot-still/recall",
+    "Cask Styles · canadian/recall"
   ],
-  "questions": 66,
-  "sources": 214,
+  "questions": 69,
+  "sources": 221,
   "shelf": 9,
   "missing": [
     "highland",
@@ -89,8 +91,7 @@
     "japanese-whisky",
     "japanese-single-malt",
     "japanese-blended",
-    "mizunara",
-    "canadian"
+    "mizunara"
   ],
   "refused": []
 }
