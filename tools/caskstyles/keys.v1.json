@@ -1,6 +1,6 @@
 {
-  "about": "Every card key of At the table: every style, one per style: 'Cask Styles · <id>/recall', in roster order. Written from the roster at the specification (5 November 2026), not yet frozen: the integrator freezes it from the whole build (34 styles), and from then on check-caskstyles allows new keys and refuses the loss of any here, because a key is a person’s saved record.",
-  "frozen": false,
+  "about": "Every card key of At the table: every style, one per style: 'Cask Styles · <id>/recall', in roster order. Written from the roster at the specification (5 November 2026) and frozen the same day from the whole build (34 styles, 34 recall cards, 102 questions): from now on check-caskstyles allows new keys and refuses the loss of any here, because a key is a person’s saved record.",
+  "frozen": true,
   "keys": [
     "Cask Styles · bourbon/recall",
     "Cask Styles · wheated-bourbon/recall",

@@ -21,8 +21,8 @@
    writing) skips only what needs the whole roster: the counts pinned in
    FROZEN, the none-lost part of the keys, and the length-clue and position
    shares below 30 questions. Everything else holds on three styles as it will
-   on thirty-four. The integrator sets keys.v1.json's frozen to true from the
-   whole build; from then on no key may leave it.
+   on thirty-four. keys.v1.json was frozen from the whole build on 5 November
+   2026 (34 styles, 34 recall cards, 102 questions); no key may leave it.
 
    D1 shape through schema.mjs, the roster sound   D2 the roster whole once written, the counts pinned
    D3 caps and the sale's two sentences   D4 voice, the shipped files and the stylesheet
