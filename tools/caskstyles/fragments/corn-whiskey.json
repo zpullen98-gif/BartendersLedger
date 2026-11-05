@@ -1,0 +1,76 @@
+{
+  "id": "corn-whiskey",
+  "name": "Corn whiskey",
+  "respell": "",
+  "family": "american",
+  "law": "27 CFR 5.143: corn whisky is distilled at no more than 80% ABV (160 proof) from a fermented mash of at least 80 per cent corn. It is the one whisky that need not be stored in oak; if it is, the oak is used or new uncharred, filled at no more than 62.5% ABV (125 proof), and the spirit is never treated with charred wood. Straight corn whisky has at least two years in that oak. All whisky is bottled at 40% ABV (80 proof) or more.",
+  "made": "A mash of at least 80 per cent corn, the rest small grains, is cooked, fermented and distilled to no more than 160 proof. Much of it is bottled young or unaged, clear and full of grain. Aged corn whiskey goes into used barrels, very often ones that held bourbon, or into new uncharred oak, so the colour stays pale and the oak gentle. A bonded bottle, Mellow Corn among them, has at least four years at 100 proof.",
+  "taste": "Unaged, it is sweet with grain: fresh corn, cornbread, buttered popcorn and an oily, light body. Aged in used barrels it turns pale gold, with butterscotch, cereal and soft oak, and usually less vanilla and spice than bourbon. Some taste close to a light bourbon, others nearer a grain whisky.",
+  "lines": {
+    "s10": "Corn whiskey is American whiskey from a mash of at least 80 per cent corn, sold young or aged in used or uncharred oak.",
+    "s20": "Corn whiskey starts with at least 80 per cent corn under the federal rule and, if aged, goes into used or uncharred oak, never charred new barrels. Expect sweet corn, cornbread and butterscotch, pale and gentle.",
+    "s45": "This is a corn whiskey, an American type under the federal rule: a mash of at least 80 per cent corn, distilled to no more than 160 proof. It need not be aged at all; if it is, it rests in used or uncharred new oak, never charred new barrels, and that is the line between it and bourbon. Expect sweet corn, cornbread and buttered popcorn when young, butterscotch and soft oak when aged, pale in the glass. We pour it on the rocks, long with ginger ale, or in a Hot Toddy. Southern moonshine was largely unaged corn whiskey, and many legal jars still are.",
+    "sale": "Corn whiskey is at least 80 per cent corn and light on the oak, so the sweet grain leads. Try it long with ginger ale as a Whiskey Ginger, or warm in a Hot Toddy."
+  },
+  "serve": {
+    "neat": "Neat at room temperature in a Glencairn for an aged bottle, so the butterscotch and grain show.",
+    "water": "A few drops of still water soften a bonded 100 proof and bring up the sweet corn.",
+    "rocks": "On the rocks suits it, young or aged; one large cube keeps it cold without drowning it.",
+    "highball": "Long with ginger ale over ice, a Whiskey Ginger; soda for a drier glass.",
+    "glass": "A Glencairn neat; a rocks glass for ice and the sour; a highball glass long; a mug for the toddy.",
+    "classic": "A Whiskey Ginger first; a Hot Toddy on a cold night, or a Whiskey Sour."
+  },
+  "guest": [
+    { "q": "Is corn whiskey the same as moonshine?", "a": "Not always. Moonshine has no federal definition, so a legal jar is labelled by its type: often corn whiskey, sometimes unaged whiskey or neutral spirits. Corn whiskey on the label means at least 80 per cent corn." },
+    { "q": "Isn't bourbon made from corn too?", "a": "Yes, at least 51 per cent, but bourbon must age in charred new oak. Corn whiskey needs at least 80 per cent corn and may never touch charred new oak, so a high-corn bourbon stays bourbon." },
+    { "q": "Why is it so pale?", "a": "Used barrels and uncharred oak give far less colour than bourbon's charred new oak, and much corn whiskey is bottled young or unaged. The flavour leans to grain rather than vanilla and caramel." }
+  ],
+  "compare": "Bourbon, under the same rule, needs at least 51 per cent corn and must age in charred new oak. Corn whiskey needs at least 80 per cent corn and may rest only in used or uncharred oak, if at all, so it is paler and grainier, with less vanilla and caramel.",
+  "benchmarks": ["Mellow Corn", "Georgia Moon", "Balcones"],
+  "shelf": [],
+  "chapters": ["american-labels", "bourbon"],
+  "canon": ["whiskey-ginger", "hot-toddy", "whiskey-sour"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What does the federal rule ask of corn whiskey, and how does its barrel differ from bourbon's?",
+      "answer": "27 CFR 5.143: at least 80 per cent corn, distilled at no more than 160 proof; no ageing required, but any oak is used or new uncharred, filled at no more than 125 proof, never charred wood. Bourbon must go into charred new oak. Straight corn whiskey has at least two years."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What minimum share of corn must a corn whiskey mash hold under 27 CFR 5.143?",
+      "options": ["51 per cent", "70 per cent", "80 per cent", "100 per cent"],
+      "a": 2,
+      "explain": "80 per cent. Bourbon needs only 51 per cent corn, and a bourbon with 80 per cent or more corn stays bourbon because it ages in charred new oak."
+    },
+    {
+      "id": "q2",
+      "q": "If corn whiskey is aged, which barrels may it rest in?",
+      "options": ["Charred new oak only", "Used or uncharred new oak", "Former sherry casks only", "Any oak, charred or not"],
+      "a": 1,
+      "explain": "Used or uncharred new oak, filled at no more than 125 proof, and never treated with charred wood. Used bourbon barrels are a common choice."
+    },
+    {
+      "id": "q3",
+      "q": "How long must a straight corn whiskey rest in oak?",
+      "options": ["At least four years", "At least three years", "No time at all", "At least two years"],
+      "a": 3,
+      "explain": "At least two years in used or uncharred new oak. Plain corn whiskey needs no ageing at all; a bottled-in-bond one, Mellow Corn among them, has at least four."
+    }
+  ],
+  "sources": [
+    { "title": "eCFR: 27 CFR 5.143, Whisky", "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-I/section-5.143" },
+    { "title": "TTB: barrel and storage requirements by whisky type", "url": "https://www.ttb.gov/media/73331/download" },
+    { "title": "American Whiskey Magazine: five things you didn't know about corn whiskey", "url": "https://www.americanwhiskeymag.com/articles/5-things-you-didnt-know-about-1-corn-whiskey/" },
+    { "title": "Difford's Guide: Mellow Corn Bottled in Bond Kentucky Straight Corn Whiskey", "url": "https://www.diffordsguide.com/beer-wine-spirits/5446/mellow-corn-bottled-in-bond" },
+    { "title": "The Bourbon Culture: Mellow Corn Bottled in Bond review", "url": "https://thebourbonculture.com/whiskey-reviews/mellow-corn-bottled-in-bond-review/" },
+    { "title": "Imbibe: Balcones Baby Blue corn whisky", "url": "https://imbibemagazine.com/?p=67990" },
+    { "title": "Distiller: An attempt at defining moonshine", "url": "https://blog.distiller.com/moonshine-definition/" },
+    { "title": "InsideHook: Your guide to legal moonshine", "url": "https://www.insidehook.com/food/your-guide-to-legal-moonshine/amp" },
+    { "title": "Saveur: White lightning", "url": "https://www.saveur.com/article/Wine-and-Drink/White-Whiskey-Moonshine" },
+    { "title": "Cask Atlas: American Labels", "url": "" },
+    { "title": "Cask Atlas: Bourbon", "url": "" }
+  ]
+}
