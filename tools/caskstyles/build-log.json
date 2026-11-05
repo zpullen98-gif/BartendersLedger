@@ -1,0 +1,72 @@
+{
+  "edition": "2026-11-05",
+  "styles": 0,
+  "planned": 34,
+  "byFamily": {
+    "american": {
+      "planned": 15,
+      "written": 0
+    },
+    "scotch": {
+      "planned": 10,
+      "written": 0
+    },
+    "irish": {
+      "planned": 4,
+      "written": 0
+    },
+    "japanese": {
+      "planned": 4,
+      "written": 0
+    },
+    "canadian": {
+      "planned": 1,
+      "written": 0
+    }
+  },
+  "words": {
+    "total": 0,
+    "perEntry": {}
+  },
+  "cards": [],
+  "questions": 0,
+  "sources": 0,
+  "shelf": 0,
+  "missing": [
+    "bourbon",
+    "wheated-bourbon",
+    "high-rye-bourbon",
+    "four-grain-bourbon",
+    "straight-whiskey",
+    "bottled-in-bond",
+    "small-batch-single-barrel",
+    "barrel-proof",
+    "tennessee-whiskey",
+    "kentucky-rye",
+    "monongahela-rye",
+    "american-single-malt",
+    "corn-whiskey",
+    "wheat-whiskey",
+    "blended-american",
+    "scotch-single-malt",
+    "single-grain-scotch",
+    "blended-malt",
+    "blended-scotch",
+    "speyside",
+    "highland",
+    "islands",
+    "lowland",
+    "islay",
+    "campbeltown",
+    "irish-single-pot-still",
+    "irish-single-malt",
+    "irish-single-grain",
+    "blended-irish",
+    "japanese-whisky",
+    "japanese-single-malt",
+    "japanese-blended",
+    "mizunara",
+    "canadian"
+  ],
+  "refused": []
+}
