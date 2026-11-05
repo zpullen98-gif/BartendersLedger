@@ -1,11 +1,11 @@
 {
   "edition": "2026-11-05",
-  "styles": 10,
+  "styles": 11,
   "planned": 34,
   "byFamily": {
     "american": {
       "planned": 15,
-      "written": 8
+      "written": 9
     },
     "scotch": {
       "planned": 10,
@@ -25,7 +25,7 @@
     }
   },
   "words": {
-    "total": 6633,
+    "total": 7284,
     "perEntry": {
       "bourbon": 664,
       "wheated-bourbon": 690,
@@ -35,6 +35,7 @@
       "bottled-in-bond": 676,
       "small-batch-single-barrel": 651,
       "barrel-proof": 656,
+      "tennessee-whiskey": 651,
       "islay": 642,
       "irish-single-pot-still": 659
     }
@@ -48,14 +49,14 @@
     "Cask Styles · bottled-in-bond/recall",
     "Cask Styles · small-batch-single-barrel/recall",
     "Cask Styles · barrel-proof/recall",
+    "Cask Styles · tennessee-whiskey/recall",
     "Cask Styles · islay/recall",
     "Cask Styles · irish-single-pot-still/recall"
   ],
-  "questions": 30,
-  "sources": 94,
+  "questions": 33,
+  "sources": 104,
   "shelf": 8,
   "missing": [
-    "tennessee-whiskey",
     "kentucky-rye",
     "monongahela-rye",
     "american-single-malt",

@@ -1,0 +1,77 @@
+{
+  "id": "tennessee-whiskey",
+  "name": "Tennessee whiskey",
+  "respell": "",
+  "family": "american",
+  "law": "Tennessee Code 57-2-106, the state law of 2013: Tennessee whiskey is made in Tennessee from at least 51 per cent corn, distilled at no more than 80% ABV (160 proof), filtered through maple charcoal before ageing, aged in new charred oak barrels filled at no more than 62.5% ABV (125 proof), and bottled at 40% ABV (80 proof) or more. One exception, drawn by county and date, frees a single distillery from the charcoal step.",
+  "made": "A mash of at least 51 per cent corn, most often with rye and malted barley, is fermented and distilled much as bourbon is. Before the barrel, the new spirit runs slowly through a deep vat of sugar maple charcoal, the Lincoln County Process; George Dickel chills it first. Then come new charred oak, years in the warehouse and water to bottling strength. Benjamin Prichard's, under the law's one exception, skips the charcoal.",
+  "taste": "Close to bourbon: sweet corn, caramel and vanilla from the new oak, often a note of ripe banana, then toasted oak and a little spice. The charcoal is often said to take the rough edges off the new spirit, so many find it softer and rounder through the middle, with a gentle finish.",
+  "lines": {
+    "s10": "Tennessee whiskey is corn-led whiskey made in Tennessee and filtered through maple charcoal before it goes into new charred oak.",
+    "s20": "Tennessee whiskey follows a state law of 2013: made in Tennessee from at least 51 per cent corn, filtered through maple charcoal before ageing, aged in new charred oak. Expect caramel, vanilla and sweet corn, soft and round.",
+    "s45": "This is Tennessee whiskey, the state's own style. A Tennessee law of 2013 asks what bourbon asks, at least 51 per cent corn and new charred oak among it, and two things more: it is made in Tennessee, and the new spirit runs through maple charcoal before ageing, the Lincoln County Process, with one exception. The charcoal is often said to round the spirit: caramel, vanilla and sweet corn, a touch of banana and toasted oak, soft through the finish. We pour it on the rocks, neat, or long with ginger ale. The process is named for Lincoln County, home to Lynchburg until 1871.",
+    "sale": "Tennessee whiskey is bourbon's neighbour with one more step: it drips through maple charcoal before it ever meets the barrel. Try it over ice, or long with ginger ale."
+  },
+  "serve": {
+    "neat": "Neat at room temperature in a Glencairn, so the caramel and sweet corn come forward.",
+    "water": "A few drops of still water open the fruit and soften the oak.",
+    "rocks": "On the rocks is a natural pour; one large cube keeps it from watering down fast.",
+    "highball": "Long with ginger ale over ice, a Whiskey Ginger; soda for a drier glass.",
+    "glass": "A Glencairn neat; a rocks glass for ice, the Old Fashioned and the sour; a highball glass long.",
+    "classic": "A Whiskey Ginger or an Old Fashioned; a Whiskey Sour for a guest who wants citrus."
+  },
+  "guest": [
+    { "q": "Is Tennessee whiskey just bourbon?", "a": "It keeps bourbon's rules for grain, still and barrel, but Tennessee law gives it its own name: made in Tennessee and filtered through maple charcoal before ageing. Its makers label it Tennessee whiskey." },
+    { "q": "What does the charcoal do?", "a": "The new spirit drips through sugar maple charcoal before it goes into the barrel. It is often said to take off harsh edges and round the spirit; the barrel then gives the caramel and vanilla." },
+    { "q": "Does it all come from Lynchburg?", "a": "No, from anywhere in Tennessee. Lynchburg is home to Jack Daniel's; George Dickel, Nelson's Green Brier, Benjamin Prichard's and others distil elsewhere in the state." }
+  ],
+  "compare": "Bourbon, 27 CFR 5.143, may be made anywhere in the United States and asks no charcoal. Tennessee whiskey keeps bourbon's grain, still and barrel limits, but must be made in Tennessee and filtered through maple charcoal before ageing, with one exception. Side by side the Tennessee glass is often found a little softer; the two can be close.",
+  "benchmarks": ["Jack Daniel's", "George Dickel", "Nelson's Green Brier", "Uncle Nearest", "Benjamin Prichard's"],
+  "shelf": [],
+  "chapters": ["american-labels", "bourbon"],
+  "canon": ["old-fashioned", "whiskey-sour", "whiskey-ginger"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What does Tennessee law ask of Tennessee whiskey beyond bourbon's rules, and what is its exception?",
+      "answer": "Under Tennessee Code 57-2-106 of 2013: made in Tennessee and filtered through maple charcoal before ageing, the Lincoln County Process, beside at least 51 per cent corn, 160 proof at most off the still, new charred oak filled at no more than 125 proof and bottling at 80 proof or more. One exception frees Benjamin Prichard's from the charcoal."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What step does Tennessee law add before Tennessee whiskey goes into the barrel?",
+      "options": ["Distilling three times in pot stills", "Filtering through maple charcoal", "Resting in used sherry casks", "Adding a little caramel colouring"],
+      "a": 1,
+      "explain": "Filtering the new spirit through maple charcoal, the Lincoln County Process, under Tennessee Code 57-2-106. Nothing may be added, and the barrels are new charred oak, as for bourbon."
+    },
+    {
+      "id": "q2",
+      "q": "In which year did Tennessee write its definition of Tennessee whiskey into state law?",
+      "options": ["1871", "1897", "1964", "2013"],
+      "a": 3,
+      "explain": "2013, Tennessee Code 57-2-106. Lynchburg's county, Moore, was drawn in 1871, the Bottled-in-Bond Act passed in 1897, and Congress named bourbon a distinctive product of the United States in 1964."
+    },
+    {
+      "id": "q3",
+      "q": "Which Tennessee distillery does the exception in the 2013 law free from the charcoal step?",
+      "options": ["Jack Daniel's", "George Dickel", "Benjamin Prichard's", "Nelson's Green Brier"],
+      "a": 2,
+      "explain": "Benjamin Prichard's, in Lincoln County, which made its whiskey without the charcoal step before the law. The exception is drawn by county and date, and the state's attorney general read it in 2015 as covering one distillery."
+    }
+  ],
+  "sources": [
+    { "title": "Justia: Tennessee Code 57-2-106, Tennessee whiskey", "url": "https://law.justia.com/codes/tennessee/2019/title-57/chapter-2/section-57-2-106/" },
+    { "title": "FindLaw: Tennessee Code 57-2-106", "url": "https://codes.findlaw.com/tn/title-57-intoxicating-liquors/tn-code-sect-57-2-106/" },
+    { "title": "Tennessee Attorney General: opinion 15-23 on the Tennessee whiskey statute", "url": "https://www.tn.gov/content/dam/tn/attorneygeneral/documents/ops/2015/op15-23.pdf" },
+    { "title": "Associated Press, via KSL: the exemption in the Tennessee whiskey law", "url": "https://www.ksl.com/article/33886270" },
+    { "title": "Wikipedia: Tennessee whiskey", "url": "https://en.wikipedia.org/wiki/Tennessee_whiskey" },
+    { "title": "Alcohol Professor: Chalk one up for the charcoal", "url": "https://www.alcoholprofessor.com/blog-posts/blog/2013/05/13/chalk-one-up-for-the-charcoal" },
+    { "title": "Distiller: Lincoln County Process, charcoal mellowing in Tennessee", "url": "https://distiller.com/articles/lincoln-county-process" },
+    { "title": "Tasting Table: Jack Daniel's vs George Dickel, how the Tennessee whiskeys differ", "url": "https://www.tastingtable.com/1521469/jack-daniels-george-dickel-whiskey-differ/" },
+    { "title": "Wikipedia: Lynchburg, Tennessee", "url": "https://en.wikipedia.org/wiki/Lynchburg,_Tennessee" },
+    { "title": "Tennessee Encyclopedia: Moore County", "url": "https://tennesseeencyclopedia.net/?p=1295" },
+    { "title": "Cask Atlas: American Labels", "url": "" },
+    { "title": "Cask Atlas: Bourbon", "url": "" }
+  ]
+}
