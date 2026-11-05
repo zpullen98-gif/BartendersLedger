@@ -1,0 +1,79 @@
+{
+  "id": "speyside",
+  "name": "Speyside",
+  "respell": "SPAY-side",
+  "family": "scotch",
+  "law": "The Scotch Whisky Regulations 2009 protect Speyside as a region, one of three with Highland and Lowland, beside the localities of Islay and Campbeltown. The rule draws its boundary by named council wards centred on Moray and the River Spey, inside the Highland area, and a Scotch may carry the name only if wholly distilled there; it may mature elsewhere in Scotland. Every Scotch rule holds: at least three years in oak casks of no more than 700 litres, bottled at 40% ABV or more.",
+  "made": "Speyside single malt is malted barley, mashed, fermented and usually distilled twice in copper pot stills, then aged in oak. Most of its houses use unpeated malt, though Benriach and a few others make peated spirit too. The casks set the two broad styles: sherry casks at houses known for them, such as Macallan and Glenfarclas, and ex-bourbon casks at many others.",
+  "taste": "Often fruit and honey: in bourbon-cask malts, pear, green apple, vanilla and flowers; in sherry-cask malts, raisin, orange peel, toffee, nutmeg and dark chocolate. Most are unpeated and medium bodied, with a clean or gently spiced finish. The region is a guide, not a promise, so the bottle decides.",
+  "lines": {
+    "s10": "Speyside is single malt Scotch distilled along the River Spey in north-east Scotland: often fruit and honey, usually without smoke.",
+    "s20": "Speyside is a protected Scotch region around the River Spey, inside the Highlands, and the name means the whisky was distilled there. Most of its malts are unpeated: pear, apple and honey from bourbon casks, raisin and spice from sherry casks.",
+    "s45": "This is a Speyside single malt, distilled in the valley of the River Spey in north-east Scotland, a region the Scotch Whisky Regulations protect by name inside the Highlands. It is malted barley, usually distilled twice in copper pot stills and aged at least three years in oak. Most Speyside houses use unpeated malt, so expect fruit and honey: pear, apple and vanilla from bourbon casks, raisin, orange peel and spice from sherry casks. The region is a guide, not a promise. We pour it neat with a jug of water beside it. The Glenlivet took out its distilling licence in 1824, the year after the excise law of 1823.",
+    "sale": "Speyside is the valley of the River Spey, home to many of Scotland's malt distilleries: fruit, honey and spice, usually without smoke. Taste it neat with a few drops of water, or stirred in a Rob Roy."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, so the fruit, honey and cask spice all show.",
+    "water": "A few drops of still water lift pear, apple and honey, and soften the spirit.",
+    "rocks": "One large cube if asked; cold mutes the fruit, so offer the water first.",
+    "highball": "A lighter bourbon-cask Speyside makes a clean highball with chilled soda and a lemon peel.",
+    "glass": "A Glencairn or nosing glass neat; a rocks glass for the cube; a coupe for the Rob Roy.",
+    "classic": "A Whiskey Highball with a lighter malt; a Rob Roy with a sherried one; a Hot Toddy."
+  },
+  "guest": [
+    { "q": "Is Speyside part of the Highlands?", "a": "On the map, yes: the Speyside region lies inside the Highland area, and some Speyside houses, Glenfarclas among them, put Highland on the label. Speyside is its own protected name." },
+    { "q": "Is Speyside whisky smoky?", "a": "Usually not. Most Speyside houses use unpeated malt, so fruit, honey and the cask lead, though Benriach and a few others make peated malt too." },
+    { "q": "Why does one Speyside taste of raisins and another of pears?", "a": "The cask. Sherry casks give raisin, orange peel and spice; ex-bourbon casks give pear, vanilla and flowers. The region tells us where it was distilled, not which cask it rested in." }
+  ],
+  "compare": "Against the Highlands: both are protected regions, and Speyside lies inside the Highland area, but a Speyside label means distilled in its smaller area around the River Spey. Most Speyside malts are unpeated and fruit-led, while Highland malts range wider, from honeyed and waxy to coastal and smoky.",
+  "benchmarks": ["The Glenlivet", "Macallan", "Glenfarclas", "Aberlour", "Glenfiddich", "The Balvenie"],
+  "shelf": [],
+  "chapters": ["scotch-regions"],
+  "canon": ["whiskey-highball", "rob-roy", "hot-toddy"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What does Speyside promise on a Scotch label, and does it promise a flavour?",
+      "answer": "That the whisky was wholly distilled in the Speyside region, protected by the Scotch Whisky Regulations 2009 and lying inside the Highland area. It promises no flavour: most houses use unpeated malt and lead with fruit, but the cask sets the style, and some make peated malt."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Under the Scotch Whisky Regulations 2009, what kind of protected name is Speyside?",
+      "options": ["A protected locality, like Islay", "A protected region, like Lowland", "An informal grouping, like the Islands", "A trade mark held by its distillers"],
+      "a": 1,
+      "explain": "A protected region, with Highland and Lowland; Islay and Campbeltown are the protected localities, and the Islands are informal. Speyside lies inside the Highland area."
+    },
+    {
+      "id": "q2",
+      "q": "In which year did The Glenlivet take out its distilling licence?",
+      "options": ["1779", "1494", "1860", "1824"],
+      "a": 3,
+      "explain": "1824, the year after the excise law of 1823 changed the duties and licences for Scotland's distillers."
+    },
+    {
+      "id": "q3",
+      "q": "What usually explains a Speyside malt that tastes of raisins and orange peel?",
+      "options": ["Sherry casks", "Peat smoke in the kiln", "The River Spey's water", "Triple distillation"],
+      "a": 0,
+      "explain": "Sherry casks give raisin, orange peel and spice; ex-bourbon casks give pear and vanilla. Speyside malt is usually unpeated and usually distilled twice."
+    }
+  ],
+  "sources": [
+    { "title": "legislation.gov.uk: The Scotch Whisky Regulations 2009, regulation 10", "url": "https://www.legislation.gov.uk/uksi/2009/2890/regulation/10" },
+    { "title": "Wikipedia: Scotch Whisky Regulations 2009", "url": "https://en.wikipedia.org/wiki/Scotch_Whisky_Regulations_2009" },
+    { "title": "The Scotch Malt Whisky Society: Beyond boundaries", "url": "https://unfiltered.smws.com/04-2021/whisky-regions" },
+    { "title": "Master of Malt: Speyside whisky guide", "url": "https://www.masterofmalt.com/guides/whisky-guides/speyside/" },
+    { "title": "The Whiskey Wash: An introduction to Scotch whisky's Speyside region", "url": "https://thewhiskeywash.com/scotch-whiskey/introduction-scotch-whisky-speyside-region/" },
+    { "title": "Lochs of Whisky: Speyside whisky tasting notes", "url": "https://lochsofwhisky.com/blog/speyside-whisky-tasting-notes" },
+    { "title": "Whisky and Wisdom: Glenfarclas 105 versus Aberlour a'bunadh", "url": "https://www.whiskyandwisdom.com/?p=3503" },
+    { "title": "Home of Malts: About Glenfarclas", "url": "https://homeofmalts.com/en/glenfarclas" },
+    { "title": "Club Whisky: Glenfarclas", "url": "https://www.clubwhisky.com/brands/glenfarclas_brand.html" },
+    { "title": "Master of Malt: A world of flavour, behind Benriach's new look", "url": "https://www.masterofmalt.com/blog/post/a-world-of-flavour-behind-benriachs-new-look" },
+    { "title": "Wikipedia: The Glenlivet", "url": "https://en.wikipedia.org/wiki/The_Glenlivet" },
+    { "title": "The Oxford Companion to Spirits and Cocktails: The Glenlivet", "url": "https://www.spiritsanddistilling.com/dictionary/acref-9780199311132-e-129" },
+    { "title": "VinePair: Need to know, The Glenlivet", "url": "https://vinepair.com/articles/ntk-glenlivet/" },
+    { "title": "Cask Atlas: Scotland, map the place, question the stereotype", "url": "" }
+  ]
+}
