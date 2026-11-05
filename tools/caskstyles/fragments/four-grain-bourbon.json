@@ -1,0 +1,76 @@
+{
+  "id": "four-grain-bourbon",
+  "name": "Four-grain and multigrain bourbon",
+  "respell": "",
+  "family": "american",
+  "law": "No legal category of its own: four-grain or multigrain bourbon is bourbon made from more than the usual three grains, and the count on the label is the producer's. The rule is bourbon's, 27 CFR 5.143: made in the United States from at least 51 per cent corn, distilled at no more than 80% ABV (160 proof), stored in charred new oak at no more than 62.5% ABV (125 proof), bottled at 40% ABV or more, nothing added.",
+  "made": "Most bourbon uses three grains: corn, rye or wheat, and malted barley. A four-grain bourbon usually mashes rye and wheat together beside the corn and malted barley; multigrain is the wider word for any bourbon of more than three. Rabbit Hole Cavehill counts its grains another way: 70 per cent corn with malted wheat, malted barley and honey malted barley, ten per cent each, and no rye. Corn stays at least 51 per cent.",
+  "taste": "Often round and layered: honey, fresh bread and vanilla from the wheat and the oak, a gentle pepper and cinnamon where rye is in the mash, and biscuit from the malt, with a soft, warm finish. Yeast, barrel, proof and age shape it as much as the grain count does.",
+  "lines": {
+    "s10": "A four-grain bourbon is bourbon made from four grains rather than three, usually corn, rye, wheat and malted barley.",
+    "s20": "Four-grain bourbon is still bourbon, at least 51 per cent corn in new charred oak, but it usually mashes rye and wheat together beside the malted barley. Expect honey and bread from the wheat and a little pepper from the rye.",
+    "s45": "This is a four-grain bourbon. It is bourbon under the federal rule, made in the United States from at least 51 per cent corn and aged in new charred oak, but where most recipes use three grains it uses four, usually both rye and wheat beside the corn and malted barley. Expect honey, fresh bread and vanilla from the wheat and the oak, with a gentle pepper and cinnamon from the rye, round rather than sharp. We pour it neat, on one large cube, or in an Old Fashioned. Woodford Reserve began its Master's Collection with a four-grain bourbon in 2005 and 2006.",
+    "sale": "Four-grain bourbon puts the wheat's honey and bread and the rye's spice in one glass, round and gently peppered. Try it neat with a drop of water, or in an Old Fashioned."
+  },
+  "serve": {
+    "neat": "Neat at room temperature in a Glencairn, so the honey, bread and spice each show.",
+    "water": "A few drops of still water open the honey and the malt.",
+    "rocks": "One large cube; its round palate holds up as it chills.",
+    "glass": "A Glencairn or tulip neat; a rocks glass for the cube and the Old Fashioned.",
+    "classic": "An Old Fashioned; a Whiskey Sour, or a Gold Rush where the honey syrup meets the grain."
+  },
+  "guest": [
+    { "q": "What are the four grains?", "a": "Usually corn, rye, wheat and malted barley, where most bourbon uses three of them. Corn stays at least 51 per cent. Some houses count differently: Cavehill's four are corn and three malts, with no rye." },
+    { "q": "Is four-grain a legal category?", "a": "No. It is bourbon under the federal rule, at least 51 per cent corn, new charred oak, nothing added. Four grain describes the recipe, and the producer chooses the words." },
+    { "q": "Does it taste different from other bourbon?", "a": "Often rounder and more layered: the wheat's honey and bread, the rye's pepper, the malt's biscuit. Yeast, barrel, proof and age shape it as much as the grains do." }
+  ],
+  "compare": "Against a high-rye bourbon the rule is the same and the grain bill differs. The high-rye bourbon puts a large share of rye beside the corn and leans to pepper and a dry finish; a four-grain bourbon spreads the small grains across rye, wheat and malt, or leaves the rye out, and usually reads softer and bready.",
+  "benchmarks": ["Rabbit Hole", "Woodford Reserve", "Balcones"],
+  "shelf": ["rabbit-hole-cavehill"],
+  "chapters": ["bourbon"],
+  "canon": ["old-fashioned", "whiskey-sour", "gold-rush"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What makes a bourbon a four-grain bourbon, and is four-grain a legal category?",
+      "answer": "Four grains in place of the usual three, usually corn, rye, wheat and malted barley; multigrain is any bourbon of more than three. No legal category: it is bourbon under 27 CFR 5.143, at least 51 per cent corn, charred new oak, nothing added."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Which grain must still make up at least 51 per cent of a four-grain bourbon?",
+      "options": ["Corn", "Rye", "Wheat", "Malted barley"],
+      "a": 0,
+      "explain": "Corn, at least 51 per cent, as for every bourbon under 27 CFR 5.143. A whiskey of 51 per cent rye or wheat would be rye or wheat whiskey instead."
+    },
+    {
+      "id": "q2",
+      "q": "Which grain does Rabbit Hole Cavehill leave out, though most four-grain bourbons use it?",
+      "options": ["Malted barley", "Wheat", "Corn", "Rye"],
+      "a": 3,
+      "explain": "Rye. Cavehill's four are 70 per cent corn with malted wheat, malted barley and honey malted barley, ten per cent each."
+    },
+    {
+      "id": "q3",
+      "q": "When did Woodford Reserve release the four-grain bourbon that began its Master's Collection?",
+      "options": ["2012 and 2013", "2005 and 2006", "1995 and 1996", "2019 and 2020"],
+      "a": 1,
+      "explain": "Accounts give a Kentucky release in 2005 and a wider one in 2006. The mash held corn, rye, wheat and malted barley together."
+    }
+  ],
+  "sources": [
+    { "title": "eCFR: 27 CFR 5.143, Whisky", "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-I/section-5.143" },
+    { "title": "Rabbit Hole Distillery: Four grain bourbon", "url": "https://www.rabbitholedistillery.com/blogs/bourbon-101/four-grain-bourbon" },
+    { "title": "Rabbit Hole Distillery: Go Beyond the Label", "url": "https://www.rabbitholedistillery.com/pages/beyond-the-label" },
+    { "title": "The Spirits Educator: What's the Difference? Rabbit Hole Heigold vs Rabbit Hole Cavehill", "url": "https://www.thespiritseducator.com/whats-the-difference/rabbit-hole-heigold-cavehill" },
+    { "title": "Distiller: Four grain bourbon", "url": "https://distiller.com/articles/four-grain-bourbon" },
+    { "title": "The Whiskey Wash: Four-grain bourbon, when three grains just aren't enough", "url": "https://thewhiskeywash.com/bourbon/7592/" },
+    { "title": "Difford's Guide: Woodford Reserve Master's Four Grain", "url": "https://www.diffordsguide.com/beer-wine-spirits/2441/woodford-reserve-masters-four-grain" },
+    { "title": "Distiller: Woodford Reserve Master's Collection Four Grain (Batch 2)", "url": "https://distiller.com/spirits/woodford-reserve-master-s-collection-four-grain-batch-2" },
+    { "title": "Los Angeles Whiskey Society: Woodford Reserve Four Grain", "url": "https://lawhiskeysociety.com/whiskey-profile/13/Woodford-Reserve-Four-Grain" },
+    { "title": "Breaking Bourbon: Balcones Texas Pot Still Bourbon", "url": "https://breakingbourbon.com/review/balcones-texas-pot-still-bourbon" },
+    { "title": "The Whiskey Wash: Balcones Distilling reveals a new Texas Pot Still Bourbon", "url": "https://thewhiskeywash.com/bourbon/balcones-distilling-reveals-a-new-texas-pot-still-bourbon/" },
+    { "title": "Cask Atlas: Bourbon", "url": "" }
+  ]
+}

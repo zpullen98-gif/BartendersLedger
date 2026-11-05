@@ -1,11 +1,11 @@
 {
   "edition": "2026-11-05",
-  "styles": 5,
+  "styles": 6,
   "planned": 34,
   "byFamily": {
     "american": {
       "planned": 15,
-      "written": 3
+      "written": 4
     },
     "scotch": {
       "planned": 10,
@@ -25,11 +25,12 @@
     }
   },
   "words": {
-    "total": 3327,
+    "total": 3962,
     "perEntry": {
       "bourbon": 664,
       "wheated-bourbon": 690,
       "high-rye-bourbon": 672,
+      "four-grain-bourbon": 635,
       "islay": 642,
       "irish-single-pot-still": 659
     }
@@ -38,14 +39,14 @@
     "Cask Styles · bourbon/recall",
     "Cask Styles · wheated-bourbon/recall",
     "Cask Styles · high-rye-bourbon/recall",
+    "Cask Styles · four-grain-bourbon/recall",
     "Cask Styles · islay/recall",
     "Cask Styles · irish-single-pot-still/recall"
   ],
-  "questions": 15,
-  "sources": 44,
-  "shelf": 4,
+  "questions": 18,
+  "sources": 55,
+  "shelf": 5,
   "missing": [
-    "four-grain-bourbon",
     "straight-whiskey",
     "bottled-in-bond",
     "small-batch-single-barrel",
