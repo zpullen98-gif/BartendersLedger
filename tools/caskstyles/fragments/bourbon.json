@@ -1,0 +1,77 @@
+{
+  "id": "bourbon",
+  "name": "Bourbon",
+  "respell": "BUR-bun",
+  "family": "american",
+  "law": "27 CFR 5.143, the United States standards of identity: bourbon whisky is made in the United States from a fermented mash of at least 51 per cent corn, distilled at no more than 80% ABV (160 proof), stored in charred new oak containers at no more than 62.5% ABV (125 proof) and bottled at 40% ABV (80 proof) or more, with no added colouring, flavouring or blending materials. Bourbon itself has no minimum age; straight bourbon needs at least two years.",
+  "made": "A mash of at least 51 per cent corn, with rye or wheat as the flavouring grain and malted barley for its enzymes, is cooked, cooled and fermented with the house's chosen yeast. It is usually distilled first in a column still and then in a doubler or thumper, and goes into new charred oak no stronger than 62.5%. Recipe, yeast, char, warehouse and years are where one house parts from another.",
+  "taste": "Vanilla, caramel and toffee from the new charred oak over sweet corn, baked apple or dark cherry and baking spice; round and sweet on the palate, drying to oak and pepper. Young bourbon runs bright and grainy, older bourbon leans to leather, tobacco and dark fruit, and a rye recipe usually reads spicier than a wheated one.",
+  "lines": {
+    "s10": "Bourbon is American whiskey made mostly from corn and aged in new charred oak: vanilla, caramel and baking spice.",
+    "s20": "Bourbon can be made anywhere in the United States, not only Kentucky, from at least 51 per cent corn, aged in new charred oak with nothing added but water. Expect vanilla, caramel and sweet corn, then baking spice and oak.",
+    "s45": "This is bourbon, the American whiskey of corn and new oak. The federal rule asks for at least 51 per cent corn, distillation no higher than 160 proof and new charred oak barrels filled at no more than 125 proof, with nothing added but water, anywhere in the United States. Rye or wheat joins the corn, the spirit usually runs through a column still and a doubler, and the new oak gives vanilla, caramel and toffee over sweet corn and baking spice. We pour it neat, on one large cube, or in an Old Fashioned. Congress named it a distinctive product of the United States in 1964.",
+    "sale": "Bourbon is corn and new charred oak, so vanilla and caramel come first and the spice follows. Try it neat with a drop of water, or in an Old Fashioned."
+  },
+  "serve": {
+    "neat": "Neat at room temperature in a Glencairn, so the vanilla and sweet corn come forward.",
+    "water": "A few drops of still water open the caramel and calm a higher proof.",
+    "rocks": "One large cube chills it slowly; small ice waters it down too fast.",
+    "highball": "Long with ginger ale or soda over ice: the corn sweetness holds up to the bubbles.",
+    "glass": "A Glencairn or tulip neat; a rocks glass for ice and the Old Fashioned; a highball glass long.",
+    "classic": "An Old Fashioned first; then a Mint Julep, Whiskey Sour, Boulevardier or Gold Rush."
+  },
+  "guest": [
+    { "q": "Does bourbon have to come from Kentucky?", "a": "No. The federal rule asks only that it be made in the United States. Kentucky is its home ground, but bourbon is made in many states." },
+    { "q": "How old does bourbon have to be?", "a": "Bourbon itself has no minimum age by law. Straight bourbon needs at least two years in new charred oak, and a whiskey under four years must state its age on the label." },
+    { "q": "Is there sugar or vanilla added?", "a": "No. Bourbon allows nothing but water. The vanilla, caramel and sweetness come from the corn and from the new charred oak, which gives up its sugars and vanillin to the spirit." }
+  ],
+  "compare": "Tennessee whiskey keeps rules close to bourbon's, at least 51 per cent corn and new charred oak, but under a state law of 2013, Tennessee Code 57-2-106: made in Tennessee and filtered through maple charcoal before ageing, with one exception. The charcoal is often said to round off the new spirit; side by side the two can be close.",
+  "benchmarks": ["Buffalo Trace", "Wild Turkey", "Four Roses", "Old Forester", "Jim Beam", "Heaven Hill"],
+  "shelf": ["ofc-2005"],
+  "chapters": ["bourbon", "american-labels"],
+  "canon": ["old-fashioned", "mint-julep", "whiskey-sour", "boulevardier", "gold-rush"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What does the federal rule require of bourbon, and what does it not require?",
+      "answer": "Made in the United States from at least 51 per cent corn, distilled at no more than 80% ABV, put into new charred oak at no more than 62.5%, bottled at 40% or more, nothing added but water. It requires neither Kentucky nor a minimum age; straight bourbon needs two years."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What share of corn must a bourbon mash hold, at the least?",
+      "options": ["51 per cent", "60 per cent", "75 per cent", "80 per cent"],
+      "a": 0,
+      "explain": "At least 51 per cent corn, under 27 CFR 5.143. Eighty per cent is the corn whiskey line, and corn whiskey goes into used or uncharred oak, never new charred barrels."
+    },
+    {
+      "id": "q2",
+      "q": "At what strength, at most, may bourbon go into its new charred oak barrel?",
+      "options": ["160 proof", "125 proof", "110 proof", "100 proof"],
+      "a": 1,
+      "explain": "No more than 125 proof, 62.5% ABV. 160 proof, 80% ABV, is the ceiling at the still, and 100 proof is the bottled-in-bond strength."
+    },
+    {
+      "id": "q3",
+      "q": "In which year did Congress name bourbon a distinctive product of the United States?",
+      "options": ["1897", "1935", "1964", "1971"],
+      "a": 2,
+      "explain": "1964, by a concurrent resolution agreed by both houses in May. 1897 is the year of the Bottled-in-Bond Act."
+    }
+  ],
+  "sources": [
+    { "title": "eCFR: 27 CFR 5.143, Whisky", "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-I/section-5.143" },
+    { "title": "Legal Information Institute: 27 CFR 5.143, Whisky", "url": "https://www.law.cornell.edu/cfr/text/27/5.143" },
+    { "title": "Legal Information Institute: 27 CFR 5.74, Statements of age", "url": "https://www.law.cornell.edu/cfr/text/27/5.74" },
+    { "title": "Whisky Advocate: Age statement", "url": "https://whiskyadvocate.com/age-statement/" },
+    { "title": "United States Statutes at Large, 78 Stat. 1208: the concurrent resolution on bourbon whiskey, 1964", "url": "https://www.govinfo.gov/content/pkg/STATUTE-78/pdf/STATUTE-78-Pg1208.pdf" },
+    { "title": "History, Art and Archives, United States House of Representatives: Designating Bourbon Whiskey", "url": "https://history.house.gov/HouseRecord/Detail/15032436199" },
+    { "title": "Distillery Trail: Bourbon declared a distinctive product of the United States", "url": "https://www.distillerytrail.com/blog/when-did-bourbon-whiskey-become-a-distinctive-product-of-the-united-states/" },
+    { "title": "Whisky Advocate: Doublers and thumpers are the whiskey maker's little helpers", "url": "https://whiskyadvocate.com/Whiskey-Distillation-Doublers-and-Thumpers-Explained" },
+    { "title": "Alcademics: How column distillation works, bourbon edition", "url": "https://alcademics.com/how-column-distillation-works-bourbon-edition/" },
+    { "title": "Justia: Tennessee Code 57-2-106, Tennessee whiskey", "url": "https://law.justia.com/codes/tennessee/2019/title-57/chapter-2/section-57-2-106/" },
+    { "title": "Cask Atlas: Bourbon", "url": "" },
+    { "title": "Cask Atlas: American Labels", "url": "" }
+  ]
+}

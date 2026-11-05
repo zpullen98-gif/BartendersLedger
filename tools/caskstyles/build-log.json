@@ -1,11 +1,11 @@
 {
   "edition": "2026-11-05",
-  "styles": 3,
+  "styles": 4,
   "planned": 34,
   "byFamily": {
     "american": {
       "planned": 15,
-      "written": 1
+      "written": 2
     },
     "scotch": {
       "planned": 10,
@@ -25,23 +25,24 @@
     }
   },
   "words": {
-    "total": 1991,
+    "total": 2655,
     "perEntry": {
+      "bourbon": 664,
       "wheated-bourbon": 690,
       "islay": 642,
       "irish-single-pot-still": 659
     }
   },
   "cards": [
+    "Cask Styles · bourbon/recall",
     "Cask Styles · wheated-bourbon/recall",
     "Cask Styles · islay/recall",
     "Cask Styles · irish-single-pot-still/recall"
   ],
-  "questions": 9,
-  "sources": 21,
-  "shelf": 2,
+  "questions": 12,
+  "sources": 31,
+  "shelf": 3,
   "missing": [
-    "bourbon",
     "high-rye-bourbon",
     "four-grain-bourbon",
     "straight-whiskey",
