@@ -1,0 +1,77 @@
+{
+  "id": "highland",
+  "name": "Highland",
+  "respell": "",
+  "family": "scotch",
+  "law": "The Scotch Whisky Regulations 2009 protect Highland as a region, with Lowland and Speyside, beside the localities of Islay and Campbeltown. Highland is the part of Scotland north of a line the rule draws from the Firth of Clyde to the Firth of Tay; Speyside lies inside it, and so do the island distilleries outside Islay. A Scotch may carry the name only if distilled there, and every Scotch rule holds: at least three years in oak casks of no more than 700 litres, bottled at 40% ABV or more.",
+  "made": "Highland single malt is malted barley, mashed, fermented and usually distilled twice in copper pot stills, then aged in oak, ex-bourbon and sherry casks the usual choices. Most houses use unpeated or lightly peated malt, and a few peat more heavily. The region runs from the far north to just north of Glasgow, and the label names only where the spirit was distilled: Glengoyne's stills stand north of the line, its warehouses across the road to the south.",
+  "taste": "Too wide for one profile. Often honey, heather, malt and orchard fruit from bourbon casks; orange peel, dried fruit and spice from sherry casks; wax and a touch of salt in some northern coastal malts, Clynelish among them; a wisp of smoke in a few. Most are medium to full bodied. The bottle decides, not the region.",
+  "lines": {
+    "s10": "Highland is Scotch whisky distilled north of the Highland line, a broad region: honey, heather, fruit and wax, usually little smoke.",
+    "s20": "Highland is a protected Scotch region covering the north of Scotland and the island distilleries outside Islay, and the name means distilled there. It is too broad for one flavour: often honey, heather and fruit, sometimes wax, salt or a little smoke.",
+    "s45": "This is a Highland single malt, distilled north of the Highland line in a region the Scotch Whisky Regulations protect by name; it takes in the north of Scotland, Speyside within it, and the island distilleries outside Islay. It is malted barley, usually distilled twice in copper pot stills and aged at least three years in oak. The region is too broad for one profile: expect honey, heather and orchard fruit, orange and spice from sherry casks, wax and a little salt in some northern malts, and seldom much smoke. We pour it neat with water beside it. The line itself goes back to the Wash Act of 1784.",
+    "sale": "Highland malt runs from honey and heather to wax, fruit and a touch of smoke, so the bottle matters more than the map. Taste it neat with a few drops of water, or stirred into a Rob Roy."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, so the honey, fruit and cask spice all show.",
+    "water": "A few drops of still water open the fruit and heather and soften the spirit.",
+    "rocks": "One large cube if asked; cold quietens the fruit, so offer the water first.",
+    "highball": "A lighter, bourbon-cask Highland makes a clean highball with chilled soda and a lemon peel.",
+    "glass": "A Glencairn or nosing glass neat; a rocks glass for the cube; a coupe for the Rob Roy.",
+    "classic": "A Rob Roy or a Bobby Burns with a Highland malt in place of the blend; a Rusty Nail."
+  },
+  "guest": [
+    { "q": "Is Speyside a Highland whisky?", "a": "On the map, yes: Speyside lies inside the Highland region, and a few Speyside houses, Glenfarclas among them, put Highland on the label. Speyside is also protected as a region of its own." },
+    { "q": "Is Highland whisky smoky?", "a": "Usually only a little, if at all. Most Highland houses use unpeated or lightly peated malt, so honey, fruit and the cask lead; a few peat more heavily. The bottle tells us, not the region." },
+    { "q": "Are the island whiskies Highland too?", "a": "In law, yes. The distilleries of Orkney, Skye, Mull and Jura fall inside the Highland region; only Islay and Campbeltown have protected names of their own. The Islands are a useful grouping, not a legal one." }
+  ],
+  "compare": "Against Speyside: both are protected regions, and Speyside sits inside the Highland area, but its name marks the smaller valley of the River Spey. Most Speyside malts are unpeated and fruit-led; Highland malts range wider, from honey and heather to wax, salt and, now and then, smoke.",
+  "benchmarks": ["Glenmorangie", "The Dalmore", "Oban", "Clynelish", "Glengoyne", "Edradour"],
+  "shelf": [],
+  "chapters": ["scotch-regions"],
+  "canon": ["rob-roy", "bobby-burns", "rusty-nail"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What does Highland promise on a Scotch label, and where does the region run?",
+      "answer": "That the whisky was distilled in the Highland region, protected by the Scotch Whisky Regulations 2009: Scotland north of a line drawn from the Firth of Clyde to the Firth of Tay, with Speyside and the island distilleries outside Islay inside it. It promises no flavour, and the whisky may mature elsewhere in Scotland."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Under the Scotch Whisky Regulations 2009, where do the distilleries of Orkney and Skye stand?",
+      "options": ["Inside the Highland region", "Inside a protected Islands region", "Inside the Islay locality", "Outside every protected name"],
+      "a": 0,
+      "explain": "Inside the Highland region. The Islands are an informal grouping, not a protected name; Islay and Campbeltown are the protected localities, and Highland, Lowland and Speyside the regions."
+    },
+    {
+      "id": "q2",
+      "q": "Glengoyne's stills stand north of the Highland line and its warehouses south of it. Which region may its single malt name?",
+      "options": ["Lowland, where it matures", "Highland, where it is distilled", "Both, as it crosses the line", "Neither, as it crosses the line"],
+      "a": 1,
+      "explain": "Highland: a region's name follows where the whisky was distilled, and it may mature elsewhere in Scotland. Glengoyne's warehouses stand across the road, on the Lowland side."
+    },
+    {
+      "id": "q3",
+      "q": "Which act first drew a line between Highland and Lowland distillers, taxing each side differently?",
+      "options": ["The Excise Act of 1823", "The Spirits Act of 1860", "The Wash Act of 1784", "The Act of Union of 1707"],
+      "a": 2,
+      "explain": "The Wash Act of 1784 taxed distillers north of the line on their stills, at lower rates, and barred them from selling south of it. The Regulations still divide Highland from Lowland by a line."
+    }
+  ],
+  "sources": [
+    { "title": "legislation.gov.uk: The Scotch Whisky Regulations 2009, regulation 10", "url": "https://www.legislation.gov.uk/uksi/2009/2890/regulation/10" },
+    { "title": "Wikipedia: Scotch Whisky Regulations 2009", "url": "https://en.wikipedia.org/wiki/Scotch_Whisky_Regulations_2009" },
+    { "title": "Master of Malt: The Highlands whisky guide", "url": "https://www.masterofmalt.com/guides/whisky-guides/the-highlands/" },
+    { "title": "The Scotch Malt Whisky Society: Beyond boundaries", "url": "https://unfiltered.smws.com/04-2021/whisky-regions" },
+    { "title": "The Whiskey Wash: 5 things you didn't know about Scotland's whisky regions", "url": "https://thewhiskeywash.com/whiskey-articles/5-things-you-didnt-know-about-scotlands-whisky-regions/" },
+    { "title": "Clackmannanshire history: Whisky excise laws", "url": "https://clackmannanshire.scot/index.php/history/whisky-excise-laws" },
+    { "title": "Wikipedia: Glengoyne distillery", "url": "https://en.wikipedia.org/wiki/Glengoyne_distillery" },
+    { "title": "Whisky for Everyone: Glengoyne Distillery", "url": "https://whiskyforeveryone.com/glengoyne-distillery/" },
+    { "title": "Home of Malts: About Glenfarclas", "url": "https://homeofmalts.com/en/glenfarclas" },
+    { "title": "Milroy's of Soho: Clynelish", "url": "https://milroysofsoho.com/collections/clynelish" },
+    { "title": "Dramface: Clynelish 1992, 18 years old", "url": "https://www.dramface.com/all-reviews/2025/clynelish-1992-18yo-signatory-vintage-unchillfiltered" },
+    { "title": "Cask Atlas: Scotland, map the place, question the stereotype", "url": "" }
+  ]
+}

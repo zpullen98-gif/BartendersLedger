@@ -1,6 +1,6 @@
 {
   "edition": "2026-11-05",
-  "styles": 24,
+  "styles": 25,
   "planned": 34,
   "byFamily": {
     "american": {
@@ -9,7 +9,7 @@
     },
     "scotch": {
       "planned": 10,
-      "written": 6
+      "written": 7
     },
     "irish": {
       "planned": 4,
@@ -25,7 +25,7 @@
     }
   },
   "words": {
-    "total": 15845,
+    "total": 16540,
     "perEntry": {
       "bourbon": 664,
       "wheated-bourbon": 690,
@@ -47,6 +47,7 @@
       "blended-malt": 645,
       "blended-scotch": 649,
       "speyside": 651,
+      "highland": 695,
       "islay": 642,
       "irish-single-pot-still": 659,
       "irish-single-malt": 641,
@@ -74,16 +75,16 @@
     "Cask Styles · blended-malt/recall",
     "Cask Styles · blended-scotch/recall",
     "Cask Styles · speyside/recall",
+    "Cask Styles · highland/recall",
     "Cask Styles · islay/recall",
     "Cask Styles · irish-single-pot-still/recall",
     "Cask Styles · irish-single-malt/recall",
     "Cask Styles · canadian/recall"
   ],
-  "questions": 72,
-  "sources": 230,
+  "questions": 75,
+  "sources": 241,
   "shelf": 9,
   "missing": [
-    "highland",
     "islands",
     "lowland",
     "campbeltown",
