@@ -1,0 +1,77 @@
+{
+  "id": "blended-malt",
+  "name": "Blended malt Scotch",
+  "respell": "",
+  "family": "scotch",
+  "law": "The Scotch Whisky Regulations 2009 define blended malt Scotch whisky as a blend of two or more single malt Scotch whiskies distilled at more than one distillery: malt only, with no grain whisky. Each malt meets the single malt rule and every Scotch rule, matured in Scotland at least three years in oak casks of no more than 700 litres, and the blend is bottled at 40% ABV or more. The rules retired the older names vatted malt and pure malt, with labels given until 23 November 2011 to change.",
+  "made": "A blender chooses single malts from two or more distilleries, often from different regions, and marries them before bottling; nothing from a column still goes in. Some are built around one region, as Big Peat is around Islay malts; others set Speyside fruit beside Highland or Islay smoke. Some distilleries add a teaspoon of another distillery's malt to casks they sell, so that whisky can only leave as a blended malt.",
+  "taste": "It depends on the malts chosen: a Speyside-led blend brings honey, pear, malt and vanilla; one built on Islay malts brings peat smoke, iodine and salt; sherry casks add dried fruit and spice. A blender builds it for balance, so it often reads rounder and more even than one distillery's malt.",
+  "lines": {
+    "s10": "A blended malt is Scotch made only from single malts of two or more distilleries, with no grain whisky.",
+    "s20": "Blended malt Scotch marries single malts from more than one distillery: all malted barley from pot stills, nothing from a column still. Expect malt, honey and orchard fruit, or smoke where Islay malts go in, built for balance.",
+    "s45": "This is a blended malt Scotch whisky, once called a vatted malt. Under the Scotch Whisky Regulations it is a blend of single malts from two or more distilleries, so every drop is malted barley distilled in pot stills, with no grain whisky, aged at least three years in oak in Scotland. A blender chooses the malts, often across regions, for balance. Expect malt, honey and orchard fruit with vanilla, or smoke and salt where Islay malts go in. We pour it neat with water beside it, or stirred in a Rob Roy. Since 23 November 2011 the old name, vatted malt, may no longer go on a label.",
+    "sale": "A blended malt is all malt from several distilleries, built by a blender for balance. Taste it neat with a drop of water, or have it stirred in a Rob Roy."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, so each malt in the blend can show.",
+    "water": "A few drops of still water open honey, fruit and malt, and calm any smoke.",
+    "rocks": "One large cube suits a rounder blended malt; offer the water first.",
+    "highball": "With chilled soda over ice in a tall glass, with a lemon peel.",
+    "glass": "A Glencairn or nosing glass neat; a rocks glass for the cube; a coupe for the Rob Roy.",
+    "classic": "A Rob Roy or a Bobby Burns, stirred; a Whiskey Highball with soda."
+  },
+  "guest": [
+    { "q": "So is a blended malt a blend?", "a": "Of malts only. It marries single malts from several distilleries but holds no grain whisky, so it is all malt. A blended Scotch adds grain whisky." },
+    { "q": "What happened to vatted malt?", "a": "Same whisky, new name. The Scotch Whisky Regulations 2009 retired vatted malt and pure malt, and labels had until 23 November 2011 to say blended malt instead." },
+    { "q": "Why don't some blended malts name the distillery?", "a": "Some distilleries add a teaspoon of another malt to casks they sell, so the whisky cannot go out as a single malt under their name. The label then says blended malt." }
+  ],
+  "compare": "Against a blended Scotch: both marry whiskies from more than one distillery, but a blended malt holds single malts only, while a blended Scotch adds single grain whisky from column stills. The blended malt is fuller and maltier; the grain in a blended Scotch makes it lighter and softer.",
+  "benchmarks": ["Monkey Shoulder", "Compass Box", "Big Peat", "Johnnie Walker Green Label"],
+  "shelf": [],
+  "chapters": ["blending", "scotch"],
+  "canon": ["rob-roy", "bobby-burns", "whiskey-highball"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is a blended malt Scotch under the 2009 regulations, and which older names did it replace?",
+      "answer": "A blend of two or more single malt Scotch whiskies from more than one distillery: all malt, no grain whisky, each malt meeting the Scotch rules. It replaced vatted malt and pure malt, which labels could carry until 23 November 2011."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "A bottler marries single malts from an Islay and a Speyside distillery, with no grain whisky. Which category is it?",
+      "options": ["Single malt Scotch", "Blended Scotch", "Blended malt Scotch", "Single grain Scotch"],
+      "a": 2,
+      "explain": "Blended malt Scotch: single malts from more than one distillery, no grain. A single malt comes from one distillery; a blended Scotch needs grain whisky as well as malt."
+    },
+    {
+      "id": "q2",
+      "q": "Which older label term did blended malt replace, unusable on labels from 23 November 2011?",
+      "options": ["Vatted malt", "Straight malt", "Highland malt", "Double malt"],
+      "a": 0,
+      "explain": "Vatted malt, with pure malt, was retired by the Scotch Whisky Regulations 2009; labels had until 23 November 2011 to change to blended malt."
+    },
+    {
+      "id": "q3",
+      "q": "A distillery adds a teaspoon of another distillery's malt to a cask it sells. What may the whisky be called?",
+      "options": ["Single malt Scotch", "Blended malt Scotch", "Single cask Scotch", "Blended Scotch"],
+      "a": 1,
+      "explain": "Blended malt: malt from more than one distillery. The teaspoon means a cask a distillery sells cannot be bottled as a single malt under its name."
+    }
+  ],
+  "sources": [
+    { "title": "legislation.gov.uk: The Scotch Whisky Regulations 2009, regulation 3", "url": "https://www.legislation.gov.uk/uksi/2009/2890/regulation/3" },
+    { "title": "Wikipedia: Scotch Whisky Regulations 2009", "url": "https://en.wikipedia.org/wiki/Scotch_Whisky_Regulations_2009" },
+    { "title": "Osborne Clarke: Scotch whisky gets special protection", "url": "https://marketinglaw.osborneclarke.com/retailing/scotch-whisky-gets-special-protection/" },
+    { "title": "The Whisky Exchange blog: the end of vatted malt", "url": "https://blog.thewhiskyexchange.com/?p=3446" },
+    { "title": "Caskstrength: Vats all, folks", "url": "https://caskstrength.blogspot.com/2011/11/vats-all-folks.html" },
+    { "title": "The Whisky Shop: What is teaspooned whisky?", "url": "https://www.whiskyshop.com/blog/what-is-teaspooned-whisky" },
+    { "title": "The Scotch Malt Whisky Society: Just a dash", "url": "https://smws.com/unfiltered/just-a-dash" },
+    { "title": "Master of Malt: What is a teaspooned whisky?", "url": "https://www.masterofmalt.com/blog/post/what-is-a-teaspooned-whisky/" },
+    { "title": "Wikipedia: Douglas Laing and Co", "url": "https://en.wikipedia.org/wiki/Douglas_Laing_%26_Co" },
+    { "title": "Distiller: Blended malt whisky", "url": "https://blog.distiller.com/blended-malt-whisky/" },
+    { "title": "Cask Atlas: Blending and the language of the label", "url": "" },
+    { "title": "Cask Atlas: Scotch, grain, still and cask", "url": "" }
+  ]
+}

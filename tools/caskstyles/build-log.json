@@ -1,6 +1,6 @@
 {
   "edition": "2026-11-05",
-  "styles": 17,
+  "styles": 18,
   "planned": 34,
   "byFamily": {
     "american": {
@@ -9,7 +9,7 @@
     },
     "scotch": {
       "planned": 10,
-      "written": 3
+      "written": 4
     },
     "irish": {
       "planned": 4,
@@ -25,7 +25,7 @@
     }
   },
   "words": {
-    "total": 11277,
+    "total": 11922,
     "perEntry": {
       "bourbon": 664,
       "wheated-bourbon": 690,
@@ -42,6 +42,7 @@
       "corn-whiskey": 693,
       "scotch-single-malt": 694,
       "single-grain-scotch": 641,
+      "blended-malt": 645,
       "islay": 642,
       "irish-single-pot-still": 659
     }
@@ -62,16 +63,16 @@
     "Cask Styles · corn-whiskey/recall",
     "Cask Styles · scotch-single-malt/recall",
     "Cask Styles · single-grain-scotch/recall",
+    "Cask Styles · blended-malt/recall",
     "Cask Styles · islay/recall",
     "Cask Styles · irish-single-pot-still/recall"
   ],
-  "questions": 51,
-  "sources": 166,
+  "questions": 54,
+  "sources": 176,
   "shelf": 9,
   "missing": [
     "wheat-whiskey",
     "blended-american",
-    "blended-malt",
     "blended-scotch",
     "speyside",
     "highland",
