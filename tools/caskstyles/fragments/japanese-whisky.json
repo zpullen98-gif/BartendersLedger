@@ -7,10 +7,10 @@
   "made": "Malted barley, with other cereals for grain whisky, is mashed, fermented and distilled in Japan: copper pot stills for malt, column stills for grain. The spirit ages at least three years in wooden casks: ex-bourbon and sherry casks, new oak, wine casks and, in some houses, Japanese Mizunara oak. Japanese companies seldom trade spirit with one another, so each makes many styles itself, varying stills, fermentation and casks, and blends from its own distilleries.",
   "taste": "No single profile. Often clean and precise: orchard fruit, honey, vanilla and malt in the single malts, light, sweet grain in the blends, dried fruit where sherry casks lead. Some malts are peated and smoky, and whisky aged in Mizunara can show sandalwood, incense and coconut. The finish is usually clean and of medium length.",
   "lines": {
-    "s10": "Japanese whisky is whisky distilled, aged at least three years and bottled in Japan: clean, precise single malts and blends.",
+    "s10": "Japanese whisky is whisky distilled, aged at least three years and bottled in Japan: single malts and blends, often clean and precise.",
     "s20": "Japanese whisky follows its makers' association standard: malted grain and Japanese water, distilled in Japan, aged at least three years in wood there and bottled there. Expect a clean, precise glass: orchard fruit, honey and vanilla, sometimes smoke or Japanese oak spice.",
-    "s45": "This is a Japanese whisky. Its makers' association set a standard in 2021, an association rule rather than a law: malted grain and Japanese water, distilled in Japan, aged at least three years in wooden casks there and bottled in Japan; since 2025 a JW logo marks bottles that meet it. The houses learnt from Scotland, pot stills for malt and column stills for grain, and each makes many styles itself. Expect a clean, precise glass: orchard fruit, honey, vanilla, sometimes smoke or a sandalwood note from Japanese oak. We pour it neat, with water, or long in a highball. Shinjiro Torii founded Yamazaki in 1923.",
-    "sale": "Japanese whisky took Scottish methods and made them its own: clean, fruity and precise. Try it long in a Whiskey Highball, or neat with a few drops of water."
+    "s45": "This is a Japanese whisky. Its makers' association set a standard in 2021, an association rule rather than a law: malted grain and Japanese water, distilled in Japan, aged at least three years in wooden casks there and bottled in Japan; since 2025 a JW logo may mark bottles that meet it. The houses learnt from Scotland, pot stills for malt and column stills for grain, and each makes many styles itself. Expect a clean, precise glass: orchard fruit, honey, vanilla, sometimes smoke or a sandalwood note from Japanese oak. We pour it neat, with water, or long in a highball. Shinjiro Torii founded Yamazaki in 1923.",
+    "sale": "Japanese whisky took Scottish methods and made them its own, often clean, fruity and precise. Try it long in a Whiskey Highball, or neat with a few drops of water."
   },
   "serve": {
     "neat": "Neat at room temperature in a small glass, so the fruit and the cask both show.",
@@ -22,7 +22,7 @@
   },
   "guest": [
     { "q": "Is Japanese whisky just like Scotch?", "a": "It grew from Scottish methods: Masataka Taketsuru studied in Glasgow and trained at Scottish distilleries before Yamazaki was built. But each Japanese house makes many styles itself, and the standard asks for wooden casks, Japanese oak included." },
-    { "q": "Is every Japanese whisky made in Japan?", "a": "Not always. A Japanese brand can bottle whisky distilled elsewhere. The association's standard, binding its members, requires distilling, three years' ageing and bottling in Japan, and its JW logo marks bottles that meet it." },
+    { "q": "Is every Japanese whisky made in Japan?", "a": "Not always. A Japanese brand can bottle whisky distilled elsewhere. The association's standard, binding its members, requires distilling, three years' ageing and bottling in Japan, and its JW logo may mark bottles that meet it." },
     { "q": "Does it have to be Japanese barley?", "a": "No. The standard asks for malted grain and for water drawn in Japan; where the grain was grown is not part of the rule." }
   ],
   "compare": "Against a single malt Scotch: Scotch is defined in law, and a single malt is all malted barley from one distillery's pot stills, aged in oak in Scotland. Japanese whisky is an association standard covering malts, grain whisky and blends, aged in wooden casks with water drawn in Japan. In the glass, the house tells you more than the country.",
@@ -41,8 +41,8 @@
     {
       "id": "q1",
       "q": "What kind of rule is the 2021 Japanese whisky standard?",
-      "options": ["A national statute passed by the Diet", "An association standard binding its members", "A geographical indication registered in law", "A trade agreement with the European Union"],
-      "a": 1,
+      "options": ["A national statute passed by the Diet", "A trade agreement with the European Union", "A geographical indication registered in law", "An association standard binding its members"],
+      "a": 3,
       "explain": "An association standard: the Japan Spirits & Liqueurs Makers Association's, binding its members. A geographical indication was put out for comment in October 2026 and is still a proposal."
     },
     {

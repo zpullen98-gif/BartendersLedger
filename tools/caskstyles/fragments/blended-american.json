@@ -20,11 +20,11 @@
     "classic": "A Whiskey Ginger or a Presbyterian; a Whiskey Highball with soda alone."
   },
   "guest": [
-    { "q": "What is it blended with?", "a": "Straight whiskey, at least 20 per cent by proof gallons, for flavour; the rest may be younger whisky or neutral grain spirit. Seagram's 7 Crown and Kessler are blended American whiskeys." },
+    { "q": "What is it blended with?", "a": "Straight whiskey, at least 20 per cent by proof gallons, for flavour; the rest younger whisky or neutral grain spirit. Seagram's 7 Crown and Kessler are blended American whiskeys; High West bottles a blend of straight bourbons." },
     { "q": "Is anything added?", "a": "Neutral spirits may be, and up to 2.5 per cent of harmless colouring, flavouring or blending materials. A straight whiskey may hold none of these." },
     { "q": "What is light whiskey?", "a": "Whiskey distilled above 160 proof, so lighter in grain flavour, and rested in used or uncharred oak. The rule was written in 1968 to answer lighter imported whiskies; it never caught on widely, and much went into blends." }
   ],
-  "compare": "A straight whiskey is one type, aged at least two years in its oak with nothing added, and straights of one type mix only from one state. Straights from different states make a blend of straight whiskies; add whisky or neutral spirits and it becomes a blended whiskey, lighter and softer in the glass.",
+  "compare": "A straight whiskey is one type, aged at least two years in its oak with nothing added, and stays straight mixed only with straights of its type from one state. Across states it becomes a blend of straight whiskies; at least 20 per cent straight with whisky or neutral spirits makes a blended whiskey, usually lighter and softer.",
   "benchmarks": ["Seagram's 7 Crown", "Kessler", "High West"],
   "shelf": [],
   "chapters": ["american-labels", "blending"],

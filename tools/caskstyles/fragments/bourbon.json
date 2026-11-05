@@ -43,7 +43,7 @@
       "q": "What share of corn must a bourbon mash hold, at the least?",
       "options": ["51 per cent", "60 per cent", "75 per cent", "80 per cent"],
       "a": 0,
-      "explain": "At least 51 per cent corn, under 27 CFR 5.143. Eighty per cent is the corn whiskey line, and corn whiskey goes into used or uncharred oak, never new charred barrels."
+      "explain": "At least 51 per cent corn, under 27 CFR 5.143. Eighty per cent is the corn whiskey line, and any oak corn whiskey rests in is used or uncharred, never new charred."
     },
     {
       "id": "q2",

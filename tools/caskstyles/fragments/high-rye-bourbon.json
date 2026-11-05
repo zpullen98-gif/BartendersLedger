@@ -25,7 +25,7 @@
     { "q": "How much rye makes it high rye?", "a": "There is no legal line. Most bourbons carry about 8 to 15 per cent rye, and the trade often calls about 20 to 35 per cent high rye. Four Roses publishes a recipe of 35 per cent." },
     { "q": "Will it taste spicy?", "a": "Usually spicier than most bourbon: pepper, cinnamon, clove and a little mint over the corn's caramel, with a drier finish. Barrel, proof and age still shape it." }
   ],
-  "compare": "Against a wheated bourbon the rule is the same and only the second grain changes: a large share of rye where the wheater uses wheat. The high-rye bourbon leans to pepper, cinnamon, mint and a drier finish, the wheater to honey, fresh bread and a rounder palate. Barrel and age can narrow the gap.",
+  "compare": "Against a wheated bourbon the rule is the same and only the second grain changes: a large share of rye where the wheater uses wheat. The high-rye bourbon usually leans to pepper, cinnamon, mint and a drier finish, the wheater to honey, fresh bread and a rounder palate. Barrel and age can narrow the gap.",
   "benchmarks": ["Four Roses", "Old Grand-Dad", "Basil Hayden", "Rabbit Hole"],
   "shelf": ["rabbit-hole-heigold"],
   "chapters": ["bourbon"],
@@ -54,9 +54,9 @@
     },
     {
       "id": "q3",
-      "q": "In which year was Old Grand-Dad, a high-rye bourbon brand, first made in Kentucky?",
-      "options": ["1897", "1882", "1935", "1964"],
-      "a": 1,
+      "q": "In which year was the Old Grand-Dad brand, a high-rye bourbon, created?",
+      "options": ["1897", "1964", "1935", "1882"],
+      "a": 3,
       "explain": "1882, when the founder named it for his grandfather, Basil Hayden. 1897 is the year of the Bottled-in-Bond Act, and 1935 the year Stitzel-Weller opened."
     }
   ],

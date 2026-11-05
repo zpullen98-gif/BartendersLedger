@@ -5,12 +5,12 @@
   "family": "japanese",
   "law": "No legal category of its own. Blended means malt whiskies married with grain whisky, as in Scotland. Sold as Japanese whisky under the Japan Spirits & Liqueurs Makers Association standard, an association standard binding its members, every whisky in the blend is mashed, fermented and distilled in Japan with water drawn there and aged at least three years in wooden casks of no more than 700 litres in Japan, and the blend is bottled there at 40% ABV or more.",
   "made": "Malt whiskies from copper pot stills are married with grain whisky from column stills: Suntory's grain comes from Chita, Nikka's from Coffey stills at Miyagikyo. Because Japanese companies seldom trade spirit, a blender works from the company's own malts and grains, aged in bourbon, sherry, new oak and some Mizunara casks, then marries, reduces and bottles them. Hibiki, first released in 1989, joins Yamazaki and Hakushu malts with Chita grain.",
-  "taste": "Lighter and rounder than the malts: soft grain sweetness, vanilla, honey and orchard fruit, the malts adding citrus, flowers or a little smoke and the casks dried fruit or spice. Older blends grow richer and longer. Under soda the grain's sweetness and the malt's fruit stay clear, which is why the style carries a highball.",
+  "taste": "Usually lighter and rounder than the malts: soft grain sweetness, vanilla, honey and orchard fruit, the malts adding citrus, flowers or a little smoke and the casks dried fruit or spice. Older blends grow richer and longer. Under soda the grain's sweetness and the malt's fruit stay clear, which is why the style carries a highball.",
   "lines": {
-    "s10": "Japanese blended whisky is malt and grain whisky married by one Japanese house: light, round and the usual base of the highball.",
+    "s10": "Japanese blended whisky is malt and grain whisky married by one Japanese house: often light and round, and the usual base of the highball.",
     "s20": "Japanese blended whisky marries pot still malts with lighter column still grain, usually from one company's own distilleries. Expect soft grain sweetness, honey, vanilla and orchard fruit; built cold with chilled soda, it makes the highball Japan drinks with food.",
     "s45": "This is a Japanese blended whisky: malt whiskies from pot stills married with lighter grain whisky from column stills. No law defines the term; to be Japanese whisky under the makers' association standard, every part is distilled in Japan and aged at least three years in wood there. Japanese companies seldom trade spirit, so a blender works from the house's own malts and grains. Expect soft grain sweetness, honey, vanilla and orchard fruit, a little spice from the cask. We pour it in a highball, built cold over plenty of ice with chilled soda, or neat. Kakubin, first released in 1937, carried Japan's highball revival from 2008.",
-    "sale": "Japan made the highball its whisky for the table: crisp, cold and bright. Have a Japanese blend built over ice with chilled soda, or long with ginger ale in a Whiskey Ginger."
+    "sale": "Japan made the whisky highball its drink for the table: crisp, cold and bright. Have a Japanese blend built over ice with chilled soda, or long with ginger ale in a Whiskey Ginger."
   },
   "serve": {
     "neat": "Neat at room temperature for an older blend, so the honey and the cask show.",
@@ -25,8 +25,8 @@
     { "q": "Is a blend a lesser whisky than a single malt?", "a": "No, a different one. A blend marries malts with lighter grain whisky for balance; Hibiki, first released in 1989, joins Yamazaki and Hakushu malts with grain whisky from Chita." },
     { "q": "How do you make a proper Japanese highball?", "a": "Everything cold: a chilled glass full of ice, the whisky stirred to chill it, then chilled soda poured gently down the side and one lift of the spoon, so the bubbles last." }
   ],
-  "compare": "Against a Japanese single malt: the single malt is malted barley alone from one distillery's pot stills, while the blend adds lighter grain whisky from column stills and often malts from several of one company's distilleries. The malt shows its house; the blend is rounder and lighter, and keeps its shape under soda.",
-  "benchmarks": ["Hibiki", "Kakubin", "Toki", "Nikka"],
+  "compare": "Against a Japanese single malt: the single malt is malted barley alone from one distillery's pot stills, while the blend adds lighter grain whisky from column stills and often malts from several of one company's distilleries. The malt shows its house; the blend usually reads rounder and lighter, and keeps its shape under soda.",
+  "benchmarks": ["Hibiki", "Kakubin", "Toki"],
   "shelf": [],
   "chapters": ["japanese"],
   "canon": ["whiskey-highball", "whiskey-ginger"],
@@ -48,8 +48,8 @@
     {
       "id": "q2",
       "q": "Which Suntory whisky, first released in 1937, carried Japan's highball revival from 2008?",
-      "options": ["Hibiki", "Kakubin", "Toki", "Shirofuda"],
-      "a": 1,
+      "options": ["Hibiki", "Shirofuda", "Toki", "Kakubin"],
+      "a": 3,
       "explain": "Kakubin, the square bottle of 1937. Suntory's highball campaign from 2008 built on it and lifted Japanese whisky sales."
     },
     {

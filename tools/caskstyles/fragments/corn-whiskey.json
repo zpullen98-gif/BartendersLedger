@@ -9,7 +9,7 @@
   "lines": {
     "s10": "Corn whiskey is American whiskey from a mash of at least 80 per cent corn, sold young or aged in used or uncharred oak.",
     "s20": "Corn whiskey starts with at least 80 per cent corn under the federal rule and, if aged, goes into used or uncharred oak, never charred new barrels. Expect sweet corn, cornbread and butterscotch, pale and gentle.",
-    "s45": "This is a corn whiskey, an American type under the federal rule: a mash of at least 80 per cent corn, distilled to no more than 160 proof. It need not be aged at all; if it is, it rests in used or uncharred new oak, never charred new barrels, and that is the line between it and bourbon. Expect sweet corn, cornbread and buttered popcorn when young, butterscotch and soft oak when aged, pale in the glass. We pour it on the rocks, long with ginger ale, or in a Hot Toddy. Southern moonshine was largely unaged corn whiskey, and many legal jars still are.",
+    "s45": "This is a corn whiskey, an American type under the federal rule: a mash of at least 80 per cent corn, distilled to no more than 160 proof. It need not be aged at all; if it is, it rests in used or uncharred new oak, never charred new barrels, and that is the line between it and bourbon. Expect sweet corn, cornbread and buttered popcorn when young, butterscotch and soft oak when aged, pale in the glass. We pour it on the rocks, long with ginger ale, or in a Hot Toddy. Moonshine was often unaged corn whiskey, and some legal jars still are.",
     "sale": "Corn whiskey is at least 80 per cent corn and light on the oak, so the sweet grain leads. Try it long with ginger ale as a Whiskey Ginger, or warm in a Hot Toddy."
   },
   "serve": {
@@ -25,7 +25,7 @@
     { "q": "Isn't bourbon made from corn too?", "a": "Yes, at least 51 per cent, but bourbon must age in charred new oak. Corn whiskey needs at least 80 per cent corn and may never touch charred new oak, so a high-corn bourbon stays bourbon." },
     { "q": "Why is it so pale?", "a": "Used barrels and uncharred oak give far less colour than bourbon's charred new oak, and much corn whiskey is bottled young or unaged. The flavour leans to grain rather than vanilla and caramel." }
   ],
-  "compare": "Bourbon, under the same rule, needs at least 51 per cent corn and must age in charred new oak. Corn whiskey needs at least 80 per cent corn and may rest only in used or uncharred oak, if at all, so it is paler and grainier, with less vanilla and caramel.",
+  "compare": "Bourbon, under the same rule, needs at least 51 per cent corn and must age in charred new oak. Corn whiskey needs at least 80 per cent corn and may rest only in used or uncharred oak, if at all, so it usually reads paler and grainier, with less vanilla and caramel.",
   "benchmarks": ["Mellow Corn", "Georgia Moon", "Balcones"],
   "shelf": [],
   "chapters": ["american-labels", "bourbon"],

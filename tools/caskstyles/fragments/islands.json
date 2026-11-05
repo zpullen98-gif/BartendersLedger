@@ -41,8 +41,8 @@
     {
       "id": "q1",
       "q": "Under the Scotch Whisky Regulations 2009, which protected name covers a single malt distilled on Skye?",
-      "options": ["Islands", "Highland", "Islay", "Lowland"],
-      "a": 1,
+      "options": ["Islands", "Lowland", "Islay", "Highland"],
+      "a": 3,
       "explain": "Highland. The Islands are an informal grouping, not a protected name, and Islay is a locality of its own; Skye's distilleries sit inside the Highland region."
     },
     {

@@ -25,7 +25,7 @@
     { "q": "Does single mean one barrel?", "a": "No. Single means one distillery, as it does in Scotch. A single malt may marry many barrels; a single barrel bottling says so on the label." },
     { "q": "How old is it?", "a": "The standard sets no minimum age. Straight American single malt has at least two years in oak, and any whisky under four years old must state its age on the label." }
   ],
-  "compare": "Single malt Scotch, under the Scotch Whisky Regulations 2009, is malted barley from pot stills at one distillery in Scotland, matured there at least three years in oak. American single malt shares the grain and the one distillery but asks no pot still and no minimum age, and may use new charred oak, so its oak often speaks louder.",
+  "compare": "Single malt Scotch, under the Scotch Whisky Regulations 2009, is malted barley from pot stills at one distillery in Scotland, matured there at least three years in oak. American single malt shares the grain and the one distillery but asks no pot still and no minimum age, and new charred oak is common, so its oak often speaks louder.",
   "benchmarks": ["Westland", "Stranahan's", "Balcones"],
   "shelf": [],
   "chapters": ["american-single-malt"],

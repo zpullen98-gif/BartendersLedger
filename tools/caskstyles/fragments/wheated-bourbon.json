@@ -24,7 +24,7 @@
     { "q": "Is it the same as wheat whiskey?", "a": "No. Wheated bourbon is at least 51 per cent corn with wheat as the second grain; wheat whiskey is at least 51 per cent wheat, a separate type under the same federal rule." },
     { "q": "Why use wheat instead of rye?", "a": "It is the distiller's choice of character: rye brings spice and a drier edge, wheat a gentler, bready sweetness. Stitzel-Weller built its bourbons on wheat from 1935, and Maker's Mark chose soft red winter wheat." }
   ],
-  "compare": "Against a high-rye bourbon the rule is the same and only the second grain changes: wheat in place of a large share of rye. The high-rye bourbon leans to pepper, dill and a drier finish, the wheater to honey, bread and a rounder palate. Barrel and age can narrow the gap.",
+  "compare": "Against a high-rye bourbon the rule is the same and only the second grain changes: wheat in place of a large share of rye. The high-rye bourbon usually leans to pepper, dill and a drier finish, the wheater to honey, bread and a rounder palate. Barrel and age can narrow the gap.",
   "benchmarks": ["Maker's Mark", "W. L. Weller", "Old Fitzgerald", "Larceny", "Stitzel-Weller"],
   "shelf": ["weller-special-reserve", "weller-12"],
   "chapters": ["bourbon"],

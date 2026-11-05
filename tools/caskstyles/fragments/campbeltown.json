@@ -10,7 +10,7 @@
     "s10": "Campbeltown is Scotch whisky distilled in the town of Campbeltown on Kintyre: often oily and a little salty, with light smoke.",
     "s20": "Campbeltown is one of the two protected Scotch localities, with Islay: the name means distilled in the town's ward on the Kintyre peninsula. Its malts are often oily and a little salty, with light smoke over fruit and vanilla.",
     "s45": "This is a Campbeltown single malt, distilled in the town of Campbeltown on the Kintyre peninsula, one of two localities the Scotch Whisky Regulations protect by name, with Islay. It is malted barley distilled in copper pot stills, two, two and a half or three times as the house and range decide, and aged at least three years in oak. The style is often oily and a little salty, with light smoke over fruit and vanilla, though the law promises none of it. We pour it neat with water beside it. The town once held more than twenty distilleries; by the 1930s only Springbank and Glen Scotia were left.",
-    "sale": "Campbeltown is a small whisky town that once held more than twenty distilleries: oily, salty and gently smoky. Taste it neat with a few drops of water, or stirred into a Rob Roy."
+    "sale": "Campbeltown is a small whisky town that once held more than twenty distilleries, its malts often oily, salty and gently smoky. Taste it neat with a few drops of water, or stirred into a Rob Roy."
   },
   "serve": {
     "neat": "Neat at room temperature, so the oily texture, the salt and the fruit all show.",
@@ -26,7 +26,7 @@
     { "q": "Is it smoky like Islay?", "a": "Sometimes lightly, seldom as much. Most Campbeltown malt shows a little smoke and salt over fruit; Longrow is heavily peated and Hazelburn unpeated. The locality promises no peat, just as Islay's name does not." }
   ],
   "compare": "Against Islay: both are protected localities in the Scotch Whisky Regulations, the only two, and each name means distilled there. Islay is an island where most houses peat their malt; Campbeltown is a town whose malts are often oily and salty with lighter smoke, Longrow apart.",
-  "benchmarks": ["Springbank", "Glen Scotia", "Glengyle", "Kilkerran", "Longrow", "Hazelburn"],
+  "benchmarks": ["Springbank", "Glen Scotia", "Kilkerran", "Longrow", "Hazelburn"],
   "shelf": [],
   "chapters": ["scotch-regions"],
   "canon": ["rob-roy", "whiskey-highball", "hot-toddy"],
@@ -48,8 +48,8 @@
     {
       "id": "q2",
       "q": "Which malt made at Springbank is unpeated and distilled three times?",
-      "options": ["Longrow", "Kilkerran", "Hazelburn", "Glen Scotia"],
-      "a": 2,
+      "options": ["Longrow", "Kilkerran", "Glen Scotia", "Hazelburn"],
+      "a": 3,
       "explain": "Hazelburn, first distilled in 1997. Longrow is the heavily peated malt, distilled twice, and Springbank itself two and a half times; Kilkerran comes from Glengyle, and Glen Scotia is a distillery of its own."
     },
     {

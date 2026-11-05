@@ -10,7 +10,7 @@
     "s10": "Islay is Scotch whisky distilled on the island of Islay, off Scotland's west coast: mostly peated, so smoke, iodine and sea salt.",
     "s20": "Islay whisky is distilled on Islay, one of the two places the Scotch Whisky Regulations protect by name as a locality. Most of its distilleries dry their barley over peat, so expect smoke, iodine, sea salt and lemon; a few make unpeated malt.",
     "s45": "This is an Islay single malt, distilled on the island of Islay in the Inner Hebrides, one of two localities the Scotch Whisky Regulations protect by name. It is malted barley, usually distilled twice in copper pot stills and aged at least three years in oak. Most of the island's distilleries dry their malt over peat smoke, so expect smoke, iodine, sea salt and lemon over vanilla from the cask, and a long, drying finish; a few make unpeated malt. We pour it neat with a jug of water on the side, and a little floats on a Penicillin. Bowmore, on Loch Indaal, dates from 1779.",
-    "sale": "Islay is the smoke and the sea in a glass: peat, iodine and salt over lemon and vanilla. Taste it neat with a few drops of water, or have it floated on a Penicillin."
+    "sale": "Most Islay malt is the smoke and the sea in a glass: peat, iodine and salt over lemon and vanilla. Taste it neat with a few drops of water, or have it floated on a Penicillin."
   },
   "serve": {
     "neat": "Neat at room temperature, so the smoke and the fruit under it both show.",
@@ -41,8 +41,8 @@
     {
       "id": "q1",
       "q": "Which other place shares Islay's standing as a protected locality under the Scotch Whisky Regulations 2009?",
-      "options": ["Speyside", "Campbeltown", "Orkney", "Skye"],
-      "a": 1,
+      "options": ["Speyside", "Skye", "Orkney", "Campbeltown"],
+      "a": 3,
       "explain": "Campbeltown. Highland, Lowland and Speyside are protected regions; Orkney and Skye belong to the informal Islands group, which is Highland in law."
     },
     {

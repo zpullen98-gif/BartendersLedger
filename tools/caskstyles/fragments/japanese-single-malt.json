@@ -7,10 +7,10 @@
   "made": "Malted barley, unpeated or peated, is mashed and fermented, then distilled in copper pot stills, a wash still and a spirit still, at one distillery. Because Japanese companies seldom trade spirit, one distillery may run stills of several shapes, more than one fermentation and many casks: ex-bourbon barrels, sherry butts, new oak and some Mizunara. Yoichi still heats its pot stills by coal fire. The malt ages at least three years in Japan.",
   "taste": "Usually clean and well defined, with a wide range between houses: orchard fruit, honey and vanilla from bourbon casks; dried fruit and spice where sherry casks lead; fresh, green and herbal in a forest malt such as Hakushu; peat smoke and a heavier, bolder body in Yoichi. Mizunara casks can add sandalwood and incense.",
   "lines": {
-    "s10": "Japanese single malt is whisky from malted barley alone, made at one Japanese distillery: clean, defined and true to its house.",
+    "s10": "Japanese single malt is whisky from malted barley alone, made at one Japanese distillery: true to its house, often clean and defined.",
     "s20": "Japanese single malt is malted barley from one distillery, pot distilled and aged at least three years in wood in Japan. Expect orchard fruit, honey and vanilla, dried fruit from sherry casks, sometimes peat smoke or green, herbal notes.",
     "s45": "This is a Japanese single malt: malted barley alone, from one distillery in Japan. Single malt has no legal definition there; the term keeps its Scottish sense, and the makers' association standard asks for distilling, at least three years in wood and bottling in Japan. Because Japanese houses seldom trade spirit, one distillery runs stills of several shapes and many casks. Expect a clean, defined glass: orchard fruit, honey and vanilla, dried fruit from sherry casks, sometimes peat smoke. We pour it neat with a few drops of water, or long in a highball. Masataka Taketsuru founded Yoichi in 1934, and coal fire still heats its stills.",
-    "sale": "Japanese single malt is one distillery in a glass, clean and precise, each house its own. Taste it neat with a few drops of water, or long in a Whiskey Highball."
+    "sale": "Japanese single malt is one distillery in a glass, each house its own, often clean and precise. Taste it neat with a few drops of water, or long in a Whiskey Highball."
   },
   "serve": {
     "neat": "Neat at room temperature, so the house's fruit, cask and any smoke all show.",
@@ -18,14 +18,14 @@
     "rocks": "One large clear cube if asked; cold quiets a delicate malt, so offer it neat first.",
     "highball": "With chilled soda over plenty of ice in a cold tall glass, one gentle stir.",
     "glass": "A Glencairn or small tulip neat; a rocks glass for the cube; a chilled highball glass for soda.",
-    "classic": "A Whiskey Highball, where a single malt gives a fuller, more defined long drink than a blend."
+    "classic": "A Whiskey Highball, where a single malt usually gives a fuller, more defined long drink than a blend."
   },
   "guest": [
     { "q": "What makes it single?", "a": "One distillery. A single malt is malted barley alone from one distillery's stills, usually many casks and several years married together: single is the distillery, never the cask." },
     { "q": "Is Japanese single malt smoky?", "a": "Some is. Yoichi often shows peat smoke and weight, Hakushu is fresh and green, and Yamazaki leans to fruit and sherry casks. The malt, the stills and the casks decide, not the country." },
     { "q": "Why does one Japanese distillery make so many styles?", "a": "Japanese companies seldom trade spirit with one another, so a distillery runs stills of different shapes, more than one fermentation and many cask types to give its own blenders a range." }
   ],
-  "compare": "Against a Japanese blended whisky: a single malt is malted barley alone from one distillery's pot stills, while a blend marries malt whiskies with lighter grain whisky from column stills, often from several distilleries of one company. The malt is fuller and shows its house; the blend is lighter and rounder.",
+  "compare": "Against a Japanese blended whisky: a single malt is malted barley alone from one distillery's pot stills, while a blend marries malt whiskies with lighter grain whisky from column stills, often from several distilleries of one company. The malt is usually fuller and shows its house; the blend usually reads lighter and rounder.",
   "benchmarks": ["Yamazaki", "Hakushu", "Yoichi", "Miyagikyo", "Chichibu", "Mars Shinshu"],
   "shelf": [],
   "chapters": ["japanese"],
@@ -48,9 +48,9 @@
     {
       "id": "q2",
       "q": "Which Japanese distillery still heats its pot stills directly by coal fire?",
-      "options": ["Yamazaki", "Hakushu", "Yoichi", "Miyagikyo"],
-      "a": 2,
-      "explain": "Yoichi, founded by Masataka Taketsuru in 1934 on Hokkaido, has kept direct coal firing, a method he learnt in Scotland at Longmorn."
+      "options": ["Yamazaki", "Hakushu", "Miyagikyo", "Yoichi"],
+      "a": 3,
+      "explain": "Yoichi, founded by Masataka Taketsuru in 1934 on Hokkaido, has kept direct coal firing, a method he learnt in Scotland."
     },
     {
       "id": "q3",

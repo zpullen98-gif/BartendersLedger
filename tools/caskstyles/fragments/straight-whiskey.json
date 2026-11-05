@@ -5,12 +5,12 @@
   "family": "american",
   "law": "27 CFR 5.143, the United States standards of identity: straight bourbon, rye, wheat, malt or rye malt whisky meets the standard of its type and is stored at least two years in charred new oak, with no added colouring, flavouring or blending materials; straight corn whisky takes its two years in used or uncharred new oak. Straights of one type mixed together stay straight only when all were made in the same state. Under four years, the label states the age (27 CFR 5.74).",
   "made": "Straight is a matter of time and purity, not of recipe. The whiskey is made to its type, bourbon or rye at least 51 per cent of its grain, filled into new charred oak at no more than 62.5% ABV and left at least two years; only water goes in at bottling. A batch may marry many barrels, and many distilleries' straights of one type, so long as all were made in one state; across states the label reads a blend of straight whiskies.",
-  "taste": "Straight promises time and purity, not one flavour. A straight bourbon reads vanilla, caramel and baking spice over sweet corn; a straight rye, pepper, mint and rye bread. Two years in new oak gives colour and a first layer of vanilla; four years and more deepen it to toffee, leather and dried fruit, with a firmer, drying finish.",
+  "taste": "Straight promises time and purity, not one flavour. A straight bourbon reads vanilla, caramel and baking spice over sweet corn; a straight rye, pepper, mint and rye bread. Two years in new oak gives colour and a first layer of vanilla; four years and more usually deepen it to toffee, leather and dried fruit, with a firmer, drying finish.",
   "lines": {
-    "s10": "Straight whiskey is American whiskey aged at least two years in new charred oak with nothing added, as in straight bourbon or straight rye.",
-    "s20": "Straight whiskey is bourbon, rye or another American type rested at least two years in new charred oak, with no colouring or flavouring added; under four years, the label states its age. Expect fuller oak, vanilla and caramel.",
-    "s45": "This is a straight whiskey, here a straight bourbon. Straight is a federal term: the whiskey meets the rule for its type, then rests at least two years in new charred oak, with no colouring, flavouring or blending materials added, and a bottle under four years must state its age. Barrels of one type can be married only from one state. The years in new oak give vanilla, caramel and toffee over the grain, with baking spice and a drying finish. We pour it neat, with a few drops of water, or in a Manhattan. Bottled-in-bond, the law of 1897, asks more: four years and 100 proof.",
-    "sale": "Straight on an American label means at least two years in new charred oak and nothing added but water. Try a straight bourbon neat, or a straight rye in a Manhattan or a Sazerac."
+    "s10": "Straight whiskey is American whiskey aged at least two years in oak with nothing added, as in straight bourbon or straight rye.",
+    "s20": "Straight whiskey is bourbon, rye or another American type rested at least two years in oak, new charred oak for all but corn, with no colouring or flavouring added; under four years, the label states its age. Expect fuller oak, vanilla and caramel.",
+    "s45": "This is a straight whiskey, here a straight bourbon. Straight is a federal term: the whiskey meets the rule for its type, then rests at least two years in oak, new charred oak for all but corn, with nothing added but water; under four years the label states its age. It may marry many barrels of one type, all made in one state. The new oak gives vanilla, caramel and toffee over the grain, with baking spice and a drying finish. We pour it neat, with a few drops of water, or in a Manhattan. Bottled-in-bond, the law of 1897, sets a different test: one season, four years, 100 proof.",
+    "sale": "Straight on an American label means at least two years in oak, new charred for bourbon and rye, and nothing added but water. Try a straight bourbon neat, or a straight rye in a Manhattan or a Sazerac."
   },
   "serve": {
     "neat": "Neat at room temperature in a Glencairn, so the oak and the grain both show.",
@@ -21,11 +21,11 @@
     "classic": "An Old Fashioned or a Manhattan with straight bourbon or rye; a Sazerac with straight rye."
   },
   "guest": [
-    { "q": "Does straight mean it came from one barrel?", "a": "No. Straight is about age and purity: at least two years in new charred oak, nothing added. A straight whiskey may marry many barrels; single barrel is a separate claim on the label." },
+    { "q": "Does straight mean it came from one barrel?", "a": "No. Straight is about age and purity: at least two years in oak, nothing added but water. A straight whiskey may marry many barrels; single barrel is a separate claim on the label." },
     { "q": "How old is a straight bourbon?", "a": "At least two years in new charred oak. Under four years the label must state the age, so a straight bourbon with no age statement is at least four years old." },
     { "q": "Can a straight whiskey be a blend?", "a": "Yes, of straights of one type from one state, and it stays straight. Straights from different states make a blend of straight whiskies, and the label must say so." }
   ],
-  "compare": "Bottled-in-bond, 27 CFR 5.88, asks more than straight: one distilling season, one distiller at one distillery, at least four years in a bonded warehouse, exactly 100 proof and the distillery on the label. In the glass a bonded bottle is always 100 proof and four years or more; a straight can be younger, lighter or stronger.",
+  "compare": "Bottled-in-bond, 27 CFR 5.88, is a test of its own, not a stricter straight: one distilling season, one distiller at one distillery, at least four years in wood in a bonded warehouse, exactly 100 proof. A bonded bottle is always 100 proof and four years or more; a straight can be younger, lighter or stronger.",
   "benchmarks": ["Four Roses", "Buffalo Trace", "W. L. Weller", "Rabbit Hole", "Thomas H. Handy"],
   "shelf": ["ofc-2005"],
   "chapters": ["american-labels", "bourbon"],

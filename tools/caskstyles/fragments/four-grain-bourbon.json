@@ -24,7 +24,7 @@
     { "q": "Is four-grain a legal category?", "a": "No. It is bourbon under the federal rule, at least 51 per cent corn, new charred oak, nothing added. Four grain describes the recipe, and the producer chooses the words." },
     { "q": "Does it taste different from other bourbon?", "a": "Often rounder and more layered: the wheat's honey and bread, the rye's pepper, the malt's biscuit. Yeast, barrel, proof and age shape it as much as the grains do." }
   ],
-  "compare": "Against a high-rye bourbon the rule is the same and the grain bill differs. The high-rye bourbon puts a large share of rye beside the corn and leans to pepper and a dry finish; a four-grain bourbon spreads the small grains across rye, wheat and malt, or leaves the rye out, and usually reads softer and bready.",
+  "compare": "Against a high-rye bourbon the rule is the same and the grain bill differs. The high-rye bourbon puts a large share of rye beside the corn and usually leans to pepper and a dry finish; a four-grain bourbon spreads the small grains across rye, wheat and malt, or leaves the rye out, and usually reads softer and bready.",
   "benchmarks": ["Rabbit Hole", "Woodford Reserve", "Balcones"],
   "shelf": ["rabbit-hole-cavehill"],
   "chapters": ["bourbon"],

@@ -9,7 +9,7 @@
   "lines": {
     "s10": "Highland is Scotch whisky distilled north of the Highland line, a broad region: honey, heather, fruit and wax, usually little smoke.",
     "s20": "Highland is a protected Scotch region covering the north of Scotland and the island distilleries outside Islay, and the name means distilled there. It is too broad for one flavour: often honey, heather and fruit, sometimes wax, salt or a little smoke.",
-    "s45": "This is a Highland single malt, distilled north of the Highland line in a region the Scotch Whisky Regulations protect by name; it takes in the north of Scotland, Speyside within it, and the island distilleries outside Islay. It is malted barley, usually distilled twice in copper pot stills and aged at least three years in oak. The region is too broad for one profile: expect honey, heather and orchard fruit, orange and spice from sherry casks, wax and a little salt in some northern malts, and seldom much smoke. We pour it neat with water beside it. The line itself goes back to the Wash Act of 1784.",
+    "s45": "This is a Highland single malt, distilled north of the Highland line in a region the Scotch Whisky Regulations protect by name; it takes in the north of Scotland, Speyside within it, and the island distilleries outside Islay. It is malted barley, usually distilled twice in copper pot stills and aged at least three years in oak. The region is too broad for one profile: expect honey, heather and orchard fruit, orange and spice from sherry casks, wax and a little salt in some northern malts, and seldom much smoke. We pour it neat with water beside it. A Highland line was first drawn by the Wash Act of 1784.",
     "sale": "Highland malt runs from honey and heather to wax, fruit and a touch of smoke, so the bottle matters more than the map. Taste it neat with a few drops of water, or stirred into a Rob Roy."
   },
   "serve": {
@@ -55,8 +55,8 @@
     {
       "id": "q3",
       "q": "Which act first drew a line between Highland and Lowland distillers, taxing each side differently?",
-      "options": ["The Excise Act of 1823", "The Spirits Act of 1860", "The Wash Act of 1784", "The Act of Union of 1707"],
-      "a": 2,
+      "options": ["The Excise Act of 1823", "The Spirits Act of 1860", "The Act of Union of 1707", "The Wash Act of 1784"],
+      "a": 3,
       "explain": "The Wash Act of 1784 taxed distillers north of the line on their stills, at lower rates, and barred them from selling south of it. The Regulations still divide Highland from Lowland by a line."
     }
   ],

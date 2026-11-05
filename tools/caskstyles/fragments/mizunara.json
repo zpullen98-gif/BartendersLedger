@@ -23,7 +23,7 @@
     { "q": "Is a Mizunara whisky aged only in Japanese oak?", "a": "Usually not. The wood leaks and is hard to work, so most whiskies spend part of their time in it, as a finish or one part of a vatting. The label promises some time in Mizunara, no more." },
     { "q": "Is it only used in Japan?", "a": "No. Scotch may age in any oak, so Scottish houses use it too: Chivas Regal finishes part of a blend in Mizunara, and Bowmore released an Islay malt finished in it in 2015." }
   ],
-  "compare": "Against a Japanese single malt: single malt is a category, malted barley from one distillery, with a rule behind it; Mizunara is only a cask, and it may hold a single malt, a blend or a Scotch. In the glass, the wood adds sandalwood, incense and coconut to whatever whisky it holds.",
+  "compare": "Against a Japanese single malt: single malt is a category, malted barley from one distillery, with a rule behind it; Mizunara is only a cask, and it may hold a single malt, a blend or a Scotch. In the glass, long ageing in the wood can add sandalwood, incense and coconut to whatever whisky it holds.",
   "benchmarks": ["Yamazaki", "Chivas Regal", "Bowmore"],
   "shelf": [],
   "chapters": ["japanese", "maturation"],
