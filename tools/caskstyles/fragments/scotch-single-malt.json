@@ -1,0 +1,78 @@
+{
+  "id": "scotch-single-malt",
+  "name": "Single malt Scotch",
+  "respell": "",
+  "family": "scotch",
+  "law": "The Scotch Whisky Regulations 2009 define single malt Scotch whisky: distilled at one distillery, in one or more batches, in pot stills, from water and malted barley with no other cereal. Every Scotch rule holds: distilled below 94.8% ABV, matured in Scotland at least three years in oak casks of no more than 700 litres, bottled at 40% ABV or more, with nothing added but water and plain caramel. Since 23 November 2012 it may leave Scotland only bottled and labelled, ready for sale.",
+  "made": "Malted barley is milled, mashed with hot water and fermented with yeast, then distilled in copper pot stills, usually twice; Auchentoshan distils three times. Drying the malt over peat smoke is a choice, not a rule. The spirit matures in oak, mostly ex-bourbon barrels and ex-sherry casks, and most bottlings marry many casks of the one distillery. An age statement promises that every whisky in the bottle is at least that old.",
+  "taste": "It ranges widely: often malt, honey and orchard fruit over vanilla from bourbon casks; dried fruit, nuts and spice from sherry casks; smoke, iodine and salt where the malt was peated. Texture runs from light and floral to oily and rich. The distillery and the cask decide, not the category.",
+  "lines": {
+    "s10": "Single malt Scotch is whisky from malted barley alone, distilled in pot stills at one distillery in Scotland.",
+    "s20": "Single malt Scotch is all malted barley, distilled in copper pot stills at a single distillery and aged at least three years in oak in Scotland. Expect malt, honey and orchard fruit or sherried dried fruit, and smoke only where the malt was peated.",
+    "s45": "This is a single malt Scotch whisky. Under the Scotch Whisky Regulations it comes from one distillery in Scotland, made from water and malted barley alone and distilled in copper pot stills, usually twice, then aged at least three years in oak. Single means one distillery, not one cask: most bottlings marry many casks. Expect malt, honey and orchard fruit with vanilla from bourbon casks, dried fruit and spice from sherry casks, and smoke only where the malt was peated. We pour it neat with a jug of water beside it. In 1963 Glenfiddich began selling its single malt beyond Scotland, when blends filled most glasses.",
+    "sale": "A single malt is one Scottish distillery's own voice: malted barley, copper pot stills and the casks it chose. Taste it neat with a few drops of water, or long with soda in a highball."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, so the malt, the fruit and the cask all show.",
+    "water": "A few drops of still water soften the alcohol and open fruit, honey and malt.",
+    "rocks": "One large cube if asked; cold mutes the aroma, so offer the water first.",
+    "highball": "With chilled soda over ice in a tall glass, a lighter malt makes a clean highball.",
+    "glass": "A Glencairn or nosing glass neat; a rocks glass for the cube; a highball glass for soda.",
+    "classic": "A Whiskey Highball with a lighter malt; a Hot Toddy on a cold night; the Blue Blazer as theatre."
+  },
+  "guest": [
+    { "q": "Is single malt better than a blend?", "a": "Neither is a grade. Single malt names one distillery and malted barley in pot stills; a blend adds grain whisky. Some guests want one distillery's character, others a blend's balance." },
+    { "q": "Does single malt mean one barrel?", "a": "No. Single means one distillery. Most bottlings marry many casks from that distillery; a single cask bottling says so on its label." },
+    { "q": "Is all single malt smoky?", "a": "No. Smoke comes from drying the malt over peat, a choice some distilleries make. Many single malts are unpeated and lead with fruit, honey and malt." },
+    { "q": "What does the age on the bottle mean?", "a": "That every whisky in it is at least that old. A 12 year old may hold older whisky, never younger, and a bottle with no age stated is still at least three years old." }
+  ],
+  "compare": "Against a blended malt: both are all malted barley from pot stills with no grain whisky, but a single malt comes from one distillery, while a blended malt marries single malts from two or more. The single malt shows one house's character; the blended malt is built by a blender across houses.",
+  "benchmarks": ["Glenfiddich", "The Glenlivet", "Macallan", "Highland Park", "Springbank", "Lagavulin"],
+  "shelf": [],
+  "chapters": ["scotch", "blending"],
+  "canon": ["whiskey-highball", "hot-toddy", "blue-blazer"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What must a single malt Scotch be under the Scotch Whisky Regulations 2009, and what does single count?",
+      "answer": "Distilled at one distillery from water and malted barley only, in pot stills, then aged at least three years in oak casks in Scotland and bottled at 40% ABV or more. Single counts the distillery, not the cask: most bottlings marry many casks."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Under the Scotch Whisky Regulations 2009, what may a single malt Scotch be distilled from?",
+      "options": ["Water and malted barley only", "Malted barley with some wheat", "Any cereal, if pot distilled", "Malted and unmalted barley"],
+      "a": 0,
+      "explain": "Water and malted barley, with no other cereal, distilled in pot stills at one distillery. Unmalted barley belongs to Irish pot still whiskey; wheat or maize makes a Scotch single grain."
+    },
+    {
+      "id": "q2",
+      "q": "Since 23 November 2012, in what form may a single malt Scotch leave Scotland?",
+      "options": ["In oak casks of up to 700 litres", "Bottled and labelled, ready for sale", "In bulk tankers to licensed bottlers", "In any container, once three years old"],
+      "a": 1,
+      "explain": "Regulation 7 of the Scotch Whisky Regulations 2009: from 23 November 2012 a single malt may leave Scotland only in a bottle labelled ready for sale, so it is bottled in Scotland."
+    },
+    {
+      "id": "q3",
+      "q": "What does the word single count in single malt Scotch?",
+      "options": ["One cask", "One harvest of barley", "One distillery", "One distillation run"],
+      "a": 2,
+      "explain": "One distillery. Most single malts marry many casks of that distillery, and the barley and the runs may come from many years; a single cask bottling says so."
+    }
+  ],
+  "sources": [
+    { "title": "legislation.gov.uk: The Scotch Whisky Regulations 2009, regulation 3", "url": "https://www.legislation.gov.uk/uksi/2009/2890/regulation/3" },
+    { "title": "legislation.gov.uk: The Scotch Whisky Regulations 2009, regulation 7", "url": "https://www.legislation.gov.uk/uksi/2009/2890/regulation/7/made" },
+    { "title": "Scotch Whisky Association: guidance for bottlers and producers, 2025", "url": "https://scotch-whisky.org.uk/media/2387/guidance-for-bottlers-and-producers_2025.pdf" },
+    { "title": "Wikipedia: Scotch Whisky Regulations 2009", "url": "https://en.wikipedia.org/wiki/Scotch_Whisky_Regulations_2009" },
+    { "title": "Wikipedia: Single malt whisky", "url": "https://en.wikipedia.org/wiki/Single_malt_whisky" },
+    { "title": "Wikipedia: Auchentoshan distillery", "url": "https://en.wikipedia.org/wiki/Auchentoshan_distillery" },
+    { "title": "whisky.com: Auchentoshan distillery", "url": "https://www.whisky.com/whisky-database/distilleries/details/auchentoshan.html" },
+    { "title": "Food Ingredients First: The whisky that changed history", "url": "https://www.foodingredientsfirst.com/news/the-whisky-that-changed-history.html" },
+    { "title": "The Whiskey Wash: 5 things you didn't know about Glenfiddich", "url": "https://thewhiskeywash.com/whiskey-articles/5-things-you-didnt-know-about-glenfiddich/" },
+    { "title": "Master of Malt: Glenfiddich, pioneer of the single malt", "url": "https://www.masterofmalt.com/blog/post/glenfiddich-pioneer-of-the-single-malt.aspx" },
+    { "title": "Cask Atlas: Scotch, grain, still and cask", "url": "" },
+    { "title": "Cask Atlas: Blending and the language of the label", "url": "" }
+  ]
+}
