@@ -1,0 +1,79 @@
+{
+  "id": "japanese-whisky",
+  "name": "Japanese whisky",
+  "respell": "",
+  "family": "japanese",
+  "law": "An association standard, not a law: the Japan Spirits & Liqueurs Makers Association standard of 2021 binds its members, its transition for existing products ending on 31 March 2024. It asks for malted grain and water drawn in Japan; mashing, fermenting and distilling in Japan below 95% ABV; at least three years in wooden casks of no more than 700 litres in Japan; bottling in Japan at 40% ABV or more. Its JW logo dates from 2025. A geographical indication put out for comment in October 2026 is a proposal.",
+  "made": "Malted barley, with other cereals for grain whisky, is mashed, fermented and distilled in Japan: copper pot stills for malt, column stills for grain. The spirit ages at least three years in wooden casks: ex-bourbon and sherry casks, new oak, wine casks and, in some houses, Japanese Mizunara oak. Japanese companies seldom trade spirit with one another, so each makes many styles itself, varying stills, fermentation and casks, and blends from its own distilleries.",
+  "taste": "No single profile. Often clean and precise: orchard fruit, honey, vanilla and malt in the single malts, light, sweet grain in the blends, dried fruit where sherry casks lead. Some malts are peated and smoky, and whisky aged in Mizunara can show sandalwood, incense and coconut. The finish is usually clean and of medium length.",
+  "lines": {
+    "s10": "Japanese whisky is whisky distilled, aged at least three years and bottled in Japan: clean, precise single malts and blends.",
+    "s20": "Japanese whisky follows its makers' association standard: malted grain and Japanese water, distilled in Japan, aged at least three years in wood there and bottled there. Expect a clean, precise glass: orchard fruit, honey and vanilla, sometimes smoke or Japanese oak spice.",
+    "s45": "This is a Japanese whisky. Its makers' association set a standard in 2021, an association rule rather than a law: malted grain and Japanese water, distilled in Japan, aged at least three years in wooden casks there and bottled in Japan; since 2025 a JW logo marks bottles that meet it. The houses learnt from Scotland, pot stills for malt and column stills for grain, and each makes many styles itself. Expect a clean, precise glass: orchard fruit, honey, vanilla, sometimes smoke or a sandalwood note from Japanese oak. We pour it neat, with water, or long in a highball. Shinjiro Torii founded Yamazaki in 1923.",
+    "sale": "Japanese whisky took Scottish methods and made them its own: clean, fruity and precise. Try it long in a Whiskey Highball, or neat with a few drops of water."
+  },
+  "serve": {
+    "neat": "Neat at room temperature in a small glass, so the fruit and the cask both show.",
+    "water": "A few drops of still water open the fruit and soften the spirit.",
+    "rocks": "One large clear cube, stirred to chill; cold mutes the fruit, so offer it neat first.",
+    "highball": "With chilled soda over plenty of ice in a cold tall glass, one gentle stir.",
+    "glass": "A Glencairn or small tulip neat; a rocks glass for the cube; a chilled highball glass for soda.",
+    "classic": "A Whiskey Highball, built cold over plenty of ice with chilled soda and one gentle stir."
+  },
+  "guest": [
+    { "q": "Is Japanese whisky just like Scotch?", "a": "It grew from Scottish methods: Masataka Taketsuru studied in Glasgow and trained at Scottish distilleries before Yamazaki was built. But each Japanese house makes many styles itself, and the standard asks for wooden casks, Japanese oak included." },
+    { "q": "Is every Japanese whisky made in Japan?", "a": "Not always. A Japanese brand can bottle whisky distilled elsewhere. The association's standard, binding its members, requires distilling, three years' ageing and bottling in Japan, and its JW logo marks bottles that meet it." },
+    { "q": "Does it have to be Japanese barley?", "a": "No. The standard asks for malted grain and for water drawn in Japan; where the grain was grown is not part of the rule." }
+  ],
+  "compare": "Against a single malt Scotch: Scotch is defined in law, and a single malt is all malted barley from one distillery's pot stills, aged in oak in Scotland. Japanese whisky is an association standard covering malts, grain whisky and blends, aged in wooden casks with water drawn in Japan. In the glass, the house tells you more than the country.",
+  "benchmarks": ["Yamazaki", "Hakushu", "Hibiki", "Yoichi", "Miyagikyo", "Chichibu"],
+  "shelf": [],
+  "chapters": ["japanese"],
+  "canon": ["whiskey-highball"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What does the Japanese whisky standard require, and is it a law?",
+      "answer": "It is the Japan Spirits & Liqueurs Makers Association standard of 2021, binding its members, not a law: malted grain, water drawn in Japan, distilled in Japan below 95% ABV, at least three years in wooden casks of no more than 700 litres in Japan, bottled there at 40% ABV or more. A JW logo since 2025."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What kind of rule is the 2021 Japanese whisky standard?",
+      "options": ["A national statute passed by the Diet", "An association standard binding its members", "A geographical indication registered in law", "A trade agreement with the European Union"],
+      "a": 1,
+      "explain": "An association standard: the Japan Spirits & Liqueurs Makers Association's, binding its members. A geographical indication was put out for comment in October 2026 and is still a proposal."
+    },
+    {
+      "id": "q2",
+      "q": "What does the Japanese whisky standard require of the casks?",
+      "options": ["Wooden casks of no more than 700 litres", "Oak casks of no more than 700 litres", "New charred oak casks of any size", "Japanese oak for at least one year"],
+      "a": 0,
+      "explain": "Wooden casks of no more than 700 litres, for at least three years in Japan. Scotch says oak; the Japanese standard says wood and names no species."
+    },
+    {
+      "id": "q3",
+      "q": "In which year did Shinjiro Torii found Yamazaki, Japan's first malt whisky distillery?",
+      "options": ["1934", "1929", "1923", "1969"],
+      "a": 2,
+      "explain": "1923. Its first whisky, Shirofuda, followed in 1929, and Masataka Taketsuru, who had worked on Yamazaki, opened Yoichi in Hokkaido in 1934."
+    }
+  ],
+  "sources": [
+    { "title": "JSLMA: Standards for Labeling Japanese Whisky", "url": "https://www.yoshu.or.jp/files/libs/552/202303291555304944.pdf" },
+    { "title": "JSLMA via Business Wire: the Japanese Whisky logo, 26 March 2025", "url": "https://www.businesswire.com/news/home/20250326387650/en" },
+    { "title": "e-Gov public comment: draft designation of Japanese whisky as a geographical indication for liquor (National Tax Agency, October 2026)", "url": "https://public-comment.e-gov.go.jp/pcm/download?seqNo=0000323244" },
+    { "title": "Suntory Global Spirits: The House of Suntory welcomes the implementation of the Japanese whisky labelling standards", "url": "https://www.suntoryglobalspirits.com/news/house-suntory-welcomes-implementation-japanese-whisky-labelling-standards-japan-spirits" },
+    { "title": "Whisky Advocate: Japanese whisky finally gets a definition, but it's complicated", "url": "https://whiskyadvocate.com/japanese-whisky-finally-gets-a-definition-but-its-complicated" },
+    { "title": "Master of Malt: Hakushu whisky and the JSLMA certification", "url": "https://www.masterofmalt.com/blog/post/hakushu-whisky-and-the-jslma-certification" },
+    { "title": "Asia Food Journal: JSLMA reinforces standards for labeling Japanese whisky with new logo", "url": "https://asiafoodjournal.com/japan-spirits-liqueurs-makers-association-jslma-reinforces-standards-for-labeling-japanese-whisky-with-new-logo" },
+    { "title": "Wikipedia: Yamazaki distillery", "url": "https://en.wikipedia.org/wiki/Yamazaki_distillery" },
+    { "title": "Difford's Guide: Suntory Yamazaki Distillery, history", "url": "https://www.diffordsguide.com/producers/162/suntory-yamazaki-distillery/history" },
+    { "title": "Hedonism: The founding of Yamazaki, Japan's whisky pioneer", "url": "https://hedonism.co.uk/yamazaki-brief-history-japans-oldest-distillery" },
+    { "title": "University of Glasgow: Japanese whisky's Glasgow roots", "url": "https://www.gla.ac.uk/explore/avenue/ourpast/japanesewhiskeysroots/" },
+    { "title": "Wikipedia: Masataka Taketsuru", "url": "https://en.wikipedia.org/wiki/Masataka_Taketsuru" },
+    { "title": "Distiller: Why the world is hooked on Japanese whisky", "url": "https://distiller.com/articles/world-hooked-japanese-whisky" },
+    { "title": "Cask Atlas: Japanese whisky, identity beyond the label design", "url": "" }
+  ]
+}
