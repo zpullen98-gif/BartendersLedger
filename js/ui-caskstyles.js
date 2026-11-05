@@ -16,7 +16,7 @@
    present, and each liquor shelf bottle of a style its style's door
    (js/ui-backbar.js reads CASK_STYLES by its shelf list).
 
-   The cards keep their own key space ('Cask Styles · <id>/recall', src
+   The cards keep their own key space ('Cask Styles \u00b7 <id>/recall', src
    'Cask Styles'), outside allDrinks, Due today, the academic modes and the
    levels; Today's cask study may deal a style card that is due. The quiz
    (mode caskstyles) deals ten styles round robin across the families, one
@@ -67,7 +67,7 @@ function caskStyleReference(prevKey){
 }
 
 /* ---- the cards, the decks, the quiz and Today's cask study ----------------- */
-function caskStyleKey(id){ return 'Cask Styles · ' + id + '/recall'; }
+function caskStyleKey(id){ return 'Cask Styles \u00b7 ' + id + '/recall'; }
 function caskStyleCards(){
   const cards = [];
   caskStyleEntries().forEach(function(e){ (e.recall || []).forEach(function(r){
@@ -75,10 +75,10 @@ function caskStyleCards(){
   }); });
   return cards;
 }
-function caskStyleCardByKey(key){ return caskStyleCards().find(function(c){ return 'Cask Styles · ' + c.caskStyleKey === key; }) || null; }
+function caskStyleCardByKey(key){ return caskStyleCards().find(function(c){ return 'Cask Styles \u00b7 ' + c.caskStyleKey === key; }) || null; }
 function caskStyleRecord(card, now){
   now = now === undefined ? Date.now() : now;
-  const rec = progress.cards && progress.cards['Cask Styles · ' + card.caskStyleKey];
+  const rec = progress.cards && progress.cards['Cask Styles \u00b7 ' + card.caskStyleKey];
   const due = Number(rec && rec.due);
   return { record: rec, due: !!rec && Number.isFinite(due) && due > 0 && due <= now, missed: !!rec && rec.w > 0 && rec.reps === 0 };
 }
@@ -95,13 +95,13 @@ function caskStyleDeckDef(id){
 function caskStyleDueRows(now){
   now = now === undefined ? Date.now() : now;
   return caskStyleCards().filter(function(c){ return caskStyleRecord(c, now).due; }).map(function(c){
-    return { chapter: '', style: c.itemId, id: c.drillId, q: c.name, a: c.back, why: '', key: 'Cask Styles · ' + c.caskStyleKey };
+    return { chapter: '', style: c.itemId, id: c.drillId, q: c.name, a: c.back, why: '', key: 'Cask Styles \u00b7 ' + c.caskStyleKey };
   });
 }
 /* the card faces: a blind front, then the answer and the style after Flip */
 function caskStyleRecallHTML(card, flipped, head, front, answer, grade){
   const e = caskStyleEntry(card.itemId);
-  const heading = '<div class="eyebrow">' + esc(e ? caskStyleFamilyTitle(e.family) : 'Whisky') + ' · At the table</div>';
+  const heading = '<div class="eyebrow">' + esc(e ? caskStyleFamilyTitle(e.family) : 'Whisky') + ' \u00b7 At the table</div>';
   const question = '<div class="caskstyle-question">' + esc(card.name) + '</div>';
   if(!flipped) return '<div class="col">' + head + '<div class="panel p5 col tc study-face">' + front + heading + question
     + '<p class="small dim">Present it out loud as you would at the table, then flip.</p><button class="btn btn-brass" data-act="fc-flip">Flip</button></div></div>';
@@ -148,11 +148,11 @@ function caskStyleHomeHTML(){
   const groups = caskStyleFamilies().map(function(f){
     const rows = caskStyleOfFamily(f.id);
     return rows.length ? '<section class="caskstyle-family" aria-labelledby="caskstyle-f-' + esc(f.id) + '"><h4 class="caskstyle-family-h" id="caskstyle-f-' + esc(f.id) + '">' + esc(f.title)
-      + ' <span class="caskstyle-soft">· ' + rows.length + (rows.length === 1 ? ' style' : ' styles') + '</span></h4><div class="caskstyle-rows">' + rows.map(caskStyleRowHTML).join('') + '</div></section>' : '';
+      + ' <span class="caskstyle-soft">\u00b7 ' + rows.length + (rows.length === 1 ? ' style' : ' styles') + '</span></h4><div class="caskstyle-rows">' + rows.map(caskStyleRowHTML).join('') + '</div></section>' : '';
   }).join('');
   return '<section class="cask-section caskstyle-home" id="caskstyle-home" aria-labelledby="caskstyle-home-h"><h3 id="caskstyle-home-h">At the table: every style</h3>'
     + '<p>Each whisky style as you would present it to a guest: the forty-five second presentation and the sale, how we pour it, what guests ask, the law that makes it, how it is made and tastes, and the style beside it.</p>'
-    + '<p class="cask-muted">' + all.length + (all.length === 1 ? ' style' : ' styles') + ' · ' + caskStyleCards().length + ' recall cards · ' + qs + ' quiz questions</p>'
+    + '<p class="cask-muted">' + all.length + (all.length === 1 ? ' style' : ' styles') + ' \u00b7 ' + caskStyleCards().length + ' recall cards \u00b7 ' + qs + ' quiz questions</p>'
     + '<div class="caskstyle-practice"><button class="btn btn-brass" data-act="caskstyle-practise" data-deck="caskstyles">Practise the cards</button>'
     + '<button class="btn btn-ghost" data-act="quiz-go" data-m="caskstyles">Take the quiz</button>'
     + '<button class="btn btn-ghost" data-act="deck" data-deck="caskstyles:again">Due or missed</button></div>'
@@ -211,7 +211,7 @@ function caskStylePageHTML(e){
   const lines = e.lines || {}, serve = e.serve || {}, fam = caskStyleFamilyTitle(e.family);
   const nb = caskStyleEntry(e.neighbour);
   const shelf = caskStyleShelfRows(e), chapters = caskStyleChapterRows(e), canon = caskStyleCanonRows(e);
-  return '<article class="cask-atlas caskstyle-page"><header class="caskstyle-heading"><p class="eyebrow">At the table: every style · ' + esc(fam) + '</p><h2 tabindex="-1">' + esc(e.name) + '</h2>'
+  return '<article class="cask-atlas caskstyle-page"><header class="caskstyle-heading"><p class="eyebrow">At the table: every style \u00b7 ' + esc(fam) + '</p><h2 tabindex="-1">' + esc(e.name) + '</h2>'
     + (e.respell ? '<p class="caskstyle-say"><span class="caskstyle-label">Say it</span> ' + esc(e.respell) + '</p>' : '')
     + '<p class="caskstyle-fam"><span class="caskstyle-label">The family</span> ' + esc(fam) + '</p></header>'
     + '<div class="caskstyle-practice"><button class="btn btn-brass" data-act="caskstyle-practise" data-deck="caskstyles">Practise the cards</button>'
@@ -228,11 +228,11 @@ function caskStylePageHTML(e){
       + (nb ? '<div class="caskstyle-links"><a class="btn btn-ghost" href="' + esc(caskStyleHref(nb.id)) + '">Its neighbour: ' + esc(nb.name) + '</a></div>' : ''))
     + caskStyleSec('houses', 'The houses to name', '<ul class="caskstyle-houses">' + (e.benchmarks || []).map(function(b){ return '<li>' + esc(b) + '</li>'; }).join('') + '</ul>'
       + '<p class="cask-muted">Houses and brands that show the style, never a statement of what the house pours.</p>')
-    + (shelf.length ? caskStyleSec('shelf', 'On our shelf', '<p class="cask-muted">The liquor shelf’s bottles of this style, each with its own tableside presentation.</p><div class="caskstyle-links">'
+    + (shelf.length ? caskStyleSec('shelf', 'On our shelf', '<p class="cask-muted">The liquor shelf\u2019s bottles of this style, each with its own tableside presentation.</p><div class="caskstyle-links">'
       + shelf.map(function(b){ return '<a class="btn btn-ghost caskstyle-bottle" href="' + esc(typeof backbarHref === 'function' ? backbarHref(b.id) : '#/menu/backbar/' + encodeURIComponent(b.id)) + '">' + esc(b.name) + '</a>'; }).join('') + '</div>') : '')
     + (chapters.length ? caskStyleSec('chapter', 'Read the chapter', '<div class="caskstyle-links">'
       + chapters.map(function(c){ return '<a class="btn btn-ghost caskstyle-chapter" href="' + esc(caskHref(c.id)) + '">' + esc(c.title) + ', in the Cask Atlas</a>'; }).join('') + '</div>') : '')
-    + (canon.length ? caskStyleSec('canon', 'The classics it belongs in', '<p class="cask-muted">The Library’s builds are the classics’, not the house’s.</p><div class="caskstyle-links">'
+    + (canon.length ? caskStyleSec('canon', 'The classics it belongs in', '<p class="cask-muted">The Library\u2019s builds are the classics\u2019, not the house\u2019s.</p><div class="caskstyle-links">'
       + canon.map(function(c){ return '<a class="btn btn-ghost caskstyle-canon" href="#/library/' + esc(c.slug) + '">' + esc(c.name) + '</a>'; }).join('') + '</div>') : '')
     + caskStyleSec('recall', 'Recall before you reveal', (e.recall || []).map(function(r){ return '<details class="caskstyle-recall"><summary>' + esc(r.prompt) + '</summary>' + caskStyleParas(r.answer) + '</details>'; }).join('')
       + '<p class="cask-muted">Reading this answer is unscored. Practise the cards to record a recall.</p>')
@@ -255,6 +255,6 @@ function caskStyleSearchText(e){
   return [e.name, (e.terms || []).join(' '), caskStyleFamilyTitle(e.family), e.lines && e.lines.s10, e.law, e.taste, (e.benchmarks || []).join(' '), caskStyleShelfNames(e).join(' ')].join(' ').toLowerCase();
 }
 function caskStyleSearchEntries(){
-  return caskStyleEntries().map(function(e){ return { t: e.name, s: 'At the table: every style · ' + caskStyleFamilyTitle(e.family), body: caskStyleSearchText(e), h: caskStyleHref(e.id) }; });
+  return caskStyleEntries().map(function(e){ return { t: e.name, s: 'At the table: every style \u00b7 ' + caskStyleFamilyTitle(e.family), body: caskStyleSearchText(e), h: caskStyleHref(e.id) }; });
 }
 function caskStyleOwnsKey(e){ return !!(e && e.target && e.target.closest && e.target.closest('.caskstyle-read-link')); }
