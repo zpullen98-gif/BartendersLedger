@@ -15,7 +15,7 @@ for(const c of rows){
  need(c.sections?.length>=3&&c.facts?.length>=3&&c.pitfalls?.length>=2,c.id+': insufficient teaching structure');
  need(c.recall?.length>=4&&c.quiz?.length>=3,c.id+': insufficient active recall');
  need(c.sources?.length>=2,c.id+': missing source trail');
- for(const s of c.sources)need(s.title&&/^https:\/\//.test(s.url)&&s.checked==='2026-10-27',c.id+': invalid source');
+ for(const s of c.sources)need(s.title&&/^https:\/\//.test(s.url)&&['2026-10-27','2026-11-05'].includes(s.checked),c.id+': invalid source');
  for(const field of ['ask','say','pairing'])need(c.service&&c.service[field],c.id+': missing service '+field);
  for(const family of ['recall','quiz']){
   const ids=new Set();
