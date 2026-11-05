@@ -1,0 +1,77 @@
+{
+  "id": "barrel-proof",
+  "name": "Barrel proof",
+  "respell": "",
+  "family": "american",
+  "law": "27 CFR 5.87, the United States labelling rule: barrel proof or cask strength may describe spirits stored in wood barrels only when they are bottled no more than two degrees of proof (1% ABV) below their strength when dumped from the barrel. Original proof, original barrel proof, original cask strength and entry proof mean bottled at the same proof the spirit went into the barrel. The whiskey still meets its type, bourbon or rye, under 27 CFR 5.143.",
+  "made": "The whiskey is made and aged to its type, bourbon filled into new charred oak at no more than 125 proof. In the warehouse the strength moves: in hot upper floors water leaves through the oak faster than alcohol and the proof usually climbs; lower and cooler, it climbs less or holds. At dumping the barrels go into the bottle with little or no water, so each batch has its own proof.",
+  "taste": "Concentrated rather than different: the whiskey's own flavours at full volume. A barrel proof bourbon reads toffee, vanilla and dark cherry over cinnamon and charred oak, thick and oily on the tongue, with heat that builds and a long, drying finish. Water calms the alcohol and often brings fruit and caramel forward.",
+  "lines": {
+    "s10": "Barrel proof, or cask strength, is whiskey bottled at about the strength it came out of the barrel, with little or no water added.",
+    "s20": "Barrel proof means bottled within two degrees of proof of the strength at which the whiskey left the barrel, by federal rule. Each batch has its own proof; expect thick toffee, dark cherry and oak, hot until water opens it.",
+    "s45": "This is a barrel proof bourbon, also called cask strength. The federal rule, 27 CFR 5.87, allows the words only when the whiskey is bottled no more than two degrees of proof below the strength it had leaving the barrel, so little or no water goes in and each batch carries its own proof. Years in a hot warehouse often push the proof up. Expect toffee, dark cherry, cinnamon and oak, thick and warm, opening with a few drops of water. We pour it neat with water on the side, or on one cube. Booker's, first sold uncut in the late 1980s, helped make barrel proof bourbon a style.",
+    "sale": "Barrel proof is the whiskey at the strength it left the barrel, so every flavour comes concentrated. Taste it neat and add water a drop at a time until it opens."
+  },
+  "serve": {
+    "neat": "Neat at room temperature in a Glencairn, with a small jug of still water beside it.",
+    "water": "A few drops at a time calm the heat and open the caramel, fruit and spice.",
+    "rocks": "One large cube tames the proof slowly; never a glass full of small ice.",
+    "glass": "A Glencairn or small tulip neat; a rocks glass for the cube or the Old Fashioned.",
+    "classic": "An Old Fashioned stirred a little longer; a barrel proof bourbon also gives an Amaretto Sour its backbone."
+  },
+  "guest": [
+    { "q": "Why is it so strong?", "a": "Almost nothing was added at bottling: it went into the bottle at about the strength it came out of the barrel, often well above 50% ABV. A few drops of water bring it to your taste." },
+    { "q": "Should I add water?", "a": "Many guests do. Start with a few drops, taste, and add more if you like; water calms the heat and often opens caramel and fruit that the alcohol was hiding." },
+    { "q": "Is barrel proof the same as cask strength?", "a": "On an American label, yes: the rule treats them as one, bottled within two degrees of proof of the strength at dumping. Scotch and Irish bottlers usually say cask strength." }
+  ],
+  "compare": "Bottled-in-bond, 27 CFR 5.88, fixes the strength at exactly 100 proof, cut with water, after one season and at least four years at one distillery. Barrel proof sets no age and no number: the whiskey is bottled within two degrees of the proof it left the barrel at, so it is usually stronger, and each batch differs.",
+  "benchmarks": ["George T. Stagg", "Booker's", "Elijah Craig", "Wild Turkey", "Maker's Mark", "Larceny"],
+  "shelf": ["george-t-stagg", "stagg"],
+  "chapters": ["american-labels", "maturation"],
+  "canon": ["old-fashioned", "amaretto-sour"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What does barrel proof, or cask strength, promise on an American label, and how does it differ from entry proof?",
+      "answer": "Under 27 CFR 5.87, barrel proof or cask strength means a spirit stored in wood barrels and bottled no more than two degrees of proof below its strength when dumped. Original proof or entry proof means bottled at the same proof it went into the barrel. Neither sets an age."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Under the federal rule, how far below its dumping strength may a barrel proof whiskey be bottled?",
+      "options": ["No more than two degrees of proof", "No more than ten degrees of proof", "No more than twenty degrees of proof", "Any amount, if the label states it"],
+      "a": 0,
+      "explain": "No more than two degrees of proof, 1% ABV, under 27 CFR 5.87. The small allowance covers the slight drop between gauging the barrels and bottling."
+    },
+    {
+      "id": "q2",
+      "q": "A whiskey label reads entry proof. What does that promise?",
+      "options": ["Bottled at exactly 100 proof after four years", "Bottled within two degrees of its dumping strength", "Bottled at the strength it went into the barrel", "Bottled at 125 proof, the bourbon barrel ceiling"],
+      "a": 2,
+      "explain": "Entry proof, like original proof, means the bottling proof equals the proof at which the spirit entered the barrel. Within two degrees of dumping strength is barrel proof; exactly 100 proof is bottled-in-bond."
+    },
+    {
+      "id": "q3",
+      "q": "In the hot upper floors of a Kentucky warehouse, what usually happens to a barrel's proof over the years?",
+      "options": ["It falls steadily", "It climbs", "It stays exactly at entry proof", "It drops to 80 proof"],
+      "a": 1,
+      "explain": "It usually climbs: in the heat, water leaves through the oak faster than alcohol. Lower and cooler floors raise it less, and some barrels hold close to their entry proof."
+    }
+  ],
+  "sources": [
+    { "title": "eCFR: 27 CFR 5.87, Barrel proof and similar terms", "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-F/section-5.87" },
+    { "title": "Legal Information Institute: 27 CFR 5.87, Barrel proof and similar terms", "url": "https://www.law.cornell.edu/cfr/text/27/5.87" },
+    { "title": "TTB: ATF Ruling 79-9, original proof, entry proof and barrel proof", "url": "https://ttb.gov/images/pdfs/rulings/79-9.htm" },
+    { "title": "Whisky Advocate: Learn the basics of barrel proof whiskey", "url": "https://whiskyadvocate.com/learn-the-basics-of-barrel-proof-whiskey" },
+    { "title": "VinePair: Barrel proof, cask strength and full proof whiskey, the differences explained", "url": "https://vinepair.com/articles/barrel-proof-cask-strength-full-proof-whiskey-differences-explained" },
+    { "title": "Kentucky Bourbon Trail: Summer in a warehouse", "url": "https://kybourbon.com/enthusiast-stories/summer-in-a-warehouse/" },
+    { "title": "Distiller: A look at how weather affects whiskey", "url": "https://distiller.com/articles/weather-affects-whiskey" },
+    { "title": "The Bourbon Culture: A statistical analysis of every warehouse at the Brown-Forman distillery", "url": "https://thebourbonculture.com/whiskey-info/a-statistical-analysis-of-every-warehouse-at-the-brown-forman-distillery/" },
+    { "title": "Beam Distilling: About Booker's", "url": "https://www.beamdistilling.com/bookersbourbon/about-bookers" },
+    { "title": "The Daily Meal: Booker's bourbon, don't just throw it back", "url": "https://www.thedailymeal.com/drink/booker-s-bourbon-don-t-just-throw-it-back" },
+    { "title": "Whisky Advocate: 14 barrel proof whiskeys that deliver bold flavor", "url": "https://whiskyadvocate.com/14-barrel-proof-whiskeys-that-deliver-bold-flavor" },
+    { "title": "Cask Atlas: American Labels", "url": "" },
+    { "title": "Cask Atlas: Oak, time and the warehouse", "url": "" }
+  ]
+}
