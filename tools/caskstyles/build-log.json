@@ -1,6 +1,6 @@
 {
   "edition": "2026-11-05",
-  "styles": 33,
+  "styles": 34,
   "planned": 34,
   "byFamily": {
     "american": {
@@ -17,7 +17,7 @@
     },
     "japanese": {
       "planned": 4,
-      "written": 3
+      "written": 4
     },
     "canadian": {
       "planned": 1,
@@ -25,7 +25,7 @@
     }
   },
   "words": {
-    "total": 21873,
+    "total": 22506,
     "perEntry": {
       "bourbon": 664,
       "wheated-bourbon": 690,
@@ -59,6 +59,7 @@
       "japanese-whisky": 685,
       "japanese-single-malt": 658,
       "japanese-blended": 670,
+      "mizunara": 633,
       "canadian": 670
     }
   },
@@ -95,13 +96,12 @@
     "Cask Styles · japanese-whisky/recall",
     "Cask Styles · japanese-single-malt/recall",
     "Cask Styles · japanese-blended/recall",
+    "Cask Styles · mizunara/recall",
     "Cask Styles · canadian/recall"
   ],
-  "questions": 99,
-  "sources": 363,
+  "questions": 102,
+  "sources": 377,
   "shelf": 9,
-  "missing": [
-    "mizunara"
-  ],
+  "missing": [],
   "refused": []
 }

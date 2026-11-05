@@ -1,0 +1,79 @@
+{
+  "id": "mizunara",
+  "name": "Mizunara oak",
+  "respell": "mee-zoo-NAH-rah",
+  "family": "japanese",
+  "law": "No legal category of its own: Mizunara is a cask, not a style, and the label word promises some time in that wood and no more. It fits the rule of the whisky it holds: the Japan Spirits & Liqueurs Makers Association standard asks for wooden casks of no more than 700 litres, the Scotch Whisky Regulations 2009 for oak casks of no more than 700 litres, so it may hold Japanese whisky or Scotch.",
+  "made": "Mizunara, Quercus crispula, which some botanists class as a variety of Quercus mongolica, grows in Japan and across north-east Asia. Its name means water oak: the wood holds much water and its grain seals less tightly than European or American oak, so casks are hard to make and prone to leak. Distillers use it mostly to finish a whisky or for one part of a vatting, and its full character takes long ageing.",
+  "taste": "Sandalwood, temple incense and coconut are the notes most tied to the wood, over the spirit's own fruit and vanilla. Younger whisky can show a sharper, spicy, woody edge, which long ageing rounds into coconut sweetness. After a short finish it is a top note, never the whole glass.",
+  "lines": {
+    "s10": "Mizunara is Japanese oak used for whisky casks: a wood that can give sandalwood, incense and coconut, not a style of its own.",
+    "s20": "Mizunara is Japanese oak, a cask rather than a category. Hard to cooper and prone to leak, it is used mostly to finish a whisky or for part of a vatting; long ageing in it gives sandalwood, incense and coconut.",
+    "s45": "This whisky has spent time in Mizunara, Japanese oak. It is a cask, not a style: no rule defines it, and the label promises some time in that wood, nothing more. Its name means water oak; the wood holds much water and leaks easily, so it is used mostly to finish a whisky or for one part of a vatting, in Japan and in Scotland. With long ageing it can give sandalwood, temple incense and coconut over the spirit's own fruit. We pour it neat, with a few drops of water at most. Japanese distillers turned to it in the 1940s, when war made imported casks hard to get.",
+    "sale": "Mizunara is Japanese oak, and long ageing in it gives sandalwood, temple incense and coconut. Taste it neat, with a few drops of water at most, so the wood can speak."
+  },
+  "serve": {
+    "neat": "Neat at room temperature in a tulip glass, so the incense and coconut can rise.",
+    "water": "A few drops of still water at most; more flattens the wood's top notes.",
+    "rocks": "No ice: cold closes the sandalwood and incense the wood has given.",
+    "glass": "A Glencairn or small tulip, so the aromas gather at the rim."
+  },
+  "guest": [
+    { "q": "What does Mizunara taste like?", "a": "The notes most tied to it are sandalwood, temple incense and coconut, and they need long ageing to show fully. A short finish in Mizunara gives a hint over the whisky's own fruit, not the whole glass." },
+    { "q": "Is a Mizunara whisky aged only in Japanese oak?", "a": "Usually not. The wood leaks and is hard to work, so most whiskies spend part of their time in it, as a finish or one part of a vatting. The label promises some time in Mizunara, no more." },
+    { "q": "Is it only used in Japan?", "a": "No. Scotch may age in any oak, so Scottish houses use it too: Chivas Regal finishes part of a blend in Mizunara, and Bowmore released an Islay malt finished in it in 2015." }
+  ],
+  "compare": "Against a Japanese single malt: single malt is a category, malted barley from one distillery, with a rule behind it; Mizunara is only a cask, and it may hold a single malt, a blend or a Scotch. In the glass, the wood adds sandalwood, incense and coconut to whatever whisky it holds.",
+  "benchmarks": ["Yamazaki", "Chivas Regal", "Bowmore"],
+  "shelf": [],
+  "chapters": ["japanese", "maturation"],
+  "canon": [],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What does Mizunara promise on a whisky label, and why is it mostly used as a finish?",
+      "answer": "Some time in Japanese oak casks, no more: Mizunara is a cask, not a category, and no rule defines it. The wood holds much water and its casks leak and are hard to make, so it is used mostly to finish a whisky or for one part of a vatting; long ageing brings sandalwood, incense and coconut."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What does the word Mizunara on a whisky label promise?",
+      "options": ["Ageing wholly in Japanese oak", "Some time in Japanese oak casks", "Whisky distilled on Hokkaido", "A legally defined Japanese style"],
+      "a": 1,
+      "explain": "Some time in Japanese oak, no more. Mizunara is a cask, not a category: most whiskies that name it were finished in it or carry a share aged in it."
+    },
+    {
+      "id": "q2",
+      "q": "Why is Mizunara used mostly as a finish rather than for a whole maturation?",
+      "options": ["Its casks leak and are hard to make", "Japanese law limits it to a finish", "Its tannin overwhelms within weeks", "It cannot be toasted or charred"],
+      "a": 0,
+      "explain": "The wood holds much water and its grain seals less tightly than European or American oak, so casks are hard to make and prone to leak. No rule limits its use."
+    },
+    {
+      "id": "q3",
+      "q": "In which decade did Japanese distillers turn to Mizunara, when war made imported casks hard to get?",
+      "options": ["The 1920s", "The 1940s", "The 1960s", "The 1980s"],
+      "a": 1,
+      "explain": "The 1940s, when the Second World War cut Japan off from imported casks. Its sandalwood and incense were valued later, once long-aged stocks showed them."
+    }
+  ],
+  "sources": [
+    { "title": "JSLMA: Standards for Labeling Japanese Whisky", "url": "https://www.yoshu.or.jp/files/libs/552/202303291555304944.pdf" },
+    { "title": "legislation.gov.uk: The Scotch Whisky Regulations 2009, regulation 3", "url": "https://www.legislation.gov.uk/uksi/2009/2890/regulation/3" },
+    { "title": "Decanter: Mizunara oak explained", "url": "https://www.decanter.com/spirits/mizunara-oak-explained-526736/" },
+    { "title": "whisky.com: Whisky in Mizunara casks", "url": "https://www.whisky.com/whisky-in-mizunara-casks.html" },
+    { "title": "Wikipedia: Quercus crispula", "url": "https://en.wikipedia.org/wiki/Quercus_crispula" },
+    { "title": "The Whiskey Wash: Yamazaki Mizunara Cask 2017 Edition continues tradition of hard-to-use wood", "url": "https://thewhiskeywash.com/world/yamazaki-mizunara-cask-2017-edition-continues-tradition-hard-use-wood/" },
+    { "title": "PR Newswire: The House of Suntory introduces the Yamazaki Mizunara Cask 2017 Edition", "url": "https://prnewswire.com/news-releases/the-house-of-suntory-whisky-proudly-introduces-the-yamazaki-mizunara-cask-2017-edition-300517895.html" },
+    { "title": "House of Suntory: Yamazaki 18 years old Mizunara", "url": "https://house.suntory.com/yamazaki-whisky/yamazaki-18-years-old-mizunara" },
+    { "title": "The Whisky Exchange: Yamazaki Mizunara", "url": "https://www.thewhiskyexchange.com/feature/yamazaki-mizunara" },
+    { "title": "88 Bamboo: Unpacking Mizunara with Suntory", "url": "https://88bamboo.co/blogs/features/unpacking-mizunara-with-suntory-tasting-yamazaki-s-mizunara-malts-toward-the-25-year-old" },
+    { "title": "Chivas: Chivas Mizunara blended Scotch whisky", "url": "https://www.chivas.com/en-us/collection/chivas-mizunara/" },
+    { "title": "Moodie Davitt Report: Chivas Regal Mizunara in European travel retail", "url": "https://moodiedavittreport.com/scottish-complexity-and-japanese-elegance-pernod-ricard-and-heinemann-launch-chivas-regal-mizunara-in-european-travel-retail" },
+    { "title": "Newswire: Bowmore Mizunara Cask Finish", "url": "https://newswire.ca/news-releases/bowmore-mizunara-cask-finish-brings-together-two-of-the-worlds-most-famous-whisky-islands-creating-an-industry-first-547471771.html" },
+    { "title": "TR Business: Bowmore brings Japanese Mizunara oak to Islay", "url": "https://www.trbusiness.com/regional-news/international/bowmore-brings-japanese-mizunara-oak-to-islay/79116" },
+    { "title": "Cask Atlas: Japanese whisky, identity beyond the label design", "url": "" },
+    { "title": "Cask Atlas: Oak, time and the warehouse", "url": "" }
+  ]
+}
