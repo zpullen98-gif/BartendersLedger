@@ -1,0 +1,133 @@
+At the table, every style: how a whisky style is written (5 November 2026)
+
+WHO READS IT
+The owner works the floor at a New Orleans restaurant and studies to master bartender. The page sits
+in the Bartender's Ledger's Whisky & Brandy tab (the Cask Atlas, key casks): "At the table: every
+style", thirty-four whisky styles in five families, each opened at #/casks/style/<id>. A reader opens a
+style because a guest named it ("something wheated", "an Islay", "a pot still"), or to learn the
+styles before a shift. The Cask Atlas chapters teach the category at length; a style entry is the
+working page: the rule in a sentence, what is in the glass, and the words to present it at the table.
+Write as a master whisky educator talks to a trained colleague on the floor: plain, warm, exact,
+concrete. Every line is sayable aloud to a guest.
+
+ONE STYLE = ONE FRAGMENT
+tools/caskstyles/fragments/<id>.json, the id from tools/caskstyles/plan.json. tools/caskstyles/schema.mjs
+is the one validator; build-caskstyles.mjs refuses a fragment it rejects. Fields, all required, in
+this order (word caps are reading words, split on spaces):
+  id          the roster's id
+  name        the roster's name, exactly
+  respell     how to say the name, capitals for the stressed syllable, hyphens between syllables
+              (EYE-luh, KAM-bul-town, mee-zoo-NAH-rah); "" for a name an English speaker reads as
+              written (at most 60 characters)
+  family      copied from the roster (american, scotch, irish, japanese, canadian)
+  law         the rule that makes it this style, stated in our own words close to the rule as written,
+              with the instrument named: 27 CFR 5.143 (the United States standards of identity) or
+              27 CFR 5.88 (bottled in bond), the Scotch Whisky Regulations 2009, the Irish whiskey
+              technical file, the Japan Spirits & Liqueurs Makers Association standard (an association
+              standard, not a law, and the law field says so), Canada's Food and Drug Regulations, a
+              state law by its name (Tennessee Code 57-2-106, 2013). A style with no legal definition
+              (wheated, high rye, four grain, small batch, Kentucky-style rye, Monongahela, Mizunara)
+              says so first ("No legal category of its own: ...") and then gives the rule of the
+              category it sits in. A proposal is called a proposal, never a rule (25 to 90 words)
+  made        how it is made: the grains or the malt, the mash, the stills, the cask, the time, what
+              varies from house to house (40 to 90 words)
+  taste       how it tastes and feels, in concrete words: nose, palate, finish, and the range across
+              the style, never a promise for every bottle ("often", "usually", "in most") (20 to 60)
+  lines       the tableside lines, each said aloud to a guest:
+                s10   the ten second line: names the style and says what it is (12 to 25 words)
+                s20   the twenty second line: the rule and the taste in brief (25 to 50 words)
+                s45   the forty-five second line, the professional tableside presentation: what the
+                      style is, where and by what rule, how it is made, how it tastes, how we pour it,
+                      and one line of story (90 to 110 words)
+                sale  exactly two sentences: the hook, then the pour or the drink (15 to 45 words)
+              s10 and s45 name the style (its name or one of the roster's terms, as a whole phrase).
+  serve       how we pour it: the ones that fit, in this order, at least three, each at most 20 words:
+                neat      the neat pour and its temperature
+                water     a few drops of water, and what they open
+                rocks     on ice, or why not
+                highball  the long drink with soda or ginger ale, where the style suits one
+                glass     the glass (always given)
+                classic   the classic it belongs in, by the canon drink's name (always given when the
+                          roster gives canon drinks; left out when it gives none, as for Mizunara)
+              No pour size, no measure stated as ours.
+  guest       2 to 4 of what guests ask: { q, a }, q the guest's own question (at most 20 words,
+              ending with a question mark), a what you say (at most 40 words)
+  compare     how it differs from its neighbour style, the roster's neighbour, named by its name or a
+              roster term: the rule first, then the glass (20 to 60 words)
+  benchmarks  3 to 6 houses or brands to name as examples: distilleries and brands, historic or
+              working, each on houses.json; nobody living, and never a person as such (a brand that
+              carries a historic founder's name, Jack Daniel's or W. L. Weller, is a brand)
+  shelf       copied from the roster: the liquor shelf's bottles of this style, each a door to its
+              page (#/menu/backbar/<id>); may be empty
+  chapters    copied from the roster: the Cask Atlas chapters, the first the one it belongs to
+  canon       copied from the roster: the canon drinks (COCKTAILS slugs); may be empty
+  recall      [{ id:'recall', prompt, answer }]: the prompt names the style and asks the rule, how it
+              is made or how to present it (at most 25 words, a question); the answer 15 to 70 words.
+              The card's key is 'Cask Styles · <id>/recall' (keys.v1.json)
+  quiz        exactly 3 questions [{ id:'q1'|'q2'|'q3', q, options:[4 strings], a:0..3, explain }]:
+              one fact each, the stem a question of at most 30 words never containing the answer,
+              four options of one kind (four rules, four years, four grains, four places), each at
+              most 12 words, one right answer and three a trained person might pick, no "all of the
+              above", no option much longer than the others, the three answers not all in one
+              position, the explain at most 45 words. One question on the rule is usual
+  sources     at least two { title, url } with https urls the author read: the rule itself first
+              (eCFR or Cornell's LII, legislation.gov.uk, the technical file, the association's own
+              page), then the producers' and independent pages; in-app sources may be added as
+              { title, url:"" } (a Cask Atlas chapter)
+Whole entry at most 800 reading words (law, made, taste, lines, serve, guest, compare).
+
+AT THE TABLE
+The forty-five is what a server says when a guest asks "tell me about it": it opens on the style by
+name, places it (the country, the region, the rule in a clause), says how it is made in one or two
+concrete steps, gives three or four tastes a guest will find, says how we pour it, and ends on one
+line of story (a date, a founding, a law). It never lectures and never sells: no "you'll love", no
+verdict on quality. The sale is two sentences a server can say while the guest decides: a hook a
+guest remembers, then the pour or the drink. The ten and twenty are the same presentation cut
+down, not new material. A guest question that the page answers is phrased as a guest phrases it
+("Is it sweeter?", "Where does the smoke come from?").
+
+THE HOUSE
+A style page never names the house and never says what the house pours, stocks, charges or builds.
+"We" and "our" are the server's voice in how we pour it. The shelf links are study links to the
+liquor shelf's pages, which carry their own rules; a style says nothing about a bottle's batch, year
+or proof beyond what that bottle's page says. No allergen or dietary talk at all.
+
+FACTS
+A rule, a figure, a date or a founding needs the rule itself or two independent sources. Where
+sources disagree, say "about" or give the range; where nothing confirms it, leave it out. The law
+field states the rule as it stands on 5 November 2026, and says so when a change is proposed but
+not made (the 2026 consultation on the Irish whiskey technical file is a proposal). Known
+corrections the Cask Atlas review makes and every style keeps (PLAN.md B): the American single malt
+standard was published on 18 December 2024 and took effect on 19 January 2025; the Japanese
+standard is an association standard (2021, the transition ended 31 March 2024), and the
+association's 2025 logo is the association's; the Tennessee law is the 2013 state law with its
+exception; a mix of straight whiskies of one type from one state stays straight; wheat is often
+found softer and rounder, the grain one influence among yeast, barrel, proof and age. A region is
+evidence of geography, not of flavour: say what most of its houses do and name the exceptions.
+Nothing volatile: no allocation, lottery, scarcity, release or shelf price, secondary market,
+current owner, parent group, acquisition or portfolio, no current master distiller or blender, no
+count of working distilleries stated as fixed ("about ten"). History is fine: the year a distillery
+was founded, closed, renamed or rebuilt, the year a law was made.
+
+PEOPLE
+Name nobody living, ever: no current distiller, blender, owner, family member, bartender or writer
+("the master distiller", "the founding family"). Historic founders and figures may be named
+(Masataka Taketsuru, Shinjiro Torii, Aeneas Coffey, Pappy Van Winkle). tools/caskstyles/people.json
+and tools/backbar/people.json list living people never to name; schema.mjs also refuses a run of
+capitalised words that proper-nouns.json (this pipeline's and the shelf's), houses.json and the
+app's own names do not allow, so a new place, house or historic name is added to proper-nouns.json
+or houses.json with the source that shows it, and a person who may be living never is.
+
+LANGUAGE
+British spelling in our own words (flavour, colour, ageing, centre, litre, savoury, practise as the
+verb, -ise); a legal name stays as the law prints it (bourbon whisky, Tennessee whiskey). Whisky for
+Scotch, Japanese and Canadian, whiskey for Irish and American, as the producers write it. No em
+dash, no en dash, no spaced hyphen or double hyphen used as a dash: use a comma, a colon or a full
+stop. Ranges with "to": "12 to 15 years"; a statute number keeps its hyphens (57-2-106). Nothing at
+or above U+2190: no arrows, no degree sign, no fraction glyphs, no emoji. Curly quotes and the
+accented letters of names are fine. No superlative at all and nothing that sells rather than
+teaches: not "the best", "finest", "smoothest", "oldest", "largest", "smokiest", "the most",
+"legendary", "iconic", "cult", "premium", "perfect", "unique", "world-class" (schema.mjs holds the
+list). No price, no currency sign, no cost. No health claim. Proof and ABV as a label prints them,
+"45% ABV (90 proof)"; a rule's strength in ABV with the proof beside it where the American rule
+gives one, "no more than 80% ABV (160 proof)".
