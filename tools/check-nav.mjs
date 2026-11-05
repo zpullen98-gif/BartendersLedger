@@ -80,6 +80,12 @@
  *     studies, the menu and Home, a cold bottle walking up the same way by
  *     replaces, and, with the House engine, the house's word from a bottle
  *     landing on the house's page and the shelf naming a renamed house
+ *   - At the table: every style (5 November 2026): the Cask Atlas home's
+ *     section and a style lit by Whisky & Brandy, a style and its deck
+ *     round-tripping at #/casks/style/<id> (a bad or missing id falling to
+ *     the Cask Atlas home), the style in the sweep, a style by its row on the
+ *     home and Back to the home and Home, a cold style walking up the same way
+ *     by replaces, and a chapter's door to a style with Back to the chapter
  *   - Print cards is a screen of its own, #/library/print, with the one Back
  *     and no second way back; Back closes it onto the Library
  *   - with the House engine beside this checkout, the bar's producers: the
@@ -310,7 +316,7 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	   deck, round, drill, riff and the level test Practise's */
 	const lit = () => (A.nav().match(/class="bnav-btn[^"]* active" aria-current="page"[^>]*data-cluster="(\w+)"/) || [])[1];
 	const lights = [
-		["caskOpen('')", 'casks'], ["caskOpen(caskChapters()[0].id)", 'casks'],
+		["caskOpen('')", 'casks'], ["caskOpen(caskChapters()[0].id)", 'casks'], ["caskStyleOpen(caskStyleEntries()[0].id)", 'casks'],
 		["state.tab='menu'; state.menu.view='menu'", 'brennans'], ["state.tab='menu'; state.menu.view='stock'", 'brennans'], ["state.tab='menu'; state.menu.view='add'", 'brennans'],
 		...['studies', 'rehearsal', 'reference'].map((v) => [`state.tab='menu'; state.menu.view='${v}'`, 'brennans']),
 		["state.tab='menu'; state.menu.view='compass'", 'brennans'], ["state.tab='menu'; state.menu.view='fall'", 'brennans'],
@@ -538,6 +544,8 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 		"caskOpen('')", "caskOpen(caskChapters()[0].id)",
 		"caskAct('cask-practice',{id:caskChapters()[0].id})",
 		"caskStart('cards','all')", "caskStart('quiz',caskChapters()[0].id)",
+		/* At the table: every style: a style, its deck and its round */
+		"caskStyleOpen(caskStyleEntries()[0].id)", "openDeck('caskstyles')", "openDeck('caskstyles:again')", "startRound('caskstyles')",
 		"openLevel(1)", "openLevel(4)",
 		"state.tab='flashcards'; state.fc.stage='pick'",
 		"openDeck('cocktails')", "openDeck('cocktails:1')", "openDeck('shots')", "openDeck('zero-proof')", "openDeck('on-tap')", "openDeck('coffee')",
@@ -613,6 +621,18 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	   falls to the shelf, and #/menu leaves it */
 	const bbId = A.run('backbarEntries()[0].id');
 	for (const [from, to] of [['#/menu/backbar', '#/menu/backbar'], ['#/menu/backbar/' + bbId, '#/menu/backbar/' + bbId], ['#/menu/view/backbar', '#/menu/backbar'], ['#/menu/backbar/no-such-bottle', '#/menu/backbar'], ['#/menu', '#/menu']]) {
+		A.run("state.tab = 'home';");
+		if (!A.g('applyRoute')(from)) { fail(`${from} is not an address applyRoute reads`); continue; }
+		A.run('navNormalise()');
+		const r = A.g('routeNow')();
+		if (r.hash !== to) fail(`${from} reads back as ${r.hash}, not ${to}`);
+	}
+	/* At the table: every style's addresses: a style prints and reads as
+	   itself, a bad, broken or missing id falls to the Cask Atlas home, and a
+	   chapter still reads as a chapter */
+	const csId = A.run('caskStyleEntries()[0].id');
+	const csCh = A.run('caskChapters()[0].id');
+	for (const [from, to] of [['#/casks/style/' + csId, '#/casks/style/' + csId], ['#/casks/style/no-such-style', '#/casks'], ['#/casks/style/%E0%A4%A', '#/casks'], ['#/casks/style', '#/casks'], ['#/casks/' + csCh, '#/casks/' + csCh], ['#/casks', '#/casks']]) {
 		A.run("state.tab = 'home';");
 		if (!A.g('applyRoute')(from)) { fail(`${from} is not an address applyRoute reads`); continue; }
 		A.run('navNormalise()');
@@ -719,6 +739,34 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	const sc = [];
 	for (let i = 0; i < 4 && backs(SC.view()); i++) { SC.tap({ 'data-act': 'back' }); await settle(); sc.push(SC.state().key); }
 	if (sc.join('|') !== 'menu/backbar|menu/view/studies|menu|home' || SC.history.length !== 1) fail(`a cold bottle walks up ${sc.join(' > ')} with ${SC.history.length} entries, not menu/backbar > Bar studies > menu > home by replaces`);
+	/* At the table: every style (5 November 2026): a style by its row on the
+	   Cask Atlas home, Back to the home and Home; a cold style walks up the
+	   same way by replaces; a chapter's door to a style, Back to the chapter */
+	const W = boot({ hash: '#/casks' });
+	await settle();
+	const w0 = W.state();
+	const wid = W.run('caskStyleEntries()[0].id');
+	if (!W.tap({ class: 'caskstyle-row', href: '#/casks/style/' + wid })) fail(`the Cask Atlas home draws no row for the style ${wid}`);
+	await settle();
+	if (W.state().key !== 'casks/style/' + wid || W.state().at !== w0.at + 1) fail(`a style's row opens ${W.state().key} at entry ${W.state().at}, not the style by one push`);
+	const wk = [];
+	for (let i = 0; i < 2 && backs(W.view()); i++) { W.tap({ 'data-act': 'back' }); await settle(); wk.push(W.state().key); }
+	if (wk.join('|') !== 'casks|home') fail(`Back from a style walks ${wk.join(' > ')}, not casks > home`);
+	const WC = boot({ hash: '#/casks/style/' + wid });
+	await settle();
+	if (WC.state().key !== 'casks/style/' + wid || WC.state().d !== 0) fail(`a cold #/casks/style/${wid} is ${WC.state().key} at depth ${WC.state().d}`);
+	const wc = [];
+	for (let i = 0; i < 2 && backs(WC.view()); i++) { WC.tap({ 'data-act': 'back' }); await settle(); wc.push(WC.state().key); }
+	if (wc.join('|') !== 'casks|home' || WC.history.length !== 1) fail(`a cold style walks up ${wc.join(' > ')} with ${WC.history.length} entries, not casks > home by replaces`);
+	const wch = W.run('caskStyleEntries()[0].chapters[0]');
+	const WD = boot({ hash: '#/casks/' + wch });
+	await settle();
+	const wd0 = WD.state();
+	if (!WD.tap({ id: 'caskstyle-d-' + wid })) fail(`the chapter ${wch} draws no Styles to present door to ${wid}`);
+	await settle();
+	if (WD.state().key !== 'casks/style/' + wid || WD.state().at !== wd0.at + 1) fail(`a chapter's door opens ${WD.state().key} at entry ${WD.state().at}, not the style by one push`);
+	WD.tap({ 'data-act': 'back' }); await settle();
+	if (WD.state().key !== 'casks/' + wch) fail(`Back from a chapter's door to a style lands on ${WD.state().key}, not the chapter`);
 }
 
 /* ---- 8. the screens: one Back, Home four cards, words and no glyphs --------- */
@@ -735,6 +783,7 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 		['Practise', "state.tab='flashcards'; state.fc.stage='pick'", true],
 		['The Cask Atlas', "caskOpen('')", true],
 		['a Cask Atlas chapter', "caskOpen(caskChapters()[0].id)", false],
+		['a style at the table', "caskStyleOpen(caskStyleEntries()[0].id)", true],
 		['Practise, every level', "state.tab='flashcards'; state.fc.stage='pick'; state.scopeAll.flashcards=true", true],
 		['a deck', "openDeck('cocktails')", true],
 		['the menu deck', "openDeck('menu')", true],
@@ -1134,6 +1183,7 @@ async function mutations(){
 		['a Coffee and tea entry climbing past its index', 'ui-nav.js', "    if(state.menu.view === 'brew' && typeof brewState === 'function' && brewState().item){ brewState().item = ''; return true; }\n", ""],
 		['a bottle on the liquor shelf climbing past the shelf', 'ui-nav.js', "    if(state.menu.view === 'backbar' && typeof backbarState === 'function' && backbarState().item){ backbarState().item = ''; return true; }\n", ""],
 		['the liquor shelf left out of the #/menu/view allowlist', 'ui-nav.js', ".concat(typeof backbarOpen === 'function' ? ['backbar'] : [])", ""],
+		['a style\'s address left out of the Cask Atlas router', 'ui-casks.js', "  if(parts[1]==='style' && typeof caskStyleRoute==='function') return caskStyleRoute(parts);\n", ""],
 	];
 	let held = 0;
 	for (const [name, file, from, to] of MUT) {

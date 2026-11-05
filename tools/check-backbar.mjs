@@ -1,7 +1,7 @@
 /* The liquor shelf, under the house's tab (4 November 2026): its gate.
 
      node tools/check-backbar.mjs              every check below
-     node tools/check-backbar.mjs --mutations  then breaks the shipped files ten ways, one at a time, and expects red each time
+     node tools/check-backbar.mjs --mutations  then breaks the shipped files eleven ways, one at a time, and expects red each time
      node tools/check-backbar.mjs --help
 
    The whole app is loaded from index.html's own script list (app.js and its
@@ -32,6 +32,8 @@
    D7 the quiz: quality and answer positions   D8 the build's own output
    W1 keys   W2 kept apart   W3 addresses and Back   W4 rendering
    W5 recall   W6 the quiz through the click   W7 the doors
+   W8 Its style at the table: each bottle a whisky style lists (CASK_STYLES,
+      js/data-caskstyles.js, 5 November 2026) draws a door to that style
    H1 the house rows claim only exact matches   H2 from the same house
    H3 the rows drawn, the house card, the house's name */
 import assert from 'node:assert/strict';
@@ -788,6 +790,29 @@ await test('W7 doors: the sub-nav after Coffee and tea, the door after Coffee an
   run("state.tab = 'menu'; state.menu.view = 'menu';");
 });
 
+await test('W8 Its style at the table: every bottle a style lists draws a door to each of its styles between In the Ledger and Recall, each landing on the style; no other bottle draws one', () => {
+  const styles = plain(g('caskStyleEntries') ? g('caskStyleEntries')() : []) || [];
+  if (!styles.length) { notes.push('W8 no whisky styles are loaded (js/data-caskstyles.js), so no bottle has a style door to hold'); return; }
+  const bad = [];
+  for (const e of entries) {
+    const want = styles.filter((st) => (st.shelf || []).includes(e.id));
+    const out = g('backbarDetailHTML')(g('backbarEntry')(e.id));
+    const doors = [...out.matchAll(/class="btn btn-ghost backbar-style" href="([^"]+)">([^<]+)</g)];
+    if (JSON.stringify(doors.map((m) => m[1])) !== JSON.stringify(want.map((st) => '#/casks/style/' + st.id))) bad.push(e.id + ': doors ' + doors.map((m) => m[1]).join(',') + ', not ' + want.map((st) => st.id).join(','));
+    doors.forEach((m, i) => { if (want[i] && m[2] !== esc(want[i].name) + ', at the table') bad.push(e.id + ': the door reads ' + m[2]); });
+    if (!want.length) { if (/id="backbar-d-style"/.test(out)) bad.push(e.id + ': Its style at the table drawn with no style'); continue; }
+    const at = out.indexOf('<h3 id="backbar-d-style">Its style at the table</h3>');
+    if (!(at > out.indexOf('id="backbar-d-links"') && at < out.indexOf('id="backbar-d-recall"'))) bad.push(e.id + ': Its style at the table is not between In the Ledger and Recall');
+    for (const st of want) {
+      run("state.tab = 'home';");
+      if (!g('applyRoute')('#/casks/style/' + st.id)) { bad.push(e.id + ': #/casks/style/' + st.id + ' is not read'); continue; }
+      run('navNormalise()');
+      if (g('routeNow')().hash !== '#/casks/style/' + st.id) bad.push(e.id + ': #/casks/style/' + st.id + ' does not land');
+    }
+  }
+  eq(bad, []);
+});
+
 /* ---- H: the house, from the shipped engine and pack ------------------------------- */
 if (!HOUSE_HERE) notes.push('H1 to H3 skipped: no House engine and pack beside this checkout (OOT_SHARED=<dir> names one)');
 else {
@@ -935,12 +960,13 @@ async function mutations() {
     ['the card keyed under another name', 'js/ui-backbar.js', "cards.push({ src: 'Back Bar',", "cards.push({ src: 'Backbar',"],
     ['a bottle\u2019s parent skipping the shelf', 'js/ui-nav.js', "    if(state.menu.view === 'backbar' && typeof backbarState === 'function' && backbarState().item){ backbarState().item = ''; return true; }\n", ''],
     ['the answer on the blind front', 'js/ui-backbar.js', "+ front + heading + question\n", "+ front + heading + question + backbarParas(card.back)\n"],
-    ['the grade before Flip let through', 'js/app.js', "['Fall 2026','Bar Compass','Brew Guide','Back Bar']", "['Fall 2026','Bar Compass','Brew Guide']"],
+    ['the grade before Flip let through', 'js/app.js', "['Fall 2026','Bar Compass','Brew Guide','Back Bar','Cask Styles']", "['Fall 2026','Bar Compass','Brew Guide','Cask Styles']"],
     ['a quiz question banked by a qkey', 'js/ui-backbar.js', "ckey: 'Back Bar \\u00b7 ' + e.id + '/recall', backbarId: e.id };", "ckey: 'Back Bar \\u00b7 ' + e.id + '/recall', qkey: 'backbar-' + e.id, backbarId: e.id };"],
     ['the house\u2019s name written into the page', 'js/ui-backbar.js', "function backbarHouseName(){ const h = backbarHouse(); return h && typeof h.name === 'string' ? h.name.trim() : ''; }", "function backbarHouseName(){ return 'Brennan\\u2019s'; }"],
     ['a match term inside a longer one counted', 'js/ui-backbar.js', " && !occ.some(function(p){ return p[2] !== o[2] && p[0] <= o[0] && p[1] >= o[1] && (p[1] - p[0]) > (o[1] - o[0]); })", ''],
     ['a house price drawn on a use row', 'js/ui-backbar.js', "+ '<h4 class=\"backbar-use-name\">' + esc(item.name) + '</h4>'", "+ '<h4 class=\"backbar-use-name\">' + esc(item.name) + (item.price ? ' ' + esc(item.price) : '') + '</h4>'"],
     ['Recall before you reveal drawn open', 'js/ui-backbar.js', "'<details class=\"backbar-recall\"><summary>'", "'<details class=\"backbar-recall\" open><summary>'"],
+    ['a bottle\u2019s style door left out', 'js/ui-backbar.js', "    + backbarStylesHTML(e)\n", ''],
   ];
   let held = 0;
   for (const [name, file, from, to] of MUT) {

@@ -965,7 +965,7 @@ async function mutations() {
     ['an entry\u2019s parent skipping the index', 'js/ui-nav.js', "    if(state.menu.view === 'brew' && typeof brewState === 'function' && brewState().item){ brewState().item = ''; return true; }\n", ''],
     ['a thumbnail drawn beside the video link', 'js/ui-brew.js', "+ esc(v.label) + '<span class=\"sr-only\">", "+ '<img src=\"https://i.ytimg.com/vi/' + esc(v.id) + '/default.jpg\" alt=\"\">' + esc(v.label) + '<span class=\"sr-only\">"],
     ['the answer on the blind front', 'js/ui-brew.js', "+ front + heading + question\n", "+ front + heading + question + brewParas(card.back)\n"],
-    ['the grade before Flip let through', 'js/app.js', "['Fall 2026','Bar Compass','Brew Guide']", "['Fall 2026','Bar Compass']"],
+    ['the grade before Flip let through', 'js/app.js', "['Fall 2026','Bar Compass','Brew Guide','Back Bar','Cask Styles']", "['Fall 2026','Bar Compass','Back Bar','Cask Styles']"],
     ['a quiz question banked by a qkey', 'js/ui-brew.js', "ckey: 'Brew Guide \\u00b7 ' + e.id + '/make', brewId: e.id };", "ckey: 'Brew Guide \\u00b7 ' + e.id + '/make', qkey: 'brew-' + e.id, brewId: e.id };"],
     ['the house\u2019s name written into the page', 'js/ui-brew.js', "function brewHouseName(){ const h = brewHouse(); return h && typeof h.name === 'string' ? h.name.trim() : ''; }", "function brewHouseName(){ return 'Brennan\\u2019s'; }"],
   ];

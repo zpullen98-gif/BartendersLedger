@@ -243,6 +243,41 @@ for (const [label, arr, key] of [
 	if (!offered.includes('backbar')) problems.push("the house's sub-nav does not offer The liquor shelf (backbar)");
 }
 
+// ---- the Cask Atlas reaches At the table: every style -----------------------
+// js/ui-caskstyles.js draws the styles (5 November 2026) and the Cask Atlas
+// reaches them: its router reads #/casks/style/<id> and prints it back, its
+// home draws the section, each chapter its Styles to present, and each liquor
+// shelf bottle of a style draws its style's door. A hook dropped from any of
+// them leaves the page loaded and unreachable in silence, so each is read
+// here; every style id is its own slug and every chapter a style names is a
+// Cask Atlas chapter, or its address and its doors would lead nowhere.
+{
+	const casksJs = read('../js/ui-casks.js');
+	const bbJs = read('../js/ui-backbar.js');
+	const index = read('../index.html');
+	const csSrc = existsSync(new URL('../js/data-caskstyles.js', import.meta.url)) ? read('../js/data-caskstyles.js') : '';
+	if (!csSrc) problems.push('js/data-caskstyles.js is missing: At the table: every style has no data');
+	else {
+		for (const [hook, what] of [['caskStyleRoute(parts)', 'the router'], ['caskStyleRouteNow()', 'the address'], ['caskStyleHomeHTML()', 'the home section'], ['caskStyleChapterDoorsHTML(c.id)', "a chapter's Styles to present"], ['caskStyleRender()', 'the page']]) {
+			if (!casksJs.includes(hook)) problems.push(`js/ui-casks.js does not call ${hook}: ${what} of At the table: every style is lost`);
+		}
+		if (!/CASK_STYLES/.test(bbJs) || !bbJs.includes('backbarStylesHTML(e)\n')) problems.push("js/ui-backbar.js no longer draws a bottle's Its style at the table from CASK_STYLES");
+		const at = ['js/ui-casks.js', 'js/data-caskstyles.js', 'js/ui-caskstyles.js', 'js/app.js'].map((f) => index.indexOf('src="' + f));
+		if (at.some((i) => i < 0) || at.some((i, k) => k && i < at[k - 1])) problems.push('index.html does not load js/data-caskstyles.js and js/ui-caskstyles.js after the Cask Atlas and before app.js');
+		if (!index.includes('href="css/caskstyles.css')) problems.push('index.html does not load css/caskstyles.css');
+		const { CASK_STYLES } = vm.runInNewContext(csSrc + ';({CASK_STYLES})', {});
+		const { CASK_CHAPTERS } = vm.runInNewContext(read('../js/data-casks.js') + ';({CASK_CHAPTERS})', {});
+		const chapterIds = new Set(CASK_CHAPTERS.map((c) => c.id));
+		const seen = new Set();
+		for (const e of CASK_STYLES.entries) {
+			if (slugify(e.id) !== e.id) problems.push(`the style id "${e.id}" is not its own slug, so #/casks/style/${e.id} would not read back`);
+			if (seen.has(e.id)) problems.push(`the style id "${e.id}" twice`);
+			seen.add(e.id);
+			for (const c of e.chapters) if (!chapterIds.has(c)) problems.push(`the style ${e.id} names the chapter "${c}", which the Cask Atlas does not hold`);
+		}
+	}
+}
+
 // ---- section keys slug uniquely, and every card names a real section --------
 // A reference card filed under a dom that names no section renders NOWHERE and
 // searches to a dead route, which is the exact shape of a half-finished move.
