@@ -1,0 +1,75 @@
+{
+  "id": "irish-single-malt",
+  "name": "Irish single malt",
+  "respell": "",
+  "family": "irish",
+  "law": "The Irish whiskey technical file defines malt Irish whiskey: distilled from a mash of malted barley only, in pot stills. Every Irish whiskey rule holds: distilled below 94.8% ABV, matured at least three years in wooden casks of no more than 700 litres on the island of Ireland, bottled at 40% ABV or more, with only water and plain caramel added. Single on the label means one distillery. The file asks for neither triple distillation nor unpeated malt.",
+  "made": "Malted barley alone is milled, mashed and fermented, then distilled in copper pot stills. How many times is the house's choice: Bushmills distils its malt three times, Cooley twice, and a few houses use peated malt, as Cooley does for Connemara. The spirit matures in wood, most often ex-bourbon casks, with sherry, port and other wine casks for richer or finished bottlings.",
+  "taste": "Usually fruity, floral and malty, the character the technical file credits to the malted barley: green apple, pear, honey, vanilla and biscuit, light to medium in body, with a clean, gentle finish. Sherry and port casks add dried fruit and nuts; a peated malt such as Connemara brings earthy peat smoke.",
+  "lines": {
+    "s10": "Irish single malt is whiskey from malted barley alone, pot distilled at one distillery in Ireland: fruity, floral and malty.",
+    "s20": "Irish single malt is all malted barley, distilled in copper pot stills at one distillery and aged at least three years in wood in Ireland, seldom peated. Expect green apple, pear, honey, vanilla and biscuit.",
+    "s45": "This is an Irish single malt whiskey. Under the Irish whiskey technical file it is made from malted barley alone, distilled in copper pot stills at one distillery and aged at least three years in wooden casks on the island of Ireland. Some houses distil three times, others twice, and a few peat their malt. Expect a fruity, floral, malty glass: green apple, pear, honey, vanilla and biscuit, with dried fruit from sherry casks. We pour it neat with a jug of water beside it, or stirred in a Tipperary. Bushmills, in north Antrim, traces its licence to a grant of 1608 for the district.",
+    "sale": "Irish single malt is malted barley alone from one Irish distillery: fruity, floral and gentle. Taste it neat with a few drops of water, or stirred with sweet vermouth and green Chartreuse in a Tipperary."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, so the orchard fruit, honey and malt come through.",
+    "water": "A few drops of still water open the pear, the flowers and the biscuit.",
+    "rocks": "One large cube if asked; cold mutes the fruit, so offer it neat first.",
+    "highball": "With chilled soda over ice in a tall glass and a lemon twist, light and fruity.",
+    "glass": "A Glencairn or tulip neat; a rocks glass for the cube; a coupe for the Tipperary.",
+    "classic": "A Tipperary, stirred with sweet vermouth and green Chartreuse; a Hot Toddy or an Irish Coffee."
+  },
+  "guest": [
+    { "q": "Is Irish single malt always triple distilled?", "a": "No. The technical file sets no count. Bushmills distils its malt three times; Cooley, where Connemara and Tyrconnell are made, distils twice." },
+    { "q": "Is it smoky like Scotch?", "a": "Usually not. Most Irish malt is dried without peat, so the glass is fruit, honey and malt. Connemara is a peated exception, and plenty of Scotch is unpeated too." },
+    { "q": "How is it different from a single pot still?", "a": "A single malt is all malted barley. A single pot still adds at least 30 per cent unmalted barley, which gives a creamier, spicier glass. Both come from copper pot stills at one distillery." }
+  ],
+  "compare": "Against a single malt Scotch: both are all malted barley from pot stills at one distillery, aged at least three years, but Scotch must age in oak in Scotland, while the Irish rule asks for wooden casks on the island of Ireland. Irish malt is more often unpeated and sometimes triple distilled, so it leans to fruit, flowers and honey.",
+  "benchmarks": ["Bushmills", "Connemara", "Tyrconnell", "Teeling", "Dingle"],
+  "shelf": [],
+  "chapters": ["irish"],
+  "canon": ["tipperary", "hot-toddy", "irish-coffee"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What makes an Irish single malt, and does the rule require triple distillation or unpeated malt?",
+      "answer": "Malted barley alone, distilled in copper pot stills at one distillery, aged at least three years in wooden casks on the island of Ireland and bottled at 40% ABV or more. The technical file requires neither: Bushmills distils three times, Cooley twice, and Connemara is peated."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Under the Irish whiskey technical file, what goes into the mash of a malt Irish whiskey?",
+      "options": ["Malted barley only", "Malted and unmalted barley", "At least 51 per cent malted barley", "Malted barley with up to 30 per cent maize"],
+      "a": 0,
+      "explain": "Malted barley only, distilled in pot stills. A mash of malted and unmalted barley in pot stills makes pot still Irish whiskey; a column still and other cereals make grain Irish whiskey."
+    },
+    {
+      "id": "q2",
+      "q": "Which Irish distillery, opened in 1987, double distils its malt and makes the peated Connemara?",
+      "options": ["Bushmills", "Midleton", "Cooley", "Kilbeggan"],
+      "a": 2,
+      "explain": "Cooley, opened in 1987, distils its malt twice and peats some of it for Connemara. Bushmills distils its malt three times."
+    },
+    {
+      "id": "q3",
+      "q": "Bushmills, in north Antrim, traces its licence to a grant made for its district in which year?",
+      "options": ["1784", "1823", "1757", "1608"],
+      "a": 3,
+      "explain": "1608, a licence to distil granted for the district rather than for this distillery; the distillery company was registered in 1784."
+    }
+  ],
+  "sources": [
+    { "title": "European Commission, eAmbrosia: Irish Whiskey technical file", "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/55944" },
+    { "title": "Revenue: Whiskey verification checks", "url": "https://www.revenue.ie/en/companies-and-charities/documents/excise/whiskey-verification-checks.pdf" },
+    { "title": "Master of Malt: Single malt Irish whiskey", "url": "https://www.masterofmalt.com/country-style/irish/single-malt-whiskey/" },
+    { "title": "Blackwater Distillery: Malty goodness", "url": "https://blackwaterdistillery.ie/malty-goodness/" },
+    { "title": "Curraghmore Whiskey: The difference between single malt and pot still Irish whiskey", "url": "https://curraghmorewhiskey.com/blog/2022/12/whats-the-difference-between-single-malt-and-pot-still-irish-whiskey" },
+    { "title": "Wikipedia: Cooley Distillery", "url": "https://en.wikipedia.org/wiki/Cooley_Distillery" },
+    { "title": "Cellar Tours: Cooley Distillery guide", "url": "https://www.cellartours.com/ireland/distilleries/cooley" },
+    { "title": "The Whisky Shop: Irish Bushmills whiskey", "url": "https://www.whiskyshop.com/world-whiskies/brand/bushmills" },
+    { "title": "Master of Malt: Bushmills Irish whiskey", "url": "https://www.masterofmalt.com/distilleries/bushmills-whiskey-distillery/" },
+    { "title": "Cask Atlas: Irish Whiskey, pot still, malt, grain and blend", "url": "" }
+  ]
+}
