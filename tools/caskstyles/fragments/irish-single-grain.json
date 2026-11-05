@@ -25,8 +25,8 @@
     { "q": "Why is it lighter than a pot still whiskey?", "a": "The column still runs continuously and makes a lighter, cleaner spirit than copper pot stills, so the cask, most often ex-bourbon, gives much of the vanilla and toffee." },
     { "q": "Isn't grain whiskey just for blends?", "a": "It carries many Irish blends, but some is bottled on its own as single grain, by Teeling, Kilbeggan and Method and Madness among others, and it shows what the blends are built on." }
   ],
-  "compare": "Against a blended Irish whiskey: a single grain is grain whiskey alone, column distilled at one distillery, while a blend marries two or more of the three styles, grain, malt and pot still. The single grain is lighter and sweeter; the malt or pot still in a blend adds body, fruit and spice.",
-  "benchmarks": ["Teeling", "Kilbeggan", "Greenore", "Method and Madness", "Midleton"],
+  "compare": "Against a blended Irish whiskey: a single grain is grain whiskey alone, column distilled at one distillery, while a blend marries two or more of the three styles, grain, malt and pot still. The single grain usually reads lighter and sweeter; the malt or pot still in a blend adds body, fruit and spice.",
+  "benchmarks": ["Teeling", "Kilbeggan", "Method and Madness", "Cooley"],
   "shelf": [],
   "chapters": ["irish"],
   "canon": ["irish-mule", "whiskey-highball", "whiskey-ginger"],
@@ -55,8 +55,8 @@
     {
       "id": "q3",
       "q": "Aeneas Coffey applied for his still patent in 1830 while running a distillery in which city?",
-      "options": ["Glasgow", "Dublin", "Cork", "Belfast"],
-      "a": 1,
+      "options": ["Glasgow", "Cork", "Belfast", "Dublin"],
+      "a": 3,
       "explain": "Dublin, where he ran the Dock distillery; the patent was granted in 1831, and Scotland's grain distillers took the still up."
     }
   ],
@@ -73,6 +73,8 @@
     { "title": "The Whiskey Wash: Method and Madness line unveiled", "url": "https://thewhiskeywash.com/irish-whiskey/irish-distillers-unveils-method-madness-line-irish-whiskey-world/" },
     { "title": "The Whisky Exchange: Method and Madness", "url": "https://www.thewhiskyexchange.com/feature/methodandmadness" },
     { "title": "Distiller: Kilbeggan 8 Year Single Grain", "url": "https://distiller.com/spirits/kilbeggan-8-year-single-grain" },
+    { "title": "Wikipedia: Cooley Distillery", "url": "https://en.wikipedia.org/wiki/Cooley_Distillery" },
+    { "title": "Scotch Noob: Greenore 8 year single grain, the whiskey now sold as Kilbeggan", "url": "https://scotchnoob.com/2016/01/04/greenore-8-year-single-grain-irish-whiskey/" },
     { "title": "Wikipedia: Aeneas Coffey", "url": "https://en.wikipedia.org/wiki/Aeneas_Coffey" },
     { "title": "Master of Malt: Whisky heroes, Aeneas Coffey", "url": "https://www.masterofmalt.com/blog/post/whisky-heroes-aeneas-coffey-exciseman-distiller-and-inventor" },
     { "title": "Scotchwhisky.com: Whisky heroes, Aeneas Coffey", "url": "https://scotchwhisky.com/magazine/whisky-heroes/20740/aeneas-coffey/" },

@@ -22,7 +22,7 @@
   },
   "guest": [
     { "q": "What does pot still mean here?", "a": "In Ireland it names a style as well as a still: a mash of malted and unmalted barley, distilled in copper pot stills. Single means it all comes from one distillery." },
-    { "q": "Is it triple distilled?", "a": "Usually, at most houses, but the technical file allows double or triple distillation. What the rule insists on is the mash of malted and unmalted barley and the copper pot stills." },
+    { "q": "Is it triple distilled?", "a": "Usually, yes, but the technical file allows double or triple distillation. What the rule insists on is the mash of malted and unmalted barley and the copper pot stills." },
     { "q": "Why the unmalted barley?", "a": "It gives the style its creamy, oily texture and its spice. A tax on malt from 1785 is often given as the reason distillers turned to raw barley, though historians debate how much it caused." }
   ],
   "compare": "Against an Irish single malt: the malt is all malted barley, while single pot still adds at least 30 per cent unmalted barley, which brings a creamier, oilier texture and more spice. Both come from one distillery and copper pot stills; the malt tends to lighter fruit and cereal.",
@@ -64,6 +64,7 @@
     { "title": "European Commission, eAmbrosia: Irish Whiskey technical file", "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/55944" },
     { "title": "Revenue: Whiskey verification checks", "url": "https://www.revenue.ie/en/companies-and-charities/documents/excise/whiskey-verification-checks.pdf" },
     { "title": "Vinetur: Ireland opens review that could redefine Irish whiskey", "url": "https://www.vinetur.com/en/20260629103448/ireland-opens-review-that-could-redefine-irish-whiskey.html" },
+    { "title": "Irish News: Government responds to industry calls to modernise the rules of Irish whiskey", "url": "https://www.irishnews.com/news/business/government-responds-to-industry-calls-to-modernise-rules-around-irish-whiskey-production-3I2WK7R46JF6ZHRIYU4V62EJ4I/" },
     { "title": "Wikipedia: Single pot still whiskey", "url": "https://en.wikipedia.org/wiki/Single_pot_still_whiskey" },
     { "title": "The Whisky Exchange: Single pot still Irish whiskey, a complete guide", "url": "https://www.thewhiskyexchange.com/inspiration/article/18566/single-pot-still-irish-whiskey-history-style-revival-the-whisky-exchange" },
     { "title": "VinePair: The history of pot still Irish whiskey", "url": "https://vinepair.com/articles/history-pot-still-irish-whiskey/" },

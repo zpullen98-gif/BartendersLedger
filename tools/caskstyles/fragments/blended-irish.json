@@ -26,7 +26,7 @@
     { "q": "Is a blend a lesser whiskey than a single?", "a": "No. Blend names a recipe, not a grade: two or more Irish styles married by a blender for a set house style. The right one depends on the drink you want." },
     { "q": "Which whiskey goes in an Irish Coffee?", "a": "Any Irish whiskey, and a blend is a common choice: light and honeyed under hot coffee, brown sugar and cream. A blend rich in pot still makes a fuller, spicier one." }
   ],
-  "compare": "Against an Irish single pot still: the single pot still is one style from one distillery, malted and unmalted barley from copper pot stills, while a blend marries two or more styles, usually with light grain whiskey from column stills. The blend is lighter, softer and sweeter; the single pot still creamier and spicier.",
+  "compare": "Against an Irish single pot still: the single pot still is one style from one distillery, malted and unmalted barley from copper pot stills, while a blend marries two or more styles, usually with light grain whiskey from column stills. The blend usually reads lighter, softer and sweeter; the single pot still creamier and spicier.",
   "benchmarks": ["Jameson", "Powers", "Tullamore D.E.W.", "Bushmills", "Writers' Tears"],
   "shelf": [],
   "chapters": ["irish", "blending"],
@@ -56,8 +56,8 @@
     {
       "id": "q3",
       "q": "In which year did a Royal Commission decline to keep the name whiskey for pot still spirit alone?",
-      "options": ["1878", "1909", "1923", "1966"],
-      "a": 1,
+      "options": ["1878", "1923", "1966", "1909"],
+      "a": 3,
       "explain": "1909. Pot still distillers had argued that only pot still spirit was whiskey; the Commission set no such limit, so grain whiskey and blends kept the name."
     }
   ],
