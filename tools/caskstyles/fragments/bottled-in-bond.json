@@ -3,7 +3,7 @@
   "name": "Bottled-in-bond",
   "respell": "",
   "family": "american",
-  "law": "27 CFR 5.88, the United States rule that grew from the Bottled-in-Bond Act of 1897: spirits of one kind, made in one distilling season (January to June, or July to December) by one distiller at one distillery, stored at least four years in wood in a bonded warehouse, changed by nothing but pure water and bottled at exactly 100 proof (50% ABV). The label names the distillery and, if it differs, the place of bottling.",
+  "law": "27 CFR 5.88, the United States rule that grew from the Bottled-in-Bond Act of 1897: spirits of one kind, made in one distilling season (January to June, or July to December) by one distiller at one distillery, stored at least four years in wood in a bonded warehouse, with nothing added but pure water, and bottled at exactly 100 proof (50% ABV). The label names the distillery and, if it differs, the place of bottling.",
   "made": "Bonded is a promise laid over a whiskey of its own type, most often bourbon or rye. Everything in the bottle was distilled in one half-year season at one distillery, filled to its type's rules and left at least four years in a bonded warehouse; many barrels from that season may be married. At bottling it is cut with water to exactly 100 proof, with no colouring or flavouring. Age beyond four years, recipe and warehouse vary by house.",
   "taste": "Bonded promises a known strength and age, not one flavour. At 100 proof and four years or more, a bonded bourbon reads caramel, vanilla and toasted oak over baking spice; a bonded rye, pepper, mint and rye bread. Fuller and warmer than an 80 or 90 proof bottling, with a longer finish that holds through ice, sugar and citrus.",
   "lines": {
@@ -25,7 +25,7 @@
     { "q": "Is a bonded bourbon from a single barrel?", "a": "No. It must all come from one distilling season at one distillery, but many barrels from that season may be married. Single barrel is a separate claim on the label." },
     { "q": "How old is a bonded whiskey?", "a": "At least four years in wood. Because it is four years or more, the label need not state an age, though some bonded bottles do." }
   ],
-  "compare": "Straight whiskey, 27 CFR 5.143, asks two years in new charred oak and nothing added, at 40% ABV or more, and may marry many seasons and distilleries of one state. Bonded narrows it: one season, one distillery, four years and exactly 100 proof. A bonded bottle is always 100 proof; a straight may be younger and softer, or stronger.",
+  "compare": "Straight whiskey, 27 CFR 5.143, asks at least two years in oak, charred new oak for every type but corn, with nothing added but water, and may marry many seasons and distilleries of one state. Bonded asks one season, one distillery, four years and exactly 100 proof. A straight may be younger and softer, or stronger.",
   "benchmarks": ["Old Fitzgerald", "Old Grand-Dad", "Evan Williams", "Rittenhouse", "E. H. Taylor", "Heaven Hill"],
   "shelf": [],
   "chapters": ["american-labels"],

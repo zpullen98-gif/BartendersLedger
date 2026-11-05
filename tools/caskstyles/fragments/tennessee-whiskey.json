@@ -57,13 +57,12 @@
       "q": "Which Tennessee distillery does the exception in the 2013 law free from the charcoal step?",
       "options": ["Jack Daniel's", "George Dickel", "Benjamin Prichard's", "Nelson's Green Brier"],
       "a": 2,
-      "explain": "Benjamin Prichard's, in Lincoln County, which made its whiskey without the charcoal step before the law. The exception is drawn by county and date, and the state's attorney general read it in 2015 as covering one distillery."
+      "explain": "Benjamin Prichard's, in Lincoln County, which made its whiskey without the charcoal step before the law. The exception is drawn by county and date, so only Prichard's meets it."
     }
   ],
   "sources": [
     { "title": "Justia: Tennessee Code 57-2-106, Tennessee whiskey", "url": "https://law.justia.com/codes/tennessee/2019/title-57/chapter-2/section-57-2-106/" },
     { "title": "FindLaw: Tennessee Code 57-2-106", "url": "https://codes.findlaw.com/tn/title-57-intoxicating-liquors/tn-code-sect-57-2-106/" },
-    { "title": "Tennessee Attorney General: opinion 15-23 on the Tennessee whiskey statute", "url": "https://www.tn.gov/content/dam/tn/attorneygeneral/documents/ops/2015/op15-23.pdf" },
     { "title": "Associated Press, via KSL: the exemption in the Tennessee whiskey law", "url": "https://www.ksl.com/article/33886270" },
     { "title": "Wikipedia: Tennessee whiskey", "url": "https://en.wikipedia.org/wiki/Tennessee_whiskey" },
     { "title": "Alcohol Professor: Chalk one up for the charcoal", "url": "https://www.alcoholprofessor.com/blog-posts/blog/2013/05/13/chalk-one-up-for-the-charcoal" },

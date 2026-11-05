@@ -9,7 +9,7 @@
   "lines": {
     "s10": "Monongahela and Maryland rye are the old rye styles of Pennsylvania and Maryland: one rye-heavy and peppery, one softer.",
     "s20": "Monongahela rye, from western Pennsylvania, was made rye-heavy with little or no corn: dry, peppery, grassy. Maryland rye is often described as softer and sweeter. Neither is a legal category; both are rye whisky under the federal rule.",
-    "s45": "This is rye in the Pennsylvania manner, the old Monongahela style, with its softer Maryland cousin beside it. Neither is a legal category: both are rye whisky under 27 CFR 5.143, at least 51 per cent rye in new charred oak. Monongahela rye, from the river valleys of western Pennsylvania, was usually rye-heavy with little or no corn; Maryland rye is often described as lighter and sweeter. Expect black pepper, clove, grass and rye bread over dark fruit, dry and firm through the finish. We pour it neat, or in a Manhattan or a Brooklyn. The Whiskey Rebellion of 1794 rose in this rye country.",
+    "s45": "This is rye in the Pennsylvania manner, the old Monongahela style, with its softer Maryland cousin beside it. Neither is a legal category: both are rye whisky under 27 CFR 5.143, at least 51 per cent rye in new charred oak. Monongahela rye, from the river valleys of western Pennsylvania, was usually rye-heavy with little or no corn; Maryland rye is often described as lighter and sweeter. Expect black pepper, clove, grass and rye bread over dark fruit, dry and firm through the finish. We pour it neat, or in a Manhattan or a Brooklyn. The Whiskey Rebellion came to a head in this rye country in 1794.",
     "sale": "This is rye in the old Pennsylvania manner, rye-heavy and peppery, with little corn to soften it. Try it in a Manhattan or a Ward 8, or neat with a drop of water."
   },
   "serve": {
@@ -24,8 +24,8 @@
     { "q": "How is Maryland rye different?", "a": "It is often described as softer and sweeter than Pennsylvania's rye, lighter in spice. Both traditions faded after Prohibition, and distilleries in both states make rye again." },
     { "q": "Can I still find the old brands?", "a": "Some names live on: Old Overholt began in western Pennsylvania and Pikesville in Maryland, and both are now made in Kentucky. Newer distilleries in both states make rye in the old manner." }
   ],
-  "compare": "Kentucky-style rye, also no legal category, sits just over the 51 per cent rye line with plenty of corn, so it reads rounder and sweeter. Monongahela rye leaned to rye with little or no corn, drier and more peppery; Maryland rye is often described as the softer of the two old styles.",
-  "benchmarks": ["Old Overholt", "Pikesville", "Sagamore Spirit"],
+  "compare": "Kentucky-style rye, also no legal category, sits just over the 51 per cent rye line with plenty of corn, so it usually reads rounder and sweeter. Monongahela rye leaned to rye with little or no corn, drier and more peppery; Maryland rye is often described as the softer of the two old styles.",
+  "benchmarks": ["Old Overholt", "Wigle", "Dad's Hat", "Sagamore Spirit"],
   "shelf": [],
   "chapters": ["american-rye"],
   "canon": ["manhattan", "old-fashioned", "brooklyn", "ward-8"],
@@ -40,8 +40,8 @@
     {
       "id": "q1",
       "q": "In which state did Monongahela rye grow up?",
-      "options": ["Kentucky", "Pennsylvania", "Maryland", "Tennessee"],
-      "a": 1,
+      "options": ["Kentucky", "Maryland", "Tennessee", "Pennsylvania"],
+      "a": 3,
       "explain": "Western Pennsylvania, along the river Monongahela and its valleys. Maryland had its own rye, often described as softer; a Kentucky-style rye carries more corn."
     },
     {
@@ -53,7 +53,7 @@
     },
     {
       "id": "q3",
-      "q": "In which year did the Whiskey Rebellion rise in the rye country of western Pennsylvania?",
+      "q": "In which year did the Whiskey Rebellion turn to armed revolt in western Pennsylvania?",
       "options": ["1776", "1794", "1812", "1865"],
       "a": 1,
       "explain": "1794: protest at the federal tax on distilled spirits, passed in 1791, turned to open revolt that year, and a federal force marched west to end it."
@@ -72,6 +72,10 @@
     { "title": "VinePair: The history and legend of Old Overholt", "url": "https://vinepair.com/articles/the-history-legend-of-old-overholt" },
     { "title": "West Virginia archives and history: the Whiskey Rebellion", "url": "https://archive.wvculture.org/History/settlement/whiskeyrebellion01.html" },
     { "title": "Observer-Reporter: Region caught spirit of making spirits long ago", "url": "https://www.observer-reporter.com/news/2017/jul/08/region-caught-spirit-of-making-spirits-long-ago/" },
+    { "title": "Whisky Advocate: The true story of Old Overholt rye", "url": "https://whiskyadvocate.com/true-story-old-overholt-rye" },
+    { "title": "The Whiskey Wash: Dad's Hat, a straight rye made in Pennsylvania again", "url": "https://thewhiskeywash.com/american-whiskey/dads-hat-unveils-first-made-in-state-pennsylvania-straight-rye-whiskey-in-over-25-years/" },
+    { "title": "Distiller: Wigle organic Pennsylvania rye", "url": "https://distiller.com/spirits/wigle-organic-pennsylvania-deep-cut-rye-whiskey" },
+    { "title": "Chilled magazine: Must try Pennsylvania rye", "url": "https://chilledmagazine.com/?p=16486" },
     { "title": "Cask Atlas: American Rye", "url": "" }
   ]
 }

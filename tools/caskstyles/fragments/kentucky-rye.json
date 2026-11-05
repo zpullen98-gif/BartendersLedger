@@ -3,13 +3,13 @@
   "name": "Kentucky-style rye",
   "respell": "",
   "family": "american",
-  "law": "No legal category of its own: Kentucky-style names a recipe, not a rule. The whiskey is rye whisky under 27 CFR 5.143, the United States standards of identity: made from at least 51 per cent rye, distilled at no more than 80% ABV (160 proof), stored in charred new oak at no more than 62.5% ABV (125 proof) and bottled at 40% ABV (80 proof) or more. Straight rye adds at least two years and nothing added.",
-  "made": "The mash sits just over the legal line, often about 51 to 55 per cent rye, with corn making most of the rest and malted barley for its enzymes, much like a bourbon recipe with the two leading grains turned round. It is cooked, fermented and distilled on the same column stills and doublers as the distillery's bourbon, then aged in new charred oak; many are bottled as straight rye.",
+  "law": "No legal category of its own: Kentucky-style names a recipe, not a rule. The whiskey is rye whisky under 27 CFR 5.143, the United States standards of identity: made from at least 51 per cent rye, distilled at no more than 80% ABV (160 proof), stored in charred new oak at no more than 62.5% ABV (125 proof) and bottled at 40% ABV (80 proof) or more. Straight rye adds at least two years, with no colouring or flavouring.",
+  "made": "The mash sits at or just over the legal line, often 51 per cent rye or a little more, with corn making most of the rest and malted barley for its enzymes, much like a bourbon recipe with the two leading grains turned round. It is cooked, fermented and distilled on the same column stills and doublers as the distillery's bourbon, then aged in new charred oak; many are bottled as straight rye.",
   "taste": "Rye spice over a rounder corn base: black pepper, cinnamon and mint over caramel, vanilla and honeyed corn, with rye bread and dried herbs on the finish. Usually softer and sweeter than a rye-heavy Pennsylvania rye, and close in feel to a high-rye bourbon.",
   "lines": {
     "s10": "Kentucky-style rye is rye whiskey made just over the 51 per cent rye line, with plenty of corn: spicy, but round.",
-    "s20": "Kentucky-style rye is a recipe, not a rule: rye whisky at about 51 to 55 per cent rye, the rest mostly corn, aged in new charred oak. Expect pepper, cinnamon and mint over caramel and sweet corn.",
-    "s45": "This is a Kentucky-style rye. American rye whisky must be at least 51 per cent rye and aged in new charred oak, by federal rule; Kentucky style sits just over that line, often about 51 to 55 per cent rye, with corn making most of the rest and a little malted barley, distilled on the same stills as bourbon. So the rye's black pepper, cinnamon and mint ride on caramel, vanilla and sweet corn, rounder than a rye-heavy Pennsylvania rye. We pour it neat, or in a Sazerac or a Manhattan. In New Orleans the Sazerac turned from cognac to American rye when cognac grew scarce.",
+    "s20": "Kentucky-style rye is a recipe, not a rule: rye whisky at or just over 51 per cent rye, the rest mostly corn, aged in new charred oak. Expect pepper, cinnamon and mint over caramel and sweet corn.",
+    "s45": "This is a Kentucky-style rye. American rye whisky must be at least 51 per cent rye and aged in new charred oak, by federal rule; Kentucky style sits just over that line, often 51 per cent rye or a little more, with corn making most of the rest and a little malted barley, distilled on the same stills as bourbon. So the rye's black pepper, cinnamon and mint ride on caramel, vanilla and sweet corn, rounder than a rye-heavy Pennsylvania rye. We pour it neat, or in a Sazerac or a Manhattan. In 2008 Louisiana named the Sazerac, a rye drink, the official cocktail of New Orleans.",
     "sale": "Kentucky-style rye keeps rye's pepper and mint but rounds them with corn, so it holds its spice in a stirred drink without turning harsh. Try it in a Sazerac, the New Orleans way, or in a Manhattan."
   },
   "serve": {
@@ -21,11 +21,11 @@
     "classic": "A Sazerac first; then a Manhattan, a Vieux Carré or a Cocktail à la Louisiane."
   },
   "guest": [
-    { "q": "What makes it Kentucky style?", "a": "The recipe: just over the 51 per cent rye the law asks, with plenty of corn and a little malted barley. The corn makes it rounder and sweeter than a rye-heavy Pennsylvania or Maryland rye." },
+    { "q": "What makes it Kentucky style?", "a": "The recipe: just over the 51 per cent rye the law asks, with plenty of corn and a little malted barley. The corn makes it rounder and sweeter than a rye-heavy Pennsylvania rye." },
     { "q": "Is it sweeter than other ryes?", "a": "Often a little, yes. The corn adds caramel and roundness under the spice. A rye made mostly or wholly of rye usually reads drier, grassier and more peppery." },
     { "q": "How is it different from a high-rye bourbon?", "a": "By which grain leads: rye whisky is at least 51 per cent rye, bourbon at least 51 per cent corn. A Kentucky-style rye and a high-rye bourbon can sit close together in the glass." }
   ],
-  "compare": "Monongahela and Maryland rye are historic regional styles, no more a legal category than Kentucky style: Pennsylvania's rye was usually rye-heavy with little or no corn, and Maryland's is often described as softer. Against them a Kentucky-style rye carries more corn, so it reads rounder and sweeter, its spice riding on caramel.",
+  "compare": "Monongahela and Maryland rye are historic regional styles, no more a legal category than Kentucky style: Pennsylvania's rye was usually rye-heavy with little or no corn, and Maryland's is often described as softer. Against them a Kentucky-style rye carries more corn, so it usually reads rounder and sweeter, its spice riding on caramel.",
   "benchmarks": ["Rittenhouse", "Sazerac Rye", "Thomas H. Handy", "Wild Turkey", "Pikesville"],
   "shelf": ["thomas-h-handy"],
   "chapters": ["american-rye"],
@@ -34,7 +34,7 @@
     {
       "id": "recall",
       "prompt": "What is a Kentucky-style rye, and what does the federal rule ask of any American rye whisky?",
-      "answer": "No legal category: a recipe just over the line, often about 51 to 55 per cent rye with corn making most of the rest, so rounder and sweeter. Under 27 CFR 5.143 rye whisky is at least 51 per cent rye, distilled at no more than 160 proof and stored in charred new oak at no more than 125 proof."
+      "answer": "No legal category: a recipe at or just over the line, often 51 per cent rye or a little more, with corn making most of the rest, so rounder and sweeter. Under 27 CFR 5.143 rye whisky is at least 51 per cent rye, distilled at no more than 160 proof and stored in charred new oak at no more than 125 proof."
     }
   ],
   "quiz": [
@@ -70,6 +70,10 @@
     { "title": "Whisky Advocate: The mashbills of Buffalo Trace", "url": "https://whiskyadvocate.com/The-Mashbills-of-Buffalo-Trace" },
     { "title": "Tasting Table: Sazerac, the original and the Thomas Handy evolution", "url": "https://tastingtable.com/688164/sazerac-original-and-thomas-handy-evolution" },
     { "title": "Difford's Guide: Sazerac (New Orleans style)", "url": "https://www.diffordsguide.com/cocktails/recipe/3390/sazerac" },
+    { "title": "Breaking Bourbon: Rittenhouse anniversary edition review, a rye at 51 per cent", "url": "https://breakingbourbon.com/review/rittenhouse-united-states-250th-anniversary-commemorative-edition" },
+    { "title": "Louisiana law, R.S. 33:1420.2: the official cocktail of New Orleans", "url": "https://legis.la.gov/Legis/Law.aspx?d=631474" },
+    { "title": "NPR, via KNAU: New Orleans declares the Sazerac its cocktail of choice", "url": "https://www.knau.org/2008-06-26/new-orleans-declares-sazerac-its-cocktail-of-choice" },
+    { "title": "Punch: The ultimate Sazerac recipe", "url": "https://punchdrink.com/articles/ultimate-best-sazerac-cocktail-recipe/" },
     { "title": "Cask Atlas: American Rye", "url": "" }
   ]
 }

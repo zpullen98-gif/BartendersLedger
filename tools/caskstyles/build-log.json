@@ -25,19 +25,19 @@
     }
   },
   "words": {
-    "total": 20532,
+    "total": 20538,
     "perEntry": {
       "bourbon": 664,
       "wheated-bourbon": 690,
       "high-rye-bourbon": 672,
       "four-grain-bourbon": 635,
       "straight-whiskey": 688,
-      "bottled-in-bond": 676,
+      "bottled-in-bond": 673,
       "small-batch-single-barrel": 651,
       "barrel-proof": 656,
       "tennessee-whiskey": 651,
-      "kentucky-rye": 650,
-      "monongahela-rye": 621,
+      "kentucky-rye": 655,
+      "monongahela-rye": 625,
       "american-single-malt": 694,
       "corn-whiskey": 693,
       "wheat-whiskey": 680,
@@ -94,7 +94,7 @@
     "Cask Styles · canadian/recall"
   ],
   "questions": 93,
-  "sources": 323,
+  "sources": 330,
   "shelf": 9,
   "missing": [
     "japanese-single-malt",

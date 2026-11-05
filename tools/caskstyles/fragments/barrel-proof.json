@@ -42,7 +42,7 @@
       "q": "Under the federal rule, how far below its dumping strength may a barrel proof whiskey be bottled?",
       "options": ["No more than two degrees of proof", "No more than ten degrees of proof", "No more than twenty degrees of proof", "Any amount, if the label states it"],
       "a": 0,
-      "explain": "No more than two degrees of proof, 1% ABV, under 27 CFR 5.87. The small allowance covers the slight drop between gauging the barrels and bottling."
+      "explain": "No more than two degrees of proof, 1% ABV, under 27 CFR 5.87: a batch dumped at 117.5 proof may be bottled at 116, never below 115.5."
     },
     {
       "id": "q2",
@@ -54,7 +54,7 @@
     {
       "id": "q3",
       "q": "In the hot upper floors of a Kentucky warehouse, what usually happens to a barrel's proof over the years?",
-      "options": ["It falls steadily", "It climbs", "It stays exactly at entry proof", "It drops to 80 proof"],
+      "options": ["It falls year by year", "It climbs year by year", "It holds at its entry proof", "It falls in the first year, then holds"],
       "a": 1,
       "explain": "It usually climbs: in the heat, water leaves through the oak faster than alcohol. Lower and cooler floors raise it less, and some barrels hold close to their entry proof."
     }
