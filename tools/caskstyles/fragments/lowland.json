@@ -1,0 +1,77 @@
+{
+  "id": "lowland",
+  "name": "Lowland",
+  "respell": "",
+  "family": "scotch",
+  "law": "The Scotch Whisky Regulations 2009 protect Lowland as a region, with Highland and Speyside, beside the localities of Islay and Campbeltown. Lowland is the part of Scotland south of the line the rule draws from the Firth of Clyde to the Firth of Tay, taking in Glasgow, Edinburgh, Fife and the Borders. A Scotch may carry the name only if distilled there. The rule asks nothing about the stills: triple distillation is a habit of some houses, never a requirement.",
+  "made": "Lowland single malt is malted barley, mashed, fermented and distilled in copper pot stills, usually twice; Auchentoshan, by Glasgow, distils all its spirit three times for a lighter spirit, an old Lowland habit that was never the rule. The malt is usually unpeated and aged in ex-bourbon and sherry casks. The region also holds grain distilleries, Cameronbridge in Fife and Girvan in Ayrshire among them, whose whisky goes mostly into blends.",
+  "taste": "Often light and gentle: cut grass, flowers, lemon, cereal and honey, with a soft, clean finish and usually no smoke. Triple distilled Auchentoshan is lighter again, citrus and grass over vanilla. The region names no style, so the bottle decides.",
+  "lines": {
+    "s10": "Lowland is Scotch whisky distilled in southern Scotland, below the Highland line: often light, grassy and floral, usually without smoke.",
+    "s20": "Lowland is a protected Scotch region covering southern Scotland, Glasgow, Edinburgh and Fife among it, and the name means distilled there. The malts are often light: grass, flowers, lemon and honey. Some houses distil three times, though the rule never asks it.",
+    "s45": "This is a Lowland single malt, distilled in southern Scotland, below the Highland line, in a region the Scotch Whisky Regulations protect by name. It is malted barley distilled in copper pot stills, usually twice, though a Lowland house may distil three times for a lighter spirit, then aged at least three years in oak. Expect a gentle glass: cut grass, flowers, lemon, cereal and honey, usually with no smoke and a clean finish. We pour it neat with a drop of water, or long with chilled soda. Auchentoshan, on the edge of Glasgow, took out its licence in 1823 and distils all its spirit three times.",
+    "sale": "Lowland malt is the gentle side of Scotch: grass, flowers, lemon and honey, usually without smoke. Taste it neat with a drop of water, or long with chilled soda in a Whiskey Highball."
+  },
+  "serve": {
+    "neat": "Neat at room temperature, so the grass, flowers and lemon stay bright.",
+    "water": "Only a few drops: a light Lowland malt opens quickly and drowns easily.",
+    "rocks": "A single large cube suits a light Lowland malt on a warm evening.",
+    "highball": "A natural highball malt: chilled soda, plenty of ice and a lemon peel in a tall glass.",
+    "glass": "A Glencairn or nosing glass neat; a highball glass for the soda; a fizz glass for the Morning Glory Fizz.",
+    "classic": "A Whiskey Highball; a Morning Glory Fizz; a Hot Toddy, where the light malt lets lemon and honey speak."
+  },
+  "guest": [
+    { "q": "Are Lowland whiskies triple distilled?", "a": "Some are; most are not. The rule asks nothing about the stills, and most Lowland malt is distilled twice. Auchentoshan, by Glasgow, distils all its spirit three times, which is where the reputation comes from." },
+    { "q": "Is Lowland whisky smoky?", "a": "Usually not. Most Lowland malt is unpeated, so grass, flowers, lemon and honey lead. The region promises no flavour, though, so the bottle tells us." },
+    { "q": "Where is the Lowland region?", "a": "Southern Scotland, south of a line the rules draw from the Firth of Clyde to the Firth of Tay: Glasgow, Edinburgh, Fife, Ayrshire and the Borders." }
+  ],
+  "compare": "Against Highland: both are protected regions, divided by a line from the Firth of Clyde to the Firth of Tay, and a label names the side the whisky was distilled on. Lowland malts are usually light, grassy and unpeated; Highland malts range wider, from honey and heather to wax, salt and some smoke.",
+  "benchmarks": ["Auchentoshan", "Glenkinchie", "Rosebank", "Bladnoch", "Cameronbridge"],
+  "shelf": [],
+  "chapters": ["scotch-regions"],
+  "canon": ["whiskey-highball", "morning-glory-fizz", "hot-toddy"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What does Lowland promise on a Scotch label, and does it promise triple distillation?",
+      "answer": "That the whisky was distilled in the Lowland region, southern Scotland below the line the Scotch Whisky Regulations 2009 draw from the Firth of Clyde to the Firth of Tay. It promises no still count and no flavour: most Lowland malt is distilled twice, though Auchentoshan distils all its spirit three times."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What do the Scotch Whisky Regulations 2009 require before a single malt may be called Lowland?",
+      "options": ["Three distillations in pot stills", "Distillation in the Lowland region", "Unpeated malt and no other", "Maturation in the Lowland region"],
+      "a": 1,
+      "explain": "Distillation in the region, with every rule for single malt Scotch met. The whisky may mature elsewhere in Scotland, and triple distillation and unpeated malt are habits of some houses, never the law."
+    },
+    {
+      "id": "q2",
+      "q": "Which Lowland distillery, on the edge of Glasgow, distils all of its spirit three times?",
+      "options": ["Glengoyne", "Glenkinchie", "Auchentoshan", "Bladnoch"],
+      "a": 2,
+      "explain": "Auchentoshan, at Clydebank. Glengoyne also stands near Glasgow, but its stills stand north of the line, so it is a Highland distillery."
+    },
+    {
+      "id": "q3",
+      "q": "In which year did Auchentoshan take out its distilling licence, by most accounts?",
+      "options": ["1779", "1830", "1887", "1823"],
+      "a": 3,
+      "explain": "1823, by most accounts, though a few give other dates. The distillery stands at Clydebank, on the edge of Glasgow."
+    }
+  ],
+  "sources": [
+    { "title": "legislation.gov.uk: The Scotch Whisky Regulations 2009, regulation 10", "url": "https://www.legislation.gov.uk/uksi/2009/2890/regulation/10" },
+    { "title": "Wikipedia: Lowland single malts", "url": "https://en.wikipedia.org/wiki/Lowland_single_malts" },
+    { "title": "Master of Malt: The five regions of Scotch whisky explained, the Lowlands", "url": "https://www.masterofmalt.com/blog/post/the-five-regions-of-scotch-whisky-explained-the-lowlands" },
+    { "title": "Gordon & MacPhail: Lowlands", "url": "https://www.gordonandmacphail.com/our-whiskies/regions/lowlands" },
+    { "title": "The Drinks Business: Fife whisky trade lobbies SWA for official status", "url": "https://www.thedrinksbusiness.com/2024/11/fife-whisky-trade-lobbies-swa-for-official-status/" },
+    { "title": "Whisky and Wisdom: Auchentoshan, triple the fun", "url": "https://whiskyandwisdom.com/auchentoshan-triple-the-fun" },
+    { "title": "Difford's Guide: Auchentoshan Distillery", "url": "https://www.diffordsguide.com/en-au/producers/18/auchentoshan-distillery" },
+    { "title": "Wikipedia: Auchentoshan distillery", "url": "https://en.wikipedia.org/wiki/Auchentoshan_distillery" },
+    { "title": "Whisky for Everyone: Auchentoshan Distillery", "url": "https://whiskyforeveryone.com/auchentoshan-distillery/" },
+    { "title": "Difford's Guide: Girvan Grain Distillery", "url": "https://www.diffordsguide.com/producers/345/girvan-grain-distillery" },
+    { "title": "Wikipedia: Glengoyne distillery", "url": "https://en.wikipedia.org/wiki/Glengoyne_distillery" },
+    { "title": "Cask Atlas: Scotland, map the place, question the stereotype", "url": "" }
+  ]
+}
