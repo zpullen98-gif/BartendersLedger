@@ -1,0 +1,80 @@
+{
+  "id": "japanese-blended",
+  "name": "Japanese blended whisky and the highball",
+  "respell": "",
+  "family": "japanese",
+  "law": "No legal category of its own. Blended means malt whiskies married with grain whisky, as in Scotland. Sold as Japanese whisky under the Japan Spirits & Liqueurs Makers Association standard, an association standard binding its members, every whisky in the blend is mashed, fermented and distilled in Japan with water drawn there and aged at least three years in wooden casks of no more than 700 litres in Japan, and the blend is bottled there at 40% ABV or more.",
+  "made": "Malt whiskies from copper pot stills are married with grain whisky from column stills: Suntory's grain comes from Chita, Nikka's from Coffey stills at Miyagikyo. Because Japanese companies seldom trade spirit, a blender works from the company's own malts and grains, aged in bourbon, sherry, new oak and some Mizunara casks, then marries, reduces and bottles them. Hibiki, first released in 1989, joins Yamazaki and Hakushu malts with Chita grain.",
+  "taste": "Lighter and rounder than the malts: soft grain sweetness, vanilla, honey and orchard fruit, the malts adding citrus, flowers or a little smoke and the casks dried fruit or spice. Older blends grow richer and longer. Under soda the grain's sweetness and the malt's fruit stay clear, which is why the style carries a highball.",
+  "lines": {
+    "s10": "Japanese blended whisky is malt and grain whisky married by one Japanese house: light, round and the usual base of the highball.",
+    "s20": "Japanese blended whisky marries pot still malts with lighter column still grain, usually from one company's own distilleries. Expect soft grain sweetness, honey, vanilla and orchard fruit; built cold with chilled soda, it makes the highball Japan drinks with food.",
+    "s45": "This is a Japanese blended whisky: malt whiskies from pot stills married with lighter grain whisky from column stills. No law defines the term; to be Japanese whisky under the makers' association standard, every part is distilled in Japan and aged at least three years in wood there. Japanese companies seldom trade spirit, so a blender works from the house's own malts and grains. Expect soft grain sweetness, honey, vanilla and orchard fruit, a little spice from the cask. We pour it in a highball, built cold over plenty of ice with chilled soda, or neat. Kakubin, first released in 1937, carried Japan's highball revival from 2008.",
+    "sale": "Japan made the highball its whisky for the table: crisp, cold and bright. Have a Japanese blend built over ice with chilled soda, or long with ginger ale in a Whiskey Ginger."
+  },
+  "serve": {
+    "neat": "Neat at room temperature for an older blend, so the honey and the cask show.",
+    "water": "Long with cold still water over ice, the mizuwari, a gentle drink beside a meal.",
+    "rocks": "Over one large clear cube, stirred to chill, for a softer, slower glass.",
+    "highball": "A chilled glass full of ice, the whisky stirred cold, chilled soda poured gently, one lift of the spoon.",
+    "glass": "A tall, thin highball glass, chilled; a rocks glass for the mizuwari or the cube.",
+    "classic": "A Whiskey Highball, the style's own serve; a Whiskey Ginger, built over ice with ginger ale."
+  },
+  "guest": [
+    { "q": "Why is the highball so popular in Japan?", "a": "It is light, cold and goes with food. In the 1950s highballs filled the Torys whisky bars, and a Kakubin highball campaign from 2008 brought whisky back to tables across Japan." },
+    { "q": "Is a blend a lesser whisky than a single malt?", "a": "No, a different one. A blend marries malts with lighter grain whisky for balance; Hibiki, first released in 1989, joins Yamazaki and Hakushu malts with grain whisky from Chita." },
+    { "q": "How do you make a proper Japanese highball?", "a": "Everything cold: a chilled glass full of ice, the whisky stirred to chill it, then chilled soda poured gently down the side and one lift of the spoon, so the bubbles last." }
+  ],
+  "compare": "Against a Japanese single malt: the single malt is malted barley alone from one distillery's pot stills, while the blend adds lighter grain whisky from column stills and often malts from several of one company's distilleries. The malt shows its house; the blend is rounder and lighter, and keeps its shape under soda.",
+  "benchmarks": ["Hibiki", "Kakubin", "Toki", "Nikka"],
+  "shelf": [],
+  "chapters": ["japanese"],
+  "canon": ["whiskey-highball", "whiskey-ginger"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What is a Japanese blended whisky, and how is its highball built?",
+      "answer": "Malt whiskies from pot stills married with lighter grain whisky from column stills, usually from one company's own distilleries; as Japanese whisky, every part distilled and aged at least three years in Japan. The highball is built cold: a chilled glass full of ice, the whisky stirred, chilled soda poured gently, one lift of the spoon."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "Under the association standard, what must be true of every whisky in a blend sold as Japanese whisky?",
+      "options": ["Distilled and aged at least three years in Japan", "Aged in Mizunara oak for at least a year", "Distilled from barley grown in Japan", "Distilled at a single distillery"],
+      "a": 0,
+      "explain": "Distilled in Japan with water drawn there and aged at least three years in wooden casks in Japan. The standard names no oak species, needs no Japanese-grown grain and allows several distilleries."
+    },
+    {
+      "id": "q2",
+      "q": "Which Suntory whisky, first released in 1937, carried Japan's highball revival from 2008?",
+      "options": ["Hibiki", "Kakubin", "Toki", "Shirofuda"],
+      "a": 1,
+      "explain": "Kakubin, the square bottle of 1937. Suntory's highball campaign from 2008 built on it and lifted Japanese whisky sales."
+    },
+    {
+      "id": "q3",
+      "q": "Hibiki, first released in 1989, takes its grain whisky from which Suntory distillery?",
+      "options": ["Yamazaki", "Hakushu", "Miyagikyo", "Chita"],
+      "a": 3,
+      "explain": "Chita, a grain distillery. Yamazaki and Hakushu give Hibiki its malts; Miyagikyo is Nikka's, where Coffey stills make Nikka's grain."
+    }
+  ],
+  "sources": [
+    { "title": "JSLMA: Standards for Labeling Japanese Whisky", "url": "https://www.yoshu.or.jp/files/libs/552/202303291555304944.pdf" },
+    { "title": "Master of Malt: Japanese whisky regulations say Nikka From the Barrel is not a Japanese whisky", "url": "https://www.masterofmalt.com/blog/post/new-regulations-mean-that-nikka-from-the-barrel-is-not-a-japanese-whisky" },
+    { "title": "Metropolis Japan: Highball fever", "url": "https://metropolisjapan.com/highball-fever/" },
+    { "title": "Nonjatta: The unbearable lightness of being a whisky highball", "url": "https://nonjatta.blogspot.com/2009/11/highballs.html" },
+    { "title": "Australian Bartender: The launch of Suntory Kakubin whisky", "url": "https://australianbartender.com.au/2015/03/24/check-out-the-launch-of-suntory-kakubin-whisky/" },
+    { "title": "Drinks Trade: The rise of Japanese whisky and the Kakubin highball", "url": "https://drinkstrade.com.au/the-rise-of-japanese-whisky-and-the-kakubin-highball" },
+    { "title": "Mic: The little-known history of the Japanese highball", "url": "https://mic.com/articles/189603/the-little-known-history-of-the-japanese-highball-cocktail-whiskey-soda" },
+    { "title": "The Whisky Shop: Hibiki", "url": "https://www.whiskyshop.com/world-whiskies/brand/hibiki" },
+    { "title": "The Whisky Exchange: Hibiki blended Japanese whisky", "url": "https://www.thewhiskyexchange.com/b/35/hibiki-japanese-whisky" },
+    { "title": "Master of Malt: Nikka Coffey Grain whisky", "url": "https://www.masterofmalt.com/whiskies/nikka/nikka-coffey-grain-whisky/" },
+    { "title": "Umami Mart: Nikka Coffey Grain whisky", "url": "https://umamimart.com/products/nikka-coffey-grain-whisky-btl-750ml" },
+    { "title": "Difford's Guide: Mizuwari", "url": "https://www.diffordsguide.com/cocktails/recipe/2991/mizuwari" },
+    { "title": "Nonjatta: How to make a mizuwari", "url": "https://nonjatta.blogspot.com/2007/05/how-to-make-mizuwari.html" },
+    { "title": "Tales of the Cocktail: The art and zen of the Japanese highball", "url": "https://talesofthecocktail.org/zen-practice-japanese-highball/" },
+    { "title": "Cask Atlas: Japanese whisky, identity beyond the label design", "url": "" }
+  ]
+}
