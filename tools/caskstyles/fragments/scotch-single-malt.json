@@ -3,13 +3,13 @@
   "name": "Single malt Scotch",
   "respell": "",
   "family": "scotch",
-  "law": "The Scotch Whisky Regulations 2009 define single malt Scotch whisky: distilled at one distillery, in one or more batches, in pot stills, from water and malted barley with no other cereal. Every Scotch rule holds: distilled below 94.8% ABV, matured in Scotland at least three years in oak casks of no more than 700 litres, bottled at 40% ABV or more, with nothing added but water and plain caramel. Since 23 November 2012 it may leave Scotland only bottled and labelled, ready for sale.",
+  "law": "The Scotch Whisky Regulations 2009 define single malt Scotch whisky: distilled at one distillery, in one or more batches, in pot stills, from water and malted barley with no other cereal. Every Scotch rule holds: distilled below 94.8% ABV, matured in Scotland at least three years in oak casks of no more than 700 litres, bottled at 40% ABV or more, with nothing added but water and plain caramel. Since 23 November 2012 it may leave Scotland only in a bottle labelled for sale.",
   "made": "Malted barley is milled, mashed with hot water and fermented with yeast, then distilled in copper pot stills, usually twice; Auchentoshan distils three times. Drying the malt over peat smoke is a choice, not a rule. The spirit matures in oak, mostly ex-bourbon barrels and ex-sherry casks, and most bottlings marry many casks of the one distillery. An age statement promises that every whisky in the bottle is at least that old.",
   "taste": "It ranges widely: often malt, honey and orchard fruit over vanilla from bourbon casks; dried fruit, nuts and spice from sherry casks; smoke, iodine and salt where the malt was peated. Texture runs from light and floral to oily and rich. The distillery and the cask decide, not the category.",
   "lines": {
     "s10": "Single malt Scotch is whisky from malted barley alone, distilled in pot stills at one distillery in Scotland.",
     "s20": "Single malt Scotch is all malted barley, distilled in copper pot stills at a single distillery and aged at least three years in oak in Scotland. Expect malt, honey and orchard fruit or sherried dried fruit, and smoke only where the malt was peated.",
-    "s45": "This is a single malt Scotch whisky. Under the Scotch Whisky Regulations it comes from one distillery in Scotland, made from water and malted barley alone and distilled in copper pot stills, usually twice, then aged at least three years in oak. Single means one distillery, not one cask: most bottlings marry many casks. Expect malt, honey and orchard fruit with vanilla from bourbon casks, dried fruit and spice from sherry casks, and smoke only where the malt was peated. We pour it neat with a jug of water beside it. In 1963 Glenfiddich began selling its single malt beyond Scotland, when blends filled most glasses.",
+    "s45": "This is a single malt Scotch whisky. Under the Scotch Whisky Regulations it comes from one distillery in Scotland, made from water and malted barley alone and distilled in copper pot stills, usually twice, then aged at least three years in oak. Single means one distillery, not one cask: most bottlings marry many casks. Expect malt, honey and orchard fruit with vanilla from bourbon casks, dried fruit and spice from sherry casks, and smoke only where the malt was peated. We pour it neat with a jug of water beside it. In 1963 Glenfiddich began promoting its single malt beyond Scotland, when blends filled most glasses.",
     "sale": "A single malt is one Scottish distillery's own voice: malted barley, copper pot stills and the casks it chose. Taste it neat with a few drops of water, or long with soda in a highball."
   },
   "serve": {
@@ -49,9 +49,9 @@
     {
       "id": "q2",
       "q": "Since 23 November 2012, in what form may a single malt Scotch leave Scotland?",
-      "options": ["In oak casks of up to 700 litres", "Bottled and labelled, ready for sale", "In bulk tankers to licensed bottlers", "In any container, once three years old"],
+      "options": ["In oak casks of up to 700 litres", "Bottled and labelled for sale", "In bulk tankers to licensed bottlers", "In any container, once three years old"],
       "a": 1,
-      "explain": "Regulation 7 of the Scotch Whisky Regulations 2009: from 23 November 2012 a single malt may leave Scotland only in a bottle labelled ready for sale, so it is bottled in Scotland."
+      "explain": "Regulation 7 of the Scotch Whisky Regulations 2009: from 23 November 2012 a single malt may leave Scotland only in a bottle labelled for sale, so it is bottled in Scotland."
     },
     {
       "id": "q3",

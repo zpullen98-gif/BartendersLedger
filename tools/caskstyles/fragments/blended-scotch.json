@@ -25,7 +25,7 @@
     { "q": "How much malt is in it?", "a": "The rule asks only for at least one single malt and one single grain, and sets no share. Brands seldom publish theirs, so we go by the label." },
     { "q": "Why use a blend in a cocktail?", "a": "The grain makes it light and even, so it mixes without taking over. The Rob Roy, the Blood and Sand and the Penicillin are made with it." }
   ],
-  "compare": "Against a blended malt: both marry whiskies from more than one distillery, but a blended Scotch must include single grain whisky beside its single malts, while a blended malt holds malts only. The grain makes a blended Scotch lighter, sweeter and softer; the blended malt is fuller and maltier.",
+  "compare": "Against a blended malt: both marry whiskies from more than one distillery, but a blended Scotch must include single grain whisky beside its single malts, while a blended malt holds malts only. The grain usually makes a blended Scotch lighter, sweeter and softer; the blended malt reads fuller and maltier.",
   "benchmarks": ["Johnnie Walker", "Chivas Regal", "Dewar's", "The Famous Grouse", "Ballantine's"],
   "shelf": [],
   "chapters": ["blending", "scotch"],

@@ -23,9 +23,9 @@
   "guest": [
     { "q": "So is a blended malt a blend?", "a": "Of malts only. It marries single malts from several distilleries but holds no grain whisky, so it is all malt. A blended Scotch adds grain whisky." },
     { "q": "What happened to vatted malt?", "a": "Same whisky, new name. The Scotch Whisky Regulations 2009 retired vatted malt and pure malt, and labels had until 23 November 2011 to say blended malt instead." },
-    { "q": "Why don't some blended malts name the distillery?", "a": "Some distilleries add a teaspoon of another malt to casks they sell, so the whisky cannot go out as a single malt under their name. The label then says blended malt." }
+    { "q": "What is a teaspooned whisky?", "a": "A cask a distillery sells with a teaspoon of another distillery's malt added, so it can never be bottled as that distillery's single malt. It can only go out as a blended malt." }
   ],
-  "compare": "Against a blended Scotch: both marry whiskies from more than one distillery, but a blended malt holds single malts only, while a blended Scotch adds single grain whisky from column stills. The blended malt is fuller and maltier; the grain in a blended Scotch makes it lighter and softer.",
+  "compare": "Against a blended Scotch: both marry whiskies from more than one distillery, but a blended malt holds single malts only, while a blended Scotch adds single grain whisky from column stills. The blended malt usually reads fuller and maltier; the grain in a blended Scotch makes it lighter and softer.",
   "benchmarks": ["Monkey Shoulder", "Compass Box", "Big Peat", "Johnnie Walker Green Label"],
   "shelf": [],
   "chapters": ["blending", "scotch"],

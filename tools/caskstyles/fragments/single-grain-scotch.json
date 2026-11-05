@@ -4,7 +4,7 @@
   "respell": "",
   "family": "scotch",
   "law": "The Scotch Whisky Regulations 2009 define single grain Scotch whisky as a Scotch distilled at a single distillery that is neither a single malt nor a blended Scotch. Scotch is distilled from water and malted barley, to which only whole grains of other cereals may be added, so wheat or maize is allowed, and the rule names no still. Every Scotch rule holds: distilled below 94.8% ABV, at least three years in oak casks of no more than 700 litres in Scotland, bottled at 40% ABV or more.",
-  "made": "Most single grain is wheat or maize, cooked and mashed with a share of malted barley whose enzymes turn the starch to sugar, then fermented and run through a continuous column still, which gives a lighter spirit than a pot still. A few houses run malted barley alone through a column. The spirit matures in oak, mostly ex-bourbon casks, which give much of its flavour, and grain whisky is the base of most blended Scotch.",
+  "made": "Most single grain is wheat or maize, cooked and mashed with a share of malted barley whose enzymes turn the starch to sugar, then fermented and run through a continuous column still, which gives a lighter spirit than a pot still. Loch Lomond runs malted barley alone through a column, still single grain by the rule. The spirit matures in oak, mostly ex-bourbon casks, which give much of its flavour, and grain whisky is the base of most blended Scotch.",
   "taste": "Usually light and sweet: vanilla, toffee, coconut and soft cereal from ex-bourbon casks, with a clean, gentle finish. Long-aged grain grows richer, with butterscotch, honey and polished oak, and wine casks add red fruit.",
   "lines": {
     "s10": "Single grain Scotch is grain whisky from one Scottish distillery, usually wheat or maize through a column still: light and sweet.",
@@ -21,12 +21,12 @@
     "classic": "A Whiskey Highball; a Whiskey Ginger with a lime wedge; a Hot Toddy with honey and lemon."
   },
   "guest": [
-    { "q": "Is single grain made from one grain?", "a": "No. Single means one distillery. Most single grains mix wheat or maize with some malted barley, and a few run malted barley alone through a column still." },
+    { "q": "Is single grain made from one grain?", "a": "No. Single means one distillery. Most single grains mix wheat or maize with some malted barley, and Loch Lomond runs malted barley alone through a column still." },
     { "q": "Isn't grain whisky just for blends?", "a": "It is the base of most blended Scotch, but some is bottled on its own as single grain, sometimes long aged, and it shows what the blends are built on." },
     { "q": "Why is it lighter than a single malt?", "a": "The continuous column still makes a lighter, cleaner spirit than a copper pot still, so the cask, usually ex-bourbon, gives much of the vanilla and toffee." }
   ],
-  "compare": "Against a single malt: both come from one distillery, but a single malt must be water and malted barley only, distilled in pot stills, while single grain is any other Scotch from one distillery, usually wheat or maize with some malted barley through a column still. The grain is lighter and sweeter, the malt fuller.",
-  "benchmarks": ["Cameronbridge", "Girvan", "North British", "Invergordon"],
+  "compare": "Against a single malt: both come from one distillery, but a single malt must be water and malted barley only, distilled in pot stills, while single grain is any other Scotch from one distillery, usually wheat or maize with some malted barley through a column still. The grain usually reads lighter and sweeter, the malt fuller.",
+  "benchmarks": ["Cameronbridge", "Girvan", "North British", "Invergordon", "Loch Lomond"],
   "shelf": [],
   "chapters": ["scotch", "blending"],
   "canon": ["whiskey-highball", "whiskey-ginger", "hot-toddy"],
@@ -69,6 +69,8 @@
     { "title": "Food Republic: The difference between single grain and single malt Scotch whisky", "url": "https://www.foodrepublic.com/1475819/difference-between-single-grain-malt-scotch-whiskey" },
     { "title": "Master of Malt: How to blend whisky, part one", "url": "https://www.masterofmalt.com/blog/post/how-to-blend-whisky-part-i/" },
     { "title": "whisky.de: Blended whisky", "url": "https://www.whisky.de/index.php?id=477&L=1" },
+    { "title": "Loch Lomond Whiskies: Single grain Scotch whisky", "url": "https://lochlomondwhiskies.com/products/single-grain-whiskey" },
+    { "title": "The Whiskey Wash: Whisky review round up, Loch Lomond", "url": "https://thewhiskeywash.com/scotch-whiskey/whisky-review-round-up-loch-lomond/" },
     { "title": "Wikipedia: Aeneas Coffey", "url": "https://en.wikipedia.org/wiki/Aeneas_Coffey" },
     { "title": "Wikipedia: Column still", "url": "https://en.wikipedia.org/wiki/Column_still" },
     { "title": "Scotchwhisky.com: Whisky heroes, Aeneas Coffey", "url": "https://scotchwhisky.com/magazine/whisky-heroes/20740/aeneas-coffey/" },
