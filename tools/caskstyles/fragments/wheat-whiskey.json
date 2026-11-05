@@ -1,0 +1,74 @@
+{
+  "id": "wheat-whiskey",
+  "name": "Wheat whiskey",
+  "respell": "",
+  "family": "american",
+  "law": "27 CFR 5.143: wheat whisky is distilled at no more than 80% ABV (160 proof) from a fermented mash of at least 51 per cent wheat, stored at no more than 62.5% ABV (125 proof) in charred new oak containers, and bottled at 40% ABV (80 proof) or more. Straight wheat whisky has at least two years in that oak. It is a type of its own beside bourbon and rye, not a kind of bourbon.",
+  "made": "Wheat leads the mash, at least 51 per cent, with corn, malted barley and sometimes rye making up the rest; a few houses use wheat alone. Bernheim Original is published at 51 per cent wheat, Woodford Reserve's wheat whiskey at 52 per cent with corn, malted barley and rye, and Dry Fly's at 100 per cent. It is distilled and aged in charred new oak as bourbon is, so barrel and age shape it as much as the grain.",
+  "taste": "Wheat is often found softer and rounder: fresh bread, toasted biscuit, honey and toffee, with orchard fruit and gentle baking spice over the vanilla and caramel of new oak. Usually less pepper than a rye; the grain is one influence among yeast, barrel, proof and age, so a long-aged or high proof bottle can still run rich and warm.",
+  "lines": {
+    "s10": "Wheat whiskey is American whiskey made from a mash of at least 51 per cent wheat and aged in charred new oak.",
+    "s20": "Wheat whiskey is its own federal type: at least 51 per cent wheat, distilled to no more than 160 proof and aged in charred new oak. It is often found soft and round, with bread, honey and toffee.",
+    "s45": "This is a wheat whiskey, its own type under the federal rule: at least 51 per cent wheat in the mash where bourbon would have corn, distilled to no more than 160 proof and aged in charred new oak, as bourbon is. Wheat is often found soft and round: fresh bread and toasted biscuit, honey and toffee, orchard fruit and gentle spice over the vanilla of the barrel. We pour it neat with a few drops of water, or in a Whiskey Sour or a Gold Rush, where the softness carries the citrus. Bernheim Original, a Kentucky straight wheat whiskey, first appeared in 2005.",
+    "sale": "Wheat whiskey puts wheat where bourbon puts corn, so it is often soft, bready and honeyed. Try it neat with a drop of water, or in a Gold Rush with honey and lemon."
+  },
+  "serve": {
+    "neat": "Neat at room temperature in a Glencairn, so the bread, honey and fruit come forward.",
+    "water": "A few drops of still water open the fruit and soften a higher strength.",
+    "rocks": "One large cube; small ice waters a soft whiskey down too fast.",
+    "highball": "Long with chilled soda over ice, a Whiskey Highball that keeps the grain gentle and clear.",
+    "glass": "A Glencairn neat; a rocks glass for the cube, the sour and the Gold Rush; a highball glass long.",
+    "classic": "A Whiskey Sour or a Gold Rush, where honey meets the wheat; a Whiskey Highball long."
+  },
+  "guest": [
+    { "q": "Is wheat whiskey the same as wheated bourbon?", "a": "No. Wheat whiskey is at least 51 per cent wheat, a type of its own. Wheated bourbon is at least 51 per cent corn, with wheat as the second grain in place of rye." },
+    { "q": "Is it sweeter?", "a": "It is often found softer and rounder, bread and honey rather than pepper. That comes from the grain and the charred new oak; proof and age shape it as much as the wheat does." },
+    { "q": "How is it different from a rye?", "a": "A rye whiskey, at least 51 per cent rye, leans to pepper, dill and a drier finish. Wheat whiskey is often softer: bread, honey and toffee, with gentle spice. Both age in charred new oak." }
+  ],
+  "compare": "Wheated bourbon is bourbon, at least 51 per cent corn, with wheat as its second grain. Wheat whiskey turns that round, at least 51 per cent wheat, under the same 160 proof, 125 proof and charred new oak limits. The wheated bourbon often shows more sweet corn and caramel, the wheat whiskey more bread and biscuit.",
+  "benchmarks": ["Bernheim", "Woodford Reserve", "Dry Fly"],
+  "shelf": [],
+  "chapters": ["american-labels"],
+  "canon": ["whiskey-sour", "gold-rush", "whiskey-highball"],
+  "recall": [
+    {
+      "id": "recall",
+      "prompt": "What does the federal rule ask of wheat whiskey, and how does it differ from wheated bourbon?",
+      "answer": "27 CFR 5.143: at least 51 per cent wheat, distilled at no more than 160 proof, charred new oak filled at no more than 125 proof, bottled at 80 proof or more, straight at two years. Wheated bourbon is at least 51 per cent corn with wheat as the second grain."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "q": "What minimum share of wheat must a wheat whiskey mash hold under 27 CFR 5.143?",
+      "options": ["20 per cent", "51 per cent", "80 per cent", "100 per cent"],
+      "a": 1,
+      "explain": "51 per cent, the same majority the rule asks of corn for bourbon and of rye for rye whisky. A wheated bourbon carries far less wheat, as its second grain."
+    },
+    {
+      "id": "q2",
+      "q": "Which barrels must a wheat whiskey be stored in?",
+      "options": ["Used bourbon barrels", "New uncharred oak", "Charred new oak", "Any oak up to 700 litres"],
+      "a": 2,
+      "explain": "Charred new oak, filled at no more than 125 proof, the same barrel rule as bourbon and rye. Used or uncharred new oak is corn whiskey's barrel."
+    },
+    {
+      "id": "q3",
+      "q": "In which year did Bernheim Original, a Kentucky straight wheat whiskey, first appear?",
+      "options": ["1935", "1964", "1999", "2005"],
+      "a": 3,
+      "explain": "2005, with a recipe published at 51 per cent wheat, exactly the share the rule asks. Stitzel-Weller opened in 1935, and in 1964 Congress named bourbon a distinctive product of the United States."
+    }
+  ],
+  "sources": [
+    { "title": "eCFR: 27 CFR 5.143, Whisky", "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-I/section-5.143" },
+    { "title": "Breaking Bourbon: Bernheim Original wheat whiskey review", "url": "https://breakingbourbon.com/review/bernheim-original-wheat-whiskey" },
+    { "title": "The Whiskey Wash: Heaven Hill celebrates 20 years of Bernheim with a limited edition wheat whiskey", "url": "https://thewhiskeywash.com/whiskey-news/heaven-hill-celebrates-20-years-of-bernheim-with-limited-edition-wheat-whiskey/" },
+    { "title": "Difford's Guide: Bernheim Original 7 Year Old Kentucky Straight Wheat Whiskey", "url": "https://www.diffordsguide.com/beer-wine-spirits/4538/bernheim-original" },
+    { "title": "The Whiskey Wash: Woodford Reserve adds a wheat whiskey to its line up", "url": "https://thewhiskeywash.com/american-whiskey/woodford-reserve-adds-a-wheat-whiskey-to-its-line-up/" },
+    { "title": "The Manual: Woodford Reserve wheat whiskey", "url": "https://themanual.com/food-and-drink/woodford-reserve-wheat-whiskey" },
+    { "title": "Flaviar: Dry Fly Straight Washington Wheat Whiskey", "url": "https://flaviar.com/dry-fly/dry-fly-washington-wheat-whiskey" },
+    { "title": "Kysela: Dry Fly wheat whiskey", "url": "https://kysela.com/dry-fly-wheat-whiskey.html" },
+    { "title": "Cask Atlas: American Labels", "url": "" }
+  ]
+}
