@@ -101,7 +101,8 @@ The Ledger's, the strictest reading. The lint holds all of it.
   class, luxurious, premium, crown jewel, masterpiece; renowned, world famous, peerless, unbeatable, unsurpassed,
   unmatched, unequalled, second to none, superb, outstanding, pinnacle, incomparable, stunning, magnificent,
   sublime, exceptional, extraordinary, prestigious, prestige, luxury, elite, gold standard, acclaimed, revered,
-  beloved, fabled, prized, a must have, top selling, top rated, top tier, number one, state of the art; and every
+  beloved, fabled, prized, a must have, top selling, top rated, top tier, number one, market leader, the leading
+  brand (or label, bourbon, Scotch, Cognac, house), state of the art; and every
   superlative in -est: largest, biggest, smallest, youngest, longest, shortest, tallest, earliest, heaviest,
   lightest, sweetest, softest, smokiest, peatiest, strongest, highest, lowest, boldest, truest, eldest, newest,
   latest, driest, darkest, deepest, fullest, mildest, grandest, fastest, slowest, freshest, widest, closest,
@@ -133,9 +134,9 @@ The Ledger's, the strictest reading. The lint holds all of it.
   unobtainable, shortage, queue, limited quantities, limited availability, once a year, per customer, collector,
   collectible. A bottling released yearly is "a yearly release", and its strength follows the rule below. The words
   are refused in history too: grain in wartime was "rationed" or "cut off", never "scarce" or "in short supply".
-- **No allergen, dietary or health talk**: allergen, gluten, coeliac, dairy free, nut free, vegan, vegetarian, kosher,
-  halal, sulphites, safe for, healthy, detox, antioxidants, good for you, medicinal benefits, cure, remedy, aids
-  digestion. (Medicinal whiskey under Prohibition is history and stands.)
+- **No allergen, dietary or health talk**: allergen, gluten, coeliac, dairy free, nut free, sugar free, vegan,
+  vegetarian, kosher, halal, sulphites, safe for, healthy, detox, antioxidants, good for you, medicinal benefits,
+  cure, remedy, aids digestion, hangover, calories, low carb, keto, diabetic. (Medicinal whiskey under Prohibition is history and stands.)
 - **No pour size stated as ours**: no ounce and no jigger in any form, no figure in millilitres or centilitres, no "a
   shot", "two fingers", "a double measure", in figures or in words. Say how it is poured (neat, with a little water,
   over one large cube, in a highball), never how much.
@@ -176,8 +177,9 @@ Where a dead person's name carries a living person's (the father of a living nam
 name stands in `people.json`'s `historic` list: add it there in the same commit, and state the year of death and your
 two sources in `report`.
 
-A name never follows a distiller's or a blender's title ("master distiller Xx" is refused). Write the dead the other
-way round: "Elmer T. Lee (1919 to 2013), then master distiller, ...".
+A name never follows a maker's title ("master distiller Xx" is refused, and so is a name after cellar master, maître
+de chai, malt master, master of wood, distillery manager, whisky maker, chief blender). Write the dead the other way
+round: "Elmer T. Lee (1919 to 2013), then master distiller, ...".
 
 ### Ownership and the present
 
@@ -199,11 +201,16 @@ A card or a question may ask about a sale the story tells, since they drill the 
 refused there, so write it the other way round: "In which year did the Sazerac Company buy the Weller label?", with
 the year in the answer or the explanation.
 
-**A present distiller or blender is never named and never described as a present fact.** "Its current master
-distiller", "today's blender" and "the master distiller is" are refused. A role in dated history is fine.
+**A present distiller, blender or cellar master is never named and never described as a present fact.** "Its current
+master distiller", "today's blender", "the cellar master is" and "its new malt master" are refused. A role in dated
+history is fine.
 
-Nothing true only this year: no production figure, no count of warehouses or stills given as fixed, no latest release.
-A habit that has held for decades (every bottle dipped in wax by hand) stands.
+**Nothing true only this year**: no production figure, no count of warehouses or stills given as fixed, no latest
+release, no plan. The lint refuses the words that date a sentence to the day it was written (this year, last year,
+recently, in recent years, to date, as of 2026, at the time of writing, upcoming, is set to, plans to open, will
+release) and a figure of output or sales (barrels a year, a million cases, annual production, market share, a
+capacity of, produces about). Give the year and what happened, or leave it out. A habit that has held for decades
+(every bottle dipped in wax by hand) stands. No exclamation mark anywhere: the page teaches, it does not cheer.
 
 ## The sources rule
 
@@ -296,7 +303,8 @@ a note that belongs to the style in general.
 
 Thirty to fifty words, one or two sentences, naming the house and the flagship: what it is, where it comes from, what
 makes it itself, how it tastes or how to pour it. The house is named by its label whole (Maker's Mark, never "the
-maker"; Four Roses, never "the Roses"). It is spoken, so no bracket and no list longer than three. Write the first
+maker"; Four Roses, never "the Roses"). It is spoken, so no bracket (the lint refuses one) and no list longer than
+three. Write the first
 sentence so that it stands alone: at a busy rail it is the one that gets said, and the second is for the guest who
 asks for more. Refused
 in spirit: "One of the greatest bourbons ever made, loved by collectors" (a judgement, and no fact a guest can keep).

@@ -153,7 +153,7 @@ const YEAR_G = /\b(?:1[1-9]\d{2}|20[0-2]\d)\b/g;
 export const SUPERLATIVE_OURS = /\b(?:eldest|newest|latest|driest|darkest|deepest|fullest|mildest|grandest|noblest|choicest|fastest|slowest|cleanest|freshest|fruitiest|spiciest|creamiest|oiliest|widest|hottest|coldest|coolest|warmest|toughest|hardest|loudest|proudest|costliest|priciest|busiest|fewest|closest|farthest|furthest|northernmost|southernmost|westernmost|easternmost|topmost|foremost|uppermost|(?:[’']s|its|their|our|his|her) most [a-z]+|most (?:heavily|widely|highly|richly|lightly|deeply|strongly|closely|keenly) [a-z]+|most (?:important|prestigious|noble|loved|admired|expensive|collectable|collectible|desirable|acclaimed|renowned|recognisable|recognised|visited|peated|sherried|aged|poured|sold|ordered|requested|imitated|copied|collected))\b/i;
 /* words that sell rather than teach, beyond the shelf's list (the Sommelier's Codex refuses most of them): famous may
    describe a house, and these judge it */
-export const SELLING_OURS = /\b(?:renowned|world[- ]famous|world[- ]renowned|peerless|unbeatable|unsurpassed|unmatched|unequalled|second to none|superb|outstanding|pinnacle|incomparable|stunning|magnificent|sublime|exceptional|extraordinary|prestigious|prestige|luxury|elite|gold standard|acclaimed|revered|beloved|fabled|prized|must-(?:have|try)|(?:a|the) must (?:have|try)|top[- ](?:selling|sellers?|rated|tier|notch)|number one|state of the art)\b/i;
+export const SELLING_OURS = /\b(?:renowned|world[- ]famous|world[- ]renowned|peerless|unbeatable|unsurpassed|unmatched|unequalled|second to none|superb|outstanding|pinnacle|incomparable|stunning|magnificent|sublime|exceptional|extraordinary|prestigious|prestige|luxury|elite|gold standard|acclaimed|revered|beloved|fabled|prized|market leaders?|(?:the|a|its) leading (?:brand|label|whisk(?:e)?y|bourbon|scotch|cognac|brandy|blend|malt|house|producer|distiller|name|seller)|must-(?:have|try)|(?:a|the) must (?:have|try)|top[- ](?:selling|sellers?|rated|tier|notch)|number one|state of the art)\b/i;
 /* American forms the two imported lists do not reach. Those lists name words one by one, and a house history is full
    of the ones they lack (popularized, modernized, favored, distills, licorice, a seven-story rickhouse). The -ize
    family is caught whole, less the words that are British as they stand (size, prize, seize, capsize, maize, Belize);
@@ -208,6 +208,17 @@ export const PRESENT_OWNER_NAMED = /\b(?:(?:is|are|remains?|has been|have been) 
 export const OWNED_PAST = /\b(?:was|were|been|being|then|once|formerly|previously)\s+(?:\w+\s+){0,2}owned by\b|\bowned by\b[^.;]*\b(?:until|from\s+\d{4}\s+to|between\s+\d{4}\s+and)\b/i;
 /* a present distiller or blender described as a present fact (a name after the title is the shelf's NAMED_ROLE) */
 export const PRESENT_MAKER = /\b(?:(?:its|the|their)\s+(?:current|present|new)\s+(?:master\s+|head\s+)?(?:distiller|blender)s?|(?:master|head)\s+(?:distiller|blender)s?\s+(?:is|are|has\s+been|since)\b|today(?:'|’)s\s+(?:master\s+|head\s+)?(?:distiller|blender)s?)\b/i;
+
+/* a maker's title the shelf's rule does not know. A Cognac house has a cellar master where a bourbon house has a master
+   distiller, and the rule is the same: no name after the title, and no present holder described. */
+const MAKER_TITLE = '(?:cellar\\s+masters?|ma[i\u00ee]tres?\\s+de\\s+chai|malt\\s+masters?|masters?\\s+of\\s+wood|distillery\\s+managers?|whisk(?:e)?y\\s+makers?|(?:chief|principal|lead)\\s+(?:distiller|blender)s?|master\\s+(?:taster|cooper)s?)';
+export const NAMED_ROLE_OURS = new RegExp('\\b' + MAKER_TITLE.replace(/\\s\+/g, ' ') + ',? [A-Z][a-z]');
+export const PRESENT_MAKER_OURS = new RegExp('\\b(?:(?:its|the|their)\\s+(?:current|present|new)\\s+' + MAKER_TITLE + '|' + MAKER_TITLE + '\\s+(?:is|are|has\\s+been|since)\\b|today(?:\'|\u2019)s\\s+' + MAKER_TITLE + ')', 'i');
+/* nothing true only this year: a word that dates the sentence to the day it was written, a plan, a figure of output */
+export const THIS_YEAR = /\b(?:this year|last year|next year|at the time of writing|as of (?:\d{4}|today|now|this writing)|to date|in recent years|recently|upcoming|forthcoming|(?:is|are) (?:set|due|slated|expected|planned|scheduled) to|plans? to (?:open|build|release|launch|expand|double)|will (?:open|launch|release|be released|be bottled|reopen|expand))\b/i;
+export const OUTPUT = /\b(?:(?:litres|gallons|cases|bottles|barrels|casks) (?:a|per|each|every) (?:year|day|week|month)|annual (?:production|capacity|output|sales)|per annum|market share|(?:million|billion) (?:litres|gallons|cases|bottles|barrels|casks)|(?:produces|sells|ships|fills|bottles) (?:about|around|some|roughly|over|more than|nearly|almost) \d|production of (?:about|around|some|roughly|over|more than) \d|(?:a|its) capacity of)\b/i;
+/* health and diet talk the shelf's list does not name */
+export const VERDICT_OURS = /\b(?:hangovers?|calories?|low[- ]carb|keto|diabetics?|sugar[- ]free|guilt[- ]free|drink responsibly)\b/i;
 
 /* ---- small readers ------------------------------------------------------------ */
 function isStr(v){ return typeof v === 'string'; }
@@ -377,7 +388,7 @@ function volatileProblems(s, where, plain){
   const history = HISTORY_FIELD.test(where);
   const po = s.match(PRESENT_OWNER) || s.match(PRESENT_OWNER_NAMED);
   if(po) out.add(where + ': "' + po[0] + '" states ownership as a present state (ownership is history: a year and what happened, in the story or the traps)');
-  const pm = s.match(PRESENT_MAKER);
+  const pm = s.match(PRESENT_MAKER) || s.match(PRESENT_MAKER_OURS);
   if(pm) out.add(where + ': "' + pm[0] + '" describes a present distiller or blender as a present fact (say what the house does, or tell it as dated history)');
   sentenceList(s).forEach((sen) => {
     /* the year that dates a sale is a year of the sentence, never a figure in a name (1792 Full Proof, Canadian Club 1858) */
@@ -439,7 +450,7 @@ export function voiceProblems(rec, at, ctx, pick){
       if(la.length) out.push(where + ': the address names a living person (' + la.join(', ') + '): cite a page that is not filed under a person’s name');
       continue;
     }
-    if(kind === 'key') continue;
+    if(kind === 'key'){ if(HOUSE_NAME.test(s)) out.push(where + ': names the owner’s workplace (a record never does, in any field)'); continue; }
     if(DASH.test(s) || DASH_MORE.test(s)) out.push(where + ': carries a dash or a hyphen standing in for one (use a comma, a colon or a full stop; a hyphen joins two words and has no space beside it)');
     for(const ch of s){ const cp = ch.codePointAt(0); if(cp >= 0x2190){ out.push(where + ': carries U+' + cp.toString(16).toUpperCase().padStart(4, '0') + ', at or above U+2190'); break; } }
     if(GLYPH.test(s) || GLYPH_MORE.test(s)) out.push(where + ': carries a degree sign or a fraction glyph (write degrees, a half, a quarter)');
@@ -466,11 +477,14 @@ export function voiceProblems(rec, at, ctx, pick){
     if(kind === 'title') continue;
     const am = s.match(BREW_AMERICAN) || s.match(AMERICAN_MORE) || s.match(AMERICAN_OURS);
     if(am) out.push(where + ': American spelling "' + am[0] + '" (British: flavour, colour, ageing, centre, litre, -ise)');
-    const ver = s.match(VERDICT);
+    const ver = s.match(VERDICT) || s.match(VERDICT_OURS);
     if(ver) out.push(where + ': "' + ver[0] + '" is allergen, dietary or health talk (none on this page)');
     volatileProblems(s, where, plain).forEach((p) => out.push(p));
-    const nr = s.match(NAMED_ROLE);
+    const nr = s.match(NAMED_ROLE) || s.match(NAMED_ROLE_OURS);
     if(nr) out.push(where + ': "' + nr[0] + '..." puts a name after a distiller’s or blender’s title (the living are never named; the dead are named first, with their dates, and the title after)');
+    const ty = s.match(THIS_YEAR) || s.match(OUTPUT);
+    if(ty) out.push(where + ': "' + ty[0] + '" is true only this year (give the year and what happened, or leave it out: no plan, no latest news, no figure of output or sales)');
+    if(/!/.test(s)) out.push(where + ': an exclamation mark (the page teaches, it does not cheer)');
     const me = s.match(MEASURE) || s.match(MEASURE_OURS);
     if(me) out.push(where + ': "' + me[0] + '" is a pour size (the page states none as ours)');
     /* the strength field is held by its own rule: a market note there keeps the sign ("43% ABV, 40% in the United Kingdom") */
@@ -738,6 +752,7 @@ export function validateRecord(rec, ctx, group, i){
     const n = sentenceList(rec.table).length;
     if(n < CAPS.tableSentences[0] || n > CAPS.tableSentences[1]) out.push(at + '.table: one or two sentences, found ' + n);
     endsStop(out, at + '.table', rec.table);
+    if(/[()\[\]]/.test(rec.table)) out.push(at + '.table: no bracket (the line is spoken: say it in the sentence or leave it out)');
     if(!namesHouse(rec.table, { producer: pick.producer, flagship: '' })) out.push(at + '.table: names the house, its label whole (' + pick.producer + ')');
     const fw = flagshipWords(pick.flagship, pick.producer);
     if(fw.length && !fw.some((x) => (' ' + fold(rec.table) + ' ').indexOf(' ' + x + ' ') >= 0)) out.push(at + '.table: names the flagship (one of: ' + fw.join(', ') + ')');
@@ -832,7 +847,7 @@ const NOW = /\b(?:today|now|still|these days|modern day|at present|recently|late
 const FIRST = /\bthe\s+first\b|\bthe\s+only\b|\bthe\s+last\b/i;
 const EVERY = /\b(?:always|every bottle|never fails|guaranteed)\b/i;
 const SHOPS = /(?:^|\.)(?:totalwine|masterofmalt|thewhiskyexchange|drizly|caskers|reservebar|wine-searcher|flaviar|binnys|klwines|specsonline|caskcartel|woodencork|finedrams)\./i;
-const ROLE = /\b(?:master|head)\s+(?:distiller|blender)s?\b/i;
+const ROLE = new RegExp('\\b(?:(?:master|head)\\s+(?:distiller|blender)s?|' + MAKER_TITLE + ')\\b', 'i');
 /* a group named beside "part of" or "under", or as a possessive before a house: a second reader checks it is not a present owner */
 const PART_OF = /\b(?:part of|a member of|in the hands of|under the wing of|in the stable of) (?:the )?[A-Z][\w&’'.-]*/;
 export function adviseRecord(rec, i, ctx){
@@ -1084,6 +1099,17 @@ export function selfTest(){
   refuse('a figure in the house’s own name is not the year of a sale', (r) => { r[0].others[0].name = 'Old Lantern 1936 Reserve'; addStory(r[0], 'Old Lantern 1936 Reserve was sold to a Chicago bottler. What matters at the table is the wheat, a softer bourbon.'); }, /story: "sold to" with no year in the sentence/);
   refuse('a present distiller described as a present fact is refused', (r) => addStory(r[0], 'Its current master distiller keeps the wheat in the mash, and that wheat is the whole lesson of the house at the table.'), /story: .*(?:volatile|present distiller)/);
   refuse('a name after a distiller’s title is refused', (r) => addStory(r[0], 'The wheat was the choice of master distiller Amos Reed in 1952, and it is the whole lesson of the house at the table.'), /story: "master distiller Am\.\.\." puts a name after/);
+  refuse('a name after a cellar master’s title is refused', (r) => addStory(r[0], 'The wheat was the choice of cellar master Amos Reed in 1952, and it is the whole lesson of the house at the table.'), /story: "cellar master Am\.\.\." puts a name after/);
+  refuse('a present cellar master is refused', (r) => addStory(r[0], 'Its current cellar master keeps the wheat in the mash, and that wheat is the whole lesson of the house at the table.'), /story: "Its current cellar master" describes a present distiller or blender/);
+  keep('a dead cellar master named first, with dates and a year, is kept', (r) => addStory(r[0], 'Amos Reed (1890 to 1961), cellar master from 1936, chose the wheat in 1952, and that is the lesson of the house.'));
+  refuse('"recently" is refused', (r) => addStory(r[0], 'The label was recently redrawn, and what matters at the table is the wheat, which gives a softer, rounder bourbon.'), /story: "recently" is true only this year/);
+  refuse('a plan is refused', (r) => addStory(r[0], 'The house plans to open a second distillery, and what matters at the table is the wheat, a softer bourbon.'), /story: "plans to open" is true only this year/);
+  refuse('a figure of output is refused', (r) => addStory(r[0], 'It fills two million barrels a year, and what matters at the table is the wheat, which gives a softer bourbon.'), /story: "[a-z ]*barrels[a-z ]*" is true only this year/);
+  refuse('a leading brand is refused', (r) => { r[0].table = r[0].table.replace('is the bottling to begin with', 'is the leading brand of the county'); }, /table: "the leading brand" is a superlative or sells/);
+  refuse('an exclamation mark is refused', (r) => { r[0].traps[0] = 'The label names the house, not a person: nobody of that name ran the distillery!'; }, /traps\[0\]: an exclamation mark/);
+  refuse('a bracket in the table line is refused', (r) => { r[0].table = r[0].table.replace('at ninety proof', '(ninety proof)'); }, /table: no bracket/);
+  refuse('a hangover is health talk', (r) => { r[0].traps[0] = 'A wheated bourbon gives no gentler hangover than any other, whatever a guest has been told.'; }, /traps\[0\]: "hangover" is allergen, dietary or health talk/);
+  refuse('the owner’s workplace in a card’s id is refused', (r) => { r[0].cards[0].id = 'brennans-pour'; r[0].quiz[0].card = 'brennans-pour'; }, /cards\[0\]\.id: names the owner’s workplace/);
   refuse('a spaced hyphen is refused', (r) => { r[0].traps[0] = 'The label names the house - not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries a dash or a hyphen standing in for one/);
   refuse('an em dash is refused', (r) => { r[0].traps[0] = 'The label names the house\u2014not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries a dash/);
   refuse('a double hyphen is refused', (r) => { r[0].traps[0] = 'The label names the house--not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries a dash/);
