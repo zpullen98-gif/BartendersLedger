@@ -26,17 +26,29 @@
    This page adds, and never takes away: a score or a medal (SCORE), scarcity
    talk the shelf's list does not reach (SCARCITY), a pour size (MEASURE), a
    per cent sign outside "% ABV", a present owner (PRESENT_OWNER) and a
-   present distiller or blender (PRESENT_MAKER).
+   present distiller or blender (PRESENT_MAKER); and, after the review of 21
+   November 2026, the forms those lists let through: a dash, a degree sign
+   or a fraction by another character (DASH_MORE, GLYPH_MORE), what no
+   reader can see and what is not plain text (HIDDEN, ENTITY, MARKUP,
+   MARK_SIGN), the -est and -most superlatives the lists lack and "most"
+   without "the" (SUPERLATIVE_OURS), further selling words (SELLING_OURS), an
+   award (SCORE_OURS), price and scarcity by another name (PRICE_OURS,
+   SCARCITY_OURS), a pour size in words (MEASURE_OURS) and American spelling
+   by family (AMERICAN_OURS). A source's title is held to the dash, the
+   people, the workplace, the superlative, price, score and scarcity rules;
+   its address to plain ASCII https, the people and the workplace.
 
    TWO DEPARTURES from the styles' and the shelf's rules, ruled on purpose
    because 160 house histories cannot be written under them:
    1. Names are refused by a list of living people (people.json), as the
       Sommelier's Codex does; there is no allow-list of proper nouns. A
       house's own name is the house (Pappy Van Winkle, Jack Daniel's, Jim
-      Beam are labels): the roster's labels and the record's own bottlings
-      are taken out of a sentence before the living are looked for, and so
-      are the dead of people.json's historic list, whose names carry a living
-      person's (Bill Samuels Sr.).
+      Beam are labels): a listed name is let stand only where the whole of
+      it lies inside a label of the roster, one of the record's own
+      bottlings or a name of people.json's historic list, the dead whose
+      names carry a living person's (Bill Samuels Sr.). A label that is
+      part of a person's name shields nothing (Teeling is a pick, and the
+      members of its family are on the list).
    2. Ownership is history. In the story and the traps the shelf's ownership
       words (owned by, acquired, acquisition, bought by, sold to) stand in a
       sentence that carries its year; anywhere else, or without a year, they
@@ -334,14 +346,14 @@ function spansOf(padded, phrase){
 /* the living named in a string. A house keeps its name: a listed name is let stand only where the whole of it lies
    inside a label of the roster, one of the record's own names or a name of the historic list (Julian Van Winkle
    inside Julian Van Winkle Sr.). A label that is only a part of the person's name shields nothing: Teeling is a
-   label and Jack Teeling is still a person, in the Teeling record as anywhere. */
+   label, and a member of the family named in full is still a person, in the Teeling record as anywhere. */
 export function livingIn(s, ctx, own){
   const t = ' ' + fold(s) + ' ';
   const shields = [];
   (ctx.foldedHistoric || []).concat((own || []).map(fold).filter(Boolean), ctx.foldedLabels || []).forEach((n) => spansOf(t, n).forEach((x) => shields.push(x)));
   return (ctx.foldedPeople || []).filter(([, n]) => spansOf(t, n).some(([a, b]) => !shields.some(([x, y]) => x <= a && b <= y))).map(([name]) => name);
 }
-/* an address read as words: its escapes undone and its separators made spaces, so jimmy-russell and Jimmy_Russell are a name */
+/* an address read as words: its escapes undone and its separators made spaces, so first-last and First_Last are a name */
 export function addressWords(url){
   let u = String(url == null ? '' : url);
   try { u = decodeURIComponent(u); } catch (e) { /* a broken escape: read it as written */ }
@@ -768,20 +780,26 @@ export function validateFragment(frag, ctx, file){
   const pos = [0, 0, 0, 0];
   frag.records.forEach((r) => (isObj(r) && isList(r.quiz) ? r.quiz : []).forEach((q) => { if(isObj(q) && Number.isInteger(q.a) && q.a >= 0 && q.a <= 3) pos[q.a]++; }));
   const tally = longestTally(frag);
-  if(tally.asked === PICKS * CAPS.quiz.n && tally.longest > PICKS) out.push('records: the answer is the longest option in ' + tally.longest + ' of the group’s ' + tally.asked + ' questions (a learner reads the pattern: no more than half)');
+  if(tally.asked === PICKS * CAPS.quiz.n){
+    if(tally.longest > LENGTH_SHARE) out.push('records: the answer is the longest option in ' + tally.longest + ' of the group’s ' + tally.asked + ' questions (a learner reads the pattern: no more than ' + LENGTH_SHARE + ')');
+    if(tally.shortest > LENGTH_SHARE) out.push('records: the answer is the shortest option in ' + tally.shortest + ' of the group’s ' + tally.asked + ' questions (a learner reads the pattern: no more than ' + LENGTH_SHARE + ')');
+  }
   const top = Math.max(...pos);
   if(top > PICKS) out.push('records: ' + top + ' of the group’s ' + pos.reduce((a, b) => a + b, 0) + ' answers sit in position ' + pos.indexOf(top) + ' (no position holds more than half: spread them)');
   return out;
 }
-/* in how many of a group's questions the answer is the longest option, alone */
+/* in how many of a group's questions the answer is the longest option, alone, and in how many the shortest. The styles'
+   gate holds both to 40 per cent across its questions; a group of ten is held to four of each, so the whole can never fail. */
+export const LENGTH_SHARE = 4;
 export function longestTally(frag){
-  let asked = 0, longest = 0;
+  let asked = 0, longest = 0, shortest = 0;
   (isObj(frag) && isList(frag.records) ? frag.records : []).forEach((r) => (isObj(r) && isList(r.quiz) ? r.quiz : []).forEach((q) => {
     if(!isObj(q) || !isList(q.options) || q.options.length !== 4 || q.options.some((o) => !isStr(o)) || !Number.isInteger(q.a) || q.a < 0 || q.a > 3) return;
     asked++;
     if(q.options.every((o, j) => j === q.a || o.length < q.options[q.a].length)) longest++;
+    if(q.options.every((o, j) => j === q.a || o.length > q.options[q.a].length)) shortest++;
   }));
-  return { asked, longest };
+  return { asked, longest, shortest };
 }
 export function recordProblems(frag, ctx, i){ return validateRecord(frag.records[i], ctx, frag.group, i); }
 
@@ -1165,7 +1183,9 @@ export function selfTest(){
   refuse('a negative stem in small letters is refused', (r) => { r[0].quiz[0].q = 'A guest asks about the mash of this house’s bourbon. Which of these grains is not in it?'; }, /quiz\[0\]\.q: never NOT or EXCEPT/);
   keep('a not in the scene before the question is no negative stem', (r) => { r[0].quiz[0].q = 'A guest insists this bourbon is not wheated. Which grain stands in for rye in its mash?'; });
   refuse('an answer twice the length of any other option is refused', (r) => { const q = r[0].quiz[0]; q.options[q.a] = 'Soft red winter wheat'; }, /quiz\[0\]\.options: the answer is much the longest/);
-  refuse('the answer the longest option in six of ten questions is refused', (r) => { r.forEach((x, n) => { const q = x.quiz[0]; q.options[q.a] = 'Winter wheat'; if(n === 0){ const q2 = x.quiz[1]; q2.options[q2.a] = 'In 1974'; } }); }, /records: the answer is the longest option in 6 of the group’s 10 questions/);
+  refuse('the answer the longest option in five of ten questions is refused', (r) => { r.forEach((x) => { const q = x.quiz[0]; q.options[q.a] = 'Winter wheat'; }); }, /records: the answer is the longest option in 5 of the group’s 10 questions/);
+  keep('the answer the longest option in four of ten questions is kept', (r) => { r.forEach((x, n) => { if(n < 4){ const q = x.quiz[0]; q.options[q.a] = 'Winter wheat'; } }); });
+  refuse('the answer the shortest option in five of ten questions is refused', (r) => { r.forEach((x) => { const q = x.quiz[0]; q.options[q.a] = 'Rye'; q.q = 'A guest asks what most bourbons use as the second grain in the mash. Which grain is it?'; }); }, /records: the answer is the shortest option in 5 of the group’s 10 questions/);
   refuse('a card that names a part of the label only is refused', (r) => { r[2].cards[0].prompt = 'What is the second grain in the copper pot bourbon of this house?'; }, /records\[2\]\.cards\[0\]: names the house on one face, its label whole \(Copper Wren\)/);
   refuse('a table line that names a part of the label only is refused', (r) => { r[2].table = r[2].table.replace(/Copper Wren/g, 'Copper'); }, /records\[2\]\.table: names the house, its label whole \(Copper Wren\)/);
   keep('a strength with a market note keeps its second per cent sign', (r) => { r[0].bottle.strength = '43% ABV, 40% in the United Kingdom'; });

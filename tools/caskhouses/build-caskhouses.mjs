@@ -70,7 +70,7 @@ import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, relative, resolve, isAbsolute, sep } from 'node:path';
 import vm from 'node:vm';
 import { CH_DIR, LEDGER_ROOT, DATA_FILE, GLOBAL, KEY_PREFIX, PICKS, FIELDS, BOTTLE_FIELDS,
-  loadContext, planProblems, validateFragment, adviseRecord, isRefuted, readingWords, cardKey, chunkGroups, roster, settleKeys, longestTally } from './schema.mjs';
+  loadContext, planProblems, validateFragment, adviseRecord, isRefuted, readingWords, cardKey, chunkGroups, roster, settleKeys, longestTally, LENGTH_SHARE } from './schema.mjs';
 
 const PARTIAL_MARK = 'A PARTIAL BUILD';
 const UNREFUTED_MARK = 'UNREFUTED';
@@ -244,7 +244,7 @@ function main(){
         else notes.push('the key "' + x + '" is in keys.v1.json and no longer in the fragment (not frozen yet)');
       });
       const tally = longestTally(r.frag);
-      if(tally.longest >= 4) notes.push('records: the answer is the longest option in ' + tally.longest + ' of ' + tally.asked + ' questions: a learner reads the pattern (more than five is refused)');
+      if(tally.longest === LENGTH_SHARE || tally.shortest === LENGTH_SHARE) notes.push('records: the answer is the ' + (tally.longest === LENGTH_SHARE ? 'longest' : 'shortest') + ' option in ' + LENGTH_SHARE + ' of ' + tally.asked + ' questions, the most a group may hold: one more is refused');
       notes.forEach((n) => console.log('note: ' + k + ' ' + n));
       if(problems.length){ failed++; console.log(at + ': ' + problems.length + ' problem' + (problems.length === 1 ? '' : 's')); }
       else { sound++; console.log(at + ': sound'); }
