@@ -44,7 +44,7 @@
     { "id": "wax", "prompt": "Who is credited with the name, the label and the red wax of Maker's Mark?", "answer": "Margie Samuels, wife of the founder, Bill Samuels Sr.; the first bottles went on sale in 1958." }
    ],
    "quiz": [
-    { "id": "q1", "tag": "bottle", "card": "mash", "q": "A guest asks why Maker's Mark tastes softer than most bourbons. Which grain does it use in place of rye?", "options": ["Soft red winter wheat", "Malted rye", "Oats", "White corn"], "a": 0, "explain": "Its recipe puts soft red winter wheat where most bourbons use rye; corn is the larger part of the mash, as the rule for bourbon requires." },
+    { "id": "q1", "tag": "bottle", "card": "mash", "q": "A guest asks why Maker's Mark tastes softer than most bourbons. Which grain does it use in place of rye?", "options": ["Soft red winter wheat", "Malted winter rye", "Rolled oats", "White dent corn"], "a": 0, "explain": "Its recipe puts soft red winter wheat where most bourbons use rye; corn is the larger part of the mash, as the rule for bourbon requires." },
     { "id": "q2", "tag": "story", "card": "wax", "q": "In which year did the first bottles of Maker's Mark go on sale?", "options": ["1953", "1958", "1980", "1981"], "a": 1, "explain": "The distillery was bought in 1953 and the first bottles followed in 1958; 1981 is the year the family sold the business." }
    ],
    "sources": [

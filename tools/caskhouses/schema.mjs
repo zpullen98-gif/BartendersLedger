@@ -212,7 +212,7 @@ function runScript(jsDir, file, expose){
 export function sentenceList(s){
   const t = String(s == null ? '' : s).trim()
     .replace(/\b(?:[A-Z]\.){2,}/g, (m) => m.replace(/\./g, '\u0001'))
-    .replace(/\b(?:St|Mt|No|Dr|Mr|Mrs|Ms|Jr|Sr|Co|Inc|Ltd|Bros|Col|vs|approx|ca)\./g, (m) => m.replace(/\./g, '\u0001'))
+    .replace(/\b(?:St|Ste|Mt|No|Nos|Dr|Mr|Mrs|Ms|Messrs|Mme|Mlle|Jr|Sr|Co|Cie|Inc|Ltd|Bros|Hnos|Vda|Col|Capt|Gen|Maj|Rev|Hon|Prof|Ph|Wm|Geo|Chas|Thos|Jas|Robt|vs|approx|ca|est)\./gi, (m) => m.replace(/\./g, '\u0001'))
     .replace(/\b([A-Z])\.(?=\s+[A-Z])/g, '$1\u0001');
   if(!t) return [];
   return t.split(/(?<=[.!?]["”’)]?)\s+(?=["“‘(]?[A-Z0-9])/).map((x) => x.replace(/\u0001/g, '.'));
@@ -227,6 +227,14 @@ export function names(text, name){
   if(!ws.length) return hasPhrase(text, name);
   const t = ' ' + fold(text) + ' ';
   return ws.some((w) => t.indexOf(' ' + w + ' ') >= 0);
+}
+/* a face that names the house: every word of the label that tells it apart (Maker and Mark, Four and Roses: one of
+   them alone is an ordinary word), or the flagship whole as the roster prints it */
+export function namesHouse(text, pick){
+  const t = ' ' + fold(text) + ' ';
+  const ws = nameWords(pick.producer);
+  if(ws.length ? ws.every((w) => t.indexOf(' ' + w + ' ') >= 0) : hasPhrase(text, pick.producer)) return true;
+  return hasPhrase(text, pick.flagship);
 }
 /* the words that tell the flagship from its house: the flagship's own words less the producer's and the class words */
 export function flagshipWords(flagship, producer){
@@ -453,7 +461,8 @@ export function voiceProblems(rec, at, ctx, pick){
     if(nr) out.push(where + ': "' + nr[0] + '..." puts a name after a distiller’s or blender’s title (the living are never named; the dead are named first, with their dates, and the title after)');
     const me = s.match(MEASURE) || s.match(MEASURE_OURS);
     if(me) out.push(where + ': "' + me[0] + '" is a pour size (the page states none as ours)');
-    if(PER_CENT_SIGN.test(s)) out.push(where + ': a per cent sign outside a strength (write per cent; "45% ABV" alone keeps the sign)');
+    /* the strength field is held by its own rule: a market note there keeps the sign ("43% ABV, 40% in the United Kingdom") */
+    if(!/\.bottle\.strength$/.test(where) && PER_CENT_SIGN.test(s)) out.push(where + ': a per cent sign outside a strength (write per cent; "45% ABV" alone keeps the sign)');
     if(HYPHEN_RANGE.test(s)) out.push(where + ': a range with a hyphen (write "12 to 15", "1935 to 1972")');
   }
   return out;
@@ -503,9 +512,13 @@ function bottleProblems(rec, at, pick){
   ['mash', 'still', 'wood', 'taste', 'pour'].forEach((k) => endsStop(out, w + '.' + k, B[k]));
   if(isStr(B.strength) && B.strength.trim()){
     const s = B.strength;
+    if(/(?<!\d)%/.test(s)) out.push(w + '.strength: a per cent sign follows its figure ("45% ABV", "40% in the United Kingdom")');
     if(STRENGTH_VARIES.test(s)){
       if(YEAR.test(s)) out.push(w + '.strength: a release that varies never carries one year’s figure (give no year; a range with "about" may stand)');
-    } else if(!STRENGTH_FIXED.test(s)) out.push(w + '.strength: as the label states it, "45% ABV (90 proof)" or "40% ABV", then a market note after a comma if one is needed; a yearly or batch release begins "Varies by batch" or "Varies by release"');
+      /* what is left once every range is taken out is one batch's figure */
+      const single = s.replace(/\d+(?:\.\d+)?\s+to\s+\d+(?:\.\d+)?(?:% ABV|\s+proof)/g, ' ');
+      if(/\d+(?:\.\d+)?(?:\s?%|\s+proof)/.test(single)) out.push(w + '.strength: a release that varies gives a range ("about 60 to 65% ABV") or no figure at all, never one batch’s or one year’s');
+    } else if(!STRENGTH_FIXED.test(s)) out.push(w + '.strength: as the label states it, "45% ABV (90 proof)" or "40% ABV", then a market note after a comma if one is needed ("43% ABV, 40% in the United Kingdom"); a yearly or batch release begins "Varies by batch" or "Varies by release"');
   }
   if(isStr(B.taste) && /\d/.test(B.taste)) out.push(w + '.taste: in words, no figure');
   if('label' in B && counted(out, w + '.label', B.label, CAPS.label.n[0], CAPS.label.n[1], 'label terms')){
@@ -567,11 +580,17 @@ function cardsProblems(rec, at, pick){
     capped(out, w + '.answer', c.answer, CAPS.cards.answer[0], CAPS.cards.answer[1]);
     if(isStr(c.prompt)){ const k = fold(c.prompt); if(prompts.has(k)) out.push(w + '.prompt: the same cue twice'); prompts.add(k); }
     if(isStr(c.prompt) && isStr(c.answer) && fold(c.answer) && (' ' + fold(c.prompt) + ' ').indexOf(' ' + fold(c.answer) + ' ') >= 0) out.push(w + ': the prompt gives the answer away');
-    if(isStr(c.prompt) && isStr(c.answer) && pick && !names(c.prompt + ' ' + c.answer, pick.producer) && !names(c.prompt + ' ' + c.answer, pick.flagship)) out.push(w + ': names the house or its flagship on one face (a card is dealt in a mixed deck)');
+    if(isStr(c.prompt) && isStr(c.answer) && pick && !namesHouse(c.prompt, pick) && !namesHouse(c.answer, pick)) out.push(w + ': names the house on one face, its label whole (' + pick.producer + ') or its flagship whole (a card is dealt in a mixed deck, and a part of the name is an ordinary word)');
   });
   return out;
 }
 
+/* a stem that asks what is not so, in small letters: read in the question itself, the stem's last sentence */
+export const NEGATIVE_STEM = /\b(?:is|are|was|were|does|do|did|has|have|can|could|would|should)\s+(?:\w+\s+){0,3}not\b|\b(?:isn|aren|wasn|weren|doesn|don|didn|hasn|haven|can|couldn|wouldn|shouldn)[’']t\b|\bexcept\b|\b(?:false|untrue|incorrect|wrong)\b/i;
+/* the answer much the longest: more than 1.6 times the longest other option and this many characters beyond it. The
+   styles hold 15; four short options beside one long answer (Oats, Malted rye, White corn, Soft red winter wheat) are a
+   tell at 11, so this page holds 8. */
+export const LENGTH_CLUE = 8;
 /* the question quality rules the styles and the shelf hold (one key, four different options, no "all of the above", the key
    not in the stem, no length clue), with the same numbers */
 function quizProblems(rec, at){
@@ -596,18 +615,18 @@ function quizProblems(rec, at){
       if(stems.has(k)) out.push(w + '.q: the same stem twice');
       stems.add(k);
       if(prompts.indexOf(k) >= 0) out.push(w + '.q: the same words as a card’s prompt');
-      if(/\b(?:NOT|EXCEPT)\b/.test(q.q)) out.push(w + '.q: never NOT or EXCEPT');
+      if(/\b(?:NOT|EXCEPT)\b/.test(q.q) || NEGATIVE_STEM.test(sentenceList(q.q).pop() || '')) out.push(w + '.q: never NOT or EXCEPT, in capitals or in small letters: ask what is so, not what is not');
     }
     if(!isList(q.options) || q.options.length !== 4 || q.options.some((o) => !isStr(o) || !o.trim())){ out.push(w + '.options: four options'); return; }
     q.options.forEach((o, j) => { if(words(o) > CAPS.quiz.option[1]) out.push(w + '.options[' + j + ']: ' + words(o) + ' words, at most ' + CAPS.quiz.option[1]); });
     if(new Set(q.options.map(fold)).size !== 4) out.push(w + '.options: four different options');
-    if(q.options.some((o) => /\b(?:all|none|both) of the (?:above|options)\b/i.test(o))) out.push(w + '.options: no "all of the above"');
+    if(q.options.some((o) => /\b(?:all|none|both|neither|either|any|each) of (?:the above|the options|the others|the three|these|those|them)\b/i.test(o))) out.push(w + '.options: no "all of the above", "none of these" or "both of them"');
     if(!Number.isInteger(q.a) || q.a < 0 || q.a > 3){ out.push(w + '.a: 0 to 3, the one key'); return; }
     keys.push(q.a);
     const key = q.options[q.a], fk = fold(key);
     if(isStr(q.q) && fk.length >= 4 && (' ' + fold(q.q) + ' ').indexOf(' ' + fk + ' ') >= 0) out.push(w + '.q: the stem carries the answer');
     const longest = Math.max(...q.options.filter((o, j) => j !== q.a).map((o) => o.length));
-    if(key.length > longest * 1.6 && key.length - longest >= 15) out.push(w + '.options: the answer is much the longest (a length clue)');
+    if(key.length > longest * 1.6 && key.length - longest >= LENGTH_CLUE) out.push(w + '.options: the answer is much the longest (a length clue: lengthen the others or shorten it)');
     capped(out, w + '.explain', q.explain, CAPS.quiz.explain[0], CAPS.quiz.explain[1]);
   });
   if(rec.quiz.length === CAPS.quiz.n && rec.quiz.every(isObj)){
@@ -640,7 +659,7 @@ function sourcesProblems(rec, at){
   return out;
 }
 
-export function checkedProblems(rec, at){
+export function checkedProblems(rec, at, planDate){
   const out = [], c = rec.checked;
   if(c === undefined) return [at + '.checked: missing (null until the refuter writes it)'];
   if(c === null) return out;
@@ -648,7 +667,12 @@ export function checkedProblems(rec, at){
   if(!isObj(c)) return [w + ': null, or the refuter’s { ' + CHECKED_FIELDS.join(', ') + ' }'];
   unknown(out, c, CHECKED_FIELDS, w, 'the check');
   CHECKED_FIELDS.filter((k) => !(k in c)).forEach((k) => out.push(w + '.' + k + ': missing'));
-  if('date' in c && (!isStr(c.date) || !/^\d{4}-\d{2}-\d{2}$/.test(c.date))) out.push(w + '.date: YYYY-MM-DD');
+  if('date' in c){
+    const d = isStr(c.date) && /^\d{4}-\d{2}-\d{2}$/.test(c.date) ? new Date(c.date + 'T00:00:00Z') : null;
+    if(!d || isNaN(d) || d.toISOString().slice(0, 10) !== c.date) out.push(w + '.date: YYYY-MM-DD, a real day');
+    else if(planDate && c.date < planDate) out.push(w + '.date: ' + c.date + ' is before the roster’s own date, ' + planDate + ' (the day the refuter read the record)');
+    else if(d.getTime() > Date.now() + 36 * 3600 * 1000) out.push(w + '.date: ' + c.date + ' has not come yet (the day the refuter read the record)');
+  }
   if('by' in c && c.by !== 'refuter') out.push(w + '.by: refuter');
   if('verdict' in c && VERDICTS.indexOf(c.verdict) < 0) out.push(w + '.verdict: sound (nothing changed) or changed (what changed is listed)');
   ['changed', 'open'].forEach((k) => { if(k in c && (!isList(c[k]) || c[k].some((x) => !isStr(x) || !x.trim()))) out.push(w + '.' + k + ': a list of sentences ([] for none)'); });
@@ -699,10 +723,10 @@ export function validateRecord(rec, ctx, group, i){
   }
   if('bottle' in rec) out.push(...bottleProblems(rec, at, pick));
   if('table' in rec && capped(out, at + '.table', rec.table, CAPS.table[0], CAPS.table[1])){
-    const n = sentences(rec.table);
+    const n = sentenceList(rec.table).length;
     if(n < CAPS.tableSentences[0] || n > CAPS.tableSentences[1]) out.push(at + '.table: one or two sentences, found ' + n);
     endsStop(out, at + '.table', rec.table);
-    if(!names(rec.table, pick.producer)) out.push(at + '.table: names the house (' + (nameWords(pick.producer).join(' or ') || pick.producer) + ')');
+    if(!namesHouse(rec.table, { producer: pick.producer, flagship: '' })) out.push(at + '.table: names the house, its label whole (' + pick.producer + ')');
     const fw = flagshipWords(pick.flagship, pick.producer);
     if(fw.length && !fw.some((x) => (' ' + fold(rec.table) + ' ').indexOf(' ' + x + ' ') >= 0)) out.push(at + '.table: names the flagship (one of: ' + fw.join(', ') + ')');
   }
@@ -718,7 +742,7 @@ export function validateRecord(rec, ctx, group, i){
   if('sources' in rec) out.push(...sourcesProblems(rec, at));
   if(rec.report !== undefined && (!isList(rec.report) || rec.report.length > CAPS.report || rec.report.some((x) => !isStr(x) || !x.trim()))) out.push(at + '.report: a list of at most ' + CAPS.report + ' sentences ([] for none): what the refuter, the integrator and the owner should know');
   if(rec.report === undefined) out.push(at + '.report: missing ([] for none)');
-  out.push(...checkedProblems(rec, at));
+  out.push(...checkedProblems(rec, at, isObj(ctx.plan) && isStr(ctx.plan.date) ? ctx.plan.date : ''));
   const total = readingWords(rec);
   if(total > CAPS.entry) out.push(at + ': ' + total + ' reading words (place, the bottle and its label, table, story, others and traps), at most ' + CAPS.entry);
   out.push(...voiceProblems(rec, at, ctx, pick));
@@ -741,9 +765,21 @@ export function validateFragment(frag, ctx){
   /* the group's ten answers: no position holds more than half */
   const pos = [0, 0, 0, 0];
   frag.records.forEach((r) => (isObj(r) && isList(r.quiz) ? r.quiz : []).forEach((q) => { if(isObj(q) && Number.isInteger(q.a) && q.a >= 0 && q.a <= 3) pos[q.a]++; }));
+  const tally = longestTally(frag);
+  if(tally.asked === PICKS * CAPS.quiz.n && tally.longest > PICKS) out.push('records: the answer is the longest option in ' + tally.longest + ' of the group’s ' + tally.asked + ' questions (a learner reads the pattern: no more than half)');
   const top = Math.max(...pos);
   if(top > PICKS) out.push('records: ' + top + ' of the group’s ' + pos.reduce((a, b) => a + b, 0) + ' answers sit in position ' + pos.indexOf(top) + ' (no position holds more than half: spread them)');
   return out;
+}
+/* in how many of a group's questions the answer is the longest option, alone */
+export function longestTally(frag){
+  let asked = 0, longest = 0;
+  (isObj(frag) && isList(frag.records) ? frag.records : []).forEach((r) => (isObj(r) && isList(r.quiz) ? r.quiz : []).forEach((q) => {
+    if(!isObj(q) || !isList(q.options) || q.options.length !== 4 || q.options.some((o) => !isStr(o)) || !Number.isInteger(q.a) || q.a < 0 || q.a > 3) return;
+    asked++;
+    if(q.options.every((o, j) => j === q.a || o.length < q.options[q.a].length)) longest++;
+  }));
+  return { asked, longest };
 }
 export function recordProblems(frag, ctx, i){ return validateRecord(frag.records[i], ctx, frag.group, i); }
 
@@ -1099,6 +1135,24 @@ export function selfTest(){
   refuse('a length clue is refused', (r) => { const q = r[0].quiz[0]; q.options[q.a] = 'Soft red winter wheat, in place of the rye of most recipes'; }, /quiz\[0\]\.options: the answer is much the longest/);
   refuse('"all of the above" is refused', (r) => { const q = r[0].quiz[0]; q.options[(q.a + 1) % 4] = 'All of the above'; }, /quiz\[0\]\.options: no "all of the above"/);
   refuse('both answers in one position are refused', (r) => { const q = r[0].quiz[1]; const key = q.options[q.a]; const rest = q.options.filter((o, j) => j !== q.a); rest.splice(r[0].quiz[0].a, 0, key); q.options = rest; q.a = r[0].quiz[0].a; }, /quiz: both answers sit in one position/);
+  refuse('"none of these" is refused', (r) => { const q = r[0].quiz[0]; q.options[(q.a + 1) % 4] = 'None of these'; }, /quiz\[0\]\.options: no "all of the above"/);
+  refuse('a negative stem in small letters is refused', (r) => { r[0].quiz[0].q = 'A guest asks about the mash of this house’s bourbon. Which of these grains is not in it?'; }, /quiz\[0\]\.q: never NOT or EXCEPT/);
+  keep('a not in the scene before the question is no negative stem', (r) => { r[0].quiz[0].q = 'A guest insists this bourbon is not wheated. Which grain stands in for rye in its mash?'; });
+  refuse('an answer twice the length of any other option is refused', (r) => { const q = r[0].quiz[0]; q.options[q.a] = 'Soft red winter wheat'; }, /quiz\[0\]\.options: the answer is much the longest/);
+  refuse('the answer the longest option in six of ten questions is refused', (r) => { r.forEach((x, n) => { const q = x.quiz[0]; q.options[q.a] = 'Winter wheat'; if(n === 0){ const q2 = x.quiz[1]; q2.options[q2.a] = 'In 1974'; } }); }, /records: the answer is the longest option in 6 of the group’s 10 questions/);
+  refuse('a card that names a part of the label only is refused', (r) => { r[2].cards[0].prompt = 'What is the second grain in the copper pot bourbon of this house?'; }, /records\[2\]\.cards\[0\]: names the house on one face, its label whole \(Copper Wren\)/);
+  refuse('a table line that names a part of the label only is refused', (r) => { r[2].table = r[2].table.replace(/Copper Wren/g, 'Copper'); }, /records\[2\]\.table: names the house, its label whole \(Copper Wren\)/);
+  keep('a strength with a market note keeps its second per cent sign', (r) => { r[0].bottle.strength = '43% ABV, 40% in the United Kingdom'; });
+  keep('a release that varies may give a range', (r) => { r[0].bottle.strength = 'Varies by release, about 60 to 65% ABV (120 to 130 proof)'; });
+  refuse('a release that varies with one batch’s figure and no year is refused', (r) => { r[0].bottle.strength = 'Varies by batch, 64.2% ABV'; }, /bottle\.strength: a release that varies gives a range/);
+  refuse('a release that varies with one batch’s proof is refused', (r) => { r[0].bottle.strength = 'Varies by batch, lately 128.4 proof'; }, /bottle\.strength: a release that varies gives a range/);
+  refuse('a checked block dated before the roster is refused', (r) => { r[0].checked = { date: '2020-01-01', by: 'refuter', verdict: 'sound', changed: [], open: [] }; }, /checked\.date: 2020-01-01 is before the roster/);
+  refuse('a checked block dated in a year to come is refused', (r) => { r[0].checked = { date: '2099-01-01', by: 'refuter', verdict: 'sound', changed: [], open: [] }; }, /checked\.date: 2099-01-01 has not come yet/);
+  refuse('a checked block with no real day is refused', (r) => { r[0].checked = { date: '2026-13-45', by: 'refuter', verdict: 'sound', changed: [], open: [] }; }, /checked\.date: YYYY-MM-DD, a real day/);
+  {
+    const one = sentenceList('Made by Cascade Hollow Distilling Co. in Tullahoma, with A. Ph. Stitzel and Geo. Dickel in mind, at 90 proof.');
+    rows.push(['a business abbreviation does not end a sentence (Co., Ph., Geo.)', one.length === 1, one.length + ' sentences']);
+  }
   refuse('three sources are refused', (r) => { r[0].sources.pop(); }, /sources: 4 to 5 sources \(3\)/);
   refuse('a source that is not https is refused', (r) => { r[0].sources[0].url = 'http://example.org/history'; }, /sources\[0\]\.url: an https address/);
   refuse('a source with no kind is refused', (r) => { delete r[0].sources[0].kind; }, /sources\[0\]\.kind: missing/);
