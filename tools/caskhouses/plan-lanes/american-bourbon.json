@@ -1,0 +1,549 @@
+{
+  "lane": "american-bourbon",
+  "date": "2026-11-21",
+  "groups": [
+    {
+      "key": "bourbon",
+      "title": "Bourbon",
+      "family": "American",
+      "style": "bourbon",
+      "chapter": "bourbon",
+      "picks": [
+        {
+          "key": "jim-beam",
+          "producer": "Jim Beam",
+          "madeBy": "",
+          "flagship": "Jim Beam Original (White Label)",
+          "why": "The Beam family's label from Clermont, Kentucky, a straight bourbon aged four years and bottled at 80 proof. It is the bourbon a guest names when they mean plain Kentucky bourbon, and the baseline every other pour in the group is tasted against.",
+          "note": "Confirm the label currently prints Original and the four year statement (one source lists no age). Mash bill of about 77 corn, 13 rye, 10 malted barley is from one source only. Owner is Suntory Global Spirits (formerly Beam Suntory): confirm the current name before printing it. Living Beam family members stay out of prose.",
+          "shelf": "",
+          "library": "Jim Beam",
+          "benchmark": true
+        },
+        {
+          "key": "buffalo-trace",
+          "producer": "Buffalo Trace",
+          "madeBy": "",
+          "flagship": "Buffalo Trace Kentucky Straight Bourbon",
+          "why": "The house bourbon of the Frankfort distillery of the same name, released in 1999 when the Sazerac Company renamed the George T. Stagg Distillery. A 90 proof low rye bourbon from the distillery's Mash Bill No. 1, it is the everyday bottle behind Weller, Blanton's, Eagle Rare and the Antique Collection.",
+          "note": "No age statement; the eight year figure some guides give is unconfirmed. Elmer T. Lee (died 2013) may be named as the master distiller who shaped it. The Antique Collection and Weller bottles on the shelf are this distillery's: link the Library record and the O.F.C. shelf bottle (ofc-2005) from the house page if wanted.",
+          "shelf": "",
+          "library": "Buffalo Trace",
+          "benchmark": true
+        },
+        {
+          "key": "wild-turkey",
+          "producer": "Wild Turkey",
+          "madeBy": "",
+          "flagship": "Wild Turkey 101",
+          "why": "The Lawrenceburg, Kentucky bourbon named after a 1940 turkey hunt, owned by the Campari Group since 2009. Its 101 proof flagship is the higher proof, high flavour bourbon a bar reaches for when a cocktail has to stand up to vermouth or citrus.",
+          "note": "Sources split on the first release, 1940 or 1942: tell it as about 1940 or confirm. Age of six to eight years comes from shop copy only. Its master distillers, father and son, are both living: by role only. Russell's Reserve, a separate label from the same distillery, stands in small-batch-single-barrel.",
+          "shelf": "",
+          "library": "Wild Turkey",
+          "benchmark": true
+        },
+        {
+          "key": "woodford-reserve",
+          "producer": "Woodford Reserve",
+          "madeBy": "Brown-Forman",
+          "flagship": "Woodford Reserve Distiller's Select",
+          "why": "The Brown-Forman bourbon launched in 1996 from its distillery near Versailles, Kentucky. Distiller's Select, 90.4 proof, is a blend of copper pot still whiskey made at Woodford and column still whiskey from Brown-Forman's Louisville plant, which makes it the clear lesson that bourbon need not come from a column still alone.",
+          "note": "Not on the bourbon benchmarks list; added because it is a Kentucky label guests order by name at nearly every bar. The pot still share (about a fifth, one shop listing) is unconfirmed: do not print a figure. Its master distiller is living: by role only.",
+          "shelf": "",
+          "library": "",
+          "benchmark": false
+        },
+        {
+          "key": "old-forester",
+          "producer": "Old Forester",
+          "madeBy": "Brown-Forman",
+          "flagship": "Old Forester 86 Proof",
+          "why": "The Louisville bourbon George Garvin Brown first sold in 1870 in sealed glass bottles, the brand on which Brown-Forman was founded, and sold by the same company before, during and after Prohibition. The 86 Proof, released in 1959, is the bottling that carries that story at the rail.",
+          "note": "The America's First Bottled Bourbon line is the company's registered claim: say sealed bottles from 1870 and attribute the claim. The Kentucky Historical Society marker dates sealed bottling to the 1870s. Its Whiskey Row distillery is on West Main Street, Louisville. George Garvin Brown (died 1917) may be named.",
+          "shelf": "",
+          "library": "Old Forester",
+          "benchmark": true
+        }
+      ],
+      "alternates": [
+        {
+          "producer": "Michter's",
+          "flagship": "Michter's US*1 Kentucky Straight Bourbon",
+          "why": "A Louisville label bottled at 91.4 proof after barrel entry at 103 proof, the standard bourbon of a house whose name reaches back to an eighteenth century Pennsylvania distillery."
+        },
+        {
+          "producer": "Angel's Envy",
+          "flagship": "Angel's Envy Kentucky Straight Bourbon Finished in Port Wine Barrels",
+          "why": "A Louisville straight bourbon of 86.6 proof finished in ruby port barrels, the bottling a guest names when they ask about cask finishes; launched in 2011."
+        }
+      ]
+    },
+    {
+      "key": "wheated-bourbon",
+      "title": "Wheated bourbon",
+      "family": "American",
+      "style": "wheated-bourbon",
+      "chapter": "bourbon",
+      "picks": [
+        {
+          "key": "makers-mark",
+          "producer": "Maker's Mark",
+          "madeBy": "",
+          "flagship": "Maker's Mark Kentucky Straight Bourbon",
+          "why": "The Loretto, Kentucky distillery bought in 1953 by Bill Samuels Sr., whose first bourbon was bottled in 1958 with soft red winter wheat in place of rye. At 90 proof, with the red wax dipped neck, it is the wheated bourbon nearly every bar carries and the first one to taste.",
+          "note": "Mash bill of 70 corn, 16 red winter wheat, 14 malted barley is from one source; Maker's states only the wheat. Bill Samuels Sr. died in 1992 and may be named; his son and grandson are living: by role only. The Library spells the name with a curly apostrophe; the library field copies it exactly.",
+          "shelf": "",
+          "library": "Maker’s Mark",
+          "benchmark": true
+        },
+        {
+          "key": "weller",
+          "producer": "W. L. Weller",
+          "madeBy": "Buffalo Trace Distillery",
+          "flagship": "Weller Special Reserve",
+          "why": "The wheated bourbon line named for William Larue Weller (1825 to 1899), whose Louisville business dates to 1849, made since 1999 under the Sazerac Company at Buffalo Trace in Frankfort. Special Reserve, 90 proof with no age statement, is the house's everyday bottling and the one on the owner's shelf.",
+          "note": "Weller is a label of Buffalo Trace, not a distillery: the Library holds no Weller record, link Buffalo Trace. The 1849 wheat recipe claim is the brand's; say the business dates to 1849. Its Stitzel-Weller past is history, told in the past tense. Weller Aged 12 Years (weller-12) is also on the shelf: the second bottle on the house page.",
+          "shelf": "weller-special-reserve",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "pappy-van-winkle",
+          "producer": "Pappy Van Winkle",
+          "madeBy": "Buffalo Trace Distillery",
+          "flagship": "Pappy Van Winkle's Family Reserve 15 Year Old",
+          "why": "The Van Winkle family's wheated bourbons, named for Julian \"Pappy\" Van Winkle (1874 to 1965), who ran the Stitzel-Weller distillery in Louisville from its opening after Prohibition. Made since 2002 by Buffalo Trace to the family's wheated recipe, the 15 Year Old at 107 proof is the bottling a guest means when they ask for Pappy.",
+          "note": "The owner named this pick. The family's living members (the founder's grandson and great grandson, who run the family company today) must never be named; Julian \"Pappy\" Van Winkle (1874 to 1965) may be. Stitzel-Weller closed as a bourbon distillery and is told as history in the past tense; confirm whether any 2002 to 2009 bottlings held Stitzel-Weller whiskey before saying so. Confirm that Pappy ran Stitzel-Weller from its opening after Prohibition (the Weller shelf record says so). Keep any talk of once a year release or scarcity out of the prose. Old Rip Van Winkle Distillery is the family company that bottles it: confirm whether the label reads Old Rip Van Winkle Distillery or Buffalo Trace.",
+          "shelf": "",
+          "library": "",
+          "benchmark": false
+        },
+        {
+          "key": "larceny",
+          "producer": "Larceny",
+          "madeBy": "Heaven Hill",
+          "flagship": "Larceny Small Batch Kentucky Straight Bourbon",
+          "why": "Heaven Hill's wheated bourbon from Bardstown, launched in 2012 and named for John E. Fitzgerald, the bonded warehouse man of the Old Fitzgerald story. At 92 proof with no age statement, it is the wheater a guest is offered when Maker's Mark or Weller is not the answer.",
+          "note": "Confirm the current label: a recent version reads Larceny Aged 6 Years Small Batch, older ones carry no age. Heaven Hill's claim of one third more wheat than competitors is the producer's: attribute it. Larceny Barrel Proof belongs to this label and is not used in barrel-proof.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "rebel",
+          "producer": "Rebel",
+          "madeBy": "Lux Row Distillers",
+          "flagship": "Rebel 100",
+          "why": "The Lux Row Distillers wheated bourbon from Bardstown, sold as Rebel Yell until the family was rebranded as Rebel; its recipe is said to come from the wheated bourbon later made at Stitzel-Weller. Rebel 100, a straight bourbon at 100 proof, is the bottling a bartender meets at the well.",
+          "note": "Replaces Old Fitzgerald here, which stands in bottled-in-bond. The Stitzel-Weller and 1849 recipe line is marketing copy: tell it as the brand's claim or leave it. Confirm whether the current Rebel 100 carries the six year statement launched in 2024 or none, and the exact rename year (2019 or later). Bottled for Lux Row, with the whiskey's distillery to confirm.",
+          "shelf": "",
+          "library": "",
+          "benchmark": false
+        }
+      ],
+      "alternates": [
+        {
+          "producer": "Redemption",
+          "flagship": "Redemption Wheated Bourbon",
+          "why": "A sourced wheated bourbon of 51 per cent corn and 45 per cent wheat, aged four years, from a brand made at MGP in Indiana."
+        },
+        {
+          "producer": "Old Elk",
+          "flagship": "Old Elk Wheated Bourbon",
+          "why": "A Fort Collins, Colorado label launched in 2020 with a mash of 51 per cent corn and 40 per cent wheat, distilled at MGP in Indiana to the brand's own recipe."
+        }
+      ]
+    },
+    {
+      "key": "high-rye-bourbon",
+      "title": "High-rye bourbon",
+      "family": "American",
+      "style": "high-rye-bourbon",
+      "chapter": "bourbon",
+      "picks": [
+        {
+          "key": "four-roses",
+          "producer": "Four Roses",
+          "madeBy": "",
+          "flagship": "Four Roses Small Batch",
+          "why": "The Lawrenceburg, Kentucky distillery that makes ten bourbon recipes from two mash bills, one of them 35 per cent rye, and five yeasts. Small Batch, 90 proof, blends four of them, two from the high rye bill, and so teaches what rye does to a bourbon better than any single bottle.",
+          "note": "Owner is Kirin: confirm before printing. Small Batch blends OBSK, OBSO, OESK and OESO, aged six to seven years (one source). The yellow label Four Roses Bourbon is the entry bottling; Small Batch was chosen as the one taught. Its master distiller is living: by role only.",
+          "shelf": "",
+          "library": "Four Roses",
+          "benchmark": true
+        },
+        {
+          "key": "old-grand-dad",
+          "producer": "Old Grand-Dad",
+          "madeBy": "Jim Beam",
+          "flagship": "Old Grand-Dad Bonded",
+          "why": "The Beam family's high rye bourbon label, named for Basil Hayden Sr. and first bottled in 1882, made today at the Jim Beam distillery in Clermont from a mash of about 27 per cent rye. The Bonded bottling, 100 proof, is the version bartenders use for a spirit forward Old Fashioned.",
+          "note": "Sources split on whether Raymond B. Hayden was a son or grandson and on 1840 or 1882: Beam's own site says first bottled in 1882, use that and leave the lineage line out unless confirmed. The flagship also teaches bottled-in-bond, but the label sits here because its lesson is the rye.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "basil-hayden",
+          "producer": "Basil Hayden",
+          "madeBy": "Jim Beam",
+          "flagship": "Basil Hayden Kentucky Straight Bourbon",
+          "why": "Old Grand-Dad's sibling from the same high rye Beam mash, released in 1992 in Beam's Small Batch Bourbon Collection and named for Meredith Basil Hayden Sr. At 80 proof it is the lighter, spicier high rye pour a guest orders by name.",
+          "note": "The name dropped its possessive (Basil Hayden's) in 2021: use Basil Hayden. Sources give the rye as 27 or 25 per cent: give no figure. Confirm 80 proof on the label, which no search source stated.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "bulleit",
+          "producer": "Bulleit",
+          "madeBy": "Diageo",
+          "flagship": "Bulleit Bourbon",
+          "why": "Diageo's frontier whiskey brand, founded in 1987 and with its own distillery near Shelbyville, Kentucky since 2017, and a mash of 68 per cent corn, 28 per cent rye and 4 per cent malted barley. At 90 proof it is the high rye bourbon found on a great many rails.",
+          "note": "Not on the high-rye benchmarks list; added because it is the high rye bourbon a working bar is likely to pour. Its founder is living: by role only. Earlier stock was sourced and aged at Stitzel-Weller: confirm before saying where current bottles are distilled. The 1830 ancestor story is the brand's claim.",
+          "shelf": "",
+          "library": "",
+          "benchmark": false
+        },
+        {
+          "key": "rabbit-hole",
+          "producer": "Rabbit Hole",
+          "madeBy": "",
+          "flagship": "Rabbit Hole Heigold",
+          "why": "The Louisville distillery whose Heigold is a high rye, double malted straight bourbon of about 70 corn, 25 malted rye and 5 malted barley, bottled at 95 proof and named for a nineteenth century German stonecutter. It is the owner's shelf bottle and the craft voice of the style.",
+          "note": "The label's Cavehill (four grain, rabbit-hole-cavehill) is the four-grain-bourbon lesson, left without a group; it can be the second bottle on the house page. Founding year (2012 is widely given) not confirmed by these searches. Its founder is living: by role only.",
+          "shelf": "rabbit-hole-heigold",
+          "library": "Rabbit Hole",
+          "benchmark": true
+        }
+      ],
+      "alternates": [
+        {
+          "producer": "Redemption",
+          "flagship": "Redemption High-Rye Bourbon",
+          "why": "A 92 proof bourbon of 60 per cent corn, 36 per cent rye and 4 per cent barley malt, distilled and aged at MGP in Indiana; clashes with the wheated alternate of the same label, so use only one."
+        },
+        {
+          "producer": "Elmer T. Lee",
+          "flagship": "Elmer T. Lee Single Barrel",
+          "why": "Buffalo Trace's single barrel named for its master distiller Elmer T. Lee (died 2013), from the distillery's higher rye mash; confirm proof and mash bill before use."
+        }
+      ]
+    },
+    {
+      "key": "bottled-in-bond",
+      "title": "Bottled in bond",
+      "family": "American",
+      "style": "bottled-in-bond",
+      "chapter": "american-labels",
+      "picks": [
+        {
+          "key": "eh-taylor",
+          "producer": "E. H. Taylor",
+          "madeBy": "Buffalo Trace Distillery",
+          "flagship": "Colonel E.H. Taylor Small Batch Bottled in Bond",
+          "why": "Named for Colonel Edmund Haynes Taylor Jr., the Frankfort distiller who fought for the Bottled-in-Bond Act of 1897 and once owned the distillery now called Buffalo Trace. The Small Batch at 100 proof is the bonded bourbon that carries the law's own history, so the term is the lesson.",
+          "note": "The term is the lesson in each why here: one distillery, one season, at least four years in a bonded warehouse, 100 proof. Confirm that the label prints Bottled in Bond on the Small Batch. E. H. Taylor died in 1923 and may be named.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "old-fitzgerald",
+          "producer": "Old Fitzgerald",
+          "madeBy": "Heaven Hill",
+          "flagship": "Old Fitzgerald Bottled-in-Bond",
+          "why": "Heaven Hill's wheated bourbon brand, once Stitzel-Weller's, released since 2018 as a twice yearly decanter series that is always bottled in bond at 100 proof, with spring and fall editions of differing ages. It shows the bond as a frame for an aged, wheated bourbon.",
+          "note": "Placed here and not in wheated-bourbon because every bottle now carries the bond, which is its identity; its wheated mash (about 68 corn, 20 wheat, 12 malted barley) is the second lesson. The Stitzel-Weller past is history in the past tense. Each edition has its own age (8 to 19 years so far): teach the series, not one edition. A permanent 7 year bonded release is also reported: confirm and prefer it if it is the standing bottling.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "evan-williams",
+          "producer": "Evan Williams",
+          "madeBy": "Heaven Hill",
+          "flagship": "Evan Williams Bottled in Bond",
+          "why": "Heaven Hill's Bardstown label, whose white label Bottled in Bond, introduced in 2012, is a 100 proof straight bourbon aged at least four years in a bonded warehouse. It is the bonded bourbon a bar keeps on the rail, beside the brand's 86 proof Black Label.",
+          "note": "Placed here rather than in bourbon because its white label is the teaching bottle for the bond; the Black Label is the brand's everyday bourbon. Confirm the 2012 introduction date of this label form. Mash bill 78 corn, 10 rye, 12 malt (one source).",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "heaven-hill",
+          "producer": "Heaven Hill",
+          "madeBy": "",
+          "flagship": "Heaven Hill Bottled-in-Bond 7 Year Old",
+          "why": "The family owned Bardstown distillery's namesake bourbon, launched in its present form in 2019 at seven years and 100 proof, after a six year bonded bottling sold only in Kentucky ended in 2018. It is the house teaching the bond with an age statement on the label.",
+          "note": "The name on the label is Heaven Hill Distillery's own: the Library record Heaven Hill links here. The family owners are living: by role only.",
+          "shelf": "",
+          "library": "Heaven Hill",
+          "benchmark": true
+        },
+        {
+          "key": "henry-mckenna",
+          "producer": "Henry McKenna",
+          "madeBy": "Heaven Hill",
+          "flagship": "Henry McKenna 10 Year Single Barrel Bottled in Bond",
+          "why": "Heaven Hill's single barrel label, a bourbon aged ten years and bottled in bond at 100 proof. It pairs the bond with a single barrel and an age statement, so a bartender can teach both terms from one bottle.",
+          "note": "Not on the benchmarks list; added for its single barrel and age statement. The namesake is a historic Kentucky distiller: confirm his dates before naming him.",
+          "shelf": "",
+          "library": "",
+          "benchmark": false
+        }
+      ],
+      "alternates": [
+        {
+          "producer": "Old Tub",
+          "flagship": "Old Tub Bottled in Bond",
+          "why": "Beam's revived name for what Jim Beam was called when first sold bottled, a 100 proof bonded bourbon of at least four years."
+        },
+        {
+          "producer": "Very Old Barton",
+          "flagship": "Very Old Barton Bottled in Bond",
+          "why": "A 100 proof bourbon distilled and bottled at Barton 1792 in Bardstown for the Sazerac Company; confirm the current label still carries the bond, which one report says it lost in 2019."
+        }
+      ]
+    },
+    {
+      "key": "small-batch-single-barrel",
+      "title": "Small batch and single barrel",
+      "family": "American",
+      "style": "small-batch-single-barrel",
+      "chapter": "american-labels",
+      "picks": [
+        {
+          "key": "blantons",
+          "producer": "Blanton's",
+          "madeBy": "Buffalo Trace Distillery",
+          "flagship": "Blanton's Original Single Barrel",
+          "why": "The Buffalo Trace bourbon released in 1984 as a single barrel bourbon, named for Colonel Albert B. Blanton and drawn from Warehouse H at 93 proof. It is the bottle that made single barrel a term guests ask for, and the term is the lesson.",
+          "note": "Named for Albert B. Blanton (died 1959), who may be named; Elmer T. Lee (died 2013) created it. Mash Bill No. 2, the higher rye bill, is from shop listings and one magazine list: confirm before printing. Its owner abroad differs by market: keep ownership out.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "eagle-rare",
+          "producer": "Eagle Rare",
+          "madeBy": "Buffalo Trace Distillery",
+          "flagship": "Eagle Rare 10 Year",
+          "why": "Buffalo Trace's ten year old single barrel bourbon, each bottle drawn from one barrel, which shows how one barrel of a known recipe still differs from the next. It is the aged single barrel a guest names beside Blanton's.",
+          "note": "Proof is in doubt: shop listings say 90, one Wikipedia line says 101 from 2018. Confirm on the producer's page before printing. Confirm the current label still prints Single Barrel.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "knob-creek",
+          "producer": "Knob Creek",
+          "madeBy": "Jim Beam",
+          "flagship": "Knob Creek Small Batch 9 Year",
+          "why": "Beam's 100 proof small batch bourbon from the Small Batch Bourbon Collection of 1992. Its nine year statement was dropped in 2016 and restored in 2020, which makes it a clear lesson in how age and batch size sit on an American label.",
+          "note": "Small batch has no legal definition in the United States: say so in the group. Booker Noe (died 2004) created the collection and may be named.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "elijah-craig",
+          "producer": "Elijah Craig",
+          "madeBy": "Heaven Hill",
+          "flagship": "Elijah Craig Small Batch",
+          "why": "Heaven Hill's bourbon named for an eighteenth century Baptist minister, bottled at 94 proof from barrels aged eight to twelve years, without an age statement. It is the small batch bourbon a bar stocks beside Knob Creek.",
+          "note": "The 1986 first release could not be confirmed: leave the date out or confirm. The minister may be named but the claim that he invented bourbon is a myth to be told as one. Elijah Craig Barrel Proof belongs to this label and is not used in barrel-proof.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "russells-reserve",
+          "producer": "Russell's Reserve",
+          "madeBy": "Wild Turkey",
+          "flagship": "Russell's Reserve Single Barrel",
+          "why": "Wild Turkey's single barrel bourbon, bottled non chill filtered at 110 proof, under a label named for the distillery's master distillers. It shows how a single barrel from a high proof house reads against the batched Wild Turkey 101.",
+          "note": "The namesakes, father and son, are both living: never name them, say the distillery's master distillers. Proof 110 is from one listing: confirm. The 104 proof figure belongs to the Single Barrel Rye, not this.",
+          "shelf": "",
+          "library": "",
+          "benchmark": false
+        }
+      ],
+      "alternates": [
+        {
+          "producer": "Baker's",
+          "flagship": "Baker's Single Barrel 7 Year",
+          "why": "Beam's single barrel bourbon of the Small Batch Bourbon Collection, aged at least seven years and bottled at 107 proof (53.5 per cent)."
+        },
+        {
+          "producer": "Four Roses",
+          "flagship": "Four Roses Single Barrel",
+          "why": "The Lawrenceburg distillery's single barrel from its 35 per cent rye mash; clashes with the high-rye pick, so use only if Four Roses moves."
+        }
+      ]
+    },
+    {
+      "key": "barrel-proof",
+      "title": "Barrel proof",
+      "family": "American",
+      "style": "barrel-proof",
+      "chapter": "american-labels",
+      "picks": [
+        {
+          "key": "bookers",
+          "producer": "Booker's",
+          "madeBy": "Jim Beam",
+          "flagship": "Booker's Bourbon",
+          "why": "The bourbon Booker Noe, Beam's master distiller, released in 1988 straight from the barrel, uncut and unfiltered, aged six to eight years, at a different natural proof for each of its four batches a year. It is the barrel proof bourbon by which the term is taught.",
+          "note": "Booker Noe died in 2004 and may be named; his son and grandson are living: by role only. Proof varies by batch (about 121 to 131 across releases): never print one figure. Placed here, not in small-batch-single-barrel, because uncut is its lesson.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "george-t-stagg",
+          "producer": "George T. Stagg",
+          "madeBy": "Buffalo Trace Distillery",
+          "flagship": "George T. Stagg",
+          "why": "The Antique Collection's uncut, unfiltered bourbon from Buffalo Trace, named for the nineteenth century owner of the distillery, released once a year at its barrel proof. It is the owner's shelf bottle and the aged end of the barrel proof lesson.",
+          "note": "George T. Stagg (died 1893) may be named. Keep release scarcity out of prose. Proof and age differ each year: print neither as fixed.",
+          "shelf": "george-t-stagg",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "stagg",
+          "producer": "Stagg",
+          "madeBy": "Buffalo Trace Distillery",
+          "flagship": "Stagg",
+          "why": "The younger, batched barrel proof bourbon from the same Buffalo Trace recipe as George T. Stagg, sold as Stagg Jr. until it was renamed Stagg in 2022. Uncut and unfiltered, at a proof that changes each batch, it is the shelf bottle that shows barrel proof at a younger age.",
+          "note": "A separate label on the owner's shelf from George T. Stagg; if the merge agent judges the two one house, keep George T. Stagg and use an alternate. The rename year is 2022 in two sources, not 2023.",
+          "shelf": "stagg",
+          "library": "",
+          "benchmark": false
+        },
+        {
+          "key": "1792",
+          "producer": "1792",
+          "madeBy": "Barton 1792 Distillery",
+          "flagship": "1792 Full Proof",
+          "why": "The Sazerac Company's Bardstown bourbon, bottled at 125 proof, the strength at which it entered the barrel, since 2016. It teaches the difference between barrel entry proof and barrel proof, a distinction the term depends on.",
+          "note": "Reviewers say it is not quite cask strength: the lesson is that it is cut back to its entry proof. Age (about 8.5 years in the launch release) is not on the label. Plain slug 1792; the label reads 1792 Bourbon.",
+          "shelf": "",
+          "library": "",
+          "benchmark": false
+        },
+        {
+          "key": "barrell",
+          "producer": "Barrell",
+          "madeBy": "Barrell Craft Spirits",
+          "flagship": "Barrell Bourbon",
+          "why": "The Louisville independent blender that buys aged straight bourbon from Indiana, Tennessee and Kentucky and bottles each numbered batch at cask strength, non chill filtered. It shows barrel proof as a blender's choice rather than a distiller's.",
+          "note": "Founding year (2013) not confirmed by these searches. Each batch has its own number, proof and sources: teach the series, not a batch. Its founder is living: by role only.",
+          "shelf": "",
+          "library": "",
+          "benchmark": false
+        }
+      ],
+      "alternates": [
+        {
+          "producer": "Penelope",
+          "flagship": "Penelope Barrel Strength",
+          "why": "A four grain straight bourbon blended from three mash bills, uncut and non chill filtered, released in numbered batches of differing proof."
+        },
+        {
+          "producer": "Larceny",
+          "flagship": "Larceny Barrel Proof",
+          "why": "Heaven Hill's wheated bourbon at barrel proof, the first national line extension of the Larceny mash; clashes with the wheated-bourbon pick, so use only if Larceny moves."
+        }
+      ]
+    },
+    {
+      "key": "tennessee-whiskey",
+      "title": "Tennessee whiskey",
+      "family": "American",
+      "style": "tennessee-whiskey",
+      "chapter": "american-labels",
+      "picks": [
+        {
+          "key": "jack-daniels",
+          "producer": "Jack Daniel's",
+          "madeBy": "Brown-Forman",
+          "flagship": "Jack Daniel's Old No. 7",
+          "why": "The Lynchburg, Tennessee distillery whose whiskey passes through sugar maple charcoal before the barrel, the Lincoln County Process it calls charcoal mellowing. Old No. 7 is the bottle a guest pictures at the words Tennessee whiskey.",
+          "note": "Nearest Green, the enslaved and later freed distiller who taught Jasper Newton Daniel, may be named (both long dead); his role is told by the brand and by historians. The 1866 registration date was not confirmed by these searches: leave it out or confirm. Proof differs by market (80 in the United States).",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "george-dickel",
+          "producer": "George Dickel",
+          "madeBy": "Cascade Hollow Distilling Co.",
+          "flagship": "George Dickel No. 12",
+          "why": "The Cascade Hollow distillery near Tullahoma, in Coffee County, Tennessee, opened in 1878, which chills its whiskey before the charcoal. No. 12 is the classic Dickel bottling and the clear contrast with Jack Daniel's.",
+          "note": "Owner is Diageo: confirm. Proof of No. 12 (90) not stated by these searches: confirm. Dickel spells whisky without the e: keep the label's spelling. George Dickel (died 1894) may be named.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "uncle-nearest",
+          "producer": "Uncle Nearest",
+          "madeBy": "",
+          "flagship": "Uncle Nearest 1856",
+          "why": "The Shelbyville, Tennessee brand named for Nathan \"Nearest\" Green, who taught Jack Daniel to distil. Its 1856 bottling is a 100 proof Tennessee whiskey passed through the Lincoln County Process.",
+          "note": "Its founder is living: by role only. The 1856 date is the brand's belief from its own research, not settled fact: say so. Early bottles were sourced; one source says from 2022 it is distilled by the brand itself: confirm. The label adds a further descriptive word after 1856 that house voice forbids: keep it out of prose.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "nelsons-green-brier",
+          "producer": "Nelson's Green Brier",
+          "madeBy": "",
+          "flagship": "Nelson's Green Brier Tennessee Whiskey",
+          "why": "The Nashville distillery revived in 2014 by descendants of Charles Nelson, whose family's Green Brier distillery ran until Tennessee's prohibition shut it in 1909. Its Tennessee whiskey is wheated, mellowed through sugar maple charcoal and bottled at 91 proof.",
+          "note": "The founders are living descendants: by role only. Charles Nelson and Louisa Nelson (both nineteenth century) may be named. The old distillery is history in the past tense. Its Belle Meade bourbon is the house's other label, not this flagship.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "prichards",
+          "producer": "Benjamin Prichard's",
+          "madeBy": "",
+          "flagship": "Prichard's Tennessee Whiskey",
+          "why": "The Kelso, Tennessee distillery opened in 1997 in an old schoolhouse, which makes its whiskey in pot stills and is the one Tennessee producer allowed to call it Tennessee whiskey without the charcoal step. It is the exception that proves the rule.",
+          "note": "Its founder is living: by role only. Sources split on 1997 or 1999 for the first distillation: confirm. Benjamin Prichard is a historic ancestor and may be named once his dates are confirmed. A second distillery opened in Nashville in 2014.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        }
+      ],
+      "alternates": [
+        {
+          "producer": "Collier and McKeel",
+          "flagship": "Collier and McKeel Tennessee Whiskey",
+          "why": "A Nashville Tennessee whiskey from a copper pot still, which pumps its spirit slowly through the charcoal rather than letting it drip."
+        },
+        {
+          "producer": "Leiper's Fork",
+          "flagship": "Leiper's Fork Bottled in Bond Tennessee Whiskey",
+          "why": "A pot distilled, sugar maple charcoal filtered Tennessee whiskey from Williamson County, bottled in bond at 100 proof since its first barrels of 2016."
+        }
+      ]
+    }
+  ],
+  "left": [
+    {
+      "style": "four-grain-bourbon",
+      "why": "Thin. The four grain bourbons a guest might meet are Rabbit Hole Cavehill (the shelf bottle, rabbit-hole-cavehill), Penelope and a handful of craft bottlings (Black Button, Bluebird, A.D. Laws) that few bars carry by name; Woodford Reserve's Four Grain was a single Master's Collection release of 2005 and Balcones is a corn and malt house. Fewer than five real labels a working bar is asked for, so no group. If the merge agent wants one, Rabbit Hole would have to move here with Cavehill, and Rabbit Hole Heigold leave high-rye."
+    },
+    {
+      "style": "straight-whiskey",
+      "why": "Not judged here: it is the other American lane's to judge."
+    }
+  ],
+  "searches": 34
+}
