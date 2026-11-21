@@ -52,8 +52,9 @@
    it says frozen: false it follows the writing build, and a key that leaves
    is printed. Once --freeze has run, the build may add a key and never
    loses one: a lost key refuses the build, because a key is a person's
-   saved record. A partial build never takes a frozen key of a group it did
-   not build.
+   saved record. A group whose keys are frozen always ships: if its fragment
+   is missing, refused or unrefuted the build writes nothing, partial or
+   whole, since the data file would lose the cards the keys still promise.
 
    The output. js/data-caskhouses.js declares CASK_HOUSES = { meta,
    families, groups, houses }: groups are the roster's built groups in
@@ -69,7 +70,7 @@ import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, relative, resolve, isAbsolute, sep } from 'node:path';
 import vm from 'node:vm';
 import { CH_DIR, LEDGER_ROOT, DATA_FILE, GLOBAL, KEY_PREFIX, PICKS, FIELDS, BOTTLE_FIELDS,
-  loadContext, planProblems, validateFragment, recordProblems, adviseRecord, isRefuted, readingWords, cardKey, chunkGroups, roster } from './schema.mjs';
+  loadContext, planProblems, validateFragment, adviseRecord, isRefuted, readingWords, cardKey, chunkGroups, roster, settleKeys, longestTally } from './schema.mjs';
 
 const PARTIAL_MARK = 'A PARTIAL BUILD';
 const UNREFUTED_MARK = 'UNREFUTED';
@@ -145,7 +146,7 @@ function build(ctx, o, mode){
     const r = readFragment(o.fragments, g.key);
     if(r.missing){ B.missing.push(g.key); return; }
     if(r.broken){ B.refused.push([g.key, ['fragment: ' + r.broken]]); return; }
-    const problems = validateFragment(r.frag, ctx);
+    const problems = validateFragment(r.frag, ctx, g.key);
     if(problems.length){ B.refused.push([g.key, problems]); return; }
     const unread = r.frag.records.filter((x) => !isRefuted(x)).map((x) => x.key);
     if(unread.length && !mode.unrefuted){ B.unrefutedGroups.push([g.key, unread]); return; }
@@ -188,32 +189,8 @@ function readKeys(file){
   if(!j || typeof j.frozen !== 'boolean' || !Array.isArray(j.keys) || j.keys.some((k) => typeof k !== 'string')) throw new Error(rel(file) + ': { about, frozen: true or false, keys: [...] }');
   return j;
 }
-/* what the keys file must hold after this build, and what stands in the way */
-function settleKeys(ctx, B, K, mode){
-  const built = new Set(B.keys);
-  const builtPicks = new Set(B.houses.map((h) => h.key));
-  const problems = [], notes = [];
-  if(new Set(B.keys).size !== B.keys.length) problems.push('keys: a key twice (two cards of one house share an id)');
-  const lost = K.keys.filter((k) => !built.has(k));
-  let keep = [];
-  if(K.frozen){
-    lost.forEach((k) => {
-      const pk = k.slice(KEY_PREFIX.length).split('/')[0];
-      if(!ctx.pickByKey.has(pk)) problems.push('keys: the frozen key "' + k + '" belongs to a pick the roster no longer holds (a pick’s key never changes once its group is built)');
-      else if(builtPicks.has(pk) || !mode.partial) problems.push('keys: the frozen key "' + k + '" would be lost (a key is a person’s saved record: keep the card’s id, whatever its words)');
-      else keep.push(k);
-    });
-  } else lost.forEach((k) => notes.push('note: the key "' + k + '" leaves keys.v1.json (not frozen yet: the file follows the build)'));
-  /* the roster's order: built keys in order, the kept frozen keys of unbuilt groups in the file's order after them */
-  const order = new Map();
-  roster(ctx.plan).forEach((x, i) => order.set(x.pick.key, i));
-  const all = B.keys.concat(keep);
-  const pos = (k) => { const pk = k.slice(KEY_PREFIX.length).split('/')[0]; return order.has(pk) ? order.get(pk) : 1e9; };
-  const fileAt = new Map(K.keys.map((k, i) => [k, i]));
-  const builtAt = new Map(B.keys.map((k, i) => [k, i]));
-  all.sort((a, b) => pos(a) - pos(b) || (builtAt.has(a) && builtAt.has(b) ? builtAt.get(a) - builtAt.get(b) : (fileAt.get(a) || 0) - (fileAt.get(b) || 0)));
-  return { problems, notes, keys: all, added: B.keys.filter((k) => K.keys.indexOf(k) < 0) };
-}
+/* what the keys file must hold after a build, and what stands in the way, is schema.mjs's settleKeys: the rule lives once */
+function settle(ctx, B, K){ return settleKeys(ctx, { keys: B.keys, picks: B.houses.map((h) => h.key) }, K); }
 
 /* ---- the modes ------------------------------------------------------------------------ */
 function printRefused(B){
@@ -254,7 +231,7 @@ function main(){
       if(!g){ console.log(at + ': no group of plan.json'); failed++; return; }
       if(r.missing){ console.log(at + ': not written yet'); absent++; return; }
       if(r.broken){ console.log(at + ': ' + r.broken); failed++; return; }
-      const problems = validateFragment(r.frag, ctx);
+      const problems = validateFragment(r.frag, ctx, k);
       problems.forEach((p) => console.log(at + ': ' + p));
       const notes = [];
       (Array.isArray(r.frag.records) ? r.frag.records : []).forEach((rec, i) => notes.push(...adviseRecord(rec, i, ctx)));
@@ -266,6 +243,8 @@ function main(){
         if(K.frozen){ console.log(at + ': the frozen key "' + x + '" is gone (keep the card’s id, whatever its words)'); problems.push(x); }
         else notes.push('the key "' + x + '" is in keys.v1.json and no longer in the fragment (not frozen yet)');
       });
+      const tally = longestTally(r.frag);
+      if(tally.longest >= 4) notes.push('records: the answer is the longest option in ' + tally.longest + ' of ' + tally.asked + ' questions: a learner reads the pattern (more than five is refused)');
       notes.forEach((n) => console.log('note: ' + k + ' ' + n));
       if(problems.length){ failed++; console.log(at + ': ' + problems.length + ' problem' + (problems.length === 1 ? '' : 's')); }
       else { sound++; console.log(at + ': sound'); }
@@ -288,11 +267,14 @@ function main(){
     let K = null;
     try { K = readKeys(o.keys); } catch (e) { problems.push(e.message); }
     if(K){
-      const S = settleKeys(ctx, B, K, mode);
+      const S = settle(ctx, B, K);
       S.problems.forEach((p) => problems.push(p));
       if(JSON.stringify(S.keys) !== JSON.stringify(K.keys)) problems.push(rel(o.keys) + ': is not the keys of the build (' + S.added.length + ' key(s) the file lacks, ' + K.keys.filter((k) => S.keys.indexOf(k) < 0).length + ' it should not hold: run the build)');
     }
     if(problems.length){ printRefused(B); problems.forEach((p) => console.error(p)); process.exit(1); }
+    /* a fragment that is not shipped cannot make the shipped file wrong, so it is a note here: the whole build refuses it */
+    B.strays.forEach((k) => console.log('note: fragments/' + k + '.json is named for no group of plan.json (the whole build refuses a stray file)'));
+    B.refused.forEach(([k, ps]) => console.log('note: fragments/' + k + '.json is on disk and not shipped: ' + ps.length + ' problem(s) by the schema'));
     console.log('ok ' + rel(o.out) + ' and ' + rel(o.keys) + ' equal the build: ' + B.groups.length + ' of ' + plan.groups.length + ' groups, ' + B.houses.length + ' of ' + all.length + ' houses, '
       + B.keys.length + ' cards, ' + B.meta.built.questions + ' questions' + (mode.partial ? '; ' + PARTIAL_MARK.toLowerCase() : '') + (B.unrefuted ? '; ' + B.unrefuted + ' records ' + UNREFUTED_MARK.toLowerCase() + ', a pilot' : '')
       + '; keys ' + (K.frozen ? 'frozen' : 'not frozen'));
@@ -309,7 +291,7 @@ function main(){
   if(!mode.partial && blocked){ console.error('build-caskhouses: the whole build ships every group of the roster, each sound and refuted. Nothing written.'); process.exit(1); }
   let K;
   try { K = readKeys(o.keys); } catch (e) { console.error(e.message); process.exit(1); }
-  const S = settleKeys(ctx, B, K, mode);
+  const S = settle(ctx, B, K);
   if(S.problems.length){ S.problems.forEach((p) => console.error(p)); console.error('build-caskhouses: nothing written.'); process.exit(1); }
   S.notes.forEach((n) => console.log(n));
   writeFileSync(o.out, B.text);

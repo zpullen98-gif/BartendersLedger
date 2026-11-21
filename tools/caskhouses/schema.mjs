@@ -750,12 +750,14 @@ export function validateRecord(rec, ctx, group, i){
 }
 
 /* ---- a group's fragment: { group, records: [five, in the roster's order] } ------- */
-export function validateFragment(frag, ctx){
+/* file: the group the fragment's file is named for (fragments/<group>.json), when the caller read it from one */
+export function validateFragment(frag, ctx, file){
   const out = (ctx.people.problems || []).slice();
   if(!isObj(frag)) return out.concat(['fragment: { group, records }']);
   unknown(out, frag, ['group', 'records'], 'fragment', 'a fragment');
   const g = ctx.groupByKey.get(frag.group);
   if(!g) return out.concat(['group: ' + JSON.stringify(frag.group) + ' is no group of plan.json']);
+  if(isStr(file) && file !== frag.group) return out.concat(['group: ' + JSON.stringify(frag.group) + ' in a file named for ' + file + ' (a group lives in fragments/<its own key>.json, and nowhere else)']);
   if(!isList(frag.records)) return out.concat(['records: a list of the group’s five records, in the roster’s order']);
   const order = g.picks.map((p) => p.key);
   const keys = frag.records.map((r) => (isObj(r) ? r.key : null));
@@ -782,6 +784,30 @@ export function longestTally(frag){
   return { asked, longest };
 }
 export function recordProblems(frag, ctx, i){ return validateRecord(frag.records[i], ctx, frag.group, i); }
+
+/* ---- the keys: what keys.v1.json must hold after a build, and what stands in the way -------------------------
+   built: { keys: every card key of the groups that built, in order; picks: the pick keys of those groups }
+   K:     keys.v1.json as it stands, { frozen, keys }
+   While K is not frozen the file follows the build and a key that leaves is a note. Once frozen, a key is a person's
+   saved record: the build may add one and never loses one. A frozen key is lost when its card's id changed, when its
+   pick left the roster, and when its group did not build at all, which a partial build would otherwise allow: the
+   data file would ship without the cards the keys file still promises. */
+export function settleKeys(ctx, built, K){
+  const have = new Set(built.keys), builtPicks = new Set(built.picks);
+  const problems = [], notes = [];
+  if(have.size !== built.keys.length) problems.push('keys: a key twice (two cards of one house share an id, or two files hold one group)');
+  const pickOf = (k) => k.slice(KEY_PREFIX.length).split('/')[0];
+  const unbuilt = new Map();
+  K.keys.filter((k) => !have.has(k)).forEach((k) => {
+    if(!K.frozen){ notes.push('note: the key "' + k + '" leaves keys.v1.json (not frozen yet: the file follows the build)'); return; }
+    const hit = ctx.pickByKey.get(pickOf(k));
+    if(!hit) problems.push('keys: the frozen key "' + k + '" belongs to a pick the roster no longer holds (a pick’s key never changes once its group is built)');
+    else if(builtPicks.has(pickOf(k))) problems.push('keys: the frozen key "' + k + '" would be lost (a key is a person’s saved record: keep the card’s id, whatever its words)');
+    else unbuilt.set(hit.group.key, (unbuilt.get(hit.group.key) || 0) + 1);
+  });
+  unbuilt.forEach((n, g) => problems.push('keys: the group ' + g + ' holds ' + n + ' frozen key' + (n === 1 ? '' : 's') + ' and did not build (a group whose keys are frozen always ships: mend its fragment before any build, partial or whole)'));
+  return { problems, notes, keys: built.keys.slice(), added: built.keys.filter((k) => K.keys.indexOf(k) < 0) };
+}
 
 /* ---- what a second reader should look at: never a failure ------------------------- */
 const NOW = /\b(?:today|now|still|these days|modern day|at present|recently|latest|newest)\b/i;
@@ -1005,7 +1031,7 @@ export function selfTest(){
   const planBase = planProblems(plan, ctx);
   rows.push(['the fixture roster passes', planBase.length === 0, planBase.slice(0, 4).join(' | ')]);
   /* each case edits a copy of the fragment and says what the validator must then say (a pattern), or that it must say nothing */
-  const refuse = (name, edit, pattern) => { const f = clone(frag); edit(f.records, f); const ps = validateFragment(f, ctx); rows.push([name, ps.some((p) => pattern.test(p)), ps.length ? ps.slice(0, 2).join(' | ') : 'no problem was raised']); };
+  const refuse = (name, edit, pattern) => { const f = clone(frag); edit(f.records, f); const file = f.__file; delete f.__file; const ps = validateFragment(f, ctx, file); rows.push([name, ps.some((p) => pattern.test(p)), ps.length ? ps.slice(0, 2).join(' | ') : 'no problem was raised']); };
   const keep = (name, edit) => { const f = clone(frag); edit(f.records, f); const ps = validateFragment(f, ctx); rows.push([name, ps.length === 0, ps.slice(0, 3).join(' | ')]); };
   const addStory = (r, text) => { r.story = r.story.replace('What matters at the table is the wheat: it gives a softer, rounder bourbon than a rye recipe does, and that is the whole lesson of the house.', text); };
 
@@ -1170,6 +1196,22 @@ export function selfTest(){
   }, /reading words .* at most 680/);
   refuse('six of ten answers in one position are refused', (r) => { r.forEach((x, n) => { if(n < 3){ x.quiz.forEach((q, qi) => { const key = q.options[q.a]; const rest = q.options.filter((o, j) => j !== q.a); const to = qi === 0 ? 0 : 1; rest.splice(to, 0, key); q.options = rest; q.a = to; }); } else { const q = x.quiz[0]; const key = q.options[q.a]; const rest = q.options.filter((o, j) => j !== q.a); rest.splice(0, 0, key); q.options = rest; q.a = 0; const q2 = x.quiz[1]; const k2 = q2.options[q2.a]; const r2 = q2.options.filter((o, j) => j !== q2.a); r2.splice(n === 3 ? 0 : 2, 0, k2); q2.options = r2; q2.a = n === 3 ? 0 : 2; } }); }, /answers sit in position 0|both answers sit in one position/);
   refuse('records out of the roster’s order are refused', (r, f) => { f.records = [r[1], r[0], r[2], r[3], r[4]]; }, /records: the roster’s order/);
+  refuse('a fragment in a file named for another group is refused', (r, f) => { f.__file = 'another-style'; }, /group: "fixture-style" in a file named for another-style/);
+  /* the keys */
+  {
+    const keys = frag.records.flatMap((x) => x.cards.map((c) => cardKey(x.key, c.id)));
+    const picks = frag.records.map((x) => x.key);
+    const settle = (name, built, K, pattern) => { const S = settleKeys(ctx, built, K); rows.push([name, pattern ? S.problems.some((p) => pattern.test(p)) : S.problems.length === 0, S.problems.join(' | ') || 'no problem was raised']); return S; };
+    const moved = keys.map((k) => (k === 'Cask Houses · old-lantern/grain' ? 'Cask Houses · old-lantern/second-grain' : k));
+    const loose = settle('before the freeze a card key may change, with a note', { keys: moved, picks }, { frozen: false, keys });
+    rows.push(['before the freeze the key that leaves is printed', loose.notes.length === 1 && /old-lantern\/grain" leaves/.test(loose.notes[0]), loose.notes.join(' | ')]);
+    settle('after the freeze a changed card key is refused', { keys: moved, picks }, { frozen: true, keys }, /the frozen key "Cask Houses · old-lantern\/grain" would be lost/);
+    const more = settle('after the freeze a key may be added', { keys, picks }, { frozen: true, keys: keys.slice(0, 8) });
+    rows.push(['the added keys are counted and kept in the build’s order', more.added.length === 2 && more.keys.join('|') === keys.join('|'), more.added.join(' | ')]);
+    settle('after the freeze a pick’s key that left the roster is refused', { keys, picks }, { frozen: true, keys: keys.concat(['Cask Houses · gone-house/grain']) }, /"Cask Houses · gone-house\/grain" belongs to a pick the roster no longer holds/);
+    settle('after the freeze a group that did not build is refused, in a partial build too', { keys: [], picks: [] }, { frozen: true, keys }, /the group fixture-style holds 10 frozen keys and did not build/);
+    settle('two cards with one key are refused', { keys: keys.concat([keys[0]]), picks }, { frozen: false, keys }, /keys: a key twice/);
+  }
   /* the roster */
   const planRefuse = (name, edit, pattern) => { const p = clone(plan); edit(p); const ps = planProblems(p, loadContext({ plan: p, people: ctx.people, facts: ctx.facts })); rows.push([name, ps.some((x) => pattern.test(x)), ps.slice(0, 2).join(' | ') || 'no problem was raised']); };
   planRefuse('a group of four picks is refused', (p) => { p.groups[0].picks.pop(); }, /picks: exactly 5 \(4\)/);
