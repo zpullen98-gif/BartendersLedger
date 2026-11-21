@@ -15,19 +15,19 @@
   "sources": 25
  },
  "words": {
-  "total": 2619,
+  "total": 2621,
   "perHouse": {
    "makers-mark": 493,
    "weller": 505,
-   "pappy-van-winkle": 562,
-   "larceny": 531,
+   "pappy-van-winkle": 565,
+   "larceny": 530,
    "rebel": 528
   }
  },
  "keys": {
   "frozen": false,
   "held": 10,
-  "added": 10
+  "added": 0
  },
  "missing": [
   "bourbon",

@@ -133,10 +133,26 @@ export const SOURCE_URL = /^https:\/\/[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?\.[a-z]{2,
 /* a year a house history may carry: 1100 (Armagnac is first written of in 1310, Scotch in 1494) to this decade */
 const YEAR = /\b(?:1[1-9]\d{2}|20[0-2]\d)\b/;
 const YEAR_G = /\b(?:1[1-9]\d{2}|20[0-2]\d)\b/g;
+/* superlatives the shelf's and the styles' lists do not name. The owner's rule is no superlative at all, and an author
+   refused "oldest" reaches for "eldest": every -est form a house history is likely to carry, the -most words (a
+   northernmost distillery is a claim that ages), and "most" as a superlative without "the" (Kentucky's most visited,
+   its most peated, most widely poured). "most bourbons", "most guests" and "most often" count things and stand. */
+export const SUPERLATIVE_OURS = /\b(?:eldest|newest|latest|driest|darkest|deepest|fullest|mildest|grandest|noblest|choicest|fastest|slowest|cleanest|freshest|fruitiest|spiciest|creamiest|oiliest|widest|hottest|coldest|coolest|warmest|toughest|hardest|loudest|proudest|costliest|priciest|busiest|fewest|closest|nearest|farthest|furthest|northernmost|southernmost|westernmost|easternmost|topmost|foremost|uppermost|(?:[’']s|its|their|our|his|her) most [a-z]+|most (?:heavily|widely|highly|richly|lightly|deeply|strongly|closely|keenly) [a-z]+|most (?:important|prestigious|noble|loved|admired|expensive|collectable|collectible|desirable|acclaimed|renowned|recognisable|recognised|visited|peated|sherried|aged|poured|sold|ordered|requested|imitated|copied|collected))\b/i;
+/* words that sell rather than teach, beyond the shelf's list (the Sommelier's Codex refuses most of them): famous may
+   describe a house, and these judge it */
+export const SELLING_OURS = /\b(?:renowned|world[- ]famous|world[- ]renowned|peerless|unbeatable|unsurpassed|unmatched|unequalled|second to none|superb|outstanding|pinnacle|incomparable|stunning|magnificent|sublime|exceptional|extraordinary|prestigious|prestige|luxury|elite|gold standard|acclaimed|revered|beloved|fabled|prized|must[- ](?:have|try)|top[- ](?:selling|sellers?|rated|tier|notch)|number one|state of the art)\b/i;
 /* a score, a rating, a medal or a trophy: none anywhere */
 export const SCORE = /\b\d{2,3}\s*(?:points?|pts)\b|\/\s?100\b|\b(?:100|hundred)[- ]point|\b(?:scor(?:e|es|ed|ing)|ratings?|rated|medals?|medall?ists?|double gold|trophy|trophies|whisk(?:e)?y of the year|spirit of the year|distiller(?:y)? of the year|hall of fame)\b/i;
 /* scarcity talk beyond the shelf's list (which holds allocation, the lottery, the secondary market, hard to find, limited supply) */
 export const SCARCITY = /\b(?:scarc\w*|rarit(?:y|ies)|waiting lists?|wait ?lists?|unobtainable|shortages?|queues?|queu(?:e|ed|ing)|limited (?:quantit\w+|numbers?|availability|stock)|once a year|collectors?|collectibles?|collectables?)\b/i;
+/* an award by another name: a house is granted a Royal Warrant, never awarded one */
+export const SCORE_OURS = /\b(?:awards?|awarded|prizes?|prize[- ]?winning|accolades?|ranked|rankings?|top (?:\d+|ten|twenty|fifty|hundred)|out of (?:ten|a hundred|100|10)|best in (?:show|class)|won (?:gold|silver|bronze)|gold at)\b/i;
+/* price by another name: what a bottle sells for, fetches or goes for at auction ("sold for a time as Rebel Yell" is no price) */
+export const PRICE_OURS = /\b(?:(?:sells?|selling) for|(?:sold|goes|went|changes? hands|changed hands) for (?:about |around |roughly |some |just |only |under |over |less than |more than |upwards of )?(?:[$\u00a3\u20ac]|a (?:song|fortune|pound|dollar)|one (?:pound|dollar)|hundreds|thousands|millions|\d[\d,.]*\s?(?:million|billion|thousand|m\b|bn\b))|fetch(?:es|ed|ing)?|auction\w*|inexpensive|overpriced|underpriced|pricier|bucks|usd|gbp|a steal|splurge|per bottle)\b/i;
+/* scarcity by another name */
+export const SCARCITY_OURS = /\b(?:ballot(?:s|ed)?|raffles?|hard to (?:get|come by|buy|obtain|track down)|(?:difficult|impossible|tough|tricky) to (?:find|get|buy|obtain|come by)|sells? out|sell[- ]outs?|selling out|snapped up|short supply|(?:high|heavy|huge|great|strong|fierce|frenzied) demand|in demand|demand (?:outstrips|outstripped|exceeds|exceeded|outran)|hype\w*|elusive|per customer|bottle limits?|trophy bottles?)\b/i;
+/* a pour size in words the first list does not reach: any ounce or jigger, a count of shots, fingers or measures */
+export const MEASURE_OURS = /\b(?:ounces?|oz|jiggers?)\b|\b(?:\d+(?:\.\d+)?|an?|one|two|three|four|half an?|a half)\s+(?:and a half\s+)?(?:shots?|fingers?)\b|\b(?:\d+(?:\.\d+)?|one|two|three|single|double|triple)\s+measures?\b/i;
 /* a pour size stated as ours: the page gives none */
 export const MEASURE = /\b\d+(?:\.\d+)?\s?(?:oz|ounces?|ml|cl|millilitres?|centilitres?)\b|\b(?:an?|one|two|half an?)\s+(?:ounces?|shots?|jiggers?|fingers?)\b/i;
 /* a per cent sign stands only in a strength, "45% ABV" */
@@ -344,12 +360,35 @@ function tidyProblems(s, where){
   if(/\s{2,}|[\t\n\r]/.test(s)) out.push(where + ': two spaces together, a tab or a line break');
   return out;
 }
+/* a name as it may stand in a sentence: any case, either apostrophe, any spacing, with or without a leading "The" */
+function nameRe(n){
+  const body = String(n).trim().replace(/^the\s+/i, '').split(/\s+/).map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/['’]/g, "['’]")).join('\\s+');
+  return new RegExp('(?:\\bthe\\s+)?' + body, 'gi');
+}
+export function sells(s){ return s.match(SUPERLATIVE) || s.match(SUPERLATIVE_MORE) || s.match(SUPERLATIVE_OURS) || s.match(SELLING_OURS); }
+/* the labels and flagships of the roster that print a word the voice refuses: each stands as a name in any record */
+function sellingNames(ctx){
+  if(!ctx._selling){
+    const out = [];
+    roster(ctx.plan).forEach((x) => [x.pick.producer, x.pick.flagship].forEach((n) => { if(isStr(n) && n.trim() && sells(n)) out.push(n); }));
+    ctx._selling = out;
+  }
+  return ctx._selling;
+}
 export function voiceProblems(rec, at, ctx, pick){
   const out = [];
   const own = ownNames(rec, pick);
-  /* the flagship's own printed words may carry a word the voice refuses (Ballantine's Finest): the name is taken out, the sentence is still held */
-  const ownFlag = [pick && pick.flagship, pick && pick.producer].filter((n) => isStr(n) && n.trim());
-  const bare = (s) => ownFlag.reduce((t, n) => t.split(n).join(' '), s);
+  /* a name is a name: the flagship's own printed words may carry a word the voice refuses (Ballantine's Finest), and so
+     may another label of the roster named beside it. The name is taken out as it may stand in a sentence (any case, either
+     apostrophe, with or without its "The"); the rest of the sentence is still held. On the label itself (bottle.name and
+     a label term) every word the roster's flagship prints is the label's, so "Finest" may be explained as a label term. */
+  const named = [pick && pick.flagship, pick && pick.producer].filter((n) => isStr(n) && n.trim()).concat(sellingNames(ctx)).sort((a, b) => b.length - a.length).map(nameRe);
+  const flagWords = new Set(fold(pick && pick.flagship).split(' ').filter(Boolean));
+  const bare = (s, where) => {
+    let t = named.reduce((x, re) => x.replace(re, ' '), s);
+    if(/\.bottle\.(?:name|label\[\d+\]\.term)$/.test(where)) t = t.split(/(\s+)/).map((tok) => (flagWords.has(fold(tok)) ? ' ' : tok)).join('');
+    return t;
+  };
   /* a sentence less the record's own names, so a figure in a name is never read as the year of a sale */
   const plain = (s) => own.slice().sort((a, b) => b.length - a.length).reduce((t, n) => t.split(n).join(' '), s);
   for(const [where, s] of strings(rec, at)){
@@ -376,25 +415,25 @@ export function voiceProblems(rec, at, ctx, pick){
     if(kind === 'provenance') continue;
     const lv = livingIn(s, ctx, own);
     if(lv.length) out.push(where + ': names a living person (' + lv.join(', ') + '): say the role, the family, the founder’s grandson');
-    if(kind === 'title') continue;
-    const b = bare(s);
-    const sup = b.match(SUPERLATIVE) || b.match(SUPERLATIVE_MORE);
+    const sup = sells(bare(s, where));
     if(sup) out.push(where + ': "' + sup[0] + '" is a superlative or sells rather than teaches');
     if(kind === 'label') continue;      /* the label's own words: its spelling and its figures are the label's */
+    /* a source's title is the publisher and the page in our words, and the page shows it: no price, score or scarcity there either */
+    const pr = s.match(PRICE) || s.match(PRICE_OURS);
+    if(pr) out.push(where + ': "' + pr[0] + '" talks price (no price anywhere)');
+    const sc = s.match(SCORE) || s.match(SCORE_OURS);
+    if(sc) out.push(where + ': "' + sc[0] + '" is a score, a rating, a medal or an award (none anywhere)');
+    const sy = s.match(SCARCITY) || s.match(SCARCITY_OURS);
+    if(sy) out.push(where + ': "' + sy[0] + '" is scarcity talk (none anywhere)');
+    if(kind === 'title') continue;
     const am = s.match(BREW_AMERICAN) || s.match(AMERICAN_MORE);
     if(am) out.push(where + ': American spelling "' + am[0] + '" (British: flavour, colour, ageing, centre, litre, -ise)');
     const ver = s.match(VERDICT);
     if(ver) out.push(where + ': "' + ver[0] + '" is allergen, dietary or health talk (none on this page)');
-    const pr = s.match(PRICE);
-    if(pr) out.push(where + ': "' + pr[0] + '" talks price (no price anywhere)');
-    const sc = s.match(SCORE);
-    if(sc) out.push(where + ': "' + sc[0] + '" is a score, a rating or a medal (none anywhere)');
-    const sy = s.match(SCARCITY);
-    if(sy) out.push(where + ': "' + sy[0] + '" is scarcity talk (none anywhere)');
     volatileProblems(s, where, plain).forEach((p) => out.push(p));
     const nr = s.match(NAMED_ROLE);
     if(nr) out.push(where + ': "' + nr[0] + '..." puts a name after a distiller’s or blender’s title (the living are never named; the dead are named first, with their dates, and the title after)');
-    const me = s.match(MEASURE);
+    const me = s.match(MEASURE) || s.match(MEASURE_OURS);
     if(me) out.push(where + ': "' + me[0] + '" is a pour size (the page states none as ours)');
     if(PER_CENT_SIGN.test(s)) out.push(where + ': a per cent sign outside a strength (write per cent; "45% ABV" alone keeps the sign)');
     if(HYPHEN_RANGE.test(s)) out.push(where + ': a range with a hyphen (write "12 to 15", "1935 to 1972")');
@@ -977,6 +1016,29 @@ export function selfTest(){
   refuse('an -est word is refused', (r) => { r[0].traps[1] = 'It is not the oldest distillery in the county, whatever the back label may be taken to say.'; }, /traps\[1\]: "oldest" is a superlative/);
   keep('a refused word inside the roster’s own flagship name is the label’s', (r) => { r[4].table = r[4].table.replace('is the bottling to begin with', 'is the one a guest calls Mill Quay Finest'); });
   refuse('the same word outside the flagship’s name is refused', (r) => { r[4].table = r[4].table.replace('soft caramel', 'the finest caramel'); }, /table: "finest" is a superlative/);
+  refuse('an -est the older lists lack is refused (eldest)', (r) => { r[0].others[0].note = 'The eldest whiskey of the house, bottled uncut from batch to batch.'; }, /others\[0\]\.note: "eldest" is a superlative/);
+  refuse('a -most word is refused (northernmost)', (r) => { r[0].traps[1] = 'It is not the northernmost distillery in the county, whatever the back label may be taken to say.'; }, /traps\[1\]: "northernmost" is a superlative/);
+  refuse('a possessive before most is refused', (r) => { r[0].table = r[0].table.replace('is the bottling to begin with', 'is Kentucky’s most visited bottling'); }, /table: "’s most visited" is a superlative/);
+  refuse('most with an adverb is refused', (r) => { r[0].table = r[0].table.replace('is the bottling to begin with', 'is a most widely poured bottling'); }, /table: "most widely poured" is a superlative/);
+  keep('most as a count stands (most bourbons, most often, at least)', (r) => { r[0].table = r[0].table.replace('It suits an Old Fashioned as well as a glass on its own.', 'Most bourbons use rye; most often it suits at least an Old Fashioned.'); });
+  refuse('a judging word of the Codex’s list is refused (renowned)', (r) => { r[0].table = r[0].table.replace('is the bottling to begin with', 'is the renowned bottling'); }, /table: "renowned" is a superlative or sells/);
+  refuse('second to none is refused', (r) => { r[0].table = r[0].table.replace('is the bottling to begin with', 'is second to none'); }, /table: "second to none" is a superlative or sells/);
+  refuse('luxury is refused', (r) => { r[0].table = r[0].table.replace('is the bottling to begin with', 'is the luxury bottling'); }, /table: "luxury" is a superlative or sells/);
+  keep('the flagship’s name stands in any case and without its The', (r) => { r[4].table = r[4].table.replace('is the bottling to begin with', 'is the one a guest calls the mill quay finest'); });
+  keep('a word the flagship prints may be explained as a label term', (r) => { r[4].bottle.label[1] = { term: 'Finest', means: 'The house’s own word for its standard bottling; it has no legal meaning.' }; });
+  refuse('the same word as a label term of another house is refused', (r) => { r[0].bottle.label[1] = { term: 'Finest', means: 'The house’s own word for its standard bottling; it has no legal meaning.' }; }, /label\[1\]\.term: "Finest" is a superlative/);
+  keep('another label of the roster stands as a name beside this one', (r) => { r[0].traps[1] = 'It is not Mill Quay Finest, whatever a guest recalls: the two labels share a county and nothing else.'; });
+  refuse('a superlative in a source’s title is refused', (r) => { r[0].sources[2].title = 'A whiskey magazine: the best bourbons of the county'; }, /sources\[2\]\.title: "best" is a superlative/);
+  refuse('a score in a source’s title is refused', (r) => { r[0].sources[2].title = 'A whiskey magazine: the house profile, 95 points'; }, /sources\[2\]\.title: "95 points" is a score/);
+  refuse('an award is refused', (r) => addStory(r[0], 'It won several awards in 2016, and what matters at the table is the wheat, which gives a softer, rounder bourbon.'), /story: "awards" is a score, a rating, a medal or an award/);
+  refuse('what a bottle sells for is refused', (r) => { r[0].others[0].note = 'The same whiskey bottled uncut; it sells for about twice as much.'; }, /others\[0\]\.note: "sells for" talks price/);
+  keep('sold for a time under another name is not a price', (r) => addStory(r[0], 'The whiskey was sold for a time under another name; what matters at the table is the wheat, which gives a softer bourbon.'));
+  refuse('a distillery sold for a pound is a price', (r) => addStory(r[0], 'The stills were sold for one pound in 1983, and what matters at the table is the wheat, which gives a softer bourbon.'), /story: "sold for one pound" talks price/);
+  refuse('an auction is refused', (r) => { r[0].traps[1] = 'Old bottles at auction prove nothing about the whiskey in a bottle bought across the bar.'; }, /traps\[1\]: "auction" talks price/);
+  refuse('a ballot is refused', (r) => addStory(r[0], 'Bottles are sold by ballot, and what matters at the table is the wheat, which gives a softer, rounder bourbon.'), /story: "ballot" is scarcity talk/);
+  refuse('selling out is refused', (r) => addStory(r[0], 'Each release sells out, and what matters at the table is the wheat, which gives a softer, rounder bourbon.'), /story: "sells out" is scarcity talk/);
+  refuse('an ounce in words is refused', (r) => { r[0].bottle.pour = 'Poured as one and a half ounces neat or over one large cube; it belongs in an Old Fashioned.'; }, /bottle\.pour: "ounces" is a pour size/);
+  refuse('a count of fingers is refused', (r) => { r[0].bottle.pour = 'Poured as three fingers neat or over one large cube of ice; it belongs in an Old Fashioned.'; }, /bottle\.pour: "three fingers" is a pour size/);
   refuse('a degree sign is refused', (r) => { r[0].bottle.still = 'Cooked, fermented and run through a column still at 80° and a doubler at Lantern Hill, the house says.'; }, /bottle\.still: carries a degree sign/);
   refuse('a fraction glyph is refused', (r) => { r[0].bottle.mash = 'Corn, with ¼ wheat and some malted barley; the house does not publish its mash bill.'; }, /bottle\.mash: carries a degree sign or a fraction glyph/);
   refuse('a mark at or above U+2190 is refused', (r) => { r[0].traps[0] = 'The label names the house \u2192 not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries U\+2192/);

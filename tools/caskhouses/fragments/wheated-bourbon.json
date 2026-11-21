@@ -161,7 +161,7 @@
    "story": "Julian \"Pappy\" Van Winkle (1874 to 1965) began in 1893 as a salesman for W. L. Weller & Sons of Louisville. He and a fellow salesman bought the firm in 1908 and later joined it to the A. Ph. Stitzel distillery, and the Stitzel-Weller Distillery opened on Derby Day in 1935, building its bourbons on wheat in place of rye. His son, Julian Van Winkle Jr. (died 1981), was pressed by stockholders to sell the distillery in 1972, and afterwards revived a label from before Prohibition, Old Rip Van Winkle, for whiskey he had made in earlier years. The founder's grandson carried the business on alone from 1981, bottling aged wheated bourbon at Lawrenceburg, and in 1994 released a 20 year old named for his grandfather: Pappy Van Winkle's Family Reserve. In 2002 the family entered a joint venture with Buffalo Trace, which has distilled the whiskey since; the last Stitzel-Weller stocks went into bottles during the years that followed. The 15 Year Old, at 107 proof, is the bottling most guests mean when they ask for Pappy.",
    "others": [
     { "name": "Pappy Van Winkle's Family Reserve 20 Year Old", "note": "The bottling that carried the name first, in 1994: five more years in oak." },
-    { "name": "Pappy Van Winkle's Family Reserve 23 Year Old", "note": "The eldest of the three Family Reserve bourbons." },
+    { "name": "Pappy Van Winkle's Family Reserve 23 Year Old", "note": "Twenty-three years in oak, eight more than the 15 Year Old." },
     { "name": "Old Rip Van Winkle 10 Year", "note": "The family's younger wheated bourbon, under the label revived after 1972." }
    ],
    "traps": [
@@ -212,7 +212,7 @@
    "bottle": {
     "name": "John E. Fitzgerald Larceny Small Batch Kentucky Straight Bourbon Whiskey",
     "class": "Kentucky straight bourbon whiskey",
-    "mash": "By Heaven Hill's account 68 per cent corn, 20 per cent wheat and 12 per cent malted barley: wheat in place of rye, and more of it than its nearest rivals use, the house says.",
+    "mash": "By Heaven Hill's account 68 per cent corn, 20 per cent wheat and 12 per cent malted barley: wheat in place of rye, and more of it than its rivals use, the house says.",
     "still": "Distilled at Heaven Hill's Bernheim Distillery in Louisville, where the house makes all of its wheated bourbon.",
     "wood": "New charred American oak, in open rick warehouses in Nelson County. Heaven Hill describes a six year old taste profile rather than a stated age.",
     "strength": "46% ABV (92 proof)",
