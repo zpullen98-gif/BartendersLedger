@@ -114,8 +114,9 @@ export const STRENGTH_FIXED = /^\d{2}(?:\.\d{1,2})?% ABV(?: \(\d{2,3}(?:\.\d{1,2
 export const STRENGTH_VARIES = /^Varies by (?:batch|release|barrel|cask|bottling)\b/;
 
 /* ---- the voice: this page's own additions ---------------------------------------- */
-const YEAR = /\b(?:1[5-9]\d{2}|20[0-2]\d)\b/;
-const YEAR_G = /\b(?:1[5-9]\d{2}|20[0-2]\d)\b/g;
+/* a year a house history may carry: 1100 (Armagnac is first written of in 1310, Scotch in 1494) to this decade */
+const YEAR = /\b(?:1[1-9]\d{2}|20[0-2]\d)\b/;
+const YEAR_G = /\b(?:1[1-9]\d{2}|20[0-2]\d)\b/g;
 /* a score, a rating, a medal or a trophy: none anywhere */
 export const SCORE = /\b\d{2,3}\s*(?:points?|pts)\b|\/\s?100\b|\b(?:100|hundred)[- ]point|\b(?:scor(?:e|es|ed|ing)|ratings?|rated|medals?|medall?ists?|double gold|trophy|trophies|whisk(?:e)?y of the year|spirit of the year|distiller(?:y)? of the year|hall of fame)\b/i;
 /* scarcity talk beyond the shelf's list (which holds allocation, the lottery, the secondary market, hard to find, limited supply) */
@@ -133,12 +134,16 @@ export const PRESENT_OWNER = new RegExp('\\b(?:' + [
   '(?:is|are|remains?|has been|have been)\\s+(?:now\\s+|today\\s+|still\\s+)?(?:wholly\\s+|majority\\s+|jointly\\s+|family\\s+)?owned',
   '(?:is|are|remains?|has been|have been)\\s+(?:now\\s+|today\\s+|still\\s+)?(?:an?\\s+)?(?:brand|label|subsidiary|unit|division|arm)\\s+of',
   '(?:now|today|still)\\s+(?:wholly\\s+|majority\\s+|family\\s+)?(?:owned|part\\s+of|belongs?|in\\s+the\\s+hands\\s+of|in\\s+family\\s+hands)',
-  'owned\\s+(?:today|now)', 'now\\s+owns?', 'today\\s+owns?', 'still\\s+owns?', 'owns\\s+it\\s+(?:today|now|still)',
+  'owned\\s+(?:today|now)', 'owns', '(?:has|have)\\s+(?:\\w+\\s+)?owned',
+  'own\\s+(?:the|its|their|this|that)\\s+(?:brand|label|distillery|company|business|firm|house|name|stills?|estate|vineyards?|bodega)',
+  'owners?\\s+(?:is|are|since|today|now)',
   '(?:its|the|their|a)\\s+(?:current|present|new)\\s+(?:owners?|parent|proprietors?)', '(?:current|present)\\s+owners?',
   'belongs\\s+to', 'parent\\s+(?:company|group|firm)', 'owner\\s+of\\s+the\\s+brand', 'subsidiary\\s+of'
 ].join('|') + ')\\b', 'i');
 /* the same, where a capital tells the owner from an ordinary noun ("is part of the Sazerac Company", "its owner, Suntory") */
-export const PRESENT_OWNER_NAMED = /\b(?:(?:is|are|remains?|has been|have been) (?:now |today |still )?part of (?:the )?[A-Z]|(?:its|the brand’s|the brand's|the label’s|the label's) owners?,? (?:is |are )?[A-Z])/;
+export const PRESENT_OWNER_NAMED = /\b(?:(?:is|are|remains?|has been|have been) (?:now |today |still )?part of (?:the )?[A-Z]|(?:[Ii]ts|[Tt]he brand’s|[Tt]he brand's|[Tt]he label’s|[Tt]he label's|[Tt]he distillery’s|[Tt]he distillery's|[Tt]he house’s|[Tt]he house's) owners?,? (?:is |are )?[A-Z]|, an? (?:brand|label|subsidiary|division|unit) of (?:the )?[A-Z])/;
+/* "owned by" told as history says when: a past marker before it (was, then, once, formerly) or a span after it (until 1987, from 1981 to 2005) */
+export const OWNED_PAST = /\b(?:was|were|been|being|then|once|formerly|previously)\s+(?:\w+\s+){0,2}owned by\b|\bowned by\b[^.;]*\b(?:until|from\s+\d{4}\s+to|between\s+\d{4}\s+and)\b/i;
 /* a present distiller or blender described as a present fact (a name after the title is the shelf's NAMED_ROLE) */
 export const PRESENT_MAKER = /\b(?:(?:its|the|their)\s+(?:current|present|new)\s+(?:master\s+|head\s+)?(?:distiller|blender)s?|(?:master|head)\s+(?:distiller|blender)s?\s+(?:is|are|has\s+been|since)\b|today(?:'|’)s\s+(?:master\s+|head\s+)?(?:distiller|blender)s?)\b/i;
 
@@ -297,7 +302,7 @@ export function pathKind(where){
   return 'prose';
 }
 const VOLATILE_G = new RegExp(VOLATILE.source, 'gi');
-function volatileProblems(s, where){
+function volatileProblems(s, where, plain){
   const out = new Set();
   const history = HISTORY_FIELD.test(where);
   const po = s.match(PRESENT_OWNER) || s.match(PRESENT_OWNER_NAMED);
@@ -305,11 +310,14 @@ function volatileProblems(s, where){
   const pm = s.match(PRESENT_MAKER);
   if(pm) out.add(where + ': "' + pm[0] + '" describes a present distiller or blender as a present fact (say what the house does, or tell it as dated history)');
   sentenceList(s).forEach((sen) => {
+    /* the year that dates a sale is a year of the sentence, never a figure in a name (1792 Full Proof, Canadian Club 1858) */
+    const dated = YEAR.test(plain ? plain(sen) : sen);
     for(const m of sen.matchAll(VOLATILE_G)){
       const w = m[0];
       if(!OWNERSHIP_HISTORY.test(w)){ out.add(where + ': "' + w + '" is volatile (allocation, scarcity, the market, a present owner or maker)'); continue; }
       if(!history) out.add(where + ': "' + w + '" speaks of ownership (dated history belongs in the story and the traps, with its year; nowhere else)');
-      else if(!YEAR.test(sen)) out.add(where + ': "' + w + '" with no year in the sentence (ownership is history only with its year: a year and what happened)');
+      else if(!dated) out.add(where + ': "' + w + '" with no year in the sentence (ownership is history only with its year: a year and what happened)');
+      else if(/^owned by$/i.test(w) && !OWNED_PAST.test(sen)) out.add(where + ': "' + w + '" reads as a present state (say when: "then owned by", "was owned by ... until 1987"; or tell the sale itself, with its year)');
     }
   });
   return [...out];
@@ -326,6 +334,8 @@ export function voiceProblems(rec, at, ctx, pick){
   /* the flagship's own printed words may carry a word the voice refuses (Ballantine's Finest): the name is taken out, the sentence is still held */
   const ownFlag = [pick && pick.flagship, pick && pick.producer].filter((n) => isStr(n) && n.trim());
   const bare = (s) => ownFlag.reduce((t, n) => t.split(n).join(' '), s);
+  /* a sentence less the record's own names, so a figure in a name is never read as the year of a sale */
+  const plain = (s) => own.slice().sort((a, b) => b.length - a.length).reduce((t, n) => t.split(n).join(' '), s);
   for(const [where, s] of strings(rec, at)){
     const kind = pathKind(where);
     if(kind === 'url'){
@@ -360,7 +370,7 @@ export function voiceProblems(rec, at, ctx, pick){
     if(sc) out.push(where + ': "' + sc[0] + '" is a score, a rating or a medal (none anywhere)');
     const sy = s.match(SCARCITY);
     if(sy) out.push(where + ': "' + sy[0] + '" is scarcity talk (none anywhere)');
-    volatileProblems(s, where).forEach((p) => out.push(p));
+    volatileProblems(s, where, plain).forEach((p) => out.push(p));
     const nr = s.match(NAMED_ROLE);
     if(nr) out.push(where + ': "' + nr[0] + '..." puts a name after a distiller’s or blender’s title (the living are never named; the dead are named first, with their dates, and the title after)');
     const me = s.match(MEASURE);
@@ -606,7 +616,7 @@ export function validateRecord(rec, ctx, group, i){
   if('say' in rec) out.push(...sayProblems(rec, at));
   if('place' in rec) capped(out, at + '.place', rec.place, CAPS.place[0], CAPS.place[1]);
   if('year' in rec || 'yearIs' in rec){
-    if(!isStr(rec.year) || (rec.year && (!/^\d{4}$/.test(rec.year) || +rec.year > new Date().getFullYear()))) out.push(at + '.year: a year in figures ("1953") where two sources agree, else "" (an empty field is a true answer)');
+    if(!isStr(rec.year) || (rec.year && (!/^\d{4}$/.test(rec.year) || +rec.year < 1100 || +rec.year > new Date().getFullYear()))) out.push(at + '.year: a year in figures ("1953") where two sources agree, else "" (an empty field is a true answer)');
     if(rec.year ? YEAR_IS.indexOf(rec.yearIs) < 0 : rec.yearIs !== '') out.push(at + '.yearIs: ' + YEAR_IS.map((x) => '"' + x + '"').join(' or ') + ' beside a year, "" beside none');
   }
   if('bottle' in rec) out.push(...bottleProblems(rec, at, pick));
@@ -620,7 +630,8 @@ export function validateRecord(rec, ctx, group, i){
   }
   if('story' in rec && capped(out, at + '.story', rec.story, CAPS.story[0], CAPS.story[1])){
     endsStop(out, at + '.story', rec.story);
-    if(new Set(rec.story.match(YEAR_G) || []).size < CAPS.storyYears) out.push(at + '.story: at least ' + CAPS.storyYears + ' dated turning points (a founding, a first release, a law, a sale, a closure, a revival)');
+    const told = ownNames(rec, pick).sort((a, b) => b.length - a.length).reduce((t, n) => t.split(n).join(' '), rec.story);
+    if(new Set(told.match(YEAR_G) || []).size < CAPS.storyYears) out.push(at + '.story: at least ' + CAPS.storyYears + ' dated turning points (a founding, a first release, a law, a sale, a closure, a revival)');
   }
   if('others' in rec) out.push(...othersProblems(rec, at));
   if('traps' in rec) out.push(...trapsProblems(rec, at));
@@ -664,6 +675,8 @@ const FIRST = /\bthe\s+first\b|\bthe\s+only\b|\bthe\s+last\b/i;
 const EVERY = /\b(?:always|every bottle|never fails|guaranteed)\b/i;
 const SHOPS = /(?:^|\.)(?:totalwine|masterofmalt|thewhiskyexchange|drizly|caskers|reservebar|wine-searcher|flaviar|binnys|klwines|specsonline|caskcartel|woodencork|finedrams)\./i;
 const ROLE = /\b(?:master|head)\s+(?:distiller|blender)s?\b/i;
+/* a group named beside "part of" or "under", or as a possessive before a house: a second reader checks it is not a present owner */
+const PART_OF = /\b(?:part of|a member of|in the hands of|under the wing of|in the stable of) (?:the )?[A-Z][\w&’'.-]*/;
 export function adviseRecord(rec, i, ctx){
   const out = [];
   const at = 'records[' + (i == null ? 0 : i) + ']';
@@ -676,6 +689,8 @@ export function adviseRecord(rec, i, ctx){
     if(fi) out.push(where + ': "' + fi[0] + '" is a claim of a first, an only or a last: two sources, or cut it');
     if(/\.bottle\.taste$/.test(where) && EVERY.test(s)) out.push(where + ': a taste promised for every bottle: say often or usually');
     if(ROLE.test(s) && !YEAR.test(s)) out.push(where + ': a distiller or blender with no year in the string: a role may be said, a present holder is never described');
+    const part = s.match(PART_OF);
+    if(part) out.push(where + ': "' + part[0] + '" may name an owner: ownership is told as dated history (a year and what happened), never as a present state');
   }
   const hit = ctx && isStr(rec.key) ? ctx.pickByKey.get(rec.key) : null;
   if(hit && ctx.foldedPeople.some(([, n]) => (' ' + fold(hit.pick.producer) + ' ').indexOf(' ' + n + ' ') >= 0)) out.push(at + '.producer: the label carries a living person’s name: the name stands only for the house, never for the person');
@@ -902,6 +917,13 @@ export function selfTest(){
   keep('a dated acquisition is kept in the traps', (r) => { r[0].traps[1] = 'The label was acquired by a Chicago bottler in 1991, so bottles of that decade were not made at Lantern Hill.'; });
   refuse('ownership with no year is refused even in the story', (r) => addStory(r[0], 'The label was later sold to a Chicago bottler. What matters at the table is the wheat, which gives a softer, rounder bourbon.'), /story: "sold to" with no year in the sentence/);
   refuse('dated ownership outside the story and the traps is refused', (r) => { r[0].others[0].note = 'Bottled uncut since the label was bought by a Chicago bottler in 1991.'; }, /others\[0\]\.note: "bought by" speaks of ownership/);
+  refuse('"owns", present tense, is refused', (r) => addStory(r[0], 'A Louisville merchant owns the distillery, and what matters at the table is the wheat, which gives a softer bourbon.'), /story: "owns" states ownership as a present state/);
+  refuse('"has owned ... since" is refused', (r) => addStory(r[0], 'A Louisville merchant has owned the house since 1974, and what matters at the table is the wheat in the mash.'), /story: "has owned" states ownership as a present state/);
+  refuse('"its owner, Named" is refused, at the head of a sentence too', (r) => { r[0].traps[0] = 'Its owner, Lantern Group, kept the name: nobody called Lantern ever ran the distillery.'; }, /traps\[0\]: "Its owner, L" states ownership as a present state/);
+  refuse('"owned by" beside an unrelated year reads as a present state', (r) => addStory(r[0], 'The distillery, owned by a Louisville merchant, built a new warehouse in 2016; the wheat is the lesson of the house.'), /story: "owned by" reads as a present state/);
+  keep('"then owned by" with its year is history', (r) => addStory(r[0], 'In 1980 the distillery, then owned by a Louisville merchant, laid down its last rye; the wheat is the lesson of the house.'));
+  keep('"was owned by ... from 1974 to 1983" is history', (r) => addStory(r[0], 'The house was owned by a Louisville merchant from 1974 to 1983, and the wheat in the mash is the lesson of the house.'));
+  refuse('a figure in the house’s own name is not the year of a sale', (r) => { r[0].others[0].name = 'Old Lantern 1936 Reserve'; addStory(r[0], 'Old Lantern 1936 Reserve was sold to a Chicago bottler. What matters at the table is the wheat, a softer bourbon.'); }, /story: "sold to" with no year in the sentence/);
   refuse('a present distiller described as a present fact is refused', (r) => addStory(r[0], 'Its current master distiller keeps the wheat in the mash, and that wheat is the whole lesson of the house at the table.'), /story: .*(?:volatile|present distiller)/);
   refuse('a name after a distiller’s title is refused', (r) => addStory(r[0], 'The wheat was the choice of master distiller Amos Reed in 1952, and it is the whole lesson of the house at the table.'), /story: "master distiller Am\.\.\." puts a name after/);
   refuse('a spaced hyphen is refused', (r) => { r[0].traps[0] = 'The label names the house - not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries a dash or a hyphen standing in for one/);
