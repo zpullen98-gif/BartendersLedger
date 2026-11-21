@@ -1,0 +1,245 @@
+{
+  "lane": "scotch-categories",
+  "date": "2026-11-21",
+  "groups": [
+    {
+      "key": "blended-scotch",
+      "title": "Blended Scotch",
+      "family": "Scotch",
+      "style": "blended-scotch",
+      "chapter": "scotch",
+      "picks": [
+        {
+          "key": "johnnie-walker",
+          "producer": "Johnnie Walker",
+          "madeBy": "",
+          "flagship": "Johnnie Walker Black Label 12 Year Old",
+          "why": "The Kilmarnock house that grew from the grocery John Walker opened in 1820; his son Alexander made its first commercial blend, Old Highland Whisky, in the 1860s. The twelve year old was renamed Black Label in 1909, and it is the aged blend a bar pours when a guest asks for Scotch by a label, the yardstick for every blend that follows.",
+          "note": "Sources split on the first blend, 1865 or 1867 for registration: tell it as the 1860s. Diageo makes it today; say no more of ownership. Green Label, the blended malt, belongs to this label and is held here, not in the blended malt group. Confirm the label strength by market (40% ABV in most).",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "chivas-regal",
+          "producer": "Chivas Regal",
+          "madeBy": "Chivas Brothers",
+          "flagship": "Chivas Regal 12 Year Old",
+          "why": "The Aberdeen blend of Chivas Brothers, merchants since the early nineteenth century; Chivas Regal was first a 25 year old blend of 1909, and the twelve year old followed in the late 1930s. Its heart is Strathisla malt from Keith, and it is the rounder, honeyed Speyside blend to set beside Johnnie Walker.",
+          "note": "Sources split on the twelve year old, 1938 or a 1939 United States release: tell it as the late 1930s. Charles Stewart Howard (dead) may be named as the blender of 1909. The label says Established 1801 Aberdeen, which is the grocery, not the whisky: say so. The Chivas name also stands in the mizunara benchmarks; keep the group here.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "dewars",
+          "producer": "Dewar’s",
+          "madeBy": "John Dewar & Sons",
+          "flagship": "Dewar’s White Label",
+          "why": "John Dewar opened his wine and spirits shop in Perth in 1846; White Label was blended in 1899 by A. J. Cameron, the firm’s first master blender, with Aberfeldy malt at its heart. It is the blend a bartender reaches for when a guest wants Scotch long, with soda or ginger ale.",
+          "note": "Aberfeldy was built in 1896 or 1898 by different sources, and Cameron joined in 1897 or earlier: keep those years out of the why unless confirmed. A. J. Cameron is dead and may be named. Confirm whether the current label prints an age; the core White Label carries none.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "the-famous-grouse",
+          "producer": "The Famous Grouse",
+          "madeBy": "Matthew Gloag & Son",
+          "flagship": "The Famous Grouse",
+          "why": "The Perth blend of Matthew Gloag & Son, first sold in 1896 as The Grouse Brand and called The Famous Grouse by about 1905, its red grouse drawn from a sketch by the founder’s daughter. It is the everyday blend to know from Perth, tied to the Glenturret distillery, which housed The Famous Grouse Experience.",
+          "note": "The name date is 1897 or 1905 by source; the malt make up is not published; any malt named in prose needs two sources. One source reports an agreed sale of the brand from Edrington to William Grant & Sons: confirm, and say nothing of ownership in prose. The core bottle may print Finest on some markets; confirm the label words. The word Famous is the label’s name, never a claim.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "ballantines",
+          "producer": "Ballantine’s",
+          "madeBy": "George Ballantine & Son",
+          "flagship": "Ballantine’s Finest",
+          "why": "George Ballantine opened a grocery in the Cowgate of Edinburgh in 1827 and moved the business to Glasgow in the 1860s; Ballantine’s Finest came in 1910 and is still the house blend, bottled and warehoused at Dumbarton. It is the lighter house blend to set beside Johnnie Walker and Chivas Regal when a drink calls for a mixing Scotch.",
+          "note": "Finest is the label’s own word and will trip the superlative lint in prose; quote it only as the name. Sources give 1865 or 1869 for Glasgow, and 40 or about 50 component whiskies: keep counts out. No confirmed Glenburgie link to Finest; leave it out.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        }
+      ],
+      "alternates": [
+        {
+          "producer": "Cutty Sark",
+          "flagship": "Cutty Sark Original",
+          "why": "Created by Berry Bros. & Rudd in London on 23 March 1923 as a pale blend for American drinkers, and carried into the United States in Prohibition; a light mixing blend with a ship’s story. Today made by La Martiniquaise; confirm."
+        },
+        {
+          "producer": "J&B",
+          "flagship": "J&B Rare",
+          "why": "The Justerini & Brooks blend launched about 1932 for the American market as Prohibition ended, pale and light; the date rests on one source, confirm."
+        }
+      ]
+    },
+    {
+      "key": "blended-malt",
+      "title": "Blended malt Scotch",
+      "family": "Scotch",
+      "style": "blended-malt",
+      "chapter": "scotch",
+      "picks": [
+        {
+          "key": "monkey-shoulder",
+          "producer": "Monkey Shoulder",
+          "madeBy": "William Grant & Sons",
+          "flagship": "Monkey Shoulder Blended Malt Scotch Whisky",
+          "why": "William Grant & Sons’ blended malt of Speyside malts, first from Glenfiddich, The Balvenie and Kininvie, launched in the early 2000s and named for the strained shoulder of the maltmen who turned barley by hand. It was made to mix, and it is the bottle that taught bars the words blended malt.",
+          "note": "Launch year 2003 by most sources, 2005 by some: confirm. Batch 27 on the collar is said to mean batches of 27 casks by one source only. Strength 40% ABV in Britain and 43% ABV in a United States listing: confirm by market. The current malt make up is not published; tell the three distilleries as its origin.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "compass-box",
+          "producer": "Compass Box",
+          "madeBy": "",
+          "flagship": "Compass Box The Peat Monster",
+          "why": "The London blending house founded in 2000, which distils nothing and builds its whiskies from bought casks, and which pressed the trade to let a label say what is in the bottle. The Peat Monster, a blended malt of Islay and Highland malts at 46% ABV, is its long running core bottling and the clearest lesson in how a blender handles smoke.",
+          "note": "The Spice Tree (2005) is the story of the inner staves the Scotch Whisky Association objected to, but Decanter reports it has been axed from the range: tell it as history. The Penicillin was first made with Compass Box Asyla, a blended Scotch now gone. The founder is living: describe him by role. Confirm The Peat Monster is still listed on the house pages.",
+          "shelf": "",
+          "library": "Compass Box",
+          "benchmark": true
+        },
+        {
+          "key": "big-peat",
+          "producer": "Big Peat",
+          "madeBy": "Douglas Laing & Co.",
+          "flagship": "Big Peat Islay Blended Malt",
+          "why": "The Glasgow bottlers Douglas Laing & Co. released Big Peat in 2009 as the first of their Remarkable Regional Malts: a blended malt of Islay malts including Ardbeg, Bowmore, Caol Ila and the closed Port Ellen, at 46% ABV without chill filtering or colour. It is the bottle to know for Islay smoke without a single distillery’s name on it.",
+          "note": "Port Ellen in the mix is from the label and retailers; Port Ellen was closed for decades and has since been rebuilt: confirm the reopening year and what the current batches hold, and tell its share as history. The family running Douglas Laing are living: keep them out.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "naked-malt",
+          "producer": "Naked Malt",
+          "madeBy": "Edrington",
+          "flagship": "Naked Malt",
+          "why": "A blended malt finished in first fill Oloroso sherry casks, sold as Naked Grouse until 2021 when it was renamed Naked Malt with the recipe unchanged. It is the sherried blended malt a bar meets on the rail, the contrast to the bourbon cask Monkey Shoulder.",
+          "note": "Strength 40% ABV by the rename coverage, 43% ABV by one 2018 review: confirm by market. One source names The Macallan, Highland Park and Glenrothes as its malts; confirm before printing. A later sale by Edrington is reported but unconfirmed: say nothing of ownership.",
+          "shelf": "",
+          "library": "",
+          "benchmark": false
+        },
+        {
+          "key": "shackleton",
+          "producer": "Shackleton",
+          "madeBy": "Whyte & Mackay",
+          "flagship": "Shackleton Blended Malt Scotch Whisky",
+          "why": "A blended malt of Highland malts at 40% ABV, built on the replica of the Mackinlay’s Rare Old Highland Malt that Ernest Shackleton took to Antarctica in 1907 and that was found under his hut in 2007. It is the bottle that carries the story of how a blender reads an old whisky and remakes it.",
+          "note": "The replica of 2011 (47.3% ABV) and this later blended malt are two bottlings: keep them apart. The blender who made the replica is living: describe him by role. The original was distilled at Glen Mhor, closed in the 1980s: told as history. Confirm the current label name.",
+          "shelf": "",
+          "library": "",
+          "benchmark": false
+        }
+      ],
+      "alternates": [
+        {
+          "producer": "Sheep Dip",
+          "flagship": "Sheep Dip Blended Malt",
+          "why": "A blended malt of more than a dozen single malts at 40% ABV, first made by Spencerfield Spirits and bottled by Ian Macleod Distillers since 2016."
+        },
+        {
+          "producer": "Timorous Beastie",
+          "flagship": "Timorous Beastie Highland Blended Malt",
+          "why": "Douglas Laing’s Highland blended malt of 2014 at 46.8% ABV, named from Burns’s To a Mouse; same house as Big Peat, so use only if Big Peat is taken."
+        }
+      ]
+    },
+    {
+      "key": "single-grain-scotch",
+      "title": "Single grain Scotch",
+      "family": "Scotch",
+      "style": "single-grain-scotch",
+      "chapter": "scotch",
+      "picks": [
+        {
+          "key": "haig-club",
+          "producer": "Haig Club",
+          "madeBy": "Cameronbridge Distillery",
+          "flagship": "Haig Club Single Grain Scotch Whisky",
+          "why": "A single grain from Cameronbridge in Fife, the column still distillery John Haig founded in 1824, launched in 2014 with no age statement at 40% ABV: wheat with a little malted barley, from refill, American oak and rejuvenated casks. It is the single grain a guest is most likely to name, and the plainest way to show what grain whisky tastes like alone.",
+          "note": "Clubman (2016) is a second bottling; keep the original as the flagship and confirm it is still sold beside Clubman. A living celebrity was tied to the launch and left in 2023: keep him out. The wheat and barley share is from retailers only.",
+          "shelf": "",
+          "library": "",
+          "benchmark": false
+        },
+        {
+          "key": "cameron-brig",
+          "producer": "Cameron Brig",
+          "madeBy": "Cameronbridge Distillery",
+          "flagship": "Cameron Brig Pure Single Grain",
+          "why": "Among the first single grains sold under a distillery’s own name, from Cameronbridge in Fife, where grain whisky in column stills was pioneered. It is the older, plainer face of the same spirit as Haig Club, and the label that shows the style was in bottle long before the new single grains.",
+          "note": "In doubt: retailers list it but stock is spotty and no dated Diageo page was found; it may be told as history. Confirm the label words (Pure Single Grain) and whether an age is printed. The style’s benchmark names Cameronbridge, the distillery, which this label is.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "loch-lomond-single-grain",
+          "producer": "Loch Lomond",
+          "madeBy": "Loch Lomond Distillery",
+          "flagship": "Loch Lomond Single Grain",
+          "why": "Made at Loch Lomond in Alexandria from 100 per cent malted barley but run through a continuous copper still, so the law calls it grain, not malt. It is the bottle that proves the still, not the cereal, makes the category, at 46% ABV with no age statement.",
+          "note": "The 46% ABV figure is from one review; confirm the label. The distillery’s single malts sit in the regions lane; this single grain is a separate label of the house, so check the merge does not double the name.",
+          "shelf": "",
+          "library": "",
+          "benchmark": true
+        },
+        {
+          "key": "ryelaw",
+          "producer": "RyeLaw",
+          "madeBy": "InchDairnie Distillery",
+          "flagship": "RyeLaw Fife Single Grain Scotch Whisky",
+          "why": "InchDairnie’s rye from Fife, a mash of malted rye and malted barley run through its Lomond Hill still, first released at five years old from a 2017 distillation at 46.3% ABV. It is single grain by the letter of the law because it is not all barley, and the bottle that shows rye returning to Scotch.",
+          "note": "Later vintages exist (2018 bottled 2025); name the bottling by vintage once confirmed. One report says the label will say Scottish Rye Whisky: confirm what it prints now. Thin for a bar: a guest meets it in a specialist bar, not on the rail.",
+          "shelf": "",
+          "library": "",
+          "benchmark": false
+        },
+        {
+          "key": "arbikie-highland-rye",
+          "producer": "Arbikie",
+          "madeBy": "Arbikie Highland Estate",
+          "flagship": "Arbikie The Original Highland Rye 1794",
+          "why": "A farm distillery in Angus that grows its own rye, wheat and barley and released Highland Rye in 2018 as the first Scotch rye in more than a century; pot distilled, so the mixed grain makes it single grain. It is the bottle that shows a single grain need not be a column still whisky.",
+          "note": "Grain shares differ by source (52 per cent rye in both, the rest wheat and malted barley in disputed parts): keep the numbers out. The first batch was 46% ABV; the 1794 range is listed at 48% ABV: confirm the label. Stock is thin; a specialist bottle.",
+          "shelf": "",
+          "library": "",
+          "benchmark": false
+        }
+      ],
+      "alternates": [
+        {
+          "producer": "The Girvan Patent Still",
+          "flagship": "The Girvan Patent Still No. 4 Apps",
+          "why": "William Grant & Sons’ first single grains from Girvan, the 25 Year Old of 2013 and No. 4 Apps of 2014 at 42% ABV with no age statement; a retailer lists No. 4 Apps as discontinued and no release since 2014 was found, so tell as history unless confirmed."
+        },
+        {
+          "producer": "The Sovereign",
+          "flagship": "The Sovereign single cask single grain (by distillery and age)",
+          "why": "Hunter Laing’s independent label for single cask single grains from North British, Strathclyde, Invergordon, Cameronbridge and closed Cambus and Dumbarton; no one fixed bottling, so a weak fit as a flagship."
+        }
+      ]
+    }
+  ],
+  "left": [
+    {
+      "style": "Blended grain Scotch",
+      "why": "The fifth category of the Scotch Whisky Regulations 2009 (grain whiskies of more than one distillery, for example Compass Box Hedonism) has no row in the styles roster, so it was judged and left; it belongs in the single grain style text, not as a group."
+    },
+    {
+      "style": "Single grain Scotch (depth)",
+      "why": "The group is made, but thin: only Haig Club is a label a guest asks for on the rail. Cameron Brig is of uncertain current supply, Girvan Patent Still shows no release since 2014, and the grain plants the benchmarks name (Girvan, North British, Invergordon) sell almost nothing under their own names, so RyeLaw and Arbikie, specialist bottles, fill the five. The author should judge whether to teach the last two as the new face of the style."
+    }
+  ],
+  "searches": 25
+}
