@@ -877,7 +877,7 @@ export function selfTest(){
   refuse('a present distiller described as a present fact is refused', (r) => addStory(r[0], 'Its current master distiller keeps the wheat in the mash, and that wheat is the whole lesson of the house at the table.'), /story: .*(?:volatile|present distiller)/);
   refuse('a name after a distiller’s title is refused', (r) => addStory(r[0], 'The wheat was the choice of master distiller Amos Reed in 1952, and it is the whole lesson of the house at the table.'), /story: "master distiller Am\.\.\." puts a name after/);
   refuse('a spaced hyphen is refused', (r) => { r[0].traps[0] = 'The label names the house - not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries a dash or a hyphen standing in for one/);
-  refuse('an em dash is refused', (r) => { r[0].traps[0] = 'The label names the house—not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries a dash/);
+  refuse('an em dash is refused', (r) => { r[0].traps[0] = 'The label names the house\u2014not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries a dash/);
   refuse('a double hyphen is refused', (r) => { r[0].traps[0] = 'The label names the house--not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries a dash/);
   refuse('a price is refused', (r) => { r[0].table = r[0].table.replace('It suits an Old Fashioned as well as a glass on its own.', 'It is affordable and suits an Old Fashioned well.'); }, /table: "affordable" talks price/);
   refuse('a currency sign is refused', (r) => { r[0].others[0].note = 'The same whiskey bottled uncut, for about $60 a bottle.'; }, /others\[0\]\.note: "\$" talks price/);
@@ -888,7 +888,7 @@ export function selfTest(){
   refuse('the same word outside the flagship’s name is refused', (r) => { r[4].table = r[4].table.replace('soft caramel', 'the finest caramel'); }, /table: "finest" is a superlative/);
   refuse('a degree sign is refused', (r) => { r[0].bottle.still = 'Cooked, fermented and run through a column still at 80° and a doubler at Lantern Hill, the house says.'; }, /bottle\.still: carries a degree sign/);
   refuse('a fraction glyph is refused', (r) => { r[0].bottle.mash = 'Corn, with ¼ wheat and some malted barley; the house does not publish its mash bill.'; }, /bottle\.mash: carries a degree sign or a fraction glyph/);
-  refuse('a mark at or above U+2190 is refused', (r) => { r[0].traps[0] = 'The label names the house → not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries U\+2192/);
+  refuse('a mark at or above U+2190 is refused', (r) => { r[0].traps[0] = 'The label names the house \u2192 not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries U\+2192/);
   refuse('American spelling is refused', (r) => { r[0].bottle.taste = r[0].bottle.taste.replace('a soft, round', 'a soft, flavorful, round'); }, /bottle\.taste: American spelling "flavorful"/);
   refuse('a score or a medal is refused', (r) => addStory(r[0], 'It took a double gold in 2016, and what matters at the table is the wheat, which gives a softer, rounder bourbon.'), /story: "double gold" is a score/);
   refuse('allocation talk is refused', (r) => addStory(r[0], 'The bottling is allocated in most states, and what matters at the table is the wheat, which gives a softer bourbon.'), /story: "allocated" is volatile/);

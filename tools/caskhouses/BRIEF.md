@@ -84,7 +84,9 @@ The Ledger's, the strictest reading. The lint holds all of it.
   class, luxurious, premium, crown jewel, masterpiece; and largest, biggest, smallest, youngest, longest, shortest,
   tallest, earliest, heaviest, lightest, sweetest, softest, smokiest, peatiest, strongest, highest, lowest, boldest,
   truest, definitive, quintessential, "the most ..." and "the least ...". The owner's own phrase, "most famous", is
-  refused: say what the house is and why a bartender must know it. The one exception is the label's own name: the
+  refused: say what the house is and why a bartender must know it. The list catches plain words too: an age statement
+  is "nothing in the bottle is younger than twelve years", never "the youngest whisky"; a floor is "the minimum", never
+  "the least". The one exception is the label's own name: the
   roster's flagship may print such a word (Ballantine's Finest) and the name stands as a name.
 - **No price** and no currency: price, priced, pricing, pricey, cost, costly, dollars, cents, cheap, expensive, bargain,
   value for money, affordable, msrp, retail, resale, any currency sign.
@@ -115,7 +117,8 @@ the label is never refused. A person is refused only when named as a person, and
 label is also a living person's name, the name stands only for the house.
 
 **The dead are named with their dates**, once, where the story first meets them: "William Larue Weller (1825 to
-1899)". If you cannot find a person's dates in two sources, describe the person instead ("a Louisville salesman").
+1899)". Where two sources agree on the death and not on the birth, the death alone will do: "Bill Samuels Sr. (died
+1992)". If you cannot find a person's death in two sources, describe the person instead ("a fellow salesman").
 Where a dead person's name carries a living person's (the father of a living namesake), the lint refuses it until the
 name stands in `people.json`'s `historic` list: add it there in the same commit, and state the year of death and your
 two sources in `report`.
@@ -179,7 +182,7 @@ its cap in words and one line of example:
 | `table` | the line to say at the table, naming the house and the flagship | 30 to 50, one or two sentences | see the pilot |
 | `story` | the backstory with its turning points | 140 to 220, at least two different years | see the pilot |
 | `others` | 1 to 3 `{ name, note }`: other bottlings of the house a guest meets | name 1 to 12, note 4 to 30 | `{ "name": "Larceny Barrel Proof", "note": "The same recipe bottled uncut, in batches." }` |
-| `traps` | 1 to 3: what is commonly got wrong | 8 to 40 each | `"Larceny is a label of Heaven Hill, not a distillery of its own."` |
+| `traps` | 1 to 3: what is commonly got wrong | 8 to 40 each | `"There is no Larceny distillery: Heaven Hill makes it, at Bernheim in Louisville."` |
 | `cards` | exactly 2 `{ id, prompt, answer }` | id at most 24 characters; prompt 5 to 25; answer 6 to 50 | `{ "id": "namesake", "prompt": "Who is Larceny named for?", "answer": "..." }` |
 | `quiz` | exactly 2 `{ id, tag, card, q, options, a, explain }` | stem 8 to 40; option at most 12; explain 8 to 45 | see below |
 | `sources` | 4 or 5 `{ title, url, kind, read }` | title 2 to 20 | see above |
@@ -187,7 +190,8 @@ its cap in words and one line of example:
 | `checked` | never shipped: `null` until the refuter writes it | | `null` |
 
 A record reads in at most 680 words (place, the bottle and its label, table, story, others and traps together). The
-pilot's five records measure what a phone page reads well: the lint prints each record's count.
+pilot's five records measure 493 to 562, with stories of 172 to 185 words and table lines of 46 to 50: that is the
+length a phone page reads well, and the lint prints each record's count.
 
 ### The bottle, field by field
 
@@ -231,8 +235,9 @@ traps. Close on what the bottle means to a bartender, not on a present fact that
 
 - `others`: the bottlings a guest meets next ("Weller Antique 107", "Maker's Mark 46"). A name with a refused word in
   it is left out.
-- `traps`: what is commonly got wrong. "Weller is a label of Buffalo Trace, not a distillery." "Small batch has no
-  legal meaning in the United States."
+- `traps`: what is commonly got wrong. "Weller is made at Buffalo Trace: there is no Weller distillery." "Small batch
+  has no legal meaning in the United States." Say who makes a label, never whose it is: "is a label of", "is a brand
+  of" and "is part of" read as present ownership and are refused.
 
 ### Cards: the id is a saved key
 

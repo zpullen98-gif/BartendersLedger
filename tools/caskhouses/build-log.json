@@ -1,0 +1,67 @@
+{
+ "edition": "2026-11-21",
+ "wave": "wave one, whisky and brandy",
+ "partial": true,
+ "unrefuted": 5,
+ "roster": {
+  "groups": 32,
+  "houses": 160
+ },
+ "built": {
+  "groups": 1,
+  "houses": 5,
+  "cards": 10,
+  "questions": 10,
+  "sources": 25
+ },
+ "words": {
+  "total": 2619,
+  "perHouse": {
+   "makers-mark": 493,
+   "weller": 505,
+   "pappy-van-winkle": 562,
+   "larceny": 531,
+   "rebel": 528
+  }
+ },
+ "keys": {
+  "frozen": false,
+  "held": 10,
+  "added": 10
+ },
+ "missing": [
+  "bourbon",
+  "high-rye-bourbon",
+  "bottled-in-bond",
+  "small-batch-single-barrel",
+  "barrel-proof",
+  "tennessee-whiskey",
+  "kentucky-rye",
+  "monongahela-rye",
+  "american-single-malt",
+  "corn-whiskey",
+  "blended-malt",
+  "blended-scotch",
+  "speyside",
+  "highland",
+  "islands",
+  "lowland",
+  "islay",
+  "campbeltown",
+  "irish-single-pot-still",
+  "irish-single-malt",
+  "blended-irish",
+  "japanese-single-malt",
+  "japanese-blended",
+  "canadian",
+  "world-whisky",
+  "cognac",
+  "armagnac",
+  "calvados",
+  "pisco",
+  "brandy-de-jerez",
+  "american-brandy"
+ ],
+ "unrefutedGroups": [],
+ "refused": []
+}
