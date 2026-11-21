@@ -136,17 +136,35 @@ const YEAR_G = /\b(?:1[1-9]\d{2}|20[0-2]\d)\b/g;
 /* superlatives the shelf's and the styles' lists do not name. The owner's rule is no superlative at all, and an author
    refused "oldest" reaches for "eldest": every -est form a house history is likely to carry, the -most words (a
    northernmost distillery is a claim that ages), and "most" as a superlative without "the" (Kentucky's most visited,
-   its most peated, most widely poured). "most bourbons", "most guests" and "most often" count things and stand. */
-export const SUPERLATIVE_OURS = /\b(?:eldest|newest|latest|driest|darkest|deepest|fullest|mildest|grandest|noblest|choicest|fastest|slowest|cleanest|freshest|fruitiest|spiciest|creamiest|oiliest|widest|hottest|coldest|coolest|warmest|toughest|hardest|loudest|proudest|costliest|priciest|busiest|fewest|closest|nearest|farthest|furthest|northernmost|southernmost|westernmost|easternmost|topmost|foremost|uppermost|(?:[’']s|its|their|our|his|her) most [a-z]+|most (?:heavily|widely|highly|richly|lightly|deeply|strongly|closely|keenly) [a-z]+|most (?:important|prestigious|noble|loved|admired|expensive|collectable|collectible|desirable|acclaimed|renowned|recognisable|recognised|visited|peated|sherried|aged|poured|sold|ordered|requested|imitated|copied|collected))\b/i;
+   its most peated, most widely poured). "most bourbons", "most guests" and "most often" count things and stand.
+   "nearest" is left out on purpose: Nearest Green is a man a Tennessee history must name. */
+export const SUPERLATIVE_OURS = /\b(?:eldest|newest|latest|driest|darkest|deepest|fullest|mildest|grandest|noblest|choicest|fastest|slowest|cleanest|freshest|fruitiest|spiciest|creamiest|oiliest|widest|hottest|coldest|coolest|warmest|toughest|hardest|loudest|proudest|costliest|priciest|busiest|fewest|closest|farthest|furthest|northernmost|southernmost|westernmost|easternmost|topmost|foremost|uppermost|(?:[’']s|its|their|our|his|her) most [a-z]+|most (?:heavily|widely|highly|richly|lightly|deeply|strongly|closely|keenly) [a-z]+|most (?:important|prestigious|noble|loved|admired|expensive|collectable|collectible|desirable|acclaimed|renowned|recognisable|recognised|visited|peated|sherried|aged|poured|sold|ordered|requested|imitated|copied|collected))\b/i;
 /* words that sell rather than teach, beyond the shelf's list (the Sommelier's Codex refuses most of them): famous may
    describe a house, and these judge it */
-export const SELLING_OURS = /\b(?:renowned|world[- ]famous|world[- ]renowned|peerless|unbeatable|unsurpassed|unmatched|unequalled|second to none|superb|outstanding|pinnacle|incomparable|stunning|magnificent|sublime|exceptional|extraordinary|prestigious|prestige|luxury|elite|gold standard|acclaimed|revered|beloved|fabled|prized|must[- ](?:have|try)|top[- ](?:selling|sellers?|rated|tier|notch)|number one|state of the art)\b/i;
+export const SELLING_OURS = /\b(?:renowned|world[- ]famous|world[- ]renowned|peerless|unbeatable|unsurpassed|unmatched|unequalled|second to none|superb|outstanding|pinnacle|incomparable|stunning|magnificent|sublime|exceptional|extraordinary|prestigious|prestige|luxury|elite|gold standard|acclaimed|revered|beloved|fabled|prized|must-(?:have|try)|(?:a|the) must (?:have|try)|top[- ](?:selling|sellers?|rated|tier|notch)|number one|state of the art)\b/i;
+/* American forms the two imported lists do not reach. Those lists name words one by one, and a house history is full
+   of the ones they lack (popularized, modernized, favored, distills, licorice, a seven-story rickhouse). The -ize
+   family is caught whole, less the words that are British as they stand (size, prize, seize, capsize, maize, Belize);
+   the -or family by stem, with the suffixes that are American (colorful, flavorings, favored) and never the ones
+   British spelling shares (humorous, vigorous, honorary, laborious, Colorado). */
+export const AMERICAN_OURS = new RegExp('\\b(?:' + [
+  '(?![a-z]*siz|priz|seiz|[a-z]*maiz|baiz|assiz|beliz)[a-z]{2,}iz(?:e|ed|es|ing|er|ers|ation|ations)',
+  '(?:cataly|electroly|hydroly)z(?:e|ed|es|ing)',
+  '(?:un|dis|mis|multi|bi|tri|off)?(?:col|flav|fav|hon|hum|lab|neighb|od|vap|harb|rum|sav|vig|rig|ferv|splend|cand|endeav|behavi|parl|val|glam|clam|ranc|arm|ard|tum|succ)or(?:s|ed|ing|ings|ful|fully|less|able|ably|ite|ites|y|ies|hood|hoods|ly|er|ers|some)?',
+  'travelers?', 'model(?:ed|ing)', 'fuel(?:ed|ing)', 'level(?:ed|ing)', 'channel(?:ed|ing)', 'marvel(?:ed|ing|ous)', 'jewelers?', 'counselors?', 'signal(?:ed|ing)', 'total(?:ed|ing)',
+  'equal(?:ed|ing)', 'rival(?:ed|ing)', 'shovel(?:ed|ing)', 'tunnel(?:ed|ing)', 'funnel(?:ed|ing)', 'quarrel(?:ed|ing)', 'dial(?:ed|ing)', 'label(?:er|ers)',
+  'distills?', 'instills?', 'enroll(?:s|ment|ments)?', 'skillful(?:ly)?', 'willful(?:ly)?', 'fulfills', 'fulfillment', 'installments?', 'enthralls?', 'appalls?',
+  'center\\w+', 'luster', 'lackluster', 'specter', 'saber', 'maneuver\\w*', '(?:kilo|centi|milli)meters?', 'meters',
+  'licorice', 'chilis?', 'chilies', 'sulfur\\w*', 'specialt(?:y|ies)', 'programs?', 'artifacts?', 'grayish', 'grayer', 'smolder\\w*', 'mold(?:y|ed|ing)', 'skeptics?', 'skepticism',
+  'analog', 'dialog', 'pretense', 'esthetic\\w*', 'airplanes?', 'tidbits?', 'gotten', 'percent',
+  '(?:\\w+[- ])?stor(?:y|ies)[- ](?:warehouses?|rickhouses?|rackhouses?|buildings?|high|tall)'
+].join('|') + ')\\b', 'i');
 /* a score, a rating, a medal or a trophy: none anywhere */
 export const SCORE = /\b\d{2,3}\s*(?:points?|pts)\b|\/\s?100\b|\b(?:100|hundred)[- ]point|\b(?:scor(?:e|es|ed|ing)|ratings?|rated|medals?|medall?ists?|double gold|trophy|trophies|whisk(?:e)?y of the year|spirit of the year|distiller(?:y)? of the year|hall of fame)\b/i;
 /* scarcity talk beyond the shelf's list (which holds allocation, the lottery, the secondary market, hard to find, limited supply) */
 export const SCARCITY = /\b(?:scarc\w*|rarit(?:y|ies)|waiting lists?|wait ?lists?|unobtainable|shortages?|queues?|queu(?:e|ed|ing)|limited (?:quantit\w+|numbers?|availability|stock)|once a year|collectors?|collectibles?|collectables?)\b/i;
 /* an award by another name: a house is granted a Royal Warrant, never awarded one */
-export const SCORE_OURS = /\b(?:awards?|awarded|prizes?|prize[- ]?winning|accolades?|ranked|rankings?|top (?:\d+|ten|twenty|fifty|hundred)|out of (?:ten|a hundred|100|10)|best in (?:show|class)|won (?:gold|silver|bronze)|gold at)\b/i;
+export const SCORE_OURS = /\b(?:awards?|awarded|prizes?|prize[- ]?winning|accolades?|top (?:\d+|ten|twenty|fifty|hundred)|out of (?:ten|a hundred|100|10)|best in (?:show|class)|won (?:gold|silver|bronze)|gold at)\b/i;
 /* price by another name: what a bottle sells for, fetches or goes for at auction ("sold for a time as Rebel Yell" is no price) */
 export const PRICE_OURS = /\b(?:(?:sells?|selling) for|(?:sold|goes|went|changes? hands|changed hands) for (?:about |around |roughly |some |just |only |under |over |less than |more than |upwards of )?(?:[$\u00a3\u20ac]|a (?:song|fortune|pound|dollar)|one (?:pound|dollar)|hundreds|thousands|millions|\d[\d,.]*\s?(?:million|billion|thousand|m\b|bn\b))|fetch(?:es|ed|ing)?|auction\w*|inexpensive|overpriced|underpriced|pricier|bucks|usd|gbp|a steal|splurge|per bottle)\b/i;
 /* scarcity by another name */
@@ -426,7 +444,7 @@ export function voiceProblems(rec, at, ctx, pick){
     const sy = s.match(SCARCITY) || s.match(SCARCITY_OURS);
     if(sy) out.push(where + ': "' + sy[0] + '" is scarcity talk (none anywhere)');
     if(kind === 'title') continue;
-    const am = s.match(BREW_AMERICAN) || s.match(AMERICAN_MORE);
+    const am = s.match(BREW_AMERICAN) || s.match(AMERICAN_MORE) || s.match(AMERICAN_OURS);
     if(am) out.push(where + ': American spelling "' + am[0] + '" (British: flavour, colour, ageing, centre, litre, -ise)');
     const ver = s.match(VERDICT);
     if(ver) out.push(where + ': "' + ver[0] + '" is allergen, dietary or health talk (none on this page)');
@@ -1043,6 +1061,17 @@ export function selfTest(){
   refuse('a fraction glyph is refused', (r) => { r[0].bottle.mash = 'Corn, with ¼ wheat and some malted barley; the house does not publish its mash bill.'; }, /bottle\.mash: carries a degree sign or a fraction glyph/);
   refuse('a mark at or above U+2190 is refused', (r) => { r[0].traps[0] = 'The label names the house \u2192 not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries U\+2192/);
   refuse('American spelling is refused', (r) => { r[0].bottle.taste = r[0].bottle.taste.replace('a soft, round', 'a soft, flavorful, round'); }, /bottle\.taste: American spelling "flavorful"/);
+  refuse('an -ize the older lists lack is refused (popularized)', (r) => addStory(r[0], 'The wheat recipe was popularized after 1952, and it gives a softer, rounder bourbon than a rye recipe does.'), /story: American spelling "popularized"/);
+  refuse('an -ization is refused', (r) => addStory(r[0], 'The modernization of 2009 kept the wheat, which gives a softer, rounder bourbon than a rye recipe does.'), /story: American spelling "modernization"/);
+  keep('size, seize and maize are British as they stand', (r) => addStory(r[0], 'The stills were seized in 1920 and later resized; maize and wheat won out, and wheat gives a softer bourbon than rye does.'));
+  refuse('favored is refused', (r) => addStory(r[0], 'The wheat recipe is favored by the house, and it gives a softer, rounder bourbon than a rye recipe does.'), /story: American spelling "favored"/);
+  refuse('a plural the older lists miss is refused (flavorings)', (r) => { r[0].bottle.label[0].means = 'Bourbon made in Kentucky with no flavorings and two years or more in new charred oak.'; }, /label\[0\]\.means: American spelling "flavorings"/);
+  keep('humorous, vigorous, honorary and Colorado are not American spellings', (r) => addStory(r[0], 'A humorous, vigorous salesman from Colorado, an honorary colonel, chose the wheat: a softer bourbon than rye gives.'));
+  refuse('distills is refused', (r) => { r[0].traps[0] = 'The house distills at Lantern Hill and nowhere else: nobody of that name ran the distillery.'; }, /traps\[0\]: American spelling "distills"/);
+  refuse('licorice is refused', (r) => { r[0].bottle.taste = r[0].bottle.taste.replace('a little cinnamon', 'a little licorice'); }, /bottle\.taste: American spelling "licorice"/);
+  refuse('a seven-story rickhouse is refused', (r) => { r[0].bottle.wood = 'New charred American oak barrels in a seven-story rickhouse; the label carries no age statement.'; }, /bottle\.wood: American spelling "seven-story rickhouse"/);
+  refuse('percent as one word is refused', (r) => { r[0].bottle.mash = 'Corn at 70 percent, with wheat and malted barley; the house does not publish the rest of its mash bill.'; }, /bottle\.mash: American spelling "percent"/);
+  keep('the label’s own printed words keep their spelling', (r) => { r[0].others[0].name = 'Old Lantern Flavored Stave Selection'; });
   refuse('a score or a medal is refused', (r) => addStory(r[0], 'It took a double gold in 2016, and what matters at the table is the wheat, which gives a softer, rounder bourbon.'), /story: "double gold" is a score/);
   refuse('allocation talk is refused', (r) => addStory(r[0], 'The bottling is allocated in most states, and what matters at the table is the wheat, which gives a softer bourbon.'), /story: "allocated" is volatile/);
   refuse('scarcity talk is refused', (r) => addStory(r[0], 'Shortages follow every release, and what matters at the table is the wheat, which gives a softer, rounder bourbon.'), /story: "Shortages" is scarcity talk/);
