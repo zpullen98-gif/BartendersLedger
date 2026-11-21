@@ -199,21 +199,28 @@ export function facts(jsDir){
 }
 
 /* ---- the people never named ------------------------------------------------------ */
-export function readPeople(file){
+/* people.json as read: the two lists, and what is wrong with them */
+export function peopleOf(j){
   const out = { names: [], historic: [], problems: [] };
-  let j = null;
-  try { j = JSON.parse(readFileSync(file, 'utf8')); } catch (e) { out.problems.push('people.json: ' + e.message); return out; }
   if(!isObj(j) || !isList(j.names) || !isList(j.historic)){ out.problems.push('people.json: { about, names: [...], historic: [...] }'); return out; }
   [['names', out.names], ['historic', out.historic]].forEach(([k, into]) => {
     const seen = new Set();
     j[k].forEach((n, i) => {
       if(!isStr(n) || !fold(n)){ out.problems.push('people.json ' + k + '[' + i + ']: a name'); return; }
-      if(seen.has(fold(n))) out.problems.push('people.json ' + k + '[' + i + ']: ' + n + ' twice');
+      if(seen.has(fold(n))){ out.problems.push('people.json ' + k + '[' + i + ']: ' + n + ' twice'); return; }
       seen.add(fold(n));
       into.push(n);
     });
   });
+  /* a name on both lists would be let stand as historic wherever it is written, and the living person never refused */
+  const living = new Set(out.names.map(fold));
+  out.historic.forEach((n) => { if(living.has(fold(n))) out.problems.push('people.json historic: ' + n + ' is also on names (a name is the living person’s or the dead one’s, never both: write the dead as the sources do, with Sr. or Jr.)'); });
   return out;
+}
+export function readPeople(file){
+  let j = null;
+  try { j = JSON.parse(readFileSync(file, 'utf8')); } catch (e) { return { names: [], historic: [], problems: ['people.json: ' + e.message] }; }
+  return peopleOf(j);
 }
 
 export function loadContext(opts = {}){
@@ -255,19 +262,27 @@ function ownNames(rec, pick){
   (isList(rec && rec.others) ? rec.others : []).forEach((o) => { if(isObj(o) && isStr(o.name) && o.name.trim()) out.push(o.name); });
   return out;
 }
-function takeOut(padded, foldedNames){
-  let t = padded;
-  foldedNames.forEach((n) => { if(n) t = t.split(' ' + n + ' ').join(' \u0001 '); });
-  return t;
+/* every place a folded phrase stands in padded, folded text: [start, end) of each */
+function spansOf(padded, phrase){
+  const out = [], needle = ' ' + phrase + ' ';
+  for(let i = padded.indexOf(needle); i >= 0; i = padded.indexOf(needle, i + 1)) out.push([i + 1, i + 1 + phrase.length]);
+  return out;
 }
-/* the living named in a string. A house keeps its name: every label of the roster and the record's own names are taken
-   out first, and so are the dead of the historic list whose names carry a living person's. */
+/* the living named in a string. A house keeps its name: a listed name is let stand only where the whole of it lies
+   inside a label of the roster, one of the record's own names or a name of the historic list (Julian Van Winkle
+   inside Julian Van Winkle Sr.). A label that is only a part of the person's name shields nothing: Teeling is a
+   label and Jack Teeling is still a person, in the Teeling record as anywhere. */
 export function livingIn(s, ctx, own){
-  let t = ' ' + fold(s) + ' ';
-  const houses = (own || []).map(fold).filter(Boolean).concat(ctx.foldedLabels || []).sort((a, b) => b.length - a.length);
-  t = takeOut(t, ctx.foldedHistoric || []);
-  t = takeOut(t, houses);
-  return (ctx.foldedPeople || []).filter(([, n]) => t.indexOf(' ' + n + ' ') >= 0).map(([name]) => name);
+  const t = ' ' + fold(s) + ' ';
+  const shields = [];
+  (ctx.foldedHistoric || []).concat((own || []).map(fold).filter(Boolean), ctx.foldedLabels || []).forEach((n) => spansOf(t, n).forEach((x) => shields.push(x)));
+  return (ctx.foldedPeople || []).filter(([, n]) => spansOf(t, n).some(([a, b]) => !shields.some(([x, y]) => x <= a && b <= y))).map(([name]) => name);
+}
+/* an address read as words: its escapes undone and its separators made spaces, so jimmy-russell and Jimmy_Russell are a name */
+export function addressWords(url){
+  let u = String(url == null ? '' : url);
+  try { u = decodeURIComponent(u); } catch (e) { /* a broken escape: read it as written */ }
+  return u.replace(/^https?:\/\//i, '').replace(/[-_/.+=?&#%~:,;()]+/g, ' ');
 }
 
 /* ---- the voice over every string ---------------------------------------------- */
@@ -316,6 +331,9 @@ export function voiceProblems(rec, at, ctx, pick){
     if(kind === 'url'){
       for(const ch of s){ const cp = ch.codePointAt(0); if(cp >= 0x2190){ out.push(where + ': carries U+' + cp.toString(16).toUpperCase().padStart(4, '0') + ', at or above U+2190'); break; } }
       if(GLYPH.test(s)) out.push(where + ': carries a degree sign or a fraction glyph');
+      if(HOUSE_NAME.test(s)) out.push(where + ': the address names the owner’s workplace (a record never does)');
+      const la = livingIn(addressWords(s), ctx, own);
+      if(la.length) out.push(where + ': the address names a living person (' + la.join(', ') + '): cite a page that is not filed under a person’s name');
       continue;
     }
     if(kind === 'key') continue;
@@ -810,7 +828,7 @@ function fixture(){
     groups: [{ key: 'fixture-style', title: 'Fixture style', family: 'American', style: '', chapter: '', chunk: 'c1', swaps: [], picks: [
       mk('old-lantern', 'Old Lantern', 'Old Lantern Bonded'), mk('avery-lark', 'Avery Lark', 'Avery Lark Small Batch', 'Lantern Hill Distillery'),
       mk('copper-wren', 'Copper Wren', 'Copper Wren 100'), mk('saint-osric', 'Saint Osric', 'Saint Osric Twelve'), mk('mill-quay', 'Mill Quay', 'Mill Quay Finest')] }] };
-  const people = { names: ['Jordan Vance', 'Avery Lark', 'Morgan Vance'], historic: ['Morgan Vance Sr.'], problems: [] };
+  const people = { names: ['Jordan Vance', 'Avery Lark', 'Morgan Vance', 'Ada Copper Wren'], historic: ['Morgan Vance Sr.'], problems: [] };
   const fx = { dir: 'fixture', styles: new Map(), chapters: new Map(), shelf: new Map(), library: new Map(), problems: [] };
   const ctx = loadContext({ plan, people, facts: fx });
   const rec = (p, n) => ({
@@ -867,6 +885,16 @@ export function selfTest(){
   refuse('a living person named in another house’s source title is refused', (r) => { r[2].sources[2].title = 'A whiskey magazine: Jordan Vance on the house'; }, /sources\[2\]\.title: names a living person/);
   keep('the dead of the historic list are named though a living name sits inside theirs', (r) => addStory(r[0], 'What matters at the table is the wheat that Morgan Vance Sr. chose in 1952: it gives a softer, rounder bourbon than rye does.'));
   refuse('the living namesake of a historic name is still refused', (r) => addStory(r[0], 'What matters at the table is the wheat that Morgan Vance keeps in the mash: a softer, rounder bourbon than rye gives.'), /names a living person \(Morgan Vance\)/);
+  refuse('a living person whose name holds a label is still refused (the label shields only itself)', (r) => addStory(r[2], 'Ada Copper Wren keeps the wheat in the mash, and that wheat is the whole lesson of the house at the table.'), /story: names a living person \(Ada Copper Wren\)/);
+  refuse('a living person in a source’s address is refused', (r) => { r[0].sources[2].url = 'https://example.org/people/jordan-vance'; }, /sources\[2\]\.url: the address names a living person \(Jordan Vance\)/);
+  refuse('a living person in an escaped address is refused', (r) => { r[0].sources[2].url = 'https://example.org/wiki/Jordan%20Vance'; }, /sources\[2\]\.url: the address names a living person/);
+  keep('a label’s own name in an address is the house', (r) => { r[1].sources[2].url = 'https://example.org/houses/avery-lark-small-batch'; });
+  {
+    const both = peopleOf({ names: ['Morgan Vance'], historic: ['Morgan Vance'] }).problems;
+    rows.push(['a name on both lists of people.json is refused', both.some((p) => /historic: Morgan Vance is also on names/.test(p)), both.join(' | ') || 'no problem was raised']);
+    const twice = peopleOf({ names: ['Jordan Vance', 'jordan vance'], historic: [] });
+    rows.push(['a name twice in people.json is refused', twice.problems.some((p) => /twice/.test(p)) && twice.names.length === 1, twice.problems.join(' | ') || 'no problem was raised']);
+  }
   refuse('a present owner is refused', (r) => addStory(r[0], 'The house is owned by a Louisville merchant, and what matters at the table is the wheat, which gives a softer bourbon.'), /story: "is owned" states ownership as a present state/);
   refuse('"now owned" and "today part of" are refused', (r) => { r[0].traps[0] = 'The distillery is now part of the Lantern Group and no longer a family business at all.'; }, /traps\[0\]: .* states ownership as a present state/);
   refuse('"currently" is refused anywhere', (r) => { r[0].bottle.wood = 'New charred American oak barrels; the label currently carries no age statement.'; }, /bottle\.wood: "currently" states ownership as a present state/);
