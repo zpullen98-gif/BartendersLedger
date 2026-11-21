@@ -75,7 +75,9 @@ engineer, the page engineer and the integrator.
   plainly), `SUPERLATIVE_OURS` (the -est and -most forms the lists lack, and "most" without "the"), `SELLING_OURS`,
   `SCORE` and `SCORE_OURS` (a score, a medal, an award), `PRICE_OURS`, `SCARCITY` and `SCARCITY_OURS`, `MEASURE` and
   `MEASURE_OURS` (a pour size), `AMERICAN_OURS` (American spelling by family: every -ize, the -or stems, the l's),
-  `PRESENT_OWNER`, `PRESENT_OWNER_NAMED`, `OWNED_PAST` and `PRESENT_MAKER`. A source's title is held to the dash, the
+  `PRESENT_OWNER`, `PRESENT_OWNER_NAMED`, `OWNED_PAST`, `PRESENT_MAKER`, `PRESENT_MAKER_OURS` and `NAMED_ROLE_OURS` (a
+  cellar master is held as a master distiller is), `THIS_YEAR` and `OUTPUT` (nothing true only this year) and
+  `VERDICT_OURS`. A source's title is held to the dash, the
   people, the workplace, the superlative, the price, the score and the scarcity rules; a source's address to plain
   ASCII https, the people and the workplace.
 - **Two departures from the styles and the shelf, on purpose.** Names are refused by a list of living people
@@ -102,6 +104,9 @@ owner's device.
 
 The pipeline was reviewed the same day by a second engineer, who seeded a bad record and an edge for every rule and
 ran every mode of the build in scratch copies. What the lint and the build let through is fixed at its cause and
-proved in `schema.mjs --test` (165 rules); the brief says what the lint now holds. Three things are a refuter's and
+proved in `schema.mjs --test` (176 rules); the brief says what the lint now holds. Three first drafts written in
+scratch for other families (an Islay malt, a Cognac, a Tennessee whiskey) were then linted to see what natural prose
+trips: the malt passed as written, and the Cognac tripped only on "the youngest eau-de-vie", which the brief now
+shows how to write. Three things are a refuter's and
 not the lint's: whether a taste belongs to the bottling, whether a date stands in two sources, and whether a
 sentence names an owner by a turn of phrase no list can know ("a Suntory distillery").

@@ -114,7 +114,8 @@ The Ledger's, the strictest reading. The lint holds all of it.
   plain words too, and a near synonym is no way round it (the lint refused "the eldest of the three" in the pilot):
   an age statement is "nothing in the bottle is younger than twelve years", never "the youngest whisky"; a floor is
   "the minimum", never "the least"; the 23 Year Old is "twenty-three years in oak, eight more than the 15", never
-  "the oldest". A place at the edge of a map is told by what lies beyond it, never as "the northernmost
+  "the oldest"; and the grades of Cognac, which the rule books define by "the youngest eau-de-vie", are written "no
+  eau-de-vie in the blend is younger than four years". A place at the edge of a map is told by what lies beyond it, never as "the northernmost
   distillery", which is also a claim that ages.
 
   The one exception is a name. The roster's flagship may print such a word (Ballantine's Finest) and the name
