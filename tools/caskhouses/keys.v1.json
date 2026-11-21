@@ -1,0 +1,5 @@
+{
+ "about": "Every recall card key of Producers and flagships, in the roster\u2019s order: \u2018Cask Houses \u00b7 <pick key>/<card id>\u2019, two a house. The pick\u2019s key comes from plan.json and the card\u2019s short id from its fragment; nothing is minted, so a reworded card and a swapped bottling keep their keys. A question has no key of its own: it carries the key of the card it is paired with. While frozen is false this file follows the writing build (build-caskhouses.mjs) and a key that leaves is printed. Once the integrator has run build-caskhouses.mjs --freeze, with the roster whole, a build may add a key and never loses one: a lost key refuses the build, because a key is a person\u2019s saved record.",
+ "frozen": false,
+ "keys": []
+}
