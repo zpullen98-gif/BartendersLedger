@@ -114,6 +114,22 @@ export const STRENGTH_FIXED = /^\d{2}(?:\.\d{1,2})?% ABV(?: \(\d{2,3}(?:\.\d{1,2
 export const STRENGTH_VARIES = /^Varies by (?:batch|release|barrel|cask|bottling)\b/;
 
 /* ---- the voice: this page's own additions ---------------------------------------- */
+/* a dash by another name, below U+2190 and outside the shelf's list: the true hyphen and the no-break hyphen (write the
+   plain one), the hyphen bullet, the minus sign, and a plain hyphen with a space on one side only ("the house- not a
+   person", "the house -not a person"). A suspended hyphen is a hyphen: "first- and second-fill casks". */
+export const DASH_MORE = /[\u2010\u2011\u2043\u2212]|\s-(?=[^\s-])|(?<=[^\s-])-\s+(?!(?:and|or|to)\b)/;
+/* a degree sign by another name and a fraction built from pieces: the ordinal indicators, the ring above, the Celsius and
+   Fahrenheit signs, the fraction slash, superscript and subscript figures */
+export const GLYPH_MORE = /[\u00aa\u00ba\u02da\u2103\u2109\u2044\u00b2\u00b3\u00b9\u2070-\u209f]/;
+/* what a reader cannot see: a control character, a no-break or other odd space, a soft hyphen, a zero width mark */
+export const HIDDEN = /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f-\u00a0\u00ad\u034f\u061c\u115f\u1160\u17b4\u17b5\u180e\u2000-\u200f\u2028-\u202f\u205f-\u206f]/;
+/* the data is plain text: no HTML entity (the dash's three entities are the shelf's; this is every other) and no markup */
+export const ENTITY = /&(?:[a-z][a-z0-9]*|#\d+|#x[0-9a-f]+);/i;
+export const MARKUP = /[<>]/;
+/* a trade mark, registered or copyright sign: a label's furniture, never ours */
+export const MARK_SIGN = /[\u00a9\u00ae\u2117\u2120\u2122]/;
+/* a source's address: https, a host with a dot, and plain printable ASCII (anything else is percent-encoded) */
+export const SOURCE_URL = /^https:\/\/[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?\.[a-z]{2,}(?::\d+)?(?:[/?#][\x21-\x7e]*)?$/i;
 /* a year a house history may carry: 1100 (Armagnac is first written of in 1310, Scotch in 1494) to this decade */
 const YEAR = /\b(?:1[1-9]\d{2}|20[0-2]\d)\b/;
 const YEAR_G = /\b(?:1[1-9]\d{2}|20[0-2]\d)\b/g;
@@ -347,12 +363,17 @@ export function voiceProblems(rec, at, ctx, pick){
       continue;
     }
     if(kind === 'key') continue;
-    if(DASH.test(s)) out.push(where + ': carries a dash or a hyphen standing in for one (use a comma, a colon or a full stop)');
+    if(DASH.test(s) || DASH_MORE.test(s)) out.push(where + ': carries a dash or a hyphen standing in for one (use a comma, a colon or a full stop; a hyphen joins two words and has no space beside it)');
     for(const ch of s){ const cp = ch.codePointAt(0); if(cp >= 0x2190){ out.push(where + ': carries U+' + cp.toString(16).toUpperCase().padStart(4, '0') + ', at or above U+2190'); break; } }
-    if(GLYPH.test(s)) out.push(where + ': carries a degree sign or a fraction glyph (write degrees, a half, a quarter)');
+    if(GLYPH.test(s) || GLYPH_MORE.test(s)) out.push(where + ': carries a degree sign or a fraction glyph (write degrees, a half, a quarter)');
+    const hid = s.match(HIDDEN);
+    if(hid) out.push(where + ': carries U+' + hid[0].codePointAt(0).toString(16).toUpperCase().padStart(4, '0') + ', a character no reader can see (a no-break space, a soft hyphen, a zero width mark: type a plain space or nothing)');
+    if(ENTITY.test(s) || MARKUP.test(s)) out.push(where + ': carries an HTML entity or markup (plain text only: write the character itself, and no < or >)');
+    if(MARK_SIGN.test(s)) out.push(where + ': carries a trade mark, registered or copyright sign (a label’s furniture, never ours)');
     tidyProblems(s, where).forEach((p) => out.push(p));
-    if(kind === 'provenance' || kind === 'name') continue;
-    if(HOUSE_NAME.test(s)) out.push(where + ': names the owner’s workplace (a record never does)');
+    if(kind === 'name') continue;
+    if(HOUSE_NAME.test(s)) out.push(where + ': names the owner’s workplace (a record never does, in any field)');
+    if(kind === 'provenance') continue;
     const lv = livingIn(s, ctx, own);
     if(lv.length) out.push(where + ': names a living person (' + lv.join(', ') + '): say the role, the family, the founder’s grandson');
     if(kind === 'title') continue;
@@ -554,7 +575,7 @@ function sourcesProblems(rec, at){
       if(/\bby\s+[A-Z][a-z]+\s+[A-Z]/.test(s.title) || /\b(?:edited by|author)\b/i.test(s.title)) out.push(w + '.title: the publisher and the page, never an author');
       const t = fold(s.title); if(titles.has(t)) out.push(w + '.title: the same source twice'); titles.add(t);
     }
-    if(!isStr(s.url) || !/^https:\/\/[^\s]+$/.test(s.url)) out.push(w + '.url: an https address');
+    if(!isStr(s.url) || !SOURCE_URL.test(s.url)) out.push(w + '.url: an https address in plain ASCII, host and page (percent-encode a dash or an accent: %E2%80%93, %C3%A9)');
     else { if(urls.has(s.url)) out.push(w + '.url: the same address twice'); urls.add(s.url); }
     if('kind' in s && SOURCE_KINDS.indexOf(s.kind) < 0) out.push(w + '.kind: primary (the producer’s own page for its own dates and methods, the regulation for a legal class) or secondary');
     if('read' in s && SOURCE_READS.indexOf(s.read) < 0) out.push(w + '.read: page (the page itself was read) or search (a search summary drawn from that site)');
@@ -929,6 +950,26 @@ export function selfTest(){
   refuse('a spaced hyphen is refused', (r) => { r[0].traps[0] = 'The label names the house - not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries a dash or a hyphen standing in for one/);
   refuse('an em dash is refused', (r) => { r[0].traps[0] = 'The label names the house\u2014not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries a dash/);
   refuse('a double hyphen is refused', (r) => { r[0].traps[0] = 'The label names the house--not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries a dash/);
+  refuse('an en dash is refused', (r) => { r[0].traps[0] = 'The label names the house\u2013not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries a dash/);
+  refuse('a dash’s entity is refused', (r) => { r[0].traps[0] = 'The label names the house&mdash;not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries a dash/);
+  refuse('a hyphen with a space after it only is refused', (r) => { r[0].traps[0] = 'The label names the house- not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries a dash/);
+  refuse('a hyphen with a space before it only is refused', (r) => { r[0].traps[0] = 'The label names the house -not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries a dash/);
+  refuse('the true hyphen U+2010 and the minus sign are refused', (r) => { r[0].traps[0] = 'The label names the house \u2010 not a person \u2212 nobody of that name ran the distillery.'; }, /traps\[0\]: carries a dash/);
+  keep('a hyphen inside a word and a suspended hyphen are kept', (r) => { r[0].traps[0] = 'The label names the house, not a first- or second-generation distiller: nobody of that name ran Lantern-Hill.'; });
+  refuse('any other HTML entity is refused', (r) => { r[0].traps[0] = 'The label names the house &minus; not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries an HTML entity or markup/);
+  refuse('markup is refused', (r) => { r[0].traps[0] = 'The label names the <b>house</b>, not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries an HTML entity or markup/);
+  refuse('a zero width space is refused', (r) => { r[0].traps[0] = 'The label names the house\u200b, not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries U\+200B, a character no reader can see/);
+  refuse('a no-break space is refused', (r) => { r[0].traps[0] = 'The label names the\u00a0house, not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries U\+00A0, a character no reader can see/);
+  refuse('a registered sign is refused', (r) => { r[0].traps[0] = 'The label names the house\u00ae, not a person: nobody of that name ran the distillery.'; }, /traps\[0\]: carries a trade mark/);
+  refuse('an ordinal indicator standing for a degree sign is refused', (r) => { r[0].bottle.still = 'Cooked, fermented and run through a column still at 80\u00ba and a doubler at Lantern Hill, the house says.'; }, /bottle\.still: carries a degree sign/);
+  refuse('a fraction built with the fraction slash is refused', (r) => { r[0].bottle.mash = 'Corn, with 1\u20444 wheat and some malted barley; the house does not publish its mash bill.'; }, /bottle\.mash: carries a degree sign or a fraction glyph/);
+  keep('an accent below U+2190 is kept', (r) => { r[0].traps[0] = 'The label names the house, not a person, and no Rémy, Père or façade has any part in it.'; });
+  refuse('a dash in a source’s title is refused', (r) => { r[0].sources[0].title = 'Old Lantern \u2014 Our history'; }, /sources\[0\]\.title: carries a dash/);
+  refuse('a raw dash in a source’s address is refused', (r) => { r[0].sources[0].url = 'https://example.org/wiki/Lantern\u2013Hill'; }, /sources\[0\]\.url: an https address in plain ASCII/);
+  keep('the same dash percent-encoded in an address is kept', (r) => { r[0].sources[0].url = 'https://example.org/wiki/Lantern%E2%80%93Hill'; });
+  refuse('an address with no host is refused', (r) => { r[0].sources[0].url = 'https://history'; }, /sources\[0\]\.url: an https address/);
+  refuse('the owner’s workplace in the report is refused', (r) => { r[0].report = ['Poured at Brennan’s by the glass.']; }, /report\[0\]: names the owner’s workplace/);
+  refuse('the owner’s workplace in a source’s address is refused', (r) => { r[0].sources[0].url = 'https://www.brennansneworleans.com/bar'; }, /sources\[0\]\.url: the address names the owner’s workplace/);
   refuse('a price is refused', (r) => { r[0].table = r[0].table.replace('It suits an Old Fashioned as well as a glass on its own.', 'It is affordable and suits an Old Fashioned well.'); }, /table: "affordable" talks price/);
   refuse('a currency sign is refused', (r) => { r[0].others[0].note = 'The same whiskey bottled uncut, for about $60 a bottle.'; }, /others\[0\]\.note: "\$" talks price/);
   refuse('a superlative is refused', (r) => { r[0].table = r[0].table.replace('is the bottling to begin with', 'is the most famous bottling of all'); }, /table: "most famous" is a superlative/);
