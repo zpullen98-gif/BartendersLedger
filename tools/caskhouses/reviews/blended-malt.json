@@ -1,0 +1,148 @@
+{
+ "group": "blended-malt",
+ "chunk": "c4",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 22,
+ "tested": [
+  "monkey-shoulder: the release of 2005 in Britain and France against 2003, the American launch of January 2012, Smokey Monkey of August 2017, 40% in Britain and 43% (86 proof) in the United States, first-fill bourbon casks, Batch 27, the three founding malts and whether the firm still names them, the maltmen's shoulder. 5 searches.",
+  "compass-box: the founding of 2000 in London by an American once in Johnnie Walker marketing, the first blends at his west London home, the published recipe of The Peat Monster (Caol Ila parcels at 64 per cent, Williamson at 35, a Highland malt blend at 1) and its casks, Monster of 2003 against a 2004 joining, The Spice Tree of 2005, the Association's objection and the heads remake, the 2015 transparency clash, the core range of July 2024. 6 searches.",
+  "big-peat: the release of 2009 as the first of the Remarkable Regional Malts, the four Islay malts, 46 per cent, no colour and no chill filtering, Big Peat 12 Years Old at 46 per cent, the founding of 1948, the brothers' division of May 2013 and which side kept Big Peat, the firm's purchase of Strathearn in 2019, the producer's tasting notes. 4 searches.",
+  "naked-malt: Naked Grouse of 2011 as a blended Scotch, the blended malt of 2017 and the malts named then (Glenturret among them) and at the rename of 2021, at least six months in first-fill Oloroso casks, 40% in most markets, the sale announced in September 2024 and completed on 1 July 2025. 2 searches.",
+  "shackleton: the five crates of January 2010 (three whisky, two brandy) on the Trust's own page, the bottles flown to Scotland in January 2011 and the syringe through the cork, the replica at 47.3 per cent and its later editions, Glen Mhor's last distilling of 1983 and demolition of 1986, the blended malt of 2017 in travel retail, Britain and France and in the United States from November 2017, 40% ABV (80 proof), the producer's casks and tasting notes. 5 searches.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, no length clue (the lint holds the group), keys at positions 2, 0, 1, 3, 3, 1, 0, 2, 1, 3, and every explain naming the nearest wrong option; Monkey Shoulder q1's explain reworded so it no longer calls Naked Malt's casks butts. No card id changed."
+ ],
+ "changed": [
+  {
+   "key": "monkey-shoulder",
+   "field": "quiz q1 explain",
+   "was": "sherry butts belong to a sherried blended malt such as Naked Malt",
+   "now": "sherry casks belong to a sherried blended malt such as Naked Malt",
+   "why": "Naked Malt's own pages and the rename coverage give first-fill Oloroso casks, never butts",
+   "sources": [
+    "https://thewhiskeywash.com/scotch-whiskey/naked-grouse-blended-whisky-rebranded-as-naked-malt/"
+   ]
+  },
+  {
+   "key": "compass-box",
+   "field": "bottle.wood",
+   "was": "The house does not give the casks of every parcel; the small Highland malt blend is finished in heavily toasted French oak.",
+   "now": "Refill hogsheads for the Caol Ila and Williamson parcels, by the house's published recipe; the small Highland malt blend lies in custom French oak casks of heavy toast.",
+   "why": "the house's product page lists every parcel with its cask: Caol Ila refill hogsheads at 46, 14, 3 and 1 per cent, Williamson refill hogsheads at 35, and the Highland malt blend in custom French oak casks of heavy toast",
+   "sources": [
+    "https://www.compassboxwhisky.com/products/the-peat-monster-1"
+   ]
+  },
+  {
+   "key": "compass-box",
+   "field": "story",
+   "was": "grew out of an earlier blend called Monster and joined the range for good in 2004, at 46 per cent",
+   "now": "grew out of Monster, a blend it made in 2003 for a New York shop, and it is bottled at 46 per cent",
+   "why": "no source read gives 2004; the house's Monster page dates the bespoke blend to 2003, the tenth anniversary bottling of 2013 marks Monster's creation for a New York shop, and Wikipedia gives a twentieth anniversary cask strength of 2023",
+   "sources": [
+    "https://www.compassboxwhisky.com/products/the-monster",
+    "https://www.thewhiskyexchange.com/P-21461.aspx",
+    "https://en.wikipedia.org/wiki/Compass_Box"
+   ]
+  },
+  {
+   "key": "compass-box",
+   "field": "story, cards[spice-tree].answer",
+   "was": "The house remade the whisky in 2009 with French oak cask heads; the house remade it in 2009 with French oak heads",
+   "now": "The house later remade the whisky with French oak cask heads; the house later remade it with French oak cask heads",
+   "why": "the house's page and Whisky Advocate's review of spring 2010 describe the heads version as the second generation, but no source read dates its release",
+   "sources": [
+    "https://www.compassboxwhisky.com/products/the-spice-tree",
+    "https://whiskyadvocate.com/Compass-Box-The-Spice-Tree-46"
+   ]
+  },
+  {
+   "key": "big-peat",
+   "field": "bottle.still",
+   "was": "Douglas Laing distils nothing.",
+   "now": "Douglas Laing, which distils none of them, blends and bottles them.",
+   "why": "the firm bought the Strathearn distillery in Perthshire in October 2019, so distils nothing no longer holds; it distils none of Big Peat's Islay malts",
+   "sources": [
+    "https://www.thespiritsbusiness.com/2019/10/douglas-laing-co-buys-strathearn-distillery/",
+    "https://drinksint.com/news/fullstory.php/aid/8565/Douglas_Laing_acquires_Strathearn_Distillery.html"
+   ]
+  },
+  {
+   "key": "big-peat",
+   "field": "story",
+   "was": "a family firm that blended and bottled whisky bought from distillers, and for decades it was known for single casks bottled under its own names",
+   "now": "a family firm that blended whisky bought from distillers, and in time it came to bottle single casks under its own names as well",
+   "why": "no source read dates the single casks far enough back to carry for decades; the brand history and the 2013 coverage show the single cask ranges without a starting year",
+   "sources": [
+    "https://www.thespiritsbusiness.com/2019/05/douglas-laing-co-a-brand-history/",
+    "https://sltn.co.uk/2013/05/16/family-firm-becomes-two/"
+   ]
+  },
+  {
+   "key": "naked-malt",
+   "field": "bottle.mash",
+   "was": "When it became a blended malt in 2017 its malts were given as The Macallan, Highland Park and The Glenrothes; no later recipe is published.",
+   "now": "At the rename of 2021 its malts were given as The Macallan, Highland Park and The Glenrothes; no recipe since the sale of 2025 is published.",
+   "why": "the trade report of 2017 named Glenturret beside the three; the three alone stand in the rename coverage of 2021",
+   "sources": [
+    "https://m.drinksint.com/news/fullstory.php/aid/7365/.html",
+    "https://thewhiskeywash.com/scotch-whiskey/naked-grouse-blended-whisky-rebranded-as-naked-malt/"
+   ]
+  },
+  {
+   "key": "shackleton",
+   "field": "bottle.wood",
+   "was": "The casks are not disclosed.",
+   "now": "Married in former bourbon casks of American oak and Spanish sherry casks, by the producer's launch notes.",
+   "why": "the producer's launch materials, carried by BevNET and The Spirits Business, say the Highland malts are married in a combination of American oak former bourbon and Spanish sherry casks",
+   "sources": [
+    "https://www.bevnet.com/news/spirits/2017/shackleton-whisky-launches-us-markets/",
+    "https://www.thespiritsbusiness.com/?p=410079"
+   ]
+  },
+  {
+   "key": "shackleton",
+   "field": "story",
+   "was": "and that October in the United States",
+   "now": "and late that year in the United States",
+   "why": "BevNET gives availability in the United States from November 2017; no source read gives October",
+   "sources": [
+    "https://www.bevnet.com/news/spirits/2017/shackleton-whisky-launches-us-markets/",
+    "https://woodencork.com/blogs/uncorked/whyte-mackay-debuts-shackleton-blended-malt"
+   ]
+  },
+  {
+   "key": "shackleton",
+   "field": "others[0].note",
+   "was": "a separate bottling made from the sample out of the hut, with a second edition called The Journey",
+   "now": "modelled on the sample from the hut and a separate bottling; later editions followed",
+   "why": "no source read confirms The Journey as the second edition (shop listings also show a Discovery edition), and made from the sample read as if the old liquid were in the bottle",
+   "sources": [
+    "https://www.diffordsguide.com/beer-wine-spirits/408/mackinlay-rare-old-highland-malt-shackleton",
+    "https://www.masterofmalt.com/whiskies/mackinlays/mackinlays-shackleton-rare-old-highland-malt-the-journey-whisky"
+   ]
+  }
+ ],
+ "open": [
+  "monkey-shoulder: 2003 or 2005 (the record gives 2005 as the release, 2003 as the start of work by one account); 43% in the United States rests on shop listings and VinePair; what Batch 27 counts.",
+  "compass-box: the year of The Spice Tree's heads version, likely 2009, wants a second source; Williamson is printed as the house names it, though trade reports give it as Laphroaig.",
+  "big-peat: the share of Port Ellen in any batch is unpublished; the bottling site was not found.",
+  "naked-malt: madeBy should follow the 2025 sale to William Grant & Sons; 43% in some markets is unsettled by market; the struck match and charcoal of the taste rest on reviews not reached.",
+  "shackleton: crates first seen in 2006 or 2007 against the Trust's January 2010; Glen Mhor as the original's distillery rests on shop features and Whisky Magazine, hedged by later accounts; the 40% strength rests on Whisky Advocate, shop listings and an American grocer's 80 proof listing, with no producer page."
+ ],
+ "living": [
+  "Met in sources and named in no record, already in people.json: Compass Box's founder (John Glaser), William Grant's malt master (Brian Kinsman), Whyte & Mackay's master blender (Richard Paterson).",
+  "Not in people.json and in no record, left for the read-together agent to add: Douglas Laing's head (Fred Laing) and a member of the family in the firm (Cara Laing), the founder's grandsons at Hunter Laing (Andrew Laing, Scott Laing), Compass Box's chief executive (Maurice Doyle) and a blender there (Jill Boyd), William Grant's chief executive (Søren Hagh), the Trust's conservation team leader (Al Fastier), and the writer of Difford's Guide (Simon Difford); the author's report adds Chris Leggat, Anna Mains and Richard Woodard.",
+  "The author's report lists Stewart Laing among the living: Whisky Advocate's obituary gives his death at 79, so he is dead; he is named in no record and should not go on the living list. The dead named in the records: Ernest Shackleton (1874 to 1922), dates agreed in Britannica and Wikipedia."
+ ],
+ "swaps": [
+  "naked-malt, madeBy: no swap of bottling or house was proposed; the author proposes that madeBy change from Edrington to William Grant & Sons. Agreed in substance: William Grant's own release, The Drinks Business and Whisky Magazine date completion to 1 July 2025. It is a change of plan.json, which this refuter may not make; put to the read-together agent, with the record's madeBy to follow it in the same commit.",
+  "No other swap proposed; all five flagships stand as the roster names them."
+ ],
+ "tension": [
+  "plan.json, shackleton why: says the whisky was found under the hut in 2007; the Trust's own page gives January 2010 for the five crates found and lifted, and accounts differ on a first sighting in 2006 or 2007. Reported, not edited.",
+  "plan.json, naked-malt: madeBy Edrington and the note's sale called unconfirmed; the sale is confirmed and completed on 1 July 2025. Reported, not edited.",
+  "The Library's record of Compass Box closes on a line that the blends cost less than single malts: a price word under the house voice, and it spells labelling the American way. Reported, not edited.",
+  "The style page (blended-malt) and its law agree with every record; its line that a blended malt holds nothing from a column still agrees with the records' traps. No tension of fact."
+ ]
+}

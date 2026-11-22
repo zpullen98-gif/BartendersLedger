@@ -48,7 +48,7 @@
           "q": "A guest asks what Monkey Shoulder is matured in. Which casks does the house name?",
           "options": ["Refill Oloroso sherry butts", "New charred oak", "First-fill bourbon casks", "Tawny port pipes"],
           "a": 2,
-          "explain": "The house matures its malts in first-fill former bourbon casks; sherry butts belong to a sherried blended malt such as Naked Malt."
+          "explain": "The house matures its malts in first-fill former bourbon casks; sherry casks belong to a sherried blended malt such as Naked Malt."
         },
         {
           "id": "q2", "tag": "story", "card": "name",
@@ -73,7 +73,19 @@
         "Left out for want of a second source: Kininvie's founding year (1990, Wikipedia only), the six months of marrying before bottling (one shop), and the 2026 redesign of the bottle (one trade report, and it would date the record).",
         "The living malt master who made the blend is not named, nor the brand's ambassador quoted by The Whiskey Wash. For people.json, the integrator should add the living names the searches showed across this group: Fred Laing, Stewart Laing, Cara Laing, Chris Leggat, Maurice Doyle, Anna Mains, Richard Woodard and Simon Difford (this author's task named the fragment alone, so people.json was not edited)."
       ],
-      "checked": null
+      "checked": {
+        "date": "2026-11-22",
+        "by": "refuter",
+        "verdict": "changed",
+        "changed": [
+          "quiz q1 explain: sherry butts became sherry casks, since Naked Malt is finished in first-fill Oloroso casks and the house names no butts; no fact of the bottle changed."
+        ],
+        "open": [
+          "year: 2005 for the British and French release stands in The Spirits Business and The Whiskey Wash; Difford's Guide and Whisky Shop give 2003, which the story keeps as the start of work by one account.",
+          "bottle.strength: 43% in the United States rests on American shop listings and VinePair; no producer page giving either figure was read.",
+          "bottle.label: whether Batch 27 counted 27 casks (VinePair) or only names the recipe stays unsettled, as the record says."
+        ]
+      }
     },
     {
       "key": "compass-box",
@@ -148,7 +160,20 @@
         "The founder's Johnnie Walker past rests on Wikipedia and several trade summaries in one search; the 2015 clash rests on Wikipedia and agrees with the Library's record of Compass Box, whose facts were taken and whose wording (labeling, the claim of excellence) was not.",
         "The two label terms are the producer's specification words; the label itself was not seen."
       ],
-      "checked": null
+      "checked": {
+        "date": "2026-11-22",
+        "by": "refuter",
+        "verdict": "changed",
+        "changed": [
+          "bottle.wood: the house was said to give no casks for its parcels; its published recipe gives refill hogsheads for the Caol Ila and Williamson parcels and custom French oak casks of heavy toast for the Highland malt blend, so the wood now says so.",
+          "story: The Peat Monster was said to have joined the range for good in 2004; no source read gives 2004, while the house's Monster page, a shop's tenth anniversary note of 2013 and Wikipedia's twentieth anniversary of 2023 point to Monster of 2003, so now a blend it made in 2003 for a New York shop.",
+          "story and cards[spice-tree].answer: the remake of The Spice Tree with French oak heads was dated 2009; Whisky Advocate's review of 2010 calls the heads version the second generation but no source read dates it, so now later, without a year."
+        ],
+        "open": [
+          "bottle.mash: Williamson is the house's own name; trade reports since 2019 give the parcel as Laphroaig, and the record prints only Williamson.",
+          "story: the year the heads version of The Spice Tree came out, likely 2009, wants a second source before it goes back in."
+        ]
+      }
     },
     {
       "key": "big-peat",
@@ -167,7 +192,7 @@
         "name": "Big Peat Islay Blended Malt Scotch Whisky",
         "class": "Blended malt Scotch whisky, of Islay malts only",
         "mash": "Peated malted barley: single malts from Islay alone. The producer names Ardbeg, Bowmore, Caol Ila and Port Ellen and publishes no shares.",
-        "still": "Douglas Laing distils nothing. Each malt was distilled in copper pot stills at its own Islay distillery, and the firm blends and bottles them.",
+        "still": "Each malt was distilled in copper pot stills at its own Islay distillery; Douglas Laing, which distils none of them, blends and bottles them.",
         "wood": "The producer does not name the casks. The label carries no age statement.",
         "strength": "46% ABV",
         "taste": "Ash, sweet tar and chimney smoke with a salty, beach-like edge, then sweet peat-dried malt and a long, phenolic finish where the smoke stays.",
@@ -221,7 +246,19 @@
         "The label terms are the producer's specification words (No Colour Added, No Chill-Filtration); the label itself was not seen.",
         "The family who run Douglas Laing, the brother who left in 2013 and the son in law who leads the firm are living and are not named; their names are listed for people.json in the Monkey Shoulder record's report."
       ],
-      "checked": null
+      "checked": {
+        "date": "2026-11-22",
+        "by": "refuter",
+        "verdict": "changed",
+        "changed": [
+          "bottle.still: Douglas Laing distils nothing was untrue after October 2019, when the firm bought the Strathearn distillery in Perthshire (Drinks International, The Spirits Business, Wikipedia); now Douglas Laing, which distils none of the malts, blends and bottles them.",
+          "story: for decades it was known for single casks rested on no date read; now in time it came to bottle single casks under its own names as well."
+        ],
+        "open": [
+          "The first of the Remarkable Regional Malts stands in the producer's account and two trade reports, so the note on a first was read and the claim kept.",
+          "The share of Port Ellen in any batch is not published; the record keeps it as malt distilled before 1983."
+        ]
+      }
     },
     {
       "key": "naked-malt",
@@ -295,7 +332,19 @@
         "The second label term is the producer's own wording, first fill sherry casks, from its pages; the exact words on the label were not seen.",
         "The place field names no town: no source gave where the blend is married."
       ],
-      "checked": null
+      "checked": {
+        "date": "2026-11-22",
+        "by": "refuter",
+        "verdict": "changed",
+        "changed": [
+          "bottle.mash: the three malts were tied to 2017; the trade report of 2017 also named Glenturret, and the three alone stand in the rename coverage of 2021, so now at the rename of 2021, with no recipe published since the sale of 2025."
+        ],
+        "open": [
+          "madeBy: Edrington copies the roster, but William Grant & Sons has made the label since the sale took effect on 1 July 2025 (William Grant's own release, The Drinks Business, Whisky Magazine); the read-together agent should change madeBy in plan.json.",
+          "bottle.strength: 43% in some markets rests on a database and a Whisky Advocate review; which markets is not settled.",
+          "bottle.taste: the struck match and the charcoal rest on reviews the refuter did not reach."
+        ]
+      }
     },
     {
       "key": "shackleton",
@@ -370,7 +419,20 @@
         "Left out for want of a source: the malts and casks of the blended malt, the Dalmore in the replica (one shop's feature), the share of each sale given to the Trust (sources differ) and the return of the original bottles to the hut in 2013 (not within the five sources).",
         "The master blender who made the replica and the blend is living and described by his role; his name already stands in people.json."
       ],
-      "checked": null
+      "checked": {
+        "date": "2026-11-22",
+        "by": "refuter",
+        "verdict": "changed",
+        "changed": [
+          "bottle.wood: the casks were called undisclosed; the producer's launch notes, carried by BevNET and The Spirits Business, give a marriage in American oak former bourbon casks and Spanish sherry casks, so the wood now says so.",
+          "story: the American launch was dated that October; BevNET gives November 2017, so now late that year.",
+          "others[0].note: The Journey was called the replica's second edition, which no source read confirmed (a Discovery edition also stands in shop listings), and made from the sample read as if the liquid were reused; now modelled on the sample from the hut, with later editions followed."
+        ],
+        "open": [
+          "The crates first seen in 2006 or 2007 against the lifting of January 2010 stays as the author wrote it, on the Trust's own page.",
+          "Glen Mhor as the original's distillery rests on shop features and Whisky Magazine, hedged as by later accounts; its last distilling was 1983 and its demolition 1986, so the 1980s stands."
+        ]
+      }
     }
   ]
 }
