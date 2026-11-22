@@ -19,7 +19,7 @@
     "class": "Blended Japanese whisky of malt and grain, which Suntory lists as meeting the makers' association standard for Japanese whisky.",
     "mash": "Malt whiskies of malted barley married with grain whisky; Suntory publishes neither the grains of the grain whisky nor the share of malt in the blend.",
     "still": "Malts from the copper pot stills of Yamazaki and Hakushu, married with grain whisky from the column stills of Chita, by Suntory's account.",
-    "wood": "Suntory names no casks for the blend, and the label carries no age statement.",
+    "wood": "Yamazaki and Hakushu malts from bourbon casks sit at the heart of the blend, by Suntory's account; no age statement on the label.",
     "strength": "40% ABV",
     "taste": "Lemon, green apple, butter biscuit and hazelnut on the nose; then popcorn, apple, dried coconut and baked almond on the palate, and a dry finish that Suntory likens to hay.",
     "pour": "In the Kaku Highball: a glass heaped with ice, lemon squeezed in first, then Kakubin and chilled soda, one part to four, poured gently and stirred once. Neat or on the rocks besides.",
@@ -133,7 +133,18 @@
     "The Satsuma kiriko perfume bottle is told as the house's account; Suntory's page says it was a gift from the founder, and to whom is not clear in the summary, so the record leaves the giver out.",
     "Place names the three distilleries, as Suntory names them for the blend; where Kakubin is blended and bottled was not found."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.wood: was \"Suntory names no casks for the blend\"; Suntory's Japanese product page and product introduction both say the blend balances bourbon cask malts from Yamazaki and Hakushu, so the wood now names them, by Suntory's account."
+    ],
+    "open": [
+     "The 2008 highball campaign and the Torys bars of the 1950s rest on the Ledger's own Japanese blended page, not on a new source.",
+     "Suntory's research history says the 1937 bottle was sold as a twelve year old; one primary source only, left out as the author left it."
+    ]
+   }
   },
   {
    "key": "hibiki",
@@ -169,7 +180,7 @@
     ]
    },
    "table": "Hibiki Japanese Harmony is Suntory's blend with no age statement, Yamazaki and Hakushu malts married with Chita grain, in the bottle of twenty-four facets. Expect rose, lychee and honey, then candied orange and a touch of Mizunara oak; pour it neat or over one large cube.",
-   "story": "Shinjiro Torii (1879 to 1962) founded the Osaka business that grew into Suntory, and in 1989 the company brought out Hibiki to mark its ninetieth year. The name means resonance. The blend joined malts from Yamazaki and Hakushu with grain whisky from Chita, so that every part came from the house's own stills; Japanese companies seldom trade spirit, and a Suntory blender works from Suntory's own malts and grains. From 1989 the bottle was designed around the number twenty-four: its twenty-four facets stand, by Suntory's account, for the twenty-four seasons of the old Japanese calendar. For years the range was known by its age statements, the 17 and the 21. In 2015 Suntory added Japanese Harmony, a blend with no age statement drawing about ten malt and grain whiskies from five kinds of cask, Mizunara oak among them; it reached the United States that August. In 2018 Suntory paused the 17, because too little whisky of that age stood in its warehouses. For a bartender, Japanese Harmony is the Hibiki a bar is likely to hold, and the lesson in how one house builds a whole from its own malts and grain.",
+   "story": "Shinjiro Torii (1879 to 1962) founded the Osaka business that grew into Suntory, and in 1989 the company brought out Hibiki to mark its ninetieth year. The name means resonance. The blend joined malts from Yamazaki and Hakushu with grain whisky from Chita, so that every part came from the house's own stills; Japanese companies seldom trade spirit, and a Suntory blender works from Suntory's own malts and grains. From 1989 the bottle was designed around the number twenty-four: its twenty-four facets stand, by Suntory's account, for the twenty-four seasons of the old Japanese calendar. For years the range was known by its age statements, the 17 and the 21. In 2015 Suntory added Japanese Harmony, a blend with no age statement drawing about ten malt and grain whiskies from five kinds of cask, Mizunara oak among them. In 2018 Suntory paused the 17, because too little whisky of that age stood in its warehouses. For a bartender, Japanese Harmony is the Hibiki a bar is likely to hold, and the lesson in how one house builds a whole from its own malts and grain.",
    "others": [
     {
      "name": "Hibiki 21 Years Old",
@@ -267,7 +278,18 @@
     "The blender who created Hibiki in 1989 and the one behind Harmony are living and are not named or described. Left out for want of a source: the share of malt to grain, the cask proportions, and the fifth kind of cask (one retail listing names plum liqueur casks).",
     "The 2018 pause of the 17 rests on Global News and the Ledger's own Hakushu record; whether the 17 has returned was not checked, and the record says only that it was paused in 2018."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: cut \"it reached the United States that August\"; Whisky Magazine dates the debut to September 2015 in New York and Difford's Guide gives March 2015 for the first release, so only the year 2015 stands."
+    ],
+    "open": [
+     "Whether the 17 Years Old has come back since the 2018 pause was not checked; the record tells only the pause.",
+     "The fifth kind of cask in Japanese Harmony was not named in any source read."
+    ]
+   }
   },
   {
    "key": "toki",
@@ -400,7 +422,15 @@
     "Left out for want of a source: a proof figure for the United States label, the share of malt to grain, when Toki reached other markets, and Toki Black, whose make-up was not read.",
     "The Sour and the Old Fashioned in the pour rest on Suntory's own Toki recipe pages, seen in search results; they are not cited separately."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "sound",
+    "changed": [],
+    "open": [
+     "Toki's reach beyond the United States after 2016 was not checked; the record says only that it was launched there first."
+    ]
+   }
   },
   {
    "key": "nikka",
@@ -422,7 +452,7 @@
     "still": "Malts from the coal-fired pot stills of Yoichi and the steam-heated pot stills of Miyagikyo, with grain whisky from Nikka's Coffey stills.",
     "wood": "The blended whiskies go back into cask to marry for a few more months before bottling, by Nikka's account. No age statement.",
     "strength": "51.4% ABV",
-    "taste": "A rich, oaky nose with vanilla, chocolate and orange peel over a note of grain; then a palate that Nikka calls mellow for its strength, with the grain's sweetness under the oak and the alcohol warm on the nose.",
+    "taste": "A rich, oaky nose with vanilla, chocolate and orange peel over a note of grain; then a thick, sweet palate, firm and full, with the grip of oak, and a woody, faintly bitter finish.",
     "pour": "Neat, then with a few drops of water, which its strength takes well; it also holds its own in a highball or an Old Fashioned.",
     "label": [
      {
@@ -534,7 +564,18 @@
     "Living people found and added to people.json: the designer of the bottle (in both spellings the sources use) and a former chief blender of Nikka. The master blender credited with the 1985 concept, the founder's adopted son, is left unnamed for want of a death year in two sources.",
     "Left out for want of a source: the share of malt to grain, the casks used for the marriage, a United States proof, and the year it first reached the United States (2018 in one trade source only). No finish is given: Nikka's page summary gave none, and the reviews read disagree."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.taste: the palate was \"mellow for its strength, with the grain's sweetness under the oak and the alcohol warm on the nose\", in no source; now Nikka's own note: a thick, sweet palate, firm and full, with oak's grip, and a woody, faintly bitter finish."
+    ],
+    "open": [
+     "Which criterion of the makers' association standard From the Barrel misses is not stated by Nikka; a trade report says Nikka's list marks it as holding whisky made outside Japan, which the record does not repeat.",
+     "The highball and Old Fashioned in the pour rest on general practice, not on a Nikka page read."
+    ]
+   }
   },
   {
    "key": "taketsuru",
@@ -554,10 +595,10 @@
     "class": "Blended malt whisky, which Nikka calls pure malt: malt whiskies from two of its distilleries and no grain whisky.",
     "mash": "Malted barley alone, in malts from Yoichi and Miyagikyo; Nikka publishes neither the share of each nor a peating level.",
     "still": "Yoichi malt from straight-head pot stills fired by coal, and Miyagikyo malt from steam-heated pot stills with bulging necks, by Nikka's account.",
-    "wood": "Malts from various casks, among which Nikka names Miyagikyo malts from sherry casks and remade casks as key parts. No age statement.",
+    "wood": "Malts from various casks; Nikka names as key malts sherry cask malts from Yoichi and Miyagikyo and remade cask malts from Miyagikyo. No age statement.",
     "strength": "43% ABV",
     "taste": "Apple and apricot on the nose with toast and vanilla from the oak; then banana and navel orange on a light, layered palate, with malt and dense peat, and a finish of dark chocolate, mellow oak and peat.",
-    "pour": "Neat or with a few drops of water; long, in a highball with chilled soda over ice, where the Yoichi smoke shows through.",
+    "pour": "Neat or with a few drops of water; long, in a highball with chilled soda over ice.",
     "label": [
      {
       "term": "Pure Malt",
@@ -570,7 +611,7 @@
     ]
    },
    "table": "Nikka Taketsuru Pure Malt is a blended malt, Yoichi and Miyagikyo malts married with no grain whisky, named for Nikka's founder. Expect apple, apricot and toast, then orange and a thread of peat; pour it neat or with a few drops of water.",
-   "story": "Masataka Taketsuru (1894 to 1979), from a sake-brewing family in Takehara, learnt whisky making in Scotland and in 1934 founded at Yoichi, on Hokkaido, the company that became Nikka. Yoichi's coal-fired stills gave a heavy, smoky malt; Miyagikyo, near Sendai, followed in 1969 and gave a softer, fruitier one, so that the house held two malts of different character to blend. Taketsuru Pure Malt carries that pairing in his name. Nikka uses pure malt only for whiskies blended from its own malts, what Scotland calls a blended malt: no grain whisky goes in. The Taketsuru Pure Malt name reached the shelf in 2000, and Pure Malts of seventeen, twenty-one and twenty-five years followed. In 2020 Nikka withdrew those three and renewed the no-age-statement Pure Malt at 43 per cent, with a larger share of Yoichi malt, which gave it more smoke. Coal-fired Yoichi brings weight and peat; steam-heated Miyagikyo, with its sherry and remade cask malts, brings fruit and softness. For a bartender, it is the other kind of blend: two distilleries of one house, married without grain.",
+   "story": "Masataka Taketsuru (1894 to 1979), from a sake-brewing family in Takehara, learnt whisky making in Scotland and in 1934 founded at Yoichi, on Hokkaido, the company that became Nikka. Yoichi's coal-fired stills gave a heavy, smoky malt; Miyagikyo, near Sendai, followed in 1969 and gave a softer, fruitier one, so that the house held two malts of different character to blend. Taketsuru Pure Malt carries that pairing in his name. Nikka uses pure malt only for whiskies blended from its own malts, what Scotland calls a blended malt: no grain whisky goes in. The Taketsuru Pure Malt name reached the shelf in 2000, and Pure Malts of seventeen, twenty-one and twenty-five years followed. In 2020 Nikka withdrew those three and kept the no-age-statement Pure Malt at 43 per cent, in a renewed blend. Coal-fired Yoichi brings weight and peat, steam-heated Miyagikyo fruit and softness, and sherry casks from both stand among the key malts. For a bartender, it is the other kind of blend: two distilleries of one house, married without grain.",
    "others": [
     {
      "name": "Nikka Single Malt Miyagikyo",
@@ -587,8 +628,7 @@
    ],
    "traps": [
     "Taketsuru Pure Malt is a blended malt, not a blended whisky: it holds malt alone, from two distilleries, and no grain.",
-    "Pure malt is Nikka's own term, not a legal class; in Scotland the same thing is called a blended malt.",
-    "The Pure Malt of 2020 carries more Yoichi malt than the bottling before it, so it reads smokier than older bottles."
+    "Pure malt is no legal class: Nikka keeps the word for blends of its own malts, and the Scotch Whisky Regulations 2009 retired it in Scotland in favour of blended malt."
    ],
    "cards": [
     {
@@ -598,8 +638,8 @@
     },
     {
      "id": "renewal-2020",
-     "prompt": "What did Nikka change in Taketsuru Pure Malt in 2020?",
-     "answer": "It withdrew the 17, 21 and 25 Years Old and renewed the no-age-statement bottling with more Yoichi malt."
+     "prompt": "What did Nikka change in the Taketsuru Pure Malt range in 2020?",
+     "answer": "It withdrew the 17, 21 and 25 Years Old and kept only the no-age-statement Pure Malt, in a renewed blend."
     }
    ],
    "quiz": [
@@ -621,15 +661,15 @@
      "id": "q2",
      "tag": "story",
      "card": "renewal-2020",
-     "q": "In 2020 Nikka renewed Taketsuru Pure Malt. Which malt did the new bottling give a larger share?",
+     "q": "In 2020 Nikka withdrew the aged Taketsuru Pure Malts. Which bottling did it keep on sale?",
      "options": [
-      "Miyagikyo",
-      "Coffey malt",
-      "Yoichi",
-      "Yamazaki"
+      "The 17 Years Old",
+      "The 21 Years Old",
+      "No age statement",
+      "The 25 Years Old"
      ],
      "a": 2,
-     "explain": "The renewed bottling holds a larger share of coal-fired Yoichi malt, which brings more smoke; Miyagikyo is the other, softer half, and Yamazaki is Suntory's."
+     "explain": "Nikka kept the no-age-statement Pure Malt, renewed in 2020; the 17 Years Old, met on older back bars, was withdrawn with the 21 and the 25."
     }
    ],
    "sources": [
@@ -640,8 +680,8 @@
      "read": "search"
     },
     {
-     "title": "Nikka: the founder",
-     "url": "https://www.nikka.com/en/story/founder/",
+     "title": "Nikka: whisky basics, the term pure malt",
+     "url": "https://www.nikka.com/en/discover/knowledge/",
      "kind": "primary",
      "read": "search"
     },
@@ -652,8 +692,8 @@
      "read": "search"
     },
     {
-     "title": "Nomunication: the Pure Malt renewal of 2020",
-     "url": "https://www.nomunication.jp/2020/01/16/nikka-pure-malt-nas-renewal-announced-for-march-31/",
+     "title": "Hokkaido Shimbun: Taketsuru Essentials toward the brand's thirtieth year",
+     "url": "https://www.hokkaido-np.co.jp/article/1313258/",
      "kind": "secondary",
      "read": "search"
     },
@@ -672,7 +712,22 @@
     "Taketsuru's dates and his sake-brewing family in Takehara stand on Nikka's founder page and in the Ledger's own Yoichi record; Miyagikyo's 1969 is the Cask Atlas's own fact.",
     "Left out for want of a source: the share of each malt, the average age (about ten years in one shop's listing only), the year the first no-age-statement Pure Malt came out (2015 in one trade source), and the twelve year old's end. A prize named on Nikka's pages is left out under the rule."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.wood: was Miyagikyo sherry and remade cask malts as the key parts; Nikka's page names sherry cask malts from both Yoichi and Miyagikyo and remade cask malts from Miyagikyo; now so.",
+     "story, traps, cards[renewal-2020], quiz[1]: the larger share of Yoichi malt in the 2020 renewal rested on one writer's own site and a reviewer's hearsay, and no Nikka release was found; cut from the story, the third trap removed, the card's answer and q2 rewritten to ask which bottling Nikka kept (the no-age-statement Pure Malt, The Spirits Business and Time Out Tokyo). Card id unchanged.",
+     "traps[1]: was \"Pure malt is Nikka's own term\"; the term was Scotland's too until the Scotch Whisky Regulations 2009 retired it, as the Ledger's own blended malt page says; now told so, with Nikka's own rule that it keeps the word for its own malts (Nikka's whisky basics page).",
+     "story, bottle.pour: the Miyagikyo-only sherry casks set right in the story; \"where the Yoichi smoke shows through\" cut from the pour, in no source.",
+     "sources: Nomunication (a writer's own site) and Nikka's founder page out; Nikka's whisky basics page and the Hokkaido Shimbun (the brand born in 2000, a second publisher beside Nihon Shokuryo Shimbun) in. The founder's dates and family stand on Nikka's founder page as cited in the Nikka record of this group."
+    ],
+    "open": [
+     "Whether this bottling meets the makers' association standard was not settled, and the record says nothing of it.",
+     "Nikka's own malts could in principle include malt from its Scottish distillery; Nikka's page names Yoichi and Miyagikyo as the key malts, and the record keeps to them."
+    ]
+   }
   }
  ]
 }
