@@ -820,6 +820,8 @@ function renderProducers(){
       + '<div class="tix-rule"></div><div class="tix-note">'+esc(x.why)+'</div></div></div>'
       + '<div style="max-width:440px"><div class="eyebrow mb1">The process</div><div class="small dim lh">'+esc(x.process)+'</div></div>'
       + '<div style="max-width:440px"><div class="eyebrow mb1">Behind the bar</div><div class="small dim lh">'+esc(x.bar)+'</div></div>'
+      /* the houses of Producers and flagships whose record names this producer (js/ui-caskhouses.js) */
+      + (typeof caskHouseLibraryDoorsHTML === 'function' ? caskHouseLibraryDoorsHTML(x.name) : '')
       + '<a class="btn btn-ghost tiny" href="'+ytSearch(producerQuery(x)+scopeSuffix())+'" target="_blank" rel="noopener noreferrer">Watch the distillery</a>'
       + '</div>' : '';
     return '<div class="panel"><button class="drink-head" aria-expanded="'+(open?'true':'false')+'" data-act="prod-open" data-i="'+i+'"'+(open?' data-open="1"':'')+'>'

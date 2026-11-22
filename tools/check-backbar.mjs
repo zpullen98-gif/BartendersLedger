@@ -1,7 +1,7 @@
 /* The liquor shelf, under the house's tab (4 November 2026): its gate.
 
      node tools/check-backbar.mjs              every check below
-     node tools/check-backbar.mjs --mutations  then breaks the shipped files eleven ways, one at a time, and expects red each time
+     node tools/check-backbar.mjs --mutations  then breaks the shipped files twelve ways, one at a time, and expects red each time
      node tools/check-backbar.mjs --help
 
    The whole app is loaded from index.html's own script list (app.js and its
@@ -34,6 +34,9 @@
    W5 recall   W6 the quiz through the click   W7 the doors
    W8 Its style at the table: each bottle a whisky style lists (CASK_STYLES,
       js/data-caskstyles.js, 5 November 2026) draws a door to that style
+   W9 Its house among the producers: each bottle a house of Producers and
+      flagships carries (CASK_HOUSES, js/data-caskhouses.js, 22 November 2026)
+      draws a door to that house, saying whether this bottle is its flagship
    H1 the house rows claim only exact matches   H2 from the same house
    H3 the rows drawn, the house card, the house's name */
 import assert from 'node:assert/strict';
@@ -812,6 +815,39 @@ await test('W8 Its style at the table: every bottle a style lists draws a door t
   }
   eq(bad, []);
 });
+/* the page's rule, stated again: the bottle is the flagship when its name, or a name it is asked for by, stands whole in the flagship's name */
+const foldName = (s) => String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[\u2018\u2019]/g, "'").toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+await test('W9 Its house among the producers: every bottle a house of Producers and flagships carries draws a door to that house after its style and before Recall, saying whether it is the flagship, each landing on the house; no other bottle draws one', () => {
+  const houses = plain(g('caskHouseRecords') ? g('caskHouseRecords')() : []) || [];
+  const built = new Set((plain(g('caskHouseGroups') ? g('caskHouseGroups')() : []) || []).map((x) => x.key));
+  if (!houses.length) { notes.push('W9 no producers are loaded (js/data-caskhouses.js), so no bottle has a house door to hold'); return; }
+  const bad = [];
+  for (const e of entries) {
+    const want = houses.filter((r) => r.shelf === e.id && built.has(r.group));
+    const out = g('backbarDetailHTML')(g('backbarEntry')(e.id));
+    const doors = [...out.matchAll(/class="btn btn-ghost backbar-producer" id="backbar-producer-([a-z0-9-]+)" href="([^"]+)">([^<]+)</g)];
+    if (JSON.stringify(doors.map((m) => m[1])) !== JSON.stringify(want.map((r) => r.key))) bad.push(e.id + ': doors ' + doors.map((m) => m[1]).join(',') + ', not ' + want.map((r) => r.key).join(','));
+    if (!want.length) { if (/id="backbar-d-producer"/.test(out)) bad.push(e.id + ': Its house among the producers drawn with no house'); continue; }
+    const at = out.indexOf('<h3 id="backbar-d-producer">Its house among the producers</h3>');
+    const after = Math.max(out.indexOf('id="backbar-d-links"'), out.indexOf('id="backbar-d-style"'));
+    if (!(at > after && at < out.indexOf('id="backbar-d-recall"'))) bad.push(e.id + ': Its house among the producers is not after In the Ledger and its style, before Recall');
+    want.forEach((r, i) => {
+      const m = doors[i];
+      if (!m) return;
+      const flag = ' ' + foldName(r.bottle.name) + ' ';
+      const same = [e.name].concat(e.aka || []).some((n) => { const f = foldName(n); return f.length >= 3 && flag.indexOf(' ' + f + ' ') >= 0; });
+      const text = esc(r.producer) + (same ? ': this bottle is its flagship' : ': its flagship is ' + esc(r.bottle.name));
+      if (m[3] !== text) bad.push(e.id + ': the door reads ' + m[3] + ', not ' + text);
+      const h = '#/casks/houses/' + r.group + '/' + r.key;
+      if (m[2] !== h) bad.push(e.id + ': the door goes to ' + m[2]);
+      run("state.tab = 'home';");
+      if (!g('applyRoute')(h)) { bad.push(e.id + ': ' + h + ' is not read'); return; }
+      run('navNormalise()');
+      if (g('routeNow')().hash !== h) bad.push(e.id + ': ' + h + ' does not land');
+    });
+  }
+  eq(bad, []);
+});
 
 /* ---- H: the house, from the shipped engine and pack ------------------------------- */
 if (!HOUSE_HERE) notes.push('H1 to H3 skipped: no House engine and pack beside this checkout (OOT_SHARED=<dir> names one)');
@@ -967,6 +1003,7 @@ async function mutations() {
     ['a house price drawn on a use row', 'js/ui-backbar.js', "+ '<h4 class=\"backbar-use-name\">' + esc(item.name) + '</h4>'", "+ '<h4 class=\"backbar-use-name\">' + esc(item.name) + (item.price ? ' ' + esc(item.price) : '') + '</h4>'"],
     ['Recall before you reveal drawn open', 'js/ui-backbar.js', "'<details class=\"backbar-recall\"><summary>'", "'<details class=\"backbar-recall\" open><summary>'"],
     ['a bottle\u2019s style door left out', 'js/ui-backbar.js', "    + backbarStylesHTML(e)\n", ''],
+    ['a bottle\u2019s house among the producers left out', 'js/ui-backbar.js', "    + backbarProducerHTML(e)\n", ''],
   ];
   let held = 0;
   for (const [name, file, from, to] of MUT) {

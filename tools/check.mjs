@@ -293,8 +293,14 @@ for (const [label, arr, key] of [
 	const chSrc = has('../js/data-caskhouses.js') ? read('../js/data-caskhouses.js') : '';
 	if (!chSrc) problems.push('js/data-caskhouses.js is missing: Producers and flagships has no data');
 	else {
-		for (const [hook, what] of [['caskHouseRoute(parts)', 'the router'], ['caskHouseRouteNow()', 'the address'], ['caskHouseParent()', 'the climb from a house to its group and the root'], ['caskHouseRender()', 'the page']]) {
+		for (const [hook, what] of [['caskHouseRoute(parts)', 'the router'], ['caskHouseRouteNow()', 'the address'], ['caskHouseParent()', 'the climb from a house to its group and the root'], ['caskHouseRender()', 'the page'],
+			['caskHouseHomeHTML()', 'the Atlas home\'s door'], ['caskHouseChapterDoorsHTML(c.id)', "a chapter's Five producers"]]) {
 			if (!casksJs.includes(hook)) problems.push(`js/ui-casks.js does not call ${hook}: ${what} of Producers and flagships is lost`);
+		}
+		/* the doors from a style, a shelf bottle and a Library producer */
+		for (const [file, hook, what] of [['../js/ui-caskstyles.js', 'caskStyleProducersHTML(e)\n', "a style's Five producers"], ['../js/ui-backbar.js', 'backbarProducerHTML(e)\n', "a bottle's Its house among the producers"],
+			['../js/ui-reference.js', 'caskHouseLibraryDoorsHTML(x.name)', "a Library producer's houses"]]) {
+			if (!read(file).includes(hook)) problems.push(`${file.slice(3)} no longer draws ${what} (${hook.trim()})`);
 		}
 		const at = ['js/ui-caskstyles.js', 'js/data-caskhouses.js', 'js/ui-caskhouses.js', 'js/app.js'].map((f) => index.indexOf('src="' + f));
 		if (at.some((i) => i < 0) || at.some((i, k) => k && i < at[k - 1])) problems.push('index.html does not load js/data-caskhouses.js and js/ui-caskhouses.js after the styles and before app.js');

@@ -2,7 +2,7 @@
    2026): its gate, on check-backbar's model.
 
      node tools/check-caskstyles.mjs              every check below
-     node tools/check-caskstyles.mjs --mutations  then breaks the shipped files twelve ways, one at a time, and expects red each time
+     node tools/check-caskstyles.mjs --mutations  then breaks the shipped files thirteen ways, one at a time, and expects red each time
      node tools/check-caskstyles.mjs --help
 
    The whole app is loaded from index.html's own script list (app.js and its
@@ -26,7 +26,7 @@
 
    D1 shape through schema.mjs, the roster sound   D2 the roster whole once written, the counts pinned
    D3 caps and the sale's two sentences   D4 voice, the shipped files and the stylesheet
-   D5 nobody named, no price   D6 links resolve to chapters, shelf bottles, canon and the neighbour, and land
+   D5 nobody named, no price   D6 links resolve to chapters, shelf bottles, canon, the neighbour and the five producers, and land
    D7 the quiz: quality and answer positions, the round dealt 2,000 times   D8 the data is the build's
    W1 keys, frozen   W2 the deck and the quiz kept apart (from the levels, Due today, each other)
    W3 addresses and Back   W4 rendering: the home, a style, a chapter's doors, a bottle's door
@@ -210,6 +210,8 @@ const BOTTLES = (plain(g('backbarEntries')()) || []);
 const COCKTAILS = plain(g('COCKTAILS')) || [];
 const slug = g('slugify');
 const href = (id) => '#/casks/style/' + id;
+/* the style's group in Producers and flagships (js/ui-caskhouses.js), once built: the page's Five producers door */
+const producersOf = (id) => plain(g('caskHouseGroupForStyle') ? g('caskHouseGroupForStyle')(id) : null);
 
 /* ---- D: the data ------------------------------------------------------------------ */
 await test('D1 shape: the file has the build\u2019s three keys, the plan\u2019s families, the styles in roster order with the build\u2019s fields, and the roster is sound', () => {
@@ -338,7 +340,7 @@ await test('D5 nobody named and no price: no person from either people list in a
   for (const e of entries) nameProblems(pick(plain(e), FIELDS), ctx).forEach((p) => bad.push(e.id + '.' + p));
   eq(bad, []);
 });
-await test('D6 links: every chapter, shelf bottle and canon drink resolves in CASK_CHAPTERS, the liquor shelf and COCKTAILS, the neighbour is a roster style, and each is drawn', () => {
+await test('D6 links: every chapter, shelf bottle and canon drink resolves in CASK_CHAPTERS, the liquor shelf and COCKTAILS, the neighbour is a roster style, the door to its five producers once that group is built, and each is drawn', () => {
   const bad = [];
   for (const e of entries) {
     run("caskStyleOpen(" + JSON.stringify(e.id) + ")");
@@ -357,6 +359,9 @@ await test('D6 links: every chapter, shelf bottle and canon drink resolves in CA
       else if (!out.includes('class="btn btn-ghost caskstyle-canon" href="#/library/' + c + '"')) bad.push(e.id + ': the canon link ' + c + ' is not drawn');
     }
     if (!e.canon.length && /id="caskstyle-p-canon"/.test(out)) bad.push(e.id + ': the classics drawn empty');
+    const five = producersOf(e.id);
+    if (five && !out.includes('class="btn btn-ghost caskstyle-producers" id="caskstyle-producers-' + five.key + '" href="#/casks/houses/' + five.key + '">Five producers: ' + esc(five.title) + '</a>')) bad.push(e.id + ': the door to its five producers is not drawn');
+    if (!five && /id="caskstyle-p-producers"/.test(out)) bad.push(e.id + ': Five producers drawn with no group built');
     if (!byPlan.has(e.neighbour) || e.neighbour === e.id) bad.push(e.id + ': the neighbour ' + e.neighbour + ' is no other roster style');
     const nbDrawn = out.includes('href="' + href(e.neighbour) + '">Its neighbour: ');
     if (byId.has(e.neighbour) !== nbDrawn) bad.push(e.id + ': the neighbour door ' + (nbDrawn ? 'drawn to an unwritten style' : 'not drawn'));
@@ -364,9 +369,10 @@ await test('D6 links: every chapter, shelf bottle and canon drink resolves in CA
   }
   eq(bad, []);
 });
-await test('D6 links: each chapter, bottle, canon and neighbour link lands on its screen', () => {
+await test('D6 links: each chapter, bottle, canon, neighbour and producers link lands on its screen', () => {
   for (const e of entries) {
-    const hashes = [].concat(e.chapters.map((c) => '#/casks/' + c), e.shelf.map((b) => '#/menu/backbar/' + b), e.canon.map((c) => '#/library/' + c), byId.has(e.neighbour) ? [href(e.neighbour)] : []);
+    const five = producersOf(e.id);
+    const hashes = [].concat(e.chapters.map((c) => '#/casks/' + c), e.shelf.map((b) => '#/menu/backbar/' + b), e.canon.map((c) => '#/library/' + c), byId.has(e.neighbour) ? [href(e.neighbour)] : [], five ? ['#/casks/houses/' + five.key] : []);
     for (const h of hashes) {
       run("state.tab = 'home';");
       assert.ok(g('applyRoute')(h), h + ' is not read');
@@ -600,7 +606,7 @@ await test('W3 Back: the home, a style by its row, Back to the home and Home; a 
   S.tap({ 'data-act': 'back' }); await settle();
   assert.equal(S.state().key, 'menu/backbar/' + b, 'Back from a bottle\u2019s door');
 });
-const SECTIONS = ['table', 'pour', 'guest', 'law', 'made', 'taste', 'differs', 'houses', 'shelf', 'chapter', 'canon', 'recall'];
+const SECTIONS = ['table', 'pour', 'guest', 'law', 'made', 'taste', 'differs', 'houses', 'producers', 'shelf', 'chapter', 'canon', 'recall'];
 const PICTURE = /<(?:img|iframe|video|picture|source|svg|object|embed)\b|url\(/i;
 await test('W4 rendering: the home gains At the table: every style after Today\u2019s cask study, the families in order, every style a row in roster order', () => {
   run("caskOpen('');");
@@ -633,7 +639,7 @@ await test('W4 rendering: every style in the shelf\u2019s order of sections, the
     assert.ok(head.includes('The family</span> ' + esc(fam)), e.id + ': the family');
     if (e.respell) assert.ok(head.includes('Say it</span> ' + esc(e.respell)), e.id + ': Say it');
     else assert.ok(!head.includes('Say it'), e.id + ': Say it drawn empty');
-    const want = SECTIONS.filter((s) => (s !== 'shelf' || e.shelf.length) && (s !== 'canon' || e.canon.length) && (s !== 'chapter' || e.chapters.length));
+    const want = SECTIONS.filter((s) => (s !== 'shelf' || e.shelf.length) && (s !== 'canon' || e.canon.length) && (s !== 'chapter' || e.chapters.length) && (s !== 'producers' || producersOf(e.id)));
     const at = want.map((s) => out.indexOf('id="caskstyle-p-' + s + '"'));
     assert.ok(at.every((i) => i >= 0), e.id + ': a section is missing ' + want.filter((s, i) => at[i] < 0).join(', '));
     eq(at, at.slice().sort((a, b) => a - b), e.id + ': the sections are out of order');
@@ -870,6 +876,7 @@ async function mutations() {
     ['the sale under no brass rule', 'css/caskstyles.css', '.caskstyle-sale{border-top:2px solid var(--brass);', '.caskstyle-sale{'],
     ['a chapter\u2019s Styles to present left out', 'js/ui-casks.js', "    +(typeof caskStyleChapterDoorsHTML==='function'?caskStyleChapterDoorsHTML(c.id):'')\n", ''],
     ['a bottle\u2019s style door left out', 'js/ui-backbar.js', "    + backbarStylesHTML(e)\n", ''],
+    ['a style\u2019s Five producers left out', 'js/ui-caskstyles.js', "    + caskStyleProducersHTML(e)\n", ''],
     ['Today\u2019s cask study dealing an unseen style card', 'js/ui-caskstyles.js', "return caskStyleCards().filter(function(c){ return caskStyleRecord(c, now).due; })", "return caskStyleCards().filter(function(c){ return true; })"],
   ];
   let held = 0;
