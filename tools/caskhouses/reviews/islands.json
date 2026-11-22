@@ -1,0 +1,221 @@
+{
+ "group": "islands",
+ "chunk": "c6",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 19,
+ "tested": [
+  "talisker: the 10's American oak casks, ten years, 45.8% ABV and the producer's tasting notes; the founding of 1830 by brothers from Eigg and the MacLeod lease; the Distillers Company of 1925; double distillation from 1928 and the five stills; the fire of 1960 and the copied stills; the maltings of 1972; the U-bend and purifier on the wash stills and the worm tubs; the Distillers Edition's Amoroso casks at 45.8%. 4 searches.",
+  "highland-park: the beadle and the pulpit as the house's legend, the farmer of High Park, the licence of 1826; the 12's sherry seasoned European and American oak, first fill and refill, 40% ABV and the producer's notes; the floor maltings at about a fifth, Hobbister Moor and its heather peat, the kilns, the dunnage warehouses and the house's angels' share claim; the Viking names of 2017. 3 searches.",
+  "jura: the founding of 1810, the Small Isles name and the licence of 1831; James Ferguson and Sons; the closure of 1901 and its cause; the rebuild of 1960 to 1963 and who led it; the still height; the relaunch of 2018; the 10's ex-bourbon barrels, Oloroso finish, 40% ABV and the producer's notes; the 12 of 2025, its casks, strength and notes, and the 12 Oloroso Edition. 6 searches.",
+  "arran: the 10's casks (mainly bourbon, a portion finished about nine months in first-fill Oloroso), 46% ABV and the producer's notes; Machrie Moor 10 at 46%; the ground broken on 16 December 1994, the eagles and where they nested, first spirit on 29 June and the opening of 17 August 1995; the Queen's opening of the visitor centre in August 1997. 3 searches.",
+  "tobermory: the 12's American oak casks, 46.3% ABV, natural colour, no chill filtering and the producer's notes; the founding of 1798 as Ledaig, the closure of 1837 and return of 1878, the Distillers Company of 1916 and the closure around 1930, the reopening of 1972 and the failure of 1975, the stops and starts to 1990 and the reopening of 2019 with the 12. 3 searches.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, no length clue (two keys longest and the rest tied or shorter), keys at positions 0, 1, 2, 3, 1, 2, 2, 0, 3, 1, every explain naming the nearest wrong option. Jura's rebuilt card answer and Arran's eagles card answer and q2 explain were reworded for the changes below. No card id changed."
+ ],
+ "changed": [
+  {
+   "key": "talisker",
+   "field": "bottle.still",
+   "was": "U-shaped lyne arms on the wash stills send some vapour back",
+   "now": "The wash stills' lyne arms dip in a U-bend with a purifier that returns some spirit",
+   "why": "a purifier returns condensed spirit to the still; the field was also trimmed to its cap",
+   "sources": [
+    "https://www.diffordsguide.com/producers/72/talisker-distillery/production",
+    "https://scotchwhisky.com/magazine/ask-the-professor/19310/secrets-of-the-lyne-arm/"
+   ]
+  },
+  {
+   "key": "talisker",
+   "field": "sources[0].url",
+   "was": "https://www.malts.com/en-gb/products/talisker-10-year-old",
+   "now": "https://www.malts.com/en-row/products/single-malt-whisky/talisker-10-year-old",
+   "why": "the address the producer's search returned for the page whose casks and notes the record uses",
+   "sources": [
+    "https://www.malts.com/en-row/products/single-malt-whisky/talisker-10-year-old"
+   ]
+  },
+  {
+   "key": "highland-park",
+   "field": "bottle.still, story",
+   "was": "the two kilns; dries it in two kilns",
+   "now": "the kilns; dries it in its kilns",
+   "why": "the producer speaks of its kilns and gives no number; no second source gave one",
+   "sources": [
+    "https://www.highlandparkwhisky.com/brand-story/craft"
+   ]
+  },
+  {
+   "key": "highland-park",
+   "field": "story",
+   "was": "built the distillery on the site of the smuggler's bothy",
+   "now": "built the distillery there",
+   "why": "no source found puts the distillery on the bothy's site",
+   "sources": [
+    "https://www.diffordsguide.com/producers/217/highland-park-distillery/history",
+    "https://en.wikipedia.org/wiki/Highland_Park_distillery"
+   ]
+  },
+  {
+   "key": "jura",
+   "field": "story",
+   "was": "In 1901 it closed as demand fell",
+   "now": "It closed in 1901",
+   "why": "sources tell of the closure and the roof taken off, one to avoid rent; none gives falling demand",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jura_distillery",
+    "https://www.scottish-places.info/features/featurefirst11876.html"
+   ]
+  },
+  {
+   "key": "jura",
+   "field": "story",
+   "was": "James Ferguson and Sons took it over in 1876",
+   "now": "Later in the century James Ferguson and Sons took it over",
+   "why": "one account dates the takeover 1876, Wikipedia a restoration of 1884",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jura_distillery",
+    "https://gracesguide.co.uk/Isle_of_Jura_Distillery"
+   ]
+  },
+  {
+   "key": "jura",
+   "field": "story, cards[rebuilt].answer",
+   "was": "a local landowner and a whisky entrepreneur",
+   "now": "two landowners of the island",
+   "why": "both rebuilders were island landowners in Wikipedia and Scotchwhisky.com",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jura_distillery",
+    "https://media.scotchwhisky.com/whiskypedia/1869/jura/"
+   ]
+  },
+  {
+   "key": "jura",
+   "field": "bottle.still",
+   "was": "more than 25 feet tall, a design of the distillery rebuilt between 1960 and 1963",
+   "now": "about 25 feet tall, of the tall design drawn when the distillery was rebuilt in the 1960s",
+   "why": "sources give 7.7 metres and 24.75 feet; over 25 feet in one",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jura_distillery",
+    "https://media.scotchwhisky.com/whiskypedia/1869/jura/"
+   ]
+  },
+  {
+   "key": "jura",
+   "field": "story, others, traps[0]",
+   "was": "the 12 credited with peach, citrus and walnut; no word of its casks",
+   "now": "the 12 matured in ex-bourbon casks alone at 40% ABV, with no sherry finish; the 12 Year Old Oloroso Edition added under others",
+   "why": "the producer's page for the 12 gives American white oak ex-bourbon casks and 40%; retailers who print an Oloroso finish describe the 12 of the 2018 range or the Oloroso Edition",
+   "sources": [
+    "https://www.jurawhisky.com/en-gb/our-whisky/aged-range/12-year-old/",
+    "https://www.jurawhisky.com/en-gb/our-whisky/special-limited-releases/12-year-old-oloroso-edition/"
+   ]
+  },
+  {
+   "key": "jura",
+   "field": "sources[3]",
+   "was": "Undiscovered Scotland: Isle of Jura Distillery",
+   "now": "Jura: 12 Year Old",
+   "why": "the new casks of the 12 rest on the producer's own page; five sources is the cap",
+   "sources": [
+    "https://www.jurawhisky.com/en-gb/our-whisky/aged-range/12-year-old/"
+   ]
+  },
+  {
+   "key": "arran",
+   "field": "story",
+   "was": "at a time when distilleries elsewhere were closing",
+   "now": "(cut)",
+   "why": "no source found makes the claim",
+   "sources": [
+    "https://www.arranwhisky.com/about/history"
+   ]
+  },
+  {
+   "key": "arran",
+   "field": "story",
+   "was": "the eagles come back most years",
+   "now": "(cut)",
+   "why": "a present habit that will not hold, on the house's word alone",
+   "sources": [
+    "https://www.arranwhisky.com/about/history"
+   ]
+  },
+  {
+   "key": "arran",
+   "field": "story, cards[eagles].answer, quiz q2 explain",
+   "was": "in the hills above",
+   "now": "on a cliff above the site",
+   "why": "the pair nested on a cliff near the site by the producer's history and Wikipedia",
+   "sources": [
+    "https://www.arranwhisky.com/about/history",
+    "https://en.wikipedia.org/wiki/Lochranza_distillery"
+   ]
+  },
+  {
+   "key": "tobermory",
+   "field": "bottle.wood",
+   "was": "Twelve years in American oak casks, matured on Mull",
+   "now": "Twelve years in American oak casks",
+   "why": "the producer names American oak and not the place of maturation",
+   "sources": [
+    "https://tobermorydistillery.com/products/tobermory-12-year-old"
+   ]
+  },
+  {
+   "key": "tobermory",
+   "field": "story",
+   "was": "known for much of its life as Ledaig",
+   "now": "first called Ledaig",
+   "why": "founded as Ledaig in Wikipedia and Scotchwhisky.com, and named so again only from 1972",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tobermory_distillery",
+    "https://scotchwhisky.com/whiskypedia/1900/tobermory/"
+   ]
+  },
+  {
+   "key": "tobermory",
+   "field": "story",
+   "was": "The Distillers Company bought it in 1916 and shut it in 1930",
+   "now": "The Distillers Company took it over in 1916 and shut it around 1930",
+   "why": "one account has the company buy the owner, John Hopkins and Co.; the closure is 1930 in some accounts and 1928 in another",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tobermory_distillery",
+    "https://whiskymag.com/articles/the-several-lives-of-tobermory"
+   ]
+  },
+  {
+   "key": "tobermory",
+   "field": "story",
+   "was": "production resumed in 1989",
+   "now": "it was distilling again by 1990",
+   "why": "accounts give 1989 and 1990 for the return",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tobermory_distillery",
+    "https://www.dcs.ed.ac.uk/home/jhb/whisky/smws/42.html"
+   ]
+  }
+ ],
+ "open": [
+  "talisker: the maltings of 1972 are demolished in Canmore, closed in the record; the Classic Malts year stays the end of the 1980s.",
+  "highland-park: much of the whisky in dunnage rests on one account; the angels' share line is the house's own claim, hedged as such.",
+  "jura: the licence of 1831 and its holder, and the Small Isles name, stand on the producer's timeline; the Ferguson date stays out.",
+  "arran: the founder's death (2016) rests on one source, so he is described; the label's front wording was not seen.",
+  "tobermory: the founder's dates were not found; the year Burn Stewart bought it (1991 or 1993) stays out."
+ ],
+ "living": [
+  "Met in sources and named in no record: Graham Eunson (already in people.json); new for people.json, Ewan McGregor, who opened the first legal Arran cask in 1998, Gordon Mitchell, the distiller who showed the Queen round Arran in 1997, and Caroline McQuistin, a writer on the producer's Talisker pages.",
+  "The dead and the undated met: Hugh and Kenneth MacAskill, Magnus Eunson, David Robertson, Archibald Campbell, William Abercrombie, Robin Fletcher, Tony Riley-Smith, William Delmé-Evans, Harold Currie (died 2016 in one source), John Sinclair. None is named in a record; Robert Louis Stevenson (1850 to 1894) stands in the Talisker story."
+ ],
+ "swaps": [
+  "jura, bottling: the author's proposal to change the flagship from Jura 10 Year Old to Jura 12 Year Old is refused for now, and only for the lint. The case is strong: the house announced in August 2025 that the 12 replaces the 10 as its first age statement (The Scotsman, The Whiskey Wash, One More Dram), on British shelves from October 2025 and around the world after; the producer's British site files the 10 under previous releases and its American site lists the 12 in the core range. A record written for the 12 cannot lint until plan.json carries it (the name would lack 10), and this refuter may not touch plan.json. For the read-together agent, with plan.json: { \"kind\": \"bottling\", \"key\": \"jura\", \"from\": \"Jura 10 Year Old\", \"to\": \"Jura 12 Year Old\", \"why\": \"the house replaced the 10 with the 12 as its first age statement in 2025\", \"agreed\": true, \"date\": \"2026-11-22\" }, then the record rewritten for the 12, keeping the key and the card ids sherry-finish and rebuilt: twelve years in American white oak ex-bourbon casks with no sherry finish, 40% ABV, peach, bright citrus and lightly toasted walnut with honey and a little cocoa on the nose (the producer's 12 page and its taste guide); the sherry-finish card then asks whether the 12 is sherry finished (no: the 10 it replaced was), and the 10 moves to others.",
+  "No other swap proposed; Talisker, Highland Park, Arran and Tobermory stand with their flagships as the roster names them."
+ ],
+ "tension": [
+  "The Ledger's islands style, quiz[2].q: names Hugh and Kenneth MacAskill with no dates, against the house rule that the dead are named with their dates; the year 1830 agrees with the record. Reported, not edited.",
+  "The Ledger's islands style, benchmarks: lists Isle of Jura, while the producer's pages and labels print Jura. Reported, not edited.",
+  "The Library's Highland Park record: Orkney's constant wind and even temperature make for unusually steady maturation; the producer claims only a temperate climate and less spirit lost than on the mainland, and the wind is not confirmed. Reported, not edited.",
+  "plan.json, jura why: calls the 10 lightly smoky (the producer's notes give no smoke) and names the 10 as the flagship the house replaced in 2025. Reported, not edited.",
+  "plan.json, arran why: has Lagg make the peated spirit and Lochranza renamed for it; no source shows a renaming, only the Lochranza Distillery name put on the label in 2019. Reported, not edited.",
+  "plan.json, highland-park why: names Magnus Eunson with no dates; the record describes him. Reported, not edited."
+ ]
+}
