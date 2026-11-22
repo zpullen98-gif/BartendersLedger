@@ -278,6 +278,45 @@ for (const [label, arr, key] of [
 	}
 }
 
+// ---- the Cask Atlas reaches Producers and flagships ---------------------------
+// js/ui-caskhouses.js draws the producers (22 November 2026) under the Atlas at
+// #/casks/houses, a group at #/casks/houses/<group> and a house below it. The
+// Atlas router reads those addresses, prints them back, draws them and lets
+// them climb their own levels before its home; a hook dropped leaves the page
+// loaded and unreachable in silence, so each is read here. Every group and
+// house key is its own slug, or its address would not read back, and every
+// style and chapter a group names is one the Ledger holds.
+{
+	const casksJs = read('../js/ui-casks.js');
+	const index = read('../index.html');
+	const has = (f) => existsSync(new URL(f, import.meta.url));
+	const chSrc = has('../js/data-caskhouses.js') ? read('../js/data-caskhouses.js') : '';
+	if (!chSrc) problems.push('js/data-caskhouses.js is missing: Producers and flagships has no data');
+	else {
+		for (const [hook, what] of [['caskHouseRoute(parts)', 'the router'], ['caskHouseRouteNow()', 'the address'], ['caskHouseParent()', 'the climb from a house to its group and the root'], ['caskHouseRender()', 'the page']]) {
+			if (!casksJs.includes(hook)) problems.push(`js/ui-casks.js does not call ${hook}: ${what} of Producers and flagships is lost`);
+		}
+		const at = ['js/ui-caskstyles.js', 'js/data-caskhouses.js', 'js/ui-caskhouses.js', 'js/app.js'].map((f) => index.indexOf('src="' + f));
+		if (at.some((i) => i < 0) || at.some((i, k) => k && i < at[k - 1])) problems.push('index.html does not load js/data-caskhouses.js and js/ui-caskhouses.js after the styles and before app.js');
+		if (!index.includes('href="css/caskhouses.css')) problems.push('index.html does not load css/caskhouses.css');
+		const { CASK_HOUSES } = vm.runInNewContext(chSrc + ';({CASK_HOUSES})', {});
+		const { CASK_CHAPTERS } = vm.runInNewContext(read('../js/data-casks.js') + ';({CASK_CHAPTERS})', {});
+		const styleSrc = has('../js/data-caskstyles.js') ? read('../js/data-caskstyles.js') : '';
+		const styleIds = new Set(styleSrc ? vm.runInNewContext(styleSrc + ';({CASK_STYLES})', {}).CASK_STYLES.entries.map((e) => e.id) : []);
+		const chapterIds = new Set(CASK_CHAPTERS.map((c) => c.id));
+		const seen = new Set();
+		for (const x of [...CASK_HOUSES.groups, ...CASK_HOUSES.houses]) {
+			if (slugify(x.key) !== x.key) problems.push(`the Producers and flagships key "${x.key}" is not its own slug, so its address would not read back`);
+			if (seen.has(x.key)) problems.push(`the Producers and flagships key "${x.key}" twice`);
+			seen.add(x.key);
+		}
+		for (const g of CASK_HOUSES.groups) {
+			if (g.style && !styleIds.has(g.style)) problems.push(`the group ${g.key} names the style "${g.style}", which At the table: every style does not hold`);
+			if (g.chapter && !chapterIds.has(g.chapter)) problems.push(`the group ${g.key} names the chapter "${g.chapter}", which the Cask Atlas does not hold`);
+		}
+	}
+}
+
 // ---- section keys slug uniquely, and every card names a real section --------
 // A reference card filed under a dom that names no section renders NOWHERE and
 // searches to a dead route, which is the exact shape of a half-finished move.

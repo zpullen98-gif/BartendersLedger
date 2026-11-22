@@ -59,6 +59,8 @@ function caskGrade(ok){
 function caskRouteNow(){
   const s=caskState();let tail='';
   if(s.page==='style' && typeof caskStyleRouteNow==='function'){ const r=caskStyleRouteNow(); if(r) return r; }
+  /* Producers and flagships (js/ui-caskhouses.js): its root, a group and a house */
+  if(typeof caskHouseRouteNow==='function'){ const r=caskHouseRouteNow(); if(r) return r; }
   if(s.page==='chapter' && caskChapter(s.item)) tail='/' + s.item;
   else if(s.page==='practice' || s.page==='run') tail='/practice/' + caskScope(s.scope) + (s.page==='run' && s.run ? '/' + s.run.mode : '');
   return {hash:'#/casks' + tail,key:'casks' + tail};
@@ -67,6 +69,8 @@ function caskRoute(parts){
   if(parts[0]!=='casks') return false;
   /* #/casks/style/<id>: At the table: every style (js/ui-caskstyles.js) */
   if(parts[1]==='style' && typeof caskStyleRoute==='function') return caskStyleRoute(parts);
+  /* #/casks/houses[/<group>[/<house>]]: Producers and flagships (js/ui-caskhouses.js) */
+  if(parts[1]==='houses' && typeof caskHouseRoute==='function') return caskHouseRoute(parts);
   const s=caskState();state.tab='casks';
   if(parts[1]==='practice'){
     s.scope=caskScope(parts[2]);
@@ -74,9 +78,11 @@ function caskRoute(parts){
   } else { s.item=caskChapter(parts[1]) ? parts[1] : '';s.page=s.item ? 'chapter' : 'index'; }
   return true;
 }
-function caskReference(key){ return state.tab==='casks' && caskState().page==='chapter' && /^casks\/practice\//.test(key || '') || typeof caskStyleReference==='function' && caskStyleReference(key); }
+function caskReference(key){ return state.tab==='casks' && caskState().page==='chapter' && /^casks\/practice\//.test(key || '') || typeof caskStyleReference==='function' && caskStyleReference(key) || typeof caskHouseReference==='function' && caskHouseReference(key); }
 function caskParent(){
   const s=caskState();
+  /* Producers and flagships climbs its own levels: a house, its group, the root, then the Atlas home */
+  if(typeof caskHouseParent==='function' && caskHouseParent()) return;
   if(s.page==='run'){s.page='practice';return;}
   if(s.page==='practice' && caskChapter(s.scope)){s.item=s.scope;s.page='chapter';return;}
   if(s.page!=='index'){s.page='index';s.item='';return;}
@@ -146,7 +152,7 @@ function caskRunHTML(){
   if(run.graded)body+='<p class="cask-muted" role="status">'+(run.results[run.results.length-1].ok?'Recorded as correct.':'Saved for another review.')+'</p><button class="btn btn-brass" data-act="cask-next">'+(run.idx===run.rows.length-1?'See the review':'Next question')+'</button>';
   return '<section class="cask-atlas cask-run"><p class="eyebrow">The Cask Atlas · '+(run.mode==='quiz'?'Knowledge check':'Recall')+'</p><h2 tabindex="-1">'+esc(row.q)+'</h2><p class="cask-muted">'+(run.idx+1)+' of '+run.rows.length+'</p>'+body+'</section>';
 }
-function renderCasks(){const s=caskState();if(s.page==='style'&&typeof caskStyleRender==='function'){const out=caskStyleRender();if(out)return out;}if(s.page==='chapter'&&caskChapter(s.item))return caskChapterHTML(caskChapter(s.item));if(s.page==='run')return caskRunHTML();if(s.page==='practice')return caskPracticeHTML();return caskIndexHTML();}
+function renderCasks(){const s=caskState();if(typeof caskHouseRender==='function'){const out=caskHouseRender();if(out)return out;}if(s.page==='style'&&typeof caskStyleRender==='function'){const out=caskStyleRender();if(out)return out;}if(s.page==='chapter'&&caskChapter(s.item))return caskChapterHTML(caskChapter(s.item));if(s.page==='run')return caskRunHTML();if(s.page==='practice')return caskPracticeHTML();return caskIndexHTML();}
 function caskAct(act,data){
   if(act==='fc-drill-weak'){
     const card=caskEntries('all','cards').find(function(r){return r.key===data.k;});

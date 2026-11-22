@@ -2,36 +2,44 @@
  "edition": "2026-11-21",
  "wave": "wave one, whisky and brandy",
  "partial": true,
- "unrefuted": 5,
+ "unrefuted": 0,
  "roster": {
   "groups": 32,
   "houses": 160
  },
  "built": {
-  "groups": 1,
-  "houses": 5,
-  "cards": 10,
-  "questions": 10,
-  "sources": 25
+  "groups": 3,
+  "houses": 15,
+  "cards": 30,
+  "questions": 30,
+  "sources": 75
  },
  "words": {
-  "total": 2621,
+  "total": 7510,
   "perHouse": {
-   "makers-mark": 493,
-   "weller": 505,
-   "pappy-van-winkle": 565,
-   "larceny": 530,
-   "rebel": 528
+   "jim-beam": 475,
+   "buffalo-trace": 469,
+   "wild-turkey": 482,
+   "woodford-reserve": 441,
+   "old-forester": 497,
+   "makers-mark": 498,
+   "weller": 513,
+   "pappy-van-winkle": 559,
+   "larceny": 525,
+   "old-fitzgerald": 586,
+   "four-roses": 516,
+   "old-grand-dad": 496,
+   "basil-hayden": 460,
+   "bulleit": 501,
+   "rabbit-hole": 492
   }
  },
  "keys": {
   "frozen": false,
-  "held": 10,
-  "added": 0
+  "held": 30,
+  "added": 22
  },
  "missing": [
-  "bourbon",
-  "high-rye-bourbon",
   "bottled-in-bond",
   "small-batch-single-barrel",
   "barrel-proof",

@@ -2,6 +2,16 @@
  "about": "Every recall card key of Producers and flagships, in the roster’s order: ‘Cask Houses · <pick key>/<card id>’, two a house. The pick’s key comes from plan.json and the card’s short id from its fragment; nothing is minted, so a reworded card and a swapped bottling keep their keys. A question has no key of its own: it carries the key of the card it is paired with. While frozen is false this file follows the writing build (build-caskhouses.mjs) and a key that leaves is printed. Once the integrator has run build-caskhouses.mjs --freeze, with the roster whole, a build may add a key and never loses one: a lost key refuses the build, because a key is a person’s saved record.",
  "frozen": false,
  "keys": [
+  "Cask Houses · jim-beam/age",
+  "Cask Houses · jim-beam/old-tub",
+  "Cask Houses · buffalo-trace/mash-bill",
+  "Cask Houses · buffalo-trace/rename",
+  "Cask Houses · wild-turkey/char",
+  "Cask Houses · wild-turkey/turkey-hunt",
+  "Cask Houses · woodford-reserve/two-stills",
+  "Cask Houses · woodford-reserve/labrot-graham",
+  "Cask Houses · old-forester/proof-1959",
+  "Cask Houses · old-forester/sealed-bottle",
   "Cask Houses · makers-mark/mash",
   "Cask Houses · makers-mark/wax",
   "Cask Houses · weller/wheat",
@@ -10,7 +20,17 @@
   "Cask Houses · pappy-van-winkle/pappy",
   "Cask Houses · larceny/mash",
   "Cask Houses · larceny/namesake",
-  "Cask Houses · rebel/wheated",
-  "Cask Houses · rebel/old-name"
+  "Cask Houses · old-fitzgerald/bond",
+  "Cask Houses · old-fitzgerald/heaven-hill",
+  "Cask Houses · four-roses/recipes",
+  "Cask Houses · four-roses/kirin",
+  "Cask Houses · old-grand-dad/bond",
+  "Cask Houses · old-grand-dad/namesake",
+  "Cask Houses · basil-hayden/proof",
+  "Cask Houses · basil-hayden/collection",
+  "Cask Houses · bulleit/mash",
+  "Cask Houses · bulleit/shelbyville",
+  "Cask Houses · rabbit-hole/double-malt",
+  "Cask Houses · rabbit-hole/namesake"
  ]
 }
