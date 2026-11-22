@@ -1,0 +1,155 @@
+{
+ "group": "blended-scotch",
+ "chunk": "c5",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 22,
+ "tested": [
+  "johnnie-walker: the 1909 rename of Extra Special Old Highland Whisky and when the 12 Years Old statement came, the malts the house names for Black Label (Cardhu, Glenkinchie, Caol Ila) and what each gives, John Walker's dates and the grocery of 1820, Alexander Walker's dates and Old Highland Whisky in the 1860s, Cardhu bought in 1893, Green Label's fifteen years and 43% ABV, Double Black's strength and make. 5 searches.",
+  "chivas-regal: the grocery of 1801 and where it stood, the brothers' firm of 1857, the Royal Warrant of 1843, the twenty-five year old of 1909 and its blenders, the 12 Year Old of 1938, Strathisla and Strathclyde as the house names them, the producer's tasting notes, Extra 13 and its Oloroso casks, Seagram's purchase of 1949 and the Milton distillery of 1950. 5 searches.",
+  "dewars: John Dewar's partnership, the shop of 1846 on the High Street of Perth and his name on glass bottles, the first master blender and White Label of 1899, Aberfeldy built from 1896 and distilling from 1898, Bacardi's purchase of 1998 with four malt distilleries, double ageing and its six months, the producer's tasting notes. 4 searches.",
+  "the-famous-grouse: the grocery on Atholl Street and who held it before the Gloags, The Grouse Brand of 1896 or 1897, the daughter who drew the bird, the rename of 12 August 1905, the sale to Highland Distillers in 1970 and the estate duty behind it, Smoky Black and its peated Glenturret, the sherry casks, the core blend's tasting notes, Ruby Cask's port casks. 5 searches.",
+  "ballantines: the grocery of 1827 in the Cowgate, George Ballantine's dates, Glasgow in 1865, the Royal Warrant of 1895, Finest of 1910, the arms of 1938, the geese of 1959, the 7 American Barrel's seven years and American oak finish. 3 searches.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, no length clue (the lint holds the group), keys at positions 0, 1, 2, 3, 1, 2, 3, 0, 2, 1, every explain naming the nearest wrong option. Only the Johnnie Walker q2 stem was reworded. No card id changed."
+ ],
+ "changed": [
+  {
+   "key": "johnnie-walker",
+   "field": "story, quiz q2",
+   "was": "renamed Black Label ... by its label; it has carried twelve years from the start; q2: its twelve year old blend",
+   "now": "renamed Black Label ... by its label.; q2: its aged blend",
+   "why": "Whisky Magazine has the Extra Special blend given its 12 Years Old statement soon after its relaunch of 1906, so no source dates the twelve years to the start of the blend",
+   "sources": [
+    "https://www.whiskymag.com/articles/right-foot-forward/",
+    "https://www.thewhiskyexchange.com/feature/johnnie_walker/johnnie_walker_history.html"
+   ]
+  },
+  {
+   "key": "johnnie-walker",
+   "field": "others[Johnnie Walker Double Black].note",
+   "was": "A smokier sibling of Black Label, with no age statement, bottled at 40% ABV.",
+   "now": "A smokier sibling of Black Label, from west coast whiskies and charred casks, with no age statement.",
+   "why": "no producer page read gives the strength; the house's own guide gives west coast whiskies and charred barrels",
+   "sources": [
+    "https://www.johnniewalker.com/en-us/whisky-guide/types-of-whisky"
+   ]
+  },
+  {
+   "key": "chivas-regal",
+   "field": "story",
+   "was": "a grocery opened on King Street in Aberdeen in 1801",
+   "now": "a grocery opened in Aberdeen in 1801, later on King Street",
+   "why": "accounts put the shop of 1801 elsewhere (one at Castle Street) and its move to King Street in 1837; the Aberdeen council's plaque marks the Chivas premises on King Street",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Chivas_Brothers",
+    "https://emuseum.aberdeencity.gov.uk/sites/230/plaque064",
+    "https://www.pressandjournal.co.uk/fp/nostalgia/2433508/how-two-penniless-ellon-brothers-walked-to-aberdeen-and-created-a-global-luxury-whisky-brand/"
+   ]
+  },
+  {
+   "key": "chivas-regal",
+   "field": "story",
+   "was": "in 1950 it bought the Strathisla distillery at Keith",
+   "now": "in 1950 it bought the Milton distillery at Keith, renamed Strathisla in 1951",
+   "why": "the distillery sold at auction in April 1950 was then named Milton and took the name Strathisla in 1951",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Strathisla_distillery",
+    "https://media.scotchwhisky.com/whiskypedia/1894/strathisla"
+   ]
+  },
+  {
+   "key": "chivas-regal",
+   "field": "traps[0]",
+   "was": "not to the whisky",
+   "now": "not of the whisky",
+   "why": "grammar",
+   "sources": []
+  },
+  {
+   "key": "the-famous-grouse",
+   "field": "story",
+   "was": "In 1905, when the business became a limited company, the blend took the name",
+   "now": "On 12 August 1905, by the house's account, the blend took the name",
+   "why": "no source read ties the rename to the limited company; Edrington's annual report and Difford's Guide date it to the Glorious Twelfth of 1905",
+   "sources": [
+    "https://annualreport.edrington.com/our-brands/the-famous-grouse",
+    "https://www.diffordsguide.com/beer-wine-spirits/974/the-famous-grouse"
+   ]
+  },
+  {
+   "key": "the-famous-grouse",
+   "field": "story",
+   "was": "the sudden death of its chairman left heavy death duties",
+   "now": "the death of its chairman left a heavy bill for estate duty",
+   "why": "Wikipedia and Master of Malt give the chairman's death and an estate duty bill; neither says sudden",
+   "sources": [
+    "https://en.wikipedia.org/wiki/The_Famous_Grouse",
+    "https://www.masterofmalt.com/blog/post/famous-grouse.aspx"
+   ]
+  },
+  {
+   "key": "the-famous-grouse",
+   "field": "story",
+   "was": "a family grocery and wine business",
+   "now": "a grocery and wine business",
+   "why": "accounts give the grocery to a Brown, whose daughter Matthew Gloag married, before the Gloags",
+   "sources": [
+    "https://media.scotchwhisky.com/whiskypedia/2619/matthew-gloag-son/",
+    "https://gracesguide.co.uk/Matthew_Gloag_and_Son"
+   ]
+  },
+  {
+   "key": "the-famous-grouse",
+   "field": "story, others[The Famous Grouse Smoky Black].note",
+   "was": "a peated Glenturret malt goes into the smoky version of the blend; More peated malts, among them a peated Glenturret",
+   "now": "when the smoky version of the blend was remade as Smoky Black in 2015, a peated Glenturret malt went into it; Remade from The Black Grouse in 2015 with more peated malts, a peated Glenturret among them",
+   "why": "the peated Glenturret is dated to the remake of 2015; Glenturret left the brand's makers in 2019, so a present tense may not hold",
+   "sources": [
+    "https://distiller.com/spirits/smoky-black",
+    "https://shop.thefamousgrouse.com/products/the-famous-grouse-smoky-black-70cl-40"
+   ]
+  },
+  {
+   "key": "the-famous-grouse",
+   "field": "bottle.taste, table, story",
+   "was": "toffee, fudge and Speyside fruit on a medium palate, with a clean, medium dry finish; table: oak, toffee and Speyside fruit; story: its oak and toffee",
+   "now": "mature Speyside fruit, dried fruit and buttery shortbread on a medium full palate, with oak spice on the finish; table: oak and dried fruit, with Speyside fruit; story: its oak and dried fruit",
+   "why": "the house's notes as retailers repeat them give oak and sherry with a citrus hint, medium full mature Speyside fruit, dried fruit, buttery shortbread and oak spice; no producer note found gives toffee or fudge",
+   "sources": [
+    "https://reservebar.com/products/the-famous-grouse-blended-scotch-whisky/GROUPING-33186",
+    "https://www.whiskymag.com/tastings/the-famous-grouse-finest-scotch-whisky/"
+   ]
+  },
+  {
+   "key": "ballantines",
+   "field": "story",
+   "was": "a young grocer whose surname the label carries opened a shop",
+   "now": "George Ballantine (1809 to 1891), a grocer of nineteen, opened a shop",
+   "why": "two sources agree on his death in 1891 and the house gives his birth as 1809, so the brief lets him be named with his dates",
+   "sources": [
+    "https://suntory.co.jp/whisky/Ballantine/chp-04-e.html",
+    "https://www.whiskeyuniv.com/b-george-ballentine",
+    "https://www.ballantines.com/en/our-story/"
+   ]
+  }
+ ],
+ "open": [
+  "johnnie-walker: the Extra Special Old Highland name is dated 1906 by Whisky Magazine; the record dates only the rename of 1909.",
+  "chivas-regal: 1801 is the house's claim (its brothers' firm dates from 1857, and who opened the grocery differs by source); whether the label prints Established 1801 Aberdeen was not settled.",
+  "dewars: the 12 Year Old's tasting words in others were not tried for want of searches.",
+  "the-famous-grouse: madeBy Matthew Gloag & Son predates the completed sale of July 2025 to William Grant & Sons, which the author's report records; the read-together agent should rule as it did for Naked Malt.",
+  "ballantines: the geese of 1959 rest on Scotchwhisky.com and the house's telling; the Hiram Walker purchase stays undated."
+ ],
+ "living": [
+  "None met. The dead met and not named in any record: Chivas Regal's blenders of 1909 (the house names two, without dates), the Famous Grouse chairman whose death in 1970 led to the sale, the Dewar sons and A. J. Cameron (no two sources for their deaths)."
+ ],
+ "swaps": [
+  "the-famous-grouse: no swap. The author raised Finest on British labels only as a possibility; the roster's The Famous Grouse stands, and Finest stays off the label terms since the roster's flagship does not print it.",
+  "No other swap proposed; all five flagships stand as the roster names them."
+ ],
+ "tension": [
+  "plan.json, the-famous-grouse why: says the grouse was drawn from a sketch by the founder's daughter; Wikipedia and Difford's give the daughter of the founder's grandson, and the record follows them. Reported, not edited.",
+  "plan.json, ballantines why: says Finest is bottled and warehoused at Dumbarton as present fact; the Dumbarton grain distillery was mothballed in 2002 and the record leaves the present out. Reported, not edited.",
+  "plan.json, chivas-regal note: says the label prints Established 1801 Aberdeen; not confirmed. Reported, not edited."
+ ]
+}
