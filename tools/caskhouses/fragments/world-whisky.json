@@ -133,7 +133,21 @@
     "Living people met in the sources and added to people.json: the founder of the King Car Group (Tien-Tsai Lee), its president (YT Lee) and the former master blender (Ian Chang).",
     "The Cask Atlas chapter on world whisky agrees: it names Kavalan's Yilan distillery as subtropical single malt and warns against turning tropical years into Scottish ones, which the record repeats."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.taste: pear drops, a ripe fruit palate and a citrus finish stood in no source for the Classic; now a floral nose of mango, tropical fruit and vanilla and a palate of honey, coconut, red apple and gentle spice, from the house's floral note and its distributors' notes.",
+     "others[1].note: the Vinho Barrique casks were called stripped and toasted; Whisky Magazine and the importers give shaved, toasted and recharred, the STR treatment, so now shaved, toasted and recharred."
+    ],
+    "open": [
+     "bottle.wood: mainly refill and former bourbon barrels with a small share of sherry casks rests on the importer and shops; the house publishes no cask make-up for the Classic.",
+     "bottle.strength: 40% ABV in most listings, United Kingdom and United States alike; the importer and one shop list 43%, so no market note is given.",
+     "story: the day of the first new make, 11 March 2006, rests on The Spirits Business alone and stays hedged as one account.",
+     "sources: the importer's address carries the word portfolio, which the voice refuses in prose; the integrator may prefer another page."
+    ]
+   }
   },
   {
    "key": "amrut",
@@ -262,7 +276,20 @@
     "Left out for want of a second source: the angel's share figure (about 12 per cent a year, one account), the still sizes and fermentation length, and the whisky writer's notice of 2010, which is score talk in any case.",
     "The other bottling's 46% strength rests on two shops' listings of the label; the refuter may prefer to confirm it on the producer's page."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.mash: the share of peated Scottish barley was widely given as a quarter; WhiskyCast gives a fifth, The Whiskey Wash a quarter, and Amrut gives no figure, so now the house gives no proportion and accounts differ.",
+     "bottle.taste: the long, spiced finish of marmalade rested on a shop; now a long finish of chocolate fudge, as the house's own page gives it, and the nose and palate to oak, barley sugar, smoke, coffee and dark chocolate as two reviews give them.",
+     "story: the surplus of aged malt rested on no source found; now the malt went first into the company's blended whiskies for the Indian market, as the 1986 blend and the early batches used in blends are told by two accounts."
+    ],
+    "open": [
+     "story: the founder's son is dated by his death in 2019 on The Spirits Business alone in this reading; the author's second source (Star of Mysore) was not re-read.",
+     "others[0].note: the standard bottling at 46% ABV was not re-read on the producer's page."
+    ]
+   }
   },
   {
    "key": "starward",
@@ -395,7 +422,22 @@
     "Left out for want of a second source: whether the barrels are recharred (the house says lightly charred or steamed, a review says not recharred), the Italian maker of the stills, and the investment of Distill Ventures in 2015.",
     "The Cask Atlas chapter names LARK for Australia and warns that not all Australian whisky is wine cask matured; this record names one mainland house whose style is the wine cask and says so, with a trap that tells it apart from Tasmania."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.mash: grown within two hours of the distillery stands on one house page while others say within a day's drive or Geelong; now grown near Melbourne by the house's account, fermented with a distilling and a brewing yeast as the house's method page says.",
+     "bottle.wood and cards[wine-barrels].answer: pinot noir is named by the house for its range, not for Nova, which it ties to shiraz and cabernet; now shiraz and cabernet among them.",
+     "bottle.taste: honeyed fruit, soft malt sweetness and a dry, nutty finish stood in no source; now red berries, toasted oak, cinnamon, clove, vanilla, dark chocolate and dry oak tannin, from the house's note and two reviews.",
+     "story: production from January 2010 rested on one account and is cut; Solera is now dated 2013, its first release, in two accounts; the red wine barrels came mainly from the Barossa and Yarra valleys by the house's account, not from South Australia alone; the Port Melbourne warehouse is now larger, not twice the size, since one account gives four times the space.",
+     "others[1].note: 100 Proof now told as named for its strength and sold first as Fortis, which shops and a distributor give; the year of the change is left out."
+    ],
+    "open": [
+     "label[0].means and story: the renaming of the Wine Cask release as Nova rests on Oz Whisky Review, a blog and a shop; no house page read gives it, and no year is given.",
+     "year: 2007 for the founding stands in the house's own fifteen moments and Whisky Advocate; one account gives 2004, the year of the founder's first visit to Tasmania."
+    ]
+   }
   },
   {
    "key": "sullivans-cove",
@@ -530,7 +572,21 @@
     "The Cask Atlas names LARK for Tasmania; Tasmania's ban of 1838 and its end in the early 1990s agree with Difford's Guide and Lark's own history. Bill Lark, living, is added to people.json; LARK the label is unaffected.",
     "The house's process page gives double distillation, worm tub condensers and three named stills; the stills are called copper pot stills on two of its product pages, and their count is left out as a figure that may change."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.still: copper pot stills, in the plural, did not hold for the spirit of a cask of about ten years; the house's original still, Myrtle, made every run for decades and two more stills were added in 2023 (Man of Many, Food and Drink Business); the worm tub condensers stand on the house's process page.",
+     "story: slow distillation in copper pot stills now slow distillation in copper, for the same reason.",
+     "sources: the house's process page now at its address as the search returns it, sullivanscove.com/pages/our-process."
+    ],
+    "open": [
+     "story: 2004 for the move to Cambridge stands in two accounts; one shop's history gives 2003.",
+     "story: the first spirit in March 1995 and the first single malt in March 1997 stand on the house's page and Oz Whisky Review; the first bottling under the Sullivans Cove name was a blend of bought in Scotch by Oz Whisky Review, and the record speaks only of the first single malt.",
+     "bottle.label[1]: French Oak Ex-Tawny is the house's product name for these casks; whether the label itself prints it was not seen."
+    ]
+   }
   },
   {
    "key": "penderyn",
@@ -668,7 +724,21 @@
     "The royal guest at the launch in 2004, who is living, is not named. The chief executive named in a Master of Malt interview is added to people.json (Stephen Davies).",
     "Left out for want of a second source: the Dragon range's strength (40 or 41% in the house's own pages), the age of the Madeira Finish, and the sale history of the company."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.still and story: pot stills in 2013 and 2014 did not hold; a second Faraday still came in 2013 and two copper pot stills in June 2014, by The Spirits Business and a second trade account.",
+     "bottle.taste: a light, fresh malt with tropical fruit through to the finish now follows the house's own note: a crisp, rounded palate whose sweetness balances a dry edge, and a finish of tropical fruit, raisins and vanilla.",
+     "story: the friends in the pub now told as the house tells it; Jim Swan with the house from the beginning now an adviser from its early years, since the house's press packs give 2002 and another of its pages the very early days, and the Madeira judgement hedged as the house's account; Aur Cymru hedged as one account, since only Difford's Guide names it the first bottling.",
+     "others[1].note: casks that had held peated Islay whisky stood in no house page; now a peated finish with a medium peaty character at 46% ABV, as the product page gives it."
+    ],
+    "open": [
+     "story: Llandudno in 2021 and Swansea in 2023 rest on Wikipedia and trade reports of the handover; no house page was read for them.",
+     "bottle.still: which still makes the spirit of the Madeira Finish since 2014 is not known and the record does not say."
+    ]
+   }
   }
  ]
 }

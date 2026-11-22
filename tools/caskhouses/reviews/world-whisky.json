@@ -1,0 +1,230 @@
+{
+ "group": "world-whisky",
+ "chunk": "c9",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 34,
+ "tested": [
+  "kavalan: the 2005 build, the first new make in March 2006, the Classic in December 2008, Taiwan's entry to the WTO in 2002 and the end of the alcohol monopoly (USTR, Taiwan Tobacco and Liquor), the Classic's casks, nose and palate, its strength by market, the Vinho Barrique's STR casks. 6 searches.",
+  "amrut: Fusion's two barleys, separate distillation and maturation in new and old American oak and the 3,000 feet on Amrut's own pages; the 1948 founding and the 1987 Kambipura distillery; the Glasgow launch at Cafe India on 24 August 2004; Fusion in 2009; the barley share; the tasting notes. 4 searches.",
+  "starward: 2007, the Qantas hangar at Essendon Fields, the 2016 move to Port Melbourne; Nova's red wine barrels and varieties, the wet fill, 41% ABV; the Wine Cask renaming; Solera in 2013; Fortis and 100 Proof; the barley, the yeasts and the stills; the tasting notes. 7 searches.",
+  "sullivans-cove: the 1994 founding at the old gasworks on the waterfront, the 1995 first spirit and 1997 first single malt, the 2004 move to Cambridge, the stills Myrtle, Goldie and Eva and the 2023 additions, the worm tubs on the house's process page, unfiltered single casks, the French Oak Ex-Tawny and Refill releases, the name on labels and in the trade. 6 searches.",
+  "penderyn: 1998, the first spirit of September 2000 and St David's Day 2004, the Faraday still at 92 per cent, the second Faraday still of 2013 and the pot stills of June 2014, Llandudno in 2021 and Swansea in 2023, the GI of 24 July 2023, Jim Swan's part and his death, Aur Cymru, the Madeira Finish's notes and strength, the Peated. 9 searches.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, no length clue the lint finds, keys at positions 1, 2, 2, 1, 1, 0, 0, 2, 3, 2, each explain naming the nearest wrong option. Two card answers reworded (starward wine-barrels); no card id changed.",
+  "34 of the 42 searches spent; 8 left unused."
+ ],
+ "changed": [
+  {
+   "key": "kavalan",
+   "field": "bottle.taste",
+   "was": "Mango and other tropical fruit, honey, vanilla and pear drops on a floral nose, then a sweet palate of ripe fruit and gentle spice, with a medium finish touched by citrus.",
+   "now": "A clean, floral nose of mango and other tropical fruit with vanilla, then a sweet palate of honey, coconut, red apple and gentle spice.",
+   "why": "pear drops and citrus stood in no note of the Classic; the house calls the nose floral, and distributors give mango, coconut, honey, cinnamon and red apple",
+   "sources": [
+    "https://specialitybrands.com/range/kavalan/kavalan-classic-single-malt",
+    "https://distiller.com/spirits/kavalan-classic-single-malt-whisky"
+   ]
+  },
+  {
+   "key": "kavalan",
+   "field": "others[1].note",
+   "was": "Matured wholly in American oak wine barriques that were stripped and toasted before filling.",
+   "now": "Matured wholly in American oak casks that held wine, shaved, toasted and recharred before filling.",
+   "why": "the casks are STR casks, shaved, toasted and recharred",
+   "sources": [
+    "https://whiskymag.com/articles/shaved-toasted-recharred-the-cask-that-made-kavalan/",
+    "https://kensingtonwinemarket.com/product/837737/kavalan-solist-vinho-barrique"
+   ]
+  },
+  {
+   "key": "amrut",
+   "field": "bottle.mash",
+   "was": "with a smaller share of peated barley from Scotland, widely given as a quarter.",
+   "now": "with a smaller share of peated barley from Scotland; the house gives no proportion, and accounts differ between a quarter and a fifth.",
+   "why": "Amrut's page says only bulk and the rest; The Whiskey Wash gives 75 and 25, WhiskyCast 80 and 20",
+   "sources": [
+    "https://amrutdistilleries.com/amrut-fusion-singlemalt-whisky-50-duplicate/",
+    "https://thewhiskeywash.com/world/amrut-whisky-the-ultimate-guide-to-the-indian-whisky-giant/",
+    "https://whiskycast.com/?p=9180"
+   ]
+  },
+  {
+   "key": "amrut",
+   "field": "bottle.taste",
+   "was": "Citrus, vanilla and fresh oak with a thread of smoke on the nose, then rich barley, dark chocolate and coffee over gentle peat, and a long, spiced finish of marmalade.",
+   "now": "Citrus, oak and barley sugar with a thread of smoke on the nose, then oak, gentle peat, coffee and dark chocolate, and a long finish of chocolate fudge.",
+   "why": "the house's own page gives a lingering chocolate fudge finish; the marmalade finish rested on a shop",
+   "sources": [
+    "https://www.amrutdistilleries.com/amrut-fusion-single-malt-whisky.php",
+    "https://specialitybrands.com/range/amrut/amrut-fusion-single-malt-whisky/"
+   ]
+  },
+  {
+   "key": "amrut",
+   "field": "story",
+   "was": "By one account the company found itself holding more aged malt than its blended malt whisky for the Indian market needed, and it chose to bottle a single malt and take it abroad.",
+   "now": "Its malt went first into the company's blended whiskies for the Indian market, until it chose to bottle a single malt and take it abroad.",
+   "why": "no source found for a surplus; the 1986 blended malt and the early batches used in the company's blends stand in two accounts",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Amrut_Distilleries",
+    "https://yourstory.com/smbstory/amrut-distilleries-whisky-liquor-india-brand-single-malt"
+   ]
+  },
+  {
+   "key": "starward",
+   "field": "bottle.mash",
+   "was": "Australian malted barley only, grown within two hours of the distillery by its own account, fermented with brewer's yeast as for a craft beer.",
+   "now": "Australian malted barley only, grown near Melbourne by the house's own account, brewed as for a craft beer and fermented with a distilling yeast and a brewing yeast.",
+   "why": "the house's pages give two hours, a day's drive and Geelong in turn, and name two yeasts",
+   "sources": [
+    "https://starward.com.au/blogs/journal/method",
+    "https://starward.com.au/blogs/journal/how-is-whisky-made"
+   ]
+  },
+  {
+   "key": "starward",
+   "field": "bottle.wood, cards[wine-barrels].answer",
+   "was": "shiraz, cabernet and pinot noir among them",
+   "now": "shiraz and cabernet among them",
+   "why": "the house ties Nova to bold reds such as shiraz and cabernet; pinot noir and merlot are named for its range in general",
+   "sources": [
+    "https://starward.com.au/blogs/journal/maturation",
+    "https://starward.com.au/products/nova"
+   ]
+  },
+  {
+   "key": "starward",
+   "field": "bottle.taste",
+   "was": "Red berries and toasted oak, then cinnamon spice, honeyed fruit and a soft malt sweetness, with a dry, nutty finish and a little dark chocolate.",
+   "now": "Red berries and toasted oak on the nose, then cinnamon, clove and vanilla with dark chocolate, and dry oak tannin holding the fruit on the finish.",
+   "why": "the house gives red berries, chocolate and soft oak spice; the distributor gives toasted cinnamon, clove and vanilla; a review gives the dry oak tannin; honeyed fruit and a nutty finish stood in no source",
+   "sources": [
+    "https://starward.com.au/pages/nova",
+    "https://specialitybrands.com/range/starward/nova/",
+    "https://www.pastemagazine.com/drink/whiskey/starward-nova-australian-single-malt-whiskey-revie"
+   ]
+  },
+  {
+   "key": "starward",
+   "field": "story",
+   "was": "Production began there in January 2010, by one account. ... Its first release, Solera, was matured ... mainly cabernet and shiraz from South Australia ... moved to a warehouse twice the size in Port Melbourne.",
+   "now": "(the 2010 sentence cut) Its first release, Solera, came in 2013, matured ... mainly shiraz and cabernet from the Barossa and Yarra valleys ... moved to a larger warehouse in Port Melbourne.",
+   "why": "January 2010 stands in no second source; Solera's 2013 release stands in two; the house names the Barossa and Yarra valleys; one account gives four times the space, not twice",
+   "sources": [
+    "https://issuu.com/thescotchmaltwhiskysociety/docs/outturn-10-october-2021-lr/s/13480734",
+    "https://specialitybrands.com/range/starward/solera/",
+    "https://starward.com.au/blogs/journal/maturation",
+    "https://www.goodfood.com.au/eat-out/just-open/starward-distillery-moves-to-port-melbourne-from-essendon-airport-20161202-gt2swr"
+   ]
+  },
+  {
+   "key": "starward",
+   "field": "others[1].note",
+   "was": "Bottled at 50% ABV; it was first released under the name Fortis.",
+   "now": "Bottled at 50% ABV, the strength that gives it its name; it was sold first as Fortis.",
+   "why": "the name follows from 50 per cent, as the trade listings say; the change of name stands in shops and a distributor, with no year",
+   "sources": [
+    "https://www.danmurphys.com.au/product/DM_123933/starward-100-proof-single-malt-australian-whisky-700ml",
+    "https://www.diffordsguide.com/beer-wine-spirits/7364/starward-fortis"
+   ]
+  },
+  {
+   "key": "sullivans-cove",
+   "field": "bottle.still",
+   "was": "Double distilled, slowly and with worm tub condensers, in copper pot stills at the distillery in Cambridge, outside Hobart, where it moved from the waterfront in 2004.",
+   "now": "Double distilled slowly, through worm tub condensers, in copper pot stills at Cambridge, outside Hobart, where the distillery moved from the waterfront in 2004; Myrtle, the original still, made every run for decades before two more were added in 2023.",
+   "why": "for decades the distillery ran on one still, Myrtle; a wash still and a spirit still joined it in 2023, so a cask of about ten years came from Myrtle alone",
+   "sources": [
+    "https://manofmany.com/culture/drinks/sullivans-cove-distillery-upgrade",
+    "https://www.foodanddrinkbusiness.com.au/news/sullivans-cove-unveils-14m-refurbished-distillery",
+    "https://sullivanscove.com/pages/our-process"
+   ]
+  },
+  {
+   "key": "sullivans-cove",
+   "field": "story",
+   "was": "slow distillation in copper pot stills",
+   "now": "slow distillation in copper",
+   "why": "the same: one still for most of the house's years",
+   "sources": [
+    "https://manofmany.com/culture/drinks/sullivans-cove-distillery-upgrade"
+   ]
+  },
+  {
+   "key": "sullivans-cove",
+   "field": "sources[4].url",
+   "was": "https://sullivanscove.com/about-us/process",
+   "now": "https://sullivanscove.com/pages/our-process",
+   "why": "the process page stands at this address in the search of the house's own domain",
+   "sources": [
+    "https://sullivanscove.com/pages/our-process"
+   ]
+  },
+  {
+   "key": "penderyn",
+   "field": "bottle.still",
+   "was": "pot stills joined it in 2013 and 2014.",
+   "now": "a second Faraday still followed in 2013 and two copper pot stills in 2014.",
+   "why": "a twin Faraday still was installed in 2013 and a pair of pot stills in June 2014",
+   "sources": [
+    "https://www.thespiritsbusiness.com/2015/09/penderyn-distillery-in-pictures/13/",
+    "https://www.whiskymag.com/articles/whisky-in-the-land-of-dragons/"
+   ]
+  },
+  {
+   "key": "penderyn",
+   "field": "bottle.taste",
+   "was": "then a light, fresh malt with tropical fruit, raisins and vanilla through to the finish.",
+   "now": "then a crisp, rounded palate whose sweetness balances a dry edge, and a finish of tropical fruit, raisins and vanilla.",
+   "why": "the house's note: crisp and finely rounded, sweetness to balance a dryness; tropical fruit, raisins and vanilla persist",
+   "sources": [
+    "https://www.penderyn.wales/product/penderyn-madeira/"
+   ]
+  },
+  {
+   "key": "penderyn",
+   "field": "story",
+   "was": "when a small group of friends, talking in a pub ...; Jim Swan (died 2017), with the house from the beginning, judged that ...; The first single malt, Aur Cymru, Welsh gold, went on sale ...; when pot stills joined the Faraday stills",
+   "now": "when, as the house tells it, a small group of friends talking in a pub ...; Jim Swan (died 2017), an adviser from its early years, judged, by the house's account, that ...; The first single malt, sold by one account as Aur Cymru, Welsh gold, went on sale ...; when a second Faraday still and then two copper pot stills were installed",
+   "why": "the pub and the Madeira judgement are the house's telling; its press packs date Swan's part from 2002 and another page to the very early days; Aur Cymru as the first bottling's name rests on Difford's Guide; the 2013 and 2014 stills as above",
+   "sources": [
+    "https://www.penderyn.wales/news/alun-evans-dr-jim-swan-and-glenn-tutssel-three-people-who-made-penderyn-what-it-is-today/",
+    "https://www.penderyn.wales/wp-content/uploads/2025/03/Press-Pack-10th-March-2024-1.pdf",
+    "https://www.diffordsguide.com/beer-wine-spirits/1388/penderyn-aur-cymru-single-malt"
+   ]
+  },
+  {
+   "key": "penderyn",
+   "field": "others[1].note",
+   "was": "Born, by the house's account, of casks that had held peated Islay whisky; 46% ABV.",
+   "now": "A peated finish with a medium peaty character, bottled at 46% ABV.",
+   "why": "no house page read says the casks held Islay whisky; the product page gives a peated finish of medium peat at 46%",
+   "sources": [
+    "https://www.penderyn.wales/product/penderyn-peated/"
+   ]
+  }
+ ],
+ "open": [
+  "kavalan: the Classic's cask make-up rests on the importer and shops; its strength is 40% in most listings and 43% in the importer's; the day 11 March 2006 rests on one account.",
+  "amrut: the son's death in 2019 was not re-read beyond The Spirits Business; the standard bottling's 46% was not re-read on the producer's page.",
+  "starward: the Wine Cask to Nova renaming stands on Oz Whisky Review, a blog and a shop, with no year; one account dates the founding to 2004.",
+  "sullivans-cove: the move to Cambridge is 2004 in two accounts and 2003 in a shop's history; whether the label prints French Oak Ex-Tawny was not seen.",
+  "penderyn: Llandudno 2021 and Swansea 2023 rest on Wikipedia and trade reports; which still makes the Madeira Finish's spirit since 2014 is unsaid."
+ ],
+ "living": [
+  "Met in sources and named in no record, already in people.json: the Starward founder (both forms), the Sullivans Cove founder, the Lark founder, the Faraday still's designer, Penderyn's chief executive, the King Car founder and president, Kavalan's former master blender.",
+  "New for people.json, met in sources and named in no record: Patrick Maguire (named by a shop's history as a buyer of Sullivans Cove in 2004), Alun Evans and Glenn Tutssel (named on Penderyn's page of three people who made the house; whether each is living was not established).",
+  "The dead met: Jim Swan, named with his death alone (2017), as the author wrote it; the Amrut founder and his son, the son dead in 2019, are left unnamed as the author left them; Michael Faraday, met as the designer's forebear, is not named."
+ ],
+ "swaps": [
+  "Sullivans Cove, a bottling name swap to Sullivans Cove French Oak Ex-Tawny, proposed by the author: refused for now. French Oak Single Cask is the name the trade lists the bottle under in Australia and the United Kingdom (Dan Murphy's, The Whisky Exchange, Cellarbrations, Nick's), while the house's own pages name each release French Oak Ex-Tawny with its cask number; the record carries both, the roster's words in bottle.name and French Oak Ex-Tawny as a label term, so a guest's words and the house's words are both taught without a change of key or cards.",
+  "Penderyn against Cardrona, a house swap the plan's note left open: no swap proposed by the author and none made; Penderyn stays."
+ ],
+ "tension": [
+  "Cask Atlas, world-whisky chapter: its four journeys and its examples are Kavalan, Paul John, LARK and Cardrona; this group names Kavalan, Amrut, Starward, Sullivans Cove and Penderyn, so only Kavalan is shared and Wales stands outside the chapter. Nothing contradicts it; reported, not edited.",
+  "plan.json, amrut why: gives Indian six row barley and a quarter peated Scottish barley; the six row barley is the Atlas's fact for Paul John, not Amrut, and the share is a quarter or a fifth by account, with no figure from the house. Reported, not edited.",
+  "plan.json, kavalan why: says matured mainly in American oak and gives the first new make as 11 March 2006; the house gives no cask make-up and the day rests on one account. Reported, not edited.",
+  "plan.json, sullivans-cove why: says usually at 47.5% ABV; the house's French Oak Ex-Tawny casks run from 46.0 to 48.1%. Reported, not edited.",
+  "plan.json, penderyn why: calls it the world whisky from closest to Scotland, a superlative the voice refuses; it does not ship, but the read-together agent may reword it. Reported, not edited."
+ ]
+}
