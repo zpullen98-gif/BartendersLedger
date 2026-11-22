@@ -1,0 +1,287 @@
+{
+ "group": "barrel-proof",
+ "chunk": "c2",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 19,
+ "tested": [
+  "bookers: Booker Noe's dates and his place as Jim Beam's grandson, the gift bottlings from the centre of the rackhouse, the 1987 introduction on Beam's own pages against the 1988 of Wikipedia, VinePair and the anniversary editions, the Small Batch Bourbon Collection of 1992, the mash of 77, 13 and 10 on Beam's own articles, six to eight years, 121 to 131 proof, the named batches from 2015 with Big Man, Small Batch, the Springfield batch of 2024, Booker's Rye of 2016. 4 searches.",
+  "george-t-stagg: the proof written by hand (Buffalo Trace's media biography), more than half the volume lost, no less than fifteen years, Mash Bill No. 1, Stagg's dates and his Garrard County birth, St. Louis, the 1878 or 1879 purchase, the 1904 or 1907 renaming, the six medicinal licences, Old Stagg uncut and unfiltered in the first Prohibition Collection. 3 searches.",
+  "stagg: the launch of 25 July 2013 from eight and nine year barrels, uncut and unfiltered, several batches a year at launch and two by 2020, Batch 18 as the first plain Stagg, Batch 19 as 22B, the rename of 2022 announced in 2021, the fifteenth batch in the second half of 2020. 2 searches, with one shared with George T. Stagg.",
+  "1792: the 1879 founding and Sazerac's purchase from Constellation in 2009 on Sazerac's own history, Ridgewood Reserve 1792 and Brown-Forman's suit of 2003 and the ruling of April 2004 (Law360, Law.com), the renaming to 1792 Ridgemont Reserve, Full Proof in May 2016 at 125 proof, its entry proof, the plate and frame filter, the barrels of autumn 2007, reviewers on the cut back to 125. 4 searches.",
+  "barrell: the founding in 2013 and the founder's career in marketing and technology on the house's About page, the independent blender model, Batch 036's three states, ages and derived mash bill and its new label, the class of a mixture of straight bourbons from several states under 27 CFR 5.143, Batch 005 of September 2015, Seagrass and the Whiskey series on the house's pages. 5 searches.",
+  "The cards and questions of all five, read for one right answer, plausible wrong options, no length clue and explanations that teach; the keys across the group sit 3, 2, 3 and 2 in positions 0 to 3, unchanged by the rewrites. The present tense, ownership, superlatives and scarcity read in every field. 19 of the share of 28 searches used in all."
+ ],
+ "changed": [
+  {
+   "key": "bookers",
+   "field": "bottle.mash",
+   "was": "Jim Beam's own bourbon recipe, which the producer's pages give as 77 per cent corn, 13 per cent rye and 10 per cent malted barley.",
+   "now": "Jim Beam's standard bourbon recipe, given on the producer's own pages as 77 per cent corn, 13 per cent rye and 10 per cent malted barley.",
+   "why": "the figure is the house's own article on Jim Beam's standard recipe, not a published mash bill for Booker's, so it is now given as the producer's",
+   "sources": [
+    "https://www.beamdistilling.com/articles/bookers-vs-bakers-bourbon-comparison/",
+    "https://www.beamdistilling.com/bookersbourbon/about-bookers"
+   ]
+  },
+  {
+   "key": "bookers",
+   "field": "bottle.wood",
+   "was": "New charred American oak, the barrels drawn, as the house tells it, from the middle floors of the rackhouse. Batches run six to eight years, each age given by the producer.",
+   "now": "New charred American oak, the barrels drawn, as the house tells it, from the centre of the rackhouse. Batches run about six to eight years, each age given by the producer.",
+   "why": "the house says the centre of the rackhouse, not the middle floors; sources give six to seven years in one place and six to eight in others, so about",
+   "sources": [
+    "https://www.beamdistilling.com/bookersbourbon/about-bookers",
+    "https://www.bookersbourbon.com/about-booker"
+   ]
+  },
+  {
+   "key": "bookers",
+   "field": "table",
+   "was": "Booker's is the barrel proof bourbon Jim Beam bottles uncut and unfiltered, from barrels drawn out of the middle of its Kentucky rackhouses. Booker's Bourbon comes in named batches of six to eight years, each at its own proof: vanilla, oak and brown sugar, hot until water opens it.",
+   "now": "Booker's is the barrel proof bourbon Jim Beam bottles uncut and unfiltered, from barrels drawn from the centre of its Kentucky rackhouses. Booker's Bourbon comes in named batches of about six to eight years, each at its own proof: vanilla, oak and brown sugar, hot until water opens it.",
+   "why": "the centre of the rackhouse and about six to eight years, as in the wood field",
+   "sources": [
+    "https://www.beamdistilling.com/bookersbourbon/about-bookers"
+   ]
+  },
+  {
+   "key": "bookers",
+   "field": "story",
+   "was": "Booker Noe (1929 to 2004), Jim Beam's grandson, ran the distilling at Jim Beam for more than forty years ... he chose barrels from the middle floors of the rackhouse, where the heat and the damp suit long ageing ... In 1987 he gave such bottlings to friends as holiday gifts under the name Booker's True Barrel Bourbon, and in 1988 Booker's went on public sale.",
+   "now": "Booker Noe (1929 to 2004), Jim Beam's grandson and for decades the distillery's master distiller ... he bottled it uncut and unfiltered from barrels at the centre of the rackhouse and gave it to friends and family at the holidays. Beam dates his introduction of Booker's True Barrel Bourbon to 1987, and most accounts give 1988 for its first general sale.",
+   "why": "Beam's own pages date the introduction to 1987 and the founder's son is quoted that 1987 saw the first bottle sold, while Wikipedia, VinePair and the anniversary editions count from 1988; more than forty years and the heat and damp of the middle floors were in no source read",
+   "sources": [
+    "https://www.jimbeam.com/our-story/beam-history",
+    "https://www.beamdistilling.com/bookersbourbon/about-bookers",
+    "https://en.wikipedia.org/wiki/Booker%27s",
+    "https://themanual.com/food-and-drink/bookers-30th-anniversary-bourbon-special-edition-booker-noe"
+   ]
+  },
+  {
+   "key": "bookers",
+   "field": "cards",
+   "was": "Who made Booker's, and how did he share it before it went on sale? / Booker Noe, Jim Beam's grandson, who gave uncut bottlings to friends as gifts before the public release of 1988.",
+   "now": "How did Booker Noe share his uncut bourbon before Booker's went on sale? / As holiday gifts to friends and family, bottled from barrels at the centre of the rackhouse.",
+   "why": "the prompt asked two things and the answer leant on the contested 1988; id gift-bottling unchanged",
+   "sources": [
+    "https://www.bookersbourbon.com/about-booker"
+   ]
+  },
+  {
+   "key": "bookers",
+   "field": "quiz",
+   "was": "q2: In which year did Booker's first go on public sale? 1964, 1992, 1988 (key), 2004",
+   "now": "q2: Before Booker's reached the shelves, how did Booker Noe share his barrel proof bourbon? Through Beam's 1992 collection, As an export bottling, As holiday gifts to friends (key), At a Louisville tasting bar",
+   "why": "q2 was keyed on 1988, which the producer's own history page contradicts; it now asks the gift bottlings, key still in position 2",
+   "sources": [
+    "https://www.jimbeam.com/our-story/beam-history",
+    "https://www.bookersbourbon.com/about-booker"
+   ]
+  },
+  {
+   "key": "george-t-stagg",
+   "field": "others",
+   "was": "Old Stagg: The distillery's label at the close of Prohibition, revived uncut and unfiltered in the Prohibition Collection of 2023.",
+   "now": "Old Stagg: The distillery's flagship label at the close of Prohibition, revived uncut and unfiltered in Buffalo Trace's first Prohibition Collection.",
+   "why": "the Prohibition Collection's year was not confirmed; the producer's Old Stagg page gives uncut and unfiltered and its place as the flagship at the close of Prohibition",
+   "sources": [
+    "https://www.buffalotracedistillery.com/our-brands/prohibition-collection/old-stagg.html",
+    "https://www.buffalotracedistillery.com/our-brands/prohibition-collection-1/"
+   ]
+  },
+  {
+   "key": "george-t-stagg",
+   "field": "traps[2]",
+   "was": "There is no Stagg distillery: it is made at Buffalo Trace, which carried Stagg's name from 1904 until 1999.",
+   "now": "There is no separate Stagg distillery: it is made at Buffalo Trace, the site that carried Stagg's name from 1904 until 1999.",
+   "why": "no Stagg distillery sat against the distillery having carried Stagg's name; reworded, the facts unchanged",
+   "sources": [
+    "https://www.distillerytrail.com/blog/the-complete-buffalo-trace-distillery-timeline-1773-to-today/"
+   ]
+  },
+  {
+   "key": "george-t-stagg",
+   "field": "cards",
+   "was": "A St. Louis whiskey salesman who took over E. H. Taylor's O.F.C. distillery in Frankfort in 1878.",
+   "now": "A Kentucky-born whiskey salesman in St. Louis who took over E. H. Taylor's O.F.C. distillery in Frankfort.",
+   "why": "the purchase year is 1878 in the shelf, the state marker and The Whiskey Wash but 1879 on Buffalo Trace's own page; the card no longer rests on it, and Kentucky-born rests on Buffalo Trace's biography and secondary accounts (Garrard County, 1835); id namesake unchanged",
+   "sources": [
+    "https://www.buffalotracedistillery.com/media-kit/bios/george-t-stagg.html",
+    "https://thewhiskeywash.com/bourbon/whiskey-chronicles-of-edmund-taylor-jr-part-4-bluegrass-distilling-empire/"
+   ]
+  },
+  {
+   "key": "george-t-stagg",
+   "field": "quiz",
+   "was": "q2: In which year did George T. Stagg take over the O.F.C. distillery in Frankfort? 1893, 1904, 1999, 1878 (key)",
+   "now": "q2: A guest asks who George T. Stagg was, the man on the label. A Frankfort mayor and distiller, A Bardstown grain farmer, A Louisville rackhouse builder, A St. Louis whiskey salesman (key)",
+   "why": "q2 was keyed on 1878, which the producer's own page gives as 1879; it now asks who Stagg was, key in position 3 as before",
+   "sources": [
+    "https://www.buffalotracedistillery.com/media-kit/bios/george-t-stagg.html",
+    "https://thewhiskeywash.com/bourbon/whiskey-chronicles-of-edmund-taylor-jr-part-4-bluegrass-distilling-empire/"
+   ]
+  },
+  {
+   "key": "stagg",
+   "field": "quiz",
+   "was": "q2 options: Stagg, renamed in 2022; George T. Stagg, yearly; Old Stagg, revived 2023; Eagle Rare, ten years",
+   "now": "q2 options: Stagg, renamed in 2022; George T. Stagg, older; Old Stagg, a revival; Eagle Rare, ten years",
+   "why": "two wrong options carried claims the record does not stand on: George T. Stagg as yearly, when a trade headline reports a year it was left out, and Old Stagg revived in 2023, a year not confirmed",
+   "sources": [
+    "https://thedailypour.com/?p=20665",
+    "https://www.buffalotracedistillery.com/our-brands/prohibition-collection/old-stagg.html"
+   ]
+  },
+  {
+   "key": "1792",
+   "field": "bottle.still",
+   "was": "Distilled and bottled at the Barton 1792 Distillery in Bardstown, as the label states; the producer gives no details of the equipment.",
+   "now": "Distilled, aged and bottled at the Barton 1792 Distillery in Bardstown, by the producer's account; it gives no details of the equipment.",
+   "why": "no label was read; the producer's 2016 release says distilled, aged and bottled at Barton 1792",
+   "sources": [
+    "https://www.bevnet.com/spirits/2016/new-limited-edition-full-proof-bourbon-released-1792-distillery/"
+   ]
+  },
+  {
+   "key": "1792",
+   "field": "bottle.label",
+   "was": "Distilled and Bottled by: Made and bottled by the Barton 1792 Distillery in Bardstown, not bought from another house.",
+   "now": "Kentucky Straight Bourbon Whiskey: Bourbon distilled in Kentucky and aged at least two years in new charred oak, with nothing added.",
+   "why": "Distilled and Bottled by was not read off a label; Kentucky Straight Bourbon Whiskey is in the bottle's name",
+   "sources": [
+    "https://1792bourbon.com/full-proof/",
+    "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-I"
+   ]
+  },
+  {
+   "key": "1792",
+   "field": "story",
+   "was": "... the strength at which its spirit went into new oak years before ... barrel proof, cask strength, entry proof and full proof are four promises, and of the four, barrel proof and cask strength alone say the whiskey reached the bottle as it left the barrel.",
+   "now": "... the strength at which its spirit went into new oak ...; the launch release came from barrels filled in the autumn of 2007 ... barrel proof and cask strength mean bottled within two degrees of proof of the strength leaving the barrel, entry proof means the strength going in, and full proof is the house's own name for bottling at entry proof.",
+   "why": "the launch barrels of autumn 2007 stand in the producer's release and Drinkhacker's review; full proof is no term of 27 CFR 5.87, so the four promises are now told as what each word means",
+   "sources": [
+    "https://www.bevnet.com/spirits/2016/new-limited-edition-full-proof-bourbon-released-1792-distillery/",
+    "https://www.drinkhacker.com/2016/06/12/review-1792-full-proof-bourbon/",
+    "https://thewhiskeywash.com/bourbon/1792-full-proof-bourbon-exactly-125-proof/"
+   ]
+  },
+  {
+   "key": "1792",
+   "field": "quiz",
+   "was": "It is bottled at the strength at which the spirit was put into the barrel; the bond law asks exactly 100 proof, and the spirit is distilled stronger than 125.",
+   "now": "It is bottled at the strength at which the spirit was put into the barrel; the bond law asks exactly 100 proof, and the label gives no age at all.",
+   "why": "q1's explanation said the spirit is distilled stronger than 125, which no source read gives",
+   "sources": [
+    "https://www.bevnet.com/spirits/2016/new-limited-edition-full-proof-bourbon-released-1792-distillery/"
+   ]
+  },
+  {
+   "key": "barrell",
+   "field": "bottle.class",
+   "was": "Straight bourbon whiskey; recent batches are blends of straight bourbons from more than one state",
+   "now": "Straight bourbon whiskey, or, where a batch draws on several states, a blend of straight bourbon whiskeys",
+   "why": "27 CFR 5.143 keeps the straight designation only for a mixture of straight whiskies of one state; a batch from three states is a blend of straight bourbon whiskeys; recent will age",
+   "sources": [
+    "https://www.law.cornell.edu/cfr/text/27/5.143",
+    "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-I",
+    "https://breakingbourbon.com/review/barrell-bourbon-batch-036"
+   ]
+  },
+  {
+   "key": "barrell",
+   "field": "bottle.mash",
+   "was": "Differs by batch, a blend of bourbons of several recipes. The house gives a mash bill derived for each batch, as about 79 per cent corn, 17 rye and 4 malted barley for Batch 038.",
+   "now": "Differs by batch, a marriage of bourbons of several recipes; the house gives a mash bill derived for the whole on each batch's label.",
+   "why": "Batch 038's figures were not confirmed, and Batch 036 reads 79, 16 and 5 in two listings; a batch's figure does not teach the series",
+   "sources": [
+    "https://breakingbourbon.com/review/barrell-bourbon-batch-036",
+    "https://thedailypour.com/?p=69959"
+   ]
+  },
+  {
+   "key": "barrell",
+   "field": "bottle.wood",
+   "was": "New charred oak, as straight bourbon requires. Ages differ by batch, from about five to sixteen years in the blend; since Batch 036 the front label lists every age.",
+   "now": "New charred oak, as straight bourbon requires. Ages differ by batch; from Batch 036 the label sets out the age of each whiskey in the blend.",
+   "why": "five to sixteen years was in no source for the series, and the front of the label was not confirmed for the ages",
+   "sources": [
+    "https://thedailypour.com/?p=69959",
+    "https://pastemagazine.com/drink/whiskey/barrell-bourbon-batch-036-review-flavors-price-source-new-label"
+   ]
+  },
+  {
+   "key": "barrell",
+   "field": "bottle.strength",
+   "was": "Varies by batch, cask strength, about 110 to 122 proof",
+   "now": "Varies by batch, cask strength",
+   "why": "a range from six batches does not hold a series that runs on; the brief's form for a batch release",
+   "sources": [
+    "https://www.barrellbourbon.com/bourbon"
+   ]
+  },
+  {
+   "key": "barrell",
+   "field": "bottle.taste",
+   "was": "Batches differ, and the house's notes are each batch's own: for one recent batch, fruit punch and pineapple giving way to aged wood, then oatmeal raisin cookie, sweet potato pie and crusty bread.",
+   "now": "Batches differ, and the house writes notes for each one: one batch runs from fruit punch and pineapple to aged wood, then oatmeal raisin cookie, sweet potato pie and crusty bread.",
+   "why": "the lint refuses the batch number as a figure in the taste; the notes stay the house's for one batch",
+   "sources": [
+    "https://www.barrellbourbon.com/bourbon"
+   ]
+  },
+  {
+   "key": "barrell",
+   "field": "story",
+   "was": "Rye, blended whiskey and rum followed in the same way, Barrell Whiskey among them in 2015 ... barrels of five to sixteen years from Tennessee, Kentucky and Indiana ... a new label that names on its front the states ...",
+   "now": "By September 2015 it had reached its fifth bourbon batch, and rye, blended whiskey and rum followed in the same way ... whiskeys from Tennessee, Kentucky and Indiana ... a new label that sets out the states ...",
+   "why": "Barrell Whiskey in 2015 rested on one review; the house's post of 29 September 2015 announces Batch 005; five to sixteen years and the front of the label as in the wood field",
+   "sources": [
+    "https://www.barrellbourbon.com/post/2015/09/29/our-latest-release-barrell-bourbon-batch-005",
+    "https://www.barrellbourbon.com/aboutus"
+   ]
+  },
+  {
+   "key": "barrell",
+   "field": "others",
+   "was": "Barrell Whiskey: begun in 2015 with whiskey distilled in Indiana. Barrell Gray Label Bourbon: A blend of straight bourbons bottled at cask strength under its own grey label.",
+   "now": "Barrell Whiskey: A separate series of blended whiskeys at cask strength, its batches often finished in other casks, from sherry and port to amaro. Barrell Seagrass: A blend of American and Canadian ryes, each part finished in Martinique rum, apricot brandy or Madeira casks.",
+   "why": "Barrell Whiskey's 2015 and Indiana claim rested on one review, and its batch pages show finishes in sherry, port and amaro casks; Gray Label is a tier name, and Seagrass is a bottle a guest meets, on the house's own page",
+   "sources": [
+    "https://www.barrellbourbon.com/whiskey",
+    "https://www.barrellbourbon.com/graylabelseagrass",
+    "https://shop.barrellbourbon.com/barrell-seagrass/"
+   ]
+  }
+ ],
+ "confirmed": [
+  "bookers: Booker Noe 1929 to 2004 and Jim Beam's grandson, uncut and unfiltered, the 1992 collection, about 121 to 131 proof, Booker's Rye of 2016 from rye filled in 2003, the named batches from about 2015, Springfield.",
+  "george-t-stagg: the handwritten proof (the card proof-by-hand and q1), more than half the volume to evaporation, no less than fifteen years, Mash Bill No. 1, 1835 to 1893, St. Louis, 1904 for the renaming, 1999, the Antique Collection of 2000 and 2002 as the reviewed shelf states.",
+  "stagg: 2013, eight to nine years at launch, uncut and unfiltered, the rename of 2022, the year and letter codes, both cards and q1.",
+  "1792: 2002 and Ridgewood Reserve, the suit and the ruling of 2004, 1792 Ridgemont Reserve, Sazerac in 2009, the 1879 distillery, Full Proof in 2016 at 125 proof, entry proof, the plate and frame filter, the reviewers' not quite barrel proof, both cards and questions.",
+  "barrell: 2013 in Louisville, a blender and bottler that buys aged straight bourbon, cask strength without chill filtering, Tennessee, Kentucky and Indiana, Batch 036 and its new label in 2024, both cards and questions."
+ ],
+ "open": [
+  "bookers: year 1988 against the producer's own 1987; the still on the Clermont campus as the producer's present account; the label's own words beyond the class and the batch.",
+  "george-t-stagg: 1878 or 1879 for the purchase and 1904 or 1907 for the renaming; the six medicinal licences on Buffalo Trace's word.",
+  "stagg: which batch first carried 22A, very likely Batch 18; eight years on the producer's page against eight to nine in the launch report.",
+  "1792: the year the distillery took the name Barton 1792, told with the 2009 purchase; the producer's tasting words not tested further.",
+  "barrell: whether any batch is distilled by Barrell, which planned a distillery of its own; whether the derived mash bill sits on the back or the front label."
+ ],
+ "livingNames": [
+  "Barrell's blender and blending operations manager, named on the house's About page: added to people.json in this commit (Nic Christiansen). Not in the record.",
+  "Booker Noe's son, Beam's seventh generation master distiller, quoted in search results on the first sale of 1987: already in people.json, and in the record only as the founder's son in checked.",
+  "Barrell's founder, met on the About page and in profiles: already in people.json, and in the record by role only."
+ ],
+ "swaps": [
+  "No swap was proposed by the author and none is ruled. 1792 Full Proof stands as the contrast that teaches entry proof against barrel proof, as its why intends; if the owner wants uncut bottlings only, the lane's alternates are for the read-together agent."
+ ],
+ "tension": [
+  "The liquor shelf's George T. Stagg record (the story) gives 1878 for Stagg's purchase of O.F.C.; Buffalo Trace's own page gives 1879. Reported, not edited.",
+  "The liquor shelf's George T. Stagg record (watch line and lines) calls George T. Stagg released once a year and the collection yearly; a trade headline of 2022 reports a year it was left out of the Antique Collection. The record never calls it yearly. Reported, not edited.",
+  "The liquor shelf's Stagg record (watch line) says George T. Stagg is released once a year, the same tension as above; it also speaks of several batches a year, where Buffalo Trace's release of January 2020 says two. Reported, not edited.",
+  "plan.json, bookers why: says Booker Noe released it in 1988 and four batches a year; Beam's own pages say 1987, and the batches a year were not confirmed. Reported, not edited.",
+  "plan.json, george-t-stagg why: released once a year, the same tension as the shelf. Reported, not edited.",
+  "The style page (barrel-proof lines.s45) says Booker's was first sold uncut in the late 1980s, which holds for 1987 and 1988 alike."
+ ]
+}
