@@ -2,21 +2,22 @@
  "edition": "2026-11-21",
  "wave": "wave one, whisky and brandy",
  "partial": true,
- "unrefuted": 0,
+ "unrefuted": 5,
  "roster": {
   "groups": 32,
   "houses": 160
  },
  "built": {
-  "groups": 3,
-  "houses": 15,
-  "cards": 30,
-  "questions": 30,
-  "sources": 75
+  "groups": 6,
+  "houses": 30,
+  "cards": 60,
+  "questions": 60,
+  "sources": 150
  },
  "words": {
-  "total": 7510,
+  "total": 15427,
   "perHouse": {
+   "1792": 511,
    "jim-beam": 475,
    "buffalo-trace": 469,
    "wild-turkey": 482,
@@ -31,18 +32,29 @@
    "old-grand-dad": 496,
    "basil-hayden": 460,
    "bulleit": 501,
-   "rabbit-hole": 492
+   "rabbit-hole": 492,
+   "eh-taylor": 597,
+   "new-riff": 550,
+   "evan-williams": 519,
+   "heaven-hill": 519,
+   "henry-mckenna": 516,
+   "blantons": 554,
+   "eagle-rare": 486,
+   "knob-creek": 534,
+   "elijah-craig": 505,
+   "russells-reserve": 471,
+   "bookers": 527,
+   "george-t-stagg": 557,
+   "stagg": 530,
+   "barrell": 541
   }
  },
  "keys": {
   "frozen": false,
-  "held": 30,
-  "added": 22
+  "held": 60,
+  "added": 30
  },
  "missing": [
-  "bottled-in-bond",
-  "small-batch-single-barrel",
-  "barrel-proof",
   "tennessee-whiskey",
   "kentucky-rye",
   "monongahela-rye",

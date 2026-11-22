@@ -19,7 +19,7 @@
    house lands on its group and a bad group on the root. The router is the
    Cask Atlas's (js/ui-casks.js), which calls the caskHouse functions here.
 
-   The cards keep their own key space ('Cask Houses · <house>/<card>', src
+   The cards keep their own key space ('Cask Houses \u00b7 <house>/<card>', src
    'Cask Houses'), outside allDrinks, Due today, the session, the academic
    modes and the levels; Today's cask study may deal a house card that is
    due and never an unseen one. The quiz (mode caskhouses) deals ten
@@ -42,7 +42,7 @@ function caskHouseHref(group, house){
 }
 function caskHouseSafeUrl(value){ try { const url = new URL(value); return url.protocol === 'https:' ? url.href : ''; } catch(e){ return ''; } }
 function caskHouseParas(value){ return String(value || '').split(/\n+/).filter(Boolean).map(function(p){ return '<p>' + esc(p) + '</p>'; }).join(''); }
-function caskHouseFold(s){ return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[‘’]/g, "'").toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
+function caskHouseFold(s){ return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[\u2018\u2019]/g, '\'').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
 function caskHouseCount(n, one, many){ return n + ' ' + (n === 1 ? one : many); }
 /* the style and the chapter a group or a house hangs on, each only where the Ledger holds it */
 function caskHouseStyle(id){ return id && typeof caskStyleEntry === 'function' ? caskStyleEntry(id) : null; }
@@ -96,7 +96,7 @@ function caskHouseReference(prevKey){
 }
 
 /* ---- the cards, the decks, the quiz and Today's cask study ----------------- */
-function caskHouseKey(house, card){ return 'Cask Houses · ' + house + '/' + card; }
+function caskHouseKey(house, card){ return 'Cask Houses \u00b7 ' + house + '/' + card; }
 function caskHouseCards(groupKey){
   const cards = [];
   caskHouseGroups().forEach(function(g){
@@ -139,7 +139,7 @@ function caskHouseRowDoorHTML(row, label){
 /* the card faces: a blind front, then the answer and the house after Flip */
 function caskHouseRecallHTML(card, flipped, head, front, answer, grade){
   const g = caskHouseGroup(card.houseGroup);
-  const heading = '<div class="eyebrow">Producers and flagships · ' + esc(g ? g.title : 'Whisky and brandy') + '</div>';
+  const heading = '<div class="eyebrow">Producers and flagships \u00b7 ' + esc(g ? g.title : 'Whisky and brandy') + '</div>';
   const question = '<div class="caskhouse-question">' + esc(card.name) + '</div>';
   if(!flipped) return '<div class="col">' + head + '<div class="panel p5 col tc study-face">' + front + heading + question
     + '<p class="small dim">Say it out loud as you would at the table, then flip.</p><button class="btn btn-brass" data-act="fc-flip">Flip</button></div></div>';
@@ -182,8 +182,8 @@ function caskHouseCountsLine(){
   const m = caskHouseMeta(), built = caskHouseGroups().length, houses = caskHouseRecords().length;
   const roster = m.roster && Number(m.roster.groups) > built ? Number(m.roster.groups) : 0;
   const qs = caskHouseRecords().reduce(function(n, r){ return n + (r.quiz || []).length; }, 0);
-  return (roster ? built + ' of ' + roster + ' groups' : caskHouseCount(built, 'group', 'groups')) + ' · '
-    + caskHouseCount(houses, 'house', 'houses') + ' · ' + caskHouseCount(caskHouseCards().length, 'recall card', 'recall cards') + ' · ' + caskHouseCount(qs, 'quiz question', 'quiz questions');
+  return (roster ? built + ' of ' + roster + ' groups' : caskHouseCount(built, 'group', 'groups')) + ' \u00b7 '
+    + caskHouseCount(houses, 'house', 'houses') + ' \u00b7 ' + caskHouseCount(caskHouseCards().length, 'recall card', 'recall cards') + ' \u00b7 ' + caskHouseCount(qs, 'quiz question', 'quiz questions');
 }
 function caskHouseHomeHTML(){
   const groups = caskHouseGroups();
@@ -231,15 +231,15 @@ function caskHouseGroupRowHTML(g){
   const st = caskHouseStyle(g.style), labels = caskHouseHousesOf(g).map(function(r){ return r.producer; });
   return '<a class="caskhouse-grow" id="caskhouse-g-' + esc(g.key) + '" href="' + esc(caskHouseHref(g.key)) + '"><span class="caskhouse-grow-name">' + esc(g.title) + '</span>'
     + (st ? '<span class="caskhouse-grow-style">The style: ' + esc(st.name) + '</span>' : '')
-    + '<span class="caskhouse-grow-labels">' + esc(labels.join(' · ')) + '</span></a>';
+    + '<span class="caskhouse-grow-labels">' + esc(labels.join(' \u00b7 ')) + '</span></a>';
 }
 function caskHouseStudyHTML(scope){
   const g = caskHouseGroup(scope);
   const deck = g ? 'caskhouses:' + g.key : 'caskhouses';
   const due = g ? 0 : caskHouseCards().filter(function(c){ const s = caskHouseCardState(c); return s.due || s.missed; }).length;
-  return '<div class="caskhouse-practice"><button class="btn btn-brass" data-act="caskhouse-practise" data-deck="' + esc(deck) + '">' + (g ? 'Practise this group’s cards' : 'Practise every card') + '</button>'
+  return '<div class="caskhouse-practice"><button class="btn btn-brass" data-act="caskhouse-practise" data-deck="' + esc(deck) + '">' + (g ? 'Practise this group\u2019s cards' : 'Practise every card') + '</button>'
     + (g ? '' : '<button class="btn btn-ghost" data-act="deck" data-deck="caskhouses:again">Due or missed (' + due + ')</button>')
-    + '<button class="btn btn-ghost" data-act="quiz-go" data-m="caskhouses"' + (g ? ' data-group="' + esc(g.key) + '"' : '') + '>' + (g ? 'Take this group’s quiz' : 'Take the quiz') + '</button></div>';
+    + '<button class="btn btn-ghost" data-act="quiz-go" data-m="caskhouses"' + (g ? ' data-group="' + esc(g.key) + '"' : '') + '>' + (g ? 'Take this group\u2019s quiz' : 'Take the quiz') + '</button></div>';
 }
 function caskHouseSearchText(r){
   const b = r.bottle || {}, g = caskHouseGroup(r.group);
@@ -253,7 +253,7 @@ function caskHouseResultsHTML(){
     + (hits.length ? '<div class="caskhouse-hits">' + hits.map(function(r){
       const g = caskHouseGroup(r.group);
       return '<a class="caskhouse-hit" id="caskhouse-s-' + esc(r.key) + '" href="' + esc(caskHouseHref(r.group, r.key)) + '"><span class="caskhouse-hit-name">' + esc(r.producer) + '</span>'
-        + '<span class="caskhouse-hit-line">' + esc((r.bottle && r.bottle.name) || '') + ' · ' + esc(g.title) + '</span></a>';
+        + '<span class="caskhouse-hit-line">' + esc((r.bottle && r.bottle.name) || '') + ' \u00b7 ' + esc(g.title) + '</span></a>';
     }).join('') + '</div>' : '');
 }
 function caskHouseRootHTML(){
@@ -264,10 +264,10 @@ function caskHouseRootHTML(){
   const fams = caskHouseFamilies().map(function(f, i){
     const list = caskHouseGroupsOfFamily(f);
     return '<section class="caskhouse-family" aria-labelledby="caskhouse-f-' + i + '"><h3 class="caskhouse-family-h" id="caskhouse-f-' + i + '">' + esc(f)
-      + ' <span class="caskhouse-soft">· ' + caskHouseCount(list.length, 'group', 'groups') + '</span></h3>'
+      + ' <span class="caskhouse-soft">\u00b7 ' + caskHouseCount(list.length, 'group', 'groups') + '</span></h3>'
       + (list.length ? '<div class="caskhouse-rows">' + list.map(caskHouseGroupRowHTML).join('') + '</div>' : '<p class="cask-muted">No group of this family is here yet.</p>') + '</section>';
   }).join('');
-  return '<article class="cask-atlas caskhouse-page caskhouse-root"><header class="caskhouse-heading"><p class="eyebrow">The Cask Atlas · Whisky &amp; Brandy</p><h2 tabindex="-1">Producers and flagships</h2>'
+  return '<article class="cask-atlas caskhouse-page caskhouse-root"><header class="caskhouse-heading"><p class="eyebrow">The Cask Atlas \u00b7 Whisky &amp; Brandy</p><h2 tabindex="-1">Producers and flagships</h2>'
     + '<p>For every style, the five houses to know and the one bottling a guest means by each: the label, how to say it, the flagship in depth, the story and the traps.</p>'
     + '<p class="cask-muted">' + esc(caskHouseCountsLine()) + '</p>' + partial + unread + '</header>'
     + (groups.length ? '<section class="caskhouse-panel" aria-labelledby="caskhouse-p-study"><h3 id="caskhouse-p-study">Study</h3>'
@@ -295,7 +295,7 @@ function caskHouseGroupHTML(g){
   const st = caskHouseStyle(g.style), ch = caskHouseChapter(g.chapter), line = caskHouseStyleLine(g), houses = caskHouseHousesOf(g);
   const doors = (st ? '<a class="btn btn-ghost caskhouse-style-door" href="' + esc(typeof caskStyleHref === 'function' ? caskStyleHref(st.id) : '#/casks/style/' + encodeURIComponent(st.id)) + '">The style: ' + esc(st.name) + '</a>' : '')
     + (ch ? '<a class="btn btn-ghost caskhouse-chapter-door" href="' + esc(caskHref(ch.id)) + '">' + esc(ch.title) + ', in the Cask Atlas</a>' : '');
-  return '<article class="cask-atlas caskhouse-page caskhouse-group"><header class="caskhouse-heading"><p class="eyebrow">Producers and flagships · ' + esc(g.family) + '</p><h2 tabindex="-1">' + esc(g.title) + '</h2>'
+  return '<article class="cask-atlas caskhouse-page caskhouse-group"><header class="caskhouse-heading"><p class="eyebrow">Producers and flagships \u00b7 ' + esc(g.family) + '</p><h2 tabindex="-1">' + esc(g.title) + '</h2>'
     + (line ? '<p class="caskhouse-styleline">' + esc(line) + '</p>' : '')
     + (doors ? '<div class="caskhouse-links">' + doors + '</div>' : '') + '</header>'
     + '<section class="caskhouse-panel" aria-labelledby="caskhouse-p-houses"><h3 id="caskhouse-p-houses">' + (houses.length === 5 ? 'The five houses' : 'The houses') + '</h3><div class="caskhouse-cards">' + houses.map(caskHouseCardHTML).join('') + '</div></section>'
@@ -322,7 +322,7 @@ function caskHouseFlagshipHTML(r){
   const label = (b.label || []).filter(function(x){ return x && x.term; });
   return '<p class="caskhouse-bottle-name">' + esc(b.name || '') + '</p>'
     + caskHouseDl([['Class', b.class], ['Made from', b.mash], ['Distilled', b.still], ['Wood', b.wood], ['Strength', b.strength], ['How it tastes', b.taste], ['How it is poured', b.pour]])
-    + (label.length ? '<p class="caskhouse-label">The label’s terms</p>' + caskHouseDl(label.map(function(x){ return [esc(x.term), x.means]; }), 'caskhouse-terms') : '');
+    + (label.length ? '<p class="caskhouse-label">The label\u2019s terms</p>' + caskHouseDl(label.map(function(x){ return [esc(x.term), x.means]; }), 'caskhouse-terms') : '');
 }
 function caskHouseShelfHTML(r){
   const b = caskHouseBottle(r.shelf);
@@ -358,7 +358,7 @@ function caskHousePagerHTML(r){
 }
 function caskHousePageHTML(r){
   const g = caskHouseGroup(r.group), year = caskHouseYearLine(r);
-  return '<article class="cask-atlas caskhouse-page caskhouse-house"><header class="caskhouse-heading"><p class="eyebrow">Producers and flagships · ' + esc(g ? g.title : '') + '</p><h2 tabindex="-1">' + esc(r.producer) + '</h2>'
+  return '<article class="cask-atlas caskhouse-page caskhouse-house"><header class="caskhouse-heading"><p class="eyebrow">Producers and flagships \u00b7 ' + esc(g ? g.title : '') + '</p><h2 tabindex="-1">' + esc(r.producer) + '</h2>'
     + (r.say ? '<p class="caskhouse-fact"><span class="caskhouse-label">Say it</span> ' + esc(r.say) + '</p>' : '')
     + '<p class="caskhouse-fact"><span class="caskhouse-label">The place</span> ' + esc(r.place) + '</p>'
     + (r.madeBy ? '<p class="caskhouse-fact"><span class="caskhouse-label">Made by</span> ' + esc(r.madeBy) + '</p>' : '')
@@ -408,7 +408,7 @@ function caskHouseAfterRender(){
 function caskHouseSearchEntries(){
   return caskHouseRecords().filter(function(r){ return caskHouseGroup(r.group); }).map(function(r){
     const g = caskHouseGroup(r.group);
-    return { t: r.producer, s: 'Producers and flagships · ' + g.title, body: caskHouseSearchText(r) + ' ' + String(r.table || '').toLowerCase(), h: caskHouseHref(r.group, r.key) };
+    return { t: r.producer, s: 'Producers and flagships \u00b7 ' + g.title, body: caskHouseSearchText(r) + ' ' + String(r.table || '').toLowerCase(), h: caskHouseHref(r.group, r.key) };
   });
 }
 function caskHouseOwnsKey(e){ return !!(e && e.target && e.target.closest && e.target.closest('.caskhouse-read-link')); }
