@@ -1,0 +1,236 @@
+{
+ "group": "cognac",
+ "chunk": "c10",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 23,
+ "tested": [
+  "hennessy: Richard Hennessy's birth (1724, or 1720 in one genealogy), County Cork, the Irish Brigade, his death of October 1800, the trading house of 1765; the Fillioux taken on as blenders (1800 or 1806, by the founder or the son by source); the star system of 1865 and the Three Star that became V.S; the house's notes for V.S (toast, roasted almond, brown sugar, vine fruit, vanilla, a floral finish) and its French oak; the four crus and some forty eaux-de-vie. 5 searches.",
+  "remy-martin: the founder born in 1695 near Rouillac and the house of 1724; André Renaud's charge of 1924, the VSOP Fine Champagne of 1927, his death in 1965 and his son-in-law's succession; the crus and the Fine Champagne name in the decrees of 1938 and the half Grande Champagne rule; the house's notes for VSOP (vanilla, dried apricot, candied pear, liquorice, silky); distillation on the lees and Limousin large-grain oak; the 1990 merger and the 1991 name. 5 searches.",
+  "martell: Jean Martell's dates (1694 to 1753) and St Brelade on the house's own page; Cordon Bleu of 1912 by the great-grandson, launched at the Hôtel de Paris in Monaco; the house's notes for Cordon Bleu (candied plum and apple, mocha, toasted almond, vetiver, a long finish of fruit and spice), its Borderies and Grande Champagne, little new oak; Seagram's share of 1987 and control of 1988; Pernod Ricard's purchase of Seagram's drinks in 2001. 5 searches.",
+  "courvoisier: the Bercy firm (1796 or 1809), the 1811 visit of Napoléon, the Jarnac house of 1828 on the house's page against 1834, 1835 and 1843 elsewhere; Félix Courvoisier's death (1866, 1886 or a life of 1808 to 1873 by source); the nephews and the court title of 1869; the Simon family of 1909 and the Brandy of Napoléon; Campari's purchase from Beam Suntory, completed on 30 April 2024; the house's VSOP page for its four crus, up to twelve years in its own barrels, stone fruit, jasmine, gingerbread. 4 searches.",
+  "ferrand: the 1840 Original Formula modelled on a Pinet-Castillon bottle of 1840, made with the cellar master and a drinks historian, 45% ABV, Grande Champagne at Angeac, three stars, the 2011 release; Maison Ferrand of 1989 and the Château de Bonbonnet at Ars; the house's roots page for the ten Elies, the manor of 1861 and the death of 1915; Ferrand Ambré's Grande Champagne and its ten years. 4 searches.",
+  "23 of the 28 searches spent; 5 left unused.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, keys at positions 2, 1, 0, 2, 3, 2, 1, 0, 2, 1 (no position more than four times), each explain naming the nearest wrong option; Courvoisier's q2 wrong option 1857, unsourced, is now 1869, a year the story tells. No card id changed."
+ ],
+ "changed": [
+  {
+   "key": "hennessy",
+   "field": "bottle.mash",
+   "was": "White wine from four crus the house names",
+   "now": "White wine of four crus as guides give the blend",
+   "why": "the house's V.S pages read through search name no crus; Difford's Guide and the house's selection material give the four",
+   "sources": [
+    "https://www.diffordsguide.com/beer-wine-spirits/1416/hennessy-vs",
+    "https://www.hennessy.com/en-int/collection/hennessy-very-special"
+   ]
+  },
+  {
+   "key": "hennessy",
+   "field": "story",
+   "was": "His son built the business and brought in a family of blenders, the Fillioux, whose sons followed their fathers into the role for generations.",
+   "now": "In the early 1800s the house took on a cooper of the Fillioux family as its blender, by its own account, and his sons and grandsons followed him into the role for generations.",
+   "why": "the house's legacy page credits the founder with naming a Fillioux, once a cooper, its blender; Wikipedia credits the son; the year is 1800 or 1806 by source",
+   "sources": [
+    "https://asia.hennessy.com/en-int/maison/legacy",
+    "https://en.wikipedia.org/wiki/Hennessy",
+    "https://www.masterofmalt.com/blog/post/the-history-of-hennessy-cognac.aspx"
+   ]
+  },
+  {
+   "key": "hennessy",
+   "field": "story",
+   "was": "the V.S is the bottle a guest names when he asks for cognac by brand, and the plainest lesson",
+   "now": "the V.S is the house's young cognac, poured long or in a Sidecar, and a plain lesson",
+   "why": "a ranking of guests' choices that no source bears, and plainest is a superlative the voice refuses",
+   "sources": [
+    "https://www.hennessy.com/en-int/collection/hennessy-very-special"
+   ]
+  },
+  {
+   "key": "remy-martin",
+   "field": "bottle.wood",
+   "was": "Aged in large-grain French oak casks toasted to a medium plus level, by the house's account.",
+   "now": "Aged in large-grain Limousin oak casks, by the house's account.",
+   "why": "the medium plus toast was in no source read; the house's craftsmanship page names Limousin oak and Whitewall Limousin large-grain oak",
+   "sources": [
+    "https://remymartin.com/?p=1486",
+    "https://whitewall.art/lifestyle/remy-martin-takes-us-to-cognac/"
+   ]
+  },
+  {
+   "key": "remy-martin",
+   "field": "story",
+   "was": "In 1724 a young vine grower from near Rouillac",
+   "now": "In 1724 a vine grower born near Rouillac",
+   "why": "the founder was born in 1695 near Rouillac, so 29 in 1724; no source calls him young",
+   "sources": [
+    "https://www.remy-cointreau.com/en/brands/remy-martin/",
+    "https://www.wikipedia.org/wiki/Remy_Martin"
+   ]
+  },
+  {
+   "key": "remy-martin",
+   "field": "story",
+   "was": "in 1938 the Fine Champagne appellation was recognised in law",
+   "now": "in 1938 the Fine Champagne name was set down in the law of the appellation",
+   "why": "the Cognac appellation is of 1936; the crus came into its decree in 1938, and the 1936 decree carries a 1938 amendment on the Fine Champagne name",
+   "sources": [
+    "https://en.wikipedia.com/wiki/Fine_Champagne",
+    "https://www.wipo.int/wipolex/en/legislation/details/1585"
+   ]
+  },
+  {
+   "key": "martell",
+   "field": "bottle.wood",
+   "was": "Aged in fine-grained French oak from the Tronçais forest, the wood the house chooses.",
+   "now": "Aged in French oak casks, very little of it new for this blend, by the house's account.",
+   "why": "no source read ties Tronçais to Cordon Bleu (the liquor shelf ties it to the XO); the house's 2022 release says it barely uses any new oak for Cordon Bleu",
+   "sources": [
+    "https://digitalpressroom.martell.com/2022/06/martellcordonbleuunveilsvibrantnewbottledesign/",
+    "https://www.martell.com/en-ww/collection/cordon-bleu/"
+   ]
+  },
+  {
+   "key": "martell",
+   "field": "bottle.still",
+   "was": "distilled twice in copper Charentais pot stills with an early cut",
+   "now": "distilled twice in copper Charentais pot stills",
+   "why": "the early cut was in no source read; clear wine and double distillation stand on the reviewed liquor shelf page",
+   "sources": [
+    "https://martell.com/en-us/house/history"
+   ]
+  },
+  {
+   "key": "martell",
+   "field": "story, quiz[1].explain",
+   "was": "Seagram bought the house in 1988; 1988 the year Seagram bought the house",
+   "now": "Seagram, which had bought a large share in 1987, took full control of the house in 1988; 1988 the year Seagram took full control of the house",
+   "why": "Seagram bought a 40 per cent share from the family in 1987 and full control in 1988 (Difford's Guide, the South China Morning Post); Wikipedia's Seagram page dates the takeover to 1987",
+   "sources": [
+    "https://www.diffordsguide.com/producer/1131/cognac-martell/story",
+    "https://www.scmp.com/business/companies/article/1376283/spirited-family-business",
+    "https://www.wikipedia.com/wiki/Seagram"
+   ]
+  },
+  {
+   "key": "martell",
+   "field": "story",
+   "was": "has kept its name and its Borderies heart ever since",
+   "now": "has kept its name since",
+   "why": "the Borderies share of the first blend is in no source read, so an unbroken heart since 1912 cannot be borne",
+   "sources": [
+    "https://www.martell.com/en-ww/collection/cordon-bleu/"
+   ]
+  },
+  {
+   "key": "courvoisier",
+   "field": "story",
+   "was": "Félix Courvoisier (died 1866) left no heir, and the house passed to his nephews.",
+   "now": "The founding son left no heir, and the house passed to his nephews",
+   "why": "his death is 1866 in one source, 1886 in another and a life of 1808 to 1873 in a third; 1828 to 1866 on the house's page is an era, not a death; without a death in two sources he is described, not named",
+   "sources": [
+    "https://courvoisier.com/heritage",
+    "https://en.wikipedia.org/wiki/Courvoisier",
+    "https://www.diffordsguide.com/producers/152/courvoisier-sa/history"
+   ]
+  },
+  {
+   "key": "courvoisier",
+   "field": "story, quiz[1].options[1], quiz[1].explain",
+   "was": "the house's own building there followed in 1857; option 1857; its building in Jarnac followed in 1857",
+   "now": "the building cut; option 1869; 1869 is the year Napoléon III named it a supplier to his court",
+   "why": "1857 was in no source read; 1869 is the court title on the house's heritage page and Beam Suntory's history",
+   "sources": [
+    "https://courvoisier.com/heritage",
+    "https://founders.beamsuntory.com/dna/courvoisier"
+   ]
+  },
+  {
+   "key": "courvoisier",
+   "field": "story",
+   "was": "The house tells that the emperor Napoléon III (1808 to 1873) named it a supplier to his court, and a legend says he inherited the taste from his uncle",
+   "now": "the story goes that the emperor Napoléon Bonaparte (1769 to 1821) visited the Bercy cellars in 1811 ... the house passed to his nephews, who in 1869, by the house's account, were named suppliers to the court of Napoléon III (1808 to 1873)",
+   "why": "the house's heritage page gives the 1869 title to the nephews, after the son's death, so the order was wrong; the brand's legend in Wikipedia and its heritage is the first Napoléon's visit to Bercy in 1811, not an inherited taste",
+   "sources": [
+    "https://courvoisier.com/heritage",
+    "https://en.wikipedia.org/wiki/Courvoisier"
+   ]
+  },
+  {
+   "key": "courvoisier",
+   "field": "story",
+   "was": "who set up a second company at Jarnac on the Charente",
+   "now": "who set up a new business at Jarnac on the Charente that dealt in cognac alone",
+   "why": "the house's heritage page has the sons found a new business in Jarnac focused on cognac alone",
+   "sources": [
+    "https://courvoisier.com/heritage"
+   ]
+  },
+  {
+   "key": "courvoisier",
+   "field": "traps[1]",
+   "was": "though a Courvoisier VSOP Fine Champagne bottling also exists",
+   "now": "though the house has also sold a VSOP Fine Champagne",
+   "why": "a present state that may not hold; Distiller lists the bottling and the house's page shows the four-cru VSOP",
+   "sources": [
+    "https://distiller.com/spirits/courvoisier-vsop-fine-cognac",
+    "https://courvoisier.com/en-us/cognac-collection/vsop"
+   ]
+  },
+  {
+   "key": "ferrand",
+   "field": "story",
+   "was": "the male line ended in 1915, when the tenth of them died of wounds from the First World War",
+   "now": "by the house's account ... the line of Elies ended in 1915, when an Elie serving in the First World War died of typhoid",
+   "why": "the house's roots page says the last Elie fell ill with dysentery while enlisted, caught typhoid on his evacuation and died in September 1915: illness, not wounds",
+   "sources": [
+    "https://ferrandcognac.com/en/roots/"
+   ]
+  },
+  {
+   "key": "ferrand",
+   "field": "story",
+   "was": "The family built its manor there in 1861",
+   "now": "By the house's account the family built its manor there in 1861",
+   "why": "the manor, the ten Elies and the end of the line rest on the house's roots page alone, which itself gives the manor to Elie VII in one place and Elie VIII in another; another house page says the 1860s",
+   "sources": [
+    "https://ferrandcognac.com/en/roots/",
+    "https://news.maisonferrand.com/vineyard-revival-manoir-mademoiselle/"
+   ]
+  },
+  {
+   "key": "ferrand",
+   "field": "others[Ferrand Ambré].note",
+   "was": "A Grande Champagne cognac of the house, in the same hammered bottle as the 1840.",
+   "now": "A Grande Champagne cognac of the house, its blend about ten years old on average, by Difford's Guide's account.",
+   "why": "the shared bottle was in no source read; Difford's Guide and shops give Ambré as Grande Champagne of about ten years' average age",
+   "sources": [
+    "https://www.diffordsguide.com/beer-wine-spirits/424/ferrand-ambre-cognac"
+   ]
+  }
+ ],
+ "open": [
+  "hennessy: the founder's birth (1724, or 1720 in one genealogy) and his regiment (Clare or Dillon) differ; the 1865 star system is credited to a grandson or a great-grandson; some forty eaux-de-vie may be the house's tasting pool rather than the blend's count.",
+  "remy-martin: André Renaud at the house from about 1910 in some accounts, 1924 on the house's; the name Rémy Cointreau 1991 on the group's timeline, 1990 in some accounts; the blind tasting of the still field was not read again.",
+  "martell: the Borderies share and the count of eaux-de-vie (more than a hundred, or 150) differ by house release; the founder's house at Gâtebourse is 1728 or 1750 by source and stays out.",
+  "courvoisier: 1828 is the house's year, with 1834, 1835 and 1843 elsewhere; the week of fermentation, the lees and the heart alone of the still field, and the house's three cocktails of the pour, were not found in this reader's searches; whether the Simon family bought the firm or took its leadership in 1909 differs by source.",
+  "ferrand: 2011 rests on Difford's Guide's notes of August 2011 and one review; the year the label changed from Pierre Ferrand to Ferrand was not found; Difford's 1702 and one history's 1792 for Pierre Ferrand are family claims and stay out."
+ ],
+ "living": [
+  "Met in sources and named in no record, already in people.json: Alexandre Gabriel, David Wondrich and Christian Guerin (Maison Ferrand and the 1840); the living Fillioux blender and the head of LVMH, met by the author and added in the author's commit.",
+  "Met in search results and named in no record, not in people.json, living as far as found, for the integrator to add: Patrice Pinet, once Courvoisier's master blender; Hugh Lander, a writer on Rémy Martin. Not added here, since this task changes only the fragment and this review.",
+  "The dead met: Richard Hennessy (1724 to 1800), Jean Martell (1694 to 1753), André Renaud (died 1965), Napoléon Bonaparte (1769 to 1821) and Napoléon III (1808 to 1873), each named with dates; Félix Courvoisier, Emmanuel Courvoisier, Louis and Jules Gallois, the Curlier brothers, Édouard Martell, Maurice Hennessy, the founder Rémy Martin and his son-in-law's successor, and Henriette Ranson-Ferrand (died 2016), described and not named."
+ ],
+ "swaps": [
+  "martell, bottling: the author kept Cordon Bleu and offered the shelf's Martell XO as an alternative for the integrator. No swap proposed in form, and none made: Cordon Bleu is the house's named blend of 1912 in every source read, and the XO stands in others and a trap. The roster's flagship stands.",
+  "No other swap proposed or made."
+ ],
+ "tension": [
+  "plan.json, hennessy why: gives the 1865 Three Star to a great-grandson of the founder; sources split between grandson and great-grandson, and the record names none. Reported, not edited.",
+  "plan.json, remy-martin why: says Renaud made the first VSOP Fine Champagne; the house says its VSOP was its first blend of the two Champagne crus, other sources that he launched or popularised it; the record says only that he launched it. Reported, not edited.",
+  "plan.json, courvoisier why: Louis Renard's core range of 1909 and 1910 found no source in the author's searches or these; and the VSOP as cask led, where the house leads with fruit. Reported, not edited.",
+  "The liquor shelf's Martell XO ties Tronçais oak to Martell in general (its How it is made and its cask); the record no longer gives Tronçais for Cordon Bleu, which no source read bears, and does not contradict the XO page.",
+  "The Library's Hennessy entry calls the house the largest on earth and says the house air-dries Limousin oak at its own cooperage; the ranking is kept out, and Limousin is not used for V.S, where the house's pages say only French oak. Reported, not edited."
+ ]
+}
