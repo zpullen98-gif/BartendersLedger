@@ -1,0 +1,201 @@
+{
+ "group": "irish-single-malt",
+ "chunk": "c7",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 23,
+ "tested": [
+  "bushmills: the 10's casks, strength and the house's notes on its product and shop pages; the label words Aged 10 Years; 1608 and the licence of James I, 1784 and the registered company, the fire of 1885; 1972 and Irish Distillers, Coleraine's grain stills to 1978 and the two-distillery era; Diageo's purchase of 2005 and the Cuervo trade agreed in November 2014. 6 searches.",
+  "connemara: the house's notes for Original and the 12 Year; the launch of 1996 and double distillation at Cooley; the cask, sought on the house's pages, Difford's and Suntory's; the peat from Scotland and the peating level. 4 searches.",
+  "tyrconnell: the Watt family, the horse and the race of 1876 at a hundred to one, the closure and the revival of 1993; the core bottling's age statement, strength and notes; the 16 Year Old's woods. 4 searches.",
+  "knappogue-castle: the house's story of 1966, the couple and the casks; the castle of 1467 and its restoration; the 12's still, casks, strength and the house's notes beside Difford's; the 14 and 16 Year Old Twin Wood and the 1951. 4 searches.",
+  "the-irishman: the Single Malt's distillation, barley, casks, strength and notes on the house's page; The Hot Irishman of 1999, The Irishman of 2006, Writers' Tears; the parting with Illva Saronno of January 2019 and Amber Beverage Group of November 2021. 5 searches.",
+  "23 of the 28 searches spent; 5 left unused.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, no length clue the lint finds, keys at positions 1, 2, 0, 2, 1, 3, 3, 1, 0, 2, each explain naming the nearest wrong option. Connemara's first-release prompt now asks one thing. No card id changed."
+ ],
+ "changed": [
+  {
+   "key": "bushmills",
+   "field": "story",
+   "was": "by 1972, when Bushmills joined Irish Distillers, it was one of two whiskey distilleries at work on the island",
+   "now": "Bushmills joined Irish Distillers in 1972, and by the late 1970s it was one of two whiskey distilleries at work on the island, beside Midleton in Cork",
+   "why": "Old Midleton ran until 1975 and the Coleraine grain stills until 1978, so two distilleries is a state of the late 1970s, not of 1972",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Irish_whiskey",
+    "https://en.wikipedia.org/wiki/Irish_Distillers"
+   ]
+  },
+  {
+   "key": "bushmills",
+   "field": "bottle.wood, cards[casks].answer, quiz[0].explain",
+   "was": "Former bourbon barrels and former sherry casks",
+   "now": "Mostly bourbon-seasoned barrels, with former sherry casks",
+   "why": "the house's own words for the 10",
+   "sources": [
+    "https://bushmills.com/products/10-year",
+    "https://shop.bushmills.com/products/10-year-old-single-malt-new"
+   ]
+  },
+  {
+   "key": "bushmills",
+   "field": "bottle.taste",
+   "was": "a light body of malt and honey, and a short, clean finish",
+   "now": "Honey on the nose, then vanilla bean, mocha and dried apricot, with milk chocolate and malted barley, and a finish of oak and fruit",
+   "why": "the light body and short finish were in no source read; the house gives a finish of oak and fruit",
+   "sources": [
+    "https://bushmills.com/products/10-year",
+    "https://shop.bushmills.com/products/10-year-old-single-malt-new"
+   ]
+  },
+  {
+   "key": "connemara",
+   "field": "bottle.wood",
+   "was": "Former bourbon casks; the label carries no age statement.",
+   "now": "The house names no cask on its pages; trade listings give former bourbon barrels. The label carries no age statement.",
+   "why": "only shops named the cask; the house's Original, 12 Year and Cask Strength pages and Difford's did not",
+   "sources": [
+    "https://www.connemarawhiskey.com/connemara-original",
+    "https://www.diffordsguide.com/beer-wine-spirits/2933/connemara-single-malt"
+   ]
+  },
+  {
+   "key": "connemara",
+   "field": "bottle.taste",
+   "was": "then a light honey sweetness over earthy, vegetal peat",
+   "now": "then light honey, vegetal peat, barley water, light spice and vanilla oak",
+   "why": "the house's own palate for Connemara Original; earthy was not in it",
+   "sources": [
+    "https://www.connemarawhiskey.com/connemara-original"
+   ]
+  },
+  {
+   "key": "connemara",
+   "field": "story",
+   "was": "which brought back an old Irish habit; Connemara kept its place as the peated malt of the Cooley range, sold without an age statement beside a 12 year old and a cask strength bottling",
+   "now": "reviving, as the house tells it, an old Irish habit; Beside the bottling with no age statement, the house has released a 12 year old and a cask strength",
+   "why": "the habit is the house's telling; the range line read as a present state",
+   "sources": [
+    "https://www.connemarawhiskey.com/connemara-12-year",
+    "https://www.connemarawhiskey.com/connemara-cask-strength"
+   ]
+  },
+  {
+   "key": "connemara",
+   "field": "cards[first-release].prompt",
+   "was": "In which year was Connemara first released, and at which distillery is it made?",
+   "now": "In which year was Connemara Peated Single Malt first released?",
+   "why": "a card asks one thing; the answer keeps Cooley",
+   "sources": [
+    "https://www.diffordsguide.com/beer-wine-spirits/2933/connemara-single-malt",
+    "https://whiskymag.com/articles/a-rite-of-passage/"
+   ]
+  },
+  {
+   "key": "tyrconnell",
+   "field": "story, cards[racehorse].answer, quiz[1].explain",
+   "was": "won the National Produce Stakes",
+   "now": "won a race in Ireland in 1876 at a hundred to one",
+   "why": "Wikipedia names the National Produce Stakes and Difford's Guide, which the author cited for it, the Queen Victoria Plate",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tyrconnell_(whiskey)",
+    "https://www.diffordsguide.com/beer-wine-spirits/2934/the-tyrconnell"
+   ]
+  },
+  {
+   "key": "tyrconnell",
+   "field": "bottle.strength",
+   "was": "40% ABV, 43% in some listings",
+   "now": "43% ABV (86 proof); earlier bottlings 40%",
+   "why": "listings that print the label give 43% and 86 proof and record a redesign from 40%; Difford's 40% was sampled in 2012",
+   "sources": [
+    "https://www.thewhiskyexchange.com/p/2913/tyrconnell-single-malt",
+    "https://www.wine.com/product/tyrconnell-single-malt-irish-whiskey/532018"
+   ]
+  },
+  {
+   "key": "tyrconnell",
+   "field": "bottle.taste",
+   "was": "tasters often find fresh malt and apple",
+   "now": "cut; the finish is vanilla oak and spice",
+   "why": "no source read gave fresh malt and apple",
+   "sources": [
+    "https://www.diffordsguide.com/beer-wine-spirits/2934/the-tyrconnell"
+   ]
+  },
+  {
+   "key": "knappogue-castle",
+   "field": "bottle.strength, traps[1]",
+   "was": "40% ABV, 43% and 46% in some markets; from 40 to 46 per cent in listings",
+   "now": "40% ABV (80 proof), 43% on the house's product page; the house's own pages give both 40 and 43 per cent",
+   "why": "46% rested on one review; the house gives 80 proof on its process page and 43% on its product and store pages",
+   "sources": [
+    "https://www.knappoguewhiskey.com/process/",
+    "https://www.knappoguewhiskey.com/product"
+   ]
+  },
+  {
+   "key": "knappogue-castle",
+   "field": "others",
+   "was": "Knappogue Castle 1951; 14 Year Old Twin Wood, from two kinds of cask, as its name says",
+   "now": "Knappogue Castle 16 Year Old Twin Wood and 14 Year Old Twin Wood, each bourbon casks then casks seasoned with oloroso sherry",
+   "why": "the 1951, bottled in 1987 after 36 years in sherry casks, is no bottling a guest meets; the Twin Woods' woods are now said",
+   "sources": [
+    "https://www.diffordsguide.com/beer-wine-spirits/5566/knappogue-castle-16-year-old-twin-wood",
+    "https://www.diffordsguide.com/beer-wine-spirits/5565/knappogue-castle-14-year-old-twin-wood"
+   ]
+  },
+  {
+   "key": "knappogue-castle",
+   "field": "story",
+   "was": "he and his wife, an architect, restored it; His son carried the label to the United States and other markets",
+   "now": "with his wife, an architect, he set about restoring it; In 1998 his son founded the company that became Castle Brands",
+   "why": "Wikipedia gives Failte Ireland a hand in the restoration; no source read told the son carrying the label abroad",
+   "sources": [
+    "https://knappoguewhiskey.com/story",
+    "https://en.wikipedia.org/wiki/Knappogue_Castle"
+   ]
+  },
+  {
+   "key": "the-irishman",
+   "field": "story, table, cards[hot-irishman].answer, quiz[1]",
+   "was": "The Hot Irishman, an Irish Coffee liqueur",
+   "now": "a bottled Irish Coffee, The Hot Irishman",
+   "why": "the house says the founders set up the company in 1999 to blend and bottle an Irish Coffee; liqueur is a shop's word",
+   "sources": [
+    "https://www.walshwhiskey.com/our-story/",
+    "https://thedrinksbusiness.com/?p=436553"
+   ]
+  },
+  {
+   "key": "the-irishman",
+   "field": "story",
+   "was": "The Irishman range of whiskeys had taken shape by 2006, led by single malt",
+   "now": "The Irishman was born in 2006",
+   "why": "the house dates the birth of The Irishman to 2006 and says nothing of single malt leading it; other accounts give 2007",
+   "sources": [
+    "https://www.walshwhiskey.com/our-story/"
+   ]
+  }
+ ],
+ "open": [
+  "bushmills: Aged 10 Years is read only in two supermarket listings of the bottle's words; 80 proof is the equivalent of 40% and was not read on a producer page.",
+  "connemara: the cask is named by shops alone; the peat from Scotland and the 20 to 25 parts per million stay out, on a shop and a review.",
+  "tyrconnell: the strength rests on retail listings; the taste on Difford's Guide alone; the revival stays 1993 or 1994 and the closure the 1920s.",
+  "knappogue-castle: the label's own strength was not read, and the house's pages disagree; the distillery stays unnamed.",
+  "the-irishman: the distillery stays unnamed; Writers' Tears is 2008 or 2009 by source; the pick stands in doubt in the plan, but the bottling is current on the house's page."
+ ],
+ "living": [
+  "Met in sources and named in no record, already in people.json: John Teeling (Cooley's founder), Mark Andrews and Mark Andrews III (the Castle Brands founder), Bernard Walsh and Rosemary Walsh (the Walsh founders).",
+  "New for people.json: none.",
+  "The dead and the undated met: Sir Thomas Phillips of the 1608 licence, Hugh Anderson of the 1784 company, Andrew Alexander Watt of the horse, Mark Edwin Andrews of Knappogue Castle and his wife; none is named in a record, as no two sources read gave their dates."
+ ],
+ "swaps": [
+  "No swap proposed by the author and none made. The Irishman stays: the house's page shows The Irishman Single Malt current, triple distilled at 40% ABV. Knappogue Castle 12 Year Old stays: the house lists it current."
+ ],
+ "tension": [
+  "The Library's Bushmills record says it holds the oldest distilling licence on record anywhere and gives est. licensed 1608; the record gives 1784, the registered company, and 1608 as a licence for the district, as the style page does. Reported, not edited.",
+  "plan.json, bushmills why: says oloroso casks and a licence in the county; the house says former sherry casks and bourbon-seasoned casks, and the style page says the district. Reported, not edited.",
+  "plan.json, tyrconnell why: gives the closure as 1925 and the revival as 1993 as fact; Difford's gives both, other accounts 1921 and 1994. Reported, not edited.",
+  "plan.json, connemara note: says the peat is now sourced from Scotland; only a shop says so. plan.json, knappogue-castle why: calls it the twelve year old a bar meets most often after Bushmills, a ranking no source gives. Reported, not edited."
+ ]
+}
