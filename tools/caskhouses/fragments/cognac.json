@@ -17,7 +17,7 @@
       "bottle": {
         "name": "Hennessy Very Special Cognac",
         "class": "Cognac of the VS grade: no eau-de-vie in the blend is younger than two years",
-        "mash": "White wine from four crus the house names, Grande Champagne, Petite Champagne, Borderies and Fins Bois, made into some forty eaux-de-vie for the blend.",
+        "mash": "White wine of four crus as guides give the blend, Grande Champagne, Petite Champagne, Borderies and Fins Bois, made into some forty eaux-de-vie.",
         "still": "Wine distilled twice in copper Charentais pot stills, as the Cognac rules require; the eaux-de-vie are then chosen and blended by the house's tasting committee.",
         "wood": "Aged in French oak casks, by the house's account. The label carries the V.S grade and no age statement.",
         "strength": "40% ABV (80 proof)",
@@ -29,7 +29,7 @@
         ]
       },
       "table": "Hennessy Very Special is the young cognac of Hennessy, the house an Irish officer founded in Cognac in 1765, blended from some forty eaux-de-vie of four crus. Toast, almond and brown sugar make it a cognac for neat sipping, a ginger ale highball or a Sidecar.",
-      "story": "Richard Hennessy (1724 to 1800), born in County Cork, served the French king in the Irish Brigade, then settled in Cognac and founded a trading house for its eaux-de-vie in 1765. His son built the business and brought in a family of blenders, the Fillioux, whose sons followed their fathers into the role for generations. By the house's account every eau-de-vie it uses is tasted by its committee before it goes into a blend. In 1865, by the house's own account, the family helped bring in grading by stars, and the Three Star cognac of that system is the line that the V.S of the label carries on. In 1971 Hennessy merged with the Champagne house Moët et Chandon to form Moët Hennessy, and in 1987 Moët Hennessy merged with Louis Vuitton to form LVMH. For a bartender the V.S is the bottle a guest names when he asks for cognac by brand, and the plainest lesson in what the grade letters promise: a floor of two years in oak, not an age.",
+      "story": "Richard Hennessy (1724 to 1800), born in County Cork, served the French king in the Irish Brigade, then settled in Cognac and founded a trading house for its eaux-de-vie in 1765. In the early 1800s the house took on a cooper of the Fillioux family as its blender, by its own account, and his sons and grandsons followed him into the role for generations. By the house's account every eau-de-vie it uses is tasted by its committee before it goes into a blend. In 1865, by the house's own account, the family helped bring in grading by stars, and the Three Star cognac of that system is the line that the V.S of the label carries on. In 1971 Hennessy merged with the Champagne house Moët et Chandon to form Moët Hennessy, and in 1987 Moët Hennessy merged with Louis Vuitton to form LVMH. For a bartender the V.S is the house's young cognac, poured long or in a Sidecar, and a plain lesson in what the grade letters promise: a floor of two years in oak, not an age.",
       "others": [
         { "name": "Hennessy V.S.O.P", "note": "Older eaux-de-vie: none in the blend is younger than four years." },
         { "name": "Hennessy X.O", "note": "The house's extra old blend, every eau-de-vie at least ten years old." }
@@ -69,7 +69,19 @@
         "The mergers of 1971 and 1987 rest on Britannica, with Wikipedia's LVMH page and the LVMH history page in agreement for 1987. A living blender of the Fillioux family and the head of LVMH appear in the sources; both names were added to people.json.",
         "The still is the Cognac rule as the Cask Atlas states it; the house's own distilleries and its share of bought eaux-de-vie were not confirmed and are left out."
       ],
-      "checked": null
+      "checked": {
+        "date": "2026-11-22", "by": "refuter", "verdict": "changed",
+        "changed": [
+          "bottle.mash: the four crus were told as named by the house; the house's V.S pages read through search name no crus, and Difford's Guide and the house's selection material give four, so now as guides give the blend.",
+          "story: the son bringing in the Fillioux; the house's legacy page credits the founder, Wikipedia the son, and the year is 1800 or 1806 by source, so now the house took on a cooper of the Fillioux family in the early 1800s, by its own account.",
+          "story: the V.S as the bottle a guest names by brand, and the plainest lesson; an unsourced ranking and a superlative, now the house's young cognac and a plain lesson."
+        ],
+        "open": [
+          "story: Richard Hennessy's birth is 1724 on the house's page and in most sources, 1720 in one genealogy; his regiment is Clare or Dillon by source, so the record says only the Irish Brigade.",
+          "story: the 1865 star system is credited to a grandson or a great-grandson of the founder by source; the record names no descendant.",
+          "bottle.mash: some forty eaux-de-vie may be the house's tasting pool rather than the final count; it rests on Difford's Guide and shops."
+        ]
+      }
     },
     {
       "key": "remy-martin",
@@ -89,7 +101,7 @@
         "class": "Cognac Fine Champagne of the VSOP grade",
         "mash": "White wine from two crus only, Grande Champagne and Petite Champagne, at least half of it Grande Champagne as Fine Champagne requires; the house publishes no exact split.",
         "still": "Distilled twice on the lees in copper Charentais pot stills, by the house's account; the eaux-de-vie are then chosen by blind tasting.",
-        "wood": "Aged in large-grain French oak casks toasted to a medium plus level, by the house's account. VSOP grade; no age statement.",
+        "wood": "Aged in large-grain Limousin oak casks, by the house's account. VSOP grade; no age statement.",
         "strength": "40% ABV",
         "taste": "Vanilla from the oak first, then dried apricot and candied pear; the palate joins dried fruit to a light note of liquorice and ends silky, as the house describes it.",
         "pour": "Neat in a tulip glass or over one large cube; it also makes a round Sidecar or Vieux Carré.",
@@ -99,7 +111,7 @@
         ]
       },
       "table": "Rémy Martin VSOP Fine Champagne is the cognac Rémy Martin blends only from the Grande and Petite Champagne crus, a bottling the house first made in 1927. Vanilla, dried apricot and a touch of liquorice make it a cognac to sip neat or to build a round Sidecar.",
-      "story": "In 1724 a young vine grower from near Rouillac set up a cognac trading house under his own name, by the house's account, and the business stayed with his family for generations. In 1924 André Renaud (died 1965) took charge of the house and became, by its account, its first cellar master. In 1927 he launched the VSOP Fine Champagne, a blend drawn only from the two chalky crus at the heart of the region, and in 1938 the Fine Champagne appellation was recognised in law. When Renaud died in 1965, his son-in-law took over the firm. In 1990 the holding companies of Rémy Martin and of Cointreau, the orange liqueur house of Angers, merged, and in 1991 the group took the name Rémy Cointreau. The house kept its rule of blending from the two Champagne crus alone. For a bartender this one bottle teaches two label words at once: what VSOP promises about age, and what Fine Champagne means about origin, which has nothing to do with sparkling wine.",
+      "story": "In 1724 a vine grower born near Rouillac set up a cognac trading house under his own name, by the house's account, and the business stayed with his family for generations. In 1924 André Renaud (died 1965) took charge of the house and became, by its account, its first cellar master. In 1927 he launched the VSOP Fine Champagne, a blend drawn only from the two chalky crus at the heart of the region, and in 1938 the Fine Champagne name was set down in the law of the appellation. When Renaud died in 1965, his son-in-law took over the firm. In 1990 the holding companies of Rémy Martin and of Cointreau, the orange liqueur house of Angers, merged, and in 1991 the group took the name Rémy Cointreau. The house kept its rule of blending from the two Champagne crus alone. For a bartender this one bottle teaches two label words at once: what VSOP promises about age, and what Fine Champagne means about origin, which has nothing to do with sparkling wine.",
       "others": [
         { "name": "Rémy Martin XO", "note": "The house's extra old blend: no eau-de-vie in it is younger than ten years." }
       ],
@@ -138,7 +150,18 @@
         "The merger is dated 1990 and the name 1991 as the group's own timeline gives them; some accounts put the whole merger in 1991. The house's Limousin oak (a house story page) and its distillation in small stills are left out of the wood and still for want of a cited page.",
         "No living person was named in what this record uses; the plan's note that the house belongs to Rémy Cointreau is told only as the dated merger."
       ],
-      "checked": null
+      "checked": {
+        "date": "2026-11-22", "by": "refuter", "verdict": "changed",
+        "changed": [
+          "bottle.wood: casks toasted to a medium plus level were in no source read; the house's craftsmanship page and Whitewall give large-grain Limousin oak, so now large-grain Limousin oak casks by the house's account.",
+          "story: a young vine grower; the founder was born in 1695 near Rouillac (Rémy Cointreau, Wikipedia) and was 29 in 1724, and no source says young, so now a vine grower born near Rouillac.",
+          "story: 1938 as the year the appellation was recognised; the Cognac decree is of 1936, and the crus and the Fine Champagne name came into it by the decrees of 1938 (Wikipedia, the 1936 decree with its 1938 amendment), so now the name set down in the law of the appellation."
+        ],
+        "open": [
+          "story: Wikipedia and one history put André Renaud at the house from about 1910 and his purchase in 1924; the record keeps 1924 as the house gives it.",
+          "story: the merger is 1990 and the name 1991 on the group's timeline; some accounts put the name in 1990."
+        ]
+      }
     },
     {
       "key": "martell",
@@ -157,8 +180,8 @@
         "name": "Martell Cordon Bleu Cognac",
         "class": "Cognac, sold by the house as an extra old blend",
         "mash": "White wine of several crus, led by a high share of old Borderies eaux-de-vie, with Grande Champagne for length, by the house's account; more than a hundred eaux-de-vie go into it.",
-        "still": "Clear wine, its lees taken off first, distilled twice in copper Charentais pot stills with an early cut, as the house describes its method.",
-        "wood": "Aged in fine-grained French oak from the Tronçais forest, the wood the house chooses. The label carries no age statement.",
+        "still": "Clear wine, its lees taken off first, distilled twice in copper Charentais pot stills, as the house describes its method.",
+        "wood": "Aged in French oak casks, very little of it new for this blend, by the house's account. The label carries no age statement.",
         "strength": "40% ABV",
         "taste": "Candied plum and apple with mocha coffee, toasted almond and vetiver on the nose, then dried fruit and nut on the palate and a long, spiced finish, as the house describes it.",
         "pour": "Neat at room temperature in a tulip glass, or with a few drops of water; it is a cognac to sip rather than to mix.",
@@ -168,7 +191,7 @@
         ]
       },
       "table": "Martell Cordon Bleu is the extra old cognac of Martell, the house a merchant from Jersey founded in Cognac in 1715, built around old eaux-de-vie of the Borderies. Candied plum, mocha and toasted almond make it a cognac to sip neat at room temperature.",
-      "story": "Jean Martell (1694 to 1753), born at St Brelade in Jersey, set up as a merchant of eaux-de-vie in Cognac, on the Charente, in 1715. His descendants built a house style on the Borderies, a small cru whose eaux-de-vie are round and floral, and on clear wine distilled without its lees. In 1912 the founder's great-grandson created Cordon Bleu, an extra old cognac given a name of its own; by the house's account it was launched at the Hôtel de Paris in Monaco. The blend, of more than a hundred eaux-de-vie, has kept its name and its Borderies heart ever since. The family ran the firm for most of three centuries. Seagram bought the house in 1988, and Pernod Ricard acquired it with Seagram's drinks business in 2001. For a bartender Cordon Bleu is the bottle that teaches the Borderies: ask what a cru brings to a blend, and this is the answer to pour, beside the house's arched XO decanter.",
+      "story": "Jean Martell (1694 to 1753), born at St Brelade in Jersey, set up as a merchant of eaux-de-vie in Cognac, on the Charente, in 1715. His descendants built a house style on the Borderies, a small cru whose eaux-de-vie are round and floral, and on clear wine distilled without its lees. In 1912 the founder's great-grandson created Cordon Bleu, an extra old cognac given a name of its own; by the house's account it was launched at the Hôtel de Paris in Monaco. The blend, of more than a hundred eaux-de-vie, has kept its name since. The family ran the firm for most of three centuries. Seagram, which had bought a large share in 1987, took full control of the house in 1988, and Pernod Ricard acquired it with Seagram's drinks business in 2001. For a bartender Cordon Bleu is the bottle that teaches the Borderies: ask what a cru brings to a blend, and this is the answer to pour, beside the house's arched XO decanter.",
       "others": [
         { "name": "Martell XO", "note": "Grande Champagne and Borderies eaux-de-vie, none younger than ten years, in an arched decanter." }
       ],
@@ -190,7 +213,7 @@
           "q": "Martell was founded in 1715. In which year was its Cordon Bleu created?",
           "options": [ "1753", "1865", "1912", "1988" ],
           "a": 2,
-          "explain": "The founder's great-grandson created it in 1912; 1753 is the year the founder died, and 1988 the year Seagram bought the house." }
+          "explain": "The founder's great-grandson created it in 1912; 1753 is the year the founder died, and 1988 the year Seagram took full control of the house." }
       ],
       "sources": [
         { "title": "Martell: Martell Cordon Bleu", "url": "https://www.martell.com/en/collections/martell-signature-cognacs/product/martell-cordon-bleu/", "kind": "primary", "read": "search" },
@@ -206,7 +229,19 @@
         "Jean Martell's dates (1694 to 1753) rest on Wikipedia's two pages, one publisher; the house's history page gives 1715 and Jersey. The great-grandson is left unnamed (Édouard Martell in the sources) for want of dates.",
         "The sales: Seagram bought a 40 per cent share in 1987 and the whole in 1988 by most accounts (Wikipedia, an encyclopedia history); Pernod Ricard's own timeline and a trade report give the takeover of Seagram's drinks in 2001, others 2002. The liquor shelf's Martell XO agrees with this record on Jersey, 1715, the Borderies, clear wine and Tronçais oak."
       ],
-      "checked": null
+      "checked": {
+        "date": "2026-11-22", "by": "refuter", "verdict": "changed",
+        "changed": [
+          "bottle.wood: Tronçais oak for Cordon Bleu was in no source read (the shelf ties it to the XO); the house's 2022 release says barely any new oak is used for Cordon Bleu, so now French oak casks, very little of it new, by the house's account.",
+          "bottle.still: the early cut was in no source read and is cut; the clear wine and double distillation stand on the shelf's reviewed page.",
+          "story: Seagram bought the house in 1988; Seagram took a 40 per cent share in 1987 and full control in 1988 (Difford's Guide, the South China Morning Post, Wikipedia), so now both steps; quiz q2's explain follows.",
+          "story: kept its Borderies heart ever since, a claim no source dates, now kept its name since."
+        ],
+        "open": [
+          "bottle.mash: the share of Borderies and the count of eaux-de-vie (more than a hundred or 150) differ by house release; the record keeps a high share and more than a hundred.",
+          "story: Jean Martell's dates stand on the house's history page and Wikipedia; the founder's house at Gâtebourse is dated 1728 or 1750 by source and is left out."
+        ]
+      }
     },
     {
       "key": "courvoisier",
@@ -236,14 +271,14 @@
         ]
       },
       "table": "Courvoisier VSOP is the four-cru cognac of Courvoisier, the house of Jarnac on the Charente, aged up to twelve years in its own oak. Stone fruit, toasted almond and gingerbread make it a cognac built for a Sidecar or a Vieux Carré.",
-      "story": "Courvoisier dates itself to 1828. By the house's account a Paris wine and spirits firm at Bercy, run by the founder's father and a partner, passed to their sons, who set up a second company at Jarnac on the Charente; the house's own building there followed in 1857. The house tells that the emperor Napoléon III (1808 to 1873) named it a supplier to his court, and a legend says he inherited the taste from his uncle: a story the brand has kept on its labels as the cognac of Napoléon. Félix Courvoisier (died 1866) left no heir, and the house passed to his nephews. In 1909 the Simon family, wine and spirits merchants in Britain, took over the firm and, by one account, gave it the slogan the Brandy of Napoléon. The house changed hands several times in the century that followed, and in 2024 Campari bought it from Beam Suntory. For a bartender the VSOP is the working cognac of the house: four crus, a round, fruity middle, and enough body to carry citrus in a Sidecar.",
+      "story": "Courvoisier dates itself to 1828. By the house's account a Paris wine and spirits firm at Bercy, run by the founder's father and a partner, passed to their sons, who set up a new business at Jarnac on the Charente that dealt in cognac alone. The brand's legend reaches further back: the story goes that the emperor Napoléon Bonaparte (1769 to 1821) visited the Bercy cellars in 1811, and the brand has long told itself as the cognac of Napoléon. The founding son left no heir, and the house passed to his nephews, who in 1869, by the house's account, were named suppliers to the court of Napoléon III (1808 to 1873). In 1909 the Simon family, the house's distributors in Britain, took over the firm and, by one account, gave it the slogan the Brandy of Napoléon. The house changed hands several times in the century that followed, and in 2024 Campari bought it from Beam Suntory. For a bartender the VSOP is the working cognac of the house: four crus, a round, fruity middle, and enough body to carry citrus in a Sidecar.",
       "others": [
         { "name": "Courvoisier VS", "note": "The house's young cognac: no eau-de-vie in it is younger than two years." },
         { "name": "Courvoisier XO", "note": "The house's extra old blend: no eau-de-vie in it is younger than ten years." }
       ],
       "traps": [
         "Napoléon on a cognac label is also an age grade, no eau-de-vie in the blend younger than six years, quite apart from the Courvoisier legend.",
-        "The VSOP the house shows blends four crus, Fins Bois among them, so it is no Fine Champagne, though a Courvoisier VSOP Fine Champagne bottling also exists."
+        "The VSOP the house shows blends four crus, Fins Bois among them, so it is no Fine Champagne, though the house has also sold a VSOP Fine Champagne."
       ],
       "cards": [
         { "id": "four-crus", "prompt": "Which crus go into Courvoisier VSOP?", "answer": "Four: Fins Bois balanced with Grande Champagne, Petite Champagne and Borderies." },
@@ -257,9 +292,9 @@
           "explain": "The house blends four crus, Fins Bois among them, so the VSOP is no Fine Champagne, which would allow Grande and Petite Champagne alone." },
         { "id": "q2", "tag": "story", "card": "jarnac-1828",
           "q": "Which year does Courvoisier give for its founding in Jarnac?",
-          "options": [ "1828", "1857", "1866", "1909" ],
+          "options": [ "1828", "1869", "1866", "1909" ],
           "a": 0,
-          "explain": "The house dates itself to 1828; its building in Jarnac followed in 1857, and 1909 is the year the Simon family took over." }
+          "explain": "The house dates itself to 1828; 1869 is the year Napoléon III named it a supplier to his court, and 1909 the year the Simon family took over." }
       ],
       "sources": [
         { "title": "Courvoisier: VSOP", "url": "https://www.courvoisier.com/cognac-collection/vsop/", "kind": "primary", "read": "search" },
@@ -276,7 +311,23 @@
         "Napoléon III's dates (1808 to 1873) rest on Britannica and napoleon.org, read through search; the first Napoléon is left unnamed as his uncle.",
         "Difford's Guide lists a Courvoisier VSOP Fine Champagne, aged 6 to 10 years, beside the four-cru VSOP the house's page shows; the record follows the house's page and names the other in a trap. The plan's why calls the VSOP cask led; the house speaks of fruit first, and the record follows the house."
       ],
-      "checked": null
+      "checked": {
+        "date": "2026-11-22", "by": "refuter", "verdict": "changed",
+        "changed": [
+          "story: Félix Courvoisier (died 1866); one source gives his death as 1866, another 1886, another a life of 1808 to 1873, so he is no longer named and is the founding son who left no heir.",
+          "story: the house's building of 1857 was in no source read and is cut; quiz q2's wrong option 1857 is now 1869 and its explain follows.",
+          "story: Napoléon III named the house a supplier before the nephews took over; the house's heritage page and Beam Suntory's history give the title of 1869 to the nephews, so the order and the year are now told.",
+          "story: the legend that he inherited the taste from his uncle; the brand's legend in Wikipedia and its heritage page is the first Napoléon's visit to Bercy in 1811, now told as the story goes, with his dates.",
+          "story: the sons' second company at Jarnac, now a new business that dealt in cognac alone, as the house's heritage page tells it.",
+          "traps[1]: a Courvoisier VSOP Fine Champagne also exists, a present state that may not hold, now the house has also sold one."
+        ],
+        "open": [
+          "year: the house gives 1828; Difford's Guide gives 1834 and Grace's Guide 1835 and 1843 for the Jarnac firm; the record keeps the house's year as its own.",
+          "bottle.still: fermentation of about a week, distillation on the lees and the heart alone kept rest on the house's own page read by the author; not found in this reader's searches.",
+          "bottle.pour: the house's Sidecar, Vieux Carré and cognac Old Fashioned were not read again here.",
+          "story: whether the Simon family bought the firm or assumed its leadership in 1909 differs by source; the record says took over."
+        ]
+      }
     },
     {
       "key": "ferrand",
@@ -306,9 +357,9 @@
         ]
       },
       "table": "Ferrand 1840 Original Formula is the Grande Champagne cognac Ferrand blended at 45 per cent after a bottle of 1840 made for mixing. Ripe grape, honey and spice stand up in a Sidecar, a julep or a Vieux Carré.",
-      "story": "The Ferrand name comes from a family of growers at Ségonzac, in Grande Champagne, where ten generations of its men, each named Elie, worked the vines and stills over three centuries, by the house's account. The family built its manor there in 1861, and the male line ended in 1915, when the tenth of them died of wounds from the First World War. In 1989 a new firm, Maison Ferrand, was founded to revive the name, and by its account the Château de Bonbonnet at Ars became the heart of its work. In 2011 the house released 1840 Original Formula, made with its cellar master and a drinks historian to recreate the three star cognac that bartenders of the nineteenth century poured into punches, juleps and crustas. The blend was modelled closely on a well-kept bottle of Pinet-Castillon cognac from 1840, and it is bottled at 45 per cent, above the 40 of most young cognacs, so that it keeps its fruit once it meets ice and sugar. For a bartender it is the cognac made to answer the old recipes as their authors wrote them.",
+      "story": "The Ferrand name comes from a family of growers at Ségonzac, in Grande Champagne, where, as the house tells it, ten generations of its men, each named Elie, worked the vines and stills over three centuries. By the house's account the family built its manor there in 1861, and the line of Elies ended in 1915, when an Elie serving in the First World War died of typhoid. In 1989 a new firm, Maison Ferrand, was founded to revive the name, and by its account the Château de Bonbonnet at Ars became the heart of its work. In 2011 the house released 1840 Original Formula, made with its cellar master and a drinks historian to recreate the three star cognac that bartenders of the nineteenth century poured into punches, juleps and crustas. The blend was modelled closely on a well-kept bottle of Pinet-Castillon cognac from 1840, and it is bottled at 45 per cent, above the 40 of most young cognacs, so that it keeps its fruit once it meets ice and sugar. For a bartender it is the cognac made to answer the old recipes as their authors wrote them.",
       "others": [
-        { "name": "Ferrand Ambré", "note": "A Grande Champagne cognac of the house, in the same hammered bottle as the 1840." }
+        { "name": "Ferrand Ambré", "note": "A Grande Champagne cognac of the house, its blend about ten years old on average, by Difford's Guide's account." }
       ],
       "traps": [
         "1840 on the label is the year of the bottle the blend copies, not a vintage and not an age.",
@@ -345,7 +396,19 @@
         "The Library dates Pierre Ferrand to 1989, as this record does from the house's own page; Difford's Guide gives 1702 for the house, which seems to be the family's claim, and is left out. The Library's claim that the house petitioned to revive old cask sizes and distillation methods was not checked and is not used.",
         "The roster's why names Jerry Thomas: he is left out of the record for want of searched dates. The family's last daughter, who died in 2016, is left out; the manor of 1861 and the line of ten men named Elie rest on the house's roots page alone."
       ],
-      "checked": null
+      "checked": {
+        "date": "2026-11-22", "by": "refuter", "verdict": "changed",
+        "changed": [
+          "story: the last Elie died of wounds from the First World War; the house's roots page says he fell ill with dysentery in service and died of typhoid in September 1915, so now an Elie serving in the war who died of typhoid.",
+          "story: the manor of 1861 and the end of the line rest on the house's roots page alone, now hedged as the house's account; the roots page itself puts the manor under Elie VII in one place and Elie VIII in another, and another house page says the 1860s.",
+          "others[Ferrand Ambré].note: the same hammered bottle as the 1840 was in no source read; Difford's Guide and shops give a Grande Champagne blend of about ten years' average age, now told so."
+        ],
+        "open": [
+          "year: 1989 for Maison Ferrand stands on the house and Wikipedia; Difford's Guide's 1702 and one history's 1792 for Pierre Ferrand are the family's claims and stay out.",
+          "story: 2011 for the release rests on Difford's Guide's notes of August 2011 and one review; the Tales of the Cocktail debut stays out for want of a year.",
+          "bottle.label: the year the label changed from Pierre Ferrand to Ferrand was not found."
+        ]
+      }
     }
   ]
 }
