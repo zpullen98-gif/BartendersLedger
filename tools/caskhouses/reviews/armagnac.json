@@ -1,0 +1,262 @@
+{
+ "group": "armagnac",
+ "chunk": "c10",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 28,
+ "tested": [
+  "the appellation's age terms: VS one year, VSOP four, Napoléon six, XO and Hors d'Âge ten since the change of 2018, an age statement held by the youngest eau-de-vie; the interprofession's label page still pairs XO with Napoléon at six. 2 searches.",
+  "the two distillations: the ban of 1903 by Janneau's account against 1936 or 1943 elsewhere, and the return of the pot still in 1972. 1 search.",
+  "tariquet: the family history (the bear tamer of Ercé and his son, 1912, seven hectares, the son's return in 1922, the daughter born in 1925, the Grassa marriage of 1946, the Montesquiou lord titled Sieur du Tariquet, armagnac since 1683); the stills of 1985 and 2016 from Condom, fired with recycled vine stakes; the VSOP sheet (60 Ugni Blanc, 40 Baco, five to seven years, 40 per cent, ripe fruit, flowers and mint, oak spice, liquorice); the lightly toasted fine-grained French oak; the two names, Domaine and Château. 7 searches.",
+  "janneau: the founding of 1851 by two partners as Dubourdieu Janneau and Cie; four or five generations; Martell in 1974 and the owners after; the 1972 petition; the VSOP page (Baco, Ugni Blanc, Folle Blanche, up to twenty years in French oak, fig, honey, leather, caramel, toasted raisins, fruit jelly); the pot still's 72 per cent and the continuous still's 52 to 60. 5 searches.",
+  "laubade: 1870 as the estate's founding, the Lesgourgues purchase of 1974 and three generations; the four grapes; the VSOP page (six to twelve years, ripe fruit, plum, sweet pastry, vanilla, citrus); the cooperage of Gascon oak and the three-year staves; variety by variety distillation on the estate's own still; the vintages after fifteen years. 4 searches.",
+  "marie-duffau: Prosper Delord the travelling distiller of 1893, his marriage to the Duffau vines, the two labels, the 1925 founding by the importer against the sons' Delord Frères by the house, the grandsons of 1963 and 1973; the Sier still dating from 1900 and the cellar back to 1904; the Napoléon's grapes and taste. 5 searches.",
+  "darroze: the restaurant at Villeneuve-de-Marsan, the late 1960s, the three casks of 1974, the Roquefort cellars of 1985, the son of 1994 (1996 in one account), about thirty estates; the 20 Ans grapes, strength and taste; the range from 8 to 60 years; distilling at fifteen estates. 4 searches.",
+  "All 28 searches of the share spent; WebFetch not tried.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, keys at positions 0, 2, 1, 0, 3, 2, 2, 0, 1, 3 (no position more than three times), each explain naming the nearest wrong option; Janneau's q2 explain now gives 1903 as the house's year. No card id changed."
+ ],
+ "changed": [
+  {
+   "key": "tariquet",
+   "field": "bottle.still",
+   "was": "the fire fed with old acacia vine posts",
+   "now": "the fire fed with old vine stakes",
+   "why": "the estate's pages give recycled vine stakes; acacia was in no source read",
+   "sources": [
+    "https://www.tariquet.com/en/elaborating-the-vin-de-chauffe/"
+   ]
+  },
+  {
+   "key": "tariquet",
+   "field": "bottle.wood",
+   "was": "Lightly toasted oak casks",
+   "now": "Lightly toasted casks of fine-grained French oak",
+   "why": "the estate's Varietals and style pages give lightly toasted barrels of fine-grained French oak",
+   "sources": [
+    "https://www.tariquet.com/en/the-varietals-a-new-range-of-bas-armagnacs/",
+    "https://www.tariquet.com/en/the-syle-of-our-bas-armagnacs/"
+   ]
+  },
+  {
+   "key": "tariquet",
+   "field": "story",
+   "was": "The estate takes its name from a seventeenth-century lord, the Sieur du Tariquet",
+   "now": "In the seventeenth century the estate belonged to a Gascon lord who took his title from it, the Sieur du Tariquet",
+   "why": "a Sieur du Tariquet is lord of Tariquet: the estate's brochure gives a Montesquiou lord of that title, so the title came from the place",
+   "sources": [
+    "https://www.tariquet.com/en/a-family-history/",
+    "https://www.tariquet.com/wp-content/uploads/2024/10/Domaine-Tariquet-Montreur-dOurs-EN.pdf"
+   ]
+  },
+  {
+   "key": "tariquet",
+   "field": "story",
+   "was": "A daughter of the family grew up on the estate and married the son of a neighbouring farmer, and through that marriage the estate passed to the Grassa family.",
+   "now": "The son settled there with his wife in 1922, and their daughter, born on the estate in 1925, married into the Grassa family, which had come from Spain; through that marriage the estate passed to the Grassas.",
+   "why": "the estate's family history has the son return with his wife in 1922, the daughter born there in 1925 and married into a family come from Spain to work on the Somport tunnel; no neighbouring farmer",
+   "sources": [
+    "https://www.tariquet.com/en/a-family-history/"
+   ]
+  },
+  {
+   "key": "tariquet",
+   "field": "traps[2]",
+   "was": "The estate prints its name as Domaine Tariquet on its product sheets of 2024; it is the same house as Château du Tariquet.",
+   "now": "The estate's labels of 2024 lead with Domaine Tariquet while the producer line reads Château du Tariquet: one estate, two names.",
+   "why": "the estate's 2024 material puts Domaine before Tariquet on every format and prints SCV Château du Tariquet as the producer line",
+   "sources": [
+    "https://www.tariquet.com/wp-content/uploads/2024/10/New-Classic-Domaine-Tariquet-BD.pdf",
+    "https://www.diffordsguide.com/producers/483/chateau-du-tariquet-domaine-du-tariquet/history"
+   ]
+  },
+  {
+   "key": "janneau",
+   "field": "story, cards[founded].answer",
+   "was": "when its founder set up in the armagnac trade at Condom ... the cellars built that year have served the house for its ageing ever since; 1851; the house ages its armagnac in the cellars built that year",
+   "now": "when two partners, one of them a Janneau, set up in the armagnac trade at Condom ... by its own account it has aged its armagnac in the cellars built that year ever since; 1851, by the house's account, when two partners set up in the armagnac trade at Condom",
+   "why": "the house's history page and Decanter give a partner beside the Janneau founder; one importer's booklet dates a cellar to 1885, so the 1851 cellars are the house's account",
+   "sources": [
+    "https://www.armagnac-janneau.com/en/history/",
+    "https://www.decanter.com/?p=523265"
+   ]
+  },
+  {
+   "key": "janneau",
+   "field": "story",
+   "was": "Four generations of the family ran the business before it passed, in the 1970s, to the Cognac house Martell.",
+   "now": "The family ran the business for generations, and in 1974, by the house's account, it was sold to the Cognac house Martell.",
+   "why": "four generations in two sources, five in another; 1974 on the house's history page and Master of Malt's, the early 1970s elsewhere",
+   "sources": [
+    "https://www.armagnac-janneau.com/en/history/",
+    "https://www.masterofmalt.com/distilleries/janneau-armagnac-distillery/",
+    "https://alcademics.com/janneau-armagnac-distillery-visit/"
+   ]
+  },
+  {
+   "key": "janneau",
+   "field": "story, quiz[1].explain",
+   "was": "Double distillation in pot stills had been barred in Armagnac from 1903; 1903 is the year double distillation was barred in Armagnac",
+   "now": "By the house's account double distillation in pot stills had been barred in Armagnac since 1903; 1903 is the year the house says double distillation was barred in Armagnac",
+   "why": "1903 is the house's year; one guide has continuous distillation the only legal method from 1943 to 1971, and the appellation itself is of 1936",
+   "sources": [
+    "https://www.armagnac-janneau.com/en/savoir-faire/",
+    "https://www.diffordsguide.com/encyclopedia/222/bws/armagnac-production-2-distillation"
+   ]
+  },
+  {
+   "key": "janneau",
+   "field": "sources[4]",
+   "was": "Fells: Janneau, the producer",
+   "now": "Janneau: the history of the house",
+   "why": "the founding, the sale and the 1972 petition rest on the house's history page; the importer's page is a lead",
+   "sources": [
+    "https://www.armagnac-janneau.com/en/history/"
+   ]
+  },
+  {
+   "key": "laubade",
+   "field": "bottle.wood, story",
+   "was": "the staves dried in the open air for three years; the wood dried in the open air for three years before the barrels are made",
+   "now": "cut; the cooperage told as Difford's Guide's and the importer's",
+   "why": "the three-year drying was in no source read; the cooperage of Gascon oak rests on Difford's Guide and the importer",
+   "sources": [
+    "https://www.diffordsguide.com/producers/1128/chateau-de-laubade",
+    "https://www.amathusdrinks.com/spirits/our-brands/chateau-de-laubade"
+   ]
+  },
+  {
+   "key": "laubade",
+   "field": "story, cards[family].answer, quiz[1].explain",
+   "was": "The château at Sorbets ... was built in 1870; the château itself was built in 1870; the year the château was built",
+   "now": "The estate at Sorbets ... dates from 1870; the estate itself dates from 1870; the year the estate dates from",
+   "why": "sources give 1870 as the estate's founding, none as the year a building went up",
+   "sources": [
+    "https://www.diffordsguide.com/producers/1128/chateau-de-laubade",
+    "https://www.vinatis.com/maisons/laubade"
+   ]
+  },
+  {
+   "key": "laubade",
+   "field": "story",
+   "was": "Each variety is made into wine and distilled apart in the continuous Armagnac way, and each eau-de-vie is aged on its own before the cellar blends them.",
+   "now": "Each variety is distilled apart in the continuous Armagnac way, on the estate's own still, before the cellar blends the eaux-de-vie.",
+   "why": "separate distillation by variety on the estate's own still is in Difford's Guide, Calibre and Fine Vines; separate ageing was in no source read",
+   "sources": [
+    "https://www.diffordsguide.com/producers/1128/chateau-de-laubade",
+    "https://calibremag.com/armagnac-special-the-houses-part-four/",
+    "https://www.finevines.com/node/313"
+   ]
+  },
+  {
+   "key": "laubade",
+   "field": "story",
+   "was": "releases them as single vintages.",
+   "now": "releases them as single vintages, each after at least fifteen years in Gascon oak by the estate's account.",
+   "why": "the estate's vintages page gives the fifteen-year minimum in Gascon oak",
+   "sources": [
+    "https://chateaudelaubade.com/la-collection/les-millesimes/?lang=en"
+   ]
+  },
+  {
+   "key": "marie-duffau",
+   "field": "bottle.taste, table",
+   "was": "cocoa, orange rind, cake batter and vanilla, with soft tannin at the finish and a hint of rancio; expect cocoa, orange rind and vanilla",
+   "now": "dried fruit such as prune and raisin, butterscotch and vanilla, then soft tannin and a little cocoa at the finish; expect dried fruit, vanilla and a touch of cocoa",
+   "why": "orange rind and cake batter rested on one importer's page; retailers' notes give dried fruit, butterscotch, vanilla and a cocoa finish",
+   "sources": [
+    "https://www.heavenlyspirits.com/marie-duffau-bas-armagnac",
+    "https://astorwines.com/item/27753"
+   ]
+  },
+  {
+   "key": "marie-duffau",
+   "field": "story",
+   "was": "and the family's cellars hold armagnacs going back to 1904",
+   "now": "cut",
+   "why": "no source read gives 1904; the house's oldest named vintage is 1900",
+   "sources": [
+    "https://www.armagnacdelord.com/lepopee/",
+    "https://alcademics.com/distillery-visit-armagnac-delord/"
+   ]
+  },
+  {
+   "key": "marie-duffau",
+   "field": "story",
+   "was": "one a Sier built in 1900, for its old armagnacs, and on double-distillation stills for fruitier young spirit",
+   "now": "one a Sier dating from 1900, and on double-distillation stills",
+   "why": "two accounts date the Sier from 1900 without saying it was built that year; which spirit each still makes was in no source read",
+   "sources": [
+    "https://www.diffordsguide.com/producers/686/-armagnac-delord",
+    "https://www.plaisirsdegascogne.com/en/producteur/armagnac-delord"
+   ]
+  },
+  {
+   "key": "marie-duffau",
+   "field": "others[Marie Duffau Hors d'Âge].note",
+   "was": "An older blend, which the importer gives as at least twelve years old.",
+   "now": "An older blend: no eau-de-vie in an armagnac Hors d'Âge is younger than ten years.",
+   "why": "twelve years was the importer's alone; ten is the appellation's floor for Hors d'Âge",
+   "sources": [
+    "https://www.armagnac.fr/learn-hors-d-age-and-xo",
+    "https://thedrinksbusiness.com/?p=410838"
+   ]
+  },
+  {
+   "key": "marie-duffau",
+   "field": "sources[4]",
+   "was": "Armagnac interprofession: understanding a label",
+   "now": "The Drinks Business: armagnac's age terms of 2018",
+   "why": "the label page gives XO and Napoléon at six years, a rule changed in 2018; The Drinks Business keeps Napoléon at six and sets XO at ten",
+   "sources": [
+    "https://thedrinksbusiness.com/?p=410838"
+   ]
+  },
+  {
+   "key": "darroze",
+   "field": "bottle.still, traps[0]",
+   "was": "by its own account, distils at fifteen of them; and distils at only some of them",
+   "now": "its pages for single estates show them distilled in the continuous Armagnac way, the blend's page naming no still; the trap cut back to the éleveur's work",
+   "why": "distilling at fifteen estates was in no source read, the house's pages included; the single-estate pages give continuous distillation at 52 to 55 per cent",
+   "sources": [
+    "https://darroze-armagnacs.com/en/produit/domaine-de-lusson-2/",
+    "https://darroze-armagnacs.com/en/produit/domaine-de-coquillon/"
+   ]
+  },
+  {
+   "key": "darroze",
+   "field": "bottle.taste, table",
+   "was": "its tannins grown fine; raisin, dried fig, caramel and baking spice, with stewed apple; Raisin, fig and caramel over soft, fine tannin",
+   "now": "its alcohol softened with age; dried and candied fruit, baking spice such as cinnamon and nutmeg, and some rancio; Dried fruit, baking spice and a touch of rancio",
+   "why": "the house says only that the alcohol softens; trade notes give candied fruit and spice, dry spices of ginger, cinnamon and nutmeg, and rancio",
+   "sources": [
+    "https://darroze-armagnacs.com/produit/carafe-grands-assemblages-20-ans/",
+    "https://www.idealwine.com/en/buy-a-wine/B2094114-43000-1-bottle-Bas-Armagnac-Les-Grands-Assemblages-20-ans-dage-Darroze-70cl-Amber",
+    "https://www.thewhiskyexchange.com/p/80424/darroze-les-grands-assemblages-20-year-old-armagnac"
+   ]
+  }
+ ],
+ "open": [
+  "tariquet: 1683 and the Sieur du Tariquet rest on the estate alone; 53 to 56 per cent off the still on the English page, 53 to 54 on the French; one listing gives the VSOP seven years at least against the estate's five to seven.",
+  "janneau: the year the pot still was barred (1903 by the house, 1936 or 1943 elsewhere); Difford's Guide's 7 to 12 years mostly in Limousin oak against the house's up to twenty in French oak; the owners after Martell.",
+  "laubade: Difford's Guide calls the cooperage the only one of its kind, and one bottling was coopered outside; the VSOP's grape shares are unpublished.",
+  "marie-duffau: 1925 with the founder, his wife and a son by the importer, against the two sons' Delord Frères by the house; the grape shares rest on the importer and the retailers who copy it; one visit gives the Napoléon an average age of six years.",
+  "darroze: the son joined in 1994 by the house, 1996 in one account; the 20 Ans grapes are Baco and Ugni Blanc by the house, with shares and other grapes in listings; 40 per cent listings not seen again."
+ ],
+ "living": [
+  "Met in sources and named in no record, not in people.json, living as far as found, for the integrator to add: Arnaud Lesgourgues, Denis Lesgourgues and Jeanne Lesgourgues (Laubade's third generation); Jacques Delord, Pierre Delord, Sylvain Delord and Jérôme Delord (the Delord house); Marc Darroze (the son of 1994) and Hélène Darroze (the chef of the family); Fabio Giovinetti (Janneau, named as its manager by a retailer). Not added here, since this task changes only the fragment and this review.",
+  "Met with no death found and named in no record: Maurice Lesgourgues (the purchase of 1974), Pierre Janneau and Georges Samalens (the petition of 1972), Francis Darroze (the founder of 1974) and Jean Darroze (the restaurant); each is described by role or left out.",
+  "The dead or undated of the house stories, described and not named: Pierre de Montesquiou, the Sieur du Tariquet; Pierre Artaud, Jean-Pierre and Pauline Artaud, Hélène and Pierre Grassa; Pierre-Etienne Janneau and Joseph Dubourdieu; Prosper Delord, Marie Duffau (a label name only), Gaston and Georges Delord."
+ ],
+ "swaps": [
+  "tariquet, bottling (name only): the author proposed Domaine Tariquet in place of Château du Tariquet. Refused for now: the estate's 2024 material leads with Domaine Tariquet, but the producer line on the same sheets is SCV Château du Tariquet, Difford's Guide and the Library carry the Château name, and no source dates a change; the change would also move the pick's producer and its Library link, which is the integrator's. The trap teaches both names. The roster's flagship stands.",
+  "No other swap proposed or made."
+ ],
+ "tension": [
+  "plan.json, tariquet why: says the estate has been the Grassa family's since 1912; by the estate's history the Artaud father and son bought it in 1912 and it passed to the Grassa family by the marriage of their granddaughter. Reported, not edited.",
+  "plan.json, janneau why: names one founder, Pierre Etienne Janneau, and the spirit aged in the cellars built in 1851 as fact; the house gives two founders, and the cellars are its own account. Reported, not edited.",
+  "plan.json, marie-duffau why: has Marie Duffau found the firm with her husband and son in 1925 and the two names since 1925; that is the importer's account, and the house's page has the two sons found Delord Frères. Reported, not edited.",
+  "plan.json, laubade why: a single block estate rests on one shop's page, and the record leaves it out. Reported, not edited.",
+  "The Library's Château du Tariquet entry gives roughly 52 to 60 per cent off the still for armagnac in general and calls the estate frequently released as single vintages; the record gives the estate's 53 to 56 and does not take up the vintages claim, which the estate's range of blends and varietals does not bear out as its lead. Its wording (flavor) is American. Reported, not edited.",
+  "No tension found with the Cask Atlas chapter, which names Janneau for both distillations."
+ ]
+}
