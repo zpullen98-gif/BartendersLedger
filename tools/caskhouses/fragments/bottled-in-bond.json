@@ -1,0 +1,350 @@
+{
+  "group": "bottled-in-bond",
+  "records": [
+    {
+      "key": "eh-taylor",
+      "group": "bottled-in-bond",
+      "producer": "E. H. Taylor",
+      "madeBy": "Buffalo Trace Distillery",
+      "style": "bottled-in-bond",
+      "chapter": "american-labels",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Frankfort, Franklin County, Kentucky",
+      "year": "",
+      "yearIs": "",
+      "bottle": {
+        "name": "Colonel E.H. Taylor, Jr. Small Batch Bottled in Bond Kentucky Straight Bourbon Whiskey",
+        "class": "Kentucky straight bourbon whiskey, bottled in bond",
+        "mash": "Buffalo Trace's Mash Bill No. 1, by the distillery's own page: corn with rye and malted barley, widely described as low in rye. No percentages are published.",
+        "still": "Distilled at the Buffalo Trace Distillery on the Kentucky River at Frankfort. Under the bond, all of it comes from one distillery and one distilling season.",
+        "wood": "New charred oak, aged at Frankfort in warehouses that, as the brand tells it, Taylor himself built. No age statement on the label: the bond asks at least four years.",
+        "strength": "50% ABV (100 proof)",
+        "taste": "Caramel corn and butterscotch on a sweet nose and palate, then a gentle rise of baking spice, and a finish that turns to pepper and tobacco.",
+        "pour": "Neat or with a few drops of water. At 100 proof it builds a firm Old Fashioned and a Manhattan that the vermouth does not swamp.",
+        "label": [
+          { "term": "Small Batch", "means": "No legal meaning in the United States: a marriage of a chosen number of barrels." },
+          { "term": "Bottled in Bond", "means": "One distilling season, one distiller at one distillery, at least four years in a bonded warehouse, and exactly 100 proof." },
+          { "term": "Colonel E.H. Taylor, Jr.", "means": "The Frankfort distiller the line is named for, who fought for the bond law of 1897." }
+        ]
+      },
+      "table": "Colonel E. H. Taylor is the Buffalo Trace bourbon named for the Frankfort distiller who fought for the Bottled-in-Bond Act of 1897. The Small Batch Bottled in Bond is his law in a bottle, one season at 100 proof: caramel corn, butterscotch and pepper.",
+      "story": "Edmund Haynes Taylor Jr. (1830 to 1923) was a Frankfort banker, sixteen years the town's mayor, and a distiller who wanted a buyer to be able to trust a bottle of bourbon. Around 1870 he bought a small distillery at Leestown, beside Frankfort, and christened it O.F.C., and by Buffalo Trace's account he built its Warehouse C in 1885. When he fell into debt, George T. Stagg took the distillery over in 1878; it is the site that became Buffalo Trace. In 1887 Taylor built a new distillery on Glenn's Creek in Woodford County, the castle that made Old Taylor. He pressed Congress for a law that would let a distiller age whiskey in a government bonded warehouse and sell it under a federal stamp that vouched for its season, its age and its strength, and the Bottled-in-Bond Act passed in 1897. In 2009 Buffalo Trace bought the Old Taylor label and its barrels from Beam, and it later began a line of bourbons in the colonel's full name. The Small Batch is the bottle of that line a bar keeps open, and the plainest way to show a guest what the bond means: the law and the name of the man who fought for it, on one label.",
+      "others": [
+        { "name": "Colonel E.H. Taylor, Jr. Single Barrel", "note": "One barrel to a bottling, also bottled in bond at 100 proof with no age statement." },
+        { "name": "E.H. Taylor, Jr. Bottled in Bond", "note": "A far older bonded bourbon, more than fifteen years in oak, a yearly release in the Antique Collection since 2025." }
+      ],
+      "traps": [
+        "No Taylor distillery makes it: the bourbon is distilled at Buffalo Trace in Frankfort, on the site of Taylor's old O.F.C.",
+        "Small Batch has no legal meaning; Bottled in Bond has, and it is the term that sets the 100 proof and the single season.",
+        "Old Taylor and Colonel E.H. Taylor are different labels, and the castle on Glenn's Creek is not where this bourbon is made."
+      ],
+      "cards": [
+        { "id": "bond-law", "prompt": "Which law is E. H. Taylor remembered for fighting for, and when did it pass?", "answer": "The Bottled-in-Bond Act, passed by Congress in 1897." },
+        { "id": "mash-bill", "prompt": "Which recipe goes into Colonel E.H. Taylor Small Batch Bottled in Bond?", "answer": "Buffalo Trace's Mash Bill No. 1: corn, rye and malted barley, with no percentages published." }
+      ],
+      "quiz": [
+        { "id": "q1", "tag": "bottle", "card": "mash-bill",
+          "q": "A guest asks which Buffalo Trace recipe goes into Colonel E.H. Taylor Small Batch Bottled in Bond. Which is it?",
+          "options": ["Mash Bill No. 2", "A wheated mash", "Mash Bill No. 1", "A four grain mash"], "a": 2,
+          "explain": "The distillery's own page names Mash Bill No. 1, corn with rye and malted barley; Mash Bill No. 2 is another of the distillery's recipes, not this one." },
+        { "id": "q2", "tag": "story", "card": "bond-law",
+          "q": "In which year did the Bottled-in-Bond Act that E. H. Taylor fought for pass?",
+          "options": ["1897", "1870", "1887", "1920"], "a": 0,
+          "explain": "Congress passed the act in 1897; 1887 is the year Taylor built his Old Taylor distillery on Glenn's Creek." }
+      ],
+      "sources": [
+        { "title": "Buffalo Trace Distillery: E. H. Taylor, Jr. Small Batch", "url": "https://www.buffalotracedistillery.com/our-brands/e-h-taylor-jr/e-h-taylor-jr-small-batch/", "kind": "primary", "read": "search" },
+        { "title": "Buffalo Trace Distillery: Col. Edmund Haynes Taylor, Jr.", "url": "https://www.buffalotracedistillery.com/our-distillery/legendary-people/edmund-haynes-taylor-jr/", "kind": "primary", "read": "search" },
+        { "title": "Wikipedia: Edmund H. Taylor Jr.", "url": "https://en.wikipedia.org/wiki/Edmund_H._Taylor_Jr.", "kind": "secondary", "read": "search" },
+        { "title": "Wikipedia: Old Taylor", "url": "https://en.wikipedia.org/wiki/Old_Taylor", "kind": "secondary", "read": "search" },
+        { "title": "VinePair: the 2025 Antique Collection and the E. H. Taylor Bottled in Bond", "url": "https://vinepair.com/booze-news/buffalo-trace-antique-collection-2025-eh-taylor-bottled-in-bond", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "The plan's note is settled: the producer's page and The Whiskey Wash both describe the Small Batch as bottled in bond at 100 proof. E. H. Taylor is dated 1830 to 1923 on Wikipedia and the Oxford Companion as a search summary gave it; the plan's why and VinePair agree on 1923, and one Clio entry gives 1922.",
+        "The year field is empty: sources split on when the line began (2011 for the first Old Fashioned Sour Mash release in trade listings, 2013 in another account) and no source dated the Small Batch itself, so the story says only that the line came after the 2009 purchase.",
+        "This repo's shelf (the O.F.C. 2005 record) and the Buffalo Trace record of the bourbon group give 1870 for Taylor's O.F.C. and 1878 for Stagg's takeover; Buffalo Trace's own pages, as searched, give 1869 for the purchase and 1879 for Stagg. The story keeps the reviewed 1878 and says around 1870; the refuter should settle both.",
+        "The mayoralty is sixteen years on Buffalo Trace's page and on the Saddle and Sirloin portrait page; Wikipedia gives the span 1871 to 1891. The aside that Sazerac's warehouses were built by Taylor is the brand's claim and is hedged.",
+        "Left out for want of a second source: the age of the barrels in the Small Batch (seven years in one 2014 magazine piece), the Treasury Secretary who worked on the act with Taylor, and the claim that the act was the country's first food purity law. The producer's liquorice note was left out of the taste for want of a second source on this bottling.",
+        "The Antique Collection bonded bourbon in others rests on Buffalo Trace's product page and the VinePair and Whisky Advocate release reports of 2025 (fifteen years and four months, 100 proof)."
+      ],
+      "checked": null
+    },
+    {
+      "key": "new-riff",
+      "group": "bottled-in-bond",
+      "producer": "New Riff",
+      "madeBy": "",
+      "style": "bottled-in-bond",
+      "chapter": "american-labels",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Newport, Campbell County, Kentucky",
+      "year": "2014",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "New Riff Kentucky Straight Bourbon Whiskey Bottled in Bond",
+        "class": "Kentucky straight bourbon whiskey, bottled in bond",
+        "mash": "By the distillery's own account 65 per cent corn, 30 per cent rye and 5 per cent malted barley, from grain grown without genetic modification.",
+        "still": "Made at Newport to what the distillery calls the Kentucky Regimen: a sour mash, fermented in open tanks and distilled on the grain through a sixty-foot copper column still, then a doubler.",
+        "wood": "New charred American oak. The distillery gives the age as four years, the bond's minimum, and bottles it without chill filtration.",
+        "strength": "50% ABV (100 proof)",
+        "taste": "Butterscotch first, giving way to fresh oak, then vanilla and the spice of a mash that is almost a third rye, carried long and warm by the full strength.",
+        "pour": "Neat or with a little water. Its rye and its strength stand up in an Old Fashioned or a Boulevardier, both among the distillery's own recipes.",
+        "label": [
+          { "term": "Bottled in Bond", "means": "One distilling season at one distillery, four years or more in a bonded warehouse, bottled at exactly 100 proof." },
+          { "term": "Kentucky Straight Bourbon Whiskey", "means": "Bourbon made in Kentucky and kept at least two years in new charred oak, with nothing added." }
+        ]
+      },
+      "table": "New Riff is the distillery at Newport, Kentucky, across the Ohio River from Cincinnati, that sold no bourbon of its own make until it could be bonded. Its Kentucky Straight Bourbon Whiskey Bottled in Bond is 30 per cent rye at 100 proof: butterscotch, oak and spice.",
+      "story": "New Riff opened its doors in May 2014 at Newport, on the Kentucky bank of the Ohio River facing Cincinnati. Its founder, a Northern Kentucky drinks merchant, set out to make bourbon of the distillery's own make, and resolved that none would go on sale until it met the rule of 1897: one season, one distillery, at least four years in a bonded warehouse and exactly 100 proof. The distillery settled on a mash of 65 per cent corn, 30 rye and 5 malted barley, soured and fermented in open tanks and distilled on the grain through a tall copper column still and a doubler, the method it calls the Kentucky Regimen. Four years on, in August 2018, the first bourbon distilled at Newport went on sale at the distillery, bottled in bond and without chill filtration, and it reached other states that autumn. An eight year old and single barrel bottlings of the same mash have followed. For a bartender New Riff shows that the bond is not only the old houses' word: a young distillery took it up as its promise of where and when its whiskey was made, and kept it on its standard bottle.",
+      "others": [
+        { "name": "New Riff Single Barrel", "note": "The same mash, at least four years old, one barrel to a bottling at barrel strength." },
+        { "name": "New Riff 8-Year-Old Kentucky Straight Bourbon Whiskey", "note": "The same mash given eight years, bottled at 100 proof without chill filtration." }
+      ],
+      "traps": [
+        "Newport is in Kentucky, across the river from Cincinnati in Ohio: this is a Kentucky straight bourbon.",
+        "The bonded bourbon is New Riff's own distillate, made at Newport, not whiskey bought from another distillery.",
+        "Bottled in bond fixes the strength at exactly 100 proof; the four years is the floor, and the bourbon may be older."
+      ],
+      "cards": [
+        { "id": "mash-bill", "prompt": "What is the mash bill of New Riff Kentucky Straight Bourbon Whiskey Bottled in Bond?", "answer": "65 per cent corn, 30 per cent rye and 5 per cent malted barley, by the distillery's own account." },
+        { "id": "first-release", "prompt": "When did the first bourbon distilled at New Riff go on sale?", "answer": "In August 2018, four years after the distillery opened at Newport in 2014, and bottled in bond." }
+      ],
+      "quiz": [
+        { "id": "q1", "tag": "bottle", "card": "mash-bill",
+          "q": "A guest asks how much rye is in New Riff's bonded bourbon. What share does the distillery give?",
+          "options": ["10 per cent", "30 per cent", "51 per cent", "20 per cent"], "a": 1,
+          "explain": "The distillery gives 65 per cent corn, 30 rye and 5 malted barley; 51 per cent is the share of corn the law asks of any bourbon." },
+        { "id": "q2", "tag": "story", "card": "first-release",
+          "q": "New Riff opened in 2014. How long did it wait before selling a bourbon of its own make?",
+          "options": ["Two years", "Six years", "Eight years", "Four years"], "a": 3,
+          "explain": "It waited the four years the bond demands and sold its first bourbon in 2018; at two years the whiskey could have been a straight bourbon, but not a bonded one." }
+      ],
+      "sources": [
+        { "title": "New Riff Distilling: Bottled in Bond bourbon", "url": "https://newriffdistilling.com/spirits/new-riff-bottled-in-bond-bourbon/", "kind": "primary", "read": "search" },
+        { "title": "New Riff Distilling: Our whiskey making process", "url": "https://newriffdistilling.com/our-process/", "kind": "primary", "read": "search" },
+        { "title": "New Riff Distilling: Our story", "url": "https://newriffdistilling.com/our-story/", "kind": "primary", "read": "search" },
+        { "title": "New Riff Distilling shop: Kentucky Straight Bourbon Whiskey, Bottled in Bond", "url": "https://shop.newriffdistilling.com/products/new-riff-kentucky-straight-bourbon-whiskey-bottled-in-bond", "kind": "primary", "read": "search" },
+        { "title": "VinePair: things to know about New Riff Distilling", "url": "https://vinepair.com/articles/ntk-new-riff-distilling/", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "The plan's note on the order of the label's words is not settled from a bottle: the distillery's shop lists New Riff Kentucky Straight Bourbon Whiskey, Bottled in Bond, and its spirits page New Riff Bottled In Bond Bourbon. bottle.name follows the shop's order and carries every word of the roster's flagship.",
+        "The opening in May 2014 rests on VinePair beside the distillery's story page, and the August 2018 first release on the plan's refuter (Distillery Trail, The Manual) and a Distiller listing that gave 1 August 2018 at the distillery and other states that September.",
+        "The sixty-foot copper column, the doubler, the open fermentation and the sour mash are on the distillery's own process page; the proofs off the still and the entry proof were not found and are left out.",
+        "The founder is described by role, as the plan asks; the shop he ran is not named. The sourced bourbon the distillery sold earlier under another name is left out, as the note advises.",
+        "The source in the shop's address is the distillery's own shop, cited for the mash, the age and the label wording as the producer's page; the lint may note it as a shop.",
+        "Left out for want of a source: the distillery's bonded rye (the shop lists a Bottled in Bond duo but the search did not show what it holds), the aquifer beneath the distillery, and the producer's full tasting note beyond butterscotch, fresh oak, vanilla and rye spice."
+      ],
+      "checked": null
+    },
+    {
+      "key": "evan-williams",
+      "group": "bottled-in-bond",
+      "producer": "Evan Williams",
+      "madeBy": "Heaven Hill",
+      "style": "bottled-in-bond",
+      "chapter": "american-labels",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Distilled in Louisville, aged and bottled in Bardstown, Kentucky",
+      "year": "1957",
+      "yearIs": "first released",
+      "bottle": {
+        "name": "Evan Williams Bottled in Bond Kentucky Straight Bourbon Whiskey",
+        "class": "Kentucky straight bourbon whiskey, bottled in bond",
+        "mash": "Heaven Hill publishes no figures for this bottling; the house's traditional bourbon recipe, used here, is widely given as 78 per cent corn, 10 rye and 12 malted barley.",
+        "still": "Distilled by Heaven Hill at its Bernheim Distillery in Louisville, where the house has made its bourbon since 1999, all of it in one distilling season.",
+        "wood": "New charred American oak, four years under government supervision in a bonded warehouse, by the brand's account.",
+        "strength": "50% ABV (100 proof)",
+        "taste": "Bright gold, with caramel on the nose and hints of vanilla, oak and barley; then citrus over vanilla and black pepper, and a warm, long, dry finish.",
+        "pour": "Neat, on the rocks or in a highball. At 100 proof on the rail it keeps its spine in an Old Fashioned, a Manhattan or a Whiskey Sour.",
+        "label": [
+          { "term": "Bottled-in-Bond", "means": "One season, one distiller at one distillery, four years or more in a bonded warehouse, then exactly 100 proof." },
+          { "term": "Kentucky Straight Bourbon Whiskey", "means": "Bourbon made in Kentucky and kept at least two years in new charred oak." }
+        ]
+      },
+      "table": "Evan Williams is the Heaven Hill bourbon named for an early Louisville distiller, and its Bottled in Bond is the white label at 100 proof, four years in a bonded warehouse. It pours caramel, vanilla and black pepper, the bonded bourbon to keep on a working rail.",
+      "story": "The label is named for Evan Williams (1755 to 1810), who came to Kentucky from Wales and settled at Louisville. A state historical marker there says he built a distillery on the Ohio River in 1783 and that it is said to have been the first commercial distillery in Kentucky; historians note that the date was first put forward more than a century after his death, so it is told as tradition. The bourbon came much later. Heaven Hill was founded at Bardstown in 1935 by five brothers of a local family and a group of investors, and it introduced Evan Williams in 1957. On 7 November 1996 fire destroyed its Bardstown distillery and seven of its warehouses, and in 1999 Heaven Hill bought the Bernheim Distillery in Louisville, where the bourbon has been distilled since, to be aged and bottled at Bardstown. Beside the black label at 86 proof stands the white label, the brand's bottle of the bond. Behind a bar it is the bonded bourbon a working rail can pour all night: the house recipe, held to one season, four years and 100 proof.",
+      "others": [
+        { "name": "Evan Williams Black Label", "note": "The everyday bottling of the same name, at 86 proof and without the bond." },
+        { "name": "Evan Williams Single Barrel", "note": "A vintage dated bourbon, one barrel to a bottling, with the year of distilling on the label." }
+      ],
+      "traps": [
+        "The year 1783 is the tradition's date for the man's distillery, not the bourbon's: Heaven Hill first sold Evan Williams in 1957.",
+        "Only the white label is bottled in bond; the black label at 86 proof makes none of the bond's promises.",
+        "Evan Williams is made by Heaven Hill, distilled at Bernheim in Louisville: no Evan Williams firm distils it."
+      ],
+      "cards": [
+        { "id": "white-label", "prompt": "What sets the Evan Williams white label apart from the black label?", "answer": "It is bottled in bond: one season, one distillery, four years in a bonded warehouse, and 100 proof, not 86." },
+        { "id": "namesake", "prompt": "Who was the Evan Williams of the label, and what is claimed for him?", "answer": "A Welsh settler of Louisville (1755 to 1810) said to have built a distillery on the Ohio in 1783; the date is tradition." }
+      ],
+      "quiz": [
+        { "id": "q1", "tag": "bottle", "card": "white-label",
+          "q": "A guest asks at what strength the Evan Williams Bottled in Bond is poured. What does the bond fix?",
+          "options": ["86 proof", "80 proof", "90 proof", "100 proof"], "a": 3,
+          "explain": "The bond fixes the strength at exactly 100 proof; 86 proof is the black label, which is not bonded." },
+        { "id": "q2", "tag": "story", "card": "namesake",
+          "q": "In which year did Heaven Hill first bring out its Evan Williams bourbon?",
+          "options": ["1783", "1957", "1935", "1996"], "a": 1,
+          "explain": "Heaven Hill introduced the label in 1957; 1783 is the year tradition gives for its namesake's distillery on the Ohio." }
+      ],
+      "sources": [
+        { "title": "Evan Williams: Bottled-in-Bond", "url": "https://evanwilliams.com/bottled-in-bond-bourbon", "kind": "primary", "read": "search" },
+        { "title": "Heaven Hill Distillery: Evan Williams Bottled-in-Bond", "url": "https://heavenhilldistillery.com/ew-bottled-in-bond.php", "kind": "primary", "read": "search" },
+        { "title": "Kentucky Historical Society: Evan Williams marker", "url": "https://history.ky.gov/markers/evan-williams-1755-1810", "kind": "secondary", "read": "search" },
+        { "title": "Heaven Hill: Through the years", "url": "https://heavenhill.com/through-the-years/", "kind": "primary", "read": "search" },
+        { "title": "Wikipedia: Evan Williams bourbon", "url": "https://en.wikipedia.org/wiki/Evan_Williams_(bourbon)", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "The plan's note asks for the 2012 introduction of the white label: one guide gives 2012 and no second source was found, so no year is given for the bonded bottling. The year field holds 1957, the brand's first release, on Heaven Hill's history page, Wikipedia and VinePair.",
+        "The mash bill 78, 10 and 12 is the plan's one source; Difford's Guide and trade guides give it as Heaven Hill's traditional bourbon recipe, and Heaven Hill's own blog gives the same figures for its namesake bonded bourbon, but no Evan Williams page states it, so it is written as given.",
+        "The white label: Difford's Guide and Distiller list the bottling as the White Label, and the brand's page tells a buyer to look for the white label, but the brand's 86 proof page uses the same words, so the label section leaves the colour out and the table and card rest on the trade names.",
+        "The four years is the brand's own figure; whether the bottle prints an age statement was not confirmed, so the record says none either way.",
+        "Evan Williams is dated 1755 to 1810 on the Kentucky Historical Society marker (which gives his death as 15 October 1810) and Wikipedia. The doubt about 1783 is the historians' as summarised by Whiskey University and a pre-Prohibition history blog; it is told as tradition.",
+        "The Library's record of Heaven Hill calls the 1996 fire catastrophic and the house the largest family-owned producer: neither word was used. Bernheim as the still house rests on Wikipedia and The Whiskey Wash's guide to Heaven Hill."
+      ],
+      "checked": null
+    },
+    {
+      "key": "heaven-hill",
+      "group": "bottled-in-bond",
+      "producer": "Heaven Hill",
+      "madeBy": "",
+      "style": "bottled-in-bond",
+      "chapter": "american-labels",
+      "shelf": "",
+      "library": "Heaven Hill",
+      "say": "",
+      "place": "Bardstown, Nelson County, Kentucky",
+      "year": "1935",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Heaven Hill Bottled-in-Bond 7 Year Old Kentucky Straight Bourbon Whiskey",
+        "class": "Kentucky straight bourbon whiskey, bottled in bond",
+        "mash": "By Heaven Hill's own account 78 per cent corn, 12 per cent malted barley and 10 per cent rye, the house's traditional bourbon recipe.",
+        "still": "Distilled by Heaven Hill at its Bernheim Distillery in Louisville in a single distilling season, as the bond requires, then aged in the house's warehouses.",
+        "wood": "Seven years in new charred American oak, three more than the bond asks; the age is stated on the front label.",
+        "strength": "50% ABV (100 proof)",
+        "taste": "Vanilla, honey and caramel on a warm nose; caramel and honey again on the palate, rounded by oak and char with a faint rye spice, and a long, lingering finish.",
+        "pour": "Neat or with a few drops of water, so the seven years show; it also builds a sturdy Old Fashioned and a Manhattan.",
+        "label": [
+          { "term": "This Bourbon is 7 Years Old", "means": "The age statement: nothing in the bottle has spent fewer than seven years in oak." },
+          { "term": "Bottled-in-Bond", "means": "One distilling season at one distillery, at least four years in a bonded warehouse, and exactly 100 proof." }
+        ]
+      },
+      "table": "Heaven Hill is the family distillery of Bardstown, Kentucky, and its namesake Bottled-in-Bond 7 Year Old carries the bond and an age statement on one label. At 100 proof it pours vanilla, honey and caramel, with a little oak and rye spice.",
+      "story": "Heaven Hill filled its first barrel at Bardstown on 13 December 1935, as the Old Heavenhill Springs distillery, founded by five brothers of a Bardstown family and a group of local investors; the brothers soon bought their partners out. The name, the company says, is that of the family who had farmed the land, split in two by a clerk's slip on the paperwork sent to Frankfort and never mended. The house grew into a maker of many labels, among them Evan Williams from 1957. On 7 November 1996 fire swept seven of its warehouses and destroyed the Bardstown distillery, and in 1999 Heaven Hill bought the Bernheim Distillery in Louisville, where its bourbon has been distilled since. For years a six year old bonded bourbon under the house's own name was sold only in Kentucky; it was retired in 2018, and in June 2019 Heaven Hill announced the 7 Year Old in its place, launched that October in eight states, the same recipe with a year more in oak. For a bartender it shows the two promises a label can stack: the bond, and an age stated in words on the front.",
+      "others": [
+        { "name": "Heaven Hill Heritage Collection", "note": "A yearly release of much older bourbon under the house's own name." }
+      ],
+      "traps": [
+        "The 7 Year Old took the place of a six year old bonded bottling sold only in Kentucky, which was retired in 2018.",
+        "Bottled in bond promises at least four years; the seven on this label is Heaven Hill's own age statement on top of the bond.",
+        "Heaven Hill makes many labels, Evan Williams, Elijah Craig, Larceny and Henry McKenna among them; this one carries the house's own name."
+      ],
+      "cards": [
+        { "id": "age-statement", "prompt": "How many years beyond the bond's minimum has Heaven Hill Bottled-in-Bond 7 Year Old spent in oak?", "answer": "Three: seven years in new charred oak, where the bond asks at least four." },
+        { "id": "fire", "prompt": "What happened to Heaven Hill's Bardstown distillery in 1996, and where did its distilling go?", "answer": "Fire destroyed it on 7 November 1996; from 1999 the bourbon was distilled at Bernheim in Louisville." }
+      ],
+      "quiz": [
+        { "id": "q1", "tag": "bottle", "card": "age-statement",
+          "q": "A guest reads the Heaven Hill bonded label, which states seven years. What is the minimum age the bond itself requires?",
+          "options": ["Four years", "Two years", "Six years", "Ten years"], "a": 0,
+          "explain": "The bond asks at least four years, and seven is the house's own statement on top of it; two years is the floor for a straight bourbon, not a bonded one." },
+        { "id": "q2", "tag": "story", "card": "fire",
+          "q": "In which year did fire destroy Heaven Hill's distillery at Bardstown?",
+          "options": ["1935", "1999", "1996", "2019"], "a": 2,
+          "explain": "The fire came on 7 November 1996; 1999 is the year Heaven Hill bought the Bernheim Distillery in Louisville." }
+      ],
+      "sources": [
+        { "title": "Heaven Hill Distillery: Heaven Hill Bottled-in-Bond", "url": "https://heavenhilldistillery.com/hh-bottled-in-bond.php", "kind": "primary", "read": "search" },
+        { "title": "Heaven Hill: the launch of the namesake Bottled-in-Bond bourbon", "url": "https://heavenhill.com/press-detail.php?postid=heaven-hill-distillery-launches-historic-bottled-in-bond-namesake-bourbon", "kind": "primary", "read": "search" },
+        { "title": "Heaven Hill: Through the years", "url": "https://heavenhill.com/through-the-years/", "kind": "primary", "read": "search" },
+        { "title": "Wikipedia: Heaven Hill", "url": "https://en.wikipedia.org/wiki/Heaven_Hill", "kind": "secondary", "read": "search" },
+        { "title": "Gear Patrol: Heaven Hill brings back its bonded bourbon at seven years", "url": "https://gearpatrol.com/2019/06/24/heaven-hill-bottled-in-bond-7-year-bourbon/", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "The plan's note is settled: the label carries the house's own name, and the family is described by role only. Heaven Hill's own page names the founders; their names and dates were not searched, so they stand as five brothers of a Bardstown family.",
+        "The farmer whose name the distillery took is not named: the company tells the clerk's slip, but no source gave his dates.",
+        "bottle.name: Heaven Hill's launch release gives Heaven Hill 7-Year-Old Bottled-in-Bond Kentucky Straight Bourbon; bottle.name keeps the roster's word order. The front label's words This Bourbon is 7 Years Old are in the same release.",
+        "The six year old's retirement in 2018 and its Kentucky only sale rest on Gear Patrol and The Whiskey Wash's review; the June 2019 announcement and the October launch in eight states are in Heaven Hill's release and its reprint by the Kentucky Distillers' Association.",
+        "The Library's record of Heaven Hill says the 1996 fire destroyed the distillery and seven warehouses and that the house distilled elsewhere for years before rebuilding; Heaven Hill's own page says fire ignited seven of its warehouses. The record agrees in substance and uses neither the Library's wording nor its superlatives. Heaven Hill's history page dates Bernheim to 1960 in one entry; the 1999 purchase stands in the house's other pages and Wikipedia.",
+        "The Heritage Collection in others is named from Heaven Hill's own pages; its ages and years were not searched and are left out. The new Heaven Hill Springs distillery at Bardstown, which filled its first barrel in 2025 by the house's account, is left out of this bottle's story because a bonded bourbon of that make cannot yet be four years old."
+      ],
+      "checked": null
+    },
+    {
+      "key": "henry-mckenna",
+      "group": "bottled-in-bond",
+      "producer": "Henry McKenna",
+      "madeBy": "Heaven Hill",
+      "style": "bottled-in-bond",
+      "chapter": "american-labels",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Distilled in Louisville, aged in Bardstown, Kentucky",
+      "year": "1855",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Henry McKenna 10 Year Single Barrel Bottled in Bond Kentucky Straight Bourbon Whiskey",
+        "class": "Kentucky straight bourbon whiskey, single barrel, bottled in bond",
+        "mash": "By Heaven Hill's own account the recipe of its namesake bonded bourbon: 78 per cent corn, 12 per cent malted barley and 10 per cent rye.",
+        "still": "Distilled by Heaven Hill at its Bernheim Distillery in Louisville; each bottling is one barrel from one distilling season.",
+        "wood": "Ten years in new charred American oak, the age stated on the label; each barrel is chosen and bottled alone, never mingled with others.",
+        "strength": "50% ABV (100 proof)",
+        "taste": "Warm golden amber, with vanilla, caramel and oak on the nose and a light herbal note; then oak, sharp spice, honey and sweetness, and a long, sweet, spicy finish.",
+        "pour": "Neat in a tulip glass with water beside it; ten years of oak make it a bourbon to sip first, though it builds a firm Old Fashioned.",
+        "label": [
+          { "term": "Single Barrel", "means": "Every bottle comes from one barrel, never mingled; the term has no legal definition, so bottles differ." },
+          { "term": "Barreled On", "means": "Written by hand on the front with the barrel's number: the day the barrel was filled." },
+          { "term": "Bottled-In-Bond", "means": "One season at one distillery, four years or more in a bonded warehouse, bottled at exactly 100 proof." }
+        ]
+      },
+      "table": "Henry McKenna is the Heaven Hill bourbon named for an Irish distiller of Nelson County, and its 10 Year Single Barrel Bottled in Bond joins three promises on one label: ten years, one barrel and the bond. It pours vanilla, caramel, honey and spice.",
+      "story": "Henry McKenna (1819 to 1893) came to Kentucky from County Derry in Ireland and settled at Fairfield, a small town north east of Bardstown in Nelson County. There he went into business, and his whiskey, sold under his own name, came from a farm distillery that the label dates to 1855, the year its face prints. After his death in 1893 his sons carried the distillery on, and in 1941 the family sold it and the brand to Joseph E. Seagram and Sons. The domestic rights to the name later passed to Heaven Hill, a few miles away in Bardstown. In 1994, by Heaven Hill's account, the house added a single barrel bottling of the label, ten years old and bottled in bond, each bottle marked by hand with its barrel number and the day the barrel was filled. The bourbon has been distilled at Heaven Hill's Bernheim Distillery in Louisville since 1999. For a bartender it is the one bottle that teaches three terms at once: an age statement, a single barrel and the bond, and the handwritten barrel number makes the second plain to a guest.",
+      "others": [
+        { "name": "Henry McKenna Sour Mash", "note": "The label's everyday bourbon at 80 proof, with no age, barrel or bond on its face." }
+      ],
+      "traps": [
+        "The ten years is the label's own statement; the bond asks only four.",
+        "Single barrel means one barrel to a bottling, so two bottles may differ: read the barrel number on the label.",
+        "The bourbon is not made at Fairfield, where Henry McKenna distilled: Heaven Hill makes it at Bernheim in Louisville."
+      ],
+      "cards": [
+        { "id": "barrel-number", "prompt": "What is written by hand on the front of Henry McKenna 10 Year Single Barrel Bottled in Bond?", "answer": "The barrel's number and the day that barrel was filled, both in handwriting." },
+        { "id": "namesake", "prompt": "Who was Henry McKenna, and where did he make his whiskey?", "answer": "An Irish distiller from County Derry (1819 to 1893) who settled at Fairfield in Nelson County, Kentucky." }
+      ],
+      "quiz": [
+        { "id": "q1", "tag": "bottle", "card": "barrel-number",
+          "q": "A guest asks what the handwritten line on the front of a Henry McKenna single barrel bottle records. What is it?",
+          "options": ["The bottling day", "Barrel number and fill date", "Rickhouse and floor", "The bottler's initials"], "a": 1,
+          "explain": "Each label carries the barrel's number and the day it was filled, in handwriting; the bottling day is not what the line records." },
+        { "id": "q2", "tag": "story", "card": "namesake",
+          "q": "Henry McKenna, the Irishman behind the label, settled and distilled in which Kentucky town?",
+          "options": ["Bardstown", "Loretto", "Frankfort", "Fairfield"], "a": 3,
+          "explain": "He settled at Fairfield in Nelson County; Bardstown is the nearby town where Heaven Hill ages the bourbon." }
+      ],
+      "sources": [
+        { "title": "Heaven Hill Distillery: Henry McKenna Single Barrel", "url": "https://heavenhilldistillery.com/henry-mckenna-single-barrel.php", "kind": "primary", "read": "search" },
+        { "title": "Heaven Hill: new packaging for the Henry McKenna bourbons", "url": "https://heavenhill.com/news-and-notes/heaven-hill-distilleries-unveils-new-packaging-for-henry-mckenna-bourbon-family/", "kind": "primary", "read": "search" },
+        { "title": "Kentucky Distillers' Association: 160 years of H. McKenna whiskey", "url": "https://kybourbon.com/enthusiast-stories/160-years-of-h-mckenna-medicinal-whiskey/", "kind": "secondary", "read": "search" },
+        { "title": "VinePair: things to know about Henry McKenna", "url": "https://vinepair.com/articles/ntk-henry-mckenna-bourbon-guide/", "kind": "secondary", "read": "search" },
+        { "title": "Whiskey University: Henry McKenna", "url": "https://whiskeyuniv.com/henry-mckenna", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "The plan's note is settled: Henry McKenna is dated 1819 to 1893. The birth year (9 January 1819, County Derry) stands in Whiskey University and the Kentucky Distillers' Association story; the death in 1893, when his sons took over, in a brand history and Whiskey University, and one account gives his age at death as 75.",
+        "The year 1855 is the label's own Est. 1855, in Heaven Hill's packaging release, and it is the year several accounts give for the distillery; the Kentucky Historical Society, as summarised, puts his move to Fairfield in 1851 and one source makes 1855 the year he opened a flour mill, so the story hedges it as the label's date.",
+        "The 1994 launch of the single barrel rests on Heaven Hill's own release as the Kentucky Distillers' Association reprinted it. The house's claim that it is the only ten year bonded single barrel bourbon is left out, as the voice refuses an only.",
+        "The year Heaven Hill took over the domestic rights from Seagram was not found (one account says the early 1980s), so the story gives no year and uses no word of sale for that step. The 1941 sale to Seagram stands in VinePair and a brand history; sources differ on whether a son died in 1940 or 1941, and the record leaves the sons unnamed.",
+        "The mash bill is Heaven Hill's blog's, which gives the same recipe for the namesake bonded bourbon and Henry McKenna; another Heaven Hill post speaks only of its bourbon rye mash bill.",
+        "Left out for want of a second source: the Irish distiller McKenna hired, the medicinal whiskey the family is said to have sold, and any figure for the barrels chosen each year. Sour Mash at 80 proof in others rests on Heaven Hill's packaging release and the Kentucky Distillers' Association report of it."
+      ],
+      "checked": null
+    }
+  ]
+}
