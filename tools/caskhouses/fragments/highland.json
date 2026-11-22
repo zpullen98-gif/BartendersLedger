@@ -22,7 +22,7 @@
     "wood": "Twelve years in bourbon casks of American oak, by the producer's account, with no sherry or wine cask in the recipe. The label states 12 Years Old.",
     "strength": "40% ABV",
     "taste": "Citrus and ripening peach with soft vanilla on the nose, then vanilla turning to floral fruit, orange blossom and honeyed malt, with a finish of almond, coconut and a little maple.",
-    "pour": "Neat with a little water beside it, or long with soda in a highball; stirred with sweet vermouth and bitters it makes a light, fruity Rob Roy.",
+    "pour": "Neat with a little water beside it, or long with soda in a highball; in a Rob Roy it turns light and fruity.",
     "label": [
      {
       "term": "The Original",
@@ -30,12 +30,12 @@
      },
      {
       "term": "12 Years Old",
-      "means": "An age statement: nothing in the bottle is younger than twelve years."
+      "means": "Every whisky in the bottle has had at least twelve years in cask."
      }
     ]
    },
-   "table": "Glenmorangie The Original is the Highland single malt from Tain, made in stills with necks over five metres tall and aged twelve years in bourbon casks. Expect citrus, peach and vanilla, then almond and coconut; pour it neat with a little water.",
-   "story": "By the house's own account, the founder and his wife set about building a distillery at Tain in 1843, turning the brewery of the Morangie farm into a still house. With no money for new stills, they bought a pair of second-hand stills that had made gin. The stills that followed are tall ones too: their copper necks stand 5.14 metres, the height, the house likes to say, of a giraffe. For decades a staff of sixteen ran the distillery, remembered as the Sixteen Men of Tain. In 1918 its main customer, the Leith blenders Macdonald & Muir, bought into the distillery; the firm later took its malt's name, and in 2004 it was sold to Louis Vuitton Moët Hennessy. For years the flagship was a ten-year-old called The Original. In July 2024 the house gave it twelve years in bourbon casks, keeping the name and the strength, after its tasting panel found that the two extra years added sweetness and a silkier body. Behind a bar it is the plain lesson in what tall stills and American oak alone give a malt: fruit, flowers and vanilla, with no sherry in it.",
+   "table": "Stills with necks over five metres tall and twelve years in bourbon casks make Glenmorangie The Original, the Highland single malt from Tain. Citrus, peach and vanilla come first, then almond and coconut, and a little water lifts them.",
+   "story": "By the house's own account, the founder and his wife set about building a distillery at Tain in 1843, turning the brewery of the Morangie farm into a still house. With no money for new stills, they bought a pair of second-hand stills that had made gin. The stills that followed are tall ones too: their copper necks stand 5.14 metres, the height, the house likes to say, of a giraffe. For decades a staff of sixteen ran the distillery, remembered as the Sixteen Men of Tain. In 1918 its main customer, the Leith blenders Macdonald & Muir, bought into the distillery; the firm later took its malt's name, and in 2004 it was sold to Louis Vuitton Moët Hennessy. For years the flagship was a ten-year-old called The Original. In July 2024 the house gave it twelve years in bourbon casks, keeping the name and the strength, after its tasting panel found that the two extra years added sweetness and a silkier body. Tall stills and American oak alone give it fruit, flowers and vanilla, with no sherry in it, and that is the lesson to draw from the glass.",
    "others": [
     {
      "name": "Glenmorangie The Quinta Ruban 14 Years Old",
@@ -172,16 +172,16 @@
     "label": [
      {
       "term": "Single Malt Scotch Whisky",
-      "means": "Malt whisky from one distillery, made from malted barley in pot stills, by the Scotch Whisky Regulations 2009."
+      "means": "The law's class: malted barley alone, distilled in pot stills at one distillery, under the Scotch Whisky Regulations 2009."
      },
      {
       "term": "14 Year Old",
-      "means": "An age statement: nothing in the bottle is younger than fourteen years."
+      "means": "The minimum age: every whisky in the bottle has had at least fourteen years in oak."
      }
     ]
    },
-   "table": "Oban 14 Year Old is the single malt from the small distillery in the middle of the West Highland port of Oban, made in two small stills cooled by worm tubs. Expect orange zest, fruit bread and clove with a dry, minty finish; pour it neat with water.",
-   "story": "Brothers of a local family set up the distillery in 1794, when there was barely a town on the bay, and Oban grew up around it: the producer calls it the town that whisky built. The brothers' family ran it until 1866, when it was sold, and in 1883 it changed hands again and was rebuilt in the years that followed. Hemmed in by the streets that grew around it, it has stayed small, with one wash still and one spirit still of the old lantern shape. Outside among the rooftops, wooden worm tubs condense the spirit slowly in the salt air, where most distilleries use modern condensers. The 14 Year Old is the house's standing bottling and became its West Highland entry in the Classic Malts, a set of single malts chosen to show the regions of Scotland. For a bartender it is the coastal Highland malt a guest asks for by name: orange zest, fruit bread and clove, from a distillery in the middle of a working port.",
+   "table": "Worm tubs cool the spirit of two small stills in the middle of the West Highland port of Oban, and the malt they make is Oban 14 Year Old. Orange zest, fruit bread and clove run to a dry, minty finish; offer water beside it.",
+   "story": "Brothers of a local family set up the distillery in 1794, when there was barely a town on the bay, and Oban grew up around it: the producer calls it the town that whisky built. The brothers' family ran it until 1866, when it was sold, and in 1883 it changed hands again and was rebuilt in the years that followed. Hemmed in by the streets that grew around it, it has stayed small, with one wash still and one spirit still of the old lantern shape. Outside among the rooftops, wooden worm tubs condense the spirit slowly in the salt air, where most distilleries use modern condensers. The 14 Year Old is the house's standing bottling and became its West Highland entry in the Classic Malts, a set of single malts chosen to show the regions of Scotland. Asked for by name as the coastal Highland malt, it pours orange zest, fruit bread and clove, from a still house in the middle of a working port.",
    "others": [
     {
      "name": "Oban Distillers Edition",
@@ -189,7 +189,7 @@
     },
     {
      "name": "Oban Little Bay",
-     "note": "A bottling with no age statement, at 43% ABV."
+     "note": "Carries no age statement; bottled at 43% ABV."
     }
    ],
    "traps": [
@@ -319,16 +319,16 @@
     "label": [
      {
       "term": "Single Malt Scotch Whisky",
-      "means": "Malt whisky from one distillery, made from malted barley in pot stills, by the Scotch Whisky Regulations 2009."
+      "means": "By the Scotch Whisky Regulations 2009, malt whisky of malted barley from pot stills at a single distillery."
      },
      {
       "term": "12 Year Old",
-      "means": "An age statement: nothing in the bottle is younger than twelve years."
+      "means": "Twelve years in cask at the minimum for all of the whisky in it."
      }
     ]
    },
-   "table": "The Dalmore 12 Year Old is the sherried Highland malt from Alness on the Cromarty Firth, the bottle with the twelve-pointed stag. It starts in bourbon casks and part of it moves to Oloroso sherry casks: Seville orange, chocolate and dried fruit, a natural Rob Roy.",
-   "story": "Alexander Matheson (1805 to 1886), a China merchant and later a member of Parliament, founded the distillery at Alness in 1839, on the site of a mill and farm on the Cromarty Firth. In 1867 the Mackenzie family took over the running of it, and in 1891 they bought it outright from his son. They brought their clan's emblem with them, the twelve-pointed royal stag that stands on every bottle. As the brand tells it, the stag recalls 1263, when a Mackenzie chief is said to have saved the King of Scots from a charging stag; the story is legend. The family's firm kept the distillery until 1960, when it merged with the blenders Whyte & Mackay, one of its customers. The stills are part of the house style: flat-topped wash stills, and spirit stills with water jackets round their necks to raise reflux. The 12 Year Old gives that spirit bourbon casks and then Oloroso. For a bartender it is the plain Highland example of what sherry does to a malt: orange peel, dried fruit and chocolate.",
+   "table": "The twelve-pointed stag on the bottle marks The Dalmore 12 Year Old, the sherried Highland malt from Alness on the Cromarty Firth. Bourbon casks come first, then part of it moves to Oloroso sherry casks, for Seville orange, chocolate and dried fruit; it makes a Rob Roy with weight.",
+   "story": "Alexander Matheson (1805 to 1886), a China merchant and later a member of Parliament, founded the distillery at Alness in 1839, on the site of a mill and farm on the Cromarty Firth. In 1867 the Mackenzie family took over the running of it, and in 1891 they bought it outright from his son. They brought their clan's emblem with them, the twelve-pointed royal stag that stands on every bottle. As the brand tells it, the stag recalls 1263, when a Mackenzie chief is said to have saved the King of Scots from a charging stag; the story is legend. The family's firm kept the distillery until 1960, when it merged with the blenders Whyte & Mackay, one of its customers. The stills are part of the house style: flat-topped wash stills, and spirit stills with water jackets round their necks to raise reflux. The 12 Year Old gives that spirit bourbon casks and then Oloroso. Orange peel, dried fruit and chocolate are what sherry brings to a Highland malt, and this bottle carries all three.",
    "others": [
     {
      "name": "The Dalmore 12 Sherry Cask Select",
@@ -454,31 +454,31 @@
     "class": "Single malt Scotch whisky, Highland",
     "mash": "Malted barley only, as a single malt must be; the producer's pages read give no barley variety and no peating figure.",
     "still": "Distilled in copper pot stills in the village of Dalwhinnie; the spirit is cooled in worm tubs outside the still house, which were taken out in a modernisation and later put back.",
-    "wood": "Matured in oak for at least fifteen years; the producer's pages read do not name the casks. The label states 15 Year Old.",
+    "wood": "Fifteen years in oak at the minimum, in casks the producer's pages read leave unnamed. The label states 15 Year Old.",
     "strength": "43% ABV",
     "taste": "A crisp, dry nose of heather with a hint of peat, then heather honey and vanilla, deeper citrus fruit and malted bread, and a long finish that starts sweet and turns to a little smoke and malt.",
     "pour": "Neat or with a little water; it makes a gentle Hot Toddy and a light Rob Roy, and a guest who wants little smoke can be offered it first.",
     "label": [
      {
       "term": "Single Malt Scotch Whisky",
-      "means": "Malt whisky from one distillery, made from malted barley in pot stills, by the Scotch Whisky Regulations 2009."
+      "means": "Made at one distillery from malted barley alone, in pot stills: the class the Scotch Whisky Regulations 2009 define."
      },
      {
       "term": "15 Year Old",
-      "means": "An age statement: nothing in the bottle is younger than fifteen years."
+      "means": "At least fifteen years in oak for every whisky in the bottle."
      }
     ]
    },
-   "table": "Dalwhinnie 15 Year Old is the gentle Highland malt from a distillery more than a thousand feet up in the Central Highlands. Expect heather honey, vanilla and citrus with only a wisp of peat at the end; pour it neat or with a little water.",
-   "story": "The distillery was built in 1897 under the name Strathspey and ran its first spirit in February 1898. Its first owners soon failed, and in 1898 it was sold and renamed Dalwhinnie, from the Gaelic for a meeting place. In 1905 it was sold to the American firm Cook & Bernheimer, so a Highland distillery passed into American hands. In 1919, with Prohibition coming to the United States, they sold it to Macdonald Greenlees, blenders of Leith, and in 1926 that firm was taken into the Distillers Company. The village stands high in the Central Highlands, more than a thousand feet above the sea, and the distillery's worm tubs, coils of pipe in tubs of cold water outside the still house, were taken out in a modernisation and later put back. The 15 Year Old is the bottling a guest will meet: honey, heather and vanilla, with only a hint of peat. For a bartender it is the malt to reach for when a guest new to Scotch asks for something gentle, and the proof that Highland need not mean smoke or sherry.",
+   "table": "More than a thousand feet up in the Central Highlands stands the distillery of Dalwhinnie 15 Year Old, a gentle Highland malt. Heather honey, vanilla and citrus give way to a trace of peat at the end; serve it neat or with a little water.",
+   "story": "The distillery was built in 1897 under the name Strathspey and ran its first spirit in February 1898. Its first owners soon failed, and in 1898 it was sold and renamed Dalwhinnie, from the Gaelic for a meeting place. In 1905 it was sold to the American firm Cook & Bernheimer, so a Highland distillery passed into American hands. In 1919, with Prohibition coming to the United States, they sold it to Macdonald Greenlees, blenders of Leith, and in 1926 that firm was taken into the Distillers Company. The village stands high in the Central Highlands, more than a thousand feet above the sea, and the distillery's worm tubs, coils of pipe in tubs of cold water outside the still house, were taken out in a modernisation and later put back. The 15 Year Old is the bottling a guest will meet: honey, heather and vanilla, with only a hint of peat. Reach for it when a newcomer to Scotch asks for something gentle: it proves that Highland need not mean smoke or sherry.",
    "others": [
     {
      "name": "Dalwhinnie Winter's Gold",
-     "note": "A bottling with no age statement that the producer suggests pouring straight from the freezer."
+     "note": "No age statement; the producer suggests pouring it straight from the freezer."
     }
    ],
    "traps": [
-    "Dalwhinnie is a Highland malt, not a Speyside one, though the distillery was built under the name Strathspey.",
+    "Built under the name Strathspey, Dalwhinnie is a Highland distillery that lies outside Speyside.",
     "Sources disagree on its height above the sea, from about 1,070 to 1,164 feet: tell a guest more than a thousand feet and leave any ranking of distilleries by height alone."
    ],
    "cards": [
@@ -596,23 +596,23 @@
     "class": "Single malt Scotch whisky, Highland",
     "mash": "Malted barley only, as the law asks of a single malt; the water is piped from the Clynemilton Burn, which an old claim has running over a vein of gold.",
     "still": "Distilled in copper pot stills at Brora; independent bottlers and writers credit the waxy texture to oily deposits that build up in the feints receiver, which, by their account, the distillery takes care to keep.",
-    "wood": "Matured in oak for at least fourteen years; the producer's pages read do not name the casks. The label states 14 Year Old.",
+    "wood": "At least fourteen years in oak; which casks, the producer's pages read do not say. The label states 14 Year Old.",
     "strength": "46% ABV",
     "taste": "Dried flowers and a seaside air on the nose, with scented candle wax when water is added and brown sugar later, then a creamy, maritime palate and a dry finish with salt and a slightly bitter edge.",
     "pour": "Neat, then with a few drops of water, which brings up the candle wax; stirred with sweet vermouth and Bénédictine it makes a Bobby Burns.",
     "label": [
      {
       "term": "Single Malt Scotch Whisky",
-      "means": "Malt whisky from one distillery, made from malted barley in pot stills, by the Scotch Whisky Regulations 2009."
+      "means": "One distillery, malted barley and pot stills: the single malt class of the Scotch Whisky Regulations 2009."
      },
      {
       "term": "14 Year Old",
-      "means": "An age statement: nothing in the bottle is younger than fourteen years."
+      "means": "No drop in the bottle has spent under fourteen years in oak."
      }
     ]
    },
-   "table": "Clynelish 14 Year Old is the Highland malt from Brora on the Sutherland coast, known for a waxy texture as much as for its taste. Expect candle wax, dried flowers and a little salt over a creamy body; a few drops of water bring the wax up.",
-   "story": "The Sutherland estate built the original Clynelish at Brora in 1819, in the years of the Sutherland Clearances, to give its smaller tenants a lawful market for their grain, with coal from the estate's own pit at Brora to fire the stills. Through the nineteenth and twentieth centuries its spirit went mainly into blends. In 1967 and 1968 a new Clynelish distillery was built on the next plot, and the name moved to it. The old still house worked on for a time under the name Brora, closed in 1983, and was brought back to work in 2021, so that in 2021 two distilleries were at work side by side. The new Clynelish kept the old house's waxy spirit, a character writers trace to the oily deposits in its feints receiver. Its spirit has long gone into Johnnie Walker, and the producer counts Clynelish among the Four Corners distilleries of Johnnie Walker. The 14 Year Old is the bottling a guest meets. For a bartender it is the malt that teaches texture as a distillery character: wax, flowers and salt from a still house on the northern coast.",
+   "table": "Known as much for its waxy texture as for its taste, Clynelish 14 Year Old is the Highland malt from Brora on the Sutherland coast. Candle wax, dried flowers and a little salt sit over a creamy body, and a few drops of water bring the wax up.",
+   "story": "The Sutherland estate built the original Clynelish at Brora in 1819, in the years of the Sutherland Clearances, to give its smaller tenants a lawful market for their grain, with coal from the estate's own pit at Brora to fire the stills. Through the nineteenth and twentieth centuries its spirit went mainly into blends. In 1967 and 1968 a new Clynelish distillery was built on the next plot, and the name moved to it. The old still house worked on for a time under the name Brora, closed in 1983, and was brought back to work in 2021, so that in 2021 two distilleries were at work side by side. The new Clynelish kept the old house's waxy spirit, a character writers trace to the oily deposits in its feints receiver. Its spirit has long gone into Johnnie Walker, and the producer counts Clynelish among the Four Corners distilleries of Johnnie Walker. Most guests meet it as the 14 Year Old. Texture, as a distillery's own character, is what it teaches: wax, flowers and salt from the northern coast.",
    "others": [
     {
      "name": "Clynelish Reserve, House Tyrell",

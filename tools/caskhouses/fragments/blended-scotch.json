@@ -38,8 +38,8 @@
           }
         ]
       },
-      "table": "Johnnie Walker Black Label 12 Year Old is the Kilmarnock house's aged blend, every whisky in it at least twelve years old. Cardhu's fruit, Glenkinchie's toffee and a soft wisp of Caol Ila smoke make it a neat pour or a rich highball.",
-      "story": "John Walker (1805 to 1857) opened a grocery in Kilmarnock in 1820, after his father's death, and sold whisky among his groceries. His son Alexander Walker (1837 to 1889) took over the business on John's death in 1857 and made it a whisky house: in the 1860s he sold a blend of his own, Old Highland Whisky, and the house's archive dates its slanted label to that decade. In 1893 the firm bought Cardhu on Speyside, its first distillery, and Cardhu malt has stood in the blends ever since. Alexander's sons widened the range and sold it by the colour of its labels, and in 1908 the Striding Man was drawn for the brand. In 1909 the aged blend, Extra Special Old Highland Whisky, was renamed Black Label, since buyers were already asking for it by its label. Behind a bar it is the aged blend to know first: twelve years, malts from across Scotland and a little smoke, and the label a guest names when asking for Scotch by colour.",
+      "table": "Every whisky in Johnnie Walker Black Label 12 Year Old, malt and grain, has spent at least twelve years in cask, and the blend comes from the Kilmarnock house. Cardhu's fruit, Glenkinchie's toffee and a thread of Caol Ila smoke make it a neat pour or a long highball.",
+      "story": "John Walker (1805 to 1857) opened a grocery in Kilmarnock in 1820, after his father's death, and sold whisky among his groceries. His son Alexander Walker (1837 to 1889) took over the business on John's death in 1857 and made it a whisky house: in the 1860s he sold a blend of his own, Old Highland Whisky, and the house's archive dates its slanted label to that decade. In 1893 the firm bought Cardhu on Speyside, its first distillery, and Cardhu malt has stood in the blends ever since. Alexander's sons widened the range and sold it by the colour of its labels, and in 1908 the Striding Man was drawn for the brand. In 1909 the aged blend, Extra Special Old Highland Whisky, was renamed Black Label, since buyers were already asking for it by its label. Twelve years, malts from across Scotland and a little smoke: this is the label a guest names when asking for Scotch by colour, and the aged blend to learn before any other.",
       "others": [
         {
           "name": "Johnnie Walker Red Label",
@@ -55,7 +55,7 @@
         }
       ],
       "traps": [
-        "There is no Johnnie Walker distillery: the blend draws on many, among them Cardhu on Speyside, Glenkinchie in the Lowlands and Caol Ila on Islay.",
+        "No single distillery makes Johnnie Walker: the blend draws on many, among them Cardhu on Speyside, Glenkinchie in the Lowlands and Caol Ila on Islay.",
         "The 12 on the label is a minimum: every whisky in the blend, malt and grain alike, has spent at least twelve years in cask.",
         "Green Label is a blended malt with no grain whisky in it; Black Label is a blended Scotch, malt and grain together."
       ],
@@ -171,16 +171,16 @@
         "label": [
           {
             "term": "12 Year Old",
-            "means": "Every whisky in the blend, malt and grain, has aged at least twelve years in cask."
+            "means": "Malt and grain alike, each whisky in the blend has spent twelve years or more in cask."
           },
           {
             "term": "Blended Scotch Whisky",
-            "means": "Single malt and single grain Scotch married together, by the Scotch Whisky Regulations 2009."
+            "means": "By the Scotch Whisky Regulations 2009, one or more single malts blended with one or more single grains."
           }
         ]
       },
-      "table": "Chivas Regal 12 Year Old is the Aberdeen house's honeyed Speyside blend, built around Strathisla malt from Keith with Strathclyde grain. Expect orchard fruit, honey, vanilla and hazelnut; pour it neat, over ice or long with soda.",
-      "story": "The firm traces itself to a grocery opened in Aberdeen in 1801, later on King Street, which the Chivas brothers came to run, and in 1843, by the house's account, Queen Victoria granted it a Royal Warrant as grocers to the royal household. Chivas Brothers blended whisky in its own cellars for Aberdeen customers who asked for a softer dram, and in 1909 it launched Chivas Regal, an aged blend that the house says first carried twenty-five years. American Prohibition from 1920 cut off much of that trade, and in 1938, by the house's account, it came back with Chivas Regal 12 Year Old. In 1949 the Seagram company bought Chivas Brothers, and in 1950 it bought the Milton distillery at Keith, renamed Strathisla in 1951, whose malt became the heart of every Chivas blend. In 2001 Pernod Ricard bought Chivas Brothers as Seagram's drinks business was divided. For a bartender the twelve year old is the honeyed Speyside answer to the smokier Johnnie Walker Black Label, and the second aged blend to know by heart.",
+      "table": "Strathisla malt from Keith sits at the heart of Chivas Regal 12 Year Old, the honeyed Speyside blend of an Aberdeen house, with Strathclyde grain beside it. Orchard fruit, honey, vanilla and hazelnut carry it neat, over ice or long with soda.",
+      "story": "The firm traces itself to a grocery opened in Aberdeen in 1801, later on King Street, which the Chivas brothers came to run, and in 1843, by the house's account, Queen Victoria named it grocers to the royal household by Royal Warrant. Chivas Brothers blended whisky in its own cellars for Aberdeen customers who asked for a softer dram, and in 1909 it launched Chivas Regal, an aged blend that the house says first carried twenty-five years. American Prohibition from 1920 cut off much of that trade, and in 1938, by the house's account, it came back with Chivas Regal 12 Year Old. In 1949 the Seagram company bought Chivas Brothers, and in 1950 it bought the Milton distillery at Keith, renamed Strathisla in 1951, whose malt became the heart of every Chivas blend. In 2001 Pernod Ricard bought Chivas Brothers as Seagram's drinks business was divided. Where Johnnie Walker Black Label brings smoke, the twelve year old answers with Speyside honey, and it is the second aged blend a guest will expect you to know by heart.",
       "others": [
         {
           "name": "Chivas Regal 18 Year Old",
@@ -315,12 +315,12 @@
           },
           {
             "term": "Blended Scotch Whisky",
-            "means": "Single malt and single grain Scotch married together, by the Scotch Whisky Regulations 2009."
+            "means": "The law's class for single malt and single grain Scotch married together, under the Scotch Whisky Regulations 2009."
           }
         ]
       },
-      "table": "Dewar's White Label is the Perth house's blended Scotch, built around honeyed Aberfeldy malt since 1899. Light, with heather honey, pear and vanilla fudge, it belongs in a highball: long with soda or ginger ale, over plenty of ice.",
-      "story": "John Dewar (1805 to 1880) left a family partnership to open his own wine and spirits shop on the High Street of Perth in 1846, and he sold whisky in glass bottles under his own name. On his death in 1880 the firm passed to his sons: the elder ran it in Scotland, and the younger became its salesman in London and abroad. In 1893 Queen Victoria granted John Dewar & Sons a Royal Warrant. The brothers built a distillery of their own at Aberfeldy in Perthshire, which began distilling in 1898, to make the malt at the heart of the house's blends. In 1899 the firm's first master blender from outside the family created White Label, with Aberfeldy at its core. In 1925 John Dewar & Sons joined the Distillers Company, and in 1998 Bacardi bought Dewar's together with four malt distilleries, Aberfeldy among them. The house tells of double ageing: once the whiskies are blended, they rest again in oak before bottling. Behind a bar White Label is the blend for a Scotch and soda, light enough to stretch and honeyed enough to hold its own.",
+      "table": "Since 1899 Dewar's White Label, the blended Scotch of a Perth house, has been built around honeyed Aberfeldy malt. Light, with heather honey, pear and vanilla fudge, it belongs in a highball: long with soda or ginger ale, over plenty of ice.",
+      "story": "Perth is where John Dewar (1805 to 1880), having left a family partnership, opened his own wine and spirits shop on the High Street in 1846, and he sold whisky in glass bottles under his own name. On his death in 1880 the firm passed to his sons: the elder ran it in Scotland, and the younger became its salesman in London and abroad. John Dewar & Sons received a Royal Warrant in 1893, late in Queen Victoria's reign. The brothers built a distillery of their own at Aberfeldy in Perthshire, which began distilling in 1898, to make the malt at the heart of the house's blends. In 1899 the firm's first master blender from outside the family created White Label, with Aberfeldy at its core. In 1925 John Dewar & Sons joined the Distillers Company, and in 1998 Bacardi bought Dewar's together with four malt distilleries, Aberfeldy among them. The house tells of double ageing: once the whiskies are blended, they rest again in oak before bottling. Ask for a Scotch and soda and White Label is the blend that answers: light in body, with honey that carries through the bubbles.",
       "others": [
         {
           "name": "Dewar's 12 Year Old",
@@ -447,12 +447,12 @@
           },
           {
             "term": "Blended Scotch Whisky",
-            "means": "Single malt and single grain Scotch married together, by the Scotch Whisky Regulations 2009."
+            "means": "Malt and grain whiskies, each a single Scotch, blended under the Scotch Whisky Regulations 2009."
           }
         ]
       },
-      "table": "The Famous Grouse is the Perth blend under the red grouse, first made by a family of wine merchants in the 1890s. Sherry casks give it oak and dried fruit, with Speyside fruit and a lift of citrus; pour it over ice, with soda or in a Whisky Mac.",
-      "story": "Matthew Gloag & Son began as a grocery and wine business on Atholl Street in Perth, and the Gloags ran it for generations. In the late 1890s the founder's grandson launched a blend he called The Grouse Brand, after the game bird of the Scottish moors, and his daughter drew the bird for the label. On 12 August 1905, by the house's account, the blend took the name The Famous Grouse; by most accounts the name grew with its popularity. The family kept the firm until 1970, when the death of its chairman left a heavy bill for estate duty, and the business was sold to Highland Distillers that same year. Glenturret, near Crieff, later housed The Famous Grouse Experience, and when the smoky version of the blend was remade as Smoky Black in 2015, a peated Glenturret malt went into it. The house leans on former sherry casks, which give the core blend its oak and dried fruit. Behind a bar it is the everyday Perth blend to know: soft, sherried and even, a house pour long with soda and a sound base for a Whisky Mac.",
+      "table": "Under the red grouse on its label, The Famous Grouse is a Perth blend first made in the 1890s by a family of wine merchants. Sherry casks lend it oak, dried fruit and a lift of citrus; serve it over ice, with soda or in a Whisky Mac.",
+      "story": "A grocery and wine business on Atholl Street in Perth was the start of Matthew Gloag & Son, and the Gloags ran it for generations. In the late 1890s the founder's grandson launched a blend he called The Grouse Brand, after the game bird of the Scottish moors, and his daughter drew the bird for the label. On 12 August 1905, by the house's account, the blend took the name The Famous Grouse; by most accounts the name grew with its popularity. The family kept the firm until 1970, when the death of its chairman left a heavy bill for estate duty, and the business was sold to Highland Distillers that same year. Glenturret, near Crieff, later housed The Famous Grouse Experience, and when the smoky version of the blend was remade as Smoky Black in 2015, a peated Glenturret malt went into it. The house leans on former sherry casks, which give the core blend its oak and dried fruit. Soft, sherried and even, it is the everyday Perth blend: a house pour long with soda, and a sound base for a Whisky Mac.",
       "others": [
         {
           "name": "The Famous Grouse Smoky Black",
@@ -586,12 +586,12 @@
           },
           {
             "term": "Blended Scotch Whisky",
-            "means": "Single malt and single grain Scotch married together, by the Scotch Whisky Regulations 2009."
+            "means": "A marriage of single malt and single grain Scotch, the class the Scotch Whisky Regulations 2009 call blended."
           }
         ]
       },
-      "table": "Ballantine's Finest is the Edinburgh house's light, sweet blend, made since 1910, with honey, milk chocolate, red apple and vanilla. It is a Scotch for mixing: over ice, long with soda, or stirred into a Rob Roy.",
-      "story": "Ballantine's began in 1827, when George Ballantine (1809 to 1891), a grocer of nineteen, opened a shop in the Cowgate of Edinburgh. He moved into wines and spirits, and in the 1860s the business went west to Glasgow, where it grew into a blending house. In 1895 Queen Victoria granted the firm a Royal Warrant, and in 1910 it launched Ballantine's Finest, the blend it has kept as its standard ever since. In 1938 Hiram Walker, the Canadian distiller that had bought the firm after American Prohibition ended, completed a grain distillery at Dumbarton on the Clyde. The same year the Lord Lyon granted Ballantine's a coat of arms. From 1959, by the house's telling, a flock of white geese known as the Scotch Watch guarded the Dumbarton warehouses against intruders in place of dogs. For a bartender Ballantine's Finest is the light, everyday blend to set beside the heavier, older names: soft and sweet, easy to stretch with soda, and the Scotch to reach for when a drink wants whisky without smoke.",
+      "table": "Honey, milk chocolate, red apple and vanilla run through Ballantine's Finest, the light, sweet blend that a house begun by an Edinburgh grocer has made since 1910. Use it to mix: over ice, long with soda or stirred into a Rob Roy.",
+      "story": "Ballantine's began in 1827, when George Ballantine (1809 to 1891), a grocer of nineteen, opened a shop in the Cowgate of Edinburgh. He moved into wines and spirits, and in the 1860s the business went west to Glasgow, where it grew into a blending house. A Royal Warrant followed in 1895, and in 1910 the firm launched Ballantine's Finest, the blend it has kept as its standard from that year on. In 1938 Hiram Walker, the Canadian distiller that had bought the firm after American Prohibition ended, completed a grain distillery at Dumbarton on the Clyde. The same year the Lord Lyon granted Ballantine's a coat of arms. From 1959, by the house's telling, a flock of white geese known as the Scotch Watch guarded the Dumbarton warehouses against intruders in place of dogs. When a drink wants whisky without smoke, Ballantine's Finest is the Scotch to reach for: light, soft and sweet beside the heavier, older names, and easy to stretch with soda.",
       "others": [
         {
           "name": "Ballantine's 17 Year Old",
@@ -604,7 +604,7 @@
       ],
       "traps": [
         "Ballantine's Finest is a name, not a grade: the word on its label marks no class under the Scotch rules.",
-        "There is no Ballantine's distillery: the blend draws on malts and grains from many distilleries, and the house names none for Ballantine's Finest."
+        "Ballantine's Finest comes from no one distillery: it draws on malts and grains from many, and the house names none of them for it."
       ],
       "cards": [
         {
