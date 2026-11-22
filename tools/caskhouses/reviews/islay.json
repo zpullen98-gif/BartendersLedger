@@ -1,0 +1,179 @@
+{
+ "group": "islay",
+ "chunk": "c6",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 21,
+ "tested": [
+  "laphroaig: the founding of 1815 by two Johnston brothers; Ian Hunter's years from 1908 and his death in 1954, the malting floors, the Prohibition journey and the ex-bourbon barrels as the house tells them; Bessie Williamson's arrival in 1934 (1935 on one producer page), her charge by 1938 or 1944, her inheritance in 1954, the sale to Seager Evans in stages from 1962 and her retirement (1971 or 1972); the strength by market; the Sherry Oak Finish and its Oloroso casks. 5 searches.",
+  "lagavulin: the 1740s illicit stills and the official 1816; the 16 at 43% ABV; the run times of about five and more than nine hours and the pear-shaped stills; the casks of the 16; Peter Mackie's arrival in 1878, the Laphroaig agency and the court fight, Malt Mill of 1908, its closure and its stills moved into Lagavulin; White Horse Distillers of 1924 and the Distillers Company; the Distillers Edition's Pedro Ximénez casks at 43% and the 8 Year Old at 48%. 5 searches.",
+  "ardbeg: the founding of 1815 and the MacDougall licence; the closure of 1981, the restart of 1989, Glenmorangie and the restart of June 1997; the Committee and the Ten of 2000; the purifier on the lyne arm; the stills, two wash and two spirit only since the still house of 2021; Uigeadail at 54.2% and the Committee's cask strength Ten. 3 searches.",
+  "bowmore: the 1779 founding as the house's year, the doubt before 1816 and the merchant Simson; the Mutters; the brokers of 1963, the company's name of 1987 or 1988, Suntory's share of 1989 and purchase of 1994; the floor maltings share; the No. 1 Vaults; the 12's ex-bourbon and Oloroso casks, its notes and its strength; the 12 Sherry Oak Cask and the 15. 5 searches.",
+  "caol-ila: the founding of 1846 by a Glasgow businessman, the change of hands in 1852 or 1854, Bulloch Lade from 1863 to its winding up in 1920, the Distillers Company in 1927, the rebuild of 1972 to 1974 and six stills; the 12 at 43% and the producer's notes; the Distillers Edition's Moscatel casks. 3 searches.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, keys at positions 0, 2, 1, 3, 2, 0, 3, 1, 1, 2, the key longest in two questions (Ardbeg q1, Bowmore q1) and never far the longest, every explain naming the nearest wrong option. Bowmore's two card answers, its q1 option and both its explains were reworded for the changes below. No card id changed."
+ ],
+ "changed": [
+  {
+   "key": "laphroaig",
+   "field": "story",
+   "was": "Ian Hunter, a nephew of the family, came to Islay in 1908 and took charge; he rebuilt part of the distillery and made ex-bourbon barrels the rule",
+   "now": "Ian Hunter, by the house's account the last of the Johnston family to run it, took charge in 1908; he rebuilt the malting floors and brought American ex-bourbon barrels in",
+   "why": "the producer calls him the last of the Johnston family to own and manage it from 1908, and credits him with the malting floors and the barrels",
+   "sources": [
+    "https://www.laphroaig.com/heritage",
+    "https://www.laphroaig.com/whisky-stories/the-ian-hunter-story"
+   ]
+  },
+  {
+   "key": "laphroaig",
+   "field": "story",
+   "was": "sold it in stages to Long John Distillers, and she retired in 1972",
+   "now": "sold it in stages to Seager Evans, the firm behind the Long John blend, and she retired in the early 1970s",
+   "why": "the buyer from 1962 was Seager Evans in every account read; the producer gives 1971 for the retirement and two secondary sources 1972",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Bessie_Williamson",
+    "https://scotchwhisky.com/magazine/whisky-heroes/9386/bessie-williamson-laphroaig/",
+    "https://www.laphroaig.com/whisky-stories/laphroaig-history-then-and-now"
+   ]
+  },
+  {
+   "key": "lagavulin",
+   "field": "bottle.wood, traps[1]",
+   "was": "former bourbon and sherry casks, mostly refill",
+   "now": "mostly former bourbon casks, with some that held sherry",
+   "why": "refill rested on one feature and a shop; two accounts give mostly American oak bourbon casks with a portion of sherry",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Lagavulin_distillery",
+    "https://thewhiskeywash.com/scotch-whiskey/the-ultimate-guide-to-the-lagavulin-16-year-old/"
+   ]
+  },
+  {
+   "key": "lagavulin",
+   "field": "others[0].note",
+   "was": "eight years in oak, sold beside the 16",
+   "now": "eight years in oak and bottled at 48% ABV, first released for the bicentenary of 2016",
+   "why": "sold beside is a present state; the producer gives the strength and the bicentenary",
+   "sources": [
+    "https://www.malts.com/en-us/products/lagavulin-8-year-old-single-malt-scotch-whisky-750ml"
+   ]
+  },
+  {
+   "key": "lagavulin",
+   "field": "others[1].note, traps[1]",
+   "was": "casks seasoned with sherry",
+   "now": "casks seasoned with Pedro Ximénez sherry",
+   "why": "the producer names Pedro Ximénez for the second maturation",
+   "sources": [
+    "https://www.malts.com/en-us/products/lagavulin-distillers-edition-single-malt-scotch-whisky-750ml"
+   ]
+  },
+  {
+   "key": "ardbeg",
+   "field": "bottle.still",
+   "was": "Distilled twice in copper pot stills, two for the wash and two for the spirit",
+   "now": "Distilled twice in copper pot stills",
+   "why": "two of each is the still house opened in 2021; a Ten in the bottle was distilled on the single pair before it, and a still count given as fixed is refused",
+   "sources": [
+    "https://thewhiskeywash.com/scotch-whiskey/ardbeg-has-a-new-custom-built-stillhouse-for-whisky-production/",
+    "https://pressandjournal.co.uk/fp/lifestyle/food-and-drink/3007048/ardbeg-new-stillhouse"
+   ]
+  },
+  {
+   "key": "ardbeg",
+   "field": "others",
+   "was": "the Committee's cask strength Ten alone",
+   "now": "Ardbeg Uigeadail at 54.2% ABV, then the cask strength Ten from American oak bourbon barrels",
+   "why": "the cask strength Ten is a Committee release a guest seldom meets; Uigeadail is a core bottling on the producer's pages",
+   "sources": [
+    "https://origin.ardbeg.com/en-US/whisky/ultimate-range/uigeadail",
+    "https://www.ardbeg.com/en-gb/ardbeg-ten-years-old-cask-strength-1115125.html"
+   ]
+  },
+  {
+   "key": "bowmore",
+   "field": "bottle.mash, table, traps[1]",
+   "was": "About 40 per cent is malted on the distillery's own floors",
+   "now": "Part of it, given as about 30 to 40 per cent",
+   "why": "one source gives about 40 per cent, another some 70 per cent shipped in from the mainland",
+   "sources": [
+    "https://scotchwhisky.com/whiskypedia/1825/bowmore/",
+    "https://smws.com.au/?p=41719"
+   ]
+  },
+  {
+   "key": "bowmore",
+   "field": "story",
+   "was": "In 1963 a firm of whisky brokers bought it and formed Morrison Bowmore Distillers, and Suntory completed its purchase of that company in 1994",
+   "now": "In 1963 a firm of whisky brokers bought it, and Suntory, which took a share of that business in 1989, completed its purchase in 1994",
+   "why": "the company took the name Morrison Bowmore Distillers in 1987 or 1988; Suntory's 35 per cent stake of 1989 is in two accounts",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Bowmore_distillery",
+    "https://gracesguide.co.uk/Morrison_Bowmore_Distillers"
+   ]
+  },
+  {
+   "key": "bowmore",
+   "field": "story, cards[founding].answer, quiz[q2].explain",
+   "was": "1779, the first year the distillery appears in the record",
+   "now": "1779, the year the house gives; some accounts find no sure sign of licensed distilling there before 1816",
+   "why": "a claim of a first with no two sources; Scotchwhisky.com and a second account find no record of distilling before 1816",
+   "sources": [
+    "https://scotchwhisky.com/whiskypedia/1825/bowmore/",
+    "https://www.bowmore.com/our-history"
+   ]
+  },
+  {
+   "key": "bowmore",
+   "field": "story, traps[0], cards[vaults].answer, quiz[q1]",
+   "was": "below the level of Loch Indaal, one wall forming part of the village's sea wall: a cold, damp warehouse where little is lost to evaporation",
+   "now": "partly below sea level on the shore of Loch Indaal",
+   "why": "sources give partly below sea level on the shore; no source read gave the sea wall or the evaporation",
+   "sources": [
+    "https://www.whiskybase.com/whiskies/distillery/4/about",
+    "https://www.bowmore.com/our-process"
+   ]
+  },
+  {
+   "key": "caol-ila",
+   "field": "table",
+   "was": "Much of the distillery's malt goes into blends",
+   "now": "Much of its malt has long gone into blends",
+   "why": "a present state of where the output goes; the line was also trimmed to its cap",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Caol_Ila_distillery"
+   ]
+  },
+  {
+   "key": "caol-ila",
+   "field": "sources[0].url",
+   "was": "https://www.malts.com/en-us/products/caol-ila-12-year-old-single-malt-scotch-whisky-70cl",
+   "now": "https://www.malts.com/en-row/products/single-malt-whisky/caol-ila-12-year-old-single-malt-scotch-whisky-70cl",
+   "why": "the address the producer's search returned for the 12 Year Old page with its 43% and notes",
+   "sources": [
+    "https://www.malts.com/en-row/products/single-malt-whisky/caol-ila-12-year-old-single-malt-scotch-whisky-70cl"
+   ]
+  }
+ ],
+ "open": [
+  "laphroaig: 43% (86 proof) for the United States rests on shop listings only, so the strength stays the United Kingdom's 40%; the year Bessie Williamson took charge is told only as by 1944.",
+  "lagavulin: the run times rest on secondary accounts; the Distillers Company year and the Malt Mill closure year stay out.",
+  "ardbeg: the tasting words are the producer's, read through a search summary.",
+  "bowmore: 40% ABV rests on Difford's and shops; the merchant Simson's arrival in 1766 is hedged as one account; the 15's Oloroso finish is not added.",
+  "caol-ila: the change of hands of 1852 or 1854 stays out; the demolition of all but one warehouse rests on the author's two sources."
+ ],
+ "living": [
+  "Met in sources and named in no record: Dave Broom (already in people.json); new for people.json, Brian Morrison, of the Morrison Bowmore history (not known to have died), and Christopher Coates and Millie Milliken, named in a page title on the producer's Bowmore site.",
+  "The dead and the undated met: Ian Hunter (died 1954) and Bessie Williamson (1910 to 1982) stand in the Laphroaig story; Peter Mackie (1855 to 1924) stands in the Lagavulin story. Alexander and Donald Johnston, John Johnston, James Logan Mackie, John MacDougall, Hector Henderson, Norman Buchanan, the Simson of Bowmore (John or David), William and James Mutter and Stanley P. Morrison (died 1971 in Wikipedia alone) are named in no record."
+ ],
+ "swaps": [
+  "No swap proposed by the author, and none is made: Laphroaig 10 Year Old, Lagavulin 16 Year Old, Ardbeg Ten Years Old, Bowmore 12 Year Old and Caol Ila 12 Year Old stand as the roster names them, each the house's own lead bottling on its pages."
+ ],
+ "tension": [
+  "The Library's Laphroaig record: gives roughly 40ppm and calls the peat compressed sphagnum and seaweed, neither confirmed; its line on the Penicillin float gives a measure, which the voice refuses. Reported, not edited.",
+  "The Library's Lagavulin record: says heavy sherry cask influence on the 16; two accounts give mostly former bourbon casks with a portion of sherry. Reported, not edited.",
+  "The Library's Ardbeg record: calls its peating the highest of the major Islay distilleries, a ranking. Reported, not edited.",
+  "plan.json, bowmore why: about 40% floor malted, where sources give about 30 to 40 per cent, and still floor malts, a present state. Reported, not edited.",
+  "plan.json, laphroaig, lagavulin and caol-ila whys: name Alexander and Donald Johnston, John Johnston and Hector Henderson with no dates; the records describe them. The caol-ila why says the output goes mostly into Johnnie Walker blends, a present state. Reported, not edited.",
+  "plan.json, lagavulin note: White Horse in 1890, where sources give 1890 or 1891; ardbeg note: the 1997 purchase unconfirmed, now confirmed by Wikipedia and two histories. Reported, not edited."
+ ]
+}
