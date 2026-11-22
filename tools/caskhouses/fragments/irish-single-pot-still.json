@@ -21,7 +21,7 @@
     "still": "Triple distilled in copper pot stills at Midleton Distillery in County Cork, where it is also casked and matured.",
     "wood": "Former bourbon barrels and sherry butts, married after at least twelve years; the label carries a 12 year age statement.",
     "strength": "40% ABV (80 proof)",
-    "taste": "Spice, ripe fruit and sherry over toasted wood, as the house gives it; tasters often find red apple, raisin, toffee and roasted nuts, on a creamy, oily body with a long finish.",
+    "taste": "Spice, fruit and sherry over toasted wood, as the house gives it, with dark dried fruit, figs and raisins from the sherry casks, on a full, creamy body and a long, lingering finish.",
     "pour": "Neat, with a jug of water beside it, or over one large cube. It makes a fuller Irish Coffee and a pot still Old Fashioned.",
     "label": [
      {
@@ -35,7 +35,7 @@
     ]
    },
    "table": "Redbreast 12 Year Old is single pot still Irish whiskey from Midleton in County Cork, malted and unmalted barley triple distilled in copper pot stills and aged in bourbon and sherry casks. It pours creamy and spicy, with dried fruit, and shows a guest what pot still means.",
-   "story": "The name began with W. and A. Gilbey, the Dublin wine and spirits merchants, who bottled pot still whiskey from the Jameson distillery on Bow Street under their own labels. By the house's account the first record of Redbreast is a Gilbey advertisement of August 1912 for a twelve year old J.J. Liqueur Whiskey, and the brand tells that the name came from a Gilbey chairman who watched birds: the robin redbreast. Jameson supplied the pot still until Bow Street closed in the summer of 1971, as the house tells it. Jameson had by then joined Powers and the Cork Distilleries Company in 1966 to form Irish Distillers, which opened its new distillery at Midleton in County Cork in 1975. The last Gilbey bottling of Redbreast came in 1985, and in 1986 Gilbey agreed to sell the name to Irish Distillers. The brand came back in 1991 as a 12 year old made from Midleton pot still, matured in bourbon and sherry casks. For a bartender Redbreast 12 is the bottle to pour first when a guest asks what single pot still tastes like, and the measure every other pot still in this group is set beside.",
+   "story": "The name began with W. and A. Gilbey, the Dublin wine and spirits merchants, who bottled pot still whiskey from the Jameson distillery on Bow Street under their own labels. By the house's account the first record of Redbreast is a Gilbey advertisement of August 1912 for a twelve year old J.J. Liqueur Whiskey, and the brand tells that the name came from a Gilbey chairman who watched birds: the robin redbreast. Jameson supplied the pot still until Bow Street closed in the summer of 1971, as the house tells it, and the making then moved to Cork. Jameson had by then joined Powers and the Cork Distilleries Company in 1966 to form Irish Distillers, which opened its new distillery at Midleton in County Cork in 1975. The last Gilbey bottling of Redbreast came in 1985, and in 1986 Gilbey agreed to sell the name to Irish Distillers. The brand came back in 1991 as a 12 year old made from Midleton pot still, matured in bourbon and sherry casks. For a bartender Redbreast 12 is the bottle to pour first when a guest asks what single pot still tastes like, and the measure every other pot still in this group is set beside.",
    "others": [
     {
      "name": "Redbreast 12 Year Old Cask Strength",
@@ -44,7 +44,7 @@
    ],
    "traps": [
     "There is no Redbreast distillery: it is made at Midleton in County Cork, beside Green Spot and Powers.",
-    "The Redbreast of before 1985 was Jameson pot still from Bow Street, bottled by Gilbey; the whiskey since 1991 is Midleton's.",
+    "Until 1971 Redbreast was Jameson pot still from Bow Street, bottled by Gilbey; after Bow Street closed the spirit came from Cork, and the whiskey since 1991 is Midleton's.",
     "Single pot still is not single malt: unmalted barley stands in the mash beside the malted."
    ],
    "cards": [
@@ -129,7 +129,20 @@
     "Left out for want of a source: any percentage of malted to unmalted barley, the share of sherry casks, and the 15, 21 and 27 Year Old and the cask editions, whose details I did not read on the producer's pages.",
     "The relaunch is December 1991 in two secondary accounts; one says the name was off the market for almost ten years, which the 1985 last Gilbey bottling does not bear out, so no gap is stated."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.taste: the tasters' red apple, toffee and roasted nuts rested on one secondary source; now the producer's spice, fruit, sherry and toasted wood with the dark dried fruit, figs and raisins its own article gives the 12.",
+     "story: after Bow Street closed in 1971 the making of Redbreast moved to Cork (Wikipedia, Irish Pub Emporium); the story now says so, so the gap from 1971 to 1985 is not left as Bow Street spirit.",
+     "traps[1]: said the Redbreast of before 1985 was Bow Street pot still; now until 1971, with Cork spirit after, and Midleton's since 1991."
+    ],
+    "open": [
+     "bottle.wood: the producer's 12 page says sherry casks, one of its pages says cream sherry and only the Cask Strength names oloroso; the record says sherry butts, which holds.",
+     "story: the robin and the bird-watching chairman stand as the brand's claim; Wikipedia and Master of Malt tell the same, unnamed."
+    ]
+   }
   },
   {
    "key": "green-spot",
@@ -165,7 +178,7 @@
     ]
    },
    "table": "Green Spot is single pot still made at Midleton for Mitchell & Son, the Dublin wine merchants who named it for the daub of green paint that once marked their casks. It carries no age statement and pours bright and spicy, with green apple, clove and toasted oak.",
-   "story": "Mitchell & Son began in 1805 as a bakery and confectioner's shop at 10 Grafton Street in Dublin, and the family went on into wine and spirits. As bonders, the Mitchells sent the casks that had held their sherry to the Jameson distillery on Bow Street, had them filled with new pot still spirit and matured them in their own cellars. By the house's account each cask was marked with a daub of paint for the age it was meant to reach: blue for seven years, green for ten, yellow for twelve and red for fifteen. Green Spot was being laid down by the early 1920s, though no record gives the year it was first sold. Yellow Spot was last bottled in the late 1950s and Blue Spot in 1964, and Green Spot, by the house's account, never stopped. When Bow Street closed in 1971, Mitchell & Son agreed with Irish Distillers that the whiskey would be made and matured at Midleton, keeping the right to sell it themselves. Yellow Spot came back in 2012, Red Spot in 2018 and Blue Spot in 2020. For a bartender Green Spot is the bonder's whiskey, the living trace of the days when Dublin merchants filled, aged and named the pot still they bought.",
+   "story": "Mitchell & Son began in 1805 as a bakery and confectioner's shop at 10 Grafton Street in Dublin, and the family went on into wine and spirits. As bonders, the Mitchells sent the casks that had held their sherry to the Jameson distillery on Bow Street, had them filled with new pot still spirit and matured them in their own cellars. By the house's account each cask was marked with a daub of paint for the age it was meant to reach: blue for seven years, green for ten, yellow for twelve and red for fifteen. By the house's account the name Green Spot dates from 1925. Yellow Spot was last bottled in the late 1950s and Blue Spot in the 1960s, and Green Spot, by the house's account, never stopped. When Bow Street closed in 1971, Mitchell & Son agreed with Irish Distillers that the whiskey would be made and matured at Midleton. Yellow Spot came back in 2012, Red Spot in 2018 and Blue Spot in 2020. For a bartender Green Spot is the bonder's whiskey, the living trace of the days when Dublin merchants filled, aged and named the pot still they bought.",
    "others": [
     {
      "name": "Yellow Spot",
@@ -253,9 +266,9 @@
      "read": "search"
     },
     {
-     "title": "Difford's Guide: Green Spot",
-     "url": "https://www.diffordsguide.com/beer-wine-spirits/72/green-spot",
-     "kind": "secondary",
+     "title": "Spot Whiskey: one hundred years of Green Spot",
+     "url": "https://www.spotwhiskey.com/en-us/100-year-anniversary/",
+     "kind": "primary",
      "read": "search"
     }
    ],
@@ -267,7 +280,21 @@
     "The Ledger's style page for Irish single pot still names Yellow Spot as a house of its own; the plan keeps the Spots as one label, and so does this record.",
     "Left out for want of a source: the Spot and Soda recipe beyond its name and the soda, and the yearly count of bottles, which is a production figure the brief refuses in any case."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: said no record gives the year Green Spot was first sold; the house dates the name to 1925 (Spot Whiskey's hundred-year page, and Mitchell & Son's anniversary bottle, first advertised in The Irish Times in October 1925); now 'By the house's account the name Green Spot dates from 1925.'",
+     "story: Blue Spot's last bottling of 1964 rested on a count back from Wikipedia's 'discontinued for 56 years'; now the 1960s, which Master of Malt's 'more than 50 years' also bears.",
+     "story: cut 'keeping the right to sell it themselves', which no source read gave and which reads as a present arrangement.",
+     "sources[4]: Difford's Guide, which carried no fact the record keeps, replaced by Spot Whiskey's hundred-year page for 1925."
+    ],
+    "open": [
+     "year: left empty; 1925 is the house's date for the name and its first advertisement, not shown as a first sale, so the integrator may set 1925 first released only on a further source.",
+     "bottle.wood: the average age is seven to nine years on Mitchell & Son's page and seven to ten on Spot Whiskey's; both stand in the record."
+    ]
+   }
   },
   {
    "key": "powers",
@@ -287,7 +314,7 @@
     "class": "Single pot still Irish whiskey, aged 12 years",
     "mash": "Malted and unmalted barley mashed together; the house publishes no percentages.",
     "still": "Triple distilled in copper pot stills at Midleton Distillery in County Cork, the house where Powers has been made since it left Dublin.",
-    "wood": "At least twelve years, mainly in American oak casks that held bourbon, with a small share of whiskey that has spent a year in oloroso sherry butts. The label states 12 years.",
+    "wood": "At least twelve years, mainly in second- and third-fill American oak casks that held bourbon, with a small share of spirit that has spent a year in oloroso sherry butts. The label states 12 years.",
     "strength": "46% ABV (92 proof)",
     "taste": "Earth, leather and tobacco on the nose with charred wood, dark chocolate and treacle toffee, then a full, spicy body that turns to vanilla, honey and dried apricot, and a lingering honeyed finish over toasted oak.",
     "pour": "Neat or with a little water, set beside Redbreast 12 for a guest learning the style; its weight carries an Old Fashioned.",
@@ -307,7 +334,7 @@
     ]
    },
    "table": "Powers John's Lane Release is a twelve year old single pot still from Midleton, named for the old Powers distillery on John's Lane in Dublin. Bottled at 46% ABV without chill filtering, it pours oily and spicy, with leather, treacle toffee and dried apricot.",
-   "story": "As the house tells it, Powers began in 1791 with a Dublin innkeeper who did a little distilling on the side, and the sideline grew into a full distillery. By 1822 the business, by then John Power & Son, stood on John's Lane, off Thomas Street, and through the nineteenth century the pot still whiskey of John's Lane was among the Dublin whiskeys a drinker asked for by name. In 1966 John Power & Son joined John Jameson & Son and the Cork Distilleries Company to form Irish Distillers. The new group built a distillery at Midleton in County Cork, which opened in 1975, and the making of Powers moved there from Dublin; John's Lane closed within a year or so. The Powers name went on chiefly as Gold Label, the blend of pot still and grain whiskey that an Irish pub pours. John's Lane Release brought the old house's single pot still back under its own name, at twelve years and bottled stronger than the blend. For a bartender it is the spicier, oilier answer to Redbreast 12, poured beside it to show how far one style can range when two Midleton houses read it.",
+   "story": "As the house tells it, Powers began in 1791 with a Dublin innkeeper who did a little distilling on the side, and the sideline grew into a full distillery. By 1822 the business traded as John Power & Son, and its distillery stood on John's Lane, a side street off Thomas Street, and through the nineteenth century the pot still whiskey of John's Lane was among the Dublin whiskeys a drinker asked for by name. In 1966 John Power & Son joined John Jameson & Son and the Cork Distilleries Company to form Irish Distillers. The new group built a distillery at Midleton in County Cork, which opened in 1975, and the making of Powers moved there from Dublin; John's Lane closed within a year or so. The Powers name went on chiefly as Gold Label, the blend of pot still and grain whiskey that an Irish pub pours. John's Lane Release brought the old house's single pot still back under its own name, at twelve years and bottled stronger than the blend. For a bartender it is the spicier, oilier answer to Redbreast 12, poured beside it to show how far one style can range when two Midleton houses read it.",
    "others": [
     {
      "name": "Powers Gold Label",
@@ -315,7 +342,7 @@
     },
     {
      "name": "Powers Three Swallow",
-     "note": "Single pot still with no age statement, at 43.2% ABV, mainly from second- and third-fill bourbon barrels with a little sherry cask whiskey."
+     "note": "Single pot still with no age statement, from former bourbon barrels with a little oloroso sherry cask whiskey; its strength differs by market."
     }
    ],
    "traps": [
@@ -332,7 +359,7 @@
     {
      "id": "wood",
      "prompt": "In what casks is Powers John's Lane Release mainly aged, and for how long at least?",
-     "answer": "Mainly American oak casks that held bourbon, with a little oloroso sherry cask whiskey, for at least twelve years."
+     "answer": "Mainly second- and third-fill American oak casks that held bourbon, with a little oloroso sherry cask whiskey, for at least twelve years."
     }
    ],
    "quiz": [
@@ -348,7 +375,7 @@
       "Former bourbon casks"
      ],
      "a": 3,
-     "explain": "John's Lane ages mainly in American oak casks that held bourbon, with a small share from oloroso sherry butts; no port is used."
+     "explain": "John's Lane ages mainly in second- and third-fill American oak casks that held bourbon, with a small share from oloroso sherry butts; no port is used."
     },
     {
      "id": "q2",
@@ -404,7 +431,20 @@
     "Left out for want of a source: the year John's Lane Release was first bottled, the share of oloroso whiskey (six per cent in one retailer's note), and the claim that Midleton's pot stills were modelled on those of John's Lane, which only a sponsored article gives.",
     "Powers Gold Label is held here as the plan asks; that it blends pot still with grain rests on the Ledger's blended Irish page and the house's process page, which says so of its blends in general."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.wood, cards[wood].answer, quiz[0].explain: the producer's John's Lane page gives mainly second- and third-fill American casks; first fill in Difford's and Distiller belongs to the Cask Strength. Now second- and third-fill.",
+     "story: said the business stood on John's Lane by 1822; sources split on when it moved there (from 1791 in some), and 1822 is the year of the name John Power & Son. Now 'By 1822 the business traded as John Power & Son, and its distillery stood on John's Lane, a side street off Thomas Street'.",
+     "others[1].note: Three Swallow's 43.2% ABV is the producer's American page, but several markets list 40%, and its casks are given as bourbon with oloroso; now 'its strength differs by market' and no fill is stated."
+    ],
+    "open": [
+     "story: John's Lane's closure stays 'within a year or so' of 1975; Wikipedia gives a year after Midleton opened, the plan 1976.",
+     "The year John's Lane Release was first bottled is still not sourced."
+    ]
+   }
   },
   {
    "key": "teeling",
@@ -537,7 +577,16 @@
     "Spirit first ran in March 2015 in Difford's alone, so the month is left out; the three copper pot stills rest on Wikipedia and one other account read in search.",
     "Left out for want of a source: an age for the whiskey in the core bottling (Batch 1 was distilled in 2015 and bottled in 2018, but the core is not dated), and how the core differs from Batch 1."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "sound",
+    "changed": [],
+    "open": [
+     "bottle.wood: the producer's shop says virgin oak, ex-bourbon and ex-wine casks and its range page virgin American oak, bourbon and sherry; the record tells both, and the label's own words were not read.",
+     "story: the Teeling Whiskey Company's founding stays undated (2011 or 2012 by source); the first spirit of 26 March 2015 rests on Difford's and The Whiskey Wash, against May 2015 commissioning in Difford's, so no month is given."
+    ]
+   }
   },
   {
    "key": "dingle",
@@ -560,7 +609,7 @@
     "wood": "Bourbon, oloroso sherry, Pedro Ximénez sherry and red wine casks, chosen by hand and married together. No age statement on the label.",
     "strength": "46.5% ABV",
     "taste": "Baking spice, nutmeg, cinnamon and allspice on the nose, then cooked dark fruit, brown sugar and spiced stewed apple, and a finish that moves from pot still spice to toasted oak, soft honey and nutmeg.",
-    "pour": "Neat or with a little water; the house's own long serve is a Whiskey Collins, with lemon, sugar and soda.",
+    "pour": "Neat or with a little water; the house's own long serve is the Dingle Whiskey Collins, with lime, sugar syrup and soda.",
     "label": [
      {
       "term": "Single Pot Still",
@@ -572,8 +621,8 @@
      }
     ]
    },
-   "table": "Dingle Single Pot Still comes from an independent distillery in an old sawmill at Milltown, on the edge of Dingle in County Kerry, made from local malted and unmalted barley. Its casks run from bourbon to sherry and red wine, and it pours with baking spice, stewed apple and honey.",
-   "story": "Dingle Distillery was founded in 2012 by three figures of the Irish craft beer trade, in a converted sawmill at Milltown on the outskirts of Dingle town in County Kerry. The first casks were filled with new spirit in December 2012. One of the three, a Dublin publican and brewer who had driven the project, died suddenly in the summer of 2016, a few months before the first whiskeys distilled and matured at Milltown came out late that year. In 2017 Dingle released its first single pot still, from a house that stood apart from Midleton. The pot still came out in batches at first. The core Single Pot Still, the distillery's first pot still made as a standing part of its range, came with a new look that draws on Dingle's Wren's Day, with the silhouette of a Wren Boy on the bottle. For a bartender it is the counterpoint to the Midleton houses of this group: the same rule, malted and unmalted barley in pot stills, read by a small house on the Kerry coast.",
+   "table": "Dingle Single Pot Still comes from a distillery in an old sawmill at Milltown, on the edge of Dingle in County Kerry, made from local malted and unmalted barley. Its casks run from bourbon to sherry and red wine, and it pours with baking spice, stewed apple and honey.",
+   "story": "Dingle Distillery was founded in 2012 by three figures of the Irish craft beer trade, in a converted sawmill at Milltown on the outskirts of Dingle town in County Kerry. The first casks were filled with new spirit in December 2012. One of the three, a Dublin publican and brewer who had driven the project, died suddenly in the summer of 2016, a few months before the distillery's first batch of whiskey came out late that year. In 2017 Dingle released its first single pot still, from a house that stood apart from Midleton. The pot still came out in batches at first. The core Single Pot Still, the distillery's first pot still made as a standing part of its range, came in September 2025 with a new look that draws on Dingle's Wren's Day, with the silhouette of a Wren Boy on the bottle. For a bartender it is the counterpoint to the Midleton houses of this group: the same rule, malted and unmalted barley in pot stills, read by a small house on the Kerry coast.",
    "others": [
     {
      "name": "Dingle 10 Year Old",
@@ -585,7 +634,7 @@
     }
    ],
    "traps": [
-    "Dingle is not made at Midleton: it is an independent distillery in County Kerry, distilling its own spirit since 2012.",
+    "Dingle is not made at Midleton: it distils its own spirit at Milltown in County Kerry, and has since 2012.",
     "Dingle makes single malt as well as single pot still, so ask which bottle the guest means."
    ],
    "cards": [
@@ -654,6 +703,12 @@
      "url": "https://www.diffordsguide.com/producers/1293/dingle-whiskey-distillery",
      "kind": "secondary",
      "read": "search"
+    },
+    {
+     "title": "Dingle Distillery: the Dingle Whiskey Collins",
+     "url": "https://dingledistillery.ie/signature-serves/dingle-whiskey-collins/",
+     "kind": "primary",
+     "read": "search"
     }
    ],
    "report": [
@@ -665,7 +720,21 @@
     "Left out for want of a source: the number and make of the stills, the wooden mash tun one summary gave, and the Whiskey Collins recipe beyond lemon, sugar and soda, which is the classic Collins build and not read on the house's page.",
     "The plan's why calls the 2017 pot still the first from an independent Irish distillery in decades; only Wikipedia was read for it, so the record says only that Dingle released its first single pot still in 2017."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "table, traps[0]: 'an independent distillery' is ownership told as a present state; now a distillery at Milltown that has distilled its own spirit since 2012.",
+     "story: 'the first whiskeys distilled and matured at Milltown came out late that year' clashed with a first single cask sold at the distillery before the 2016 batch (Distiller, the house's history); now 'the distillery's first batch of whiskey', which Wikipedia dates to late 2016.",
+     "story: the core Single Pot Still and its Wren Boy look came on 18 September 2025 by the house's press release; the year is now told.",
+     "bottle.pour: the house's Dingle Whiskey Collins takes lime, not lemon, by its own recipe page; now lime, sugar syrup and soda, with that page added to the sources."
+    ],
+    "open": [
+     "The founder who died in 2016 stands on people.json's living list; the integrator should move him to historic, as the author asked.",
+     "bottle.wood: the distillery's sheet gives a cask split for the core (about 59 per cent bourbon, 33 oloroso, 4 Pedro Ximenez, 4 red wine) read in one search summary only; it is left out."
+    ]
+   }
   }
  ]
 }

@@ -1,0 +1,178 @@
+{
+ "group": "irish-single-pot-still",
+ "chunk": "c7",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 23,
+ "tested": [
+  "redbreast: the 12's casks, strength and the producer's notes; the Cask Strength's oloroso; the Gilbey advertisement of August 1912 and the J.J. Liqueur Whiskey; the robin and the bird-watching chairman; Bow Street's closure in the summer of 1971 and the move to Cork; Irish Distillers of 1966 and Midleton of 1975; the last Gilbey bottling of 1985, the sale of 1986 and the relaunch of December 1991. 4 searches.",
+  "green-spot: Mitchell & Son of 1805 on Grafton Street and the bonding of 1887; the colours blue seven, green ten, yellow twelve, red fifteen; the name's year; Yellow Spot's end in the late 1950s and return in May 2012, Blue Spot's end and return of November 2020, Red Spot of 2018 at fifteen years; the 1971 arrangement at Midleton; the average age and casks; Léoville Barton at 46% ABV; Spot and Soda. 5 searches.",
+  "powers: 1791 and the innkeeper on Thomas Street; John Power & Son by 1822; John's Lane off Thomas Street and its closure after Midleton opened in 1975; John's Lane Release's casks, fill, strength, chill filtering and the producer's notes; Three Swallow's casks and strength; Gold Label as a blend of pot still and grain. 4 searches.",
+  "teeling: the 50 and 50 barley split, triple distillation, 46% ABV and the cask list on the shop and range pages; Batch 1 of October 2018, distilled in 2015, and the nearly fifty years; the three pot stills and the first spirit of March 2015; Walter Teeling's Marrowbone Lane of 1782 as the family's account, Cooley of 1987, Beam's deal of 16 December 2011; Small Batch's rum casks and Single Grain's 95 per cent corn and red wine casks. 5 searches.",
+  "dingle: the founding of 2012 by three figures of the craft beer trade, the Fitzgerald sawmill at Milltown, production from 29 November and the first casks of 18 December 2012; the co-founder's death in 2016 and the first batch of late 2016; the first single pot still of 2017; the core Single Pot Still's casks, 46.5% ABV and the Wren Boy look of 18 September 2025; the 10 Year Old's bourbon, port and Pedro Ximénez casks; the core single malt; the Dingle Whiskey Collins. 5 searches.",
+  "23 of the 28 searches spent; 5 left unused.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, no length clue the lint finds, keys at positions 0, 1, 2, 3, 3, 0, 1, 2, 2, 3, each explain naming the nearest wrong option. Powers' wood card answer and q1 explain were reworded for the fill. No card id changed."
+ ],
+ "changed": [
+  {
+   "key": "redbreast",
+   "field": "bottle.taste",
+   "was": "tasters often find red apple, raisin, toffee and roasted nuts, on a creamy, oily body with a long finish",
+   "now": "with dark dried fruit, figs and raisins from the sherry casks, on a full, creamy body and a long, lingering finish",
+   "why": "the producer's own notes for the 12; the tasters' words rested on one secondary source",
+   "sources": [
+    "https://www.redbreastwhiskey.com/en-us/whiskey-collections/redbreast-12-year-old/",
+    "https://www.redbreastwhiskey.com/en/article/the-art-of-whiskey-blending-from-redbreast-master-blenders/"
+   ]
+  },
+  {
+   "key": "redbreast",
+   "field": "story, traps[1]",
+   "was": "Jameson supplied the pot still until Bow Street closed in 1971; the Redbreast of before 1985 was Jameson pot still from Bow Street",
+   "now": "the making then moved to Cork; until 1971 Bow Street pot still, after it Cork spirit, and Midleton's since 1991",
+   "why": "the Gilbey bottlings of 1971 to 1985 were not Bow Street spirit",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Redbreast_(whiskey)",
+    "https://irishpubemporium.com/?p=11242"
+   ]
+  },
+  {
+   "key": "green-spot",
+   "field": "story",
+   "was": "Green Spot was being laid down by the early 1920s, though no record gives the year it was first sold",
+   "now": "By the house's account the name Green Spot dates from 1925",
+   "why": "the house celebrated its hundred years in 2025 and dates the first advertisement in The Irish Times to October 1925",
+   "sources": [
+    "https://www.spotwhiskey.com/en-us/100-year-anniversary/",
+    "https://mitchellandson.com/products/green-spot-anniversary-10yo-limited-edition"
+   ]
+  },
+  {
+   "key": "green-spot",
+   "field": "story",
+   "was": "Blue Spot in 1964",
+   "now": "Blue Spot in the 1960s",
+   "why": "1964 is only a count back from Wikipedia's 56 years; Master of Malt gives more than 50",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Green_Spot_(whiskey)",
+    "https://www.masterofmalt.com/blog/post/blue-spot-irish-whiskey-returns-after-more-than-50-years.aspx"
+   ]
+  },
+  {
+   "key": "green-spot",
+   "field": "story",
+   "was": "keeping the right to sell it themselves",
+   "now": "cut",
+   "why": "no source read gave it, and it reads as a present arrangement",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Green_Spot_(whiskey)"
+   ]
+  },
+  {
+   "key": "green-spot",
+   "field": "sources[4]",
+   "was": "https://www.diffordsguide.com/beer-wine-spirits/72/green-spot",
+   "now": "https://www.spotwhiskey.com/en-us/100-year-anniversary/",
+   "why": "Difford's carried no fact the record keeps; the hundred-year page carries 1925",
+   "sources": [
+    "https://www.spotwhiskey.com/en-us/100-year-anniversary/"
+   ]
+  },
+  {
+   "key": "powers",
+   "field": "bottle.wood, cards[wood].answer, quiz[0].explain",
+   "was": "mainly in American oak casks that held bourbon",
+   "now": "mainly in second- and third-fill American oak casks that held bourbon",
+   "why": "the producer's John's Lane page; the first fill some accounts give belongs to John's Lane Cask Strength",
+   "sources": [
+    "https://www.powerswhiskey.com/en-US/whiskey/powers-johns-lane",
+    "https://www.powerswhiskey.com/en/product/johns-lane-cask-strength"
+   ]
+  },
+  {
+   "key": "powers",
+   "field": "story",
+   "was": "By 1822 the business, by then John Power & Son, stood on John's Lane, off Thomas Street",
+   "now": "By 1822 the business traded as John Power & Son, and its distillery stood on John's Lane, a side street off Thomas Street",
+   "why": "1822 is the year of the firm's name; sources split on when the distillery came to John's Lane",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Powers_(whiskey)",
+    "https://www.powerswhiskey.com/en-us/our-story"
+   ]
+  },
+  {
+   "key": "powers",
+   "field": "others[1].note",
+   "was": "at 43.2% ABV, mainly from second- and third-fill bourbon barrels with a little sherry cask whiskey",
+   "now": "from former bourbon barrels with a little oloroso sherry cask whiskey; its strength differs by market",
+   "why": "43.2% is the producer's American page and several markets list 40%; accounts differ on the fill",
+   "sources": [
+    "https://www.powerswhiskey.com/en-US/whiskey/powers-three-swallow",
+    "https://thewhiskeywash.com/irish-whiskey/whiskey-review-powers-irish-whiskey-three-swallow-release/"
+   ]
+  },
+  {
+   "key": "dingle",
+   "field": "table, traps[0]",
+   "was": "an independent distillery",
+   "now": "a distillery at Milltown that has distilled its own spirit since 2012",
+   "why": "independence is ownership told as a present state, which the brief refuses",
+   "sources": [
+    "https://dingledistillery.ie/press-release/dingle-distillery-unveils-new-brand-identity-and-two-landmark-expressions/"
+   ]
+  },
+  {
+   "key": "dingle",
+   "field": "story",
+   "was": "the first whiskeys distilled and matured at Milltown came out late that year",
+   "now": "the distillery's first batch of whiskey came out late that year",
+   "why": "a first single cask was sold at the distillery before the batch of late 2016",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Dingle_Distillery",
+    "https://distiller.com/spirits/dingle-single-malt-batch-no-1"
+   ]
+  },
+  {
+   "key": "dingle",
+   "field": "story",
+   "was": "no year for the core Single Pot Still and its new look",
+   "now": "came in September 2025",
+   "why": "the house's press release puts both on sale from 18 September 2025",
+   "sources": [
+    "https://dingledistillery.ie/press-release/dingle-distillery-unveils-new-brand-identity-and-two-landmark-expressions/"
+   ]
+  },
+  {
+   "key": "dingle",
+   "field": "bottle.pour, sources",
+   "was": "a Whiskey Collins, with lemon, sugar and soda",
+   "now": "the Dingle Whiskey Collins, with lime, sugar syrup and soda; the recipe page added as a fifth source",
+   "why": "the house's own recipe takes lime juice",
+   "sources": [
+    "https://dingledistillery.ie/signature-serves/dingle-whiskey-collins/"
+   ]
+  }
+ ],
+ "open": [
+  "redbreast: oloroso for the 12 is named only for the Cask Strength on the producer's pages; one page says cream sherry. The record says sherry butts.",
+  "green-spot: the year field stays empty; 1925 is the house's year for the name and its first advertisement, not shown as a first sale. The average age is seven to nine (Mitchell & Son) or seven to ten (Spot Whiskey).",
+  "powers: John's Lane's closure stays within a year or so of 1975 (Wikipedia a year after, the plan 1976); the year John's Lane Release was first bottled is unsourced.",
+  "teeling: the label's own cask words were not read: wine casks on the shop page, sherry on the range page. The Teeling Whiskey Company's year stays 2011 or 2012 by source.",
+  "dingle: the founder who died in July 2016 stands on people.json's living list and should move to historic, as the author reported; the core's cask split rests on one search summary of the house's sheet and is left out."
+ ],
+ "living": [
+  "Met in sources and named in no record, already in people.json: Jack Teeling, Stephen Teeling, John Teeling, Liam LaHart, Peter Mosley, Elliot Hughes, Billy Leighton.",
+  "New for people.json: none.",
+  "The dead and the undated met: James Power and his son John Power, Walter Teeling of 1782, the Gilbey chairman, the Mitchell founder of 1805; none is named in a record, as no two sources gave their dates. Oliver Hughes (died 2016) is described, not named, and stands on the living list for the integrator to move."
+ ],
+ "swaps": [
+  "No swap proposed by the author and none needed: each flagship is the label's own bottling and carries every word of the roster's name."
+ ],
+ "tension": [
+  "plan.json, powers why: says John's Lane closed in 1976; Wikipedia says production ceased there a year after Midleton opened in 1975, and the house says production moved in 1975. Reported, not edited.",
+  "plan.json, redbreast why: says the 12 matures in oloroso sherry casks; the producer's 12 page says sherry casks and names oloroso only for the Cask Strength. Reported, not edited.",
+  "plan.json, dingle why: calls Dingle the first independent Irish distillery in decades to release a single pot still; that rests on Wikipedia alone and the record does not say it. Reported, not edited.",
+  "plan.json, green-spot note: gives the Spot names' start as the 1887 bonding trade or the 1920s; the house dates Green Spot's name to 1925. Reported, not edited.",
+  "The Ledger's Irish single pot still style names Yellow Spot as a house of its own beside Green Spot; the plan and the record hold the Spots as one label. The Library's Teeling record gives the first new distillery in Dublin in 125 years as fact; the record gives it as widely described. Reported, not edited."
+ ]
+}
