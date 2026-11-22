@@ -1,0 +1,670 @@
+{
+ "group": "speyside",
+ "records": [
+  {
+   "key": "glenfiddich",
+   "group": "speyside",
+   "producer": "Glenfiddich",
+   "madeBy": "",
+   "style": "speyside",
+   "chapter": "scotch-regions",
+   "shelf": "",
+   "library": "Glenfiddich",
+   "say": "glen-FID-ick",
+   "place": "Dufftown, Moray, Scotland",
+   "year": "1887",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Glenfiddich 12 Year Old Single Malt Scotch Whisky",
+    "class": "Single malt Scotch whisky, Speyside",
+    "mash": "Malted barley only, as the law asks of a single malt; the house names no barley variety and draws its water from the Robbie Dhu spring.",
+    "still": "Distilled in copper pot stills at the distillery in Dufftown; the house credits the fruit of its spirit to the high cut point William Grant insisted on.",
+    "wood": "Matured in Oloroso sherry casks and bourbon casks, then rested in oak marrying tuns before bottling, by the producer's account. The label states 12 Year Old.",
+    "strength": "40% ABV",
+    "taste": "Fresh and fruity on the nose with a hint of pear, then sweet fruit that turns to butterscotch, cream, malt and a little oak, with a long, mellow finish.",
+    "pour": "Neat with a jug of water beside it, over ice, or long in a highball with soda. Stirred, it makes a light Rob Roy, and it stands in a Blood and Sand.",
+    "label": [
+     {
+      "term": "Single Malt Scotch Whisky",
+      "means": "Malt whisky from one distillery, made from malted barley in pot stills, by the Scotch Whisky Regulations 2009."
+     },
+     {
+      "term": "12 Year Old",
+      "means": "An age statement: nothing in the bottle is younger than twelve years."
+     }
+    ]
+   },
+   "table": "Glenfiddich 12 Year Old is the single malt from the distillery William Grant built in Dufftown, in Speyside: pear, butterscotch, cream and a little oak. It matures in sherry and bourbon casks, rests in marrying tuns, and pours well neat or long with soda.",
+   "story": "William Grant (died 1923) began building Glenfiddich in Dufftown in 1886 with the help of his nine children, seven sons and two daughters, and the first spirit ran from its copper stills on Christmas Day 1887. The name is Gaelic for the valley of the deer, which is why a stag stands on the label. The family firm, William Grant & Sons, passed from the founder to his sons and their descendants. For most of the twentieth century nearly all Scotch reached drinkers in blends, and in 1963 the firm began promoting Glenfiddich as a single malt beyond Scotland, in the triangular bottle that became its mark. In the 1950s the distillery took on its own coppersmiths and its own cooperage, a habit few distilleries kept. The 12 Year Old marries whisky from Oloroso sherry casks and bourbon casks in oak tuns before it is bottled. Behind a bar it is the single malt a guest new to Scotch will often name, and the plain example of a fruit-led Speysider: pear, butterscotch and malt.",
+   "others": [
+    {
+     "name": "Glenfiddich 12 Year Old Sherry Cask Finish",
+     "note": "The 12 given a further finish in Amontillado sherry casks, bottled at 43% ABV."
+    },
+    {
+     "name": "Glenfiddich 15 Year Old",
+     "note": "Married in the Solera Vat, a tun never fully emptied: only about half is drawn off before more whisky goes in."
+    }
+   ],
+   "traps": [
+    "The 12 Year Old is not a sherry cask whisky alone: the producer names Oloroso sherry casks and bourbon casks, married together in oak tuns.",
+    "Glenfiddich and The Balvenie were both built by William Grant in Dufftown, side by side, but they are separate distilleries with their own stills and their own whiskies."
+   ],
+   "cards": [
+    {
+     "id": "casks",
+     "prompt": "In which casks does Glenfiddich 12 Year Old mature?",
+     "answer": "Oloroso sherry casks and bourbon casks, then a time in oak marrying tuns before bottling."
+    },
+    {
+     "id": "first-spirit",
+     "prompt": "On which day did the first spirit run at Glenfiddich?",
+     "answer": "Christmas Day 1887, after William Grant and his family began building the distillery in 1886."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "casks",
+     "q": "A guest asks what Glenfiddich 12 Year Old is aged in. Which casks does the producer name?",
+     "options": [
+      "Oloroso sherry and bourbon casks",
+      "New charred American oak barrels",
+      "Port pipes and Madeira drums",
+      "Mizunara and French oak casks"
+     ],
+     "a": 0,
+     "explain": "The producer names Oloroso sherry casks and bourbon casks, married in oak tuns; new charred oak is what bourbon itself must use, not this Scotch."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "first-spirit",
+     "q": "On which day did the first spirit run from the Glenfiddich stills?",
+     "options": [
+      "New Year's Day 1887",
+      "Burns Night 1886",
+      "Christmas Day 1887",
+      "Hogmanay 1886"
+     ],
+     "a": 2,
+     "explain": "The first spirit ran on Christmas Day 1887; 1886 is the year William Grant and his family began to build, not the year the stills first ran."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Glenfiddich: 12 Year Old",
+     "url": "https://www.glenfiddich.com/en-au/12-year-old/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Glenfiddich: the family since 1887",
+     "url": "https://glenfiddich.com/au/since-1887",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Glenfiddich: 12 Year Old Sherry Cask Finish",
+     "url": "https://www.glenfiddich.com/en-us/12-year-old-sherry-cask-finish/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Glenfiddich distillery",
+     "url": "https://en.wikipedia.org/wiki/Glenfiddich",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: William Grant, the founder",
+     "url": "https://en.wikipedia.org/wiki/William_Grant_(businessman)",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "Label wording, from the plan's note: the bottling was relaunched in 2019 with the words Our Original Twelve in Britain and the United States (Distiller, a review site, only), while the producer's own pages read in search title it 12 Year Old. The record prints only the words both carry, 12 Year Old and Single Malt Scotch Whisky; the refuter may confirm whether the shelf label still says Our Original Twelve.",
+    "The plan's claim that the 12 replaced an unaged bottling in 2000 rests on one source here too (a Whisky Magazine article, read in search), so it is left out.",
+    "William Grant is dated by his death alone, 1923, in Wikipedia and the producer's own timeline; his birth is 1839 in Wikipedia and 1849 in Difford's Guide. The founding year is 1887 by the producer's own account (the first spirit) and 1886 in Wikipedia (the start of building); the record gives the house's 1887 with both dates told in the story.",
+    "The triangular bottle's date is left out: sources give 1956, 1957 and 1961. The year the coppersmiths and cooperage came is given only as the 1950s (Wikipedia; the producer's craftsmen pages say 1957 and 1959).",
+    "The Library's Glenfiddich record says it created the single malt category: that is the brand's claim to a first and is not repeated; the style page's own line on 1963 is followed instead. The Library's phrase affordable Rob Roy base carries a price word and was not copied.",
+    "Left out for want of a source read: whether the malt is unpeated (likely, but no page read says so) and the distillation count, which follows the style page's usual twice in copper pot stills only by implication, so the record says pot stills without a number.",
+    "Living people met: a great-grandson of the founder credited with the coppersmiths (named on the producer's site, whose dates were not found) is not named; the integrator may check whether he belongs in people.json."
+   ],
+   "checked": null
+  },
+  {
+   "key": "the-glenlivet",
+   "group": "speyside",
+   "producer": "The Glenlivet",
+   "madeBy": "",
+   "style": "speyside",
+   "chapter": "scotch-regions",
+   "shelf": "",
+   "library": "",
+   "say": "glen-LIV-it",
+   "place": "Minmore, Glenlivet, Moray, Scotland",
+   "year": "1824",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "The Glenlivet 12 Year Old Single Malt Scotch Whisky",
+    "class": "Single malt Scotch whisky, Speyside",
+    "mash": "Malted barley only, as the law asks of a single malt; the house publishes no recipe beyond that.",
+    "still": "Distilled in copper pot stills at the distillery at Minmore, in the glen of the River Livet.",
+    "wood": "First matured in traditional European oak casks, then in American oak casks, which the house credits with vanilla, by the producer's account. The label states 12 Year Old.",
+    "strength": "40% ABV",
+    "taste": "Banana and pineapple on the nose, then sweet peach and pear with vanilla and toffee, and a long, creamy finish; pineapple is the note the house names first.",
+    "pour": "Neat with a jug of water beside it, or long in a highball with soda. Stirred, it makes a gentle Rob Roy.",
+    "label": [
+     {
+      "term": "Double Oak",
+      "means": "The house's name for the two oaks: European oak casks first, then American oak casks."
+     },
+     {
+      "term": "12 Year Old",
+      "means": "No whisky in the bottle has had fewer than twelve years in oak."
+     }
+    ]
+   },
+   "table": "The Glenlivet 12 Year Old is the single malt from the glen of the River Livet, where George Smith took out his licence in 1824: pineapple, pear, vanilla and toffee. It sees European oak first and American oak after, and it is gentle neat or long with soda.",
+   "story": "Before 1823 much of the whisky made in the glen of the Livet was distilled without a licence, and the name Glenlivet was already known for it. The Excise Act of 1823 made licensed distilling worth the trouble, and in 1824 George Smith (died 1871), a farmer at Upper Drumin, rode to Elgin and took out his licence: by the house's account the first legal distiller in the parish of Glenlivet. In the late 1850s the work moved down the hill to a larger distillery at Minmore. On his death in 1871 a son who had been training for the law came home to run the business. In 1884, as the house tells it, the son established the right to call his whisky The Glenlivet; other distilleries could add Glenlivet to their own names only as a hyphenated suffix, which is why old labels read Macallan-Glenlivet. In 1953 the firm merged with that of Glen Grant. The 12 Year Old is the soft, fruity Speyside benchmark, and the article on its label is a lesson in itself.",
+   "others": [
+    {
+     "name": "The Glenlivet Founder's Reserve",
+     "note": "A bottling with no age statement, named for the founder."
+    }
+   ],
+   "traps": [
+    "The licence of 1824 is the house's claim to the first legal distiller in the parish of Glenlivet, not in Speyside and not in Scotland.",
+    "Double Oak runs European oak first and American oak after, not the other way round.",
+    "The name carries its article: The Glenlivet, since the claim to the name the house dates to 1884; Glenlivet alone once named a whole district's whisky."
+   ],
+   "cards": [
+    {
+     "id": "double-oak",
+     "prompt": "In which order do the two oaks come in The Glenlivet 12 Year Old?",
+     "answer": "European oak casks first, then American oak casks, which the house credits with vanilla."
+    },
+    {
+     "id": "licence-1824",
+     "prompt": "In which year did George Smith take out his licence for The Glenlivet?",
+     "answer": "1824, the year after the Excise Act of 1823 made licensed distilling worth the trouble."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "double-oak",
+     "q": "A guest reads Double Oak on The Glenlivet 12 Year Old. Which oak does the whisky meet first?",
+     "options": [
+      "American oak",
+      "European oak",
+      "Japanese oak",
+      "Hungarian oak"
+     ],
+     "a": 1,
+     "explain": "The producer says the whisky is first matured in traditional European oak, then in American oak, which gives the vanilla; American oak comes second, not first."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "licence-1824",
+     "q": "Which law made George Smith's licence of 1824 at The Glenlivet worth taking out?",
+     "options": [
+      "The Spirits Act of 1860",
+      "The Immature Spirits Act of 1915",
+      "The Scotch Whisky Act of 1988",
+      "The Excise Act of 1823"
+     ],
+     "a": 3,
+     "explain": "The Excise Act of 1823 made licensed distilling worth doing, and Smith took out his licence in 1824; the 1915 act came long after, and set a minimum age."
+    }
+   ],
+   "sources": [
+    {
+     "title": "The Glenlivet: 12 Year Old",
+     "url": "https://www.theglenlivet.com/en-us/whisky/12-year-old-single-malt-scotch/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "The Glenlivet: our history",
+     "url": "https://www.theglenlivet.com/en/our-history/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "The Glenlivet: questions answered",
+     "url": "https://www.theglenlivet.com/en-us/faqs/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Difford's Guide: The Glenlivet 12 Year Old",
+     "url": "https://www.diffordsguide.com/beer-wine-spirits/6711/the-glenlivet-12-year-old",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: The Glenlivet distillery",
+     "url": "https://en.wikipedia.org/wiki/The_Glenlivet_distillery",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "Licence: kept as narrow as the plan's note asks. The producer's history says the first legal distiller in the parish of Glenlivet, and the record says so as the house's account; a Chivas Brothers archivist, cited in a trade feature, dates it to 9 November 1824.",
+    "Label: the plan asks which label the Ledger prints. The producer's British page and Difford's Guide both carry Double Oak on the 12, and one review dates the words on the label to a 2019 redesign with the whisky unchanged; the record prints Double Oak as a label term in all markets, not only the United States. The plan's why has the oaks in the right order, European first and American after.",
+    "George Smith is dated by his death alone, 1871, in the producer's history and Wikipedia; his birth year was not searched. His son, John Gordon Smith, is described and not named, for no death year was found.",
+    "The move to Minmore is given as the late 1850s: Wikipedia says 1858 and another account says 1859, after fire damage at Drumin. The 1884 claim to the name rests on the producer's FAQ and Wikipedia; no court record was read, so the record says established the right, as the house tells it, and does not call it a court case.",
+    "Left out: the later sales (Seagram in 1977 or 1978, Pernod Ricard in 2000 or 2001; the sources disagree on both years), the legend of the pistols and the royal visit of 1822 (no source found), and the distillation count.",
+    "Founder's Reserve: the producer's own page names the bottling; that it carries no age statement was not read on a page and should be confirmed, or the entry cut, by the refuter.",
+    "The Library holds no Glenlivet record; the style page's line on the 1824 licence and the Excise Act of 1823 agrees with the sources."
+   ],
+   "checked": null
+  },
+  {
+   "key": "the-macallan",
+   "group": "speyside",
+   "producer": "The Macallan",
+   "madeBy": "",
+   "style": "speyside",
+   "chapter": "scotch-regions",
+   "shelf": "",
+   "library": "The Macallan",
+   "say": "mac-AL-an",
+   "place": "Easter Elchies, Craigellachie, Moray, Scotland",
+   "year": "1824",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "The Macallan Sherry Oak 12 Years Old Single Malt Scotch Whisky",
+    "class": "Single malt Scotch whisky, Speyside",
+    "mash": "Malted barley only, as the law asks of a single malt; the house publishes no recipe beyond that.",
+    "still": "Distilled in small copper pot stills, which the house counts among its Six Pillars, at the Easter Elchies estate near Craigellachie, where a new distillery opened in 2018.",
+    "wood": "Matured in oak casks seasoned with sherry in Jerez, mostly European oak, by the producer's account; the gold colour is natural, from the casks. The label states 12 Years Old.",
+    "strength": "40% ABV, 43% in some markets",
+    "taste": "Dried fruit, candied citrus peel and oak on the nose with ginger and nutmeg, then raisin and sultana, ginger syrup, cinnamon and a touch of vanilla, with a long finish of oak and warm ginger.",
+    "pour": "Neat, or with a few drops of water. Stirred with sweet vermouth and bitters, it makes a rich Rob Roy.",
+    "label": [
+     {
+      "term": "Sherry Oak",
+      "means": "The house's range matured in oak casks seasoned with sherry in Jerez."
+     },
+     {
+      "term": "12 Years Old",
+      "means": "No whisky in the bottle is younger than twelve years."
+     }
+    ]
+   },
+   "table": "The Macallan Sherry Oak 12 Years Old is the Speyside single malt from Craigellachie built on oak casks seasoned with sherry in Jerez: dried fruit, raisin, ginger and candied peel, and a gold colour that comes from the wood alone.",
+   "story": "In 1824, soon after the Excise Act of 1823, a local farmer and schoolteacher took out a licence to distil on the Easter Elchies estate, on the high ground above the Spey near Craigellachie. Easter Elchies House, built in 1700, stands at the heart of the estate and is the house's emblem. In 1892 a wine merchant bought the distillery and renamed it Macallan-Glenlivet, borrowing the name of the famous glen to the south as many Speyside distilleries then did. His family kept it for about a century: shares went to outside companies from 1986, and in 1996 Highland Distillers bought the company, ending the family's hold. In 2018 a new distillery opened on the estate. The house sets out its way as Six Pillars, among them its curiously small stills and its sherry seasoned casks from Jerez. For a bartender the Sherry Oak 12 is the lesson in what sherry seasoned oak does to a Speyside malt: the dried fruit, the spice and the colour all come from the cask.",
+   "others": [
+    {
+     "name": "The Macallan Double Cask 12 Years Old",
+     "note": "The same age from sherry seasoned casks of both European and American oak, lighter and more vanilla led."
+    }
+   ],
+   "traps": [
+    "The colour is natural: the house credits the gold to its sherry seasoned casks, not to added caramel.",
+    "Sherry Oak 12 is not a sherry finish: the whisky spends its years in the sherry seasoned casks.",
+    "Say predominantly, not exclusively: the producer's main page speaks of mostly sherry seasoned European oak."
+   ],
+   "cards": [
+    {
+     "id": "sherry-oak",
+     "prompt": "What casks shape The Macallan Sherry Oak 12 Years Old?",
+     "answer": "Oak casks seasoned with sherry in Jerez, mostly European oak; the natural colour comes from them."
+    },
+    {
+     "id": "macallan-glenlivet",
+     "prompt": "What name did The Macallan take after its sale in 1892?",
+     "answer": "Macallan-Glenlivet: a wine merchant bought it and added the suffix many Speyside houses then used."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "sherry-oak",
+     "q": "A guest asks where the gold of The Macallan Sherry Oak 12 Years Old comes from. What gives it?",
+     "options": [
+      "Added caramel colouring",
+      "Heavily peated malt",
+      "Sherry seasoned oak casks",
+      "Charred new American oak"
+     ],
+     "a": 2,
+     "explain": "The producer calls the colour natural, from casks seasoned with sherry in Jerez; caramel is allowed in Scotch, but the house says it adds none here."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "macallan-glenlivet",
+     "q": "In which year did a wine merchant buy The Macallan and rename it Macallan-Glenlivet?",
+     "options": [
+      "1824",
+      "1892",
+      "1953",
+      "1996"
+     ],
+     "a": 1,
+     "explain": "The distillery was bought and renamed in 1892; 1824 is the year of its licence, and 1996 the year Highland Distillers bought the company."
+    }
+   ],
+   "sources": [
+    {
+     "title": "The Macallan: Sherry Oak 12 Years Old",
+     "url": "https://www.themacallan.com/en/single-malt-scotch-whisky/sherry-oak-12-years-old",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "The Macallan: about the house",
+     "url": "https://www.themacallan.com/en/about",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Edrington: The Macallan",
+     "url": "https://uk.edrington.com/en/our-brands/scotch-whisky/the-macallan",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: The Macallan distillery",
+     "url": "https://en.wikipedia.org/wiki/The_Macallan_distillery",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Highland Distillers",
+     "url": "https://en.wikipedia.org/wiki/Highland_Distillers",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "Casks: the producer's main page says mostly sherry seasoned European oak; its Mexican page says exclusively Oloroso seasoned oak casks from Jerez. The record follows the plan's note and the main page: mostly European oak, never exclusively.",
+    "Strength: 40% ABV on the producer's Mexican page and British shops; Edrington's British page gives 40% to 43%, and two secondary listings put the American bottle at 43%. The record says 43% in some markets; no American producer page was read to name the United States outright.",
+    "The plan's note offers Double Cask 12 as the more common bar bottle in some markets. The record keeps Sherry Oak 12, the bottling that teaches sherry oak, and gives Double Cask under others; the note on Double Cask (lighter and more vanilla led) is a fair reading of its American oak but rests on no page read, and the refuter may cut those four words.",
+    "The founder, Alexander Reid, is described and not named: only one source (University College London's slavery legacies database) gives a death year, 1847. The buyer of 1892, Roderick Kemp, is described as a wine merchant for the same reason: no dates were searched.",
+    "The 1996 sale: Wikipedia's Highland Distillers article and a company history agree on the year; they differ on the shares (75 per cent bought outright, or 51 per cent through a company formed with Suntory), so the record says only that Highland Distillers bought the company. Later owners are left out.",
+    "The Library's Macallan record speaks of a famously narrow cut and heavy, oily spirit: neither was confirmed in a source read, and both are left out. Its line that the casks are made in Jerez to Macallan's specification agrees in substance with the producer's sherry seasoned casks from Jerez.",
+    "Left out for want of a source: the exact label wording beyond the bottle's name (whether it prints Highland Single Malt), the still charge of 3,900 litres (the brand's figure, which would read as a count fixed in time), and the estate's architecture prize shortlist."
+   ],
+   "checked": null
+  },
+  {
+   "key": "the-balvenie",
+   "group": "speyside",
+   "producer": "The Balvenie",
+   "madeBy": "",
+   "style": "speyside",
+   "chapter": "scotch-regions",
+   "shelf": "",
+   "library": "",
+   "say": "bal-VEN-ee",
+   "place": "Dufftown, Moray, Scotland",
+   "year": "1892",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "The Balvenie DoubleWood 12 Year Old Single Malt Scotch Whisky",
+    "class": "Single malt Scotch whisky, Speyside",
+    "mash": "Malted barley only; the distillery malts part of its own barley on its floor maltings, and the house publishes no recipe beyond that.",
+    "still": "Distilled in copper pot stills at the distillery in Dufftown, kept in shape by the distillery's own coppersmiths.",
+    "wood": "Twelve years in American oak casks, then nine months more in European oak sherry casks, by the producer's account. The label states 12 Year Old.",
+    "strength": "40% ABV, 43% in the United States",
+    "taste": "Red apple, vanilla and Oloroso sherry on the nose with a little cinnamon spice from the oak, then honey, nutty sherry and gingerbread on the palate.",
+    "pour": "Neat or with a few drops of water. Stirred, it makes a gentle Rob Roy or a Bobby Burns.",
+    "label": [
+     {
+      "term": "DoubleWood",
+      "means": "Two woods: American oak for the years of maturing, then European oak sherry casks to finish."
+     },
+     {
+      "term": "12 Year Old",
+      "means": "Nothing in the bottle has had fewer than twelve years in oak."
+     }
+    ]
+   },
+   "table": "The Balvenie DoubleWood 12 Year Old is the Dufftown single malt that spends twelve years in American oak and nine months more in sherry casks: honey, vanilla and red apple with nutty sherry. It is the bottle that shows what a cask finish does.",
+   "story": "William Grant had opened Glenfiddich in Dufftown in 1887, and early in 1892 he began to turn an eighteenth-century mansion beside it, Balvenie New House, into a second distillery. The work took fifteen months, and the first spirit ran on 1 May 1893, by one account from second-hand stills bought from Lagavulin on Islay and Glen Albyn in Inverness. Later the mansion was pulled down and floor maltings built in its place, and Balvenie is one of the few Scotch distilleries that malts some of its own barley on a floor, by hand, with its own coppersmiths to tend the stills. In 1993 the distillery's malt master made DoubleWood: twelve years in American oak, then nine months in European oak sherry casks. It is often credited with bringing the idea of a cask finish to wide notice, and finishing has shaped the house's range ever since. Behind a bar it is the clear pour for explaining a finish: the honeyed oak of the long years first, then the fruit the sherry casks added at the end.",
+   "others": [
+    {
+     "name": "The Balvenie DoubleWood 17 Year Old",
+     "note": "The same two woods with seventeen years behind the whisky."
+    },
+    {
+     "name": "The Balvenie Caribbean Cask 14 Year Old",
+     "note": "Fourteen years in American oak, then a finish in casks that had held Caribbean rum."
+    }
+   ],
+   "traps": [
+    "DoubleWood is not matured in sherry casks throughout: the twelve years in American oak come first, then nine months in sherry casks.",
+    "The strength differs by market: 40% ABV in Britain and 43% ABV in the United States, so read the label before you quote it.",
+    "The Balvenie and Glenfiddich share a founder and a site in Dufftown, but they are separate distilleries with their own stills."
+   ],
+   "cards": [
+    {
+     "id": "doublewood",
+     "prompt": "What are the two woods of The Balvenie DoubleWood 12 Year Old?",
+     "answer": "American oak casks for twelve years, then European oak sherry casks for nine months."
+    },
+    {
+     "id": "first-spirit",
+     "prompt": "When did the first spirit run at The Balvenie?",
+     "answer": "On 1 May 1893, fifteen months after work began in 1892 to turn Balvenie New House into a distillery."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "doublewood",
+     "q": "A guest asks how long The Balvenie DoubleWood 12 Year Old spends in sherry casks. What does the house say?",
+     "options": [
+      "Three weeks",
+      "Twelve years",
+      "Six years",
+      "Nine months"
+     ],
+     "a": 3,
+     "explain": "The house gives twelve years in American oak, then nine months in European oak sherry casks; twelve years is the time in American oak, not in sherry casks."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "first-spirit",
+     "q": "In which year did the first spirit run at The Balvenie?",
+     "options": [
+      "1893",
+      "1887",
+      "1963",
+      "1993"
+     ],
+     "a": 0,
+     "explain": "The first spirit ran on 1 May 1893; 1887 is the year Glenfiddich first ran, and 1993 the year DoubleWood was made."
+    }
+   ],
+   "sources": [
+    {
+     "title": "The Balvenie: DoubleWood 12",
+     "url": "https://shop.us.thebalvenie.com/products/the-balvenie-doublewood-12",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Difford's Guide: The Balvenie 12 Year Old DoubleWood",
+     "url": "https://www.diffordsguide.com/beer-wine-spirits/1301/the-balvenie-12-year-old-doublewood",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "The Scotsman: distillery of the week, Balvenie",
+     "url": "https://www.scotsman.com/distilleries/distillery-of-the-week-balvenie/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Undiscovered Scotland: Balvenie Distillery",
+     "url": "https://www.undiscoveredscotland.co.uk/dufftown/balvenie/index.html",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Balvenie distillery",
+     "url": "https://en.wikipedia.org/wiki/Balvenie_distillery",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "Casks, from the plan's note: the producer's own American page says European oak sherry casks, and the trade feature in The Scotsman says Spanish sherry oak; the record follows the producer. The nine months stands on the producer's page and The Scotsman, and the producer places the move after twelve years in American oak.",
+    "Strength: 43% ABV (86 proof) on the producer's American shop; 40% on William Grant & Sons' product information page and in Difford's Guide. The market note follows them.",
+    "Founding: work began in 1892 (Wikipedia, The Scotsman) and the first spirit ran on 1 May 1893; one source gives a foundation stone of 1886, which the others do not support, and it is left out. The second-hand stills from Lagavulin and Glen Albyn rest on one account and are told so.",
+    "The floor maltings: the demolition of the house and the building of the maltings is dated to 1920 in one account only, so the record says later. Whether the distillery keeps its own cooperage, as the plan's note asks, was not settled, and the record names only the coppersmiths and the floor maltings.",
+    "The plan's why places the distillery beside the ruin of Balvenie Castle: no source read says so, and the castle is left out.",
+    "The malt master who made DoubleWood in 1993 is living and is not named; the integrator may add him to people.json. The claim that DoubleWood pioneered cask finishing is told as often credited, after The Scotsman, and no claim of a first is made.",
+    "The two others are named from the producer's own range; their notes (seventeen years, rum casks) follow their names and were not read on a page, so the refuter may confirm them."
+   ],
+   "checked": null
+  },
+  {
+   "key": "aberlour",
+   "group": "speyside",
+   "producer": "Aberlour",
+   "madeBy": "",
+   "style": "speyside",
+   "chapter": "scotch-regions",
+   "shelf": "",
+   "library": "",
+   "say": "ab-er-LOW-er, a-BOO-nah",
+   "place": "Aberlour, Moray, Scotland",
+   "year": "1879",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Aberlour A'bunadh Single Malt Scotch Whisky",
+    "class": "Single malt Scotch whisky, Speyside, bottled at cask strength",
+    "mash": "Malted barley only, as the law asks of a single malt; the house publishes no recipe beyond that.",
+    "still": "Distilled in copper pot stills at the Aberlour distillery, in the village of Aberlour on Speyside.",
+    "wood": "Built on Spanish oak butts that had held Oloroso sherry; the producer's page for newer batches speaks of a finish in Oloroso and Pedro Ximénez casks, so read the batch. No age statement.",
+    "strength": "Varies by batch, about 59 to 62% ABV, uncut",
+    "taste": "Sherry, orange and cinnamon on the nose with a little praline, then black cherry, ginger and dark chocolate on the palate; water opens a note of chocolate orange.",
+    "pour": "Neat first, then with water added a few drops at a time: it is bottled at the strength it left the cask, and water opens it.",
+    "label": [
+     {
+      "term": "A'bunadh",
+      "means": "Gaelic for the original: the house's tribute to its founder, James Fleming."
+     },
+     {
+      "term": "Cask Strength",
+      "means": "Bottled at the strength it left the cask, with no water added."
+     },
+     {
+      "term": "Batch",
+      "means": "Each release carries a batch number, and strength and flavour differ from batch to batch."
+     }
+    ]
+   },
+   "table": "Aberlour A'bunadh is the Speyside single malt bottled at cask strength in numbered batches, built on Spanish oak that held Oloroso sherry: orange, cinnamon, dark chocolate and dried fruit. Pour it neat, then add water a few drops at a time.",
+   "story": "James Fleming (1830 to 1895), a banker and grain merchant in the village, built the Aberlour distillery in 1879; by some accounts an earlier distillery had worked nearby from 1826. Money he left founded the Fleming Cottage Hospital in Aberlour, opened in 1900. The story behind A'bunadh begins in the 1970s, when men at work on the still room are said to have found a bottle of old Aberlour in its foundations, wrapped in a newspaper of 1898. They drank much of it, as the story goes, and what was left went to the laboratory, which set out to make a whisky in its style. The result came out in 1997: whisky from Oloroso sherry butts, bottled at the strength it left the cask, with no age statement and a batch number on each label. The name is Gaelic for the original, the house's tribute to its founder. The producer's page for newer batches adds Pedro Ximénez casks to the Oloroso, so the batch number on the label is worth reading. For a bartender it is the plain lesson in cask strength: taste it neat, then watch water open it.",
+   "others": [
+    {
+     "name": "Aberlour 12 Year Old Double Cask",
+     "note": "The house's twelve-year-old, matured in two kinds of cask and bottled at a standard strength."
+    }
+   ],
+   "traps": [
+    "A'bunadh carries no age statement, so give a guest no number of years as fact.",
+    "Its strength changes from batch to batch, so quote the label in hand, never one figure."
+   ],
+   "cards": [
+    {
+     "id": "cask-strength",
+     "prompt": "How is Aberlour A'bunadh bottled?",
+     "answer": "At cask strength, with no age statement, in numbered batches whose strength differs."
+    },
+    {
+     "id": "found-bottle",
+     "prompt": "What find is said to have inspired Aberlour A'bunadh?",
+     "answer": "A bottle of old Aberlour found in the still room foundations, wrapped in a newspaper of 1898."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "cask-strength",
+     "q": "A guest finds Aberlour A'bunadh fiery when neat. Why is it so strong?",
+     "options": [
+      "It is distilled three times",
+      "It is bottled at cask strength",
+      "It is made from peated malt",
+      "It is fortified with brandy"
+     ],
+     "a": 1,
+     "explain": "It goes into the bottle at the strength it left the cask, with no water added; triple distillation lightens a spirit and is not what makes this one strong."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "found-bottle",
+     "q": "Which find is said to have inspired Aberlour A'bunadh?",
+     "options": [
+      "A recipe in an old ledger",
+      "A cask in a cellar in Jerez",
+      "A bottle wrapped in an 1898 newspaper",
+      "A letter from the founder"
+     ],
+     "a": 2,
+     "explain": "Men at work on the still room are said to have found a bottle wrapped in a newspaper of 1898; no ledger or letter plays a part in the story."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Aberlour: A'bunadh",
+     "url": "https://www.aberlour.com/en/our-whisky/abunadh-scotch-whisky/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Aberlour: A'bunadh, the American page",
+     "url": "https://www.aberlour.com/en-us/our-whisky/abunadh-scotch-whisky/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: A'bunadh",
+     "url": "https://en.wikipedia.org/wiki/A%27bunadh",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Aberlour distillery",
+     "url": "https://en.wikipedia.org/wiki/Aberlour_distillery",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Whisky Magazine: A'bunadh and its homecoming",
+     "url": "https://www.whiskymag.com/articles/aberlour-abunadhs-homecoming-and-the-creation-of-a-cult-scotch-whisky/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The casks have moved. Wikipedia and Whisky Magazine describe A'bunadh as matured only in Oloroso sherry butts (Whisky Magazine says first fill); the producer's own British page, read in search, now says finished in Oloroso and Pedro Ximénez sherry casks, and one retailer says the batch count restarted in 2025 with American oak in the vatting. The record says built on Oloroso butts, with the producer's newer finish told and the guest told to read the batch. The refuter should settle this; the year 2025 rests on one shop and is left out.",
+    "Pick in doubt: because of that change, the plan's why (matured only in Oloroso casks) no longer holds for newer batches. A'bunadh is still the bottling that teaches cask strength in a sherried Speysider, so no swap is proposed; if the refuter prefers a steadier bottle, Aberlour 12 Year Old Double Cask is the alternative the plan names, which this record did not research beyond its name.",
+    "Founding: 1879 under James Fleming in Wikipedia and Undiscovered Scotland; 1826 for an earlier distillery by James Gordon and Peter Weir rests on listings that call it disputed, so the story tells it as by some accounts. The fires are left out: sources date one to 1878 or 1879 and others imply 1898.",
+    "James Fleming is dated 1830 to 1895 in Wikipedia and Undiscovered Scotland. The year the bottle was found is 1973 in some accounts and 1975 in others, so the record says the 1970s.",
+    "The launch year 1997 stands in Wikipedia's batch table and Whisky Magazine; The Spirits Business gives 2000, which the record does not follow.",
+    "Strength: early batches were 59.6% and batch 81, bottled in 2024, 61.6% (Wikipedia's table); a retailer lists another at 60.5%. The record gives about 59 to 62% and no single figure.",
+    "Left out for want of a source: whether the whisky is chill filtered or coloured (Difford's Guide alone says neither), the age range of the casks (5 to 25 years, Difford's alone), and the later sale of the business to Robert Thorne & Sons in 1892 (one source)."
+   ],
+   "checked": null
+  }
+ ]
+}
