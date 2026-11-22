@@ -34,12 +34,12 @@
      }
     ]
    },
-   "table": "Canadian Club 1858 Original is the blended Canadian whisky made at Windsor, Ontario, across the river from Detroit, where Hiram Walker set up his distillery. Almond, light pepper and vanilla over a dry finish: pour it long with ginger ale or soda.",
-   "story": "Hiram Walker (1816 to 1899), a grocer and grain merchant from Massachusetts, turned to distilling in Detroit in the 1850s. Michigan's temperance laws pressed on the trade, and he bought land across the river in what is now Ontario, where a distillery and flour mill were soon at work; the house dates its beginning to 1858, and the town that grew round the works was called Walkerville. His whisky found a following in the gentlemen's clubs of the United States and came to be known as Club Whisky. American distillers then pressed for imported whisky to name its country of origin, and the word Canadian went onto the label. When the United States went dry in January 1920, Ontario went on letting its distillers make whisky for export, and Windsor, facing Detroit across the water, became a smugglers' crossing: by the brand's account Canadian Club was run across the border and counterfeited by bootleggers. The whisky is made at Windsor, on the site Walker chose. For a bartender it is the Canadian whisky a guest names in a highball, and the bottle that shows what a light Canadian blend does with ginger ale.",
+   "table": "Canadian Club 1858 Original is the blended Canadian whisky made at Windsor, Ontario, across the river from Detroit, where Hiram Walker set up his distillery. Long with ginger ale or soda it shows its almond, light pepper and vanilla over a dry finish.",
+   "story": "Hiram Walker (1816 to 1899), a grocer and grain merchant from Massachusetts, turned to distilling in Detroit in the 1850s. Michigan's temperance laws pressed on the trade, and he bought land across the river in what is now Ontario, where a distillery and flour mill were soon at work; the house dates its beginning to 1858, and the town that grew round the works was called Walkerville. His whisky found a following in the gentlemen's clubs of the United States and came to be known as Club Whisky. American distillers then pressed for imported whisky to name its country of origin, and the word Canadian went onto the label. When the United States went dry in January 1920, Ontario went on letting its distillers make whisky for export, and Windsor, facing Detroit across the water, became a smugglers' crossing: by the brand's account Canadian Club was run across the border and counterfeited by bootleggers. The whisky is made at Windsor, on the site Walker chose. At the rail it is the Canadian whisky a guest names in a highball, and the one that shows what a light blend does with ginger ale.",
    "others": [
     {
      "name": "Canadian Club Classic 12 Year Old",
-     "note": "Twelve years in oak at the least, as its name says."
+     "note": "Twelve years in oak at the least, the age in its name."
     },
     {
      "name": "Canadian Club 100% Rye",
@@ -169,7 +169,7 @@
     "still": "Distilled at Gimli on Lake Winnipeg in column stills of several sizes; accounts of the distillery add a Coffey still that makes one of the rye whiskies in the blend.",
     "wood": "Aged in oak at Gimli; the house publishes no cask detail for this bottling, and the label carries no age statement.",
     "strength": "40% ABV",
-    "taste": "By the house's notes, vanilla and a little fruit on the nose, then a soft, creamy palate of oak, vanilla and butterscotch giving way to clove and nutmeg, and a long finish.",
+    "taste": "The house notes vanilla and a little fruit on the nose, then a soft, creamy palate of oak, vanilla and butterscotch giving way to clove and nutmeg, and a long finish.",
     "pour": "Neat, over ice or long with ginger ale; it makes a soft Old Fashioned, a Manhattan or a Whiskey Sour.",
     "label": [
      {
@@ -178,12 +178,12 @@
      },
      {
       "term": "Blended Canadian Whisky",
-      "means": "Many whiskies married, each mashed, distilled and aged in Canada, three years at least in small wood."
+      "means": "A marriage of many whiskies, every one made in Canada and aged there for three years or more in small wood."
      }
     ]
    },
-   "table": "Crown Royal Fine De Luxe is the Canadian whisky in the purple bag, first blended in 1939 for the royal tour of Canada and made at Gimli on Lake Winnipeg. Some fifty whiskies give vanilla, butterscotch and soft spice; pour it neat, on ice or with ginger ale.",
-   "story": "In the spring of 1939 King George VI and Queen Elizabeth crossed Canada by train, the first time, as the Canadian Encyclopedia tells it, that a reigning monarch had set foot in the country. Seagram, the Canadian distiller, made a whisky for the tour under its president. By the brand's account some six hundred blends were tried before one of about fifty whiskies was chosen; it went into a cut-glass bottle and a purple bag stitched in gold, and ten cases rode the royal train. For years it was sold only in Canada, and it crossed into the United States in the 1960s. The making came to rest at Gimli, a town on the western shore of Lake Winnipeg in Manitoba, where column stills of many sizes make the base and flavouring whiskies the blenders marry. In 2000 Seagram was sold to Vivendi, whose drinks were then divided between Diageo and Pernod Ricard, and Crown Royal went to Diageo. For a bartender it is the Canadian whisky many a guest asks for by its purple bag, and the plain lesson in what a blend of many component whiskies means.",
+   "table": "Blended first in 1939 for the royal tour of Canada, Crown Royal Fine De Luxe is the Canadian whisky in the purple bag, made at Gimli on Lake Winnipeg. Some fifty whiskies give vanilla, butterscotch and soft spice, whether neat, on ice or with ginger ale.",
+   "story": "In the spring of 1939 King George VI and Queen Elizabeth crossed Canada by train, the first time, as the Canadian Encyclopedia tells it, that a reigning monarch had set foot in the country. Seagram, the Canadian distiller, made a whisky for the tour under its president. By the brand's account some six hundred blends were tried before one of about fifty whiskies was chosen; it went into a cut-glass bottle and a purple bag stitched in gold, and ten cases rode the royal train. For years it was sold only in Canada, and it crossed into the United States in the 1960s. The making came to rest at Gimli, a town on the western shore of Lake Winnipeg in Manitoba, where column stills of many sizes make the base and flavouring whiskies the blenders marry. In 2000 Seagram was sold to Vivendi, whose drinks were then divided between Diageo and Pernod Ricard, and Crown Royal went to Diageo. The purple bag is what many a guest asks for, and behind it lies the lesson of the Canadian blend: base and flavouring whiskies made apart and married.",
    "others": [
     {
      "name": "Crown Royal Northern Harvest Rye",
@@ -195,8 +195,8 @@
     }
    ],
    "traps": [
-    "Crown Royal is made at Gimli in Manitoba, on Lake Winnipeg, not in Ontario and not in the United States.",
-    "Fine De Luxe carries no age statement: give a guest no number of years.",
+    "Gimli, on Lake Winnipeg in Manitoba, is where Crown Royal is made: not Ontario, and not the United States.",
+    "Fine De Luxe carries no age statement, so offer no age for it.",
     "Fine De Luxe is a blend of many whiskies, not a rye whisky; the rye-led bottling is Northern Harvest Rye."
    ],
    "cards": [
@@ -316,12 +316,12 @@
     "still": "Distilled and bottled at the Hiram Walker distillery in Windsor, Ontario; the house's pages for Deluxe name no still.",
     "wood": "Aged in white oak barrels, by the house's account. The producer gives no age for this bottling.",
     "strength": "40% ABV",
-    "taste": "By the house's notes, dried fruit, caramel and a grassy note of spring meadows on the nose, then oak, toasted grain and toffee, and a full, warm finish.",
+    "taste": "As the house tastes it, dried fruit, caramel and a grassy note of spring meadows on the nose, then oak, toasted grain and toffee, and a full, warm finish.",
     "pour": "Over ice, with soda, or long with ginger ale and a wedge of lime, the house's own Deluxe and Ginger; it also stirs into a Toronto.",
     "label": [
      {
       "term": "Deluxe",
-      "means": "The house's name for its everyday blend; it carries no legal meaning and no age."
+      "means": "A name the house gives its everyday blend, promising no age and holding no legal meaning."
      },
      {
       "term": "Canadian Whisky",
@@ -329,8 +329,8 @@
      }
     ]
    },
-   "table": "J.P. Wiser's Deluxe is the everyday Canadian blend made in Windsor, Ontario, corn whisky married with rye, under a name the house dates to 1857. Toffee, toasted grain and oak: pour it over ice or long with ginger ale and lime.",
-   "story": "The house dates its whisky to 1857, when the man whose name the label carries came to Prescott, a town on the St. Lawrence River in eastern Ontario, to run a distillery there, as its manager by most accounts and as a partner by one, and the whisky came to carry his name and his initials. After his death the business passed from his heirs: in 1918, by most accounts, a new holding company that had taken in the Corby distillery at Corbyville, near Belleville, bought it, and the making left Prescott for Corbyville. In 1989 the Corbyville distillery closed after 132 years, and its maturing whisky went to the Hiram Walker distillery in Windsor, where Wiser's is distilled and bottled. Deluxe is the everyday blend of the range: corn for a light body and rye for spice, married by the blenders. Around it the house built older bottlings, rye-led ones and blends of great age. For a bartender it is the plain Ontario lesson in how Canadian whisky is assembled from component whiskies, and the bottle to pour when a guest wants a soft Canadian with ginger ale.",
+   "table": "Corn whisky married with rye, J.P. Wiser's Deluxe is the everyday Canadian blend of Windsor, Ontario, under a name the house dates to 1857. Over ice or long with ginger ale and lime, it gives toffee, toasted grain and oak.",
+   "story": "Prescott, a town on the St. Lawrence River in eastern Ontario, is where the story starts: the house dates its whisky to 1857, when the man whose name the label carries came there to run a distillery, as its manager by most accounts and as a partner by one, and the whisky came to carry his name and his initials. After his death the business passed from his heirs: in 1918, by most accounts, a new holding company that had taken in the Corby distillery at Corbyville, near Belleville, bought it, and the making left Prescott for Corbyville. In 1989 the Corbyville distillery closed after 132 years, and its maturing whisky went to the Hiram Walker distillery in Windsor, where Wiser's is distilled and bottled. Deluxe is the everyday blend of the range: corn for a light body and rye for spice, married by the blenders. Around it the house built older bottlings, rye-led ones and blends of great age. Reach for it when a guest wants a soft Canadian with ginger ale; in it an Ontario blend shows how corn whisky is married with rye.",
    "others": [
     {
      "name": "J.P. Wiser's 18 Year Old",
@@ -343,7 +343,7 @@
    ],
    "traps": [
     "There is no Wiser's distillery: the whisky is distilled at Hiram Walker in Windsor, far from Prescott, where it began.",
-    "The producer gives no age for Deluxe: give a guest no number of years.",
+    "The producer gives no age for Deluxe, and a figure in years would be a guess.",
     "Wiser's and Canadian Club come from the same Windsor distillery, but they are different blends."
    ],
    "cards": [
@@ -466,21 +466,21 @@
     "still": "Distilled at Grimsby, each grain fermented and distilled on its own; the house speaks of pot and column stills and names none for this blend.",
     "wood": "Each grain whisky aged apart in seasoned former bourbon barrels and new American white oak, by the house's account, then blended. No age statement.",
     "strength": "40% ABV",
-    "taste": "By the house's notes, honey, vanilla, orange peel and apricot over toasted oak, black walnut and spice, then vanilla, honey, a hint of rye spice and cocoa, and a long finish.",
+    "taste": "In the house's tasting notes, honey, vanilla, orange peel and apricot over toasted oak, black walnut and spice, then vanilla, honey, a hint of rye spice and cocoa, and a long finish.",
     "pour": "Neat or over one large cube; long with ginger ale, or shaken in a Whisky Sour.",
     "label": [
      {
       "term": "Barrel Select",
-      "means": "The house's name for its first whisky, born in 2000; it carries no legal meaning."
+      "means": "Chosen for the house's first whisky, born in 2000; the words have no meaning in law."
      },
      {
       "term": "Canadian Whisky",
-      "means": "Mashed, distilled and aged in Canada, three years at least in small wood."
+      "means": "Whisky as the Canadian standard defines it: mashed and distilled in Canada, and aged there in small wood for at least three years."
      }
     ]
    },
-   "table": "Forty Creek Barrel Select comes from a distillery in Grimsby, between Hamilton and Niagara Falls, where corn, rye and barley are each distilled and aged on their own, then blended. Honey, apricot, vanilla and a touch of cocoa: pour it neat or over one large cube.",
-   "story": "The distillery at Grimsby, on the Niagara shore of Lake Ontario, began, by the house's account, in 1972, when it was opened to make fruit brandies. In 1992 a winemaker bought it, renamed it Kittling Ridge and made wine and spirits there, with a blender beside him from the start. The whisky grew from his own trials: instead of mashing the grains together and ageing the spirit as one, he distilled corn, rye and barley each on its own and aged each apart, then blended the finished whiskies. Barrel Select, first released in 2000, was the result, and the house calls it its flagship. The label's name came to stand for the place, and in 2012 the distillery took the name Forty Creek. New bottlings followed, among them Copper Pot, later renamed Copper Bold, and Double Barrel Reserve. For a bartender Barrel Select is the bottle of the newer Ontario school: a blend of grain whiskies made apart, the way a winemaker keeps separate lots, and a Canadian to set beside the older houses of Windsor.",
+   "table": "Forty Creek Barrel Select comes from a distillery in Grimsby, between Hamilton and Niagara Falls, where corn, rye and barley are each distilled and aged on their own, then blended. Poured neat or over one large cube, it opens on honey, apricot and vanilla, with a touch of cocoa.",
+   "story": "Grimsby's distillery, on the Niagara shore of Lake Ontario, began, by the house's account, in 1972, when it was opened to make fruit brandies. In 1992 a winemaker bought it, renamed it Kittling Ridge and made wine and spirits there, with a blender beside him from the start. The whisky grew from his own trials: instead of mashing the grains together and ageing the spirit as one, he distilled corn, rye and barley each on its own and aged each apart, then blended the finished whiskies. Barrel Select, first released in 2000, was the result, and the house calls it its flagship. The label's name came to stand for the place, and in 2012 the distillery took the name Forty Creek. New bottlings followed, among them Copper Pot, later renamed Copper Bold, and Double Barrel Reserve. Barrel Select stands for the newer Ontario school: grain whiskies made apart, the way a winemaker keeps separate lots, then blended, a Canadian to set beside the older houses of Windsor.",
    "others": [
     {
      "name": "Forty Creek Copper Bold",
@@ -494,7 +494,7 @@
    "traps": [
     "Forty Creek is a blend, not a single grain or a rye whisky: its corn, rye and barley whiskies are made apart and then blended.",
     "Kittling Ridge and Forty Creek are one distillery at Grimsby: it took its label's name in 2012.",
-    "Barrel Select carries no age statement: give a guest no number of years."
+    "Barrel Select carries no age statement: never put a figure in years on it."
    ],
    "cards": [
     {
@@ -616,8 +616,8 @@
     "still": "Distilled in batches in a single copper pot still at the Hiram Walker distillery in Windsor, Ontario, by the house's account.",
     "wood": "Virgin white oak barrels, new casks never filled before, by the house's account. No age statement on the label.",
     "strength": "43% ABV",
-    "taste": "By the house's notes, sour rye bread, ripe pear, warm honey and vanilla on the nose with a little flower, then rye spice leading over dark fruit, and a warming finish.",
-    "pour": "Neat or with a few drops of water; it makes a spicy Manhattan, an Old Fashioned or a Toronto.",
+    "taste": "The house finds sour rye bread, ripe pear, warm honey and vanilla on the nose with a little flower, then rye spice leading over dark fruit, and a warming finish.",
+    "pour": "Neat or watered a touch; it makes a spicy Manhattan, an Old Fashioned or a Toronto.",
     "label": [
      {
       "term": "Lot No. 40",
@@ -629,8 +629,8 @@
      }
     ]
    },
-   "table": "Lot No. 40 Canadian Rye Whisky is rye alone, distilled in a single copper pot still at Windsor, Ontario, and aged in new oak. Rye bread, pear, honey and pepper: pour it neat, or stir it into a Manhattan for a guest who wants Canadian rye with spice.",
-   "story": "The name looks back to 1784, when, at the end of the American war, a settler took land at Ernestown, near Lake Ontario, and came to keep grist mills, one of them on a plot known as Lot 40. Two centuries on, a descendant of his, then master distiller at Hiram Walker in Windsor, made a whisky in his memory: rye in a pot still, as he supposed early Canadian distillers made it. It came out in 1998, one of three whiskies the distillery released together under a single banner, but within a few years it was gone from the shelves. In 2012 the Windsor blenders brought it back, distilled in a single copper pot still and aged in virgin oak. Around the revived whisky grew a family of bottlings: Dark Oak, cask strength editions and finishes in other woods. For a bartender it answers a question the style raises at the table: the Canadian word rye promises no rye share, and here the whole mash is rye.",
+   "table": "Lot No. 40 Canadian Rye Whisky is rye alone, distilled in a single copper pot still at Windsor, Ontario, and aged in new oak. For a guest who wants Canadian rye with spice, it gives rye bread, pear, honey and pepper neat, and it stirs into a Manhattan.",
+   "story": "At the end of the American war, in 1784, a settler took land at Ernestown, near Lake Ontario, and came to keep grist mills, one of them on a plot known as Lot 40, the name the whisky carries. Two centuries on, a descendant of his, then master distiller at Hiram Walker in Windsor, made a whisky in his memory: rye in a pot still, as he supposed early Canadian distillers made it. It came out in 1998, one of three whiskies the distillery released together under a single banner, but within a few years it was gone from the shelves. In 2012 the Windsor blenders brought it back, distilled in a single copper pot still and aged in virgin oak. Around the revived whisky grew a family of bottlings: Dark Oak, cask strength editions and finishes in other woods. It answers a question the style raises at the table: the Canadian word rye promises no rye share, and here the whole mash is rye.",
    "others": [
     {
      "name": "Lot No. 40 Dark Oak",
@@ -642,7 +642,7 @@
     }
    ],
    "traps": [
-    "Lot No. 40 is a Canadian whisky, not an American rye, though it is made from rye alone and aged in new oak.",
+    "Though made from rye alone and aged in new oak, Lot No. 40 is Canadian whisky, not American rye.",
     "Not every Canadian rye is made from rye: Lot No. 40 is, but the Canadian standard sets no rye share.",
     "Lot No. 40 was gone from the shelves for some years after its first release of 1998: the bottle a guest meets is the return of 2012."
    ],
