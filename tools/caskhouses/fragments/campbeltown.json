@@ -134,7 +134,17 @@
     "The label terms are read from the producer's pages, not a photograph of the label; whether the label prints 10 Year Old or Aged 10 Years was not confirmed, so the age wording is not offered as a label term.",
     "The chairman who died in 2023 is not named; no living person is named. Bottles of the 10 at 100 proof and the 15's casks were not researched and are left out."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "sound",
+    "changed": [],
+    "open": [
+     "story: the Reids' licence of 1828 and the Mitchells' purchase of 1837 rest on Wikipedia and Scotchwhisky.com; the producer says the Mitchells built it in 1828 on Archibald Mitchell's illicit still, and the record gives both.",
+     "story: 1973 for the first Longrow rests on the producer's timeline and Scotchwhisky.com; one secondary timeline gives only a first bottling of 1985. The reopening is 1987 for limited and 1989 for full production by source, which the record's late 1980s covers.",
+     "bottle.wood: the 60 and 40 cask split is the producer's for the 2025 bottling and may move between bottlings."
+    ]
+   }
   },
   {
    "key": "glen-scotia",
@@ -156,7 +166,7 @@
     "still": "Distilled twice in copper pot stills at Glen Scotia in Campbeltown; the house says the distillation is slow, to build flavour and oils.",
     "wood": "Matured in first-fill bourbon casks, then finished for up to twelve months in casks that held Pedro Ximénez sherry, by the producer's account. No age statement on the label.",
     "strength": "46% ABV",
-    "taste": "Toffee and fudge with apple and pear, a spray of sea salt and the spiced fruit of the Pedro Ximénez casks, then salted caramel and a sweet, dry sherry finish, as the producer describes it.",
+    "taste": "Crème caramel, toffee, apple and peach with a little sea spray on the nose, then rich spiced fruit, toffee and fudge on the palate, and a finish of vanilla oak and gentle spice, as the producer describes it.",
     "pour": "Neat or with a few drops of water; its sherry sweetness also stands up over one large cube.",
     "label": [
      {
@@ -169,16 +179,16 @@
      }
     ]
    },
-   "table": "Glen Scotia Double Cask comes from a Campbeltown distillery founded as Scotia in 1832, first matured in bourbon casks and then finished in Pedro Ximénez sherry casks. It gives toffee, pear and spiced fruit over a little sea salt; pour it neat or with a few drops of water.",
+   "table": "Glen Scotia Double Cask comes from a Campbeltown distillery founded as Scotia in 1832, first matured in bourbon casks and then finished in Pedro Ximénez sherry casks. It gives toffee, peach and spiced fruit over a little sea salt; pour it neat or with a few drops of water.",
    "story": "The firm of Stewart, Galbraith and Co founded the distillery in 1832 under the name Scotia, and by 1835 the town held almost thirty distilleries, by the house's account. A later owner, Duncan MacCallum (died 1930), is the subject of the distillery's legend: the story goes that he drowned himself in 1930, and staff have long told of his ghost. In the 1930s the Bloch brothers of Glasgow bought the distillery and added Glen to its name. By then most of Campbeltown's distilleries had closed in the slump after the First World War, and only Springbank and Glen Scotia were left, so the name of the town as a whisky region rested on the two. Glen Scotia had hard years after that: it was mothballed in 1984 and reopened in 1989 under new owners, and in 1994 it was bought by Glen Catrine Bonded Warehouse. Through all of it the distillery kept much of its design of the 1830s, by its own account the mash tun, the still room and a dunnage warehouse. Double Cask opens its range for a guest: Campbeltown salt under a sweet sherry finish, and a second distillery to set beside Springbank.",
    "others": [
     {
      "name": "Glen Scotia 15 Year Old",
-     "note": "Unpeated, fifteen years in first-fill bourbon and refill American oak casks, at 46% ABV, by the producer's account."
+     "note": "Fifteen years in American oak bourbon casks, bottled at 46% ABV, by the producer's account."
     },
     {
      "name": "Glen Scotia Victoriana",
-     "note": "Bottled at cask strength from bourbon barrels finished in Pedro Ximénez and heavily charred oak casks."
+     "note": "Bottled at cask strength after a finish in heavily charred oak casks, by the producer's account."
     }
    ],
    "traps": [
@@ -267,7 +277,22 @@
     "Iain McAlister, named as the distillery's manager in a Scotchwhisky.com article, is added to people.json; he is not named in the record.",
     "The Ledger's Campbeltown style page agrees: by the 1930s only Springbank and Glen Scotia were left. The producer says almost thirty distilleries by 1835, which sits with the page's more than twenty."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.taste: the producer's notes are crème caramel, toffee, apple, peach and sea spray, then spiced fruit, toffee and fudge, and vanilla oak and gentle spice; pear, salted caramel and a dry sherry finish were not in them, so the taste now follows the producer.",
+     "table: pear became peach, after the producer's notes.",
+     "others[0]: the 15 Year Old's note no longer says unpeated or first-fill and refill casks; the producer gives American oak bourbon casks at 46% ABV and neither of the others.",
+     "others[1]: Victoriana's note now gives the producer's finish in heavily charred oak; the Pedro Ximénez share rests on shops only and is cut."
+    ],
+    "open": [
+     "story: the Blochs' purchase is 1930 in Scotchwhisky.com and 1933 in Grace's Guide, and the Glen was added in 1939 by the Loch Lomond Group's account, so the record keeps the 1930s.",
+     "bottle.wood: the finish is up to twelve months on one producer page and a twelve-month finish on another; the record keeps up to twelve months.",
+     "story: the legend of the drowning stands as a legend; his death in 1930 rests on Grace's Guide and Scotchwhisky.com, which differ on its cause."
+    ]
+   }
   },
   {
    "key": "kilkerran",
@@ -286,10 +311,10 @@
     "name": "Kilkerran 12 Year Old Single Malt Scotch Whisky",
     "class": "Single malt Scotch whisky, distilled in the Campbeltown locality",
     "mash": "Malted barley only, floor-malted at neighbouring Springbank and lightly peated, by the house's account.",
-    "still": "Distilled at Glengyle in Campbeltown in one wash still and one spirit still, first made for Ben Wyvis, a distillery at Invergordon demolished in the 1970s. By the house's account Glengyle distils for a short season each year, worked by the Springbank team.",
+    "still": "Distilled at Glengyle in Campbeltown in one wash still and one spirit still, first made for Ben Wyvis, a malt distillery within the grain distillery at Invergordon that closed in the 1970s. By the house's account Glengyle distils for a short season each year, worked by the Springbank team.",
     "wood": "About 70 per cent former bourbon casks and 30 per cent former sherry casks, by the producer's account. 12 Year Old is the age the label gives: nothing in the bottle is younger than twelve years.",
     "strength": "46% ABV",
-    "taste": "Sweet confectionery and a gentle smoke like toasted marshmallow on the nose; then citrus zest turning oily, with peat, spice and toffee, and a finish of campfire smoke, nut pie and butterscotch, as the producer describes it.",
+    "taste": "Sweet confectionery, pear drops and marzipan with a soft smoke like toasted marshmallow on the nose; lemon zest turning oily, then peat smoke, pepper and toffee; a finish of smoke, pecan pie and butterscotch, as the producer describes it.",
     "pour": "Neat, with a few drops of water to bring the citrus forward; a malt to sip slowly.",
     "label": [
      {
@@ -311,7 +336,7 @@
     },
     {
      "name": "Kilkerran Heavily Peated",
-     "note": "Released in batches at cask strength, peated to about 45 parts per million and matured mostly in bourbon casks."
+     "note": "Released in batches at cask strength, peated to about 45 parts per million and matured mostly in bourbon casks, by the producer's account."
     }
    ],
    "traps": [
@@ -400,7 +425,20 @@
     "Mitchell's Glengyle was headed by the Springbank chairman who died in 2023, by the producer's account; he is not named. Frank McHardy, quoted on the producer's page, is already in people.json and is not named.",
     "The label terms are read from the producer's pages, not a photograph of the label; the age wording on the label was not confirmed."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.still: Ben Wyvis is now a malt distillery within the grain distillery at Invergordon that closed in the 1970s; the sources give a closure of 1976 or 1977 and say the stills were saved, and none says it was demolished.",
+     "bottle.taste: reworded to the producer's notes for the 2025 edition (pear drops, marzipan, toasted marshmallow, lemon, peat smoke, pepper, toffee, pecan pie, butterscotch); nut pie and spice were the author's paraphrase.",
+     "others[1]: the Heavily Peated note now says it is the producer's account; the producer gives around 45 parts per million and mostly bourbon casks, while shops give 84 for early batches."
+    ],
+    "open": [
+     "story: the first Kilkerran bottling is 2007 or 2009 by source and the record gives no year; the 12 Year Old of 2016 rests on The Whisky Exchange and Distiller, both shops or review sites, beside Scotchwhisky.com.",
+     "bottle.still: the short season with the Springbank team is the producer's account; secondary sources agree on Springbank's staff and differ on the months."
+    ]
+   }
   },
   {
    "key": "longrow",
@@ -423,7 +461,7 @@
     "wood": "A marriage of former bourbon and former sherry casks; the producer gives no proportions, and the label carries no age statement.",
     "strength": "46% ABV",
     "taste": "Creamy vanilla custard on the nose, with smoke that builds slowly, then toasted marshmallow, herbs and rich fruit; creamy on the palate with a slight medicinal edge and smoke in waves, and a long finish, as the producer describes it.",
-    "pour": "Neat or with a few drops of water to let the smoke open; it can also stand as the smoky float on a Penicillin.",
+    "pour": "Neat or with a few drops of water to let the smoke open; a malt to sip rather than to mix.",
     "label": [
      {
       "term": "Peated",
@@ -436,7 +474,7 @@
     ]
    },
    "table": "Longrow Peated is the heavily peated malt of Springbank distillery in Campbeltown, distilled twice and sold under its own name. Bourbon and sherry casks bring vanilla custard and rich fruit under slow, building smoke; pour it neat for a guest who wants smoke from outside Islay.",
-   "story": "Longrow takes its name from a Campbeltown distillery built in 1824, which closed in 1896. It stood next door to Springbank, and by the house's account its old warehouse became Springbank's bottling hall. The name came back in 1973, when Springbank's then chairman ran an experiment to prove that an Islay-style malt could be made on the mainland: barley peated hard on the distillery's own kiln and distilled twice, in place of Springbank's two and a half times. The spirit was not made every year at first, and it was in the 1990s that Longrow was distilled regularly and took its place as a single malt of its own. The standing bottling carries no age statement and is labelled Peated. For a bartender Longrow completes the lesson of one distillery: the same barley malted on the same floors and the same stills, yet heavy smoke against Springbank's light peat and Hazelburn's none.",
+   "story": "Longrow takes its name from a Campbeltown distillery built in 1824, which closed in 1896. It stood next door to Springbank. The name came back in 1973, when Springbank's then chairman ran an experiment to prove that an Islay-style malt could be made on the mainland: barley peated hard on the distillery's own kiln and distilled twice, in place of Springbank's two and a half times. The spirit was not made every year at first, and it was in the 1990s that Longrow was distilled regularly and took its place as a single malt of its own. The standing bottling carries no age statement and is labelled Peated. For a bartender Longrow completes the lesson of one distillery: the same barley malted on the same floors and the same stills, yet heavy smoke against Springbank's light peat and Hazelburn's none.",
    "others": [
     {
      "name": "Longrow 100 Proof",
@@ -529,7 +567,19 @@
     "The peating figures (48 hours of peat smoke, 45 parts per million) are the producer's. The 100 Proof note rests on the producer's page for its 2025 release; its exact strength is not given.",
     "The label terms are read from the producer's pages and a shop's product title, not a photograph of the label."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: cut the house's account that the old Longrow warehouse became Springbank's bottling hall; no producer page read says it, and Undiscovered Scotland puts Springbank's car park on the old site.",
+     "bottle.pour: cut the smoky float on a Penicillin; no source ties Longrow to the drink, whose float is an Islay malt in its recipe, so the pour is now neat or with water."
+    ],
+    "open": [
+     "story: regular distillation from the 1990s is the producer's bar menu; secondary sources give 1990 or 1992.",
+     "others[0]: the 100 Proof's strength is not given in the record; the British 100 proof is about 57 per cent, left out for want of the producer's figure."
+    ]
+   }
   },
   {
    "key": "hazelburn",
@@ -568,8 +618,8 @@
    "story": "Hazelburn takes its name from one of the Campbeltown distilleries lost in the 1920s, when the slump after the First World War closed most of the town's stills; the sources differ on its last owners and on the very year it shut. The name lay unused for seventy years. In 1997 Springbank, which had first made the heavily peated Longrow in 1973, began a third spirit at the same address: barley malted on its own floors and dried with hot air alone, with no peat, then distilled three times through the same copper stills. That gave the distillery three malts from one barley and one still house, told apart by the peat in the kiln and the number of times the spirit runs: Longrow twice, Springbank two and a half times and Hazelburn three. By the producer's account the 10 Year Old, from bourbon casks alone, is the flagship of the Hazelburn range, bottled each year at 46% ABV. For a bartender it is the control in the experiment: set beside Springbank 10 and Longrow Peated, it lets a guest taste what peat and a third distillation do to one spirit.",
    "others": [
     {
-     "name": "Hazelburn Sherry Wood 8 Year Old",
-     "note": "A younger Hazelburn, eight years in sherry casks, released yearly."
+     "name": "Hazelburn Sherry Wood",
+     "note": "A yearly release matured fully in sherry casks, its age changing from one release to the next."
     }
    ],
    "traps": [
@@ -658,7 +708,18 @@
     "The Ledger's Campbeltown style page and its quiz (Hazelburn unpeated, distilled three times, first distilled in 1997) agree with the producer.",
     "The label terms are read from the producer's pages, not a photograph of the label. The Sherry Wood 8 Year Old rests on the producer's page for its 2025 release; its strength is not given."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "others[0]: Hazelburn Sherry Wood 8 Year Old became Hazelburn Sherry Wood, a yearly release whose age changes: the producer's 2025 edition is eight years in oloroso, and its bar menus list 12 and 15 year old Sherry Wood editions of 2023."
+    ],
+    "open": [
+     "story: the old Hazelburn distillery closed in 1925 or 1926 by source; the record keeps the 1920s.",
+     "story: Hazelburn's first distillation is 1997 in the producer's timeline and Wikipedia; one secondary source gives 1996."
+    ]
+   }
   }
  ]
 }
