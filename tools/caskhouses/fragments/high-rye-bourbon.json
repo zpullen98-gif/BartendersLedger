@@ -22,7 +22,7 @@
         "wood": "New charred oak, aged in the single-storey rack warehouses at Cox's Creek; the distillery says it uses six- and seven-year-old bourbons. The label carries no age statement.",
         "strength": "45% ABV (90 proof)",
         "taste": "Ripe fruit, sweet oak and caramel on the nose, then red berries and dried spice on the palate, with a soft, long finish.",
-        "pour": "Neat or over one large cube. Its rye makes a spicy Manhattan or Old Fashioned, and it holds its own in a Boulevardier.",
+        "pour": "Neat or on the rocks. Its rye makes a spicy Manhattan or Old Fashioned, and it works well in a Boulevardier.",
         "label": [
           {
             "term": "Small Batch",
@@ -35,7 +35,7 @@
         ]
       },
       "table": "Four Roses Small Batch is a Lawrenceburg, Kentucky bourbon that marries four of the distillery's ten recipes, two of them from a mash of 35 per cent rye. At 90 proof it brings red berries, caramel and dried spice, and it stirs into a Manhattan with ease.",
-      "story": "As the brand tells it, the name came from a corsage of four red roses that a Southern belle wore to a ball to accept a proposal, and a Louisville whiskey merchant registered Four Roses as a trademark in 1888. The distillery at Lawrenceburg, built in 1910 in the Spanish Mission style, stands on the National Register of Historic Places. Seagram bought the Frankfort Distilleries, and Four Roses with them, in 1943. In the 1950s Seagram turned the Four Roses sold at home into a blended whiskey, while straight bourbon under the name went abroad, to Europe and Japan. The single-storey warehouses at Cox's Creek were built low, so that the top and bottom racks age alike. In 2002 Kirin Brewery bought the brand, ended the blend and brought Kentucky straight bourbon back to American shelves. Small Batch followed in 2006, introduced at the Kentucky Bourbon Festival. For a bartender it is the lesson in recipe: two mash bills and five yeasts make ten bourbons, and this bottle marries four of them.",
+      "story": "A corsage of four red roses gave the bourbon its name, as the brand tells it: a Southern belle wore it to a ball to accept a proposal. A Louisville whiskey merchant registered Four Roses as a trademark in 1888. The distillery at Lawrenceburg, built in 1910 in the Spanish Mission style, stands on the National Register of Historic Places. Seagram bought the Frankfort Distilleries, and Four Roses with them, in 1943. In the 1950s Seagram turned the Four Roses sold at home into a blended whiskey, while straight bourbon under the name went abroad, to Europe and Japan. The single-storey warehouses at Cox's Creek were built low, so that the top and bottom racks age alike. In 2002 Kirin Brewery bought the brand, ended the blend and brought Kentucky straight bourbon back to American shelves. Small Batch followed in 2006, introduced at the Kentucky Bourbon Festival. The lesson it carries is recipe: two mash bills and five yeasts make ten bourbons, and this bottle marries four of them.",
       "others": [
         {
           "name": "Four Roses Bourbon",
@@ -166,7 +166,7 @@
         "wood": "New charred oak, at least four years in a bonded warehouse, as the bond rule requires. The label carries no age statement.",
         "strength": "50% ABV (100 proof)",
         "taste": "Cinnamon, citrus peel and toasted oak with a little dried fruit on the nose, then sweet vanilla and rye warmth on the palate, and a long, peppery finish.",
-        "pour": "Neat, with a little water or over one large cube. At 100 proof it holds up in an Old Fashioned, a Manhattan or a Boulevardier.",
+        "pour": "Neat, with a little water or over one large cube. At 100 proof it keeps its shape in an Old Fashioned, a Manhattan or a Boulevardier.",
         "label": [
           {
             "term": "Bonded",
@@ -191,7 +191,7 @@
         }
       ],
       "traps": [
-        "There is no Old Grand-Dad distillery: Jim Beam makes it at Clermont.",
+        "Old Grand-Dad has no distillery of its own: Jim Beam makes it at Clermont.",
         "The standard Bonded carries no age statement: the bond promises at least four years and no more. The yearly 7 Year Bonded is another bottling.",
         "Bonded here is the rule of the bottle, not the style: the label sits with high rye bourbon for its mash."
       ],
@@ -325,8 +325,8 @@
           }
         ]
       },
-      "table": "Basil Hayden is a high rye Kentucky straight bourbon made by Beam at Clermont and bottled at 80 proof: light in body, with vanilla, brown sugar and a peppery rye edge. It is widely said to share its mash with Old Grand-Dad, and pours the gentler of the two.",
-      "story": "The bourbon carries the name of Basil Hayden Sr. (died 1804), a Catholic farmer from St. Mary's County, Maryland, who led families of his faith into the country near Bardstown, Kentucky, in the 1780s, as its histories tell it. By the family's tradition he put more rye in his mash than his neighbours did. His grandson named a bourbon for him in 1882, Old Grand-Dad, and more than a century passed before the grandfather's own name came to a label. In 1992 Beam's master distiller of the time created the Small Batch Bourbon Collection, four bourbons for slow sipping: Booker's, Baker's, Knob Creek and Basil Hayden's. The other three stood at higher strengths; Basil Hayden's was bottled at 80 proof, the floor the law allows, from a high rye recipe. In 2021 the label dropped its possessive and became Basil Hayden, with new packaging and, by the reports of the time, the same whiskey. For a bartender it is the bottle for a guest who wants the spice of rye without the heat of a stronger bourbon.",
+      "table": "Light in body at 80 proof, Basil Hayden is a high rye Kentucky straight bourbon made by Beam at Clermont, with vanilla, brown sugar and a peppery rye edge. It is widely said to share its mash with Old Grand-Dad, and pours the gentler of the two.",
+      "story": "Basil Hayden Sr. (died 1804), whose name the bourbon carries, was a Catholic farmer from St. Mary's County, Maryland, who led families of his faith into the country near Bardstown, Kentucky, in the 1780s, as its histories tell it. Family tradition holds that his mash carried more rye than his neighbours' did. In 1882 his grandson named Old Grand-Dad for him, and more than a century passed before the grandfather's own name came to a label. In 1992 Beam's master distiller of the time created the Small Batch Bourbon Collection, four bourbons for slow sipping: Booker's, Baker's, Knob Creek and Basil Hayden's. The other three stood at higher strengths; Basil Hayden's was bottled at 80 proof, the floor the law allows, from a high rye recipe. In 2021 the label dropped its possessive and became Basil Hayden, with new packaging and, by the reports of the time, the same whiskey. Pour it for a guest who wants the spice of rye without the heat of a stronger bourbon.",
       "others": [
         {
           "name": "Basil Hayden 10 Year",
@@ -467,8 +467,8 @@
           }
         ]
       },
-      "table": "Bulleit Bourbon is a Kentucky straight bourbon with a high share of rye, made by Diageo, which opened the Bulleit distillery near Shelbyville in 2017. At 90 proof it brings maple, oak and nutmeg with a dry, spicy edge, and it holds up in a Whiskey Sour.",
-      "story": "Bulleit's tale begins as the brand tells it: in the 1830s an ancestor of the founder made a high rye whiskey in Kentucky, and the making stopped when he vanished around 1860 on a journey with his whiskey. In 1987 a descendant, a lawyer, founded Bulleit Frontier Whiskey on that story, with whiskey made for him under contract rather than at a distillery of his own. The brand passed through Seagram's hands and went to Diageo in the division of Seagram's drinks business, while the Four Roses distillery at Lawrenceburg went on making the bourbon under contract. That contract ran out around 2014, the year Diageo broke ground on a distillery of its own near Shelbyville, in Shelby County. The Bulleit Distilling Co. opened there in March 2017, and other Kentucky distillers supplied whiskey in the years between. For a bartender it is the high rye bourbon of a great many rails: dry and spicy beside the corn, and the bottle a guest is likely to ask for by name.",
+      "table": "Bulleit Bourbon is a Kentucky straight bourbon with a high share of rye, made by Diageo, which opened the Bulleit distillery near Shelbyville in 2017. At 90 proof it brings maple, oak and nutmeg and its dry, spicy edge carries through the lemon of a Whiskey Sour.",
+      "story": "Bulleit's tale begins as the brand tells it: in the 1830s an ancestor of the founder made a high rye whiskey in Kentucky, and the making stopped when he vanished around 1860 on a journey with his whiskey. In 1987 a descendant, a lawyer, founded Bulleit Frontier Whiskey on that story, with whiskey made for him under contract rather than at a distillery of his own. The brand passed through Seagram's hands and went to Diageo in the division of Seagram's drinks business, while the Four Roses distillery at Lawrenceburg went on making the bourbon under contract. That contract ran out around 2014, the year Diageo broke ground on a distillery of its own near Shelbyville, in Shelby County. The Bulleit Distilling Co. opened there in March 2017, and other Kentucky distillers supplied whiskey in the years between. Behind the bar it is the high rye bourbon of a great many rails, dry and spicy beside the corn, and a name guests often call for.",
       "others": [
         {
           "name": "Bulleit Rye",
@@ -608,7 +608,7 @@
         "wood": "New American white oak barrels, toasted and then charred, filled at 110 proof. No age statement on the front label; the distillery's own pages give three or four years.",
         "strength": "47.5% ABV (95 proof)",
         "taste": "Toasted malt, orange peel and baked apple on the nose, then butterscotch and bright citrus on a buttery palate, and a finish that builds into black pepper and cinnamon.",
-        "pour": "Neat or over one large cube. Its rye and its strength carry a Boulevardier, a Manhattan or an Old Fashioned.",
+        "pour": "Neat, or with a splash of water. Its rye and its strength carry a Boulevardier, a Manhattan or an Old Fashioned.",
         "label": [
           {
             "term": "High Rye",
@@ -620,8 +620,8 @@
           }
         ]
       },
-      "table": "Rabbit Hole Heigold is a high rye Kentucky straight bourbon from Rabbit Hole's distillery in Louisville, its rye and barley both malted and bottled at 95 proof. Orange peel and butterscotch give way to pepper and cinnamon, and it makes a lively Boulevardier.",
-      "story": "Rabbit Hole was founded in Louisville in 2012 by a psychologist turned distiller. Its first whiskeys were made to its recipes elsewhere while it built its own, and the distillery opened in the spring of 2018, with a copper column still made by Vendome, the Louisville coppersmiths. In 2019 Pernod Ricard took a majority share, and the same year the range was named for the city's history, with Heigold among the new bottles. The name is that of Christian Heigold (died 1865), a German stonecutter of Louisville. After the anti-immigrant unrest of the 1850s he carved the front of his house with busts of American figures and mottos of loyalty to the city and the Union, and he died soon after it was finished. When the house came down, the carved facade was saved; it was listed on the National Register of Historic Places in 1978 and moved in 2007 to River Road. For a bartender Heigold teaches what malting the small grains brings to a high rye mash, and the Louisville story behind the word on its label.",
+      "table": "Rabbit Hole Heigold comes from Rabbit Hole's distillery in Louisville: a high rye Kentucky straight bourbon with its rye and barley both malted, bottled at 95 proof. Orange peel and butterscotch give way to pepper and cinnamon, and it makes a lively Boulevardier.",
+      "story": "Rabbit Hole was founded in Louisville in 2012 by a psychologist turned distiller. Its first whiskeys were made to its recipes elsewhere while it built its own, and the distillery opened in the spring of 2018, with a copper column still made by Vendome, the Louisville coppersmiths. In 2019 Pernod Ricard took a majority share, and the same year the range was named for the city's history, with Heigold among the new bottles. The name is that of Christian Heigold (died 1865), a German stonecutter of Louisville. After the anti-immigrant unrest of the 1850s he carved the front of his house with busts of American figures and mottos of loyalty to the city and the Union, and he died soon after it was finished. When the house came down, the carved facade was saved; it was listed on the National Register of Historic Places in 1978 and moved in 2007 to River Road. Heigold teaches what malting the small grains brings to a high rye mash, and carries a Louisville story in the word on its label.",
       "others": [
         {
           "name": "Rabbit Hole Cavehill",

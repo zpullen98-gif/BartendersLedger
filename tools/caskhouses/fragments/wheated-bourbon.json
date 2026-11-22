@@ -48,7 +48,7 @@
    ],
    "traps": [
     "The label spells it whisky, without the e, though it is a Kentucky bourbon and not Scotch.",
-    "It carries no age statement, so no number of years should be quoted to a guest.",
+    "No age is printed on its label, so give a guest no number of years as fact.",
     "The wheat stands in place of rye, not of corn: it is a bourbon of at least 51 per cent corn like any other."
    ],
    "cards": [
@@ -169,7 +169,7 @@
     "wood": "New charred American oak barrels. No age statement: for a straight bourbon without one, that means at least four years.",
     "strength": "45% ABV (90 proof)",
     "taste": "Caramel and honey on a sweet nose, then butterscotch, a little fresh bread from the wheat and soft oak, with a short, sweet finish and none of the pepper of rye.",
-    "pour": "Neat or over one large cube. It makes a gentle Old Fashioned, and it suits a Gold Rush or a Whiskey Sour.",
+    "pour": "Neat, or on the rocks with one large cube. It mixes a mellow Old Fashioned, and it suits a Gold Rush or a Whiskey Sour.",
     "label": [
      {
       "term": "The Original Wheated Bourbon",
@@ -185,7 +185,7 @@
      }
     ]
    },
-   "table": "W. L. Weller is the wheated bourbon line made at Buffalo Trace in Frankfort, and Weller Special Reserve is its green label at 90 proof. Wheat stands where most bourbons use rye, so expect honey, caramel and butterscotch: a soft bourbon for a gentle Old Fashioned.",
+   "table": "Made at Buffalo Trace in Frankfort, W. L. Weller is a line of wheated bourbons, and Weller Special Reserve is its green label at 90 proof. With wheat in the place of rye it pours honey, caramel and butterscotch, a soft bourbon for the guest who finds rye too peppery.",
    "story": "The label carries the name of William Larue Weller (1825 to 1899), who went into the whiskey trade in Louisville in 1849 with his brother, as W. L. Weller & Brothers. The brand credits him with putting wheat in the mash where others used rye, though historians have long debated whether he distilled at all. In 1893 the firm hired a young salesman, Julian \"Pappy\" Van Winkle (1874 to 1965), who bought it with a fellow salesman in 1908 and later joined it to the A. Ph. Stitzel distillery. The Stitzel-Weller Distillery opened near Louisville on Derby Day in 1935 and made the wheated recipe its own. The Van Winkle family sold the distillery to Norton Simon in 1972, the stills there went quiet in the early 1990s, and in 1999 the Weller label was bought by the Sazerac Company, which moved it to Buffalo Trace in Frankfort. Special Reserve is the first step of the range that followed, and the bottle a guest who asks for a wheater is most often poured.",
    "others": [
     {
@@ -338,7 +338,7 @@
     ]
    },
    "table": "Pappy Van Winkle is a wheated bourbon made at Buffalo Trace in Frankfort to the Van Winkle family's recipe from the old Stitzel-Weller distillery. The Family Reserve 15 Year Old is the one a guest means: fifteen years in oak at 107 proof, caramel, leather and spice, poured neat.",
-   "story": "Julian \"Pappy\" Van Winkle (1874 to 1965) began in 1893 as a salesman for W. L. Weller & Sons of Louisville. He and a fellow salesman bought the firm in 1908 and later joined it to the A. Ph. Stitzel distillery, and the Stitzel-Weller Distillery opened on Derby Day in 1935, building its bourbons on wheat in place of rye. His son, Julian Van Winkle Jr. (died 1981), was pressed by stockholders to sell the distillery in 1972, and afterwards revived a label from before Prohibition, Old Rip Van Winkle, bottling whiskey from the old distillery's stocks. The founder's grandson carried the business on from 1981, bottling aged wheated bourbon, and in 1994 released a 20 year old named for his grandfather: Pappy Van Winkle's Family Reserve. In 2002 the family entered a joint venture with Buffalo Trace, which has distilled the whiskey since; the last Stitzel-Weller stocks went into bottles during the years that followed. The 15 Year Old, at 107 proof, is the bottling most guests mean when they ask for Pappy.",
+   "story": "Julian \"Pappy\" Van Winkle (1874 to 1965) began in 1893 as a salesman for W. L. Weller & Sons of Louisville. In 1908 he and a fellow salesman bought the firm; they later merged it with the A. Ph. Stitzel distillery, and on Derby Day in 1935 Stitzel-Weller opened, its bourbons built on wheat where others used rye. His son, Julian Van Winkle Jr. (died 1981), was pressed by stockholders to sell the distillery in 1972, and afterwards revived a label from before Prohibition, Old Rip Van Winkle, bottling whiskey from the old distillery's stocks. The founder's grandson carried the business on from 1981, bottling aged wheated bourbon, and in 1994 released a 20 year old named for his grandfather: Pappy Van Winkle's Family Reserve. In 2002 the family entered a joint venture with Buffalo Trace, which has distilled the whiskey since; the last Stitzel-Weller stocks went into bottles during the years that followed. The 15 Year Old, at 107 proof, is the bottling most guests mean when they ask for Pappy.",
    "others": [
     {
      "name": "Pappy Van Winkle's Family Reserve 20 Year Old",
@@ -491,8 +491,8 @@
      }
     ]
    },
-   "table": "Larceny is a wheated bourbon made by Heaven Hill in Louisville, named for the Treasury agent of the Old Fitzgerald legend. The Small Batch at 92 proof tastes of fresh bread, toffee and buttery caramel: the wheater to pour when Maker's Mark or Weller is not the answer.",
-   "story": "The name comes from a legend told about Old Fitzgerald, the wheated bourbon that was the flagship of Stitzel-Weller. John E. Fitzgerald, the story goes, was no distiller but a Treasury agent, one of the few men allowed the keys to a bonded warehouse, and he used them to draw whiskey from the barrels he liked; the lightened casks were known as Fitzgerald barrels. The Old Fitzgerald name dates from the nineteenth century, and Julian \"Pappy\" Van Winkle (1874 to 1965) made it a wheated bourbon at Stitzel-Weller after Prohibition. When that distillery fell silent in the early 1990s the bourbon moved to the new Bernheim Distillery in Louisville, and in 1999 Bernheim and the brand were sold to Heaven Hill, three years after the fire of 1996 at its own distillery in Bardstown. Heaven Hill launched Larceny in 2012 on the Fitzgerald story, with a keyhole cut into the label, and a barrel proof version followed in 2020. For a bartender it is the wheated bourbon to reach for when the better known names are not on the shelf.",
+   "table": "Named for the Treasury agent of the Old Fitzgerald legend, Larceny is a wheated bourbon that Heaven Hill makes in Louisville. The Small Batch at 92 proof tastes of fresh bread, toffee and buttery caramel, the wheater to pour when Maker's Mark or Weller is not the answer.",
+   "story": "The name comes from a legend told about Old Fitzgerald, the wheated bourbon that was the flagship of Stitzel-Weller. John E. Fitzgerald, the story goes, was no distiller but a Treasury agent, one of the few men allowed the keys to a bonded warehouse, and he used them to draw whiskey from the barrels he liked; the lightened casks were known as Fitzgerald barrels. The Old Fitzgerald name dates from the nineteenth century, and Julian \"Pappy\" Van Winkle (1874 to 1965) made it a wheated bourbon at Stitzel-Weller after Prohibition. When that distillery fell silent in the early 1990s the bourbon moved to the new Bernheim Distillery in Louisville, and in 1999 Bernheim and the brand were sold to Heaven Hill, three years after the fire of 1996 at its own distillery in Bardstown. Heaven Hill launched Larceny in 2012 on the Fitzgerald story, with a keyhole cut into the label, and a barrel proof version followed in 2020. Its keyhole label makes the legend easy to tell to a guest who wants a wheater beyond the better known names.",
    "others": [
     {
      "name": "Larceny Barrel Proof",
@@ -504,7 +504,7 @@
     }
    ],
    "traps": [
-    "There is no Larceny distillery: Heaven Hill makes it, at its Bernheim Distillery in Louisville.",
+    "No distillery carries the Larceny name: Heaven Hill makes it, at its Bernheim Distillery in Louisville.",
     "The tale of John E. Fitzgerald and his keys is a legend the brand tells, not settled history.",
     "Small batch promises no number of barrels: the term has no legal meaning in the United States."
    ],
@@ -642,8 +642,8 @@
      }
     ]
    },
-   "table": "Rebel is the wheated bourbon of Lux Row Distillers in Bardstown, the label once sold as Rebel Yell. Rebel 100 is its straight bourbon at 100 proof: caramel and vanilla with some heat, a firm wheater that holds its own in an Old Fashioned or a Whiskey Sour.",
-   "story": "Rebel began as Rebel Yell, a wheated bourbon of the Stitzel-Weller Distillery, the house near Louisville that opened in 1935 and built its bourbons on wheat. Accounts of its birth differ: one places it in the 1930s, another in 1949, at the centenary of the Weller firm; they agree that it was aimed at the South. The brand's own line, that its recipe dates from 1849, takes the year of the Weller firm, and it is told as the brand's claim. After the Van Winkle family sold Stitzel-Weller in 1972 the distillery's labels were scattered, and Rebel Yell came to the David Sherman company of St. Louis, later named Luxco; accounts of the year differ. For decades the whiskey was bought in and bottled for the company. Luxco opened a distillery of its own, Lux Row Distillers, at Bardstown in 2018, and was itself acquired by MGP Ingredients in 2021. Along the way the label dropped its second word and became Rebel. Rebel 100, introduced in 2019, is the hundred proof straight bourbon of the range, and the one a bartender is likely to meet at the well.",
+   "table": "Rebel is the wheated bourbon of Lux Row Distillers in Bardstown, the label once sold as Rebel Yell. Rebel 100 is its straight bourbon at 100 proof: caramel and vanilla with some heat, a firm wheater with the backbone for an Old Fashioned or a Whiskey Sour.",
+   "story": "The label was born as Rebel Yell, a wheated bourbon of the Stitzel-Weller Distillery, which had opened near Louisville in 1935 with wheat at the heart of its mash. Accounts of its birth differ: one places it in the 1930s, another in 1949, at the centenary of the Weller firm; they agree that it was aimed at the South. The brand's own line, that its recipe dates from 1849, takes the year of the Weller firm, and it is told as the brand's claim. After the Van Winkle family sold Stitzel-Weller in 1972 the distillery's labels were scattered, and Rebel Yell came to the David Sherman company of St. Louis, later named Luxco; accounts of the year differ. For decades the whiskey was bought in and bottled for the company. Luxco opened a distillery of its own, Lux Row Distillers, at Bardstown in 2018, and was itself acquired by MGP Ingredients in 2021. Along the way the label dropped its second word and became Rebel. Rebel 100, introduced in 2019, is the hundred proof straight bourbon of the range, and the one a bartender is likely to meet at the well.",
    "others": [
     {
      "name": "Rebel Kentucky Straight Bourbon",
