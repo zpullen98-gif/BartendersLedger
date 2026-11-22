@@ -35,7 +35,7 @@
     ]
    },
    "table": "Glenmorangie The Original is the Highland single malt from Tain, made in stills with necks over five metres tall and aged twelve years in bourbon casks. Expect citrus, peach and vanilla, then almond and coconut; pour it neat with a little water.",
-   "story": "By the house's own account, a farmer and his wife set about building a distillery at Tain in 1843, turning the old Morangie brewery on their land into a still house. With no money for new stills, they bought a pair of second-hand stills that had made gin. The stills that followed are tall ones too: their copper necks stand 5.14 metres, the height, the house likes to say, of a giraffe. For decades a staff of sixteen ran the distillery, remembered as the Sixteen Men of Tain. In 1918 the distillery was sold to Macdonald & Muir, a firm that renamed itself after its malt in 1996, and in 2004 the company was sold to Louis Vuitton Moët Hennessy. For years the flagship was a ten-year-old called The Original. In July 2024 the house gave it twelve years in bourbon casks, keeping the name and the strength, after its tasting panel found that the two extra years added sweetness and a silkier body. Behind a bar it is the plain lesson in what tall stills and American oak alone give a malt: fruit, flowers and vanilla, with no sherry in it.",
+   "story": "By the house's own account, the founder and his wife set about building a distillery at Tain in 1843, turning the brewery of the Morangie farm into a still house. With no money for new stills, they bought a pair of second-hand stills that had made gin. The stills that followed are tall ones too: their copper necks stand 5.14 metres, the height, the house likes to say, of a giraffe. For decades a staff of sixteen ran the distillery, remembered as the Sixteen Men of Tain. In 1918 its main customer, the Leith blenders Macdonald & Muir, bought into the distillery; the firm later took its malt's name, and in 2004 it was sold to Louis Vuitton Moët Hennessy. For years the flagship was a ten-year-old called The Original. In July 2024 the house gave it twelve years in bourbon casks, keeping the name and the strength, after its tasting panel found that the two extra years added sweetness and a silkier body. Behind a bar it is the plain lesson in what tall stills and American oak alone give a malt: fruit, flowers and vanilla, with no sherry in it.",
    "others": [
     {
      "name": "Glenmorangie The Quinta Ruban 14 Years Old",
@@ -95,7 +95,7 @@
    "sources": [
     {
      "title": "Glenmorangie: The Original 12 Years Old",
-     "url": "https://www.glenmorangie.com/pages/the-original-12-years-old",
+     "url": "https://www.glenmorangie.com/products/the-original-12-years-old",
      "kind": "primary",
      "read": "search"
     },
@@ -132,7 +132,20 @@
     "The second-hand gin stills stand in Wikipedia, The Single Cask and Decanter, read in search; one guide dates a gin still purchase to 1887 instead, so the record gives no year for it.",
     "The Ledger's highland style names Glenmorangie only as a benchmark and states nothing that disagrees with this record."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: the founder is no longer called a farmer; the producer and LVMH name the founder and his wife, and Wikipedia has him acquire the Morangie farm and convert its brewery, so the brewery is now the farm's, not one on their land.",
+     "story: 1918 is now told as Macdonald & Muir, its main customer, buying into the distillery, since Wikipedia gives a purchase and two other accounts a 40 per cent share beside Durham & Co; the 1996 renaming year rests on Difford's Guide alone and is cut, the firm later took its malt's name.",
+     "sources: the producer's page on The Original 12 is cited at its products address, which the search returned, in place of a pages address no search showed."
+    ],
+    "open": [
+     "The 2004 sale to LVMH stands in Wikipedia and Difford's Guide; one account gives 2005, the year the deal completed.",
+     "The stills are given as 5.14 metres by the house and LVMH, 5.13 by Difford's Guide; the record keeps the house's figure as the house's."
+    ]
+   }
   },
   {
    "key": "oban",
@@ -155,7 +168,7 @@
     "wood": "Matured in oak casks for at least fourteen years; the producer's pages read do not name the casks. The label states 14 Year Old.",
     "strength": "43% ABV",
     "taste": "Oily, waxy and nutty on the nose with ripe orchard fruit, then fruit bread, orange zest and clove, growing drier and minty with crisp green apple, and a long finish of dark chocolate.",
-    "pour": "Neat with a jug of water beside it, or over one large cube; stirred with sweet vermouth and bitters it makes a Rob Roy with a coastal edge.",
+    "pour": "Neat with a jug of water beside it, or over one large cube; stirred with sweet vermouth and bitters it makes a Rob Roy.",
     "label": [
      {
       "term": "Single Malt Scotch Whisky",
@@ -168,7 +181,7 @@
     ]
    },
    "table": "Oban 14 Year Old is the single malt from the small distillery in the middle of the West Highland port of Oban, made in two small stills cooled by worm tubs. Expect orange zest, fruit bread and clove with a dry, minty finish; pour it neat with water.",
-   "story": "Two brothers set up the distillery in 1794, when there was barely a town on the bay, and Oban grew up around it: the producer calls it the town that whisky built. The brothers' family ran it until 1866, when it was sold, and in 1883 it changed hands again and was rebuilt. Hemmed in by the streets that grew around it, it has stayed small, with one wash still and one spirit still of the old lantern shape. Outside among the rooftops, wooden worm tubs condense the spirit slowly in the salt air, where most distilleries use modern condensers. The 14 Year Old is the house's standing bottling and became its West Highland entry in the Classic Malts, a set of single malts chosen to show the regions of Scotland. For a bartender it is the coastal Highland malt a guest asks for by name: orange zest, fruit bread, clove and a little salt, from a distillery in the middle of a working port.",
+   "story": "Brothers of a local family set up the distillery in 1794, when there was barely a town on the bay, and Oban grew up around it: the producer calls it the town that whisky built. The brothers' family ran it until 1866, when it was sold, and in 1883 it changed hands again and was rebuilt in the years that followed. Hemmed in by the streets that grew around it, it has stayed small, with one wash still and one spirit still of the old lantern shape. Outside among the rooftops, wooden worm tubs condense the spirit slowly in the salt air, where most distilleries use modern condensers. The 14 Year Old is the house's standing bottling and became its West Highland entry in the Classic Malts, a set of single malts chosen to show the regions of Scotland. For a bartender it is the coastal Highland malt a guest asks for by name: orange zest, fruit bread and clove, from a distillery in the middle of a working port.",
    "others": [
     {
      "name": "Oban Distillers Edition",
@@ -176,7 +189,7 @@
     },
     {
      "name": "Oban Little Bay",
-     "note": "A bottling with no age statement, sold beside the 14 Year Old."
+     "note": "A bottling with no age statement, at 43% ABV."
     }
    ],
    "traps": [
@@ -192,7 +205,7 @@
     {
      "id": "town",
      "prompt": "In which year was the Oban distillery founded, and what came after it?",
-     "answer": "1794, by two brothers; the town of Oban grew up around it, which is why the producer calls it the town that whisky built."
+     "answer": "1794, by brothers of a local family; the town of Oban grew up around it, which is why the producer calls it the town that whisky built."
     }
    ],
    "quiz": [
@@ -222,7 +235,7 @@
       "1794"
      ],
      "a": 3,
-     "explain": "Two brothers founded it in 1794; 1866 is when their family's time there ended and 1883 when it was rebuilt."
+     "explain": "Brothers of a local family founded it in 1794; 1866 is when their family's time there ended and 1883 when it changed hands again."
     }
    ],
    "sources": [
@@ -265,7 +278,21 @@
     "The worm tubs rest on the producer's own product page; the claim that Oban is among the smallest distilleries, made there and in trade accounts, is a ranking and is left out.",
     "The line that most distilleries use modern condensers rests on trade accounts that put the worm tub distilleries at fourteen to sixteen; the record gives no count."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story, cards[town], quiz q2: two brothers is now brothers of a local family, since sources name two (Hugh and John) or three (with James) Stevenson brothers.",
+     "story and quiz q2: the rebuild is no longer dated 1883; Higgin bought in 1883 and rebuilt it in the years after (1883 to 1887 in one account, 1890 to 1894 in others).",
+     "story: a little salt is cut from the closing line, as the producer's notes give orange zest, fruit bread and clove and no salt; bottle.pour: the coastal edge on the Rob Roy is cut, a judgement no source makes.",
+     "others[Oban Little Bay]: sold beside the 14 Year Old is a present state; the note now gives the bottling's 43% ABV from the producer's page."
+    ],
+    "open": [
+     "The 14's casks are not named; the producer names refill American and European oak for the Distillers Edition's first maturation only.",
+     "The Classic Malts year stays out (1987, 1988 or 1989)."
+    ]
+   }
   },
   {
    "key": "the-dalmore",
@@ -398,7 +425,16 @@
     "Left out for want of a source: the split of years between bourbon and sherry casks, the share of the spirit that goes to sherry, a distillation count, and the bottle's exact label wording beyond the producer's own titling.",
     "The 1960 merger with Whyte & Mackay, a customer of the firm, stands in Wikipedia and a second account read in search; the blenders' home city is left out, as no page read named it."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "sound",
+    "changed": [],
+    "open": [
+     "bottle.taste: the finish of roasted coffee and dark chocolate rests on the producer's own serve article, not its tasting sheet, which names nose and palate only.",
+     "The 1891 purchase stands in Grace's Guide and the producer's price; Difford's Guide alone gives 1886. The Mackenzie arrival is 1867 in most accounts, 1869 in one."
+    ]
+   }
   },
   {
    "key": "dalwhinnie",
@@ -421,7 +457,7 @@
     "wood": "Matured in oak for at least fifteen years; the producer's pages read do not name the casks. The label states 15 Year Old.",
     "strength": "43% ABV",
     "taste": "A crisp, dry nose of heather with a hint of peat, then heather honey and vanilla, deeper citrus fruit and malted bread, and a long finish that starts sweet and turns to a little smoke and malt.",
-    "pour": "Neat or with a little water; it makes a gentle Hot Toddy and a light Rob Roy, and a guest who wants no smoke can be offered it first.",
+    "pour": "Neat or with a little water; it makes a gentle Hot Toddy and a light Rob Roy, and a guest who wants little smoke can be offered it first.",
     "label": [
      {
       "term": "Single Malt Scotch Whisky",
@@ -434,7 +470,7 @@
     ]
    },
    "table": "Dalwhinnie 15 Year Old is the gentle Highland malt from a distillery more than a thousand feet up in the Central Highlands. Expect heather honey, vanilla and citrus with only a wisp of peat at the end; pour it neat or with a little water.",
-   "story": "The distillery was built in 1897 under the name Strathspey and ran its first spirit in February 1898. Its first owners soon failed, and in 1898 it was sold and renamed Dalwhinnie, from the Gaelic for a meeting place. In 1905 it was sold to Cook & Bernheimer, distillers of New York and Baltimore, so a Highland distillery passed into American hands. When Prohibition came to the United States in 1919 they sold it to Macdonald Greenlees, blenders of Leith, and in 1926 that firm was taken into the Distillers Company. The village stands high in the Central Highlands, more than a thousand feet above the sea, and the distillery's worm tubs, coils of pipe in tubs of cold water outside the still house, were taken out in a modernisation and later put back. The 15 Year Old is the bottling a guest will meet: honey, heather and vanilla, with only a hint of peat. For a bartender it is the malt to reach for when a guest new to Scotch asks for something gentle, and the proof that Highland need not mean smoke or sherry.",
+   "story": "The distillery was built in 1897 under the name Strathspey and ran its first spirit in February 1898. Its first owners soon failed, and in 1898 it was sold and renamed Dalwhinnie, from the Gaelic for a meeting place. In 1905 it was sold to the American firm Cook & Bernheimer, so a Highland distillery passed into American hands. In 1919, with Prohibition coming to the United States, they sold it to Macdonald Greenlees, blenders of Leith, and in 1926 that firm was taken into the Distillers Company. The village stands high in the Central Highlands, more than a thousand feet above the sea, and the distillery's worm tubs, coils of pipe in tubs of cold water outside the still house, were taken out in a modernisation and later put back. The 15 Year Old is the bottling a guest will meet: honey, heather and vanilla, with only a hint of peat. For a bartender it is the malt to reach for when a guest new to Scotch asks for something gentle, and the proof that Highland need not mean smoke or sherry.",
    "others": [
     {
      "name": "Dalwhinnie Winter's Gold",
@@ -527,7 +563,20 @@
     "The founders of 1897 (named in Wikipedia and one other account), the buyer of 1898 and his son are not named: no dates of death were found. The road from Perth to Inverness and the Drumochter Pass rest on general geography; the pass appears only in a quiz explanation.",
     "The worm tubs' removal and return are dated differently by sources (one gives 1995 as the year of removal, garbled in the summary read), so the record gives no year. The weather station on the site is left out for want of a second source."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: Cook & Bernheimer are now the American firm, as no source read made them distillers of New York and Baltimore.",
+     "story: the sale of 1919 is now made with Prohibition coming to the United States, since national Prohibition took force in January 1920.",
+     "bottle.pour: a guest who wants no smoke is now one who wants little smoke, as the producer's own notes give a hint of peat on the nose and smoke and peat in the finish."
+    ],
+    "open": [
+     "The worm tubs came back in 1995 by Wikipedia alone, so no year is printed; the removal year is not settled.",
+     "The height stays at more than a thousand feet: sources give 1,073, 1,154 and 1,164 feet."
+    ]
+   }
   },
   {
    "key": "clynelish",
@@ -545,8 +594,8 @@
    "bottle": {
     "name": "Clynelish 14 Year Old Single Malt Scotch Whisky",
     "class": "Single malt Scotch whisky, Highland",
-    "mash": "Malted barley only; the producer says the water comes from the Kildonan hills, which were panned for gold in the nineteenth century.",
-    "still": "Distilled in copper pot stills at Brora; independent bottlers and writers credit the waxy texture to oily deposits that build up in the feints receiver, which the distillery takes care to keep.",
+    "mash": "Malted barley only, as the law asks of a single malt; the water is piped from the Clynemilton Burn, which an old claim has running over a vein of gold.",
+    "still": "Distilled in copper pot stills at Brora; independent bottlers and writers credit the waxy texture to oily deposits that build up in the feints receiver, which, by their account, the distillery takes care to keep.",
     "wood": "Matured in oak for at least fourteen years; the producer's pages read do not name the casks. The label states 14 Year Old.",
     "strength": "46% ABV",
     "taste": "Dried flowers and a seaside air on the nose, with scented candle wax when water is added and brown sugar later, then a creamy, maritime palate and a dry finish with salt and a slightly bitter edge.",
@@ -563,7 +612,7 @@
     ]
    },
    "table": "Clynelish 14 Year Old is the Highland malt from Brora on the Sutherland coast, known for a waxy texture as much as for its taste. Expect candle wax, dried flowers and a little salt over a creamy body; a few drops of water bring the wax up.",
-   "story": "The Sutherland estate built the original Clynelish at Brora in 1819, in the years of the Sutherland Clearances, to give its smaller tenants a lawful market for their grain, with coal from the estate's own pit at Brora to fire the stills. Through the nineteenth and twentieth centuries its spirit went mainly into blends. In 1967 and 1968 a new Clynelish distillery was built on the next plot, and the name moved to it. The old still house worked on for a time under the name Brora, closed in 1983, and was brought back to work in 2021, so two distilleries now stand side by side. The new Clynelish kept the old house's waxy spirit, a character writers trace to the oily deposits in its feints receiver. Its spirit has long gone into Johnnie Walker, and the producer counts Clynelish among the Four Corners distilleries of Johnnie Walker. The 14 Year Old is the bottling a guest meets. For a bartender it is the malt that teaches texture as a distillery character: wax, flowers and salt from a still house on the northern coast.",
+   "story": "The Sutherland estate built the original Clynelish at Brora in 1819, in the years of the Sutherland Clearances, to give its smaller tenants a lawful market for their grain, with coal from the estate's own pit at Brora to fire the stills. Through the nineteenth and twentieth centuries its spirit went mainly into blends. In 1967 and 1968 a new Clynelish distillery was built on the next plot, and the name moved to it. The old still house worked on for a time under the name Brora, closed in 1983, and was brought back to work in 2021, so that in 2021 two distilleries were at work side by side. The new Clynelish kept the old house's waxy spirit, a character writers trace to the oily deposits in its feints receiver. Its spirit has long gone into Johnnie Walker, and the producer counts Clynelish among the Four Corners distilleries of Johnnie Walker. The 14 Year Old is the bottling a guest meets. For a bartender it is the malt that teaches texture as a distillery character: wax, flowers and salt from a still house on the northern coast.",
    "others": [
     {
      "name": "Clynelish Reserve, House Tyrell",
@@ -595,11 +644,11 @@
      "options": [
       "A finish in beeswax casks",
       "Deposits in the feints receiver",
-      "Peat cut from the Kildonan hills",
-      "Water drawn from the Brora river"
+      "Peat from the Sutherland moors",
+      "Water from the Clynemilton Burn"
      ],
      "a": 1,
-     "explain": "Writers and bottlers trace it to oily deposits left to build in the feints receiver; the Kildonan hills give the water, not peat or wax."
+     "explain": "Writers and bottlers trace it to oily deposits left to build in the feints receiver; the Clynemilton Burn gives the distillery its water, not its wax."
     },
     {
      "id": "q2",
@@ -656,7 +705,21 @@
     "The founder is the Sutherland estate here: sources name the Marquess of Stafford, later the first Duke of Sutherland, but no dates were checked, so he is not named. The estate's coal pit and the tenants' grain rest on the Highland HER and WhiskyFun; one history doubts that these were the main reasons.",
     "Left out for want of a source: the casks of the 14, the number of stills, and the year 1967 as the start of the build; the record gives 1967 and 1968 as the build years, as Canmore and Wikipedia do. The house is in the style's benchmarks and its taste line, which agree with this record."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.mash: the water is now the Clynemilton Burn with the gold told as an old claim; no source read ties the water to the Kildonan hills, whose gold rush of 1869 was on the Kildonan and Suisgill burns, and Canmore and Wikipedia give the burn and the claim.",
+     "bottle.still: the care taken to keep the deposits is now told as the writers' account, since only secondary sources give it.",
+     "story: two distilleries now stand side by side is now so that in 2021 two distilleries were at work side by side, a dated fact that will not age.",
+     "quiz q1: the options Peat cut from the Kildonan hills and Water drawn from the Brora river are now Peat from the Sutherland moors and Water from the Clynemilton Burn, and the explain names the burn as the water, for the same reason as the mash."
+    ],
+    "open": [
+     "The renaming of the old distillery as Brora (1969 or 1975) stays out.",
+     "The House Tyrell note's tropical fruit and vanilla rest on reviews, not a producer's page."
+    ]
+   }
   }
  ]
 }
