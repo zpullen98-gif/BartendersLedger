@@ -1,0 +1,190 @@
+{
+ "group": "highland",
+ "chunk": "c5",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 23,
+ "tested": [
+  "glenmorangie: the move of The Original from ten years to twelve in July 2024, its bourbon casks and 40% ABV, the tasting panel's reason, the producer's own tasting notes, the founder and his wife and the Morangie farm's brewery of 1843, the second-hand gin stills, the 5.14 metre necks and the giraffe, the Sixteen Men of Tain, the Tarlogie Springs and their hard water, the sale of 1918, the renaming of the firm, the sale of 2004, The Nectar 16 and its sweet wine casks at 46%. 6 searches.",
+  "oban: the founding of 1794 and how many brothers, the family's time to 1866, the purchase of 1883 and the dates of the rebuild, the lantern stills and the wooden worm tubs among the rooftops, the producer's tasting notes, the Distillers Edition's Montilla Fino second maturation, Little Bay's strength. 3 searches.",
+  "the-dalmore: the 12's American white oak and its portion in Oloroso casks that held aged Oloroso, 40% ABV, the producer's tasting notes, the 12 Sherry Cask Select at 43% in Oloroso and Pedro Ximenez casks, Alexander Matheson's dates and trade, 1839, 1867, the purchase of 1891 from his son, the legend of 1263, the merger of 1960 with Whyte & Mackay, the flat-topped wash stills and water-jacketed spirit stills, the Cigar Malt Reserve's casks and 44%. 4 searches.",
+  "dalwhinnie: Strathspey of 1897 and first spirit in 1898, the failure and the sale and renaming of 1898, the Gaelic meaning of the name, Cook & Bernheimer of 1905, the sale of 1919 to Macdonald Greenlees and the Distillers Company of 1926, the worm tubs taken out and put back, the producer's tasting notes and serve, the height. 4 searches.",
+  "clynelish: the producer's tasting notes and 46% ABV, the founding of 1819 by the Marquess of Stafford for his tenants' grain with Brora coal, the new distillery of 1967 and 1968, the renaming as Brora, its closure of 1983 and return of 2021, the feints receiver and the wax, the water and the gold, House Tyrell of 2018. 6 searches.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, no length clue (the lint holds the group at four longest keys), keys at positions 0, 2, 1, 3, 3, 0, 2, 1, 1, 3, every explain naming the nearest wrong option. Oban's town card answer and q2 explain, and Clynelish's q1 options and explain, were reworded for the changes below. No card id changed."
+ ],
+ "changed": [
+  {
+   "key": "glenmorangie",
+   "field": "story",
+   "was": "a farmer and his wife set about building a distillery at Tain in 1843, turning the old Morangie brewery on their land into a still house",
+   "now": "the founder and his wife set about building a distillery at Tain in 1843, turning the brewery of the Morangie farm into a still house",
+   "why": "the producer and LVMH name the founder and his wife; Wikipedia has a former distillery manager acquire the farm and convert its brewery, so farmer is not settled",
+   "sources": [
+    "https://www.glenmorangie.com/en-au/pages/history",
+    "https://en.wikipedia.org/wiki/Glenmorangie_distillery"
+   ]
+  },
+  {
+   "key": "glenmorangie",
+   "field": "story",
+   "was": "In 1918 the distillery was sold to Macdonald & Muir, a firm that renamed itself after its malt in 1996",
+   "now": "In 1918 its main customer, the Leith blenders Macdonald & Muir, bought into the distillery; the firm later took its malt's name",
+   "why": "Wikipedia gives a purchase by the main customer, while two other accounts give Durham & Co 60 per cent and Macdonald & Muir 40; the 1996 renaming rests on Difford's Guide alone",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Glenmorangie_distillery",
+    "https://thewhiskyclub.com.au/glenmorangie",
+    "https://www.diffordsguide.com/producers/1086/the-glenmorangie-company-ltd-macdonald-and-muir/history"
+   ]
+  },
+  {
+   "key": "glenmorangie",
+   "field": "sources[0].url",
+   "was": "https://www.glenmorangie.com/pages/the-original-12-years-old",
+   "now": "https://www.glenmorangie.com/products/the-original-12-years-old",
+   "why": "the address the producer's search returned for the page whose notes the record uses",
+   "sources": [
+    "https://www.glenmorangie.com/products/the-original-12-years-old"
+   ]
+  },
+  {
+   "key": "oban",
+   "field": "story, cards[town].answer, quiz q2 explain",
+   "was": "Two brothers",
+   "now": "Brothers of a local family",
+   "why": "sources name Hugh and John Stevenson, others add James; the count is not settled",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Oban_distillery",
+    "https://www.malts.com/en-gb/distilleries/oban/history-of-oban"
+   ]
+  },
+  {
+   "key": "oban",
+   "field": "story, quiz q2 explain",
+   "was": "in 1883 it changed hands again and was rebuilt; 1883 when it was rebuilt",
+   "now": "in 1883 it changed hands again and was rebuilt in the years that followed; 1883 when it changed hands again",
+   "why": "the buyer of 1883 rebuilt it later, 1883 to 1887 in one account and 1890 to 1894 in others, the producer's timeline putting the start in 1890",
+   "sources": [
+    "https://www.malts.com/en-gb/distilleries/oban/history-of-oban",
+    "https://gracesguide.co.uk/Oban_Distillery"
+   ]
+  },
+  {
+   "key": "oban",
+   "field": "story, bottle.pour",
+   "was": "orange zest, fruit bread, clove and a little salt; a Rob Roy with a coastal edge",
+   "now": "orange zest, fruit bread and clove; a Rob Roy",
+   "why": "the producer's notes give no salt, and the coastal edge is a judgement no source makes",
+   "sources": [
+    "https://www.malts.com/en-us/products/oban-14-year-old-single-malt-scotch-whisky-750ml"
+   ]
+  },
+  {
+   "key": "oban",
+   "field": "others[Oban Little Bay].note",
+   "was": "A bottling with no age statement, sold beside the 14 Year Old.",
+   "now": "A bottling with no age statement, at 43% ABV.",
+   "why": "sold beside is a present state that will age; the strength is on the producer's page",
+   "sources": [
+    "https://www.malts.com/en-row/our-whisky-collection/oban/oban-little-bay"
+   ]
+  },
+  {
+   "key": "dalwhinnie",
+   "field": "story",
+   "was": "Cook & Bernheimer, distillers of New York and Baltimore",
+   "now": "the American firm Cook & Bernheimer",
+   "why": "no source read placed the firm in both cities; every account read gives it as American",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Dalwhinnie_distillery",
+    "https://www.undiscoveredscotland.co.uk/dalwhinnie/dalwhinniedistillery/index.html"
+   ]
+  },
+  {
+   "key": "dalwhinnie",
+   "field": "story",
+   "was": "When Prohibition came to the United States in 1919 they sold it",
+   "now": "In 1919, with Prohibition coming to the United States, they sold it",
+   "why": "the sale of 1919 is tied to Prohibition in several accounts, but national Prohibition took force only in January 1920",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Dalwhinnie_distillery",
+    "https://www.undiscoveredscotland.co.uk/dalwhinnie/dalwhinniedistillery/index.html"
+   ]
+  },
+  {
+   "key": "dalwhinnie",
+   "field": "bottle.pour",
+   "was": "a guest who wants no smoke",
+   "now": "a guest who wants little smoke",
+   "why": "the producer's notes give hints of peat on the nose and smoke and peat in the finish",
+   "sources": [
+    "https://www.malts.com/en-us/products/dalwhinnie-15-year-old-single-malt-scotch-whisky-750ml"
+   ]
+  },
+  {
+   "key": "clynelish",
+   "field": "bottle.mash",
+   "was": "the producer says the water comes from the Kildonan hills, which were panned for gold in the nineteenth century",
+   "now": "the water is piped from the Clynemilton Burn, which an old claim has running over a vein of gold",
+   "why": "the distillery's water is the Clynemilton Burn; the Kildonan gold rush of 1869 was on the Kildonan and Suisgill burns, another strath, and the gold in the Clynelish water is a claim, not a fact",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Clynelish_distillery",
+    "https://canmore.org.uk/site/79559",
+    "https://en.wikipedia.org/wiki/Kildonan_Gold_Rush"
+   ]
+  },
+  {
+   "key": "clynelish",
+   "field": "quiz q1 options and explain",
+   "was": "Peat cut from the Kildonan hills; Water drawn from the Brora river; the Kildonan hills give the water",
+   "now": "Peat from the Sutherland moors; Water from the Clynemilton Burn; the Clynemilton Burn gives the distillery its water, not its wax",
+   "why": "the same correction as the mash; the key and its place are unchanged",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Clynelish_distillery"
+   ]
+  },
+  {
+   "key": "clynelish",
+   "field": "bottle.still",
+   "was": "which the distillery takes care to keep",
+   "now": "which, by their account, the distillery takes care to keep",
+   "why": "the removal and return of the deposits in the silent season rests on secondary accounts, some of them hearsay",
+   "sources": [
+    "https://www.whiskyfun.com/2024/Clynelish-is-back-on-the-tasting-desk.html",
+    "https://dramface.com/all-reviews/clynelish-comparison"
+   ]
+  },
+  {
+   "key": "clynelish",
+   "field": "story",
+   "was": "so two distilleries now stand side by side",
+   "now": "so that in 2021 two distilleries were at work side by side",
+   "why": "a present state that will age, told as the dated fact; Brora's first new cask was filled in May 2021",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Brora_distillery",
+    "https://www.diffordsguide.com/producers/227/brora-distillery-the-original-clynelish/history"
+   ]
+  }
+ ],
+ "open": [
+  "glenmorangie: the sale to LVMH is 2004 in Wikipedia and Difford's Guide and 2005 in one account; the still necks are 5.14 metres by the house, 5.13 by Difford's Guide.",
+  "oban: the 14's casks are not named by the producer; the Classic Malts year stays out.",
+  "the-dalmore: the finish notes come from the producer's serve article, not its tasting sheet; 1891 is set against Difford's Guide's 1886, and 1867 against one account's 1869.",
+  "dalwhinnie: the return of the worm tubs in 1995 rests on Wikipedia alone; the height is 1,073, 1,154 or 1,164 feet by source.",
+  "clynelish: the Brora renaming year (1969 or 1975) stays out; the House Tyrell tasting note rests on reviews; the tenants' grain and the coal are told on the Highland HER and one history, which another doubts."
+ ],
+ "living": [
+  "Met in sources and named in no record, already in people.json: Glenmorangie's director of distilling who tested The Original at twelve years (Bill Lumsden), a whisky guide writer quoted on House Tyrell (Jim Murray).",
+  "No new living name was met for people.json. The dead met (Alexander Matheson, 1805 to 1886, by Wikipedia and the Cambridge University archive; the Stevenson brothers; the buyer of 1883; the founders of 1897; A. P. Blyth) are named in no record but Matheson's."
+ ],
+ "swaps": [
+  "glenmorangie: no swap. The plan's flagship words, Glenmorangie The Original, all stand on the twelve-year label of July 2024, so the bottling stands; the plan's why, which says ten years, needs the read-together agent.",
+  "No other swap proposed; all five flagships stand as the roster names them."
+ ],
+ "tension": [
+  "plan.json, glenmorangie why: says The Original is ten years in bourbon casks; since July 2024 it is twelve. Reported, not edited.",
+  "plan.json, dalwhinnie why: prints about 1,073 feet as settled and calls the 15 the Classic Malts bottling; the record gives more than a thousand feet and leaves the Classic Malts out. Reported, not edited.",
+  "plan.json, oban why: has the Stevenson brothers build the town and the 14 in the Classic Malts since the series began; the record says brothers of a local family and gives no series year. Reported, not edited.",
+  "plan.json, clynelish why: dates the official 14 to 2002 on shops alone, and has the new distillery built in 1967 where Canmore and Wikipedia give 1967 and 1968. Reported, not edited.",
+  "The Ledger's highland style names the five houses only as benchmarks and its taste line (wax and salt in some northern coastal malts, Clynelish among them) agrees with the records; no page of the Ledger was found in tension beyond the plan."
+ ]
+}
