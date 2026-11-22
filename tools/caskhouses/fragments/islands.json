@@ -1,0 +1,657 @@
+{
+  "group": "islands",
+  "records": [
+    {
+      "key": "talisker",
+      "group": "islands",
+      "producer": "Talisker",
+      "madeBy": "",
+      "style": "islands",
+      "chapter": "scotch-regions",
+      "shelf": "",
+      "library": "",
+      "say": "TAL-iss-ker",
+      "place": "Carbost, Isle of Skye, Scotland",
+      "year": "1830",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Talisker 10 Year Old Single Malt Scotch Whisky",
+        "class": "Single malt Scotch whisky; an island malt from Skye, Highland in law",
+        "mash": "Malted barley only, as the law asks of a single malt; the house describes it as smoky and publishes no peating level.",
+        "still": "Distilled twice at Carbost in five copper pot stills, two for the wash and three for the spirit, a layout kept from the days of triple distillation. U-shaped lyne arms on the wash stills send some vapour back, and wooden worm tubs outside condense the rest.",
+        "wood": "At least ten years in American oak casks, by the producer's account. The bottling is sold as the 10 Year Old.",
+        "strength": "45.8% ABV",
+        "taste": "Seawater, smoke and a lemony sweetness on the nose, then barley malt, dried fruit and a strong note of black pepper, with a warming, peppery finish that lasts.",
+        "pour": "Neat with a little water beside it, or long with soda and ice in a highball, where the pepper and smoke carry.",
+        "label": [
+          {
+            "term": "Single Malt",
+            "means": "Made only from malted barley, in pot stills, at the one distillery at Carbost."
+          },
+          {
+            "term": "Scotch Whisky",
+            "means": "Distilled and matured in Scotland, at least three years in oak, and bottled at 40% ABV or more."
+          }
+        ]
+      },
+      "table": "Talisker 10 Year Old is a single malt from Skye, made at Carbost on the shore of Loch Harport since 1830: sea spray and smoke first, then dried fruit and a burst of black pepper. Pour it neat with a little water beside it.",
+      "story": "In 1830 two brothers who had come to Skye from the Isle of Eigg, the MacAskills, founded a distillery at Carbost, on the shore of Loch Harport, with a lease from the MacLeods. Robert Louis Stevenson (1850 to 1894) named it in 1880, in his poem The Scotsman's Return from Abroad, as one of the king of drinks beside Islay and Glenlivet. The distillery passed to the Distillers Company in 1925, and in 1928 it gave up triple distillation for double, though it kept its three spirit stills beside the two for the wash. In November 1960 a fire burned down the house where the stills stood, and the stills were rebuilt as exact copies of the old ones so that the spirit would not change; the old worm tubs outside were spared. The distillery's own maltings closed in 1972. At the end of the 1980s the 10 Year Old was chosen as one of the Classic Malts, the island malt of the set. For a bartender it is the bottle that shows a guest what a maritime Scotch means: salt, smoke and pepper in one glass.",
+      "others": [
+        {
+          "name": "Talisker Distillers Edition",
+          "note": "A second maturation in casks seasoned with Amoroso sherry, bottled by vintage at 45.8% ABV."
+        }
+      ],
+      "traps": [
+        "Talisker is an island malt, but in law it is a Highland single malt: the Scotch Whisky Regulations protect no Islands region, only Islay and Campbeltown as localities.",
+        "Talisker is made on Skye, not on Islay: it is often poured beside Islay malts for its smoke, but its home is Carbost on Loch Harport."
+      ],
+      "cards": [
+        {
+          "id": "stills",
+          "prompt": "Why does Talisker run three spirit stills beside two wash stills?",
+          "answer": "The layout was kept from triple distillation, which Talisker gave up for double distillation in 1928."
+        },
+        {
+          "id": "founded",
+          "prompt": "In which year was Talisker founded, and where?",
+          "answer": "In 1830, at Carbost on Loch Harport, Isle of Skye, by two brothers from the Isle of Eigg."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "stills",
+          "q": "A guest on a distillery tour asks why Talisker has three spirit stills and two wash stills. What is the reason?",
+          "options": [
+            "A relic of triple distillation",
+            "A rule of the Scotch law",
+            "A second spirit for blends",
+            "A way to add peat smoke"
+          ],
+          "a": 0,
+          "explain": "Talisker was triple distilled until 1928 and kept the stills when it moved to double distillation; the Scotch law sets no number of stills."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "founded",
+          "q": "A guest asks how long whisky has been made at Carbost on Skye. In which year was Talisker founded?",
+          "options": [
+            "1798",
+            "1830",
+            "1887",
+            "1963"
+          ],
+          "a": 1,
+          "explain": "Two brothers from Eigg founded Talisker in 1830; 1798 is the year Highland Park and Tobermory give for their own beginnings."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Malts.com: Talisker 10 Year Old",
+          "url": "https://www.malts.com/en-gb/products/talisker-10-year-old",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Malts.com: The history of Talisker",
+          "url": "https://www.malts.com/en-us/distilleries/talisker/history-of-talisker/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Wikipedia: Talisker distillery",
+          "url": "https://en.wikipedia.org/wiki/Talisker_distillery",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "Difford's Guide: Talisker Distillery, production",
+          "url": "https://www.diffordsguide.com/producers/72/talisker-distillery/production",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "Difford's Guide: Talisker Distillery, history",
+          "url": "https://www.diffordsguide.com/producers/72/talisker-distillery/history",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "The plan's note is settled for the year: Wikipedia and Difford's give 1830 for the founding by Hugh and Kenneth MacAskill, with 1831 for the opening at Carbost after the lease, so the record gives 1830 as the founding. Both brothers are named as founders in both sources, but no two sources read gave either brother's death, so the record calls them two brothers from Eigg, the MacAskills, and names neither in full. The Ledger's islands style names them in a quiz stem; the integrator may wish to bring that in line.",
+        "Sources differ on the sale history: Master of Malt and Whisky Magazine have a blenders' consortium in 1898 or 1916 before the Distillers Company in 1925 (Wikipedia, Grace's Guide); the record keeps only 1925.",
+        "The Classic Malts year is given as 1988 by Wikipedia and 1989 by Difford's, so the record says the end of the 1980s.",
+        "Difford's tells the 1960 fire as a valve left open on a spirit still; one source only, so the cause is left out. Difford's says the worm tub coils survived the fire and the wooden tubs were replaced in 1997 and 1998; an Edinburgh page says the tubs survived, so the record says only that the old worm tubs were spared.",
+        "Left out for want of a source: the peating level, the source of the malt, the label's exact front wording (no page showed it, so the label terms are the class words alone), and Talisker Skye and Talisker Storm, which were not confirmed in detail.",
+        "Stevenson's dates are given from general reference; the poem and its year stand in Wikipedia and Difford's."
+      ],
+      "checked": null
+    },
+    {
+      "key": "highland-park",
+      "group": "islands",
+      "producer": "Highland Park",
+      "madeBy": "",
+      "style": "islands",
+      "chapter": "scotch-regions",
+      "shelf": "",
+      "library": "Highland Park",
+      "say": "",
+      "place": "Kirkwall, Orkney, Scotland",
+      "year": "1798",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Highland Park 12 Year Old Viking Honour Single Malt Scotch Whisky",
+        "class": "Single malt Scotch whisky; an island malt from Orkney, Highland in law",
+        "mash": "Malted barley only. About a fifth is malted on the distillery's own floors and dried over peat cut on Hobbister Moor, made largely of heather; the rest is bought in already malted.",
+        "still": "Distilled in copper pot stills at Kirkwall, beside the two kilns where the house dries its own malt after turning it by hand on the malting floor.",
+        "wood": "Twelve years, mostly in sherry seasoned casks of European and American oak, first fill among them, with refill casks rounding out the vatting, by the producer's account.",
+        "strength": "40% ABV",
+        "taste": "Heather honey and a soft, aromatic peat smoke, with rich fruitcake, winter spices and Seville orange; the smoke stays sweet and gentle beneath the honey.",
+        "pour": "Neat with a little water, or over one large cube; a gentle first island malt for a guest who is wary of smoke.",
+        "label": [
+          {
+            "term": "Viking Honour",
+            "means": "The name the 12 Year Old took in 2017, when the core range was given Viking names; the whisky did not change."
+          },
+          {
+            "term": "Single Malt",
+            "means": "Made only from malted barley, in pot stills, at the one distillery in Kirkwall."
+          }
+        ]
+      },
+      "table": "Highland Park 12 Year Old Viking Honour comes from Kirkwall on Orkney, where part of the malt is dried over island peat made of heather: honey first, then orange and fruitcake over a sweet, gentle smoke. It suits a guest who is wary of peat.",
+      "story": "The house dates itself to 1798 and to a church beadle who, as the brand tells it, distilled on the side and hid his whisky beneath the pulpit when the excise men came. Other accounts credit a farmer who took the High Park estate above Kirkwall that year and built the distillery on the site of the smuggler's bothy, and several give 1826 as the year it first took out a licence. What sets it apart is the malt. The house turns part of its barley by hand on its own floors, about a fifth of what it needs, and dries it in two kilns over peat cut on Hobbister Moor, a few miles away. Orkney peat is made largely of heather, and its smoke is sweet and floral rather than tarry. Much of the whisky rests in dunnage warehouses with earth floors, and the house says the steady island climate takes less spirit from the casks than the mainland does. In 2017 the core range took Viking names to tell of Orkney's Norse past, and the 12 Year Old became Viking Honour, with the whisky unchanged. For a bartender it is the bottle that shows peat need not taste of tar: honey first, smoke second.",
+      "others": [
+        {
+          "name": "Highland Park 18 Year Old Viking Pride",
+          "note": "Eighteen years, named in the same 2017 repackaging as Viking Honour."
+        },
+        {
+          "name": "Highland Park 10 Year Old Viking Scars",
+          "note": "The ten-year-old of the core range, named Viking Scars in 2017."
+        }
+      ],
+      "traps": [
+        "Highland Park is no mainland Highland malt: it is made in Kirkwall on Orkney, built on the High Park estate, and it is Highland in law only because the Islands have no protected name.",
+        "Viking Honour is a name, not a cask or a finish: the 12 Year Old took it in 2017 and the whisky in the bottle did not change."
+      ],
+      "cards": [
+        {
+          "id": "heather-peat",
+          "prompt": "What gives Highland Park's smoke its sweet, floral side?",
+          "answer": "Peat cut on Hobbister Moor on Orkney, made largely of heather, which dries part of the malt in the house's own kilns."
+        },
+        {
+          "id": "viking-honour",
+          "prompt": "When did Highland Park 12 Year Old take the name Viking Honour?",
+          "answer": "In 2017, when the core range was repackaged with Viking names; the whisky did not change."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "heather-peat",
+          "q": "A guest asks why Highland Park 12 tastes of honey with only a gentle smoke. What does the house point to?",
+          "options": [
+            "Peat from Islay's bogs",
+            "Smoke from oak chips",
+            "Peat made of heather",
+            "A finish in rum casks"
+          ],
+          "a": 2,
+          "explain": "The house dries part of its malt over Hobbister Moor peat, made largely of heather, which gives a sweet, floral smoke; it uses no Islay peat."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "viking-honour",
+          "q": "A regular remembers Highland Park 12 before its Viking name. In which year did it become Viking Honour?",
+          "options": [
+            "2008",
+            "2012",
+            "2015",
+            "2017"
+          ],
+          "a": 3,
+          "explain": "The core range was repackaged with Viking names in 2017, the 12 as Viking Honour and the 18 as Viking Pride; the whisky inside was unchanged."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Highland Park: Viking Honour 12 Year Old",
+          "url": "https://www.highlandparkwhisky.com/en-ca/product/12-year-old",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Highland Park: The craft",
+          "url": "https://www.highlandparkwhisky.com/brand-story/craft",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Difford's Guide: Highland Park Distillery, history",
+          "url": "https://www.diffordsguide.com/producers/217/highland-park-distillery/history",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "Whisky Magazine: the Highland Park maltings",
+          "url": "https://whiskymag.com/articles/maltman-turner-overdrive/",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "Scotchwhisky.com: the Highland Park Viking revamp",
+          "url": "https://scotchwhisky.com/magazine/latest-news/13633/highland-park-revamp-taps-viking-heritage/",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "The plan's note asks that the 1798 link be told as the producer's: the producer names the founder as Magnus Eunson, a church beadle and smuggler, and Difford's tells the pulpit story; no two sources gave his dates, so the record describes him and does not name him. Graham Eunson stands on people.json's living list, a second reason to keep the surname out. The farmer who took the High Park estate is named David Robertson by Difford's and Whisky Auction, again without dates, so he too is described.",
+        "The share of floor malting is settled at about a fifth: a trade guide and Whisky Magazine both give 20 per cent. One source has the rest malted by Simpsons in the Borders, another has barley from the Black Isle, so the record says only that the rest is bought in.",
+        "The 1937 sale is left out: the Spirits Business has Highland Distillers buying it that year, Wikipedia a Glasgow firm, so the buyer is in doubt.",
+        "The Library's Highland Park record agrees on the floor maltings at about 20 per cent and the heather peat; its line on Orkney's wind and even temperature is taken only as the house's own claim of less spirit lost, and its wording (flavor) was not copied.",
+        "The 2017 names stand in Scotchwhisky.com, SLTN and Master of Malt; one mirror of a Whisky Advocate page swaps Honour and Pride, against the rest and the producer's own page, which titles the 12 Year Old Viking Honour.",
+        "Left out for want of a source: the number of stills, the peating level and the label's exact front wording beyond Viking Honour."
+      ],
+      "checked": null
+    },
+    {
+      "key": "jura",
+      "group": "islands",
+      "producer": "Jura",
+      "madeBy": "",
+      "style": "islands",
+      "chapter": "scotch-regions",
+      "shelf": "",
+      "library": "",
+      "say": "JOO-ruh",
+      "place": "Craighouse, Isle of Jura, Scotland",
+      "year": "1810",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Jura 10 Year Old Single Malt Scotch Whisky",
+        "class": "Single malt Scotch whisky; an island malt from Jura, Highland in law",
+        "mash": "Malted barley only, as the law asks of a single malt; the house publishes no detail of its malt or its peating.",
+        "still": "Distilled at Craighouse in four copper pot stills more than 25 feet tall, a design of the distillery rebuilt between 1960 and 1963.",
+        "wood": "Matured in American white oak barrels that held bourbon, then finished in Oloroso sherry casks from Jerez, by the producer's account. The bottling is sold as the 10 Year Old.",
+        "strength": "40% ABV",
+        "taste": "Vanilla, orange, cracked black pepper and dark chocolate on the nose, then nectarine, ginger, coffee and toasted almond in the mouth, sweet with the sherry finish.",
+        "pour": "Neat or with a little water; over ice, or long with soda and a twist of orange in a highball.",
+        "label": [
+          {
+            "term": "Single Malt",
+            "means": "Made only from malted barley, in pot stills, at the one distillery at Craighouse."
+          },
+          {
+            "term": "Scotch Whisky",
+            "means": "Distilled and matured in Scotland, at least three years in oak, and bottled at 40% ABV or more."
+          }
+        ]
+      },
+      "table": "Jura 10 Year Old comes from the distillery at Craighouse on the Isle of Jura: bourbon barrels and a finish in Oloroso sherry casks give it orange, vanilla and toasted almond, with dark chocolate behind. Pour it neat or long with soda.",
+      "story": "By the house's own account the laird of the island founded a distillery at Craighouse in 1810, at first called the Small Isles distillery, and it was licensed in 1831. James Ferguson and Sons took it over in 1876. In 1901 it closed as demand fell; the roof came off, the buildings fell into ruin, and the island lost the work the distillery had given. In 1960 a local landowner and a whisky entrepreneur set out to rebuild it, so that the island would have jobs again, and brought in a distillery designer to draw a new one on the old site. It reopened in 1963, with tall copper stills. Whyte and Mackay bought the distillery in the early 1990s, and in 2018 the range was relaunched. In August 2025 the house announced that a 12 Year Old would take the place of the 10 as its first age statement, and the 12 reached British shelves that October. Behind a bar the 10 is the gentle island malt, sweet with sherry rather than smoke, bourbon barrels first and Oloroso last.",
+      "others": [
+        {
+          "name": "Jura 12 Year Old",
+          "note": "In Britain from October 2025 the bottling that replaced the 10, two years older; the house credits the extra time with peach, citrus and walnut."
+        }
+      ],
+      "traps": [
+        "In Britain the 10 Year Old gave way to a 12 Year Old in October 2025: a guest asking for Jura 10 may be offered the 12, which the house made its first age statement.",
+        "Jura is not an Islay whisky, though the island lies across the Sound of Islay from Islay: it is an island malt, and Highland in law."
+      ],
+      "cards": [
+        {
+          "id": "sherry-finish",
+          "prompt": "How is Jura 10 Year Old matured?",
+          "answer": "In American white oak barrels that held bourbon, then finished in Oloroso sherry casks from Jerez."
+        },
+        {
+          "id": "rebuilt",
+          "prompt": "Why was the Jura distillery rebuilt between 1960 and 1963?",
+          "answer": "To bring work back to the island: a local landowner and a whisky entrepreneur rebuilt it on the old site, and it reopened in 1963."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "sherry-finish",
+          "q": "A guest asks what gives Jura 10 Year Old its orange and dried fruit. In which casks is it finished?",
+          "options": [
+            "Port pipes from the Douro",
+            "Oloroso sherry casks",
+            "Rum casks from Jamaica",
+            "New oak from France"
+          ],
+          "a": 1,
+          "explain": "After bourbon barrels the 10 Year Old is finished in Oloroso sherry casks from Jerez; no port pipe plays a part in it."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "rebuilt",
+          "q": "A guest asks how old the present Jura distillery is. In which year did it reopen after its long silence?",
+          "options": [
+            "1901",
+            "1938",
+            "1963",
+            "1995"
+          ],
+          "a": 2,
+          "explain": "The distillery closed in 1901 and was rebuilt from 1960, reopening in 1963; 1901 is the year it closed, not the year it came back."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Jura: 10 Year Old",
+          "url": "https://www.jurawhisky.com/en-us/our-whisky/core-range/10-year-old/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Jura: The distillery timeline from 1810",
+          "url": "https://www.jurawhisky.com/en-gb/news/jura-distillery-timeline-our-history-from-1810-to-today/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Wikipedia: Jura distillery",
+          "url": "https://en.wikipedia.org/wiki/Jura_distillery",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "Undiscovered Scotland: Isle of Jura Distillery",
+          "url": "https://www.undiscoveredscotland.co.uk/jura/distillery/index.html",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "The Scotsman: why the Jura 10 year old is being replaced",
+          "url": "https://foodanddrink.scotsman.com/drink/whisky/why-jura-10-year-old-whisky-is-being-discontinued-as-first-of-its-kind-packaging-unveiled/",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "A swap of the bottling is proposed: in August 2025 the house announced that Jura 12 Year Old replaces the 10 Year Old as its first age-stated bottling, on British shelves from October 2025 with a global rollout to follow (The Scotsman, The Whiskey Wash, One More Dram, Spiritz, Master of Malt). The producer's British site files the 10 under previous releases, while its American page still lists it in the core range. Proposed: { kind: bottling, key: jura, from: Jura 10 Year Old, to: Jura 12 Year Old }, why: the house replaced the 10 with the 12 in 2025. The record is written on the 10, as the roster names it, with the change told in story, others and a trap; a swap needs the 12's casks and strength confirmed on the producer's own page (one trade source gives ex-bourbon barrels with an Oloroso finish at 40% ABV).",
+        "The plan's note on the label: the producer's pages print Jura, not Isle of Jura; the front label wording was not confirmed, so the label terms are the class words alone. The Ledger's islands style lists the house as Isle of Jura among its benchmarks.",
+        "The rebuilders are named Robin Fletcher and Tony Riley-Smith, and the designer William Delmé-Evans, in the producer's timeline and Wikipedia; no two sources gave their deaths, so the record describes them.",
+        "The sale to Whyte and Mackay is given as 1993 by some sources and 1994 by the producer, so the record says the early 1990s. Stills went from two to four in 1978 or 1979 by different accounts; left out.",
+        "Left out for want of a source: George Orwell's stay on the island, the island's population, and any peating detail of the 10."
+      ],
+      "checked": null
+    },
+    {
+      "key": "arran",
+      "group": "islands",
+      "producer": "Arran",
+      "madeBy": "Lochranza Distillery",
+      "style": "islands",
+      "chapter": "scotch-regions",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Lochranza, Isle of Arran, Scotland",
+      "year": "1995",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Arran 10 Year Old Single Malt",
+        "class": "Single malt Scotch whisky, from the Isle of Arran",
+        "mash": "Malted barley only; the Arran malt is unpeated, and the distillery's peated spirit is bottled under its own name, Machrie Moor.",
+        "still": "Distilled at Lochranza, in the north of the island, in copper pot stills; spirit first ran there on 29 June 1995.",
+        "wood": "Ten years, mainly in bourbon casks, with a portion finished for about nine months in first-fill Oloroso sherry casks before vatting, by the producer's account.",
+        "strength": "46% ABV",
+        "taste": "Candied citrus and honey on the nose, with liquorice and butterscotch, then round citrus, sweet oak and apple, and a clean finish of sweet spice, hazelnut and cinnamon.",
+        "pour": "Neat, with a little water to open the fruit, or long with soda in a highball.",
+        "label": [
+          {
+            "term": "Lochranza Distillery",
+            "means": "The distillery in the north of Arran that makes this malt; its sister at Lagg, in the south, opened in 2019."
+          },
+          {
+            "term": "Single Malt",
+            "means": "Made only from malted barley, in pot stills, at the one distillery at Lochranza."
+          }
+        ]
+      },
+      "table": "Arran 10 Year Old is the unpeated single malt of Lochranza, in the north of the Isle of Arran, bottled at 46% ABV with no chill filtering and no added colour: citrus, honey and apple, then cinnamon and hazelnut. Pour it neat with a little water.",
+      "story": "Arran had gone without a legal distillery for more than 150 years when a former director of Chivas Brothers set out to build one at Lochranza, in the north of the island, at a time when distilleries elsewhere were closing. Building began on 16 December 1994 and, by the house's account, was halted for a while so that a pair of golden eagles could nest in the hills above; the eagles come back most years. Spirit first ran through the stills on 29 June 1995, and the distillery was opened officially on 17 August that year. The Queen opened its visitor centre in 1997. The malt was left unpeated, and when the house began to make peated spirit it bottled it under another name, Machrie Moor. In 2019 the company opened a second distillery, at Lagg in the south of the island, and gave its single malts a new look, with the Lochranza Distillery name on the label and, as the house put it, the same whisky inside. For a bartender the 10 Year Old is the fresh, fruity island malt, bottled at 46 per cent without chill filtering, that shows an island whisky need not be smoky.",
+      "others": [
+        {
+          "name": "Machrie Moor 10 Year Old",
+          "note": "The peated malt of Lochranza, sold under its own name and bottled at 46% ABV."
+        },
+        {
+          "name": "Lagg Single Malt Kilmory Edition",
+          "note": "From the sister distillery at Lagg, in the south of the island, under its own label."
+        }
+      ],
+      "traps": [
+        "Arran malt is made at Lochranza, in the north: Lagg, opened in 2019 in the south, is a second distillery with its own label, not a new name for Lochranza.",
+        "Machrie Moor is Lochranza's peated malt under its own name; the Arran 10 Year Old itself is unpeated, with its fruit from bourbon casks and a sherry finish."
+      ],
+      "cards": [
+        {
+          "id": "strength",
+          "prompt": "At what strength is Arran 10 Year Old bottled?",
+          "answer": "46% ABV, with no chill filtering and no added colour."
+        },
+        {
+          "id": "eagles",
+          "prompt": "What halted the building of the Arran distillery at Lochranza, by the house's account?",
+          "answer": "A pair of golden eagles nesting in the hills above; building paused so they could nest."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "strength",
+          "q": "A guest notices that Arran 10 Year Old feels fuller than many ten-year-olds. At what strength is it bottled?",
+          "options": [
+            "40% ABV",
+            "43% ABV",
+            "46% ABV",
+            "57% ABV"
+          ],
+          "a": 2,
+          "explain": "It is bottled at 46% ABV with no chill filtering, which the house says keeps the oils that carry flavour; 40 per cent is the legal minimum for Scotch."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "eagles",
+          "q": "A guest has heard a story about birds and the Arran distillery. What paused the building at Lochranza?",
+          "options": [
+            "Nesting golden eagles",
+            "A winter of storms",
+            "A ban on new stills",
+            "A fire in the maltings"
+          ],
+          "a": 0,
+          "explain": "By the house's account building paused while a pair of golden eagles nested in the hills above; no fire or ban held it up."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Arran: 10 Year Old Single Malt",
+          "url": "https://www.arranwhisky.com/shop-whiskies/arran-single-malts/15-arran-single-malt-10-year-old",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Arran: Lochranza Distillery's story",
+          "url": "https://www.arranwhisky.com/about/our-story",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Arran: a new look for the single malts",
+          "url": "https://www.arranwhisky.com/news/208-a-breath-of-fresh-arran",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Wikipedia: Lochranza distillery",
+          "url": "https://en.wikipedia.org/wiki/Lochranza_distillery",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "CalMac: Lochranza Distillery",
+          "url": "https://calmac.co.uk/activities/lochranza-distillery",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "The plan's note is settled: the producer gives first mashing on 24 June, first spirit on 29 June and the official opening on 17 August 1995, and Wikipedia agrees on 29 June and 17 August, so the two dates of the note are the first spirit and the opening.",
+        "The cask recipe is settled on the producer's page: mainly bourbon casks for ten years, with a portion finished for about nine months in first-fill Oloroso sherry casks. The plan's why says bourbon and sherry cask malt, which is near enough, but the integrator may wish to say finish.",
+        "The plan's why says the first distillery was renamed Lochranza; no source read shows a renaming. Wikipedia says the two are referred to as Lochranza and Lagg since the second opened, and the producer's 2019 new look put a Lochranza Distillery logo on the label. The record says only that.",
+        "The founder, named Harold Currie in the producer's pages and Wikipedia, is described: one source gives his death in 2016 at 91, and no second was found. The Queen in 1997 and the eagles stand on the producer's own pages, the eagles hedged as its account.",
+        "The years without a legal distillery are given variously by the producer as over 150, 158 and over 160; the record says more than 150, which all accounts meet.",
+        "Left out for want of a source: the number and shape of the stills, whether Lochranza still makes any peated spirit since Lagg opened, and the label's front wording beyond the Lochranza Distillery name. The producer's page states natural colour and no chill filtering; the record says so in prose, not as a label term."
+      ],
+      "checked": null
+    },
+    {
+      "key": "tobermory",
+      "group": "islands",
+      "producer": "Tobermory",
+      "madeBy": "",
+      "style": "islands",
+      "chapter": "scotch-regions",
+      "shelf": "",
+      "library": "",
+      "say": "toh-ber-MOR-ee",
+      "place": "Tobermory, Isle of Mull, Scotland",
+      "year": "1798",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Tobermory 12 Year Old Single Malt Scotch Whisky",
+        "class": "Single malt Scotch whisky; an island malt from Mull, Highland in law",
+        "mash": "Malted barley only, and unpeated; the distillery's heavily peated spirit is bottled under another name, Ledaig.",
+        "still": "Distilled in copper pot stills at the distillery on the harbour at Tobermory, modernised during a closure from 2017 to 2019.",
+        "wood": "Twelve years in American oak casks, matured on Mull, by the producer's account; bottled with no added colour and no chill filtering.",
+        "strength": "46.3% ABV",
+        "taste": "Orange and citrus with floral hints, oak and vanilla on the nose, then sweet orange, creamy caramel and vanilla with cinnamon and clove, a light saltiness, and a long finish of vanilla and spice.",
+        "pour": "Neat with a little water, or long with soda in a highball, where a twist of orange suits its citrus.",
+        "label": [
+          {
+            "term": "Tobermory",
+            "means": "The name the distillery gives its unpeated malt; the heavily peated malt of the same stills is sold as Ledaig."
+          },
+          {
+            "term": "Single Malt",
+            "means": "Made only from malted barley, in pot stills, at the one distillery in Tobermory."
+          }
+        ]
+      },
+      "table": "Tobermory 12 Year Old is the unpeated malt of the distillery in the harbour town of Tobermory on Mull: twelve years in American oak at 46.3% ABV, with orange, caramel, vanilla and clove. The same stills make the peated Ledaig.",
+      "story": "The house dates itself to 1798, when a merchant of the harbour town founded a distillery on the shore at Tobermory, known for much of its life as Ledaig. Its story is one of long silences. It closed in 1837 and did not distil again until the 1870s. The Distillers Company bought it in 1916 and shut it in 1930, and it stayed silent for more than forty years. It reopened in 1972 under the Ledaig name and closed again in 1975; after more stops and starts, production resumed in 1989. The house kept the old name, Ledaig, for its heavily peated malt and Tobermory for the unpeated one. From 2017 to 2019 the distillery closed again, this time for refurbishment, and when it reopened in 2019 the 12 Year Old replaced the 10 as the unpeated malt's signature bottling, beside a new gin. For a bartender it is the lesson that peat is the house's choice, not the island's.",
+      "others": [
+        {
+          "name": "Ledaig 10 Year Old",
+          "note": "The heavily peated malt of the same distillery and stills, at ten years."
+        }
+      ],
+      "traps": [
+        "Tobermory and Ledaig come from one distillery: Tobermory is the unpeated malt, Ledaig the heavily peated one, and Ledaig was once the distillery's own name.",
+        "The 10 Year Old was replaced by the 12 when the distillery reopened in 2019; a bottle of the 10 on an older shelf is the earlier flagship, not a sister."
+      ],
+      "cards": [
+        {
+          "id": "ledaig",
+          "prompt": "Under what name does the Tobermory distillery sell its peated malt?",
+          "answer": "Ledaig, the heavily peated malt from the same stills; Tobermory is the unpeated one."
+        },
+        {
+          "id": "reawakening",
+          "prompt": "Why did Tobermory 12 Year Old first appear in 2019?",
+          "answer": "The distillery reopened after a refurbishment from 2017 to 2019, and the 12 replaced the 10 as its unpeated signature bottling."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "ledaig",
+          "q": "A guest who loves smoke asks for a malt from the Tobermory distillery on Mull. Which label is its peated one?",
+          "options": [
+            "Bunnahabhain",
+            "Scapa",
+            "Talisker",
+            "Ledaig"
+          ],
+          "a": 3,
+          "explain": "Ledaig is the peated malt of the Tobermory distillery; Talisker is smoky too, but it is made on Skye, not Mull."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "reawakening",
+          "q": "A guest remembers a Tobermory 10 Year Old. What took its place when the distillery reopened in 2019?",
+          "options": [
+            "A 15 Year Old at 40% ABV",
+            "A 12 Year Old at 46.3% ABV",
+            "A cask strength 10",
+            "A peated 12 Year Old"
+          ],
+          "a": 1,
+          "explain": "The 12 Year Old at 46.3% ABV, unpeated and from American oak, replaced the 10 in 2019; the peated malt goes out as Ledaig, not as Tobermory."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Tobermory: Tobermory 12 Year Old",
+          "url": "https://tobermorydistillery.com/products/tobermory-12-year-old",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Tobermory: Our story",
+          "url": "https://tobermorydistillery.com/story/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Wikipedia: Tobermory distillery",
+          "url": "https://en.wikipedia.org/wiki/Tobermory_distillery",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "The Spirits Business: Tobermory 12 marks the reawakening",
+          "url": "https://www.thespiritsbusiness.com/2019/02/tobermory-12-year-old-to-mark-distillery-reawakening",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "Whisky Magazine: Tobermory the survivor",
+          "url": "https://whiskymag.com/articles/tobermory-the-survivor",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "The plan's note is settled: the 12 Year Old replaced the 10 at the 2019 reopening (The Spirits Business, Scottish Field, retailers' notes), and the producer's core range collection lists the 12. The 1798 date stands on the producer's story page and in Wikipedia.",
+        "The founder is named John Sinclair in Wikipedia and other accounts; no dates were found, so the record calls him a merchant of the town.",
+        "The reopening after 1837 is dated 1873 by one source and 1878 by another, so the record says the 1870s. The sale to Burn Stewart is dated 1991 or 1993, and the 1979 purchase and renaming rests on one source; both are left out.",
+        "The 1916 purchase by the Distillers Company and the 1930 closure stand in two sources; the link to Prohibition rests on one account and is left out, as are the backers of 1972 (a Liverpool shipping firm and Domecq, one account) and the 1996 launch of Ledaig 10 Year Old (one account).",
+        "The 2019 gin is named Tobermory Hebridean Gin at launch and Tobermory Gin later; the record says only a new gin.",
+        "Left out for want of a source: the number of stills, the label's front wording (retailers print both Single Malt and Island Single Malt), and the Tobermory 10's casks."
+      ],
+      "checked": null
+    }
+  ]
+}
