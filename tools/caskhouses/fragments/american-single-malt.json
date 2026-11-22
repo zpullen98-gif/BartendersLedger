@@ -134,7 +134,23 @@
     "Ownership is told only as the 2016 agreement and the completion in January 2017 (The Spirits Business, The Drinks Business, The Whiskey Wash). The founders are living and are described, not named; Matt Hofmann is already in people.json and Emerson Lamb is added.",
     "Left out for want of a source: Garry oak and Washington peat work, the still sizes, entry proof, and whether the Vendome stills ran the earliest American Oak spirit made before the SoDo move."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: the founders were called two Washington natives; only one is shown to have grown up in the state, so now two young partners.",
+     "story: the purchase was completed early in 2017; Rémy Cointreau's own release and The Drinks Business date the closing to 6 January 2017, so now in January 2017.",
+     "bottle.wood: the marriage with used American oak and first-fill former bourbon casks rested on no source read; the house's page says predominantly new American oak, and the wood now says that alone.",
+     "sources: The Spirits Business on the December 2016 agreement gives way to The Drinks Business on the January 2017 closing, which also tells the earlier agreement."
+    ],
+    "open": [
+     "year: the founding is 2010 in The Whiskey Wash, Tales of the Cocktail and InsideHook, 2011 in Wikipedia; the refuter leaves it empty with the author.",
+     "The swap to Westland Flagship is refused for now (see the review): American Oak was ceased in 2021, so the plan's flagship needs the read-together agent.",
+     "bottle.taste rests on Distiller's notes; the house's own notes for American Oak were not found.",
+     "Whether Sherry Wood was ceased with American Oak and Peated: The Whiskey Wash says so, the house's page read names American Oak and Peated."
+    ]
+   }
   },
   {
    "key": "stranahans",
@@ -269,7 +285,20 @@
     "The first release year, 2006 in the plan, rests on Good Beer Hunting alone and is left out; the claim of the first licensed distillery in Colorado since Prohibition is given as widely said (Wikipedia and a Colorado listing).",
     "Left out for want of a source: the fermentation time (six days in one visit), the still sizes, and the claim that the first wash was a leftover keg of Flying Dog beer rather than its wort."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: the move to South Kalamath Street was dated May 2009; May 2009 is when the move was announced, and the accounts give only 2009, so now In 2009.",
+     "cards[char].answer: the four year minimum came off the card, since the house's own pages give four years on one and six to nine on another; the card now asks one thing, the cask."
+    ],
+    "open": [
+     "bottle.still rests on visitors' accounts of Vendome pot and column stills, three wash and two spirit stills by one; the house's pages name no still.",
+     "The sale to Proximo is dated 2010 in Westword (28 December 2010) and Wikipedia; one account gives 2011.",
+     "The first licensed distillery in Colorado since Prohibition is the house's own claim, repeated widely; no independent check was found, and the story tells it as widely called."
+    ]
+   }
   },
   {
    "key": "mccarthys",
@@ -399,7 +428,22 @@
     "The first of the kind is the maker's own statement of the commission's recognition, told as the maker's; the Commission's own page was not read.",
     "Left out for want of a second source: the Portland brewery that once brewed the wash, the peating level (over 40 parts per million in one review) and the sherry casks some sellers mention."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "place: Oregon alone gave no town; Clear Creek's work moved from Portland to Hood River after 2017 (BevNet's report of the move, Wikipedia), so now Hood River, Hood River County, Oregon.",
+     "story: the move to Hood River, announced by Hood River Distillers in 2017, is told with its year after the sale of 2014.",
+     "others[0].name: McCarthy's American Single Malt 6 Year is not the bottling's name; BevNet's release and listings give McCarthy's 6 Year Oregon Single Malt.",
+     "traps[1]: the malt as the same distillery's work, not another's, hid that the wash was brewed by a Portland brewery; the trap now says the malt came eleven years after the founding, from the same house."
+    ],
+    "open": [
+     "The move's date: the announcement had Portland closing in January 2018 and Hood River starting that spring; a later account says 2017. The story gives only the announcement of 2017.",
+     "The first distillation (1991 in Whisky Advocate, 1995 for the first batch in another account) stays out; 1996 for the release stands in three accounts.",
+     "The trip on which the founder found peated Scotch is placed in Scotland, on a fishing trip, in Whisky Advocate; one account says Ireland. It stays told as the story goes."
+    ]
+   }
   },
   {
    "key": "westward",
@@ -532,7 +576,21 @@
     "The taste is the house's own notes on its product page; its shop gives another set (vanilla, brown sugar, baking spice, tobacco, dark chocolate), and the record keeps the product page's.",
     "year is the founding of House Spirits in 2004 (Wikipedia and the house's own history); no first release year for Westward was found."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: a former brewer and winemaker and a partner, and the aim of a Northwest single malt from the founding, rested on no source read by the refuter; now two partners, and the aim is cut.",
+     "story: Aviation's bartender was called a Portland bartender; accounts place him in Seattle or in Portland, so now a bartender.",
+     "sources: the house's product page has moved to westward-whiskey-original; the address is set to the page the search returned."
+    ],
+    "open": [
+     "The house's product page names the bottling Westward Whiskey Original; whether the label reads American Single Malt Whiskey or Original was not seen on a label.",
+     "The closing of the sale approved on 1 October 2025, expected on 3 November 2025, was not confirmed.",
+     "The founding of 2004 in Corvallis and the move of 2005 rest on Wikipedia and one other account; some sources give 2002."
+    ]
+   }
   },
   {
    "key": "virginia-distillery",
@@ -671,7 +729,25 @@
     "The cask shares are the house's batch pages (about 50 per cent bourbon, 25 Cuvée, 25 sherry); STR is read as shaved, toasted and recharred, the usual meaning, which the house's pages did not spell out in the summaries read. The whisky consultant who devised the Cuvée profile is dead but not named for want of two sources on his dates.",
     "Left out for want of a second source: the blends of imported Scotch malt the house sold while its own spirit aged, and its part in seeking the federal standard."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.mash: North American grown barley and the mountain spring water rested on no source the refuter found; the mash now says malted barley, mashed, fermented and distilled at the distillery, and no more.",
+     "bottle.still and story: the building raised around the stills and the large stills rested on no source read; cut. A pair of copper pot stills made in Scotland stands, since both makers named, Forsyths of Rothes and Northern Fabricators of Elgin, are Scottish.",
+     "bottle.wood: the house gives a minimum of three years on its landing page and four on its shop; the wood now gives both, and no age is printed.",
+     "bottle.taste and table: cocoa was found in no source; Whisky Advocate gives raspberry jam for this bottling and The Whiskey Wash a savoury, spicy turn; caramel stands in the listings. Now raspberry jam, caramel and spice.",
+     "story: the founder who had built companies in the United States and in Ireland rested on one account; cut to a businessman.",
+     "traps: added that the house's own pages call the bottling Courage & Conviction Signature Malt, which a guest may also meet.",
+     "quiz q1 explain: the bourbon and sherry casks bring caramel and cocoa was unsourced; it now says why rum casks and port pipes are wrong."
+    ],
+    "open": [
+     "The founder's death: 2013 in InsideHook and on one page of dates, 18 months into the project in Virginia Living; he stays described by role.",
+     "The label's words: the house's pages say Signature Malt, the Virginia ABC listing and the house's shop say Courage & Conviction American Single Malt Whisky; no label was seen. A 2026 review gives a minimum of six years.",
+     "The founding of 2011 rests on the house's accounts and one profile; a directory gives 2015, the year the distillery opened."
+    ]
+   }
   }
  ]
 }
