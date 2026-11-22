@@ -1,0 +1,145 @@
+{
+ "group": "campbeltown",
+ "chunk": "c7",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 25,
+ "tested": [
+  "springbank: the licence of 1828, the Reids and the Mitchells of 1837, the illicit still and the settlers of the 1660s; J&A Mitchell; the 10 Year Old's 60 and 40 casks, 46% ABV, light peat and the producer's notes; the three stills, the flame-fired wash still and the two and a half distillations; the silence of 1979 to 1987 or 1989; Longrow of 1973 and Hazelburn of 1997. 5 searches.",
+  "glen-scotia: 1832 as Scotia by Stewart, Galbraith and Co; almost thirty distilleries by 1835 and the design of the 1830s on the producer's page; Duncan MacCallum's death of 1930 and the legend; the Blochs of the 1930s and the Glen of 1939; mothballed in 1984, reopened by Gibson International in 1989, bought by Glen Catrine in 1994; Double Cask's casks, finish, strength and notes; the 15 Year Old and Victoriana. 6 searches.",
+  "kilkerran: Glengyle of 1872, the sale of 1919 and the closure of 1925; the purchase of 2000 and the first spirit of 2004; the Ben Wyvis stills and that distillery's closure; the Glengyle name with Loch Lomond; the 12 Year Old's 70 and 30 casks, 46% ABV and the producer's notes; the 12 of 2016 and the 16 of 2020; Heavily Peated at around 45 parts per million; the short season with the Springbank team. 6 searches.",
+  "longrow: the old distillery of 1824 to 1896 beside Springbank and its site; the chairman's experiment of 1973 and regular distillation from the 1990s; double distillation, 48 hours of peat and 45 parts per million; Longrow Peated's casks, strength and notes; the 100 Proof page. 4 searches.",
+  "hazelburn: the old distillery of 1825 to 1925 or 1926 and the Greenlees; 1997; hot-air drying and three distillations; the 10 Year Old as the range's flagship, all bourbon casks, at 46% ABV, and its notes; the Sherry Wood release and its ages. 4 searches, one shared with Longrow.",
+  "25 of the 28 searches spent; 3 left unused.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, no length clue the lint finds, keys at positions 2, 0, 1, 3, 3, 1, 0, 2, 1, 2, each explain naming the nearest wrong option. No card or question was changed and no card id changed."
+ ],
+ "changed": [
+  {
+   "key": "glen-scotia",
+   "field": "bottle.taste",
+   "was": "Toffee and fudge with apple and pear, a spray of sea salt and the spiced fruit of the Pedro Ximénez casks, then salted caramel and a sweet, dry sherry finish",
+   "now": "Crème caramel, toffee, apple and peach with a little sea spray, then rich spiced fruit, toffee and fudge, and a finish of vanilla oak and gentle spice",
+   "why": "the producer's own notes for Double Cask; pear, salted caramel and a dry sherry finish were not among them",
+   "sources": [
+    "https://www.glenscotia.com/products/double-cask-single-malt-scotch-whisky",
+    "https://us.glenscotia.com/products/double-cask-whisky"
+   ]
+  },
+  {
+   "key": "glen-scotia",
+   "field": "table",
+   "was": "toffee, pear and spiced fruit",
+   "now": "toffee, peach and spiced fruit",
+   "why": "the producer's notes give peach",
+   "sources": [
+    "https://www.glenscotia.com/products/double-cask-single-malt-scotch-whisky"
+   ]
+  },
+  {
+   "key": "glen-scotia",
+   "field": "others[0].note",
+   "was": "Unpeated, fifteen years in first-fill bourbon and refill American oak casks",
+   "now": "Fifteen years in American oak bourbon casks, bottled at 46% ABV",
+   "why": "the producer's pages give American oak bourbon casks and 46% ABV and say neither unpeated nor first-fill and refill",
+   "sources": [
+    "https://www.glenscotia.com/collections/single-malt-scotch-whisky"
+   ]
+  },
+  {
+   "key": "glen-scotia",
+   "field": "others[1].note",
+   "was": "from bourbon barrels finished in Pedro Ximénez and heavily charred oak casks",
+   "now": "after a finish in heavily charred oak casks, by the producer's account",
+   "why": "the producer's page names the charred oak finish; the Pedro Ximénez share rests on shops alone",
+   "sources": [
+    "https://www.glenscotia.com/products/victoriana-single-malt-scotch-whisky"
+   ]
+  },
+  {
+   "key": "kilkerran",
+   "field": "bottle.still",
+   "was": "Ben Wyvis, a distillery at Invergordon demolished in the 1970s",
+   "now": "Ben Wyvis, a malt distillery within the grain distillery at Invergordon that closed in the 1970s",
+   "why": "the sources give a closure of 1976 or 1977 within the Invergordon complex and say the stills were saved; none says demolished",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ben_Wyvis_distillery",
+    "https://scotchwhisky.com/whiskypedia/2015/ben-wyvis/"
+   ]
+  },
+  {
+   "key": "kilkerran",
+   "field": "bottle.taste",
+   "was": "Sweet confectionery and a gentle smoke like toasted marshmallow; citrus zest turning oily, with peat, spice and toffee; campfire smoke, nut pie and butterscotch",
+   "now": "Sweet confectionery, pear drops and marzipan with a soft smoke like toasted marshmallow; lemon zest turning oily, then peat smoke, pepper and toffee; smoke, pecan pie and butterscotch",
+   "why": "brought to the producer's own words for the 12 Year Old",
+   "sources": [
+    "https://kilkerran.scot/kilkerran-12yo-2025/",
+    "https://kilkerran.scot/kilkerran-bottlings/12yo/"
+   ]
+  },
+  {
+   "key": "kilkerran",
+   "field": "others[1].note",
+   "was": "peated to about 45 parts per million and matured mostly in bourbon casks",
+   "now": "the same, by the producer's account",
+   "why": "the figure is the producer's around 45; shops give 84 for early batches, so the line is hedged as the house's",
+   "sources": [
+    "https://kilkerran.scot/kilkerran-bottlings/heavily-peated/"
+   ]
+  },
+  {
+   "key": "longrow",
+   "field": "story",
+   "was": "It stood next door to Springbank, and by the house's account its old warehouse became Springbank's bottling hall.",
+   "now": "It stood next door to Springbank.",
+   "why": "no producer page read says it; Undiscovered Scotland puts Springbank's car park on the old Longrow site and Historic Environment Scotland names the bottling hall a former duty free warehouse",
+   "sources": [
+    "https://www.undiscoveredscotland.co.uk/campbeltown/springbank/index.html",
+    "https://canmore.org.uk/site/83593"
+   ]
+  },
+  {
+   "key": "longrow",
+   "field": "bottle.pour",
+   "was": "it can also stand as the smoky float on a Penicillin",
+   "now": "a malt to sip rather than to mix",
+   "why": "no source ties Longrow to the drink, whose recipe floats an Islay malt; a guest told it would be misled",
+   "sources": [
+    "https://www.springbank.scot/whisky/longrow/peated/"
+   ]
+  },
+  {
+   "key": "hazelburn",
+   "field": "others[0]",
+   "was": "Hazelburn Sherry Wood 8 Year Old: a younger Hazelburn, eight years in sherry casks, released yearly",
+   "now": "Hazelburn Sherry Wood: a yearly release matured fully in sherry casks, its age changing from one release to the next",
+   "why": "the 2025 edition is eight years in oloroso, but the producer's bar menus list 12 and 15 year old Sherry Wood editions of 2023, so the age belongs to one release",
+   "sources": [
+    "https://springbank.scot/whisky/hazelburn/sherry-wood",
+    "https://www.springbank.scot/wp-content/uploads/sites/2/2024/02/The-Washback-Bar-Menu-January-2024.pdf"
+   ]
+  }
+ ],
+ "open": [
+  "springbank: the founding stands as two accounts, the house's (the Mitchells in 1828) and the secondary (the Reids' licence of 1828, the Mitchells from 1837); the 60 and 40 split is the 2025 bottling's.",
+  "glen-scotia: the Blochs' year is 1930 or 1933 by source and the record keeps the 1930s; the finish is up to twelve months on one producer page and twelve months on another; MacCallum's cause of death differs by source and is told as legend.",
+  "kilkerran: the first Kilkerran bottling is 2007 or 2009 and the year field stays empty; the 12 of 2016 rests on secondary and shop sources; the short season with the Springbank team is the producer's account.",
+  "longrow: regular distillation is the 1990s on the producer's menu and 1990 or 1992 elsewhere; the 100 Proof's figure is left out.",
+  "hazelburn: the old distillery's closure is 1925 or 1926 by source; 1997 stands in the producer's timeline and Wikipedia, against one source's 1996."
+ ],
+ "living": [
+  "Met in sources and named in no record, already in people.json: Frank McHardy, Iain McAlister.",
+  "New for people.json: none.",
+  "The dead and the undated met: the Springbank chairman who died in 2023, the Mitchell brothers of 1837 and Archibald Mitchell, the Longrow founders of 1824, the Greenlees brothers; none is named in a record. Duncan MacCallum (died 1930) is named with his death year, which Grace's Guide and Scotchwhisky.com both give."
+ ],
+ "swaps": [
+  "No swap proposed by the author and none needed: each flagship is the label's own standing bottling and carries every word of the roster's name. The Glen Scotia note's offer of the 15 Year Old as flagship is declined with the author: Double Cask opens the producer's core range."
+ ],
+ "tension": [
+  "plan.json, springbank why: says medium peated; the producer calls the Springbank range lightly peated, as the record does. Reported, not edited.",
+  "plan.json, glen-scotia why: says owned by the Loch Lomond Group since the 1990s; Glen Catrine bought it in 1994 and the Loch Lomond Group's own site gives 1996, while Grace's Guide places the group in 2014. The record names no later owner. Reported, not edited.",
+  "plan.json, kilkerran why: says another company owns the Glengyle name, a present ownership; the record says only that the name had passed to another company. Reported, not edited.",
+  "The Library's Springbank record says the only distillery in Scotland doing every stage on site and family owned by the Mitchells since founding; secondary sources give the first licence to the Reids, and the producer says ownership passed into three trusts in 2023. The record makes neither claim. Reported, not edited.",
+  "The Ledger's Campbeltown style page and quiz agree with the records: by the 1930s only Springbank and Glen Scotia were left, Glengyle revived in 2004, Hazelburn unpeated and distilled three times, Longrow twice."
+ ]
+}
