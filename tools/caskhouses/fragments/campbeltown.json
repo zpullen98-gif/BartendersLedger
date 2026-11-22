@@ -1,0 +1,664 @@
+{
+ "group": "campbeltown",
+ "records": [
+  {
+   "key": "springbank",
+   "group": "campbeltown",
+   "producer": "Springbank",
+   "madeBy": "",
+   "style": "campbeltown",
+   "chapter": "scotch-regions",
+   "shelf": "",
+   "library": "Springbank",
+   "say": "",
+   "place": "Campbeltown, Kintyre, Argyll, Scotland",
+   "year": "1828",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Springbank 10 Year Old Single Malt Scotch Whisky",
+    "class": "Single malt Scotch whisky, distilled in the Campbeltown locality",
+    "mash": "Malted barley only, as the law asks of a single malt, malted on the distillery's own floors and lightly peated in its kiln, by the house's account.",
+    "still": "Fermented for up to 110 hours in wooden washbacks, then distilled at Springbank in three copper pot stills, the wash still fired by a live flame. The spirit runs two and a half times: part of it takes a third distillation.",
+    "wood": "About 60 per cent former bourbon casks and 40 per cent former sherry casks, by the producer's account. 10 Year Old is the age the label gives: nothing in the bottle is younger than ten years.",
+    "strength": "46% ABV",
+    "taste": "The producer's notes give cereal, gooseberry, mango and honeycomb on the nose, then oatmeal, malted barley and orange pulp on the palate, and a finish of sea salt; bottles differ a little from one year's bottling to the next.",
+    "pour": "Neat, with a jug of water beside it so the guest can add a few drops; a malt to sip rather than to mix.",
+    "label": [
+     {
+      "term": "Campbeltown Single Malt Scotch Whisky",
+      "means": "Malted barley only, from pot stills at one distillery in the Campbeltown locality."
+     },
+     {
+      "term": "46% vol",
+      "means": "The strength of the 10 Year Old, bottled without chill filtration or added colour, by the house's account."
+     }
+    ]
+   },
+   "table": "Springbank 10 Year Old comes from the Campbeltown distillery that malts its own barley on its floors, peats it lightly and distils it two and a half times. Bourbon and sherry casks give cereal, orange and honeycomb with a salty finish; pour it neat, with water beside it.",
+   "story": "Campbeltown once held more than twenty distilleries, and Springbank stands in the middle of the town. By the house's account it was built in 1828 on the site of an illicit still worked by the Mitchells, a family of maltsters who had come to Kintyre as settlers; secondary accounts give the licence of 1828 to the Reids, in-laws of the Mitchells, who sold the distillery to two Mitchell brothers in 1837. The family firm became J&A Mitchell, and in 1872 one of the brothers left after a quarrel and built Glengyle nearby. In the slump after the First World War most of the town's distilleries closed, and by the 1930s only Springbank and Glen Scotia were left. In 1973 Springbank first made Longrow, a heavily peated malt, and after a silence that began in 1979 and lasted into the late 1980s it added the unpeated Hazelburn in 1997. The family's company brought Glengyle back to life in 2004. By its own account the house does every stage on site, from malting to bottling. For a bartender the 10 Year Old is the town's reference malt: light peat, two and a half distillations and no chill filtration.",
+   "others": [
+    {
+     "name": "Springbank 15 Year Old",
+     "note": "Five more years in oak than the 10, from the same stills."
+    },
+    {
+     "name": "Springbank 21 Year Old",
+     "note": "A yearly release with twenty-one years in oak, eleven more than the 10."
+    }
+   ],
+   "traps": [
+    "Springbank, Longrow and Hazelburn are three malts from the one Springbank distillery, not three distilleries: they differ in peat and in the number of distillations.",
+    "The 10 Year Old is lightly peated by the house's own account, a little smoke under salt and fruit; Longrow is the smoky malt of the distillery.",
+    "Two and a half times means that part of the spirit takes a third distillation, not that the whole of it does."
+   ],
+   "cards": [
+    {
+     "id": "two-and-a-half",
+     "prompt": "How many times is Springbank 10 Year Old distilled?",
+     "answer": "Two and a half times: part of the spirit takes a third distillation through the distillery's three copper stills."
+    },
+    {
+     "id": "mitchells",
+     "prompt": "Which family took Springbank over in 1837?",
+     "answer": "The Mitchells: two Mitchell brothers took over the distillery, which the house dates to 1828; their firm became J&A Mitchell."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "two-and-a-half",
+     "q": "A guest asks how Springbank 10 Year Old is distilled. How many times does its spirit run through the stills?",
+     "options": [
+      "Once, in a column",
+      "Twice, in pot stills",
+      "Two and a half times",
+      "Three times in full"
+     ],
+     "a": 2,
+     "explain": "Springbank runs its spirit two and a half times, part of it taking a third distillation; twice is the regime for Longrow and three times for Hazelburn."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "mitchells",
+     "q": "Secondary accounts give the first licence at Springbank, in 1828, to the Reids. Which family took the distillery over in 1837?",
+     "options": [
+      "The Mitchells",
+      "The Greenlees",
+      "The Blochs",
+      "The Mackies"
+     ],
+     "a": 0,
+     "explain": "Two Mitchell brothers took Springbank over in 1837; the Bloch brothers come into the story of Glen Scotia, which they bought in the 1930s."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Springbank: Story",
+     "url": "https://www.springbank.scot/about/story/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Springbank: Process",
+     "url": "https://www.springbank.scot/about/process/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Springbank: the 10 Year Old",
+     "url": "https://www.springbank.scot/whisky/springbank-range/10yo-2025-1/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Springbank distillery",
+     "url": "https://en.wikipedia.org/wiki/Springbank_(distillery)",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Scotchwhisky.com: Springbank, Whiskypedia",
+     "url": "https://scotchwhisky.com/whiskypedia/1892/springbank/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note on the founders is settled as a disagreement: the producer's story says the Mitchells built Springbank in 1828 on the site of an illicit Mitchell still, while Wikipedia and Scotchwhisky.com give the 1828 licence to the Reids, in-laws of the Mitchells, who sold to John and William Mitchell in 1837. The record gives both, the house's account first. The brothers and Archibald Mitchell are not named, for want of their dates in two sources.",
+    "The plan's why says medium peated; the producer's range page says the Springbank malts are lightly peated, and the record follows the producer. The cask split (60 per cent bourbon, 40 sherry) and the tasting notes are the producer's for the 10 Year Old page of 2025; the split may move between bottlings.",
+    "The silence is given as 1979 into the late 1980s because Wikipedia says reopened in 1989 and Scotchwhisky.com 1987. The reopening of the floor maltings (1992, Scotchwhisky.com only) is left out for want of a second source.",
+    "On site bottling and every stage on site rest on the producer's own distillery page and are hedged as its account; the claim to be the one distillery in Scotland to do so, which the producer makes and the Library repeats, is not made.",
+    "The Library's Springbank record says the distillery has been family owned by the Mitchells since founding; secondary sources give the Reids the first licence, and the producer's story of 2023 says ownership passed into three trusts on the chairman's death. The integrator may wish to soften the Library's line.",
+    "The label terms are read from the producer's pages, not a photograph of the label; whether the label prints 10 Year Old or Aged 10 Years was not confirmed, so the age wording is not offered as a label term.",
+    "The chairman who died in 2023 is not named; no living person is named. Bottles of the 10 at 100 proof and the 15's casks were not researched and are left out."
+   ],
+   "checked": null
+  },
+  {
+   "key": "glen-scotia",
+   "group": "campbeltown",
+   "producer": "Glen Scotia",
+   "madeBy": "",
+   "style": "campbeltown",
+   "chapter": "scotch-regions",
+   "shelf": "",
+   "library": "",
+   "say": "",
+   "place": "Campbeltown, Kintyre, Argyll, Scotland",
+   "year": "1832",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Glen Scotia Double Cask Campbeltown Single Malt Scotch Whisky",
+    "class": "Single malt Scotch whisky, distilled in the Campbeltown locality",
+    "mash": "Malted barley only, as the law asks of a single malt, mashed with water from Crosshill Loch; the producer's page for the bottle gives no peating level.",
+    "still": "Distilled twice in copper pot stills at Glen Scotia in Campbeltown; the house says the distillation is slow, to build flavour and oils.",
+    "wood": "Matured in first-fill bourbon casks, then finished for up to twelve months in casks that held Pedro Ximénez sherry, by the producer's account. No age statement on the label.",
+    "strength": "46% ABV",
+    "taste": "Toffee and fudge with apple and pear, a spray of sea salt and the spiced fruit of the Pedro Ximénez casks, then salted caramel and a sweet, dry sherry finish, as the producer describes it.",
+    "pour": "Neat or with a few drops of water; its sherry sweetness also stands up over one large cube.",
+    "label": [
+     {
+      "term": "Double Cask",
+      "means": "Two casks in turn: first-fill bourbon casks, then a finish in Pedro Ximénez sherry casks."
+     },
+     {
+      "term": "Campbeltown",
+      "means": "Distilled in the Campbeltown locality, one of two the Scotch Whisky Regulations protect by name."
+     }
+    ]
+   },
+   "table": "Glen Scotia Double Cask comes from a Campbeltown distillery founded as Scotia in 1832, first matured in bourbon casks and then finished in Pedro Ximénez sherry casks. It gives toffee, pear and spiced fruit over a little sea salt; pour it neat or with a few drops of water.",
+   "story": "The firm of Stewart, Galbraith and Co founded the distillery in 1832 under the name Scotia, and by 1835 the town held almost thirty distilleries, by the house's account. A later owner, Duncan MacCallum (died 1930), is the subject of the distillery's legend: the story goes that he drowned himself in 1930, and staff have long told of his ghost. In the 1930s the Bloch brothers of Glasgow bought the distillery and added Glen to its name. By then most of Campbeltown's distilleries had closed in the slump after the First World War, and only Springbank and Glen Scotia were left, so the name of the town as a whisky region rested on the two. Glen Scotia had hard years after that: it was mothballed in 1984 and reopened in 1989 under new owners, and in 1994 it was bought by Glen Catrine Bonded Warehouse. Through all of it the distillery kept much of its design of the 1830s, by its own account the mash tun, the still room and a dunnage warehouse. Double Cask opens its range for a guest: Campbeltown salt under a sweet sherry finish, and a second distillery to set beside Springbank.",
+   "others": [
+    {
+     "name": "Glen Scotia 15 Year Old",
+     "note": "Unpeated, fifteen years in first-fill bourbon and refill American oak casks, at 46% ABV, by the producer's account."
+    },
+    {
+     "name": "Glen Scotia Victoriana",
+     "note": "Bottled at cask strength from bourbon barrels finished in Pedro Ximénez and heavily charred oak casks."
+    }
+   ],
+   "traps": [
+    "Glen Scotia is a distillery of its own, not a label of Springbank, though both stand in the town of Campbeltown.",
+    "Double Cask carries no age statement: its sweetness comes from the Pedro Ximénez finish, not from long years in oak."
+   ],
+   "cards": [
+    {
+     "id": "px-finish",
+     "prompt": "In which casks is Glen Scotia Double Cask finished?",
+     "answer": "Casks that held Pedro Ximénez sherry, after maturation in first-fill bourbon casks."
+    },
+    {
+     "id": "bloch",
+     "prompt": "Who gave Glen Scotia the Glen in its name?",
+     "answer": "The Bloch brothers of Glasgow, who bought the distillery, founded as Scotia in 1832, in the 1930s."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "px-finish",
+     "q": "A guest asks where the sweetness in Glen Scotia Double Cask comes from. In which casks is it finished?",
+     "options": [
+      "Oloroso sherry butts",
+      "Pedro Ximénez sherry casks",
+      "Ruby port pipes",
+      "Sauternes wine barriques"
+     ],
+     "a": 1,
+     "explain": "Matured first in first-fill bourbon casks, it is finished in casks that held Pedro Ximénez; oloroso butts play no part in this bottling."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "bloch",
+     "q": "Glen Scotia was founded in Campbeltown in 1832 under a shorter name. Who added Glen to it?",
+     "options": [
+      "The founding partners",
+      "The Mitchell family",
+      "The Reid family",
+      "The Bloch brothers"
+     ],
+     "a": 3,
+     "explain": "The Bloch brothers of Glasgow bought the distillery in the 1930s and added Glen; the founding partners, Stewart, Galbraith and Co, called it Scotia."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Glen Scotia: Double Cask",
+     "url": "https://www.glenscotia.com/products/double-cask-single-malt-scotch-whisky",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Glen Scotia: the distillery",
+     "url": "https://www.glenscotia.com/pages/distillery",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Grace's Guide: Glen Scotia Distillery",
+     "url": "https://www.gracesguide.co.uk/Glen_Scotia_Distillery",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Scotchwhisky.com: Glen Scotia, Whiskypedia",
+     "url": "https://scotchwhisky.com/whiskypedia/1848/glen-scotia/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "The Whiskey Wash: the ghost of Glen Scotia",
+     "url": "https://thewhiskeywash.com/scotch-whiskey/the-ghost-of-glen-scotia-the-tragic-tale-of-duncan-maccallum/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "Double Cask is kept as the flagship: the producer leads its core range with Double Cask, the 15 Year Old and Victoriana, and Double Cask is the entry bottling. The 15 Year Old stands in others. No swap proposed.",
+    "The plan's note on the Loch Lomond year: the record gives 1994, the year Grace's Guide and Scotchwhisky.com's Loch Lomond page give for the purchase by Glen Catrine Bonded Warehouse, and does not name the later group, since The Whiskey Wash gives 1996 and 1999 and Wikipedia 2014 for the later steps.",
+    "The year the Blochs bought the distillery is 1930 in Scotchwhisky.com and 1933 in Grace's Guide and Wikipedia, so the record says the 1930s. The year MacCallum bought it (1891 or 1924) is left out. His death in 1930 stands in Scotchwhisky.com and The Whiskey Wash; the drowning is told as the legend it is, and which loch is disputed, so no loch is named.",
+    "Victoriana's strength is left out: sources give 54.2 and 52.2 per cent. The sale to Hiram Walker in 1954 rests on Grace's Guide alone and is left out, as is the year Double Cask was first released, which no source read gave.",
+    "Iain McAlister, named as the distillery's manager in a Scotchwhisky.com article, is added to people.json; he is not named in the record.",
+    "The Ledger's Campbeltown style page agrees: by the 1930s only Springbank and Glen Scotia were left. The producer says almost thirty distilleries by 1835, which sits with the page's more than twenty."
+   ],
+   "checked": null
+  },
+  {
+   "key": "kilkerran",
+   "group": "campbeltown",
+   "producer": "Kilkerran",
+   "madeBy": "Glengyle Distillery",
+   "style": "campbeltown",
+   "chapter": "scotch-regions",
+   "shelf": "",
+   "library": "",
+   "say": "kil-KERR-an",
+   "place": "Campbeltown, Kintyre, Argyll, Scotland",
+   "year": "",
+   "yearIs": "",
+   "bottle": {
+    "name": "Kilkerran 12 Year Old Single Malt Scotch Whisky",
+    "class": "Single malt Scotch whisky, distilled in the Campbeltown locality",
+    "mash": "Malted barley only, floor-malted at neighbouring Springbank and lightly peated, by the house's account.",
+    "still": "Distilled at Glengyle in Campbeltown in one wash still and one spirit still, first made for Ben Wyvis, a distillery at Invergordon demolished in the 1970s. By the house's account Glengyle distils for a short season each year, worked by the Springbank team.",
+    "wood": "About 70 per cent former bourbon casks and 30 per cent former sherry casks, by the producer's account. 12 Year Old is the age the label gives: nothing in the bottle is younger than twelve years.",
+    "strength": "46% ABV",
+    "taste": "Sweet confectionery and a gentle smoke like toasted marshmallow on the nose; then citrus zest turning oily, with peat, spice and toffee, and a finish of campfire smoke, nut pie and butterscotch, as the producer describes it.",
+    "pour": "Neat, with a few drops of water to bring the citrus forward; a malt to sip slowly.",
+    "label": [
+     {
+      "term": "Kilkerran",
+      "means": "The malt's name, from the old Gaelic name of Campbeltown; the distillery that makes it is Glengyle."
+     },
+     {
+      "term": "Single Malt Scotch Whisky",
+      "means": "Malted barley only, from pot stills at the one distillery, Glengyle."
+     }
+    ]
+   },
+   "table": "Kilkerran 12 Year Old is the malt of Glengyle, the Campbeltown distillery revived in 2004 by the firm behind Springbank. Lightly peated and aged in bourbon and sherry casks, it gives citrus, toffee and a soft campfire smoke; pour it neat.",
+   "story": "One of the Mitchell brothers of Springbank left the family distillery after a quarrel with his brother and founded Glengyle nearby in 1872. It was sold in 1919 and stopped distilling in 1925, one of the many Campbeltown distilleries lost in the slump after the First World War. In 2000 Mitchell's Glengyle, a company headed by Springbank's then chairman, bought the silent buildings, and after four years of rebuilding the first spirit ran in 2004, through stills first made for the Ben Wyvis distillery. The whisky could not carry the distillery's name, because the Glengyle name had passed to another company and stood on a blended malt, so it is sold as Kilkerran, from Ceann Loch Chille Chiarain, the Gaelic name of the settlement where Saint Kieran is said to have kept his cell. Early bottlings came out as work in progress while the spirit aged, and in 2016 a standing 12 Year Old joined the range. The revival gave Campbeltown three working distilleries again. For a bartender the 12 is the town's softer smoke, a lighter peating than Longrow from a still house of its own.",
+   "others": [
+    {
+     "name": "Kilkerran 16 Year Old",
+     "note": "Added to the core range in 2020 and released yearly, its casks varying a little from year to year."
+    },
+    {
+     "name": "Kilkerran Heavily Peated",
+     "note": "Released in batches at cask strength, peated to about 45 parts per million and matured mostly in bourbon casks."
+    }
+   ],
+   "traps": [
+    "There is no Kilkerran distillery: the malt is made at Glengyle and sold under another name because the Glengyle name passed to another company.",
+    "Kilkerran is not distilled at Springbank, though Springbank malts its barley and the Springbank team works its short distilling season."
+   ],
+   "cards": [
+    {
+     "id": "glengyle-name",
+     "prompt": "Why is the malt of Glengyle sold as Kilkerran?",
+     "answer": "The Glengyle name had passed to another company; Kilkerran comes from the old Gaelic name of Campbeltown."
+    },
+    {
+     "id": "revival",
+     "prompt": "In which year did Glengyle, the home of Kilkerran, run its first spirit again?",
+     "answer": "2004, after four years of rebuilding; it had stopped distilling in 1925."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "glengyle-name",
+     "q": "A guest asks which distillery makes Kilkerran 12 Year Old. What do you tell them?",
+     "options": [
+      "Springbank",
+      "Glen Scotia",
+      "Ben Wyvis",
+      "Glengyle"
+     ],
+     "a": 3,
+     "explain": "Kilkerran is the malt of Glengyle, sold under another name; Springbank malts its barley and lends its team, but the spirit is distilled at Glengyle, and Ben Wyvis gave only its stills."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "revival",
+     "q": "Glengyle stopped distilling in 1925. In which year did the distillery that makes Kilkerran run its first spirit again?",
+     "options": [
+      "2000",
+      "2004",
+      "2009",
+      "2016"
+     ],
+     "a": 1,
+     "explain": "The buildings were bought in 2000 and rebuilt over four years, with the first spirit in 2004; 2016 is the year the 12 Year Old joined the range."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Kilkerran: the Glengyle Distillery",
+     "url": "https://kilkerran.scot/the-glengyle-distillery/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Kilkerran: the 12 Year Old",
+     "url": "https://kilkerran.scot/kilkerran-bottlings/12yo/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Glengyle distillery",
+     "url": "https://en.wikipedia.org/wiki/Glengyle_distillery",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Scotchwhisky.com: Kilkerran, Whiskypedia",
+     "url": "https://scotchwhisky.com/whiskypedia/2052/kilkerran/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Scotchwhisky.com: Ben Wyvis, Whiskypedia",
+     "url": "https://scotchwhisky.com/whiskypedia/2015/ben-wyvis/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note on the closure: the producer's own history and Wikipedia both give 1925, so the year stands; the seventy-nine dormant years are not counted. The short season with the Springbank team is the producer's account (about three months, October to December) and is hedged; the months are left out, as a habit that may change.",
+    "Who holds the Glengyle name differs: Scotchwhisky.com says the mark passed to Bloch Bros, the previous owner, and Wikipedia says Loch Lomond Distillers holds it for a blended malt. The record says only that the name had passed to another company and stood on a blended malt.",
+    "The year field is empty: Glengyle was founded in 1872, but Kilkerran is a name first bottled in the 2000s, and the first release is 2007 in one Scotchwhisky.com page and 2009 in another. The 12 Year Old's release in 2016 stands in Scotchwhisky.com and Whisky Magazine.",
+    "The Ben Wyvis stills rest on Wikipedia's Ben Wyvis and Glengyle pages and on Scotchwhisky.com; the capacities differ between them and are left out. The number of distillations is not stated, though one wash still and one spirit still suggest two.",
+    "Mitchell's Glengyle was headed by the Springbank chairman who died in 2023, by the producer's account; he is not named. Frank McHardy, quoted on the producer's page, is already in people.json and is not named.",
+    "The label terms are read from the producer's pages, not a photograph of the label; the age wording on the label was not confirmed."
+   ],
+   "checked": null
+  },
+  {
+   "key": "longrow",
+   "group": "campbeltown",
+   "producer": "Longrow",
+   "madeBy": "Springbank Distillery",
+   "style": "campbeltown",
+   "chapter": "scotch-regions",
+   "shelf": "",
+   "library": "Springbank",
+   "say": "",
+   "place": "Campbeltown, Kintyre, Argyll, Scotland",
+   "year": "",
+   "yearIs": "",
+   "bottle": {
+    "name": "Longrow Peated Campbeltown Single Malt Scotch Whisky",
+    "class": "Single malt Scotch whisky, distilled in the Campbeltown locality",
+    "mash": "Malted barley only, floor-malted at Springbank and dried over peat smoke for about 48 hours, to about 45 parts per million of phenols, by the house's account.",
+    "still": "Distilled twice at Springbank in Campbeltown, in the same copper stills that make Springbank and Hazelburn.",
+    "wood": "A marriage of former bourbon and former sherry casks; the producer gives no proportions, and the label carries no age statement.",
+    "strength": "46% ABV",
+    "taste": "Creamy vanilla custard on the nose, with smoke that builds slowly, then toasted marshmallow, herbs and rich fruit; creamy on the palate with a slight medicinal edge and smoke in waves, and a long finish, as the producer describes it.",
+    "pour": "Neat or with a few drops of water to let the smoke open; it can also stand as the smoky float on a Penicillin.",
+    "label": [
+     {
+      "term": "Peated",
+      "means": "Made from heavily peated malt: the smoky one of the three malts of Springbank distillery."
+     },
+     {
+      "term": "Campbeltown Single Malt Scotch Whisky",
+      "means": "Malted barley only, from the pot stills of Springbank distillery in Campbeltown."
+     }
+    ]
+   },
+   "table": "Longrow Peated is the heavily peated malt of Springbank distillery in Campbeltown, distilled twice and sold under its own name. Bourbon and sherry casks bring vanilla custard and rich fruit under slow, building smoke; pour it neat for a guest who wants smoke from outside Islay.",
+   "story": "Longrow takes its name from a Campbeltown distillery built in 1824, which closed in 1896. It stood next door to Springbank, and by the house's account its old warehouse became Springbank's bottling hall. The name came back in 1973, when Springbank's then chairman ran an experiment to prove that an Islay-style malt could be made on the mainland: barley peated hard on the distillery's own kiln and distilled twice, in place of Springbank's two and a half times. The spirit was not made every year at first, and it was in the 1990s that Longrow was distilled regularly and took its place as a single malt of its own. The standing bottling carries no age statement and is labelled Peated. For a bartender Longrow completes the lesson of one distillery: the same barley malted on the same floors and the same stills, yet heavy smoke against Springbank's light peat and Hazelburn's none.",
+   "others": [
+    {
+     "name": "Longrow 100 Proof",
+     "note": "A yearly release of Longrow bottled at 100 proof in the old British measure, stronger than the Peated."
+    }
+   ],
+   "traps": [
+    "Longrow is made at Springbank distillery: the old Longrow distillery closed in 1896, and there has been no Longrow distillery since.",
+    "Longrow is a Campbeltown malt, not an Islay one, though it was first made to prove that Islay-style smoke could come from the mainland."
+   ],
+   "cards": [
+    {
+     "id": "twice",
+     "prompt": "How many times is Longrow distilled at Springbank?",
+     "answer": "Twice, against two and a half times for Springbank and three for Hazelburn."
+    },
+    {
+     "id": "experiment",
+     "prompt": "Why was Longrow first distilled at Springbank in 1973?",
+     "answer": "As an experiment to prove that an Islay-style malt could be made on the mainland."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "twice",
+     "q": "A guest compares the three malts of Springbank distillery. How many times is the heavily peated Longrow distilled?",
+     "options": [
+      "Twice, in pot stills",
+      "Two and a half times",
+      "Three times in full",
+      "Once, in a column"
+     ],
+     "a": 0,
+     "explain": "Longrow is distilled twice; two and a half times is the regime for Springbank itself, and three times for the unpeated Hazelburn."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "experiment",
+     "q": "In 1973 Springbank first made Longrow as an experiment. What did it set out to prove?",
+     "options": [
+      "Wheat could take the place of malted barley",
+      "Grain whisky could age as long as malt",
+      "Islay-style malt could be made on the mainland",
+      "Sherry casks could tame a heavy peating"
+     ],
+     "a": 2,
+     "explain": "Springbank's then chairman set out to show that a heavily peated malt in the Islay manner could be distilled on the mainland; grain whisky played no part in it."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Springbank: Longrow",
+     "url": "https://www.springbank.scot/whisky/longrow/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Springbank: Longrow Peated",
+     "url": "https://www.springbank.scot/whisky/longrow/peated/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Springbank: Process",
+     "url": "https://www.springbank.scot/about/process/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Scotchwhisky.com: Longrow, Whiskypedia",
+     "url": "https://scotchwhisky.com/whiskypedia/2062/longrow/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Grace's Guide: Longrow Distillery",
+     "url": "https://www.gracesguide.co.uk/Longrow_Distillery",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note is settled: the producer has a page titled Longrow Peated, at 46% ABV, from bourbon and sherry casks, and the producer's Longrow page calls the malt double distilled. A bar menu of the distillery once called it distilled 2.5 times; the record follows the product and process pages, and the Ledger's style page agrees.",
+    "On a 10 Year Old as standard: Scotchwhisky.com's timeline gives a 10 Year Old introduced in 1997, but no producer page read lists one now, and the producer's no age statement bottling is Peated. The 10 is left out; no swap proposed.",
+    "The year Longrow Peated replaced an earlier unaged Longrow (given as 2011 or 2012) rests on shops and a review site and is left out, so the year field is empty: 1824 and 1973 belong to the old distillery and to the first distillation, not to the label's founding or first release.",
+    "The founders of the old Longrow distillery (John Ross, John Colville and John Beith) are left unnamed, for want of their dates; Wikipedia and Grace's Guide differ on their roles. The closure in 1896 stands in Scotchwhisky.com and Grace's Guide.",
+    "The peating figures (48 hours of peat smoke, 45 parts per million) are the producer's. The 100 Proof note rests on the producer's page for its 2025 release; its exact strength is not given.",
+    "The label terms are read from the producer's pages and a shop's product title, not a photograph of the label."
+   ],
+   "checked": null
+  },
+  {
+   "key": "hazelburn",
+   "group": "campbeltown",
+   "producer": "Hazelburn",
+   "madeBy": "Springbank Distillery",
+   "style": "campbeltown",
+   "chapter": "scotch-regions",
+   "shelf": "",
+   "library": "Springbank",
+   "say": "",
+   "place": "Campbeltown, Kintyre, Argyll, Scotland",
+   "year": "",
+   "yearIs": "",
+   "bottle": {
+    "name": "Hazelburn 10 Year Old Single Malt Scotch Whisky",
+    "class": "Single malt Scotch whisky, distilled in the Campbeltown locality",
+    "mash": "Malted barley only, floor-malted at Springbank and dried with hot air alone, with no peat smoke, by the house's account.",
+    "still": "Distilled three times at Springbank in Campbeltown, through the same copper stills that make Springbank and Longrow.",
+    "wood": "Former bourbon casks only, by the producer's account. 10 Year Old is the age the label gives: nothing in the bottle is younger than ten years.",
+    "strength": "46% ABV",
+    "taste": "Baked pineapple, lemon sherbet, honeycomb and dried orange peel on the nose; green apple with a slight vegetal note and custard tart on the palate; then a light earthiness, salted caramel, ginger and toasted coconut, in the producer's notes.",
+    "pour": "Neat or with a few drops of water; with no peat in it, it is the gentle malt to pour for a guest new to Scotch.",
+    "label": [
+     {
+      "term": "Hazelburn",
+      "means": "The unpeated, triple-distilled malt of Springbank distillery, named for a lost Campbeltown distillery."
+     },
+     {
+      "term": "Campbeltown Single Malt Scotch Whisky",
+      "means": "Malted barley only, from the pot stills of Springbank distillery in Campbeltown."
+     }
+    ]
+   },
+   "table": "Hazelburn 10 Year Old is the unpeated malt of Springbank distillery in Campbeltown, distilled three times and aged ten years in former bourbon casks. It is light and fruity, with pineapple, lemon and honeycomb; pour it neat for a guest who wants Campbeltown without smoke.",
+   "story": "Hazelburn takes its name from one of the Campbeltown distilleries lost in the 1920s, when the slump after the First World War closed most of the town's stills; the sources differ on its last owners and on the very year it shut. The name lay unused for seventy years. In 1997 Springbank, which had first made the heavily peated Longrow in 1973, began a third spirit at the same address: barley malted on its own floors and dried with hot air alone, with no peat, then distilled three times through the same copper stills. That gave the distillery three malts from one barley and one still house, told apart by the peat in the kiln and the number of times the spirit runs: Longrow twice, Springbank two and a half times and Hazelburn three. By the producer's account the 10 Year Old, from bourbon casks alone, is the flagship of the Hazelburn range, bottled each year at 46% ABV. For a bartender it is the control in the experiment: set beside Springbank 10 and Longrow Peated, it lets a guest taste what peat and a third distillation do to one spirit.",
+   "others": [
+    {
+     "name": "Hazelburn Sherry Wood 8 Year Old",
+     "note": "A younger Hazelburn, eight years in sherry casks, released yearly."
+    }
+   ],
+   "traps": [
+    "Hazelburn is made at Springbank distillery; the old Hazelburn distillery closed in the 1920s.",
+    "Hazelburn is unpeated, not lightly peated: its malt is dried with hot air alone, and the smoke at this distillery comes in Longrow and, lightly, in Springbank."
+   ],
+   "cards": [
+    {
+     "id": "unpeated",
+     "prompt": "How is the malt for Hazelburn dried at Springbank?",
+     "answer": "With hot air alone and no peat smoke; the spirit is then distilled three times."
+    },
+    {
+     "id": "first-distilled",
+     "prompt": "In which year did Springbank first distil Hazelburn?",
+     "answer": "1997; the name is that of a Campbeltown distillery lost in the 1920s."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "unpeated",
+     "q": "A guest wants a Campbeltown malt with no smoke and is offered Hazelburn 10 Year Old. How is its malt dried?",
+     "options": [
+      "Over peat for two days",
+      "With hot air alone",
+      "Over a beech wood fire",
+      "In the open sun"
+     ],
+     "a": 1,
+     "explain": "Hazelburn's malt is dried with hot air and no peat; two days of peat smoke is the treatment for Longrow's malt, at the same distillery."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "first-distilled",
+     "q": "Springbank first made Longrow in 1973. In which year did it first distil Hazelburn?",
+     "options": [
+      "1837",
+      "1979",
+      "1997",
+      "2004"
+     ],
+     "a": 2,
+     "explain": "Hazelburn was first distilled in 1997; 2004 is the year Glengyle, the home of Kilkerran, ran its first spirit again."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Springbank: Hazelburn",
+     "url": "https://www.springbank.scot/whisky/hazelburn/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Springbank: Hazelburn 10 Year Old",
+     "url": "https://www.springbank.scot/whisky/hazelburn/10yo-2024/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Springbank: Whisky",
+     "url": "https://www.springbank.scot/whisky/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Hazelburn distillery",
+     "url": "https://en.wikipedia.org/wiki/Hazelburn_distillery",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Scotchwhisky.com: Hazelburn, Whiskypedia",
+     "url": "https://scotchwhisky.com/whiskypedia/2043/hazelburn/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note is settled: the producer lists Hazelburn 10 Year Old pages for 2024 and for its next bottling, at 46% ABV and 100 per cent bourbon casks, and calls it the flagship of the Hazelburn range. It comes out each year, always at 46%, so the strength is given as a single figure; no swap proposed.",
+    "The year field is empty: 1997 is the first distillation, and the first bottling (an 8 Year Old in 2005) rests on one Scotchwhisky.com timeline and is left out.",
+    "The old Hazelburn distillery is given only as lost in the 1920s: Wikipedia gives a closure of 1925 and Scotchwhisky.com other owners and years (1921, 1926), and its founding year (1825, or a link with Rieclachan) is disputed and left out. Seventy years is the round span from the 1920s to 1997.",
+    "The plan's why says air dried barley; the producer says the kiln dries Hazelburn's malt with hot air, and the record says that.",
+    "The Ledger's Campbeltown style page and its quiz (Hazelburn unpeated, distilled three times, first distilled in 1997) agree with the producer.",
+    "The label terms are read from the producer's pages, not a photograph of the label. The Sherry Wood 8 Year Old rests on the producer's page for its 2025 release; its strength is not given."
+   ],
+   "checked": null
+  }
+ ]
+}
