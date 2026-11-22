@@ -1,0 +1,635 @@
+{
+  "group": "blended-scotch",
+  "records": [
+    {
+      "key": "johnnie-walker",
+      "group": "blended-scotch",
+      "producer": "Johnnie Walker",
+      "madeBy": "",
+      "style": "blended-scotch",
+      "chapter": "scotch",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Kilmarnock, East Ayrshire, Scotland",
+      "year": "1820",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Johnnie Walker Black Label 12 Year Old Blended Scotch Whisky",
+        "class": "Blended Scotch whisky, aged 12 years",
+        "mash": "Malted barley for the single malts and other cereals for the grain whiskies. The house names Cardhu, Glenkinchie and Caol Ila among its malts and publishes no full recipe.",
+        "still": "The malts come from copper pot stills at distilleries across Scotland and the grain whiskies from column stills; the house blends them and does not name every distillery.",
+        "wood": "Oak casks, which the house does not name. Every whisky in the blend, malt and grain, has aged at least twelve years, and the label states 12 Year Old.",
+        "strength": "40% ABV, 43% in some markets",
+        "taste": "Dark fruit, sweet spice and vanilla, with creamy toffee beneath and a soft cloak of smoke that carries into the finish.",
+        "pour": "Neat, with a few drops of water or over ice; long with ginger ale or soda in a highball, and stirred into a Rob Roy or a Blood and Sand.",
+        "label": [
+          {
+            "term": "Black Label",
+            "means": "No legal meaning: the name the twelve year old took in 1909, after the colour of its label."
+          },
+          {
+            "term": "12 Year Old",
+            "means": "Every whisky in the blend, malt and grain, has aged at least twelve years in cask."
+          },
+          {
+            "term": "Blended Scotch Whisky",
+            "means": "Single malt and single grain Scotch married together, by the Scotch Whisky Regulations 2009."
+          }
+        ]
+      },
+      "table": "Johnnie Walker Black Label 12 Year Old is the Kilmarnock house's aged blend, every whisky in it at least twelve years old. Cardhu's fruit, Glenkinchie's toffee and a soft wisp of Caol Ila smoke make it a neat pour or a rich highball.",
+      "story": "John Walker (1805 to 1857) opened a grocery in Kilmarnock in 1820, after his father's death, and sold whisky among his groceries. His son Alexander Walker (1837 to 1889) took over the business on John's death in 1857 and made it a whisky house: in the 1860s he sold a blend of his own, Old Highland Whisky, and the house's archive dates its slanted label to that decade. In 1893 the firm bought Cardhu on Speyside, its first distillery, and Cardhu malt has stood in the blends ever since. Alexander's sons widened the range and sold it by the colour of its labels, and in 1908 the Striding Man was drawn for the brand. In 1909 the aged blend, Extra Special Old Highland Whisky, was renamed Black Label, since buyers were already asking for it by its label; it has carried twelve years from the start. Behind a bar it is the aged blend to know first: twelve years, malts from across Scotland and a little smoke, and the label a guest names when asking for Scotch by colour.",
+      "others": [
+        {
+          "name": "Johnnie Walker Red Label",
+          "note": "The house's blend made for mixing, with no age statement."
+        },
+        {
+          "name": "Johnnie Walker Green Label",
+          "note": "A blended malt of single malts aged at least fifteen years, with no grain whisky, bottled at 43% ABV."
+        },
+        {
+          "name": "Johnnie Walker Double Black",
+          "note": "A smokier sibling of Black Label, with no age statement, bottled at 40% ABV."
+        }
+      ],
+      "traps": [
+        "There is no Johnnie Walker distillery: the blend draws on many, among them Cardhu on Speyside, Glenkinchie in the Lowlands and Caol Ila on Islay.",
+        "The 12 on the label is a minimum: every whisky in the blend, malt and grain alike, has spent at least twelve years in cask.",
+        "Green Label is a blended malt with no grain whisky in it; Black Label is a blended Scotch, malt and grain together."
+      ],
+      "cards": [
+        {
+          "id": "malts",
+          "prompt": "Which three malts does Johnnie Walker name in Black Label?",
+          "answer": "Cardhu from Speyside for fruit, Glenkinchie from the Lowlands for toffee, and Caol Ila from Islay for smoke."
+        },
+        {
+          "id": "rename",
+          "prompt": "What was Johnnie Walker Black Label called before 1909?",
+          "answer": "Extra Special Old Highland Whisky; buyers asked for it by its label's colour, and the name Black Label followed in 1909."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "malts",
+          "q": "A guest asks where the smoke in Johnnie Walker Black Label comes from. Which malt does the house name?",
+          "options": ["Caol Ila", "Cardhu", "Glenkinchie", "Strathisla"],
+          "a": 0,
+          "explain": "Caol Ila, on Islay, gives the cloak of smoke; Cardhu, the nearest wrong answer, brings sweet fruit and spice from Speyside."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "rename",
+          "q": "Under which name did Johnnie Walker sell its twelve year old blend before it became Black Label in 1909?",
+          "options": ["Kilmarnock Reserve", "Extra Special Old Highland", "Walker's Kilmarnock Blend", "Old Vatted Glenlivet"],
+          "a": 1,
+          "explain": "Extra Special Old Highland Whisky became Black Label in 1909, when buyers already named it by colour; Old Vatted Glenlivet was another Edinburgh house's blend."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Johnnie Walker: Black Label",
+          "url": "https://www.johnniewalker.com/en-gb/our-whisky/core-range/johnnie-walker-black-label-blended-scotch-whisky-70-cl",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Johnnie Walker: the Johnnie Walker story",
+          "url": "https://www.johnniewalker.com/en-gb/whisky-guide/the-johnnie-walker-story",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Diageo: two hundred years of Johnnie Walker from its archive",
+          "url": "https://www.diageo.com/en/news-and-media/stories/2020/celebrating-200-years-of-our-johnnie-walker-story-from-the-diageo-archive",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Wikipedia: Johnnie Walker",
+          "url": "https://en.wikipedia.org/wiki/Johnnie_Walker",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "Difford's Guide: Johnnie Walker Black Label",
+          "url": "https://www.diffordsguide.com/en-au/beer-wine-spirits/306/johnnie-walker-black-label",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "First blend: sources give 1860, 1865 and 1867 for Old Highland Whisky and its registration, so the story says the 1860s, as the plan asked. The slanted label is dated to the 1860s by the Diageo archive timeline; one Diageo story credits John rather than Alexander with it, so the record ties it to the decade, not to a man.",
+        "The Extra Special name: Whisky Magazine and Master of Malt date the relaunch of three blends as Extra Special Old Highland to 1906, and the Whisky Exchange dates the Johnnie Walker name to 1908; the record gives only the 1909 rename to Black Label, which the house's own page and Difford's Guide agree on.",
+        "Dates of the dead: John Walker (1805 to 1857) rests on the National Records of Scotland and Grace's Guide; Alexander Walker (1837 to 1889) on Wikipedia and the Whisky Exchange. Cardhu in 1893 rests on Wikipedia's Cardhu page, The Scotsman and the house's own Cardhu history; that page is not among the five sources for want of room.",
+        "Strength: the house's British and Nigerian pages give 40% ABV and its South African page 43%, so the field says 43% in some markets.",
+        "Left out for want of a second source: the square bottle (one Diageo story credits John and ties it to breakage at sea, the archive timeline dates it to the 1870s), the illustrator of the Striding Man, the count of whiskies in the blend (given as up to 40 by one trade page) and the grain distillery. The Kilmarnock bottling hall's closure in 2012 rests on Wikipedia alone and is left out.",
+        "Green Label is held here as an other bottling, as the plan's note asks. No living person is named; none surfaced in the searches beyond the brand's present blenders, whom no source here named.",
+        "Ownership: Diageo is not named, as the plan's note asks; the Distillers Company merger of 1925 is left out."
+      ],
+      "checked": null
+    },
+    {
+      "key": "chivas-regal",
+      "group": "blended-scotch",
+      "producer": "Chivas Regal",
+      "madeBy": "Chivas Brothers",
+      "style": "blended-scotch",
+      "chapter": "scotch",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Aberdeen, Scotland",
+      "year": "1909",
+      "yearIs": "first released",
+      "bottle": {
+        "name": "Chivas Regal 12 Year Old Blended Scotch Whisky",
+        "class": "Blended Scotch whisky, aged 12 years",
+        "mash": "Malted barley for the malts and other cereals for the grain. The house names Strathisla single malt at the heart of the blend and Strathclyde single grain beside it, and publishes no full recipe.",
+        "still": "Strathisla's malt comes from copper pot stills at Keith on Speyside and the Strathclyde grain from column stills; the other malts and grains are not named.",
+        "wood": "Oak casks; every whisky in the blend has aged at least twelve years, and the label states 12 Year Old. The house does not publish its mix of casks.",
+        "strength": "40% ABV (80 proof)",
+        "taste": "Orchard fruit, heather and honey on the nose, then honey, vanilla, hazelnut and butterscotch on a round, creamy palate, with ripe pear behind.",
+        "pour": "Neat, over ice or long with soda in a highball, the serve the house itself gives; it also stands in a Rob Roy or a Penicillin.",
+        "label": [
+          {
+            "term": "12 Year Old",
+            "means": "Every whisky in the blend, malt and grain, has aged at least twelve years in cask."
+          },
+          {
+            "term": "Blended Scotch Whisky",
+            "means": "Single malt and single grain Scotch married together, by the Scotch Whisky Regulations 2009."
+          }
+        ]
+      },
+      "table": "Chivas Regal 12 Year Old is the Aberdeen house's honeyed Speyside blend, built around Strathisla malt from Keith with Strathclyde grain. Expect orchard fruit, honey, vanilla and hazelnut; pour it neat, over ice or long with soda.",
+      "story": "The firm traces itself to a grocery opened on King Street in Aberdeen in 1801, which the Chivas brothers came to run, and in 1843, by the house's account, Queen Victoria granted it a Royal Warrant as grocers to the royal household. Chivas Brothers blended whisky in its own cellars for Aberdeen customers who asked for a softer dram, and in 1909 it launched Chivas Regal, an aged blend that the house says first carried twenty-five years. American Prohibition from 1920 cut off much of that trade, and in 1938, by the house's account, it came back with Chivas Regal 12 Year Old. In 1949 the Seagram company bought Chivas Brothers, and in 1950 it bought the Strathisla distillery at Keith, whose malt became the heart of every Chivas blend. In 2001 Pernod Ricard bought Chivas Brothers as Seagram's drinks business was divided. For a bartender the twelve year old is the honeyed Speyside answer to the smokier Johnnie Walker Black Label, and the second aged blend to know by heart.",
+      "others": [
+        {
+          "name": "Chivas Regal 18 Year Old",
+          "note": "Eighteen years in cask at the minimum, six more than the 12, with dried fruit, toffee and dark chocolate."
+        },
+        {
+          "name": "Chivas Regal Extra 13 Sherry Cask",
+          "note": "A thirteen year old blend with part of it matured in Oloroso sherry casks."
+        },
+        {
+          "name": "Chivas Regal Mizunara",
+          "note": "A blend with part of it finished in Japanese Mizunara oak."
+        }
+      ],
+      "traps": [
+        "The year 1801 that the house gives is the year of the Aberdeen grocery behind the firm, not to the whisky: Chivas Regal was first blended in 1909.",
+        "There is no Chivas Regal distillery: the blend is built around Strathisla malt from Keith, with Strathclyde grain and other whiskies the house does not name.",
+        "Chivas Brothers is the firm and Chivas Regal its blend; Strathisla is the distillery at the heart of it."
+      ],
+      "cards": [
+        {
+          "id": "heart-malt",
+          "prompt": "Which single malt stands at the heart of Chivas Regal 12 Year Old?",
+          "answer": "Strathisla, from Keith on Speyside, married with Strathclyde single grain."
+        },
+        {
+          "id": "twelve-year-old",
+          "prompt": "In which year did Chivas Regal release its twelve year old?",
+          "answer": "In 1938, by the house's account, after American Prohibition; Chivas Regal itself was first blended in 1909."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "heart-malt",
+          "q": "A guest asks which single malt sits at the heart of Chivas Regal 12 Year Old. Which does the house name?",
+          "options": ["Glenburgie", "Cardhu", "Strathisla", "Aberfeldy"],
+          "a": 2,
+          "explain": "Strathisla, from Keith, runs through every Chivas blend; Glenburgie is the malt Ballantine's calls the heart of its own character."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "twelve-year-old",
+          "q": "Chivas Regal was first blended in 1909. In which year did the house release its 12 Year Old?",
+          "options": ["1920", "1909", "1949", "1938"],
+          "a": 3,
+          "explain": "The house gives 1938, after Prohibition; 1949 is the year the Seagram company bought Chivas Brothers, not the year of the 12."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Chivas Regal: Chivas Regal 12 Year Old",
+          "url": "https://www.chivas.com/en-us/collection/chivas-12/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Chivas Regal: our history",
+          "url": "https://www.chivas.com/en/our-history/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Wikipedia: Chivas Brothers",
+          "url": "https://en.wikipedia.org/wiki/Chivas_Brothers",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "Pernod Ricard: our key dates",
+          "url": "https://www.pernod-ricard.com/en/our-group/our-key-dates/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "The Whiskey Wash: Chivas Regal 12 Year Old tasted",
+          "url": "https://thewhiskeywash.com/reviews/whisky-review-chivas-regal-12-year-old/",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "The 1801 founding: Wikipedia names a William Edward (or Forrest) as the grocer of 1801, with James Chivas joining in 1838 and the firm becoming Chivas Brothers later; the house's page has the brothers open the shop themselves. The record says the brothers came to run it and keeps 1801 for the grocery alone, as the plan asked. Whether the label itself prints Established 1801 Aberdeen was not confirmed, so it is not a label term here.",
+        "The brothers James and John Chivas, and the blender of 1909, are not named: no two sources gave their deaths. The plan offered Charles Stewart Howard as the blender of 1909; the searches found only a Charles Howard named with another blender, and no dates, so he is left out.",
+        "The twelve year old: the house's own page gives 1938 and the record follows it, hedged; the plan noted a 1939 American release in some sources. The twenty-five year old of 1909 rests on the house's own page alone and is told as its claim.",
+        "Casks: The Whiskey Wash gives former bourbon and former sherry casks; no second source or house page was found, so the wood field says the house publishes no cask mix.",
+        "Seagram's purchase of 1949 rests on Wikipedia and Grace's Guide (not cited, for want of room); Strathisla in 1950 on Wikipedia's Chivas Brothers and Strathisla pages. Pernod Ricard's 2001 purchase rests on its own key dates and Wikipedia; one account dates the bid to December 2000."
+      ],
+      "checked": null
+    },
+    {
+      "key": "dewars",
+      "group": "blended-scotch",
+      "producer": "Dewar's",
+      "madeBy": "John Dewar & Sons",
+      "style": "blended-scotch",
+      "chapter": "scotch",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Perth, Perth and Kinross, Scotland",
+      "year": "1846",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Dewar's White Label Blended Scotch Whisky",
+        "class": "Blended Scotch whisky",
+        "mash": "Malted barley for the malts and other cereals for the grain: many single malts and grains, with Aberfeldy malt at the heart. The house publishes no full recipe.",
+        "still": "Aberfeldy's malt comes from copper pot stills at Aberfeldy in Perthshire and the grain whiskies from column stills; the house does not name its other distilleries.",
+        "wood": "Oak casks, then, by the house's account, a second rest in oak for about six months after blending, which it calls double ageing. No age statement on the label.",
+        "strength": "40% ABV",
+        "taste": "Heather honey, pear and citrus on the nose, then vanilla fudge, toffee and toasted oak, with a fresh herbal edge and honey on the finish.",
+        "pour": "Long with soda or ginger ale in a highball, over ice, or stirred into a Rob Roy or a Rusty Nail.",
+        "label": [
+          {
+            "term": "White Label",
+            "means": "No legal meaning: the name of the blend since it was first made in 1899."
+          },
+          {
+            "term": "Blended Scotch Whisky",
+            "means": "Single malt and single grain Scotch married together, by the Scotch Whisky Regulations 2009."
+          }
+        ]
+      },
+      "table": "Dewar's White Label is the Perth house's blended Scotch, built around honeyed Aberfeldy malt since 1899. Light, with heather honey, pear and vanilla fudge, it belongs in a highball: long with soda or ginger ale, over plenty of ice.",
+      "story": "John Dewar (1805 to 1880) left a family partnership to open his own wine and spirits shop on the High Street of Perth in 1846, and he sold whisky in glass bottles under his own name. On his death in 1880 the firm passed to his sons: the elder ran it in Scotland, and the younger became its salesman in London and abroad. In 1893 Queen Victoria granted John Dewar & Sons a Royal Warrant. The brothers built a distillery of their own at Aberfeldy in Perthshire, which began distilling in 1898, to make the malt at the heart of the house's blends. In 1899 the firm's first master blender from outside the family created White Label, with Aberfeldy at its core. In 1925 John Dewar & Sons joined the Distillers Company, and in 1998 Bacardi bought Dewar's together with four malt distilleries, Aberfeldy among them. The house tells of double ageing: once the whiskies are blended, they rest again in oak before bottling. Behind a bar White Label is the blend for a Scotch and soda, light enough to stretch and honeyed enough to hold its own.",
+      "others": [
+        {
+          "name": "Dewar's 12 Year Old",
+          "note": "Twelve years at the minimum, rested again in oak after blending; butterscotch, cereal and soft spice."
+        },
+        {
+          "name": "Dewar's 15 Year Old",
+          "note": "Fifteen years at the minimum, married and then rested again in oak casks."
+        }
+      ],
+      "traps": [
+        "White Label carries no age statement: the 12, 15 and 18 Year Old are separate bottlings of the house.",
+        "There is no Dewar's distillery as such: Aberfeldy, built by the Dewar brothers, makes the malt at the blend's heart, and malts and grains from other distilleries join it."
+      ],
+      "cards": [
+        {
+          "id": "heart-malt",
+          "prompt": "Which distillery's malt is at the heart of Dewar's White Label?",
+          "answer": "Aberfeldy, in Perthshire, built by the Dewar brothers and distilling from 1898."
+        },
+        {
+          "id": "first-blend",
+          "prompt": "In which year was Dewar's White Label first blended?",
+          "answer": "In 1899, by the firm's first master blender from outside the Dewar family."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "heart-malt",
+          "q": "A guest asks which malt gives Dewar's White Label its honeyed core. Which distillery does the house name?",
+          "options": ["Glenturret", "Aberfeldy", "Strathisla", "Cardhu"],
+          "a": 1,
+          "explain": "Aberfeldy, built by the Dewar brothers in Perthshire, is the heart malt; Strathisla is the heart of Chivas Regal instead."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "first-blend",
+          "q": "In which year did the Perth firm of Dewar's first blend White Label?",
+          "options": ["1846", "1880", "1899", "1925"],
+          "a": 2,
+          "explain": "White Label came in 1899, a year after Aberfeldy began distilling; 1846 is the year John Dewar opened his Perth shop."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Dewar's: the Dewar's heritage",
+          "url": "https://www.dewars.com/dewars-heritage/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Dewar's: White Label",
+          "url": "https://shop.dewars.com/products/dewars-white-label-whisky",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Bacardi: Dewar's blended Scotch whisky",
+          "url": "https://www.bacardilimited.com/our-brands/dewars/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Wikipedia: John Dewar and Sons",
+          "url": "https://en.wikipedia.org/wiki/John_Dewar_%26_Sons",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "Difford's Guide: John Dewar and Sons, a history",
+          "url": "https://www.diffordsguide.com/producers/857/john-dewar-and-sons-ltd",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "Aberfeldy: Bacardi's page says the brothers founded it in 1898, and Whisky Magazine has production begin in 1898, a year before White Label; the plan noted 1896 in some sources, which is the year building began by other accounts. The record says it began distilling in 1898.",
+        "The first master blender: the plan allows A. J. Cameron to be named, but no two sources gave his death, so he is described by his role. The house dates his first creation to 1897; another source gives 1890; the record gives no year for his joining.",
+        "The sons: John Alexander Dewar and Tommy Dewar are described by role, not named, since their dates were not confirmed in two sources here. John Dewar's dates rest on Wikipedia's John Dewar Sr. page and Difford's Guide; one Wikipedia page gives 1825 for his birth, which the record does not follow.",
+        "Double ageing: the six months of rest after blending rests on the house's White Label shop page alone and is told as the house's account; its FAQ does not mention it.",
+        "Left out: the count of whiskies (up to 30 by the house's FAQ, over 40 by another page), the claim that Dewar's was the first blend granted a Royal Warrant, the house's own account of the highball, and the grain distillery, for want of a second source.",
+        "The 1998 sale rests on Wikipedia, The Spirits Business and a New York Times item of 31 March 1998; the month differs by source and is not given."
+      ],
+      "checked": null
+    },
+    {
+      "key": "the-famous-grouse",
+      "group": "blended-scotch",
+      "producer": "The Famous Grouse",
+      "madeBy": "Matthew Gloag & Son",
+      "style": "blended-scotch",
+      "chapter": "scotch",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Perth, Perth and Kinross, Scotland",
+      "year": "",
+      "yearIs": "",
+      "bottle": {
+        "name": "The Famous Grouse Blended Scotch Whisky",
+        "class": "Blended Scotch whisky",
+        "mash": "Malted barley for the malts and other cereals for the grain; the house publishes neither its malts nor its recipe.",
+        "still": "Malts from copper pot stills and grain whisky from column stills, at distilleries the house does not name for the core blend.",
+        "wood": "Oak casks: by the house's account a high share of former sherry casks, beside former bourbon casks. No age statement on the label.",
+        "strength": "40% ABV",
+        "taste": "Oak, sherry and a hint of citrus on the nose, then toffee, fudge and Speyside fruit on a medium palate, with a clean, medium dry finish.",
+        "pour": "Neat, over ice or long with soda or ginger ale; it makes a sound Rob Roy, and a Whisky Mac with green ginger wine.",
+        "label": [
+          {
+            "term": "The Famous Grouse",
+            "means": "The blend's name since 1905; it was first sold as The Grouse Brand."
+          },
+          {
+            "term": "Blended Scotch Whisky",
+            "means": "Single malt and single grain Scotch married together, by the Scotch Whisky Regulations 2009."
+          }
+        ]
+      },
+      "table": "The Famous Grouse is the Perth blend under the red grouse, first made by a family of wine merchants in the 1890s. Sherry casks give it oak, toffee and Speyside fruit with a lift of citrus; pour it over ice, with soda or in a Whisky Mac.",
+      "story": "Matthew Gloag & Son began as a family grocery and wine business on Atholl Street in Perth, and the Gloags ran it for generations. In the late 1890s the founder's grandson launched a blend he called The Grouse Brand, after the game bird of the Scottish moors, and his daughter drew the bird for the label. In 1905, when the business became a limited company, the blend took the name The Famous Grouse; by most accounts the name grew with its popularity. The family kept the firm until 1970, when the sudden death of its chairman left heavy death duties, and the business was sold to Highland Distillers that same year. Glenturret, near Crieff, later housed The Famous Grouse Experience, and a peated Glenturret malt goes into the smoky version of the blend. The house leans on former sherry casks, which give the core blend its oak and toffee. Behind a bar it is the everyday Perth blend to know: soft, sherried and even, a house pour long with soda and a sound base for a Whisky Mac.",
+      "others": [
+        {
+          "name": "The Famous Grouse Smoky Black",
+          "note": "More peated malts, among them a peated Glenturret, for smoke, spice and dried fruit."
+        },
+        {
+          "name": "The Famous Grouse Ruby Cask",
+          "note": "Rested in casks seasoned with port, for a note of fruitcake."
+        }
+      ],
+      "traps": [
+        "Famous is part of the name, not a claim: the blend was first sold as The Grouse Brand.",
+        "The Famous Grouse is a blended Scotch with grain whisky in it; Naked Malt, once called The Naked Grouse, is a blended malt with none.",
+        "The house publishes no malts for the core blend, so do not quote a recipe to a guest."
+      ],
+      "cards": [
+        {
+          "id": "casks",
+          "prompt": "Which casks does The Famous Grouse lean on for its character?",
+          "answer": "A high share of former sherry casks beside former bourbon casks, by the house's account."
+        },
+        {
+          "id": "first-name",
+          "prompt": "Under what name was The Famous Grouse first sold?",
+          "answer": "The Grouse Brand; the blend took the name The Famous Grouse in 1905."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "casks",
+          "q": "A guest tastes oak and sherry in The Famous Grouse. Which casks does the house lean on?",
+          "options": ["New charred oak", "Port pipes", "Former rum casks", "Former sherry casks"],
+          "a": 3,
+          "explain": "The house uses a high share of former sherry casks beside bourbon casks; port casks belong to the Ruby Cask bottling, not the core blend."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "first-name",
+          "q": "Before 1905, under which name was The Famous Grouse sold?",
+          "options": ["The Grouse Brand", "Gloag's Perth Blend", "The Red Grouse", "Atholl Street Blend"],
+          "a": 0,
+          "explain": "It was first sold as The Grouse Brand, and Famous came into the name in 1905; the red bird is on the label, not in the name."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia: The Famous Grouse",
+          "url": "https://en.wikipedia.org/wiki/The_Famous_Grouse",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "Scotchwhisky.com: Matthew Gloag and Son",
+          "url": "https://scotchwhisky.com/whiskypedia/2619/matthew-gloag-son/",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "Edrington: The Famous Grouse",
+          "url": "https://uk.edrington.com/our-brands/scotch-whisky/the-famous-grouse/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "The Famous Grouse: Smoky Black",
+          "url": "https://shop.thefamousgrouse.com/products/the-famous-grouse-smoky-black-70cl-40",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Difford's Guide: The Famous Grouse",
+          "url": "https://www.diffordsguide.com/beer-wine-spirits/974/the-famous-grouse",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "Year left empty: sources split between 1896 (Wikipedia, a British grocer's listing) and 1897 (Scotchwhisky.com) for The Grouse Brand, so the story says the late 1890s. The rename to The Famous Grouse is dated 1905 by Wikipedia and by a trade mark registration of 1905 that IdealWine reports; Systembolaget says only the early 1900s.",
+        "The plan's why calls the grouse a sketch by the founder's daughter; Wikipedia gives the daughter of the founder's grandson, the Matthew Gloag of the 1890s, and the record follows it. She and the grandson are not named, for want of their dates in two sources.",
+        "Ownership: Edrington agreed in September 2024 to sell The Famous Grouse and Naked Malt to William Grant & Sons; the competition authority cleared it in March 2025 and the sale was completed in July 2025 (The Grocer, Whisky Magazine, Whisky Advocate, Edrington's own release). As the plan asked, the story stops at the 1970 sale and says nothing of later owners. The integrator may want madeBy to follow the sale, as was agreed for Naked Malt; British shop listings already print William Grant and Sons as maker.",
+        "Label: British grocers list the core bottle as The Famous Grouse Finest Blended Scotch Whisky, so Finest is printed in that market. Finest is not in the roster's flagship, so the brief refuses it in this record; bottle.name carries the words without it. If the integrator wants Finest on the label, the flagship would need a bottling swap.",
+        "Left out for want of sources: the malts of the core blend (Highland Park and The Macallan are often named, never by the house here), the 1842 royal banquet (one source tells it, another says it never took place), the founding year of the grocery (1800, 1807 or 1835 by source), Edrington's purchase of Highland Distillers in 1999, and where the blend is married and bottled.",
+        "Glenturret: The Famous Grouse Experience is told in the past, since Scotchwhisky.com and the Press and Journal disagree on whether the distillery stayed with the brand's makers; Glenturret in Smoky Black rests on the house's own shop page."
+      ],
+      "checked": null
+    },
+    {
+      "key": "ballantines",
+      "group": "blended-scotch",
+      "producer": "Ballantine's",
+      "madeBy": "George Ballantine & Son",
+      "style": "blended-scotch",
+      "chapter": "scotch",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Edinburgh, Scotland",
+      "year": "1827",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Ballantine's Finest Blended Scotch Whisky",
+        "class": "Blended Scotch whisky",
+        "mash": "Malted barley for the malts and other cereals for the grain; the house publishes no recipe for Ballantine's Finest and names none of its malts.",
+        "still": "Malts from copper pot stills and grain whisky from column stills, at distilleries the house does not name for Ballantine's Finest.",
+        "wood": "Oak casks, which the house does not name. No age statement on the label.",
+        "strength": "40% ABV",
+        "taste": "Honey with a hint of spice on the nose, then milk chocolate, red apple and vanilla on a light palate, with a fresh, rounded finish.",
+        "pour": "Over ice, long with soda or ginger ale in a highball, or as the mixing Scotch in a Rob Roy or a Blood and Sand.",
+        "label": [
+          {
+            "term": "Finest",
+            "means": "The house's name for its standard blend since 1910; it carries no legal meaning."
+          },
+          {
+            "term": "Blended Scotch Whisky",
+            "means": "Single malt and single grain Scotch married together, by the Scotch Whisky Regulations 2009."
+          }
+        ]
+      },
+      "table": "Ballantine's Finest is the Edinburgh house's light, sweet blend, made since 1910, with honey, milk chocolate, red apple and vanilla. It is a Scotch for mixing: over ice, long with soda, or stirred into a Rob Roy.",
+      "story": "Ballantine's began in 1827, when a young grocer whose surname the label carries opened a shop in the Cowgate of Edinburgh. He moved into wines and spirits, and in the 1860s the business went west to Glasgow, where it grew into a blending house. In 1895 Queen Victoria granted the firm a Royal Warrant, and in 1910 it launched Ballantine's Finest, the blend it has kept as its standard ever since. In 1938 Hiram Walker, the Canadian distiller that had bought the firm after American Prohibition ended, completed a grain distillery at Dumbarton on the Clyde. The same year the Lord Lyon granted Ballantine's a coat of arms. From 1959, by the house's telling, a flock of white geese known as the Scotch Watch guarded the Dumbarton warehouses against intruders in place of dogs. For a bartender Ballantine's Finest is the light, everyday blend to set beside the heavier, older names: soft and sweet, easy to stretch with soda, and the Scotch to reach for when a drink wants whisky without smoke.",
+      "others": [
+        {
+          "name": "Ballantine's 17 Year Old",
+          "note": "Seventeen years at the minimum, with honey, creamy vanilla, oak and a touch of spice."
+        },
+        {
+          "name": "Ballantine's 7 American Barrel",
+          "note": "Seven years in cask, then finished in American oak barrels."
+        }
+      ],
+      "traps": [
+        "Ballantine's Finest is a name, not a grade: the word on its label marks no class under the Scotch rules.",
+        "There is no Ballantine's distillery: the blend draws on malts and grains from many distilleries, and the house names none for Ballantine's Finest."
+      ],
+      "cards": [
+        {
+          "id": "taste",
+          "prompt": "Which flavours does the house give for Ballantine's Finest?",
+          "answer": "Honey and a hint of spice on the nose, then milk chocolate, red apple and vanilla."
+        },
+        {
+          "id": "first-blend",
+          "prompt": "In which year did Ballantine's Finest first appear?",
+          "answer": "In 1910; the house has kept it as its standard blend ever since."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "taste",
+          "q": "A guest asks what Ballantine's Finest tastes of. Which notes does the house give?",
+          "options": ["Peat smoke and iodine", "Dark cherry and leather", "Milk chocolate and red apple", "Salted caramel and sea brine"],
+          "a": 2,
+          "explain": "The house gives honey, milk chocolate, red apple and vanilla; peat smoke and iodine belong to an Islay malt, not to this light blend."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "first-blend",
+          "q": "In which year did the house launch Ballantine's Finest, the blend it has kept as its standard?",
+          "options": ["1827", "1910", "1938", "1895"],
+          "a": 1,
+          "explain": "Ballantine's Finest came in 1910; 1827 is the year the founder opened his Edinburgh grocery, and 1895 the year of the Royal Warrant."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ballantine's: our story",
+          "url": "https://www.ballantines.com/en/our-story/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Ballantine's: Ballantine's Finest",
+          "url": "https://www.ballantines.com/en/range/ballantines-finest/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Scotchwhisky.com: Ballantine's",
+          "url": "https://media.scotchwhisky.com/whiskypedia/2310/ballantine-s",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "Wikipedia: Ballantine's",
+          "url": "https://en.wikipedia.org/wiki/Ballantine%27s",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "Difford's Guide: George Ballantine and Son, a history",
+          "url": "https://www.diffordsguide.com/producers/261/george-ballantine-and-son-ltd/history",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "The founder is not named as a person: the house gives his birth as 1809, but no source searched gave his death, so the story describes him as the grocer whose surname the label carries.",
+        "Hiram Walker's purchase is dated 1935 (Suntory's history), 1936 (Scotchwhisky.com, Difford's Guide) and 1937 (Wikipedia), so the story gives no year for it and dates only the Dumbarton distillery of 1938 (Canmore, Difford's Guide). Glasgow is given as the 1860s, since sources say 1865 or 1869, as the plan noted.",
+        "The geese: 1959 rests on Scotchwhisky.com, and Suntory's history tells the geese too; the story hedges it as the house's telling.",
+        "Malts: the house's own single malt pages call Glenburgie the heart and Miltonduff the foundation of Ballantine's character, but nothing ties either to Finest, so the record names neither, as the plan asked. The count of whiskies (over 40 on the house's page) is kept out.",
+        "Left out: the 1919 sale to a Glasgow firm, Hiram Walker's sale of the brand in 1987 and everything after, the mothballing of Dumbarton in 2002, and the bottling and warehousing at Dumbarton that the plan's why names as present fact, which would date the record.",
+        "Finest is quoted only as the name and as a label term, as the brief allows for the roster's flagship."
+      ],
+      "checked": null
+    }
+  ]
+}
