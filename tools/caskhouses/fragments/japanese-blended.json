@@ -1,0 +1,678 @@
+{
+ "group": "japanese-blended",
+ "records": [
+  {
+   "key": "kakubin",
+   "group": "japanese-blended",
+   "producer": "Kakubin",
+   "madeBy": "Suntory",
+   "style": "japanese-blended",
+   "chapter": "japanese",
+   "shelf": "",
+   "library": "",
+   "say": "kah-koo-BIN",
+   "place": "The Yamazaki, Hakushu and Chita distilleries, Japan",
+   "year": "1937",
+   "yearIs": "first released",
+   "bottle": {
+    "name": "Suntory Whisky Kakubin",
+    "class": "Blended Japanese whisky of malt and grain, which Suntory lists as meeting the makers' association standard for Japanese whisky.",
+    "mash": "Malt whiskies of malted barley married with grain whisky; Suntory publishes neither the grains of the grain whisky nor the share of malt in the blend.",
+    "still": "Malts from the copper pot stills of Yamazaki and Hakushu, married with grain whisky from the column stills of Chita, by Suntory's account.",
+    "wood": "Suntory names no casks for the blend, and the label carries no age statement.",
+    "strength": "40% ABV",
+    "taste": "Lemon, green apple, butter biscuit and hazelnut on the nose; then popcorn, apple, dried coconut and baked almond on the palate, and a dry finish that Suntory likens to hay.",
+    "pour": "In the Kaku Highball: a glass heaped with ice, lemon squeezed in first, then Kakubin and chilled soda, one part to four, poured gently and stirred once. Neat or on the rocks besides.",
+    "label": [
+     {
+      "term": "Suntory Whisky",
+      "means": "The name the blend was first sold under in 1937, by Suntory's account."
+     },
+     {
+      "term": "Kakubin",
+      "means": "Square bottle: the nickname its square, tortoiseshell cut bottle earned it."
+     }
+    ]
+   },
+   "table": "Kakubin is Suntory's square bottled blend of 1937, Yamazaki and Hakushu malts married with Chita grain, and the whisky of the Kaku Highball. Build it over heaped ice with a squeeze of lemon and four parts chilled soda: lemon, green apple and toasted nuts, light and dry.",
+   "story": "Shinjiro Torii (1879 to 1962), whose Osaka company grew into Suntory, began building Yamazaki in 1923, and its first whisky, Shirofuda, followed in 1929. By Suntory's account he then set out, as the company's first master blender, to make a gentler blend that suited Japanese taste, and in 1937 it came out, sold simply as Suntory Whisky. The square bottle was shaped for easy storage and cut with an auspicious tortoiseshell pattern, an idea the house traces to a cut glass Satsuma kiriko perfume bottle; drinkers named it Kakubin, square bottle, and the nickname became the whisky's name. In the 1950s highballs filled the Torys whisky bars, and from 2008 a Suntory campaign for the Kakubin highball brought whisky back to tables across Japan. The drink is the Kaku Highball, Kaku-hai in Japan, named for the bottle, and Suntory's recipe keeps to one method: lemon first, heaped ice, cold soda poured slowly. For a bartender, Kakubin is the lesson in the Japanese highball: a light, dry blend built to keep its shape under ice and soda.",
+   "others": [
+    {
+     "name": "Kakubin Black",
+     "note": "A stronger Kakubin bottled at 43 per cent, sold in Japan."
+    },
+    {
+     "name": "Kaku Highball",
+     "note": "Suntory's ready made Kakubin highball, sold in cans in Japan."
+    }
+   ],
+   "traps": [
+    "Kakubin is a blend, not a single malt: Yamazaki and Hakushu malts meet Chita grain whisky in it.",
+    "Kakubin is the bottle's nickname, square bottle; Suntory first sold the whisky in 1937 simply as Suntory Whisky.",
+    "A Kaku Highball is not whisky and soda poured anyhow: by Suntory's recipe the lemon goes in first, the ice is heaped and the cold soda poured slowly."
+   ],
+   "cards": [
+    {
+     "id": "square-bottle",
+     "prompt": "What does the name Kakubin mean?",
+     "answer": "Square bottle, for its square, tortoiseshell cut shape; Suntory first sold it in 1937 as Suntory Whisky."
+    },
+    {
+     "id": "kaku-highball",
+     "prompt": "How does Suntory build a Kaku Highball with Kakubin?",
+     "answer": "Heaped ice, lemon squeezed in first, then one part Kakubin to four of chilled soda, poured gently and stirred once."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "kaku-highball",
+     "q": "A guest asks for a Kaku Highball built the way Suntory builds it. What goes over the ice before the Kakubin?",
+     "options": [
+      "Chilled soda",
+      "Squeezed lemon",
+      "A sugar cube",
+      "Orange bitters"
+     ],
+     "a": 1,
+     "explain": "Suntory's recipe squeezes the lemon over heaped ice first, then adds the Kakubin and last the chilled soda, poured slowly; the soda never goes in first."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "square-bottle",
+     "q": "In which year did Suntory first release the whisky later known as Kakubin?",
+     "options": [
+      "1923",
+      "1929",
+      "1937",
+      "1989"
+     ],
+     "a": 2,
+     "explain": "Kakubin came out in 1937; 1929 was the year of Shirofuda, Suntory's first whisky, and 1923 the year building began at Yamazaki."
+    }
+   ],
+   "sources": [
+    {
+     "title": "House of Suntory: Kakubin blended whisky",
+     "url": "https://house.suntory.com/kakubin-whisky/kakubin",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Suntory Japan: Kakubin 700ml, product information",
+     "url": "https://products.suntory.co.jp/d/4901777284289/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Suntory Japan: Kakubin, the craft of the bottle",
+     "url": "https://mobile.suntory.co.jp/whisky/kakubin/kodawari/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Suntory Japan: how to make a Kaku Highball",
+     "url": "https://www.suntory.co.jp/whisky/kakubin/kakuhigh/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Australian Bartender: the launch of Suntory Kakubin",
+     "url": "https://australianbartender.com.au/2015/03/24/check-out-the-launch-of-suntory-kakubin-whisky/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note on wording is settled from Suntory's own pages: the House of Suntory names it Suntory Whisky Kakubin, and the record uses Kakubin, never Kaku or Yellow Label, save in the drink's name. Suntory's sales claim (the best selling whisky in Japan) stays out.",
+    "The 40 per cent strength and the line that the product meets the makers' association standard for Japanese whisky rest on Suntory's Japanese product page; retail listings agree on 40 per cent. Kakubin Black at 43 per cent rests on Suntory's Japanese product page alone.",
+    "The 2008 highball campaign and the Torys bars of the 1950s are the Ledger's styles' own facts (japanese-blended), so they carry no new source; the one outside account found for 2008 was a writer's own site and is not cited.",
+    "Left out for want of a source: the casks of the blend, the share of malt, what grain Chita mashes, and the 8 October 1937 birthday on Suntory's blog. Suntory's Japanese research history says the 1937 bottle was sold as a twelve year old; the record does not repeat it, for want of a second source and because no age is printed today.",
+    "The Satsuma kiriko perfume bottle is told as the house's account; Suntory's page says it was a gift from the founder, and to whom is not clear in the summary, so the record leaves the giver out.",
+    "Place names the three distilleries, as Suntory names them for the blend; where Kakubin is blended and bottled was not found."
+   ],
+   "checked": null
+  },
+  {
+   "key": "hibiki",
+   "group": "japanese-blended",
+   "producer": "Hibiki",
+   "madeBy": "Suntory",
+   "style": "japanese-blended",
+   "chapter": "japanese",
+   "shelf": "",
+   "library": "",
+   "say": "hee-BEE-kee",
+   "place": "The Yamazaki, Hakushu and Chita distilleries, Japan",
+   "year": "1989",
+   "yearIs": "first released",
+   "bottle": {
+    "name": "Hibiki Japanese Harmony",
+    "class": "Blended Japanese whisky: malt whiskies married with grain whisky, every part from Suntory's own distilleries.",
+    "mash": "Malted barley for the malts, with grain whisky beside them; Suntory publishes no recipe and no share of malt to grain.",
+    "still": "Malts from the copper pot stills of Yamazaki and Hakushu, grain whisky from Chita, blended by Suntory's own blenders.",
+    "wood": "About ten malt and grain whiskies from five kinds of cask, among them American white oak, former sherry casks and Japanese Mizunara oak. No age statement.",
+    "strength": "43% ABV",
+    "taste": "Rose, lychee, a hint of rosemary, mature wood and sandalwood on the nose; then honey, candied orange peel and white chocolate on the palate, and a long, gentle finish with a hint of Mizunara oak.",
+    "pour": "Neat or over one large cube; long, in a highball with chilled soda over plenty of ice.",
+    "label": [
+     {
+      "term": "Hibiki",
+      "means": "Resonance in Japanese; Suntory speaks of harmony between people and nature."
+     },
+     {
+      "term": "Japanese Harmony",
+      "means": "No age statement: whiskies of many ages blended for balance."
+     }
+    ]
+   },
+   "table": "Hibiki Japanese Harmony is Suntory's blend with no age statement, Yamazaki and Hakushu malts married with Chita grain, in the bottle of twenty-four facets. Expect rose, lychee and honey, then candied orange and a touch of Mizunara oak; pour it neat or over one large cube.",
+   "story": "Shinjiro Torii (1879 to 1962) founded the Osaka business that grew into Suntory, and in 1989 the company brought out Hibiki to mark its ninetieth year. The name means resonance. The blend joined malts from Yamazaki and Hakushu with grain whisky from Chita, so that every part came from the house's own stills; Japanese companies seldom trade spirit, and a Suntory blender works from Suntory's own malts and grains. From 1989 the bottle was designed around the number twenty-four: its twenty-four facets stand, by Suntory's account, for the twenty-four seasons of the old Japanese calendar. For years the range was known by its age statements, the 17 and the 21. In 2015 Suntory added Japanese Harmony, a blend with no age statement drawing about ten malt and grain whiskies from five kinds of cask, Mizunara oak among them; it reached the United States that August. In 2018 Suntory paused the 17, because too little whisky of that age stood in its warehouses. For a bartender, Japanese Harmony is the Hibiki a bar is likely to hold, and the lesson in how one house builds a whole from its own malts and grain.",
+   "others": [
+    {
+     "name": "Hibiki 21 Years Old",
+     "note": "Yamazaki and Hakushu malts with Chita grain, every whisky at least twenty-one years in cask, at 43 per cent."
+    },
+    {
+     "name": "Hibiki 17 Years Old",
+     "note": "Every whisky at least seventeen years in cask; Suntory paused its sale in 2018."
+    }
+   ],
+   "traps": [
+    "Japanese Harmony carries no age statement, so give a guest no number of years for it.",
+    "Hibiki is a blend of malt and grain, not a single malt: Chita grain whisky is part of every bottle.",
+    "The twenty-four facets of the bottle stand for the twenty-four seasons of the old Japanese calendar, by Suntory's account, not for any age."
+   ],
+   "cards": [
+    {
+     "id": "three-distilleries",
+     "prompt": "Which three Suntory distilleries give Hibiki Japanese Harmony its whiskies?",
+     "answer": "Yamazaki and Hakushu for the malts, and Chita for the grain whisky."
+    },
+    {
+     "id": "first-release",
+     "prompt": "In which year was Hibiki first released?",
+     "answer": "1989, to mark the company's ninetieth year; Japanese Harmony followed in 2015."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "three-distilleries",
+     "q": "A guest asks where the grain whisky in Hibiki Japanese Harmony is made. Which distillery makes it?",
+     "options": [
+      "Chita",
+      "Hakushu",
+      "Yamazaki",
+      "Miyagikyo"
+     ],
+     "a": 0,
+     "explain": "Chita makes Suntory's grain whisky; Yamazaki and Hakushu give the malts, and Miyagikyo, where Coffey stills make grain, is Nikka's distillery, not Suntory's."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "first-release",
+     "q": "In which year did Suntory first release the Hibiki blend?",
+     "options": [
+      "1937",
+      "1973",
+      "1984",
+      "1989"
+     ],
+     "a": 3,
+     "explain": "Hibiki came out in 1989 for the company's ninetieth year; 1984 saw the Yamazaki single malt, 1973 the founding of Hakushu and 1937 Kakubin."
+    }
+   ],
+   "sources": [
+    {
+     "title": "House of Suntory: Hibiki Japanese Harmony",
+     "url": "https://house.suntory.com/hibiki-whisky/hibiki-japanese-harmony",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "House of Suntory: Hibiki blended Japanese whisky",
+     "url": "https://house.suntory.com/hibiki-whisky",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Whisky Magazine: Japanese Harmony",
+     "url": "https://whiskymag.com/story/japanese-harmony",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Cigar Aficionado: a Hibiki with no age statement",
+     "url": "https://www.cigaraficionado.com/article/suntory-blends-a-no-age-statement-hibiki-18347",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Global News: Suntory halts Hakushu 12 and Hibiki 17",
+     "url": "https://globalnews.ca/news/4212467/suntory-time-japan-whiskey-hibiki-hakushu-discontinued",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note on strength is settled at 43% ABV: Suntory's pages for the range, Cigar Aficionado and the retail listings all give 43 per cent; the 42 per cent listing was not found again and is not used. The aged bottlings stand in others, not as the flagship.",
+    "The year Japanese Harmony came out: Whisky Magazine and Cigar Aficionado give 2015, Cigar Aficionado the August rollout in the United States; Difford's Guide gives March 2015 for the first release. The record gives 2015 and August only for the United States.",
+    "The blend's make-up (about ten malt and grain whiskies, five kinds of cask, American white oak, sherry and Mizunara among them) rests on Cigar Aficionado and Difford's Guide; Suntory's own Harmony page was read only for its tasting notes and does not, in its summary, name the distilleries. The three distilleries stand in Whisky Magazine and in the Ledger's styles (japanese-blended), which say Hibiki joins Yamazaki and Hakushu malts with Chita grain.",
+    "The meaning of the facets: Suntory ties them to micro-seasons, the twenty-four seasons of the old calendar; other accounts add the twenty-four hours of the day. The record keeps the house's reading.",
+    "The blender who created Hibiki in 1989 and the one behind Harmony are living and are not named or described. Left out for want of a source: the share of malt to grain, the cask proportions, and the fifth kind of cask (one retail listing names plum liqueur casks).",
+    "The 2018 pause of the 17 rests on Global News and the Ledger's own Hakushu record; whether the 17 has returned was not checked, and the record says only that it was paused in 2018."
+   ],
+   "checked": null
+  },
+  {
+   "key": "toki",
+   "group": "japanese-blended",
+   "producer": "Toki",
+   "madeBy": "Suntory",
+   "style": "japanese-blended",
+   "chapter": "japanese",
+   "shelf": "",
+   "library": "",
+   "say": "TOH-kee",
+   "place": "The Yamazaki, Hakushu and Chita distilleries, Japan",
+   "year": "2016",
+   "yearIs": "first released",
+   "bottle": {
+    "name": "Suntory Whisky Toki",
+    "class": "Blended Japanese whisky of malt and grain.",
+    "mash": "Malted barley for the malts, with grain whisky beside them; Suntory publishes no recipe and no share of malt to grain.",
+    "still": "Hakushu malt from pot stills and heavy-type grain whisky from Chita are its two pillars, with Yamazaki malts in support, by Suntory's account.",
+    "wood": "Hakushu malt from American white oak casks, with Yamazaki malts from American white oak and Spanish oak casks. No age statement.",
+    "strength": "43% ABV",
+    "taste": "Basil, green apple and honey on the nose; then grapefruit, green grapes, peppermint and thyme on the palate, and a gently sweet, spicy finish of vanilla oak, white pepper and ginger.",
+    "pour": "Long, in a highball: a tall glass filled to the brim with ice, then chilled soda. It also makes a Whisky Sour and a gentle Old Fashioned.",
+    "label": [
+     {
+      "term": "Toki",
+      "means": "Time in Japanese, which Suntory ties both to its blending tradition and to a new approach."
+     },
+     {
+      "term": "Suntory Whisky",
+      "means": "Made by Suntory from whiskies of its own three distilleries."
+     }
+    ]
+   },
+   "table": "Suntory Whisky Toki is the blend Suntory made for the highball, Hakushu malt and Chita grain at its heart with Yamazaki malts in support. Built tall over ice with chilled soda, it gives green apple, basil and honey, then a touch of white pepper and ginger.",
+   "story": "Suntory's blends often take Yamazaki malt, the house's first, as their key part. Toki, whose name means time in Japanese, turned that order round. Suntory brought it out in the United States in August 2016, a blend with no age statement in which two whiskies lead: Hakushu malt aged in American white oak, from the forest distillery Suntory founded in 1973, and heavy-type grain whisky from Chita. Yamazaki malts from American white oak and Spanish oak casks play the supporting part, by Suntory's account, rounding the blend and lifting the sweetness of the grain. The house says the name speaks both of its whisky-making traditions and of the new approach to blending it took here. Toki was made to be poured many ways, neat, on the rocks and in cocktails, but above all long, and Suntory's own serve fills a tall glass to the brim with ice before the soda goes in. For a bartender, Toki is the rail blend for highballs: green, light and clean, and a plain introduction to how a Japanese blender balances malt against grain.",
+   "others": [
+    {
+     "name": "The Hakushu 12 Years Old",
+     "note": "The forest malt that leads Toki, bottled on its own as a single malt."
+    },
+    {
+     "name": "Kakubin",
+     "note": "Suntory's older highball blend of 1937, the whisky of the Kaku Highball."
+    }
+   ],
+   "traps": [
+    "Toki is a blend of malt and grain, not a single malt, though Hakushu malt leads it.",
+    "Toki was first brought out for the United States, in 2016, and is no old Japanese label: Kakubin is the highball blend of 1937."
+   ],
+   "cards": [
+    {
+     "id": "two-pillars",
+     "prompt": "Which two whiskies lead the Suntory Whisky Toki blend?",
+     "answer": "Hakushu malt from American white oak casks and heavy-type grain whisky from Chita, with Yamazaki malts in support."
+    },
+    {
+     "id": "name-time",
+     "prompt": "What does the name of Suntory Whisky Toki mean?",
+     "answer": "Time, in Japanese; Suntory first brought it out in the United States in August 2016."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "two-pillars",
+     "q": "A guest asks which malt leads Suntory Whisky Toki. Which distillery's malt is it?",
+     "options": [
+      "Yamazaki",
+      "Yoichi",
+      "Hakushu",
+      "Chichibu"
+     ],
+     "a": 2,
+     "explain": "Hakushu malt from American white oak casks leads, beside Chita grain; Yamazaki malts play only a supporting part in Toki."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "name-time",
+     "q": "In which country did Suntory first launch Toki, in 2016?",
+     "options": [
+      "Japan",
+      "United States",
+      "United Kingdom",
+      "Australia"
+     ],
+     "a": 1,
+     "explain": "Suntory launched Toki in the United States in August 2016, there alone at first; Japan, home of its three distilleries, was not its first market."
+    }
+   ],
+   "sources": [
+    {
+     "title": "House of Suntory: Suntory Whisky Toki",
+     "url": "https://house.suntory.com/toki-whisky/suntory-whisky-toki",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Suntory Global Spirits: the introduction of Toki",
+     "url": "https://www.suntoryglobalspirits.com/news/house-suntory-whisky-announces-introduction-suntory-whisky-toki",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "House of Suntory: the Toki highball",
+     "url": "https://house.suntory.com/cocktails/whisky-highball",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Beverage Industry: Suntory Whisky Toki",
+     "url": "https://www.bevindustry.com/articles/89491-suntory-whisky-toki",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "The Whiskey Wash: Toki, a blend of three distilleries",
+     "url": "https://thewhiskeywash.com/world/suntory-whisky-toki-blend-three-japanese-distilleries/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note on the date is settled: Suntory's own announcement and Beverage Industry (dated 8 August 2016) both place the launch in the United States in August 2016, so the year stands as first released, in the United States.",
+    "The blender named in Suntory's announcement and The Whiskey Wash is living and stands in people.json already; he is not named or described as a present role.",
+    "The make-up (Hakushu American white oak malt and Chita heavy-type grain as the two pillars, Yamazaki American white oak and Spanish oak malts in support) rests on Suntory's announcement and The Whiskey Wash; Beverage Industry gives the same four parts.",
+    "The Ledger's styles name Toki among the houses of the style but say nothing of it beyond that; nothing in this repo disagrees.",
+    "Left out for want of a source: a proof figure for the United States label, the share of malt to grain, when Toki reached other markets, and Toki Black, whose make-up was not read.",
+    "The Sour and the Old Fashioned in the pour rest on Suntory's own Toki recipe pages, seen in search results; they are not cited separately."
+   ],
+   "checked": null
+  },
+  {
+   "key": "nikka",
+   "group": "japanese-blended",
+   "producer": "Nikka",
+   "madeBy": "",
+   "style": "japanese-blended",
+   "chapter": "japanese",
+   "shelf": "",
+   "library": "",
+   "say": "",
+   "place": "Yoichi, Hokkaido, and Miyagikyo, Sendai, Japan",
+   "year": "1934",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Nikka Whisky From the Barrel",
+    "class": "Blended whisky of malt and grain, which Nikka marks as not meeting every criterion of the Japanese whisky standard.",
+    "mash": "More than a hundred malt and grain whiskies, the malts mostly from Nikka's own Yoichi and Miyagikyo; Nikka names no other source and publishes no recipe.",
+    "still": "Malts from the coal-fired pot stills of Yoichi and the steam-heated pot stills of Miyagikyo, with grain whisky from Nikka's Coffey stills.",
+    "wood": "The blended whiskies go back into cask to marry for a few more months before bottling, by Nikka's account. No age statement.",
+    "strength": "51.4% ABV",
+    "taste": "A rich, oaky nose with vanilla, chocolate and orange peel over a note of grain; then a palate that Nikka calls mellow for its strength, with the grain's sweetness under the oak and the alcohol warm on the nose.",
+    "pour": "Neat, then with a few drops of water, which its strength takes well; it also holds its own in a highball or an Old Fashioned.",
+    "label": [
+     {
+      "term": "From the Barrel",
+      "means": "The blend married again in cask and bottled with little water added, not at one cask's strength."
+     },
+     {
+      "term": "Nikka Whisky",
+      "means": "The company Masataka Taketsuru founded at Yoichi in 1934 as Dai Nippon Kaju."
+     }
+    ]
+   },
+   "table": "Nikka Whisky From the Barrel is a blend of malt and Coffey grain whiskies, married again in cask and bottled at 51.4 per cent in a small square bottle. Expect oak, vanilla, chocolate and orange peel; pour it neat, then add a few drops of water.",
+   "story": "Masataka Taketsuru (1894 to 1979), who had learnt whisky making in Scotland, founded Dai Nippon Kaju at Yoichi on Hokkaido in 1934, a company that made apple juice while its first spirit aged; Nikka is drawn from its name. Its malt came from Yoichi's coal-fired stills and, from 1969, from Miyagikyo near Sendai, where Nikka's Coffey stills came to make its grain whisky. From the Barrel came out in 1985, after the founder's death, when, by the brand's account, Nikka's blenders set out to catch the whisky as it comes from the cask. More than a hundred malt and grain whiskies are blended, returned to cask to marry for some months, and bottled at 51.4 per cent with little water added. The squat square bottle, designed in 1985 as a small block of whisky, has barely changed since. By Nikka's own history it was sold at first only in Hokkaido and Aomori, and across Japan from 1988. Under the makers' association standard set in 2021, Nikka states that this blend does not meet every criterion of Japanese whisky, and says so on its own pages. For a bartender, it is the proof that a blend can be dense and strong: a lot of whisky in a small bottle.",
+   "others": [
+    {
+     "name": "Nikka Coffey Grain",
+     "note": "Grain whisky from Nikka's Coffey stills bottled on its own, sweet and soft."
+    },
+    {
+     "name": "Nikka Single Malt Yoichi",
+     "note": "The coal-fired, smoky malt of the house's first distillery, bottled alone."
+    }
+   ],
+   "traps": [
+    "From the Barrel is not barrel proof: the blend is married in cask and bottled at 51.4 per cent, a strength Nikka sets, not one cask's.",
+    "It is a blend of malt and grain, not a single malt, and Nikka itself says it does not meet every criterion of the Japanese whisky standard."
+   ],
+   "cards": [
+    {
+     "id": "barrel-name",
+     "prompt": "What does From the Barrel mean on the Nikka Whisky From the Barrel label?",
+     "answer": "The blend is married again in cask for some months and bottled at 51.4 per cent with little water added; it is not barrel proof."
+    },
+    {
+     "id": "launch-1985",
+     "prompt": "In which year did Nikka first release From the Barrel, and where?",
+     "answer": "1985, at first only in Hokkaido and Aomori; it went on sale across Japan in 1988."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "barrel-name",
+     "q": "A guest takes Nikka Whisky From the Barrel for a single cask at barrel proof. What is it?",
+     "options": [
+      "A single malt from one cask",
+      "A rye whisky from one barrel",
+      "A grain whisky left uncut",
+      "A blend married again in cask"
+     ],
+     "a": 3,
+     "explain": "From the Barrel blends more than a hundred malt and grain whiskies, marries them in cask and bottles them at 51.4 per cent; it is neither a single cask nor a single malt."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "launch-1985",
+     "q": "In which year did Nikka first release From the Barrel?",
+     "options": [
+      "1985",
+      "1934",
+      "1969",
+      "1988"
+     ],
+     "a": 0,
+     "explain": "It came out in 1985 in Hokkaido and Aomori; 1988 is the year it went on sale across Japan, and 1934 the year Nikka was founded."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Nikka: From the Barrel",
+     "url": "https://www.nikka.com/en/brands/fromthebarrel/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Nikka: the history of the house",
+     "url": "https://www.nikka.com/en/story/history/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Nikka: standards for labelling Japanese whisky",
+     "url": "https://www.nikka.com/en/brands/labelingstandards/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Nikka: the founder",
+     "url": "https://www.nikka.com/en/story/founder/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "The Whiskey Wash: From the Barrel at forty years",
+     "url": "https://thewhiskeywash.com/whiskey-news/nikka-from-the-barrel-celebrates-40-years/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note is settled thus. The barrel in the name is said not to mean barrel proof (Nikka speaks of cask strength intensity and minimal dilution; one independent review read in search says plainly it is not barrel proof). On the make-up, Nikka's own page says the malts come mostly from its two distilleries; the record says that and no more, and names no Scotch malt, for want of a primary source.",
+    "On the standard: Nikka's own pages carry the line that this product does not meet all the criteria of Japanese whisky set by the Japan Spirits and Liqueurs Makers Association; Master of Malt's blog reports the same. Whether the bottle's label itself says so was not confirmed, so the record puts it on Nikka's pages, not on the label.",
+    "The Ledger's styles call From the Barrel's maker the house whose Coffey stills stand at Miyagikyo, and list Master of Malt on the standard among their sources; nothing in this repo disagrees.",
+    "Launch: Nikka's history gives 1985 in Hokkaido and Aomori and a national launch in 1988; one trade source gives 1986 for Japan. The record follows Nikka.",
+    "Strength: Nikka's pages give 51.4 per cent and in one place 51 per cent; the label and every listing read give 51.4 per cent, which the record keeps.",
+    "Living people found and added to people.json: the designer of the bottle (in both spellings the sources use) and a former chief blender of Nikka. The master blender credited with the 1985 concept, the founder's adopted son, is left unnamed for want of a death year in two sources.",
+    "Left out for want of a source: the share of malt to grain, the casks used for the marriage, a United States proof, and the year it first reached the United States (2018 in one trade source only). No finish is given: Nikka's page summary gave none, and the reviews read disagree."
+   ],
+   "checked": null
+  },
+  {
+   "key": "taketsuru",
+   "group": "japanese-blended",
+   "producer": "Taketsuru",
+   "madeBy": "Nikka",
+   "style": "japanese-blended",
+   "chapter": "japanese",
+   "shelf": "",
+   "library": "",
+   "say": "tah-keh-TSOO-roo",
+   "place": "Yoichi, Hokkaido, and Miyagikyo, Sendai, Japan",
+   "year": "2000",
+   "yearIs": "first released",
+   "bottle": {
+    "name": "Nikka Taketsuru Pure Malt",
+    "class": "Blended malt whisky, which Nikka calls pure malt: malt whiskies from two of its distilleries and no grain whisky.",
+    "mash": "Malted barley alone, in malts from Yoichi and Miyagikyo; Nikka publishes neither the share of each nor a peating level.",
+    "still": "Yoichi malt from straight-head pot stills fired by coal, and Miyagikyo malt from steam-heated pot stills with bulging necks, by Nikka's account.",
+    "wood": "Malts from various casks, among which Nikka names Miyagikyo malts from sherry casks and remade casks as key parts. No age statement.",
+    "strength": "43% ABV",
+    "taste": "Apple and apricot on the nose with toast and vanilla from the oak; then banana and navel orange on a light, layered palate, with malt and dense peat, and a finish of dark chocolate, mellow oak and peat.",
+    "pour": "Neat or with a few drops of water; long, in a highball with chilled soda over ice, where the Yoichi smoke shows through.",
+    "label": [
+     {
+      "term": "Pure Malt",
+      "means": "Nikka's term for a whisky blended only from its own malts, with no grain whisky."
+     },
+     {
+      "term": "Taketsuru",
+      "means": "The surname of Masataka Taketsuru, who founded the company at Yoichi in 1934."
+     }
+    ]
+   },
+   "table": "Nikka Taketsuru Pure Malt is a blended malt, Yoichi and Miyagikyo malts married with no grain whisky, named for Nikka's founder. Expect apple, apricot and toast, then orange and a thread of peat; pour it neat or with a few drops of water.",
+   "story": "Masataka Taketsuru (1894 to 1979), from a sake-brewing family in Takehara, learnt whisky making in Scotland and in 1934 founded at Yoichi, on Hokkaido, the company that became Nikka. Yoichi's coal-fired stills gave a heavy, smoky malt; Miyagikyo, near Sendai, followed in 1969 and gave a softer, fruitier one, so that the house held two malts of different character to blend. Taketsuru Pure Malt carries that pairing in his name. Nikka uses pure malt only for whiskies blended from its own malts, what Scotland calls a blended malt: no grain whisky goes in. The Taketsuru Pure Malt name reached the shelf in 2000, and Pure Malts of seventeen, twenty-one and twenty-five years followed. In 2020 Nikka withdrew those three and renewed the no-age-statement Pure Malt at 43 per cent, with a larger share of Yoichi malt, which gave it more smoke. Coal-fired Yoichi brings weight and peat; steam-heated Miyagikyo, with its sherry and remade cask malts, brings fruit and softness. For a bartender, it is the other kind of blend: two distilleries of one house, married without grain.",
+   "others": [
+    {
+     "name": "Nikka Single Malt Miyagikyo",
+     "note": "The soft, fruity steam-heated malt of the pair, bottled alone."
+    },
+    {
+     "name": "Nikka Single Malt Yoichi",
+     "note": "The coal-fired, smoky malt of the pair, bottled alone."
+    },
+    {
+     "name": "Taketsuru Pure Malt 17 Years Old",
+     "note": "An age-statement Pure Malt that Nikka withdrew in 2020; older bottles are met on back bars."
+    }
+   ],
+   "traps": [
+    "Taketsuru Pure Malt is a blended malt, not a blended whisky: it holds malt alone, from two distilleries, and no grain.",
+    "Pure malt is Nikka's own term, not a legal class; in Scotland the same thing is called a blended malt.",
+    "The Pure Malt of 2020 carries more Yoichi malt than the bottling before it, so it reads smokier than older bottles."
+   ],
+   "cards": [
+    {
+     "id": "pure-malt",
+     "prompt": "What does Pure Malt mean on Nikka Taketsuru Pure Malt?",
+     "answer": "Malt whiskies only, blended from Nikka's own Yoichi and Miyagikyo, with no grain whisky: a blended malt."
+    },
+    {
+     "id": "renewal-2020",
+     "prompt": "What did Nikka change in Taketsuru Pure Malt in 2020?",
+     "answer": "It withdrew the 17, 21 and 25 Years Old and renewed the no-age-statement bottling with more Yoichi malt."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "pure-malt",
+     "q": "A guest asks what sets Nikka Taketsuru Pure Malt apart from a blend such as From the Barrel. What is it made of?",
+     "options": [
+      "Malt and grain whiskies",
+      "Malt whiskies alone",
+      "Grain whiskies alone",
+      "Malt, grain and rye"
+     ],
+     "a": 1,
+     "explain": "Pure malt is Nikka's word for a blend of its own malts with no grain; From the Barrel, by contrast, marries malt with Coffey grain whisky."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "renewal-2020",
+     "q": "In 2020 Nikka renewed Taketsuru Pure Malt. Which malt did the new bottling give a larger share?",
+     "options": [
+      "Miyagikyo",
+      "Coffey malt",
+      "Yoichi",
+      "Yamazaki"
+     ],
+     "a": 2,
+     "explain": "The renewed bottling holds a larger share of coal-fired Yoichi malt, which brings more smoke; Miyagikyo is the other, softer half, and Yamazaki is Suntory's."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Nikka: Taketsuru Pure Malt",
+     "url": "https://www.nikka.com/en/brands/taketsuru/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Nikka: the founder",
+     "url": "https://www.nikka.com/en/story/founder/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "The Spirits Business: Nikka to discontinue Taketsuru whiskies",
+     "url": "https://www.thespiritsbusiness.com/2020/01/nikka-to-discontinue-taketsuru-whiskies/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Nomunication: the Pure Malt renewal of 2020",
+     "url": "https://www.nomunication.jp/2020/01/16/nikka-pure-malt-nas-renewal-announced-for-march-31/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Nihon Shokuryo Shimbun: Taketsuru Pure Malt Essentials",
+     "url": "https://news.nissyoku.co.jp/foodsnews/260508-26",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note is settled: the record says in its class, table and first trap that this is a blended malt, not a blended whisky. The bottling taught is the no-age-statement Taketsuru Pure Malt at 43 per cent, renewed in 2020 (The Spirits Business, Nomunication and Time Out Tokyo); the 17, 21 and 25 were withdrawn by March 2020. No swap is proposed.",
+    "The plan's why says Miyagikyo leads the blend; the 2020 renewal raised the share of Yoichi malt (Nomunication), and Nikka's page names Miyagikyo sherry and remade cask malts as key parts. The record gives both and names no leading malt.",
+    "The year 2000 for the Taketsuru Pure Malt name rests on two articles of one paper, Nihon Shokuryo Shimbun (the 2026 Essentials release and a May 2026 piece on the brand's thirtieth year in 2030); an article of 2001 in the same paper, seen in a search summary, says a Taketsuru twelve year old Pure Malt came out in November 2000. A refuter may wish to find a second publisher.",
+    "Whether this bottling meets the makers' association standard for Japanese whisky rests on Master of Malt alone (which reports it passes) and is left out.",
+    "Taketsuru's dates and his sake-brewing family in Takehara stand on Nikka's founder page and in the Ledger's own Yoichi record; Miyagikyo's 1969 is the Cask Atlas's own fact.",
+    "Left out for want of a source: the share of each malt, the average age (about ten years in one shop's listing only), the year the first no-age-statement Pure Malt came out (2015 in one trade source), and the twelve year old's end. A prize named on Nikka's pages is left out under the rule."
+   ],
+   "checked": null
+  }
+ ]
+}
