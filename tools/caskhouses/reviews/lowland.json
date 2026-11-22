@@ -1,0 +1,273 @@
+{
+ "group": "lowland",
+ "chunk": "c6",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 23,
+ "tested": [
+  "auchentoshan: the 12's casks, strength and producer's notes, and its 2025 relabel as Double Cask; triple distillation through wash, intermediate and spirit stills and the 81 per cent off the stills; the licence of 1823 and Duntocher; the Clydebank Blitz of March 1941, the warehouses and the bomb crater pond; Morrison in 1984 and Suntory in 1994. 5 searches.",
+  "glenkinchie: the 12's producer's notes and 43% ABV; the cast-iron worm tub; the Distillers Edition's Amontillado casks; Milton and the Rates of 1825, 1837, the rebuild of the 1890s; Scottish Malt Distillers of 1914, its five members and the Distillers Company's purchase of 1925; the Classic Malts. 3 searches.",
+  "bladnoch: the founding of 1817 by two McClelland brothers; the sale of 1994 from United Distillers, the restart of 2000, the stop of 2009, the failure of 2014, the sale of July 2015 and the restart of 2017; the trio of 2017; the 10 Year Old's bourbon casks, 46.7% ABV and its standing; the 2024 range of 13 and 16 and Vinaya's casks. 6 searches.",
+  "kingsbarns: Doocot's 90 and 10 per cent cask split, STR barriques, 46% ABV, the producer's notes and the two Forsyths stills; the caddie, the family of Wemyss Malts, the opening of November 2014, the first casks, the steading and its castellated dovecote; Balcomie and Coaltown. 5 searches.",
+  "lindores-abbey: MCDXCIV's casks, 46% ABV, the producer's notes and the sale of 2 July 2021; the three Forsyths stills and Douglas fir washbacks; the first spirit of 13 December 2017; the Exchequer entry's wording and date and the friar's link to Lindores; the barley; the Casks of Lindores at 49.4%. 4 searches.",
+  "23 of the 28 searches spent; 5 left unused.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, no length clue, keys at positions 0, 2, 1, 3, 2, 0, 3, 1, 1, 3, each explain naming the nearest wrong option. Auchentoshan's blitz answer, Glenkinchie's worm-tub answer, Lindores' exchequer-1494 answer and q2 explain were reworded for the changes below. No card id changed."
+ ],
+ "changed": [
+  {
+   "key": "auchentoshan",
+   "field": "bottle.name",
+   "was": "Auchentoshan 12 Year Old Single Malt Scotch Whisky",
+   "now": "Auchentoshan 12 Year Old Double Cask Single Malt Scotch Whisky",
+   "why": "the house put out the 12 Year Old Double Cask in place of its 12 Year Old from October 2025; every word of the roster's flagship is kept, so no swap is needed",
+   "sources": [
+    "https://www.auchentoshan.com/core-range/12-year-old-double-cask",
+    "https://www.dramface.com/news/2025/auchentoshan-unveils-vibrant-new-look-and-12-year-old-double-cask-expression"
+   ]
+  },
+  {
+   "key": "auchentoshan",
+   "field": "bottle.label[0]",
+   "was": "Triple Distilled",
+   "now": "Double Cask",
+   "why": "the new label's own words, with the two casks the producer names; Triple Distilled was not seen on the new label",
+   "sources": [
+    "https://www.auchentoshan.com/core-range/12-year-old-double-cask",
+    "https://www.dramface.com/news/2025/auchentoshan-unveils-vibrant-new-look-and-12-year-old-double-cask-expression"
+   ]
+  },
+  {
+   "key": "auchentoshan",
+   "field": "bottle.wood",
+   "was": "bourbon casks give the larger share",
+   "now": "cut",
+   "why": "the share rests on Difford's Guide alone and a shop",
+   "sources": [
+    "https://www.auchentoshan.com/core-range/12-year-old-double-cask"
+   ]
+  },
+  {
+   "key": "auchentoshan",
+   "field": "bottle.taste, table",
+   "was": "vanilla, hazelnut, tangerine and lime, and a slightly dry finish touched with ginger; citrus, hazelnut and vanilla",
+   "now": "lemon zest and oak, tangerine and lime, and a sharp finish of ginger; citrus, sweet pastry and nuts",
+   "why": "the producer's notes for the Double Cask",
+   "sources": [
+    "https://www.auchentoshan.com/core-range/12-year-old-double-cask"
+   ]
+  },
+  {
+   "key": "auchentoshan",
+   "field": "story, cards[blitz].answer",
+   "was": "a bomb crater behind the site became the pond",
+   "now": "as the story goes, a bomb crater behind the site became the pond",
+   "why": "Difford's Guide notes old photographs showing the pond was larger before the war",
+   "sources": [
+    "https://www.diffordsguide.com/producers/18/auchentoshan-distillery/history",
+    "https://en.wikipedia.org/wiki/Auchentoshan_distillery"
+   ]
+  },
+  {
+   "key": "auchentoshan",
+   "field": "traps",
+   "was": "two traps",
+   "now": "a third, on the Double Cask in place of the 12 Year Old in 2025",
+   "why": "a guest will meet both labels",
+   "sources": [
+    "https://www.dramface.com/news/2025/auchentoshan-unveils-vibrant-new-look-and-12-year-old-double-cask-expression"
+   ]
+  },
+  {
+   "key": "auchentoshan",
+   "field": "sources[2]",
+   "was": "https://www.founders.beamsuntory.com/dna/auchentoshan",
+   "now": "https://www.dramface.com/news/2025/auchentoshan-unveils-vibrant-new-look-and-12-year-old-double-cask-expression",
+   "why": "the record now rests on the report of the Double Cask; the 81 per cent stands on the producer's process page and Wikipedia",
+   "sources": [
+    "https://www.auchentoshan.com/our-process",
+    "https://en.wikipedia.org/wiki/Auchentoshan_distillery"
+   ]
+  },
+  {
+   "key": "glenkinchie",
+   "field": "bottle.taste, table, story",
+   "was": "dry grass, lemon, pear and malt; lemon, dry grass, pear and flowers; grass, lemon and flowers",
+   "now": "vanilla, cut flowers, a toasty note, citrus, butter icing, lemon cheesecake, freesias, a herbal, drying finish; vanilla, cut flowers and lemon; vanilla, lemon and flowers",
+   "why": "the producer's notes for the 12; dry grass and pear are in none read",
+   "sources": [
+    "https://www.malts.com/en-row/products/single-malt-whisky/glenkinchie-12-year-old-single-malt-scotch-whisky-70cl/"
+   ]
+  },
+  {
+   "key": "glenkinchie",
+   "field": "bottle.still, cards[worm-tub].answer",
+   "was": "credits with adding weight and character",
+   "now": "credits with giving the spirit more character and depth",
+   "why": "the producer's own words for the worm tub",
+   "sources": [
+    "https://www.malts.com/en/glenkinchie"
+   ]
+  },
+  {
+   "key": "glenkinchie",
+   "field": "story",
+   "was": "and its first bottlings under its own name followed",
+   "now": "cut",
+   "why": "no source read gave the first bottlings under its own name",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Glenkinchie_distillery"
+   ]
+  },
+  {
+   "key": "bladnoch",
+   "field": "story",
+   "was": "in 2014 the company went into liquidation",
+   "now": "in 2014 the business failed and the distillery was put up for sale",
+   "why": "WhiskyCast reports administration, others liquidation; all agree it failed and was offered for sale",
+   "sources": [
+    "https://whiskycast.com/bladnoch-distillery-in-administration-to-be-sold/",
+    "https://www.scotsman.com/arts-and-culture/new-owner-sought-bladnoch-distillery-1541855"
+   ]
+  },
+  {
+   "key": "bladnoch",
+   "field": "story",
+   "was": "in 2017 distilling began again; that year the first bottlings of the revival came out",
+   "now": "in January 2017 the first bottlings were announced, and later that year distilling began again",
+   "why": "the trio was announced in January 2017, before the spring restart",
+   "sources": [
+    "https://www.thewhiskybusiness.com/2017/01/bladnoch-announces-launch-of-trio-of.html",
+    "https://thewhiskeywash.com/scotch-whiskey/bladnoch-distillery-drops-trio-new-scotch-whisky-releases/"
+   ]
+  },
+  {
+   "key": "kingsbarns",
+   "field": "story",
+   "was": "The first casks were filled in 2015",
+   "now": "its first casks filled soon after",
+   "why": "Undiscovered Scotland gives the first cask as December 2014, the house and others March 2015",
+   "sources": [
+    "https://www.undiscoveredscotland.co.uk/kingsbarns/kingsbarnsdistillery/index.html",
+    "https://www.kingsbarnsdistillery.com/blogs/news/kingsbarns-distillery-spirit-is-now-3-years-old"
+   ]
+  },
+  {
+   "key": "kingsbarns",
+   "field": "story",
+   "was": "an old dovecote that has the look of a fortified tower",
+   "now": "a castellated dovecote",
+   "why": "Canmore's word for it; the tower likeness rests on no source read",
+   "sources": [
+    "https://canmore.org.uk/site/98805/east-newhall-farm",
+    "https://www.undiscoveredscotland.co.uk/kingsbarns/kingsbarnsdistillery/index.html"
+   ]
+  },
+  {
+   "key": "kingsbarns",
+   "field": "bottle.pour",
+   "was": "or in the hot toddy the house makes with it",
+   "now": "cut",
+   "why": "no source read gave the toddy",
+   "sources": [
+    "https://www.kingsbarnsdistillery.com/products/doocot-70cl"
+   ]
+  },
+  {
+   "key": "kingsbarns",
+   "field": "others[0].note",
+   "was": "casks that held Oloroso sherry",
+   "now": "American oak butts that held Oloroso sherry",
+   "why": "the producer's page for Balcomie",
+   "sources": [
+    "https://www.kingsbarnsdistillery.com/blogs/news/introducting-balcomie-sherry-cask-matured-single-malt"
+   ]
+  },
+  {
+   "key": "lindores-abbey",
+   "field": "story, cards[exchequer-1494].answer, quiz[1].explain",
+   "was": "to make aqua vitae for the king",
+   "now": "given to a friar by order of the king, to make aqua vitae",
+   "why": "the entry reads To Friar John Cor, by order of the King, to make aqua vitae VIII bolls of malt",
+   "sources": [
+    "https://www.scotlandspeople.gov.uk/image-library/image/7197",
+    "https://journals.socantscot.org/index.php/psas/article/download/7383/7352/7340"
+   ]
+  },
+  {
+   "key": "lindores-abbey",
+   "field": "table, story",
+   "was": "the abbey named in a record of 1494; the abbey whose name stands beside the record of 1494; whether he distilled there himself is not known",
+   "now": "the abbey the distillery ties to a record of 1494; the abbey that whisky history ties to the record; other accounts place him elsewhere",
+   "why": "the entry names the friar and not the abbey, and one account places him with the Dominicans of Stirling",
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Cor",
+    "https://www.scotlandspeople.gov.uk/image-library/image/7197"
+   ]
+  },
+  {
+   "key": "lindores-abbey",
+   "field": "bottle.wood, table",
+   "was": "Mostly bourbon barrels, with wine barriques and sherry butts; mostly from bourbon barrels",
+   "now": "A selection of bourbon barrels, wine barriques and sherry butts; the table keeps the taste and drops the casks",
+   "why": "the producer's words give no share",
+   "sources": [
+    "https://lindoresabbeydistillery.com/lindores/"
+   ]
+  },
+  {
+   "key": "lindores-abbey",
+   "field": "bottle.taste",
+   "was": "Vanilla, caramel, orchard fruit and pear drops ... dried fruit, citrus and a little spice",
+   "now": "mellow vanilla, orchard fruit and touches of citrus, a little pepper from the wood; buttered popcorn and malty cereal in reviews",
+   "why": "the producer's notes and one review; caramel and pear drops are in none read",
+   "sources": [
+    "https://lindoresabbeydistillery.com/lindores/",
+    "https://whiskyforeveryone.com/review-lindores-mcdxciv-1494/"
+   ]
+  },
+  {
+   "key": "lindores-abbey",
+   "field": "bottle.mash",
+   "was": "of the Laureate variety by the house's account, grown on farms whose fields lie around the distillery",
+   "now": "grown in Fife, much of it, by the house's account, on farmland around the distillery that was once the abbey's",
+   "why": "a variety changes with the crop and was not confirmed; accounts give Fife barley, and from 2020 the abbey's farmland",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Lindores_Abbey_distillery",
+    "https://lindoresabbeydistillery.com/barley/"
+   ]
+  },
+  {
+   "key": "lindores-abbey",
+   "field": "story",
+   "was": "in the spring of 2021",
+   "now": "in 2021",
+   "why": "one review dates the members' bottles to June 2021",
+   "sources": [
+    "https://whiskyforeveryone.com/review-lindores-mcdxciv-1494/"
+   ]
+  }
+ ],
+ "open": [
+  "auchentoshan: three warehouses in 1941 rests on Difford's Guide and one history site, the producer's timeline speaking of a warehouse; whether American Oak and Three Wood stand in the 2025 range was not confirmed.",
+  "glenkinchie: the 12's casks stay unnamed; the Distillers Company's purchase stays 1925 (Grace's Guide, Master of Malt) against 1929 in one shop.",
+  "bladnoch: the 10 Year Old is not in the producer's range and was called a limited edition at release; the swap is refused for now for the lint only (below).",
+  "kingsbarns: the steading's date (about 1800, nineteenth or eighteenth century by source) and the family's takeover year stay loose.",
+  "lindores-abbey: whether the label prints Lowland was not confirmed; the entry's year is 1494 in most accounts, 1495 in some."
+ ],
+ "living": [
+  "Met in sources and named in no record, already in people.json: Douglas Clement, Doug Clement, William Wemyss, Isabella Wemyss, David Prior, Raymond Armstrong, Nick Savage, Ian MacMillan, Drew McKenzie Smith, Helen McKenzie Smith.",
+  "New for people.json, met in sources and named in no record: Gary Haggart, who took Lindores' first cut of spirit in 2017.",
+  "The dead and the undated met: John and Thomas McClelland, John and George Rate, Friar John Cor, James Grey; none is named in a record, as no two sources gave their dates."
+ ],
+ "swaps": [
+  "bladnoch, bottling: the author's proposal to change the flagship from Bladnoch 10 Year Old to Bladnoch 13 Year Old is refused for now, and only for the lint. The case is strong: The Spirits Business called the 10 a limited edition at its release, and in September 2024 the house withdrew its 11 and 14 and brought in a 13 and a 16 as the Heritage Collection with the 19 and the 30 (Whisky Magazine, Dramface, Wooden Cork). A record written for the 13 cannot lint until plan.json carries it (the name would lack 10), and this refuter may not touch plan.json. For the read-together agent, with plan.json: { \"kind\": \"bottling\", \"key\": \"bladnoch\", \"from\": \"Bladnoch 10 Year Old\", \"to\": \"Bladnoch 13 Year Old\", \"why\": \"the 10 left the range and the house brought in the 13 as its first age statement in 2024\", \"agreed\": true, \"date\": \"2026-11-22\" }, then the record rewritten for the 13, keeping the key and the card ids silence and founding: thirteen years in bourbon casks alone, 46.7% ABV, non chill filtered, with the producer's honey, citrus, cut grass and fresh apple; the silence card then asks when distilling stopped (2009) and why a thirteen-year-old of 2024 was distilled before the stop, which holds for any bottle distilled before 2017; the 10 moves out of others or stands as an older bottling.",
+  "No other swap proposed or needed; Auchentoshan's Double Cask carries every word of the roster's flagship, so its new name needs no swap, though the read-together agent may wish to write the roster's flagship as Auchentoshan 12 Year Old Double Cask."
+ ],
+ "tension": [
+  "plan.json, bladnoch why: calls the 10 Year Old the core bottling; The Spirits Business called it a limited edition and the house's range no longer lists it. Reported, not edited.",
+  "plan.json, auchentoshan why: says the 12 is matured in bourbon and sherry casks at 40% ABV, which holds, but the label now reads 12 Year Old Double Cask. Reported, not edited.",
+  "plan.json, glenkinchie why: names the brothers John and George Rate with no dates, against the house rule that the dead are named with their dates, and gives the Kinchie Burn, which no search read confirmed. Reported, not edited.",
+  "plan.json, lindores-abbey why: names Friar John Cor with no dates, and its note gives the label as Lindores Lowland Single Malt Scotch Whisky MCDXCIV, not confirmed here. Reported, not edited.",
+  "The Ledger's lowland style: its forty-five second line and its recall answer say Auchentoshan distils all its spirit three times, which agrees; nothing in the style or the Library disagrees with the five records. Reported, not edited."
+ ]
+}

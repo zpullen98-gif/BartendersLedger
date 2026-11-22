@@ -134,7 +134,24 @@
     "The label term Triple Distilled is taken from the producer's page wording; the exact label layout was not seen. The Manhattan stands on the house's own cocktail page.",
     "The Ledger's Lowland page agrees: it gives 1823 for the licence and three distillations for all the spirit."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.name: the house replaced its 12 Year Old with the 12 Year Old Double Cask from October 2025 (the producer's page, Dramface and others); now Auchentoshan 12 Year Old Double Cask Single Malt Scotch Whisky, every word of the roster's flagship kept.",
+     "bottle.label: Triple Distilled, not seen on the new label, gives way to Double Cask, the label's own words, with the two cask kinds the producer names.",
+     "bottle.wood: bourbon casks give the larger share, resting on Difford's Guide alone, cut.",
+     "bottle.taste and table: hazelnut and vanilla came from the older 12; now the producer's notes for the Double Cask (sweet pastry, citrus, nuttiness, green leafiness, lemon zest, oak, tangerine, lime, ginger).",
+     "story and cards[blitz].answer: the bomb crater pond is now told as a story, since Difford's Guide shows from old photographs that the pond was larger before the war.",
+     "traps: a third added, on the Double Cask taking the 12 Year Old's place in 2025.",
+     "sources: the Beam Suntory founders page gives way to Dramface's report of the Double Cask; the 81 per cent off the stills stands on the producer's process page and Wikipedia."
+    ],
+    "open": [
+     "story: three warehouses lost in 1941 rests on Difford's Guide and one whisky history site; the producer's timeline speaks of a warehouse. Kept as three, for the integrator.",
+     "others: whether American Oak and Three Wood stand in the 2025 range was not confirmed."
+    ]
+   }
   },
   {
    "key": "glenkinchie",
@@ -264,7 +281,20 @@
     "The Distillers Edition's Amontillado finish rests on the producer's range pages read in search; the refuter may wish to confirm it.",
     "The Ledger's Lowland page names Glenkinchie as a benchmark and states nothing that disagrees with this record."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.taste, table and story: dry grass and pear were in no producer's note; now the producer's notes (vanilla, cut flowers, a toasty note, citrus, butter icing, lemon cheesecake, freesias, a herbal, drying finish).",
+     "bottle.still and cards[worm-tub].answer: the producer credits the worm tub with more character and depth, not weight; now its words.",
+     "story: the first bottlings under its own name following the Classic Malts rested on no source; cut."
+    ],
+    "open": [
+     "story: Scottish Malt Distillers' five firms are given by Grace's Guide as firms (Dawson for St Magdalene, Young for Grange) and by others as distilleries; they agree. The Distillers Company's purchase is 1925 in Grace's Guide and Master of Malt, 1929 in one shop; 1925 stands.",
+     "bottle.wood: the cask types of the 12 stay unnamed, as the producer gives none."
+    ]
+   }
   },
   {
    "key": "bladnoch",
@@ -399,7 +429,19 @@
     "Left out: the stills' count and shape, the water, and any claim that the 10 Year Old carries no added colour, which one review disputes. The taste rests on reviews read in search, not on the producer's notes.",
     "The Ledger's Lowland page names Bladnoch as a benchmark and states nothing that disagrees with this record."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: the 2014 liquidation is given as administration by WhiskyCast and liquidation by others; now the business failed and the distillery was put up for sale, which all agree on.",
+     "story: the trio Samsara, Adela and Talia was announced in January 2017, before distilling began again later that year (The Whisky Business, The Whiskey Wash, The Spirits Business); the order is now right."
+    ],
+    "open": [
+     "bottle: The Spirits Business called the 10 Year Old a limited edition on its release, against the plan's core bottling; the 10 is no longer in the producer's range. The swap to the 13 is refused for now, for the lint only (see the review).",
+     "story: the twentieth century stays loose, as the author left it: closure and revival dates rest on single sources."
+    ]
+   }
   },
   {
    "key": "kingsbarns",
@@ -533,7 +575,21 @@
     "The cask split of 90 and 10 per cent is the house's (its guide and its posts on Dream to Dram and Doocot); the Portuguese red wine is on the producer's product page.",
     "Not in the style's benchmarks, as the plan says; the Ledger's pages say nothing of Kingsbarns."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: the first casks filled in 2015 conflicts with Undiscovered Scotland's first cask of December 2014; now its first casks filled soon after the opening.",
+     "story: the dovecote's look of a fortified tower is now castellated, Canmore's word and the house's centre piece.",
+     "bottle.pour: the hot toddy rested on no source read; cut.",
+     "others: Balcomie is from American oak butts that held Oloroso sherry, by the producer's page; Coaltown's casks that held peated whisky stand on the producer's page and Dramface."
+    ],
+    "open": [
+     "story: the steading is about 1800 in Undiscovered Scotland and nineteenth century in Canmore, eighteenth century on one house page; about 1800 stands.",
+     "story: the family's takeover year stays as by 2013."
+    ]
+   }
   },
   {
    "key": "lindores-abbey",
@@ -663,7 +719,23 @@
     "Left out: the stills' charges and names, the organic barley of 2020, the capacity figures, the unaged Aqua Vitae spirit (one source), and the cask mix of the first release, which an older page gives as bourbon, Amontillado and Pedro Ximénez casks at another strength.",
     "Not in the style's benchmarks, as the plan says; the Ledger's pages say nothing of Lindores."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story, cards[exchequer-1494].answer and quiz[1].explain: the entry reads by order of the King (ScotlandsPeople, the Society of Antiquaries); for the king is now by order of the king.",
+     "table and story: the 1494 entry names the friar, not the abbey; now the distillery ties the abbey to the record, and other accounts place the friar elsewhere.",
+     "bottle.wood and table: mostly bourbon barrels rested on no source; now a selection of bourbon barrels, wine barriques and sherry butts, the producer's words.",
+     "bottle.taste: caramel and pear drops were in no note read; now the producer's nose (vanilla, orchard fruit, citrus, a little pepper) and a review's popcorn and cereal.",
+     "bottle.mash: the Laureate variety, a crop of one year, cut; now Fife barley, much of it from the abbey's old farmland by the house's account.",
+     "story: the Society's first bottles in the spring of 2021 is now in 2021, as one review dates them to June."
+    ],
+    "open": [
+     "bottle.name: whether the label also prints Lowland was not confirmed.",
+     "story: the Exchequer entry is dated 1494 by most and 1495 by some; 1494 stands with the label."
+    ]
+   }
   }
  ]
 }
