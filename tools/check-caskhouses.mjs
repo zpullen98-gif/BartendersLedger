@@ -4,7 +4,7 @@
      node tools/check-caskhouses.mjs              every check below; passes on a partial build and says so last
      node tools/check-caskhouses.mjs --release    the same, and refuses a data file whose meta says partial, whose
                                                   meta.unrefuted is above 0, or whose keys are not frozen
-     node tools/check-caskhouses.mjs --mutations  then breaks the shipped files twenty-four ways, one at a time, and
+     node tools/check-caskhouses.mjs --mutations  then breaks the shipped files twenty-five ways, one at a time, and
                                                   expects red each time, from the check written for that rule (a
                                                   mutation that finds nothing to change, or that only another
                                                   check catches, is itself a failure)
@@ -459,6 +459,9 @@ await test('W2 kept apart: out of allDrinks, the academic modes, Due today, the 
   const modes = g('FC_MODES');
   const at = modes.findIndex((m) => m[0] === 'caskhouses');
   assert.ok(at > 0 && modes[at - 1][0] === 'caskstyles', 'the caskhouses mode is not right after caskstyles');
+  /* the mode's name sits in one picker with the menu's own modes, where "the house" is the
+     owner's workplace: a producer is named a producer there, never a house */
+  assert.ok(!/\bhouses?\b/i.test(modes[at][1] + ' ' + modes[at][2]), 'the caskhouses mode calls a producer a house: ' + modes[at][1]);
   const live = g('caskHouseCards')();
   for (const m of modes) if (m[0] !== 'caskhouses') assert.ok(live.every((c) => !m[3](c)), 'the mode ' + m[0] + ' fits a house card');
   assert.ok(live.every((c) => modes[at][3](c)));
@@ -1014,6 +1017,7 @@ async function mutations() {
     ['a chapter named houses, shadowed by the producers', 'js/data-casks.js', '    "id": "tasting",\n', '    "id": "houses",\n', 'W3 no name shadows another'],
     ['the Practise rows drawn with no house here', 'js/ui-nav.js', "if(typeof caskHouseDeckDef === 'function' && typeof caskHouseCards === 'function' && caskHouseCards().length) house +=", "if(typeof caskHouseDeckDef === 'function') house +=", 'W9 the partial states'],
     ['the root saying 1 of 32 groups are here', 'js/ui-caskhouses.js', "' groups ' + (groups.length === 1 ? 'is' : 'are') + ' here so far.", "' groups are here so far.", 'W9 the partial states'],
+    ['the flashcard mode calling a producer a house', 'js/ui-study.js', "['caskhouses','Flagship recall','Name the producer,", "['caskhouses','House recall','Name the house,", 'W2 kept apart: out of allDrinks'],
     ['the search index losing the houses', 'js/ui-new.js', "  if(typeof caskHouseSearchEntries === 'function') ix.push(...caskHouseSearchEntries());\n", '', 'W8 the Practise rows'],
   ];
   let held = 0;

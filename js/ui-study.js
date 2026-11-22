@@ -462,7 +462,7 @@ const FC_MODES = [
   ['brew','Coffee and tea recall','Say how a coffee or a tea is made and served, then flip and grade yourself.', d => d.src === 'Brew Guide'],
   ['backbar','Liquor shelf recall','Say what the bottle is, how it is made and how we pour it, then flip and grade yourself.', d => d.src === 'Back Bar'],
   ['caskstyles','Style recall','Present the whisky style as you would at the table, then flip and grade yourself.', d => d.src === 'Cask Styles'],
-  ['caskhouses','House recall','Name the house, its flagship and its story as you would at the table, then flip and grade yourself.', d => d.src === 'Cask Houses'],
+  ['caskhouses','Flagship recall','Name the producer, its flagship and its story as you would at the table, then flip and grade yourself.', d => d.src === 'Cask Houses'],
   ['name2spec','Name to Spec','The order comes in. Recite the whole build out loud, then flip and grade yourself.', fitsName],
   ['spec2name','Spec to Name','Read a blind ticket and call the drink, the service-printer skill.', fitsName],
   ['build','Assemble the Ticket','An ingredient bank with decoys mixed in. Select every line that belongs in the spec.', hasSpec],
