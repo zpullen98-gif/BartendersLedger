@@ -18,24 +18,24 @@
     "name": "Laphroaig 10 Year Old Islay Single Malt Scotch Whisky",
     "class": "Single malt Scotch whisky, distilled on Islay, one of the two localities the Scotch Whisky Regulations protect by name",
     "mash": "Malted barley only, as the law asks of a single malt. Part of it is malted on the distillery's own floors and dried over Islay peat; the rest comes from the Port Ellen maltings.",
-    "still": "Distilled twice in copper pot stills at the distillery on the south coast of Islay, near Port Ellen.",
-    "wood": "Ten years in ex-bourbon barrels, by the producer's own account. The label states the age: 10 Year Old.",
+    "still": "Run twice through copper pot stills on the south coast of Islay, near Port Ellen.",
+    "wood": "Ten years in ex-bourbon barrels, by the producer's own account. The age, 10 Year Old, is on the label.",
     "strength": "40% ABV, as sold in the United Kingdom",
     "taste": "Peat smoke, seaweed and a medicinal note on the nose, with a touch of sweetness beneath; then salt and more smoke on the palate, and a sweetness that lingers on the finish.",
-    "pour": "Neat with a jug of water beside it, or a little floated on a Penicillin, where its smoke sits over the honey, ginger and lemon.",
+    "pour": "Neat, with cool water to hand, or a little floated on a Penicillin, where its smoke sits over the honey, ginger and lemon.",
     "label": [
      {
       "term": "Islay Single Malt Scotch Whisky",
-      "means": "Malted barley only, distilled in pot stills at one distillery, and distilled on Islay."
+      "means": "One Islay distillery, its pot stills and malted barley alone."
      },
      {
       "term": "10 Year Old",
-      "means": "Nothing in the bottle has spent less than ten years in oak."
+      "means": "Ten years in oak, or more, for every whisky the bottle holds."
      }
     ]
    },
-   "table": "Laphroaig 10 Year Old is the Islay single malt from the south coast near Port Ellen, ten years in ex-bourbon barrels: peat smoke, seaweed and a medicinal edge over a quiet sweetness. Pour it neat with water beside it, or float a little on a Penicillin.",
-   "story": "Two brothers of the Johnston family set up the distillery on the south coast of Islay, officially in 1815, and their line ran it for more than a century. Ian Hunter (died 1954), by the house's account the last of the Johnston family to run it, took charge in 1908. As the house tells it, he rebuilt the malting floors, took the single malt to America in the years of Prohibition, and brought American ex-bourbon barrels into its warehouses. In 1934 Bessie Williamson (1910 to 1982) came to the island as a typist for the summer. She rose to manage the office, then the distillery, and by 1944 she was running it. When Hunter died in 1954 he left the business to her. From 1962 she sold it in stages to Seager Evans, the firm behind the Long John blend, and she retired in the early 1970s. Through every change the distillery kept its floor maltings and its kiln fired with Islay peat, which are part of why the 10 Year Old tastes as it does. For a bartender it is the bottle that teaches what Islay peat means: smoke, sea and a medicinal edge in one glass.",
+   "table": "After ten years in ex-bourbon barrels on Islay's south coast, near Port Ellen, Laphroaig 10 Year Old pours peat smoke, seaweed and a medicinal edge over a quiet sweetness. Pour it neat, or float a little on a Penicillin.",
+   "story": "Laphroaig's official year is 1815, when two Johnston brothers founded the distillery on the south coast of Islay, and their line ran it for more than a century. Ian Hunter (died 1954), by the house's account the last of the Johnston family to run it, took charge in 1908. As the house tells it, he rebuilt the malting floors, took the single malt to America in the years of Prohibition, and brought American ex-bourbon barrels into its warehouses. In 1934 Bessie Williamson (1910 to 1982) came to the island as a typist for the summer. She rose to manage the office, then the distillery, and by 1944 she was running it. When Hunter died in 1954 he left the business to her. From 1962 she sold it in stages to Seager Evans, the firm behind the Long John blend, and she retired in the early 1970s. Across those changes the distillery kept its floor maltings and its kiln fired with Islay peat, which are part of why the 10 Year Old tastes as it does. It is the bottle a guest should taste to learn what Islay peat means: smoke, sea and a medicinal edge together.",
    "others": [
     {
      "name": "Laphroaig 10 Year Old Cask Strength",
@@ -169,23 +169,23 @@
     "class": "Single malt Scotch whisky, distilled on Islay",
     "mash": "Malted barley only, as the law asks of a single malt, dried over peat; the producer's page for the bottle gives no peating level.",
     "still": "Distilled twice at Lagavulin in pear-shaped copper pot stills. A long fermentation and a slow distillation, about five hours for the first run and more than nine for the second, give the spirit long contact with copper.",
-    "wood": "At least sixteen years in oak, by the producer's account. Secondary sources give mostly former bourbon casks, with some that held sherry. The label states the age: 16 Year Old.",
+    "wood": "At least sixteen years in oak, the producer says. Secondary sources give mostly former bourbon casks, with some that held sherry. 16 Year Old is the age the label gives.",
     "strength": "43% ABV",
     "taste": "Deep peat smoke, iodine and seaweed on the nose, with a dark sweetness and a hint of smoky tea; then vanilla and light caramel under the smoke, a full body, and a long finish of peat and salt.",
     "pour": "Neat, or with a few drops of water; a slow glass to sip after dinner rather than a malt for the mixing tin.",
     "label": [
      {
       "term": "Single Malt Scotch Whisky",
-      "means": "Malted barley only, distilled in pot stills at the one distillery on Lagavulin Bay."
+      "means": "Malted barley only, through the pot stills of the one distillery on Lagavulin Bay."
      },
      {
       "term": "16 Year Old",
-      "means": "Nothing in the bottle has spent less than sixteen years in oak."
+      "means": "Sixteen years in oak as a minimum, for all the whisky in the bottle."
      }
     ]
    },
-   "table": "Lagavulin 16 Year Old is the Islay single malt from Lagavulin Bay on the south coast, sixteen years in oak and bottled at 43% ABV: deep peat smoke, iodine and seaweed over a slow, dark sweetness. Pour it neat, with a few drops of water if the guest likes.",
-   "story": "Distilling at Lagavulin is older than its paperwork: records suggest illicit stills on the bay by the 1740s, and the house dates its official founding to 1816, when legal distilling began there. In 1878 Peter Mackie (1855 to 1924) came to Lagavulin to join his uncle's firm, and he built his White Horse blend on its malt. His firm was for years the agent for neighbouring Laphroaig; when that agency ended in a quarrel, he built in 1908 a small copy of Laphroaig inside Lagavulin's walls, called Malt Mill, which ran until the early 1960s and whose whisky went mostly into blends. After Mackie's death his company took the name White Horse Distillers and soon joined the Distillers Company. When Malt Mill closed, its stills were moved into Lagavulin's own still house, as the sources tell it. The 16 Year Old was long sold as the Islay malt of the Classic Malts range, and in 2016 the distillery marked two hundred years. For a bartender it is the slow Islay: a long ferment, slow stills and sixteen years in oak round the smoke without taming it.",
+   "table": "Deep peat smoke, iodine and seaweed over a slow, dark sweetness: Lagavulin 16 Year Old comes from Lagavulin Bay on the south coast of Islay, sixteen years in oak and bottled at 43% ABV. Keep it for the close of an evening, neat or with a splash of water.",
+   "story": "Distilling at Lagavulin is older than its paperwork: records suggest illicit stills on the bay by the 1740s, and the house dates its official founding to 1816, when legal distilling began there. In 1878 Peter Mackie (1855 to 1924) came to Lagavulin to join his uncle's firm, and he built his White Horse blend on its malt. His firm was for years the agent for neighbouring Laphroaig; when that agency ended in a quarrel, he built in 1908 a small copy of Laphroaig inside Lagavulin's walls, called Malt Mill, which ran until the early 1960s and whose whisky went mostly into blends. After Mackie's death his company took the name White Horse Distillers and soon joined the Distillers Company. When Malt Mill closed, its stills were moved into Lagavulin's own still house, as the sources tell it. The 16 Year Old was long sold as the Islay malt of the Classic Malts range, and in 2016 the distillery marked two hundred years. Slowness is its lesson: a long ferment, unhurried stills and sixteen years in oak round the smoke without taming it.",
    "others": [
     {
      "name": "Lagavulin 8 Year Old",
@@ -197,8 +197,8 @@
     }
    ],
    "traps": [
-    "Lagavulin and Laphroaig are neighbours on the south coast of Islay, but they are separate distilleries with separate histories, and once fought each other in the courts.",
-    "The 16 Year Old is not a sherry-cask whisky: secondary sources give mostly former bourbon casks, and the Pedro Ximénez finish is the Distillers Edition's."
+    "Lagavulin and Laphroaig are neighbours on the south coast of Islay, yet two distilleries with their own histories, which once met each other in court.",
+    "The 16 Year Old is no sherry-cask whisky: secondary sources give mostly former bourbon casks, and the Pedro Ximénez finish is the Distillers Edition's."
    ],
    "cards": [
     {
@@ -314,24 +314,24 @@
     "name": "Ardbeg Ten Years Old",
     "class": "Single malt Scotch whisky, distilled on Islay",
     "mash": "Malted barley only, heavily peated and brought in from the Port Ellen maltings; the house's own pages give the malt's peating as at least 50 parts per million.",
-    "still": "Distilled twice in copper pot stills. A purifier on the lyne arm of the spirit still catches the heavier vapours and sends them back down to be distilled again, which lightens the spirit.",
-    "wood": "Ten years in ex-bourbon casks, by the producer's account. The label states the age in words: Ten Years Old.",
+    "still": "Two distillations in copper pot stills. A purifier on the lyne arm of the spirit still catches the heavier vapours and sends them back down to be distilled again, which lightens the spirit.",
+    "wood": "Ten years in ex-bourbon casks, in the producer's own specification. The label states the age in words: Ten Years Old.",
     "strength": "46% ABV",
     "taste": "Smoky fruit, zesty lemon and lime and dark chocolate on the nose, with menthol and black pepper; then crackling peat, cinnamon toffee and brine, and a long smoky finish of espresso, aniseed and toasted almonds.",
     "pour": "Neat, then with a little water, which the producer says brings out a briny, sea spray note. Its smoke also carries well into a highball with soda.",
     "label": [
      {
       "term": "Ten Years Old",
-      "means": "Nothing in the bottle has spent less than ten years in oak."
+      "means": "The age spelt out in words: all of the whisky has spent ten years or more in oak."
      },
      {
       "term": "Non Chill-filtered",
-      "means": "Not chilled and filtered before bottling, so the oils stay in; it may cloud with water or ice."
+      "means": "The whisky skips the chilling and filtering, so its oils stay in; it may cloud with water or ice."
      }
     ]
    },
-   "table": "Ardbeg Ten Years Old is the heavily peated Islay single malt from the south coast near Port Ellen, ten years in ex-bourbon casks and bottled at 46% ABV without chill filtration. Expect smoke with lemon, lime and black pepper; pour it neat, then add a little water.",
-   "story": "Ardbeg dates its founding to 1815, when the MacDougall family took up legal distilling on the south coast of Islay, though spirit was probably made on the site before then. Hiram Walker took control at the end of the 1970s, and in 1981 the distillery closed. It reopened in 1989, but through the 1990s it worked only in spells. In 1997 Glenmorangie bought Ardbeg, and limited distilling began again that June, with full production in 1998. In 2000 the house launched Ardbeg Ten Years Old, and in the same year founded the Ardbeg Committee, a club of followers formed, as the house tells it, so that the doors would never close again. The Ten became the cornerstone of the range. For a bartender it is the Islay malt that shows heavy peat and bright fruit together: the purifier on the spirit still sends the heavier oils back, so the smoke arrives with citrus rather than tar.",
+   "table": "Ardbeg Ten Years Old, from the south coast of Islay near Port Ellen, is heavily peated yet bright with lemon, lime and black pepper: ten years in ex-bourbon casks, bottled at 46% ABV without chill filtration. Taste it neat first, then with a little water for the brine.",
+   "story": "Ardbeg dates its founding to 1815, when the MacDougall family took up legal distilling on the south coast of Islay, though spirit was probably made on the site before then. Hiram Walker took control in the late 1970s, and in 1981 the distillery closed. It reopened in 1989, but through the 1990s it worked only in spells. In 1997 Glenmorangie bought Ardbeg, and limited distilling began again that June, with full production in 1998. In 2000 the house launched Ardbeg Ten Years Old, and in the same year founded the Ardbeg Committee, a club of followers formed, as the house tells it, so that the doors would never close again. The Ten became the cornerstone of the range. In the glass the Ten shows heavy peat and bright fruit together: the purifier on the spirit still sends the heavier oils back, so the smoke arrives light, with citrus beside it.",
    "others": [
     {
      "name": "Ardbeg Uigeadail",
@@ -344,7 +344,7 @@
    ],
    "traps": [
     "A high peating level does not make Ardbeg the heavier glass: the purifier on its spirit still sends heavy vapours back, so the Ten drinks bright and citrus.",
-    "The label writes the age in words, Ten Years Old; a guest who asks for Ardbeg 10 means the same bottle."
+    "The label writes the age in words, Ten Years Old; Ardbeg 10 on a guest's lips means the same bottle."
    ],
    "cards": [
     {
@@ -459,24 +459,24 @@
     "name": "Bowmore 12 Year Old Islay Single Malt Scotch Whisky",
     "class": "Single malt Scotch whisky, distilled on Islay",
     "mash": "Malted barley only. Part of it, given as about 30 to 40 per cent, is malted on the distillery's own floors and dried over peat, the rest brought in from the mainland; the peating is medium, given as 25 parts per million.",
-    "still": "Distilled twice in copper pot stills at the distillery in the village of Bowmore, on the shore of Loch Indaal.",
-    "wood": "Twelve years in American oak ex-bourbon casks and European oak Oloroso sherry casks, by the producer's account. The label states the age: 12 Year Old.",
+    "still": "Double distilled in copper pot stills in the village of Bowmore, on the shore of Loch Indaal.",
+    "wood": "Twelve years in American oak ex-bourbon casks and European oak Oloroso sherry casks, by the producer's account. Its label carries the age: 12 Year Old.",
     "strength": "40% ABV",
     "taste": "Lemon and heather honey on the nose with a soft puff of smoke; then honey, peat smoke and dry oak, a little salt and seaweed, lemon zest, ripe pear and vanilla, and a gentle smoky finish.",
-    "pour": "Neat or with a little water; its gentler smoke suits a guest new to Islay, and it makes an easy highball with soda.",
+    "pour": "Neat or with a little water; with soda it makes a soft highball, its smoke kept gentle.",
     "label": [
      {
       "term": "Islay Single Malt Scotch Whisky",
-      "means": "Malted barley only, distilled in pot stills at one distillery, and distilled on Islay."
+      "means": "Single malt from one Islay distillery: malted barley only, distilled in pot stills on the island."
      },
      {
       "term": "12 Year Old",
-      "means": "Nothing in the bottle has spent less than twelve years in oak."
+      "means": "Twelve years is the floor: no whisky in it has had fewer in cask."
      }
     ]
    },
-   "table": "Bowmore 12 Year Old is the Islay single malt from the village of Bowmore on Loch Indaal, partly malted on its own floors and aged in bourbon and sherry casks: lemon, honey and a gentle smoke. It is the soft way into Islay for a guest wary of peat.",
-   "story": "Bowmore gives 1779 as its founding year, though some accounts find no sure sign of licensed distilling there before 1816, and by one account a merchant named Simson, who came to Bowmore in 1766, began it soon after his arrival. In the nineteenth century the Mutter family of Glasgow took it over and built its name in the trade. It passed through several hands in the twentieth century. In 1963 a firm of whisky brokers bought it, and Suntory, which took a share of that business in 1989, completed its purchase in 1994. Through every change the distillery kept its floor maltings, where part of the barley is turned by hand and dried over peat, and its No. 1 Vaults, a warehouse set partly below sea level on the shore of Loch Indaal. For a bartender the 12 Year Old is the middle of Islay: smoke, but with honey and lemon ahead of it, the bottle for a guest taking a first step toward peat.",
+   "table": "Part of the barley for Bowmore 12 Year Old is turned by hand on the distillery's own floors, in the village of Bowmore on Loch Indaal, and it rests in bourbon and sherry casks: lemon and honey ahead of a gentle smoke. It suits a guest new to Islay.",
+   "story": "The year on Bowmore's own history is 1779, though some accounts find no sure sign of licensed distilling there before 1816, and by one account a merchant named Simson, who came to Bowmore in 1766, began it soon after his arrival. In the nineteenth century the Mutter family of Glasgow took it over and built its name in the trade. It passed through several hands in the twentieth century. In 1963 a firm of whisky brokers bought it, and Suntory, which took a share of that business in 1989, completed its purchase in 1994. In all those years Bowmore held on to its floor maltings, where part of the barley is turned by hand and dried over peat, and to its No. 1 Vaults, a warehouse set partly below sea level on the shore of Loch Indaal. Honey and lemon first, the smoke behind them: the 12 Year Old sits in the middle of Islay, a first step toward peat.",
    "others": [
     {
      "name": "Bowmore 12 Year Old Sherry Oak Cask",
@@ -489,7 +489,7 @@
    ],
    "traps": [
     "The No. 1 Vaults lie partly below sea level, but the whisky is not aged under water: it is a warehouse on the shore of Loch Indaal.",
-    "Bowmore floor malts only part of its barley, given as about 30 to 40 per cent; the rest is brought in, so not every grain is turned on its floors.",
+    "The floors at Bowmore take only part of the barley, given as about 30 to 40 per cent; the rest is brought in, so not every grain is turned by hand there.",
     "The 12 Year Old and the 12 Year Old Sherry Oak Cask are two bottlings: the second carries a sherry finish the core 12 does not."
    ],
    "cards": [
@@ -608,23 +608,23 @@
     "class": "Single malt Scotch whisky, distilled on Islay",
     "mash": "Malted barley only, peated, as the law asks of a single malt; the producer gives no peating level. The distillery also makes an unpeated spirit for other releases.",
     "still": "Distilled twice in six copper pot stills, in a still house rebuilt between 1972 and 1974 with glass walls facing the Sound of Islay.",
-    "wood": "At least twelve years in oak casks; the producer's page for the bottle names no cask type. The label states the age: 12 Year Old.",
+    "wood": "At least twelve years in oak casks; the producer's page for the bottle names no cask type. The age on the label: 12 Year Old.",
     "strength": "43% ABV",
     "taste": "A fresh, sweet nose with a little citrus and a light puff of smoke; then sweetness turning to a fragrant smokiness, salt and almond oil with water, and a lingering sweet, smoky finish.",
-    "pour": "Neat or with a little water, which brings out salt and an oily note; its lighter smoke also suits a highball with soda.",
+    "pour": "Neat, or with water, which draws out salt and an oily note; its lighter smoke also works long, with soda.",
     "label": [
      {
       "term": "Single Malt Scotch Whisky",
-      "means": "Malted barley only, distilled in pot stills at the one distillery near Port Askaig."
+      "means": "A single distillery by Port Askaig, malted barley alone, and pot stills."
      },
      {
       "term": "12 Year Old",
-      "means": "Nothing in the bottle has spent less than twelve years in oak."
+      "means": "None of the whisky inside is under twelve years old."
      }
     ]
    },
-   "table": "Caol Ila 12 Year Old is the Islay single malt from the Sound of Islay near Port Askaig: fresh and sweet, with citrus and a lighter, oily smoke. Much of its malt has long gone into blends such as Johnnie Walker, so many guests have tasted it unknowingly.",
-   "story": "Caol Ila takes its name from the Gaelic for the Sound of Islay, the strait between Islay and Jura that the distillery looks across. It was founded in 1846 in a tight bay beside Port Askaig, on the island's east coast, and changed hands within a few years. In 1863 the blenders Bulloch Lade took it over, and Caol Ila stayed with them until the firm failed in 1920. In 1927 the Distillers Company gained control, and the distillery ran on until 1972, when the old buildings were pulled down, all but one warehouse. A new distillery opened in 1974 with six stills, three times the two it had before, in a still house walled in glass that faces the Sound. For decades nearly all of its malt went into blends, Johnnie Walker among them, and the 12 Year Old is the bottling that lets a guest meet it alone. For a bartender it is the Islay a guest has often tasted without knowing it: lighter and oilier in its smoke than the south coast malts, and the plain way to show how Islay seasons a blend.",
+   "table": "Caol Ila 12 Year Old comes from the distillery by Port Askaig on the Sound of Islay: fresh and sweet, with citrus and a lighter, oily smoke. Its malt has long gone into blends such as Johnnie Walker, so many guests have tasted it without knowing.",
+   "story": "Caol Ila is the Gaelic name of the Sound of Islay, the strait between Islay and Jura that the distillery looks across. It was founded in 1846 in a tight bay beside Port Askaig, on the island's east coast, and changed hands within a few years. In 1863 the blenders Bulloch Lade took it over, and Caol Ila stayed with them until the firm failed in 1920. In 1927 the Distillers Company gained control, and the distillery ran on until 1972, when the old buildings were pulled down, all but one warehouse. A new distillery opened in 1974 with six stills, three times the two it had before, in a still house walled in glass that faces the Sound. For decades blenders took nearly all of its malt, Johnnie Walker among them, and the 12 Year Old lets a guest meet it alone. Lighter and oilier in its smoke than the south coast malts, it shows how Islay seasons a blend.",
    "others": [
     {
      "name": "Caol Ila Distillers Edition",
@@ -636,7 +636,7 @@
     }
    ],
    "traps": [
-    "Caol Ila is no newcomer because its single malt is less seen: the distillery dates from 1846, and most of its spirit has long gone into blends.",
+    "Caol Ila is no newcomer because its single malt is less seen: the distillery dates from 1846, and most of what it makes has long been used in blends.",
     "The glass still house dates from the rebuild of 1972 to 1974; a modern building does not mean a young distillery.",
     "Caol Ila also makes an unpeated spirit, released from time to time; the 12 Year Old is the peated one."
    ],

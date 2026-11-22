@@ -19,10 +19,10 @@
         "class": "Single malt Scotch whisky; an island malt from Skye, Highland in law",
         "mash": "Malted barley only, as the law asks of a single malt; the house describes it as smoky and publishes no peating level.",
         "still": "Distilled twice at Carbost in five copper pot stills, two wash and three spirit, a layout kept from triple distillation. The wash stills' lyne arms dip in a U-bend with a purifier that returns some spirit, and wooden worm tubs outside condense the rest.",
-        "wood": "At least ten years in American oak casks, by the producer's account. The bottling is sold as the 10 Year Old.",
+        "wood": "At least ten years in American oak casks, according to the producer. The bottling is sold as the 10 Year Old.",
         "strength": "45.8% ABV",
         "taste": "Seawater, smoke and a lemony sweetness on the nose, then barley malt, dried fruit and a strong note of black pepper, with a warming, peppery finish that lasts.",
-        "pour": "Neat with a little water beside it, or long with soda and ice in a highball, where the pepper and smoke carry.",
+        "pour": "Neat, adding water drop by drop, or long with soda and ice in a highball, where the pepper and smoke carry.",
         "label": [
           {
             "term": "Single Malt",
@@ -34,8 +34,8 @@
           }
         ]
       },
-      "table": "Talisker 10 Year Old is a single malt from Skye, made at Carbost on the shore of Loch Harport since 1830: sea spray and smoke first, then dried fruit and a burst of black pepper. Pour it neat with a little water beside it.",
-      "story": "In 1830 two brothers who had come to Skye from the Isle of Eigg, the MacAskills, founded a distillery at Carbost, on the shore of Loch Harport, with a lease from the MacLeods. Robert Louis Stevenson (1850 to 1894) named it in 1880, in his poem The Scotsman's Return from Abroad, as one of the king of drinks beside Islay and Glenlivet. The distillery passed to the Distillers Company in 1925, and in 1928 it gave up triple distillation for double, though it kept its three spirit stills beside the two for the wash. In November 1960 a fire burned down the house where the stills stood, and the stills were rebuilt as exact copies of the old ones so that the spirit would not change; the old worm tubs outside were spared. The distillery's own maltings closed in 1972. At the end of the 1980s the 10 Year Old was chosen as one of the Classic Malts, the island malt of the set. For a bartender it is the bottle that shows a guest what a maritime Scotch means: salt, smoke and pepper in one glass.",
+      "table": "Beside Loch Harport at Carbost, on Skye, Talisker has made whisky since 1830, and Talisker 10 Year Old carries sea spray and smoke, then dried fruit and a burst of black pepper. Offer it neat, with a little water on the side.",
+      "story": "In 1830 two brothers who had come to Skye from the Isle of Eigg, the MacAskills, founded a distillery at Carbost, on the shore of Loch Harport, with a lease from the MacLeods. Robert Louis Stevenson (1850 to 1894) named it in 1880, in his poem The Scotsman's Return from Abroad, as one of the king of drinks beside Islay and Glenlivet. The distillery passed to the Distillers Company in 1925, and in 1928 it gave up triple distillation for double, though it kept its three spirit stills beside the two for the wash. In November 1960 a fire burned down the house where the stills stood, and the stills were rebuilt as exact copies of the old ones so that the spirit would not change; the old worm tubs outside were spared. The distillery's own maltings closed in 1972. At the end of the 1980s the 10 Year Old was chosen as one of the Classic Malts, the island malt of the set. Hand the 10 Year Old to a guest curious about maritime Scotch: salt, smoke and pepper together.",
       "others": [
         {
           "name": "Talisker Distillers Edition",
@@ -163,7 +163,7 @@
         "wood": "Twelve years, mostly in sherry seasoned casks of European and American oak, first fill among them, with refill casks rounding out the vatting, by the producer's account.",
         "strength": "40% ABV",
         "taste": "Heather honey and a soft, aromatic peat smoke, with rich fruitcake, winter spices and Seville orange; the smoke stays sweet and gentle beneath the honey.",
-        "pour": "Neat with a little water, or over one large cube; a gentle first island malt for a guest who is wary of smoke.",
+        "pour": "Neat or cut with a little water, or over ice; a gentle first island malt for a guest who is wary of smoke.",
         "label": [
           {
             "term": "Viking Honour",
@@ -171,12 +171,12 @@
           },
           {
             "term": "Single Malt",
-            "means": "Made only from malted barley, in pot stills, at the one distillery in Kirkwall."
+            "means": "Only malted barley, through pot stills, and all of it made at the distillery in Kirkwall."
           }
         ]
       },
-      "table": "Highland Park 12 Year Old Viking Honour comes from Kirkwall on Orkney, where part of the malt is dried over island peat made of heather: honey first, then orange and fruitcake over a sweet, gentle smoke. It suits a guest who is wary of peat.",
-      "story": "The house dates itself to 1798 and to a church beadle who, as the brand tells it, distilled on the side and hid his whisky beneath the pulpit when the excise men came. Other accounts credit a farmer who took the High Park estate above Kirkwall that year and built the distillery there, and several give 1826 as the year it first took out a licence. What sets it apart is the malt. The house turns part of its barley by hand on its own floors, about a fifth of what it needs, and dries it in its kilns over peat cut on Hobbister Moor, a few miles away. Orkney peat is made largely of heather, and its smoke is sweet and floral rather than tarry. Much of the whisky rests in dunnage warehouses with earth floors, and the house says the steady island climate takes less spirit from the casks than the mainland does. In 2017 the core range took Viking names to tell of Orkney's Norse past, and the 12 Year Old became Viking Honour, with the whisky unchanged. For a bartender it is the bottle that shows peat need not taste of tar: honey first, smoke second.",
+      "table": "Peat made largely of heather, cut on Orkney, dries part of the malt for Highland Park 12 Year Old Viking Honour, made at Kirkwall: heather honey first, then orange and fruitcake, with a soft, sweet smoke that never takes the lead.",
+      "story": "The house dates itself to 1798 and to a church beadle who, as the brand tells it, distilled on the side and hid his whisky beneath the pulpit when the excise men came. Other accounts credit a farmer who took the High Park estate above Kirkwall that year and built the distillery there, and several give 1826 as the year it first took out a licence. What sets it apart is the malt. The house turns part of its barley by hand on its own floors, about a fifth of what it needs, and dries it in its kilns over peat cut on Hobbister Moor, a few miles away. Orkney peat is made largely of heather, and its smoke is sweet and floral rather than tarry. Much of the whisky rests in dunnage warehouses with earth floors, and the house says the steady island climate takes less spirit from the casks than the mainland does. In 2017 the core range took Viking names to tell of Orkney's Norse past, and the 12 Year Old became Viking Honour, with the whisky unchanged. It proves to a doubtful guest that peat need not taste of tar: honey comes first, and the smoke second.",
       "others": [
         {
           "name": "Highland Park 18 Year Old Viking Pride",
@@ -188,8 +188,8 @@
         }
       ],
       "traps": [
-        "Highland Park is no mainland Highland malt: it is made in Kirkwall on Orkney, built on the High Park estate, and it is Highland in law only because the Islands have no protected name.",
-        "Viking Honour is a name, not a cask or a finish: the 12 Year Old took it in 2017 and the whisky in the bottle did not change."
+        "Highland Park is no mainland Highland malt: it is made in Kirkwall on Orkney, built on the High Park estate, and the regulations file it under Highland only because they name no Islands region.",
+        "Viking Honour marks no cask and no finish: the 12 Year Old took the name in 2017 and its recipe stayed as it was."
       ],
       "cards": [
         {
@@ -305,23 +305,23 @@
         "class": "Single malt Scotch whisky; an island malt from Jura, Highland in law",
         "mash": "Malted barley only, as the law asks of a single malt; the house publishes no detail of its malt or its peating.",
         "still": "Distilled at Craighouse in four copper pot stills about 25 feet tall, of the tall design drawn when the distillery was rebuilt in the 1960s.",
-        "wood": "Matured in American white oak barrels that held bourbon, then finished in Oloroso sherry casks from Jerez, by the producer's account. The bottling is sold as the 10 Year Old.",
+        "wood": "American white oak barrels that held bourbon, then a finish in Oloroso sherry casks from Jerez, as the producer describes it. The label gives ten years.",
         "strength": "40% ABV",
         "taste": "Vanilla, orange, cracked black pepper and dark chocolate on the nose, then nectarine, ginger, coffee and toasted almond in the mouth, sweet with the sherry finish.",
-        "pour": "Neat or with a little water; over ice, or long with soda and a twist of orange in a highball.",
+        "pour": "A sipping malt, neat or with a little water; or long, over ice with soda and a twist of orange in a highball.",
         "label": [
           {
             "term": "Single Malt",
-            "means": "Made only from malted barley, in pot stills, at the one distillery at Craighouse."
+            "means": "One distillery, at Craighouse, and malted barley alone, run through pot stills."
           },
           {
             "term": "Scotch Whisky",
-            "means": "Distilled and matured in Scotland, at least three years in oak, and bottled at 40% ABV or more."
+            "means": "The law's floor for any Scotch: made and matured in Scotland, three years in oak at least, and 40% ABV or more."
           }
         ]
       },
-      "table": "Jura 10 Year Old comes from the distillery at Craighouse on the Isle of Jura: bourbon barrels and a finish in Oloroso sherry casks give it orange, vanilla and toasted almond, with dark chocolate behind. Pour it neat or long with soda.",
-      "story": "By the house's own account the laird of the island founded a distillery at Craighouse in 1810, at first called the Small Isles distillery, and it was licensed in 1831. Later in the century James Ferguson and Sons took it over. It closed in 1901; the roof came off, the buildings fell into ruin, and the island lost the work the distillery had given. In 1960 two landowners of the island set out to rebuild it, so that islanders would have work again, and brought in a designer to draw a new distillery on the old site. It reopened in 1963, with tall copper stills. Whyte and Mackay bought the distillery in the early 1990s, and in 2018 the range was relaunched. In August 2025 the house announced that a 12 Year Old would take the place of the 10 as its first age statement, matured in bourbon casks alone, and the 12 reached British shelves that October before going further afield. Behind a bar the 10 is the gentle island malt, sweet with sherry rather than smoke, bourbon barrels first and Oloroso last.",
+      "table": "Bourbon barrels first and Oloroso sherry casks last give Jura 10 Year Old its orange, vanilla and toasted almond, with dark chocolate behind, and it comes from the island's one distillery, at Craighouse. Neat suits it, and so does a highball.",
+      "story": "The laird of the island founded a distillery at Craighouse in 1810, by the house's own account, at first called the Small Isles distillery, and it was licensed in 1831. Later in the century James Ferguson and Sons took it over. It closed in 1901; the roof came off, the buildings fell into ruin, and the island lost the work the distillery had given. In 1960 two landowners of the island set out to rebuild it, so that islanders would have work again, and brought in a designer to draw a new distillery on the old site. It reopened in 1963, with tall copper stills. Whyte and Mackay bought the distillery in the early 1990s, and in 2018 the range was relaunched. In August 2025 the house announced that a 12 Year Old would take the place of the 10 as its first age statement, matured only in bourbon casks, and the 12 reached British shelves that October before going further afield. The 10 on the shelf is the gentle island malt, sweet with sherry rather than smoke; the 12 that follows it leaves the sherry out.",
       "others": [
         {
           "name": "Jura 12 Year Old",
@@ -334,7 +334,7 @@
       ],
       "traps": [
         "From October 2025 the 10 Year Old gave way to a 12 Year Old, first in Britain: a guest asking for Jura 10 may be offered the 12, which has no sherry finish.",
-        "Jura is not an Islay whisky, though the island lies across the Sound of Islay from Islay: it is an island malt, and Highland in law."
+        "Jura is not an Islay whisky, though only the Sound of Islay lies between the two islands: it is an island malt, which the regulations count as Highland."
       ],
       "cards": [
         {
@@ -453,10 +453,10 @@
         "class": "Single malt Scotch whisky, from the Isle of Arran",
         "mash": "Malted barley only; the Arran malt is unpeated, and the distillery's peated spirit is bottled under its own name, Machrie Moor.",
         "still": "Distilled at Lochranza, in the north of the island, in copper pot stills; spirit first ran there on 29 June 1995.",
-        "wood": "Ten years, mainly in bourbon casks, with a portion finished for about nine months in first-fill Oloroso sherry casks before vatting, by the producer's account.",
+        "wood": "Ten years, mainly in bourbon casks, with a portion finished for about nine months in first-fill Oloroso sherry casks before vatting, as the producer gives it.",
         "strength": "46% ABV",
         "taste": "Candied citrus and honey on the nose, with liquorice and butterscotch, then round citrus, sweet oak and apple, and a clean finish of sweet spice, hazelnut and cinnamon.",
-        "pour": "Neat, with a little water to open the fruit, or long with soda in a highball.",
+        "pour": "Neat with a dash of water; with soda over ice it makes a fresh highball.",
         "label": [
           {
             "term": "Lochranza Distillery",
@@ -464,12 +464,12 @@
           },
           {
             "term": "Single Malt",
-            "means": "Made only from malted barley, in pot stills, at the one distillery at Lochranza."
+            "means": "Barley malt and nothing else, pot distilled at Lochranza and nowhere else."
           }
         ]
       },
-      "table": "Arran 10 Year Old is the unpeated single malt of Lochranza, in the north of the Isle of Arran, bottled at 46% ABV with no chill filtering and no added colour: citrus, honey and apple, then cinnamon and hazelnut. Pour it neat with a little water.",
-      "story": "Arran had gone without a legal distillery for more than 150 years when a former director of Chivas Brothers set out to build one at Lochranza, in the north of the island. Building began on 16 December 1994 and, by the house's account, was halted for a while so that a pair of golden eagles could nest on a cliff above the site. Spirit first ran through the stills on 29 June 1995, and the distillery was opened officially on 17 August that year. The Queen opened its visitor centre in 1997. The malt was left unpeated, and when the house began to make peated spirit it bottled it under another name, Machrie Moor. In 2019 the company opened a second distillery, at Lagg in the south of the island, and gave its single malts a new look, with the Lochranza Distillery name on the label and, as the house put it, the same whisky inside. For a bartender the 10 Year Old is the fresh, fruity island malt, bottled at 46 per cent without chill filtering, that shows an island whisky need not be smoky.",
+      "table": "Unpeated and bottled at 46% ABV with no chill filtering and no added colour, Arran 10 Year Old is the single malt of Lochranza, in the north of the Isle of Arran: citrus, honey and apple, then cinnamon and hazelnut. A little water opens the fruit.",
+      "story": "Arran had gone without a legal distillery for more than 150 years when a former director of Chivas Brothers set out to build one at Lochranza, in the north of the island. Building began on 16 December 1994 and, by the house's account, was halted for a while so that a pair of golden eagles could nest on a cliff above the site. Spirit first ran through the stills on 29 June 1995, and the distillery was opened officially on 17 August that year. The Queen opened its visitor centre in 1997. The malt was left unpeated, and when the house began to make peated spirit it bottled it under another name, Machrie Moor. In 2019 the company opened a second distillery, at Lagg in the south of the island, and gave its single malts a new look, with the Lochranza Distillery name on the label and, as the house put it, the same whisky inside. Fresh and fruity, bottled at 46 per cent without chill filtering, the 10 Year Old is the answer to a guest who believes every island whisky is smoky.",
       "others": [
         {
           "name": "Machrie Moor 10 Year Old",
@@ -599,10 +599,10 @@
         "class": "Single malt Scotch whisky; an island malt from Mull, Highland in law",
         "mash": "Malted barley only, and unpeated; the distillery's heavily peated spirit is bottled under another name, Ledaig.",
         "still": "Distilled in copper pot stills at the distillery on the harbour at Tobermory, modernised during a closure from 2017 to 2019.",
-        "wood": "Twelve years in American oak casks, by the producer's account; bottled with no added colour and no chill filtering.",
+        "wood": "Twelve years in American oak casks, on the producer's word; bottled with no added colour and no chill filtering.",
         "strength": "46.3% ABV",
         "taste": "Orange and citrus with floral hints, oak and vanilla on the nose, then sweet orange, creamy caramel and vanilla with cinnamon and clove, a light saltiness, and a long finish of vanilla and spice.",
-        "pour": "Neat with a little water, or long with soda in a highball, where a twist of orange suits its citrus.",
+        "pour": "With soda over ice and a twist of orange, which suits its citrus, or neat, with water to hand.",
         "label": [
           {
             "term": "Tobermory",
@@ -610,12 +610,12 @@
           },
           {
             "term": "Single Malt",
-            "means": "Made only from malted barley, in pot stills, at the one distillery in Tobermory."
+            "means": "Tobermory's own malt, from malted barley alone, through pot stills."
           }
         ]
       },
-      "table": "Tobermory 12 Year Old is the unpeated malt of the distillery in the harbour town of Tobermory on Mull: twelve years in American oak at 46.3% ABV, with orange, caramel, vanilla and clove. The same stills make the peated Ledaig.",
-      "story": "The house dates itself to 1798, when a merchant of the harbour town founded a distillery on the shore at Tobermory, first called Ledaig. Its story is one of long silences. It closed in 1837 and did not distil again until the 1870s. The Distillers Company took it over in 1916 and shut it around 1930, and it stayed silent for more than forty years. It reopened in 1972 under the Ledaig name and closed again in 1975; after more stops and starts, it was distilling again by 1990. The house kept the old name, Ledaig, for its heavily peated malt and Tobermory for the unpeated one. From 2017 to 2019 the distillery closed again, this time for refurbishment, and when it reopened in 2019 the 12 Year Old replaced the 10 as the unpeated malt's signature bottling, beside a new gin. For a bartender it is the lesson that peat is the house's choice, not the island's.",
+      "table": "From the harbour town on Mull that gives it its name, Tobermory 12 Year Old is the distillery's unpeated malt, twelve years in American oak at 46.3% ABV, with orange, caramel and vanilla over clove. Ledaig, the peated malt, comes off the same stills.",
+      "story": "A merchant of the harbour town founded a distillery on the shore at Tobermory in 1798, by the house's account, and called it Ledaig. Its story is one of long silences. It closed in 1837 and did not distil again until the 1870s. The Distillers Company took it over in 1916 and shut it around 1930, and it stayed silent for more than forty years. It reopened in 1972 under the Ledaig name and closed again in 1975; after more stops and starts, it was distilling again by 1990. The house kept the old name, Ledaig, for its heavily peated malt and Tobermory for the unpeated one. From 2017 to 2019 the distillery closed again, this time for refurbishment, and when it reopened in 2019 the 12 Year Old replaced the 10 as the unpeated malt's signature bottling, beside a new gin. Peat, the 12 and Ledaig together show, is the house's choice and not the island's.",
       "others": [
         {
           "name": "Ledaig 10 Year Old",
