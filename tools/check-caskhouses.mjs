@@ -5,8 +5,9 @@
      node tools/check-caskhouses.mjs --release    the same, and refuses a data file whose meta says partial, whose
                                                   meta.unrefuted is above 0, or whose keys are not frozen
      node tools/check-caskhouses.mjs --mutations  then breaks the shipped files nineteen ways, one at a time, and
-                                                  expects red each time (a mutation that finds nothing to change
-                                                  is itself a failure)
+                                                  expects red each time, from the check written for that rule (a
+                                                  mutation that finds nothing to change, or that only another
+                                                  check catches, is itself a failure)
      node tools/check-caskhouses.mjs --help
 
    The whole app is loaded from index.html's own script list (app.js and its
@@ -888,31 +889,32 @@ console.log('Producers and flagships: ' + checks + ' checks passed; ' + groups.l
 
 /* ---- the gate proves it can fail -------------------------------------------------
    Each mutation breaks one rule in a scratch copy of the shipped tree (index.html,
-   js/, css/); this gate, run on it with LEDGER_JS, must go red. */
+   js/, css/); this gate, run on it with LEDGER_JS, must go red, and red by the check
+   the mutation names (its fifth field, the start of that check's name). */
 async function mutations() {
   const MUT = [
-    ['js/data-caskhouses.js edited by hand', 'js/data-caskhouses.js', '"edition":"', '"edition":"hand-'],
-    ['the card keyed under another source', 'js/ui-caskhouses.js', "cards.push({ src: 'Cask Houses',", "cards.push({ src: 'Cask House',"],
-    ['a house opened under a group that is not its own', 'js/ui-caskhouses.js', "const r = g && house && (g.houses || []).indexOf(house) >= 0 ? caskHouseRecord(house) : null;", "const r = g && house ? caskHouseRecord(house) : null;"],
-    ['a house climbing straight to the Atlas home', 'js/ui-casks.js', "  if(typeof caskHouseParent==='function' && caskHouseParent()) return;\n", ''],
-    ['the answer on the blind front', 'js/ui-caskhouses.js', "+ front + heading + question\n", "+ front + heading + question + caskHouseParas(card.back)\n"],
-    ['the grade before Flip let through', 'js/app.js', "    if(fc.deck[fc.idx] && fc.deck[fc.idx].src === 'Cask Houses' && !fc.flipped) return;\n", ''],
-    ['a quiz question banked by a qkey', 'js/ui-caskhouses.js', "ckey: p.q.ckey, caskHouseKey: p.r.key };", "ckey: p.q.ckey, qkey: 'caskhouse-' + p.r.key, caskHouseKey: p.r.key };"],
-    ['Recall before you reveal drawn open', 'js/ui-caskhouses.js', "'<details class=\"caskhouse-recall\"><summary>'", "'<details class=\"caskhouse-recall\" open><summary>'"],
-    ['a source opened without noopener', 'js/ui-caskhouses.js', "target=\"_blank\" rel=\"noopener noreferrer\">' + esc(s.title)", "target=\"_blank\">' + esc(s.title)"],
-    ['the table line out of the reading face', 'css/caskhouses.css', 'p.caskhouse-tline{font-family:var(--house-reading);', 'p.caskhouse-tline{'],
-    ['Previous and Next leaving the group', 'js/ui-caskhouses.js', "const list = caskHouseHousesOf(caskHouseGroup(r.group)), at = list.indexOf(r)", "const list = caskHouseRecords(), at = list.indexOf(r)"],
-    ['a chapter\u2019s Five producers left out', 'js/ui-casks.js', "    +(typeof caskHouseChapterDoorsHTML==='function'?caskHouseChapterDoorsHTML(c.id):'')\n", ''],
-    ['the Atlas home\u2019s section left out', 'js/ui-casks.js', "    +(typeof caskHouseHomeHTML==='function'?caskHouseHomeHTML():'')\n", ''],
-    ['a shelf bottle\u2019s house door left out', 'js/ui-backbar.js', "    + backbarProducerHTML(e)\n", ''],
-    ['a Library producer\u2019s houses left out', 'js/ui-reference.js', "      + (typeof caskHouseLibraryDoorsHTML === 'function' ? caskHouseLibraryDoorsHTML(x.name) : '')\n", ''],
-    ['Today\u2019s cask study dealing an unseen house card', 'js/ui-caskhouses.js', "return caskHouseCards().filter(function(c){ return caskHouseCardState(c, now).due; })", "return caskHouseCards().filter(function(c){ return true; })"],
-    ['a group\u2019s quiz dealing every group', 'js/ui-caskhouses.js', "caskState().houseQuiz = caskHouseGroup(data.group) ? data.group : '';", "caskState().houseQuiz = '';"],
-    ['the dashboard trend counting a producers round', 'js/ui-new.js', " && q.mode !== 'caskhouses');", ');'],
-    ['the search index losing the houses', 'js/ui-new.js', "  if(typeof caskHouseSearchEntries === 'function') ix.push(...caskHouseSearchEntries());\n", ''],
+    ['js/data-caskhouses.js edited by hand', 'js/data-caskhouses.js', '"edition":"', '"edition":"hand-', 'D1 the build'],
+    ['the card keyed under another source', 'js/ui-caskhouses.js', "cards.push({ src: 'Cask Houses',", "cards.push({ src: 'Cask House',", 'W1 cards'],
+    ['a house opened under a group that is not its own', 'js/ui-caskhouses.js', "const r = g && house && (g.houses || []).indexOf(house) >= 0 ? caskHouseRecord(house) : null;", "const r = g && house ? caskHouseRecord(house) : null;", 'W3 addresses'],
+    ['a house climbing straight to the Atlas home', 'js/ui-casks.js', "  if(typeof caskHouseParent==='function' && caskHouseParent()) return;\n", '', 'W3 addresses'],
+    ['the answer on the blind front', 'js/ui-caskhouses.js', "+ front + heading + question\n", "+ front + heading + question + caskHouseParas(card.back)\n", 'W6 the deck'],
+    ['the grade before Flip let through', 'js/app.js', "    if(fc.deck[fc.idx] && fc.deck[fc.idx].src === 'Cask Houses' && !fc.flipped) return;\n", '', 'W6 the deck'],
+    ['a quiz question banked by a qkey', 'js/ui-caskhouses.js', "ckey: p.q.ckey, caskHouseKey: p.r.key };", "ckey: p.q.ckey, qkey: 'caskhouse-' + p.r.key, caskHouseKey: p.r.key };", 'D6 the quiz'],
+    ['Recall before you reveal drawn open', 'js/ui-caskhouses.js', "'<details class=\"caskhouse-recall\"><summary>'", "'<details class=\"caskhouse-recall\" open><summary>'", 'W4 every house'],
+    ['a source opened without noopener', 'js/ui-caskhouses.js', "target=\"_blank\" rel=\"noopener noreferrer\">' + esc(s.title)", "target=\"_blank\">' + esc(s.title)", 'D5 sources'],
+    ['the table line out of the reading face', 'css/caskhouses.css', 'p.caskhouse-tline{font-family:var(--house-reading);', 'p.caskhouse-tline{', 'D3 the stylesheet'],
+    ['Previous and Next leaving the group', 'js/ui-caskhouses.js', "const list = caskHouseHousesOf(caskHouseGroup(r.group)), at = list.indexOf(r)", "const list = caskHouseRecords(), at = list.indexOf(r)", 'W4 every house'],
+    ['a chapter\u2019s Five producers left out', 'js/ui-casks.js', "    +(typeof caskHouseChapterDoorsHTML==='function'?caskHouseChapterDoorsHTML(c.id):'')\n", '', 'W5 the doors in: a chapter'],
+    ['the Atlas home\u2019s section left out', 'js/ui-casks.js', "    +(typeof caskHouseHomeHTML==='function'?caskHouseHomeHTML():'')\n", '', 'W5 the doors in: the Atlas home'],
+    ['a shelf bottle\u2019s house door left out', 'js/ui-backbar.js', "    + backbarProducerHTML(e)\n", '', 'W5 the doors in: a style page'],
+    ['a Library producer\u2019s houses left out', 'js/ui-reference.js', "      + (typeof caskHouseLibraryDoorsHTML === 'function' ? caskHouseLibraryDoorsHTML(x.name) : '')\n", '', 'W5 the doors in: a Library'],
+    ['Today\u2019s cask study dealing an unseen house card', 'js/ui-caskhouses.js', "return caskHouseCards().filter(function(c){ return caskHouseCardState(c, now).due; })", "return caskHouseCards().filter(function(c){ return true; })", 'W6 Today'],
+    ['a group\u2019s quiz dealing every group', 'js/ui-caskhouses.js', "caskState().houseQuiz = caskHouseGroup(data.group) ? data.group : '';", "caskState().houseQuiz = '';", 'W7 the quiz'],
+    ['the dashboard trend counting a producers round', 'js/ui-new.js', " && q.mode !== 'caskhouses');", ');', 'W7 the quiz'],
+    ['the search index losing the houses', 'js/ui-new.js', "  if(typeof caskHouseSearchEntries === 'function') ix.push(...caskHouseSearchEntries());\n", '', 'W8 the Practise rows'],
   ];
   let held = 0;
-  for (const [name, file, from, to] of MUT) {
+  for (const [name, file, from, to, mine] of MUT) {
     const dir = mkdtempSync(join(tmpdir(), 'ledger-caskhouses-'));
     for (const d of ['js', 'css']) cpSync(join(ROOT, d), join(dir, d), { recursive: true });
     writeFileSync(join(dir, 'index.html'), html);
@@ -921,8 +923,14 @@ async function mutations() {
     writeFileSync(join(dir, file), src.replace(from, to));
     const r = spawnSync(process.execPath, [SELF], { env: Object.assign({}, process.env, { LEDGER_JS: join(dir, 'js') }), encoding: 'utf8' });
     rmSync(dir, { recursive: true, force: true });
+    /* held only when the check written for it is among the failures: a red from
+       another check (a fragment a lane is editing makes D1 red in every copy) proves
+       nothing about the rule this mutation breaks */
+    const fails = r.stderr.split('\n').filter((l) => /^\s{4}\S/.test(l)).map((l) => l.trim());
+    const why = fails.find((l) => l.indexOf(mine) === 0);
     if (r.status === 0) problems.push('the mutation "' + name + '" left this gate green');
-    else { held++; const why = (r.stderr.split('\n').find((l) => /^\s{4}\S/.test(l)) || '').trim(); console.log('  mutation held: ' + name + ' :: ' + why.slice(0, 150)); }
+    else if (!why) problems.push('the mutation "' + name + '" turned the gate red, but not by its own check (' + mine + '): ' + (fails[0] || r.stderr.trim().split('\n').pop() || '').slice(0, 150));
+    else { held++; console.log('  mutation held: ' + name + ' :: ' + why.slice(0, 150)); }
   }
   console.log('  ' + held + ' of ' + MUT.length + ' mutations turned the gate red');
   if (problems.length) {
