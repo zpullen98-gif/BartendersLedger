@@ -26,16 +26,16 @@
     "label": [
      {
       "term": "Triple Distilled",
-      "means": "The house distils its pot still and its grain whiskey three times; the Irish rules allow two."
+      "means": "The house distils its pot still and its grain whiskey three times; the Irish rules do not require three."
      },
      {
       "term": "Sine Metu",
-      "means": "Latin for without fear: the Jameson family motto, printed on the front of the bottle."
+      "means": "Latin for without fear: the Jameson family motto, on a banner beneath the crest on the label."
      }
     ]
    },
    "table": "Jameson Irish Whiskey is the blend from Midleton in County Cork: pot still whiskey from malted and unmalted barley married to light grain whiskey, triple distilled and aged in bourbon and sherry casks. Expect vanilla, toasted wood and a touch of sherry, easy over ice or in an Irish Coffee.",
-   "story": "The house dates its beginning to 1780 and to John Jameson (1740 to 1823), a Scot from Alloa who came to Dublin in the late 1770s and ran a distillery on Bow Street. Family historians argue over how much of the work was his and how much his son's, who carried the business on. By 1851 the business traded as John Jameson & Son. Through the twentieth century Irish whiskey lost much of its trade abroad, and in 1966 Jameson joined John Power & Son and the Cork Distilleries Company to form Irish Distillers. The group built a new distillery at Midleton in County Cork, which opened in 1975, and Bow Street fell silent in the 1970s; its buildings served as the company's offices until 1997, when they became a visitor centre. For a bartender Jameson is the Irish whiskey many guests ask for by name, and the plain lesson in an Irish blend: pot still for spice and body, grain for lightness.",
+   "story": "The house dates its beginning to 1780 and to John Jameson (1740 to 1823), a Scot from Alloa who came to Dublin and ran a distillery on Bow Street. Accounts differ on how he came to it: one says his wife's cousins, the Stein family, founded Bow Street and took him on as manager, and that he became its owner in 1805. By 1810 the business traded as John Jameson & Son. Through the twentieth century Irish whiskey lost much of its trade abroad, and in 1966 Jameson joined John Power & Son and the Cork Distilleries Company to form Irish Distillers. The group built a new distillery at Midleton in County Cork, which opened in 1975, and Bow Street fell silent in the early 1970s; in 1997 its buildings opened as a visitor centre. For a bartender Jameson is the Irish whiskey many guests ask for by name, and the plain lesson in an Irish blend: pot still for spice and body, grain for lightness.",
    "others": [
     {
      "name": "Jameson Caskmates Stout Edition",
@@ -90,7 +90,7 @@
       "Thomas Street"
      ],
      "a": 2,
-     "explain": "John Jameson's distillery stood on Bow Street; John's Lane, off Thomas Street, was the Powers distillery, and Grafton Street the home of Mitchell & Son."
+     "explain": "John Jameson's distillery stood on Bow Street; John's Lane, off Thomas Street, was the Powers distillery, and Thomas Street the home of George Roe & Co."
     }
    ],
    "sources": [
@@ -131,7 +131,23 @@
     "Left out for want of a second source: the sale of Irish Distillers to Pernod Ricard in 1988 (Wikipedia alone was read), Difford's age of five to six years for the pot still part, and the code name of the grain whiskey. One house page says the Original rests in casks seasoned with Irish pale ale; that is the Caskmates line, not the Original, and is left out.",
     "The Library's Midleton record gives the distillery as established in 1825: that is the old Midleton distillery of the Cork Distilleries Company; the distillery where Jameson moved is the new one opened beside it in 1975. The record says 1975 for the new distillery and makes no claim on the size of its stills."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: John & Son is dated by 1810 in Wikipedia and the Kennetpans history, not 1851; now by 1810.",
+     "story: the late 1770s arrival was in no source read; cut. The family dispute is now told as the sources tell it: one account has the Stein family founding Bow Street with him as manager, and him its owner from 1805.",
+     "story: Bow Street as company offices until 1997 was in no source read; now its buildings opened as a visitor centre in 1997, and the last distilling is the early 1970s (the house gives June 1970, others 1971).",
+     "bottle.label Triple Distilled: the Irish rules allow two was loose; now the rules do not require three, as the style page says.",
+     "bottle.label Sine Metu: now on a banner beneath the crest, as trade mark filings of the label and a supermarket listing describe it.",
+     "quiz q2 explain: Grafton Street as Mitchell & Son's home was not tested and is cut; Thomas Street is now George Roe & Co., whose distillery stood there (Wikipedia, Whisky Magazine), with John's Lane off it (the National Inventory of Architectural Heritage)."
+    ],
+    "open": [
+     "bottle.wood: one house article says the Original rests in casks seasoned with Irish pale ale; the house's other pages say bourbon and sherry casks, which the record keeps.",
+     "story: the Stein account and the 1805 ownership rest on one secondary account in a search summary; told as one account."
+    ]
+   }
   },
   {
    "key": "tullamore-dew",
@@ -153,7 +169,7 @@
     "still": "Triple distilled, by the house's account. Distilling came back to the town in 2014 with the Tullamore distillery at Clonminch, on the edge of Tullamore.",
     "wood": "Refill barrels, former bourbon barrels and former sherry butts, each whiskey for at least three years by the house's account. No age statement on the label.",
     "strength": "40% ABV",
-    "taste": "Light and crisp: green apple and a grassy note from the grain, soft fruit from the malt and a little pepper from the pot still, with vanilla and toffee and a gentle finish.",
+    "taste": "By the house's account, light and gentle: sweetness from the grain, fruit from the malt and spice from the pot still, with notes that run from honey and vanilla to a little pepper.",
     "pour": "Over ice, long with ginger ale or soda water, or in an Irish Coffee, where its light grain sits easily under the cream.",
     "label": [
      {
@@ -166,8 +182,8 @@
      }
     ]
    },
-   "table": "Tullamore D.E.W. Original is the blend from Tullamore in County Offaly that marries all three Irish styles: grain for sweetness, malt for fruit and pot still for spice. Light, with green apple, vanilla and a little pepper, it is made for a highball or an Irish Coffee.",
-   "story": "A distillery was built at Tullamore in County Offaly in 1829. Daniel E. Williams (1848 to 1921) went to work in the town at about fourteen, joined the distillery and rose to run it as general manager, and his family later took the business over. His initials, D.E.W., gave the whiskey its name. In 1954 the old distillery closed, and for sixty years Tullamore D.E.W. was made elsewhere, in Dublin and in Cork, latterly at Midleton. William Grant & Sons bought the brand from C&C Group in 2010 and built a new distillery at Clonminch, on the edge of the town. It opened on 17 September 2014, and whiskey was made in Tullamore again for the first time in sixty years. Through every move the Original kept its shape: a blend of grain, malt and pot still whiskey. For a bartender it is the bottle that shows an Irish blend can hold all three styles at once, set beside Jameson, which marries two, and it is the light, easy whiskey to reach for in a highball.",
+   "table": "Tullamore D.E.W. Original is the blend from Tullamore in County Offaly that marries all three Irish styles: grain for sweetness, malt for fruit and pot still for spice. Light, with honey, vanilla and a little pepper, it is made for a highball or an Irish Coffee.",
+   "story": "A distillery was built at Tullamore in County Offaly in 1829. Daniel E. Williams (1848 to 1921) went to work at about fourteen in a Tullamore mill that soon became part of the distillery; he rose to run it as general manager, and his family later took the business over. His initials, D.E.W., gave the whiskey its name. In 1954 the old distillery closed, and for sixty years Tullamore D.E.W. was made elsewhere, for many years at Midleton in County Cork. William Grant & Sons bought the brand from C&C Group in 2010 and built a new distillery at Clonminch, on the edge of the town. It opened on 17 September 2014, and whiskey was made in Tullamore again for the first time in sixty years. Through every move the Original kept its shape: a blend of grain, malt and pot still whiskey. For a bartender it is the bottle that shows an Irish blend can hold all three styles at once, set beside Jameson, which marries two, and it is the light, easy whiskey to reach for in a highball.",
    "others": [
     {
      "name": "Tullamore D.E.W. 12 Year Old Special Reserve",
@@ -263,7 +279,20 @@
     "The taste rests on the producer's own description of the house style (grassy, crisp green apple from the grain, fruit from the malt, spice from the pot still) as Whisky Advocate reports it, and on two reviews (toffee, vanilla, pepper); the house's product pages read gave no nose and palate notes.",
     "Left out: the brand's slogan, the owners between 1954 and 2010 (Powers, Irish Distillers and C&C, for want of two sources on each year), and the Library's claim that the San Francisco bar of the Irish Coffee has poured it since 2006, which was not checked. The 2010 sale by C&C Group stands in Wikipedia and William Grant & Sons' own page."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.taste: green apple, grassy, toffee and a gentle finish were in no source of mine; now the house's account, sweetness, fruit and spice by style, honey and vanilla to a little pepper, and the table line follows (honey for green apple).",
+     "story: Williams went to work at fourteen or fifteen in a Tullamore mill that soon became part of the distillery (Wikipedia, the Offaly Express); now said so.",
+     "story: made in Dublin and in Cork was not confirmed for Dublin; now for many years at Midleton, where Wikipedia says the making moved under Powers and Irish Distillers."
+    ],
+    "open": [
+     "bottle.strength: the house's range page gives 40 to 43% by market; 40% is kept and the 43% market was not named in any source read.",
+     "story: the 2010 sale from C&C Group rests on the author's Wikipedia and William Grant pages; my searches confirmed 2010 and William Grant, not the seller."
+    ]
+   }
   },
   {
    "key": "writers-tears",
@@ -283,7 +312,7 @@
     "class": "Blended Irish whiskey, of pot still and malt with no grain",
     "mash": "Barley alone, malted and unmalted: aged single pot still married to single malt, with no grain whiskey. The house publishes no shares in the marriage.",
     "still": "Triple distilled in copper pot stills and unpeated, by the house's account. The house names no distillery: the whiskey is bought in and blended by Walsh Whiskey.",
-    "wood": "American oak barrels that held bourbon. The label carries no age statement.",
+    "wood": "Flame-charred American oak barrels that held bourbon, by the house's account. The label carries no age statement.",
     "strength": "40% ABV",
     "taste": "By the house's notes, apple and a touch of vanilla on the nose, then ginger and orchard fruit, gently spiced, and a long finish that turns to dark chocolate.",
     "pour": "Neat or with a few drops of water, to taste the pot still spice and the malt's fruit; it makes a rich Irish Coffee.",
@@ -299,7 +328,7 @@
     ]
    },
    "table": "Writers' Tears Copper Pot is an Irish blend with no grain whiskey in it: single pot still married to single malt, triple distilled in copper pot stills and aged in bourbon barrels. Expect apple, ginger and a little dark chocolate; pour it neat, then with a drop of water.",
-   "story": "A husband and wife set up Walsh Whiskey in County Carlow in 1999, a company that blended and bottled whiskey made at distilleries it did not own. The Irishman came first, and by the house's account Writers' Tears followed in 2009. As the house tells it, the name honours the Irish writers who sought inspiration and comfort in whiskey, and it calls on Yeats, Joyce and Beckett among them. The house also ties the marriage of pot still and malt to an Irish style of the nineteenth century that it calls the champagne of Irish whiskey. With Illva Saronno, the Italian maker of Disaronno, as an equal partner, Walsh opened a distillery on the Royal Oak estate in Carlow in 2016. In 2019 the two agreed to part: the distillery passed to Illva and became Royal Oak Distillery, and Writers' Tears and The Irishman stayed with Walsh. The house names no distillery for the Copper Pot. Behind a bar it is the bottle that breaks the rule of thumb about blends: an Irish blend need not hold grain, and this one is pot still and malt alone.",
+   "story": "A husband and wife set up a company in County Carlow in 1999 to make a bottled Irish Coffee, The Hot Irishman. It grew into Walsh Whiskey, which blended and bottled whiskey made at distilleries it did not own. The Irishman came next, and by the house's account Writers' Tears followed in 2009. As the house tells it, the name honours the Irish writers who sought inspiration and comfort in whiskey, and it calls on Yeats, Joyce and Beckett among them. The house also ties the marriage of pot still and malt to an Irish style of the nineteenth century that it calls the champagne of Irish whiskey. With Illva Saronno, the Italian maker of Disaronno, as an equal partner, Walsh opened a distillery on the Royal Oak estate in Carlow in 2016. In 2019 the two agreed to part: the distillery passed to Illva and became Royal Oak Distillery, and Writers' Tears and The Irishman stayed with Walsh, which Amber Beverage Group bought in 2021. The house names no distillery for the Copper Pot. Behind a bar it is the bottle that breaks the rule of thumb about blends: an Irish blend need not hold grain, and this one is pot still and malt alone.",
    "others": [
     {
      "name": "Writers' Tears Double Oak",
@@ -396,7 +425,21 @@
     "Left out for want of a search of my own: the sale of Walsh Whiskey to Amber Beverage Group in November 2021, which The Irishman record of this repo tells with sources; the refuter may add it. The 2016 opening and the 2019 parting rest on BevNET and Difford's Guide.",
     "The style page of this repo says the Copper Pot marries pot still and malt with no grain, which the house's page and The Whiskey Wash agree with."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: the 1999 company was set up to make a bottled Irish Coffee, The Hot Irishman, and grew into Walsh Whiskey (the house and Amber Beverage Group); now said so, and The Irishman follows it.",
+     "story: Amber Beverage Group's purchase of Walsh Whiskey in November 2021 added, with its year, from the Irish Times and Amber's own page, as The Irishman record tells it.",
+     "bottle.wood: flame-charred American oak bourbon casks are the house's words; now said so."
+    ],
+    "open": [
+     "year: 2009 is consistent in the house's pages and the trade, but one account dates The Irishman to 2007 and Writers' Tears three years later; the field stays empty and 2009 is told as the house's account.",
+     "bottle.still: the distillery stays unnamed, as the house names none.",
+     "bottle.strength: 40% rests on house releases of 2015 and 2019; the current label was not read."
+    ]
+   }
   },
   {
    "key": "paddy",
@@ -414,11 +457,11 @@
    "bottle": {
     "name": "Paddy Irish Whiskey",
     "class": "Blended Irish whiskey",
-    "mash": "A blend of Irish whiskeys from barley and other cereals; accounts differ on its shares of pot still, malt and grain, and the house publishes no recipe.",
+    "mash": "A blend of grain, malt and pot still whiskey, by the house's account, from Irish barley among its cereals; the house publishes no shares in the blend.",
     "still": "Triple distilled, by the house's account, at Midleton in County Cork, where Irish Distillers agreed to go on making it after the sale of 2016.",
     "wood": "Matured in three kinds of oak cask, by the house's account, which does not name them. The label carries no age statement.",
     "strength": "40% ABV",
-    "taste": "By the house's notes, nutty and malty with a touch of charred wood, and a mellow, mildly woody finish; tasters also find honey, vanilla and soft bread.",
+    "taste": "By the house's notes, nutty malt, woodland notes and spice on the nose with a hint of honey and vanilla; then light and crisp, nutty and malty, with charred wood and a toasty biscuit note; a mellow, mildly woody finish.",
     "pour": "Neat, over ice or long with ginger ale; it stands well in an Irish Coffee or a hot whiskey with lemon and cloves.",
     "label": [
      {
@@ -432,21 +475,21 @@
     ]
    },
    "table": "Paddy Irish Whiskey is the Cork blend, made at Midleton and named for the salesman who carried it round the county's pubs. Triple distilled, light, nutty and malty with a mellow finish, it is the Cork pour to set beside Jameson.",
-   "story": "In 1867 four distilleries in the city of Cork joined to form the Cork Distilleries Company, and the old distillery at Midleton came in the following year. The company's whiskey went out under a long name, Cork Distilleries Company Old Irish Whiskey. In the early 1880s it took on a young Cork salesman, and for some four decades, as the brand tells it, he carried the whiskey round the pubs of the county, until publicans took to ordering it by his first name. In the early twentieth century, 1912 by one account and 1913 by the house's, the company put that name on the label: Paddy. In 1966 the Cork Distilleries Company joined John Jameson & Son and John Power & Son to form Irish Distillers, and the group gathered its making at the new Midleton distillery, opened in 1975. Irish Distillers sold the brand to the Sazerac Company of Louisiana in 2016 and agreed to go on making it at Midleton. For a bartender Paddy is the Cork answer to Jameson: the same stills at Midleton, a lighter blend, and a name that came from the pubs.",
+   "story": "In 1867 four distilleries in the city of Cork joined to form the Cork Distilleries Company, and the old distillery at Midleton came in the following year. The company's whiskey went out under a long name, Cork Distilleries Company Old Irish Whiskey. In the early 1880s it took on a young Cork salesman, and for nearly forty years, until he retired in 1921, he carried the whiskey round the pubs of the county, where publicans took to ordering it by his first name. In the early twentieth century, 1912 by one account and 1913 by the house's, the company put that name on the label: Paddy. In 1966 the Cork Distilleries Company joined John Jameson & Son and John Power & Son to form Irish Distillers, and the group gathered its making at the new Midleton distillery, opened in 1975. Irish Distillers sold the brand to the Sazerac Company of Louisiana in 2016 and agreed to go on making it at Midleton. For a bartender Paddy is the Cork answer to Jameson: the same stills at Midleton, a lighter blend, and a name that came from the pubs.",
    "others": [
     {
      "name": "Paddy Devil's Apple",
-     "note": "A flavoured bottling of the house: the whiskey with apple and cinnamon."
+     "note": "Launched in 2013: Paddy with apple and cinnamon, sold in some markets as a liqueur below whiskey strength."
     }
    ],
    "traps": [
     "Paddy is made at Midleton, the same distillery as Jameson, though the Sazerac Company bought the brand in 2016.",
-    "The name is a salesman's: the pubs of Cork named the whiskey for him, and it is no slang word for the Irish."
+    "The name is a salesman's first name: the pubs of Cork named the whiskey for the man who sold it to them."
    ],
    "cards": [
     {
      "id": "midleton",
-     "prompt": "At which distillery is Paddy Irish Whiskey made, and how many times is it distilled?",
+     "prompt": "At which distillery is Paddy Irish Whiskey made?",
      "answer": "At Midleton in County Cork, the distillery that makes Jameson; it is triple distilled."
     },
     {
@@ -525,7 +568,23 @@
     "A pick to watch: The Spirits Business reported in 2022 that the Sazerac Company bought Lough Gill Distillery in County Sligo as the coming home of Paddy. The record keeps Midleton, where Irish Distillers agreed in 2016 to go on making it, and states no plan; the refuter should check whether the making has moved, which would change madeBy.",
     "The Cork Distilleries Company of 1867 and Midleton's joining in 1868 rest on Wikipedia's Paddy and Cork Distilleries Company pages and on the Echo; the four founding distilleries are not named in the record for want of a second source."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.mash: the house says a blend of grain, malt and pot still whiskey from Irish barley; now its account, with no shares.",
+     "bottle.taste: honey, vanilla and soft bread as tasters' notes were not the house's; now the house's own nose, palate and finish.",
+     "story: some four decades is now nearly forty years, until he retired in 1921 (Hot Press, Drinks Industry Ireland).",
+     "traps: the slang trap read as denying that Paddy is a slang word; now only that the name is the salesman's first name.",
+     "others: Devil's Apple launched in 2013 and is sold in some markets as a liqueur at 35% (BevNET, reviews); the note says so.",
+     "cards midleton: the prompt asked two things; now one, the answer keeps triple distilled."
+    ],
+    "open": [
+     "madeBy and traps: Sazerac bought Lough Gill Distillery in Sligo in June 2022 as a home for Paddy and renamed it Hawk's Rock in 2025; no source read says the making has left Midleton, which Difford's still gives. The integrator should watch it.",
+     "story: the renaming stays 1912 or 1913 by source; the start 1881 or 1882."
+    ]
+   }
   },
   {
    "key": "slane",
@@ -544,10 +603,10 @@
     "name": "Slane Irish Whiskey Triple Casked",
     "class": "Blended Irish whiskey",
     "mash": "Grain and malt whiskeys, by the house's account, with no shares given. The grain whiskey the distillery makes itself is from a barley mash, not corn or wheat.",
-    "still": "Slane Distillery, in the castle's eighteenth-century stables, has three copper pot stills and six column stills. The first bottles were blended from whiskey bought from other Irish distilleries.",
+    "still": "Slane Distillery, in the castle's eighteenth-century stables, was built with three copper pot stills and six column stills. The early bottles were blended from whiskey bought from other Irish distilleries.",
     "wood": "Triple casked: the whiskeys rest in virgin oak, seasoned whiskey barrels and oloroso sherry casks before they are married. No age statement on the label.",
     "strength": "40% ABV",
-    "taste": "By the house's notes, fruit with caramel, butterscotch and vanilla on the nose, brown spice and toasted oak; then spice sweetened by caramel over dried fruit, and a finish of dried fruit and baking spice.",
+    "taste": "By the house's notes, vanilla with demerara sugar, ripe banana, caramel and butterscotch on the nose; then spice, sweetened by caramel, vanilla and butterscotch over dried fruit, and a lingering finish of dried fruit and baking spice.",
     "pour": "Neat, over ice or long with ginger ale; its caramel and dried fruit suit an Irish Old Fashioned.",
     "label": [
      {
@@ -560,12 +619,12 @@
      }
     ]
    },
-   "table": "Slane Irish Whiskey Triple Casked is the blend from the stables of Slane Castle in County Meath, aged in three woods: virgin oak, seasoned whiskey barrels and oloroso sherry casks. Expect caramel, butterscotch and dried fruit, with brown spice on the finish.",
-   "story": "Slane Castle stands above the River Boyne in County Meath, and since 1981 its grounds have held rock concerts, which helped keep the estate going. In 2009 the family began bottling Slane Castle Whiskey, a blend made for them at Cooley Distillery in County Louth, until Beam, which bought Cooley in 2012, stopped making whiskey for other labels. In 2015 Brown-Forman, the Kentucky company behind Jack Daniel's, bought Slane Castle Irish Whiskey and set about building a distillery in the castle's eighteenth-century stables and courtyards, its first outside the United States. The distillery opened in 2017, with three copper pot stills and six column stills, made half the height first planned so that they would fit the protected buildings. Slane Triple Casked came out the same year, blended at first from whiskey bought from other Irish distilleries, with the aim, as the house told it, of working the castle's own whiskey into the blend as it came of age. For a bartender it is the lesson of wood in a blend: the same whiskeys rested in three kinds of cask, then married.",
+   "table": "Slane Irish Whiskey Triple Casked is the blend from the stables of Slane Castle in County Meath, aged in three woods: virgin oak, seasoned whiskey barrels and oloroso sherry casks. Expect caramel, butterscotch and dried fruit, with baking spice on the finish.",
+   "story": "Slane Castle stands above the River Boyne in County Meath, and since 1981 its grounds have held rock concerts, which helped keep the estate going. In 2009 the family began bottling Slane Castle Whiskey, a blend made for them at Cooley Distillery in County Louth, until Beam bought Cooley and, in 2012, stopped making whiskey for other labels. In 2015 Brown-Forman, the Kentucky company behind Jack Daniel's, bought Slane Castle Irish Whiskey and set about building a distillery in the castle's eighteenth-century stables and courtyards. The distillery opened in 2017, with three copper pot stills and six column stills. Slane Triple Casked came out in May of that year, blended at first from whiskey bought from other Irish distilleries, with the aim, as the house told it, of working the castle's own whiskey into the blend as it came of age. For a bartender it is the lesson of wood in a blend: the same whiskeys rested in three kinds of cask, then married.",
    "others": [
     {
      "name": "Slane Extra Sherry Wood",
-     "note": "The same three casks with a larger share of oloroso sherry wood, bottled at 45% ABV."
+     "note": "A release of the house's Wood Series: the same three casks with more oloroso sherry influence, bottled at 45% ABV."
     },
     {
      "name": "Slane Special Edition",
@@ -657,7 +716,23 @@
     "The early Slane Castle Whiskey of 2009 was blended by Cooley's then blender, a living man already in people.json; he is not named. The fire that damaged the castle in 1991 is left out on one source.",
     "One house page says the seasoned casks held Tennessee whiskey; the record says seasoned whiskey barrels, as the range pages do."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.taste and table: the house's notes are vanilla, demerara sugar, ripe banana, caramel and butterscotch, then spice over dried fruit, and a finish of dried fruit and baking spice; now the house's, and the table's brown spice is baking spice.",
+     "bottle.still: the stills are told as built (three pot, six column, Difford's Guide), not as a present count; the first bottles is now the early bottles.",
+     "story: Beam bought Cooley in 2011 by one account; now Beam bought Cooley and in 2012 stopped making whiskey for others, as the Spirits Business brand history says.",
+     "story: Brown-Forman's first outside the United States cut: a claim of a first, which only Difford's Guide makes among the sources read, and it may be meant of a distillery built rather than one owned.",
+     "story: the stills made half the height to fit the protected buildings was in no source read; cut. Triple Casked came out in May 2017 (the Spirits Business).",
+     "others: Extra Sherry Wood is a release of the house's Wood Series, at first sold at airports and the distillery; the note says Wood Series."
+    ],
+    "open": [
+     "year: 2017 is the opening (public in August 2017); one trade piece gives 2016 for the purchase, the others 2015, which the record keeps.",
+     "bottle.mash: the distillery's own barley grain whiskey rests on Difford's Guide and the house's barley account; whether the blend now holds the castle's own whiskey is unsettled, and the record says neither."
+    ]
+   }
   }
  ]
 }

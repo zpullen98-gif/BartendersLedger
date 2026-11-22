@@ -1,0 +1,296 @@
+{
+ "group": "blended-irish",
+ "chunk": "c8",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 24,
+ "tested": [
+  "jameson: the house's notes, the four years and the casks on its own pages; John Jameson's dates, Alloa, 1780, the Stein account and John Jameson & Son by 1810; the last distilling at Bow Street (June 1970 by the house, 1971 elsewhere) and the visitor centre of 1997; Sine Metu on the label's crest; Bow Street 18 finished at Bow Street; George Roe on Thomas Street and Powers on John's Lane for the question. 6 searches.",
+  "tullamore-dew: Daniel E. Williams, his dates, the mill and the general manager; the closure of 1954, the making at Midleton, William Grant's purchase of 2010, the opening of 17 September 2014 at Clonminch; the house's account of the Original's blend, casks and strength; tasting notes sought on the house's pages and in reviews. 4 searches.",
+  "writers-tears: the house's Copper Pot page (marriage, triple distillation, unpeated, flame-charred bourbon casks, 40%, notes); Walsh's founding of 1999 with The Hot Irishman, The Irishman, the 2009 launch, the Royal Oak opening of 2016, the parting of 2019 and Amber Beverage Group's purchase of November 2021. 2 searches.",
+  "paddy: the salesman's start (1881 or 1882), his retirement in 1921, the renaming (1912 or 1913); the house's blend, barley, three kinds of cask and notes; 40% ABV; the Sazerac sale of 2016 and the Lough Gill purchase of 2022 against the making at Midleton; Devil's Apple. 5 searches.",
+  "slane: the purchase of 2015, the launch of May 2017 and the opening of August 2017, the stables; three pot and six column stills and barley for the grain (Difford's Guide); the house's casks and notes; Extra Sherry Wood and Special Edition; Slane Castle Whiskey of 2009 made at Cooley and Beam's ending of the supply in 2012. 6 searches (one refused for a blocked domain and run again).",
+  "24 of the 28 searches spent; 4 left unused.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, keys at positions 0, 2, 1, 3, 2, 0, 3, 1, 1, 2, each explain naming the nearest wrong option. Paddy's midleton prompt now asks one thing. No card id changed."
+ ],
+ "changed": [
+  {
+   "key": "jameson",
+   "field": "story",
+   "was": "By 1851 the business traded as John Jameson & Son",
+   "now": "By 1810 the business traded as John Jameson & Son",
+   "why": "both sources read date the name John Jameson & Son's Bow Street Distillery to 1810",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jameson_Irish_Whiskey",
+    "https://www.kennetpans.info/bow-street-distillery/"
+   ]
+  },
+  {
+   "key": "jameson",
+   "field": "story",
+   "was": "who came to Dublin in the late 1770s ... Family historians argue over how much of the work was his and how much his son's",
+   "now": "who came to Dublin ... Accounts differ on how he came to it: one says his wife's cousins, the Stein family, founded Bow Street and took him on as manager, and that he became its owner in 1805",
+   "why": "no source read gave the late 1770s; the dispute the sources show is over the founding, not father and son",
+   "sources": [
+    "https://clackmannanshire.scot/index.php/history/john-jameson",
+    "https://en.wikipedia.org/wiki/Jameson_Distillery_Bow_St."
+   ]
+  },
+  {
+   "key": "jameson",
+   "field": "story",
+   "was": "Bow Street fell silent in the 1970s; its buildings served as the company's offices until 1997, when they became a visitor centre",
+   "now": "Bow Street fell silent in the early 1970s; in 1997 its buildings opened as a visitor centre",
+   "why": "the offices were in no source read; the house gives June 1970 for the last run and others 1971",
+   "sources": [
+    "https://www.jamesonwhiskey.com/en-US/our-story",
+    "https://en.wikipedia.org/wiki/Jameson_Distillery_Bow_St."
+   ]
+  },
+  {
+   "key": "jameson",
+   "field": "bottle.label[Triple Distilled].means",
+   "was": "the Irish rules allow two",
+   "now": "the Irish rules do not require three",
+   "why": "the technical file sets no number of distillations; the style page says triple distillation is never required",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Irish_whiskey"
+   ]
+  },
+  {
+   "key": "jameson",
+   "field": "bottle.label[Sine Metu].means",
+   "was": "printed on the front of the bottle",
+   "now": "on a banner beneath the crest on the label",
+   "why": "trade mark filings of the label place the motto on a banner under the shield",
+   "sources": [
+    "https://trademarks.justia.com/882/19/john-jameson-distilled-matured-bottled-in-ireland-john-jameson-son-limited-jj-s-jameson-estd-1780-sine-metu-john-jameson-1780-88219563.html",
+    "https://www.sainsburys.co.uk/groceries/product/jameson-triple-distilled-blended-irish-whiskey-70cl"
+   ]
+  },
+  {
+   "key": "jameson",
+   "field": "quiz[1].explain",
+   "was": "and Grafton Street the home of Mitchell & Son",
+   "now": "and Thomas Street the home of George Roe & Co.",
+   "why": "the Grafton Street claim was untested; Roe's distillery stood on Thomas Street, and John's Lane runs off it",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Thomas_Street_Distillery",
+    "https://www.buildingsofireland.ie/buildings-search/building/50080581/national-college-of-art-and-design-thomas-street-johns-lane-west-dublin-8-dublin-city"
+   ]
+  },
+  {
+   "key": "tullamore-dew",
+   "field": "bottle.taste, table",
+   "was": "Light and crisp: green apple and a grassy note from the grain ... vanilla and toffee and a gentle finish; Light, with green apple, vanilla and a little pepper",
+   "now": "By the house's account, light and gentle: sweetness from the grain, fruit from the malt and spice from the pot still, with notes that run from honey and vanilla to a little pepper; Light, with honey, vanilla and a little pepper",
+   "why": "no source of mine gave green apple, grassy or toffee for the Original; the house gives the three styles' parts and honey to vanilla to spice",
+   "sources": [
+    "https://www.tullamoredew.com/en-us/our-whiskey-range/tullamore-original/",
+    "https://tullamoredew.com/en-gb/our-range"
+   ]
+  },
+  {
+   "key": "tullamore-dew",
+   "field": "story",
+   "was": "went to work in the town at about fourteen, joined the distillery and rose to run it",
+   "now": "went to work at about fourteen in a Tullamore mill that soon became part of the distillery; he rose to run it",
+   "why": "the sources say a mill that later became part of the distillery",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tullamore_Dew",
+    "https://www.offalyexpress.ie/news/all-time-greats/359920/offaly-all-time-greats-profile-15-daniel-e-williams.html"
+   ]
+  },
+  {
+   "key": "tullamore-dew",
+   "field": "story",
+   "was": "made elsewhere, in Dublin and in Cork, latterly at Midleton",
+   "now": "made elsewhere, for many years at Midleton in County Cork",
+   "why": "no source read put the making in Dublin; Wikipedia gives the move to Midleton under Powers and Irish Distillers",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tullamore_Dew",
+    "https://www.whiskeylore.org/distilleries/eu-uk/republic-of-ireland/tullamore-d-e-w"
+   ]
+  },
+  {
+   "key": "writers-tears",
+   "field": "story",
+   "was": "A husband and wife set up Walsh Whiskey in County Carlow in 1999, a company that blended and bottled whiskey ... The Irishman came first",
+   "now": "A husband and wife set up a company in County Carlow in 1999 to make a bottled Irish Coffee, The Hot Irishman. It grew into Walsh Whiskey, which blended and bottled whiskey ... The Irishman came next",
+   "why": "the 1999 company was formed for The Hot Irishman, by the house and Amber Beverage Group",
+   "sources": [
+    "https://www.walshwhiskey.com/our-story/",
+    "https://amberbev.com/?p=19194"
+   ]
+  },
+  {
+   "key": "writers-tears",
+   "field": "story",
+   "was": "and Writers' Tears and The Irishman stayed with Walsh.",
+   "now": "and Writers' Tears and The Irishman stayed with Walsh, which Amber Beverage Group bought in 2021.",
+   "why": "the sale of November 2021, dated history, which The Irishman record of this group's chunk already tells",
+   "sources": [
+    "https://www.irishtimes.com/tags/walsh-whiskey",
+    "https://amberbev.com/?p=19194"
+   ]
+  },
+  {
+   "key": "writers-tears",
+   "field": "bottle.wood",
+   "was": "American oak barrels that held bourbon.",
+   "now": "Flame-charred American oak barrels that held bourbon, by the house's account.",
+   "why": "the house's own words",
+   "sources": [
+    "https://www.walshwhiskey.com/whiskey/copper-pot/"
+   ]
+  },
+  {
+   "key": "paddy",
+   "field": "bottle.mash",
+   "was": "A blend of Irish whiskeys from barley and other cereals; accounts differ on its shares of pot still, malt and grain",
+   "now": "A blend of grain, malt and pot still whiskey, by the house's account, from Irish barley among its cereals; the house publishes no shares in the blend",
+   "why": "the house states the three styles; shares stay unpublished",
+   "sources": [
+    "https://www.paddywhiskey.com/whiskey/",
+    "https://www.paddywhiskey.com/"
+   ]
+  },
+  {
+   "key": "paddy",
+   "field": "bottle.taste",
+   "was": "tasters also find honey, vanilla and soft bread",
+   "now": "the house's nose (nutty malt, woodland notes, spice, honey and vanilla), palate (light, crisp, nutty, malty, charred wood, toasty biscuit) and finish",
+   "why": "soft bread was in no source read; the house's own notes are fuller",
+   "sources": [
+    "https://www.paddywhiskey.com/whiskey/"
+   ]
+  },
+  {
+   "key": "paddy",
+   "field": "story",
+   "was": "for some four decades, as the brand tells it, he carried the whiskey round the pubs of the county, until publicans took to ordering it",
+   "now": "for nearly forty years, until he retired in 1921, he carried the whiskey round the pubs of the county, where publicans took to ordering it",
+   "why": "two sources give his retirement in 1921 after nearly forty years",
+   "sources": [
+    "https://www.hotpress.com/lifestyle-sports/drinks-special-celebrating-spirit-paddy-paddy-irish-whiskey-22771807",
+    "https://www.drinksindustryireland.ie/hi-spirits-launches-the-spirit-of-paddy/"
+   ]
+  },
+  {
+   "key": "paddy",
+   "field": "traps[1]",
+   "was": "and it is no slang word for the Irish",
+   "now": "The name is a salesman's first name: the pubs of Cork named the whiskey for the man who sold it to them.",
+   "why": "the old wording read as denying that the word is slang, which is not so; the trap now teaches only the origin",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Paddy_Whiskey"
+   ]
+  },
+  {
+   "key": "paddy",
+   "field": "others[Paddy Devil's Apple].note",
+   "was": "A flavoured bottling of the house: the whiskey with apple and cinnamon.",
+   "now": "Launched in 2013: Paddy with apple and cinnamon, sold in some markets as a liqueur below whiskey strength.",
+   "why": "introduced in 2013; at 35% in the United States it is labelled a liqueur",
+   "sources": [
+    "https://www.bevnet.com/spirits/2013/paddy-irish-whiskey-introduces-two-new-flavored-whiskeys",
+    "https://bevinfogroup.com/2014/02/20/paddy-whiskey-devils-apple-and-bee-sting/"
+   ]
+  },
+  {
+   "key": "paddy",
+   "field": "cards[midleton].prompt",
+   "was": "At which distillery is Paddy Irish Whiskey made, and how many times is it distilled?",
+   "now": "At which distillery is Paddy Irish Whiskey made?",
+   "why": "a card asks one thing; the answer keeps triple distilled",
+   "sources": [
+    "https://www.paddywhiskey.com/whiskey/"
+   ]
+  },
+  {
+   "key": "slane",
+   "field": "bottle.taste, table",
+   "was": "fruit with caramel, butterscotch and vanilla on the nose, brown spice and toasted oak ...; with brown spice on the finish",
+   "now": "vanilla with demerara sugar, ripe banana, caramel and butterscotch on the nose; then spice, sweetened by caramel, vanilla and butterscotch over dried fruit, and a lingering finish of dried fruit and baking spice; with baking spice on the finish",
+   "why": "the house's own notes as its page gives them",
+   "sources": [
+    "https://www.slaneirishwhiskey.com/whiskey/",
+    "https://www.slaneirishwhiskey.com/product/"
+   ]
+  },
+  {
+   "key": "slane",
+   "field": "bottle.still",
+   "was": "has three copper pot stills and six column stills. The first bottles were blended",
+   "now": "was built with three copper pot stills and six column stills. The early bottles were blended",
+   "why": "a count of stills is told as built, not as a fixed present fact",
+   "sources": [
+    "https://www.diffordsguide.com/en-au/producer/1192/slane-castle-distillery/production"
+   ]
+  },
+  {
+   "key": "slane",
+   "field": "story",
+   "was": "until Beam, which bought Cooley in 2012, stopped making whiskey for other labels",
+   "now": "until Beam bought Cooley and, in 2012, stopped making whiskey for other labels",
+   "why": "accounts put Beam's purchase the year before it cut off the supply in 2012",
+   "sources": [
+    "https://www.thespiritsbusiness.com/2018/09/slane-a-brand-history/",
+    "https://www.irishtimes.com/business/agribusiness-and-food/new-12m-distillery-for-slane-castle-1.1460765"
+   ]
+  },
+  {
+   "key": "slane",
+   "field": "story",
+   "was": ", its first outside the United States; made half the height first planned so that they would fit the protected buildings",
+   "now": "cut",
+   "why": "a claim of a first on one source; the stills' height in no source read",
+   "sources": [
+    "https://www.diffordsguide.com/en-au/producer/1192/slane-castle-distillery/production"
+   ]
+  },
+  {
+   "key": "slane",
+   "field": "story",
+   "was": "Slane Triple Casked came out the same year",
+   "now": "Slane Triple Casked came out in May of that year",
+   "why": "the Spirits Business timeline gives the launch in May and the public opening in August 2017",
+   "sources": [
+    "https://www.thespiritsbusiness.com/2018/09/slane-a-brand-history/"
+   ]
+  },
+  {
+   "key": "slane",
+   "field": "others[Slane Extra Sherry Wood].note",
+   "was": "The same three casks with a larger share of oloroso sherry wood, bottled at 45% ABV.",
+   "now": "A release of the house's Wood Series: the same three casks with more oloroso sherry influence, bottled at 45% ABV.",
+   "why": "the house presents it as a Wood Series release; it was first sold at airports and the distillery",
+   "sources": [
+    "https://www.slaneirishwhiskey.com/extra-sherry-wood/",
+    "https://www.hotpress.com/lifestyle-sports/hot-press-attends-launch-of-slane-extra-sherry-wood-22905120"
+   ]
+  }
+ ],
+ "open": [
+  "jameson: the Stein account and his ownership from 1805 rest on one secondary account; one house article puts the Original in Irish pale ale seasoned casks, against the house's other pages.",
+  "tullamore-dew: the house's range page gives 40 to 43% by market, and the 43% market is unnamed; the seller in 2010 (C&C Group) was not in my own searches; the table and taste now lean on the house's account alone, for want of a second tasting source.",
+  "writers-tears: 2009 is the house's year, one account gives 2010; the current label's strength was not read; the distillery stays unnamed.",
+  "paddy: Sazerac bought Lough Gill Distillery in Sligo in June 2022 as a home for Paddy and renamed it Hawk's Rock in 2025; no source read says the making has left Midleton, so madeBy and the Midleton trap stand, and the integrator should watch them. The renaming stays 1912 or 1913.",
+  "slane: whether the blend now holds the castle's own whiskey is unsettled and the record says neither; the purchase is 2015 in all but one source (2016)."
+ ],
+ "living": [
+  "Met in sources and named in no record, already in people.json: Alex Conyngham and Henry Mountcharles (the Slane family), Bernard Walsh and Rosemary Walsh (the Walsh founders).",
+  "Met in sources, living, named in no record: the master blender of Hawk's Rock Distillery, named in a Sazerac release of 2025, already in people.json. Lord Mountcharles is the form one source used; Henry Mountcharles already stands.",
+  "New for people.json: none in this commit.",
+  "The dead met: John Jameson (1740 to 1823) and Daniel E. Williams (1848 to 1921), named with their dates; the Paddy salesman, Patrick J. O'Flaherty, retired 1921, his death year in no source read, so described, not named; the Stein family and Margaret Haig, not named beyond the family."
+ ],
+ "swaps": [
+  "No swap proposed by the author and none made. Paddy stays at Midleton as madeBy: the Lough Gill purchase of 2022 is told as no move, since no source read says the making has moved."
+ ],
+ "tension": [
+  "plan.json, tullamore-dew why, and the Library's Tullamore D.E.W. record: say Daniel E. Williams rose from the stables (the Library: from stable boy to own the distillery); the sources read say a mill that became part of the distillery, then general manager, with the Daly family owning it in his day. Reported, not edited.",
+  "The Library's Tullamore D.E.W. record says the whiskey was made at Midleton for decades and claims the San Francisco bar of the Irish Coffee has poured it since 2006; the latter was not tested. Reported, not edited.",
+  "plan.json, paddy why: names the salesman Paddy Flaherty; the house and Sazerac give Patrick J. O'Flaherty. The record names neither. Reported, not edited.",
+  "plan.json, jameson why: says the Bow Street distillery was running by 1780 under John Jameson, which one account disputes (the Stein family founding, Jameson as manager). The Library's Midleton record gives 1825, the old Cork distillery, not the new one of 1975. Reported, not edited."
+ ]
+}
