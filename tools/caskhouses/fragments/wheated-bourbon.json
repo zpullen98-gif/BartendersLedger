@@ -11,28 +11,40 @@
    "shelf": "",
    "library": "Maker’s Mark",
    "say": "",
-   "place": "Loretto, Kentucky",
+   "place": "Loretto, Marion County, Kentucky",
    "year": "1953",
    "yearIs": "founded",
    "bottle": {
     "name": "Maker's Mark Kentucky Straight Bourbon Whisky",
     "class": "Kentucky straight bourbon whisky, spelt on the label without the e",
     "mash": "By the distillery's own account 70 per cent corn, 16 per cent soft red winter wheat and 14 per cent malted barley: wheat stands where most bourbons use rye.",
-    "still": "Sour mashed, fermented and distilled twice in copper stills at the distillery in Loretto, by its own account.",
+    "still": "Fermented and distilled twice at the distillery in Loretto: first in a copper column still, then in a copper doubler.",
     "wood": "New charred American white oak barrels, moved by hand from the upper floors of the warehouses to the cooler lower ones as they age. The label carries no age statement.",
     "strength": "45% ABV (90 proof)",
     "taste": "Sweet oak, vanilla and a little fruit on the nose, then caramel, cherry and soft spice, round rather than peppery, with a soft, clean finish.",
     "pour": "Neat, with a few drops of water or over one large cube. It makes a gentle Old Fashioned and stands in a Whiskey Sour, a Gold Rush and a Mint Julep.",
     "label": [
-     { "term": "Kentucky Straight Bourbon Whisky", "means": "Straight bourbon made in Kentucky; the house spells whisky without the e." },
-     { "term": "45% Alc./Vol.", "means": "Ninety proof, the one strength of the standard bottling." }
+     {
+      "term": "Kentucky Straight Bourbon Whisky",
+      "means": "Straight bourbon made in Kentucky; the house spells whisky without the e."
+     },
+     {
+      "term": "45% Alc./Vol.",
+      "means": "Ninety proof, the one strength of the standard bottling."
+     }
     ]
    },
    "table": "Maker's Mark is the wheated bourbon from Loretto, Kentucky, made with soft red winter wheat where most bourbons use rye. The bottle with the red wax is its Kentucky Straight Bourbon Whisky at 90 proof: caramel, vanilla and cherry, soft enough for a gentle Old Fashioned.",
    "story": "Bill Samuels Sr. (died 1992) bought the old Burks' Distillery at Loretto in the autumn of 1953, and distilling began there the following year. He built his recipe around soft red winter wheat in place of rye, and the first bottles went on sale in 1958. His wife, Margie Samuels (died 1985), is credited with the name, the label, the shape of the bottle and the red wax that seals each neck, an idea said to be drawn from her collection of old Cognac bottles. In 1980 the distillery, listed as Burks' Distillery, was made a National Historic Landmark. The family sold the business to Hiram Walker & Sons in 1981 and went on managing it. The brand passed to Fortune Brands in 2005, and in 2014 Beam, the company that then held it, was sold to Suntory of Japan. Through every change the recipe and the single strength stayed as they were. For a bartender the bottle is the plain lesson in wheat: one mash, one strength, and the wheated bourbon that nearly every bar carries.",
    "others": [
-    { "name": "Maker's Mark 46", "note": "The same bourbon given a further finish with French oak staves." },
-    { "name": "Maker's Mark Cask Strength", "note": "The same whisky bottled uncut, its strength changing from batch to batch." }
+    {
+     "name": "Maker's Mark 46",
+     "note": "The same bourbon given a further finish with French oak staves."
+    },
+    {
+     "name": "Maker's Mark Cask Strength",
+     "note": "The same whisky bottled uncut, its strength changing from batch to batch."
+    }
    ],
    "traps": [
     "The label spells it whisky, without the e, though it is a Kentucky bourbon and not Scotch.",
@@ -40,19 +52,78 @@
     "The wheat stands in place of rye, not of corn: it is a bourbon of at least 51 per cent corn like any other."
    ],
    "cards": [
-    { "id": "mash", "prompt": "What is the Maker's Mark mash bill, as the distillery gives it?", "answer": "70 per cent corn, 16 per cent soft red winter wheat and 14 per cent malted barley: wheat in place of rye." },
-    { "id": "wax", "prompt": "Who is credited with the name, the label and the red wax of Maker's Mark?", "answer": "Margie Samuels, wife of the founder, Bill Samuels Sr.; the first bottles went on sale in 1958." }
+    {
+     "id": "mash",
+     "prompt": "What is the Maker's Mark mash bill, as the distillery gives it?",
+     "answer": "70 per cent corn, 16 per cent soft red winter wheat and 14 per cent malted barley: wheat in place of rye."
+    },
+    {
+     "id": "wax",
+     "prompt": "Who is credited with the name, the label and the red wax of Maker's Mark?",
+     "answer": "Margie Samuels, wife of the founder, Bill Samuels Sr.; the first bottles went on sale in 1958."
+    }
    ],
    "quiz": [
-    { "id": "q1", "tag": "bottle", "card": "mash", "q": "A guest asks why Maker's Mark tastes softer than most bourbons. Which grain does it use in place of rye?", "options": ["Soft red winter wheat", "Malted winter rye", "Rolled oats", "White dent corn"], "a": 0, "explain": "Its recipe puts soft red winter wheat where most bourbons use rye; corn is the larger part of the mash, as the rule for bourbon requires." },
-    { "id": "q2", "tag": "story", "card": "wax", "q": "In which year did the first bottles of Maker's Mark go on sale?", "options": ["1953", "1958", "1980", "1981"], "a": 1, "explain": "The distillery was bought in 1953 and the first bottles followed in 1958; 1981 is the year the family sold the business." }
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "mash",
+     "q": "A guest asks why Maker's Mark tastes softer than most bourbons. Which grain does it use in place of rye?",
+     "options": [
+      "Soft red winter wheat",
+      "Malted winter rye",
+      "Rolled oats",
+      "White dent corn"
+     ],
+     "a": 0,
+     "explain": "Its recipe puts soft red winter wheat where most bourbons use rye; corn is the larger part of the mash, as the rule for bourbon requires."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "wax",
+     "q": "In which year did the first bottles of Maker's Mark go on sale?",
+     "options": [
+      "1953",
+      "1958",
+      "1980",
+      "1981"
+     ],
+     "a": 1,
+     "explain": "The distillery was bought in 1953 and the first bottles followed in 1958; 1981 is the year the family sold the business."
+    }
    ],
    "sources": [
-    { "title": "Maker's Mark: How it is made", "url": "https://www.makersmark.com/en-us/distillery/how-its-made", "kind": "primary", "read": "search" },
-    { "title": "Maker's Mark: Kentucky Straight Bourbon", "url": "https://www.makersmark.com/en-us/bourbons/makers-mark", "kind": "primary", "read": "search" },
-    { "title": "Wikipedia: Maker's Mark", "url": "https://en.wikipedia.org/wiki/Maker%27s_Mark", "kind": "secondary", "read": "search" },
-    { "title": "Difford's Guide: Maker's Mark Distillery, history", "url": "https://www.diffordsguide.com/producers/126/makers-mark-distillery/history", "kind": "secondary", "read": "search" },
-    { "title": "Kentucky Distillers' Association: an honour for the founder's son", "url": "https://kybourbon.com/?p=2528", "kind": "secondary", "read": "search" }
+    {
+     "title": "Maker's Mark: How it is made",
+     "url": "https://www.makersmark.com/en-us/distillery/how-its-made",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Maker's Mark: Kentucky Straight Bourbon",
+     "url": "https://www.makersmark.com/en-us/bourbons/makers-mark",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Maker's Mark",
+     "url": "https://en.wikipedia.org/wiki/Maker%27s_Mark",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Difford's Guide: Maker's Mark Distillery, history",
+     "url": "https://www.diffordsguide.com/producers/126/makers-mark-distillery/history",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Kentucky Distillers' Association: an honour for the founder's son",
+     "url": "https://kybourbon.com/?p=2528",
+     "kind": "secondary",
+     "read": "search"
+    }
    ],
    "report": [
     "The plan's note says the mash bill rests on one source and that the house states only the wheat: the distillery's own page now gives 70 per cent corn, 16 wheat and 14 malted barley, so the record gives it as the distillery's.",
@@ -63,7 +134,19 @@
     "The Library's record of Maker's Mark agrees in substance; its wording (flavoring, aging) is the older library's and was not copied.",
     "The second label term is the strength as the producer's range page prints it; no other label wording was confirmed from a primary page."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-21",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "place: was Loretto, Kentucky; now Loretto, Marion County, Kentucky, the town, county and state the brief asks for.",
+     "bottle.still: was sour mashed and distilled twice in copper stills by its own account; now distilled twice, first in a copper column still and then in a copper doubler, as Difford's Guide and The Spirits Educator both describe; the sour mash claim had no source read and is cut."
+    ],
+    "open": [
+     "bottle.still: the proofs off the column and the doubler (120 and 130 proof in secondary accounts) are left out; the producer's pages read gave no figure.",
+     "story: the owner between 1987 and 2001 (Allied or Seagram) is still disputed between sources and stays out, as the author left it."
+    ]
+   }
   },
   {
    "key": "weller",
@@ -88,17 +171,35 @@
     "taste": "Caramel and honey on a sweet nose, then butterscotch, a little fresh bread from the wheat and soft oak, with a short, sweet finish and none of the pepper of rye.",
     "pour": "Neat or over one large cube. It makes a gentle Old Fashioned, and it suits a Gold Rush or a Whiskey Sour.",
     "label": [
-     { "term": "The Original Wheated Bourbon", "means": "The label's own claim for the Weller name: wheat in place of rye in the mash." },
-     { "term": "Special Reserve", "means": "The name of this bottling, the first step of the range; the words have no legal meaning." },
-     { "term": "Kentucky Straight Bourbon Whiskey", "means": "Bourbon made in Kentucky and kept at least two years in new charred oak." }
+     {
+      "term": "The Original Wheated Bourbon",
+      "means": "The label's own claim for the Weller name: wheat in place of rye in the mash."
+     },
+     {
+      "term": "Special Reserve",
+      "means": "The name of this bottling, the first step of the range; the words have no legal meaning."
+     },
+     {
+      "term": "Kentucky Straight Bourbon Whiskey",
+      "means": "Bourbon made in Kentucky and kept at least two years in new charred oak."
+     }
     ]
    },
    "table": "W. L. Weller is the wheated bourbon line made at Buffalo Trace in Frankfort, and Weller Special Reserve is its green label at 90 proof. Wheat stands where most bourbons use rye, so expect honey, caramel and butterscotch: a soft bourbon for a gentle Old Fashioned.",
-   "story": "The label carries the name of William Larue Weller (1825 to 1899), who went into the whiskey trade in Louisville in 1849 with his brother, as W. L. Weller & Brothers. The brand credits him with putting wheat in the mash where others used rye, though historians still debate whether he distilled at all. In 1893 the firm hired a young salesman, Julian \"Pappy\" Van Winkle (1874 to 1965), who bought it with a fellow salesman in 1908 and later joined it to the A. Ph. Stitzel distillery. The Stitzel-Weller Distillery opened near Louisville on Derby Day in 1935 and made the wheated recipe its own. The Van Winkle family sold the distillery to Norton Simon in 1972, the stills there went quiet in the early 1990s, and in 1999 the Weller label was bought by the Sazerac Company, which moved it to Buffalo Trace in Frankfort. Special Reserve is the first step of the range that followed, and the bottle a guest who asks for a wheater is most often poured.",
+   "story": "The label carries the name of William Larue Weller (1825 to 1899), who went into the whiskey trade in Louisville in 1849 with his brother, as W. L. Weller & Brothers. The brand credits him with putting wheat in the mash where others used rye, though historians have long debated whether he distilled at all. In 1893 the firm hired a young salesman, Julian \"Pappy\" Van Winkle (1874 to 1965), who bought it with a fellow salesman in 1908 and later joined it to the A. Ph. Stitzel distillery. The Stitzel-Weller Distillery opened near Louisville on Derby Day in 1935 and made the wheated recipe its own. The Van Winkle family sold the distillery to Norton Simon in 1972, the stills there went quiet in the early 1990s, and in 1999 the Weller label was bought by the Sazerac Company, which moved it to Buffalo Trace in Frankfort. Special Reserve is the first step of the range that followed, and the bottle a guest who asks for a wheater is most often poured.",
    "others": [
-    { "name": "Weller Antique 107", "note": "The same wheated recipe bottled at 107 proof." },
-    { "name": "Weller Aged 12 Years", "note": "The same recipe rested twelve years in new charred oak, deeper and oakier; the black label." },
-    { "name": "William Larue Weller", "note": "The uncut, unfiltered wheated bourbon of the Buffalo Trace Antique Collection, a yearly release." }
+    {
+     "name": "Weller Antique 107",
+     "note": "The same wheated recipe bottled at 107 proof."
+    },
+    {
+     "name": "Weller Aged 12 Years",
+     "note": "The same recipe rested twelve years in new charred oak, deeper and oakier; the black label."
+    },
+    {
+     "name": "William Larue Weller",
+     "note": "The uncut, unfiltered wheated bourbon of the Buffalo Trace Antique Collection, a yearly release."
+    }
    ],
    "traps": [
     "Weller is made at Buffalo Trace: there is no Weller distillery, in Frankfort or anywhere else.",
@@ -106,19 +207,78 @@
     "Special Reserve is the green label at 90 proof; Antique 107 and the 12 year old share its recipe, not its bottle."
    ],
    "cards": [
-    { "id": "wheat", "prompt": "What does wheated mean on Weller Special Reserve, and is the mash bill published?", "answer": "Wheat takes the place of rye beside corn and malted barley; the distillery does not publish the proportions." },
-    { "id": "name", "prompt": "Who was the W. L. Weller of the label, and when did his firm begin?", "answer": "William Larue Weller (1825 to 1899), a Louisville whiskey merchant whose firm began trading in 1849." }
+    {
+     "id": "wheat",
+     "prompt": "What does wheated mean on Weller Special Reserve, and is the mash bill published?",
+     "answer": "Wheat takes the place of rye beside corn and malted barley; the distillery does not publish the proportions."
+    },
+    {
+     "id": "name",
+     "prompt": "Who was the W. L. Weller of the label, and when did his firm begin?",
+     "answer": "William Larue Weller (1825 to 1899), a Louisville whiskey merchant whose firm began trading in 1849."
+    }
    ],
    "quiz": [
-    { "id": "q1", "tag": "bottle", "card": "wheat", "q": "Weller Special Reserve carries no age statement. As a straight bourbon, what is the minimum time it has spent in oak?", "options": ["At least two years", "At least six years", "At least four years", "At least twelve years"], "a": 2, "explain": "A straight bourbon younger than four years must state its age, so no statement means at least four; two years is the floor for the word straight itself." },
-    { "id": "q2", "tag": "story", "card": "name", "q": "In which year did the Sazerac Company buy the Weller label and move it to Buffalo Trace?", "options": ["1935", "1972", "1849", "1999"], "a": 3, "explain": "The label changed hands in 1999; 1935 is the year Stitzel-Weller opened and 1972 the year the Van Winkle family sold that distillery." }
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "wheat",
+     "q": "Weller Special Reserve carries no age statement. As a straight bourbon, what is the minimum time it has spent in oak?",
+     "options": [
+      "At least two years",
+      "At least six years",
+      "At least four years",
+      "At least twelve years"
+     ],
+     "a": 2,
+     "explain": "A straight bourbon younger than four years must state its age, so no statement means at least four; two years is the floor for the word straight itself."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "name",
+     "q": "In which year did the Sazerac Company buy the Weller label and move it to Buffalo Trace?",
+     "options": [
+      "1935",
+      "1972",
+      "1849",
+      "1999"
+     ],
+     "a": 3,
+     "explain": "The label changed hands in 1999; 1935 is the year Stitzel-Weller opened and 1972 the year the Van Winkle family sold that distillery."
+    }
    ],
    "sources": [
-    { "title": "Buffalo Trace Distillery: W. L. Weller Special Reserve", "url": "https://www.buffalotracedistillery.com/our-brands/w-l-weller/w-l-weller-special-reserve/", "kind": "primary", "read": "search" },
-    { "title": "Buffalo Trace Distillery: William Larue Weller", "url": "https://www.buffalotracedistillery.com/our-brands/w-l-weller/william-larue-weller/", "kind": "primary", "read": "search" },
-    { "title": "Old Rip Van Winkle Distillery: Our legacy", "url": "https://oldripvanwinkle.com/heritage/", "kind": "secondary", "read": "search" },
-    { "title": "Wikipedia: Stitzel-Weller Distillery", "url": "https://en.wikipedia.org/wiki/Stitzel%E2%80%93Weller_Distillery", "kind": "secondary", "read": "search" },
-    { "title": "VinePair: W. L. Weller bourbon guide", "url": "https://vinepair.com/articles/wl-weller-bourbon-guide/", "kind": "secondary", "read": "search" }
+    {
+     "title": "Buffalo Trace Distillery: W. L. Weller Special Reserve",
+     "url": "https://www.buffalotracedistillery.com/our-brands/w-l-weller/w-l-weller-special-reserve/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Buffalo Trace Distillery: William Larue Weller",
+     "url": "https://www.buffalotracedistillery.com/our-brands/w-l-weller/william-larue-weller/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Old Rip Van Winkle Distillery: Our legacy",
+     "url": "https://oldripvanwinkle.com/heritage/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Stitzel-Weller Distillery",
+     "url": "https://en.wikipedia.org/wiki/Stitzel%E2%80%93Weller_Distillery",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "VinePair: W. L. Weller bourbon guide",
+     "url": "https://vinepair.com/articles/wl-weller-bourbon-guide/",
+     "kind": "secondary",
+     "read": "search"
+    }
    ],
    "report": [
     "Built on the liquor shelf's reviewed record weller-special-reserve: the mash, the wood, the four year reading of no age statement, the green and black labels and the Weller of 1849 are that record's, and nothing here contradicts it.",
@@ -127,7 +287,18 @@
     "William Larue Weller's death in 1899 is the producer's own statement and the plan's; his birth in 1825 is the producer's and the shelf record's.",
     "The liquor shelf also holds Weller Aged 12 Years (weller-12): a second door for the house page, named here under others."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-21",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: was historians still debate whether he distilled at all; now historians have long debated it, so the sentence no longer states a present that may age."
+    ],
+    "open": [
+     "story: the firm's first name is W. L. Weller & Brothers in one account and William Larue Weller & Brothers in another, and one account dates its opening to late 1848; the record keeps 1849, the producer's year.",
+     "cards and quiz: q1 asks the minimum age in oak while its card, wheat, drills the mash; both are right, but the integrator may wish to pair the age question with a card on age in a later wave. The card id is unchanged."
+    ]
+   }
   },
   {
    "key": "pappy-van-winkle",
@@ -152,17 +323,35 @@
     "taste": "Caramel corn, vanilla and toffee on the nose; a full, supple palate of caramel, leather and oak with a little fruit and peppery brown spice, and a long finish of spice and wood.",
     "pour": "Neat in a tulip glass, with a few drops of water offered beside it. At this age and strength it is a bourbon to sip, and it is not built into a mixed drink.",
     "label": [
-     { "term": "Family Reserve", "means": "The Van Winkle family's name for its older bottlings; the words have no legal meaning." },
-     { "term": "15 Years Old", "means": "An age statement: nothing in the bottle has spent fewer than fifteen years in oak." },
-     { "term": "107 Proof", "means": "53.5 per cent alcohol by volume, well above the 80 proof floor for bourbon." }
+     {
+      "term": "Family Reserve",
+      "means": "The Van Winkle family's name for its older bottlings; the words have no legal meaning."
+     },
+     {
+      "term": "15 Years Old",
+      "means": "An age statement: nothing in the bottle has spent fewer than fifteen years in oak."
+     },
+     {
+      "term": "107 Proof",
+      "means": "53.5 per cent alcohol by volume, well above the 80 proof floor for bourbon."
+     }
     ]
    },
-   "table": "Pappy Van Winkle is the Van Winkle family's wheated bourbon, made at Buffalo Trace in Frankfort to the recipe of the old Stitzel-Weller distillery. The Family Reserve 15 Year Old is the one a guest means: fifteen years in oak at 107 proof, caramel, leather and spice, poured neat.",
-   "story": "Julian \"Pappy\" Van Winkle (1874 to 1965) began in 1893 as a salesman for W. L. Weller & Sons of Louisville. He and a fellow salesman bought the firm in 1908 and later joined it to the A. Ph. Stitzel distillery, and the Stitzel-Weller Distillery opened on Derby Day in 1935, building its bourbons on wheat in place of rye. His son, Julian Van Winkle Jr. (died 1981), was pressed by stockholders to sell the distillery in 1972, and afterwards revived a label from before Prohibition, Old Rip Van Winkle, for whiskey he had made in earlier years. The founder's grandson carried the business on alone from 1981, bottling aged wheated bourbon at Lawrenceburg, and in 1994 released a 20 year old named for his grandfather: Pappy Van Winkle's Family Reserve. In 2002 the family entered a joint venture with Buffalo Trace, which has distilled the whiskey since; the last Stitzel-Weller stocks went into bottles during the years that followed. The 15 Year Old, at 107 proof, is the bottling most guests mean when they ask for Pappy.",
+   "table": "Pappy Van Winkle is a wheated bourbon made at Buffalo Trace in Frankfort to the Van Winkle family's recipe from the old Stitzel-Weller distillery. The Family Reserve 15 Year Old is the one a guest means: fifteen years in oak at 107 proof, caramel, leather and spice, poured neat.",
+   "story": "Julian \"Pappy\" Van Winkle (1874 to 1965) began in 1893 as a salesman for W. L. Weller & Sons of Louisville. He and a fellow salesman bought the firm in 1908 and later joined it to the A. Ph. Stitzel distillery, and the Stitzel-Weller Distillery opened on Derby Day in 1935, building its bourbons on wheat in place of rye. His son, Julian Van Winkle Jr. (died 1981), was pressed by stockholders to sell the distillery in 1972, and afterwards revived a label from before Prohibition, Old Rip Van Winkle, bottling whiskey from the old distillery's stocks. The founder's grandson carried the business on from 1981, bottling aged wheated bourbon, and in 1994 released a 20 year old named for his grandfather: Pappy Van Winkle's Family Reserve. In 2002 the family entered a joint venture with Buffalo Trace, which has distilled the whiskey since; the last Stitzel-Weller stocks went into bottles during the years that followed. The 15 Year Old, at 107 proof, is the bottling most guests mean when they ask for Pappy.",
    "others": [
-    { "name": "Pappy Van Winkle's Family Reserve 20 Year Old", "note": "The bottling that carried the name first, in 1994: five more years in oak." },
-    { "name": "Pappy Van Winkle's Family Reserve 23 Year Old", "note": "Twenty-three years in oak, eight more than the 15 Year Old." },
-    { "name": "Old Rip Van Winkle 10 Year", "note": "The family's younger wheated bourbon, under the label revived after 1972." }
+    {
+     "name": "Pappy Van Winkle's Family Reserve 20 Year Old",
+     "note": "The bottling that carried the name first, in 1994: five more years in oak."
+    },
+    {
+     "name": "Pappy Van Winkle's Family Reserve 23 Year Old",
+     "note": "Twenty-three years in oak, eight more than the 15 Year Old."
+    },
+    {
+     "name": "Old Rip Van Winkle 10 Year",
+     "note": "The family's younger wheated bourbon, under the label revived after 1972."
+    }
    ],
    "traps": [
     "Pappy is not a distillery: the whiskey has been distilled at Buffalo Trace since 2002, and earlier bottles drew on Stitzel-Weller stock.",
@@ -170,19 +359,78 @@
     "The name on the label is the founder's, who died in 1965; the bottling that carries it dates only from 1994."
    ],
    "cards": [
-    { "id": "proof", "prompt": "What are the age, the strength and the mash of Pappy Van Winkle's Family Reserve 15 Year Old?", "answer": "Fifteen years in new charred oak, 107 proof (53.5% ABV), from a wheated mash whose proportions are not published." },
-    { "id": "pappy", "prompt": "Who was the Pappy of Pappy Van Winkle?", "answer": "Julian Van Winkle Sr. (1874 to 1965), a Weller salesman from 1893 who helped found Stitzel-Weller, which opened in 1935." }
+    {
+     "id": "proof",
+     "prompt": "At what strength is Pappy Van Winkle's Family Reserve 15 Year Old bottled?",
+     "answer": "107 proof, 53.5% ABV, after fifteen years in new charred oak."
+    },
+    {
+     "id": "pappy",
+     "prompt": "Who was the Pappy of Pappy Van Winkle?",
+     "answer": "Julian Van Winkle Sr. (1874 to 1965), a Weller salesman from 1893 who helped found Stitzel-Weller, which opened in 1935."
+    }
    ],
    "quiz": [
-    { "id": "q1", "tag": "bottle", "card": "proof", "q": "A guest asks how strong the Pappy Van Winkle 15 Year Old is. What does the label state?", "options": ["90 proof", "107 proof", "100 proof", "Barrel proof, varying by release"], "a": 1, "explain": "The 15 Year Old is bottled at 107 proof, 53.5% ABV; 90 proof is the strength of Weller Special Reserve, its neighbour from the same distillery." },
-    { "id": "q2", "tag": "story", "card": "pappy", "q": "Which distillery, opened on Derby Day in 1935, made the wheated bourbon the Van Winkle name was built on?", "options": ["Stitzel-Weller", "Buffalo Trace", "Bernheim", "Burks' Distillery"], "a": 0, "explain": "Stitzel-Weller opened near Louisville in 1935; Buffalo Trace has distilled the whiskey only since the joint venture of 2002." }
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "proof",
+     "q": "A guest asks how strong the Pappy Van Winkle 15 Year Old is. What does the label state?",
+     "options": [
+      "90 proof",
+      "107 proof",
+      "100 proof",
+      "Barrel proof, varying by release"
+     ],
+     "a": 1,
+     "explain": "The 15 Year Old is bottled at 107 proof, 53.5% ABV; 90 proof is the strength of Weller Special Reserve, its neighbour from the same distillery."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "pappy",
+     "q": "Which distillery, opened on Derby Day in 1935, made the wheated bourbon the Van Winkle name was built on?",
+     "options": [
+      "Stitzel-Weller",
+      "Buffalo Trace",
+      "Bernheim",
+      "Burks' Distillery"
+     ],
+     "a": 0,
+     "explain": "Stitzel-Weller opened near Louisville in 1935; Buffalo Trace has distilled the whiskey only since the joint venture of 2002."
+    }
    ],
    "sources": [
-    { "title": "Old Rip Van Winkle Distillery: Our legacy", "url": "https://oldripvanwinkle.com/heritage/", "kind": "primary", "read": "search" },
-    { "title": "Old Rip Van Winkle Distillery: Our whiskeys", "url": "https://oldripvanwinkle.com/whiskey/", "kind": "primary", "read": "search" },
-    { "title": "Buffalo Trace Distillery: Pappy Van Winkle 15 Year", "url": "https://www.buffalotracedistillery.com/our-brands/van-winkle/pappy-van-winkle-15-year/", "kind": "primary", "read": "search" },
-    { "title": "Buffalo Trace Distillery: Pappy Van Winkle", "url": "https://www.buffalotracedistillery.com/our-distillery/legendary-people/pappy-van-winkle/", "kind": "primary", "read": "search" },
-    { "title": "The Whiskey Wash: From Stitzel-Weller to Buffalo Trace, the chronology of Pappy Van Winkle", "url": "https://thewhiskeywash.com/american-whiskey/from-stitzel-weller-to-buffalo-trace-the-chronology-of-pappy-van-winkle/", "kind": "secondary", "read": "search" }
+    {
+     "title": "Old Rip Van Winkle Distillery: Our legacy",
+     "url": "https://oldripvanwinkle.com/heritage/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Old Rip Van Winkle Distillery: Our whiskeys",
+     "url": "https://oldripvanwinkle.com/whiskey/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Buffalo Trace Distillery: Pappy Van Winkle 15 Year",
+     "url": "https://www.buffalotracedistillery.com/our-brands/van-winkle/pappy-van-winkle-15-year/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Buffalo Trace Distillery: Pappy Van Winkle",
+     "url": "https://www.buffalotracedistillery.com/our-distillery/legendary-people/pappy-van-winkle/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "The Whiskey Wash: From Stitzel-Weller to Buffalo Trace, the chronology of Pappy Van Winkle",
+     "url": "https://thewhiskeywash.com/american-whiskey/from-stitzel-weller-to-buffalo-trace-the-chronology-of-pappy-van-winkle/",
+     "kind": "secondary",
+     "read": "search"
+    }
    ],
    "report": [
     "The owner named this pick. Nothing about a yearly release, allocation or what the bottle fetches is written anywhere in the record.",
@@ -194,7 +442,21 @@
     "Added to people.json's historic list, because the living list holds the grandson's name inside theirs: Julian Van Winkle Sr. (died 1965) and Julian Van Winkle Jr. (died 1981), both on the family's own legacy page and on Buffalo Trace's pages. The founder's granddaughter, named as an author in one source, is added to the living list.",
     "The year Stitzel-Weller closed is 1991, 1992 or 1994 by source and is not stated in this record."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-21",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "table: was the Van Winkle family's wheated bourbon, a possessive that reads as present ownership; now a wheated bourbon made at Buffalo Trace to the Van Winkle family's recipe.",
+     "story: was that Julian Van Winkle Jr. revived Old Rip Van Winkle for whiskey he had made in earlier years; now for whiskey from the old distillery's stocks, as Wikipedia and the Filson papers summary give it.",
+     "story: was that the grandson carried the business on alone from 1981, bottling at Lawrenceburg; the Lawrenceburg bottling (the old Hoffman distillery) stood in one source only and alone in none, so both are cut.",
+     "cards[proof]: the prompt asked the age, the strength and the mash at once; now it asks the strength alone and the answer gives 107 proof, 53.5% ABV, with the age beside it. The id is unchanged."
+    ],
+    "open": [
+     "story: the source of the stock behind the first 20 Year Old of 1994 is Stitzel-Weller in one account and Old Boone in another; the record names neither.",
+     "bottle.taste: the tasting words rest on the producer's page as the author read it; no second account was searched."
+    ]
+   }
   },
   {
    "key": "larceny",
@@ -210,25 +472,36 @@
    "year": "2012",
    "yearIs": "first released",
    "bottle": {
-    "name": "John E. Fitzgerald Larceny Small Batch Kentucky Straight Bourbon Whiskey",
+    "name": "Larceny Small Batch Kentucky Straight Bourbon Whiskey",
     "class": "Kentucky straight bourbon whiskey",
-    "mash": "By Heaven Hill's account 68 per cent corn, 20 per cent wheat and 12 per cent malted barley: wheat in place of rye, and more of it than its rivals use, the house says.",
-    "still": "Distilled at Heaven Hill's Bernheim Distillery in Louisville, where the house makes all of its wheated bourbon.",
-    "wood": "New charred American oak, in open rick warehouses in Nelson County. Heaven Hill describes a six year old taste profile rather than a stated age.",
+    "mash": "By Heaven Hill's account 68 per cent corn, 20 per cent wheat and 12 per cent malted barley: wheat in place of rye, and a larger share of it, the house says, than its nearest rival uses.",
+    "still": "Distilled at Heaven Hill's Bernheim Distillery in Louisville, by the house's own account.",
+    "wood": "New charred American oak. At launch Heaven Hill described barrels of six to twelve years from the upper floors of its rickhouses, and later a six year old taste profile; no age statement on the label is confirmed.",
     "strength": "46% ABV (92 proof)",
     "taste": "Fresh bread and toffee with a little butterscotch on the nose, then buttery caramel and honey with a rich feel in the mouth, and a long finish that is gently sweet and savoury.",
     "pour": "Neat, on the rocks or with a little water. It makes a soft Old Fashioned and a Whiskey Sour, and it is the wheater to offer a guest who asks for something like Weller.",
     "label": [
-     { "term": "John E. Fitzgerald", "means": "The Treasury agent of the Old Fitzgerald legend, for whom the label is named." },
-     { "term": "Small Batch", "means": "No legal meaning; Heaven Hill has described batches of 200 barrels or fewer." },
-     { "term": "Kentucky Straight Bourbon Whiskey", "means": "Bourbon made in Kentucky and kept at least two years in new charred oak." }
+     {
+      "term": "Small Batch",
+      "means": "No legal meaning; Heaven Hill gave 100 barrels or fewer at launch and 200 or fewer later."
+     },
+     {
+      "term": "Kentucky Straight Bourbon Whiskey",
+      "means": "Bourbon made in Kentucky and kept at least two years in new charred oak."
+     }
     ]
    },
-   "table": "Larceny is Heaven Hill's wheated bourbon, distilled in Louisville and named for the Treasury agent of the Old Fitzgerald legend. The Small Batch at 92 proof tastes of fresh bread, toffee and buttery caramel, and it is the wheater to pour when Maker's Mark or Weller is not the answer.",
+   "table": "Larceny is a wheated bourbon made by Heaven Hill in Louisville, named for the Treasury agent of the Old Fitzgerald legend. The Small Batch at 92 proof tastes of fresh bread, toffee and buttery caramel: the wheater to pour when Maker's Mark or Weller is not the answer.",
    "story": "The name comes from a legend told about Old Fitzgerald, the wheated bourbon that was the flagship of Stitzel-Weller. John E. Fitzgerald, the story goes, was no distiller but a Treasury agent, one of the few men allowed the keys to a bonded warehouse, and he used them to draw whiskey from the barrels he liked; the lightened casks were known as Fitzgerald barrels. The Old Fitzgerald name dates from the nineteenth century, and Julian \"Pappy\" Van Winkle (1874 to 1965) made it a wheated bourbon at Stitzel-Weller after Prohibition. When that distillery fell silent in the early 1990s the bourbon moved to the new Bernheim Distillery in Louisville, and in 1999 Bernheim and the brand were sold to Heaven Hill, three years after the fire of 1996 at its own distillery in Bardstown. Heaven Hill launched Larceny in 2012 on the Fitzgerald story, with a keyhole cut into the label, and a barrel proof version followed in 2020. For a bartender it is the wheated bourbon to reach for when the better known names are not on the shelf.",
    "others": [
-    { "name": "Larceny Barrel Proof", "note": "The same wheated recipe bottled uncut in batches, its strength changing with each." },
-    { "name": "Old Fitzgerald Bottled-in-Bond", "note": "Heaven Hill's older wheated label, the one the Larceny story is drawn from." }
+    {
+     "name": "Larceny Barrel Proof",
+     "note": "The same wheated recipe bottled uncut in batches, its strength changing with each."
+    },
+    {
+     "name": "Old Fitzgerald Bottled-in-Bond",
+     "note": "Heaven Hill's older wheated label, the one the Larceny story is drawn from."
+    }
    ],
    "traps": [
     "There is no Larceny distillery: Heaven Hill makes it, at its Bernheim Distillery in Louisville.",
@@ -236,19 +509,78 @@
     "Small batch promises no number of barrels: the term has no legal meaning in the United States."
    ],
    "cards": [
-    { "id": "mash", "prompt": "What is the Larceny mash bill, as Heaven Hill gives it, and where is it distilled?", "answer": "68 per cent corn, 20 per cent wheat and 12 per cent malted barley, distilled at the Bernheim Distillery in Louisville." },
-    { "id": "namesake", "prompt": "Who is Larceny named for, and what is the story?", "answer": "John E. Fitzgerald, a Treasury agent who, the legend says, used his warehouse keys to draw whiskey from the barrels he liked." }
+    {
+     "id": "mash",
+     "prompt": "What is the Larceny mash bill, as Heaven Hill gives it, and where is it distilled?",
+     "answer": "68 per cent corn, 20 per cent wheat and 12 per cent malted barley, distilled at the Bernheim Distillery in Louisville."
+    },
+    {
+     "id": "namesake",
+     "prompt": "Who is Larceny named for, and what is the story?",
+     "answer": "John E. Fitzgerald, a Treasury agent who, the legend says, used his warehouse keys to draw whiskey from the barrels he liked."
+    }
    ],
    "quiz": [
-    { "id": "q1", "tag": "bottle", "card": "mash", "q": "Larceny Small Batch is a wheated bourbon. According to Heaven Hill, what share of its mash is wheat?", "options": ["12 per cent", "16 per cent", "51 per cent", "20 per cent"], "a": 3, "explain": "Heaven Hill gives 68 per cent corn, 20 wheat and 12 malted barley; 16 per cent is the wheat share Maker's Mark gives for its own recipe." },
-    { "id": "q2", "tag": "story", "card": "namesake", "q": "In the legend behind Larceny, what was John E. Fitzgerald's job?", "options": ["A cooper who charred the barrels", "A Louisville whiskey salesman", "A Treasury agent with warehouse keys", "A distiller at Bernheim"], "a": 2, "explain": "The story makes him a Treasury agent, one of the few allowed the keys to a bonded warehouse; it does not make him a distiller." }
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "mash",
+     "q": "Larceny Small Batch is a wheated bourbon. According to Heaven Hill, what share of its mash is wheat?",
+     "options": [
+      "12 per cent",
+      "16 per cent",
+      "51 per cent",
+      "20 per cent"
+     ],
+     "a": 3,
+     "explain": "Heaven Hill gives 68 per cent corn, 20 wheat and 12 malted barley; 16 per cent is the wheat share Maker's Mark gives for its own recipe."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "namesake",
+     "q": "In the legend behind Larceny, what was John E. Fitzgerald's job?",
+     "options": [
+      "A cooper who charred the barrels",
+      "A Louisville whiskey salesman",
+      "A Treasury agent with warehouse keys",
+      "A distiller at Bernheim"
+     ],
+     "a": 2,
+     "explain": "The story makes him a Treasury agent, one of the few allowed the keys to a bonded warehouse; it does not make him a distiller."
+    }
    ],
    "sources": [
-    { "title": "Larceny Bourbon: Small Batch", "url": "https://larcenybourbon.com/small-batch", "kind": "primary", "read": "search" },
-    { "title": "Heaven Hill: the launch of Larceny Kentucky Straight Bourbon Whiskey", "url": "https://heavenhill.com/news-and-notes/heaven-hill-distilleries-announces-the-launch-of-larceny-kentucky-straight-bourbon-whiskey/", "kind": "primary", "read": "search" },
-    { "title": "Heaven Hill: Larceny launches new packaging", "url": "https://heavenhill.com/news-and-notes/larceny-kentucky-straight-bourbon-whiskey-launches-new-packaging-seize-tonight-campaign/", "kind": "primary", "read": "search" },
-    { "title": "Heaven Hill Distillery: Old Fitzgerald history", "url": "https://heavenhilldistillery.com/oldfitzgerald-history.php", "kind": "primary", "read": "search" },
-    { "title": "Wikipedia: Old Fitzgerald", "url": "https://en.wikipedia.org/wiki/Old_Fitzgerald", "kind": "secondary", "read": "search" }
+    {
+     "title": "Larceny Bourbon: Small Batch",
+     "url": "https://larcenybourbon.com/small-batch",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Heaven Hill: the launch of Larceny Kentucky Straight Bourbon Whiskey",
+     "url": "https://heavenhill.com/news-and-notes/heaven-hill-distilleries-announces-the-launch-of-larceny-kentucky-straight-bourbon-whiskey/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Heaven Hill: Larceny launches new packaging",
+     "url": "https://heavenhill.com/news-and-notes/larceny-kentucky-straight-bourbon-whiskey-launches-new-packaging-seize-tonight-campaign/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Heaven Hill Distillery: Old Fitzgerald history",
+     "url": "https://heavenhilldistillery.com/oldfitzgerald-history.php",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Old Fitzgerald",
+     "url": "https://en.wikipedia.org/wiki/Old_Fitzgerald",
+     "kind": "secondary",
+     "read": "search"
+    }
    ],
    "report": [
     "Open, and the plan's own question: whether the standard label now reads Aged 6 Years. A shop lists a Larceny Aged 6 Years Small Batch, Difford's Guide lists no age statement, and Heaven Hill's own pages and its packaging release of 2024 speak only of a six year old taste profile. The wood field says what the producer says; a refuter should read a current label.",
@@ -259,7 +591,23 @@
     "Left out for want of a second source: the bottler's line on the label, and the sum paid for the Old Fitzgerald name during Prohibition, which differs between Heaven Hill's own page and Wikipedia.",
     "Two members of the family that leads Heaven Hill are named in a source's title and are added to people.json."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-21",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.name: was John E. Fitzgerald Larceny Small Batch Kentucky Straight Bourbon Whiskey; the prefix belongs to the older label and the 2024 packaging release names the bottle Larceny Small Batch, so now Larceny Small Batch Kentucky Straight Bourbon Whiskey; the John E. Fitzgerald label term goes with it.",
+     "bottle.mash: was more wheat than its rivals use; Heaven Hill's 2024 release compares itself with the leading competitor only, so now a larger share than its nearest rival uses, the house says.",
+     "bottle.still: was where the house makes all of its wheated bourbon; Heaven Hill announced in 2022 a return to distilling at Bardstown, so the claim may not hold, and now the line says only Bernheim, by the house's account.",
+     "bottle.wood: was open rick warehouses in Nelson County, which no source read gave; now the launch release's barrels of six to twelve years from the upper rickhouse floors, the later six year old taste profile, and no age statement confirmed.",
+     "bottle.label[Small Batch]: was 200 barrels or fewer; the launch release gives 100 or fewer and a later one 200 or fewer, and now both are said.",
+     "table: was Heaven Hill's wheated bourbon, a possessive that names the owner; now made by Heaven Hill in Louisville, and the second sentence shortened to stay within fifty words."
+    ],
+    "open": [
+     "bottle.wood and label: a shop listing reads Larceny Aged 6 Years Small Batch while Distiller and Breaking Bourbon list no age statement; a current label should be read before an age is added.",
+     "sources: the John E. Fitzgerald legend rests on the brand's own pages; it is told as a legend throughout."
+    ]
+   }
   },
   {
    "key": "rebel",
@@ -278,42 +626,116 @@
     "name": "Rebel 100 Kentucky Straight Bourbon Whiskey",
     "class": "Kentucky straight bourbon whiskey",
     "mash": "A wheated mash, given by the company as 68 per cent corn, 20 per cent wheat and 12 per cent malt.",
-    "still": "Distilled at Lux Row Distillers in Bardstown, by the brand's account; before that distillery opened in 2018 the whiskey was bought from producers the company did not name.",
+    "still": "Distilled at Lux Row Distillers in Bardstown, by the company's account. Lux Row opened only in 2018, so Rebel bottled before then was distilled elsewhere and bought in.",
     "wood": "New charred American oak. The company's pages give no age for the standard bottling; a separate Rebel 100 6 Year carries its age on the label.",
     "strength": "50% ABV (100 proof)",
     "taste": "A sweet nose, then caramel and vanilla carried with some heat on the tongue at this strength, and a dry finish; the wheat keeps it round rather than peppery.",
     "pour": "At the well and in mixed drinks: its strength stands up in an Old Fashioned, a Whiskey Sour or a highball with ginger ale. Neat for a guest who wants a firm wheater.",
     "label": [
-     { "term": "100", "means": "One hundred proof, 50 per cent alcohol by volume: the strength is the name of the bottling." },
-     { "term": "Kentucky Straight Bourbon Whiskey", "means": "Bourbon made in Kentucky and kept at least two years in new charred oak." }
+     {
+      "term": "100",
+      "means": "One hundred proof, 50 per cent alcohol by volume: the strength is the name of the bottling."
+     },
+     {
+      "term": "Kentucky Straight Bourbon Whiskey",
+      "means": "Bourbon made in Kentucky and kept at least two years in new charred oak."
+     }
     ]
    },
    "table": "Rebel is the wheated bourbon of Lux Row Distillers in Bardstown, the label once sold as Rebel Yell. Rebel 100 is its straight bourbon at 100 proof: caramel and vanilla with some heat, a firm wheater that holds its own in an Old Fashioned or a Whiskey Sour.",
-   "story": "Rebel began as Rebel Yell, a wheated bourbon of the Stitzel-Weller Distillery, the house near Louisville that opened in 1935 and built its bourbons on wheat. Accounts of its birth differ: one places it in the 1930s, another in 1949, at the centenary of the Weller firm; they agree that it was aimed at the South. The brand's own line, that its recipe dates from 1849, is the Weller story borrowed, and it is told as the brand's claim. After the Van Winkle family sold Stitzel-Weller in 1972 the distillery's labels were scattered, and Rebel Yell came to the David Sherman company of St. Louis, later named Luxco; accounts of the year differ. For decades the whiskey was bought in and bottled for the company. Luxco opened a distillery of its own, Lux Row Distillers, at Bardstown in 2018, and was itself acquired by MGP Ingredients in 2021. Along the way the label dropped its second word and became Rebel. Rebel 100 is the hundred proof straight bourbon of the range, and the one a bartender is likely to meet at the well.",
+   "story": "Rebel began as Rebel Yell, a wheated bourbon of the Stitzel-Weller Distillery, the house near Louisville that opened in 1935 and built its bourbons on wheat. Accounts of its birth differ: one places it in the 1930s, another in 1949, at the centenary of the Weller firm; they agree that it was aimed at the South. The brand's own line, that its recipe dates from 1849, takes the year of the Weller firm, and it is told as the brand's claim. After the Van Winkle family sold Stitzel-Weller in 1972 the distillery's labels were scattered, and Rebel Yell came to the David Sherman company of St. Louis, later named Luxco; accounts of the year differ. For decades the whiskey was bought in and bottled for the company. Luxco opened a distillery of its own, Lux Row Distillers, at Bardstown in 2018, and was itself acquired by MGP Ingredients in 2021. Along the way the label dropped its second word and became Rebel. Rebel 100, introduced in 2019, is the hundred proof straight bourbon of the range, and the one a bartender is likely to meet at the well.",
    "others": [
-    { "name": "Rebel Kentucky Straight Bourbon", "note": "The 80 proof bottling of the same wheated recipe." },
-    { "name": "Rebel 100 6 Year", "note": "The hundred proof bourbon with a six year age statement, sold beside the standard bottling." },
-    { "name": "Rebel 10 Year Single Barrel", "note": "A ten year old single barrel bottling of the wheated recipe." }
+    {
+     "name": "Rebel Kentucky Straight Bourbon",
+     "note": "The 80 proof bottling of the same wheated recipe."
+    },
+    {
+     "name": "Rebel 100 6 Year",
+     "note": "The hundred proof bourbon with a six year age statement, sold beside the standard bottling."
+    },
+    {
+     "name": "Rebel 10 Year Single Barrel",
+     "note": "A ten year old single barrel bottling of the wheated recipe."
+    }
    ],
    "traps": [
     "The year 1849 in the brand's story is the Weller firm's, not the year Rebel Yell was first bottled.",
     "Older bottles read Rebel Yell: the same label under its former name, not a different bourbon.",
-    "Rebel is a wheated bourbon, so it sits with Maker's Mark and Weller, not with the high rye bourbons its strength might suggest."
+    "Rebel is a wheated bourbon, like Maker's Mark and Weller: its 100 proof makes it firmer, not a high rye bourbon."
    ],
    "cards": [
-    { "id": "wheated", "prompt": "What kind of bourbon is Rebel 100, and what is its strength?", "answer": "A wheated Kentucky straight bourbon at 100 proof, 50% ABV; the company gives the mash as 68 per cent corn, 20 wheat and 12 malt." },
-    { "id": "old-name", "prompt": "Under what name was Rebel sold for most of its life, and at which distillery did it begin?", "answer": "Rebel Yell, a wheated bourbon of the Stitzel-Weller Distillery near Louisville." }
+    {
+     "id": "wheated",
+     "prompt": "What kind of bourbon is Rebel 100, and what is its strength?",
+     "answer": "A wheated Kentucky straight bourbon at 100 proof, 50% ABV; the company gives the mash as 68 per cent corn, 20 wheat and 12 malt."
+    },
+    {
+     "id": "old-name",
+     "prompt": "Under what name was Rebel sold for most of its life, and at which distillery did it begin?",
+     "answer": "Rebel Yell, a wheated bourbon of the Stitzel-Weller Distillery near Louisville."
+    }
    ],
    "quiz": [
-    { "id": "q1", "tag": "bottle", "card": "wheated", "q": "A guest asks what the 100 on a bottle of Rebel 100 means. Which answer is right?", "options": ["It is bottled at 100 proof", "It is aged 100 months", "It is 100 per cent corn", "It is batch number 100"], "a": 0, "explain": "The figure is the strength: 100 proof, 50% ABV. It is a wheated bourbon, so corn is the larger part of the mash and not the whole of it." },
-    { "id": "q2", "tag": "story", "card": "old-name", "q": "Which Bardstown distillery, opened in 2018, makes Rebel by the brand's account?", "options": ["Heaven Hill", "Willett", "Lux Row Distillers", "Barton 1792"], "a": 2, "explain": "Luxco opened Lux Row Distillers at Bardstown in 2018; Heaven Hill, Willett and Barton are other distilleries of the same town." }
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "wheated",
+     "q": "A guest asks what the 100 on a bottle of Rebel 100 means. Which answer is right?",
+     "options": [
+      "It is bottled at 100 proof",
+      "It is aged 100 months",
+      "It is 100 per cent corn",
+      "It is batch number 100"
+     ],
+     "a": 0,
+     "explain": "The figure is the strength: 100 proof, 50% ABV. It is a wheated bourbon, so corn is the larger part of the mash and not the whole of it."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "old-name",
+     "q": "Which Bardstown distillery, opened in 2018, makes Rebel by the brand's account?",
+     "options": [
+      "Heaven Hill",
+      "Willett",
+      "Lux Row Distillers",
+      "Barton 1792"
+     ],
+     "a": 2,
+     "explain": "Luxco opened Lux Row Distillers at Bardstown in 2018; Heaven Hill, Willett and Barton 1792 are older Bardstown names."
+    }
    ],
    "sources": [
-    { "title": "Rebel Bourbon: 100 Proof Bourbon", "url": "https://rebelbourbon.com/whiskey/100-proof-bourbon/", "kind": "primary", "read": "search" },
-    { "title": "Luxco: Rebel Bourbon adds a new size to the Rebel 100 line", "url": "https://www.luxco.com/rebel-bourbon-adds-new-size-to-rebel-100-lineup/", "kind": "primary", "read": "search" },
-    { "title": "Luxco: Lux Row Distillers introduces Rebel 100 6 Year", "url": "https://www.luxco.com/lux-row-distillers-introduces-rebel-100-6-year-bourbon/", "kind": "primary", "read": "search" },
-    { "title": "Wikipedia: Rebel (bourbon)", "url": "https://en.wikipedia.org/wiki/Rebel_(bourbon)", "kind": "secondary", "read": "search" },
-    { "title": "Whisky Advocate: MGP, Luxco and Kentucky bourbon", "url": "https://www.whiskyadvocate.com/mgp-luxco-kentucky-bourbon-acquisition/", "kind": "secondary", "read": "search" }
+    {
+     "title": "Rebel Bourbon: 100 Proof Bourbon",
+     "url": "https://rebelbourbon.com/whiskey/100-proof-bourbon/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Luxco: Rebel Bourbon adds a new size to the Rebel 100 line",
+     "url": "https://www.luxco.com/rebel-bourbon-adds-new-size-to-rebel-100-lineup/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Luxco: Lux Row Distillers introduces Rebel 100 6 Year",
+     "url": "https://www.luxco.com/lux-row-distillers-introduces-rebel-100-6-year-bourbon/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Rebel (bourbon)",
+     "url": "https://en.wikipedia.org/wiki/Rebel_(bourbon)",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Whisky Advocate: MGP, Luxco and Kentucky bourbon",
+     "url": "https://www.whiskyadvocate.com/mgp-luxco-kentucky-bourbon-acquisition/",
+     "kind": "secondary",
+     "read": "search"
+    }
    ],
    "report": [
     "The year field is empty on purpose: the label's creation is the 1930s in Wikipedia, 1949 in The Whiskey Wash and 1936 as a registered name in a third account, and no two sources agree.",
@@ -325,7 +747,22 @@
     "The brand's pages name the distillery's master distiller, who is living: the name is added to people.json and the record says nothing of the role.",
     "Pick in doubt, mildly: Rebel is a well bourbon more than a house a guest asks for by name, and Old Fitzgerald, which it replaces here, is the stronger wheated story; the plan places Old Fitzgerald in bottled in bond, so the pick stands."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-21",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.still: was that the whiskey was bought from producers the company did not name; a review reports a Heaven Hill contract and the company has not said either way, so now only that Lux Row opened in 2018 and earlier Rebel was distilled elsewhere and bought in.",
+     "story: was the Weller story borrowed, a judgement; now that the brand's 1849 takes the year of the Weller firm, told as its claim.",
+     "story: Rebel 100 now carries its year, introduced in 2019, from Luxco's own release.",
+     "traps[2]: was that its strength might suggest a high rye bourbon, which teaches nothing true; now that its 100 proof makes it firmer, and it stays a wheater beside Maker's Mark and Weller.",
+     "quiz[q2].explain: was that Heaven Hill, Willett and Barton are other distilleries of the same town; Heaven Hill has distilled at Bernheim in Louisville, so now they are older Bardstown names."
+    ],
+    "open": [
+     "year: the label's creation (1930s, about 1950 or 1949) and the year the David Sherman company bought it (early 1980s or 1999) stay unsettled and out, as the author left them.",
+     "story: the rename to Rebel is 2020 in Wikipedia alone and stays undated."
+    ]
+   }
   }
  ]
 }
