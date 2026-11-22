@@ -1,0 +1,262 @@
+{
+ "group": "bottled-in-bond",
+ "chunk": "c2",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 26,
+ "tested": [
+  "eh-taylor: the producer's Small Batch page (Bottled in Bond, 100 proof, Mash Bill No. 1, aged in the warehouses Taylor built, its own tasting words), Taylor's dates 1830 to 1923 and his sixteen years as mayor, the O.F.C. purchase of 1869 or 1870, Stagg's takeover of 1878 with Taylor kept on, Warehouse C of 1885, Old Taylor on Glenn's Creek in 1887, the purchase of Old Taylor and its barrels from Beam in 2009, the line's first release, the Single Barrel at 100 proof in Warehouse C, the bonded bourbon added to the Antique Collection in 2025 at fifteen years and four months. 9 searches.",
+  "new-riff: the opening at Newport in May 2014 and its two founders, the first release of its own bourbon on 1 August 2018 and in other states that September, the mash of 65, 30 and 5 from non genetically modified grain, at least four years, 100 proof, no chill filtration, the Kentucky Regimen (sour mash, open fermentation, a sixty-foot copper column, a doubler) on the process page, the producer's tasting note, the eight year old of March 2024 and why it is not bonded, the Single Barrel at barrel proof and at least four years. 5 searches.",
+  "evan-williams: the state marker (1755 to 1810, the distillery of 1783 on the Ohio, the claim of a first commercial distillery) and the historians' doubt, the launch of 1957 on Heaven Hill's timeline, the producer's tasting note and its white label, the Single Barrel's dated label. 4 searches, one shared with Heaven Hill.",
+  "heaven-hill: the first barrel on 13 December 1935 at Old Heavenhill Springs, the five brothers and the investors and the buyout, the clerk's slip on the name and William Heavenhill's land, the fire of 7 November 1996 and its seven warehouses, the purchase of Bernheim from United Distillers in 1999, the first barrel at Heaven Hill Springs in Bardstown in 2025, the 7 Year Old announced in June 2019 after the Kentucky only six year old, the front label's This Bourbon is 7 Years Old, the producer's tasting note, the Heritage Collection. 5 searches.",
+  "henry-mckenna: his birth in County Derry in 1819, Fairfield north east of Bardstown, the distillery of 1855, his sons from 1893, the sale to Seagram in 1941, Heaven Hill's single barrel line extension of 1994, the handwritten barrel number and fill date. 3 searches.",
+  "The cards and questions of all five, read for one right answer, plausible wrong options, no length clue, the key positions across the group (0, 1, 2 and 3 hold 2, 3, 2 and 3 keys) and explanations that teach; the bond's terms against the style's own reviewed page (27 CFR 5.88). No search of their own."
+ ],
+ "changed": [
+  {
+   "key": "eh-taylor",
+   "field": "bottle.taste",
+   "was": "Caramel corn and butterscotch on a sweet nose and palate, then a gentle rise of baking spice, and a finish that turns to pepper and tobacco.",
+   "now": "Caramel corn sweetness with butterscotch and liquorice, then a soft feel in the mouth that turns to gentle spice, pepper and tobacco on the finish.",
+   "why": "the producer's own tasting note for this bottling, which is primary for it; the baking spice was in no source",
+   "sources": [
+    "https://www.buffalotracedistillery.com/our-brands/e-h-taylor-jr/e-h-taylor-jr-small-batch/"
+   ]
+  },
+  {
+   "key": "eh-taylor",
+   "field": "story",
+   "was": "christened it O.F.C., and by Buffalo Trace's account he built its Warehouse C in 1885. When he fell into debt, George T. Stagg took the distillery over in 1878; it is the site that became Buffalo Trace.",
+   "now": "christened it O.F.C. When he fell into debt, George T. Stagg took the distillery over in 1878 and kept Taylor on to run it, and by Buffalo Trace's account Taylor built its Warehouse C in 1885; the site became Buffalo Trace.",
+   "why": "the story told 1885 before 1878; Taylor went on overseeing the distillery under Stagg, which is how he came to build Warehouse C",
+   "sources": [
+    "https://thewhiskeywash.com/bourbon/whiskey-chronicles-of-edmund-taylor-jr-part-4-bluegrass-distilling-empire/",
+    "https://www.buffalotracedistillery.com/buffalo-trace-history/"
+   ]
+  },
+  {
+   "key": "eh-taylor",
+   "field": "others",
+   "was": "Single Barrel: One barrel to a bottling, also bottled in bond at 100 proof with no age statement. E.H. Taylor, Jr. Bottled in Bond: A far older bonded bourbon, more than fifteen years in oak, a yearly release in the Antique Collection since 2025.",
+   "now": "Single Barrel: One barrel to a bottling, aged in Warehouse C, also bottled in bond at 100 proof with no age statement. Bottled in Bond: A far older bonded bourbon, more than fifteen years in oak, which joined the yearly Antique Collection in 2025.",
+   "why": "the Single Barrel page names Warehouse C; one release in 2025 is no run of yearly releases of the bottling, and its age figure belongs to that release",
+   "sources": [
+    "https://www.buffalotracedistillery.com/our-brands/e-h-taylor-jr/e-h-taylor-jr-single-barrel/",
+    "https://whiskyadvocate.com/buffalo-trace-eh-taylor-bottled-in-bond-bourbon-joins-2025-btac-collection"
+   ]
+  },
+  {
+   "key": "eh-taylor",
+   "field": "cards[bond-law].prompt",
+   "was": "Which law is E. H. Taylor remembered for fighting for, and when did it pass?",
+   "now": "Which federal law did E. H. Taylor fight for?",
+   "why": "a card asks one thing where it can; the year stays in the answer and the id is unchanged",
+   "sources": []
+  },
+  {
+   "key": "new-riff",
+   "field": "story",
+   "was": "Its founder, a Northern Kentucky drinks merchant, set out",
+   "now": "Its founders, who came from a Northern Kentucky drinks shop, set out",
+   "why": "trade accounts of the opening name two founders, both from the same shop",
+   "sources": [
+    "https://www.distillerytrail.com/blog/new-riff-distilling-releasing-their-1st-bottled-in-bond-kentucky-straight-bourbon-whiskey/",
+    "https://themanual.com/food-and-drink/new-riff-distilling-new-bottled-in-bond-bourbon"
+   ]
+  },
+  {
+   "key": "new-riff",
+   "field": "story and others[New Riff 8-Year-Old Kentucky Straight Bourbon Whiskey]",
+   "was": "An eight year old and single barrel bottlings of the same mash have followed. / The same mash given eight years, bottled at 100 proof without chill filtration.",
+   "now": "Single barrel bottlings of the same mash followed, and in 2024 an eight year old. / The same mash given at least eight years, at 100 proof without chill filtration, but not bonded: it marries two distilling seasons.",
+   "why": "the eight year old came in March 2024 and the distillery waived the bond for it, since it blends two seasons; a guest who reads 100 proof may take it for bonded",
+   "sources": [
+    "https://newriffdistilling.com/spirits/new-riff-8-year-old-bourbon/",
+    "https://www.bevnet.com/spirits/2024/new-riff-distilling-unveils-eight-year-old-bourbon-whiskey"
+   ]
+  },
+  {
+   "key": "new-riff",
+   "field": "bottle.wood",
+   "was": "The distillery gives the age as four years, the bond's minimum",
+   "now": "The distillery gives the age as at least four years, the bond's minimum",
+   "why": "the distillery's page reads aged at least four years",
+   "sources": [
+    "https://newriffdistilling.com/spirits/new-riff-bottled-in-bond-bourbon/"
+   ]
+  },
+  {
+   "key": "new-riff",
+   "field": "bottle.taste",
+   "was": "Butterscotch first, giving way to fresh oak, then vanilla and the spice of a mash that is almost a third rye, carried long and warm by the full strength.",
+   "now": "Butterscotch and fresh oak on the nose, then vanilla and a rye spice of clove, cinnamon and mint, with dark berries, white pepper and clove on a long finish.",
+   "why": "the distillery's own nose, palate and finish, which the author had only in part",
+   "sources": [
+    "https://newriffdistilling.com/spirits/new-riff-bottled-in-bond-bourbon/"
+   ]
+  },
+  {
+   "key": "new-riff",
+   "field": "bottle.pour",
+   "was": "an Old Fashioned or a Boulevardier, both among the distillery's own recipes.",
+   "now": "an Old Fashioned or a Boulevardier.",
+   "why": "no source read showed the two as the distillery's recipes",
+   "sources": []
+  },
+  {
+   "key": "evan-williams",
+   "field": "story",
+   "was": "historians note that the date was first put forward more than a century after his death, so it is told as tradition.",
+   "now": "historians have questioned both the date and the claim, so they are told as tradition.",
+   "why": "the doubt stands in two accounts; the century after his death rested on one",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Evan_Williams_(bourbon)",
+    "https://pre-prowhiskeymen.blogspot.com/2022/03/evan-williams-myth-and-man.html"
+   ]
+  },
+  {
+   "key": "evan-williams",
+   "field": "story and bottle.still",
+   "was": "the Bernheim Distillery in Louisville, where the bourbon has been distilled since / where the house has made its bourbon since 1999",
+   "now": "the Bernheim Distillery in Louisville, which from then on distilled the bourbon / bought in 1999 after the Bardstown fire",
+   "why": "Heaven Hill filled its first barrel at Heaven Hill Springs in Bardstown in 2025, so a since would not hold",
+   "sources": [
+    "https://heavenhill.com/news-and-notes/heaven-hill-fills-first-barrel-at-new-heaven-hill-springs-distillery-cementing-status-as-largest-independent-bourbon-producer/",
+    "https://thewhiskeywash.com/whiskey-news/heaven-hill-fills-first-barrel-at-new-distillery-in-bourbons-heartland/"
+   ]
+  },
+  {
+   "key": "evan-williams",
+   "field": "others[Evan Williams Single Barrel]",
+   "was": "with the year of distilling on the label",
+   "now": "with the day the barrel was filled on the label",
+   "why": "the producer marks each bottle with the date the bourbon went into oak",
+   "sources": [
+    "https://heavenhilldistillery.com/evan-williams-single-barrel-vintage.php"
+   ]
+  },
+  {
+   "key": "evan-williams",
+   "field": "quiz q2",
+   "was": "In which year did Heaven Hill first bring out its Evan Williams bourbon? (1783, 1957, 1935, 1996; key 1957)",
+   "now": "Tradition says the man the Evan Williams label is named for built a distillery on the Ohio at Louisville. In which year? (1957, 1783, 1935, 1810; key 1783)",
+   "why": "the question is paired with the namesake card and now drills it; the key stays in position 1 and 1957 is taught in the explanation and the trap",
+   "sources": [
+    "https://history.ky.gov/markers/evan-williams-1755-1810"
+   ]
+  },
+  {
+   "key": "heaven-hill",
+   "field": "story",
+   "was": "is that of the family who had farmed the land",
+   "now": "is that of the farmer who had owned the land",
+   "why": "the company and Sotheby's guide give the land as William Heavenhill's; a family farming it was in no source",
+   "sources": [
+    "https://heavenhill.com/history.php",
+    "https://www.sothebys.com/en/articles/heaven-hill-a-comprehensive-collectors-guide"
+   ]
+  },
+  {
+   "key": "heaven-hill",
+   "field": "story",
+   "was": "Heaven Hill announced the 7 Year Old in its place, launched that October in eight states, the same recipe with a year more in oak.",
+   "now": "Heaven Hill announced the 7 Year Old in its place, the same recipe with a year more in oak. In 2025 the house filled the first barrel at a new distillery in Bardstown, Heaven Hill Springs.",
+   "why": "no source read gave eight states; the Springs barrel keeps the Bernheim sentence true as history",
+   "sources": [
+    "https://gearpatrol.com/2019/06/24/heaven-hill-bottled-in-bond-7-year-bourbon/",
+    "https://heavenhill.com/news-and-notes/heaven-hill-fills-first-barrel-at-new-heaven-hill-springs-distillery-cementing-status-as-largest-independent-bourbon-producer/",
+    "https://www.fredminnick.com/2025/04/07/heaven-hill-fills-barrel-at-new-springs-distillery-in-bardstown/"
+   ]
+  },
+  {
+   "key": "heaven-hill",
+   "field": "story",
+   "was": "the Bernheim Distillery in Louisville, where its bourbon has been distilled since.",
+   "now": "the Bernheim Distillery in Louisville and moved its distilling there.",
+   "why": "the same present as in the Evan Williams record",
+   "sources": [
+    "https://thewhiskeywash.com/bourbon/how-heaven-hill-rebuilt-after-the-1996-fire/"
+   ]
+  },
+  {
+   "key": "heaven-hill",
+   "field": "bottle.taste",
+   "was": "Vanilla, honey and caramel on a warm nose; caramel and honey again on the palate, rounded by oak and char with a faint rye spice, and a long, lingering finish.",
+   "now": "Amber in the glass, with vanilla, honey and caramel on the nose, then a sweet palate edged with a light rye spice, and a long finish.",
+   "why": "the producer's own words; oak and char on the palate were in no source read",
+   "sources": [
+    "https://heavenhilldistillery.com/hh-bottled-in-bond.php"
+   ]
+  },
+  {
+   "key": "heaven-hill",
+   "field": "others[Heaven Hill Heritage Collection]",
+   "was": "A yearly release of much older bourbon under the house's own name.",
+   "now": "Much older bourbon under the house's own name, released in editions; the 2024 edition was eighteen years old.",
+   "why": "no source gave a yearly rhythm; the 2024 edition is on the house's blog",
+   "sources": [
+    "https://blog.heavenhilldistillery.com/detail.php?post_name=behind-the-bottleheaven-hill-heritage-collection-2024-release"
+   ]
+  },
+  {
+   "key": "heaven-hill",
+   "field": "cards[fire]",
+   "was": "What happened to Heaven Hill's Bardstown distillery in 1996, and where did its distilling go?",
+   "now": "What destroyed Heaven Hill's Bardstown distillery in 1996? (answer: fire, on 7 November 1996, which took seven warehouses too; from 1999 the house distilled at Bernheim in Louisville)",
+   "why": "a card asks one thing; the id is unchanged",
+   "sources": []
+  },
+  {
+   "key": "henry-mckenna",
+   "field": "story",
+   "was": "The bourbon has been distilled at Heaven Hill's Bernheim Distillery in Louisville since 1999.",
+   "now": "From 1999 Heaven Hill distilled it at its Bernheim Distillery in Louisville.",
+   "why": "the same present as in the Evan Williams record",
+   "sources": []
+  },
+  {
+   "key": "henry-mckenna",
+   "field": "bottle.taste",
+   "was": "Warm golden amber, with vanilla, caramel and oak ...",
+   "now": "Bottles differ by barrel; usually vanilla, caramel and oak ...",
+   "why": "a single barrel's taste is told as usual, as the brief asks",
+   "sources": []
+  },
+  {
+   "key": "henry-mckenna",
+   "field": "quiz q1.explain",
+   "was": "the bottling day is not what the line records.",
+   "now": "the bottling day is not on that line, which dates the barrel, not the bottle.",
+   "why": "the explanation now says why the nearest wrong option is wrong",
+   "sources": []
+  }
+ ],
+ "confirmed": [
+  "eh-taylor: Bottled in Bond on the Small Batch label (the plan's note), 100 proof, Mash Bill No. 1, Taylor 1830 to 1923, the 1887 castle on Glenn's Creek, the 2009 purchase from Beam, the 1897 act, the table line and both questions.",
+  "new-riff: May 2014, August 2018, the mash and its non genetically modified grain, the Kentucky Regimen and its sixty-foot copper column and doubler, 100 proof, no chill filtration, both cards and questions.",
+  "evan-williams: 1755 to 1810, the marker's 1783, the 1957 launch, the fire and Bernheim, the white label, the producer's tasting note.",
+  "heaven-hill: 13 December 1935, the five brothers and the investors and the buyout, the clerk's slip, the fire, the Kentucky only six year old and its retirement in 2018, the announcement of June 2019, the front label's words, the mash on the producer's page.",
+  "henry-mckenna: 1819 and County Derry, Fairfield north east of Bardstown, 1855 as the label's date, the sons from 1893, Seagram in 1941, the 1994 single barrel line extension, the handwritten barrel number and fill date."
+ ],
+ "open": [
+  "eh-taylor: the line's first release year (2011 in several accounts, 2013 in one) is left out; O.F.C. 1869 or 1870, Stagg 1878 or 1879 and Warehouse C 1884 or 1885 differ across sources, and the record keeps around 1870, 1878 and the house's 1885; the mayoralty of sixteen years (Buffalo Trace and Political Graveyard) against Wikipedia's span of 1871 to 1891.",
+  "new-riff: the order of the words on the bottle was not read off a label; the spread to other states in September 2018 rests on trade accounts.",
+  "evan-williams: the plan's 2012 for the white label is unconfirmed and left out; the place field names two towns, not a town and county.",
+  "heaven-hill: the buyout's year (1935 or 1937 on Heaven Hill's own pages); the release's 7-Year-Old word order against the roster's.",
+  "henry-mckenna: his death in 1893 rests on secondary accounts, one giving his age at death as 75; the year Heaven Hill took the domestic rights (the early 1980s, 1989 and 1994 all appear); Barreled On as the printed words beside the handwriting was not read off a label."
+ ],
+ "livingNames": [
+  "New Riff's second founder, named with the first in Distillery Trail's and The Manual's accounts of the 2018 release (surname Erisman): not in people.json and not in the record; left for the read-together agent to add.",
+  "New Riff's founder, Heaven Hill's family president and his daughter, Heaven Hill's bonded bourbon ambassador, and two bourbon historians and writers met in search results: already in people.json, and none in the record."
+ ],
+ "swaps": [
+  "No swap was proposed by the author and none is ruled. New Riff stands in the group by the owner's ruling of 2026-11-22, already in plan.json."
+ ],
+ "tension": [
+  "The style's own page (bottled-in-bond, the houses it names) still lists Old Fitzgerald, which has moved to wheated-bourbon in this roster; it is a bonded bourbon, so not wrong, noted only.",
+  "The liquor shelf's O.F.C. 2005 record gives 1870 for Taylor's O.F.C. and 1878 for Stagg's takeover; Buffalo Trace's timeline gives 1869 for the purchase, and some accounts 1879 for Stagg. Reported, not edited.",
+  "The Library's Heaven Hill record says the house distilled elsewhere for years before rebuilding, calls the 1996 fire catastrophic and the house the largest family-owned producer, and describes Rittenhouse as priced like a mixer: the distilling moved to Bernheim in 1999 and a new Bardstown distillery filled its first barrel only in 2025; the record uses none of that wording. Reported, not edited.",
+  "plan.json, evan-williams why: calls Evan Williams Heaven Hill's Bardstown label and gives 2012 for the white label; it is distilled at Bernheim in Louisville, and 2012 was not confirmed. Reported, not edited.",
+  "plan.json, new-riff why: four years old; the distillery's page reads at least four years. The why is not wrong in substance; noted only."
+ ]
+}
