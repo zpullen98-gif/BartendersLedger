@@ -15,18 +15,18 @@
    "year": "1823",
    "yearIs": "founded",
    "bottle": {
-    "name": "Auchentoshan 12 Year Old Single Malt Scotch Whisky",
+    "name": "Auchentoshan 12 Year Old Double Cask Single Malt Scotch Whisky",
     "class": "Single malt Scotch whisky, Lowland",
     "mash": "Malted barley alone, as the law asks of any single malt Scotch whisky.",
     "still": "Distilled three times at Clydebank, through a wash still, an intermediate still and a spirit still, which by the house's account carry the spirit to about 81 per cent alcohol, against about 70 for two distillations.",
-    "wood": "Twelve years in American oak casks that held bourbon and Spanish oak casks that held Oloroso sherry, by the house's account; bourbon casks give the larger share. The age statement is twelve years.",
+    "wood": "Twelve years in American oak casks that held bourbon and Spanish oak casks that held Oloroso sherry, by the house's account. The age statement is twelve years.",
     "strength": "40% ABV",
-    "taste": "Sweet pastry and citrus with a green, nutty edge on the nose, then vanilla, hazelnut, tangerine and lime, and a slightly dry finish touched with ginger.",
+    "taste": "Sweet pastry, a burst of citrus, nuttiness and a green, leafy note on the nose, then lemon zest and oak, tangerine and lime, and a sharp finish of ginger.",
     "pour": "Neat with a little water, or long with soda in a highball; the house also stirs it into a Manhattan, where it reads light and citrus.",
     "label": [
      {
-      "term": "Triple Distilled",
-      "means": "All of the spirit has passed through three stills, where most Scotch malt passes through two."
+      "term": "Double Cask",
+      "means": "Matured in two kinds of cask: American oak that held bourbon and Spanish oak that held Oloroso sherry."
      },
      {
       "term": "12 Year Old",
@@ -34,8 +34,8 @@
      }
     ]
    },
-   "table": "Auchentoshan, at Clydebank on the edge of Glasgow, distils all of its spirit three times, and its 12 Year Old shows what that does: a light, clean malt of citrus, hazelnut and vanilla from bourbon and sherry casks. Pour it neat, or long with soda.",
-   "story": "The distillery took out its licence in 1823 on land near Duntocher, west of Glasgow; some accounts trace a still on the site a few years earlier, under the Duntocher name. The name it took, Auchentoshan, comes from the Gaelic for the corner of the field. Through the nineteenth century and much of the twentieth it passed from one owner to the next. On 13 and 14 March 1941 the German raids remembered as the Clydebank Blitz struck the town: three of the distillery's warehouses were destroyed with the whisky in them, and a bomb crater behind the site became the pond that holds its cooling water. In 1984 the whisky firm later named Morrison Bowmore Distillers bought the distillery, and in 1994 Suntory took full control of that company. Through every change the three stills stayed the point, a habit once shared by other Lowland houses and kept here for all of the spirit. For a bartender the 12 Year Old is the plain lesson in triple distillation: light enough for a highball, with enough sherry cask in it to stand up in a Manhattan.",
+   "table": "Auchentoshan, at Clydebank on the edge of Glasgow, distils all of its spirit three times, and its 12 Year Old Double Cask shows what that does: a light, clean malt of citrus, sweet pastry and nuts from bourbon and sherry casks. Pour it neat, or long with soda.",
+   "story": "The distillery took out its licence in 1823 on land near Duntocher, west of Glasgow; some accounts trace a still on the site a few years earlier, under the Duntocher name. The name it took, Auchentoshan, comes from the Gaelic for the corner of the field. Through the nineteenth century and much of the twentieth it passed from one owner to the next. On 13 and 14 March 1941 the German raids remembered as the Clydebank Blitz struck the town: three of the distillery's warehouses were destroyed with the whisky in them, and, as the story goes, a bomb crater behind the site became the pond that holds its cooling water. In 1984 the whisky firm later named Morrison Bowmore Distillers bought the distillery, and in 1994 Suntory took full control of that company. Through every change the three stills stayed the point, a habit once shared by other Lowland houses and kept here for all of the spirit. For a bartender the 12 Year Old is the plain lesson in triple distillation: light enough for a highball, with enough sherry cask in it to stand up in a Manhattan.",
    "others": [
     {
      "name": "Auchentoshan American Oak",
@@ -48,7 +48,8 @@
    ],
    "traps": [
     "Triple distillation is the house's habit, not a Lowland rule: the regulations ask nothing of the stills, and most Lowland malt is distilled twice.",
-    "Clydebank sits on the Clyde by Glasgow, south of the Highland line, so Auchentoshan is a Lowland malt and not a Highland one."
+    "Clydebank sits on the Clyde by Glasgow, south of the Highland line, so Auchentoshan is a Lowland malt and not a Highland one.",
+    "In 2025 the house put out the 12 Year Old Double Cask, from bourbon and Oloroso sherry casks, in place of its 12 Year Old; older bottles read only 12 Year Old."
    ],
    "cards": [
     {
@@ -59,7 +60,7 @@
     {
      "id": "blitz",
      "prompt": "What did Auchentoshan lose in the Clydebank Blitz of March 1941?",
-     "answer": "Three of its warehouses and the whisky in them; a bomb crater behind the site became its cooling pond."
+     "answer": "Three of its warehouses and the whisky in them; the story goes that a bomb crater became its cooling pond."
     }
    ],
    "quiz": [
@@ -106,9 +107,9 @@
      "read": "search"
     },
     {
-     "title": "Beam Suntory founders: Auchentoshan",
-     "url": "https://www.founders.beamsuntory.com/dna/auchentoshan",
-     "kind": "primary",
+     "title": "Dramface: Auchentoshan's new look and 12 Year Old Double Cask",
+     "url": "https://www.dramface.com/news/2025/auchentoshan-unveils-vibrant-new-look-and-12-year-old-double-cask-expression",
+     "kind": "secondary",
      "read": "search"
     },
     {
@@ -152,10 +153,10 @@
     "name": "Glenkinchie 12 Year Old Single Malt Scotch Whisky",
     "class": "Single malt Scotch whisky, Lowland",
     "mash": "Malted barley alone, as the law asks of a single malt; the producer names no barley variety.",
-    "still": "Distilled in copper pot stills at Pencaitland, the spirit condensed in a cast-iron worm tub, a coil of copper pipe sunk in cold water, which the producer credits with adding weight and character.",
+    "still": "Distilled in copper pot stills at Pencaitland, the spirit condensed in a cast-iron worm tub, a coil of copper pipe sunk in cold water, which the producer credits with giving the spirit more character and depth.",
     "wood": "At least twelve years in oak; the producer's page for this bottling names no cask type. The age statement is twelve years.",
     "strength": "43% ABV",
-    "taste": "Fresh citrus and vanilla on the nose with dry grass and flowers, then a soft, creamy palate of lemon, pear and malt, and a dry, herbal finish.",
+    "taste": "Vanilla, cut flowers and a clean, toasty note on the nose, growing sweet and creamy with fresh citrus, then butter icing, lemon cheesecake and freesias, and a herbal, drying finish.",
     "pour": "Neat before dinner with a drop of water, or long with chilled soda in a highball.",
     "label": [
      {
@@ -168,8 +169,8 @@
      }
     ]
    },
-   "table": "Glenkinchie is the Lowland malt of East Lothian, made at Pencaitland near Edinburgh, and its 12 Year Old is the gentle glass of the Classic Malts: lemon, dry grass, pear and flowers at 43% ABV. Pour it neat before dinner, or long with soda.",
-   "story": "By the account most often told, two brothers of the Rate family, farmers, began distilling at or near the site around 1825 under the name Milton. No record joins the two names for certain, though Milton is held likely to be Glenkinchie under its first name, and the house itself counts its years from 1825. The Rates were licensed as Glenkinchie in 1837. In the 1890s the distillery was rebuilt as a model Victorian distillery. In 1914 Glenkinchie joined Rosebank, St Magdalene, Grange and Clydesdale, five Lowland houses together, to form Scottish Malt Distillers, and in 1925 the Distillers Company bought that firm. For decades its malt went into blends. In the late 1980s it was chosen as the Lowland house of the Classic Malts, a range that set one malt from each region side by side, and its first bottlings under its own name followed. For a bartender the 12 Year Old is the Lowland reference: grass, lemon and flowers, the region's gentle style in one glass.",
+   "table": "Glenkinchie is the Lowland malt of East Lothian, made at Pencaitland near Edinburgh, and its 12 Year Old is the gentle glass of the Classic Malts: vanilla, cut flowers and lemon at 43% ABV. Pour it neat before dinner, or long with soda.",
+   "story": "By the account most often told, two brothers of the Rate family, farmers, began distilling at or near the site around 1825 under the name Milton. No record joins the two names for certain, though Milton is held likely to be Glenkinchie under its first name, and the house itself counts its years from 1825. The Rates were licensed as Glenkinchie in 1837. In the 1890s the distillery was rebuilt as a model Victorian distillery. In 1914 Glenkinchie joined Rosebank, St Magdalene, Grange and Clydesdale, five Lowland houses together, to form Scottish Malt Distillers, and in 1925 the Distillers Company bought that firm. For decades its malt went into blends. In the late 1980s it was chosen as the Lowland house of the Classic Malts, a range that set one malt from each region side by side. For a bartender the 12 Year Old is the Lowland reference: vanilla, lemon and flowers, the region's gentle style in one glass.",
    "others": [
     {
      "name": "Glenkinchie Distillers Edition",
@@ -184,7 +185,7 @@
     {
      "id": "worm-tub",
      "prompt": "How does Glenkinchie condense its spirit?",
-     "answer": "In a cast-iron worm tub: a coil of copper pipe in cold water, which the producer credits with weight and character."
+     "answer": "In a cast-iron worm tub: a coil of copper pipe in cold water, which the producer credits with more character and depth."
     },
     {
      "id": "smd-1914",
@@ -299,7 +300,7 @@
     ]
    },
    "table": "Bladnoch is the Lowland distillery on the river of that name by Wigtown, in Scotland's far south west, and its 10 Year Old is bourbon cask malt at 46.7% ABV, not chill filtered: honey, citrus and pepper. A few drops of water open it.",
-   "story": "Two brothers of a farming family founded Bladnoch in 1817, a licensed farm distillery on the River Bladnoch near Wigtown, in Galloway. Its history since has been one of closings and returns. In the twentieth century it fell silent and was revived more than once, and it passed through the hands of the big blending groups. A private buyer took it from United Distillers in 1994 and brought it back into production in 2000. Distilling stopped again in 2009, and in 2014 the company went into liquidation. In July 2015 an Australian businessman bought the distillery, and in 2017, its two-hundredth year, distilling began again; that year the first bottlings of the revival came out, Samsara, Adela and Talia, all drawn on whisky made before the silence. The 10 Year Old followed, matured in bourbon casks alone and bottled at 46.7% ABV without chill filtering, a plain picture of the old Bladnoch spirit before the new stills had whisky of their own to give. For a bartender Bladnoch is the Galloway malt, light, honeyed and fresh, from a distillery that has come back from closure more than once.",
+   "story": "Two brothers of a farming family founded Bladnoch in 1817, a licensed farm distillery on the River Bladnoch near Wigtown, in Galloway. Its history since has been one of closings and returns. In the twentieth century it fell silent and was revived more than once, and it passed through the hands of the big blending groups. A private buyer took it from United Distillers in 1994 and brought it back into production in 2000. Distilling stopped again in 2009, and in 2014 the business failed and the distillery was put up for sale. In July 2015 an Australian businessman bought it. In January 2017, its two-hundredth year, the first bottlings of the revival were announced, Samsara, Adela and Talia, all drawn on whisky made before the silence, and later that year distilling began again. The 10 Year Old followed, matured in bourbon casks alone and bottled at 46.7% ABV without chill filtering, a plain picture of the old Bladnoch spirit before the new stills had whisky of their own to give. For a bartender Bladnoch is the Galloway malt, light, honeyed and fresh, from a distillery that has come back from closure more than once.",
    "others": [
     {
      "name": "Bladnoch 13 Year Old",
@@ -421,7 +422,7 @@
     "wood": "About 90 per cent first-fill bourbon barrels and 10 per cent STR barriques, shaved, toasted and re-charred, that held Portuguese red wine. No age statement.",
     "strength": "46% ABV",
     "taste": "Soft brown sugar, banana cake batter and tropical fruit on the nose, then pineapple syrup, summer berries and a hint of rhubarb, with kiwi fruit and citrus zest in the finish.",
-    "pour": "Neat or with a little water, long with soda in a highball, or in the hot toddy the house makes with it.",
+    "pour": "Neat or with a little water, or long with soda in a highball.",
     "label": [
      {
       "term": "Doocot",
@@ -434,11 +435,11 @@
     ]
    },
    "table": "Kingsbarns is the young Lowland distillery near St Andrews in Fife, and Doocot, named for the old dovecote on its farm, is its flagship single malt: bourbon barrels with a touch of red wine barrique, full of banana, pineapple and summer berries.",
-   "story": "The idea began with a local golf caddie, who heard visitors to the courses of Fife ask for a distillery nearby and found there was none. He planned one in the derelict farm steading of East Newhall, on the Cambo Estate, buildings put up around 1800 beside an old dovecote that has the look of a fortified tower. By 2013 the family behind the bottling house Wemyss Malts had taken the project over, keeping the caddie on as a director, and the distillery opened in November 2014. The first casks were filled in 2015, and the first single malt, Dream to Dram, followed: mostly first-fill bourbon barrels, with a tenth of red wine barriques. On 3 March 2023 Doocot took its place as the flagship, by the house's account the same spirit and the same casks, left longer in oak, and Dream to Dram was retired. For a bartender Doocot is the new Lowland in one glass: Fife barley, no peat, and fruit where the older Lowland houses give grass.",
+   "story": "The idea began with a local golf caddie, who heard visitors to the courses of Fife ask for a distillery nearby and found there was none. He planned one in the derelict farm steading of East Newhall, on the Cambo Estate, buildings put up around 1800 about a castellated dovecote. By 2013 the family behind the bottling house Wemyss Malts had taken the project over, keeping the caddie on as a director, and the distillery opened in November 2014, its first casks filled soon after. The first single malt, Dream to Dram, followed: mostly first-fill bourbon barrels, with a tenth of red wine barriques. On 3 March 2023 Doocot took its place as the flagship, by the house's account the same spirit and the same casks, left longer in oak, and Dream to Dram was retired. For a bartender Doocot is the new Lowland in one glass: Fife barley, no peat, and fruit where the older Lowland houses give grass.",
    "others": [
     {
      "name": "Kingsbarns Balcomie",
-     "note": "The house's single malt from casks that held Oloroso sherry."
+     "note": "The house's single malt from American oak butts that held Oloroso sherry."
     },
     {
      "name": "Kingsbarns Coaltown",
@@ -550,11 +551,11 @@
    "bottle": {
     "name": "Lindores Single Malt Scotch Whisky MCDXCIV",
     "class": "Single malt Scotch whisky, Lowland",
-    "mash": "Malted barley alone, of the Laureate variety by the house's account, grown on farms whose fields lie around the distillery, once the abbey's lands.",
+    "mash": "Malted barley alone, grown in Fife, much of it, by the house's account, on farmland around the distillery that was once the abbey's.",
     "still": "Distilled in three copper pot stills made by Forsyths of Rothes: one wash still and two smaller spirit stills, which by the house's account give the spirit more copper contact after a long fermentation in wooden washbacks.",
-    "wood": "Mostly bourbon barrels, with wine barriques and sherry butts, by the producer's account. No age statement.",
+    "wood": "A selection of bourbon barrels, wine barriques and sherry butts, by the producer's account. No age statement.",
     "strength": "46% ABV",
-    "taste": "Vanilla, caramel, orchard fruit and pear drops on the nose, then a creamy palate of vanilla, dried fruit, citrus and a little spice, with a delicate, sweet finish.",
+    "taste": "Mellow vanilla, orchard fruit and touches of citrus, with a little pepper from the wood; reviews often add buttered popcorn and malty cereal, with a soft, sweet finish.",
     "pour": "Neat or with a drop of water, or long with soda in a highball.",
     "label": [
      {
@@ -567,8 +568,8 @@
      }
     ]
    },
-   "table": "Lindores is the Fife single malt made beside the ruined abbey at Newburgh, the abbey named in a record of 1494 that sent malt to a friar to make aqua vitae. MCDXCIV, that year in Roman numerals, is its flagship: vanilla, pear and dried fruit, mostly from bourbon barrels.",
-   "story": "Lindores Abbey was founded in 1191, a house of the Tironensian monks on the edge of Newburgh, by the Firth of Tay. In the Exchequer Rolls for 1494 stands an entry of eight bolls of malt given to a friar, wherewith to make aqua vitae for the king. Historians of whisky tell it as the start of its written history in Scotland, and the distillery tells the friar as a monk of Lindores, though whether he distilled there himself is not known. The abbey fell to ruin and its lands became farms. The family who farmed beside the ruins set out to bring distilling back, and the distillery, built beside the abbey, ran its first spirit in December 2017. Members of its 1494 Society received the first bottles of single malt in the spring of 2021, and on 2 July 2021 Lindores MCDXCIV went on general sale. For a bartender the bottle carries a story to tell at the table: a young Lowland malt from the abbey whose name stands beside the record of 1494.",
+   "table": "Lindores is the Fife single malt made beside the ruined abbey at Newburgh, which the distillery ties to a record of 1494 of malt sent to a friar to make aqua vitae. MCDXCIV, that year in Roman numerals, is its flagship: vanilla, orchard fruit and citrus.",
+   "story": "Lindores Abbey was founded in 1191, a house of the Tironensian monks on the edge of Newburgh, by the Firth of Tay. In the Exchequer Rolls for 1494 stands an entry of eight bolls of malt given to a friar by order of the king, wherewith to make aqua vitae. Historians of whisky tell it as the start of its written history in Scotland, and the distillery tells the friar as a monk of Lindores, though other accounts place him elsewhere, and whether he distilled there is not known. The abbey fell to ruin and its lands became farms. The family who farmed beside the ruins set out to bring distilling back, and the distillery, built beside the abbey, ran its first spirit in December 2017. Members of its 1494 Society received the first bottles of single malt in 2021, and on 2 July 2021 Lindores MCDXCIV went on general sale. For a bartender the bottle carries a story to tell at the table: a young Lowland malt from beside the abbey that whisky history ties to the record of 1494.",
    "others": [
     {
      "name": "The Casks of Lindores",
@@ -588,7 +589,7 @@
     {
      "id": "exchequer-1494",
      "prompt": "Which record of 1494 does Lindores trace its story to?",
-     "answer": "The Exchequer Roll entry of eight bolls of malt given to a friar, to make aqua vitae for the king."
+     "answer": "The Exchequer Roll entry of eight bolls of malt given to a friar by order of the king, to make aqua vitae."
     }
    ],
    "quiz": [
@@ -618,7 +619,7 @@
       "Eight bolls of malt"
      ],
      "a": 3,
-     "explain": "The entry gives eight bolls of malt to make aqua vitae for the king; a boll was an old Scots measure of grain, and no wine, oats or rye are named."
+     "explain": "The entry gives eight bolls of malt to a friar, by order of the king, to make aqua vitae; a boll was an old Scots measure of grain, and no wine, oats or rye are named."
     }
    ],
    "sources": [
