@@ -1,0 +1,353 @@
+{
+  "group": "monongahela-rye",
+  "records": [
+    {
+      "key": "old-overholt",
+      "group": "monongahela-rye",
+      "producer": "Old Overholt",
+      "madeBy": "James B. Beam Distilling Co.",
+      "style": "monongahela-rye",
+      "chapter": "american-rye",
+      "shelf": "",
+      "library": "Jim Beam",
+      "say": "OH-ver-holt",
+      "place": "Made in Kentucky; founded at West Overton, Westmoreland County, Pennsylvania",
+      "year": "1810",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Old Overholt Straight Rye Whiskey",
+        "class": "Straight rye whiskey, distilled in Kentucky",
+        "mash": "Beam publishes no mash bill. By law it is at least 51 per cent rye, and accounts agree that corn and malted barley make up the rest.",
+        "still": "Distilled in Kentucky by James B. Beam Distilling Co.; the Overholt distilleries of western Pennsylvania closed long ago.",
+        "wood": "New charred oak. The label states four years, the brand's minimum since 2022, when a year was added to the three of 2020.",
+        "strength": "43% ABV (86 proof)",
+        "taste": "Grass, white flowers and peach skin on the nose, then allspice, white pepper and apricot over a light cereal sweetness, the spice and dark fruit the brand speaks of, with a dry, short finish.",
+        "pour": "Over one large cube, or in a cocktail: it mixes a dry Manhattan, a Sazerac or a rye Old Fashioned.",
+        "label": [
+          { "term": "Straight Rye Whiskey", "means": "At least 51 per cent rye, at least two years in new charred oak, nothing added but water." },
+          { "term": "86 Proof", "means": "43% ABV, the strength the brand restored in 2020 after years at 80 proof." }
+        ]
+      },
+      "table": "Old Overholt carries the name of a Pennsylvania rye family that went into business in 1810, and Old Overholt Straight Rye Whiskey is made in Kentucky by Beam, four years old at 86 proof. It pours allspice, white pepper and apricot, a dry rye for a Manhattan.",
+      "story": "The Overholt family farmed and distilled rye at West Overton, in Westmoreland County, Pennsylvania, from the early 1800s, and the brand dates itself to 1810, when Abraham Overholt (died 1870) took charge of the family still and made it a business. In 1859 the firm, as A. Overholt & Co., added a second distillery at Broad Ford. Abraham's grandson Henry Clay Frick (1849 to 1919), the industrialist born at West Overton, took control in 1881. The West Overton distillery closed with Prohibition and never reopened, but the firm held a federal permit to sell its whiskey as medicine. After repeal the label passed to National Distillers, which closed the Broad Ford still house in 1951, and the whiskey moved from distillery to distillery. In 1987 the James B. Beam Distilling Co. bought the brand with the National Distillers labels and settled its making in Kentucky. In 2020 the bottle rose from 80 to 86 proof without chill filtering, and in 2022 it gained a fourth year. Behind a bar it is the name that carries the Monongahela story, though the whiskey in it is Kentucky rye.",
+      "others": [
+        { "name": "Old Overholt Bonded Rye", "note": "Bottled in Bond at 100 proof, at least four years old." },
+        { "name": "Old Overholt Cask Strength", "note": "The rye bottled uncut and without filtering, in batches." },
+        { "name": "A. Overholt Monongahela Mash Rye Whiskey", "note": "Rye and malted barley alone, 80 and 20 per cent, with no corn, at 95 proof." }
+      ],
+      "traps": [
+        "Old Overholt began in Pennsylvania, but its whiskey is Kentucky made, by Beam since it took the label in 1987.",
+        "The year 1810 is when Abraham Overholt took the family distilling in hand; the family had distilled at West Overton before it.",
+        "A. Overholt Monongahela Mash is a separate bottling of rye and malt with no corn; the everyday Old Overholt carries corn."
+      ],
+      "cards": [
+        { "id": "kentucky-made", "prompt": "Where is Old Overholt Straight Rye Whiskey made?", "answer": "In Kentucky, by James B. Beam Distilling Co., since 1987; its Pennsylvania distilleries closed long before." },
+        { "id": "frick", "prompt": "Which industrialist, a grandson of Abraham Overholt, took control of the Old Overholt firm in 1881?", "answer": "Henry Clay Frick (1849 to 1919), born at West Overton." }
+      ],
+      "quiz": [
+        { "id": "q1", "tag": "bottle", "card": "kentucky-made",
+          "q": "Old Overholt Straight Rye Whiskey rose from 80 to 86 proof in 2020. What age has its label stated since 2022?",
+          "options": ["Two years", "Three years", "Four years", "Six years"], "a": 2,
+          "explain": "A year was added in 2022 to make it four years old; three years was the age of the 2020 bottling it replaced." },
+        { "id": "q2", "tag": "story", "card": "frick",
+          "q": "In which year did Henry Clay Frick take control of A. Overholt & Co.?",
+          "options": ["1810", "1859", "1919", "1881"], "a": 3,
+          "explain": "Frick took control in 1881; 1859 is the year the firm added its Broad Ford distillery, and 1810 the year Abraham Overholt took charge." }
+      ],
+      "sources": [
+        { "title": "Beam Distilling: Old Overholt Original", "url": "https://www.beamdistilling.com/old-overholt/whiskies/old-overholt-original", "kind": "primary", "read": "search" },
+        { "title": "Beam Distilling: the Old Overholt story", "url": "https://www.beamdistilling.com/old-overholt/our-story", "kind": "primary", "read": "search" },
+        { "title": "Wikipedia: Old Overholt", "url": "https://en.wikipedia.org/wiki/Old_Overholt", "kind": "secondary", "read": "search" },
+        { "title": "The Whiskey Wash: Old Overholt Straight Rye at 86 proof", "url": "https://thewhiskeywash.com/reviews/whiskey-review-old-overholt-straight-rye-whiskey-86-proof/", "kind": "secondary", "read": "search" },
+        { "title": "The Manual: the Old Overholt update", "url": "https://www.themanual.com/food-and-drink/old-overholt-rye-whiskey-update/", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "The plan's note asked when production moved to Kentucky: Beam's own history says it relocated production to Kentucky when it took the National Distillers brands, and one account names Clermont; between 1951 (the Broad Ford still house closing, Wikipedia and Whisky Advocate) and 1987 the whiskey moved between distilleries, one account naming Forks of Elkhorn near Frankfort. The record says only that Beam settled its making in Kentucky, and names no distillery.",
+        "The 2020 change (86 proof, no chill filtering) stands in The Manual and The Whiskey Wash; the four years of 2022 stands in Beam's page (a four year minimum) and in two trade reviews. Beam's page confirms the 86 proof and four year minimum.",
+        "Abraham Overholt is dated by his death alone, 1870 (Wikipedia, which gives 1784 to 1870, and the West Overton museum's account); his birth rests on Wikipedia alone. Henry Clay Frick's 1849 to 1919 stands in Wikipedia and EBSCO's research starter.",
+        "The corn in the mash rests on VinePair and The Bourbon Culture, both of which say Beam brought the recipe into line with its other ryes after 1987; no percentage is given because Beam publishes none (one enthusiast estimate of 51, 35 and 14 was left out).",
+        "Left out for want of a second source: the 1888 rename to Old Overholt with Abraham's face on the label (Wikipedia only), Andrew Mellon's partnership (Beam's timeline only), and the label's exact age wording, so no age term is printed in label.",
+        "The style page's line that Old Overholt began in western Pennsylvania and is made in Kentucky agrees with this record. The Library's Jim Beam record gives a 1795 lineage, which is the Beam family's and not Overholt's; year keeps 1810, the Overholt business."
+      ],
+      "checked": null
+    },
+    {
+      "key": "sagamore-spirit",
+      "group": "monongahela-rye",
+      "producer": "Sagamore Spirit",
+      "madeBy": "",
+      "style": "monongahela-rye",
+      "chapter": "american-rye",
+      "shelf": "",
+      "library": "",
+      "say": "SAG-uh-more",
+      "place": "Port Covington, Baltimore, Maryland",
+      "year": "",
+      "yearIs": "",
+      "bottle": {
+        "name": "Sagamore Spirit Signature Rye Whiskey",
+        "class": "Rye whiskey, married from two straight rye whiskeys",
+        "mash": "Two rye mash bills, distilled and aged apart: a high rye with malted barley for spice, and a lower rye in which corn and malted barley play a larger part. The house gives no percentages.",
+        "still": "The whiskey of the Signature was distilled in Indiana to the house's two recipes and shipped to Maryland, where it is married and brought to strength.",
+        "wood": "New charred oak, the two ryes aged apart before they are married; the house's pages give no age for the Signature.",
+        "strength": "41.5% ABV (83 proof)",
+        "taste": "Maple-like sweetness and cherry on the nose, then vanilla, rye spice and wildflower honey, closing dry on peppercorn, cinnamon and oak; a gentle rye at its low strength.",
+        "pour": "Neat or on the rocks; at 83 proof it mixes a soft Manhattan, an Old Fashioned or a Whiskey Sour.",
+        "label": [
+          { "term": "Signature", "means": "The name of this bottling, the marriage of the house's two rye recipes; no legal meaning." },
+          { "term": "Rye Whiskey", "means": "At least 51 per cent rye, aged in new charred oak, under the federal standard." }
+        ]
+      },
+      "table": "Sagamore Spirit is the Baltimore distillery that set out to bring back Maryland rye, and Sagamore Spirit Signature Rye Whiskey marries a high-rye and a low-rye whiskey, cut to 83 proof with spring water from Sagamore Farm. Expect vanilla, honey and a gentle pepper.",
+      "story": "Sagamore Spirit takes its name from Sagamore Farm, a horse farm in Baltimore County, Maryland, whose limestone spring water brings the whiskey to strength, carried some twenty miles to the bottling hall. The founders set out to revive Maryland rye, a style the state had lost with Prohibition and one often described as softer than the Pennsylvania kind. While their own distillery was planned, they had two rye recipes distilled for them in Indiana, one high in rye and one lower, aged apart and then married and proofed in Maryland: that marriage became the Signature, at 83 proof. The distillery opened in April 2017 on the Port Covington waterfront in Baltimore, with a copper column still, and by the house's account it was the first in Maryland since Prohibition to distil, age and bottle rye. Its own Maryland spirit reached the bottle in stages, and in May 2024 the house launched Sagamore Small Batch Rye Whiskey, its first rye made wholly in Maryland, at 93 proof. Behind a bar the Signature is the bottle that put the Maryland rye name back in front of guests, and the one to set beside its newer stablemate.",
+      "others": [
+        { "name": "Sagamore Small Batch Rye Whiskey", "note": "Launched in May 2024 as the house's first rye made wholly in Maryland, a high and low rye blend at 93 proof." },
+        { "name": "Sagamore Bottled in Bond Straight Rye Whiskey", "note": "Bonded at 100 proof from one distilling season, at least four years old." }
+      ],
+      "traps": [
+        "The Signature's whiskey was distilled in Indiana and married in Maryland; Small Batch of 2024 is the house's first rye made wholly in Maryland.",
+        "Maryland rye is a historic style, not a legal class: the bottle is rye whiskey under the federal standard.",
+        "Sagamore Farm gives the water and the name; the distillery stands on the Baltimore waterfront, not on the farm."
+      ],
+      "cards": [
+        { "id": "two-ryes", "prompt": "What goes into Sagamore Spirit Signature Rye Whiskey?", "answer": "Two rye whiskeys, one high in rye and one lower, married and cut to 83 proof with spring water from Sagamore Farm." },
+        { "id": "maryland-made", "prompt": "Which Sagamore Spirit rye of May 2024 was the house's first made wholly in Maryland?", "answer": "Sagamore Small Batch Rye Whiskey, at 93 proof; the Signature before it was distilled in Indiana." }
+      ],
+      "quiz": [
+        { "id": "q1", "tag": "bottle", "card": "two-ryes",
+          "q": "A guest asks how Sagamore Spirit Signature Rye Whiskey is built. What is in the bottle?",
+          "options": ["One rye from a single mash", "Two ryes, high and low in rye", "Rye with a little bourbon", "Rye finished in Madeira casks"], "a": 1,
+          "explain": "The Signature marries a high-rye and a low-rye whiskey, distilled and aged apart; it is not one mash bill, and no bourbon goes into it." },
+        { "id": "q2", "tag": "story", "card": "maryland-made",
+          "q": "In which year did Sagamore Spirit launch Small Batch, its first rye made wholly in Maryland?",
+          "options": ["2013", "2017", "2024", "2019"], "a": 2,
+          "explain": "Small Batch came in May 2024; 2017 is the year the Port Covington distillery opened, before its own spirit was old enough to bottle." }
+      ],
+      "sources": [
+        { "title": "Sagamore Spirit: Distilling Sagamore Spirit", "url": "https://sagamorespirit.com/making-rye-whiskey/", "kind": "primary", "read": "search" },
+        { "title": "Sagamore Spirit: Small Batch Rye Whiskey", "url": "https://sagamorespirit.com/spirits/sagamore-small-batch-rye-whiskey/", "kind": "primary", "read": "search" },
+        { "title": "Whisky Advocate: the Sagamore Spirit distillery opens in Baltimore", "url": "https://whiskyadvocate.com/sagamore-spirit-distillery-opens-in-baltimore", "kind": "secondary", "read": "search" },
+        { "title": "Craft Spirits Magazine: Sagamore Spirit launches Small Batch Rye", "url": "https://craftspiritsmag.com/2024/05/15/sagamore-spirit-launches-small-batch-rye-whiskey/", "kind": "secondary", "read": "search" },
+        { "title": "The Whiskey Wash: Sagamore Spirit Rye reviewed", "url": "https://thewhiskeywash.com/reviews/whiskey-review-sagamore-spirit-rye/", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "A swap of the bottling is proposed: Sagamore launched Sagamore Small Batch Rye Whiskey in May 2024 as its new flagship and its first rye made wholly in Maryland (93 proof, a high and low rye blend aged four to six years by the house), and the house's own spirits pages list Small Batch and no Signature. Signature is still listed by some shops and a whisky database at 41.5%, so no discontinuation was confirmed; the record stays on the Signature until the refuter rules.",
+        "The plan's note asked what the Signature batch is: the house's own older page says the two mash bills were distilled in Indiana and shipped to Maryland for blending and proofing, VinePair names MGP, and no source says the Signature is Maryland distilled, so the record says Indiana.",
+        "year is empty: the company's founding is 2012 in one profile and a Technical.ly interview and 2013 in another review, and no first release year was confirmed. The distillery's opening in April 2017 stands in Whisky Advocate, Baltimore Magazine and Distillery Trail.",
+        "Age is left out: a trade page of the house gives two years and more, Distiller gives two years, and no label age was confirmed; the plan's four to six years belongs to Small Batch, not the Signature.",
+        "The taste rests on The Whiskey Wash's review of the 83 proof bottling, with honey and peppermint also in Distiller's community notes; the house publishes no notes for the Signature that the searches found.",
+        "Left out for want of a second source: the 1909 on the bottle (the farm's springhouse, one account), the height of the column still, and the share of grain grown at the farm.",
+        "Names added to people.json: the founder and the president of the company, both living, both named in the press."
+      ],
+      "checked": null
+    },
+    {
+      "key": "wigle",
+      "group": "monongahela-rye",
+      "producer": "Wigle",
+      "madeBy": "Pittsburgh Distilling Company",
+      "style": "monongahela-rye",
+      "chapter": "american-rye",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Strip District, Pittsburgh, Allegheny County, Pennsylvania",
+      "year": "",
+      "yearIs": "",
+      "bottle": {
+        "name": "Wigle Reserve Pennsylvania Straight Rye Whiskey",
+        "class": "Straight rye whiskey, made in Pennsylvania",
+        "mash": "Regional rye with wheat and malted barley, and no corn named; the house publishes no percentages for this bottling.",
+        "still": "Milled, fermented and distilled in a copper pot still at the house's distillery in Pittsburgh's Strip District.",
+        "wood": "New charred oak. Wigle's own pages give the age as six years in one place and four in another, so read the label.",
+        "strength": "42% ABV (84 proof)",
+        "taste": "Cinnamon, black pepper and caramel, as the house describes it, with vanilla and stone fruit behind and a dry, peppery close.",
+        "pour": "Neat or with a little water; it makes a spicy Manhattan, an Old Fashioned or a Whiskey Sour.",
+        "label": [
+          { "term": "Pennsylvania Straight Rye", "means": "Straight rye whiskey made in Pennsylvania, at least two years in new charred oak." },
+          { "term": "Wigle Reserve", "means": "The house's name for its range of aged whiskeys; no legal meaning." }
+        ]
+      },
+      "table": "Wigle is the Pittsburgh distillery that takes its name from a Whiskey Rebellion rebel, and Wigle Reserve Pennsylvania Straight Rye Whiskey is its regional rye, pot distilled in the Strip District with wheat and malted barley. Cinnamon, pepper and caramel: Monongahela rye made in Pittsburgh again.",
+      "story": "Western Pennsylvania made rye for close to two centuries, as the house tells it, and the style took the name of the Monongahela valley. In 1791 Congress taxed whiskey, and the farmers and distillers of the region rose against the excise. The distillery's name recalls one of them, a man named Wigle who attacked a federal excise officer, was convicted of treason and condemned to hang, and was pardoned by George Washington (1732 to 1799) in November 1795. A Pittsburgh family opened Wigle to the public in the Strip District in March 2012, and it is generally counted the city's first distillery since Prohibition. From the start it milled, fermented and pot distilled regional grain itself, and its ryes carry wheat and malted barley beside the rye, with no corn. In 2022 the founding family agreed to sell Wigle and its sister cidery to Pittsburgh Spirits. Behind a bar Wigle is the name that shows what the western Pennsylvania rye tradition tastes like when it is made in the city again, from grain grown in the region.",
+      "others": [
+        { "name": "Wigle Reserve Single Barrel Rye", "note": "One barrel at a time at 100 proof, from rye, wheat and malted barley." },
+        { "name": "Wigle Reserve Cask Strength Rye", "note": "The rye bottled uncut at barrel strength." }
+      ],
+      "traps": [
+        "Wigle distils its own grain in Pittsburgh's Strip District: it is not a Kentucky rye under a Pennsylvania name.",
+        "Monongahela rye is a historic style, not a legal class; this bottle is straight rye whiskey under the federal rule.",
+        "Its ryes carry wheat beside the rye and malted barley, and no corn."
+      ],
+      "cards": [
+        { "id": "namesake", "prompt": "Whose story does the Wigle name carry?", "answer": "A Whiskey Rebellion rebel convicted of treason and pardoned by George Washington in 1795." },
+        { "id": "no-corn", "prompt": "What grains go into Wigle Reserve Pennsylvania Straight Rye Whiskey?", "answer": "Regional rye with wheat and malted barley, and no corn, pot distilled in Pittsburgh." }
+      ],
+      "quiz": [
+        { "id": "q1", "tag": "bottle", "card": "no-corn",
+          "q": "Beside rye, which grains go into the mash of Wigle's Pennsylvania straight rye?",
+          "options": ["Corn and malted barley", "Wheat and malted barley", "Oats and malted rye", "Corn and wheat"], "a": 1,
+          "explain": "The house names regional rye, wheat and malted barley; corn and malted barley is the Kentucky pattern, not Wigle's." },
+        { "id": "q2", "tag": "story", "card": "namesake",
+          "q": "Which event of western Pennsylvania's past does the Wigle name recall?",
+          "options": ["The Whiskey Rebellion", "The War of 1812", "The Civil War", "The repeal of Prohibition"], "a": 0,
+          "explain": "The name recalls a rebel of the Whiskey Rebellion pardoned in 1795; Prohibition's end in 1933 opened the door for distilleries, but the name is older." }
+      ],
+      "sources": [
+        { "title": "Wigle Whiskey: Wigle Reserve Pennsylvania Straight Rye", "url": "https://wiglewhiskey.com/shop/wigle-reserve/wigle-reserve-pennsylvania-straight-rye-2/", "kind": "primary", "read": "search" },
+        { "title": "Wigle Whiskey: the bottle list", "url": "https://wiglewhiskey.com/wigle-bottle-list/", "kind": "primary", "read": "search" },
+        { "title": "Wikipedia: Wigle Whiskey", "url": "https://en.wikipedia.org/wiki/Wigle_Whiskey", "kind": "secondary", "read": "search" },
+        { "title": "Mount Vernon: Whiskey Rebellion timeline", "url": "https://www.mountvernon.org/george-washington/the-first-president/whiskey-rebellion-timeline/", "kind": "secondary", "read": "search" },
+        { "title": "Breaking Bourbon: Wigle and Threadbare agree a sale to Pittsburgh Spirits", "url": "https://breakingbourbon.com/bourbon-whiskey-press-releases/wigle-whiskey-and-threadbare-cider-mead-initiates-sale-to-pittsburgh-spirits", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "A swap of the bottling is proposed: the roster's Wigle Straight Rye Whiskey is an older name (The Whiskey Wash reviewed a batch at 47.2%), and the house's own shop lists Wigle Reserve Pennsylvania Straight Rye as its straight rye. bottle.name adds Whiskey so the roster's words stand; the producer's page prints the name without it, so the flagship should become Wigle Reserve Pennsylvania Straight Rye if the refuter agrees.",
+        "The plan's note asked for the core rye and its proof: 84 proof (42% ABV) is the house's bottle list alone; its product page gives no figure. The age is six years on the product page and four on a menu of the house, so wood gives neither as fact.",
+        "year is empty: Wikipedia gives operations from 2011 and opening to the public in March 2012, and local coverage gives 2011; the story uses March 2012.",
+        "The namesake is described, not dated: Philip Wigle (also spelt Weigel or Vigol) is named in Wikipedia, the Smithsonian and the Founders Online papers, but no source found gives his death. Washington's pardon of November 1795 stands in Mount Vernon's timeline and the Smithsonian; the 1791 excise in the same.",
+        "The plan's why calls Wigle family owned: in August 2022 the family agreed a sale to Pittsburgh Spirits, a company of the Nutting family (Breaking Bourbon's press release, CBS Pittsburgh, Pittsburgh Magazine); whether the sale closed was not confirmed, so the story says only that the sale was agreed. The plan's why should drop family owned. The corporate name in madeBy was not confirmed.",
+        "The organic label of the plan's why was not confirmed for this bottling: the product page says regional grain, and organic appears only on older bottlings.",
+        "Name added to people.json: the head of the buying family, living, named in the sources."
+      ],
+      "checked": null
+    },
+    {
+      "key": "dads-hat",
+      "group": "monongahela-rye",
+      "producer": "Dad's Hat",
+      "madeBy": "Mountain Laurel Spirits",
+      "style": "monongahela-rye",
+      "chapter": "american-rye",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Bristol, on the Delaware above Philadelphia, Pennsylvania",
+      "year": "2011",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Dad's Hat Pennsylvania Rye Whiskey",
+        "class": "Rye whiskey, made in Pennsylvania; not a straight rye",
+        "mash": "80 per cent rye, 15 malted barley and 5 malted rye by the house's own figures, with no corn: rye and malt alone, the old Monongahela way.",
+        "still": "Fermented about a week, then distilled twice in Bristol, on a pot still with a side column.",
+        "wood": "New charred oak quarter casks for at least six months, by the house's account; the small cask lets the rye take oak quickly.",
+        "strength": "45% ABV (90 proof)",
+        "taste": "Floral and spicy on the nose, cinnamon through the middle, with dried fruit, black cherry, tobacco, vanilla and oak beneath, and white pepper on a dry finish.",
+        "pour": "Neat or over ice; its young spice stands up in a Manhattan, a Sazerac or a Whiskey Sour.",
+        "label": [
+          { "term": "Pennsylvania Rye Whiskey", "means": "Rye whiskey made in Pennsylvania; not straight, since it has under two years in oak." },
+          { "term": "Dad's Hat", "means": "The house's name, for a founder's father, who wore fedora hats and drank rye." }
+        ]
+      },
+      "table": "Dad's Hat is a Bristol, Pennsylvania distillery making rye from rye and malt alone, and Dad's Hat Pennsylvania Rye Whiskey is its classic: 80 per cent rye, at least six months in small quarter casks, at 90 proof. Expect cinnamon, black cherry and pepper.",
+      "story": "Two friends founded Mountain Laurel Spirits in Bristol, Pennsylvania, on the Delaware above Philadelphia, in 2011, to make rye in the Pennsylvania manner again. One of them had grown up around rye at his family's bar, and the whiskey is named for his father, who wore fedora hats and drank rye whiskey. The recipe was worked out with Michigan State University's artisan distilling programme, and it follows the old Monongahela pattern of rye and malt with no corn: 80 per cent rye, 15 malted barley and 5 malted rye, fermented for about a week and distilled twice on a pot still with a side column. The classic rests at least six months in new charred quarter casks, small barrels that give the young spirit its oak quickly, and by 2012 it was in bottle at 90 proof and being written about in Philadelphia. Larger barrels followed for straight and bonded ryes. Behind a bar Dad's Hat is the bottle that shows how a rye of rye and malt alone tastes when young: floral, spicy and dry, a different animal from the corn-rounded ryes of Kentucky.",
+      "others": [
+        { "name": "Dad's Hat Pennsylvania Bottled In Bond Rye Whiskey", "note": "Bonded, so 100 proof and at least four years old by law." },
+        { "name": "Dad's Hat Vermouth Finish Rye Whiskey", "note": "The classic rested about three months more in casks that held sweet vermouth." }
+      ],
+      "traps": [
+        "Dad's Hat Pennsylvania Rye Whiskey is not a straight rye: it spends months, not years, in small quarter casks.",
+        "Its mash carries no corn: rye with malted barley and malted rye, the old Pennsylvania way.",
+        "A bonded rye is 100 proof by law; a listing of the house's straight rye at 95 proof is another bottling."
+      ],
+      "cards": [
+        { "id": "quarter-casks", "prompt": "How is Dad's Hat Pennsylvania Rye Whiskey aged?", "answer": "At least six months in new charred oak quarter casks, small barrels that give oak quickly; it is not a straight rye." },
+        { "id": "name", "prompt": "Who is the dad of Dad's Hat?", "answer": "A founder's father, who wore fedora hats and drank rye whiskey at the family bar." }
+      ],
+      "quiz": [
+        { "id": "q1", "tag": "bottle", "card": "quarter-casks",
+          "q": "A guest asks how long Dad's Hat Pennsylvania Rye Whiskey rests in oak, and in what. What does the house say?",
+          "options": ["Four years in full barrels", "Six months in quarter casks", "Two years in full barrels", "Six months in sherry casks"], "a": 1,
+          "explain": "The classic rests at least six months in new charred quarter casks; two years in barrels would make a straight rye, which this is not." },
+        { "id": "q2", "tag": "story", "card": "name",
+          "q": "In which year did Mountain Laurel Spirits begin making Dad's Hat in Bristol?",
+          "options": ["1999", "2006", "2011", "2016"], "a": 2,
+          "explain": "The distillery began in Bristol in 2011, and its classic rye was in bottle by 2012; 2006 is too early for the house." }
+      ],
+      "sources": [
+        { "title": "Dad's Hat: our process", "url": "https://dadshatrye.com/our-process/", "kind": "primary", "read": "search" },
+        { "title": "Dad's Hat: Classic Pennsylvania Rye Whiskey", "url": "https://store.dadshatrye.com/product/classic-pennsylvania-rye-whiskey/1", "kind": "primary", "read": "search" },
+        { "title": "Dad's Hat: the classic rye", "url": "https://dadshatrye.com/whiskey/classic-rye/", "kind": "primary", "read": "search" },
+        { "title": "Philadelphia Magazine: Dad's Hat rye whiskey", "url": "https://www.phillymag.com/foobooz/2024/04/09/dads-hat-rye-whiskey/", "kind": "secondary", "read": "search" },
+        { "title": "Whiskey Lore: Dad's Hat distillery", "url": "https://www.whiskeylore.org/distilleries/us/pennsylvania/dads-hat-distillery", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "The plan's note asked whether the house is open: the house's own store lists the classic, Philadelphia Magazine profiled it in April 2024 and a newer tasting room in Bristol Borough was reported; no notice of closure was found, but nothing later than 2024 confirmed it.",
+        "The plan's note on the bonded proof: the 95 proof listing belongs to Dad's Hat Pennsylvania Straight Rye (47.5%, which Distiller marks discontinued), not to the bonded rye, which is 100 proof by law (27 CFR 5.88); others names the bonded bottling as Caskers prints it, and the refuter may wish to confirm it on the label.",
+        "The plan's note on the classic's age: the house says at least six months in quarter casks; Distiller gives six to nine months. The eight and a half months of the plan's older source is left out.",
+        "The mash of 80, 15 and 5 is the house's process page; an older brochure of the house names rye and malted barley only, and a newer page speaks of 80 per cent rye and 20 malt, which agree once the two malts are added. Philadelphia Magazine's 85 and 15 is not used.",
+        "Left out for want of a second source: the Stetson factory as the maker of the father's hats, the white rye as the house's first release, the year of the first straight rye (the house's claim of the first Pennsylvania made straight rye in over twenty-five years) and the 500 gallon size of the pot still, which rests on the house's process page alone and is kept out of the bottle for want of a date.",
+        "place and story leave out the county: the lint reads its name as a word for money, so Bristol is placed on the Delaware above Philadelphia instead.", "Names added to people.json: the two founders, both living, named in the press."
+      ],
+      "checked": null
+    },
+    {
+      "key": "liberty-pole",
+      "group": "monongahela-rye",
+      "producer": "Liberty Pole Spirits",
+      "madeBy": "Mingo Creek Craft Distillers",
+      "style": "monongahela-rye",
+      "chapter": "american-rye",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "North Strabane, Washington County, Pennsylvania",
+      "year": "2016",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Old Monongahela Full Proof Rye Whiskey",
+        "class": "Rye whiskey, made in Washington County, Pennsylvania",
+        "mash": "61 per cent rye, 13 malted rye, 13 wheat and 13 malted barley, by the house's own figures, and no corn.",
+        "still": "Sweet mashed and batch distilled in pot stills at the house's distillery in Washington County.",
+        "wood": "New charred oak, filled at a low barrel entry proof of 108; the house gives no age statement, and the first batch, D24, married six barrels.",
+        "strength": "54% ABV (108 proof)",
+        "taste": "Rosemary, tarragon, citrus, brown sugar and spearmint on the nose, then allspice and apricot, and a finish of bread and white pepper, by the house's own notes.",
+        "pour": "Neat, or with a little water to open the herbs; it holds its own in a Manhattan or a Sazerac.",
+        "label": [
+          { "term": "Full Proof", "means": "Bottled at 108, the proof at which the spirit went into the barrel." },
+          { "term": "Old Monongahela", "means": "The name of the old western Pennsylvania rye style; no legal meaning." }
+        ]
+      },
+      "table": "Liberty Pole Spirits distils in Washington County, the farm country of the Whiskey Rebellion, and Old Monongahela Full Proof Rye Whiskey is its high-rye whiskey with no corn, bottled at the 108 proof it went into the barrel. Herbs, apricot and white pepper.",
+      "story": "Washington County, south of Pittsburgh, was the farm country of the Whiskey Rebellion, where in 1794 protesters against the federal excise on whiskey raised liberty poles as their banner. A family founded Liberty Pole Spirits in the town of Washington in July 2016, naming it for those poles and distilling small batches of whiskey in pot stills downtown. In 2023 the house moved to a larger campus in North Strabane, raising a liberty pole on the site in place of a groundbreaking, and Mingo Creek Craft Distillers, the company behind the label, moved all its work there. In May 2024 it released Old Monongahela Full Proof Rye, built on the old regional pattern: a mash high in rye, with malted rye, wheat and malted barley and not a kernel of corn, sweet mashed, batch distilled and filled at a low barrel entry proof of 108, then bottled at that same strength. Behind a bar it is the bottle that puts the style's own name on the label, and a way to show a guest what Monongahela rye meant before the corn of Kentucky's ryes became the habit.",
+      "others": [
+        { "name": "Liberty Pole Spirits Rye Whiskey", "note": "The house's everyday rye at 92 proof." }
+      ],
+      "traps": [
+        "Mingo Creek Craft Distillers makes Liberty Pole; Mango Creek, in some reviews, is a misprint.",
+        "Old Monongahela is a style name on the label, not a legal class: the bottle is rye whiskey under the federal rule.",
+        "Full proof here means the barrel entry proof, 108, not the strength the barrel reached."
+      ],
+      "cards": [
+        { "id": "entry-proof", "prompt": "What does Full Proof mean on Old Monongahela Full Proof Rye?", "answer": "It is bottled at 108 proof, the proof at which it went into the barrel." },
+        { "id": "liberty-poles", "prompt": "What were the liberty poles that Liberty Pole Spirits is named for?", "answer": "Poles raised by Whiskey Rebellion protesters in 1794 against the federal whiskey excise." }
+      ],
+      "quiz": [
+        { "id": "q1", "tag": "bottle", "card": "entry-proof",
+          "q": "At what proof is Old Monongahela Full Proof Rye bottled?",
+          "options": ["90 proof", "100 proof", "108 proof", "125 proof"], "a": 2,
+          "explain": "It goes into the barrel at 108 and is bottled at that same proof; 125 is the legal ceiling for barrel entry, not this whiskey's strength." },
+        { "id": "q2", "tag": "story", "card": "liberty-poles",
+          "q": "In which year did Whiskey Rebellion protesters raise the liberty poles that name Liberty Pole Spirits?",
+          "options": ["1776", "1794", "1812", "1861"], "a": 1,
+          "explain": "The poles went up in the Whiskey Rebellion of 1794; 1776 is the year of independence, before the federal whiskey excise of 1791." }
+      ],
+      "sources": [
+        { "title": "Liberty Pole Spirits: Old Monongahela Full Proof Rye Whiskey", "url": "https://www.libertypolespirits.com/product-page/old-monongahela-full-proof-rye-whiskey", "kind": "primary", "read": "search" },
+        { "title": "Liberty Pole Spirits: Rye Whiskey", "url": "https://www.libertypolespirits.com/product-page/liberty-pole-spirits-rye-whiskey", "kind": "primary", "read": "search" },
+        { "title": "Craft Spirits Magazine: Liberty Pole releases Old Monongahela Full Proof Rye", "url": "https://craftspiritsmag.com/2024/05/08/liberty-pole-spirits-releases-old-monongahela-full-proof-rye-whiskey/", "kind": "secondary", "read": "search" },
+        { "title": "Whisky Advocate: Liberty Pole Spirits moves to a new home", "url": "https://whiskyadvocate.com/Enriching-History-Pennsylvania-s-Liberty-Pole-Spirits-Has-a-Spacious-New-Home", "kind": "secondary", "read": "search" },
+        { "title": "Observer-Reporter: the distiller opens a new whiskey campus", "url": "https://www.observer-reporter.com/business/2023/jul/17/raising-the-pole-distiller-opens-new-whiskey-campus/", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "The plan's note asked the author to choose between Old Monongahela and the 92 proof straight rye: the record keeps Old Monongahela, which the house calls its Monongahela style rye and which puts the style's name on the label; the 92 proof Rye Whiskey stands under others. Its proof should not move between batches, since the house bottles at the barrel entry proof of 108.",
+        "Age is left out: one shop gives three and a half to four and a half years for batch D24, and the house gives none.",
+        "The release of May 2024 stands in Craft Spirits Magazine and a second trade post of 9 May 2024; Breaking Bourbon gives July 2024 as a release date, which may be wider distribution.",
+        "The founding of July 2016 and the 2023 move to North Strabane stand in Whisky Advocate, the Observer-Reporter and Visit Washington County; whether pot stills were used at the first downtown site rests on the house's description of small batch pot distilled whiskey.",
+        "Left out for want of a source: where the rye is grown (one review says Pennsylvania), the proof off the still (about 130 in one account), and the Whiskey Rebellion story behind the name Mingo Creek.",
+        "Not a benchmark pick and a house a guest may not know; it stays because it is the one label of the five that prints the style's own name.",
+        "Names added to people.json: the four founders of the family, all living, named in the sources."
+      ],
+      "checked": null
+    }
+  ]
+}
