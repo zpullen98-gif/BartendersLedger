@@ -610,159 +610,140 @@
    }
   },
   {
-   "key": "rebel",
+   "key": "old-fitzgerald",
    "group": "wheated-bourbon",
-   "producer": "Rebel",
-   "madeBy": "Lux Row Distillers",
+   "producer": "Old Fitzgerald",
+   "madeBy": "Heaven Hill",
    "style": "wheated-bourbon",
    "chapter": "bourbon",
    "shelf": "",
    "library": "",
    "say": "",
-   "place": "Bardstown, Nelson County, Kentucky",
-   "year": "",
-   "yearIs": "",
+   "place": "Louisville, Jefferson County, Kentucky",
+   "year": "1870",
+   "yearIs": "first released",
    "bottle": {
-    "name": "Rebel 100 Kentucky Straight Bourbon Whiskey",
-    "class": "Kentucky straight bourbon whiskey",
-    "mash": "A wheated mash, given by the company as 68 per cent corn, 20 per cent wheat and 12 per cent malt.",
-    "still": "Distilled at Lux Row Distillers in Bardstown, by the company's account. Lux Row opened only in 2018, so Rebel bottled before then was distilled elsewhere and bought in.",
-    "wood": "New charred American oak. The company's pages give no age for the standard bottling; a separate Rebel 100 6 Year carries its age on the label.",
+    "name": "Old Fitzgerald 7 Year Old Bottled-in-Bond Kentucky Straight Bourbon Whiskey",
+    "class": "Kentucky straight bourbon whiskey, bottled in bond",
+    "mash": "By Heaven Hill's account 68 per cent corn, 20 per cent wheat and 12 per cent malted barley: the wheated recipe that Larceny shares.",
+    "still": "Distilled by Heaven Hill at its Bernheim Distillery in Louisville, the home of its wheated recipe since 1999, in a single distilling season; the neck wrap names the season and the year.",
+    "wood": "Seven years in new charred American oak barrels with a level 3 char, by the house's account. The age is stated on the label.",
     "strength": "50% ABV (100 proof)",
-    "taste": "A sweet nose, then caramel and vanilla carried with some heat on the tongue at this strength, and a dry finish; the wheat keeps it round rather than peppery.",
-    "pour": "At the well and in mixed drinks: its strength stands up in an Old Fashioned, a Whiskey Sour or a highball with ginger ale. Neat for a guest who wants a firm wheater.",
+    "taste": "Graham cracker and honey on the nose, then fresh bread, brown sugar and baking spice on the palate, with a cinnamon sweetness that fades into oak on the finish.",
+    "pour": "Neat, or with a few drops of water to open the spice. At 100 proof it holds its own over one large cube and builds a firm, rounded Old Fashioned or Manhattan.",
     "label": [
      {
-      "term": "100",
-      "means": "One hundred proof, 50 per cent alcohol by volume: the strength is the name of the bottling."
+      "term": "Bottled-in-Bond",
+      "means": "One distiller, one distillery and one distilling season, at least four years in oak in a bonded warehouse, then bottled at 100 proof."
      },
      {
       "term": "Kentucky Straight Bourbon Whiskey",
-      "means": "Bourbon made in Kentucky and kept at least two years in new charred oak."
+      "means": "Bourbon made in Kentucky and kept at least two years in new charred oak; this one has seven."
+     },
+     {
+      "term": "Your Key to Hospitality",
+      "means": "The label's own motto, written on the label and the base of the bottle; it carries no legal meaning."
      }
     ]
    },
-   "table": "Rebel is the wheated bourbon of Lux Row Distillers in Bardstown, the label once sold as Rebel Yell. Rebel 100 is its straight bourbon at 100 proof: caramel and vanilla with some heat, a firm wheater with the backbone for an Old Fashioned or a Whiskey Sour.",
-   "story": "The label was born as Rebel Yell, a wheated bourbon of the Stitzel-Weller Distillery, which had opened near Louisville in 1935 with wheat at the heart of its mash. Accounts of its birth differ: one places it in the 1930s, another in 1949, at the centenary of the Weller firm; they agree that it was aimed at the South. The brand's own line, that its recipe dates from 1849, takes the year of the Weller firm, and it is told as the brand's claim. After the Van Winkle family sold Stitzel-Weller in 1972 the distillery's labels were scattered, and Rebel Yell came to the David Sherman company of St. Louis, later named Luxco; accounts of the year differ. For decades the whiskey was bought in and bottled for the company. Luxco opened a distillery of its own, Lux Row Distillers, at Bardstown in 2018, and was itself acquired by MGP Ingredients in 2021. Along the way the label dropped its second word and became Rebel. Rebel 100, introduced in 2019, is the hundred proof straight bourbon of the range, and the one a bartender is likely to meet at the well.",
+   "table": "Old Fitzgerald, once the main bourbon of the Stitzel-Weller Distillery, is a wheated bourbon Heaven Hill makes in Louisville; its 7 Year Old Bottled-in-Bond spends seven years in oak and is bottled at 100 proof. It pours honey, fresh bread and cinnamon, soft and firm enough for an Old Fashioned.",
+   "story": "By the brand's account the name first appeared in 1870, on a whiskey a Milwaukee liquor merchant sold to steamships, railways and private clubs, and only later on general sale. As Prohibition ended the name passed to Julian \"Pappy\" Van Winkle and his partners, and when their Stitzel-Weller Distillery opened near Louisville in 1935, Old Fitzgerald became its main bourbon, made with wheat in place of rye; the plant was often called the Old Fitzgerald Distillery. The Van Winkle family sold the distillery in 1972, and the label went with it through a line of drinks companies. Distilling at Stitzel-Weller ended in the early 1990s and the recipe moved to the new Bernheim Distillery in Louisville; in 1999 Heaven Hill bought Bernheim from Diageo, and with it the Old Fitzgerald name and its barrels. In 2018 Heaven Hill began a twice yearly series of aged, bonded decanters, each edition of its own age, and in June 2025 it launched the 7 Year Old as the label's standing bottling. Behind a bar it is the wheater that carries the Stitzel-Weller name, at the strength the bond demands.",
    "others": [
     {
-     "name": "Rebel Kentucky Straight Bourbon",
-     "note": "The 80 proof bottling of the same wheated recipe."
-    },
-    {
-     "name": "Rebel 100 6 Year",
-     "note": "The hundred proof bourbon with a six year age statement, sold beside the standard bottling."
-    },
-    {
-     "name": "Rebel 10 Year Single Barrel",
-     "note": "A ten year old single barrel bottling of the wheated recipe."
+     "name": "Old Fitzgerald Bottled-in-Bond Decanter Series",
+     "note": "Spring and fall editions since 2018, always bonded at 100 proof, each of its own age, in a faceted decanter."
     }
    ],
    "traps": [
-    "The year 1849 in the brand's story is the Weller firm's, not the year Rebel Yell was first bottled.",
-    "Older bottles read Rebel Yell: the same label under its former name, not a different bourbon.",
-    "Rebel is a wheated bourbon, like Maker's Mark and Weller: its 100 proof makes it firmer, not a high rye bourbon."
+    "Old Fitzgerald is no longer Stitzel-Weller whiskey: that distillery stopped in the early 1990s, and the 7 Year Old was distilled by Heaven Hill at Bernheim.",
+    "The 7 Year Old and the decanter series are different bottlings: the decanters change their age with each spring and fall edition.",
+    "Bottled-in-Bond promises at least four years, one season and 100 proof; the seven years is the label's own age statement on top of it."
    ],
    "cards": [
     {
-     "id": "wheated",
-     "prompt": "What kind of bourbon is Rebel 100, and what is its strength?",
-     "answer": "A wheated Kentucky straight bourbon at 100 proof, 50% ABV; the company gives the mash as 68 per cent corn, 20 wheat and 12 malt."
+     "id": "bond",
+     "prompt": "What does Bottled-in-Bond promise on the Old Fitzgerald 7 Year Old Bottled-in-Bond?",
+     "answer": "One distiller, distillery and distilling season, at least four years in a bonded warehouse, and bottling at 100 proof."
     },
     {
-     "id": "old-name",
-     "prompt": "Under what name was Rebel sold for most of its life, and at which distillery did it begin?",
-     "answer": "Rebel Yell, a wheated bourbon of the Stitzel-Weller Distillery near Louisville."
+     "id": "heaven-hill",
+     "prompt": "In which year did Heaven Hill buy the Old Fitzgerald name?",
+     "answer": "1999, from Diageo, together with the Bernheim Distillery in Louisville and the label's barrels."
     }
    ],
    "quiz": [
     {
      "id": "q1",
      "tag": "bottle",
-     "card": "wheated",
-     "q": "A guest asks what the 100 on a bottle of Rebel 100 means. Which answer is right?",
+     "card": "bond",
+     "q": "A guest reads Bottled-in-Bond on the Old Fitzgerald 7 Year Old. At what strength must a bonded bourbon be bottled?",
      "options": [
-      "It is bottled at 100 proof",
-      "It is aged 100 months",
-      "It is 100 per cent corn",
-      "It is batch number 100"
+      "80 proof",
+      "90 proof",
+      "107 proof",
+      "100 proof"
      ],
-     "a": 0,
-     "explain": "The figure is the strength: 100 proof, 50% ABV. It is a wheated bourbon, so corn is the larger part of the mash and not the whole of it."
+     "a": 3,
+     "explain": "The bonded rules fix the strength at 100 proof, 50% ABV, reached with water alone; 107 proof is the Pappy Van Winkle 15 Year Old's strength, and no bonded figure."
     },
     {
      "id": "q2",
      "tag": "story",
-     "card": "old-name",
-     "q": "Which Bardstown distillery, opened in 2018, makes Rebel by the brand's account?",
+     "card": "heaven-hill",
+     "q": "Which distillery came to Heaven Hill with the Old Fitzgerald name in 1999?",
      "options": [
-      "Heaven Hill",
-      "Willett",
-      "Lux Row Distillers",
-      "Barton 1792"
+      "Bernheim",
+      "Stitzel-Weller",
+      "Buffalo Trace",
+      "Old Judge"
      ],
-     "a": 2,
-     "explain": "Luxco opened Lux Row Distillers at Bardstown in 2018; Heaven Hill, Willett and Barton 1792 are older Bardstown names."
+     "a": 0,
+     "explain": "Heaven Hill bought the Bernheim Distillery in Louisville from Diageo in 1999, the brand with it; Stitzel-Weller had stopped distilling some years before."
     }
    ],
    "sources": [
     {
-     "title": "Rebel Bourbon: 100 Proof Bourbon",
-     "url": "https://rebelbourbon.com/whiskey/100-proof-bourbon/",
+     "title": "Heaven Hill: Old Fitzgerald unveils its 7 Year Old Bottled-in-Bond",
+     "url": "https://heavenhill.com/news-and-notes/your-key-to-hospitality-old-fitzgerald-bourbon-unveils-7-year-old-bottled-in-bond/",
      "kind": "primary",
      "read": "search"
     },
     {
-     "title": "Luxco: Rebel Bourbon adds a new size to the Rebel 100 line",
-     "url": "https://www.luxco.com/rebel-bourbon-adds-new-size-to-rebel-100-lineup/",
+     "title": "Heaven Hill Distillery: Old Fitzgerald history",
+     "url": "https://heavenhilldistillery.com/oldfitzgerald-history.php",
      "kind": "primary",
      "read": "search"
     },
     {
-     "title": "Luxco: Lux Row Distillers introduces Rebel 100 6 Year",
-     "url": "https://www.luxco.com/lux-row-distillers-introduces-rebel-100-6-year-bourbon/",
+     "title": "eCFR: 27 CFR 5.88, Bottled in bond",
+     "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-F/section-5.88",
      "kind": "primary",
      "read": "search"
     },
     {
-     "title": "Wikipedia: Rebel (bourbon)",
-     "url": "https://en.wikipedia.org/wiki/Rebel_(bourbon)",
+     "title": "Wikipedia: Old Fitzgerald",
+     "url": "https://en.wikipedia.org/wiki/Old_Fitzgerald",
      "kind": "secondary",
      "read": "search"
     },
     {
-     "title": "Whisky Advocate: MGP, Luxco and Kentucky bourbon",
-     "url": "https://www.whiskyadvocate.com/mgp-luxco-kentucky-bourbon-acquisition/",
+     "title": "The Whiskey Wash: the Old Fitzgerald 7 Year Bottled-in-Bond launch",
+     "url": "https://thewhiskeywash.com/whiskey-new-releases/old-fitzgerald-returns-with-7-year-bottled-in-bond-signature-expression/",
      "kind": "secondary",
      "read": "search"
     }
    ],
    "report": [
-    "The year field is empty on purpose: the label's creation is the 1930s in Wikipedia, 1949 in The Whiskey Wash and 1936 as a registered name in a third account, and no two sources agree.",
-    "The year the David Sherman company took the label is 1993 in one of the company's own releases, 1999 and the early 1980s elsewhere: the story names the buyer and gives no year.",
-    "The year the label dropped Yell is 2020 in Wikipedia alone (the plan suggests 2019 or later); Whisky Advocate reports the change without a date, so the story says only that it happened.",
-    "The plan asks whether Rebel 100 carries the six year statement: the company sells Rebel 100 6 Year as a separate bottling beside the standard one, and no source read states an age for the standard bottling. A refuter should read the label.",
-    "The plan asks who distils it: the brand's pages say Lux Row Distillers in Bardstown. Before 2018 the whiskey was sourced; Heaven Hill is widely reported as the source and the company has not said so, so no distillery is named.",
-    "Left out for want of a second source: national distribution from 1984, and the brand's own tasting words beyond caramel, vanilla, heat and a dry finish (one of its pages carries notes that belong to the 80 proof bottling).",
-    "The brand's pages name the distillery's master distiller, who is living: the name is added to people.json and the record says nothing of the role.",
-    "Pick in doubt, mildly: Rebel is a well bourbon more than a house a guest asks for by name, and Old Fitzgerald, which it replaces here, is the stronger wheated story; the plan places Old Fitzgerald in bottled in bond, so the pick stands."
+    "Written on 2026-11-22 in Rebel's place, after the owner took Rebel out as a label a fine dining guest does not ask for; Rebel's record and its checked block are gone with it, and its lines in reviews/wheated-bourbon.json were not touched by this run.",
+    "Flagship: the 7 Year Old Bottled-in-Bond, launched in June 2025 as the label's standing bottling (Heaven Hill's release, Whisky Advocate, VinePair, The Whiskey Wash), chosen over the decanter series because the decanters change age with each spring and fall edition and the 7 Year Old can be poured all year.",
+    "Bottle name: retail listings print Old Fitzgerald Aged 7 Years Bottled-In-Bond Kentucky Straight Bourbon Whiskey while Heaven Hill writes 7 Year Old; a refuter should read the bottle and set the name to its words.",
+    "The merchant who first sold the whiskey is Solomon Charles Herbst in Wikipedia and Heaven Hill's timeline, but no two sources give his death, so he is described and not named; the year he registered the name is 1884 or 1901 by Heaven Hill's own pages and is left out, as is the year 1933 for the sale to the Stitzel-Weller partners, which the two sources read attach to different events.",
+    "Left out for want of a source: the sum paid for the name after Prohibition (excluded by the voice in any case), the drinks companies between 1972 and 1999 by name (Wikipedia's chain is garbled), the still type at Bernheim, and the warehouse the barrels age in.",
+    "Bernheim as the still: Heaven Hill says its wheated bourbon has been made there continually since 1999, and a seven year old of 2025 was distilled about 2018, before the return to Bardstown announced in 2022 that the Larceny refuter met.",
+    "Larceny's record in this group lists Old Fitzgerald Bottled-in-Bond under others, as Heaven Hill's older wheated label; with Old Fitzgerald now its neighbour here, the integrator may wish to drop or reword that entry. Larceny's story also tells the Old Fitzgerald history from Pappy to the 1999 sale, so this story opens on 1870 and tells the later years briefly.",
+    "No living person is named. The tasting words are Heaven Hill's own; three reviews read through search agree on honey, cinnamon and oak. The label term Kentucky Straight Bourbon Whiskey rests on retail listings of the bottle and on the class of a bonded bourbon of seven years; Heaven Hill's release names Bottled-in-Bond and Your Key to Hospitality on the label."
    ],
-   "checked": {
-    "date": "2026-11-21",
-    "by": "refuter",
-    "verdict": "changed",
-    "changed": [
-     "bottle.still: was that the whiskey was bought from producers the company did not name; a review reports a Heaven Hill contract and the company has not said either way, so now only that Lux Row opened in 2018 and earlier Rebel was distilled elsewhere and bought in.",
-     "story: was the Weller story borrowed, a judgement; now that the brand's 1849 takes the year of the Weller firm, told as its claim.",
-     "story: Rebel 100 now carries its year, introduced in 2019, from Luxco's own release.",
-     "traps[2]: was that its strength might suggest a high rye bourbon, which teaches nothing true; now that its 100 proof makes it firmer, and it stays a wheater beside Maker's Mark and Weller.",
-     "quiz[q2].explain: was that Heaven Hill, Willett and Barton are other distilleries of the same town; Heaven Hill has distilled at Bernheim in Louisville, so now they are older Bardstown names."
-    ],
-    "open": [
-     "year: the label's creation (1930s, about 1950 or 1949) and the year the David Sherman company bought it (early 1980s or 1999) stay unsettled and out, as the author left them.",
-     "story: the rename to Rebel is 2020 in Wikipedia alone and stays undated."
-    ]
-   }
+   "checked": null
   }
  ]
 }
