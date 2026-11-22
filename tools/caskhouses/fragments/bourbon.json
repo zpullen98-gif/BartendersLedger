@@ -19,32 +19,31 @@
     "class": "Kentucky straight bourbon whiskey",
     "mash": "Corn, rye and malted barley, with corn the larger part as the law requires; the house publishes no percentages.",
     "still": "Sour mashed and distilled at Clermont, by the house's account first to low wine at about 125 proof, then through a doubler to high wine below 160 proof.",
-    "wood": "Four years in new, charred American white oak barrels with a number four char, by the house's account; the age is printed on the back label.",
+    "wood": "Four years in new, charred American white oak barrels with a number four char, by the house's account. The house gives the age as four years.",
     "strength": "40% ABV (80 proof)",
-    "taste": "Vanilla and caramel over sweet corn, medium in body, with a little oak and a touch of rye spice on a short, clean finish.",
+    "taste": "Oak and vanilla on the nose over a little spice, then caramel and vanilla in a medium body, and oak with a hint of spice on the finish.",
     "pour": "Neat, over ice or in a highball with ginger ale or soda; it is a sound base for a Whiskey Sour or an Old Fashioned.",
     "label": [
      { "term": "Kentucky Straight Bourbon Whiskey", "means": "Bourbon made in Kentucky and kept at least two years in new charred oak." },
-     { "term": "Aged 4 Years", "means": "Nothing in the bottle is younger than four years; the statement sits on the back label." }
+     { "term": "80 Proof", "means": "40 per cent alcohol by volume, the floor the law sets for bourbon." }
     ]
    },
-   "table": "Jim Beam White Label is the Kentucky straight bourbon from Clermont, four years in new charred oak and bottled at 80 proof. Expect vanilla, caramel and sweet corn with a little spice: the plain bourbon every other pour is measured against, and an easy highball.",
-   "story": "As the brand tells it, the Beam family sold its first whiskey in Kentucky in 1795, a year that is the family's claim for its line rather than for this label, and its bourbon was sold for decades under the name Old Tub. James B. Beam (1864 to 1947) took charge of the family distillery in the 1890s, and Prohibition closed it in 1920. After repeal he rebuilt at Clermont with friends and family, and the first batch was ready in 1935. The rights to Old Tub had been lost, and in 1943 the bourbon took his own name, Jim Beam. The family tells of him carrying a jug of the house yeast home at weekends to keep it safe, and the house says it has used that strain since repeal. In 2014 Suntory of Japan bought Beam Inc., the company that then made it. For a bartender the White Label is the baseline: learn its corn, vanilla and gentle spice, and every other bourbon on the back bar is tasted against it.",
+   "table": "Jim Beam White Label is the Kentucky straight bourbon from Clermont, four years in new charred oak and bottled at 80 proof. Expect vanilla, caramel and oak with a little spice: a plain bourbon to taste the others against, and an easy highball.",
+   "story": "As the brand tells it, the Beam family sold its first whiskey in Kentucky in 1795, a year that is the family's claim for its line rather than for this label, and its bourbon was sold for decades under the name Old Tub. James B. Beam (1864 to 1947) took charge of the family distillery in the 1890s, and Prohibition closed it in 1920. After repeal he rebuilt at Clermont with friends and family, and the first batch was ready in 1935. The rights to Old Tub had been lost, and in 1943 the bourbon took his own name, Jim Beam. The family tells of him carrying a jug of the house yeast home at weekends to keep it safe, and the house says it has used that strain since repeal. In 2014 Suntory of Japan bought Beam Inc., the company that then made it. For a bartender the White Label is the baseline: learn its vanilla, caramel and gentle spice, and every other bourbon on the back bar is tasted against it.",
    "others": [
-    { "name": "Jim Beam Double Oak", "note": "Aged twice, the second time in a fresh charred oak barrel, by the house's account." },
-    { "name": "Jim Beam Repeal Batch", "note": "A bourbon of the house bottled without chill filtering, by the house's account." }
+    { "name": "Jim Beam Double Oak", "note": "Aged twice, the second time in a fresh charred oak barrel, by the house's account." }
    ],
    "traps": [
-    "The age is printed on the back label, so White Label is often taken for a bourbon with no age statement: it is four years old.",
+    "White Label is often taken for a bourbon with no age: by the house's account it is four years old, twice the straight bourbon minimum.",
     "The year 1795 is the Beam family's claim for an ancestor, not the age of the Jim Beam name, which the bourbon took in 1943.",
     "Clermont rebuilt after Prohibition: the first batch there was ready in 1935."
    ],
    "cards": [
-    { "id": "age", "prompt": "How long is Jim Beam White Label aged, and where does the label say so?", "answer": "Four years in new charred oak, twice the straight bourbon minimum; the statement is on the back label." },
+    { "id": "age", "prompt": "How long is Jim Beam White Label aged?", "answer": "Four years in new charred oak by the house's account, twice the straight bourbon minimum." },
     { "id": "old-tub", "prompt": "Under what name was the Beam family's bourbon sold before it became Jim Beam?", "answer": "Old Tub; the rights were lost over Prohibition, and in 1943 the bourbon took the name of James B. Beam." }
    ],
    "quiz": [
-    { "id": "q1", "tag": "bottle", "card": "age", "q": "A guest says Jim Beam White Label has no age. What age does the bourbon carry?", "options": ["Two years", "Four years", "Six years", "Eight years"], "a": 1, "explain": "The house ages it four years and prints that on the back label; two years is only the minimum for the word straight." },
+    { "id": "q1", "tag": "bottle", "card": "age", "q": "A guest says Jim Beam White Label has no age. What age does the bourbon carry?", "options": ["Two years", "Four years", "Six years", "Eight years"], "a": 1, "explain": "The house ages it four years by its own account; two years is only the minimum for the word straight." },
     { "id": "q2", "tag": "story", "card": "old-tub", "q": "In which year did the Beam family's bourbon take the name Jim Beam?", "options": ["1795", "1920", "1935", "1943"], "a": 3, "explain": "The name came in 1943, after the Old Tub rights were lost; 1935 is the year the first batch was ready at the rebuilt Clermont distillery." }
    ],
    "sources": [
@@ -62,7 +61,7 @@
     "The Library's record calls the house the largest bourbon producer on earth and the birthplace of the premium category: both are superlative or unsourced claims and were not used.",
     "The first bourbon sale is not dated with a person: the ancestor's own dates were not sought, and the family is named instead."
    ],
-   "checked": null
+   "checked": {"date": "2026-11-21", "by": "refuter", "verdict": "changed", "changed": ["bottle.wood, label, traps, cards and quiz: the back label placement of the age rests on one review and is contradicted by another, so it is cut; the four years now stands as the house's account (its FAQ and product pages).", "bottle.label: the term Aged 4 Years was not seen on the label itself; now 80 Proof, which the strength makes sure.", "bottle.taste and table: sweet corn and a short, clean finish were in no source; now the house's own notes, oak, vanilla, caramel and a hint of spice.", "others: Jim Beam Repeal Batch is listed by the house as a limited edition, a bottle a guest seldom meets; cut."], "open": ["The high wine proof is about 130 to 135 in trade accounts and below 160 on the house's page; the record keeps the house's wording.", "The post-repeal rebuild is 1933 in some accounts and the opening 1935 in others; the story keeps the first batch in 1935."]}
   },
   {
    "key": "buffalo-trace",
@@ -92,7 +91,7 @@
     ]
    },
    "table": "Buffalo Trace is the flagship bourbon of the Frankfort distillery of the same name, the house behind Weller and Blanton's. Its Kentucky Straight Bourbon Whiskey, at 90 proof, brings vanilla, brown sugar, toffee and a little mint: an easy Old Fashioned bourbon.",
-   "story": "The distillery on the Kentucky River at Frankfort takes its name, by its own account, from the ancient traces that migrating buffalo wore through the wilderness to a crossing of the river there. A distillery called O.F.C. stood on the site by 1870. In 1878 it was bought by a St. Louis whiskey merchant, and from 1904 it carried his name as the George T. Stagg Distillery. Through Prohibition it kept working under a special government licence to bottle whiskey for medicinal use, one of a handful so permitted, and in 1935 a metal-clad warehouse rose there that later housed Blanton's, first released in 1984 as a single barrel bourbon. The Sazerac Company bought the distillery in 1992, and in 1999 renamed it Buffalo Trace; a bourbon of the same name followed that year, made to its Mash Bill No. 1. For a bartender it is the everyday bottle of the distillery behind Weller, Blanton's and the Antique Collection: taste it first, and the rest of the family makes sense.",
+   "story": "The distillery on the Kentucky River at Frankfort takes its name, by its own account, from the ancient traces that migrating buffalo wore through the wilderness to a crossing of the river there. A distillery called O.F.C. stood on the site by 1870. In 1878 it was bought by a St. Louis whiskey merchant, and from 1904 it carried his name as the George T. Stagg Distillery. Through Prohibition it kept working under a special government licence to bottle whiskey for medicinal use, one of a handful so permitted, and after repeal a metal-clad warehouse rose there that later housed Blanton's, first released in 1984 as a single barrel bourbon. The Sazerac Company bought the distillery in 1992, and in 1999 renamed it Buffalo Trace; a bourbon of the same name followed that year, made to its Mash Bill No. 1. For a bartender it is the everyday bottle of the distillery behind Weller, Blanton's and the Antique Collection: taste it first, and the rest of the family makes sense.",
    "others": [
     { "name": "Eagle Rare 10 Year", "note": "A ten year old Kentucky straight bourbon made at the same distillery." },
     { "name": "Blanton's Single Barrel", "note": "The distillery's single barrel bourbon, first released in 1984." },
@@ -127,7 +126,7 @@
     "The year 1999 is the first release of the bourbon; the Library's est. 1773 is the brand's claim for whiskey on the site, which the story leaves out for want of a second source. The Library's record calls the site America's oldest continuously operating distillery and the most influential address in bourbon: both are claims the voice refuses and they were not used. The plan's word low rye is not on the producer's page and was left out.",
     "The other Frankfort labels named under others and traps rest on this repo's reviewed shelf records and styles, which place Weller, Blanton's and the Antique Collection at this distillery."
    ],
-   "checked": null
+   "checked": {"date": "2026-11-21", "by": "refuter", "verdict": "changed", "changed": ["story: the metal-clad warehouse was dated 1935, a year found in no source; the accounts say only that it was built after repeal, in the 1930s, and the story now says after repeal."], "open": ["The Stagg name is 1904 on the state marker and the distillery's history page and 1907 on another of its pages; 1904 is kept, as in this repo's shelf records.", "George T. Stagg's purchase is 1878 on the state marker and 1879 on the distillery's Taylor page; the story keeps 1878, as the shelf record does."]}
   },
   {
    "key": "wild-turkey",
@@ -159,12 +158,11 @@
    "table": "Wild Turkey 101 is the Kentucky straight bourbon from Lawrenceburg, bottled at 101 proof from barrels with a deep alligator char. Vanilla, toffee, baking spice and orange peel: the bourbon to reach for when a drink must stand up to citrus or vermouth.",
    "story": "Wild Turkey began as a merchant's label rather than a distillery. Austin, Nichols, a New York firm of merchants, bought its bourbon from Kentucky distilleries, the Ripy family's at Lawrenceburg among them. The name comes, the story goes, from a turkey hunt in 1940, when an executive of the firm took warehouse samples along, and his friends asked a year later for more of that wild turkey bourbon; some accounts put the hunt a few years earlier. By most accounts Austin, Nichols was bottling it under that name by 1942. In 1971 the firm bought the Lawrenceburg distillery, known then as the Boulevard Distillery, and renamed it for the label. Pernod Ricard bought the distillery and the brand in 1980, and the Campari Group bought both in 2009, bringing a new distillery on the site into use in 2011. A father and son, both master distillers there across decades, shaped its style. At 101 proof, from barrels filled at a low proof so that less water goes in at bottling, it is the bar's bourbon for a drink that has to hold its own.",
    "others": [
-    { "name": "Wild Turkey 101 Rye", "note": "A rye whiskey of the house, bottled at the same 101 proof." },
-    { "name": "Wild Turkey Kentucky Spirit", "note": "The house's single barrel bourbon, each bottle from one barrel." }
+    { "name": "Wild Turkey 101 Rye", "note": "A rye whiskey of the house, bottled at the same 101 proof." }
    ],
    "traps": [
     "The 101 on the label is the proof, 50.5 per cent alcohol, not an age or a batch number.",
-    "Russell's Reserve comes from the same Lawrenceburg distillery but stands under its own name: it is not a Wild Turkey bottling on the label.",
+    "Wild Turkey 101 is not the plain Wild Turkey Bourbon: that bottling is lower in strength, at 81 proof.",
     "The turkey hunt of 1940 is the brand's story, and accounts differ on its year: tell it as the story goes."
    ],
    "cards": [
@@ -172,7 +170,7 @@
     { "id": "turkey-hunt", "prompt": "Where does the name Wild Turkey come from, as the story goes?", "answer": "A turkey hunt in 1940, when an Austin, Nichols executive shared warehouse samples with friends who asked for more of that wild turkey bourbon." }
    ],
    "quiz": [
-    { "id": "q1", "tag": "bottle", "card": "char", "q": "A guest asks what the 101 on the Wild Turkey label means. What is it?", "options": ["The age in months", "The batch number", "The proof", "The barrel count"], "a": 2, "explain": "It is the proof, 50.5 per cent alcohol by volume; it is neither a batch number nor an age, which the house's pages give differently." },
+    { "id": "q1", "tag": "bottle", "card": "char", "q": "A guest asks what the 101 on the Wild Turkey label means. What is it?", "options": ["The age in months", "The batch number", "The proof", "The barrel count"], "a": 2, "explain": "It is the proof, 50.5 per cent alcohol by volume, the one strength of the bottling; it is not a batch number, and no age is printed in its place." },
     { "id": "q2", "tag": "story", "card": "turkey-hunt", "q": "Which New York firm put the Wild Turkey name on its bourbon after a hunting trip?", "options": ["Pernod Ricard", "Austin, Nichols", "Campari Group", "Boulevard Distillery"], "a": 1, "explain": "Austin, Nichols, a firm of merchants, named and bottled it; Pernod Ricard bought the distillery and brand only in 1980." }
    ],
    "sources": [
@@ -191,7 +189,7 @@
     "The mash bill is not published in any source I found; the widely given 75 corn, 13 rye and 12 malted barley was not confirmed and is left out.",
     "The Campari purchase of 2009 and the new distillery of 2011 each stand in two secondary accounts (Wikipedia and The Whiskey Wash guide)."
    ],
-   "checked": null
+   "checked": {"date": "2026-11-21", "by": "refuter", "verdict": "changed", "changed": ["others: the house's own United States page lists Kentucky Spirit as no longer available; cut.", "traps: the Russell's Reserve trap told the present state of a label that once printed the Wild Turkey name; now the plain Wild Turkey Bourbon at 81 proof, on the house's own product page.", "quiz q1 explain: reworded so it says plainly why the batch number is wrong."], "open": ["The first bottling under the name is 1942 in Wikipedia and one trade account; the year field stays empty, as the author left it.", "The 1971 purchase of the Boulevard Distillery is 1972 in the Oxford Companion; 1971 is kept with most accounts."]}
   },
   {
    "key": "woodford-reserve",
@@ -211,17 +209,17 @@
     "class": "Kentucky straight bourbon whiskey",
     "mash": "By the house's account 72 per cent corn, 18 per cent rye and 10 per cent malted barley.",
     "still": "A marriage of two whiskeys: one distilled three times in copper pot stills at the Woodford Reserve Distillery near Versailles, the other made on a column still at Brown-Forman's distillery at Shively, beside Louisville.",
-    "wood": "New charred oak barrels; the two whiskeys age apart and are joined at bottling. No age statement on the label.",
+    "wood": "New charred oak barrels. No age statement on the label.",
     "strength": "45.2% ABV (90.4 proof)",
-    "taste": "Cherry, blackberry and cooked peach, which the house puts down to its long fermentation, then cocoa, cinnamon and clove with a little tobacco leaf, over toasted oak and a spicy finish.",
+    "taste": "Dried fruit, mint and orange under a dusting of cocoa, with faint vanilla and tobacco spice, then citrus, cinnamon, toffee and chocolate, and a long, warm finish.",
     "pour": "Neat or over one large cube; it suits a Manhattan, an Old Fashioned and the Mint Julep.",
     "label": [
      { "term": "Distiller's Select", "means": "The name of the house's standard bourbon; the words have no legal meaning." },
      { "term": "Kentucky Straight Bourbon Whiskey", "means": "Bourbon made in Kentucky and kept at least two years in new charred oak." }
     ]
    },
-   "table": "Woodford Reserve Distiller's Select is the Kentucky straight bourbon from the old stone distillery near Versailles, at 90.4 proof. It marries copper pot still whiskey with column still whiskey, and pours cherry, cocoa, cinnamon and toasted oak: a natural Manhattan bourbon.",
-   "story": "A distillery stood on Glenn's Creek near Versailles by about 1812, built by the Pepper family, and whiskey was made there through much of the century. In 1878 the Peppers sold the property to the partnership of Labrot & Graham, whose name it took. Brown-Forman bought the distillery in 1941 and ran it until 1968, when it closed, and the land went back to farming. In 1993 Brown-Forman bought it back, restored the stone buildings and put in copper pot stills, and in 1996 it released Woodford Reserve, its bourbon from the old site. The distillery itself took the Woodford Reserve name only in 2003. Because the pot stills alone could not supply the whole bottle, Distiller's Select marries their triple distilled whiskey with column still whiskey from Brown-Forman's Shively distillery. For a bartender it is two lessons in one glass: bourbon need not come from a column still alone, and a bourbon can be built from more than one still.",
+   "table": "Woodford Reserve Distiller's Select is the Kentucky straight bourbon from the old stone distillery near Versailles, at 90.4 proof. It marries copper pot still whiskey with column still whiskey, and pours dried fruit, orange, cocoa and cinnamon: a natural Manhattan bourbon.",
+   "story": "A distillery stood on Glenn's Creek near Versailles by about 1812, built by the Pepper family, and whiskey was made there through much of the century. In 1878 the Peppers sold the property to the partnership of Labrot & Graham, whose name it took. Brown-Forman bought the distillery in 1941 and ran it until 1968, when it closed, and the land went back to farming. In the early 1990s Brown-Forman bought it back, restored the stone buildings and put in copper pot stills, and in 1996 it released Woodford Reserve, its bourbon from the old site. The distillery itself took the Woodford Reserve name only in 2003. Distiller's Select marries their triple distilled whiskey with column still whiskey from Brown-Forman's Shively distillery. For a bartender it is two lessons in one glass: bourbon need not come from a column still alone, and a bourbon can be built from more than one still.",
    "others": [
     { "name": "Woodford Reserve Rye", "note": "A rye whiskey made at the same distillery near Versailles." },
     { "name": "Woodford Reserve Wheat Whiskey", "note": "A straight wheat whiskey of the house, with wheat the larger part of the mash." }
@@ -232,7 +230,7 @@
     "Its strength is 90.4 proof, not 90: the label states 45.2 per cent."
    ],
    "cards": [
-    { "id": "two-stills", "prompt": "Which two kinds of still make the whiskey in Woodford Reserve Distiller's Select?", "answer": "Copper pot stills at Versailles, run three times, and a column still at Brown-Forman's Shively distillery; the two are married at bottling." },
+    { "id": "two-stills", "prompt": "Which two kinds of still make the whiskey in Woodford Reserve Distiller's Select?", "answer": "Copper pot stills at Versailles, run three times, and a column still at Brown-Forman's Shively distillery, married in the one bourbon." },
     { "id": "labrot-graham", "prompt": "What was the Woodford Reserve distillery called before 2003?", "answer": "Labrot & Graham, after the partners who bought it from the Pepper family in 1878." }
    ],
    "quiz": [
@@ -241,7 +239,7 @@
    ],
    "sources": [
     { "title": "Woodford Reserve: Distiller's Select", "url": "https://shop.woodfordreserve.com/distillers-select/", "kind": "primary", "read": "search" },
-    { "title": "Woodford Reserve: Conducting a tasting", "url": "https://www.woodfordreserve.com/lifestyle/conducting-a-tasting/", "kind": "primary", "read": "search" },
+    { "title": "Woodford Reserve: Bourbon whiskey", "url": "https://www.woodfordreserve.com/whiskey/straight-bourbon-whiskey/", "kind": "primary", "read": "search" },
     { "title": "Wikipedia: Woodford Reserve", "url": "https://en.wikipedia.org/wiki/Woodford_Reserve", "kind": "secondary", "read": "search" },
     { "title": "Kentucky Historical Society: Labrot & Graham Distillery marker", "url": "https://history.ky.gov/markers/labrot-graham-distillery-2", "kind": "secondary", "read": "search" },
     { "title": "Difford's Guide: Woodford Reserve Distillery", "url": "https://www.diffordsguide.com/producers/262/woodford-reserve-distillery-labrot-and-graham", "kind": "secondary", "read": "search" }
@@ -255,7 +253,7 @@
     "Not on the style's benchmark list; this repo's four-grain and wheat whiskey styles already name the house. The National Historic Landmark listing could not be confirmed, so it is left out. The master distiller is living and not named.",
     "The pot stills' Scottish origin, and the Woodford Reserve Double Oaked, rest on a shop and on no search of mine, and are left out."
    ],
-   "checked": null
+   "checked": {"date": "2026-11-21", "by": "refuter", "verdict": "changed", "changed": ["bottle.wood and cards: the two whiskeys age apart and join at bottling was stated as settled; sources differ on whether they are blended before or after the barrel, so the timing is cut.", "bottle.taste and table: cherry, blackberry and cooked peach were not tied to this bottling; now the house's own notes for its straight bourbon, dried fruit, mint, orange, cocoa, cinnamon and toffee, and the source is that page.", "story: the buyback was 1993; the state marker and others give 1994 and Difford's 1993, so now the early 1990s. The reason given for the column still share was the author's inference and is cut."], "open": ["The 1968 closure and the sale of the land to a neighbouring farmer, dated 1971 in one trade account, are told without the second year."]}
   },
   {
    "key": "old-forester",
@@ -274,7 +272,7 @@
     "name": "Old Forester 86 Proof Kentucky Straight Bourbon Whisky",
     "class": "Kentucky straight bourbon whisky, spelt on the label without the e",
     "mash": "By the brand's account its traditional recipe, 72 per cent corn, 18 per cent rye and 10 per cent malted barley.",
-    "still": "Made mostly at Brown-Forman's distillery at Shively, beside Louisville; since 2018 the brand also distils at its own distillery on Whiskey Row.",
+    "still": "Distilled at Brown-Forman's distillery at Shively, beside Louisville, and from 2018 also at the brand's own distillery on Whiskey Row.",
     "wood": "New charred American oak barrels. No age statement on the label.",
     "strength": "43% ABV (86 proof)",
     "taste": "Citrus, tropical fruit and soft florals on the nose with a pound cake sweetness, then citrus zest, ripe pear, fresh mint and clove, and a finish of spearmint and toasted oak.",
@@ -319,7 +317,7 @@
     "The move from Whiskey Row to Howard Street in the 1920s rests on one account and is left out, as is the 1897 move to 100 proof given in the fact sheet alone.",
     "The Library's record agrees in substance; its phrase one of only a handful of brands sold through Prohibition is narrower than the brand's own claim of the one bourbon sold by the same company throughout, which the record gives as the brand's claim."
    ],
-   "checked": null
+   "checked": {"date": "2026-11-21", "by": "refuter", "verdict": "changed", "changed": ["bottle.still: made mostly at Shively was a share of production in no source and one that may change; now distilled at Shively and from 2018 also on Whiskey Row."], "open": []}
   }
  ]
 }

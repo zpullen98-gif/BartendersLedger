@@ -1,0 +1,53 @@
+{
+ "group": "bourbon",
+ "chunk": "c1",
+ "date": "2026-11-21",
+ "by": "refuter",
+ "searches": 22,
+ "tested": [
+  "jim-beam: the four year age and where it is printed, the still and its low and high wine, the char, the Old Tub rename of 1943 and its reason, the first batch after repeal, the house's tasting notes, Double Oak and Repeal Batch.",
+  "buffalo-trace: O.F.C. and its year, the Stagg purchase and the Stagg name, the Prohibition licence, the metal-clad warehouse and its year, the 1992 sale and the 1999 rename and release, the strength by market, the tasting notes, Mash Bill No. 1.",
+  "wild-turkey: the hunt and its year, the first bottling, the 1971 purchase of the Boulevard Distillery, the sales of 1980 and 2009, the column still and doubler, the number four char, the low entry proof, the age the house gives, the tasting notes, the 101 Rye and Kentucky Spirit.",
+  "woodford-reserve: the Pepper distillery of about 1812, the 1878 sale to Labrot and Graham, Brown-Forman's purchase, closure and buyback, the 1996 release and the 2003 rename, the triple pot stills and the Shively column still, the mash bill, the strength, the tasting notes.",
+  "old-forester: George Garvin Brown's dates, the half-brother of 1870, the sealed bottle, the Forman partnership of 1890, the 90 proof of 1870, the 100 proof of 1897, the 86 Proof of 1959, the Whiskey Row distillery of 2018, the mash bills of the 1924 and the Rye, the tasting notes."
+ ],
+ "changed": [
+  { "record": "jim-beam", "field": "bottle.wood, traps[0], cards[0], quiz[0].explain", "was": "the age is printed on the back label", "now": "four years, by the house's account", "why": "one review puts the statement on the back label and another says it is on no label; the house's FAQ and product pages give four years.", "sources": ["https://www.jimbeam.com/en-us/faq", "https://www.jimbeam.com/en-us/bourbons/jim-beam"] },
+  { "record": "jim-beam", "field": "bottle.label[1]", "was": "Aged 4 Years", "now": "80 Proof", "why": "the term was not seen on a label; the strength is sure.", "sources": ["https://www.jimbeam.com/en-us/bourbons/jim-beam"] },
+  { "record": "jim-beam", "field": "bottle.taste, table, story", "was": "sweet corn, a short, clean finish", "now": "oak, vanilla, caramel and a hint of spice", "why": "the house's own notes; sweet corn stood in no source.", "sources": ["https://www.jimbeam.com/en-us/bourbons/jim-beam"] },
+  { "record": "jim-beam", "field": "others[1]", "was": "Jim Beam Repeal Batch", "now": "cut", "why": "the house lists it as a limited edition, not a bottle a guest meets.", "sources": ["https://www.jimbeam.com/en-us/bourbons/jim-beam-repeal-batch"] },
+  { "record": "buffalo-trace", "field": "story", "was": "in 1935 a metal-clad warehouse rose there", "now": "after repeal a metal-clad warehouse rose there", "why": "no source gives 1935; the accounts say only that Warehouse H was built in the 1930s, after repeal.", "sources": ["https://vinepair.com/articles/blantons-bourbon-whiskey-guide/", "https://thewhiskeywash.com/whiskey-articles/the-ultimate-guide-to-blantons-bourbon/"] },
+  { "record": "wild-turkey", "field": "others[1]", "was": "Wild Turkey Kentucky Spirit", "now": "cut", "why": "the house's own United States page lists it as no longer available.", "sources": ["https://www.wildturkeybourbon.com/en-us/products/kentucky-spirit/"] },
+  { "record": "wild-turkey", "field": "traps[1]", "was": "Russell's Reserve is not a Wild Turkey bottling on the label", "now": "Wild Turkey 101 is not the plain Wild Turkey Bourbon, which is 81 proof", "why": "early Russell's Reserve labels printed the Wild Turkey name, so the trap told a present state; the 81 proof bottling stands on the house's page.", "sources": ["https://www.wildturkeybourbon.com/en-us/products/wild-turkey-bourbon/"] },
+  { "record": "wild-turkey", "field": "quiz[0].explain", "was": "neither a batch number nor an age, which the house's pages give differently", "now": "the one strength of the bottling; not a batch number, and no age printed in its place", "why": "the old wording did not teach why the near option is wrong.", "sources": [] },
+  { "record": "woodford-reserve", "field": "bottle.wood, cards[0]", "was": "the two whiskeys age apart and are joined at bottling", "now": "timing cut", "why": "trade accounts differ on whether the two distillates are married before or after the barrel.", "sources": ["https://en.wikipedia.org/wiki/Woodford_Reserve", "https://thewhiskeywash.com/whiskey-articles/how-is-woodford-reserve-made-the-complete-guide/"] },
+  { "record": "woodford-reserve", "field": "bottle.taste, table, sources[1]", "was": "cherry, blackberry and cooked peach from a tasting guide", "now": "dried fruit, mint, orange, cocoa, cinnamon and toffee from the house's straight bourbon page", "why": "the house's page for the bottling itself, which replaces the tasting guide as a source.", "sources": ["https://www.woodfordreserve.com/whiskey/straight-bourbon-whiskey/"] },
+  { "record": "woodford-reserve", "field": "story", "was": "In 1993 Brown-Forman bought it back; because the pot stills alone could not supply the whole bottle", "now": "In the early 1990s; the cause cut", "why": "the state's account and others give 1994, Difford's 1993; the cause was an inference in no source.", "sources": ["https://explorekyhistory.ky.gov/items/show/422", "https://www.diffordsguide.com/producers/262/woodford-reserve-distillery-labrot-and-graham"] },
+  { "record": "old-forester", "field": "bottle.still", "was": "Made mostly at Shively", "now": "Distilled at Shively and from 2018 also on Whiskey Row", "why": "a share of production stood in no source and may change.", "sources": ["https://www.oldforester.com/wp-content/uploads/2022/06/FactSheet_OFD_History.docx-2.pdf"] }
+ ],
+ "confirmed": [
+  "Jim Beam: low wine at about 125 proof and a doubler to high wine below 160 (house), number four char (house), the Old Tub name lost over Prohibition and Jim Beam from 1943 (house history, Wikipedia), Double Oak twice barrelled (house).",
+  "Buffalo Trace: O.F.C. 1869 to 1870 (state marker, house), Stagg 1878 and the Stagg name 1904 (state marker, house history), one of a handful with a medicinal licence (house), rename and release in 1999 (house), 90 proof and 40 per cent by market and the tasting notes (house).",
+  "Wild Turkey: the 1940 hunt as the story goes, the 1971 purchase, Pernod Ricard 1980, Campari 2009 (Wikipedia, Difford's, VinePair), column still and doubler, number four alligator char, low entry proof, the tasting notes (house).",
+  "Woodford Reserve: about 1812 (state marker, house), Labrot and Graham 1878 (state marker), 1941, 1968, 1996 and 2003 (trade accounts, Wikipedia), triple pot stills and the Shively column still, 72, 18 and 10, 90.4 proof (house and trade).",
+  "Old Forester: 1870 with the half-brother, sealed bottles, Forman partnership 1890 (state marker, Brown-Forman history), 90 proof at first, 100 proof 1897, 86 Proof 1959 with the 100 retained (brand fact sheet and trade), 1924 at 79, 11 and 10 and the Rye at 65, 20 and 15 and 100 proof (brand), tasting notes (brand)."
+ ],
+ "open": [
+  "jim-beam: high wine about 130 to 135 proof in trade accounts; the rebuild after repeal 1933 or the opening 1935.",
+  "buffalo-trace: the Stagg name 1904 or 1907 on the distillery's own pages; the Stagg purchase 1878 or 1879.",
+  "wild-turkey: first bottling 1942 in Wikipedia and one trade account, year left empty; Boulevard purchase 1971 or 1972.",
+  "woodford-reserve: the 1971 sale of the land to a farmer rests on one trade account and is left out."
+ ],
+ "living": [
+  "Met in sources: Wild Turkey's father and son master distillers and Woodford Reserve's master distiller emeritus, all already in people.json and named in no record. No name added."
+ ],
+ "swaps": [
+  "The author proposed no swap. None proposed by the refuter: the five picks and flagships stand."
+ ],
+ "tension": [
+  "The Library's Jim Beam calls the house the largest bourbon producer on earth and the birthplace of the premium category, and its Behind the bar line speaks of a bargain: superlative, unsourced and price words the house voice refuses.",
+  "The Library's Buffalo Trace gives est. 1773 site and calls it America's oldest continuously operating distillery: the brand's claim, not used here; the record's year is the 1999 release.",
+  "The Library's Wild Turkey gives a barrel entry proof of 115, which no source of the author or refuter confirmed.",
+  "The distillery's own pages give the Stagg name as 1904 in one place and 1907 in another; this repo's shelf records say 1904, as the record does."
+ ]
+}
