@@ -15,9 +15,9 @@
   "sources": 150
  },
  "words": {
-  "total": 15417,
+  "total": 15373,
   "perHouse": {
-   "1792": 528,
+   "1792": 525,
    "jim-beam": 475,
    "buffalo-trace": 469,
    "wild-turkey": 482,
@@ -33,20 +33,20 @@
    "basil-hayden": 460,
    "bulleit": 501,
    "rabbit-hole": 492,
-   "eh-taylor": 597,
-   "new-riff": 550,
-   "evan-williams": 519,
+   "eh-taylor": 594,
+   "new-riff": 551,
+   "evan-williams": 511,
    "heaven-hill": 519,
-   "henry-mckenna": 516,
-   "blantons": 554,
-   "eagle-rare": 486,
-   "knob-creek": 534,
-   "elijah-craig": 505,
-   "russells-reserve": 471,
-   "bookers": 513,
-   "george-t-stagg": 561,
-   "stagg": 530,
-   "barrell": 524
+   "henry-mckenna": 514,
+   "blantons": 548,
+   "eagle-rare": 480,
+   "knob-creek": 532,
+   "elijah-craig": 500,
+   "russells-reserve": 473,
+   "bookers": 504,
+   "george-t-stagg": 567,
+   "stagg": 520,
+   "barrell": 525
   }
  },
  "keys": {
