@@ -647,7 +647,7 @@
     ]
    },
    "table": "Old Fitzgerald, once the main bourbon of the Stitzel-Weller Distillery, is a wheated bourbon Heaven Hill makes in Louisville; its 7 Year Old Bottled-in-Bond spends seven years in oak and is bottled at 100 proof. It pours honey, fresh bread and cinnamon, soft and firm enough for an Old Fashioned.",
-   "story": "By the brand's account the name first appeared in 1870, on a whiskey a Milwaukee liquor merchant sold to steamships, railways and private clubs, and only later on general sale. As Prohibition ended the name passed to Julian \"Pappy\" Van Winkle and his partners, and when their Stitzel-Weller Distillery opened near Louisville in 1935, Old Fitzgerald became its main bourbon, made with wheat in place of rye; the plant was often called the Old Fitzgerald Distillery. The Van Winkle family sold the distillery in 1972, and the label went with it through a line of drinks companies. Distilling at Stitzel-Weller ended in the early 1990s and the recipe moved to the new Bernheim Distillery in Louisville; in 1999 Heaven Hill bought Bernheim from Diageo, and with it the Old Fitzgerald name and its barrels. In 2018 Heaven Hill began a twice yearly series of aged, bonded decanters, each edition of its own age, and in June 2025 it launched the 7 Year Old as the label's standing bottling. Behind a bar it is the wheater that carries the Stitzel-Weller name, at the strength the bond demands.",
+   "story": "By the brand's account the name first appeared in 1870, on a whiskey a Milwaukee liquor merchant sold to steamships, railways and private clubs, and only later on general sale. During Prohibition, in 1925 by Heaven Hill's account, the name was sold to W. L. Weller and Sons, the Louisville firm of Julian \"Pappy\" Van Winkle (1874 to 1965) and his partners, and when their Stitzel-Weller Distillery opened near Louisville in 1935, Old Fitzgerald became its main bourbon, made with wheat in place of rye; the plant was often called the Old Fitzgerald Distillery. The Van Winkle family sold the distillery in 1972, and the label went with it through a line of drinks companies. Distilling at Stitzel-Weller ended in the early 1990s and the recipe moved to the new Bernheim Distillery in Louisville; in 1999 Heaven Hill bought Bernheim from Diageo, and with it the Old Fitzgerald name and its barrels. In 2018 Heaven Hill began a twice yearly series of aged, bonded decanters, each edition of its own age, and in June 2025 it launched the 7 Year Old as the label's standing bottling. Behind a bar it is the wheater that carries the Stitzel-Weller name, at the strength the bond demands.",
    "others": [
     {
      "name": "Old Fitzgerald Bottled-in-Bond Decanter Series",
@@ -734,7 +734,7 @@
     }
    ],
    "report": [
-    "Written on 2026-11-22 in Rebel's place, after the owner took Rebel out as a label a fine dining guest does not ask for; Rebel's record and its checked block are gone with it, and its lines in reviews/wheated-bourbon.json were not touched by this run.",
+    "Written on 2026-11-22 in Rebel's place, after the owner took Rebel out as a label a fine dining guest does not ask for; Rebel's record and its checked block are gone with it, and its lines in reviews/wheated-bourbon.json gave way in the refuter's run of the same day.",
     "Flagship: the 7 Year Old Bottled-in-Bond, launched in June 2025 as the label's standing bottling (Heaven Hill's release, Whisky Advocate, VinePair, The Whiskey Wash), chosen over the decanter series because the decanters change age with each spring and fall edition and the 7 Year Old can be poured all year.",
     "Bottle name: retail listings print Old Fitzgerald Aged 7 Years Bottled-In-Bond Kentucky Straight Bourbon Whiskey while Heaven Hill writes 7 Year Old; a refuter should read the bottle and set the name to its words.",
     "The merchant who first sold the whiskey is Solomon Charles Herbst in Wikipedia and Heaven Hill's timeline, but no two sources give his death, so he is described and not named; the year he registered the name is 1884 or 1901 by Heaven Hill's own pages and is left out, as is the year 1933 for the sale to the Stitzel-Weller partners, which the two sources read attach to different events.",
@@ -743,7 +743,19 @@
     "Larceny's record in this group lists Old Fitzgerald Bottled-in-Bond under others, as Heaven Hill's older wheated label; with Old Fitzgerald now its neighbour here, the integrator may wish to drop or reword that entry. Larceny's story also tells the Old Fitzgerald history from Pappy to the 1999 sale, so this story opens on 1870 and tells the later years briefly.",
     "No living person is named. The tasting words are Heaven Hill's own; three reviews read through search agree on honey, cinnamon and oak. The label term Kentucky Straight Bourbon Whiskey rests on retail listings of the bottle and on the class of a bonded bourbon of seven years; Heaven Hill's release names Bottled-in-Bond and Your Key to Hospitality on the label."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: was 'As Prohibition ended the name passed to Julian Pappy Van Winkle and his partners'; now during Prohibition, in 1925 by Heaven Hill's account, the name was sold to W. L. Weller and Sons, the firm of Julian Pappy Van Winkle (1874 to 1965) and his partners. Heaven Hill's timeline gives the sale to Weller in 1925 and Wikipedia places it during Prohibition, which ended only in 1933; Pappy now carries his dates where the story first meets him, as the brief asks."
+    ],
+    "open": [
+     "bottle.name: Heaven Hill writes 7-Year-Old and retail listings Aged 7 Years; no bottle was read, so the record keeps the producer's words.",
+     "story: the year the name first appeared rests on the brand's account (1870); Heaven Hill's own pages also give 1884 and 1889, and a trade record 1901, for the trademark and the first general sale, which the record leaves out.",
+     "bottle.still: the still at Bernheim is not named; no producer page read gave it."
+    ]
+   }
   }
  ]
 }

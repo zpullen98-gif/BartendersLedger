@@ -8,48 +8,216 @@
   "makers-mark: the purchase of Burks' Distillery in 1953, distilling from 1954, the first bottles in 1958, the mash of 70, 16 and 14 on the distillery's page, two distillations in a copper column still and a copper doubler, the National Historic Landmark of 1980 listed as Burks' Distillery, the sales of 1981, 2005 and 2014, Margie Samuels's death in 1985 and her credit for the name, label and wax, Maker's Mark 46 and its seared French oak staves, Maker's Mark Cask Strength. 6 searches.",
   "weller: William Larue Weller (1825 to 1899), the firm of 1849 with his younger brother, the hire of 1893, the purchase of 1908, Stitzel-Weller on Derby Day 1935, the sale of 1972, the Sazerac Company's purchase of the label from Diageo in 1999, the label's Original Wheated Bourbon at 90 proof, Weller 12 at 90 proof, William Larue Weller uncut and unfiltered in the Antique Collection. 4 searches, two shared with the Van Winkle record.",
   "pappy-van-winkle: 1893, 1908 (Buffalo Trace's own pages; one secondary gives 1903), 1935, 1972, Julian Van Winkle Jr. (1914 to 1981, the Filson papers), the revival of Old Rip Van Winkle, the 20 Year Old of 1994, the joint venture of 2002, 107 proof, fifteen years in deep charred oak from barrels in the heart of the warehouses (Buffalo Trace's page), the Lawrenceburg bottling. 5 searches.",
-  "larceny: the launch of 2012, the mash of 68, 20 and 12, Bernheim, 92 proof, the small batch figures, the barrels of six to twelve years at launch, the six year old taste profile, the 2024 packaging with its die cut keyhole, the label's age statement and wording, the purchase of Bernheim and Old Fitzgerald in 1999 after the fire of 1996. 4 searches.",
-  "rebel: the mash of 68, 20 and 12, distillation at Lux Row, Rebel 100 introduced in 2019, the 6 Year of 2024, the 10 Year Single Barrel, the Stitzel-Weller birth, the David Sherman company and Luxco, the rename, MGP's purchase of Luxco on 1 April 2021. 4 searches."
+  "larceny: the launch of 2012, the mash of 68, 20 and 12, Bernheim, 92 proof, the small batch figures, the barrels of six to twelve years at launch, the six year old taste profile, the 2024 packaging with its die cut keyhole, the label's age statement and wording, the purchase of Bernheim and Old Fitzgerald in 1999 after the fire of 1996. 4 searches."
  ],
  "changed": [
-  { "key": "makers-mark", "field": "place", "was": "Loretto, Kentucky", "now": "Loretto, Marion County, Kentucky", "why": "the brief asks for town, county and state", "sources": ["Wikipedia: Maker's Mark"] },
-  { "key": "makers-mark", "field": "bottle.still", "was": "Sour mashed, fermented and distilled twice in copper stills at the distillery in Loretto, by its own account.", "now": "Fermented and distilled twice at the distillery in Loretto: first in a copper column still, then in a copper doubler.", "why": "the two stills are named in two accounts; the sour mash claim had no source read", "sources": ["https://www.diffordsguide.com/producers/126/makers-mark-distillery", "https://www.thespiritseducator.com/makers-mark"] },
-  { "key": "weller", "field": "story", "was": "though historians still debate whether he distilled at all", "now": "though historians have long debated whether he distilled at all", "why": "the old wording stated a present that may age", "sources": [] },
-  { "key": "pappy-van-winkle", "field": "table", "was": "Pappy Van Winkle is the Van Winkle family's wheated bourbon, made at Buffalo Trace in Frankfort to the recipe of the old Stitzel-Weller distillery.", "now": "Pappy Van Winkle is a wheated bourbon made at Buffalo Trace in Frankfort to the Van Winkle family's recipe from the old Stitzel-Weller distillery.", "why": "the possessive read as present ownership", "sources": [] },
-  { "key": "pappy-van-winkle", "field": "story", "was": "Old Rip Van Winkle, for whiskey he had made in earlier years. The founder's grandson carried the business on alone from 1981, bottling aged wheated bourbon at Lawrenceburg", "now": "Old Rip Van Winkle, bottling whiskey from the old distillery's stocks. The founder's grandson carried the business on from 1981, bottling aged wheated bourbon", "why": "the sources say Jr. bottled stocks of the old distillery; Lawrenceburg (the old Hoffman distillery) stood in one source, and alone in none", "sources": ["https://en.wikipedia.org/wiki/Pappy_Van_Winkle%27s_Family_Reserve", "https://filsonhistorical.org/research-doc/julian-proctor-van-winkle-jr-1914-1981-papers/"] },
-  { "key": "pappy-van-winkle", "field": "cards[proof]", "was": "What are the age, the strength and the mash of Pappy Van Winkle's Family Reserve 15 Year Old?", "now": "At what strength is Pappy Van Winkle's Family Reserve 15 Year Old bottled? (answer: 107 proof, 53.5% ABV, after fifteen years in new charred oak)", "why": "a card asks one thing where it can; the id is unchanged", "sources": ["https://www.buffalotracedistillery.com/our-brands/van-winkle/pappy-van-winkle-15-year/"] },
-  { "key": "larceny", "field": "bottle.name and bottle.label", "was": "John E. Fitzgerald Larceny Small Batch Kentucky Straight Bourbon Whiskey, with a John E. Fitzgerald label term", "now": "Larceny Small Batch Kentucky Straight Bourbon Whiskey, and the term removed", "why": "the prefix is the older label's; the 2024 packaging release names Larceny Small Batch, and no source read prints the prefix on the label now", "sources": ["https://heavenhill.com/news-and-notes/larceny-kentucky-straight-bourbon-whiskey-launches-new-packaging-seize-tonight-campaign/", "https://distiller.com/spirits/larceny-bourbon"] },
-  { "key": "larceny", "field": "bottle.mash", "was": "more of it than its rivals use, the house says", "now": "a larger share of it, the house says, than its nearest rival uses", "why": "Heaven Hill compares itself with one competitor, not all", "sources": ["https://heavenhill.com/news-and-notes/larceny-kentucky-straight-bourbon-whiskey-launches-new-packaging-seize-tonight-campaign/"] },
-  { "key": "larceny", "field": "bottle.still", "was": "where the house makes all of its wheated bourbon", "now": "by the house's own account", "why": "Heaven Hill announced in 2022 a return to distilling in Bardstown, so the claim of all may not hold", "sources": ["https://www.pressreader.com/usa/oroville-mercury-register/20220504/281844352213335"] },
-  { "key": "larceny", "field": "bottle.wood", "was": "in open rick warehouses in Nelson County. Heaven Hill describes a six year old taste profile rather than a stated age.", "now": "At launch Heaven Hill described barrels of six to twelve years from the upper floors of its rickhouses, and later a six year old taste profile; no age statement on the label is confirmed.", "why": "Nelson County and open rick had no source read; the launch release gives the barrels", "sources": ["https://heavenhill.com/news-and-notes/heaven-hill-distilleries-announces-the-launch-of-larceny-kentucky-straight-bourbon-whiskey/", "https://heavenhill.com/news-and-notes/heaven-hill-distillery-announces-national-launch-of-larceny-kentucky-straight-bourbon-whiskey/"] },
-  { "key": "larceny", "field": "bottle.label[Small Batch].means", "was": "Heaven Hill has described batches of 200 barrels or fewer", "now": "Heaven Hill gave 100 barrels or fewer at launch and 200 or fewer later", "why": "both figures are the house's, at different dates", "sources": ["https://heavenhill.com/news-and-notes/heaven-hill-distilleries-announces-the-launch-of-larceny-kentucky-straight-bourbon-whiskey/"] },
-  { "key": "larceny", "field": "table", "was": "Larceny is Heaven Hill's wheated bourbon, distilled in Louisville and named for ... caramel, and it is the wheater to pour", "now": "Larceny is a wheated bourbon made by Heaven Hill in Louisville, named for ... caramel: the wheater to pour", "why": "the possessive named the owner; the line had to stay within fifty words", "sources": [] },
-  { "key": "rebel", "field": "bottle.still", "was": "before that distillery opened in 2018 the whiskey was bought from producers the company did not name", "now": "Lux Row opened only in 2018, so Rebel bottled before then was distilled elsewhere and bought in", "why": "a review reports a Heaven Hill contract and the company is silent; say only what follows from the date", "sources": ["https://www.luxco.com/lux-row-distillers-introduces-rebel-100-6-year-bourbon/", "https://www.breakingbourbon.com/review/rebel-10-year-single-barrel-2025"] },
-  { "key": "rebel", "field": "story", "was": "is the Weller story borrowed", "now": "takes the year of the Weller firm", "why": "a judgement made plain; the claim is still told as the brand's", "sources": [] },
-  { "key": "rebel", "field": "story", "was": "Rebel 100 is the hundred proof straight bourbon", "now": "Rebel 100, introduced in 2019, is the hundred proof straight bourbon", "why": "the year is the company's own and teaches the bottle's age as a label", "sources": ["https://www.luxco.com/rebel-bourbon-adds-new-size-to-rebel-100-lineup/"] },
-  { "key": "rebel", "field": "traps[2]", "was": "so it sits with Maker's Mark and Weller, not with the high rye bourbons its strength might suggest", "now": "like Maker's Mark and Weller: its 100 proof makes it firmer, not a high rye bourbon", "why": "strength suggests no grain; the trap now teaches the true point", "sources": [] },
-  { "key": "rebel", "field": "quiz[q2].explain", "was": "Heaven Hill, Willett and Barton are other distilleries of the same town", "now": "Heaven Hill, Willett and Barton 1792 are older Bardstown names", "why": "Heaven Hill has distilled at Bernheim in Louisville since 1999", "sources": ["https://thewhiskeywash.com/bourbon/how-heaven-hill-rebuilt-after-the-1996-fire/"] }
+  {
+   "key": "makers-mark",
+   "field": "place",
+   "was": "Loretto, Kentucky",
+   "now": "Loretto, Marion County, Kentucky",
+   "why": "the brief asks for town, county and state",
+   "sources": [
+    "Wikipedia: Maker's Mark"
+   ]
+  },
+  {
+   "key": "makers-mark",
+   "field": "bottle.still",
+   "was": "Sour mashed, fermented and distilled twice in copper stills at the distillery in Loretto, by its own account.",
+   "now": "Fermented and distilled twice at the distillery in Loretto: first in a copper column still, then in a copper doubler.",
+   "why": "the two stills are named in two accounts; the sour mash claim had no source read",
+   "sources": [
+    "https://www.diffordsguide.com/producers/126/makers-mark-distillery",
+    "https://www.thespiritseducator.com/makers-mark"
+   ]
+  },
+  {
+   "key": "weller",
+   "field": "story",
+   "was": "though historians still debate whether he distilled at all",
+   "now": "though historians have long debated whether he distilled at all",
+   "why": "the old wording stated a present that may age",
+   "sources": []
+  },
+  {
+   "key": "pappy-van-winkle",
+   "field": "table",
+   "was": "Pappy Van Winkle is the Van Winkle family's wheated bourbon, made at Buffalo Trace in Frankfort to the recipe of the old Stitzel-Weller distillery.",
+   "now": "Pappy Van Winkle is a wheated bourbon made at Buffalo Trace in Frankfort to the Van Winkle family's recipe from the old Stitzel-Weller distillery.",
+   "why": "the possessive read as present ownership",
+   "sources": []
+  },
+  {
+   "key": "pappy-van-winkle",
+   "field": "story",
+   "was": "Old Rip Van Winkle, for whiskey he had made in earlier years. The founder's grandson carried the business on alone from 1981, bottling aged wheated bourbon at Lawrenceburg",
+   "now": "Old Rip Van Winkle, bottling whiskey from the old distillery's stocks. The founder's grandson carried the business on from 1981, bottling aged wheated bourbon",
+   "why": "the sources say Jr. bottled stocks of the old distillery; Lawrenceburg (the old Hoffman distillery) stood in one source, and alone in none",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Pappy_Van_Winkle%27s_Family_Reserve",
+    "https://filsonhistorical.org/research-doc/julian-proctor-van-winkle-jr-1914-1981-papers/"
+   ]
+  },
+  {
+   "key": "pappy-van-winkle",
+   "field": "cards[proof]",
+   "was": "What are the age, the strength and the mash of Pappy Van Winkle's Family Reserve 15 Year Old?",
+   "now": "At what strength is Pappy Van Winkle's Family Reserve 15 Year Old bottled? (answer: 107 proof, 53.5% ABV, after fifteen years in new charred oak)",
+   "why": "a card asks one thing where it can; the id is unchanged",
+   "sources": [
+    "https://www.buffalotracedistillery.com/our-brands/van-winkle/pappy-van-winkle-15-year/"
+   ]
+  },
+  {
+   "key": "larceny",
+   "field": "bottle.name and bottle.label",
+   "was": "John E. Fitzgerald Larceny Small Batch Kentucky Straight Bourbon Whiskey, with a John E. Fitzgerald label term",
+   "now": "Larceny Small Batch Kentucky Straight Bourbon Whiskey, and the term removed",
+   "why": "the prefix is the older label's; the 2024 packaging release names Larceny Small Batch, and no source read prints the prefix on the label now",
+   "sources": [
+    "https://heavenhill.com/news-and-notes/larceny-kentucky-straight-bourbon-whiskey-launches-new-packaging-seize-tonight-campaign/",
+    "https://distiller.com/spirits/larceny-bourbon"
+   ]
+  },
+  {
+   "key": "larceny",
+   "field": "bottle.mash",
+   "was": "more of it than its rivals use, the house says",
+   "now": "a larger share of it, the house says, than its nearest rival uses",
+   "why": "Heaven Hill compares itself with one competitor, not all",
+   "sources": [
+    "https://heavenhill.com/news-and-notes/larceny-kentucky-straight-bourbon-whiskey-launches-new-packaging-seize-tonight-campaign/"
+   ]
+  },
+  {
+   "key": "larceny",
+   "field": "bottle.still",
+   "was": "where the house makes all of its wheated bourbon",
+   "now": "by the house's own account",
+   "why": "Heaven Hill announced in 2022 a return to distilling in Bardstown, so the claim of all may not hold",
+   "sources": [
+    "https://www.pressreader.com/usa/oroville-mercury-register/20220504/281844352213335"
+   ]
+  },
+  {
+   "key": "larceny",
+   "field": "bottle.wood",
+   "was": "in open rick warehouses in Nelson County. Heaven Hill describes a six year old taste profile rather than a stated age.",
+   "now": "At launch Heaven Hill described barrels of six to twelve years from the upper floors of its rickhouses, and later a six year old taste profile; no age statement on the label is confirmed.",
+   "why": "Nelson County and open rick had no source read; the launch release gives the barrels",
+   "sources": [
+    "https://heavenhill.com/news-and-notes/heaven-hill-distilleries-announces-the-launch-of-larceny-kentucky-straight-bourbon-whiskey/",
+    "https://heavenhill.com/news-and-notes/heaven-hill-distillery-announces-national-launch-of-larceny-kentucky-straight-bourbon-whiskey/"
+   ]
+  },
+  {
+   "key": "larceny",
+   "field": "bottle.label[Small Batch].means",
+   "was": "Heaven Hill has described batches of 200 barrels or fewer",
+   "now": "Heaven Hill gave 100 barrels or fewer at launch and 200 or fewer later",
+   "why": "both figures are the house's, at different dates",
+   "sources": [
+    "https://heavenhill.com/news-and-notes/heaven-hill-distilleries-announces-the-launch-of-larceny-kentucky-straight-bourbon-whiskey/"
+   ]
+  },
+  {
+   "key": "larceny",
+   "field": "table",
+   "was": "Larceny is Heaven Hill's wheated bourbon, distilled in Louisville and named for ... caramel, and it is the wheater to pour",
+   "now": "Larceny is a wheated bourbon made by Heaven Hill in Louisville, named for ... caramel: the wheater to pour",
+   "why": "the possessive named the owner; the line had to stay within fifty words",
+   "sources": []
+  }
  ],
  "open": [
   "makers-mark: the owner between 1987 and 2001 (Allied or Seagram) is disputed and stays out; the proofs off the stills are secondary only and left out.",
   "weller: the firm's first name and whether it opened in late 1848 or 1849; the record keeps 1849, the producer's year. Its q1 (minimum age) is paired with the card on wheat: both right, a pairing the integrator may revisit without changing an id.",
   "pappy-van-winkle: whose stock filled the first 20 Year Old of 1994 (Stitzel-Weller or Old Boone) is disputed and not stated; whether the label's bottler line reads Old Rip Van Winkle Distillery stays unsettled, as the author reported.",
-  "larceny: whether the current label carries Aged 6 Years (a shop listing says so; Distiller and Breaking Bourbon list no age statement). A current bottle should be read.",
-  "rebel: the year of the label's creation, the year the David Sherman company bought it, and the year of the rename to Rebel stay unsettled and out."
+  "larceny: whether the current label carries Aged 6 Years (a shop listing says so; Distiller and Breaking Bourbon list no age statement). A current bottle should be read."
  ],
  "livingNames": [
-  "Lux Row's master distiller, named in Luxco's release on Rebel 100: already in people.json.",
   "The founder's grandson of the Van Winkle family (the third Julian): already in people.json.",
   "A Maker's Mark family member named in a Leaders interview title: already in people.json.",
   "A Maker's Mark innovation head named in a Whiskey Wash headline on Star Hill Farm (first name Blake): not in people.json and not in the record; left for the read-together agent to add."
  ],
  "swaps": [
-  "No swap was proposed by the author. The author's mild doubt on Rebel as a pick is noted and the pick stands: the plan places Old Fitzgerald under bottled in bond. The Larceny bottle name change carries every word of the roster's flagship and is no swap."
+  "Rebel's record, its checked block and its lines in this file (one tested line, five changes, one open question and one living name met) gave way on 2026-11-22 with the pick, after the owner's ruling below; this line keeps the record that the 21 November review read Rebel.",
+  "As ruled by the owner on 2026-11-22: Rebel is taken out as a label a fine dining guest does not ask for; Old Fitzgerald moves into this group from bottled-in-bond with its key kept, its flagship now the 7 Year Old Bottled-in-Bond, the standing bottling launched in June 2025, in place of the decanter series whose age changes each edition; New Riff Bottled in Bond Kentucky Straight Bourbon takes Old Fitzgerald's place in bottled-in-bond under the new key new-riff. The owner approved the changes in the words \"I like the changes let's continue\"."
  ],
  "tension": [
   "plan.json, larceny why: calls Larceny Heaven Hill's wheated bourbon from Bardstown; it is distilled at Bernheim in Louisville (the record says so). Reported, not edited.",
   "plan.json, pappy-van-winkle why: says Pappy ran Stitzel-Weller from its opening; the family's heritage page says he took over the combined firm and opened the distillery in 1935, and one secondary names him president, so the plan is not wrong, but the record says no more than the sources share.",
   "The Library's Maker's Mark record speaks of a roller mill; no source read confirmed it, and the record leaves it out.",
   "The liquor shelf's Weller Special Reserve story says Weller is distilled today at Buffalo Trace: a present tense that holds, noted only."
- ]
+ ],
+ "rerun": {
+  "date": "2026-11-22",
+  "by": "refuter",
+  "key": "old-fitzgerald",
+  "searches": 11,
+  "tested": [
+   "old-fitzgerald: the launch of the 7 Year Old on 3 June 2025 as the standing bottling, seven years in new charred oak with a level 3 char, 100 proof, the mash of 68, 20 and 12, Heaven Hill's own tasting words, the neck wrap's distilling season and year, the motto Your Key to Hospitality on the label and blown into the base. 4 searches.",
+   "old-fitzgerald: the brand's 1870, the Milwaukee merchant and the sale to steamships, railways and private clubs, the sale of the name to W. L. Weller and Sons in 1925, Stitzel-Weller from 1935 and the plant's popular name, the sale of 1972, the end of distilling at Stitzel-Weller (1992 in Wikipedia and Whisky Magazine, 1994 in Heaven Hill's timeline, so the record's early 1990s holds), the move to the new Bernheim, Heaven Hill's purchase of Bernheim and the brand from Diageo in April 1999 with its barrelled stocks, the decanter series since spring 2018 (an 11 year old first, a 9 year old that fall). 5 searches.",
+   "old-fitzgerald: the bonded rules of 27 CFR 5.88 against the label term, the card and q1 (one distiller, one distillery, one season, at least four years in a bonded warehouse, reduced to 100 proof with water alone); the cards and questions for one right answer, plausible wrong options and no length clue. Read from the author's sources and the searches above, no search of its own.",
+   "new-riff (plan.json, bottled-in-bond): the label exists and is made today, the distillery's pages print Bottled in Bond on its standard bourbon, the mash of 65, 30 and 5, four years, 100 proof, no chill filtration, the opening in Newport in 2014 and the first release of its own bourbon in August 2018 after a sourced bourbon sold as O.K.I. 2 searches.",
+   "The group's four other records: none names Rebel as one of the five; nothing to set right."
+  ],
+  "changed": [
+   {
+    "key": "old-fitzgerald",
+    "field": "story",
+    "was": "As Prohibition ended the name passed to Julian \"Pappy\" Van Winkle and his partners",
+    "now": "During Prohibition, in 1925 by Heaven Hill's account, the name was sold to W. L. Weller and Sons, the Louisville firm of Julian \"Pappy\" Van Winkle (1874 to 1965) and his partners",
+    "why": "Heaven Hill's timeline gives the sale to Weller in 1925 and Wikipedia puts it during Prohibition, which ended in 1933; Pappy now carries his dates where the story first meets him",
+    "sources": [
+     "https://heavenhilldistillery.com/oldfitzgerald-history.php",
+     "https://en.wikipedia.org/wiki/Old_Fitzgerald"
+    ]
+   },
+   {
+    "key": "old-fitzgerald",
+    "field": "report",
+    "was": "its lines in reviews/wheated-bourbon.json were not touched by this run",
+    "now": "its lines in reviews/wheated-bourbon.json gave way in the refuter's run of the same day",
+    "why": "the review file now says so",
+    "sources": []
+   },
+   {
+    "key": "old-fitzgerald",
+    "field": "checked",
+    "was": "null",
+    "now": "changed, with one change and three open questions",
+    "why": "the record is refuted",
+    "sources": []
+   },
+   {
+    "key": "new-riff",
+    "field": "plan.json note",
+    "was": "The opening in 2014 and the first release in 2018 stand in trade accounts and are to be confirmed on the distillery's story page; the founder's name is to go into people.json",
+    "now": "both confirmed in two trade accounts beside the distillery's story page; the founder's name stands in people.json",
+    "why": "confirmed by search; the why needed no change",
+    "sources": [
+     "https://newriffdistilling.com/our-story/",
+     "https://www.distillerytrail.com/blog/new-riff-distilling-releasing-their-1st-bottled-in-bond-kentucky-straight-bourbon-whiskey/",
+     "https://themanual.com/food-and-drink/new-riff-distilling-new-bottled-in-bond-bourbon"
+    ]
+   }
+  ],
+  "confirmed": [
+   "old-fitzgerald: every field but the one story sentence stands as the author wrote it: the 1870 told as the brand's account, the steamships, railways and private clubs, Stitzel-Weller from 1935 and called the Old Fitzgerald Distillery, the 1972 sale, the early 1990s end, the 1999 purchase from Diageo with the barrels, the decanters since 2018, the 2025 launch, the mash, the level 3 char, the seven years, 100 proof, the neck wrap, the motto, the bonded terms, the tasting words (Heaven Hill's own) and both cards and questions."
+  ],
+  "open": [
+   "old-fitzgerald: the bottle's own age wording (7-Year-Old in Heaven Hill's release, Aged 7 Years in retail listings); a bottle should be read.",
+   "old-fitzgerald: the trademark and first general sale years (1884, 1889 and 1901 appear across Heaven Hill's pages and a trade record) are left out, as the author left them.",
+   "old-fitzgerald: the still at Bernheim is not named in any producer page read.",
+   "larceny: its others list still names Old Fitzgerald Bottled-in-Bond as Heaven Hill's older wheated label; true, but now a neighbour in this group. A wording matter for the integrator, not a fact, so left."
+  ],
+  "livingNames": [
+   "New Riff's founder, named in trade accounts of the 2014 opening: added to people.json.",
+   "A television food host named in Heaven Hill's 2025 Old Fitzgerald hospitality release title: added to people.json; the record does not cite that page.",
+   "A designer named in Heaven Hill's Old Fitzgerald backgammon set release title: added to people.json.",
+   "Heaven Hill's family chairman and the Van Winkle granddaughter and writer met in search results: already in people.json."
+  ]
+ }
 }
