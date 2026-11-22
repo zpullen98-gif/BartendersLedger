@@ -1,0 +1,195 @@
+{
+ "group": "canadian",
+ "chunk": "c9",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 27,
+ "tested": [
+  "canadian-club: Hiram Walker's dates, his start in Detroit (1838, distilling tried in 1854 in the DCB alone), the Michigan law of 1855, the land of 1856 and the works of 1858 or 1859; Club Whisky and the gentlemen's clubs, the word Canadian on the label (1882, 1889 or 1890 by source); the Ontario Temperance Act and the export trade through Windsor; the house's 1858 page for its casks, grains, notes and the three years exceeded; blending before ageing; Canadian Club 100% Rye and Classic 12. 7 searches.",
+  "crown-royal: the 1939 tour, six hundred blends, ten cases and the royal train, the cut-glass decanter and the purple bag; the US launch of 1964; Gimli's column stills of many sizes and its Coffey still; the house's notes for Fine De Luxe; Northern Harvest Rye at 45% ABV and 90 per cent rye; the Aged 18 Years. 6 searches.",
+  "wisers: 1857 at Prescott, manager or partner; the founder's death of 1911 and the heirs; the Canadian Industrial Alcohol Company of 1918, its buying of Wiser's and the move to Corbyville (1914, 1918, 1920 or 1932 by source); the close of Corbyville in 1989 after 132 years; the house's notes for Deluxe, its corn and rye and Deluxe and Ginger; the 18 Year Old and Triple Barrel Rye. 5 searches.",
+  "forty-creek: the eau de vie distillery of 1972 (licence 1971), the winemaker's purchase of 1992, Kittling Ridge renamed Forty Creek in August 2012; Barrel Select born in 2000; the house's notes, casks and 40% ABV; the sherry finish of the reviews; Copper Bold and Double Barrel Reserve. 5 searches.",
+  "lot-no-40: the Loyalist settler of 1784 at Ernestown and the mill on Lot 40; the Canadian Whisky Guild release of 1998; the 2012 return and its recipe; the single copper pot still, the virgin oak, 43% ABV; Dark Oak at 48% in char two then char four new oak; the label's words by market. 4 searches.",
+  "27 of the 42 searches spent; 15 left unused.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, keys at positions 2, 0, 1, 3, 0, 2, 3, 1, 1, 0, each explain naming the nearest wrong option; Lot No. 40's revival card and its explain no longer carry the contested recipe. No card id changed."
+ ],
+ "changed": [
+  {
+   "key": "canadian-club",
+   "field": "story",
+   "was": "began distilling in Detroit in 1854",
+   "now": "turned to distilling in Detroit in the 1850s",
+   "why": "only the DCB gives 1854, as the year he decided to experiment with distilling; the Windsor library has him learn to distil vinegar",
+   "sources": [
+    "https://www.biographi.ca/en/bio/walker_hiram_12E.html",
+    "https://www.windsorpubliclibrary.com/hiram-walker/"
+   ]
+  },
+  {
+   "key": "canadian-club",
+   "field": "story",
+   "was": "bought land across the river in Upper Canada",
+   "now": "bought land across the river in what is now Ontario",
+   "why": "the province was Canada West by 1856, and the sources give 1856 to 1859 for the land and the works",
+   "sources": [
+    "https://www.thecanadianencyclopedia.ca/en/article/hiram-walker",
+    "https://www.biographi.ca/en/bio/walker_hiram_12E.html"
+   ]
+  },
+  {
+   "key": "canadian-club",
+   "field": "others[Canadian Club 100% Rye].note",
+   "was": "A Canadian whisky made from rye alone, unlike the corn-led blend.",
+   "now": "Distilled from rye alone at Alberta Distillers in Calgary, unlike the corn-led Windsor blend.",
+   "why": "the 100% Rye is distilled in Calgary, not Windsor, which a guest told the trap would otherwise miss",
+   "sources": [
+    "https://thewhiskeywash.com/canadian-whiskey/canadian-club-100-rye-whisky-comes-north/",
+    "https://kensingtonwinemarket.com/product/767076/canadian-club-100-rye"
+   ]
+  },
+  {
+   "key": "crown-royal",
+   "field": "story",
+   "was": "the Canadian whisky a guest names first",
+   "now": "the Canadian whisky many a guest asks for by its purple bag",
+   "why": "a ranking of guests' choices that no source bears, and close to the voice's refused ranking",
+   "sources": [
+    "https://www.crownroyal.com/story/our-history/"
+   ]
+  },
+  {
+   "key": "wisers",
+   "field": "story",
+   "was": "After his death the business struggled, and at the end of the First World War, in 1918, Wiser's was merged with Corby, the distiller of Corbyville near Belleville. The making left Prescott for the Corby distillery at Corbyville, and when that distillery closed after 132 years",
+   "now": "After his death the business passed from his heirs: in 1918, by most accounts, a new holding company that had taken in the Corby distillery at Corbyville, near Belleville, bought it, and the making left Prescott for Corbyville. In 1989 the Corbyville distillery closed after 132 years",
+   "why": "Corby's history has the Canadian Industrial Alcohol Company, which took in Corby, buy Wiser's assets; Wikipedia and a company history give 1918 and the heirs; no source said the business struggled; Corby's history and its 2009 annual report date the close to 1989",
+   "sources": [
+    "https://www.corby.ca/en/about-corby/history/",
+    "https://en.wikipedia.org/wiki/Canadian_whisky",
+    "https://www.company-histories.com/Corby-Distilleries-Limited-Company-History.html",
+    "https://www.corby.ca/wp-content/uploads/2009-Annual-Report.pdf"
+   ]
+  },
+  {
+   "key": "wisers",
+   "field": "others[J.P. Wiser's 18 Year Old].note",
+   "was": "Corn whisky from double column stills, eighteen years at least in used Canadian whisky casks.",
+   "now": "By the house's account, corn whisky from double column stills, eighteen years at least in used Canadian whisky casks.",
+   "why": "the used Canadian whisky casks are Corby's listing; reviews give former bourbon casks",
+   "sources": [
+    "https://itsolutions.corby.ca/whiskies/jp-wisers-18-year-old-canadian-whisky",
+    "https://canadianwhisky.org/blog/reviews/jp-wisers-18-year-old.html"
+   ]
+  },
+  {
+   "key": "wisers",
+   "field": "others[J.P. Wiser's Triple Barrel Rye].note",
+   "was": "A blend led by rye whisky distilled once in a column still.",
+   "now": "A rye-led blend matured in three kinds of cask: used Canadian whisky casks, first-fill bourbon barrels and virgin oak.",
+   "why": "the single column distillation was in no source read; the three casks are in every one",
+   "sources": [
+    "https://distiller.com/spirits/j-p-wiser-s-triple-barrel-rye",
+    "https://www.masterofmalt.com/whiskies/jp-wisers/jp-wisers-10-year-old-triple-barrel-whisky/?sku=113849"
+   ]
+  },
+  {
+   "key": "wisers",
+   "field": "quiz[1].explain",
+   "was": "made it after the merger with Corby",
+   "now": "made it after the sale of 1918",
+   "why": "follows the story's correction",
+   "sources": [
+    "https://www.corby.ca/en/about-corby/history/"
+   ]
+  },
+  {
+   "key": "forty-creek",
+   "field": "year, yearIs",
+   "was": "1992, founded",
+   "now": "2000, first released",
+   "why": "the house dates the first distillery to 1972 and Barrel Select to 2000; 1992 is the winemaker's purchase, not a founding",
+   "sources": [
+    "https://fortycreekwhisky.com/our-story/",
+    "https://www.lcbo.com/en/forty-creek-barrel-select-whisky-350629"
+   ]
+  },
+  {
+   "key": "forty-creek",
+   "field": "bottle.wood, story, cards[grains-apart].answer",
+   "was": "then blended and laid down again in once-used bourbon barrels; The blended whiskies are laid down again in once-used bourbon barrels before bottling.",
+   "now": "by the house's account, then blended; the story sentence cut; the card gives former bourbon barrels and new oak",
+   "why": "the house's Barrel Select page gives only seasoned former bourbon barrels and new white oak; its distillery page ties the once-used bourbon barrels to Double Barrel Reserve; reviews give sherry casks instead",
+   "sources": [
+    "https://fortycreekwhisky.com/product/barrel-select/",
+    "https://fortycreekwhisky.com/distillery/"
+   ]
+  },
+  {
+   "key": "forty-creek",
+   "field": "others",
+   "was": "Copper Bold: more time in oak and a higher strength than Barrel Select; Double Barrel Reserve: given a second spell in barrels",
+   "now": "Copper Bold: bottled stronger than Barrel Select, with toffee, nuts and spice; Double Barrel Reserve: a second spell in once-used bourbon barrels, by the house's account",
+   "why": "more time in oak was in no source read; the house's pages give the stronger bottling, the notes and the second barrels",
+   "sources": [
+    "https://fortycreekwhisky.com/product/copper-bold/",
+    "https://fortycreekwhisky.com/distillery/"
+   ]
+  },
+  {
+   "key": "lot-no-40",
+   "field": "bottle.mash, story, traps[2], cards[revival].answer, quiz[1].explain",
+   "was": "the return of 2012 left out the malted rye of the first recipe; this time from 100 per cent rye grain with no malted rye; the first used some malted rye, the second rye grain alone",
+   "now": "the house's 100 per cent rye, with the doubt on earlier bottlings said; the story's 2012 return without a recipe; the trap on the gap between 1998 and 2012",
+   "why": "Whisky Magazine gives 2012 as rye with no malted rye, but canadianwhisky.org, Distiller and Whisky Advocate give the 2012 release as 90 per cent rye and 10 malted rye, and the US importer says the recipe was changed later to all unmalted rye",
+   "sources": [
+    "https://whiskymag.com/articles/beneath-the-underdog/",
+    "https://canadianwhisky.org/blog/reviews/lot-no-40-2012-release-43-alcvol.html",
+    "https://hotalingandco.com/?p=3285"
+   ]
+  },
+  {
+   "key": "lot-no-40",
+   "field": "bottle.still",
+   "was": "Distilled in batches in a single copper pot still at the Hiram Walker distillery in Windsor, Ontario.",
+   "now": "the same, by the house's account",
+   "why": "Dark Oak is described as column then pot distilled, and one French shop says the same of the standard bottling",
+   "sources": [
+    "https://www.pernod-ricard.com/en/brands/lot-no-40",
+    "https://www.diffordsguide.com/beer-wine-spirits/7501/lot-40-dark-oak"
+   ]
+  },
+  {
+   "key": "lot-no-40",
+   "field": "bottle.label[Lot No. 40].means",
+   "was": "an ancestor of the blender who created the whisky",
+   "now": "an ancestor of the distiller who created the whisky",
+   "why": "Whisky Magazine and the record's own story make him master distiller",
+   "sources": [
+    "https://whiskymag.com/articles/beneath-the-underdog/",
+    "https://www.selfridges.com/ES/en/cat/world-whiskey-lot-40-rye-whiskey-700ml_414-73052213-LOT40700ML/"
+   ]
+  }
+ ],
+ "open": [
+  "canadian-club: blending before ageing is the house's claim, one Windsor representative is quoted that it was dropped for the bulk trade, so the record says neither; the year Canadian went onto the label (1882, 1889 or 1890) stays out.",
+  "crown-royal: the house's cut-glass decanter beside a museum's crown-shaped bottle; ten cases on the train (the brand) beside a hundred cases made that first year (the Waterloo museum); 90 per cent rye in Northern Harvest Rye, 95 in one shop; whether base whisky also comes from Valleyfield, one review only, so the record names Gimli alone.",
+  "wisers: manager or partner at Prescott stays hedged; the move to Corbyville stays undated and the 1918 purchase is by most accounts, with 1914, 1920 and 1932 in other sources.",
+  "forty-creek: a sherry cask finish after blending is given by Whisky Advocate, Distiller and Difford's and not by the house's page; the record says neither. The licence year (1970 or 1971) stays out.",
+  "lot-no-40: whether today's bottle is all unmalted rye rests on the importer alone; the label's words differ by market; the char of the standard bottling was not found."
+ ],
+ "living": [
+  "Met in sources and named in no record, already in people.json: Don Livermore (the Windsor master blender), John K. Hall and John Hall, Bill Ashburn, Otto Rieder, Mike Booth, Davin de Kergommeaux.",
+  "New for people.json in this commit: Dan Tullio, the Canadian Club ambassador quoted in Beverage Industry, living as far as found.",
+  "The dead met: Hiram Walker (1816 to 1899), named with his dates; Samuel Bronfman (died 1971), Mortimer Davis and J.P. Wiser (1825 to 1911), not named as people in any record; Joshua Booth, the settler of 1784, not named; Casey Hyland, the glass blower of one museum page, not named."
+ ],
+ "swaps": [
+  "lot-no-40, bottling: the author proposed Lot No. 40 100% Pot Still Rye Whisky if the label does not print Canadian Rye Whisky. Refused for now: US listings carry Lot No. 40 Canadian Rye Whisky, Ontario's carries Single Copper Pot Still Canadian Whisky and the house shop 100% Pot Still Rye Whisky, so the label's words differ by market and no reading of a label settles one; the roster's name stands, and the integrator may revisit it from a label.",
+  "No other swap proposed or made."
+ ],
+ "tension": [
+  "plan.json, canadian-club why: says the 1858 Original is blended before it is aged; the house claims it, a Windsor representative is quoted that pre-barrel blending was stopped. The record says neither. Reported, not edited.",
+  "plan.json, lot-no-40 why: says unmalted rye alone and names the plot where Joshua Booth ran his first pot still; the 2012 recipe is in dispute (90 and 10 malted rye in three sources) and Whisky Magazine gives grist mills on Lot 40. Reported, not edited.",
+  "plan.json, forty-creek why: the Old Pal claim found no source; and crown-royal why: made today only at Gimli, which one review disputes for the base whisky, and which speaks of the present. Reported, not edited.",
+  "The style page and the Cask Atlas agree with the records: Canadian Club's corn with rye, rye malt and barley malt, its former bourbon barrels, and Crown Royal's 1939 blend for the royal tour, the first visit of a reigning monarch."
+ ]
+}
