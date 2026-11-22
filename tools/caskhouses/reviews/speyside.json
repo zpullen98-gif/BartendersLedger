@@ -1,0 +1,159 @@
+{
+ "group": "speyside",
+ "chunk": "c5",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 24,
+ "tested": [
+  "glenfiddich: the 12's Oloroso and bourbon casks and marrying tuns, 40% ABV (80 proof), the label words Our Original Twelve, the high cut point, the Robbie Dhu spring, the producer's tasting notes, William Grant's dates and his seven sons and two daughters, building from 1886 and the first spirit on Christmas Day 1887, the 12 Sherry Cask Finish in Amontillado casks at 43%, the 15's Solera vat kept at least half full. 5 searches.",
+  "the-glenlivet: Double Oak and the order of its oaks, the producer's tasting notes against the record's banana and peach, George Smith's licence of 1824 and the parish claim, the ride to Elgin, Upper Drumin and the move to Minmore after the fire of 1858, the death of 1871 and the youngest son trained for the law, the name claim of 1884, the merger with Glen Grant of 1953, Founder's Reserve and its want of an age statement. 6 searches.",
+  "the-macallan: Sherry Oak 12's casks (mostly European oak on the main and American pages, exclusively Oloroso seasoned on the Mexican), its strength by market and the producer's tasting notes, the licence of 1824 by a farmer and schoolteacher, Easter Elchies House and 1700, the wine merchant's purchase and the Macallan-Glenlivet name of 1892, the stake of 1986, the takeover of 1996 and the end of the family's hold. 3 searches.",
+  "the-balvenie: DoubleWood's twelve years in American oak and nine months in European oak sherry casks, 43% in the United States and 40% in Britain, the producer's tasting notes, work from early 1892 on Balvenie New House, the first spirit of 1 May 1893 from stills from Lagavulin and Glen Albyn, the demolition of the house (1920 or 1929), DoubleWood of 1993, DoubleWood 17 and Caribbean Cask 14. 5 searches.",
+  "aberlour: the casks of the numbered batches against the Oloroso and Pedro Ximenez finish, the Sherry Cask Collection of October 2025, the label words, the batch strengths, the bottle of 1898 and where it was found, the launch of about 1997, what the name means and whether it honours the founder, James Fleming's dates and trade, the hospital his legacy built and its opening of 30 April 1900. 5 searches.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, no length clue (the lint holds the group), keys at positions 0, 2, 1, 3, 2, 1, 3, 0, 1, 2, every explain naming the nearest wrong option. Only the Aberlour found-bottle answer was reworded, for the place of the find. No card id changed."
+ ],
+ "changed": [
+  {
+   "key": "glenfiddich",
+   "field": "story",
+   "was": "William Grant (died 1923)",
+   "now": "William Grant (1839 to 1923)",
+   "why": "two sources now agree on the birth: Wikipedia and the producer's own timeline give 1839",
+   "sources": [
+    "https://en.wikipedia.org/wiki/William_Grant_(businessman)",
+    "https://static.prnasia.com/pro/media/201506/glenfiddich/Glenfiddich%20-%20Timeline.pdf"
+   ]
+  },
+  {
+   "key": "glenfiddich",
+   "field": "bottle.label",
+   "was": "Single Malt Scotch Whisky; 12 Year Old",
+   "now": "Single Malt Scotch Whisky; 12 Year Old; Our Original Twelve",
+   "why": "the producer's own pages head the bottling 12 Year Old Our Original Twelve, which settles the plan's question on the label's wording",
+   "sources": [
+    "https://www.glenfiddich.com/en-au/12-year-old/",
+    "https://shop.us.glenfiddich.com/products/glenfiddich-12-year-old"
+   ]
+  },
+  {
+   "key": "the-glenlivet",
+   "field": "bottle.taste",
+   "was": "Banana and pineapple on the nose, then sweet peach and pear",
+   "now": "Pear and orchard fruit on the nose, then pineapple, sweet peach",
+   "why": "no producer note or review read ties banana to the 12 Year Old; the one banana note found belongs to the American Oak Finish. The producer names a fruity nose and pineapple, and reviews give pear, peach, toffee and vanilla",
+   "sources": [
+    "https://www.theglenlivet.com/en/whisky/12-year-old-double-oak-engraved/",
+    "https://thewhiskeywash.com/scotch-whiskey/the-glenlivet-12-year-old-double-oak-review-and-tasting-notes/"
+   ]
+  },
+  {
+   "key": "the-macallan",
+   "field": "story",
+   "was": "Easter Elchies House, built in 1700,",
+   "now": "Easter Elchies House, which dates from 1700,",
+   "why": "the house of 1700 is an extension of an older L-shaped tower, by a Glasgow University history",
+   "sources": [
+    "https://journals.gla.ac.uk/bih/article/download/597/263/1814"
+   ]
+  },
+  {
+   "key": "the-macallan",
+   "field": "others[Double Cask].note",
+   "was": "The same age from sherry seasoned casks of both European and American oak, lighter and more vanilla led.",
+   "now": "The same age from sherry seasoned casks of both European and American oak.",
+   "why": "the comparison rested on no page read, as the author said",
+   "sources": [
+    "https://www.themacallan.com/en-us/single-malt-scotch-whisky/double-cask-12-years-old"
+   ]
+  },
+  {
+   "key": "the-balvenie",
+   "field": "bottle.taste, table",
+   "was": "Red apple, vanilla and Oloroso sherry on the nose with a little cinnamon spice from the oak, then honey, nutty sherry and gingerbread on the palate; table: honey, vanilla and red apple",
+   "now": "Sweet fruit and Oloroso sherry on the nose, layered with honey and vanilla, then nutty sweetness, cinnamon spice and a light layer of sherry, with a long, warming finish; table: honey, vanilla and sweet fruit",
+   "why": "the producer's own notes, which retailers repeat word for word, give these things; red apple and gingerbread are no producer's note",
+   "sources": [
+    "https://www.thewhiskyexchange.com/p/284/balvenie-12-year-old-doublewood",
+    "https://www.diffordsguide.com/beer-wine-spirits/1301/the-balvenie-12-year-old-doublewood"
+   ]
+  },
+  {
+   "key": "the-balvenie",
+   "field": "story",
+   "was": "Later the mansion was pulled down and floor maltings built in its place, and Balvenie is",
+   "now": "Later the mansion was pulled down. Balvenie is",
+   "why": "one account puts the maltings on the site in an expansion of 1920, another has the house pulled down in 1929 and its basement used for a warehouse, so in its place cannot stand",
+   "sources": [
+    "https://www.scotsman.com/distilleries/distillery-of-the-week-balvenie/",
+    "https://www.undiscoveredscotland.co.uk/dufftown/balvenie/index.html"
+   ]
+  },
+  {
+   "key": "aberlour",
+   "field": "bottle.wood, story, others",
+   "was": "the producer's page for newer batches speaks of a finish in Oloroso and Pedro Ximénez casks, so read the batch",
+   "now": "Matured in Spanish oak butts that had held Oloroso sherry, which the label states; in story and others, the separate A'bunadh Sherry Cask Collection of October 2025, finished in Oloroso and Pedro Ximénez casks, beside the numbered batches",
+   "why": "the Oloroso and Pedro Ximenez finish is the first edition of a new yearly series at 56.2%, offered alongside the core batches, which run on (batch 85 is listed); no source shows the core whisky changed",
+   "sources": [
+    "https://www.thespiritsbusiness.com/2025/10/aberlour-debuts-limited-edition-abunadh-collection/",
+    "https://thewhiskeywash.com/whiskey-news/aberlour-abunadh-launch-limited-edition-sherry-cask-whisky/",
+    "https://www.aberlour.com/en/our-whisky/abunadh-limited-edition/"
+   ]
+  },
+  {
+   "key": "aberlour",
+   "field": "story, bottle.label[A'bunadh]",
+   "was": "Gaelic for the original, the house's tribute to its founder, James Fleming",
+   "now": "Gaelic for of the origin, a nod to the old Aberlour whose style it set out to match",
+   "why": "no source read ties the name to Fleming; the sources tie it to the old bottle and to paying homage to the origins",
+   "sources": [
+    "https://en.wikipedia.org/wiki/A%27bunadh",
+    "https://thewhiskyclub.com.au/how-the-legendary-abunadh-became-the-worlds-no1-cult-sherry-bomb/"
+   ]
+  },
+  {
+   "key": "aberlour",
+   "field": "story, cards[found-bottle].answer",
+   "was": "found a bottle of old Aberlour in its foundations; found in the still room foundations",
+   "now": "found a bottle of old Aberlour hidden there (the still room); said to have been found in the still room in the 1970s",
+   "why": "accounts differ: the foundations of the still room, a time capsule, or behind the name plate when new stills went in",
+   "sources": [
+    "https://en.wikipedia.org/wiki/A%27bunadh",
+    "https://www.whiskymag.com/articles/aberlour-abunadhs-homecoming-and-the-creation-of-a-cult-scotch-whisky/"
+   ]
+  },
+  {
+   "key": "aberlour",
+   "field": "bottle.label",
+   "was": "A'bunadh; Cask Strength; Batch",
+   "now": "A'bunadh; Spanish Oloroso Sherry Butts; Batch",
+   "why": "Cask Strength in those words was not seen on a label; a shop's photograph of the front label shows Matured in Spanish Oloroso Sherry Butts, and Wikipedia gives the Spanish oak Oloroso butts",
+   "sources": [
+    "https://www.kingsoopers.com/p/aberlour-a-bunadh-highland-single-malt-scotch-whisky/0008043251617",
+    "https://en.wikipedia.org/wiki/A%27bunadh"
+   ]
+  }
+ ],
+ "open": [
+  "glenfiddich: the high cut point is William Grant's on the 12's page and his son Alec's on the history page; the triangular bottle has no agreed year (1956, 1957, 1961).",
+  "the-glenlivet: the 1884 right to the name is the house's account (an agreement among the Speyside distillers, by its archive); one secondary source makes it a court claim by a grandson.",
+  "the-macallan: 43% in the United States rests on secondary listings; the record says some markets.",
+  "the-balvenie: the cooperage was not searched; the second-hand stills from Lagavulin and Glen Albyn now stand in two accounts and stay told as one account's.",
+  "aberlour: 1973 or 1975 for the find; the strength range rests on Wikipedia's batch table and shops; whether the label prints cask strength in any words was not settled."
+ ],
+ "living": [
+  "Met in sources and named in no record, already in people.json: The Balvenie's malt master who made DoubleWood (David Stewart), William Grant's malt master (Brian Kinsman).",
+  "Not in people.json and in no record, left for the read-together agent: The Macallan's former chairman, a great-grandson of the buyer of 1892 (Allan Shiach). The author's Glenfiddich report names no one for the founder's great-grandson credited with the coppersmiths; Charles Gordon stands in people.json already and was not met here."
+ ],
+ "swaps": [
+  "aberlour: no swap. The author offered Aberlour 12 Year Old Double Cask should the casks have moved; they have not (the Oloroso and Pedro Ximenez bottling is a separate series), so A'bunadh stands as the plan names it.",
+  "the-macallan: no swap. The plan's note offered Double Cask 12; Sherry Oak 12 stands as the bottling that teaches sherry seasoned oak, with Double Cask under others.",
+  "No other swap proposed; all five flagships stand as the roster names them."
+ ],
+ "tension": [
+  "plan.json, aberlour why: says A'bunadh is matured only in Oloroso sherry casks; the sources agree for the numbered batches, and the author's doubt came from the separate Sherry Cask Collection. Reported, not edited.",
+  "plan.json, the-balvenie why: places the distillery beside the ruin of Balvenie Castle; no source read says so, and the record leaves the castle out. Reported, not edited.",
+  "plan.json, glenfiddich why: the 12 replacing an unaged bottling in 2000 rests on one source and is not in the record. Reported, not edited.",
+  "The Library's Glenfiddich record calls the 12 an affordable Rob Roy base and says the house created the single malt category; the Library's Macallan record speaks of a famously narrow cut. None is in the records. Reported, not edited."
+ ]
+}
