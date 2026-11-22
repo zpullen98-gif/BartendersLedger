@@ -1,0 +1,676 @@
+{
+ "group": "american-single-malt",
+ "records": [
+  {
+   "key": "westland",
+   "group": "american-single-malt",
+   "producer": "Westland",
+   "madeBy": "",
+   "style": "american-single-malt",
+   "chapter": "american-single-malt",
+   "shelf": "",
+   "library": "",
+   "say": "",
+   "place": "Seattle, King County, Washington",
+   "year": "",
+   "yearIs": "",
+   "bottle": {
+    "name": "Westland American Oak American Single Malt Whiskey",
+    "class": "American single malt whiskey: all malted barley, from one distillery",
+    "mash": "Only malted barley, in five malts: Washington Select pale malt with Munich, extra special, pale chocolate and brown malts, most of it grown in Washington State.",
+    "still": "Fermented with a Belgian saison brewer's yeast for up to 144 hours by the house's account, then distilled in two Vendome copper pot stills at its distillery in Seattle's SoDo district.",
+    "wood": "Mostly new American oak, married with used American oak and first-fill former bourbon casks. The label carries no age statement, and the minimums given in listings do not agree.",
+    "strength": "46% ABV (92 proof)",
+    "taste": "Toffee, vanilla and bready malt on the nose, then coffee and dark chocolate from the roasted malts, a little banana in some bottles, and a dry, chocolate finish.",
+    "pour": "Neat, with a few drops of water, or long with soda over ice. Its roasted malt makes a dark, dry Old Fashioned with malt in place of bourbon.",
+    "label": [
+     {
+      "term": "American Oak",
+      "means": "The bottling's name, for the new American oak casks that carry most of the marriage."
+     },
+     {
+      "term": "American Single Malt Whiskey",
+      "means": "All malted barley from one distillery in the United States, a federal standard since January 2025."
+     }
+    ]
+   },
+   "table": "Westland is the Seattle distillery that set out to make a single malt of the American Northwest, and Westland American Oak was the bottle that made its name: five malts and new American oak, giving toffee, coffee and dark chocolate.",
+   "story": "Westland was founded in Seattle by two Washington natives who wanted a single malt of their own corner of the country rather than a copy of Scotch; accounts give the founding as 2010 or 2011. The distillery settled in the SoDo district, where two Vendome copper pot stills, a brewer's mash of five malts, a Belgian saison yeast and long fermentations set its style. Its first range was three bottlings: the standard malt, later named American Oak, matured mostly in new American oak, with Sherry Wood and Peated beside it. In December 2016 Rémy Cointreau agreed to buy the distillery, and the purchase was completed early in 2017. The house later ceased making American Oak, Sherry Wood and Peated, and put Westland Flagship at the head of its range in American Oak's place. For a bartender American Oak is the bottle that showed what roasted malts and new oak do to malted barley, and the name a guest may use when asking for Westland.",
+   "others": [
+    {
+     "name": "Westland Flagship",
+     "note": "The bottling the house put at the head of its range in place of American Oak."
+    },
+    {
+     "name": "Westland Sherry Wood",
+     "note": "The sister of the original range, matured in part in sherry casks, also ceased."
+    }
+   ],
+   "traps": [
+    "The house ceased making American Oak and put Westland Flagship in its place, so a new Westland bottle on a shelf is most likely the Flagship.",
+    "American Oak names the casks, not the grain: the whiskey is all malted barley, with no corn in it.",
+    "No age is printed on the label, so give a guest no number of years as fact."
+   ],
+   "cards": [
+    {
+     "id": "five-malts",
+     "prompt": "What is in the mash of Westland American Oak?",
+     "answer": "Only malted barley, in five malts: Washington pale malt with Munich, extra special, pale chocolate and brown."
+    },
+    {
+     "id": "successor",
+     "prompt": "Which bottling did Westland put in the place of American Oak?",
+     "answer": "Westland Flagship, after the house ceased making American Oak, Sherry Wood and Peated."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "five-malts",
+     "q": "A guest asks what grain goes into Westland American Oak. Which is it?",
+     "options": [
+      "Malted barley only",
+      "Corn with malted barley",
+      "Malted rye with barley",
+      "Wheat with malted barley"
+     ],
+     "a": 0,
+     "explain": "The mash is all malted barley, in five malts; American Oak names the casks, and corn would make it a bourbon style instead."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "successor",
+     "q": "A guest asks for Westland American Oak, which the house ceased making. Which bottling did it put in its place?",
+     "options": [
+      "Westland Peated",
+      "Westland Garryana",
+      "Westland Flagship",
+      "Westland Sherry Wood"
+     ],
+     "a": 2,
+     "explain": "Westland Flagship took American Oak's place at the head of the range; Peated and Sherry Wood were its sisters, and were ceased with it."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Westland: American Oak American Single Malt",
+     "url": "https://de.westlanddistillery.com/westland-american-single-malt-whiskey",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Westland: the American Oak and Peated Heritage range",
+     "url": "https://westlanddistillery.com/products/american-oak-peated-heritage-range-bundle",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Tales of the Cocktail Foundation: how the whiskey is made at Westland",
+     "url": "https://talesofthecocktail.org/behind-scenes-westland-distillery/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "The Spirits Business: Rémy Cointreau agrees to buy Westland",
+     "url": "https://www.thespiritsbusiness.com/2016/12/remy-cointreau-acquires-westland-distillery/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "The Whiskey Wash: Westland changes its core range",
+     "url": "https://thewhiskeywash.com/whiskey-styles/american-whiskey/westland-distillery-shaking-up-its-core-range-of-whiskeys/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "A swap of the bottling is proposed: Westland's own pages say the house has ceased making American Oak, Sherry Wood and Peated, and Westland Flagship (46 per cent, at least 40 months, new and used American oak with former bourbon and oloroso casks, by the house's Flagship page) took American Oak's place. Distiller dates the change to spring 2021; no second source gave the year, so the record gives none. The record stays on American Oak until the refuter rules.",
+    "year is empty: the founding is 2010 in Tales of the Cocktail and most listings and 2011 in Wikipedia and InsideHook. The October 2013 opening of the SoDo distillery to visitors rests on Seattle Met alone and is left out.",
+    "The plan's note on maturation is unsettled: listings give a minimum of 36 months for American Oak and one review page gives two years; the house's page read gives no figure, so wood says only that the minimums disagree. The 40 months belongs to the Flagship.",
+    "The five malts stand on the house's American Oak page and Distiller; Distiller's figure of about 90 per cent Washington barley is given as most of it. The 144 hours is the house's own claim (its product sheets give 96 to 144 hours).",
+    "The taste rests on Distiller's critic's note and community notes (toffee, vanilla, coffee, dark chocolate, banana in a few); the house's own notes for American Oak were not found.",
+    "Ownership is told only as the 2016 agreement and the completion in January 2017 (The Spirits Business, The Drinks Business, The Whiskey Wash). The founders are living and are described, not named; Matt Hofmann is already in people.json and Emerson Lamb is added.",
+    "Left out for want of a source: Garry oak and Washington peat work, the still sizes, entry proof, and whether the Vendome stills ran the earliest American Oak spirit made before the SoDo move."
+   ],
+   "checked": null
+  },
+  {
+   "key": "stranahans",
+   "group": "american-single-malt",
+   "producer": "Stranahan's",
+   "madeBy": "",
+   "style": "american-single-malt",
+   "chapter": "american-single-malt",
+   "shelf": "",
+   "library": "",
+   "say": "STRAN-uh-hanz",
+   "place": "Denver, Denver County, Colorado",
+   "year": "2004",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Stranahan's Original American Single Malt Whiskey",
+    "class": "American single malt whiskey",
+    "mash": "Only malted barley, brewed into a wash at the distillery; the house speaks of locally sourced grain and publishes no further recipe.",
+    "still": "Distilled twice in Denver in copper stills built by Vendome: by visitors' accounts a pot with a column above it for the opening run, then a copper pot for the second.",
+    "wood": "New American oak barrels with a number 3 char. No age statement on the label: the house gives a minimum of four years on one page and six to nine years on another.",
+    "strength": "47% ABV (94 proof)",
+    "taste": "Caramel, butterscotch, vanilla and maple syrup on the nose, then cinnamon butter, chocolate and spiced pear, with oak, tobacco and leather on the finish.",
+    "pour": "Neat, or with a splash of water to open the oak. Its new oak sweetness carries an Old Fashioned or a Manhattan made with malt in place of bourbon.",
+    "label": [
+     {
+      "term": "Original",
+      "means": "The house's standing bottling, beside its cask finishes and yearly releases."
+     },
+     {
+      "term": "American Single Malt Whiskey",
+      "means": "All malted barley from one distillery in the United States."
+     }
+    ]
+   },
+   "table": "Stranahan's is the Denver distillery that has made single malt since 2004, and Stranahan's Original American Single Malt Whiskey is its standing bottle: all malted barley in new charred oak at 94 proof, with caramel, butterscotch and spiced pear.",
+   "story": "The house's story begins with a fire. In 1998, as it tells it, a volunteer firefighter came to a burning barn on a ranch at Woody Creek, near Aspen, and met its owner, a physicist who had founded the Flying Dog brewery. The two became friends, and in 2004 they set up a whiskey distillery in Denver, the whiskey named for the rancher. The early spirit was distilled from Flying Dog's beer, though the accounts differ on how. The early bottles were labelled Stranahan's Colorado Whiskey, and Stranahan's is widely called the first licensed whiskey distillery in Colorado since Prohibition. In May 2009 the distillery moved into a former brewery building on South Kalamath Street in Denver, and in 2010 Proximo Spirits bought the business, saying the whiskey would stay where it was. The standing bottle came to be labelled Original American Single Malt Whiskey, and in January 2025 a federal standard for the category came into force. For a bartender it is the Rocky Mountain malt a guest names, and the plain lesson in what new charred oak does to malted barley.",
+   "others": [
+    {
+     "name": "Stranahan's Sherry Cask",
+     "note": "The same single malt given a finish in former sherry casks."
+    },
+    {
+     "name": "Stranahan's Snowflake",
+     "note": "A yearly winter release, a different marriage of cask finishes each time, numbered by edition."
+    }
+   ],
+   "traps": [
+    "Older labels read Stranahan's Colorado Whiskey: it is the same house's single malt under an older name.",
+    "It is a single malt, not a bourbon, though it matures in new charred oak as bourbon does.",
+    "No age is printed on the label, and the house's own pages give different figures, so give a guest no number of years as fact."
+   ],
+   "cards": [
+    {
+     "id": "char",
+     "prompt": "In what barrels does Stranahan's Original mature?",
+     "answer": "New American oak barrels with a number 3 char, for at least four years by the house's own account."
+    },
+    {
+     "id": "barn-fire",
+     "prompt": "How, as the house tells it, did the founders of Stranahan's meet?",
+     "answer": "At a barn fire in 1998 on a ranch at Woody Creek, near Aspen: a volunteer firefighter met the ranch's owner."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "char",
+     "q": "A guest asks how Stranahan's Original is aged. Which barrels does the house name?",
+     "options": [
+      "Used bourbon barrels",
+      "New charred American oak",
+      "Former sherry butts",
+      "Uncharred French oak"
+     ],
+     "a": 1,
+     "explain": "The house names new American oak with a number 3 char; used bourbon barrels belong to Scotch, not to the Original."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "barn-fire",
+     "q": "As the house tells it, what first brought the two founders of Stranahan's together, in 1998?",
+     "options": [
+      "A brewery tour",
+      "A ski race",
+      "A cattle sale",
+      "A barn fire"
+     ],
+     "a": 3,
+     "explain": "A volunteer firefighter came to a barn fire on the Woody Creek ranch and met its owner; the brewery link came through the owner's Flying Dog."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Stranahan's: Original",
+     "url": "https://stranahans.com/whiskey/original/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Stranahan's shop: Original",
+     "url": "https://shop.stranahans.com/products/original",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Stranahan's Colorado Whiskey",
+     "url": "https://en.wikipedia.org/wiki/Stranahan%27s_Colorado_Whiskey",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Westword: Proximo Spirits to buy Stranahan's",
+     "url": "https://www.westword.com/restaurants/nycs-proximo-spirits-plans-to-buy-stranahans-colorado-whiskey-keep-things-the-same-5764950",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "The Drink Nation: a tour of the Stranahan's distillery",
+     "url": "https://denver.thedrinknation.com/articles/read/9674-Stranahans-Distillery-Tours-Denver-Whiskey-From-Start-to-Finish",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note on age is settled as far as the house allows: its shop page gives a minimum of four years in new American oak with a number 3 char, and its main page says six to nine years; the record gives both as the house's and no single figure. The plan's six to nine years per one directory now has the house's own page behind it.",
+    "The plan's note on ownership: Wikipedia and Westword both put the sale to Proximo Spirits in 2010; the story tells it with its year and names no later owner.",
+    "The label name: the house's pages call the bottling Original and the category American single malt whiskey; the label wording Stranahan's Original American Single Malt Whiskey was not read off a photographed label, and Stranahan's Colorado Whiskey is given as the older name on Wikipedia.",
+    "The physicist who backed the distillery is not named: he is George Stranahan, who died in Denver on 20 May 2021 at 89 (Physics Today, The Aspen Times); the record keeps him by role to stay within five sources. His partner, the firefighter and founder, is living and is added to people.json as Jess Graber.",
+    "The still rests on visitors' accounts (The Drink Nation, Whisky for Everyone and Alcademics): a Vendome pot with a column above it, then a copper pot spirit still. The house's pages read name no still.",
+    "The first release year, 2006 in the plan, rests on Good Beer Hunting alone and is left out; the claim of the first licensed distillery in Colorado since Prohibition is given as widely said (Wikipedia and a Colorado listing).",
+    "Left out for want of a source: the fermentation time (six days in one visit), the still sizes, and the claim that the first wash was a leftover keg of Flying Dog beer rather than its wort."
+   ],
+   "checked": null
+  },
+  {
+   "key": "mccarthys",
+   "group": "american-single-malt",
+   "producer": "McCarthy's",
+   "madeBy": "Clear Creek Distillery",
+   "style": "american-single-malt",
+   "chapter": "american-single-malt",
+   "shelf": "",
+   "library": "",
+   "say": "",
+   "place": "Oregon, United States",
+   "year": "1996",
+   "yearIs": "first released",
+   "bottle": {
+    "name": "McCarthy's Oregon Single Malt Whiskey",
+    "class": "American single malt whiskey, labelled Oregon single malt",
+    "mash": "Only peated malted barley, the malt imported from Scotland.",
+    "still": "Distilled by Clear Creek Distillery in a single pass through a Holstein pot still.",
+    "wood": "Three years in barrels of air-dried Oregon oak, by the maker's account, and bottled without chill filtration.",
+    "strength": "42.5% ABV (85 proof)",
+    "taste": "Peat smoke on the nose and the palate, with dried fruit and plum beneath it, then a warm finish of honey and gentle peat.",
+    "pour": "Neat or with a few drops of water, as a peated Scotch is poured. A little of it floated on a Penicillin gives the smoke an Islay malt would.",
+    "label": [
+     {
+      "term": "Oregon Single Malt Whiskey",
+      "means": "All malted barley from one distillery, made and aged in Oregon."
+     },
+     {
+      "term": "McCarthy's",
+      "means": "Named for the founder of Clear Creek Distillery, who made the malt."
+     }
+    ]
+   },
+   "table": "McCarthy's Oregon Single Malt Whiskey is the peated malt of Clear Creek Distillery, first released in 1996, long before American single malt had a federal standard: Scottish peated barley, one pass through a pot still and three years in Oregon oak.",
+   "story": "Steve McCarthy (died 2023) founded Clear Creek Distillery in Portland in 1985 to make eaux-de-vie from Oregon fruit, pear above all, in the European manner. A taste for peated Scotch, found on a trip to Scotland as the story goes, set him on a malt of his own. He brought in peated malted barley from Scotland, had it brewed into a wash, ran it once through a Holstein pot still and laid it down in barrels of Oregon oak. McCarthy's Oregon Single Malt was released in 1996, years before American single malt was spoken of as a category, and its maker says the American Single Malt Whiskey Commission recognises it as the first of the kind. In 2014 McCarthy sold Clear Creek to Hood River Distillers and stayed on to advise. He died in January 2023, at 79. The malt kept its Scottish peat, its single pass and its three years in Oregon oak. For a bartender it is the bottle that shows where American single malt began, and the answer for a guest who wants a smoky malt made in the United States.",
+   "others": [
+    {
+     "name": "McCarthy's American Single Malt 6 Year",
+     "note": "The same peated malt given six years in oak and bottled at 100 proof."
+    }
+   ],
+   "traps": [
+    "It is not Scotch: the peated barley comes from Scotland, but the whiskey is distilled and aged in Oregon.",
+    "Clear Creek began as a maker of fruit eaux-de-vie, pear above all; the malt is the same distillery's work, not another's."
+   ],
+   "cards": [
+    {
+     "id": "one-pass",
+     "prompt": "How is McCarthy's Oregon Single Malt distilled?",
+     "answer": "Once, in a single pass through a Holstein pot still, from peated malted barley imported from Scotland."
+    },
+    {
+     "id": "first-release",
+     "prompt": "In which year was McCarthy's Oregon Single Malt first released?",
+     "answer": "1996, eleven years after Steve McCarthy founded Clear Creek Distillery in Portland in 1985."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "one-pass",
+     "q": "A guest asks how many times McCarthy's Oregon Single Malt is distilled. What is the answer?",
+     "options": [
+      "Three times",
+      "Twice",
+      "Once",
+      "Four times"
+     ],
+     "a": 2,
+     "explain": "It runs once, in a single pass through a Holstein pot still; twice is the habit of most Scotch malts, not of McCarthy's."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "first-release",
+     "q": "A guest asks when McCarthy's Oregon Single Malt first reached the shelves. In which year was it released?",
+     "options": [
+      "1996",
+      "1985",
+      "2005",
+      "2014"
+     ],
+     "a": 0,
+     "explain": "It was released in 1996; 1985 is the year Clear Creek Distillery was founded, eleven years before the malt came out."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Hood River Distillers: McCarthy's Oregon Single Malt Whiskey",
+     "url": "https://www.hrdspirits.com/mccarthys-oregon-single-malt",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Clear Creek Distillery",
+     "url": "https://en.wikipedia.org/wiki/Clear_Creek_Distillery",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "The Oregon Encyclopedia: the founder of Clear Creek",
+     "url": "https://oregonencyclopedia.org/articles/mccarthy-steve",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Whisky Advocate: a tribute to the founder of Clear Creek",
+     "url": "https://whiskyadvocate.com/Steve-McCarthy",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Distiller Magazine: in memory of the founder of Clear Creek",
+     "url": "https://distilling.com/distillermagazine/in-memory-of-steve-mccarthy/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note on the bottling is settled: the maker's page lists McCarthy's Oregon Single Malt Whiskey at three years in air-dried Oregon oak and 85 proof (42.5%), distilled once in a Holstein pot still; the six year release is a separate bottling at 100 proof and stands in others.",
+    "Steve McCarthy is named with his death alone: he died on 2 January 2023 aged 79 (The Spirits Business, Whisky Advocate, Earthjustice), and no source read gave his birth year.",
+    "The plan's 1991 for the first distillation rests on Whisky Advocate alone (another account gives 1995) and is left out; 1996 for the first release stands in the Oregon Encyclopedia and Whisky Advocate. One account puts a release at Christmas 1997.",
+    "The trip to Scotland is told as a story: most accounts place it in Scotland, one in Ireland.",
+    "place is the state alone: the founding was in Portland, but where Clear Creek distils since the sale of 2014 (Portland or Hood River) was not confirmed in any source read.",
+    "The first of the kind is the maker's own statement of the commission's recognition, told as the maker's; the Commission's own page was not read.",
+    "Left out for want of a second source: the Portland brewery that once brewed the wash, the peating level (over 40 parts per million in one review) and the sherry casks some sellers mention."
+   ],
+   "checked": null
+  },
+  {
+   "key": "westward",
+   "group": "american-single-malt",
+   "producer": "Westward",
+   "madeBy": "House Spirits Distillery",
+   "style": "american-single-malt",
+   "chapter": "american-single-malt",
+   "shelf": "",
+   "library": "",
+   "say": "",
+   "place": "Portland, Multnomah County, Oregon",
+   "year": "2004",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Westward American Single Malt Whiskey",
+    "class": "American single malt whiskey",
+    "mash": "Only malted barley, two-row barley of the Pacific Northwest, brewed at the distillery into a beer before it is distilled.",
+    "still": "Distilled twice in low-reflux pot stills at the distillery in Portland, after the house has brewed and fermented its own wash.",
+    "wood": "New American oak barrels, heavily toasted and lightly charred. The label carries no age statement.",
+    "strength": "45% ABV (90 proof)",
+    "taste": "Orange peel, caramel and toasted nut on the nose, then stone fruit, vanilla, honey and coconut, with toffee, light oak and roasted fruit on the finish.",
+    "pour": "Neat, with a little water or over one large cube; its fruit and malt make a light highball with soda and a good Whiskey Sour.",
+    "label": [
+     {
+      "term": "American Single Malt Whiskey",
+      "means": "All malted barley from one distillery in the United States."
+     },
+     {
+      "term": "45% ABV",
+      "means": "Ninety proof, the strength of the standing bottling."
+     }
+    ]
+   },
+   "table": "Westward is the Portland, Oregon whiskey that begins as beer, and Westward American Single Malt Whiskey is its standing bottle: Northwest two-row barley, brewed and distilled in the city and aged in new American oak, with orange peel, honey and toffee at 90 proof.",
+   "story": "House Spirits Distillery was founded in Corvallis, Oregon, in 2004 by a former brewer and winemaker and a partner, with the aim of making a single malt of the American Northwest. It soon moved to Portland. Whiskey takes years, and the house first made its name with gin: Aviation American Gin, worked out with a Portland bartender. The malt grew meanwhile under the Westward name and was made the brewer's way: a wash of Northwest two-row barley brewed and fermented on site, distilled twice in pot stills and aged in full-size new American oak barrels, heavily toasted and lightly charred. Stout cask, cask strength and other finishes followed beside the standing bottle. In April 2025 House Spirits filed for Chapter 11 protection, and in October 2025 a court approved the sale of most of its assets to the private investors who had financed it through the case. For a bartender Westward is the plain lesson that American single malt begins as beer, brewed, distilled and aged in one Portland distillery.",
+   "others": [
+    {
+     "name": "Westward Cask Strength",
+     "note": "The same single malt bottled uncut, its strength varying from release to release."
+    },
+    {
+     "name": "Westward Oregon Stout Cask",
+     "note": "The malt finished in barrels that had held stout."
+    }
+   ],
+   "traps": [
+    "New American oak does not make it a bourbon: it is all malted barley, with no corn in it.",
+    "It begins as beer brewed on site, not as a spirit bought in: the house brews, distils and ages it in Portland."
+   ],
+   "cards": [
+    {
+     "id": "two-row",
+     "prompt": "What barley goes into Westward American Single Malt Whiskey?",
+     "answer": "Two-row malted barley of the Pacific Northwest, brewed into a beer at the distillery in Portland."
+    },
+    {
+     "id": "corvallis",
+     "prompt": "In which Oregon town did House Spirits, the distillery behind Westward, begin?",
+     "answer": "Corvallis, in 2004, before the distillery moved to Portland."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "two-row",
+     "q": "A guest asks what grain Westward American Single Malt Whiskey is made from. Which is it?",
+     "options": [
+      "Yellow dent corn",
+      "Malted winter rye",
+      "Soft red wheat",
+      "Two-row malted barley"
+     ],
+     "a": 3,
+     "explain": "It is all malted barley, Northwest two-row brewed on site; rye or corn would take it out of single malt altogether."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "corvallis",
+     "q": "In which Oregon town did House Spirits, the distillery behind Westward, begin in 2004?",
+     "options": [
+      "Eugene",
+      "Corvallis",
+      "Salem",
+      "Bend"
+     ],
+     "a": 1,
+     "explain": "House Spirits began in Corvallis in 2004 and soon moved to Portland, where Westward is made; Eugene lies to the south and played no part."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Westward Whiskey: the distillery's home page",
+     "url": "https://westwardwhiskey.com/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Westward Whiskey: Original",
+     "url": "https://westwardwhiskey.com/products/westward-american-single-malt",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: House Spirits Distillery",
+     "url": "https://en.wikipedia.org/wiki/House_Spirits_Distillery",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "The Whiskey Wash: Westward single malt comes of age",
+     "url": "https://thewhiskeywash.com/american-whiskey/house-spirits-westward-single-malt-comes-age/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Willamette Week: Westward Whiskey's assets go to an investment group",
+     "url": "https://www.wweek.com/drink/2025/10/27/westward-whiskey-sold-to-new-investment-group",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The house's own product page now names the standing bottling Westward Whiskey Original; the label wording Westward American Single Malt Whiskey was not read off a photographed label. If the label now reads Original, a bottling swap of the name only may be wanted; the whiskey is the same.",
+    "The plan's note on ownership is settled by leaving it out: no source read named Diageo. The record tells only the Chapter 11 filing of April 2025 and the court's approval in October 2025 of the sale of most assets to private investors (Willamette Week, VinePair, BevNet, Whisky Advocate); the closing, expected in November 2025, was not confirmed.",
+    "Names added to people.json, all living and named in the sources: the two founders (Christian Krogstad, Lee Medoff), the chief executive (Thomas Mooney) and an investor (Luis Fernando Leal).",
+    "Left out for want of a second source: the American pale ale yeast (one trade account), the number 2 char given there beside the house's heavily toasted and lightly charred, the 2005 year of the move to Portland (Wikipedia alone), the sale of Aviation in 2016 and the label redesign of 2020.",
+    "The taste is the house's own notes on its product page; its shop gives another set (vanilla, brown sugar, baking spice, tobacco, dark chocolate), and the record keeps the product page's.",
+    "year is the founding of House Spirits in 2004 (Wikipedia and the house's own history); no first release year for Westward was found."
+   ],
+   "checked": null
+  },
+  {
+   "key": "virginia-distillery",
+   "group": "american-single-malt",
+   "producer": "Virginia Distillery Co.",
+   "madeBy": "",
+   "style": "american-single-malt",
+   "chapter": "american-single-malt",
+   "shelf": "",
+   "library": "",
+   "say": "",
+   "place": "Lovingston, Nelson County, Virginia",
+   "year": "2011",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Courage & Conviction American Single Malt Whisky",
+    "class": "American single malt whisky, spelt on the label without the e",
+    "mash": "Only malted barley, North American grown by the house's account, with water from springs in the mountains around the distillery.",
+    "still": "Distilled at Lovingston in two copper pot stills made in Scotland, the building raised around them.",
+    "wood": "A marriage of casks, by the house's account about half former bourbon, a quarter sherry and a quarter Cuvée, former European red wine casks shaved, toasted and recharred. The house gives a minimum of four years.",
+    "strength": "46% ABV (92 proof)",
+    "taste": "Caramel and butterscotch on the nose, raspberry from the red wine casks, then cocoa, vanilla and barrel spice, with the malt beneath.",
+    "pour": "Neat or with a little water. Its red fruit and cocoa suit a Rob Roy or a Manhattan made with malt, and a highball with soda.",
+    "label": [
+     {
+      "term": "Courage & Conviction",
+      "means": "The founder's own saying, as the house tells it, given to its single malt."
+     },
+     {
+      "term": "American Single Malt Whisky",
+      "means": "All malted barley from one distillery in the United States, spelt whisky."
+     }
+    ]
+   },
+   "table": "Virginia Distillery Co. makes its single malt at Lovingston in the Blue Ridge foothills, and Courage & Conviction American Single Malt Whisky is its flagship: all malted barley from bourbon, sherry and red wine casks, with caramel, raspberry and cocoa at 46 per cent.",
+   "story": "Virginia Distillery Co. was founded in 2011 by a businessman who had built companies in the United States and in Ireland and wanted a malt distillery of his own in the Blue Ridge foothills of Nelson County. Two large copper pot stills made in Scotland were set at Lovingston, and the building was raised around the stills and the mash tuns. The founder died while the distillery was being built, and his family carried the work on. The distillery opened in 2015, and its own malt was laid down in bourbon, sherry and red wine casks. In 2020 it released Courage & Conviction, named for a saying the founder often repeated: the distillery's own single malt, aged at least three years, a marriage of the three casks at 46 per cent. Single cask versions of each wood followed beside it. In January 2025 the federal standard for American single malt came into force. For a bartender the bottle is the lesson that the category reaches well beyond the West: a Virginia malt in the Scottish manner, with red wine casks giving it its own colour.",
+   "others": [
+    {
+     "name": "Courage & Conviction Bourbon Cask",
+     "note": "The malt from former bourbon casks alone, one of three single cask bottlings beside the flagship."
+    },
+    {
+     "name": "Courage & Conviction Sherry Cask",
+     "note": "The malt from former sherry casks alone."
+    },
+    {
+     "name": "Courage & Conviction Cuvée Cask",
+     "note": "The malt from the shaved, toasted and recharred red wine casks alone."
+    }
+   ],
+   "traps": [
+    "It is spelt whisky, without the e, though it is an American single malt.",
+    "The red wine casks shape the flavour, not the class: it is all malted barley, distilled at Lovingston."
+   ],
+   "cards": [
+    {
+     "id": "three-casks",
+     "prompt": "Which three casks make up Courage & Conviction American Single Malt Whisky?",
+     "answer": "Former bourbon casks, about half, with sherry casks and Cuvée red wine casks, about a quarter each."
+    },
+    {
+     "id": "name",
+     "prompt": "Where does Virginia Distillery Co. take the name Courage & Conviction from?",
+     "answer": "From a saying of its founder, who died while the distillery at Lovingston was being built."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "three-casks",
+     "q": "A guest asks which casks give Courage & Conviction its raspberry note. Which are they?",
+     "options": [
+      "Cuvée red wine casks",
+      "Former rum casks",
+      "Tawny port pipes",
+      "Stout casks"
+     ],
+     "a": 0,
+     "explain": "The Cuvée casks held European red wine and give the raspberry; the bourbon and sherry casks bring caramel and cocoa, and no port pipe is used."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "name",
+     "q": "What does the name Courage & Conviction honour?",
+     "options": [
+      "A Civil War regiment",
+      "A Blue Ridge mountain",
+      "A river in Nelson County",
+      "A saying of the founder"
+     ],
+     "a": 3,
+     "explain": "The house took the name from a saying its founder often repeated; it has nothing to do with a regiment or with the land around Lovingston."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Virginia Distillery Co.: Our story",
+     "url": "https://vadistillery.com/our-story",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Virginia Distillery Co. shop: Courage & Conviction",
+     "url": "https://shop.vadistillery.com/products/courage-conviction-signature-malt-gift-pack",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "The Whiskey Wash: the flagship single malt debuts",
+     "url": "https://thewhiskeywash.com/american-whiskey/virginia-distillery-company-finally-debuts-its-flagship-american-single-malt-whiskey/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "BevNet: the first Courage & Conviction release",
+     "url": "https://www.bevnet.com/spirits/2020/virginia-distillery-company-debuts-first-release-in-courage-conviction-series",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Richmond BizSense: the stills of Nelson County",
+     "url": "https://richmondbizsense.com/2012/07/27/a-taste-of-the-highlands-in-virginias-hills/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note on the label: the house's own pages now call the flagship Courage & Conviction Signature Malt, its shop titling it Courage & Conviction: American Single Malt Whisky. A swap of the bottling's name to Courage & Conviction Signature Malt is proposed if the refuter finds the label reads so; the record keeps the roster's words until then.",
+    "The age moved: the first release of 2020 was aged at least three years (The Whiskey Wash), and the house's shop now gives a minimum of four years; wood gives the house's four, the story the three of 2020.",
+    "The founder, Dr. George G. Moore, is not named: InsideHook gives his death as 2013 and BevNet in 2015 calls him the late founder, but no second source gave the year, so he is described by role. His widow and son, both living, are added to people.json (Angela Moore, Gareth Moore), with the company's early president named in Richmond BizSense (John McCray).",
+    "The plan's note on size is kept out: the house calls itself the largest independent maker of American single malt, a ranking.",
+    "The opening in 2015 rests on BevNet's 2015 report of the tasting room and production site and Alcohol Professor's late 2015 start of distilling; the stills' maker (Forsyths or a fabricator in Elgin) and their Turkish history are left out as the accounts disagree.",
+    "The cask shares are the house's batch pages (about 50 per cent bourbon, 25 Cuvée, 25 sherry); STR is read as shaved, toasted and recharred, the usual meaning, which the house's pages did not spell out in the summaries read. The whisky consultant who devised the Cuvée profile is dead but not named for want of two sources on his dates.",
+    "Left out for want of a second source: the blends of imported Scotch malt the house sold while its own spirit aged, and its part in seeking the federal standard."
+   ],
+   "checked": null
+  }
+ ]
+}
