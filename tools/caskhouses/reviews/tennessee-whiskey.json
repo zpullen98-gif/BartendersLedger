@@ -1,0 +1,253 @@
+{
+ "group": "tennessee-whiskey",
+ "chunk": "c3",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 25,
+ "tested": [
+  "jack-daniels: 140 proof off the still, ten feet of sugar maple charcoal over three to five days, 80, 12 and 8 (the house's pages); the house's tasting notes and banana from the yeast (FAQ); 1866 against Krass's 1875 from land and deed records; the hand over of 1907 and Motlow's 1869 to 1947; the reopening of 1938; Brown-Forman in 1956; 90 proof to 86 in 1987 and to 80 in 2002 or 2004; the Lincoln County line of Lynchburg (the style page). 6 searches.",
+  "george-dickel: the rename of No. 12 to Signature Recipe (Distiller, a forum thread of 2018, the house's own Signature Recipe page), 90 proof, 84, 8 and 8; Schenley in 1937, Coffee County's vote and the rebuild of 1958, the first mash of July 1959 and the first bottling of 1964; the founding of the Cascade distillery (1877 or 1878, 1870 the house's story), the share of 1888, Dickel's death in June 1894; the chill to 40 degrees Fahrenheit, the winter legend and the steeped charcoal vats. 6 searches.",
+  "uncle-nearest: the launch of July 2017 and 100 proof (launch notice), the Lincoln County Process on the brand's page, the name the brand prints, the brand's request for Tennessee Whiskey on the front label, the Sand Creek Farms rezoning of 2017, the distillery's opening of 2019, the sourcing and the move to the brand's own whiskey (2021 or 2022, unsettled). 4 searches.",
+  "nelsons-green-brier: the 91 proof as an ode to 1891 and the wheated recipe (the house's product page and a Fox News piece), Charles Nelson's death on 13 December 1891 and Louisa's running of the business to 1909, the first barrel of 16 August 2014 and the opening that November (the house's ten year notice), the company of 2009 against the distillery of 2014, the blend of 2022, the house's tasting notes. 4 searches.",
+  "prichards: the exception in Tenn. Code 57-2-106(c) and Attorney General Opinion No. 15-23 of 18 March 2015; 1997 and 1999 for the schoolhouse; the second distillery of May 2014; copper pot stills, white corn and 15 to 53 gallon charred white oak barrels on the house's pages; 80 proof and the mash. 4 searches.",
+  "The cards and questions of all five: one right answer each, plausible wrong options of one kind, no length clue (the lint holds it), keys at positions 0, 2, 1, 2, 3, 0, 3, 1, 2, 3, and explains that teach the nearest wrong option; no card id changed. 1 search spent confirming a brand page that could not be confirmed."
+ ],
+ "changed": [
+  {
+   "key": "jack-daniels",
+   "field": "story",
+   "was": "in 1907 he handed the business to his nephew Lem Motlow (1869 to 1947).",
+   "now": "in 1907 he handed the business to his nephew Lem Motlow (1869 to 1947) and another relative.",
+   "why": "the sources give the distillery passing to Motlow and a second nephew or cousin, whose share Motlow later took",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Lem_Motlow",
+    "https://pressroom.jackdaniels.com/?p=51",
+    "https://thewhiskeywash.com/american-whiskey/the-history-of-jack-daniels-iconic-tennessee-whiskey/"
+   ]
+  },
+  {
+   "key": "jack-daniels",
+   "field": "story",
+   "was": "the house tells several stories, and an old tax district number is the account most often given.",
+   "now": "Where the name came from nobody knows, by the house's own account, and several stories are told.",
+   "why": "no source read ranked the stories or gave the tax district as the usual one",
+   "sources": [
+    "https://www.jackdaniels.com/faqs"
+   ]
+  },
+  {
+   "key": "jack-daniels",
+   "field": "story",
+   "was": "the charcoal before the barrel is what keeps it from being sold as bourbon.",
+   "now": "the charcoal before the barrel is why the house calls it Tennessee whiskey and not bourbon.",
+   "why": "whether federal law would bar the word bourbon is beyond the sources; the house's reason is its charcoal",
+   "sources": [
+    "https://www.jackdaniels.com/articles/lincoln-county-process"
+   ]
+  },
+  {
+   "key": "jack-daniels",
+   "field": "bottle.taste",
+   "was": "Caramel and vanilla from the new oak, dried fruit and toasted wood, a light, peppery spice and a dry, lingering finish.",
+   "now": "Caramel and vanilla from the new oak, dried fruit, toasted wood and a light banana note from the yeast, a faint spice and a dry, lingering finish.",
+   "why": "the house's own notes give a faint spice, not pepper, and its FAQ the banana note from the yeast",
+   "sources": [
+    "https://www.jackdaniels.com/en-us/whiskey/old-no-7",
+    "https://www.jackdaniels.com/faqs"
+   ]
+  },
+  {
+   "key": "george-dickel",
+   "field": "story",
+   "was": "founded by others in 1877 though its bottles claimed 1870, and the firm in time took a share in it and became its sole distributor.",
+   "now": "which others founded in the late 1870s; the house's own story has Dickel distilling there from 1870, a date historians find no record of. In 1888 a partner in the firm bought a share of the distillery, and the firm became its sole distributor.",
+   "why": "the sources split on 1877 and 1878, none showed a bottle claiming 1870, which is the house's story; Wikipedia dates the share and the sole distribution to 1888",
+   "sources": [
+    "https://en.wikipedia.org/wiki/George_Dickel",
+    "https://www.diffordsguide.com/producers/646/cascade-hollow-distillery-geo-a-dickel-and-co/history",
+    "https://tennesseeencyclopedia.net/entries/george-dickel-distillery/"
+   ]
+  },
+  {
+   "key": "george-dickel",
+   "field": "story and quiz q2 explain",
+   "was": "Schenley bought the Cascade trademark and the recipe",
+   "now": "Schenley bought the rights to the Cascade name",
+   "why": "the sources give the rights to the Cascade name or whisky; none read named the recipe",
+   "sources": [
+    "https://en.wikipedia.org/wiki/George_Dickel",
+    "https://www.diffordsguide.com/producers/646/cascade-hollow-distillery-geo-a-dickel-and-co/history"
+   ]
+  },
+  {
+   "key": "george-dickel",
+   "field": "story and cards[chill].answer",
+   "was": "from the old belief that whisky made in winter tasted mellower",
+   "now": "as the story goes, George Dickel found whisky made in winter tasted mellower",
+   "why": "the sources tell it as legend; it is now told as one",
+   "sources": [
+    "https://vinepair.com/articles/george-dickel-tennessee-whisky-guide/"
+   ]
+  },
+  {
+   "key": "uncle-nearest",
+   "field": "bottle.name",
+   "was": "Uncle Nearest 1856 Tennessee Whiskey",
+   "now": "Uncle Nearest 1856",
+   "why": "the brand names the bottling 1856 followed by words the voice refuses, and asked the TTB to print Tennessee Whiskey on the front label; no source read showed those two words there",
+   "sources": [
+    "https://unclenearest.com/premium-aged-whiskey/",
+    "https://unclenearest.com/transparency/tennessee-whiskey-also-bourbon/"
+   ]
+  },
+  {
+   "key": "uncle-nearest",
+   "field": "bottle.still, story and traps[1]",
+   "was": "two accounts say that from 2022 the 1856 was distilled, aged and bottled by the brand itself",
+   "now": "two trade accounts say the 1856 moved to whiskey the brand made itself in 2022",
+   "why": "the brand's own pages read in search date nothing and speak of a still house at Shelbyville under construction; a search summary giving 2021 could not be tied to a page, so the record says only what the two trade accounts say",
+   "sources": [
+    "https://distiller.com/spirits/uncle-nearest-1856-tennessee-whiskey",
+    "https://www.breakingbourbon.com/article/the-story-of-uncle-nearest-1856-whiskey",
+    "https://unclenearest.com/distillery/"
+   ]
+  },
+  {
+   "key": "uncle-nearest",
+   "field": "story",
+   "was": "the Nearest Green Distillery opened there in 2019",
+   "now": "the Nearest Green Distillery opened there in stages from 2019",
+   "why": "Wikipedia gives the first phase opening in September 2019, Difford's an establishment of 2018",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Uncle_Nearest_Premium_Whiskey",
+    "https://www.diffordsguide.com/producers/1822/nearest-green-distillery"
+   ]
+  },
+  {
+   "key": "nelsons-green-brier",
+   "field": "story",
+   "was": "came to Nashville shortly before the Civil War, by the house's account, and from about 1870 ran the Green Brier distillery",
+   "now": "ran the Green Brier distillery ... in the decades after the Civil War. After his death in December 1891",
+   "why": "the house's pages give 1860 in one place and no settled 1870; the death of 13 December 1891 is on its story page",
+   "sources": [
+    "https://greenbrierdistillery.com/pages/our-story"
+   ]
+  },
+  {
+   "key": "nelsons-green-brier",
+   "field": "story",
+   "was": "First 108, a two-year-old whiskey of its own make, sold only at the distillery. The flagship Tennessee whiskey followed from full-size barrels, sold at first in the Nashville market",
+   "now": "First 108, a whiskey of its own make, at the distillery. The flagship Tennessee whiskey followed",
+   "why": "the age, the full-size barrels and the first market rested on one account each",
+   "sources": []
+  },
+  {
+   "key": "nelsons-green-brier",
+   "field": "bottle.still",
+   "was": "one account says some of this whiskey was made on a partner's still by the house's own staff, to its recipe",
+   "now": "a trade account of 2022 gave the blend then as about three quarters its own pot still whiskey and a quarter column still whiskey made under contract",
+   "why": "Whisky Advocate's 2022 report is the account, and its date keeps it from reading as the present",
+   "sources": [
+    "https://whiskyadvocate.com/nashville-distillers-tennessee-whiskey"
+   ]
+  },
+  {
+   "key": "nelsons-green-brier",
+   "field": "bottle.wood",
+   "was": "one account gives early runs two to five years in full-size barrels",
+   "now": "the label carries no age statement",
+   "why": "one account only",
+   "sources": []
+  },
+  {
+   "key": "nelsons-green-brier",
+   "field": "bottle.taste",
+   "was": "Caramel and vanilla, nutmeg and cinnamon, a little chocolate and nougat as the house describes it, with brown sugar and charred oak toward a dry finish.",
+   "now": "Caramel, vanilla, cinnamon and apple on the nose, then brown sugar, cinnamon roll, caramel apple and a touch of cocoa, with cinnamon and black cherry on the finish, as the house describes it.",
+   "why": "the house's product page gives these notes, not nougat",
+   "sources": [
+    "https://shop.greenbrierdistillery.com/products/green-brier-tennessee-whiskey"
+   ]
+  },
+  {
+   "key": "nelsons-green-brier",
+   "field": "story",
+   "was": "it is the wheated Tennessee whiskey",
+   "now": "it is a wheated Tennessee whiskey",
+   "why": "the definite article claimed an only",
+   "sources": []
+  },
+  {
+   "key": "nelsons-green-brier",
+   "field": "sources",
+   "was": "the Nashville Scene, The Whiskey Wash and Wikipedia",
+   "now": "the house's product page, its ten year notice and Whisky Advocate's 2022 report",
+   "why": "the house's pages carry the 91 proof as an ode to 1891, the wheated recipe, the first barrel of 16 August 2014 and the opening that November",
+   "sources": [
+    "https://shop.greenbrierdistillery.com/products/green-brier-tennessee-whiskey",
+    "https://greenbrierdistillery.com/blogs/news-press/celebrating-10-years-of-tradition-at-nelsons-green-brier-distillery"
+   ]
+  },
+  {
+   "key": "prichards",
+   "field": "story, quiz q1 explain and traps[0]",
+   "was": "the state's attorney general read it in 2015 as covering one distillery: Prichard's",
+   "now": "framed for one distillery, Prichard's; in 2015 the state's attorney general gave the opinion, which binds no court, that the exception was likely unconstitutional",
+   "why": "Opinion No. 15-23 of 18 March 2015 judged the exception likely unconstitutional; telling it only as a reading that it covers Prichard's leaves out what it held",
+   "sources": [
+    "https://www.ksl.com/article/33886270",
+    "https://www.courthousenews.com/tennessee-questions-whiskey-classification/"
+   ]
+  },
+  {
+   "key": "prichards",
+   "field": "bottle.mash",
+   "was": "with rye and malted barley as one review gives it; no percentages are published",
+   "now": "the house publishes no mash bill",
+   "why": "one review only; the house and Wikipedia name only the white corn",
+   "sources": [
+    "https://prichardsdistillery.com/about/",
+    "https://en.wikipedia.org/wiki/Benjamin_Prichard%27s_Tennessee_Whiskey"
+   ]
+  },
+  {
+   "key": "prichards",
+   "field": "quiz q2 explain",
+   "was": "the house's second distillery, of 2014, is on the grounds of the Fontanel Mansion",
+   "now": "the house opened a second distillery in 2014, on the grounds of the Fontanel Mansion",
+   "why": "a present tense that may not hold; whether the Fontanel distillery runs was not found",
+   "sources": []
+  },
+  {
+   "key": "prichards",
+   "field": "sources",
+   "was": "Whisky Advocate: Benjamin Prichard's Tennessee Whiskey (a review page carrying a score)",
+   "now": "KSL: the exemption in the Tennessee whiskey law",
+   "why": "a page that gives a score is not a source",
+   "sources": [
+    "https://www.ksl.com/article/33886270"
+   ]
+  }
+ ],
+ "open": [
+  "jack-daniels: the step from 86 to 80 proof, 2002 (Wikipedia, Chicago Booth) or 2004 (the press of that autumn); the year Nearest Green was named first master distiller.",
+  "george-dickel: the year of the rename to Signature Recipe; bottle.name keeps ', formerly No. 12' until plan.json takes the swap.",
+  "uncle-nearest: when the 1856 became the brand's own whiskey and where that whiskey is distilled; the brand's finances in 2025 and whether the label stands; the TTB's answer on the back label's Straight Bourbon Whiskey.",
+  "nelsons-green-brier: the first year of the 91 proof flagship (2017 in Whisky Advocate's 2022 piece, 2019 elsewhere); the company's 2009 against the distillery's 2014 for year; Louisa Nelson's death year.",
+  "prichards: the taste rests on a review page now dropped for its score; the will of 1822 is the family's account; whether the exception has met a court since 2015; whether the Fontanel distillery still runs."
+ ],
+ "living": [
+  "Met in sources and named in no record: Uncle Nearest's founder and master blender, the two Nelson brothers and Prichard's founder, all already in people.json; Jack Daniel's former master distiller, whose name a Wikipedia address carried, already in people.json.",
+  "Not in people.json and not in the record, left for the read-together agent to add: the Tennessee attorney general who signed Opinion No. 15-23 (first name Herbert), and Jack Daniel's biographer of 2004 (surname Krass), both met in search results."
+ ],
+ "swaps": [
+  "george-dickel, bottling: the author's proposal to change the flagship from George Dickel No. 12 to George Dickel Signature Recipe is agreed. The house has its own Signature Recipe page, Distiller and retailers give it as formerly No. 12, the liquid unchanged at 90 proof, and the record is already written for it. For the read-together agent to apply in plan.json: { \"kind\": \"bottling\", \"key\": \"george-dickel\", \"from\": \"George Dickel No. 12\", \"to\": \"George Dickel Signature Recipe\", \"why\": \"the house renamed No. 12 Signature Recipe on its labels and its own pages\", \"agreed\": true, \"date\": \"2026-11-22\" }; with it, bottle.name becomes George Dickel Signature Recipe Tennessee Whisky, the pick and its card ids unchanged.",
+  "No other swap proposed by author or refuter; the other four picks and flagships stand."
+ ],
+ "tension": [
+  "The Cask Atlas (js/data-casks.js) says the attorney general's 2015 opinion read the exception as exempting a single distillery; it did, and it went on to judge the exception likely unconstitutional, which the page does not say. Reported, not edited.",
+  "plan.json, george-dickel why: says the Cascade Hollow distillery opened in 1878; the sources split on 1877 and 1878 for the first Cascade distillery, and the distillery that runs in the hollow was built from 1958. Reported, not edited.",
+  "plan.json, uncle-nearest why: calls the 1856 a Shelbyville brand passed through the Lincoln County Process; the brand's pages agree, though where its own whiskey is distilled is not settled.",
+  "The style page's at the table line speaks of a touch of banana in Tennessee whiskey, which Jack Daniel's own FAQ supports for Old No. 7; no tension, noted only."
+ ]
+}

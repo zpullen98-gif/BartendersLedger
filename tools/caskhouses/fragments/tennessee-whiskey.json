@@ -137,7 +137,21 @@
     "Left out for want of a source: the square bottle's year, the banana note in the taste (retailers only), the house's own cooperage and the exact law that let Lynchburg distil again in 1938, which rests on Wikipedia and the brand's history in outline.",
     "The style page's line that Lynchburg is home to Jack Daniel's and that Lincoln County held Lynchburg until 1871 agrees with this record."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: Jack gave the distillery in 1907 to Lem Motlow and another nephew or cousin (Wikipedia, Lem Motlow's press page, The Whiskey Wash), not to Motlow alone; now 'and another relative'.",
+     "story: 'an old tax district number is the account most often given' rested on no source read and ranked the stories; now the house's own word that nobody knows, and that several stories are told.",
+     "story: the close said the charcoal keeps it from being sold as bourbon, a legal claim beyond the sources; now the charcoal is why the house calls it Tennessee whiskey and not bourbon.",
+     "bottle.taste: now follows the house's own notes (dried fruit, toasted oak, caramel, vanilla, a faint spice, a dry lingering finish, and the light banana note its FAQ puts down to the yeast); 'peppery' had no source."
+    ],
+    "open": [
+     "story: the step from 86 to 80 proof stays undated: Wikipedia and Chicago Booth give 2002, the press of autumn 2004 reports it as new that year.",
+     "story: the year the house named Nearest Green its first master distiller (2016 or 2017) stays out, as the author left it."
+    ]
+   }
   },
   {
    "key": "george-dickel",
@@ -272,7 +286,21 @@
     "The founding year of the first Cascade distillery is disputed (1877 in Difford's and Wikipedia, 1878 in other accounts, 1882 in the Tennessee Encyclopedia's Coffee County entry), so year carries 1964, the first bottling of the reborn label, which two sources agree on.",
     "Left out for want of a source: the stills and the proof off them, an age for the whisky (one forum gives six to twelve years), the house's own tasting words for Signature Recipe, and the Stitzel interlude in Louisville under prohibition, which rested on one source."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: 'founded by others in 1877 though its bottles claimed 1870' is now 'founded in the late 1870s', with 1870 told as the house's own story for which Wikipedia finds no evidence; the sources split on 1877 and 1878, and none read showed a bottle printing 1870.",
+     "story: 'the firm in time took a share' is now dated: in 1888 a partner of the firm bought a share of the distillery and the firm became its sole distributor (Wikipedia, Difford's).",
+     "story: Schenley bought 'the Cascade trademark and the recipe' in 1937; the sources give the rights to the Cascade name or whisky, and no source read named the recipe; now 'the rights to the Cascade name'. q2's explain follows.",
+     "story and cards[chill]: the winter belief is told as the story goes (VinePair, Difford's), not as fact; the 40 degrees Fahrenheit stands in both."
+    ],
+    "open": [
+     "bottle.name: carries ', formerly No. 12' only so the lint holds it to the roster's flagship; once plan.json takes the agreed swap it should read George Dickel Signature Recipe Tennessee Whisky.",
+     "The year of the rename from No. 12 to Signature Recipe stays unknown; a forum thread of September 2018 shows a new No. 12 label, and no source dates the new name."
+    ]
+   }
   },
   {
    "key": "uncle-nearest",
@@ -411,7 +439,21 @@
     "Left out for want of a source: the mash bill, an age (retailers give seven, eight or eight to fourteen years), the names of the sourcing distilleries (one source says George Dickel), and the brand's business news of 2025, which would be a present fact.",
     "A pick to watch: reports in 2025 of the brand's finances were not researched here; the integrator may wish to confirm the label is still made before the group ships."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.name: was Uncle Nearest 1856 Tennessee Whiskey; the brand's own page and launch notice name the bottling 1856 Premium Aged Whiskey, the brand asked the TTB to print Tennessee Whiskey on the front label and no source read showed it there, and Premium is refused; now Uncle Nearest 1856.",
+     "bottle.still, story and traps[1]: the move to the brand's own whiskey is told as what two trade accounts say (2022); a search summary that gave 2021 from the brand's own site could not be tied to a page, so it is not used; the brand distilling, ageing and bottling the 1856 itself is no longer stated.",
+     "story: the distillery at Shelbyville opened in stages from 2019 (Wikipedia gives its first phase in September 2019, Difford's an establishment of 2018), not opened whole in 2019."
+    ],
+    "open": [
+     "Where the brand's own whiskey is distilled was not settled; its Shelbyville pages speak of a still house under construction, a present fact the record leaves out.",
+     "The brand's finances in 2025 were not researched; the integrator may confirm the label is still made before the group ships.",
+     "The brand's request to print Straight Bourbon Whiskey on the back label is left out: the TTB's answer was not found."
+    ]
+   }
   },
   {
    "key": "nelsons-green-brier",
@@ -545,7 +587,25 @@
     "The year the 91 proof flagship was first sold (about 2019 by the Nashville Scene's piece, which carries no date on the page read) is left out, as are the claim that Charles Nelson sold some 380,000 gallons in 1885 (one trade source) and the 2019 investment by Constellation Brands, on which two sources disagree as to its size.",
     "The plan's note is settled: the old distillery is told in the past tense, and Belle Meade stands as the house's other label, not this flagship."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: 'came to Nashville shortly before the Civil War' and 'from about 1870 ran the Green Brier distillery' are cut: the house's own pages give the distillery's founding as 1860 in one place and otherwise, and nothing settled 1870; now he ran it in the decades after the Civil War, and he died in December 1891 (the house's story page).",
+     "story: First 108 loses 'two-year-old' and 'sold only at the distillery' for want of a second source; the flagship loses 'from full-size barrels' and 'sold at first in the Nashville market', resting on one account.",
+     "bottle.still: the partner's still is now what Whisky Advocate reported in 2022, about three quarters house pot still whiskey and a quarter column still whiskey made under contract, dated so it does not read as the present.",
+     "bottle.wood: 'two to five years in full-size barrels' rested on one account and is cut; no age statement stands.",
+     "bottle.taste: chocolate and nougat were not found on the house's page; now the house's own notes for the bottling.",
+     "sources: the Nashville Scene, The Whiskey Wash and Wikipedia give way to the house's product page (91 proof, an ode to 1891, wheated, maple charcoal), its ten year notice (first barrel 16 August 2014, doors open November 2014) and Whisky Advocate's 2022 piece on the blend.",
+     "story: 'it is the wheated Tennessee whiskey' read as a claim of an only; now 'a wheated Tennessee whiskey'."
+    ],
+    "open": [
+     "year: 2014 stands as the founding of the distillery (first barrel and opening in 2014, the house); one trade account dates the revived company to 2009.",
+     "The year the 91 proof flagship was first sold: one account gives 2019, Whisky Advocate's 2022 piece has the revived label debut in 2017; the record gives no year.",
+     "Louisa Nelson stays described as his widow, her death year not found."
+    ]
+   }
   },
   {
    "key": "prichards",
@@ -679,7 +739,22 @@
     "The mash's rye and malted barley rest on one review; the house names only the white corn. The Whisky Advocate page carries a score, which the title leaves out.",
     "Left out for want of a source: the house's beginnings with rum, the age of the schoolhouse (one source gives 1939), the number of distillations and the proof off the still, and what Double Barreled means on the bourbon's label."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: the attorney general's opinion of 18 March 2015 (No. 15-23) did not read the exception as covering Prichard's so much as judge it likely unconstitutional, an opinion that binds no court (AP via KSL, Courthouse News); now told so. q1's explain and traps[0] say the exception was framed for, and covers, Prichard's in the law of 2013.",
+     "bottle.mash: the rye and malted barley rested on one review; the house names only white corn and publishes no mash bill; now said plainly.",
+     "quiz q2 explain: the Fontanel distillery is now told as opened in 2014, not as a present fact.",
+     "sources: the Whisky Advocate review page, which carries a score, is replaced by the AP report of the exemption on KSL; the house's pages confirm the copper pot stills, the white corn and the 15 to 53 gallon charred white oak barrels."
+    ],
+    "open": [
+     "bottle.taste rests on the author's reading of a review page that carries a score, now dropped; no second tasting source was read.",
+     "The will of 1822 is the family's account only, hedged as such.",
+     "Whether the exception has been tested in court since 2015 was not found."
+    ]
+   }
   }
  ]
 }
