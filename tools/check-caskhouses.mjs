@@ -4,7 +4,7 @@
      node tools/check-caskhouses.mjs              every check below; passes on a partial build and says so last
      node tools/check-caskhouses.mjs --release    the same, and refuses a data file whose meta says partial, whose
                                                   meta.unrefuted is above 0, or whose keys are not frozen
-     node tools/check-caskhouses.mjs --mutations  then breaks the shipped files twenty-two ways, one at a time, and
+     node tools/check-caskhouses.mjs --mutations  then breaks the shipped files twenty-four ways, one at a time, and
                                                   expects red each time, from the check written for that rule (a
                                                   mutation that finds nothing to change, or that only another
                                                   check catches, is itself a failure)
@@ -36,7 +36,7 @@
    W3 addresses, parents and Back through real taps   W4 rendering: the root, every group, every house
    W5 the doors in: the Atlas home, a chapter, a style, a shelf bottle, the Library
    W6 the deck through real taps and Today's cask study   W7 the quiz through the click and its one row
-   W8 the Practise rows, search and key ownership */
+   W8 the Practise rows, search and key ownership   W9 the partial states: one group, a lone group, no data */
 import assert from 'node:assert/strict';
 import { readFileSync, mkdtempSync, cpSync, writeFileSync, rmSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname, resolve } from 'node:path';
@@ -891,6 +891,77 @@ await test('W8 the Practise rows after the styles\u2019 rows, the search index (
   assert.ok(g('caskHouseOwnsKey')({ target: { closest: (s) => (/caskhouse-read-link/.test(s) ? {} : null) } }), 'the read link is not the page\u2019s own');
 });
 
+/* The partial states, as the lanes bring the roster in: one group built, a group built whose
+   style page exists while its neighbours' groups do not, and no data at all. Every producers door,
+   deck and round any screen offers must reach something, every count must be what is built, and
+   with nothing built nothing may offer a door. */
+await test('W9 the partial states: one group, a group whose neighbours are not built, and no data; every producers door on every screen lands, every deck and round it offers deals, the counts are true, and with no data no door at all', () => {
+  const saved = JSON.stringify(data);
+  const bad = [];
+  const screens = () => {
+    const out = [];
+    run("state.tab = 'casks'; caskOpen('')"); out.push(['the Atlas home', g('renderCasks')()]);
+    run("caskHouseOpen('', '')"); out.push(['the root', g('renderCasks')()]);
+    for (const x of plain(g('caskHouseGroups')())) {
+      run('caskHouseOpen(' + JSON.stringify(x.key) + ", '')"); out.push(['the group ' + x.key, g('renderCasks')()]);
+      for (const k of x.houses) { run('caskHouseOpen(' + JSON.stringify(x.key) + ', ' + JSON.stringify(k) + ')'); out.push(['the house ' + k, g('renderCasks')()]); }
+    }
+    for (const c of CHAPTERS) out.push(['the chapter ' + c.id, g('caskChapterHTML')(g('caskChapter')(c.id))]);
+    for (const st of STYLES) out.push(['the style ' + st.id, g('caskStylePageHTML')(g('caskStyleEntry')(st.id))]);
+    for (const b of BOTTLES) out.push(['the bottle ' + b.id, g('backbarDetailHTML')(g('backbarEntry')(b.id))]);
+    run("state.tab = 'producers'; state.prod.cat = 'All';");
+    LIBRARY.forEach((p, i) => { run('state.prod.open = ' + i); out.push(['the Library entry ' + p.name, g('renderProducers')()]); });
+    run('state.prod.open = null');
+    out.push(['the Practise rows', g('fcPickHTML')()]);
+    out.push(['the search index', plain(g('buildSearchIndex')()).map((r) => 'href="' + r.h + '"').join(' ')]);
+    return out;
+  };
+  const offers = (list) => {
+    const found = [];
+    for (const [name, html] of list) {
+      for (const m of html.matchAll(/href="(#\/casks\/houses[^"]*)"/g)) found.push([name, 'link', m[1]]);
+      for (const m of html.matchAll(/data-deck="(caskhouses[^"]*)"/g)) found.push([name, 'deck', m[1]]);
+      for (const m of html.matchAll(/data-act="quiz-go" data-m="caskhouses"(?: data-group="([^"]+)")?/g)) found.push([name, 'quiz', m[1] || '']);
+    }
+    return found;
+  };
+  const sound = (state, list) => {
+    for (const [name, kind, what] of offers(list)) {
+      if (kind === 'link' && !lands(what)) bad.push(state + ', ' + name + ': ' + what + ' lands on ' + g('routeNow')().hash);
+      if (kind === 'deck') { const d = plain(g('deckDef')(what)); if (!d || (!d.preset.only.length && what !== 'caskhouses:again')) bad.push(state + ', ' + name + ': the deck ' + what + ' deals nothing'); }
+      if (kind === 'quiz') { run('caskState().houseQuiz = ' + JSON.stringify(what)); if (!plain(g('caskHouseQuizRound')()).length) bad.push(state + ', ' + name + ': the quiz ' + (what || 'of every group') + ' deals nothing'); run("caskState().houseQuiz = ''"); }
+    }
+  };
+  const counts = (state) => {
+    const n = g('caskHouseGroups')().length, hs = g('caskHouseRecords')().length;
+    run("caskHouseOpen('', '')");
+    const root = strip(g('renderCasks')());
+    if (!root.includes(n + ' of ' + plan.groups.length + ' groups · ' + hs + ' house' + (hs === 1 ? '' : 's'))) bad.push(state + ': the root does not count ' + n + ' groups and ' + hs + ' houses');
+    if (!root.includes('Still being written: ' + n + ' of ' + plan.groups.length + ' groups ' + (n === 1 ? 'is' : 'are') + ' here so far.')) bad.push(state + ': the root’s partial line is not ' + n + ' of ' + plan.groups.length + ' in its number');
+  };
+  const keepOnly = (key) => run('(function(k){ var x = CASK_HOUSES; x.groups = x.groups.filter(function(y){ return y.key === k; }); var hs = x.groups.length ? x.groups[0].houses : []; x.houses = x.houses.filter(function(h){ return hs.indexOf(h.key) >= 0; }); })(' + JSON.stringify(key) + ')');
+  try {
+    keepOnly(groups[0].key);
+    sound('one group (' + groups[0].key + ')', screens()); counts('one group');
+    run('CASK_HOUSES = ' + saved);
+    const lone = groups.slice().reverse().find((x) => x.style && STYLES.some((st) => st.id === x.style)) || groups[groups.length - 1];
+    keepOnly(lone.key);
+    const list = screens();
+    sound('only ' + lone.key, list); counts('only ' + lone.key);
+    for (const st of STYLES) if (st.id !== lone.style && /caskstyle-producers/.test((list.find((x) => x[0] === 'the style ' + st.id) || ['', ''])[1])) bad.push('only ' + lone.key + ': the style ' + st.id + ' draws Five producers with no group built');
+    run('CASK_HOUSES = undefined');
+    const none = screens();
+    offers(none).forEach(([name, kind, what]) => bad.push('no data, ' + name + ': still offers the ' + kind + ' ' + (what || 'caskhouses')));
+    run("caskHouseOpen('', '')");
+    const root = strip(g('renderCasks')());
+    if (!/opens once the houses are here/.test(root) || /\d+ groups? ·/.test(root)) bad.push('no data: the root does not say plainly that nothing is here yet');
+    if (g('caskDaily')().some((r) => r.house)) bad.push('no data: Today’s cask study deals a house card');
+  } finally {
+    run('CASK_HOUSES = ' + saved + "; state.tab = 'home'; caskState().houseQuiz = '';");
+  }
+  eq(bad, []);
+});
+
 /* ---- the release: a whole, refuted roster under frozen keys ---------------------------- */
 if (RELEASE) {
   const K = readJSON(KEYS_FILE);
@@ -941,6 +1012,8 @@ async function mutations() {
     ['a price word in a page string written as a template', 'js/ui-caskhouses.js', "'</ul><p class=\"cask-muted\">Reading the sources needs a connection.</p></details>'", "`</ul><p class=\"cask-muted\">Reading the sources needs a connection, at no cost.</p></details>`", 'D3 the voice'],
     ['a price word the literals cannot see, on the Atlas home', 'js/ui-caskhouses.js', "'<p>Five houses for each style, each with", "'<p>Five houses for each style, at every pri' + 'ce, each with", 'D4 every page'],
     ['a chapter named houses, shadowed by the producers', 'js/data-casks.js', '    "id": "tasting",\n', '    "id": "houses",\n', 'W3 no name shadows another'],
+    ['the Practise rows drawn with no house here', 'js/ui-nav.js', "if(typeof caskHouseDeckDef === 'function' && typeof caskHouseCards === 'function' && caskHouseCards().length) house +=", "if(typeof caskHouseDeckDef === 'function') house +=", 'W9 the partial states'],
+    ['the root saying 1 of 32 groups are here', 'js/ui-caskhouses.js', "' groups ' + (groups.length === 1 ? 'is' : 'are') + ' here so far.", "' groups are here so far.", 'W9 the partial states'],
     ['the search index losing the houses', 'js/ui-new.js', "  if(typeof caskHouseSearchEntries === 'function') ix.push(...caskHouseSearchEntries());\n", '', 'W8 the Practise rows'],
   ];
   let held = 0;

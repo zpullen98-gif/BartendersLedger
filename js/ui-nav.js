@@ -481,8 +481,9 @@ function fcPickHTML(){
   if(typeof caskDoorHTML === 'function') house += caskDoorHTML();
   /* At the table: every style (js/ui-caskstyles.js): its deck, its misses and its quiz, apart from the levels */
   if(typeof caskStyleDeckDef === 'function') house += rowsNav('Every style at the table', [deckRow('caskstyles'), deckRow('caskstyles:again'), quizRow('caskstyles', 'The style quiz', typeof caskStyleQuizLine === 'function' ? caskStyleQuizLine() : '')]);
-  /* Producers and flagships (js/ui-caskhouses.js): its deck, its misses and its quiz, apart from the levels */
-  if(typeof caskHouseDeckDef === 'function') house += rowsNav('Producers and flagships', [deckRow('caskhouses'), deckRow('caskhouses:again'), quizRow('caskhouses', 'The producers quiz', typeof caskHouseQuizLine === 'function' ? caskHouseQuizLine() : '')]);
+  /* Producers and flagships (js/ui-caskhouses.js): its deck, its misses and its quiz, apart from the levels,
+     drawn only once a house is here, so no row opens an empty deck or a round of nothing */
+  if(typeof caskHouseDeckDef === 'function' && typeof caskHouseCards === 'function' && caskHouseCards().length) house += rowsNav('Producers and flagships', [deckRow('caskhouses'), deckRow('caskhouses:again'), quizRow('caskhouses', 'The producers quiz', typeof caskHouseQuizLine === 'function' ? caskHouseQuizLine() : '')]);
   /* the level's subjects, or every level's, then one row to the level's rounds */
   const L = lv ? levelInfo(lv).name : 'Every level';
   const books = levelBooks(lv || 0).map(function(b){

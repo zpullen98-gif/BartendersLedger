@@ -259,7 +259,7 @@ function caskHouseResultsHTML(){
 function caskHouseRootHTML(){
   const m = caskHouseMeta(), groups = caskHouseGroups();
   const partial = m.roster && Number(m.roster.groups) > groups.length
-    ? '<p class="cask-muted caskhouse-partial">Still being written: ' + groups.length + ' of ' + Number(m.roster.groups) + ' groups are here so far.</p>' : '';
+    ? '<p class="cask-muted caskhouse-partial">Still being written: ' + groups.length + ' of ' + Number(m.roster.groups) + ' groups ' + (groups.length === 1 ? 'is' : 'are') + ' here so far.</p>' : '';
   const unread = Number(m.unrefuted) > 0 ? '<p class="cask-muted caskhouse-partial">Some of these records are a first draft that no second reader has checked yet.</p>' : '';
   const fams = caskHouseFamilies().map(function(f, i){
     const list = caskHouseGroupsOfFamily(f);
@@ -269,7 +269,7 @@ function caskHouseRootHTML(){
   }).join('');
   return '<article class="cask-atlas caskhouse-page caskhouse-root"><header class="caskhouse-heading"><p class="eyebrow">The Cask Atlas \u00b7 Whisky &amp; Brandy</p><h2 tabindex="-1">Producers and flagships</h2>'
     + '<p>For every style, the five houses to know and the one bottling a guest means by each: the label, how to say it, the flagship in depth, the story and the traps.</p>'
-    + '<p class="cask-muted">' + esc(caskHouseCountsLine()) + '</p>' + partial + unread + '</header>'
+    + (groups.length ? '<p class="cask-muted">' + esc(caskHouseCountsLine()) + '</p>' : '') + partial + unread + '</header>'
     + (groups.length ? '<section class="caskhouse-panel" aria-labelledby="caskhouse-p-study"><h3 id="caskhouse-p-study">Study</h3>'
       + '<p class="cask-muted">Two recall cards and two questions a house. They keep their own record: they change no level and no Due today.</p>' + caskHouseStudyHTML('') + '</section>'
       + '<section class="caskhouse-panel caskhouse-search" aria-labelledby="caskhouse-p-search"><h3 id="caskhouse-p-search">Find a label</h3>'
