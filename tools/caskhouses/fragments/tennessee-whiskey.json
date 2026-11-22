@@ -35,7 +35,7 @@
     ]
    },
    "table": "Jack Daniel's Old No. 7 is the Tennessee whiskey from Lynchburg, dripped through ten feet of sugar maple charcoal before it goes into new charred oak. It pours at 80 proof with caramel, vanilla and a light spice, neat, over ice or long with cola.",
-   "story": "The house dates its distillery to 1866 and prints that year on its label; a biographer's reading of the land and deed records points to 1875, and the question stays open. Jasper Newton Daniel, known as Jack (died 1911), learnt to make whiskey as a boy on the farm of Dan Call, a preacher and distiller near Lynchburg, from Nathan Green, called Nearest, an enslaved man born about 1820 who later worked for Jack as his head distiller. The distillery has since named Green its first master distiller. Jack had no children, and in 1907 he handed the business to his nephew Lem Motlow (1869 to 1947) and another relative. Prohibition, first the state's and then the nation's, stopped distilling in Lynchburg; Motlow worked for repeal, and the stills ran again from 1938. Brown-Forman bought the distillery in 1956. Old No. 7 was bottled at 90 proof after Prohibition, at 86 from 1987 and later at 80. Where the name came from nobody knows, by the house's own account, and several stories are told. For a bartender it is the bottle that teaches the style: the charcoal before the barrel is why the house calls it Tennessee whiskey and not bourbon.",
+   "story": "The house dates its distillery to 1866 and prints that year on its label; a biographer's reading of the land and deed records points to 1875, and the question stays open. Jasper Newton Daniel, known as Jack (died 1911), learnt to make whiskey as a boy on the farm of Dan Call, a preacher and distiller near Lynchburg, from Nathan Green, called Nearest, an enslaved man born about 1820 who later worked for Jack as his head distiller. The distillery has since named Green its first master distiller. Jack had no children, and in 1907 he handed the business to his nephew Lem Motlow (1869 to 1947) and another relative. Prohibition, first the state's and then the nation's, stopped distilling in Lynchburg; Motlow worked for repeal, and the stills ran again from 1938. Brown-Forman bought the distillery in 1956. Old No. 7 was bottled at 90 proof after Prohibition, at 86 from 1987 and later at 80. Where the name came from nobody knows, by the house's own account, and several stories are told. Learn the style from this bottle first: the charcoal before the barrel is why the house calls it Tennessee whiskey and not bourbon.",
    "others": [
     {
      "name": "Gentleman Jack",
@@ -167,14 +167,14 @@
    "year": "1964",
    "yearIs": "first released",
    "bottle": {
-    "name": "George Dickel Signature Recipe Tennessee Whisky, formerly No. 12",
+    "name": "George Dickel Signature Recipe Tennessee Whisky",
     "class": "Tennessee whisky, spelt on the label without the e",
     "mash": "Widely given as 84 per cent corn, 8 per cent rye and 8 per cent malted barley, the figures the house prints for its Classic Recipe from the same mash.",
     "still": "Distilled at Cascade Hollow. The new spirit is chilled to 40 degrees Fahrenheit, then left to fill vats of sugar maple charcoal rather than trickle through them, before it goes into the barrel.",
     "wood": "New charred oak barrels; the label carries no age statement.",
     "strength": "45% ABV (90 proof)",
     "taste": "Vanilla, sweet corn and brown sugar, a little cherry, then charred oak and a trace of maple on a gentle finish.",
-    "pour": "Neat or over one large cube; it stands in an Old Fashioned, a Whiskey Sour or a highball with ginger ale.",
+    "pour": "Neat, or with ice; it stands in an Old Fashioned, a Whiskey Sour or a highball with ginger ale.",
     "label": [
      {
       "term": "Signature Recipe",
@@ -186,8 +186,8 @@
      }
     ]
    },
-   "table": "George Dickel Signature Recipe, the bottling long sold as George Dickel No. 12, is the Tennessee whisky from Cascade Hollow, chilled before it meets the maple charcoal. At 90 proof it gives vanilla, sweet corn and brown sugar, and its label spells whisky without the e.",
-   "story": "George A. Dickel (died 1894) and his firm sold the whisky of the Cascade distillery in Cascade Hollow, near Tullahoma, which others founded in the late 1870s; the house's own story has Dickel distilling there from 1870, a date historians find no record of. In 1888 a partner in the firm bought a share of the distillery, and the firm became its sole distributor. Tennessee's prohibition closed the hollow. In 1937 Schenley bought the rights to the Cascade name, and in 1958, once the voters of Coffee County allowed it, the company sent a distiller to build a new distillery in the hollow. Its first mash ran in July 1959, and George Dickel Tennessee Whisky was first bottled in 1964. The house spells whisky without the e and has done so from the start: by its own account George Dickel meant it to stand beside Scotch. It chills the new spirit before the charcoal, since, as the story goes, George Dickel found whisky made in winter tasted mellower, and it lets the cold spirit fill the charcoal vats rather than drip through them. The numbered bottlings were later renamed, No. 12 becoming Signature Recipe. For a bartender the bottle is the contrast to Jack Daniel's: the same state and the same law, a different way with the charcoal.",
+   "table": "Chilled before it meets the maple charcoal, George Dickel Signature Recipe, the bottling long sold as George Dickel No. 12, is the Tennessee whisky of Cascade Hollow. At 90 proof it gives vanilla, sweet corn and brown sugar, and its label spells whisky without the e.",
+   "story": "George A. Dickel (died 1894) and his firm sold the whisky of the Cascade distillery in Cascade Hollow, near Tullahoma, which others founded in the late 1870s; the house's own story has Dickel distilling there from 1870, a date historians find no record of. In 1888 a partner in the firm bought a share of the distillery, and the firm became its sole distributor. Tennessee's prohibition closed the hollow. In 1937 Schenley bought the rights to the Cascade name, and in 1958, once the voters of Coffee County allowed it, the company sent a distiller to build a new distillery in the hollow. Its first mash ran in July 1959, and George Dickel Tennessee Whisky was first bottled in 1964. The house spells whisky without the e and has done so from the start: by its own account George Dickel meant it to stand beside Scotch. It chills the new spirit before the charcoal, since, as the story goes, George Dickel found whisky made in winter tasted mellower, and it lets the cold spirit fill the charcoal vats rather than drip through them. The numbered bottlings were later renamed, No. 12 becoming Signature Recipe. Set against Jack Daniel's it makes the contrast plain: the same state and the same law, a different way with the charcoal.",
    "others": [
     {
      "name": "George Dickel Classic Recipe",
@@ -339,8 +339,8 @@
      }
     ]
    },
-   "table": "Uncle Nearest 1856 is a 100 proof Tennessee whiskey from Shelbyville, named for Nathan Green, the enslaved man who taught Jack Daniel to distil. It runs through sugar maple charcoal before the barrel and pours with spiced caramel, maple and dried fruit.",
-   "story": "The label honours Nathan Green, called Nearest, born about 1820, an enslaved man hired out to Dan Call, a preacher, grocer and distiller near Lynchburg. Green taught the young Jack Daniel to make whiskey and later worked for him as head distiller, and the Jack Daniel distillery has since named him its first master distiller. Uncle Nearest 1856 went on sale in July 2017, by the brand's own launch notice, and the 1856 of its name is the year the brand dates itself back to, from its own research rather than settled record. Its early bottlings were sourced whiskey, made at other Tennessee distilleries and passed through the Lincoln County Process before ageing. In 2017 Bedford County approved the use of the old Sand Creek Farms at Shelbyville for the brand's home, and the Nearest Green Distillery opened there in stages from 2019. Two trade accounts date the 1856's move to whiskey the brand made itself to 2022. For a bartender the bottle carries the story a guest at a Tennessee whiskey shelf should hear: whiskey making in Lynchburg was taught by an enslaved man, and his name is on this label.",
+   "table": "Uncle Nearest 1856, a 100 proof Tennessee whiskey from Shelbyville, takes its name from Nathan Green, the enslaved man who taught Jack Daniel to distil. It meets sugar maple charcoal before the barrel, and spiced caramel, maple and dried fruit fill the glass.",
+   "story": "Nathan Green, called Nearest, born about 1820, was an enslaved man hired out to Dan Call, a preacher, grocer and distiller near Lynchburg. Green taught the young Jack Daniel to make whiskey and later worked for him as head distiller, and the Jack Daniel distillery has since named him its first master distiller. Uncle Nearest 1856 went on sale in July 2017, by the brand's own launch notice, and the 1856 of its name is the year the brand dates itself back to, from its own research rather than settled record. Its early bottlings were sourced whiskey, made at other Tennessee distilleries and passed through the Lincoln County Process before ageing. In 2017 Bedford County approved the use of the old Sand Creek Farms at Shelbyville for the brand's home, and the Nearest Green Distillery opened there in stages from 2019. Two trade accounts date the 1856's move to whiskey the brand made itself to 2022. Here is the story a guest at a Tennessee whiskey shelf should hear: whiskey making in Lynchburg was taught by an enslaved man, and his name is on this label.",
    "others": [
     {
      "name": "Uncle Nearest 1884",
@@ -395,7 +395,7 @@
       "Charles Nelson"
      ],
      "a": 0,
-     "explain": "Nathan Green, called Nearest, taught Jack Daniel to distil; Lem Motlow was Jack's nephew, who took over the distillery in 1907."
+     "explain": "Nathan Green, called Nearest, taught Jack Daniel to distil; Lem Motlow was the nephew to whom Jack handed the business in 1907."
     }
    ],
    "sources": [
@@ -488,8 +488,8 @@
      }
     ]
    },
-   "table": "Nelson's Green Brier Tennessee Whiskey is wheated Tennessee whiskey from Nashville, made to the recipe of a family distillery that prohibition closed in 1909. It runs through sugar maple charcoal, is bottled at 91 proof for the year its founder died, and pours with caramel, vanilla and nutmeg.",
-   "story": "Charles Nelson (died 1891) ran the Green Brier distillery at Greenbrier, in Robertson County, north of Nashville, in the decades after the Civil War. After his death in December 1891 his widow ran the business until Tennessee adopted statewide prohibition in 1909 and the distillery closed its doors. The brand did not come back when national Prohibition ended. More than a century later two brothers, descendants of Charles Nelson, revived the name in Nashville. Their distillery in Marathon Village filled its first barrel of Tennessee whiskey on 16 August 2014 and opened to visitors that November. In 2017 the house released First 108, a whiskey of its own make, at the distillery. The flagship Tennessee whiskey followed, bottled at 91 proof, a nod to the year Charles Nelson died. It is wheated, as the family recipe was, and it passes through sugar maple charcoal before ageing. For a bartender it is a wheated Tennessee whiskey and a lesson in how prohibition broke the state's distilling for a generation.",
+   "table": "Wheat takes the place of rye in Nelson's Green Brier Tennessee Whiskey, made in Nashville to the recipe of a family distillery that prohibition closed in 1909. It passes through sugar maple charcoal, its 91 proof marks the year Charles Nelson died, and it gives caramel, vanilla and cinnamon.",
+   "story": "At Greenbrier, in Robertson County, north of Nashville, Charles Nelson (died 1891) ran the Green Brier distillery in the decades after the Civil War. After his death in December 1891 his widow ran the business until Tennessee adopted statewide prohibition in 1909 and the distillery closed its doors. The brand did not come back when national Prohibition ended. More than a century later two brothers, descendants of Charles Nelson, revived the name in Nashville. Their distillery in Marathon Village filled its first barrel of Tennessee whiskey on 16 August 2014 and opened to visitors that November. In 2017 the house released First 108, a whiskey of its own make, at the distillery. The flagship Tennessee whiskey followed, bottled at 91 proof, a nod to the year Charles Nelson died. It is wheated, as the family recipe was, and it passes through sugar maple charcoal before ageing. The bottle teaches twice: it is a wheated Tennessee whiskey, and a lesson in how prohibition broke the state's distilling for a generation.",
    "others": [
     {
      "name": "Nelson's First 108",
@@ -628,7 +628,7 @@
     "wood": "Charred white oak barrels of 15 to 53 gallons, by the house's account; the house states no age.",
     "strength": "40% ABV (80 proof)",
     "taste": "Caramel, cinnamon and oak on the nose, then sweet caramel corn, soft cinnamon and black pepper, with a medium, slightly dry finish.",
-    "pour": "Neat or over one large cube; it suits a Whiskey Sour or a highball with ginger ale.",
+    "pour": "Neat, or long in a highball with ginger ale; it also suits a Whiskey Sour.",
     "label": [
      {
       "term": "Tennessee Whiskey",
@@ -640,8 +640,8 @@
      }
     ]
    },
-   "table": "Benjamin Prichard's Tennessee Whiskey comes from an old schoolhouse in Kelso, made from white corn in copper pot stills. It is the Tennessee whiskey the state's law of 2013 frees from the maple charcoal step, and it pours with sweet corn, caramel and cinnamon.",
-   "story": "The founder set up Prichard's Distillery in 1997, by the house's own account, and its home is a former schoolhouse at Kelso, in Lincoln County; the house dates the opening of the distillery there to 1999, while other accounts give 1997. The label carries the name of a forebear who, by the family's account, made whiskey in Davidson County from white corn and spring water in pot stills, and whose will of 1822 left his still and its tubs to a son. The house made its Tennessee whiskey in copper pot stills and without the maple charcoal step that Jack Daniel's and George Dickel use. In May 2014 it opened a second distillery in Nashville, on the grounds of the Fontanel Mansion. When Tennessee wrote its definition of Tennessee whiskey into law in 2013, requiring the maple charcoal before ageing, the law carried an exception drawn by county and date, framed for one distillery, Prichard's; in 2015 the state's attorney general gave the opinion, which binds no court, that the exception was likely unconstitutional. For a bartender the bottle is the exception that teaches the rule: pour it beside Jack Daniel's Old No. 7 and a guest tastes what the charcoal does.",
+   "table": "Benjamin Prichard's Tennessee Whiskey comes from an old schoolhouse in Kelso, made from white corn in copper pot stills. It is the Tennessee whiskey the state's law of 2013 frees from the maple charcoal step, and it tastes of sweet corn, cinnamon and caramel.",
+   "story": "The founder set up Prichard's Distillery in 1997, by the house's own account, and its home is a former schoolhouse at Kelso, in Lincoln County; the house dates the opening of the distillery there to 1999, while other accounts give 1997. The label carries the name of a forebear who, by the family's account, made whiskey in Davidson County from white corn and spring water in pot stills, and whose will of 1822 left his still and its tubs to a son. The house made its Tennessee whiskey in copper pot stills and without the maple charcoal step that Jack Daniel's and George Dickel use. In May 2014 it opened a second distillery in Nashville, on the grounds of the Fontanel Mansion. When Tennessee wrote its definition of Tennessee whiskey into law in 2013, requiring the maple charcoal before ageing, the law carried an exception drawn by county and date, framed for one distillery, Prichard's; in 2015 the state's attorney general gave the opinion, which binds no court, that the exception was likely unconstitutional. It is the exception that teaches the rule: poured beside Jack Daniel's Old No. 7, it lets a guest taste what the charcoal does.",
    "others": [
     {
      "name": "Benjamin Prichard's Double Barreled Bourbon",

@@ -22,7 +22,7 @@
     "wood": "New charred American oak, in Heaven Hill's warehouses. The bond asks at least four years, and the house describes it as aged four years or more.",
     "strength": "50% ABV (100 proof)",
     "taste": "Dried fruit, toffee and sweet pepper on the nose, then cocoa, citrus, cinnamon, nutmeg and vanilla, with a long spice on the finish that the house likens to maple.",
-    "pour": "Neat or over one large cube, but above all a stirring rye: at 100 proof it holds its spice in a Manhattan, a Sazerac or a Vieux Carré.",
+    "pour": "Neat if asked, but above all a stirring rye: at 100 proof it holds its spice in a Manhattan, a Sazerac or a Vieux Carré.",
     "label": [
      {
       "term": "Bottled-in-Bond",
@@ -38,8 +38,8 @@
      }
     ]
    },
-   "table": "Rittenhouse is the bonded rye Heaven Hill makes in Kentucky from a mash of just 51 per cent rye. Its Straight Rye Whisky Bottled in Bond is at least four years old and 100 proof, with cocoa, cinnamon and dried fruit that hold up in a Manhattan.",
-   "story": "Rittenhouse began in Philadelphia in 1934, the year after Prohibition ended, when the Continental Distilling Corporation brought out Rittenhouse Square Straight Rye, named, as Heaven Hill tells it, for the city's Rittenhouse Square. Rye had long been the whiskey of Pennsylvania and Maryland, and the label was made to win drinkers back to it. In 1948 Continental dropped Square from the name and remade the whiskey as a four year old bottled in bond. As rye faded behind bourbon, Rittenhouse lived on as a regional label, and in 1993, by Heaven Hill's own history, the Bardstown house took the brand over and made it in Kentucky, to a recipe of 51 per cent rye. Fire destroyed Heaven Hill's Bardstown distillery in 1996; neighbouring distillers made its whiskey under contract until it bought the Bernheim Distillery in Louisville in 1999. By the house's account Rittenhouse was for a time the one bonded rye on the market, and as bartenders went back to the classic rye drinks it became the bottle many of them reached for. Behind a bar it is the working rye of the stirred drink: bonded, 100 proof, and steady in a Manhattan.",
+   "table": "Rittenhouse is the bonded rye Heaven Hill makes in Kentucky from a mash of just 51 per cent rye. Its Straight Rye Whisky Bottled in Bond is at least four years old and 100 proof, and its cocoa, cinnamon and dried fruit carry through a Manhattan.",
+   "story": "Rittenhouse began in Philadelphia in 1934, the year after Prohibition ended, when the Continental Distilling Corporation brought out Rittenhouse Square Straight Rye, named, as Heaven Hill tells it, for the city's Rittenhouse Square. Rye had long been the whiskey of Pennsylvania and Maryland, and the label was made to win drinkers back to it. In 1948 Continental dropped Square from the name and remade the whiskey as a four year old bottled in bond. As rye faded behind bourbon, Rittenhouse lived on as a regional label, and in 1993, by Heaven Hill's own history, the Bardstown house took the brand over and made it in Kentucky, to a recipe of 51 per cent rye. Fire destroyed Heaven Hill's Bardstown distillery in 1996; neighbouring distillers made its whiskey under contract until it bought the Bernheim Distillery in Louisville in 1999. By the house's account Rittenhouse was for a time the one bonded rye on the market, and as bartenders went back to the classic rye drinks it became the bottle many of them reached for. On the rail it earns its place in the stirred drink: bonded, 100 proof, and steady in a Manhattan.",
    "others": [
     {
      "name": "Rittenhouse United States 250th Anniversary Commemorative Edition",
@@ -187,8 +187,8 @@
      }
     ]
    },
-   "table": "Sazerac Rye is the straight rye made at Buffalo Trace in Frankfort and named for the New Orleans cocktail it belongs in. At 90 proof, with clove, vanilla and anise over rye pepper, it is the rye to reach for when a guest asks for a Sazerac.",
-   "story": "The name goes back to New Orleans, where, by the Sazerac Company's account, a coffee house opened in the French Quarter around 1850 and came to be called the Sazerac Coffee House, after Sazerac de Forge et Fils, a French brandy it imported. Its house cocktail was made with that brandy and Peychaud's Bitters. Thomas H. Handy, who had clerked there, bought the house in 1869 with fellow employees, and his firm grew into the Sazerac Company. As phylloxera ruined the vineyards of France, the story goes, the cocktail turned from brandy to American rye; some historians hold that rye was in it from the start. The company bought the Frankfort distillery in 1992 and renamed it Buffalo Trace in 1999, and in 2006 it launched Sazerac Rye in a bottle modelled on the house's packaging of the 1880s. In 2008 Louisiana named the Sazerac the official cocktail of New Orleans, and in 2025 the distillery set a 100 proof and a 125 proof version beside the 90. For a bartender it is the rye that shares its name with the drink, and the plain answer when a guest asks what goes in a Sazerac.",
+   "table": "Buffalo Trace in Frankfort makes Sazerac Rye, a straight rye named for the New Orleans cocktail it belongs in. At 90 proof, with clove, vanilla and anise over rye pepper, it is the rye to reach for when a guest asks for a Sazerac.",
+   "story": "The name goes back to New Orleans, where, by the Sazerac Company's account, a coffee house opened in the French Quarter around 1850 and came to be called the Sazerac Coffee House, after Sazerac de Forge et Fils, a French brandy it imported. Its house cocktail was made with that brandy and Peychaud's Bitters. Thomas H. Handy, who had clerked there, bought the house in 1869 with fellow employees, and his firm grew into the Sazerac Company. As phylloxera ruined the vineyards of France, the story goes, the cocktail turned from brandy to American rye; some historians hold that rye was in it from the start. The company bought the Frankfort distillery in 1992 and renamed it Buffalo Trace in 1999, and in 2006 it launched Sazerac Rye in a bottle modelled on the house's packaging of the 1880s. In 2008 Louisiana named the Sazerac the official cocktail of New Orleans, and in 2025 the distillery set a 100 proof and a 125 proof version beside the 90. Sharing its name with the drink, it is the plain answer when a guest asks what goes in a Sazerac.",
    "others": [
     {
      "name": "Sazerac Rye 100 Proof",
@@ -344,8 +344,8 @@
      }
     ]
    },
-   "table": "Thomas H. Handy Sazerac Straight Rye is the uncut rye of Buffalo Trace's yearly Antique Collection, the recipe of Sazerac Rye at full barrel strength. Each release carries its own proof on the label, and from 2026 every barrel is at least twelve years old.",
-   "story": "The name is that of Thomas H. Handy (1839 to 1893, as the Sazerac Company gives his dates), who went to work as a clerk at the Sazerac House in New Orleans. In 1869, by the company's account, he and several fellow employees of his firm, Thos. H. Handy & Co., bought the house, and the Sazerac Company grew from that firm. By the company's telling it was in his time that the Sazerac cocktail came to be made with American rye in place of French brandy, as phylloxera ruined the vineyards of France. More than a century later the company's Frankfort distillery, Buffalo Trace since 1999, began its Antique Collection in 2000, and Thomas H. Handy joined it in 2006 as the rye bottled straight from the barrel, uncut and unfiltered, beside the 18 year old Sazerac. For its first twenty years the barrels were mostly around six years old; with the release of 2026 the distillery set a floor of twelve years for every barrel. For a bartender it is the Sazerac rye at full strength: read the proof off the label, and pour it with water at hand.",
+   "table": "The uncut rye of Buffalo Trace's yearly Antique Collection, Thomas H. Handy Sazerac Straight Rye is the recipe of Sazerac Rye at full barrel strength. Each release carries its own proof on the label, and from 2026 every barrel is at least twelve years old.",
+   "story": "Thomas H. Handy (1839 to 1893, as the Sazerac Company gives his dates) went to work as a clerk at the Sazerac House in New Orleans. In 1869, by the company's account, he and several fellow employees of his firm, Thos. H. Handy & Co., bought the house, and the Sazerac Company grew from that firm. By the company's telling it was in his time that the Sazerac cocktail came to be made with American rye in place of French brandy, as phylloxera ruined the vineyards of France. More than a century later the company's Frankfort distillery, Buffalo Trace since 1999, began its Antique Collection in 2000, and Thomas H. Handy joined it in 2006 as the rye bottled straight from the barrel, uncut and unfiltered, beside the 18 year old Sazerac. For its first twenty years the barrels were mostly around six years old; with the release of 2026 the distillery set a floor of twelve years for every barrel. Treat it as the Sazerac rye at full strength: read the proof off the label, and pour it with water at hand.",
    "others": [
     {
      "name": "Sazerac Rye",
@@ -358,7 +358,7 @@
    ],
    "traps": [
     "Its proof changes with each release and runs high: read it off tonight's label rather than quote a figure.",
-    "It is not Sazerac Rye: one recipe, but Handy is bottled uncut at barrel proof, and Sazerac Rye at 90.",
+    "Do not pour it as Sazerac Rye: the recipe is shared, but Sazerac Rye is cut to 90 proof and Handy goes into the bottle uncut.",
     "Its age changed with the release of 2026: twelve years and more, where earlier releases were around six."
    ],
    "cards": [
@@ -480,7 +480,7 @@
     "wood": "New charred American oak, with an age statement of six years: the barrels were chosen at that age or more.",
     "strength": "55% ABV (110 proof)",
     "taste": "Dusty cocoa and a little oaky smoke on the nose, then a dry, spicy palate of honeyed rye and clove, ending soft, with vanilla and baking spice.",
-    "pour": "Neat, with a few drops of water or over one large cube; at 110 proof it also makes a firm Manhattan or Sazerac.",
+    "pour": "Neat with a few drops of water, or over ice; at 110 proof it also makes a firm Manhattan or Sazerac.",
     "label": [
      {
       "term": "Aged 6 Years",
@@ -496,8 +496,8 @@
      }
     ]
    },
-   "table": "Pikesville is a Maryland rye name from 1895 that Heaven Hill has made in Kentucky since 1982. Its Straight Rye Whiskey 110 Proof is six years old: cocoa, clove and honeyed rye, strong enough to sip with a drop of water or to stir into a firm Manhattan.",
-   "story": "The name is that of Pikesville, a town outside Baltimore, and by Heaven Hill's account the rye was first made in Maryland in 1895, when Maryland, like Pennsylvania, was rye country. Prohibition all but ended Maryland's rye trade. Pikesville came back after Repeal and, as Heaven Hill tells it, held on as the last Maryland rye standing. In 1982 Heaven Hill of Bardstown bought the brand, and once distilling in Maryland had ended it made the whiskey in Kentucky. For more than thirty years Pikesville lived on mostly in Maryland, as a young rye at 80 proof. In 2015 Heaven Hill relaunched it as a six year old straight rye at 110 proof, distilled at its Bernheim Distillery in Louisville and aged at Bardstown, and the young rye went on, on Maryland shelves, as Pikesville Supreme. The house's rye recipe also makes Rittenhouse, so the two can be poured side by side to show what the extra years and ten more proof do. For a bartender it is the bridge between two rye traditions: a Maryland name with Kentucky whiskey in the bottle.",
+   "table": "A Maryland rye name from 1895, Pikesville came to Heaven Hill in 1982 and is made in Kentucky. Its Straight Rye Whiskey 110 Proof is a six year old of cocoa, clove and honeyed rye, strong enough to sip with a drop of water.",
+   "story": "Pikesville is a town outside Baltimore, and by Heaven Hill's account the rye named for it was first made in Maryland in 1895, when Maryland, like Pennsylvania, was rye country. Prohibition all but ended Maryland's rye trade. Pikesville came back after Repeal and, as Heaven Hill tells it, held on as the last Maryland rye standing. In 1982 Heaven Hill of Bardstown bought the brand, and once distilling in Maryland had ended it made the whiskey in Kentucky. For more than thirty years Pikesville lived on mostly in Maryland, as a young rye at 80 proof. In 2015 Heaven Hill relaunched it as a six year old straight rye at 110 proof, distilled at its Bernheim Distillery in Louisville and aged at Bardstown, and the young rye went on, on Maryland shelves, as Pikesville Supreme. The house's rye recipe also makes Rittenhouse, so the two can be poured side by side to show what the extra years and ten more proof do. Two rye traditions meet in it: a Maryland name with Kentucky whiskey in the bottle.",
    "others": [
     {
      "name": "Pikesville Supreme",
@@ -505,7 +505,7 @@
     }
    ],
    "traps": [
-    "Pikesville is distilled in Kentucky, at Bernheim in Louisville: only the name is from Maryland.",
+    "Pikesville's whiskey is Kentucky's, distilled at Bernheim in Louisville; Maryland gave it the name.",
     "Pikesville Supreme, the 80 proof rye of Maryland shelves, is not the six year old at 110 proof.",
     "Heaven Hill's own pages give two mash bills; promise a guest the 51 per cent rye and no more."
    ],
@@ -639,8 +639,8 @@
      }
     ]
    },
-   "table": "Michter's is the Louisville house that carries the name of a Pennsylvania distillery, and its US*1 Single Barrel Kentucky Straight Rye is bottled one barrel at a time at 84.8 proof. Pepper, citrus and butterscotch make it a gentle rye for a guest who finds bonded ryes hot.",
-   "story": "Michter's traces its line to a distillery near Schaefferstown, Pennsylvania, where, by the brand's account, Swiss Mennonite farmers of the Shenk family began distilling rye in 1753. The site later passed to the Bomberger family, and in the 1950s an owner named its whiskey Michter's, joining the names of his two sons. In 1980 the old Bomberger's Distillery was made a National Historic Landmark. The business went bankrupt in 1989, the Pennsylvania distillery closed soon after, and the name was left to lapse. In the 1990s two men from the drinks trade bought the trademark and rebuilt Michter's in Kentucky, bottling at first whiskey bought from other distillers, then whiskey others distilled to its own specification. By its own account the house bought a building at Shively in Louisville in 2011, and in August 2015 it began filling barrels of its own whiskey there. The US*1 Rye, bottled one barrel at a time below the strength of the bonded ryes, became the rye guests ask for by the Michter's name. For a bartender it is the gentle side of Kentucky rye: single barrel, low in proof, and an easy first rye to pour.",
+   "table": "A Pennsylvania distillery's name lives on at Michter's in Louisville, whose US*1 Single Barrel Kentucky Straight Rye is bottled one barrel at a time at 84.8 proof. Pepper, citrus and butterscotch make it a gentle rye beside the bonded ones.",
+   "story": "Michter's traces its line to a distillery near Schaefferstown, Pennsylvania, where, by the brand's account, Swiss Mennonite farmers of the Shenk family began distilling rye in 1753. The site later passed to the Bomberger family, and in the 1950s an owner named its whiskey Michter's, joining the names of his two sons. In 1980 the old Bomberger's Distillery was made a National Historic Landmark. The business went bankrupt in 1989, the Pennsylvania distillery closed soon after, and the name was left to lapse. In the 1990s two men from the drinks trade bought the trademark and rebuilt Michter's in Kentucky, bottling at first whiskey bought from other distillers, then whiskey others distilled to its own specification. By its own account the house bought a building at Shively in Louisville in 2011, and in August 2015 it began filling barrels of its own whiskey there. The US*1 Rye, bottled one barrel at a time below the strength of the bonded ryes, became the rye guests ask for by the Michter's name. Kentucky rye shows its gentle side in this bottle: single barrel, low in proof, and an easy first rye for a guest new to the style.",
    "others": [
     {
      "name": "Michter's US*1 Barrel Strength Rye",
@@ -681,7 +681,7 @@
       "110 proof"
      ],
      "a": 0,
-     "explain": "It is bottled at 84.8 proof, 42.4% ABV; 100 proof is the strength of the bond, which Rittenhouse carries."
+     "explain": "It is bottled at 84.8 proof, 42.4% ABV; 100 proof is where the bonded ryes stand, Rittenhouse among them."
     },
     {
      "id": "q2",
