@@ -21,7 +21,7 @@
     "still": "Triple distilled in copper pot stills at Midleton Distillery in County Cork, where it is also casked and matured.",
     "wood": "Former bourbon barrels and sherry butts, married after at least twelve years; the label carries a 12 year age statement.",
     "strength": "40% ABV (80 proof)",
-    "taste": "Spice, fruit and sherry over toasted wood, as the house gives it, with dark dried fruit, figs and raisins from the sherry casks, on a full, creamy body and a long, lingering finish.",
+    "taste": "Spice, fruit and sherry over toasted wood, the house says, with dark dried fruit, figs and raisins from the sherry casks, on a full, creamy body and a long, lingering finish.",
     "pour": "Neat, with a jug of water beside it, or over one large cube. It makes a fuller Irish Coffee and a pot still Old Fashioned.",
     "label": [
      {
@@ -34,8 +34,8 @@
      }
     ]
    },
-   "table": "Redbreast 12 Year Old is single pot still Irish whiskey from Midleton in County Cork, malted and unmalted barley triple distilled in copper pot stills and aged in bourbon and sherry casks. It pours creamy and spicy, with dried fruit, and shows a guest what pot still means.",
-   "story": "The name began with W. and A. Gilbey, the Dublin wine and spirits merchants, who bottled pot still whiskey from the Jameson distillery on Bow Street under their own labels. By the house's account the first record of Redbreast is a Gilbey advertisement of August 1912 for a twelve year old J.J. Liqueur Whiskey, and the brand tells that the name came from a Gilbey chairman who watched birds: the robin redbreast. Jameson supplied the pot still until Bow Street closed in the summer of 1971, as the house tells it, and the making then moved to Cork. Jameson had by then joined Powers and the Cork Distilleries Company in 1966 to form Irish Distillers, which opened its new distillery at Midleton in County Cork in 1975. The last Gilbey bottling of Redbreast came in 1985, and in 1986 Gilbey agreed to sell the name to Irish Distillers. The brand came back in 1991 as a 12 year old made from Midleton pot still, matured in bourbon and sherry casks. For a bartender Redbreast 12 is the bottle to pour first when a guest asks what single pot still tastes like, and the measure every other pot still in this group is set beside.",
+   "table": "Malted and unmalted barley, triple distilled in copper pot stills at Midleton in County Cork, make Redbreast 12 Year Old, a single pot still Irish whiskey aged in bourbon and sherry casks. Creamy and spicy, with dried fruit, it is the glass that explains what pot still means.",
+   "story": "W. and A. Gilbey, the Dublin wine and spirits merchants, gave Redbreast its start, bottling pot still whiskey from the Jameson distillery on Bow Street under their own labels. By the house's account the first record of Redbreast is a Gilbey advertisement of August 1912 for a twelve year old J.J. Liqueur Whiskey, and the brand tells that the name came from a Gilbey chairman who watched birds: the robin redbreast. Jameson supplied the pot still until Bow Street closed in the summer of 1971, as the house tells it, and the making then moved to Cork. Jameson had by then joined Powers and the Cork Distilleries Company in 1966 to form Irish Distillers, which opened its new distillery at Midleton in County Cork in 1975. The last Gilbey bottling of Redbreast came in 1985, and in 1986 Gilbey agreed to sell the name to Irish Distillers. The brand came back in 1991 as a 12 year old made from Midleton pot still, matured in bourbon and sherry casks. When a guest asks what single pot still tastes like, Redbreast 12 is the bottle to open, and the measure every other pot still in this group is set beside.",
    "others": [
     {
      "name": "Redbreast 12 Year Old Cask Strength",
@@ -43,7 +43,7 @@
     }
    ],
    "traps": [
-    "There is no Redbreast distillery: it is made at Midleton in County Cork, beside Green Spot and Powers.",
+    "Redbreast has no distillery of its own: it is made at Midleton in County Cork, beside Green Spot and Powers.",
     "Until 1971 Redbreast was Jameson pot still from Bow Street, bottled by Gilbey; after Bow Street closed the spirit came from Cork, and the whiskey since 1991 is Midleton's.",
     "Single pot still is not single malt: unmalted barley stands in the mash beside the malted."
    ],
@@ -72,7 +72,7 @@
       "Madeira drums"
      ],
      "a": 0,
-     "explain": "Redbreast 12 matures in former bourbon barrels and sherry butts, and the sherry brings the dried fruit; port plays no part in this bottling."
+     "explain": "Redbreast 12 matures in former bourbon barrels and sherry butts, and the sherry brings the dried fruit; no port pipe is used for it."
     },
     {
      "id": "q2",
@@ -177,8 +177,8 @@
      }
     ]
    },
-   "table": "Green Spot is single pot still made at Midleton for Mitchell & Son, the Dublin wine merchants who named it for the daub of green paint that once marked their casks. It carries no age statement and pours bright and spicy, with green apple, clove and toasted oak.",
-   "story": "Mitchell & Son began in 1805 as a bakery and confectioner's shop at 10 Grafton Street in Dublin, and the family went on into wine and spirits. As bonders, the Mitchells sent the casks that had held their sherry to the Jameson distillery on Bow Street, had them filled with new pot still spirit and matured them in their own cellars. By the house's account each cask was marked with a daub of paint for the age it was meant to reach: blue for seven years, green for ten, yellow for twelve and red for fifteen. By the house's account the name Green Spot dates from 1925. Yellow Spot was last bottled in the late 1950s and Blue Spot in the 1960s, and Green Spot, by the house's account, never stopped. When Bow Street closed in 1971, Mitchell & Son agreed with Irish Distillers that the whiskey would be made and matured at Midleton. Yellow Spot came back in 2012, Red Spot in 2018 and Blue Spot in 2020. For a bartender Green Spot is the bonder's whiskey, the living trace of the days when Dublin merchants filled, aged and named the pot still they bought.",
+   "table": "Green Spot, the single pot still Midleton makes for Mitchell & Son, the Dublin wine merchants, takes its name from the daub of green paint that once marked their casks. No age is stated; it is bright and spicy, with green apple, clove and toasted oak.",
+   "story": "Mitchell & Son began in 1805 as a bakery and confectioner's shop at 10 Grafton Street in Dublin, and the family went on into wine and spirits. As bonders, the Mitchells sent the casks that had held their sherry to the Jameson distillery on Bow Street, had them filled with new pot still spirit and matured them in their own cellars. As the house tells it, each cask was marked with a daub of paint for the age it was meant to reach: blue for seven years, green for ten, yellow for twelve and red for fifteen. The house dates the name Green Spot to 1925. Yellow Spot was last bottled in the late 1950s and Blue Spot in the 1960s, and Green Spot, the house says, never stopped. When Bow Street closed in 1971, Mitchell & Son agreed with Irish Distillers that the whiskey would be made and matured at Midleton. Yellow Spot came back in 2012, Red Spot in 2018 and Blue Spot in 2020. What survives in Green Spot is the bonder's trade: Dublin merchants who filled, aged and named the pot still they bought.",
    "others": [
     {
      "name": "Yellow Spot",
@@ -333,8 +333,8 @@
      }
     ]
    },
-   "table": "Powers John's Lane Release is a twelve year old single pot still from Midleton, named for the old Powers distillery on John's Lane in Dublin. Bottled at 46% ABV without chill filtering, it pours oily and spicy, with leather, treacle toffee and dried apricot.",
-   "story": "As the house tells it, Powers began in 1791 with a Dublin innkeeper who did a little distilling on the side, and the sideline grew into a full distillery. By 1822 the business traded as John Power & Son, and its distillery stood on John's Lane, a side street off Thomas Street, and through the nineteenth century the pot still whiskey of John's Lane was among the Dublin whiskeys a drinker asked for by name. In 1966 John Power & Son joined John Jameson & Son and the Cork Distilleries Company to form Irish Distillers. The new group built a distillery at Midleton in County Cork, which opened in 1975, and the making of Powers moved there from Dublin; John's Lane closed within a year or so. The Powers name went on chiefly as Gold Label, the blend of pot still and grain whiskey that an Irish pub pours. John's Lane Release brought the old house's single pot still back under its own name, at twelve years and bottled stronger than the blend. For a bartender it is the spicier, oilier answer to Redbreast 12, poured beside it to show how far one style can range when two Midleton houses read it.",
+   "table": "The old Powers distillery on John's Lane in Dublin lends its name to Powers John's Lane Release, a twelve year old single pot still made at Midleton. Bottled at 46% ABV without chill filtering, it is oily and spicy, with leather, treacle toffee and dried apricot.",
+   "story": "Powers dates its beginning to 1791 and, as the house tells it, to a Dublin innkeeper who did a little distilling on the side, a sideline that grew into a full distillery. By 1822 the business traded as John Power & Son, and its distillery stood on John's Lane, a side street off Thomas Street, and through the nineteenth century the pot still whiskey of John's Lane was among the Dublin whiskeys a drinker asked for by name. In 1966 John Power & Son joined John Jameson & Son and the Cork Distilleries Company to form Irish Distillers. The new group built a distillery at Midleton in County Cork, which opened in 1975, and the making of Powers moved there from Dublin; John's Lane closed within a year or so. The Powers name went on chiefly as Gold Label, the blend of pot still and grain whiskey that an Irish pub pours. John's Lane Release brought the old house's single pot still back under its own name, at twelve years and bottled stronger than the blend. Its spice and oil answer Redbreast 12, and a glass of each shows how far one style can range when two Midleton houses read it.",
    "others": [
     {
      "name": "Powers Gold Label",
@@ -479,8 +479,8 @@
      }
     ]
    },
-   "table": "Teeling Single Pot Still is distilled in Dublin itself, at the Teeling distillery in Newmarket, from an even split of malted and unmalted barley. It pours with stewed apple, honey and white pepper: Dublin pot still, made in Dublin again.",
-   "story": "As the family tells it, the Teeling name in Dublin whiskey goes back to 1782, when an ancestor set up a distillery on Marrowbone Lane in the Liberties. Two centuries on, the family founded Cooley Distillery in County Louth in 1987, and in December 2011 Beam agreed to buy Cooley. Two brothers of the family then set up the Teeling Whiskey Company, bottling whiskey from Cooley stock at first, and in 2015 they opened a distillery at Newmarket, a short walk from the old Marrowbone Lane site. It is widely described as the first new distillery to open in Dublin in more than 125 years. Spirit ran from its three copper pot stills that year, and in October 2018 the first batch of Teeling Single Pot Still, distilled in 2015, came out, presented as the first whiskey distilled in Dublin to be bottled in nearly fifty years. For a bartender it is the bottle that shows single pot still made outside Midleton, back in the city where John's Lane and Bow Street once made it, and the house's spice and fruit set beside the Midleton bottles of this group.",
+   "table": "Teeling Single Pot Still is distilled in Dublin itself, at the Teeling distillery in Newmarket, from an even split of malted and unmalted barley. Its notes are stewed apple, honey and white pepper: Dublin pot still, made in Dublin again.",
+   "story": "As the family tells it, the Teeling name in Dublin whiskey goes back to 1782, when an ancestor set up a distillery on Marrowbone Lane in the Liberties. Two centuries on, the family founded Cooley Distillery in County Louth in 1987, and in December 2011 Beam agreed to buy Cooley. Two brothers of the family then set up the Teeling Whiskey Company, bottling whiskey from Cooley stock at first, and in 2015 they opened a distillery at Newmarket, a short walk from the old Marrowbone Lane site. It is widely described as the first new distillery to open in Dublin in more than 125 years. Spirit ran from its three copper pot stills that year, and in October 2018 the first batch of Teeling Single Pot Still, distilled in 2015, came out, presented as the first whiskey distilled in Dublin to be bottled in nearly fifty years. It brings single pot still back to the city where John's Lane and Bow Street once made it, from a house outside Midleton, with spice and fruit to set beside the Midleton bottles of this group.",
    "others": [
     {
      "name": "Teeling Small Batch",
@@ -621,8 +621,8 @@
      }
     ]
    },
-   "table": "Dingle Single Pot Still comes from a distillery in an old sawmill at Milltown, on the edge of Dingle in County Kerry, made from local malted and unmalted barley. Its casks run from bourbon to sherry and red wine, and it pours with baking spice, stewed apple and honey.",
-   "story": "Dingle Distillery was founded in 2012 by three figures of the Irish craft beer trade, in a converted sawmill at Milltown on the outskirts of Dingle town in County Kerry. The first casks were filled with new spirit in December 2012. One of the three, a Dublin publican and brewer who had driven the project, died suddenly in the summer of 2016, a few months before the distillery's first batch of whiskey came out late that year. In 2017 Dingle released its first single pot still, from a house that stood apart from Midleton. The pot still came out in batches at first. The core Single Pot Still, the distillery's first pot still made as a standing part of its range, came in September 2025 with a new look that draws on Dingle's Wren's Day, with the silhouette of a Wren Boy on the bottle. For a bartender it is the counterpoint to the Midleton houses of this group: the same rule, malted and unmalted barley in pot stills, read by a small house on the Kerry coast.",
+   "table": "An old sawmill at Milltown, on the edge of Dingle in County Kerry, is where local malted and unmalted barley becomes Dingle Single Pot Still. Bourbon, sherry and red wine casks give it baking spice, brown sugar and cooked dark fruit.",
+   "story": "Dingle Distillery was founded in 2012 by three figures of the Irish craft beer trade, in a converted sawmill at Milltown on the outskirts of Dingle town in County Kerry. The first casks were filled with new spirit in December 2012. One of the three, a Dublin publican and brewer who had driven the project, died suddenly in the summer of 2016, a few months before the distillery's first batch of whiskey came out late that year. In 2017 Dingle released its first single pot still, from a house that stood apart from Midleton. The pot still came out in batches at first. The core Single Pot Still, the distillery's first pot still made as a standing part of its range, came in September 2025 with a new look that draws on Dingle's Wren's Day, with the silhouette of a Wren Boy on the bottle. The Midleton houses of this group meet their counterpoint here: the same rule, malted and unmalted barley in pot stills, read by a small house on the Kerry coast.",
    "others": [
     {
      "name": "Dingle 10 Year Old",

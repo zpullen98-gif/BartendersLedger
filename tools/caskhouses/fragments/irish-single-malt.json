@@ -22,7 +22,7 @@
     "wood": "Mostly bourbon-seasoned barrels, with former sherry casks, for at least ten years; the label carries a 10 year age statement.",
     "strength": "40% ABV (80 proof)",
     "taste": "Honey on the nose, then vanilla bean, mocha and dried apricot, as the house gives it, with milk chocolate and malted barley, and a finish of oak and fruit.",
-    "pour": "Neat, with a jug of water beside it, or over one large cube. It stands in an Irish Coffee and a stirred Tipperary.",
+    "pour": "Neat, on the rocks or with water on the side. It stands in an Irish Coffee and a stirred Tipperary.",
     "label": [
      {
       "term": "Single Malt",
@@ -38,8 +38,8 @@
      }
     ]
    },
-   "table": "Bushmills 10 Year Old Single Malt is triple distilled from malted barley alone in County Antrim and aged ten years in bourbon and sherry casks. It pours light and honeyed, with vanilla and a little chocolate, and shows a guest the soft Irish malt.",
-   "story": "Bushmills prints 1608 on every bottle. As the house tells it, that is the year James I granted a local landowner a licence to distil in the district: a licence, not a distillery. The Old Bushmills Distillery Company was registered in 1784, and in 1885 a fire destroyed nearly all of the distillery, which was rebuilt. Prohibition in the United States closed the American market to Irish whiskey, Bushmills joined Irish Distillers in 1972, and by the late 1970s it was one of two whiskey distilleries at work on the island, beside Midleton in Cork. Pernod Ricard bought Irish Distillers in 1988, Diageo bought the distillery in 2005, and in 2014 Diageo agreed to hand Bushmills to Jose Cuervo in exchange for full ownership of Don Julio tequila. Through each change the malt stayed triple distilled from malted barley alone. For a bartender the 10 Year Old is the reference for the soft, triple distilled Irish malt, and the bottle to pour beside a peated Connemara.",
+   "table": "Triple distilled from malted barley alone in County Antrim, Bushmills 10 Year Old Single Malt spends ten years in bourbon and sherry casks. Light and honeyed, with vanilla and a little chocolate, it shows how gentle an Irish malt can be.",
+   "story": "Bushmills prints 1608 on every bottle. As the house tells it, that is the year James I granted a local landowner a licence to distil in the district: a licence, not a distillery. The Old Bushmills Distillery Company was registered in 1784, and in 1885 a fire destroyed nearly all of the distillery, which was rebuilt. Prohibition in the United States closed the American market to Irish whiskey, Bushmills joined Irish Distillers in 1972, and by the late 1970s it was one of two whiskey distilleries at work on the island, beside Midleton in Cork. Pernod Ricard bought Irish Distillers in 1988, Diageo bought the distillery in 2005, and in 2014 Diageo agreed to hand Bushmills to Jose Cuervo in exchange for full ownership of Don Julio tequila. None of these changes altered the malt: it stayed triple distilled from malted barley alone. The soft, triple distilled Irish malt is measured by the 10 Year Old, the bottle to pour beside a peated Connemara.",
    "others": [
     {
      "name": "Bushmills Original",
@@ -169,7 +169,7 @@
     "still": "Double distilled in pot stills at Cooley Distillery in County Louth, where Bushmills, by contrast, distils its malt three times.",
     "wood": "The house names no cask on its pages; trade listings give former bourbon barrels. The label carries no age statement.",
     "strength": "40% ABV",
-    "taste": "Sweet barley, peat smoke, kippers and baked apple crumble on the nose, as the house gives it; then light honey, vegetal peat, barley water, light spice and vanilla oak.",
+    "taste": "Sweet barley, peat smoke, kippers and baked apple crumble on the nose, in the house's words; then light honey, vegetal peat, barley water, light spice and vanilla oak.",
     "pour": "Neat, with a few drops of water, or long with soda in a highball. It brings smoke to a Tipperary or an Irish Old Fashioned.",
     "label": [
      {
@@ -182,8 +182,8 @@
      }
     ]
    },
-   "table": "Connemara Peated Single Malt is the smoky Irish whiskey: malted barley dried over peat fires, then double distilled at Cooley in County Louth. Expect sweet barley, peat smoke and baked apple; it is the answer when a guest asks whether Ireland makes a peated malt.",
-   "story": "Cooley Distillery began in 1987, when a group led by its founder took over a former state plant for industrial alcohol at Riverstown, near Dundalk in County Louth. Converted to make whiskey, it began distilling in 1989, and it chose to distil its malt twice rather than three times. Connemara followed in 1996: a single malt made from barley dried over peat fires, reviving, as the house tells it, an old Irish habit in a whiskey better known for soft, unpeated malt. Cooley was sold to Beam in 2012, and Suntory bought Beam in 2014. Beside the bottling with no age statement, the house has released a 12 year old and a cask strength. For a bartender it settles a question guests often ask: yes, Ireland makes smoky whiskey, and this is the bottle to pour when they want to taste it beside a soft Bushmills or an Islay malt.",
+   "table": "Connemara Peated Single Malt is the smoky Irish whiskey: malted barley dried over peat fires, then double distilled at Cooley in County Louth. Expect sweet barley, peat smoke and baked apple, with honey and vanilla oak behind them.",
+   "story": "Cooley Distillery's home at Riverstown, near Dundalk in County Louth, was a former state plant for industrial alcohol, which a group led by its founder took over in 1987. Converted to make whiskey, it began distilling in 1989, and it chose to distil its malt twice rather than three times. Connemara followed in 1996: a single malt made from barley dried over peat fires, reviving, as the house tells it, an old Irish habit in a whiskey better known for soft, unpeated malt. Cooley was sold to Beam in 2012, and Suntory bought Beam in 2014. Beside the bottling with no age statement, the house has released a 12 year old and a cask strength. Guests often ask whether Ireland makes smoky whiskey; this is the bottle that says yes, to taste beside a soft Bushmills or an Islay malt.",
    "others": [
     {
      "name": "Connemara 12 Year",
@@ -330,8 +330,8 @@
      }
     ]
    },
-   "table": "The Tyrconnell Single Malt is a double distilled Irish malt from Cooley in County Louth, aged in bourbon casks and named for a Derry racehorse. It pours bright and citrusy, with lemon, green apple and honey: the Cooley malt to set beside smoky Connemara.",
-   "story": "The name is older than the whiskey in the bottle. The Watt family ran a large distillery on Abbey Street in Derry, and the family's story is that in 1876 their horse The Tyrconnell won a race in Ireland at odds of a hundred to one, and that they named a whiskey for it to mark the win. The Watt distillery closed in the 1920s, and the name fell out of use. Cooley Distillery, founded in 1987 in a former state alcohol plant near Dundalk, brought it back as a single malt in the early 1990s; sources give the year as 1993 or 1994. Double distilled in pot stills and aged in bourbon casks, it became Cooley's plain malt, beside the peated Connemara that followed in 1996. Cooley was sold to Beam in 2012, and Suntory bought Beam in 2014. For a bartender the Tyrconnell carries two lessons: a revived Irish name need not come from its old distillery, and Cooley distils its malt twice where Bushmills distils three times.",
+   "table": "A Derry family's racehorse gave The Tyrconnell Single Malt its name: a double distilled Irish malt made at Cooley in County Louth and aged in bourbon casks. Bright and citrusy, with lemon, green apple and honey, it is the Cooley malt to set beside smoky Connemara.",
+   "story": "The name is older than the whiskey in the bottle. The Watt family ran a large distillery on Abbey Street in Derry, and the family's story is that in 1876 their horse The Tyrconnell won a race in Ireland at odds of a hundred to one, and that they named a whiskey for it to mark the win. The Watt distillery closed in the 1920s, and the name fell out of use. Cooley Distillery, founded in 1987 in a former state alcohol plant near Dundalk, brought it back as a single malt in the early 1990s; sources give the year as 1993 or 1994. Double distilled in pot stills and aged in bourbon casks, it became Cooley's plain malt, beside the peated Connemara that followed in 1996. Beam bought Cooley in 2012, and Suntory bought Beam two years later. The Tyrconnell carries two lessons to the bar: a revived Irish name need not come from its old distillery, and Cooley distils its malt twice where Bushmills distils three times.",
    "others": [
     {
      "name": "The Tyrconnell 16 Year Old",
@@ -460,8 +460,8 @@
     "still": "Triple distilled in copper pot stills, by the house's account; the label names no distillery, and the whiskey is bought in from another house's stills.",
     "wood": "Former bourbon casks for twelve years; the label carries a 12 year age statement.",
     "strength": "40% ABV (80 proof), 43% on the house's product page",
-    "taste": "Biscuit and peppery spice on the nose, as the house gives it, then bright fruit and mild spice; tasters also find leather, apricot, orange zest and passion fruit, with vanilla.",
-    "pour": "Neat or with a little water, or over one large cube; it also makes a fruity Whiskey Sour.",
+    "taste": "Biscuit and peppery spice on the nose, by the house's notes, then bright fruit and mild spice; tasters also find leather, apricot, orange zest and passion fruit, with vanilla.",
+    "pour": "Neat, with a little water or over ice; it also makes a fruity Whiskey Sour.",
     "label": [
      {
       "term": "Knappogue Castle",
@@ -473,8 +473,8 @@
      }
     ]
    },
-   "table": "Knappogue Castle 12 Year Old is a triple distilled Irish single malt aged twelve years in bourbon casks, named for a castle in County Clare. Its whiskey is bought from another distillery and bottled under the castle's name, with biscuit, spice and bright fruit in the glass.",
-   "story": "Knappogue Castle is a tower house built in 1467 by the MacNamaras in the parish of Quin, County Clare. In 1966 a Houston businessman, a former Assistant Secretary of the United States Navy, bought it in ruins, and with his wife, an architect, he set about restoring it. Around the same time, by the brand's account, he began buying casks of pot still whiskey from Irish distilleries, aged them further and bottled them under the castle's name. In 1998 his son founded the company that became Castle Brands and brought the family's Knappogue Castle whiskey into it. Pernod Ricard agreed to buy Castle Brands in August 2019 and completed the purchase that October. The producer names no distillery, and accounts differ on whose stills made the malt over the years. For a bartender the bottle teaches that an Irish single malt label and the distillery behind it can be two different things, and that the castle on the label is a place to visit, not a distillery.",
+   "table": "Knappogue Castle 12 Year Old takes the name of a tower house in County Clare: a triple distilled Irish single malt, aged twelve years in bourbon casks. The whiskey is bought from another distillery and bottled under the castle's name, and gives biscuit, spice and bright fruit.",
+   "story": "Knappogue Castle is a tower house built in 1467 by the MacNamaras in the parish of Quin, County Clare. In 1966 a Houston businessman, a former Assistant Secretary of the United States Navy, bought it in ruins, and with his wife, an architect, he set about restoring it. Around the same time, by the brand's account, he began buying casks of pot still whiskey from Irish distilleries, aged them further and bottled them under the castle's name. In 1998 his son founded the company that became Castle Brands and brought the family's Knappogue Castle whiskey into it. Pernod Ricard agreed to buy Castle Brands in August 2019 and completed the purchase that October. The producer names no distillery, and accounts differ on whose stills made the malt over the years. An Irish single malt label and the distillery behind it can be two different things, and Knappogue Castle shows it: the castle on the label is a place to visit, not a distillery.",
    "others": [
     {
      "name": "Knappogue Castle 16 Year Old Twin Wood",
@@ -486,7 +486,7 @@
     }
    ],
    "traps": [
-    "There is no Knappogue distillery: the castle stands in County Clare, and the whiskey is bought from another house's stills.",
+    "The castle is no distillery: it stands in County Clare, and the whiskey is bought from another house's stills.",
     "The house's own pages give both 40 and 43 per cent: read the label before quoting a figure to a guest."
    ],
    "cards": [
@@ -514,7 +514,7 @@
       "Bourbon casks"
      ],
      "a": 3,
-     "explain": "The house ages the 12 in former bourbon casks for all twelve years; oloroso butts play no part in this bottling."
+     "explain": "The house ages the 12 in former bourbon casks for all twelve years; the oloroso casks belong to the Twin Wood bottlings."
     },
     {
      "id": "q2",
@@ -619,8 +619,8 @@
      }
     ]
    },
-   "table": "The Irishman Single Malt is the triple distilled Irish malt of Walsh Whiskey, made from Irish barley and aged in bourbon and oloroso sherry casks. Honeyed malt, candied fruit and fig: a soft malt for sipping neat, from a Carlow house that began by bottling Irish Coffee.",
-   "story": "Walsh Whiskey began in County Carlow in 1999, when a husband and wife set up a company to blend and bottle an Irish Coffee, The Hot Irishman. By the house's account The Irishman was born in 2006, and Writers' Tears followed. Like many Irish labels of those years it was bottled from whiskey made at a distillery the house did not own. In 2016 the founders opened a distillery on the Royal Oak estate in Carlow with Illva Saronno, the Italian maker of Disaronno, as an equal partner. In January 2019 the two parted over how to grow the business: the distillery passed to Illva and was renamed Royal Oak Distillery, and the brands stayed with Walsh. Amber Beverage Group bought Walsh Whiskey in November 2021. For a bartender The Irishman Single Malt shows that an Irish malt label may come from a house that buys and blends its whiskey, and that triple distillation and sherry wood are choices of style, not rules.",
+   "table": "Walsh Whiskey of County Carlow bottles The Irishman Single Malt, triple distilled from Irish barley and aged in bourbon and oloroso sherry casks. Honeyed malt, candied fruit and fig: a soft malt for sipping neat, from a house that began by bottling Irish Coffee.",
+   "story": "A husband and wife set up Walsh Whiskey in County Carlow in 1999, a company to blend and bottle an Irish Coffee, The Hot Irishman. By the house's account The Irishman was born in 2006, and Writers' Tears followed. Like many Irish labels of those years it was bottled from whiskey made at a distillery the house did not own. In 2016 the founders opened a distillery on the Royal Oak estate in Carlow with Illva Saronno, the Italian maker of Disaronno, as an equal partner. In January 2019 the two parted over how to grow the business: the distillery passed to Illva and was renamed Royal Oak Distillery, and the brands stayed with Walsh. Amber Beverage Group bought Walsh Whiskey in November 2021. Behind The Irishman Single Malt stands a house that buys and blends its whiskey, and the bottle shows that triple distillation and sherry wood are choices of style, not rules.",
    "others": [
     {
      "name": "Writers' Tears",
@@ -628,7 +628,7 @@
     }
    ],
    "traps": [
-    "There is no Irishman distillery: Walsh Whiskey of County Carlow bottles it from whiskey made at a distillery it does not name.",
+    "No Irishman distillery exists: Walsh Whiskey of County Carlow bottles it from whiskey made at a distillery it does not name.",
     "Do not confuse it with the Nutty Irishman, a drink of Irish cream and hazelnut liqueur with no whiskey of this house in it."
    ],
    "cards": [
@@ -656,7 +656,7 @@
       "Red wine barriques"
      ],
      "a": 0,
-     "explain": "The house matures it in bourbon casks and oloroso sherry casks, and the sherry brings the raisin; port pipes play no part in this bottling."
+     "explain": "The house matures it in bourbon casks and oloroso sherry casks, and the sherry brings the raisin; port pipes are not used for it."
     },
     {
      "id": "q2",

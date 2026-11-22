@@ -34,8 +34,8 @@
      }
     ]
    },
-   "table": "Springbank 10 Year Old comes from the Campbeltown distillery that malts its own barley on its floors, peats it lightly and distils it two and a half times. Bourbon and sherry casks give cereal, orange and honeycomb with a salty finish; pour it neat, with water beside it.",
-   "story": "Campbeltown once held more than twenty distilleries, and Springbank stands in the middle of the town. By the house's account it was built in 1828 on the site of an illicit still worked by the Mitchells, a family of maltsters who had come to Kintyre as settlers; secondary accounts give the licence of 1828 to the Reids, in-laws of the Mitchells, who sold the distillery to two Mitchell brothers in 1837. The family firm became J&A Mitchell, and in 1872 one of the brothers left after a quarrel and built Glengyle nearby. In the slump after the First World War most of the town's distilleries closed, and by the 1930s only Springbank and Glen Scotia were left. In 1973 Springbank first made Longrow, a heavily peated malt, and after a silence that began in 1979 and lasted into the late 1980s it added the unpeated Hazelburn in 1997. The family's company brought Glengyle back to life in 2004. By its own account the house does every stage on site, from malting to bottling. For a bartender the 10 Year Old is the town's reference malt: light peat, two and a half distillations and no chill filtration.",
+   "table": "Springbank 10 Year Old is malted on the distillery's own floors in the middle of Campbeltown, lightly peated and distilled two and a half times. Bourbon and sherry casks give cereal, orange and honeycomb, and the finish carries sea salt; a jug of water belongs beside it.",
+   "story": "Campbeltown once held more than twenty distilleries, and Springbank stands in the middle of the town. By the house's account it was built in 1828 on the site of an illicit still worked by the Mitchells, a family of maltsters who had come to Kintyre as settlers; secondary accounts give the licence of 1828 to the Reids, in-laws of the Mitchells, who sold the distillery to two Mitchell brothers in 1837. The family firm became J&A Mitchell, and in 1872 one of the brothers left after a quarrel and built Glengyle nearby. In the slump after the First World War most of the town's distilleries closed, and by the 1930s only Springbank and Glen Scotia were left. In 1973 Springbank first made Longrow, a heavily peated malt, and after a silence that began in 1979 and lasted into the late 1980s it added the unpeated Hazelburn in 1997. The family's company brought Glengyle back to life in 2004. By its own account the house does every stage on site, from malting to bottling. The 10 Year Old is where Campbeltown is learnt at the bar: light peat, two and a half distillations and no chill filtration.",
    "others": [
     {
      "name": "Springbank 15 Year Old",
@@ -179,8 +179,8 @@
      }
     ]
    },
-   "table": "Glen Scotia Double Cask comes from a Campbeltown distillery founded as Scotia in 1832, first matured in bourbon casks and then finished in Pedro Ximénez sherry casks. It gives toffee, peach and spiced fruit over a little sea salt; pour it neat or with a few drops of water.",
-   "story": "The firm of Stewart, Galbraith and Co founded the distillery in 1832 under the name Scotia, and by 1835 the town held almost thirty distilleries, by the house's account. A later owner, Duncan MacCallum (died 1930), is the subject of the distillery's legend: the story goes that he drowned himself in 1930, and staff have long told of his ghost. In the 1930s the Bloch brothers of Glasgow bought the distillery and added Glen to its name. By then most of Campbeltown's distilleries had closed in the slump after the First World War, and only Springbank and Glen Scotia were left, so the name of the town as a whisky region rested on the two. Glen Scotia had hard years after that: it was mothballed in 1984 and reopened in 1989 under new owners, and in 1994 it was bought by Glen Catrine Bonded Warehouse. Through all of it the distillery kept much of its design of the 1830s, by its own account the mash tun, the still room and a dunnage warehouse. Double Cask opens its range for a guest: Campbeltown salt under a sweet sherry finish, and a second distillery to set beside Springbank.",
+   "table": "In Campbeltown, at the distillery founded as Scotia in 1832, Glen Scotia Double Cask is matured in bourbon casks and then finished in Pedro Ximénez sherry casks. Toffee, peach and spiced fruit come over a little sea salt, and a few drops of water suit it.",
+   "story": "The firm of Stewart, Galbraith and Co founded the distillery in 1832 under the name Scotia, and by 1835 the town held almost thirty distilleries, by the house's account. A later owner, Duncan MacCallum (died 1930), is the subject of the distillery's legend: the story goes that he drowned himself in 1930, and staff have long told of his ghost. In the 1930s the Bloch brothers of Glasgow bought the distillery and added Glen to its name. By then the lean years after the First World War had shut most of the town's stills, and only Springbank and Glen Scotia were left at work, so the name of the town as a whisky region rested on the two. Glen Scotia had hard years after that: it was mothballed in 1984 and reopened in 1989 under new owners, and in 1994 it was bought by Glen Catrine Bonded Warehouse. Through all of it the distillery kept much of its design of the 1830s, by its own account the mash tun, the still room and a dunnage warehouse. Double Cask opens its range for a guest: Campbeltown salt under a sweet sherry finish, and a second distillery to set beside Springbank.",
    "others": [
     {
      "name": "Glen Scotia 15 Year Old",
@@ -220,7 +220,7 @@
       "Sauternes wine barriques"
      ],
      "a": 1,
-     "explain": "Matured first in first-fill bourbon casks, it is finished in casks that held Pedro Ximénez; oloroso butts play no part in this bottling."
+     "explain": "Matured first in first-fill bourbon casks, it is finished in casks that held Pedro Ximénez; oloroso butts are not among its casks."
     },
     {
      "id": "q2",
@@ -314,7 +314,7 @@
     "still": "Distilled at Glengyle in Campbeltown in one wash still and one spirit still, first made for Ben Wyvis, a malt distillery within the grain distillery at Invergordon that closed in the 1970s. By the house's account Glengyle distils for a short season each year, worked by the Springbank team.",
     "wood": "About 70 per cent former bourbon casks and 30 per cent former sherry casks, by the producer's account. 12 Year Old is the age the label gives: nothing in the bottle is younger than twelve years.",
     "strength": "46% ABV",
-    "taste": "Sweet confectionery, pear drops and marzipan with a soft smoke like toasted marshmallow on the nose; lemon zest turning oily, then peat smoke, pepper and toffee; a finish of smoke, pecan pie and butterscotch, as the producer describes it.",
+    "taste": "Sweet confectionery, pear drops and marzipan with a soft smoke like toasted marshmallow on the nose; lemon zest turning oily, then peat smoke, pepper and toffee; a finish of smoke, pecan pie and butterscotch, in the house's own tasting words.",
     "pour": "Neat, with a few drops of water to bring the citrus forward; a malt to sip slowly.",
     "label": [
      {
@@ -327,8 +327,8 @@
      }
     ]
    },
-   "table": "Kilkerran 12 Year Old is the malt of Glengyle, the Campbeltown distillery revived in 2004 by the firm behind Springbank. Lightly peated and aged in bourbon and sherry casks, it gives citrus, toffee and a soft campfire smoke; pour it neat.",
-   "story": "One of the Mitchell brothers of Springbank left the family distillery after a quarrel with his brother and founded Glengyle nearby in 1872. It was sold in 1919 and stopped distilling in 1925, one of the many Campbeltown distilleries lost in the slump after the First World War. In 2000 Mitchell's Glengyle, a company headed by Springbank's then chairman, bought the silent buildings, and after four years of rebuilding the first spirit ran in 2004, through stills first made for the Ben Wyvis distillery. The whisky could not carry the distillery's name, because the Glengyle name had passed to another company and stood on a blended malt, so it is sold as Kilkerran, from Ceann Loch Chille Chiarain, the Gaelic name of the settlement where Saint Kieran is said to have kept his cell. Early bottlings came out as work in progress while the spirit aged, and in 2016 a standing 12 Year Old joined the range. The revival gave Campbeltown three working distilleries again. For a bartender the 12 is the town's softer smoke, a lighter peating than Longrow from a still house of its own.",
+   "table": "Distilled at Glengyle, the Campbeltown distillery the firm behind Springbank revived in 2004, Kilkerran 12 Year Old carries another name because the Glengyle name had passed to another company. Lightly peated, from bourbon and sherry casks, it brings citrus, toffee and a soft campfire smoke.",
+   "story": "One of the Mitchell brothers of Springbank left the family distillery after a quarrel with his brother and founded Glengyle nearby in 1872. It was sold in 1919 and stopped distilling in 1925, one of the many Campbeltown stills silenced in the hard years that followed the First World War. In 2000 Mitchell's Glengyle, a company headed by Springbank's then chairman, bought the silent buildings, and after four years of rebuilding the first spirit ran in 2004, through stills first made for the Ben Wyvis distillery. The whisky could not carry the distillery's name, because the Glengyle name had passed to another company and stood on a blended malt, so it is sold as Kilkerran, from Ceann Loch Chille Chiarain, the Gaelic name of the settlement where Saint Kieran is said to have kept his cell. Early bottlings came out as work in progress while the spirit aged, and in 2016 a standing 12 Year Old joined the range. The revival gave Campbeltown three working distilleries again. The 12 brings the town's softer smoke to the shelf, lighter in peat than Longrow and from a still house of its own.",
    "others": [
     {
      "name": "Kilkerran 16 Year Old",
@@ -460,8 +460,8 @@
     "still": "Distilled twice at Springbank in Campbeltown, in the same copper stills that make Springbank and Hazelburn.",
     "wood": "A marriage of former bourbon and former sherry casks; the producer gives no proportions, and the label carries no age statement.",
     "strength": "46% ABV",
-    "taste": "Creamy vanilla custard on the nose, with smoke that builds slowly, then toasted marshmallow, herbs and rich fruit; creamy on the palate with a slight medicinal edge and smoke in waves, and a long finish, as the producer describes it.",
-    "pour": "Neat or with a few drops of water to let the smoke open; a malt to sip rather than to mix.",
+    "taste": "Creamy vanilla custard on the nose, with smoke that builds slowly, then toasted marshmallow, herbs and rich fruit; creamy on the palate with a slight medicinal edge and smoke in waves, and a long finish, in Springbank's own notes.",
+    "pour": "Neat or with a few drops of water to let the smoke open; it is a sipping malt, not a mixer.",
     "label": [
      {
       "term": "Peated",
@@ -473,8 +473,8 @@
      }
     ]
    },
-   "table": "Longrow Peated is the heavily peated malt of Springbank distillery in Campbeltown, distilled twice and sold under its own name. Bourbon and sherry casks bring vanilla custard and rich fruit under slow, building smoke; pour it neat for a guest who wants smoke from outside Islay.",
-   "story": "Longrow takes its name from a Campbeltown distillery built in 1824, which closed in 1896. It stood next door to Springbank. The name came back in 1973, when Springbank's then chairman ran an experiment to prove that an Islay-style malt could be made on the mainland: barley peated hard on the distillery's own kiln and distilled twice, in place of Springbank's two and a half times. The spirit was not made every year at first, and it was in the 1990s that Longrow was distilled regularly and took its place as a single malt of its own. The standing bottling carries no age statement and is labelled Peated. For a bartender Longrow completes the lesson of one distillery: the same barley malted on the same floors and the same stills, yet heavy smoke against Springbank's light peat and Hazelburn's none.",
+   "table": "Heavily peated and distilled twice, Longrow Peated is made at Springbank distillery in Campbeltown and sold under a name of its own. Vanilla custard and rich fruit from bourbon and sherry casks sit under a slow, building smoke, for the guest who wants peat from outside Islay.",
+   "story": "Longrow takes its name from a Campbeltown distillery built in 1824, which closed in 1896. It stood next door to Springbank. The name came back in 1973, when Springbank's then chairman ran an experiment to prove that an Islay-style malt could be made on the mainland: barley peated hard on the distillery's own kiln and distilled twice, in place of Springbank's two and a half times. The spirit was not made every year at first, and it was in the 1990s that Longrow was distilled regularly and took its place as a single malt of its own. The standing bottling carries no age statement and is labelled Peated. Longrow completes the whole lesson that one distillery can teach: the same barley malted on the same floors and the same stills, yet heavy smoke against Springbank's light peat and Hazelburn's none.",
    "others": [
     {
      "name": "Longrow 100 Proof",
@@ -510,7 +510,7 @@
       "Once, in a column"
      ],
      "a": 0,
-     "explain": "Longrow is distilled twice; two and a half times is the regime for Springbank itself, and three times for the unpeated Hazelburn."
+     "explain": "Longrow is distilled twice; two and a half times is how Springbank itself runs, and three times is the unpeated Hazelburn's way."
     },
     {
      "id": "q2",
@@ -614,8 +614,8 @@
      }
     ]
    },
-   "table": "Hazelburn 10 Year Old is the unpeated malt of Springbank distillery in Campbeltown, distilled three times and aged ten years in former bourbon casks. It is light and fruity, with pineapple, lemon and honeycomb; pour it neat for a guest who wants Campbeltown without smoke.",
-   "story": "Hazelburn takes its name from one of the Campbeltown distilleries lost in the 1920s, when the slump after the First World War closed most of the town's stills; the sources differ on its last owners and on the very year it shut. The name lay unused for seventy years. In 1997 Springbank, which had first made the heavily peated Longrow in 1973, began a third spirit at the same address: barley malted on its own floors and dried with hot air alone, with no peat, then distilled three times through the same copper stills. That gave the distillery three malts from one barley and one still house, told apart by the peat in the kiln and the number of times the spirit runs: Longrow twice, Springbank two and a half times and Hazelburn three. By the producer's account the 10 Year Old, from bourbon casks alone, is the flagship of the Hazelburn range, bottled each year at 46% ABV. For a bartender it is the control in the experiment: set beside Springbank 10 and Longrow Peated, it lets a guest taste what peat and a third distillation do to one spirit.",
+   "table": "No peat goes into Hazelburn 10 Year Old, the malt Springbank distillery in Campbeltown distils three times and ages ten years in former bourbon casks. Light and fruity, with pineapple, lemon and honeycomb, it is the Campbeltown for a guest who wants no smoke.",
+   "story": "Hazelburn was one of the Campbeltown distilleries lost in the 1920s, when most of the town's stills fell silent after the First World War; the sources differ on its last owners and on the very year it shut. The name lay unused for seventy years. In 1997 Springbank, which had first made the heavily peated Longrow in 1973, began a third spirit at the same address: barley malted on its own floors and dried with hot air alone, with no peat, then distilled three times through the same copper stills. That gave the distillery three malts from one barley and one still house, told apart by the peat in the kiln and the number of times the spirit runs: Longrow twice, Springbank two and a half times and Hazelburn three. By the producer's account the 10 Year Old, from bourbon casks alone, is the flagship of the Hazelburn range, bottled each year at 46% ABV. Poured beside Springbank 10 and Longrow Peated, it is the control in the experiment, letting a guest taste what peat and a third distillation do to one spirit.",
    "others": [
     {
      "name": "Hazelburn Sherry Wood",
