@@ -1,0 +1,133 @@
+{
+ "group": "japanese-single-malt",
+ "chunk": "c8",
+ "date": "2026-11-22",
+ "by": "refuter",
+ "searches": 21,
+ "tested": [
+  "yamazaki: the 12's three woods and Suntory's own nose, palate and finish; the launch of 1984 under Keizo Saji, the pure malt label to 2004, Saji's dates and his role as second master blender; the direct fire of the first distillation at Yamazaki and Hakushu on Suntory's news page. 4 searches.",
+  "hakushu: Suntory's notes for the 12, lightly peated, the Forest Highball; 1973, Keizo Saji's lead, Mount Kaikoma and Hokuto; the water through granite; the pause of 2018 and the return of 2021. 4 searches.",
+  "yoichi: the straight-head stills, downward lyne arms and coal fire on Nikka's pages; Nikka's notes for the Single Malt Yoichi; where the smoke comes from; Taketsuru's family, Glasgow, the marriage and Rita Cowan's dates, Dai Nippon Kaju and the first whisky of 1940; the ten buildings as Important Cultural Properties. 5 searches.",
+  "miyagikyo: the stills and steam (in the Yoichi search); 1969, the Sendai name, the Hirose and Nikkawa; Nikka's tale of the river water and its Coffey still timeline; Nikka's notes and the peated and unpeated malt. 4 searches.",
+  "mars: the 1949, 1960, 1985, 1992 to 2011 and 2024 dates on Hombo's pages and others; the core Single Malt KOMAGATAKE, its strength, casks, taste and the 798 metres; the IPA Cask Finish; the Settsu Shuzo man who sent Taketsuru to Scotland. 5 searches.",
+  "21 of the 28 searches spent; 7 left unused.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, no length clue the lint finds, keys at positions 2, 0, 1, 3, 3, 1, 0, 2, 2, 1, each explain naming the nearest wrong option. No card id changed."
+ ],
+ "changed": [
+  {
+   "key": "hakushu",
+   "field": "bottle.taste",
+   "was": "Basil, pine needle and green apple on the nose, with pear and mint; then sweet pear, kiwi and mint on the palate",
+   "now": "Basil, pine needle, green apple and pear on the nose; then sweet pear, mint, kiwi and basil on the palate",
+   "why": "Suntory's own notes put mint on the palate, not the nose, and give basil there too",
+   "sources": [
+    "https://house.suntory.com/hakushu-whisky/hakushu-12-years-old"
+   ]
+  },
+  {
+   "key": "hakushu",
+   "field": "story",
+   "was": "and Hibiki joins Hakushu malt with Yamazaki's",
+   "now": "and Hibiki joins Hakushu malt with Yamazaki's and with grain whisky",
+   "why": "Hibiki is a blend with Chita grain, as the Ledger's own Japanese blended page says; the line read as a blend of two malts",
+   "sources": [
+    "The Ledger, At the table: Japanese blended (Hibiki, first released in 1989, joins Yamazaki and Hakushu malts with Chita grain)"
+   ]
+  },
+  {
+   "key": "yoichi",
+   "field": "bottle.mash, traps[0]",
+   "was": "by its account the smoke comes from the malt, not from the coal; The coal fires heat the stills; they do not smoke the whisky. The peat comes from the malt, by Nikka's own account.",
+   "now": "its tasting note puts the smoky aroma down to the peat fires that dried the barley; Do not put Yoichi's smoke down to the coal alone: by Nikka's account the peat fires that dried the barley give the smoky aroma, and the coal fire adds depth and a subtle smokiness.",
+   "why": "Nikka's own pages credit the coal-fired distillation with depth and a subtle smokiness, so the record misstated the house's account",
+   "sources": [
+    "https://www.nikka.com/en/brands/yoichi_miyagikyo/",
+    "https://nikka.com/eng/brands/singlemalt-yoichi/"
+   ]
+  },
+  {
+   "key": "yoichi",
+   "field": "story",
+   "was": "the third son of a sake-brewing family from Takehara, went to Glasgow in 1918 to learn how Scotch whisky was made, and in January 1920 married Rita Cowan",
+   "now": "the son of a sake-brewing family from Takehara, went to Glasgow in 1918 to learn how Scotch whisky was made, and in 1920 married Rita Cowan",
+   "why": "no source read gave him as the third son or the month of the marriage; the sources agree on 1920",
+   "sources": [
+    "https://www.gla.ac.uk/explore/avenue/ourpast/japanesewhiskeysroots/",
+    "https://www.nikka.com/en/story/founder/"
+   ]
+  },
+  {
+   "key": "miyagikyo",
+   "field": "bottle.taste",
+   "was": "a finish of soft oak, floral and fruity rather than smoky",
+   "now": "a finish of soft oak, fruity rather than smoky",
+   "why": "Nikka's note gives soft oak and no floral note",
+   "sources": [
+    "https://www.nikka.com/en/brands/yoichi_miyagikyo/products/"
+   ]
+  },
+  {
+   "key": "miyagikyo",
+   "field": "story",
+   "was": "were later moved to Miyagikyo, where they make the grain whisky for the house's blends",
+   "now": "were moved to Miyagikyo in 1999, to make the grain whisky for the house's blends",
+   "why": "Nikka's own history timeline dates the move to 1999, a primary source for the house's own dates; the line no longer tells a present state",
+   "sources": [
+    "https://www.nikka.com/en/story/history/"
+   ]
+  },
+  {
+   "key": "mars",
+   "field": "bottle.wood, cards[casks].answer, quiz[0].explain",
+   "was": "ex-bourbon barrels, sherry casks, port casks and wine casks",
+   "now": "ex-bourbon barrels, sherry casks, port casks, wine casks and other casks (among others, on the card and the explain)",
+   "why": "the producer's page lists other casks beside the four",
+   "sources": [
+    "https://www.hombo.co.jp/en/product/mars-singlemalt-komagatake/",
+    "https://www.hombo.co.jp/en/2025/new-product/20250729-newproduct-whisky/"
+   ]
+  },
+  {
+   "key": "mars",
+   "field": "bottle.taste",
+   "was": "then a clean, rich malt on the palate and a finish that lingers",
+   "now": "then a lingering finish; the producer's note names no other flavour",
+   "why": "clean, rich malt was in no source; the producer's note names apple tea, apricot and ripe persimmon, then a smooth texture and a lingering finish, and no independent note of the 45% core was found",
+   "sources": [
+    "https://www.hombo.co.jp/en/product/mars-singlemalt-komagatake/"
+   ]
+  },
+  {
+   "key": "mars",
+   "field": "story",
+   "was": "under the guidance of a distiller who had been Masataka Taketsuru's superior at Settsu Shuzo",
+   "now": "under the guidance of the man who had been Masataka Taketsuru's superior at Settsu Shuzo",
+   "why": "the sources read describe him as the Settsu Shuzo man who sent Taketsuru to Scotland and the founder of Mars, not as a distiller",
+   "sources": [
+    "https://quillandpad.com/2021/02/09/mars-shinshu-japanese-whiskies-high-altitude-fire-and-ice/",
+    "https://www.hombo.co.jp/en/quality/whisky/"
+   ]
+  }
+ ],
+ "open": [
+  "yamazaki: pure malt on the label until 2004 rests on VinePair and trade histories; 1923 is the start of building, trade sources give 1924 for the opening.",
+  "hakushu: Suntory names no cask for the 12; the pause of 2018 and the return of 2021 rest on news reports.",
+  "yoichi: the Important Cultural Property year is November 2021 (recommendation) or February 2022 (designation) by source, so none is given; Nikka names no casks.",
+  "miyagikyo: brought from Scotland in 1963 rests on Nikka's history alone; the 10 Years Old's return is 2025 in the United Kingdom and July 2026 in the United States, so no year is given.",
+  "mars: Mars Whisky as a label term was not seen on a photograph of the core label; 798 metres stands on a Hombo page under the Shinshu name; 1960 for Yamanashi rests on Master of Malt and the producer's history."
+ ],
+ "living": [
+  "Met in sources and named in no record: none new; no living blender or distiller of Suntory, Nikka or Hombo appears in any record.",
+  "New for people.json: none.",
+  "The dead met and named with dates: Shinjiro Torii (1879 to 1962), Keizo Saji (1919 to 1999), Masataka Taketsuru (1894 to 1979), Rita Cowan (1896 to 1961). The dead met and not named: Kiichiro Iwai of Settsu Shuzo and Mars (no death year in two sources), and Taketsuru's adopted son, whose recollection Nikka gives for the river water tale."
+ ],
+ "swaps": [
+  "No swap proposed by the author and none made. The Yoichi and Miyagikyo no-age-statement bottlings stay: Nikka's expressions page lists both at 45%. Mars Single Malt Komagatake stays: the producer made it the core bottling of the brand in July 2025."
+ ],
+ "tension": [
+  "plan.json, yamazaki why: calls the twelve year old of 1984 the first single malt Japan marketed in earnest; one trade history says Nikka released a Yoichi single malt in 1982, and VinePair says the twelve-year age statement reached the label only in 1986. The record makes neither claim. Reported, not edited.",
+  "plan.json, hakushu why: gives about 700 metres, which rests on one listing; the record leaves it out. Reported, not edited.",
+  "plan.json, yoichi note: dates the Important Cultural Property to 2021; the formal designation is reported for February 2022. plan.json, miyagikyo note: says the 10 Years Old returned in July 2026 as its first age statement since 2015; The Whiskey Wash reports its return to the United Kingdom before that. Reported, not edited.",
+  "The Library's Suntory Yamazaki record calls Masataka Taketsuru its first distillery manager, while the styles say he worked on Yamazaki; the Library's Nikka Yoichi record calls coal firing a technique nearly extinct worldwide, where Nikka says only that it is rarely seen. The Japanese single malt style page names the house Mars Shinshu, the name before 2024. Reported, not edited."
+ ]
+}
