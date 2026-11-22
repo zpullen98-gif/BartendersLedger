@@ -4,7 +4,7 @@
      node tools/check-caskhouses.mjs              every check below; passes on a partial build and says so last
      node tools/check-caskhouses.mjs --release    the same, and refuses a data file whose meta says partial, whose
                                                   meta.unrefuted is above 0, or whose keys are not frozen
-     node tools/check-caskhouses.mjs --mutations  then breaks the shipped files twenty-five ways, one at a time, and
+     node tools/check-caskhouses.mjs --mutations  then breaks the shipped files twenty-six ways, one at a time, and
                                                   expects red each time, from the check written for that rule (a
                                                   mutation that finds nothing to change, or that only another
                                                   check catches, is itself a failure)
@@ -819,7 +819,7 @@ await test('W6 Today\u2019s cask study: no unseen house card; a due one dealt, r
   v = B.view();
   assert.ok(v.includes(esc(c.answer).slice(0, 40)), 'the answer after Reveal');
   const s0 = B.state();
-  assert.ok(B.tap({ id: 'caskhouse-run-' + h.key }), 'no door to the house after Reveal');
+  assert.ok(B.tap({ id: 'caskhouse-run-' + h.key + '-' + c.id }), 'no door to the house after Reveal');
   await settle();
   eq([B.state().key, B.state().at], [hrefHouse(h).slice(2), s0.at + 1], 'the door opens the house by one push');
   B.tap({ 'data-act': 'back' }); await settle();
@@ -832,6 +832,23 @@ await test('W6 Today\u2019s cask study: no unseen house card; a due one dealt, r
   assert.ok(after.r === before.r + 1 && after.reps > before.reps, 'grading did not write the house card');
   assert.equal(JSON.stringify(Object.keys(B.g('progress').cards).filter((k) => k !== c.key).sort()), others, 'grading wrote another card');
   assert.equal(JSON.stringify(Object.assign({}, B.g('progress'), { cards: null })), rest, 'grading wrote outside progress.cards');
+});
+await test('W6 Today’s review: a house whose two cards are both due is dealt twice, and the review that ends the run draws each row’s door to the house with an id of its own', async () => {
+  const B = boot({ hash: '#/casks' });
+  await settle();
+  const h = houses[0], now = Date.now();
+  B.run('progress.cards = {}; ' + h.cards.map((c) => 'progress.cards[' + JSON.stringify(c.key) + '] = { r: 1, w: 0, reps: 1, ef: 2.5, ivl: 1, last: ' + (now - 3 * 86400000) + ', due: ' + (now - 86400000) + ' };').join(' ') + ' saveProgress(); render();');
+  await settle();
+  assert.ok(B.tap({ 'data-act': 'cask-start', 'data-mode': 'cards', 'data-s': 'today', 'data-id': 'all' }), 'Start today’s study');
+  await settle();
+  const n = B.run('caskState().run.rows.length');
+  assert.equal(B.run('caskState().run.rows.filter(function(r){ return r.house === ' + JSON.stringify(h.key) + '; }).length'), h.cards.length, 'both due cards of the house are not dealt');
+  for (let i = 0; i < n; i++) { B.tap({ 'data-act': 'cask-flip' }); await settle(); B.tap({ 'data-act': 'cask-grade', 'data-k': 'yes' }); await settle(); B.tap({ 'data-act': 'cask-next' }); await settle(); }
+  const v = B.view();
+  assert.ok(B.run('caskState().run.done'), 'the run did not end');
+  const ids = [...v.matchAll(/\bid="([^"]+)"/g)].map((m) => m[1]);
+  eq([...new Set(ids.filter((x, i) => ids.indexOf(x) !== i))], [], 'an id twice on the review');
+  eq([...v.matchAll(/class="btn btn-ghost caskhouse-run-door" id="([^"]+)" href="([^"]+)"/g)].map((m) => [m[1], m[2]]).sort(), h.cards.map((c) => ['caskhouse-run-' + h.key + '-' + c.id, hrefHouse(h)]).sort(), 'the review’s doors to the house');
 });
 await test('W7 the quiz through the click: a group\u2019s round deals only its questions, one Recent rounds row in mode caskhouses and nothing else written, Study this card and Back keep the results, the trend ignores it, Learn why reads the house', async () => {
   const x0 = groups[groups.length - 1];
@@ -1018,6 +1035,7 @@ async function mutations() {
     ['the Practise rows drawn with no house here', 'js/ui-nav.js', "if(typeof caskHouseDeckDef === 'function' && typeof caskHouseCards === 'function' && caskHouseCards().length) house +=", "if(typeof caskHouseDeckDef === 'function') house +=", 'W9 the partial states'],
     ['the root saying 1 of 32 groups are here', 'js/ui-caskhouses.js', "' groups ' + (groups.length === 1 ? 'is' : 'are') + ' here so far.", "' groups are here so far.", 'W9 the partial states'],
     ['the flashcard mode calling a producer a house', 'js/ui-study.js', "['caskhouses','Flagship recall','Name the producer,", "['caskhouses','House recall','Name the house,", 'W2 kept apart: out of allDrinks'],
+    ['a run door keyed by its house alone', 'js/ui-caskhouses.js', "id=\"caskhouse-run-' + esc(row.house) + '-' + esc(row.id) + '\"", "id=\"caskhouse-run-' + esc(row.house) + '\"", 'W6 Today’s review'],
     ['the search index losing the houses', 'js/ui-new.js', "  if(typeof caskHouseSearchEntries === 'function') ix.push(...caskHouseSearchEntries());\n", '', 'W8 the Practise rows'],
   ];
   let held = 0;

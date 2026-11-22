@@ -131,9 +131,10 @@ function caskHouseDueRows(now){
     return { chapter: '', house: c.itemId, houseGroup: c.houseGroup, id: c.drillId, q: c.name, a: c.back, why: '', key: caskHouseKey(c.itemId, c.drillId) };
   });
 }
-/* a revealed run row's reading door (caskRowDoor in js/ui-casks.js) */
+/* a revealed run row's reading door (caskRowDoor in js/ui-casks.js); its id names the card as
+   well as the house, since a house's two cards can both be due and the review lists each row */
 function caskHouseRowDoorHTML(row, label){
-  return '<a class="btn btn-ghost caskhouse-run-door" id="caskhouse-run-' + esc(row.house) + '" href="' + esc(caskHouseHref(row.houseGroup, row.house)) + '">'
+  return '<a class="btn btn-ghost caskhouse-run-door" id="caskhouse-run-' + esc(row.house) + '-' + esc(row.id) + '" href="' + esc(caskHouseHref(row.houseGroup, row.house)) + '">'
     + esc(String(label || '').replace('the full chapter', 'the whole house')) + '</a>';
 }
 /* the card faces: a blind front, then the answer and the house after Flip */
