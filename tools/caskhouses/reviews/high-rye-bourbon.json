@@ -1,0 +1,207 @@
+{
+ "group": "high-rye-bourbon",
+ "chunk": "c1",
+ "date": "2026-11-21",
+ "by": "refuter",
+ "searches": 22,
+ "tested": [
+  "four-roses: the 1888 trademark and the Louisville merchant, the 1910 Spanish Mission distillery and its National Register listing, Seagram's 1943 purchase, the blend at home from the 1950s, the Cox's Creek warehouses and their year, Kirin's 2002 purchase, Small Batch's 2006 launch at the Kentucky Bourbon Festival, its four recipes and its six- and seven-year age, the column and doubler and the 138 to 140 proof off the doubler, three days of fermentation, Small Batch Select of 2019 at 104 proof.",
+  "old-grand-dad: the grandson and 1882, the Wathen sale and its year, American Medicinal Spirits and National Distillers, the plant near Frankfort, the sale to Jim Beam Brands and its year, the Bonded label name and the bond rule on Beam's page, the 80 and 114 proof bottlings, the yearly 7 Year Bonded, the mash as Beam's guides give it.",
+  "basil-hayden: Basil Hayden Sr.'s death in 1804 and the 1785 Catholic settlement from St. Mary's County, the 1992 Small Batch Bourbon Collection, 80 proof, the possessive dropped in 2021, the 10 Year, the mash as Beam's own articles give it.",
+  "bulleit: the 1830s ancestor and his end around 1860, the 1987 founding and the founder's practice, the Four Roses contract and its end, the 2014 groundbreaking and the March 2017 opening near Shelbyville, a reported pause of production, the mash of 68, 28 and 4, the pronunciation.",
+  "rabbit-hole: the 2012 founding, the contract whiskeys before 2018, the 2018 distillery, the 2019 Pernod Ricard stake and the Heigold rebrand weeks later, the mash of 70, 25 malted German rye and 5 malted barley, the 110 entry proof and the toasted and charred barrels, the age the house gives, 95 proof, Cavehill at 95 and Dareringer at 93, Christian Heigold's trade and death in 1865, the facade's moves and its National Register listing."
+ ],
+ "changed": [
+  {
+   "record": "four-roses",
+   "field": "story",
+   "was": "The single-storey warehouses at Cox's Creek were finished in 1960",
+   "now": "The single-storey warehouses at Cox's Creek were built low",
+   "why": "no source dates them to 1960; the house says only that a later warehouse was its first built since 1960.",
+   "sources": [
+    "https://www.fourrosesbourbon.com/heritage",
+    "https://kybourbon.com/industry-news/four-roses-continues-to-expand-at-warehouse-bottling-facility-in-coxs-creek"
+   ]
+  },
+  {
+   "record": "old-grand-dad",
+   "field": "story",
+   "was": "His grandson, a Nelson County distiller",
+   "now": "His grandson, a distiller",
+   "why": "the county rests on one weak listing.",
+   "sources": [
+    "https://www.beamdistilling.com/old-grand-dad-bourbon/about-us"
+   ]
+  },
+  {
+   "record": "old-grand-dad",
+   "field": "story",
+   "was": "In 1899 the brand passed to the Wathen family",
+   "now": "At the end of the 1890s",
+   "why": "Wikipedia gives 1899, another account the late 1890s.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Old_Grand-Dad",
+    "https://vinepair.com/articles/ntk-old-grand-dad-bourbon-guide/"
+   ]
+  },
+  {
+   "record": "old-grand-dad",
+   "field": "story",
+   "was": "In 1987 National Distillers sold its spirits brands to Jim Beam Brands",
+   "now": "At the end of the 1980s",
+   "why": "Wikipedia gives 1987, Beam's own history page 1988.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Old_Grand-Dad",
+    "https://www.beamdistilling.com/about-Old-Grand-Dad"
+   ]
+  },
+  {
+   "record": "old-grand-dad",
+   "field": "bottle.mash",
+   "was": "Beam publishes no figures for it",
+   "now": "Beam's product pages give no figures; its own buyer's guides give 63, 27 and 10",
+   "why": "Beam's own articles do give the recipe; the product pages do not.",
+   "sources": [
+    "https://www.beamdistilling.com/articles/basil-hayden-mash-bill/"
+   ]
+  },
+  {
+   "record": "basil-hayden",
+   "field": "bottle.mash",
+   "was": "Beam publishes no figures",
+   "now": "Beam's product pages give no figures",
+   "why": "as for Old Grand-Dad.",
+   "sources": [
+    "https://www.beamdistilling.com/articles/basil-hayden-mash-bill/"
+   ]
+  },
+  {
+   "record": "basil-hayden",
+   "field": "others[0].note",
+   "was": "released from time to time",
+   "now": "the age statement alone",
+   "why": "trade reports say the 10 Year has returned to stay; a release habit is a present state that ages.",
+   "sources": [
+    "https://thewhiskeywash.com/bourbon/basil-hayden-10-year-is-back-and-here-to-stay/"
+   ]
+  },
+  {
+   "record": "basil-hayden",
+   "field": "traps[2]",
+   "was": "It shares its recipe with Old Grand-Dad ... which carries far less rye",
+   "now": "It is widely said to share its recipe with Old Grand-Dad, a mash with more rye than Jim Beam's white label",
+   "why": "the shared recipe is not published by the house, so it is hedged as in bottle.mash.",
+   "sources": []
+  },
+  {
+   "record": "bulleit",
+   "field": "story",
+   "was": "the making stopped with his death around 1860",
+   "now": "the making stopped when he vanished around 1860 on a journey with his whiskey",
+   "why": "the brand's tale and Wikipedia say he disappeared, not that he died.",
+   "sources": [
+    "https://www.bulleit.com/en-gb/the-story",
+    "https://en.wikipedia.org/wiki/Bulleit_Bourbon"
+   ]
+  },
+  {
+   "record": "bulleit",
+   "field": "story",
+   "was": "a Louisville lawyer, left his practice and founded",
+   "now": "a lawyer, founded",
+   "why": "one account says he left his practice, another that he kept it for a decade; the city was not confirmed.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Bulleit_Bourbon",
+    "https://vinepair.com/articles/10-things-you-should-know-about-bulleit-bourbon/"
+   ]
+  },
+  {
+   "record": "bulleit",
+   "field": "story, bottle.still",
+   "was": "That contract ended in 2014; until 2014",
+   "now": "ran out around 2014; until about 2014",
+   "why": "sources give 2013 or 2014.",
+   "sources": [
+    "https://whiskyadvocate.com/The-Modern-Resurrection-of-Four-Roses",
+    "https://en.wikipedia.org/wiki/Four_Roses"
+   ]
+  },
+  {
+   "record": "bulleit",
+   "field": "bottle.still, table",
+   "was": "distilled at Shelbyville from 2017",
+   "now": "Diageo opened the Bulleit distillery near Shelbyville in 2017",
+   "why": "a present state of production: Diageo also distils at Lebanon, Kentucky, and paused that plant in 2025; the opening is history and holds.",
+   "sources": [
+    "https://www.bevnet.com/spirits/2017/bulleit-distilling-co-celebrates-ribbon-cutting-event-new-distillery-shelbyville-ky",
+    "https://www.just-drinks.com/news/diageo-pauses-production-at-kentucky-whiskey-facility"
+   ]
+  },
+  {
+   "record": "bulleit",
+   "field": "say",
+   "was": "BULL-it",
+   "now": "BUL-it",
+   "why": "the founder is reported to say it like the bullet; the new respelling rhymes the first syllable with dull, not with full.",
+   "sources": [
+    "https://thewhiskeywash.com/whiskey-articles/the-ultimate-guide-to-bulleit-bourbon/"
+   ]
+  },
+  {
+   "record": "rabbit-hole",
+   "field": "story",
+   "was": "made to its recipes at other distilleries from 2014",
+   "now": "made to its recipes elsewhere",
+   "why": "no source gives 2014; the accounts say only that it contract distilled before 2018.",
+   "sources": [
+    "https://whiskyadvocate.com/rabbit-hole-heigold-bourbon-redesign/"
+   ]
+  },
+  {
+   "record": "rabbit-hole",
+   "field": "story",
+   "was": "moved to River Road, where it stands on the National Register",
+   "now": "listed on the National Register in 1978 and moved in 2007 to River Road",
+   "why": "the listing (file 78001363) came before the move; told in order and as history.",
+   "sources": [
+    "https://npgallery.nps.gov/AssetDetail/NRIS/78001363",
+    "https://www.hmdb.org/m.asp?m=104120"
+   ]
+  },
+  {
+   "record": "rabbit-hole",
+   "field": "sources[4]",
+   "was": "Duke University, Migration Memorials",
+   "now": "National Park Service: National Register file",
+   "why": "a primary source for the listing the story now dates.",
+   "sources": [
+    "https://npgallery.nps.gov/AssetDetail/NRIS/78001363"
+   ]
+  }
+ ],
+ "confirmed": [
+  "Four Roses: Small Batch launched 2006 at the Kentucky Bourbon Festival, OBSK, OESK, OBSO and OESO, six and seven years, 90 proof (house); the doubler at about 138 to 140 proof and three days of fermentation (house); Seagram 1943 and Kirin 2002 (house, Wikipedia); 1888 trademark (house, Wikipedia); 1910 Spanish Mission and National Register (Wikipedia, The Clio); Small Batch Select 2019, 104 proof, non-chill filtered (house, trade press).",
+  "Old Grand-Dad: grandson and 1882 (Beam, Wikipedia); Wathen family, American Medicinal Spirits and medicinal whiskey under Prohibition, National Distillers at the Frankfort plant (Wikipedia, a bourbon history site); Bonded Straight Bourbon Whiskey and the bond rule (Beam); 80, 100 and 114 proof bottlings and the yearly 7 Year Bonded (Beam, Wikipedia, trade press).",
+  "Basil Hayden: Basil Hayden Sr. died 1804, will proved August 1804, the 1785 settlement of Maryland Catholics on Pottinger's Creek (state marker, genealogy records); 80 proof and the 1992 collection (Beam, Wikipedia); the possessive dropped with the 2021 relaunch (design write-up, Toast launch coverage).",
+  "Bulleit: 1987, the 1830s tale, groundbreaking 2014 and opening March 2017 near Shelbyville (brand release, Wikipedia); 68, 28 and 4 widely given (Wikipedia, VinePair); 45% ABV (brand, Difford's).",
+  "Rabbit Hole: founded 2012 and its own distillery 2018 (Whisky Advocate, trade press); Pernod Ricard 2019 and Heigold launched weeks later in the rebrand (Whisky Advocate, The Manual); 70, 25 and 5, entry at 110 proof, toasted then charred, 95 proof (house); Cavehill 95 proof, four grains all malted beside the corn, Dareringer 93 proof in PX casks (house); Heigold a German stonecutter or stonemason who reached Louisville about 1850 and died in 1865 as the facade was finished (state marker, Atlas Obscura)."
+ ],
+ "open": [
+  "four-roses: the distillery's year, 1910 or 1911; Seagram 1943 for Frankfort Distilleries, 1946 on one house page for the distillery.",
+  "old-grand-dad: when distilling ended at the Frankfort plant; no source dates it.",
+  "basil-hayden: the year the possessive was dropped rests on secondary accounts; no brand page states it.",
+  "bulleit: the 1989 first run at the Leestown distillery stands in one account; left out.",
+  "rabbit-hole: the age is four years on the product page and three in the house's articles; Heigold's trade is stonecutter or stonemason by source."
+ ],
+ "living": [
+  "Met in sources: the founders of Bulleit and Rabbit Hole and the Four Roses master distiller of the 2019 Small Batch Select, all already in people.json and named in no record. No name added."
+ ],
+ "swaps": [
+  "The author proposed no swap. None proposed by the refuter: the five picks and flagships stand."
+ ],
+ "tension": [
+  "The Library's Four Roses says single-storey rack warehouses produce far more consistent ageing, and its Behind the bar line speaks of best value: a superlative and a price word the house voice refuses.",
+  "The liquor shelf's Rabbit Hole Heigold calls Christian Heigold a stonemason who settled in Louisville before 1850 and dates the carving from 1857; the record says stonecutter (state marker) and gives no arrival year, since sources give about 1850.",
+  "The high-rye-bourbon style's quiz[2] explain says the founder named Old Grand-Dad for his grandfather in 1882; Beam's page and Wikipedia agree the namer was the grandson, a distiller, and this record follows them, so the two agree in substance."
+ ]
+}
