@@ -35,7 +35,7 @@
     ]
    },
    "table": "Mellow Corn Bottled in Bond Kentucky Straight Corn Whiskey is Heaven Hill's aged corn whiskey: at least 80 per cent corn, four years in once-used bourbon barrels and 100 proof. Expect buttery sweetcorn, cinnamon and pepper, pale in the glass, under a yellow label bearing the Medley family crest.",
-   "story": "Mellow Corn was first made in 1945 by the Medley Distilling Company of Owensboro, Kentucky, and went out under a yellow label bearing the Medley family crest. The label passed through other hands, and in 1993 it came to Heaven Hill of Bardstown, by Heaven Hill's own account as one of several labels in a deal with United Distillers. Heaven Hill changed almost nothing. The label stayed as it was, crest and all, and the whiskey kept to the bonded rule: one distilling season, four years in a bonded warehouse, 100 proof. From the 1970s, in Heaven Hill's telling, it was for decades the one aged corn whiskey sold across the country. Then bartenders found it, drawn first by the loud label and kept by the grain and the strength, as Punch reported. In 2023 the house showed the same recipe at twenty years old in its Heritage Collection. For a bartender Mellow Corn is the plain lesson in what separates corn whiskey from bourbon: the same grain at the heart of it, but oak that has held whiskey before.",
+   "story": "Mellow Corn was first made in 1945 by the Medley Distilling Company of Owensboro, Kentucky, and went out under a yellow label bearing the Medley family crest. The label passed through other hands, and in 1993 it came to Heaven Hill of Bardstown, by Heaven Hill's own account as one of several labels in a deal with United Distillers. Heaven Hill changed almost nothing. The label stayed as it was, crest and all, and the whiskey kept to the bonded rule: one distilling season, four years in a bonded warehouse, 100 proof. From the 1970s, in Heaven Hill's telling, it was for decades the one aged corn whiskey sold across the country. Then, as Heaven Hill tells it, bartenders and drinkers found it again, drawn by the loud label and kept by the grain. In 2023 the house showed the same recipe at twenty years old in its Heritage Collection. For a bartender Mellow Corn is the plain lesson in what separates corn whiskey from bourbon: the same grain at the heart of it, but oak that has held whiskey before.",
    "others": [
     {
      "name": "Heaven Hill Heritage Collection 20 Year Old Corn Whiskey",
@@ -103,8 +103,8 @@
      "read": "search"
     },
     {
-     "title": "Punch: bartenders and Mellow Corn",
-     "url": "https://punchdrink.com/articles/newest-bartender-obsession-mellow-corn-whiskey/",
+     "title": "Tasting Table: a guide to Mellow Corn",
+     "url": "https://www.tastingtable.com/1591852/mellow-corn-kentucky-straight-whiskey-bottle-guide",
      "kind": "secondary",
      "read": "search"
     },
@@ -115,9 +115,9 @@
      "read": "search"
     },
     {
-     "title": "Breaking Bourbon: Heaven Hill Heritage Collection corn whiskey of 2023",
-     "url": "https://www.breakingbourbon.com/review/heaven-hill-heritage-collection-2nd-edition-kentucky-straight-corn-whiskey",
-     "kind": "secondary",
+     "title": "Heaven Hill: the Heritage Collection of 2023",
+     "url": "https://heavenhill.com/news-and-notes/heaven-hill-distillery-announces-2023-heaven-hill-heritage-collection-release/",
+     "kind": "primary",
      "read": "search"
     }
    ],
@@ -131,7 +131,23 @@
     "The Library notes 1935 for Heaven Hill: that is the house's founding, which the second quiz uses; the record's 1945 is the first release of the Mellow Corn label, by Medley, before it came to Heaven Hill.",
     "The other bottling is not printed Mellow Corn: the house has no second regular Mellow Corn bottling in the sources read, so its Heritage Collection corn whiskey of the same recipe stands in others. A 2026 ten year old bonded release was seen in one summary without a confirmed name and is left out."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.pour, story: the Meloma highball and the house ambassador were found in no source searched; cut, and the pour now gives the style page's ginger ale and Hot Toddy.",
+     "story, table: the label's yellow, red and green and 'little changed since 1945' rested on no source; Heaven Hill says only that the label is unchanged since it took the brand and still bears the Medley crest, so the record says a yellow label bearing the Medley family crest.",
+     "story: the 1993 year is Tasting Table's (Heaven Hill's own blog misprints 1933), so the hedge now sits on the deal with United Distillers, not on the year; the label's passing through other hands before 1993 added (Renfield, Glenmore, then United Distillers, by Tasting Table).",
+     "story: 'stood on the low shelves of the markets that already knew it' and 'its people having decided long ago not to touch it' cut as unsourced; the bartenders' return is now told as Heaven Hill tells it.",
+     "sources: Punch and Breaking Bourbon give way to Tasting Table (1993, the 80, 12 and 8 recipe) and Heaven Hill's own release on the 2023 Heritage Collection (twenty years, 115 proof, 80 per cent corn, 12 malted barley, 8 rye)."
+    ],
+    "open": [
+     "story: 1993 rests on Tasting Table and on Heaven Hill's blog, which prints 1933 for the same deal; no second independent date was found.",
+     "bottle.taste rests on Difford's Guide alone.",
+     "bottle.mash: Heaven Hill's brand page by search gives 80, 12 and 8; Breaking Bourbon and some listings give 90 per cent corn; the record keeps both as given."
+    ]
+   }
   },
   {
    "key": "georgia-moon",
@@ -264,7 +280,21 @@
     "The press release's address carries the words top selling from its headline; the title given is my own. If the lint or the refuter will not have the address, Heaven Hill's new products archive is the fallback.",
     "Bernheim's purchase in 1999 and the move of distilling there stand on Heaven Hill's own pages; the Library says only that Heaven Hill distilled elsewhere for years after the fire, which agrees."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: Bernheim was bought in 1999 from United Distillers and Vintners, not United Distillers, which had become UDV in 1997.",
+     "story, others: the two flavours of 2008 are peach and lemonade at 70 proof in Heaven Hill's own release and Beverage Business; the Fruit Jar sentence, told as a present state in some markets, cut from the story; the second other is now Georgia Moon Peach, the name of 2008, with natural peach flavour.",
+     "cards[maker].answer, quiz q2 explain: the moonlight legend rests on Difford's alone, so the card and explain now say only that the name recalls moonshine."
+    ],
+    "open": [
+     "sources[1]: the address of Heaven Hill's 2008 release carries the headline words top selling; the integrator may prefer the Beverage Business report of August 2008 at archives.beveragebusiness.com.",
+     "year stays empty: no source dates the brand's first release.",
+     "bottle.taste rests on Difford's Guide alone."
+    ]
+   }
   },
   {
    "key": "ole-smoky",
@@ -393,7 +423,22 @@
     "Left out: the weekend of 4 July 2010 is hedged as one account (Wikipedia only); the Apax investment of 2022 and the claim of visitor numbers (Wikipedia, the house) are left out as ownership and a figure. The still type was not found.",
     "Phil Bredesen, the governor who signed the 2009 law in the WKMS report, is added to people.json; he is not named in the record. No founder of Ole Smoky is named in any source I read, and none is named here."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.mash: the press account of 84, 8 and 8 was not found; the house's own blog reprint and retailers give 80 per cent corn and keep the rest secret, so the record gives the floor and says no full recipe is published.",
+     "bottle.label: 'Unaged Corn Whiskey' was not seen as a label term; the jar's class in retail listings is corn whiskey (Tennessee Corn Whiskey in one), so the term is now Corn Whiskey.",
+     "story: the third county's distillery is Prichard's, in Kelso, Lincoln County, not 'a rum distillery' (Wikipedia, Tennessee whiskey; Mint Julep Tours); the 41 counties are those that allowed both package stores and liquor by the drink (Wikipedia, Alcohol laws of Tennessee; WKMS).",
+     "story: the weekend of 4 July 2010 rested on Wikipedia alone and is cut; the founders are now told as a group of local lawyers (NPR, 2013; Wikipedia).",
+     "sources: the Chilled magazine reprint gives way to NPR's report of 2013 on the 2009 law and the founders."
+    ],
+    "open": [
+     "bottle.taste rests on retail notes; no review was found within the share.",
+     "bottle.class: the label's exact words (Tennessee Corn Whiskey or Corn Whiskey) were seen only in shop listings, not on a photograph read."
+    ]
+   }
   },
   {
    "key": "platte-valley",
@@ -429,7 +474,7 @@
     ]
    },
    "table": "Platte Valley Corn Whiskey comes in a cork-stoppered ceramic jug from McCormick Distilling of Weston, Missouri: a straight corn whiskey, aged in oak and bottled at 80 proof. It pours sweet and buttery, toast and caramel over corn, and the jug is what a guest remembers.",
-   "story": "Two brothers of the Holladay family founded a distillery at a limestone spring in Weston, Missouri, in 1856, and one of them went on to run stagecoach lines across the West. A sale in 1900 made it the Shawhan Distillery. The company changed its name more than once in the years that followed, and in 1942 its owners took the McCormick name and the company became McCormick Distilling. Under that name it sent out Platte Valley, a straight corn whiskey in a ceramic jug sealed with a cork. In 2016, for the 160th year of the site, the old distillery took back the Holladay name and turned again to making bourbon of its own. For a bartender Platte Valley is the aged corn in the jug: the bottle that shows a guest that corn whiskey can rest in oak, look like moonshine and yet not be bourbon, and the jug is the part of it a guest remembers.",
+   "story": "Ben Holladay (1819 to 1887) and a brother founded a distillery at a limestone spring in Weston, Missouri, in 1856, and Ben went on to run stagecoach lines across the West as the Stagecoach King. By 1900 the distillery had passed to the Shawhan family and taken their name. The company changed its name more than once in the years that followed, and in 1942 its owners took the McCormick name and the company became McCormick Distilling. Under that name it sent out Platte Valley, a straight corn whiskey in a ceramic jug sealed with a cork. In 2016, for the 160th year of the site, the old distillery took back the Holladay name and turned again to making bourbon of its own. For a bartender Platte Valley is the aged corn in the jug: the bottle that shows a guest that corn whiskey can rest in oak, look like moonshine and yet not be bourbon, and the jug is the part of it a guest remembers.",
    "others": [
     {
      "name": "Platte Valley FireShine",
@@ -479,7 +524,7 @@
       "1942"
      ],
      "a": 1,
-     "explain": "Two Holladay brothers founded it in 1856; 1900 is when it became the Shawhan Distillery, and 1942 when the McCormick name came in."
+     "explain": "Two Holladay brothers founded it in 1856; by 1900 it carried the Shawhan name, and 1942 is when the McCormick name came in."
     }
    ],
    "sources": [
@@ -508,8 +553,8 @@
      "read": "search"
     },
     {
-     "title": "The Whisky Exchange: Platte Valley 3 Year Old",
-     "url": "https://www.thewhiskyexchange.com/p/1179/platte-valley-3-year-old",
+     "title": "Oregon History Project: Ben Holladay",
+     "url": "https://oregonhistoryproject.org/articles/historical-records/ben-holladay-1819-1887",
      "kind": "secondary",
      "read": "search"
     }
@@ -523,7 +568,24 @@
     "A pick in doubt, not a swap: Platte Valley is still listed by McCormick and in retail, but it is a thin, quiet label next to the others; the lane's alternates (Midnight Moon, Hudson) carry their own doubts, so I propose no swap.",
     "The taste rests on two retailers' notes (The Whisky Exchange, Master of Malt) for want of a review."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: the founder is now named with his dates, Ben Holladay (1819 to 1887), and his stagecoach lines (Oregon History Project, Legends of America, Wikipedia); his brother stays undated, as the sources give 1864 and 1894 for his death.",
+     "story: the handover of 1860, the son-in-law, Prohibition's medicinal bottling, the sale of 1936, the Old Weston name and the Waldron plant rested on Wikipedia alone or on no source; cut. The Shawhan name is now 'by 1900', since accounts give 1894 and 1900; the many names before McCormick in 1942 rest on the Holladay Distillery's history and Visit KC.",
+     "story: the 1960s jugs and their age statements rested on auction and shop pages; cut.",
+     "bottle.wood: the retailers' three years and 30 months taken out of the record, which now says only the straight whiskey's two year floor and that the producer states no age.",
+     "quiz q2 explain: 'by 1900 it carried the Shawhan name' in place of the year of a sale.",
+     "sources: Master of Malt and The Whisky Exchange give way to Visit KC on the 160th year and the Oregon History Project on Ben Holladay."
+    ],
+    "open": [
+     "bottle.wood: the age; retail listings give three years, one 30 months, and none read is the producer's.",
+     "bottle.still: where the spirit is distilled; retailers say Illinois, McCormick says nothing.",
+     "bottle.taste rests on shop notes; no review was found."
+    ]
+   }
   },
   {
    "key": "balcones",
@@ -653,7 +715,21 @@
     "True Blue 100 is labelled Pot Distilled Straight Corn Whisky in a search summary of the producer's shop; only the name and the 100 proof were seen there.",
     "The Ledger's corn whiskey style lists Balcones among its houses and cites Imbibe on Baby Blue; nothing in the style contradicts this record."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story, cards[welding-shop].answer, quiz q2 explain: the shop's two thousand square feet, the pylons, Waco Creek, the low ceilings and the leaking roof stood in no source searched; the record now says a former welding shop under a bridge in Waco (Baylor's Preserving Waco, VinePair).",
+     "story: the move is dated: the Texas Fireproof Storage building bought in 2011, two years of building work, distilling there from early 2016 on Forsyths stills (Drinks International, The Spirits Business).",
+     "bottle.mash: the producer's page says the blue corn is grown in Texas and roasted; added.",
+     "sources: Whisky Advocate's profile gives way to Drinks International on the opening of the new distillery."
+    ],
+    "open": [
+     "story: the corn's first source, Hopi blue corn of New Mexico, rests on Imbibe; one account says Arizona.",
+     "bottle.wood: no age and no barrel size; one account gives six months for the first release, left out."
+    ]
+   }
   }
  ]
 }
