@@ -22,7 +22,7 @@
     "wood": "Four years in once-used bourbon barrels, by Heaven Hill's own account, in a bonded warehouse. Corn whiskey may rest only in used or uncharred oak, which keeps it pale.",
     "strength": "50% ABV (100 proof)",
     "taste": "Chargrilled sweetcorn, butter and cinnamon on the nose, then buttery corn with black pepper, a little vanilla and toasted oak, pale straw in the glass, and a dry, toasty finish.",
-    "pour": "Neat or over one large cube, or long: Heaven Hill's own highball is the Meloma, Mellow Corn with grapefruit soda and lime in the manner of a Paloma.",
+    "pour": "Neat or over one large cube, long with ginger ale, or warm in a Hot Toddy, where the 100 proof carries the corn through the lemon and honey.",
     "label": [
      {
       "term": "Bottled in Bond",
@@ -34,8 +34,8 @@
      }
     ]
    },
-   "table": "Mellow Corn Bottled in Bond Kentucky Straight Corn Whiskey is Heaven Hill's aged corn whiskey: at least 80 per cent corn, four years in once-used bourbon barrels and 100 proof. Expect buttery sweetcorn, cinnamon and pepper, pale in the glass, under a yellow label little changed since 1945.",
-   "story": "Mellow Corn was first made in 1945 by the Medley Distilling Company of Owensboro, Kentucky, and went out under a yellow, red and green label bearing the Medley family crest. In 1993, by Heaven Hill's own account, the brand came to Heaven Hill of Bardstown in a deal for several labels with United Distillers. Heaven Hill changed almost nothing. The label stayed as it was, its people having decided long ago not to touch it, and the whiskey kept to the bonded rule: one distilling season, four years in a bonded warehouse, 100 proof. It stood on the low shelves of the markets that already knew it, and for decades, in Heaven Hill's telling, it was the one aged corn whiskey sold across the country. Then bartenders found it, drawn first by the loud label and kept by the grain, and Heaven Hill's own ambassador built a highball on it, the Meloma, a Paloma made with corn whiskey in place of tequila. In 2023 the house showed the same recipe at twenty years old in its Heritage Collection. For a bartender Mellow Corn is the plain lesson in what separates corn whiskey from bourbon: the same grain, but oak that has held whiskey before.",
+   "table": "Mellow Corn Bottled in Bond Kentucky Straight Corn Whiskey is Heaven Hill's aged corn whiskey: at least 80 per cent corn, four years in once-used bourbon barrels and 100 proof. Expect buttery sweetcorn, cinnamon and pepper, pale in the glass, under a yellow label bearing the Medley family crest.",
+   "story": "Mellow Corn was first made in 1945 by the Medley Distilling Company of Owensboro, Kentucky, and went out under a yellow label bearing the Medley family crest. The label passed through other hands, and in 1993 it came to Heaven Hill of Bardstown, by Heaven Hill's own account as one of several labels in a deal with United Distillers. Heaven Hill changed almost nothing. The label stayed as it was, crest and all, and the whiskey kept to the bonded rule: one distilling season, four years in a bonded warehouse, 100 proof. From the 1970s, in Heaven Hill's telling, it was for decades the one aged corn whiskey sold across the country. Then bartenders found it, drawn first by the loud label and kept by the grain and the strength, as Punch reported. In 2023 the house showed the same recipe at twenty years old in its Heritage Collection. For a bartender Mellow Corn is the plain lesson in what separates corn whiskey from bourbon: the same grain at the heart of it, but oak that has held whiskey before.",
    "others": [
     {
      "name": "Heaven Hill Heritage Collection 20 Year Old Corn Whiskey",
@@ -167,15 +167,15 @@
     ]
    },
    "table": "Georgia Moon Corn Whiskey is Heaven Hill's corn whiskey in a glass mason jar at 80 proof, its label reading less than 30 days old. It is the moonshine end of the style: bready, peppery sweetcorn with no oak to speak of, poured over ice or long with ginger ale.",
-   "story": "Georgia Moon takes its name from the moonshiners of corn whiskey, who ran their stills by moonlight because the smoke would give them away by day, as Difford's Guide tells it. Yet the jar is made in Kentucky, not Georgia, by Heaven Hill, the Bardstown house that five brothers of the Shapira family and a group of local investors founded in 1935, filling its first barrel that December. On 7 November 1996 a fire took Heaven Hill's distillery and seven of its rickhouses. In 1999 the house bought the Bernheim distillery in Louisville from United Distillers and moved its distilling there, while ageing and bottling stayed near Bardstown. Through all of it Georgia Moon kept its glass mason jar and its wink of a label, less than 30 days old. In 2008 Heaven Hill added two flavoured versions at 70 proof in the same jar, and a stronger Fruit Jar at 100 proof stands beside the original in some markets. Behind a bar Georgia Moon is the lawful face of moonshine: a corn whiskey, taxed and labelled, that has spent almost no time in wood, and a plain way to show a guest what corn tastes like before the barrel.",
+   "story": "Georgia Moon takes its name from the moonshiners of corn whiskey, who ran their stills by moonlight because the smoke would give them away by day, as Difford's Guide tells it. Yet the jar is made in Kentucky, not Georgia, by Heaven Hill, the Bardstown house that five brothers of the Shapira family and a group of local investors founded in 1935, filling its first barrel that December. On 7 November 1996 a fire took Heaven Hill's distillery and seven of its rickhouses. In 1999 the house bought the Bernheim distillery in Louisville from United Distillers and Vintners and moved its distilling there, while ageing and bottling stayed near Bardstown. Through all of it Georgia Moon kept its glass mason jar and its wink of a label, less than 30 days old. In 2008 Heaven Hill added two flavoured versions, peach and lemonade, at 70 proof in the same jar. Behind a bar Georgia Moon is the lawful face of moonshine: a corn whiskey, taxed and labelled, that has spent almost no time in wood, and a plain way to show a guest what corn tastes like before the barrel.",
    "others": [
     {
      "name": "Georgia Moon Fruit Jar 100 Proof",
      "note": "A stronger jar of Georgia Moon corn whiskey, bottled at 100 proof."
     },
     {
-     "name": "Georgia Moon Peach Whiskey",
-     "note": "Corn whiskey with peach flavour, one of the flavoured jars that followed the original."
+     "name": "Georgia Moon Peach",
+     "note": "Corn whiskey with natural peach flavour, one of the two flavoured jars first sent out in 2008, at 70 proof."
     }
    ],
    "traps": [
@@ -191,7 +191,7 @@
     {
      "id": "maker",
      "prompt": "Who makes Georgia Moon, and in which state?",
-     "answer": "Heaven Hill, in Kentucky; the name recalls moonshiners who ran their stills by moonlight, not a Georgia distillery."
+     "answer": "Heaven Hill, in Kentucky; the Georgia of the name recalls moonshine, not a Georgia distillery."
     }
    ],
    "quiz": [
@@ -221,7 +221,7 @@
       "Kentucky"
      ],
      "a": 3,
-     "explain": "Heaven Hill makes it in Kentucky; the name recalls moonshiners working by moonlight, not a Georgia still, and Tennessee is the home of Ole Smoky."
+     "explain": "Heaven Hill makes it in Kentucky; the name recalls moonshine, not a Georgia still, and Tennessee is the home of Ole Smoky."
     }
    ],
    "sources": [
@@ -282,7 +282,7 @@
    "bottle": {
     "name": "Ole Smoky Original Moonshine",
     "class": "Unaged corn whiskey, as the producer's page states it",
-    "mash": "Mostly corn, at least 80 per cent as corn whiskey requires. The producer's pages read give no recipe, and press accounts differ: one gives 84 per cent corn, 8 rye and 8 malted barley.",
+    "mash": "Mostly corn, at least 80 per cent as corn whiskey requires; the house's pages read give no full recipe.",
     "still": "Distilled by Ole Smoky at its own distilleries in East Tennessee, beginning in Gatlinburg; the pages read do not describe the still.",
     "wood": "None: it goes into the jar unaged and clear, as only corn whiskey of the American whiskeys may.",
     "strength": "50% ABV (100 proof)",
@@ -294,13 +294,13 @@
       "means": "No legal class in the United States: a word of style for a clear spirit sold young."
      },
      {
-      "term": "Unaged Corn Whiskey",
-      "means": "The legal class behind the jar: at least 80 per cent corn and no time in oak."
+      "term": "Corn Whiskey",
+      "means": "The legal class behind the jar: at least 80 per cent corn, distilled to no more than 160 proof, with no oak required."
      }
     ]
    },
    "table": "Ole Smoky Original Moonshine is unaged corn whiskey from Gatlinburg, Tennessee, clear and bottled at 100 proof in a glass jar. It is the moonshine a guest names: sweet corn and pepper with no oak at all, poured over ice or long with lemonade.",
-   "story": "Moonshine in the Tennessee hills was often corn whiskey made out of the taxman's sight and sold clear and young. Even after national Prohibition ended, Tennessee kept lawful distilling within narrow bounds: before 2009 it was allowed in only three counties, Moore, Coffee and Lincoln, the homes of Jack Daniel's, George Dickel and a rum distillery. In 2009 the legislature opened distilling to 41 more counties, those where liquor was already served by the drink, and Sevier County was among them. Ole Smoky opened in the mountain town of Gatlinburg in 2010, on the weekend of 4 July as one account has it. It set out to make the hills' own spirit lawfully: corn whiskey, clear and unaged, in a glass jar, from what the house calls a recipe a hundred years old, which is its own claim and not a matter of record. Flavoured jars followed the Original, and more distilleries in Tennessee followed the one in Gatlinburg. For a bartender the Original is the moonshine a guest names, and the plain proof that a lawful jar of moonshine is corn whiskey that never met a barrel.",
+   "story": "Moonshine in the Tennessee hills was often corn whiskey made out of the taxman's sight and sold clear and young. Even after national Prohibition ended, Tennessee kept lawful distilling within narrow bounds: before 2009 it was allowed in only three counties, Moore, Coffee and Lincoln, the homes of Jack Daniel's, George Dickel and Prichard's. In 2009 the legislature opened distilling to 41 more counties, those that already allowed both liquor stores and liquor by the drink, and Sevier County was among them. Ole Smoky opened in the mountain town of Gatlinburg in 2010, started by a group of local lawyers. It set out to make the hills' own spirit lawfully: corn whiskey, clear and unaged, in a glass jar, from what the house calls a recipe a hundred years old, which is its own claim and not a matter of record. Flavoured jars followed the Original, and more distilleries in Tennessee followed the one in Gatlinburg. For a bartender the Original is the moonshine a guest names, and the plain proof that a lawful jar of moonshine is corn whiskey that never met a barrel.",
    "others": [
     {
      "name": "Ole Smoky Apple Pie Moonshine",
@@ -367,8 +367,8 @@
      "read": "search"
     },
     {
-     "title": "Ole Smoky: Chilled magazine on its moonshine",
-     "url": "https://olesmoky.com/blogs/news/chilled-magazine-by-the-light-of-the-silvery-moon",
+     "title": "NPR: moonshine as a living in East Tennessee",
+     "url": "https://www.npr.org/sections/thesalt/2013/06/27/196218491/moonshine-as-moneymaker-eastern-tennessee-will-drink-to-that",
      "kind": "secondary",
      "read": "search"
     },
@@ -413,7 +413,7 @@
     "class": "Straight corn whiskey",
     "mash": "Corn: McCormick calls it a 100 per cent straight corn whiskey and publishes no mash bill. The law asks at least 80 per cent corn.",
     "still": "Bottled by McCormick Distilling in Weston, Missouri, in a cork-sealed ceramic jug. The sources read do not say where or on what still the spirit is distilled.",
-    "wood": "Aged in oak before it is jugged, and as a straight whiskey at least two years. The producer's pages read state no age; retailers give three years or 30 months.",
+    "wood": "Aged in oak before it is jugged, at least two years as the law asks of a straight whiskey; the producer's pages read state no age.",
     "strength": "40% ABV (80 proof)",
     "taste": "Sweet and buttery, with brioche, toast and caramel over the corn, and savoury touches of corn on the cob coming through, light in body.",
     "pour": "Neat or over ice, long with ginger ale, or in a Hot Toddy; its soft sweetness also suits a Whiskey Sour.",
@@ -429,7 +429,7 @@
     ]
    },
    "table": "Platte Valley Corn Whiskey comes in a cork-stoppered ceramic jug from McCormick Distilling of Weston, Missouri: a straight corn whiskey, aged in oak and bottled at 80 proof. It pours sweet and buttery, toast and caramel over corn, and the jug is what a guest remembers.",
-   "story": "Two brothers of the Holladay family founded a distillery at a limestone spring in Weston, Missouri, in 1856. One brother handed it to the other in 1860, and after him a son-in-law ran it until a sale in 1900 made it the Shawhan Distillery. Through Prohibition it stayed open by bottling whiskey already made, for medicinal use. After a sale in 1936 it became the Old Weston Distillery, and in 1942 the McCormick name, bought from a plant at nearby Waldron, gave the company the title McCormick Distilling. Under that name the company sent out Platte Valley, a straight corn whiskey in a ceramic jug sealed with a cork; jugs from the 1960s carry age statements older than the bottling's, so the whiskey inside has changed over the years. In 2016, for the 160th year of the site, the old distillery took back the Holladay name and turned again to making bourbon. For a bartender Platte Valley is the aged corn in the jug: the bottle that shows a guest that corn whiskey can rest in oak, look like moonshine and yet not be bourbon.",
+   "story": "Two brothers of the Holladay family founded a distillery at a limestone spring in Weston, Missouri, in 1856, and one of them went on to run stagecoach lines across the West. A sale in 1900 made it the Shawhan Distillery. The company changed its name more than once in the years that followed, and in 1942 its owners took the McCormick name and the company became McCormick Distilling. Under that name it sent out Platte Valley, a straight corn whiskey in a ceramic jug sealed with a cork. In 2016, for the 160th year of the site, the old distillery took back the Holladay name and turned again to making bourbon of its own. For a bartender Platte Valley is the aged corn in the jug: the bottle that shows a guest that corn whiskey can rest in oak, look like moonshine and yet not be bourbon, and the jug is the part of it a guest remembers.",
    "others": [
     {
      "name": "Platte Valley FireShine",
@@ -502,14 +502,14 @@
      "read": "search"
     },
     {
-     "title": "The Whisky Exchange: Platte Valley 3 Year Old",
-     "url": "https://www.thewhiskyexchange.com/p/1179/platte-valley-3-year-old",
+     "title": "Visit KC: McCormick Distilling at 160 years",
+     "url": "https://visitkc.com/visitors/things-do/entertainment/sponsored/160th-anniversary-mccormick-distilling",
      "kind": "secondary",
      "read": "search"
     },
     {
-     "title": "Master of Malt: Platte Valley",
-     "url": "https://www.masterofmalt.com/spirit/mccormick-distilling-company/platte-valley-spirit/",
+     "title": "The Whisky Exchange: Platte Valley 3 Year Old",
+     "url": "https://www.thewhiskyexchange.com/p/1179/platte-valley-3-year-old",
      "kind": "secondary",
      "read": "search"
     }
@@ -541,7 +541,7 @@
    "bottle": {
     "name": "Balcones Baby Blue Corn Whisky",
     "class": "Corn whisky, spelt without the e on the label",
-    "mash": "By the producer's account 100 per cent roasted blue corn, the heirloom grain that gives the bottling its name.",
+    "mash": "By the producer's account 100 per cent blue corn, grown in Texas and roasted, the heirloom grain that gives the bottling its name.",
     "still": "Distilled at the Balcones distillery in Waco; the producer's Baby Blue page read names no still, though its sister True Blue 100 is labelled pot distilled.",
     "wood": "Used oak casks, by the producer's account, for a whisky the house calls intentionally youthful. The label carries no age statement.",
     "strength": "46% ABV (92 proof)",
@@ -559,7 +559,7 @@
     ]
    },
    "table": "Balcones Baby Blue Corn Whisky comes from Waco, Texas, made from roasted blue corn and bottled at 92 proof. It is corn whisky built for sipping, melted butter, kettle corn and toffee, and the bottling with which Balcones began in 2009.",
-   "story": "Balcones was founded in Waco in 2008, in a former welding shop of about two thousand square feet, wedged against the pylons of a bridge over Waco Creek, with low ceilings and a leaking roof. Distilling began in 2009, and Baby Blue was the whisky it began with, made from roasted blue corn: as Imbibe tells it, the corn began as Hopi blue corn grown in New Mexico, before the house turned to a blue flint corn grown in West Texas. A corn whisky aged in used oak and bottled at 92 proof, it made the name of a distillery that went on to malt, rye and smoked whiskies. In 2014 the founder left after a dispute with the company's investors, and the distillery carried on without him. Between 2015 and 2016 the company refitted the Texas Fireproof Storage building in Waco, a far larger home with larger stills, and moved its distilling there. The used oak is what keeps Baby Blue a corn whisky and not a bourbon. For a bartender it is the craft answer to Mellow Corn: corn whisky made to be sipped, with the roast of the corn in the glass.",
+   "story": "Balcones was founded in Waco in 2008, in a former welding shop under a bridge. Distilling began in 2009, and Baby Blue was the whisky it began with, made from roasted blue corn: as Imbibe tells it, the corn began as Hopi blue corn grown in New Mexico, before the house turned to a blue flint corn grown in West Texas. A corn whisky aged in used oak and bottled at 92 proof, it made the name of a distillery that went on to malt, rye and smoked whiskies. In 2014 the founder left after a dispute with the company's investors, and the distillery carried on without him. In 2011 the company bought the old Texas Fireproof Storage building in downtown Waco, a few blocks away, and in 2016, after two years of building work, began distilling there on larger copper stills made by Forsyths of Scotland. The used oak is what keeps Baby Blue a corn whisky and not a bourbon. For a bartender it is the craft answer to Mellow Corn: corn whisky made to be sipped, with the roast of the corn in the glass.",
    "others": [
     {
      "name": "Balcones True Blue 100",
@@ -579,7 +579,7 @@
     {
      "id": "welding-shop",
      "prompt": "In what kind of building did Balcones begin, in 2008?",
-     "answer": "A former welding shop of about two thousand square feet, beside a bridge over Waco Creek."
+     "answer": "A former welding shop under a bridge in Waco; the distillery moved downtown in 2016."
     }
    ],
    "quiz": [
@@ -609,7 +609,7 @@
       "A fire station"
      ],
      "a": 1,
-     "explain": "Balcones started in a former welding shop beside a bridge over Waco Creek; it later moved into the old Texas Fireproof Storage building, never a fire station."
+     "explain": "Balcones started in a former welding shop under a bridge in Waco; in 2016 it moved into the old Texas Fireproof Storage building, never a fire station."
     }
    ],
    "sources": [
@@ -638,8 +638,8 @@
      "read": "search"
     },
     {
-     "title": "Whisky Advocate: the places shaping Texas whiskey",
-     "url": "https://whiskyadvocate.com/the-bold-places-and-people-shaping-texas-whiskey",
+     "title": "Drinks International: Balcones opens a new distillery",
+     "url": "https://drinksint.com/news/fullstory.php/aid/6095/.html",
      "kind": "secondary",
      "read": "search"
     }
