@@ -1,0 +1,696 @@
+{
+ "group": "kentucky-rye",
+ "records": [
+  {
+   "key": "rittenhouse",
+   "group": "kentucky-rye",
+   "producer": "Rittenhouse",
+   "madeBy": "Heaven Hill",
+   "style": "kentucky-rye",
+   "chapter": "american-rye",
+   "shelf": "",
+   "library": "Heaven Hill",
+   "say": "",
+   "place": "Distilled in Louisville, aged in Bardstown, Kentucky",
+   "year": "1934",
+   "yearIs": "first released",
+   "bottle": {
+    "name": "Rittenhouse Straight Rye Whisky Bottled in Bond",
+    "class": "Straight rye whisky, bottled in bond; the label spells whisky without the e",
+    "mash": "By Heaven Hill's own account 51 per cent rye, 35 per cent corn and 14 per cent malted barley: rye at the legal minimum, with corn making most of the rest.",
+    "still": "Distilled by Heaven Hill at its Bernheim Distillery in Louisville, from the house's one rye recipe. Under the bond every bottling comes from one distillery and one distilling season.",
+    "wood": "New charred American oak, in Heaven Hill's warehouses. The bond asks at least four years, and the house describes it as aged four years or more.",
+    "strength": "50% ABV (100 proof)",
+    "taste": "Dried fruit, toffee and sweet pepper on the nose, then cocoa, citrus, cinnamon, nutmeg and vanilla, with a long spice on the finish that the house likens to maple.",
+    "pour": "Neat or over one large cube, but above all a stirring rye: at 100 proof it holds its spice in a Manhattan, a Sazerac or a Vieux Carré.",
+    "label": [
+     {
+      "term": "Bottled-in-Bond",
+      "means": "One distilling season at one distillery, at least four years in a bonded warehouse, and bottled at 100 proof, under federal rule."
+     },
+     {
+      "term": "Straight Rye Whisky",
+      "means": "At least 51 per cent rye and two years or more in new charred oak; the house spells it whisky, without the e."
+     },
+     {
+      "term": "100 Proof",
+      "means": "Fifty per cent alcohol by volume, the strength the bond requires."
+     }
+    ]
+   },
+   "table": "Rittenhouse is the bonded rye Heaven Hill makes in Kentucky from a mash of just 51 per cent rye. Its Straight Rye Whisky Bottled in Bond is at least four years old and 100 proof, with cocoa, cinnamon and dried fruit that hold up in a Manhattan.",
+   "story": "Rittenhouse began in Philadelphia in 1934, the year after Prohibition ended, when the Continental Distilling Corporation brought out Rittenhouse Square Straight Rye, named, by most accounts, for the Philadelphia square of that name. Rye had long been the whiskey of Pennsylvania and Maryland, and the label was made to win drinkers back to it. In 1948, after the war years had cut distilling short, Continental dropped Square from the name and brought the whiskey back as a four year old bottled in bond. As rye faded behind bourbon, Rittenhouse lived on as a regional label, and in 1993, by Heaven Hill's own history, the Bardstown house took the brand over and made it in Kentucky, to a recipe of 51 per cent rye. When fire destroyed its Bardstown distillery in 1996, Heaven Hill moved its distilling to the Bernheim Distillery in Louisville, bought in 1999. By the house's account Rittenhouse was for a time the one bonded rye on the market, and as bartenders went back to the classic rye drinks it became the bottle many of them reached for. Behind a bar it is the working rye of the stirred drink: bonded, 100 proof, and steady in a Manhattan.",
+   "others": [
+    {
+     "name": "Rittenhouse United States 250th Anniversary Commemorative Edition",
+     "note": "A ten year old bonded edition of 2026, from the same 51 per cent rye recipe."
+    }
+   ],
+   "traps": [
+    "Rittenhouse is made in Kentucky by Heaven Hill, not in Philadelphia: only the name is Pennsylvanian.",
+    "The bond promises one distilling season, at least four years and 100 proof; it is a rule of origin and strength, not a mark of quality.",
+    "Its 51 per cent rye is the legal minimum, so it is a Kentucky-style rye, rounder than a rye-heavy one."
+   ],
+   "cards": [
+    {
+     "id": "mash",
+     "prompt": "What is the Rittenhouse mash bill, by Heaven Hill's account?",
+     "answer": "51 per cent rye, 35 per cent corn and 14 per cent malted barley: rye at the legal minimum."
+    },
+    {
+     "id": "square",
+     "prompt": "Under what name was Rittenhouse first sold in 1934?",
+     "answer": "Rittenhouse Square Straight Rye, from the Continental Distilling Corporation of Philadelphia; Square was dropped in 1948."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "mash",
+     "q": "A guest asks how much rye is in Rittenhouse Bottled in Bond. What share of the mash is rye, by Heaven Hill's account?",
+     "options": [
+      "51 per cent",
+      "65 per cent",
+      "80 per cent",
+      "95 per cent"
+     ],
+     "a": 0,
+     "explain": "Heaven Hill gives 51 per cent rye, the legal minimum, with 35 corn and 14 malted barley; 95 per cent would make a rye-heavy whiskey of another style."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "square",
+     "q": "In which city was Rittenhouse first sold, in 1934?",
+     "options": [
+      "Baltimore",
+      "Louisville",
+      "Philadelphia",
+      "Pittsburgh"
+     ],
+     "a": 2,
+     "explain": "Continental Distilling brought it out in Philadelphia as Rittenhouse Square Straight Rye; Louisville came later, when Heaven Hill made it in Kentucky."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Heaven Hill Distillery: Rittenhouse Rye",
+     "url": "https://heavenhilldistillery.com/rittenhouse-rye.php",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Heaven Hill: a toast to ninety years of its brands",
+     "url": "https://heavenhill.com/news-and-notes/a-toast-to-90-years-celebrating-the-brands-that-shaped-our-journey/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Heaven Hill: the Rittenhouse 250th anniversary edition",
+     "url": "https://heavenhill.com/news-and-notes/heaven-hill-distillery-unveils-rittenhouse-united-states-250th-anniversary-commemorative-edition-straight-rye-whisky/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "VinePair: things to know about Rittenhouse Rye",
+     "url": "https://vinepair.com/articles/ntk-rittenhouse-rye/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "The Whiskey Wash: a guide to the whiskeys of Heaven Hill",
+     "url": "https://thewhiskeywash.com/whiskey-articles/every-whiskey-made-by-heaven-hill-distillery-the-complete-guide/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's mash question is settled on Heaven Hill's own pages: the Rittenhouse page gives a 51 per cent rye mash, and its 250th anniversary release and a house blog give 51 rye, 35 corn and 14 malted barley; the 51, 37, 12 of some reviews is left out.",
+    "The year Heaven Hill took the brand is disputed in its own pages: 1993 on its ninety years page and heritage page, 1982 in an older blog post, and 1999 in a blog rundown and some secondary accounts (VinePair, The Whiskey Wash). The record gives 1993 as Heaven Hill's own history and the cards ask nothing of it.",
+    "The Pennsylvania style claim is kept out, as the plan asks. That the name comes from Rittenhouse Square is hedged as most accounts: Heaven Hill gives the first name, Rittenhouse Square Straight Rye, and VinePair the link to the park.",
+    "Bernheim as the still rests on The Whiskey Wash and VinePair, and on Heaven Hill's statement that one rye recipe makes Rittenhouse and Pikesville, which its Pikesville launch says is distilled at Bernheim; no Rittenhouse page of the house names the still.",
+    "The claim that Rittenhouse was for a time the only bonded rye on the market is Heaven Hill's, from a blog interview, and is hedged as the house's account.",
+    "Left out for want of a source: the Very Rare Single Barrel bottlings (ages and years not confirmed), the label's front words beyond the three terms, and any contract distilling of the rye after the 1996 fire.",
+    "Year is the label's, 1934, not the house's: the Library's Heaven Hill gives 1935, the founding of Heaven Hill, which the story keeps apart. The Library's Heaven Hill record agrees in substance (100 proof, four years, the 1996 fire); its wording and its price talk were not used. One others entry is a release of 2026, dated; the integrator may cut it if a dated edition reads as a latest release."
+   ],
+   "checked": null
+  },
+  {
+   "key": "sazerac-rye",
+   "group": "kentucky-rye",
+   "producer": "Sazerac Rye",
+   "madeBy": "Buffalo Trace Distillery",
+   "style": "kentucky-rye",
+   "chapter": "american-rye",
+   "shelf": "",
+   "library": "Buffalo Trace",
+   "say": "SAZ-uh-rak",
+   "place": "Frankfort, Franklin County, Kentucky",
+   "year": "",
+   "yearIs": "",
+   "bottle": {
+    "name": "Sazerac Rye",
+    "class": "Straight rye whiskey",
+    "mash": "Rye, corn and malted barley, from Buffalo Trace's rye recipe. The distillery publishes no percentages; trade accounts describe a low rye mash, close to the 51 per cent line.",
+    "still": "Distilled at Buffalo Trace Distillery in Frankfort, from the same rye recipe as Thomas H. Handy and the 18 year old Sazerac; the distillery does not describe the stills.",
+    "wood": "New charred American oak. The label carries no age statement; it was once sold as six years old, and the distillery gives no age for it.",
+    "strength": "45% ABV (90 proof)",
+    "taste": "Clove, vanilla and anise first, then the pepper of rye over a gentle sweetness of grain, and a dry, spicy finish.",
+    "pour": "Above all in a Sazerac, stirred with sugar and Peychaud's Bitters into a glass rinsed with absinthe; also neat, or in a Manhattan or a Vieux Carré.",
+    "label": [
+     {
+      "term": "Sazerac",
+      "means": "The name of the New Orleans coffee house and its cocktail, and of the company that grew from it."
+     },
+     {
+      "term": "Straight Rye Whiskey",
+      "means": "At least 51 per cent rye and two years or more in new charred oak, with no colouring or flavouring."
+     },
+     {
+      "term": "90 Proof",
+      "means": "Forty-five per cent alcohol by volume, the standard bottling."
+     }
+    ]
+   },
+   "table": "Sazerac Rye is the straight rye made at Buffalo Trace in Frankfort and named for the New Orleans cocktail it belongs in. At 90 proof, with clove, vanilla and anise over rye pepper, it is the rye to reach for when a guest asks for a Sazerac.",
+   "story": "The name goes back to New Orleans, where, by the Sazerac Company's account, a coffee house opened in the French Quarter around 1850 and came to be called the Sazerac Coffee House, after Sazerac de Forge et Fils, a French brandy it imported. Its house cocktail was made with that brandy and Peychaud's Bitters. Thomas H. Handy, who had clerked there, bought the house in 1869 with fellow employees, and his firm grew into the Sazerac Company. As phylloxera ruined the vineyards of France, the story goes, the cocktail turned from brandy to American rye; some historians hold that rye was in it from the start. The company bought the Frankfort distillery in 1992 and renamed it Buffalo Trace in 1999, and in 2006 it launched Sazerac Rye in a bottle modelled on the house's packaging of the 1880s. In 2008 Louisiana named the Sazerac the official cocktail of New Orleans, and in 2025 the distillery set a 100 proof and a 125 proof version beside the 90. For a bartender it is the rye that shares its name with the drink, and the plain answer when a guest asks what goes in a Sazerac.",
+   "others": [
+    {
+     "name": "Sazerac Rye 100 Proof",
+     "note": "The same rye at 100 proof, added in 2025 for cocktails."
+    },
+    {
+     "name": "Sazerac Rye Full Proof",
+     "note": "The same rye at 125 proof, added to the range late in 2025."
+    },
+    {
+     "name": "Sazerac Rye 18 Year Old",
+     "note": "Eighteen years in oak at 90 proof, a yearly release of the Antique Collection."
+    }
+   ],
+   "traps": [
+    "Sazerac Rye is not the Sazerac cocktail: the whiskey took the drink's name in 2006, long after the drink.",
+    "No age is printed on its label: older bottles and some shop copy say six years, but give a guest no figure as fact.",
+    "It is not Thomas H. Handy: one recipe, but Handy is bottled uncut at barrel proof and Sazerac Rye at 90."
+   ],
+   "cards": [
+    {
+     "id": "no-age",
+     "prompt": "What does the Sazerac Rye label say of the whiskey's age?",
+     "answer": "Nothing: it carries no age statement. It was once sold as six years old, so quote no figure."
+    },
+    {
+     "id": "launch",
+     "prompt": "In which year was Sazerac Rye launched in a bottle modelled on the 1880s packaging?",
+     "answer": "2006, by the distillery's account; Louisiana named the Sazerac the official cocktail of New Orleans in 2008."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "no-age",
+     "q": "A guest asks how old Sazerac Rye is. What does its label say of its age?",
+     "options": [
+      "Six years old",
+      "It states none",
+      "Four years old",
+      "Ten years old"
+     ],
+     "a": 1,
+     "explain": "The label carries no age statement; six years is what older bottles and some shop copy claim, which is why it is no figure to quote."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "launch",
+     "q": "Buffalo Trace brought Sazerac Rye out in a bottle copied from the house's old packaging. In which year?",
+     "options": [
+      "1869",
+      "1992",
+      "2008",
+      "2006"
+     ],
+     "a": 3,
+     "explain": "The distillery launched it in 2006; 2008 is the year Louisiana named the Sazerac the official cocktail of New Orleans."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Buffalo Trace Distillery: Sazerac Rye",
+     "url": "https://www.buffalotracedistillery.com/our-brands/sazerac-rye-whiskey/sazerac-straight-rye-whiskey/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Sazerac Company: Our story",
+     "url": "https://www.sazerac.com/our-company/our-story/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "VinePair: a timeline of rye bottlings",
+     "url": "https://vinepair.com/articles/essential-bottles-of-rye-timeline-infographic/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Breaking Bourbon: Sazerac Rye review",
+     "url": "https://breakingbourbon.com/review/sazerac-rye",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "The Spirits Business: Sazerac Rye Full Proof joins the range",
+     "url": "https://www.thespiritsbusiness.com/2025/11/sazerac-rye-full-proof-joins-core-range/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note is followed: no age is given, and the six years is told only as what older bottles and shop copy said (Breaking Bourbon, and a Drinkhacker review titled 6 Years Old). The mash is not published; the low rye description rests on Breaking Bourbon and Whisky Advocate's mash bill piece cited on the style page, so it is hedged as trade accounts.",
+    "Year left empty: 2006 is the launch of the present label in Buffalo Trace's and VinePair's accounts (VinePair calls it a relaunch of an older Sazerac rye), so it is neither a founding nor plainly a first release; the story tells it.",
+    "Sharing the recipe with Sazerac 18 rests on Breaking Bourbon; sharing it with Thomas H. Handy rests on the reviewed liquor shelf record.",
+    "The 100 proof (July 2025) and the 125 proof Full Proof (November 2025) stand in several trade reports (The Whiskey Wash, The Spirits Business, VinePair, Whisky Advocate) and on Buffalo Trace's brand pages; they are dated history and the others field, never the flagship.",
+    "Thomas H. Handy is named without his dates here, since the Handy record dates him; the Sazerac Company gives 1839 to 1893, Wikipedia's Sazerac articles give his death as 1889.",
+    "The Library's Buffalo Trace record names Sazerac Rye in passing and agrees; the style page's 2008 Louisiana cocktail law is taken from it, already sourced there.",
+    "Left out for want of a second source: the entry proof, the warehouse and any age, and the claim that the Sazerac is America's first branded cocktail, which is the house's."
+   ],
+   "checked": null
+  },
+  {
+   "key": "thomas-h-handy",
+   "group": "kentucky-rye",
+   "producer": "Thomas H. Handy",
+   "madeBy": "Buffalo Trace Distillery",
+   "style": "kentucky-rye",
+   "chapter": "american-rye",
+   "shelf": "thomas-h-handy",
+   "library": "Buffalo Trace",
+   "say": "",
+   "place": "Frankfort, Franklin County, Kentucky",
+   "year": "2006",
+   "yearIs": "first released",
+   "bottle": {
+    "name": "Thomas H. Handy Sazerac Straight Rye",
+    "class": "Straight rye whiskey, bottled uncut and unfiltered at barrel proof",
+    "mash": "The rye recipe of Sazerac Rye: rye, corn and malted barley, in proportions the distillery does not publish.",
+    "still": "Distilled at Buffalo Trace Distillery in Frankfort, on the Kentucky River; the distillery gives no details of the stills for this rye.",
+    "wood": "New charred American oak. Earlier releases were around six years old; from the release of 2026, by the distillery's account, every barrel is at least twelve years old.",
+    "strength": "Varies by release, uncut and unfiltered",
+    "taste": "Cinnamon, mint and rye spice over cherry and brown sugar in the younger releases; the older barrels bring seasoned oak, fresh herbs, dill and tobacco, by the distillery's notes. Hot at full strength, it opens with water.",
+    "pour": "Neat with a jug of water beside it, added a few drops at a time. Stirred into a Sazerac it makes a far stronger drink than the usual, so tell the guest.",
+    "label": [
+     {
+      "term": "Uncut",
+      "means": "Bottled at the strength it left the barrel, with no water added."
+     },
+     {
+      "term": "Unfiltered",
+      "means": "Not filtered before bottling, by the distillery's account."
+     },
+     {
+      "term": "Sazerac Straight Rye",
+      "means": "The recipe of Sazerac Rye, at least two years in new charred oak, here at full strength."
+     }
+    ]
+   },
+   "table": "Thomas H. Handy Sazerac Straight Rye is the uncut rye of Buffalo Trace's yearly Antique Collection, the recipe of Sazerac Rye at full barrel strength. Each release carries its own proof on the label, and from 2026 every barrel is at least twelve years old.",
+   "story": "The name is that of Thomas H. Handy (1839 to 1893, as the Sazerac Company gives his dates), a Marylander who went to work at the Sazerac House in New Orleans. In 1869, by the company's account, he and several fellow employees bought the house, and his firm, Thos. H. Handy & Co., went on to import and sell spirits under its own names; the Sazerac Company grew from it. By the company's telling it was in his time that the Sazerac cocktail came to be made with American rye in place of French brandy, as phylloxera ruined the vineyards of France. More than a century later the company's Frankfort distillery, Buffalo Trace since 1999, began its Antique Collection in 2000, and Thomas H. Handy joined it in 2006 as the rye bottled straight from the barrel, uncut and unfiltered, beside the 18 year old Sazerac. For its first twenty years the barrels were mostly around six years old; with the release of 2026 the distillery set a floor of twelve years for every barrel. For a bartender it is the Sazerac rye at full strength: read the proof off the label, and pour it with water at hand.",
+   "others": [
+    {
+     "name": "Sazerac Rye",
+     "note": "The same distillery's rye recipe, cut to 90 proof, with no age statement."
+    },
+    {
+     "name": "Sazerac Rye 18 Year Old",
+     "note": "The other rye of the Antique Collection, eighteen years in oak at 90 proof."
+    }
+   ],
+   "traps": [
+    "Its proof changes with each release and runs high: read it off tonight's label rather than quote a figure.",
+    "It is not Sazerac Rye: one recipe, but Handy is bottled uncut at barrel proof, and Sazerac Rye at 90.",
+    "Its age changed with the release of 2026: twelve years and more, where earlier releases were around six."
+   ],
+   "cards": [
+    {
+     "id": "uncut",
+     "prompt": "How is Thomas H. Handy bottled, against Sazerac Rye's 90 proof?",
+     "answer": "Uncut and unfiltered, straight from the barrel, so each yearly release has its own proof, printed on the label."
+    },
+    {
+     "id": "namesake",
+     "prompt": "Who was the man behind the Thomas H. Handy name?",
+     "answer": "A Marylander who bought the Sazerac House in New Orleans in 1869, by the company's account; the Sazerac Company grew from his firm."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "uncut",
+     "q": "A guest asks why Thomas H. Handy's proof differs from year to year. How is it bottled?",
+     "options": [
+      "Cut to 90 proof",
+      "Cut to 100 proof",
+      "Uncut and unfiltered",
+      "Blended to one strength"
+     ],
+     "a": 2,
+     "explain": "It goes into the bottle at the strength it left the barrel, uncut and unfiltered; 90 proof is Sazerac Rye, the same recipe cut down."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "namesake",
+     "q": "In which year, by the Sazerac Company's account, did Thomas H. Handy buy the Sazerac House?",
+     "options": [
+      "1869",
+      "1850",
+      "1893",
+      "2006"
+     ],
+     "a": 0,
+     "explain": "1869 by the company's account; 1850 is about when the coffee house opened, and 2006 the year the rye joined the Antique Collection."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Buffalo Trace Distillery: Thomas H. Handy Sazerac",
+     "url": "https://www.buffalotracedistillery.com/our-brands/antique-collection/thomas-h-handy.html",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Sazerac Company: Our story",
+     "url": "https://www.sazerac.com/our-company/our-story/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Whisky Advocate: the 2026 Antique Collection and an older Handy",
+     "url": "https://whiskyadvocate.com/buffalo-trace-antique-collection-2026-review",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "The Whiskey Wash: the 2026 Antique Collection, Handy at twelve years",
+     "url": "https://thewhiskeywash.com/whiskey-news/buffalo-trace-unveils-2026-antique-collection-thomas-h-handy-now-aged-12-years/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Breaking Bourbon: Buffalo Trace on the 2026 Antique Collection",
+     "url": "https://breakingbourbon.com/bourbon-whiskey-press-releases/buffalo-trace-distillery-unveils-2026-buffalo-trace-antique-collection-honoring-whiskey-legends-while-charting-a-new-future-for-thomas-h-handy",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note is settled: the age change is not Maxim's alone. Whisky Advocate, The Whiskey Wash and Buffalo Trace's press release (as Breaking Bourbon prints it) all say that from the 2026 release every barrel is at least twelve years old; the 2025 release was given as 6 years 3 months.",
+    "The liquor shelf record of Thomas H. Handy says around six years in most releases, in its age fact, its made text, its lines and a Watch for; since 2026 that holds only for earlier releases. The shelf should be brought forward in its own review; this record says both.",
+    "2006 as the first release rests on the twentieth anniversary of 2026 in The Whiskey Wash and the press release; the Antique Collection's start in 2000 is taken from the reviewed barrel proof record of George T. Stagg.",
+    "Handy's dates are the Sazerac Company's timeline (1839 to 1893), with 1893 also in a whiskey history blog and a cocktail history piece; Wikipedia's Sazerac Company and Sazerac articles give 1889 for his death. The record hedges the dates as the company's. The year he bought the house is 1869 in the company's account and 1871 in one magazine account; the company's is used.",
+    "Year is the bottling's first release, 2006, not the 1773 site date the Library's Buffalo Trace record gives for the distillery. Strength carries no figure, as the brief asks: 2025 was 129.8 proof and 2026 about 130 in the trade reports.",
+    "The taste joins the shelf record's notes for the younger releases with Buffalo Trace's product notes, which read as the twelve year old's; both are hedged.",
+    "Left out for want of a source: the release's age statement wording on the 2026 label, the barrel count, and the warehouse."
+   ],
+   "checked": null
+  },
+  {
+   "key": "pikesville",
+   "group": "kentucky-rye",
+   "producer": "Pikesville",
+   "madeBy": "Heaven Hill",
+   "style": "kentucky-rye",
+   "chapter": "american-rye",
+   "shelf": "",
+   "library": "Heaven Hill",
+   "say": "",
+   "place": "Distilled in Louisville, aged in Bardstown, Kentucky",
+   "year": "1895",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Pikesville Straight Rye Whiskey 110 Proof",
+    "class": "Straight rye whiskey",
+    "mash": "At least 51 per cent rye, with corn and malted barley. Heaven Hill's pages give the rest two ways, 39 corn and 10 barley on its Pikesville sheet, or the 35 and 14 of its shared rye recipe, so quote only the rye.",
+    "still": "Distilled by Heaven Hill at its Bernheim Distillery in Louisville, by the house's account of the 2015 launch, then aged in its rickhouses at Bardstown.",
+    "wood": "New charred American oak, with an age statement of six years: the barrels were chosen at that age or more.",
+    "strength": "55% ABV (110 proof)",
+    "taste": "Dusty cocoa and a little oaky smoke on the nose, then a dry, spicy palate of honeyed rye and clove, ending soft, with vanilla and baking spice.",
+    "pour": "Neat, with a few drops of water or over one large cube; at 110 proof it also makes a firm Manhattan or Sazerac.",
+    "label": [
+     {
+      "term": "Aged 6 Years",
+      "means": "No whiskey in the bottle is younger than six years."
+     },
+     {
+      "term": "110 Proof",
+      "means": "Fifty-five per cent alcohol by volume, well above the usual bottling strength."
+     },
+     {
+      "term": "Straight Rye Whiskey",
+      "means": "At least 51 per cent rye and two years or more in new charred oak, with nothing added."
+     }
+    ]
+   },
+   "table": "Pikesville is a Maryland rye name from 1895 that Heaven Hill has made in Kentucky since 1982. Its Straight Rye Whiskey 110 Proof is six years old: cocoa, clove and honeyed rye, strong enough to sip with a drop of water or to stir into a firm Manhattan.",
+   "story": "The name is that of Pikesville, a town outside Baltimore, and by Heaven Hill's account the rye was first made in Maryland in 1895, when Maryland, like Pennsylvania, was rye country. Prohibition all but ended Maryland's rye trade. Pikesville came back after Repeal and, as Heaven Hill tells it, held on as the last Maryland rye standing. In 1982 Heaven Hill of Bardstown bought the brand, and once distilling in Maryland had ended it made the whiskey in Kentucky. For more than thirty years Pikesville lived on mostly in Maryland, as a young rye at 80 proof. In 2015 Heaven Hill relaunched it as a six year old straight rye at 110 proof, distilled at its Bernheim Distillery in Louisville and aged at Bardstown, and the young rye went on, on Maryland shelves, as Pikesville Supreme. The house's rye recipe also makes Rittenhouse, so the two can be poured side by side to show what the extra years and ten more proof do. For a bartender it is the bridge between two rye traditions: a Maryland name with Kentucky whiskey in the bottle.",
+   "others": [
+    {
+     "name": "Pikesville Supreme",
+     "note": "The younger Maryland rye at 80 proof, not the six year old."
+    }
+   ],
+   "traps": [
+    "Pikesville is distilled in Kentucky, at Bernheim in Louisville: only the name is from Maryland.",
+    "Pikesville Supreme, the 80 proof rye of Maryland shelves, is not the six year old at 110 proof.",
+    "Heaven Hill's own pages give two mash bills; promise a guest the 51 per cent rye and no more."
+   ],
+   "cards": [
+    {
+     "id": "proof",
+     "prompt": "At what proof is the six year old Pikesville rye bottled?",
+     "answer": "110 proof, 55% ABV, ten above Rittenhouse's bonded 100."
+    },
+    {
+     "id": "maryland",
+     "prompt": "Where and when did the Pikesville name begin?",
+     "answer": "In Maryland, named for Pikesville near Baltimore, in 1895 by Heaven Hill's account; Heaven Hill bought it in 1982."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "proof",
+     "q": "A guest wants a rye stronger than a bottled in bond. At what proof is the six year old Pikesville bottled?",
+     "options": [
+      "90 proof",
+      "100 proof",
+      "101 proof",
+      "110 proof"
+     ],
+     "a": 3,
+     "explain": "It is bottled at 110 proof; 100 proof is the strength of the bond, which Rittenhouse carries."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "maryland",
+     "q": "In which state did the Pikesville name begin?",
+     "options": [
+      "Pennsylvania",
+      "Maryland",
+      "Virginia",
+      "Kentucky"
+     ],
+     "a": 1,
+     "explain": "It began in Maryland in 1895 by Heaven Hill's account; Kentucky is where Heaven Hill has made it since buying the brand in 1982."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Heaven Hill Distillery: Pikesville Straight Rye",
+     "url": "https://heavenhilldistillery.com/pikesville-straight-rye.php",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Heaven Hill: Pikesville Straight Rye Whiskey",
+     "url": "https://heavenhill.com/brands-detail.php?brandid=pikesville-straight-rye-whiskey",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Distillery Trail: Heaven Hill launches the six year old Pikesville",
+     "url": "https://www.distillerytrail.com/blog/heaven-hill-launches-6-year-old-110-proof-pikesville-rye-whiskey/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Breaking Bourbon: Pikesville Rye 6 Year review",
+     "url": "https://www.breakingbourbon.com/pikesville-rye-6-year.html",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "VinePair: a timeline of rye bottlings",
+     "url": "https://vinepair.com/articles/essential-bottles-of-rye-timeline-infographic/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's question of the year is settled on Heaven Hill's Pikesville page, which gives 1982, as does a secondary history; the plan's 1980s is the year Maryland production ended in the house's account.",
+    "The mash is not settled: Heaven Hill's Pikesville sheet gives about 51 rye, 39 corn and 10 malted barley, while a house blog says one rye recipe of 51, 35 and 14 becomes Rittenhouse, Pikesville and Elijah Craig Rye. The plan's 65, 23, 12 appears on no Heaven Hill page found and is left out. The record gives only the 51 per cent rye as certain and says the house gives the rest two ways.",
+    "Bernheim and the Bardstown rickhouses are in Heaven Hill's 2015 launch release, as Distillery Trail and the Kentucky Distillers' Association print it; that release names a living distiller, who is kept out (already in people.json). The release's address carries a selling word, so Distillery Trail's copy is cited instead.",
+    "The plan's made in Maryland until the 1970s is left out: secondary accounts (Baltimore blogs) put the last Maryland distilling at the Majestic plant in Lansdowne in 1972 or 1973, while Heaven Hill says Maryland production ended in the 1980s, likely meaning the end of Maryland stocks. The record says only that Heaven Hill made it in Kentucky once Maryland distilling had ended.",
+    "The founding firm (a family firm at Scott's Level, in blog accounts) and the post Repeal owners are left out for want of a primary or a second independent source.",
+    "Year is the label's, 1895, not Heaven Hill's 1935 as the Library gives it. The last Maryland rye claim is hedged as Heaven Hill's account; The Whiskey Wash says the same. The monongahela-rye style page says Pikesville began in Maryland and is now made in Kentucky; it agrees. The Library's Heaven Hill record does not name Pikesville."
+   ],
+   "checked": null
+  },
+  {
+   "key": "michters",
+   "group": "kentucky-rye",
+   "producer": "Michter's",
+   "madeBy": "",
+   "style": "kentucky-rye",
+   "chapter": "american-rye",
+   "shelf": "",
+   "library": "Michter’s",
+   "say": "MIK-terz",
+   "place": "Louisville, Jefferson County, Kentucky",
+   "year": "",
+   "yearIs": "",
+   "bottle": {
+    "name": "Michter's US*1 Single Barrel Kentucky Straight Rye",
+    "class": "Kentucky straight rye whiskey, single barrel",
+    "mash": "A rye mash; Michter's publishes no recipe for it, and the figures some shops give are not the house's.",
+    "still": "Made by Michter's in Louisville, which bought a site at Shively in 2012 and by 2015 distilled all its own whiskey there; earlier bottlings were distilled for it under contract in Kentucky.",
+    "wood": "Fire charred new American white oak, each bottling drawn from a single barrel; the label carries no age statement.",
+    "strength": "42.4% ABV (84.8 proof)",
+    "taste": "Peppery rye spice and bright citrus, then butterscotch and toasted oak, gentle at its strength, with a dry, spicy finish.",
+    "pour": "Neat or over one large cube; it stirs a softer Manhattan or Sazerac than a bonded rye does, for a guest who finds 100 proof too hot.",
+    "label": [
+     {
+      "term": "US*1",
+      "means": "The house's name for its core range of whiskeys; the label prints a star in place of the asterisk."
+     },
+     {
+      "term": "Single Barrel",
+      "means": "Each bottling is drawn from one barrel, so bottles differ a little from barrel to barrel."
+     },
+     {
+      "term": "Kentucky Straight Rye",
+      "means": "Rye whiskey made in Kentucky: at least 51 per cent rye and two years or more in new charred oak."
+     }
+    ]
+   },
+   "table": "Michter's is the Louisville house that carries the name of a Pennsylvania distillery, and its US*1 Single Barrel Kentucky Straight Rye is bottled one barrel at a time at 84.8 proof. Pepper, citrus and butterscotch make it a gentle rye for a guest who finds bonded ryes hot.",
+   "story": "Michter's traces its line to a distillery near Schaefferstown, Pennsylvania, where, by the brand's account, Swiss Mennonite farmers of the Shenk family began distilling rye in 1753. The site later passed to the Bomberger family, and in the 1950s an owner named its whiskey Michter's, joining the names of his two sons. In 1980 the old Bomberger's Distillery was made a National Historic Landmark. The business went bankrupt in 1989, the Pennsylvania distillery closed soon after, and the name was left to lapse. In the 1990s two men from the drinks trade bought the trademark and rebuilt Michter's in Kentucky, bottling at first whiskey distilled for them by others, under contract from about 2003. The house bought a site at Shively in Louisville in 2012, and by 2015 it was distilling all of its own whiskey there. The US*1 Rye, bottled one barrel at a time below the strength of the bonded ryes, became the rye guests ask for by the Michter's name. For a bartender it is the gentle side of Kentucky rye: single barrel, low in proof, and an easy first rye to pour.",
+   "others": [
+    {
+     "name": "Michter's US*1 Barrel Strength Rye",
+     "note": "The same rye bottled uncut, barrel by barrel, so its proof varies by barrel."
+    },
+    {
+     "name": "Michter's 10 Year Kentucky Straight Rye",
+     "note": "The house's rye with a ten year age statement."
+    }
+   ],
+   "traps": [
+    "Michter's rye is not made in Pennsylvania: the old distillery there closed after 1989, and the whiskey is Kentucky's.",
+    "Single barrel means one barrel a bottling, so two bottles may taste a little apart.",
+    "Older bottlings were distilled under contract; do not tell a guest that every bottle came from Shively."
+   ],
+   "cards": [
+    {
+     "id": "proof",
+     "prompt": "At what proof is Michter's US*1 Rye bottled?",
+     "answer": "84.8 proof, 42.4% ABV, one barrel a bottling: gentler than the bonded ryes at 100."
+    },
+    {
+     "id": "name",
+     "prompt": "Where does the Michter's name come from?",
+     "answer": "A distillery near Schaefferstown, Pennsylvania, whose owner in the 1950s joined the names of his two sons."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "proof",
+     "q": "A guest finds bonded rye too hot and asks for Michter's US*1 Rye. At what proof is it bottled?",
+     "options": [
+      "84.8 proof",
+      "92.8 proof",
+      "100 proof",
+      "110 proof"
+     ],
+     "a": 0,
+     "explain": "It is bottled at 84.8 proof, 42.4% ABV; 100 proof is the strength of the bond, which Rittenhouse carries."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "name",
+     "q": "Michter's takes its name from a distillery in which state?",
+     "options": [
+      "Kentucky",
+      "Maryland",
+      "Pennsylvania",
+      "Tennessee"
+     ],
+     "a": 2,
+     "explain": "The name was first given to the whiskey of a distillery near Schaefferstown, Pennsylvania, in the 1950s; Kentucky is where the house rebuilt it."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Michter's: US*1 Kentucky Straight Rye",
+     "url": "https://michters.com/us1-kentucky-straight-rye/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Michter's: Legacy",
+     "url": "https://michters.com/legacy/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Michter's: the Shively distillery",
+     "url": "https://michters.com/shively/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "VinePair: things to know about Michter's",
+     "url": "https://vinepair.com/articles/michters-guide/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Bomberger's Distillery",
+     "url": "https://en.wikipedia.org/wiki/Bomberger%27s_Distillery",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's question of the still is settled only in part: Michter's bought its Shively site in 2012 and was distilling all its own whiskey by 2015 (VinePair, and a Sotheby's article on the house); earlier whiskey was sourced and then contract distilled from about 2003 (VinePair). Michter's own pages do not say which rye bottlings came from which still, so the record says both and names no contract distiller.",
+    "The mash is unpublished; the 53, 33, 14 of one retailer is left out as the plan asks.",
+    "The two men who bought the trademark are left unnamed: sources name both, and both belong on people.json's names list (Joseph Magliocco, Dick Newman); this task may change only the fragment, so the integrator should add them. The 1950s owner and his two sons are also left unnamed; none is known to have died with two sources.",
+    "Sources differ on the purchase of the trademark (1996, 1997 or the late 1990s) and on the closing of the Pennsylvania distillery (1989 in Wikipedia, February 1990 in VinePair and a writer's history): the record says the business went bankrupt in 1989 and the distillery closed soon after, and the 1990s for the trademark.",
+    "The 1753 founding is the brand's claim for an ancestor and is told as such; year is left empty for that reason. The National Historic Landmark of 1980 rests on Wikipedia and the National Park Service nomination.",
+    "Left out for want of a second source: the Fort Nelson distillery and its old Pennsylvania pot stills (Whisky Advocate alone), the barrel entry proof of this rye (Michter's tour pages give 103 and 125 for two single barrel ryes without saying which), heat cycled warehouses, and the meaning of US*1.",
+    "The Library's Michter's record gives a barrel entry proof of 103 and heat cycled warehouses as house practice; neither was confirmed for this bottling, so neither is used. Its wording was not copied.",
+    "The roster prints US*1 with an asterisk; the label prints a star, which the voice refuses, so the asterisk stands throughout."
+   ],
+   "checked": null
+  }
+ ]
+}
