@@ -1,0 +1,671 @@
+{
+  "group": "barrel-proof",
+  "records": [
+    {
+      "key": "bookers",
+      "group": "barrel-proof",
+      "producer": "Booker's",
+      "madeBy": "Jim Beam",
+      "style": "barrel-proof",
+      "chapter": "american-labels",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Clermont, Bullitt County, Kentucky",
+      "year": "1988",
+      "yearIs": "first released",
+      "bottle": {
+        "name": "Booker's Bourbon",
+        "class": "Kentucky straight bourbon whiskey, bottled uncut at barrel proof",
+        "mash": "Jim Beam's own bourbon recipe, which the producer's pages give as 77 per cent corn, 13 per cent rye and 10 per cent malted barley.",
+        "still": "Distilled by Jim Beam on its Clermont campus in Kentucky, by the producer's account; no details of the equipment are given for this bottling.",
+        "wood": "New charred American oak, the barrels drawn, as the house tells it, from the middle floors of the rackhouse. Batches run six to eight years, each age given by the producer.",
+        "strength": "Varies by batch, uncut, about 121 to 131 proof",
+        "taste": "Vanilla and oak on the nose, often with brown sugar, dried fruit or toasted nuts; then an intense, hot palate that turns sweet, and a long, warm finish.",
+        "pour": "Neat with water beside it, or over one large cube; a few drops of water open it. At this strength it carries a robust Old Fashioned.",
+        "label": [
+          {
+            "term": "Kentucky Straight Bourbon Whiskey",
+            "means": "Bourbon made in Kentucky and aged at least two years in new charred oak."
+          },
+          {
+            "term": "Batch",
+            "means": "The year and the batch's number within that year; since about 2015 each batch also carries a name."
+          }
+        ]
+      },
+      "table": "Booker's is the barrel proof bourbon Jim Beam bottles uncut and unfiltered, from barrels drawn out of the middle of its Kentucky rackhouses. Booker's Bourbon comes in named batches of six to eight years, each at its own proof: vanilla, oak and brown sugar, hot until water opens it.",
+      "story": "Booker Noe (1929 to 2004), Jim Beam's grandson, ran the distilling at Jim Beam for more than forty years and liked his bourbon as it came out of the barrel. As the house tells it, he chose barrels from the middle floors of the rackhouse, where the heat and the damp suit long ageing, and bottled them uncut and unfiltered, at whatever strength they had reached. In 1987 he gave such bottlings to friends as holiday gifts under the name Booker's True Barrel Bourbon, and in 1988 Booker's went on public sale. In 1992 Beam gathered it with Baker's, Basil Hayden's and Knob Creek as its Small Batch Bourbon Collection. He laid barrels down to the end: rye he filled in 2003, the year before his death, came out in 2016 as Booker's Rye. Since about 2015 each batch has carried a name, often drawn from his life, his home town of Springfield or his sayings, beside the year and number on the label. For a bartender, Booker's is where barrel proof is taught: one recipe, no water after the barrel, and a strength that changes with every batch, so the label in the hand is the one figure to quote.",
+      "others": [
+        {
+          "name": "Booker's Rye",
+          "note": "Rye Booker Noe laid down in 2003, bottled uncut in 2016 at thirteen years as the Big Time Batch."
+        }
+      ],
+      "traps": [
+        "There is no Booker's distillery: Jim Beam makes it, and Booker was a man, Booker Noe, the grandson of Jim Beam.",
+        "Each batch has its own proof: read it off the label in hand, and never quote one figure for the bourbon.",
+        "Booker's stands in Beam's Small Batch Bourbon Collection, but small batch has no legal meaning; uncut is its lesson."
+      ],
+      "cards": [
+        {
+          "id": "uncut",
+          "prompt": "How is Booker's Bourbon bottled, by the producer's account?",
+          "answer": "Uncut and unfiltered: no water after the barrel and no chill filtering, so each batch has its own proof."
+        },
+        {
+          "id": "gift-bottling",
+          "prompt": "Who made Booker's, and how did he share it before it went on sale?",
+          "answer": "Booker Noe, Jim Beam's grandson, who gave uncut bottlings to friends as gifts before the public release of 1988."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "uncut",
+          "q": "A guest asks why each batch of Booker's Bourbon carries a different proof. What is the reason?",
+          "options": [
+            "Its recipe changes yearly",
+            "It is bottled uncut",
+            "It is finished in port",
+            "It is cut to a set proof"
+          ],
+          "a": 1,
+          "explain": "No water goes in after the barrel, so each batch keeps the strength its barrels reached; the recipe itself stays the same from batch to batch."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "gift-bottling",
+          "q": "In which year did Booker's first go on public sale?",
+          "options": [
+            "1964",
+            "1992",
+            "1988",
+            "2004"
+          ],
+          "a": 2,
+          "explain": "Booker Noe shared it with friends as gifts first and released it to the public in 1988; 1992 is the year it joined the Small Batch Bourbon Collection."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Beam Distilling: About Booker's",
+          "url": "https://www.beamdistilling.com/bookersbourbon/about-bookers",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Booker's: the batches",
+          "url": "https://www.bookersbourbon.com/batches",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Beam Distilling: Booker's Rye, the Big Time Batch",
+          "url": "https://www.beamdistilling.com/bookersbourbon/whiskies/2016-le-limited-edition-bookers-rye-big-time-batch",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Wikipedia: Booker's",
+          "url": "https://en.wikipedia.org/wiki/Booker%27s",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "VinePair: need to know, Booker's Bourbon",
+          "url": "https://vinepair.com/articles/ntk-bookers-bourbon-guide/",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "The plan's note is settled: Booker Noe is named with his dates, 1929 to 2004, on Wikipedia and Whiskey University as search summaries gave them; his son and grandson are not named. The strength is a range, about 121 to 131 proof, as Beam's own pages give it, and no batch's figure is printed.",
+        "Year: 1988 for the public release stands in Wikipedia, VinePair and Beam's thirtieth anniversary page; Beam Distilling's About page says he introduced it in 1987, which the story keeps as the year of the gift bottlings, as VinePair tells it. One retailer and one Beam article give 1992, the year of the Small Batch Bourbon Collection.",
+        "The mash bill, 77 per cent corn, 13 rye and 10 malted barley, rests on Beam Distilling's own pages read by search summary, which call it Jim Beam's standard recipe; the refuter may wish to mark it given as.",
+        "Beam's pages say Booker's is made at a small distillery on the Clermont campus named for the founder's living son; that name is left out, and the still field says only Clermont. No column, doubler or proof off the still was found for this bottling.",
+        "The batch names drawn from Springfield, his home town, rest on Beam's 2024 batch page and a VinePair review of that batch as summarised; the 1992 collection rests on Wikipedia's Booker's and Knob Creek entries and agrees with the high rye and small batch fragments.",
+        "Left out for want of a source: any wording of the label beyond the class and the batch (whether it prints uncut and unfiltered, or the age to the day, was not confirmed), the first release's size, and the claim, made by one source, that it was the first bourbon sold uncut.",
+        "The style page (barrel-proof lines.s45) says Booker's was first sold uncut in the late 1980s, which agrees. No shelf bottle or Library record exists for Booker's."
+      ],
+      "checked": null
+    },
+    {
+      "key": "george-t-stagg",
+      "group": "barrel-proof",
+      "producer": "George T. Stagg",
+      "madeBy": "Buffalo Trace Distillery",
+      "style": "barrel-proof",
+      "chapter": "american-labels",
+      "shelf": "george-t-stagg",
+      "library": "",
+      "say": "",
+      "place": "Frankfort, Franklin County, Kentucky",
+      "year": "2002",
+      "yearIs": "first released",
+      "bottle": {
+        "name": "George T. Stagg Kentucky Straight Bourbon Whiskey",
+        "class": "Kentucky straight bourbon whiskey, bottled uncut at barrel proof",
+        "mash": "Buffalo Trace's Mash Bill No. 1, by the distillery's own page: corn with rye and malted barley. No percentages are published.",
+        "still": "Distilled at the Buffalo Trace Distillery in Frankfort, on the Kentucky River; the distillery gives no details of the equipment for this bottling.",
+        "wood": "New charred oak, no less than fifteen years by the distillery's page, each barrel losing more than half its volume to evaporation. Each release states its own age.",
+        "strength": "Varies by release, uncut, the proof written on the label by hand",
+        "taste": "Toffee, dark chocolate, black cherry and tobacco on the nose, then a thick, hot palate of molasses, espresso and oak spice; water opens dried fruit and vanilla, and the finish is long and drying.",
+        "pour": "Neat with a jug of water on the side, or over one large cube. It is a bourbon for slow sipping, not for the mixing glass.",
+        "label": [
+          {
+            "term": "Kentucky Straight Bourbon Whiskey",
+            "means": "Made in Kentucky as bourbon, aged at least two years in new charred oak, with nothing added."
+          },
+          {
+            "term": "Proof",
+            "means": "Written on the front label by hand, since nobody knows it until the barrels are sampled and dumped."
+          }
+        ]
+      },
+      "table": "George T. Stagg is the long aged barrel proof bourbon of Buffalo Trace in Frankfort, at least fifteen years in new charred oak, bottled uncut and unfiltered, its proof written on the label by hand. Expect toffee, black cherry and espresso, thick and hot, with water beside it.",
+      "story": "George T. Stagg (1835 to 1893) was a Kentuckian who sold whiskey in St. Louis and bought barrels of O.F.C. bourbon from Colonel E. H. Taylor Jr. When Taylor fell into debt, Stagg took over the O.F.C. distillery in Frankfort in 1878, moving from selling whiskey to making it. In 1904, eleven years after his death, the distillery took his name as the George T. Stagg Distillery. By the distillery's account it was one of six allowed to bottle whiskey for medicine through Prohibition, and Old Stagg became the bourbon it led with as Prohibition ended. The site was renamed Buffalo Trace in 1999, and its Antique Collection began in 2000. George T. Stagg joined the collection in 2002: barrels of the corn led Mash Bill No. 1, left fifteen years and more in new charred oak and bottled uncut and unfiltered in the autumn release. Over those summers each barrel gives more than half its volume to the air, and the strength left behind goes into the bottle, so the proof is written on by hand. For a bartender it is the long end of the barrel proof lesson: the same uncut idea as any batch, carried through fifteen years, and a bottle always poured with water beside it.",
+      "others": [
+        {
+          "name": "Stagg",
+          "note": "The younger, batched barrel proof bourbon from the same recipe, sold as Stagg Jr. until 2022."
+        },
+        {
+          "name": "Old Stagg",
+          "note": "The distillery's label at the close of Prohibition, revived uncut and unfiltered in the Prohibition Collection of 2023."
+        }
+      ],
+      "traps": [
+        "George T. Stagg and Stagg are two bourbons: the same recipe, but Stagg has about half the years and comes in batches.",
+        "Its proof changes from release to release: read it off the label rather than quote a figure.",
+        "There is no Stagg distillery: it is made at Buffalo Trace, which carried Stagg's name from 1904 until 1999."
+      ],
+      "cards": [
+        {
+          "id": "proof-by-hand",
+          "prompt": "How does the proof come to be on the front label of George T. Stagg?",
+          "answer": "It is written in by hand, because nobody knows it until the barrels are sampled and dumped."
+        },
+        {
+          "id": "namesake",
+          "prompt": "Who was George T. Stagg, the man behind the bourbon's name?",
+          "answer": "A St. Louis whiskey salesman who took over E. H. Taylor's O.F.C. distillery in Frankfort in 1878."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "proof-by-hand",
+          "q": "A guest notices the proof on a bottle of George T. Stagg looks handwritten. How does that figure reach the label?",
+          "options": [
+            "Written in by hand",
+            "Printed months ahead",
+            "Stamped by the state",
+            "Carried over unchanged"
+          ],
+          "a": 0,
+          "explain": "Each release's barrels are sampled and dumped before anyone knows the proof, so it is written in by hand; it is never printed ahead or carried over from another year."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "namesake",
+          "q": "In which year did George T. Stagg take over the O.F.C. distillery in Frankfort?",
+          "options": [
+            "1893",
+            "1904",
+            "1999",
+            "1878"
+          ],
+          "a": 3,
+          "explain": "Stagg took it over from E. H. Taylor Jr. in 1878; 1904 is the year the distillery took his name, eleven years after his death."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Buffalo Trace Distillery: George T. Stagg",
+          "url": "https://www.buffalotracedistillery.com/our-brands/george-t-stagg/george-t-stagg-bourbon/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Buffalo Trace Distillery: George T. Stagg, the bourbon's biography",
+          "url": "https://www.buffalotracedistillery.com/media-kit/bios/george-t-stagg.html",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Buffalo Trace Distillery: Old Stagg",
+          "url": "https://www.buffalotracedistillery.com/our-brands/prohibition-collection/old-stagg.html",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Whiskey University: George T. Stagg",
+          "url": "https://www.whiskeyuniv.com/george-t-stagg",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "Distillery Trail: a Buffalo Trace timeline",
+          "url": "https://www.distillerytrail.com/blog/the-complete-buffalo-trace-distillery-timeline-1773-to-today/",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "The plan's note is settled: George T. Stagg is named with his dates, 1835 to 1893, on Whiskey University and the Distillery Trail timeline, and Buffalo Trace's own page gives the birth year. Neither the proof nor the age of any one release is printed; the strength field begins Varies by release.",
+        "Buffalo Trace's own pages, as searched, date Stagg's purchase of the O.F.C. to 1879 in one place and the renaming to 1900 or 1907 in others; the story keeps the reviewed shelf's 1878 and the Kentucky Historical Society marker's 1904. The refuter should settle the purchase year beside the E. H. Taylor record of bottled in bond, which raised the same question.",
+        "The shelf record (george-t-stagg lines.s20) calls it one of five whiskeys in the Antique Collection; Buffalo Trace's own Antique Collection page now says six, since E. H. Taylor Bottled in Bond joined in 2025. The record gives no count; the shelf line may need a correction there.",
+        "The shelf gives around 15 years in most releases; the distillery's own page now says no less than fifteen, and an older page of the distillery said nearly a decade. The record follows the current page and says each release states its own age.",
+        "A trade headline found in passing says George T. Stagg was left out of one year's Antique Collection, so the record never says it is released every year; it says only that it joined in 2002 and comes in the autumn release.",
+        "Left out for want of a second source: the claim that Stagg put steam heat into a warehouse in the 1880s, and his Union Army service. The taste and the pour follow the reviewed shelf record."
+      ],
+      "checked": null
+    },
+    {
+      "key": "stagg",
+      "group": "barrel-proof",
+      "producer": "Stagg",
+      "madeBy": "Buffalo Trace Distillery",
+      "style": "barrel-proof",
+      "chapter": "american-labels",
+      "shelf": "stagg",
+      "library": "",
+      "say": "",
+      "place": "Frankfort, Franklin County, Kentucky",
+      "year": "2013",
+      "yearIs": "first released",
+      "bottle": {
+        "name": "Stagg Kentucky Straight Bourbon Whiskey",
+        "class": "Kentucky straight bourbon whiskey, bottled uncut at barrel proof",
+        "mash": "Buffalo Trace's Mash Bill No. 1, the recipe of George T. Stagg: corn with rye and malted barley. No percentages are published.",
+        "still": "Distilled at the Buffalo Trace Distillery in Frankfort; the distillery gives no details of the equipment for this bottling.",
+        "wood": "New charred oak for about eight to nine years by the distillery's and the trade's accounts, roughly half the time of George T. Stagg. No age statement on the label.",
+        "strength": "Varies by batch, uncut, printed on each batch's label",
+        "taste": "Black cherry, caramel and brown sugar on the nose with a little oak char; a thick palate of dark chocolate, cinnamon and baked cherry; water brings out vanilla and dried fruit before a long, peppery finish.",
+        "pour": "Neat with water on the side, or over one large cube; a few drops of water bring the fruit forward.",
+        "label": [
+          {
+            "term": "Kentucky Straight Bourbon Whiskey",
+            "means": "A Kentucky bourbon of at least two years in new charred oak, its strength from the barrel."
+          },
+          {
+            "term": "Batch",
+            "means": "Since 2022 a code of the year and a letter, as 22A, where Stagg Jr. carried running numbers."
+          }
+        ]
+      },
+      "table": "Stagg, sold as Stagg Jr. until 2022, is the batched barrel proof bourbon of Buffalo Trace in Frankfort: the George T. Stagg recipe given about eight to nine years in oak, bottled uncut and unfiltered. Each batch has its own proof, with black cherry, caramel and dark chocolate.",
+      "story": "The name goes back to the distillery's past: by Buffalo Trace's account, Old Stagg was the bourbon the George T. Stagg Distillery led with as Prohibition ended, and the barrel proof bourbons that carry the name grew from it. George T. Stagg itself had been an autumn release of the Antique Collection since 2002, fifteen years and more in oak. In 2013 Buffalo Trace added a younger bourbon from the same Mash Bill No. 1 and called it Stagg Jr. Its opening batch was drawn from barrels of eight to nine years and bottled uncut and unfiltered, and the distillery meant to release several batches a year rather than one. The batches were numbered as they came, and the fifteenth was released in 2020. In 2022 the Jr. left the label and the bourbon became plain Stagg, its batches marked from then on by the year and a letter, as 22A. For a bartender the two bottles side by side teach what time does to barrel proof: one recipe, one uncut bottling, about half the years in wood for Stagg, and a proof to read off each batch's label rather than recall.",
+      "others": [
+        {
+          "name": "George T. Stagg",
+          "note": "The same recipe at fifteen years and more, an autumn release of the Antique Collection."
+        },
+        {
+          "name": "Stagg Jr.",
+          "note": "This bourbon under its first name, on bottles of 2013 to 2021, in numbered batches."
+        }
+      ],
+      "traps": [
+        "A guest asking for Stagg Jr. wants this bourbon: the Jr. left the label in 2022 and the recipe did not change.",
+        "Stagg is not George T. Stagg: the same recipe and the same uncut bottling, with about half the years in oak.",
+        "Read the proof off the batch's label, since it changes from batch to batch and is always high."
+      ],
+      "cards": [
+        {
+          "id": "age",
+          "prompt": "Roughly how long does Stagg rest in oak?",
+          "answer": "About eight to nine years, roughly half the fifteen or more of George T. Stagg; the label gives no age."
+        },
+        {
+          "id": "stagg-jr",
+          "prompt": "Under which name was Stagg sold before 2022?",
+          "answer": "Stagg Jr., first released in 2013; the Jr. left the label in 2022."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "age",
+          "q": "A guest asks how Stagg differs from George T. Stagg, made from the same recipe. What sets them apart?",
+          "options": [
+            "A wheated mash",
+            "A sherry cask finish",
+            "About half the years",
+            "A cut to 100 proof"
+          ],
+          "a": 2,
+          "explain": "Both are Mash Bill No. 1 bottled uncut and unfiltered; Stagg simply has about eight to nine years in oak against fifteen and more, and neither is cut to 100 proof."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "stagg-jr",
+          "q": "A guest asks for a Stagg Jr. Which bottle on the shelf does the guest mean?",
+          "options": [
+            "Stagg, renamed in 2022",
+            "George T. Stagg, yearly",
+            "Old Stagg, revived 2023",
+            "Eagle Rare, ten years"
+          ],
+          "a": 0,
+          "explain": "Stagg Jr. dropped the Jr. in 2022 and is sold as Stagg; George T. Stagg is the older bottling of the same recipe."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Buffalo Trace Distillery: Stagg",
+          "url": "https://www.buffalotracedistillery.com/our-brands/george-t-stagg/stagg-bourbon/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "The Spirits Business: Buffalo Trace releases Stagg Jr.",
+          "url": "https://www.thespiritsbusiness.com/2013/07/buffalo-trace-releases-stagg-jr-bourbon/",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "The Whiskey Wash: the fifteenth Stagg Jr.",
+          "url": "https://thewhiskeywash.com/whiskey-styles/bourbon/new-stagg-jr-15th-release-bourbon-will-keep-you-warm-at-131-1-proof/",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "The Daily Pour: Stagg Jr. sees a name change",
+          "url": "https://thedailypour.com/?p=20665",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "Buffalo Trace Distillery: Old Stagg",
+          "url": "https://www.buffalotracedistillery.com/our-brands/prohibition-collection/old-stagg.html",
+          "kind": "primary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "The plan's note is settled as the merge ruling asks: the namesake's life is told under George T. Stagg, and this story is the younger bottling's own, from Old Stagg to Stagg Jr. to the rename. The rename year, 2022, stands on the shelf record and The Daily Pour; one guide says Batch 18 of 2022 was the opening batch as Stagg, and another says the change was announced late in 2021.",
+        "The batch code of a year and a letter (22A, 22B, and later codes such as 26B in retail listings) rests on The Daily Pour and on shops' listings of the label, which confirm a label term and nothing more.",
+        "The age: Buffalo Trace's own Stagg page, as searched, says eight years; The Spirits Business's 2013 report says the opening batch was eight to nine; the shelf says eight to nine in most batches. The record gives about eight to nine by the distillery's and the trade's accounts.",
+        "The shelf record's watch line about two antlered bottles was not confirmed by any source read here and is not repeated.",
+        "Left out for want of a source: how many batches came each year after the opening (guides say two, the 2013 report says several), and the batch at which the label changed."
+      ],
+      "checked": null
+    },
+    {
+      "key": "1792",
+      "group": "barrel-proof",
+      "producer": "1792",
+      "madeBy": "Barton 1792 Distillery",
+      "style": "barrel-proof",
+      "chapter": "american-labels",
+      "shelf": "",
+      "library": "",
+      "say": "sev-en-teen NINE-tee-two",
+      "place": "Bardstown, Nelson County, Kentucky",
+      "year": "2002",
+      "yearIs": "first released",
+      "bottle": {
+        "name": "1792 Full Proof Kentucky Straight Bourbon Whiskey",
+        "class": "Kentucky straight bourbon whiskey, bottled at its barrel entry proof",
+        "mash": "Corn, rye and malted barley, widely described as a high rye recipe; the distillery does not publish its mash bill.",
+        "still": "Distilled and bottled at the Barton 1792 Distillery in Bardstown, as the label states; the producer gives no details of the equipment.",
+        "wood": "New charred oak barrels, filled at 125 proof. The label carries no age statement.",
+        "strength": "62.5% ABV (125 proof)",
+        "taste": "A deep, smoky char from the oak balanced by sweet vanilla and caramel, full and bold at this strength; a few drops of water soften the heat.",
+        "pour": "Neat with a little water, or over one large cube; at 125 proof it keeps its voice in an Old Fashioned or a Manhattan.",
+        "label": [
+          {
+            "term": "Full Proof",
+            "means": "Bottled at 125 proof, the strength at which the spirit went into the barrel."
+          },
+          {
+            "term": "Distilled and Bottled by",
+            "means": "Made and bottled by the Barton 1792 Distillery in Bardstown, not bought from another house."
+          }
+        ]
+      },
+      "table": "1792 is the Bardstown bourbon of the Barton 1792 Distillery, named for the year Kentucky became a state. 1792 Full Proof is bottled at 125 proof, the strength at which it entered the barrel, close to but not quite barrel proof: vanilla, caramel and charred oak.",
+      "story": "The distillery behind the label stands at Bardstown, where a distillery was founded in 1879. In 2002 it brought out a small batch bourbon named for 1792, the year Kentucky became a state, at first as Ridgewood Reserve 1792. Brown-Forman, the maker of Woodford Reserve, sued over the name and the bottle, a federal judge ruled for it in 2004, and the bourbon became 1792 Ridgemont Reserve, later simply 1792. In 2009 the Sazerac Company bought the distillery and its brands from Constellation Brands, and the site took the name Barton 1792 Distillery. Full Proof followed in 2016. By the brand's account it is bottled at 125 proof, the strength at which its spirit went into new oak years before, and it skips chill filtering for a plate and frame filter. Reviewers note that the bourbon leaves the barrel stronger and is brought back down to 125, so it is full proof, not barrel proof. For a bartender it is the plain lesson in the words on a strong label: barrel proof, cask strength, entry proof and full proof are four promises, and of the four, barrel proof and cask strength alone say the whiskey reached the bottle as it left the barrel.",
+      "others": [
+        {
+          "name": "1792 Small Batch",
+          "note": "The house's standard bourbon, a marriage of chosen barrels at a gentler strength."
+        },
+        {
+          "name": "1792 Bottled in Bond",
+          "note": "One distilling season, at least four years in a bonded warehouse, and exactly 100 proof."
+        }
+      ],
+      "traps": [
+        "Full proof is not barrel proof: by reviewers' accounts the bourbon leaves the barrel stronger and is brought back to its entry proof of 125.",
+        "1792 is not the year of the distillery: it marks Kentucky's statehood, and the bourbon was first sold in 2002.",
+        "The distillery is Barton 1792 in Bardstown; Buffalo Trace in Frankfort is a different distillery."
+      ],
+      "cards": [
+        {
+          "id": "entry-proof",
+          "prompt": "At what proof is 1792 Full Proof bottled, and what does that figure match?",
+          "answer": "125 proof, the strength at which the spirit went into the barrel."
+        },
+        {
+          "id": "statehood",
+          "prompt": "What does the number 1792 on the label of 1792 Full Proof mark?",
+          "answer": "The year Kentucky became a state; the bourbon was first sold in 2002."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "entry-proof",
+          "q": "A guest asks if 1792 Full Proof is barrel proof. What does its 125 proof match?",
+          "options": [
+            "Its age in months",
+            "The bond law's minimum",
+            "Its distilling proof",
+            "Its barrel entry proof"
+          ],
+          "a": 3,
+          "explain": "It is bottled at the strength at which the spirit was put into the barrel; the bond law asks exactly 100 proof, and the spirit is distilled stronger than 125."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "statehood",
+          "q": "What does the number 1792 on a 1792 Full Proof label stand for?",
+          "options": [
+            "The distillery's founding",
+            "Kentucky's statehood",
+            "A barrel number",
+            "The bonded whiskey law"
+          ],
+          "a": 1,
+          "explain": "It marks the year Kentucky became a state; the distillery at Bardstown dates from 1879."
+        }
+      ],
+      "sources": [
+        {
+          "title": "1792 Bourbon: Full Proof",
+          "url": "https://1792bourbon.com/full-proof/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "1792 Bourbon: defining moments",
+          "url": "https://1792bourbon.com/defining-moments/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Wikipedia: 1792 Bourbon",
+          "url": "https://en.wikipedia.org/wiki/1792_Bourbon",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "VinePair: need to know, 1792 Bourbon",
+          "url": "https://vinepair.com/articles/ntk-1792-bourbon-guide/",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "Modern Thirst: 1792 Full Proof",
+          "url": "https://modernthirst.com/2016/06/27/1792-full-proof-bourbon-review/",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "The plan's note is settled: the lesson of the record is that 125 proof is the entry proof and the bourbon is brought down to it, as reviewers say; the brand's own page says only that it is bottled at its original barrel entry proof and passes through a plate and frame filter. The age of the launch release, about eight and a half years in Drinkhacker's 2016 review, rests on one source and is left out; the label carries none.",
+        "A pick in doubt by its words: the label says Full Proof, not Barrel Proof, so 1792 stands in this group as the contrast that teaches the term, as its why intends. If the owner wants only uncut bottlings, the lane's alternates should be weighed; I propose no swap.",
+        "Year 2002 is the first release of the 1792 label (Wikipedia, VinePair and the brand's Defining Moments page); Full Proof came in 2016 (May 2016 in Breaking Bourbon, June 2016 in two reviews). The distillery's founding is 1879 in most sources and 1889 in one; its founders, Tom Moore and Benjamin Mattingly in VinePair, are not named for want of their dates.",
+        "The 1792bourbon.com Full Proof page, as summarised, printed 93.7 proof and 46.85% beside the Full Proof text; that is the strength of 1792 Small Batch and was taken to be the summary's confusion. The refuter should confirm 125 proof on the label itself.",
+        "The mash bill is given only as corn, rye and malted barley, widely described as high in rye; a figure of about 75, 15 and 10 per cent appears in one guide with the note that Barton does not publish it, and is left out.",
+        "Left out for want of a source: the still (no column or doubler detail was found), the year the distillery took the name Barton (1944 in one source), and the year the Ridgemont Reserve name was dropped.",
+        "No shelf bottle or Library record exists for 1792, and no page of this repo was found to disagree. The respelling is offered because guests say one seven nine two; cut it if it reads as needless."
+      ],
+      "checked": null
+    },
+    {
+      "key": "barrell",
+      "group": "barrel-proof",
+      "producer": "Barrell",
+      "madeBy": "Barrell Craft Spirits",
+      "style": "barrel-proof",
+      "chapter": "american-labels",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Louisville, Jefferson County, Kentucky",
+      "year": "2013",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Barrell Bourbon",
+        "class": "Straight bourbon whiskey; recent batches are blends of straight bourbons from more than one state",
+        "mash": "Differs by batch, a blend of bourbons of several recipes. The house gives a mash bill derived for each batch, as about 79 per cent corn, 17 rye and 4 malted barley for Batch 038.",
+        "still": "Not distilled by Barrell: it buys aged straight bourbon from distilleries in Tennessee, Kentucky and Indiana that it does not name, then blends and bottles it in Kentucky.",
+        "wood": "New charred oak, as straight bourbon requires. Ages differ by batch, from about five to sixteen years in the blend; since Batch 036 the front label lists every age.",
+        "strength": "Varies by batch, cask strength, about 110 to 122 proof",
+        "taste": "Batches differ, and the house's notes are each batch's own: for one recent batch, fruit punch and pineapple giving way to aged wood, then oatmeal raisin cookie, sweet potato pie and crusty bread.",
+        "pour": "Neat, then with a few drops of water; over one large cube for a guest who finds it hot. A strong Old Fashioned takes it well.",
+        "label": [
+          {
+            "term": "Batch",
+            "means": "A number for each blend, as 038; every batch has its own sources, ages and proof."
+          },
+          {
+            "term": "Cask Strength",
+            "means": "Bottled at the strength of the blend as it comes from the barrels, not cut down with water."
+          }
+        ]
+      },
+      "table": "Barrell Bourbon is the Louisville blender's numbered series of straight bourbons bought from Tennessee, Kentucky and Indiana, married and bottled at cask strength without chill filtering. Each batch is its own bourbon, with its own ages and proof, so read the label before you describe it.",
+      "story": "Barrell Craft Spirits was founded in Louisville in 2013 by a founder who had made his career, by the house's account, in marketing and technology. It began as a blender and bottler, not a distiller: it bought aged straight bourbon, chose and married the barrels, and bottled the blend at the strength the barrels gave, without chill filtering, under a batch number. Rye, blended whiskey and rum followed in the same way, Barrell Whiskey among them in 2015. The bourbon batches grew more involved as the numbers rose: barrels of five to sixteen years from Tennessee, Kentucky and Indiana in one batch or another, high rye and high corn recipes married together, and a mash bill derived for the whole. In 2024 Batch 036 brought a new label that names on its front the states the whiskey came from and the age of every whiskey in the blend. For a bartender, Barrell Bourbon is barrel proof as a blender's choice rather than a distiller's: the strength is the barrels', the recipe is the blend, and the batch number is the bourbon, so a guest is told what this bottle holds and never what an earlier batch held.",
+      "others": [
+        {
+          "name": "Barrell Whiskey",
+          "note": "A blended whiskey series apart from the bourbon, also at cask strength, begun in 2015 with whiskey distilled in Indiana."
+        },
+        {
+          "name": "Barrell Gray Label Bourbon",
+          "note": "A blend of straight bourbons bottled at cask strength under its own grey label."
+        }
+      ],
+      "traps": [
+        "Barrell is a blender, not a distillery: it buys aged bourbon and marries it, and the name is spelt with two l's.",
+        "Each batch is a different blend: one batch's proof or tasting note does not describe the next."
+      ],
+      "cards": [
+        {
+          "id": "blender",
+          "prompt": "Does Barrell distil the bourbon in Barrell Bourbon?",
+          "answer": "No: it buys aged straight bourbon from distilleries in Tennessee, Kentucky and Indiana, then blends and bottles it."
+        },
+        {
+          "id": "founded",
+          "prompt": "In which year was Barrell Craft Spirits founded, and where?",
+          "answer": "In 2013, in Louisville, Kentucky, as an independent blender and bottler."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "blender",
+          "q": "A guest asks which distillery makes Barrell Bourbon. What is the right answer?",
+          "options": [
+            "Bought bourbons, blended by Barrell",
+            "Barrell's stills in Louisville since 2013",
+            "Buffalo Trace, under contract",
+            "Jim Beam, at Clermont"
+          ],
+          "a": 0,
+          "explain": "Barrell buys aged straight bourbon from several distilleries and blends it; it did not begin with stills of its own, and no single distillery makes it."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "founded",
+          "q": "In which year was Barrell Craft Spirits founded in Louisville?",
+          "options": [
+            "2009",
+            "2017",
+            "2013",
+            "2022"
+          ],
+          "a": 2,
+          "explain": "The house dates its founding to 2013; Barrell Whiskey followed in 2015, and 2017 is too late."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Barrell Craft Spirits: About us",
+          "url": "https://www.barrellbourbon.com/aboutus",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Barrell Craft Spirits: Barrell Bourbon",
+          "url": "https://www.barrellbourbon.com/bourbon",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Barrell Craft Spirits: earlier bourbon batches",
+          "url": "https://www.barrellbourbon.com/bourbonbatches",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "BevNet: Barrell Bourbon Batch 036",
+          "url": "https://www.bevnet.com/pr/2024/05/29/barrell-craft-spirits-introduces-barrell-bourbon-batch-036",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Breaking Bourbon: Barrell Whiskey Batch 001",
+          "url": "https://www.breakingbourbon.com/review/barrell-whiskey-batch-001",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "The plan's note is settled: the founding year, 2013, stands on the house's own About page and on a trade press release; the founder is living and is told by role only. His name and that of the house's former master distiller appeared in sources, and both are added to people.json.",
+        "The series is taught, not a batch: the only batch figures given are Batch 038's derived mash bill and tasting notes, from the house's own page, each named as that batch's. The strength range, about 110 to 122 proof, is drawn from batches 001, 024, 025, 031, 037 and 038 as the house's pages and Breaking Bourbon list them.",
+        "The class field says straight bourbon whiskey with recent batches blended across states; the exact legal wording on the label for a blend of straight bourbons from several states was not read, and the refuter should check it against 27 CFR 5.143.",
+        "Barrell announced in 2017 a distillery of its own in Louisville, and in 2023 opened, and in 2026 sold, a blending and bottling site in Jeffersontown, by trade reports. These are present or recent facts that will age and are left out; whether any Barrell bourbon is now distilled by Barrell was not settled, so the record says it began as a blender.",
+        "Left out for want of a source: the make of Batch 001 (a five year Tennessee bourbon at cask strength in one listing and one writer's review, both leads only), and the first year a Barrell Bourbon reached shelves (2013 or 2014 by different accounts).",
+        "Barrell Whiskey's start in 2015 rests on Breaking Bourbon's review of Batch 001 and one listing; Gray Label rests on the house's own page. No shelf bottle or Library record exists for Barrell."
+      ],
+      "checked": null
+    }
+  ]
+}
