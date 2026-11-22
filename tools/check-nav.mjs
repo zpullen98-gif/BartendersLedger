@@ -317,6 +317,7 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	const lit = () => (A.nav().match(/class="bnav-btn[^"]* active" aria-current="page"[^>]*data-cluster="(\w+)"/) || [])[1];
 	const lights = [
 		["caskOpen('')", 'casks'], ["caskOpen(caskChapters()[0].id)", 'casks'], ["caskStyleOpen(caskStyleEntries()[0].id)", 'casks'],
+		["caskHouseOpen('','')", 'casks'], ["caskHouseOpen(caskHouseGroups()[0].key,'')", 'casks'], ["caskHouseOpen(caskHouseGroups()[0].key,caskHouseGroups()[0].houses[0])", 'casks'],
 		["state.tab='menu'; state.menu.view='menu'", 'brennans'], ["state.tab='menu'; state.menu.view='stock'", 'brennans'], ["state.tab='menu'; state.menu.view='add'", 'brennans'],
 		...['studies', 'rehearsal', 'reference'].map((v) => [`state.tab='menu'; state.menu.view='${v}'`, 'brennans']),
 		["state.tab='menu'; state.menu.view='compass'", 'brennans'], ["state.tab='menu'; state.menu.view='fall'", 'brennans'],
@@ -546,6 +547,9 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 		"caskStart('cards','all')", "caskStart('quiz',caskChapters()[0].id)",
 		/* At the table: every style: a style, its deck and its round */
 		"caskStyleOpen(caskStyleEntries()[0].id)", "openDeck('caskstyles')", "openDeck('caskstyles:again')", "startRound('caskstyles')",
+		/* Producers and flagships: the root, a group, a house, its decks and its round */
+		"caskHouseOpen('','')", "caskHouseOpen(caskHouseGroups()[0].key,'')", "caskHouseOpen(caskHouseGroups()[0].key,caskHouseGroups()[0].houses[0])",
+		"openDeck('caskhouses')", "openDeck('caskhouses:again')", "openDeck('caskhouses:' + caskHouseGroups()[0].key)", "startRound('caskhouses')",
 		"openLevel(1)", "openLevel(4)",
 		"state.tab='flashcards'; state.fc.stage='pick'",
 		"openDeck('cocktails')", "openDeck('cocktails:1')", "openDeck('shots')", "openDeck('zero-proof')", "openDeck('on-tap')", "openDeck('coffee')",
@@ -633,6 +637,23 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	const csId = A.run('caskStyleEntries()[0].id');
 	const csCh = A.run('caskChapters()[0].id');
 	for (const [from, to] of [['#/casks/style/' + csId, '#/casks/style/' + csId], ['#/casks/style/no-such-style', '#/casks'], ['#/casks/style/%E0%A4%A', '#/casks'], ['#/casks/style', '#/casks'], ['#/casks/' + csCh, '#/casks/' + csCh], ['#/casks', '#/casks']]) {
+		A.run("state.tab = 'home';");
+		if (!A.g('applyRoute')(from)) { fail(`${from} is not an address applyRoute reads`); continue; }
+		A.run('navNormalise()');
+		const r = A.g('routeNow')();
+		if (r.hash !== to) fail(`${from} reads back as ${r.hash}, not ${to}`);
+	}
+	/* Producers and flagships' addresses: the root, a group and a house print
+	   and read as themselves; a bad house falls to its group, a bad group, a
+	   broken id or a house under another group to the root or its group, and
+	   the Atlas's own words still read as theirs */
+	const chG = A.run('caskHouseGroups()[0].key');
+	const chH = A.run('caskHouseGroups()[0].houses[0]');
+	const chOther = A.run('(caskHouseGroups()[1] || caskHouseGroups()[0]).key');
+	for (const [from, to] of [['#/casks/houses', '#/casks/houses'], ['#/casks/houses/' + chG, '#/casks/houses/' + chG], ['#/casks/houses/' + chG + '/' + chH, '#/casks/houses/' + chG + '/' + chH],
+		['#/casks/houses/' + chG + '/no-such-house', '#/casks/houses/' + chG], ['#/casks/houses/no-such-group', '#/casks/houses'], ['#/casks/houses/no-such-group/' + chH, '#/casks/houses'],
+		['#/casks/houses/%E0%A4%A', '#/casks/houses'], ['#/casks/houses/' + chOther + '/' + (chOther === chG ? 'no-such-house' : chH), '#/casks/houses/' + chOther],
+		['#/casks/style/' + csId, '#/casks/style/' + csId], ['#/casks/' + csCh, '#/casks/' + csCh]]) {
 		A.run("state.tab = 'home';");
 		if (!A.g('applyRoute')(from)) { fail(`${from} is not an address applyRoute reads`); continue; }
 		A.run('navNormalise()');
@@ -767,6 +788,28 @@ const backs = (s) => (s.match(/data-act="back"/g) || []).length;
 	if (WD.state().key !== 'casks/style/' + wid || WD.state().at !== wd0.at + 1) fail(`a chapter's door opens ${WD.state().key} at entry ${WD.state().at}, not the style by one push`);
 	WD.tap({ 'data-act': 'back' }); await settle();
 	if (WD.state().key !== 'casks/' + wch) fail(`Back from a chapter's door to a style lands on ${WD.state().key}, not the chapter`);
+	/* Producers and flagships (22 November 2026): the Atlas home's door to the
+	   root, a group's row, a house's card, then Back one step a screen to the
+	   Atlas home and Home; a cold house walks up the same way by replaces */
+	const PH = boot({ hash: '#/casks' });
+	await settle();
+	const pg = PH.run('caskHouseGroups()[0].key'), ph = PH.run('caskHouseGroups()[0].houses[0]');
+	let pat = PH.state().at;
+	for (const [want, key] of [[{ id: 'caskhouse-root-door' }, 'casks/houses'], [{ id: 'caskhouse-g-' + pg }, 'casks/houses/' + pg], [{ id: 'caskhouse-h-' + ph }, 'casks/houses/' + pg + '/' + ph]]) {
+		if (!PH.tap(want)) { fail(`Producers and flagships draws no ${JSON.stringify(want)}`); break; }
+		await settle();
+		if (PH.state().key !== key || PH.state().at !== pat + 1) fail(`${JSON.stringify(want)} opens ${PH.state().key} at entry ${PH.state().at}, not ${key} by one push`);
+		pat = PH.state().at;
+	}
+	const pk = [];
+	for (let i = 0; i < 4 && backs(PH.view()); i++) { PH.tap({ 'data-act': 'back' }); await settle(); pk.push(PH.state().key); }
+	if (pk.join('|') !== 'casks/houses/' + pg + '|casks/houses|casks|home') fail(`Back from a house walks ${pk.join(' > ')}, not its group > the root > casks > home`);
+	const PC = boot({ hash: '#/casks/houses/' + pg + '/' + ph });
+	await settle();
+	if (PC.state().key !== 'casks/houses/' + pg + '/' + ph || PC.state().d !== 0) fail(`a cold house is ${PC.state().key} at depth ${PC.state().d}`);
+	const pc = [];
+	for (let i = 0; i < 4 && backs(PC.view()); i++) { PC.tap({ 'data-act': 'back' }); await settle(); pc.push(PC.state().key); }
+	if (pc.join('|') !== 'casks/houses/' + pg + '|casks/houses|casks|home' || PC.history.length !== 1) fail(`a cold house walks up ${pc.join(' > ')} with ${PC.history.length} entries, not its group > the root > casks > home by replaces`);
 }
 
 /* ---- 8. the screens: one Back, Home four cards, words and no glyphs --------- */
@@ -1184,6 +1227,7 @@ async function mutations(){
 		['a bottle on the liquor shelf climbing past the shelf', 'ui-nav.js', "    if(state.menu.view === 'backbar' && typeof backbarState === 'function' && backbarState().item){ backbarState().item = ''; return true; }\n", ""],
 		['the liquor shelf left out of the #/menu/view allowlist', 'ui-nav.js', ".concat(typeof backbarOpen === 'function' ? ['backbar'] : [])", ""],
 		['a style\'s address left out of the Cask Atlas router', 'ui-casks.js', "  if(parts[1]==='style' && typeof caskStyleRoute==='function') return caskStyleRoute(parts);\n", ""],
+		['a house climbing straight to the Cask Atlas home', 'ui-casks.js', "  if(typeof caskHouseParent==='function' && caskHouseParent()) return;\n", ""],
 	];
 	let held = 0;
 	for (const [name, file, from, to] of MUT) {

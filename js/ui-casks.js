@@ -20,7 +20,9 @@ function caskDaily(){
   const last = function(r){ const p = progress.cards[r.key]; return p ? Number(p.last) || 0 : 0; };
   /* a style card that is due (js/ui-caskstyles.js) joins the due reviews; an unseen one never does */
   const styleDue = typeof caskStyleDueRows === 'function' ? caskStyleDueRows() : [];
-  const due = rows.filter(function(r){ return caskRecord(r).due; }).concat(styleDue).sort(function(a,b){ return last(a)-last(b); });
+  /* and so does a Producers and flagships card that is due (js/ui-caskhouses.js); an unseen one never does */
+  const houseDue = typeof caskHouseDueRows === 'function' ? caskHouseDueRows() : [];
+  const due = rows.filter(function(r){ return caskRecord(r).due; }).concat(styleDue).concat(houseDue).sort(function(a,b){ return last(a)-last(b); });
   const fresh = rows.filter(function(r){ return !caskRecord(r).seen; });
   const spread = [], groups = {};
   fresh.forEach(function(r){ (groups[r.chapter] || (groups[r.chapter]=[])).push(r); });
@@ -92,6 +94,7 @@ function caskOpen(id){ const s=caskState();state.tab='casks';s.item=caskChapter(
 function caskButton(id,label,cls){ return '<button class="btn ' + (cls || 'btn-ghost') + '" data-act="cask-open" data-id="' + esc(id || '') + '">' + esc(label) + '</button>'; }
 /* a run row's reading door: its chapter, or for a style card its style (js/ui-caskstyles.js) */
 function caskRowDoor(row,label){
+  if(row && row.house && typeof caskHouseRowDoorHTML==='function') return caskHouseRowDoorHTML(row,label);
   if(row && row.style && typeof caskStyleHref==='function') return '<a class="btn btn-ghost caskstyle-run-door" id="caskstyle-run-'+esc(row.style)+'" href="'+esc(caskStyleHref(row.style))+'">'+esc(label.replace('the full chapter','the whole style'))+'</a>';
   return caskButton(row && row.chapter,label);
 }
