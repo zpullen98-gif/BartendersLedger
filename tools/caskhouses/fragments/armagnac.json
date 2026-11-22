@@ -1,0 +1,673 @@
+{
+ "group": "armagnac",
+ "records": [
+  {
+   "key": "tariquet",
+   "group": "armagnac",
+   "producer": "Château du Tariquet",
+   "madeBy": "",
+   "style": "",
+   "chapter": "armagnac-calvados",
+   "shelf": "",
+   "library": "Château du Tariquet",
+   "say": "tah-ree-KAY",
+   "place": "Eauze, Bas-Armagnac, Gers, France",
+   "year": "1912",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Château du Tariquet Bas-Armagnac VSOP",
+    "class": "Bas-Armagnac, appellation d'origine contrôlée, VSOP",
+    "mash": "Wine from the estate's own grapes: by its own account 60 per cent Ugni Blanc and 40 per cent Baco, each variety made into wine and distilled apart.",
+    "still": "Distilled once, in the continuous Armagnac way, on the estate's own wood-fired stills, the fire fed with old acacia vine posts. By the estate's account the spirit leaves the still at about 53 to 56 per cent.",
+    "wood": "Lightly toasted oak casks, which the estate says add structure with little vanilla. No age statement: the estate gives five to seven years, where the rules ask four for VSOP.",
+    "strength": "40% ABV",
+    "taste": "By the estate's own notes, ripe fruit and flowers with a cool minty freshness on the nose, then oak spice and fresh mint on the palate, and a finish of liquorice and macerated fruit.",
+    "pour": "Neat in a tulip glass at room temperature, or over one large cube. In a Sidecar it stands where Cognac would, and the drink comes out bigger and earthier.",
+    "label": [
+     {
+      "term": "Bas-Armagnac",
+      "means": "The appellation's western zone, around Eauze, where all the estate's vines grow."
+     },
+     {
+      "term": "VSOP",
+      "means": "No eau-de-vie in the blend is younger than four years; the estate gives five to seven."
+     }
+    ]
+   },
+   "table": "Château du Tariquet VSOP is a Bas-Armagnac from one family estate near Eauze, distilled once on its own wood-fired stills from Ugni Blanc and Baco. Expect ripe fruit, flowers and a cool minty edge over oak spice, good neat or as the brandy in a Sidecar.",
+   "story": "The estate takes its name from a seventeenth-century lord, the Sieur du Tariquet, and the house dates armagnac there to 1683 by its own account. In 1912 a bear tamer from Ercé, in the Ariège, and his son pooled their savings to buy it, with about seven hectares of vines, and set about restoring it. A daughter of the family grew up on the estate and married the son of a neighbouring farmer, and through that marriage the estate passed to the Grassa family. In 1985 the estate set up a still of its own, made at Condom in the Armagnac tradition and fired with wood; a second, from the same maker, followed in 2016. Each grape variety is made into wine and distilled apart, and the casks are only lightly toasted, so the fruit of the grape leads the oak. For a bartender the VSOP is the plain lesson that armagnac is a grower's spirit: one estate's vines, one family's stills, and a blend young enough to pour.",
+   "others": [
+    {
+     "name": "Domaine Tariquet VS Classique",
+     "note": "The estate's younger Bas-Armagnac, given three to five years in oak."
+    },
+    {
+     "name": "Domaine Tariquet XO",
+     "note": "An older blend of the estate; no eau-de-vie in an armagnac XO is younger than ten years."
+    }
+   ],
+   "traps": [
+    "Armagnac is not always distilled once, but Tariquet is: single-pass, continuous distillation on the estate's own stills.",
+    "The label carries no age statement: five to seven years is the estate's figure, and four years the legal minimum for VSOP.",
+    "The estate prints its name as Domaine Tariquet on its product sheets of 2024; it is the same house as Château du Tariquet."
+   ],
+   "cards": [
+    {
+     "id": "grapes",
+     "prompt": "Which two grapes go into Château du Tariquet Bas-Armagnac VSOP?",
+     "answer": "Ugni Blanc and Baco, about 60 and 40 per cent by the estate's account, each distilled apart."
+    },
+    {
+     "id": "own-still",
+     "prompt": "In which year did Château du Tariquet begin distilling on a still of its own?",
+     "answer": "1985, on a wood-fired still made at Condom; a second followed in 2016."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "grapes",
+     "q": "A guest asks which grapes make the Château du Tariquet VSOP. What do you tell them?",
+     "options": [
+      "Ugni Blanc and Baco",
+      "Folle Blanche and Colombard",
+      "Tannat and Merlot",
+      "Sémillon and Muscadelle"
+     ],
+     "a": 0,
+     "explain": "Ugni Blanc and Baco, about 60 and 40 per cent by the estate's sheet; Folle Blanche and Colombard are armagnac grapes too, but not in this blend."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "own-still",
+     "q": "Since which year has Château du Tariquet distilled its armagnac on a still of its own?",
+     "options": [
+      "1683",
+      "1912",
+      "1985",
+      "2016"
+     ],
+     "a": 2,
+     "explain": "1985, on a wood-fired still made at Condom; 1912 is the year the family bought the estate, and 2016 brought a second still."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Domaine Tariquet: a family history",
+     "url": "https://www.tariquet.com/en/a-family-history/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Domaine Tariquet: VSOP product sheet",
+     "url": "https://tariquet.com/wp-content/uploads/2024/10/Product-sheet-Domaine-Tariquet-VSOP.pdf",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Domaine Tariquet: Carafe VSOP Classic sheet",
+     "url": "https://www.tariquet.com/wp-content/uploads/2024/10/Product-sheet-Domaine-Tariquet-Carafe-VSOP-Classic.pdf",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Domaine Tariquet: making the wine for the still",
+     "url": "https://www.tariquet.com/en/elaborating-the-vin-de-chauffe/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Difford's Guide: Château du Tariquet, history",
+     "url": "https://www.diffordsguide.com/producers/483/chateau-du-tariquet-domaine-du-tariquet/history",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "Proposed bottling swap, name only: the estate's own product sheets of 2024 print Domaine Tariquet VSOP Bas-Armagnac, not Château du Tariquet; the record keeps the roster's words until a refuter agrees the change, and a trap tells the guest the two names are one house. I found no source dating the change of name.",
+    "The plan's note on age is settled from the estate's VSOP sheet: five to seven years, 60 per cent Ugni Blanc and 40 Baco, 40 per cent alcohol; the VS Classique sheet gives three to five years, so the two are not mixed here.",
+    "The Library's record (single estate, distilled once in a continuous still at roughly 52 to 60 per cent) agrees in substance; the estate's English page gives 53 to 56 per cent off the still and its French page 53 to 54, so the refuter may prefer the narrower figure. Its wording (flavor) was not copied.",
+    "The year 1912 is the family's purchase of the estate, which the Library, Difford's Guide and Gault and Millau all give as the house's founding; armagnac there since 1683 is the house's own claim and is told as such.",
+    "The bear tamer and his son, and the daughter who married into the Grassa family, are described and not named: I found no dates for them. The living Grassa generation is not named."
+   ],
+   "checked": null
+  },
+  {
+   "key": "janneau",
+   "group": "armagnac",
+   "producer": "Janneau",
+   "madeBy": "",
+   "style": "",
+   "chapter": "armagnac-calvados",
+   "shelf": "",
+   "library": "",
+   "say": "zhah-NOH",
+   "place": "Condom, Gers, France",
+   "year": "1851",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Janneau VSOP Grand Armagnac",
+    "class": "Armagnac, appellation d'origine contrôlée, VSOP",
+    "mash": "Wine of Baco, Ugni Blanc and Folle Blanche from the Bas-Armagnac and the Ténarèze, by the house's account; it publishes no proportions.",
+    "still": "Distilled both ways the appellation allows, and the two blended: once through a continuous Armagnac still, and twice in Charentais pot stills, which by the house's account bring the spirit to about 72 per cent.",
+    "wood": "French oak casks in the house's cellars at Condom; some eaux-de-vie in the blend have spent up to twenty years in wood, the house says. No age statement beyond VSOP.",
+    "strength": "40% ABV",
+    "taste": "By the house's own notes, fig and honey on the nose with oak tannin, leather and caramel, then toasted golden raisins, spice and fruit jelly on a long palate.",
+    "pour": "Neat in a tulip glass, with a drop of water or over one large cube. The house also pours it in cocktails, and it makes a broad, fruity Sidecar.",
+    "label": [
+     {
+      "term": "Grand Armagnac",
+      "means": "The house's own words, not an appellation: the appellation of this blend is Armagnac."
+     },
+     {
+      "term": "V.S.O.P.",
+      "means": "No eau-de-vie in the blend is younger than four years."
+     }
+    ]
+   },
+   "table": "Janneau VSOP is the house blend from Condom, made of eaux-de-vie distilled both ways the appellation allows, once in the continuous Armagnac still and twice in pot stills. Fig, honey and toasted raisins with a little leather, it is a gentle first armagnac neat or in a Sidecar.",
+   "story": "Janneau dates itself to 1851, when its founder set up in the armagnac trade at Condom, in the Gers, and the cellars built that year have served the house for its ageing ever since. Four generations of the family ran the business before it passed, in the 1970s, to the Cognac house Martell. The house's place in the region's history is its stills. Double distillation in pot stills had been barred in Armagnac from 1903, and by the house's account it was allowed back in 1972 at Janneau's request. Since then Janneau has distilled both ways: once through the continuous Armagnac still, whose spirit it says brings intensity and depth, and twice in Charentais pot stills, whose spirit it says brings finesse and precision. Then it blends the two. That is why the Cask Atlas names Janneau when it warns that not every armagnac is distilled once. For a bartender the VSOP is the house's everyday blend at 40 per cent and the bottle that puts both stills in one glass, a fair first pour for a guest who knows Cognac.",
+   "others": [
+    {
+     "name": "Janneau VS",
+     "note": "A younger blend, which the house describes as fresh and fruity."
+    },
+    {
+     "name": "Janneau XO",
+     "note": "An older blend: no eau-de-vie in an armagnac XO is younger than ten years."
+    }
+   ],
+   "traps": [
+    "Not all armagnac is distilled once: Janneau blends spirit from the continuous Armagnac still with spirit double distilled in pot stills.",
+    "Grand Armagnac on the label is the house's phrase, not one of the appellation's zones."
+   ],
+   "cards": [
+    {
+     "id": "two-stills",
+     "prompt": "How are the eaux-de-vie of Janneau VSOP distilled?",
+     "answer": "Both ways the appellation allows: once in the continuous Armagnac still and twice in Charentais pot stills, then blended."
+    },
+    {
+     "id": "founded",
+     "prompt": "In which year was the house of Janneau founded at Condom?",
+     "answer": "1851; the house ages its armagnac in the cellars built that year."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "two-stills",
+     "q": "A guest has read that every armagnac is distilled once. What is true of Janneau VSOP?",
+     "options": [
+      "It is distilled once in a continuous still alone",
+      "It blends single- and double-distilled spirit",
+      "It is distilled twice in pot stills alone",
+      "It is distilled three times in copper"
+     ],
+     "a": 1,
+     "explain": "The house blends spirit from the continuous Armagnac still with spirit distilled twice in pot stills; a continuous still alone describes most armagnac, not this blend."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "founded",
+     "q": "A guest asks how long Janneau has made armagnac at Condom. From which year does the house date itself?",
+     "options": [
+      "1851",
+      "1903",
+      "1972",
+      "1985"
+     ],
+     "a": 0,
+     "explain": "1851; 1903 is the year double distillation was barred in Armagnac, and 1972 the year the house says it was allowed back."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Janneau: the VSOP",
+     "url": "https://www.armagnac-janneau.com/en/armagnac/janneau-v-s-o-p/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Janneau: the art of distillation",
+     "url": "https://www.armagnac-janneau.com/en/savoir-faire/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Difford's Guide: Janneau VSOP Grand Armagnac",
+     "url": "https://www.diffordsguide.com/beer-wine-spirits/3719/janneau-vsop",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Difford's Guide: Janneau Fils et Cie",
+     "url": "https://www.diffordsguide.com/producers/608/janneau-fils-et-cie",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Fells: Janneau, the producer",
+     "url": "https://fells.co.uk/our-producers/janneau/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note on still is settled from the house's VSOP page: Baco, Ugni Blanc and Folle Blanche from Bas-Armagnac and Ténarèze, single and double distillation, some eaux-de-vie up to twenty years in French oak; no age statement beyond VSOP is given, so neither seven years nor the legal minimum is quoted as the bottle's age.",
+    "The strength, 40 per cent, rests on Difford's Guide and a trade listing; the house's VSOP page as read through search did not print it.",
+    "The founder, given in secondary sources as Pierre Etienne Janneau, is not named: I found no dates for him. The house is never called the oldest, as the note asks.",
+    "Ownership after the family is left at Martell in the 1970s: one source gives the early 1970s and another 1974, and the later owners (Seagram, an Italian group, a French group in 2014) differ in date between sources, so they are left out.",
+    "Grand Armagnac is described as the house's own phrase and not an appellation, from the appellation's zones as the Cask Atlas lists them; no source states its meaning outright, so the refuter may wish to soften the label term.",
+    "The Cask Atlas chapter agrees with this record: it cites the house's savoir-faire page for the two methods."
+   ],
+   "checked": null
+  },
+  {
+   "key": "laubade",
+   "group": "armagnac",
+   "producer": "Château de Laubade",
+   "madeBy": "",
+   "style": "",
+   "chapter": "armagnac-calvados",
+   "shelf": "",
+   "library": "",
+   "say": "loh-BAHD",
+   "place": "Sorbets, Bas-Armagnac, Gers, France",
+   "year": "1870",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Château de Laubade VSOP Bas-Armagnac",
+    "class": "Bas-Armagnac, appellation d'origine contrôlée, VSOP",
+    "mash": "Wine from the four grapes grown on the estate: Baco, Ugni Blanc, Folle Blanche and Colombard. The house publishes no proportions for the VSOP.",
+    "still": "Distilled on the estate in the continuous Armagnac way, one grape variety at a time, before the eaux-de-vie are blended.",
+    "wood": "Casks the house coopers itself from Gascon oak, the staves dried in the open air for three years. No age statement: the estate gives six to twelve years for the blend.",
+    "strength": "40% ABV",
+    "taste": "By the estate's own notes, ripe fruit, plums and sweet pastry on the nose, then vanilla and citrus on a soft palate, and a long finish.",
+    "pour": "Neat in a tulip glass, or over one large cube. The estate also pours its armagnac in cocktails, and the VSOP gives a fruity Sidecar.",
+    "label": [
+     {
+      "term": "Bas-Armagnac",
+      "means": "The zone of the appellation in which Sorbets and the estate's vines lie."
+     },
+     {
+      "term": "VSOP",
+      "means": "No eau-de-vie in the blend has less than four years; the estate gives six to twelve."
+     }
+    ]
+   },
+   "table": "Château de Laubade VSOP is a Bas-Armagnac from one estate at Sorbets, blended from all four grapes it grows and aged in casks the house makes from Gascon oak. Ripe plum, sweet pastry and vanilla: pour it neat, or let it lead a Sidecar.",
+   "story": "The château at Sorbets, in the heart of the Bas-Armagnac, was built in 1870. In 1974 the Lesgourgues family bought the property, and three generations of the family have run it since. Laubade is a grower's house in the full sense: it distils only the grapes of its own vineyard, and it grows all four of the varieties a bartender meets on armagnac labels, Baco, Ugni Blanc, Folle Blanche and Colombard. Each variety is made into wine and distilled apart in the continuous Armagnac way, and each eau-de-vie is aged on its own before the cellar blends them. The house also coopers its own casks from the oak of Gascon forests, the wood dried in the open air for three years before the barrels are made. Beside its blends it keeps eaux-de-vie of many harvests and releases them as single vintages. For a bartender the VSOP shows what one estate's four grapes give in a single blend, and it is the bottle that makes the four grape names worth learning.",
+   "others": [
+    {
+     "name": "Château de Laubade XO",
+     "note": "An older blend of the estate; no eau-de-vie in an armagnac XO is younger than ten years."
+    },
+    {
+     "name": "Château de Laubade vintages",
+     "note": "Single-harvest Bas-Armagnacs of the estate: the year on the label is the harvest, not the time in wood."
+    }
+   ],
+   "traps": [
+    "A vintage on a Laubade bottle names the harvest, not the years in wood: ask when it was bottled.",
+    "Six to twelve years is the estate's figure for the VSOP; the label promises only the legal four."
+   ],
+   "cards": [
+    {
+     "id": "four-grapes",
+     "prompt": "Which four grapes go into Château de Laubade VSOP?",
+     "answer": "Baco, Ugni Blanc, Folle Blanche and Colombard, all grown on the estate at Sorbets."
+    },
+    {
+     "id": "family",
+     "prompt": "In which year did the Lesgourgues family buy Château de Laubade?",
+     "answer": "1974; the château itself was built in 1870."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "four-grapes",
+     "q": "A guest asks what grapes go into Château de Laubade VSOP. What is the answer?",
+     "options": [
+      "Ugni Blanc, Sémillon, Muscadelle and Colombard",
+      "Folle Blanche, Melon, Chenin Blanc and Baco",
+      "Tannat, Merlot, Malbec and Baco",
+      "Baco, Ugni Blanc, Folle Blanche and Colombard"
+     ],
+     "a": 3,
+     "explain": "The estate grows and blends Baco, Ugni Blanc, Folle Blanche and Colombard; Sémillon and Muscadelle belong to Bordeaux whites, not to its armagnac."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "family",
+     "q": "A guest asks how long the present family has run Château de Laubade. In which year did it come to the estate?",
+     "options": [
+      "1870",
+      "1912",
+      "1974",
+      "1985"
+     ],
+     "a": 2,
+     "explain": "1974; 1870 is the year the château was built, and the family has run the estate for three generations since the purchase."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Château de Laubade: VSOP",
+     "url": "https://www.chateaudelaubade.com/en/vsop/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Château de Laubade: the family estate",
+     "url": "https://www.chateaudelaubade.com/en/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Difford's Guide: Château de Laubade",
+     "url": "https://www.diffordsguide.com/producers/1128/chateau-de-laubade",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Difford's Guide: Château de Laubade VSOP",
+     "url": "https://www.diffordsguide.com/beer-wine-spirits/3720/chateau-de-laubade-vsop",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Amathus Drinks: Château de Laubade",
+     "url": "https://www.amathusdrinks.com/spirits/our-brands/chateau-de-laubade",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note on the founding is settled at 1870, which the estate's own pages, Amathus and Difford's Guide all give; I found no source for 1855.",
+    "The estate's size is left out: listings give about 105 hectares, 260 acres or over 100, and a count of hectares or casks reads as a figure of the day. The single block of the plan's why rests on one shop's page and is left out.",
+    "The still is told as continuous and variety by variety, from Amathus and a shop's page; a third account calls it a column still, and one says the still was built to order in 1974. Neither detail is in the record.",
+    "The strength, 40 per cent, rests on Difford's Guide and trade listings; the estate's VSOP page as read through search did not print it.",
+    "The cooperage from Gascon oak rests on Difford's Guide and Amathus; Difford's calls Laubade the only house to cooper its own casks, a claim of an only that the record leaves out.",
+    "The family member who bought the estate in 1974 is named in one source; the present generation is living, and nobody of the family is named here.",
+    "The taste is the estate's own note; no independent tasting was used."
+   ],
+   "checked": null
+  },
+  {
+   "key": "marie-duffau",
+   "group": "armagnac",
+   "producer": "Marie Duffau",
+   "madeBy": "Delord",
+   "style": "",
+   "chapter": "armagnac-calvados",
+   "shelf": "",
+   "library": "",
+   "say": "mah-REE dew-FOH",
+   "place": "Lannepax, Gers, France",
+   "year": "1893",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Marie Duffau Napoléon Bas-Armagnac",
+    "class": "Bas-Armagnac, appellation d'origine contrôlée, Napoléon",
+    "mash": "The house publishes no proportions; the importer gives the blend as about 70 per cent Ugni Blanc, 20 Baco, 5 Colombard and 5 Folle Blanche.",
+    "still": "Distilled by the Delord family at Lannepax, which distils both on continuous Armagnac stills, one a Sier of 1900, and on double-distillation stills; neither house nor importer says which spirit goes into the Napoléon.",
+    "wood": "Oak casks in the family's cellars at Lannepax. Napoléon on the label means no eau-de-vie in the blend is younger than six years, the minimum the importer gives.",
+    "strength": "40% ABV",
+    "taste": "By the importer's notes, cocoa, orange rind, cake batter and vanilla, with soft tannin at the finish and a hint of rancio.",
+    "pour": "Neat in a tulip glass or over one large cube, and sturdy enough for a Sidecar or a brandy Old Fashioned.",
+    "label": [
+     {
+      "term": "Napoléon",
+      "means": "An age term: no eau-de-vie in the blend is younger than six years."
+     },
+     {
+      "term": "Bas-Armagnac",
+      "means": "The western zone of the appellation, in which the family's vineyards lie."
+     }
+    ]
+   },
+   "table": "Marie Duffau Napoléon is a Bas-Armagnac made by the Delord family at Lannepax and sold under the name of a forebear of the family. Napoléon means at least six years in oak: expect cocoa, orange rind and vanilla, good neat or in a Sidecar.",
+   "story": "The house tells its story from 1893, when the founder worked as a travelling distiller, carrying his still from farm to farm across Gascony. He married into the Duffau family, whose vines came into the business, and the family has sold its armagnac under two names ever since, Delord and Marie Duffau, each the name of a forebear, as the importer tells it. His sons set up the house as Delord Frères at Lannepax, and the importer dates the company's official founding to 1925. The brothers sold their Bas-Armagnacs beyond Gascony, as far as the United States, and the family's cellars hold armagnacs going back to 1904. A grandson took over the house in 1963 and was joined by his brother in 1973, and a fourth generation followed. Delord distils both ways the appellation allows: on continuous Armagnac stills, one a Sier built in 1900, for its old armagnacs, and on double-distillation stills for fruitier young spirit. For a bartender the Napoléon teaches two things at once: that one family can sell under two names, and what Napoléon promises on an armagnac label.",
+   "others": [
+    {
+     "name": "Marie Duffau Hors d'Âge",
+     "note": "An older blend, which the importer gives as at least twelve years old."
+    },
+    {
+     "name": "Delord 25 Ans",
+     "note": "The family's other label: a blend in which no eau-de-vie is younger than twenty-five years."
+    }
+   ],
+   "traps": [
+    "Marie Duffau and Delord are one family house at Lannepax: there is no separate Marie Duffau distillery.",
+    "Napoléon is an age term on an armagnac label, at least six years, and no claim about the emperor."
+   ],
+   "cards": [
+    {
+     "id": "napoleon",
+     "prompt": "What does Napoléon promise on the Marie Duffau Napoléon label?",
+     "answer": "That no eau-de-vie in the blend is younger than six years."
+    },
+    {
+     "id": "two-names",
+     "prompt": "Which family house makes Marie Duffau armagnac?",
+     "answer": "The Delord family at Lannepax, which sells its armagnac under both names, Delord and Marie Duffau."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "napoleon",
+     "q": "A guest asks what Napoléon means on the Marie Duffau label. At least how old is every eau-de-vie in the blend?",
+     "options": [
+      "Two years",
+      "Four years",
+      "Six years",
+      "Ten years"
+     ],
+     "a": 2,
+     "explain": "Six years: Napoléon sits above VSOP, which asks four, and below XO and Hors d'Age, which ask ten."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "two-names",
+     "q": "A guest asks who makes Marie Duffau. Which family house stands behind the label?",
+     "options": [
+      "Delord, at Lannepax",
+      "Janneau, at Condom",
+      "Darroze, at Roquefort",
+      "Laubade, at Sorbets"
+     ],
+     "a": 0,
+     "explain": "The Delord family at Lannepax sells under both names; Janneau is a separate house at Condom."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Armagnacs Delord: family history",
+     "url": "https://www.armagnacdelord.com/en/family-history/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Armagnacs Delord: the house",
+     "url": "https://www.armagnacdelord.com/en/house-of-delord/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Heavenly Spirits: Marie Duffau Bas Armagnac",
+     "url": "https://www.heavenlyspirits.com/marie-duffau-bas-armagnac",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Wikidata: Armagnac Delord",
+     "url": "https://www.wikidata.org/wiki/Q2861704",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Armagnac interprofession: understanding a label",
+     "url": "https://www.armagnac.fr/en/magazine/understanding-a-label/456/0/4",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note is only partly settled. The Delord house's own pages date the story to 1893 and name the founder and his two sons, who set up Delord Frères at Lannepax, but they never mention Marie Duffau; the link between the label and the family rests on the US importer and Wikidata, which lists both brands under Armagnac Delord. The importer gives 1925 as the official founding; the record uses 1893, the house's date, and tells both.",
+    "The founder, his sons and his wife are described and not named in prose (their names appear only as the label Marie Duffau and the house Delord): I found no dates for any of them. Living members of the family appear in the house's pages (three are named on its family history page); the record names none, and they are left for the integrator to add to people.json, since this task changes only the fragment.",
+    "The grape shares come from the importer and retailers only, so they are written as the importer's; the house publishes none for this bottling.",
+    "Which still makes the Napoléon is unknown: Delord works both continuous and double-distillation stills, and Difford's Guide says the sister Delord Napoleon is two thirds double distilled. That figure belongs to the other label and is left out.",
+    "The ten year minimum one retailer claims for the Napoléon is left out; six years is the rule and the importer's minimum.",
+    "The taste is the importer's note, with one tasting review agreeing on vanilla; no house sheet exists for this bottling that I could find.",
+    "The plan's why calls Marie Duffau the founder with her husband and son: the importer's two accounts differ on whether the name honours the founder's wife or a great-grandmother of the family, so the record says a forebear."
+   ],
+   "checked": null
+  },
+  {
+   "key": "darroze",
+   "group": "armagnac",
+   "producer": "Darroze",
+   "madeBy": "",
+   "style": "",
+   "chapter": "armagnac-calvados",
+   "shelf": "",
+   "library": "",
+   "say": "dah-ROZE",
+   "place": "Roquefort, Landes, France",
+   "year": "1974",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Darroze Les Grands Assemblages 20 Ans Bas-Armagnac",
+    "class": "Bas-Armagnac, appellation d'origine contrôlée, with an age statement of twenty years",
+    "mash": "Wine of Baco and Ugni Blanc, the two grapes the house names for its 20 Ans, from many Bas-Armagnac estates; it gives no proportions.",
+    "still": "Not one still: the house chooses and ages eaux-de-vie from about thirty Bas-Armagnac estates and, by its own account, distils at fifteen of them.",
+    "wood": "French oak casks, aged in the house's cellars at Roquefort. The age statement means no eau-de-vie in the blend is younger than twenty years.",
+    "strength": "43% ABV",
+    "taste": "By the house's account a mature armagnac, its alcohol softened and its tannins grown fine; tasting notes commonly find raisin, dried fig, caramel and baking spice, with stewed apple.",
+    "pour": "Neat in a tulip glass at room temperature, with a drop of water if the guest wishes. At twenty years it is poured to be sipped, after dinner or beside coffee.",
+    "label": [
+     {
+      "term": "Les Grands Assemblages",
+      "means": "The house's blends by age, built from many estates and harvests for a steady style."
+     },
+     {
+      "term": "20 Ans",
+      "means": "Twenty years: every eau-de-vie in the blend has spent at least that long in oak."
+     }
+    ]
+   },
+   "table": "Darroze Les Grands Assemblages 20 Ans is a Bas-Armagnac blended at Roquefort from casks the house has chosen and aged from many growers, none under twenty years in oak. Raisin, fig and caramel over soft, fine tannin: pour it neat, at room temperature.",
+   "story": "The Darroze family kept a restaurant at Villeneuve-de-Marsan, in the Landes, where armagnac was served straight from the barrel. From the late 1960s the son of the house went out into the Bas-Armagnac to choose casks from growers and bottle what he found, and in 1974 he founded the house, by its own account with three casks of estate armagnac from the restaurant's cellar. His idea was that armagnac could be kept like wine: one estate, one harvest, no blending, each bottle naming its grower. That became the house's range of single-estate vintages. The house built its cellars at Roquefort in 1985, and his son joined him in 1994. Les Grands Assemblages is the other half of the work: blends by age, from eight years to sixty, made from many terroirs and harvests so that each keeps one style from year to year, the age on the label held by every part of the blend. For a bartender the 20 Ans teaches what an armagnac éleveur does: chooses, ages and blends casks from other people's vines.",
+   "others": [
+    {
+     "name": "Darroze Les Grands Assemblages 8 Ans",
+     "note": "The same blending by age, with no eau-de-vie younger than eight years."
+    },
+    {
+     "name": "Darroze Les Grands Assemblages 60 Ans",
+     "note": "The same blending by age, with no eau-de-vie in it under sixty years."
+    }
+   ],
+   "traps": [
+    "Darroze is an éleveur: it buys, ages and bottles armagnac from growers' estates, and distils at only some of them.",
+    "The 20 Ans is a blend of many estates; the single-estate vintages, each named for its estate and harvest, are the house's other range."
+   ],
+   "cards": [
+    {
+     "id": "twenty",
+     "prompt": "What does 20 Ans promise on Darroze Les Grands Assemblages 20 Ans?",
+     "answer": "That no eau-de-vie in the blend is younger than twenty years."
+    },
+    {
+     "id": "eleveur",
+     "prompt": "What kind of armagnac house is Darroze?",
+     "answer": "An éleveur at Roquefort, founded in 1974: it chooses, ages and bottles eaux-de-vie from about thirty Bas-Armagnac estates."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "twenty",
+     "q": "A guest asks how old the armagnac in Darroze Les Grands Assemblages 20 Ans is. What does the label promise?",
+     "options": [
+      "The blend averages twenty years of age",
+      "Every eau-de-vie in it is at least twenty",
+      "Part of the blend is twenty years old",
+      "Twenty years from harvest, glass included"
+     ],
+     "a": 1,
+     "explain": "An armagnac age statement binds every part of the blend, so each eau-de-vie in it has twenty years at least; an average would let younger spirit in."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "eleveur",
+     "q": "A guest asks whether Darroze grows its own grapes. Which describes the house?",
+     "options": [
+      "A cooperative of Gers grape growers",
+      "A single estate distilling its own vines",
+      "A Cognac house with a Gascon cellar",
+      "An éleveur that ages growers' armagnac"
+     ],
+     "a": 3,
+     "explain": "Darroze chooses, ages and bottles eaux-de-vie from about thirty estates; a single estate distilling its own vines describes Laubade or Tariquet, not Darroze."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Darroze Armagnacs: our story",
+     "url": "https://darroze-armagnacs.com/en/notre-histoire/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Darroze Armagnacs: Grands Assemblages 20 ans",
+     "url": "https://darroze-armagnacs.com/en/produit/20-ans/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Darroze Armagnacs: Les Grands Assemblages",
+     "url": "https://darroze-armagnacs.com/en/les-grands-assemblages/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Darroze Armagnacs: the fiftieth anniversary",
+     "url": "https://darroze-armagnacs.com/en/actualites/armagnacs-darroze-celebrates-its-50th-anniversary/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Difford's Guide: Darroze, the producer",
+     "url": "https://www.diffordsguide.com/producers/1156/francis-darroze",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note on strength: the house's own page gives 43 per cent, as do two trade listings; two others give 40 per cent, which may be another market's bottling. The record gives the house's figure.",
+    "Roquefort, in the Landes, is confirmed as the house's seat by its own company name and Difford's Guide; 1974 as the founding by the house's timeline, Difford's Guide and The Whisky Exchange.",
+    "The founder is described and not named in prose: one page of the town of Villeneuve-de-Marsan reports his death, but I found no year in two sources. His son, who joined in 1994 and runs the house, and the chef of the family are living and are left for the integrator to add to people.json, since this task changes only the fragment; the restaurant founder of the 1920s generation is left out.",
+    "The grapes are those the house names for its 20 Ans carafe; I found no separate list for the bottle, so the refuter may wish to check that the two blends are one.",
+    "The taste beyond the house's own words rests on trade tasting notes (raisin, dried fig and caramel in several, stewed apple in one); treat it as a lead for the refuter.",
+    "The house's single-estate range is called the Collection Unique; the voice refuses the word, so the record describes it and does not name it.",
+    "Left out for want of a source: the still the house uses at the fifteen estates, any reduction or additive practice for the blends (the claim of no additives belongs to the single-estate range), and the stock the house keeps."
+   ],
+   "checked": null
+  }
+ ]
+}
