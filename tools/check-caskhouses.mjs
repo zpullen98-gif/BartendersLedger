@@ -4,7 +4,7 @@
      node tools/check-caskhouses.mjs              every check below; passes on a partial build and says so last
      node tools/check-caskhouses.mjs --release    the same, and refuses a data file whose meta says partial, whose
                                                   meta.unrefuted is above 0, or whose keys are not frozen
-     node tools/check-caskhouses.mjs --mutations  then breaks the shipped files twenty-one ways, one at a time, and
+     node tools/check-caskhouses.mjs --mutations  then breaks the shipped files twenty-two ways, one at a time, and
                                                   expects red each time, from the check written for that rule (a
                                                   mutation that finds nothing to change, or that only another
                                                   check catches, is itself a failure)
@@ -527,6 +527,24 @@ await test('W3 addresses: the root, every group and every house round-trip; each
   for (const [from, to] of bads) eq(climb(from)[0], to, from + ' does not land on its parent');
   for (const h of ['#/casks/style/' + (STYLES[0] || {}).id, '#/casks/' + CHAPTERS[0].id, '#/casks', '#/casks/practice/all']) assert.ok(lands(h), h + ' no longer reads as itself');
 });
+/* The Atlas router reads an unknown second segment as a chapter and takes style, practice and
+   houses for itself, and the decks take caskhouses:again for the misses: a name that met one of
+   those would be read as the other, the address or deck of one never reaching it. Held over the
+   whole roster, not only what is built, so a lane cannot bring a clash in. */
+await test('W3 no name shadows another: no chapter is named houses, style or practice, no roster group again; every chapter, style, group and house reads as itself, a name they share included', () => {
+  const TAKEN = ['houses', 'style', 'practice'];
+  eq(CHAPTERS.map((c) => c.id).filter((id) => TAKEN.includes(id)), [], 'a chapter named for a segment the Atlas router takes, so #/casks/<id> never reaches it');
+  eq(plan.groups.map((x) => x.key).filter((k) => k === 'again'), [], 'a roster group named again, so its deck caskhouses:again would be the misses');
+  const bad = [];
+  const reads = (h, page, item) => { if (!lands(h)) bad.push(h + ' prints back as ' + g('routeNow')().hash); else if (run('caskState().page') !== page || (item !== undefined && run('caskState().item') !== item)) bad.push(h + ' reads as ' + run('caskState().page') + ' ' + run('caskState().item')); };
+  for (const c of CHAPTERS) reads('#/casks/' + c.id, 'chapter', c.id);
+  for (const st of STYLES) reads('#/casks/style/' + st.id, 'style', st.id);
+  reads(hrefRoot, 'houses');
+  for (const x of groups) reads(hrefGroup(x.key), 'housegroup', x.key);
+  for (const h of houses) reads(hrefHouse(h), 'house', h.group);
+  for (const x of groups) { const d = plain(g('deckDef')('caskhouses:' + x.key)); if (!d || d.preset.only.some((c) => c.houseGroup !== x.key)) bad.push('caskhouses:' + x.key + ' is not the group’s deck'); }
+  eq(bad, []);
+});
 await test('W3 Back through real taps: the Atlas home\u2019s door, a group\u2019s row, a house\u2019s card, then one Back a screen to Home; a cold house walks up by replaces; a revealed card keeps its place', async () => {
   const x0 = groups[0], h0 = housesOf(x0)[0];
   const B = boot({ hash: '#/casks' });
@@ -922,6 +940,7 @@ async function mutations() {
     ['the dashboard trend counting a producers round', 'js/ui-new.js', " && q.mode !== 'caskhouses');", ');', 'W7 the quiz'],
     ['a price word in a page string written as a template', 'js/ui-caskhouses.js', "'</ul><p class=\"cask-muted\">Reading the sources needs a connection.</p></details>'", "`</ul><p class=\"cask-muted\">Reading the sources needs a connection, at no cost.</p></details>`", 'D3 the voice'],
     ['a price word the literals cannot see, on the Atlas home', 'js/ui-caskhouses.js', "'<p>Five houses for each style, each with", "'<p>Five houses for each style, at every pri' + 'ce, each with", 'D4 every page'],
+    ['a chapter named houses, shadowed by the producers', 'js/data-casks.js', '    "id": "tasting",\n', '    "id": "houses",\n', 'W3 no name shadows another'],
     ['the search index losing the houses', 'js/ui-new.js', "  if(typeof caskHouseSearchEntries === 'function') ix.push(...caskHouseSearchEntries());\n", '', 'W8 the Practise rows'],
   ];
   let held = 0;
