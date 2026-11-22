@@ -69,7 +69,7 @@
         "Left out for want of a second source: the 1888 rename to Old Overholt with Abraham's face on the label (Wikipedia only), Andrew Mellon's partnership (Beam's timeline only), and the label's exact age wording, so no age term is printed in label.",
         "The style page's line that Old Overholt began in western Pennsylvania and is made in Kentucky agrees with this record. The Library's Jim Beam record gives a 1795 lineage, which is the Beam family's and not Overholt's; year keeps 1810, the Overholt business."
       ],
-      "checked": null
+      "checked": {"date": "2026-11-22", "by": "refuter", "verdict": "changed", "changed": ["story: the second distillery at Broad Ford was built from 1854 by the family (Wikipedia, Whisky Advocate, VinePair give 1854, VinePair alone 1859), not added in 1859 by A. Overholt & Co., a name the firm took later; now From 1854 the family built a second, larger distillery at Broad Ford.", "story: the firm was sold to National Distillers in 1932, before repeal, not passed to it after; now In 1932 the firm was sold to National Distillers.", "story: West Overton is said to have never reopened after Prohibition, not to have closed with it, which no source dated.", "story, traps[0] and cards[kentucky-made].answer: since 1987 and settled its making in Kentucky are cut; the Oxford Companion has the whiskey at Forks of Elkhorn near Frankfort before Beam's purchase, and one trade source dates a move to 1993, so the record says only that Beam bought the label in 1987 and makes it in Kentucky.", "bottle.taste and table: the notes came from a review of the three year old 86 proof bottling of 2020; now the house's own notes for the four year old (light spice, pepper, fruit, vanilla, dark fruit) and Whisky Advocate's review of it (mint, cocoa, cherry).", "bottle.label[86 Proof].means: restored is cut, since no source dated an earlier 86 proof; now the strength since 2020, 80 proof before.", "quiz q2 explain: no longer teaches 1859 as the Broad Ford year; now teaches 1919, Frick's death, and 1810, the brand's own date.", "sources: The Whiskey Wash's review of the three year old replaced by Whisky Advocate's new releases page of 2022, which gives the rise from three to four years."], "open": ["bottle.wood and quiz q1: the fourth year is dated 2022 by Distiller and Whisky Advocate's new releases page; one search summary set it in 2020, so the year 2022 rests on two secondaries.", "story: the 1810 is the brand's own date for Abraham Overholt taking charge; his father had distilled at West Overton from about 1800.", "story: the medicinal permit under Prohibition and Frick's 1849 to 1919 were not tested by a search of the refuter's own; both are widely told."]}
     },
     {
       "key": "sagamore-spirit",
@@ -139,7 +139,7 @@
         "Left out for want of a second source: the 1909 on the bottle (the farm's springhouse, one account), the height of the column still, and the share of grain grown at the farm.",
         "Names added to people.json: the founder and the president of the company, both living, both named in the press."
       ],
-      "checked": null
+      "checked": {"date": "2026-11-22", "by": "refuter", "verdict": "changed", "changed": ["bottle.still: the Signature was told as Indiana distilled outright; the house's own page now says it distils both mash bills itself, so the still now says the first batches were distilled under contract in Indiana and the house does not say how much of a later bottle it made.", "story: the water is trucked 22 miles by the house's account (the house's pages, Distillery Trail), not some twenty.", "story: the house's claim of the first Maryland distillery since Prohibition to distil, age and bottle rye was found in no source and is cut; the copper column still some forty feet tall stands in Distillery Trail and Baltimore Magazine.", "traps[0] and cards[maryland-made].answer: the Signature began as whiskey distilled in Indiana, not was distilled in Indiana, for the same reason."], "open": ["flagship: the house's spirits list shows Small Batch, the Bottled in Bond and older ryes and no Signature, though a Signature page stands on its site; whether the Signature is still made was not settled. The swap to Small Batch is refused for now (see the review).", "bottle.class: straight is the house's word for the two mash bills; the Signature's label was not seen.", "bottle.taste rests on The Whiskey Wash's review alone, the house's notes for the Signature not found."]}
     },
     {
       "key": "wigle",
@@ -209,7 +209,7 @@
         "The organic label of the plan's why was not confirmed for this bottling: the product page says regional grain, and organic appears only on older bottlings.",
         "Name added to people.json: the head of the buying family, living, named in the sources."
       ],
-      "checked": null
+      "checked": {"date": "2026-11-22", "by": "refuter", "verdict": "changed", "changed": ["bottle.still: copper is cut, since the house says only that it mills, ferments and pot distils all its products in the Strip District.", "bottle.taste: vanilla, stone fruit and the dry close came from no source; now the house's own cinnamon, black pepper and caramel, with the grain and the oak named as their reason.", "others[Wigle Reserve Single Barrel Rye].note: 100 proof is cut, since single barrels vary and no house page gave it."], "open": ["bottle.wood: six years on the product page, four on a menu of the house; the label was not seen.", "madeBy: Pittsburgh Distilling Company was not confirmed; one listing names Pittsburgh Spirits dba Wigle Whiskey after the 2022 sale.", "bottle.name: whether the label prints Whiskey after Straight Rye was not seen; the house's shop names it Wigle Reserve Pennsylvania Straight Rye."]}
     },
     {
       "key": "dads-hat",
@@ -278,7 +278,7 @@
         "Left out for want of a second source: the Stetson factory as the maker of the father's hats, the white rye as the house's first release, the year of the first straight rye (the house's claim of the first Pennsylvania made straight rye in over twenty-five years) and the 500 gallon size of the pot still, which rests on the house's process page alone and is kept out of the bottle for want of a date.",
         "place and story leave out the county: the lint reads its name as a word for money, so Bristol is placed on the Delaware above Philadelphia instead.", "Names added to people.json: the two founders, both living, named in the press."
       ],
-      "checked": null
+      "checked": {"date": "2026-11-22", "by": "refuter", "verdict": "changed", "changed": ["story: the recipe worked out with Michigan State University's distilling programme was found in no source of the refuter's and is cut.", "story: founded in 2011 is now began distilling there in 2011, since one account dates the company to 2010 and the distilling to 2011.", "story and cards[name].answer: the father served rye at the family's tavern, as the profiles of the house found in search tell it, not drank it at the family bar; the Stetson fedoras stay out on one source.", "story: being written about in Philadelphia is cut; now in bottle by 2012, at 90 proof (one account gives the first shipment as June 2012).", "quiz q2 explain: now says why 2006 is wrong, five years before the house made any whiskey."], "open": ["year: 2011 is the start of distilling in two accounts and the company's founding is 2010 in one; yearIs founded is kept for the distilling year.", "others: the Bottled In Bond rye's name rests on a shop page (Caskers), which gives the same 80, 15 and 5 mash."]}
     },
     {
       "key": "liberty-pole",
@@ -347,7 +347,7 @@
         "Not a benchmark pick and a house a guest may not know; it stays because it is the one label of the five that prints the style's own name.",
         "Names added to people.json: the four founders of the family, all living, named in the sources."
       ],
-      "checked": null
+      "checked": {"date": "2026-11-22", "by": "refuter", "verdict": "changed", "changed": ["bottle.wood: the first batch is no longer named D24, which Whisky Advocate reviewed in autumn 2025 and no source tied to the first release; now the first release married six barrels of three and a half to four and a half years (the house's release and a trade post).", "story: pot stills at the downtown site is cut, since the two pot stills are reported at the North Strabane campus; the move is dated July 2023 (grand opening of 15 July 2023, WPXI and Visit Washington County), and the liberty pole was raised at the groundbreaking, before the campus opened."], "open": ["Mingo Creek as the name of a band of whiskey rebels rests on one account and stays out.", "The release date: May 2024 in two trade posts, July 2024 in Breaking Bourbon's review."]}
     }
   ]
 }
