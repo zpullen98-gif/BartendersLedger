@@ -35,7 +35,7 @@
     ]
    },
    "table": "Christian Drouin is a family calvados house of the Pays d'Auge, and its Sélection is the young one built for mixing: cider apples and perry pears, distilled in a column still and kept fresh in old casks. Reach for it in a Widow's Kiss.",
-   "story": "In 1960 the founder bought the Fiefs Sainte-Anne farm in the hills of Gonneville, near Honfleur, a farm of cider apple orchards. By the house's account he distilled his cider with the help of a licensed distiller from the north of the Pays d'Auge, and laid the spirit down in former sherry, port and calvados casks in the farm's old outbuildings, buying older stocks when other estates were sold. His son joined him in partnership in 1969, but nothing was sold until 1979, once the stocks were judged deep enough: that gap is why some accounts date the house to 1960 and others to about 1980. In the early 1990s production moved to a seventeenth-century farm at Coudray-Rabut, near Pont-l'Évêque, where the press, the stills and the ageing cellars stand together. The founder's grandson joined in 2004, the third generation at the house. The range runs from the young Sélection, column distilled from apples and pears, to Pays d'Auge blends double distilled in pot stills and aged mostly in small casks. For a bartender the Sélection is the house's mixing calvados, the one to pour in the classic apple brandy drinks.",
+   "story": "In 1960 the founder took on the Fiefs Sainte-Anne, a farm of cider apple orchards in the hills of Gonneville, near Honfleur. By the house's account he distilled his cider with the help of a licensed distiller from the north of the Pays d'Auge, and laid the spirit down in former sherry, port and calvados casks in the farm's old outbuildings, buying older stocks when other estates were sold. His son joined him in partnership in 1969, but nothing was sold until 1979, once the stocks were judged deep enough: that gap is why some accounts date the house to 1960 and others to about 1980. In the early 1990s production moved to a seventeenth-century farm at Coudray-Rabut, near Pont-l'Évêque, where the press, the stills and the ageing cellars stand together. The founder's grandson joined in 2004, the third generation at the house. The range runs from the young Sélection, column distilled from apples and pears, to Pays d'Auge blends double distilled in pot stills and aged mostly in small casks. For a bartender the Sélection is the house's mixing calvados, the one to pour in the classic apple brandy drinks.",
    "others": [
     {
      "name": "Christian Drouin VSOP",
@@ -49,7 +49,7 @@
    "traps": [
     "The Sélection is plain AOC Calvados, column distilled from apples and pears; it is not a Calvados Pays d'Auge, though the house's older blends are.",
     "Sélection is the house's own word, not an age mention: it promises only the appellation's two years in oak.",
-    "The house dates from 1960, when the farm was bought; its first sales came only in 1979, which is why some accounts give about 1980."
+    "The house dates from 1960, when the farm came to the founder; its first sales came only in 1979, which is why some accounts give about 1980."
    ],
    "cards": [
     {
@@ -60,7 +60,7 @@
     {
      "id": "first-sales",
      "prompt": "In which year did Christian Drouin first sell its calvados?",
-     "answer": "1979, nearly twenty years after the farm was bought in 1960, once the stocks were judged deep enough."
+     "answer": "1979, nearly twenty years after the farm came to the founder in 1960, once the stocks were judged deep enough."
     }
    ],
    "quiz": [
@@ -82,7 +82,7 @@
      "id": "q2",
      "tag": "story",
      "card": "first-sales",
-     "q": "The Christian Drouin farm was bought in 1960. In which year did the house first put its calvados on sale?",
+     "q": "The Christian Drouin house began on its farm in 1960. In which year did the house first put its calvados on sale?",
      "options": [
       "1965",
       "1969",
@@ -134,7 +134,18 @@
     "The Library's record (Christian Drouin) calls the house the benchmark for calvados and Pays d'Auge the top appellation: both are judgements, not used. Its process text (double distillation, a blend of bitter, bittersweet, sweet and acidic apples, sherry and port casks) describes the Pays d'Auge range, not the Sélection; the Widow's Kiss and Corpse Reviver No. 1 come from it.",
     "Left out for want of a source: the Sélection's pear share, its tasting note in any words but the house's (balanced, fruity, pear freshness, apple roundness), and the house's claim of an evaporation loss about twice the Norman norm, which a search summary gave without its page."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story, traps, cards[1], quiz[1]: the farm 'bought' in 1960 is now a farm the founder took on, or that came to him, in 1960: the house's history says the farm passed to him that year, and no source read gives a purchase."
+    ],
+    "open": [
+     "bottle.name: the label is printed Christian Drouin on older stock and C. Drouin by the American importer and some shops; no label photograph was read, and the roster's name stands.",
+     "story: the son's partnership of 1969 rests on the house's word partnership and a merchant's year; the grandson's 2004 on the importer and a merchant."
+    ]
+   }
   },
   {
    "key": "pere-magloire",
@@ -156,7 +167,7 @@
     "still": "Double distilled in pot stills, as the Pays d'Auge appellation requires of every bottle that carries its name; the house's pages read give no detail of its stills.",
     "wood": "Oak casks for at least four years, the VSOP minimum; no age statement beyond the grade.",
     "strength": "40% ABV",
-    "taste": "Baked apple and apple blossom on the nose with a little clove, then nuts, vanilla and a grip of oak tannin on the palate, as Difford's Guide describes it.",
+    "taste": "Apple blossom on the nose, then reduced cider and roasted nuts, with a grip of oak tannin on the finish, as Difford's Guide and the house's own note describe it.",
     "pour": "Neat in a tulip glass or over one large cube after dinner; it also makes a round Sidecar with calvados in place of Cognac.",
     "label": [
      {
@@ -169,8 +180,8 @@
      }
     ]
    },
-   "table": "Père Magloire is the calvados house of Pont-l'Évêque, dating itself to 1821, and its VSOP is a Calvados Pays d'Auge, double distilled and at least four years in oak. Baked apple and blossom, to sip after dinner or shake into a calvados Sidecar.",
-   "story": "Père Magloire dates itself to 1821, and Debrise-Dulac, the firm under which the brand grew, is given the same founding year. Its distillery and cellars stand on the road out of Pont-l'Évêque towards Trouville, in the middle of the Pays d'Auge. The VSOP carries an appellation older than the label most guests know. In 1942, with the state requisitioning spirits for the war, the cider brandy of the Pays d'Auge was recognised as an appellation, which set it apart from industrial spirit and spared its stocks; its rules ask for cider of at least 70 per cent apples, double distillation in pot stills and at least two years in oak, and a VSOP must have four. In 2018 the house opened its old cellars at Pont-l'Évêque to visitors as the Calvados Experience, a tour of Norman history that ends in a tasting. For a bartender the VSOP is a calvados a guest will often have met on a shop shelf, and the plain lesson in what Pays d'Auge on a label promises.",
+   "table": "Père Magloire is the calvados house of Pont-l'Évêque, dating itself to 1821, and its VSOP is a Calvados Pays d'Auge, double distilled and at least four years in oak. Apple blossom and roasted nuts, to sip after dinner or shake into a calvados Sidecar.",
+   "story": "Père Magloire dates itself to 1821, and Debrise-Dulac, the firm under which the brand grew, is given the same founding year. Its distillery and cellars stand on the road out of Pont-l'Évêque towards Trouville, in the middle of the Pays d'Auge. The appellation on the VSOP has a history of its own. In 1942, with the state requisitioning spirits for the war, the cider brandy of the Pays d'Auge was recognised as an appellation, which set it apart from industrial spirit and spared its stocks; its rules ask for cider of at least 70 per cent apples, double distillation in pot stills and at least two years in oak, and a VSOP must have four. In 2018 the house opened its old cellars at Pont-l'Évêque to visitors as the Calvados Experience, a tour of Norman history that ends in a tasting. For a bartender the VSOP is a calvados a guest will often have met on a shop shelf, and the plain lesson in what Pays d'Auge on a label promises.",
    "others": [
     {
      "name": "Père Magloire VS Fine",
@@ -268,7 +279,19 @@
     "Debrise-Dulac's founding year of 1821 is Difford's Guide's; the house's own site gives 1821 for Père Magloire. The bicentenary of 2021 is left out: only one summary mentioned it.",
     "No living person is named. The composer of a ballad the house published in 2024 is added to people.json because a source showed his name."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: 'The VSOP carries an appellation older than the label most guests know' was false (the label dates itself to 1821, the appellation to 1942); now 'The appellation on the VSOP has a history of its own'.",
+     "bottle.taste and table: baked apple, vanilla and clove were found in no source for this bottling read here; now apple blossom, reduced cider, roasted nuts and oak tannin, as Difford's Guide and the house's note quoted by a shop give them."
+    ],
+    "open": [
+     "bottle.name: the Pays d'Auge wording is confirmed for the British and European bottle; an American label was not read.",
+     "others: a Père Magloire Fine Pays d'Auge is also listed by one British shop beside the VS Fine AOC Calvados; the VS Fine's column still rests on a trade article and the appellation's rule."
+    ]
+   }
   },
   {
    "key": "boulard",
@@ -290,7 +313,7 @@
     "still": "Double distilled in copper pot stills at the Moulin de la Foulonnerie, Coquainvilliers, by the house's account: a first pass makes the brouillis, a second the spirit.",
     "wood": "Several Calvados Pays d'Auge aged at least four years in oak, blended, then given time back in cask to marry, as the house tells it. No age statement beyond the grade.",
     "strength": "40% ABV",
-    "taste": "Fruit and oak on the nose with hazelnut, toast and brioche, then cooked apple and vanilla on a balanced palate and a long, soft finish, as the house describes it.",
+    "taste": "Fruit and oak on the nose with hazelnut, toast and brioche, then ripe apple, vanilla and oak on a balanced palate, as the house describes it.",
     "pour": "Neat in a tulip glass or over one large cube; it makes a round Sidecar or a Jack Rose with calvados in place of applejack.",
     "label": [
      {
@@ -303,8 +326,8 @@
      }
     ]
    },
-   "table": "Boulard is the calvados house of Coquainvilliers in the Pays d'Auge, founded in 1825, and its VSOP is a Calvados Pays d'Auge, double distilled in copper pot stills and at least four years in oak. Cooked apple, hazelnut and toast: pour it neat or in a Sidecar.",
-   "story": "The house was founded in the Pays d'Auge in 1825, and by its own account it double distilled all its calvados from the start: a first pass through the copper pot still makes the brouillis, a low wine, and a second draws the spirit. Its distillery stands at the Moulin de la Foulonnerie at Coquainvilliers, and four generations of the family followed the founder, as the house counts them. The house's claim is that the family pressed for double distillation to be tied to an appellation. In 1942, with the state requisitioning spirits for the war, Calvados Pays d'Auge was recognised as an appellation, and the pot still and the two passes became its rule; the broader Calvados appellation, recognised later, allows a single pass in a column still, and the pear country of Domfront gained its own appellation in 1997. The VSOP is the house's blend of several Pays d'Auge calvados, none younger than four years, married again in cask after blending. For a bartender it is the Pays d'Auge to learn the appellation on: two passes through the still, four years in oak at least, and apple fruit that holds up in a drink.",
+   "table": "Boulard is the calvados house of Coquainvilliers in the Pays d'Auge, founded in 1825, and its VSOP is a Calvados Pays d'Auge, double distilled in copper pot stills and at least four years in oak. Ripe apple, hazelnut and toast: pour it neat or in a Sidecar.",
+   "story": "The house was founded in the Pays d'Auge in 1825, and by its own account it double distilled all its calvados from the start: a first pass through the copper pot still makes the brouillis, a low wine, and a second draws the spirit. Its distillery stands at the Moulin de la Foulonnerie at Coquainvilliers, and four generations of the family followed the founder, as the house counts them. The house's claim is that the family pressed for double distillation to be tied to an appellation. In 1942, with the state requisitioning spirits for the war, Calvados Pays d'Auge was recognised as an appellation, and the pot still and the two passes became its rule; the other calvados country was given a lesser status that year and became the Calvados appellation in 1984, which allows a single pass in a column still, and the pear country of Domfront gained its own appellation in 1997. The VSOP is the house's blend of several Pays d'Auge calvados, none younger than four years, married again in cask after blending. For a bartender it is the Pays d'Auge to learn the appellation on: two passes through the still, four years in oak at least, and apple fruit that holds up in a drink.",
    "others": [
     {
      "name": "Boulard XO",
@@ -401,7 +424,19 @@
     "The 40 per cent strength rests on Difford's Guide's VSOP page; the house's VSOP page in its search summary gave none. The Bourbon Cask Finish is listed at 44 per cent by its importer, so the record says only that it is stronger.",
     "Left out: the four ageing cellars at Coquainvilliers (a fixed count), a claim that the house's stills are among the oldest in the region (a ranking), and the house's own claim to lead calvados (a selling word). The year the broad Calvados appellation became an AOC is given as 1984 by the interprofession's consumer site and is left out of the story for want of room."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: 'the broader Calvados appellation, recognised later' now says the other calvados country was given a lesser status in 1942 and became the Calvados appellation in 1984, as the interprofession's pages give it.",
+     "bottle.taste and table: cooked apple and a long, soft finish are not in the house's note, which gives ripe apple, vanilla and oak on the palate; now so."
+    ],
+    "open": [
+     "story: the family's hand in the 1942 appellation is the house's claim, repeated by its British importer; no independent account was found.",
+     "place: one merchant founds the house at Yvetot; the house's distillery at the Moulin de la Foulonnerie, Coquainvilliers, is where the record places it, and the story does not say where the founding was."
+    ]
+   }
   },
   {
    "key": "daron",
@@ -419,9 +454,9 @@
    "bottle": {
     "name": "Daron Fine Calvados Pays d'Auge",
     "class": "Calvados Pays d'Auge, a young blend",
-    "mash": "Cider apples of several bittersweet and sweet varieties, with a small share of perry pears; no proportions are published.",
-    "still": "Double distilled in copper pot stills, as the Pays d'Auge appellation requires. Where it is distilled is not disclosed; Maison Ferrand, the Cognac house, is named as its producer.",
-    "wood": "Aged in oak, Limousin oak by Difford's Guide's account, for at least the appellation's two years. No age statement on the label.",
+    "mash": "Bitter and bittersweet cider apples, with pears added for freshness, by Ferrand's page; only the first pressing is used, and no proportions are published.",
+    "still": "Double distilled in small Charentais copper pot stills, by Ferrand's page, as the Pays d'Auge appellation requires. Where it is distilled is not disclosed; Maison Ferrand, the Cognac house, is named as its producer.",
+    "wood": "Small, used Limousin oak casks, by Ferrand's page and Difford's Guide, for at least the appellation's two years. No age statement on the label.",
     "strength": "40% ABV",
     "taste": "Fresh cider apple first, with a light hand of oak behind it: a young and fresh style of calvados, as Difford's Guide describes it, made with mixing in mind.",
     "pour": "Shaken: a Jack Rose made with calvados, a calvados Sidecar or a Widow's Kiss; it also stands over ice with a little water.",
@@ -441,12 +476,12 @@
    "others": [
     {
      "name": "Daron XO",
-     "note": "The older Pays d'Auge blend of the label: no calvados in it is younger than six years."
+     "note": "The label's older blend: under the calvados rules, no calvados in an XO is younger than six years."
     }
    ],
    "traps": [
     "There is no Daron distillery to visit: the label is bottled under Maison Ferrand, and where it is distilled is not disclosed.",
-    "Fine is not an age mention of the rules: give a guest no number of years beyond the appellation's two."
+    "Fine promises only the appellation's two years in oak: give a guest no number of years beyond that."
    ],
    "cards": [
     {
@@ -516,8 +551,8 @@
      "read": "search"
     },
     {
-     "title": "IDAC: how to read a calvados label",
-     "url": "https://www.idac-aoc.fr/en/the-calvados/how-to-read-the-labels.html",
+     "title": "Ferrand Spirits Germany: Daron",
+     "url": "https://ferrand-spirits.com/Produkte/Calvados/Daron/",
      "kind": "primary",
      "read": "search"
     }
@@ -530,7 +565,23 @@
     "The pick stands though the label is thin on history: the owner's own fall menu pours Daron, as Daron Fin Calvados, in its To Each His Own, and the Ledger's menu card already asks him to confirm whether the bottle reads Fine. The record follows the producer's spelling, Fine, and the menu card's caution stands.",
     "No year is given: no founding or first release year for the label was found. The story's years are Ferrand's (1989, the 1840 Original Formula of 2011, from the Cognac group's record and its sources) and the appellation's (1942). The founder of Maison Ferrand is living and already in people.json; he is not named."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.still: small Charentais copper pot stills now told, from Ferrand's German page for Daron, which the Ledger's own fall menu cites; the plan's note called it a retailer's claim.",
+     "bottle.wood: small, used Limousin oak casks, now on Ferrand's page and Difford's Guide, not Difford's alone.",
+     "bottle.mash: bittersweet and sweet apples with a small share of pears is now bitter and bittersweet apples with pears for freshness and only the first pressing, as Ferrand's page gives it.",
+     "traps[1]: 'Fine is not an age mention of the rules' was not safe: Difford's Guide and a trade summary list Fine beside VS at two years, the interprofession's guide does not; now the trap says only that Fine promises the appellation's two years.",
+     "others[0]: Daron XO no longer called a Pays d'Auge, which no source read confirmed; the six years are told as the XO rule.",
+     "sources: IDAC's label guide gives way to Ferrand's Daron page."
+    ],
+    "open": [
+     "Where Daron is distilled stays undisclosed; Difford's orchards north of the Pays d'Auge rest on one source and stay out.",
+     "Whether Fine is a listed age mention of the current cahier des charges is unsettled: the record says only what the label promises at the least."
+    ]
+   }
   },
   {
    "key": "roger-groult",
@@ -552,7 +603,7 @@
     "still": "Double distilled at the Clos de la Hurvanière in antique copper pot stills heated by a wood fire, by the estate's account.",
     "wood": "At least three years in old French oak casks, blended by what the estate calls a perpetual assemblage. The label states three years of age.",
     "strength": "40% ABV",
-    "taste": "Intense, fresh apple, by the estate's own note: a young Pays d'Auge in which the fruit of the cider leads and the old casks stay in the background.",
+    "taste": "Intense, fresh and tart apple with a light touch of wood, by the estate's own note: a young Pays d'Auge in which the fruit of the cider leads and the old casks stay behind it.",
     "pour": "The estate names it for cocktails or after dinner: neat, over one large cube, or in a Jack Rose or a Sidecar made with calvados.",
     "label": [
      {
@@ -578,7 +629,7 @@
     }
    ],
    "traps": [
-    "The bottle long sold as Réserve is called 3 ans d'âge on the estate's own page; Réserve, under the calvados rules, promises the same three years.",
+    "The bottle long sold as Réserve is called 3 ans d'âge on the estate's shop page, and Reserve 3 years old on its cocktail page; under the calvados rules Réserve promises the same three years.",
     "The estate's fire is wood, under antique copper pot stills: not gas, and not a column still."
    ],
    "cards": [
@@ -637,6 +688,12 @@
      "read": "search"
     },
     {
+     "title": "Calvados Roger Groult: our cocktails",
+     "url": "https://calvados-groult.com/en/nos-cocktails/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
      "title": "Calvados Roger Groult: Calvados 8 years old",
      "url": "https://calvados-groult.com/en/boutique/calvados-8-ans-dage-70cl/",
      "kind": "primary",
@@ -646,12 +703,6 @@
      "title": "Wikipedia: Calvados Roger Groult",
      "url": "https://en.wikipedia.org/wiki/Calvados_Roger_Groult",
      "kind": "secondary",
-     "read": "search"
-    },
-    {
-     "title": "IDAC: Calvados Pays d'Auge cahier des charges",
-     "url": "https://www.idac-aoc.fr/images/cdc/CDC_CalvadosPaysAuge.pdf",
-     "kind": "primary",
      "read": "search"
     }
    ],
@@ -664,7 +715,21 @@
     "The plan's note says all five picks are Pays d'Auge: in fact the Christian Drouin Sélection is plain AOC Calvados, column distilled from apples and pears, so the group does show the broad appellation once. The pear led Domfrontais still has no pick; Christian Drouin's Le Domfrontais stands among that record's other bottlings.",
     "Left out: the estate's prizes and its claims of a world title (no scores), and its prices."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-22",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.taste: the estate's own note gives intense, fresh, tart apple with slight wood; the taste now says so rather than casks kept in the background.",
+     "traps[0]: the estate's cocktail page still calls the bottle Reserve 3 years old, beside 3 ans d'âge on its shop page; the trap now says both.",
+     "sources: the cahier des charges, whose rules the Cask Atlas already states, gives way to the estate's cocktail page."
+    ],
+    "open": [
+     "story: Léon Groult's dates (1874 to 1923) stand on the estate's history page alone; Wikipedia's summary names him without dates.",
+     "report: the author says a brother and sister took over in 2022; a trade summary has the fifth generation succeeding in 2008. Neither is in the record.",
+     "The proposed bottling swap is refused for now: see the group's review."
+    ]
+   }
   }
  ]
 }
