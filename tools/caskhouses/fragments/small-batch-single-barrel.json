@@ -22,7 +22,7 @@
     "wood": "New charred American oak, aged in Warehouse H, a metal-clad warehouse built in 1935 whose walls follow the heat and cold of the seasons closely, by the brand's account. No age statement.",
     "strength": "46.5% ABV (93 proof)",
     "taste": "Nutmeg and baking spice on the nose; dry vanilla with honey, caramel and corn on the palate, and a medium finish where corn and nutmeg come back. Each barrel reads a little differently.",
-    "pour": "Neat or with a few drops of water, so that one barrel can be tasted on its own terms; over one large cube for a slower glass, or stirred into an Old Fashioned.",
+    "pour": "Neat, or with a touch of water, so that one barrel can be tasted on its own terms; on the rocks for a slower glass, or stirred into an Old Fashioned.",
     "label": [
      {
       "term": "Single Barrel",
@@ -42,8 +42,8 @@
      }
     ]
    },
-   "table": "Blanton's is the single barrel bourbon of Buffalo Trace in Frankfort, every bottle drawn from one barrel aged in the metal-clad Warehouse H. Blanton's Original Single Barrel, at 93 proof under its horse and jockey stopper, pours honey, caramel, dry vanilla and nutmeg.",
-   "story": "Albert Bacon Blanton (1881 to 1959) was born on a farm near the Frankfort distillery and joined it in 1897, at sixteen, as an office boy. He rose to be its president in 1921 and led it until 1952; after the repeal of Prohibition he had Warehouse H built in metal, quick to raise, in 1935. When he entertained important guests, the story goes, he drew whiskey for them from chosen barrels in the centre of that warehouse. Elmer T. Lee (1919 to 2013), then master distiller, remembered that habit, and in 1984, near the end of his career, he launched a bourbon bottled one barrel at a time and named it for the colonel: Blanton's Single Barrel, which the distillery calls the first single barrel bourbon. Each bottle carries its barrel number and the day the barrel was emptied, written by hand, under a horse and jockey stopper; since 1999 there have been eight of them, each marked with one letter of the name. The distillery took the name Buffalo Trace in 1999. Behind a bar Blanton's is the bottle that taught guests to ask for a single barrel, and the proof that no two barrels read quite alike.",
+   "table": "Every bottle of Blanton's is drawn from one barrel aged in the metal-clad Warehouse H at Buffalo Trace in Frankfort. Blanton's Original Single Barrel, at 93 proof under its horse and jockey stopper, pours honey, caramel, dry vanilla and nutmeg.",
+   "story": "Born on a farm near the Frankfort distillery, Albert Bacon Blanton (1881 to 1959) joined it in 1897, at sixteen, as an office boy. He rose to be its president in 1921 and led it until 1952; after the repeal of Prohibition he had Warehouse H built in metal, quick to raise, in 1935. When he entertained important guests, the story goes, he drew whiskey for them from chosen barrels in the centre of that warehouse. Elmer T. Lee (1919 to 2013), then master distiller, remembered that habit, and in 1984, near the end of his career, he launched a bourbon bottled one barrel at a time and named it for the colonel: Blanton's Single Barrel, which the distillery calls the first single barrel bourbon. Each bottle carries its barrel number and the day the barrel was emptied, written by hand, under a horse and jockey stopper; since 1999 there have been eight of them, each marked with one letter of the name. The distillery took the name Buffalo Trace in 1999. Blanton's is the bottle that taught guests to ask for a single barrel, and the proof, barrel by barrel, that no two read quite alike.",
    "others": [
     {
      "name": "Blanton's Gold",
@@ -55,7 +55,7 @@
     }
    ],
    "traps": [
-    "There is no Blanton's distillery: the bourbon is made and aged at Buffalo Trace in Frankfort, in Warehouse H.",
+    "The name is the colonel's, not a distillery's: the bourbon is made and aged in Frankfort, in Buffalo Trace's Warehouse H.",
     "The letter and the pose on the stopper are placed at random; they say nothing about the whiskey in the bottle.",
     "Single barrel is not barrel proof: the Original is brought down with water to 93 proof."
    ],
@@ -179,7 +179,7 @@
     "wood": "New charred American oak for no less than ten years, by the distillery's account; the age statement stands on the back label.",
     "strength": "45% ABV (90 proof)",
     "taste": "Toffee, orange peel, herbs, honey, leather and oak on the nose; a bold, dry palate of candied almond and dark cocoa, and a long, dry finish.",
-    "pour": "Neat or with a little water; it holds its own in a Manhattan or an Old Fashioned, where the ten years of oak show through the vermouth or the sugar.",
+    "pour": "Neat or with a little water; its ten years of oak show through the vermouth of a Manhattan or the sugar of an Old Fashioned.",
     "label": [
      {
       "term": "Aged 10 Years",
@@ -191,8 +191,8 @@
      }
     ]
    },
-   "table": "Eagle Rare is the ten year old Kentucky straight bourbon of Buffalo Trace in Frankfort, made from the same recipe as Buffalo Trace bourbon and left far longer in oak. Eagle Rare 10 Year pours toffee, orange peel, leather and dark cocoa at 90 proof.",
-   "story": "Seagram introduced Eagle Rare in 1975 as a ten year old Kentucky straight bourbon at 101 proof, made, by most accounts, at its Four Roses distillery in Lawrenceburg. The Sazerac Company bought the label from Seagram in 1989, and in 1992 bought the Frankfort distillery that it renamed Buffalo Trace in 1999, where the bourbon is made. In 2005 the strength came down to 90 proof and the bottling was sold as a single barrel bourbon, each bottle drawn from one barrel. About 2012, by later accounts, a new automated bottling line came into use; because, as the distillery explained, it can let a little of one barrel run into the next, the words Single Barrel came off the label, and the bottle was redesigned with the age statement moved to the back. The distillery describes every barrel as chosen with care, and the whiskey kept its recipe and its ten years. For a bartender it is the lesson in reading a label as it stands: ten years of oak and one recipe, with no claim to a single barrel.",
+   "table": "Eagle Rare takes the recipe of Buffalo Trace bourbon and leaves it far longer in oak at the same Frankfort distillery, for a ten year old Kentucky straight bourbon. Eagle Rare 10 Year pours toffee, orange peel, leather and dark cocoa at 90 proof.",
+   "story": "Seagram introduced Eagle Rare in 1975 as a ten year old Kentucky straight bourbon at 101 proof, made, by most accounts, at its Four Roses distillery in Lawrenceburg. The Sazerac Company bought the label from Seagram in 1989, and in 1992 bought the Frankfort distillery that it renamed Buffalo Trace in 1999, where the bourbon is made. In 2005 the strength came down to 90 proof and the bottling was sold as a single barrel bourbon, each bottle drawn from one barrel. About 2012, by later accounts, a new automated bottling line came into use; because, as the distillery explained, it can let a little of one barrel run into the next, the words Single Barrel came off the label, and the bottle was redesigned with the age statement moved to the back. The distillery describes every barrel as chosen with care, and the whiskey kept its recipe and its ten years. What a guest should be told is what the label says as it stands: ten years of oak and one recipe, with no claim to a single barrel.",
    "others": [
     {
      "name": "Eagle Rare 17 Year Old",
@@ -321,7 +321,7 @@
     "wood": "New charred American oak for at least nine years. The age statement, taken off in late 2016, has been back on the label since 2020.",
     "strength": "50% ABV (100 proof)",
     "taste": "Toasted nuts, grain and oak on the nose; a full, sweet and woody palate with caramel and vanilla, and a long finish.",
-    "pour": "Neat with a splash of water, or over one large cube; at 100 proof it stands up to vermouth and bitters in a Manhattan or a Boulevardier.",
+    "pour": "Neat with a splash of water, or on one big cube; at 100 proof it stands up to vermouth and bitters in a Boulevardier or a Manhattan.",
     "label": [
      {
       "term": "Small Batch",
@@ -338,7 +338,7 @@
     ]
    },
    "table": "Knob Creek is Beam's small batch bourbon from Kentucky, made in the manner of the full strength whiskey sold before Prohibition. Knob Creek Small Batch 9 Year spends at least nine years in charred oak and is bottled at 100 proof: toasted nuts, caramel and oak.",
-   "story": "Booker Noe (1929 to 2004), a grandson of Jim Beam, was the family distillery's master distiller when he created Knob Creek in 1992. It was one of the Small Batch Bourbon Collection, four bourbons beside Booker's, Baker's and Basil Hayden's, and he built it, by the producer's account, on the bonded whiskey of the years before Prohibition, the kind the Bottled-in-Bond Act of 1897 stood behind: long in oak and bottled at 100 proof. The name is a place, not a person. Knob Creek is the stream that ran by the Kentucky farm where Abraham Lincoln (1809 to 1865) spent his boyhood; in 1860 he wrote that his memories began at the Knob Creek place. In late 2016 the producer took the nine year statement off the label, saying it could not promise that every barrel had reached nine years, and in 2020 the statement came back. For a bartender Knob Creek is a steady 100 proof bourbon for the stirred drinks, and a plain lesson that the words small batch say nothing of age: the number on the label does.",
+   "story": "Knob Creek was created in 1992 by Booker Noe (1929 to 2004), a grandson of Jim Beam and then the family distillery's master distiller. It was one of the Small Batch Bourbon Collection, four bourbons beside Booker's, Baker's and Basil Hayden's, and he built it, by the producer's account, on the bonded whiskey of the years before Prohibition, the kind the Bottled-in-Bond Act of 1897 stood behind: long in oak and bottled at 100 proof. The name is a place, not a person. Knob Creek is the stream that ran by the Kentucky farm where Abraham Lincoln (1809 to 1865) spent his boyhood; in 1860 he wrote that his memories began at the Knob Creek place. In late 2016 the producer took the nine year statement off the label, saying it could not promise that every barrel had reached nine years, and in 2020 the statement came back. Stirred drinks get a steady 100 proof bourbon from it, and a guest gets the lesson that the words small batch say nothing of age: the number on the label does.",
    "others": [
     {
      "name": "Knob Creek Single Barrel Reserve 9 Year",
@@ -472,7 +472,7 @@
     "wood": "New oak barrels with a level 3 char, by the house's account: a mingling of barrels of eight to twelve years, in batches of 200 barrels or fewer. No age statement since 2016.",
     "strength": "47% ABV (94 proof)",
     "taste": "Vanilla bean, sweet fruit and fresh mint on the nose; warm on the palate, with spice, a little smoke and nutmeg, and a long, sweet, gently toasted finish.",
-    "pour": "Neat or with a few drops of water, or on one large cube; with its 94 proof and long years of oak it makes a deep Old Fashioned and a firm Whiskey Sour.",
+    "pour": "Neat, with water to taste, or on ice; its 94 proof and long years of oak make a deep Old Fashioned and a Whiskey Sour with backbone.",
     "label": [
      {
       "term": "Small Batch",
@@ -484,8 +484,8 @@
      }
     ]
    },
-   "table": "Elijah Craig is the Heaven Hill bourbon named for a Baptist minister of early Kentucky. Elijah Craig Small Batch mingles barrels of eight to twelve years at 94 proof: vanilla, nutmeg and toasted oak, with the depth of its years for an Old Fashioned.",
-   "story": "Elijah Craig (died 1808) was a Baptist minister from Virginia who settled in Kentucky, where he ran a mill at Royal Spring, at what became Georgetown. The claim that he made the first bourbon there in 1789, or first charred his barrels, goes back to a history of Kentucky published in 1874, and historians treat it as legend. Heaven Hill of Bardstown chose his name for a new label in 1986: a twelve year old small batch bourbon. Fire destroyed the Bardstown distillery in 1996, and from 1999 the house distilled at Bernheim in Louisville while its whiskey went on ageing around Bardstown. To stretch its stock of older barrels as the label grew, Heaven Hill took the twelve year statement off the back label in 2016, and the Small Batch became a mingling of barrels of eight to twelve years at the same 94 proof. For a bartender it is the bottle that shows what long years in oak bring to a small batch bourbon, with a founding story to tell as the legend it is.",
+   "table": "Elijah Craig Small Batch mingles barrels of eight to twelve years at 94 proof, a Heaven Hill bourbon that carries the name of a Baptist minister of early Kentucky. Vanilla, nutmeg and toasted oak give an Old Fashioned the depth of its years.",
+   "story": "Before his name was a bourbon's, Elijah Craig (died 1808) was a Baptist minister from Virginia who settled in Kentucky, where he ran a mill at Royal Spring, at what became Georgetown. The claim that he made the first bourbon there in 1789, or first charred his barrels, goes back to a history of Kentucky published in 1874, and historians treat it as legend. Heaven Hill of Bardstown chose his name for a new label in 1986: a twelve year old small batch bourbon. Fire destroyed the Bardstown distillery in 1996, and from 1999 the house distilled at Bernheim in Louisville while its whiskey went on ageing around Bardstown. To stretch its stock of older barrels as the label grew, Heaven Hill took the twelve year statement off the back label in 2016, and the Small Batch became a mingling of barrels of eight to twelve years at the same 94 proof. The Small Batch shows what long years in oak bring to a small batch bourbon, and its founding story is told as the legend it is.",
    "others": [
     {
      "name": "Elijah Craig Barrel Proof",
@@ -499,7 +499,7 @@
    "traps": [
     "Elijah Craig did not invent bourbon: the claim goes back to a history of 1874 and is told as legend.",
     "The Small Batch has carried no age statement since 2016; the twelve years belong to older bottles and to the Barrel Proof.",
-    "Heaven Hill distils in Louisville, at Bernheim, not in Bardstown: the Bardstown distillery burned in 1996."
+    "This bourbon is distilled in Louisville, at Bernheim, not in Bardstown, where the distillery burned in 1996."
    ],
    "cards": [
     {
@@ -582,7 +582,8 @@
     "The fire of 1996 and the move to Bernheim in 1999 stand on Heaven Hill's own timeline; that Elijah Craig in particular is distilled at Bernheim is inferred from the house's statement that Bernheim became its main distilling plant, and a refuter may wish to confirm it.",
     "The level 3 char, the 200 barrel batches and the eight to twelve years are the house's own words; the twelve year statement came off the back label in early 2016 (Heaven Hill and The Whiskey Wash).",
     "Elijah Craig Barrel Proof sits under others only, as the note asks, and is not used for barrel proof. The founders of Heaven Hill are not named; the family's living members stand in people.json.",
-    "The Ledger holds no shelf or Library record for this label; the style page names it as a house and agrees."
+    "The Ledger holds no shelf or Library record for this label; the style page names it as a house and agrees.",
+    "Read together on 2026-11-22: the third trap said Heaven Hill distils in Louisville and not in Bardstown, which the house's first barrel at Heaven Hill Springs in Bardstown in 2025 (the Heaven Hill record) makes untrue of the house; it now speaks of this bourbon, as the still field does. The integrator should confirm the still field once whiskey from the new distillery is bottled."
    ],
    "checked": {
     "date": "2026-11-22",
@@ -620,7 +621,7 @@
     "wood": "New American oak with the house's deep number four char, the alligator char; each bottle from one barrel, and no age statement on the label.",
     "strength": "55% ABV (110 proof)",
     "taste": "Vanilla, nuts and brown sugar on the nose with oak and cinnamon; a bold, spicy palate of toffee, liquorice and vanilla, and a finish of sweet spice with a malty note.",
-    "pour": "Neat, with a few drops of water to open the strength, or over one large cube; it gives a firm backbone to an Old Fashioned.",
+    "pour": "Neat, a little water opening the strength, or on the rocks; in an Old Fashioned the 110 proof keeps the bourbon ahead of the sugar.",
     "label": [
      {
       "term": "Single Barrel",
@@ -633,7 +634,7 @@
     ]
    },
    "table": "Russell's Reserve is the Wild Turkey label a son first made in 1998 to honour his father, then master distiller at Lawrenceburg. Russell's Reserve Single Barrel comes one barrel at a time, not chill filtered, at 110 proof: toffee, vanilla, cinnamon and oak, with more weight than Wild Turkey 101.",
-   "story": "Russell's Reserve began as a son's tribute to his father, then master distiller of the Wild Turkey Distillery at Lawrenceburg. By the brand's account, his son made a small batch bourbon in 1998 to mark his father's forty-five years at the distillery, and called it Russell's Reserve. The label came to market in 2001 as a ten year old Kentucky straight bourbon at 101 proof, the strength of the house's flagship, and in 2005 the ten year old was brought down to 90 proof. In 2013 came Russell's Reserve Single Barrel, each bottle from one barrel, bottled at 110 proof and without chill filtering. The son, who had joined the distillery in 1981, was named master distiller beside his father in 2015. Behind a bar it shows the Wild Turkey style at its plainest: deep char, a low barrel entry, one cask at a time, and the strength left high.",
+   "story": "A son's tribute to his father, then master distiller of the Wild Turkey Distillery at Lawrenceburg, is where Russell's Reserve began. By the brand's account, his son made a small batch bourbon in 1998 to mark his father's forty-five years at the distillery, and called it Russell's Reserve. The label came to market in 2001 as a ten year old Kentucky straight bourbon at 101 proof, the strength of the house's flagship, and in 2005 the ten year old was brought down to 90 proof. In 2013 came Russell's Reserve Single Barrel, each bottle from one barrel, bottled at 110 proof and without chill filtering. The son, who had joined the distillery in 1981, was named master distiller beside his father in 2015. Here the Wild Turkey style is laid bare: deep char, a low barrel entry, one cask at a time, and the strength left high.",
    "others": [
     {
      "name": "Russell's Reserve 10 Year",
@@ -645,7 +646,7 @@
     }
    ],
    "traps": [
-    "Russell's Reserve is made at the Wild Turkey Distillery in Lawrenceburg: there is no separate Russell's Reserve distillery.",
+    "Russell's Reserve carries a family's name but has no distillery of its own: it is made at the Wild Turkey Distillery in Lawrenceburg.",
     "The 110 proof is a set bottling strength, not barrel proof: every barrel is brought down to the same figure.",
     "The label of 1998 and 2001 was a ten year old small batch; the Single Barrel came only in 2013."
    ],
