@@ -1,0 +1,685 @@
+{
+ "group": "small-batch-single-barrel",
+ "records": [
+  {
+   "key": "blantons",
+   "group": "small-batch-single-barrel",
+   "producer": "Blanton's",
+   "madeBy": "Buffalo Trace Distillery",
+   "style": "small-batch-single-barrel",
+   "chapter": "american-labels",
+   "shelf": "",
+   "library": "",
+   "say": "",
+   "place": "Frankfort, Franklin County, Kentucky",
+   "year": "1984",
+   "yearIs": "first released",
+   "bottle": {
+    "name": "Blanton's Original Single Barrel Bourbon Whiskey",
+    "class": "Kentucky straight bourbon whiskey",
+    "mash": "Corn, rye and malted barley to the distillery's Mash Bill No. 2, the recipe it names for Blanton's; no percentages are published.",
+    "still": "Distilled at Buffalo Trace Distillery in Frankfort; the producer's pages name the recipe and the warehouse, not the stills.",
+    "wood": "New charred American oak, aged in Warehouse H, a metal-clad warehouse built in 1935 whose walls follow the heat and cold of the seasons closely, by the brand's account. No age statement.",
+    "strength": "46.5% ABV (93 proof)",
+    "taste": "Nutmeg and baking spice on the nose; dry vanilla with honey, caramel and corn on the palate, and a medium finish where corn and nutmeg come back. Each barrel reads a little differently.",
+    "pour": "Neat or with a few drops of water, so that one barrel can be tasted on its own terms; over one large cube for a slower glass, or stirred into an Old Fashioned.",
+    "label": [
+     {
+      "term": "Single Barrel",
+      "means": "Every bottle is drawn from one barrel alone, never mingled with another; the words have no legal definition."
+     },
+     {
+      "term": "Dumped on",
+      "means": "The handwritten date the barrel was emptied, the day its ageing stopped; bottling may follow later."
+     },
+     {
+      "term": "Warehouse H",
+      "means": "The metal-clad warehouse in Frankfort where every barrel of Blanton's rests."
+     },
+     {
+      "term": "Barrel No. and Rick No.",
+      "means": "The number of the barrel and of the rack it rested on, written by hand."
+     }
+    ]
+   },
+   "table": "Blanton's is the single barrel bourbon of Buffalo Trace in Frankfort, every bottle drawn from one barrel aged in the metal-clad Warehouse H. Blanton's Original Single Barrel, at 93 proof under its horse and jockey stopper, pours honey, caramel, dry vanilla and nutmeg.",
+   "story": "Albert Bacon Blanton (1881 to 1959) was born on a farm near the Frankfort distillery and joined it in 1897, at sixteen, as an office boy. He rose to run it as president from 1921, and after the repeal of Prohibition he had Warehouse H built in metal, quick to raise, in 1935. When he entertained important guests, the story goes, he drew whiskey for them from chosen barrels in the centre of that warehouse. Elmer T. Lee (1919 to 2013), then master distiller, remembered that habit, and in 1984, near the end of his career, he launched a bourbon bottled one barrel at a time and named it for the colonel: Blanton's Single Barrel, which the distillery calls the first modern single barrel bourbon. Each bottle carries its barrel number and the day the barrel was emptied, written by hand, and its stopper is one of eight horse and jockey figures, each marked with one letter of the name. The distillery took the name Buffalo Trace in 1999. Behind a bar Blanton's is the bottle that taught guests to ask for a single barrel, and the proof that no two barrels read quite alike.",
+   "others": [
+    {
+     "name": "Blanton's Gold",
+     "note": "A stronger single barrel bottling of the same bourbon."
+    },
+    {
+     "name": "Blanton's Straight from the Barrel",
+     "note": "Single barrels bottled uncut, at the strength they leave the cask."
+    }
+   ],
+   "traps": [
+    "There is no Blanton's distillery: the bourbon is made and aged at Buffalo Trace in Frankfort, in Warehouse H.",
+    "The letter and the pose on the stopper are placed at random; they say nothing about the whiskey in the bottle.",
+    "Single barrel is not barrel proof: the Original is brought down with water to 93 proof."
+   ],
+   "cards": [
+    {
+     "id": "dump-date",
+     "prompt": "What does the handwritten date on a Blanton's label record?",
+     "answer": "The dump date: the day its one barrel was emptied and the bourbon stopped ageing."
+    },
+    {
+     "id": "namesake",
+     "prompt": "Who is Blanton's named for?",
+     "answer": "Albert Bacon Blanton (1881 to 1959), president of the Frankfort distillery from 1921; Elmer T. Lee launched the bourbon in his honour in 1984."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "dump-date",
+     "q": "A guest points to the date written by hand on a bottle of Blanton's. What does it mark?",
+     "options": [
+      "The day the barrel was filled",
+      "The day the barrel was emptied",
+      "The day the bottle was corked",
+      "The day the whiskey was distilled"
+     ],
+     "a": 1,
+     "explain": "The label records the dump date, the day the barrel was emptied and its ageing stopped; bottling can follow later, so it is not the day the bottle was corked."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "namesake",
+     "q": "In which year did Elmer T. Lee launch Blanton's Single Barrel?",
+     "options": [
+      "1935",
+      "1959",
+      "1984",
+      "1999"
+     ],
+     "a": 2,
+     "explain": "Blanton's went on sale in 1984; 1935 is the year Warehouse H was built and 1999 the year the distillery became Buffalo Trace."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Buffalo Trace Distillery: Blanton's Original Single Barrel",
+     "url": "https://www.buffalotracedistillery.com/our-brands/blantons-single-barrel/blantons-original-single-barrel/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Buffalo Trace Distillery: Albert B. Blanton",
+     "url": "https://www.buffalotracedistillery.com/our-distillery/legendary-people/colonel-albert-blanton/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Blanton's: Questions and answers",
+     "url": "https://blantonsbourbon.com/pages/faq",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Blanton's",
+     "url": "https://en.wikipedia.org/wiki/Blanton%27s",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "The Whiskey Wash: a guide to Blanton's bourbon",
+     "url": "https://thewhiskeywash.com/whiskey-articles/the-ultimate-guide-to-blantons-bourbon/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note is settled: Mash Bill No. 2 and 93 proof (46.5 per cent) stand on Buffalo Trace's own product page. The page gives no percentages and does not itself call the bill high rye, so the record names the bill and says no more of it.",
+    "Albert Bacon Blanton is dated 1881 to 1959: the birth year on the distillery's own page and in Wikipedia, the death in Wikipedia and The Whiskey Wash guide. His start in 1897 as an office boy and his presidency from 1921 are the distillery's. His retirement year, 1952 in VinePair and one other summary, is left out as one source too few.",
+    "Elmer T. Lee is dated 1919 to 2013 as the plan's note and Wikipedia's page on him give; the record names him once, after his dates, as the brief asks.",
+    "Warehouse H built in 1935 is the distillery's year; the brand's own story says only that it was ordered after repeal. The honey barrels from the centre of the warehouse are told as a story, as both producer pages tell it.",
+    "The label terms Dumped on, Barrel No. and Rick No. rest on the brand's questions page and VinePair's guide to the dump date; no producer photograph of the label was read, so a refuter may wish to confirm the exact printed words, and the class Kentucky straight bourbon whiskey with them.",
+    "Ownership abroad is kept out, as the note asks. The strengths of Blanton's Gold and Straight from the Barrel were not searched, so others gives no figure.",
+    "The style page's line that Blanton's is usually named the first modern single barrel bourbon agrees; the record gives the claim as the distillery's."
+   ],
+   "checked": null
+  },
+  {
+   "key": "eagle-rare",
+   "group": "small-batch-single-barrel",
+   "producer": "Eagle Rare",
+   "madeBy": "Buffalo Trace Distillery",
+   "style": "small-batch-single-barrel",
+   "chapter": "american-labels",
+   "shelf": "",
+   "library": "",
+   "say": "",
+   "place": "Frankfort, Franklin County, Kentucky",
+   "year": "1975",
+   "yearIs": "first released",
+   "bottle": {
+    "name": "Eagle Rare 10 Year Kentucky Straight Bourbon Whiskey",
+    "class": "Kentucky straight bourbon whiskey",
+    "mash": "Corn, rye and malted barley to the distillery's Mash Bill No. 1, the recipe of Buffalo Trace bourbon; no percentages are published.",
+    "still": "Distilled at Buffalo Trace Distillery in Frankfort; the producer's pages name the recipe and not the stills.",
+    "wood": "New charred American oak for no less than ten years, by the distillery's account; the age statement stands on the back label.",
+    "strength": "45% ABV (90 proof)",
+    "taste": "Toffee, orange peel, herbs, honey, leather and oak on the nose; a bold, dry palate of candied almond and dark cocoa, and a long, dry finish.",
+    "pour": "Neat or with a little water; it holds its own in a Manhattan or an Old Fashioned, where the ten years of oak show through the vermouth or the sugar.",
+    "label": [
+     {
+      "term": "Aged 10 Years",
+      "means": "The age statement, on the back label: nothing in the bottle is younger than ten years."
+     },
+     {
+      "term": "Kentucky Straight Bourbon Whiskey",
+      "means": "Bourbon made in Kentucky and aged at least two years in new charred oak."
+     }
+    ]
+   },
+   "table": "Eagle Rare is the ten year old Kentucky straight bourbon of Buffalo Trace in Frankfort, made from the same recipe as Buffalo Trace bourbon and left far longer in oak. Eagle Rare 10 Year pours toffee, orange peel, leather and dark cocoa at 90 proof.",
+   "story": "Seagram introduced Eagle Rare in 1975 as a ten year old Kentucky straight bourbon at 101 proof, made, by most accounts, at its Four Roses distillery in Lawrenceburg. The Sazerac Company bought the label from Seagram in 1989, and in 1992 bought the Frankfort distillery that it renamed Buffalo Trace in 1999, where the bourbon is made. In 2005 the strength came down to 90 proof and the bottling was sold as a single barrel bourbon, each bottle drawn from one barrel. About 2012, by the accounts of the time, a new automated bottling line came into use; because it can let a little of one barrel run into the next, the words Single Barrel came off the label, and the bottle was redesigned with the age statement moved to the back. The distillery describes every barrel as chosen with care, and the whiskey kept its recipe and its ten years. For a bartender it is the lesson in reading a label as it stands: ten years of oak and one recipe, with no claim to a single barrel.",
+   "others": [
+    {
+     "name": "Eagle Rare 17 Year Old",
+     "note": "The same recipe after seventeen years in oak, a yearly release of the Buffalo Trace Antique Collection."
+    }
+   ],
+   "traps": [
+    "Eagle Rare 10 Year no longer prints Single Barrel on its label: the words came off about 2012, with a new bottling line.",
+    "The 101 proof was the strength of the Seagram bottling of 1975 and the years after; the bourbon has been 90 proof since 2005.",
+    "It shares Mash Bill No. 1 with Buffalo Trace bourbon; Blanton's is made from Mash Bill No. 2."
+   ],
+   "cards": [
+    {
+     "id": "mash-bill",
+     "prompt": "Which Buffalo Trace mash bill goes into Eagle Rare 10 Year?",
+     "answer": "Mash Bill No. 1, the recipe of Buffalo Trace bourbon; Blanton's is made from Mash Bill No. 2."
+    },
+    {
+     "id": "label-change",
+     "prompt": "Why does Eagle Rare 10 Year no longer print Single Barrel on its label?",
+     "answer": "About 2012 a new automated bottling line came in that can let one barrel run into the next, so the words came off."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "mash-bill",
+     "q": "Eagle Rare 10 Year and Blanton's come from one Frankfort distillery. Which recipe goes into Eagle Rare?",
+     "options": [
+      "The wheated Weller recipe",
+      "Mash Bill No. 2",
+      "The Sazerac rye recipe",
+      "Mash Bill No. 1"
+     ],
+     "a": 3,
+     "explain": "Eagle Rare is made from Mash Bill No. 1, the recipe of Buffalo Trace bourbon; Mash Bill No. 2 is the recipe of Blanton's."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "label-change",
+     "q": "Why did the words Single Barrel come off the Eagle Rare label about 2012?",
+     "options": [
+      "A new bottling line can mix barrels",
+      "A new law barred the words on bourbon",
+      "The bourbon became a small batch blend",
+      "Seagram kept the right to the words"
+     ],
+     "a": 0,
+     "explain": "The automated line that came in can let a little of one barrel run into the next, so the claim was dropped; no law barred the words, and Blanton's prints them."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Buffalo Trace Distillery: Eagle Rare 10",
+     "url": "https://www.buffalotracedistillery.com/our-brands/eagle-rare/eagle-rare-10/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Buffalo Trace Distillery: Eagle Rare 17 Year Old letter of 2025",
+     "url": "https://cms.buffalotracedistillery.com/wp-content/uploads/2025/12/Eagle-Rare-17yr-Letter-2025.pdf",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Eagle Rare",
+     "url": "https://en.wikipedia.org/wiki/Eagle_Rare",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "VinePair: things to know about Eagle Rare",
+     "url": "https://vinepair.com/articles/ntk-eagle-rare-bourbon/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "The Whiskey Wash: a guide to Eagle Rare 10 Year Old",
+     "url": "https://thewhiskeywash.com/whiskey-styles/american-whiskey/the-ultimate-guide-to-eagle-rare-10-year-old-bourbon/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note on proof is settled: 90 proof, 45 per cent, stands on the distillery's own product page. The 101 proof is the Seagram bottling of 1975 to 2005 (Wikipedia and The Whiskey Wash); one Wikipedia line of 101 from 2018 reads as a confusion with another release and is not used.",
+    "The plan's note on the label is settled against the plan: the current label does not print Single Barrel. VinePair and The Whiskey Wash guide both date the change to about 2012, with a new automated bottling line that can mix a little whiskey between barrels, and both say the age statement moved to the back label. The distillery's own page for the 10 speaks of every barrel chosen with care and does not call it a single barrel.",
+    "A swap to consider: the style is small batch and single barrel, and Eagle Rare 10 Year is now neither by its own label. The record is written to teach that lesson, and the style page names Eagle Rare among its houses, so the pick can stand; if the refuter prefers a label that prints the words, the lane's alternate Baker's, flagship Baker's Single Barrel 7 Year (Beam, 107 proof), is the swap of the house I propose, with Four Roses barred by the high rye group.",
+    "Where the bourbon was made between 1989 and 1992 is left out: the distillery's page says Buffalo Trace has made it since 1989, while Tasting Table says Heaven Hill made it until the Sazerac Company bought the Frankfort distillery in 1992. The Seagram years at Four Roses in Lawrenceburg rest on The Whiskey Wash guide and Gear Patrol and are told as by most accounts.",
+    "The 1975 first release stands on the distillery's letter of 2025 and Wikipedia; the Sazerac purchase of 1989 on Wikipedia and Tasting Table.",
+    "Seagram's master distiller of 1975 is not named; his dates were not searched. The Eagle Rare 12 Year announced in 2025 is left out of others as a new release whose details rest on one listing."
+   ],
+   "checked": null
+  },
+  {
+   "key": "knob-creek",
+   "group": "small-batch-single-barrel",
+   "producer": "Knob Creek",
+   "madeBy": "Jim Beam",
+   "style": "small-batch-single-barrel",
+   "chapter": "american-labels",
+   "shelf": "",
+   "library": "",
+   "say": "",
+   "place": "Clermont, Bullitt County, Kentucky",
+   "year": "1992",
+   "yearIs": "first released",
+   "bottle": {
+    "name": "Knob Creek Small Batch 9 Year Kentucky Straight Bourbon Whiskey",
+    "class": "Kentucky straight bourbon whiskey",
+    "mash": "Corn, rye and malted barley, with corn the larger part as the law requires; Beam publishes no percentages for it.",
+    "still": "Distilled by Beam in Kentucky and, by the producer's account, taken off the still at a lower proof; it names no single still house for the bottling.",
+    "wood": "New charred American oak for at least nine years. The age statement, taken off in late 2016, has been back on the label since 2020.",
+    "strength": "50% ABV (100 proof)",
+    "taste": "Toasted nuts, grain and oak on the nose; a full, sweet and woody palate with caramel, vanilla and a little hazelnut.",
+    "pour": "Neat with a splash of water, or over one large cube; at 100 proof it stands up to vermouth and bitters in a Manhattan or a Boulevardier.",
+    "label": [
+     {
+      "term": "Small Batch",
+      "means": "No legal meaning in the United States: the producer's word for a chosen mingling of barrels."
+     },
+     {
+      "term": "100 Proof",
+      "means": "Fifty per cent alcohol by volume, the strength of the bonded whiskeys it was modelled on."
+     },
+     {
+      "term": "Kentucky Straight Bourbon Whiskey",
+      "means": "Bourbon made in Kentucky and aged at least two years in new charred oak; this one nine."
+     }
+    ]
+   },
+   "table": "Knob Creek is Beam's small batch bourbon from Kentucky, made in the manner of the full strength whiskey sold before Prohibition. Knob Creek Small Batch 9 Year spends at least nine years in charred oak and is bottled at 100 proof: toasted nuts, caramel and oak.",
+   "story": "Booker Noe (1929 to 2004), a grandson of Jim Beam, was the family distillery's master distiller when he created Knob Creek in 1992. It was one of the Small Batch Bourbon Collection, four bourbons beside Booker's, Baker's and Basil Hayden's, and he built it, by the producer's account, on the bonded whiskey of the years before Prohibition, the kind the Bottled-in-Bond Act of 1897 stood behind: long in oak and bottled at 100 proof. The name is a place, not a person. Knob Creek is the stream that ran by the Kentucky farm where Abraham Lincoln (1809 to 1865) spent his boyhood, a farm his family knew as the Knob Creek place. In late 2016 the producer took the nine year statement off the label, saying it could not promise that every barrel had reached nine years, and in 2020 the statement came back. For a bartender Knob Creek is a steady 100 proof bourbon for the stirred drinks, and a plain lesson that the words small batch say nothing of age: the number on the label does.",
+   "others": [
+    {
+     "name": "Knob Creek Single Barrel Reserve 9 Year",
+     "note": "One barrel bottled on its own, also nine years old, at a higher strength."
+    },
+    {
+     "name": "Knob Creek Rye",
+     "note": "A straight rye whiskey at 100 proof, first released in 2012 without an age statement."
+    }
+   ],
+   "traps": [
+    "Small batch has no legal meaning in the United States: no rule sets how many barrels make a batch.",
+    "Knob Creek is named for the creek by Abraham Lincoln's boyhood farm, not for the place where he was born.",
+    "Bottles filled between late 2016 and 2020 carry no age statement; that is the label of those years, not a different bourbon."
+   ],
+   "cards": [
+    {
+     "id": "age-statement",
+     "prompt": "In which year did the nine year age statement return to the Knob Creek label?",
+     "answer": "In 2020, after the producer took it off in late 2016 for want of enough nine year old barrels."
+    },
+    {
+     "id": "name",
+     "prompt": "What is Knob Creek named for?",
+     "answer": "The creek by the Kentucky farm where Abraham Lincoln spent his boyhood; Booker Noe created the bourbon in 1992."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "age-statement",
+     "q": "A guest holds a Knob Creek bottle with no age on its label. Between which years was the nine year statement left off?",
+     "options": [
+      "Late 2016 to 2020",
+      "2001 to 2005",
+      "1992 to 1997",
+      "2012 to 2016"
+     ],
+     "a": 0,
+     "explain": "The statement came off in late 2016 and returned in 2020; 1992 is the year the bourbon was created, with its nine years printed."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "name",
+     "q": "Knob Creek names a place rather than a person. What is it?",
+     "options": [
+      "The town where Lincoln was born",
+      "The Beam family's first farm",
+      "A creek by Lincoln's boyhood farm",
+      "A hill above the Clermont stills"
+     ],
+     "a": 2,
+     "explain": "It is the creek by the farm where Lincoln spent his boyhood; he was born at another farm, Sinking Spring, so the town of his birth is the common mistake."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Beam Distilling: Knob Creek Bourbon",
+     "url": "https://www.beamdistilling.com/our-brands/knob-creek-bourbon",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Beam founders: the Knob Creek story",
+     "url": "https://founders.beamsuntory.com/dna/knobcreek",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Knob Creek bourbon",
+     "url": "https://en.wikipedia.org/wiki/Knob_Creek_(bourbon)",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "The Whiskey Wash: Knob Creek gets its nine year statement back",
+     "url": "https://thewhiskeywash.com/bourbon/knob-creek-to-get-its-9-year-age-statement-back/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Whisky Advocate: Beam in his blood",
+     "url": "https://whiskyadvocate.com/booker-noe-beam-blood",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note is met: the group says that small batch has no legal definition (label and traps), and Booker Noe is named with his dates, 1929 to 2004: the birth year on Beam's own pages, the death in Whisky Advocate's profile and Wikipedia's page on Booker's. His son and grandson, both living, are not named and stand already in people.json.",
+    "The age statement: removed in late 2016 (Wikipedia and The Whiskey Wash), restored in 2020 (Beam's own article and Wikipedia; the return was announced in 2019). The 100 proof, the nine years and the lower distillation proof are the producer's.",
+    "The mash bill widely given as about 75 per cent corn, 13 rye and 12 malted barley rests on one summary, so no figure is printed.",
+    "The name: Beam's founders page and Tasting Table tie it to the Knob Creek farm of Lincoln's boyhood. VinePair says the town of his birth, which the trap and the second question correct.",
+    "Place is Clermont, Beam's home distillery and where the Jim Beam record stands; the producer does not say which of its Kentucky distilleries makes Knob Creek, and the still field says so.",
+    "The strength of the Single Barrel Reserve, widely given as 120 proof, was not searched and is left as a higher strength. Tasting words come from Beam's own pages, which differ from one another; the record keeps the words two of them share."
+   ],
+   "checked": null
+  },
+  {
+   "key": "elijah-craig",
+   "group": "small-batch-single-barrel",
+   "producer": "Elijah Craig",
+   "madeBy": "Heaven Hill",
+   "style": "small-batch-single-barrel",
+   "chapter": "american-labels",
+   "shelf": "",
+   "library": "",
+   "say": "",
+   "place": "Bardstown, Nelson County, Kentucky",
+   "year": "1986",
+   "yearIs": "first released",
+   "bottle": {
+    "name": "Elijah Craig Small Batch Kentucky Straight Bourbon Whiskey",
+    "class": "Kentucky straight bourbon whiskey",
+    "mash": "Local corn, rye and malted barley, by the house's account; Heaven Hill gives no percentages for this bottling.",
+    "still": "Made by Heaven Hill, which has distilled its whiskey at the Bernheim Distillery in Louisville since 1999, after fire took its Bardstown distillery in 1996; the barrels age around Bardstown.",
+    "wood": "New oak barrels with a level 3 char, by the house's account: a mingling of barrels of eight to twelve years, in batches of 200 barrels or fewer. No age statement since 2016.",
+    "strength": "47% ABV (94 proof)",
+    "taste": "Vanilla bean, fruit and fresh mint on the nose; warm and woody on the palate, with spice, a little smoke and nutmeg, and a long, sweet, gently toasted finish.",
+    "pour": "Neat or with a few drops of water, or on one large cube; with its 94 proof and long years of oak it makes a deep Old Fashioned and a firm Whiskey Sour.",
+    "label": [
+     {
+      "term": "Small Batch",
+      "means": "By the house's account a mingling of no more than 200 barrels; the words have no legal definition."
+     },
+     {
+      "term": "94 Proof",
+      "means": "Forty-seven per cent alcohol by volume, the bottling's one strength."
+     }
+    ]
+   },
+   "table": "Elijah Craig is the Heaven Hill bourbon named for a Baptist minister of early Kentucky. Elijah Craig Small Batch mingles barrels of eight to twelve years at 94 proof: vanilla, nutmeg and toasted oak, with the depth of its years for an Old Fashioned.",
+   "story": "Elijah Craig (died 1808) was a Baptist minister from Virginia who settled in Kentucky, where, as the house tells it, he set up a distillery in 1789 on Elkhorn Creek, at what became Georgetown. The claim that he invented bourbon, or first charred his barrels, goes back to a history of Kentucky published in 1874, and historians treat it as legend. Heaven Hill of Bardstown chose his name for a new label in 1986: a twelve year old small batch bourbon. Fire destroyed the Bardstown distillery in 1996, and from 1999 the house distilled at Bernheim in Louisville while its whiskey went on ageing around Bardstown. To stretch its stock of older barrels as the label grew, Heaven Hill took the twelve year statement off the back label in 2016, and the Small Batch became a mingling of barrels of eight to twelve years at the same 94 proof. For a bartender it is the bottle that shows what long years in oak bring to a small batch bourbon, with a founding story to tell as the legend it is.",
+   "others": [
+    {
+     "name": "Elijah Craig Barrel Proof",
+     "note": "Twelve years old and bottled uncut, in batches through the year; it kept its age statement."
+    },
+    {
+     "name": "Elijah Craig Toasted Barrel",
+     "note": "The Small Batch given a second spell in a toasted new oak barrel."
+    }
+   ],
+   "traps": [
+    "Elijah Craig did not invent bourbon: the claim goes back to a history of 1874 and is told as legend.",
+    "The Small Batch has carried no age statement since 2016; the twelve years belong to older bottles and to the Barrel Proof.",
+    "Heaven Hill distils in Louisville, at Bernheim, not in Bardstown: the Bardstown distillery burned in 1996."
+   ],
+   "cards": [
+    {
+     "id": "age-change",
+     "prompt": "What did Elijah Craig Small Batch take off its label in 2016?",
+     "answer": "Its twelve year age statement; it became a mingling of barrels of eight to twelve years, at the same 94 proof."
+    },
+    {
+     "id": "namesake",
+     "prompt": "Who was the Elijah Craig of Heaven Hill's bourbon?",
+     "answer": "A Baptist minister of early Kentucky (died 1808), credited by legend with inventing bourbon."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "age-change",
+     "q": "A guest remembers Elijah Craig Small Batch as a twelve year old. What ages of barrel go into it since 2016?",
+     "options": [
+      "Four to six years",
+      "Eight to twelve years",
+      "Twelve to fifteen years",
+      "Two to four years"
+     ],
+     "a": 1,
+     "explain": "The house mingles barrels of eight to twelve years; twelve to fifteen would match the old age statement or more, which the label no longer makes."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "namesake",
+     "q": "Heaven Hill's label names a figure of early Kentucky. Who was Elijah Craig?",
+     "options": [
+      "A Louisville merchant",
+      "A Bardstown banker",
+      "A Frankfort senator",
+      "A Baptist minister"
+     ],
+     "a": 3,
+     "explain": "Elijah Craig was a Baptist minister who settled in Kentucky; the merchants and bankers belong to other labels' stories, not his."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Elijah Craig: Small Batch",
+     "url": "https://elijahcraig.com/small-batch",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Heaven Hill: Through the years",
+     "url": "https://heavenhill.com/through-the-years/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Heaven Hill: the Small Batch age change",
+     "url": "https://heavenhill.com/news-and-notes/elijah-craig-small-batch-age-change/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Elijah Craig bourbon",
+     "url": "https://en.wikipedia.org/wiki/Elijah_Craig_(bourbon)",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Encyclopedia Virginia: Elijah Craig",
+     "url": "https://encyclopediavirginia.org/entries/elijah-craig-ca-1745-may-18-1808/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note on 1986 is settled: the first release stands in Heaven Hill's own news of the age change and in Wikipedia.",
+    "Elijah Craig is dated by his death alone, 1808 (Encyclopedia Virginia and Wikipedia): his birth is 1738 in Wikipedia and Whisky Advocate and about 1745 in the two Virginia references. The invention of bourbon is told as legend, as the note asks; Wikipedia and Whisky Advocate trace it to an 1874 history of Kentucky. The distillery of 1789 on Elkhorn Creek is the house's claim and is hedged so.",
+    "The mash bill of 78 per cent corn, 10 rye and 12 malted barley is VinePair's figure for Heaven Hill's standard bourbon recipe, not a figure the house gives for Elijah Craig, so it is left out.",
+    "The fire of 1996 and the move to Bernheim in 1999 stand on Heaven Hill's own timeline; that Elijah Craig in particular is distilled at Bernheim is inferred from the house's statement that Bernheim became its main distilling plant, and a refuter may wish to confirm it.",
+    "The level 3 char, the 200 barrel batches and the eight to twelve years are the house's own words; the twelve year statement came off the back label in early 2016 (Heaven Hill and The Whiskey Wash).",
+    "Elijah Craig Barrel Proof sits under others only, as the note asks, and is not used for barrel proof. The founders of Heaven Hill are not named; the family's living members stand in people.json.",
+    "The Ledger holds no shelf or Library record for this label; the style page names it as a house and agrees."
+   ],
+   "checked": null
+  },
+  {
+   "key": "russells-reserve",
+   "group": "small-batch-single-barrel",
+   "producer": "Russell's Reserve",
+   "madeBy": "Wild Turkey",
+   "style": "small-batch-single-barrel",
+   "chapter": "american-labels",
+   "shelf": "",
+   "library": "",
+   "say": "",
+   "place": "Lawrenceburg, Anderson County, Kentucky",
+   "year": "2001",
+   "yearIs": "first released",
+   "bottle": {
+    "name": "Russell's Reserve Single Barrel Kentucky Straight Bourbon Whiskey",
+    "class": "Kentucky straight bourbon whiskey",
+    "mash": "Wild Turkey's bourbon recipe of corn, rye and malted barley, with corn the larger part; the house publishes no percentages.",
+    "still": "Distilled at the Wild Turkey Distillery in Lawrenceburg on a column still and then a doubler, as the house's bourbons are.",
+    "wood": "New American oak with the house's deep number four char, the alligator char; each bottle from one barrel, and no age statement on the label.",
+    "strength": "55% ABV (110 proof)",
+    "taste": "Vanilla, nuts and brown sugar on the nose with oak and cinnamon; a bold, spicy palate of toffee, liquorice and vanilla, and a finish of sweet spice with a malty note.",
+    "pour": "Neat, with a few drops of water to open the strength, or over one large cube; it gives a firm backbone to an Old Fashioned.",
+    "label": [
+     {
+      "term": "Single Barrel",
+      "means": "Each bottle comes from one barrel, chosen by the house; the words have no legal definition."
+     },
+     {
+      "term": "110 Proof",
+      "means": "Fifty-five per cent alcohol by volume, the one strength every barrel is brought down to."
+     }
+    ]
+   },
+   "table": "Russell's Reserve is the Wild Turkey label first made in 1998 for a father and son, both master distillers at Lawrenceburg. Russell's Reserve Single Barrel comes one barrel at a time, not chill filtered, at 110 proof: toffee, vanilla, cinnamon and oak, with more weight than Wild Turkey 101.",
+   "story": "Russell's Reserve began as a son's tribute to his father, master distiller of the Wild Turkey Distillery at Lawrenceburg. By the brand's account, his son made a small batch bourbon in 1998 to mark his father's forty-five years at the distillery, and called it Russell's Reserve. The label came to market in 2001 as a ten year old Kentucky straight bourbon at 101 proof, the strength of the house's flagship, and in 2005 the ten year old was brought down to 90 proof. In March 2013 came Russell's Reserve Single Barrel, each bottle from one barrel, bottled at 110 proof and without chill filtering. The son was named master distiller beside his father in 2015, and the brand credits the two with choosing its barrels. Behind a bar it shows the Wild Turkey style at its plainest: deep char, a low barrel entry, one cask at a time, and the strength left high.",
+   "others": [
+    {
+     "name": "Russell's Reserve 10 Year",
+     "note": "The ten year old small batch bourbon at 90 proof, the bottling where the label began."
+    },
+    {
+     "name": "Russell's Reserve Single Barrel Rye",
+     "note": "The same one barrel at a time approach, for rye whiskey."
+    }
+   ],
+   "traps": [
+    "Russell's Reserve is made at the Wild Turkey Distillery in Lawrenceburg: there is no separate Russell's Reserve distillery.",
+    "The 110 proof is a set bottling strength, not barrel proof: every barrel is brought down to the same figure.",
+    "The label of 1998 and 2001 was a ten year old small batch; the Single Barrel came only in 2013."
+   ],
+   "cards": [
+    {
+     "id": "proof",
+     "prompt": "At what proof is Russell's Reserve Single Barrel bottled?",
+     "answer": "110 proof, 55 per cent, one barrel at a time and not chill filtered."
+    },
+    {
+     "id": "namesake",
+     "prompt": "Whom does the Russell's Reserve label honour?",
+     "answer": "Wild Turkey's master distillers, a father and son; by the brand's account the son made it in 1998 for his father's forty-five years there."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "proof",
+     "q": "A guest compares Russell's Reserve Single Barrel with Wild Turkey 101. At what proof is the single barrel bottled?",
+     "options": [
+      "90 proof",
+      "101 proof",
+      "104 proof",
+      "110 proof"
+     ],
+     "a": 3,
+     "explain": "The Single Barrel is bottled at 110 proof, not chill filtered; 101 is the proof of Wild Turkey 101 and of the Russell's Reserve of 2001."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "namesake",
+     "q": "In which year did Russell's Reserve first reach the market, as a ten year old at 101 proof?",
+     "options": [
+      "1998",
+      "2001",
+      "2005",
+      "2013"
+     ],
+     "a": 1,
+     "explain": "It came to market in 2001; 1998 is the year, by the brand's account, the son first made it for his father, and 2013 the year of the Single Barrel."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Russell's Reserve: Single Barrel Bourbon",
+     "url": "https://www.russellsreserve.com/en-us/our-products/single-barrel-bourbon/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Russell's Reserve: Our story",
+     "url": "https://www.russellsreserve.com/our-story/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wild Turkey: Russell's Reserve Single Barrel Bourbon",
+     "url": "https://www.wildturkeybourbon.com/en-au/products/russells-reserve-single-barrel-bourbon/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Difford's Guide: Russell's Reserve Single Barrel",
+     "url": "https://www.diffordsguide.com/beer-wine-spirits/3634/wild-turkey-russells-reserve-single-barrel",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Cigar Aficionado: a first taste of Russell's Reserve Single Barrel",
+     "url": "https://www.cigaraficionado.com/article/first-taste-russells-reserve-single-barrel-16920",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note is settled: 110 proof and non-chill filtering stand on the brand's own product page, Difford's Guide and Cigar Aficionado. The namesakes, father and son, are living and named by role only; their names stand already in people.json. Russell's Reserve is named as a label.",
+    "The year field is 2001, the label's first release, on the brand's own story and Whisky Advocate; 1998 is the brand's year for the first small batch made for the father, and is told as its account. The Single Barrel of March 2013 stands in Difford's Guide and Cigar Aficionado.",
+    "The 90 proof of the ten year old from 2005 is the brand's own year, with one review beside it. The son named master distiller in 2015 is the brand's.",
+    "Left out for want of a source: an age for the barrels (eight to ten years in blogs and shop listings only) and the rye's strength. Cigar Aficionado calls the Single Barrel Wild Turkey's second single barrel bourbon, so no first is claimed.",
+    "The still and the alligator char rest on this repo's Wild Turkey record in the bourbon group, which drew them from the house's own pages; Difford's also names the heavy char for this bottling. The low barrel entry in the story is that record's and the house's.",
+    "The claim of shops that non chill filtering keeps more flavour in the glass was left out of the story; the record states only the fact of it."
+   ],
+   "checked": null
+  }
+ ]
+}
