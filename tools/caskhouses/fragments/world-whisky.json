@@ -1,0 +1,674 @@
+{
+ "group": "world-whisky",
+ "records": [
+  {
+   "key": "kavalan",
+   "group": "world-whisky",
+   "producer": "Kavalan",
+   "madeBy": "King Car Group",
+   "style": "",
+   "chapter": "world-whisky",
+   "shelf": "",
+   "library": "",
+   "say": "KAH-vuh-lan",
+   "place": "Yuanshan Township, Yilan County, Taiwan",
+   "year": "2008",
+   "yearIs": "first released",
+   "bottle": {
+    "name": "Kavalan Classic Single Malt Whisky",
+    "class": "Taiwanese single malt whisky",
+    "mash": "Malted barley alone, as a single malt must be; the house does not say on the pages read where its barley is grown.",
+    "still": "Distilled twice in copper pot stills of Scottish design at the King Car distillery in Yuanshan, Yilan County.",
+    "wood": "A marriage of casks, mainly refill and former bourbon barrels with a small share of sherry casks, by its importer's account, matured in Yilan's subtropical heat and humidity. No age statement.",
+    "strength": "40% ABV",
+    "taste": "Mango and other tropical fruit, honey, vanilla and pear drops on a floral nose, then a sweet palate of ripe fruit and gentle spice, with a medium finish touched by citrus.",
+    "pour": "Neat or with a few drops of water; it also makes a light, fruity highball with chilled soda water.",
+    "label": [
+     {
+      "term": "Classic",
+      "means": "The name of the house's first bottling, released in December 2008; it carries no legal meaning."
+     },
+     {
+      "term": "Single Malt Whisky",
+      "means": "Malted barley distilled at the one distillery, Kavalan's own in Yilan County."
+     }
+    ]
+   },
+   "table": "Kavalan is Taiwan's single malt house in Yilan County, where subtropical heat and humidity work the spirit and the cask fast. The Kavalan Classic Single Malt Whisky was its first bottling, in 2008: mango, honey and vanilla, gentle enough to pour neat.",
+   "story": "Until Taiwan's entry to the WTO in 2002, alcohol there was a state monopoly and no private company could distil it. The opening came quickly to the King Car Group, a Taiwanese food and drinks company, which built a malt distillery at Yuanshan in Yilan County, completed in 2005. Its first new make ran in March 2006, on 11 March by one account, from copper pot stills of Scottish design. The label takes its name from the Kavalan, the Indigenous people of the Yilan plain, whose name was long the old name of the county itself. The first bottling, the Classic, went on sale in December 2008, less than three years after the first spirit. By the house's own account the subtropical heat and humidity of Yilan quicken the exchange between spirit and oak, which is how so young a malt shows ripe fruit and a full colour. For a bartender the Classic is the bottle that teaches the point the Cask Atlas makes: climate changes the pace of maturation, but a year in Yilan is one year, and no number of Scottish years is in the glass.",
+   "others": [
+    {
+     "name": "Kavalan Ex-Bourbon Oak",
+     "note": "The same spirit matured in former bourbon barrels alone."
+    },
+    {
+     "name": "Kavalan Vinho Barrique",
+     "note": "Matured wholly in American oak wine barriques that were stripped and toasted before filling."
+    }
+   ],
+   "traps": [
+    "The Classic carries no age statement: give no number of years, and never a count of Scottish years it is said to equal.",
+    "Kavalan is a single malt, not a blend: every cask in the Classic was filled at the one distillery in Yilan County.",
+    "Kavalan is the label and the distillery; the King Car Group is the company that built it, in 2005."
+   ],
+   "cards": [
+    {
+     "id": "climate",
+     "prompt": "Why does the Kavalan Classic show ripe fruit and colour so young?",
+     "answer": "Yilan's subtropical heat and humidity quicken the exchange between spirit and oak, by the house's account; its years are ordinary years."
+    },
+    {
+     "id": "first-spirit",
+     "prompt": "In which year did the first new make run at the Kavalan distillery?",
+     "answer": "2006, in March, after the distillery at Yuanshan was completed in 2005; the Classic followed in December 2008."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "climate",
+     "q": "A guest says the Kavalan Classic must equal a Scotch three times its age. What is the sound reply?",
+     "options": [
+      "Each Taiwanese year counts as three in law",
+      "Heat quickens maturation, but a year stays a year",
+      "Its label states the Scottish age it equals",
+      "Humidity slows maturation, so it is older"
+     ],
+     "a": 1,
+     "explain": "Heat and humidity change the pace of the exchange with the cask, but elapsed time stays elapsed time; no law turns a Taiwanese year into three Scottish ones."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "first-spirit",
+     "q": "In which year did the first new make run at the Kavalan distillery in Yuanshan?",
+     "options": [
+      "2002",
+      "2005",
+      "2006",
+      "2008"
+     ],
+     "a": 2,
+     "explain": "The first spirit ran in March 2006; 2005 is the year the building was completed, and 2008 the year the Classic went on sale."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Kavalan: Classic Single Malt Whisky",
+     "url": "https://www.kavalanwhisky.com/en/product.php?act=view&id=1",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "The Spirits Business: Kavalan, a brand history",
+     "url": "https://www.thespiritsbusiness.com/2020/05/kavalan-a-brand-history/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "The Spirits Business: an age stated Kavalan",
+     "url": "https://www.thespiritsbusiness.com/2025/03/kavalan-unveils-its-first-age-statement-whisky/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Kavalan Distillery",
+     "url": "https://en.wikipedia.org/wiki/Kavalan_Distillery",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Hotaling and Co.: Kavalan Classic, the importer's page",
+     "url": "https://www.hotalingandco.com/portfolio/kavalan/kavalan-classic/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note on the founding is settled as it asks: the distillery was completed in 2005 (The Spirits Business timeline, Whisky Magazine, Kavalan's own 'since 2005') and the first spirit ran in March 2006 (Wikipedia, The Spirits Business); the day, 11 March, rests on The Spirits Business alone and is hedged as one account. The year field is the first release, December 2008, in Wikipedia and The Spirits Business.",
+    "The plan's why says the Classic is matured mainly in American oak: the importer gives mainly refill and former bourbon barrels with a small share of sherry casks, and the house publishes no proportions; the record gives the importer's account. A shop's note naming wine casks among them was not followed.",
+    "Strength: 40% ABV in Whisky Magazine's tasting and The Whisky Exchange's listing; the United States importer lists 43%. The market note is left out until a refuter confirms the American label.",
+    "Left out for want of a second source: the still maker (Forsyths of Rothes, in one search summary), the German stills said to have been added later, the consultant Jim Swan's part at Kavalan, the source of the barley and the King Car Group's founding year, which sources give as 1956 or 1979.",
+    "Living people met in the sources and added to people.json: the founder of the King Car Group (Tien-Tsai Lee), its president (YT Lee) and the former master blender (Ian Chang).",
+    "The Cask Atlas chapter on world whisky agrees: it names Kavalan's Yilan distillery as subtropical single malt and warns against turning tropical years into Scottish ones, which the record repeats."
+   ],
+   "checked": null
+  },
+  {
+   "key": "amrut",
+   "group": "world-whisky",
+   "producer": "Amrut",
+   "madeBy": "Amrut Distilleries",
+   "style": "",
+   "chapter": "world-whisky",
+   "shelf": "",
+   "library": "",
+   "say": "",
+   "place": "Kambipura, near Bengaluru, Karnataka, India",
+   "year": "1948",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Amrut Fusion Indian Single Malt Whisky",
+    "class": "Indian single malt whisky",
+    "mash": "Malted barley only: most of it Indian barley from the Himalayan foothills, by the house's account, with a smaller share of peated barley from Scotland, widely given as a quarter.",
+    "still": "Distilled twice in copper pot stills at the Amrut distillery at Kambipura, on the Mysore Road outside Bengaluru, built in 1987.",
+    "wood": "The Indian and the peated Scottish malts are distilled and matured apart, in new and used American oak barrels, then married, by the house's account. No age statement.",
+    "strength": "50% ABV",
+    "taste": "Citrus, vanilla and fresh oak with a thread of smoke on the nose, then rich barley, dark chocolate and coffee over gentle peat, and a long, spiced finish of marmalade.",
+    "pour": "Neat, or with a few drops of water to open it at its full strength; it also stands up over one large cube.",
+    "label": [
+     {
+      "term": "Fusion",
+      "means": "The joining of two barleys, Indian and peated Scottish, distilled and matured apart and then married."
+     },
+     {
+      "term": "Indian Single Malt Whisky",
+      "means": "Malted barley distilled at the one distillery, Amrut's own outside Bengaluru."
+     }
+    ]
+   },
+   "table": "Amrut is India's single malt house from the edge of Bengaluru, and Amrut Fusion joins Indian barley with peated barley from Scotland. Bottled strong, it gives citrus, dark chocolate and a gentle smoke, and a few drops of water open it.",
+   "story": "Amrut began in Bangalore in 1948, the year after Indian independence, and grew as a maker of spirits for the Indian market. Its malt distillery at Kambipura, on the Mysore Road outside the city, was built in 1987. By one account the company found itself holding more aged malt than its blended malt whisky for the Indian market needed, and it chose to bottle a single malt and take it abroad. The launch came in Glasgow, at Cafe India, on 24 August 2004: an Indian single malt offered first in Scotland. The founder's son led the company through those years until his death in 2019. Fusion followed in 2009, named for its recipe: Indian barley and peated barley from Scotland, distilled and matured apart in American oak and then married. The distillery stands about 3,000 feet above sea level, and by its own account the heat there speeds the work between spirit and wood. For a bartender Fusion is the plain lesson that a malt from a warm country can be young and yet deep, and that peat need not come from an island.",
+   "others": [
+    {
+     "name": "Amrut Indian Single Malt Whisky",
+     "note": "The house's standard single malt, bottled at 46% ABV."
+    }
+   ],
+   "traps": [
+    "Fusion means two barleys, not two countries' whiskies blended: every drop is distilled at Amrut's own distillery near Bengaluru.",
+    "No age is printed on the Fusion label, so give a guest no number of years as fact.",
+    "The smoke comes from peated barley malted in Scotland, not from an Islay cask."
+   ],
+   "cards": [
+    {
+     "id": "two-barleys",
+     "prompt": "Which two barleys go into Amrut Fusion?",
+     "answer": "Indian barley from the Himalayan foothills and a smaller share of peated barley from Scotland, matured apart and then married."
+    },
+    {
+     "id": "glasgow",
+     "prompt": "Where was Amrut's single malt first launched, in August 2004?",
+     "answer": "In Glasgow, at Cafe India, on 24 August 2004; Amrut Fusion followed in 2009."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "two-barleys",
+     "q": "A guest asks where the smoke in Amrut Fusion comes from. Which answer is right?",
+     "options": [
+      "Charred new oak alone",
+      "A finish in Islay casks",
+      "Peated Scottish barley",
+      "Smoke-dried Indian barley"
+     ],
+     "a": 2,
+     "explain": "A share of the barley is peated malt from Scotland, joined to unpeated Indian barley; the casks are American oak, and an Islay cask plays no part."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "glasgow",
+     "q": "In which city was Amrut's single malt first launched, in August 2004?",
+     "options": [
+      "Bengaluru",
+      "Glasgow",
+      "London",
+      "Mumbai"
+     ],
+     "a": 1,
+     "explain": "It was launched at Cafe India in Glasgow on 24 August 2004; Bengaluru is where it is made, not where it was first offered."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Amrut Distilleries: Amrut Fusion",
+     "url": "https://amrutdistilleries.com/amrut-fusion-singlemalt-whisky-50-duplicate/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Amrut Distilleries: the distillery",
+     "url": "https://amrutdistilleries.com/distillery/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Amrut whisky",
+     "url": "https://en.wikipedia.org/wiki/Amrut_(whisky)",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "The Whiskey Wash: a guide to Amrut",
+     "url": "https://thewhiskeywash.com/world/amrut-whisky-the-ultimate-guide-to-the-indian-whisky-giant/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "The Spirits Business: Amrut's managing director dies",
+     "url": "https://www.thespiritsbusiness.com/2019/05/amrut-distilleries-managing-director-dies/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note asks for the barley share: Amrut's own pages say only that most of the barley is Indian, from the Himalayan foothills, and that a portion is peated Scottish barley; the quarter rests on The Whiskey Wash and the planner, so it is written as widely given. The planner's six row barley was not confirmed for Amrut and is left out (the Cask Atlas gives six row barley for Paul John, not Amrut).",
+    "The plan's note on the age (four and a half years on one tasting site) is not settled: no producer page read gives an age for Fusion, so the record gives none. Non chill filtering is also left out: one secondary account states it, and a 2026 press release for another Amrut bottling claims that bottling as India's first non chill filtered single malt.",
+    "The founding year is 1948 in The Whiskey Wash and other accounts; one Wikipedia article gives 1947. The founder and his son are not named: the son's death in 2019 stands in Star of Mysore and The Spirits Business, but the family surname is a living grandson's too, and no dates were found for the founder.",
+    "Left out for want of a second source: the angel's share figure (about 12 per cent a year, one account), the still sizes and fermentation length, and the whisky writer's notice of 2010, which is score talk in any case.",
+    "The other bottling's 46% strength rests on two shops' listings of the label; the refuter may prefer to confirm it on the producer's page."
+   ],
+   "checked": null
+  },
+  {
+   "key": "starward",
+   "group": "world-whisky",
+   "producer": "Starward",
+   "madeBy": "Starward Distillery",
+   "style": "",
+   "chapter": "world-whisky",
+   "shelf": "",
+   "library": "",
+   "say": "",
+   "place": "Port Melbourne, Melbourne, Victoria, Australia",
+   "year": "2007",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Starward Nova Single Malt Australian Whisky",
+    "class": "Australian single malt whisky",
+    "mash": "Australian malted barley only, grown within two hours of the distillery by its own account, fermented with brewer's yeast as for a craft beer.",
+    "still": "Distilled twice in copper pot stills at the distillery in Port Melbourne, by its own account.",
+    "wood": "Matured wholly in Australian red wine barrels, shiraz, cabernet and pinot noir among them, filled with new make while wet with wine. No age statement.",
+    "strength": "41% ABV",
+    "taste": "Red berries and toasted oak, then cinnamon spice, honeyed fruit and a soft malt sweetness, with a dry, nutty finish and a little dark chocolate.",
+    "pour": "Neat, over one large cube or long in a highball with soda; its red fruit also suits a whisky Old Fashioned.",
+    "label": [
+     {
+      "term": "Nova",
+      "means": "The bottling's name, given to what began as the house's Wine Cask release."
+     },
+     {
+      "term": "Single Malt Australian Whisky",
+      "means": "Malted barley distilled at the one distillery, Starward's own in Melbourne."
+     }
+    ]
+   },
+   "table": "Starward is Melbourne's single malt house, and Starward Nova spends its whole life in Australian red wine barrels, filled while wet with wine. It pours red berries, toasted oak and cinnamon spice, and it makes a bright highball.",
+   "story": "Starward began in 2007, when its founder turned an old Qantas maintenance hangar at Essendon Fields, beside Melbourne's Essendon Airport, into a distillery. Production began there in January 2010, by one account. From the start the house set out to make a whisky of its own city, using barley grown close by and barrels from Australian wineries. Its first release, Solera, was matured in casks that had held apera, the Australian name for a sherry style wine. Spirit was also filled into red wine barrels, mainly cabernet and shiraz from South Australia, for a release first called Wine Cask and later renamed Nova. In 2016 the distillery moved to a warehouse twice the size in Port Melbourne. The house credits Melbourne's swings of temperature with quickening the work between spirit and oak. For a bartender Nova teaches the wine cask as a house style rather than a finish: the red fruit comes from barrels the whisky never leaves, and it shows a guest that Australian whisky is not only Tasmanian.",
+   "others": [
+    {
+     "name": "Starward Solera",
+     "note": "The house's first release, matured in casks that held apera, Australia's sherry style wine."
+    },
+    {
+     "name": "Starward 100 Proof",
+     "note": "Bottled at 50% ABV; it was first released under the name Fortis."
+    }
+   ],
+   "traps": [
+    "Nova is matured wholly in red wine barrels, not only finished in them.",
+    "Starward is made in Melbourne, on the mainland: it is not a Tasmanian whisky.",
+    "No age statement is printed on the Nova label, so give a guest no number of years as fact."
+   ],
+   "cards": [
+    {
+     "id": "wine-barrels",
+     "prompt": "In what casks does Starward Nova spend its whole maturation?",
+     "answer": "Australian red wine barrels, shiraz, cabernet and pinot noir among them, filled while wet with wine."
+    },
+    {
+     "id": "hangar",
+     "prompt": "Where did Starward first distil, before its move to Port Melbourne in 2016?",
+     "answer": "In an old Qantas hangar at Essendon Fields, beside Melbourne's Essendon Airport; the house was founded in 2007."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "wine-barrels",
+     "q": "A guest asks whether Starward Nova is only finished in wine casks. What is so?",
+     "options": [
+      "Finished for a year in port pipes",
+      "Matured wholly in red wine barrels",
+      "Bourbon casks, then six months in wine",
+      "Matured in sherry butts, then wine"
+     ],
+     "a": 1,
+     "explain": "Nova spends its whole maturation in Australian red wine barrels; it is not a bourbon cask whisky given a short wine finish."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "hangar",
+     "q": "Where was Starward's first distillery, before the move to Port Melbourne?",
+     "options": [
+      "A Qantas hangar",
+      "A Hobart warehouse",
+      "A Geelong winery",
+      "A Yarra Valley barn"
+     ],
+     "a": 0,
+     "explain": "It began in an old Qantas hangar at Essendon Fields and moved to a Port Melbourne warehouse in 2016; Hobart is home to Tasmanian houses, not this one."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Starward: Nova Single Malt",
+     "url": "https://starward.com.au/products/nova",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Starward: fifteen moments that made the house",
+     "url": "https://starward.com.au/blogs/journal/15-moments-that-made-starward",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Starward: the method",
+     "url": "https://starward.com.au/blogs/journal/method",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Whisky Advocate: Starward and Australian distilling",
+     "url": "https://whiskyadvocate.com/new-starward-whiskies-and-distillery-plan",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Oz Whisky Review: Starward, the New World Whisky Distillery",
+     "url": "https://ozwhiskyreview.com.au/starward-new-world-whisky-distillery/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note asks to confirm an age of two years: no source gives Nova an age. Whisky Advocate says each Starward whisky ages at least three years, and the house speaks of four to eight Melbourne years; the record gives no age and calls the label one without an age statement.",
+    "Nova's first release year is not settled: Oz Whisky Review says the first Wine Cask release was later renamed Nova, and the sources put the first red wine cask release in 2015 or 2016, so no year for Nova is given. The planner's claim that Nova is the signature malt stands on the house's own fifteen moments page.",
+    "The founder is living and is not named; his name is added to people.json in both forms the sources use (David Vitale, Dave Vitale).",
+    "Left out for want of a second source: whether the barrels are recharred (the house says lightly charred or steamed, a review says not recharred), the Italian maker of the stills, and the investment of Distill Ventures in 2015.",
+    "The Cask Atlas chapter names LARK for Australia and warns that not all Australian whisky is wine cask matured; this record names one mainland house whose style is the wine cask and says so, with a trap that tells it apart from Tasmania."
+   ],
+   "checked": null
+  },
+  {
+   "key": "sullivans-cove",
+   "group": "world-whisky",
+   "producer": "Sullivans Cove",
+   "madeBy": "Tasmania Distillery",
+   "style": "",
+   "chapter": "world-whisky",
+   "shelf": "",
+   "library": "",
+   "say": "",
+   "place": "Cambridge, near Hobart, Tasmania, Australia",
+   "year": "1994",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Sullivans Cove French Oak Single Cask",
+    "class": "Australian single malt whisky, from Tasmania",
+    "mash": "Malted barley only, all of it grown in Tasmania, by the distillery's own account.",
+    "still": "Double distilled, slowly and with worm tub condensers, in copper pot stills at the distillery in Cambridge, outside Hobart, where it moved from the waterfront in 2004.",
+    "wood": "One French oak cask that held tawny, the Australian fortified wine. Each bottling is one numbered cask, and its age varies, often about ten years.",
+    "strength": "Varies by cask, about 46 to 48% ABV",
+    "taste": "Usually dark fruit, plum jam and salted caramel, with maple and dried rose, then a long finish of quince paste and dark chocolate; each cask differs.",
+    "pour": "Neat, or with a drop of water; a single cask is for sipping on its own, not for mixing.",
+    "label": [
+     {
+      "term": "Single Cask",
+      "means": "Every bottle of the release comes from one cask, so no two releases taste alike."
+     },
+     {
+      "term": "French Oak Ex-Tawny",
+      "means": "The cask: French oak that held tawny, the Australian fortified wine."
+     }
+    ]
+   },
+   "table": "Sullivans Cove is the Tasmanian single malt house of Cambridge, outside Hobart, and Sullivans Cove French Oak Single Cask is one French oak cask that held Australian tawny. Expect dark fruit, plum jam and caramel, and a strength and age that change from cask to cask.",
+   "story": "Tasmania banned distilling in 1838, and the island made no whisky for more than a century and a half, until the law was changed in the early 1990s. Tasmania Distillery was founded in 1994 on Hobart's waterfront at Sullivans Cove, the old harbour that gave the whisky its name. By the house's account its first spirit ran in March 1995, and that spirit was bottled as its first single malt in March 1997. The business changed hands more than once in its early years, and in 2004 the distillery moved from the waterfront to a small warehouse at Cambridge, outside Hobart. There the house kept its habit: Tasmanian barley, slow distillation in copper pot stills, and each release drawn from one cask, numbered, and bottled unfiltered. Its French oak casks that once held Australian tawny became the bottling a guest asks for by name. For a bartender the bottle carries two lessons: Tasmania is told apart from the mainland, and a single cask is a release, never a recipe, so the strength and the age are read off the bottle in hand.",
+   "others": [
+    {
+     "name": "Sullivans Cove American Oak Single Cask",
+     "note": "One American oak cask that held bourbon, bottled cask by cask in the same way."
+    },
+    {
+     "name": "Sullivans Cove French Oak Ex-Tawny Refill",
+     "note": "A second use of the tawny cask, filled after an earlier batch of the house's malt."
+    }
+   ],
+   "traps": [
+    "Each release is one cask: quote the cask number, the strength and the age on the bottle in hand, never a fixed figure.",
+    "Sullivans Cove is Tasmanian, made at Cambridge outside Hobart: it is not the mainland whisky of Melbourne.",
+    "The tawny cask held Australian fortified wine, not red table wine."
+   ],
+   "cards": [
+    {
+     "id": "tawny-cask",
+     "prompt": "What did the cask of Sullivans Cove French Oak Single Cask once hold?",
+     "answer": "Tawny, an Australian fortified wine, in French oak; each release is one such cask, numbered."
+    },
+    {
+     "id": "waterfront",
+     "prompt": "Where did Sullivans Cove move in 2004, from its first home on Hobart's waterfront?",
+     "answer": "To a small warehouse at Cambridge, outside Hobart; the distillery was founded on the waterfront in 1994."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "tawny-cask",
+     "q": "A guest asks what the French oak cask of this Sullivans Cove once held. What is the answer?",
+     "options": [
+      "Australian tawny",
+      "Pinot noir",
+      "Kentucky bourbon",
+      "Oloroso sherry"
+     ],
+     "a": 0,
+     "explain": "The French oak casks held tawny, Australia's fortified wine; the house's American oak casks are the ones that held bourbon."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "waterfront",
+     "q": "In which year was Tasmania Distillery founded on Hobart's waterfront at Sullivans Cove?",
+     "options": [
+      "1838",
+      "1992",
+      "1994",
+      "2004"
+     ],
+     "a": 2,
+     "explain": "It was founded in 1994; 2004 is the year it moved to Cambridge, and 1838 the year Tasmania banned distilling."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Sullivans Cove: our story",
+     "url": "https://sullivanscove.com/the-distillery/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Sullivans Cove: French Oak Ex-Tawny, cask TD0402",
+     "url": "https://sullivanscove.com/products/sullivans-cove-french-oak-whisky-0-7l-47-0-alc-vol-2",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Sullivans Cove: the first spirit and the first release",
+     "url": "https://sullivanscove.com/pages/a-story-of-true-rarity",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Difford's Guide: Tasmanian whisky",
+     "url": "https://www.diffordsguide.com/encyclopedia/438/bws/tasmanian-whisky",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Sullivans Cove: our process",
+     "url": "https://sullivanscove.com/about-us/process",
+     "kind": "primary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note asks that strength and age not be fixed: the house's own pages give casks from 46.0 to 48.1% ABV and from about nine and a half to eleven years for the French Oak Ex-Tawny releases, so both are written as varying.",
+    "A swap of the bottling's name, for the refuter: the house now names these releases French Oak Ex-Tawny with a cask number (TD0402 and others), while Single Cask appears on older labels and in shops' listings. The record keeps the roster's words in bottle.name and gives French Oak Ex-Tawny as a label term; if the refuter agrees, the flagship could read Sullivans Cove French Oak Ex-Tawny.",
+    "Award talk stays out, as the note asks, though a competition win in 2014 is the turning point most accounts tell.",
+    "The early ownership is told only as changes of hands: Wikipedia gives a change in 1999, and one account says the company was wound up in 2003 and its stills and stock bought by new partners; neither the buyers nor the sale years stand in two sources. The founder is named in one source only and is added to people.json (Robert Hosken) in case he is living.",
+    "The first spirit of March 1995 and the first single malt of March 1997 rest on the house's own page; a claim that the first bottling under the name was bought in whisky rests on one account and is left out. The brewery that once made the wash rests on one shop's blog and is left out.",
+    "The Cask Atlas names LARK for Tasmania; Tasmania's ban of 1838 and its end in the early 1990s agree with Difford's Guide and Lark's own history. Bill Lark, living, is added to people.json; LARK the label is unaffected.",
+    "The house's process page gives double distillation, worm tub condensers and three named stills; the stills are called copper pot stills on two of its product pages, and their count is left out as a figure that may change."
+   ],
+   "checked": null
+  },
+  {
+   "key": "penderyn",
+   "group": "world-whisky",
+   "producer": "Penderyn",
+   "madeBy": "Penderyn Distillery",
+   "style": "",
+   "chapter": "world-whisky",
+   "shelf": "",
+   "library": "",
+   "say": "pen-DER-in",
+   "place": "Penderyn, Rhondda Cynon Taf, Wales",
+   "year": "2004",
+   "yearIs": "first released",
+   "bottle": {
+    "name": "Penderyn Madeira Finish",
+    "class": "Single Malt Welsh Whisky, a protected geographical indication since 2023",
+    "mash": "Malted barley only, brewed into a wash on site in the distillery's own mash tun.",
+    "still": "Distilled at Penderyn, where the Faraday still, a single copper still designed for the distillery, draws spirit at 92 per cent alcohol in one distillation; pot stills joined it in 2013 and 2014.",
+    "wood": "Matured in former bourbon barrels, then finished in casks that held Madeira wine. No age statement.",
+    "strength": "46% ABV",
+    "taste": "Cream toffee, ripe fruit and raisins on the nose, then a light, fresh malt with tropical fruit, raisins and vanilla through to the finish.",
+    "pour": "Neat or with a few drops of water, or long in a highball with soda.",
+    "label": [
+     {
+      "term": "Madeira Finish",
+      "means": "A last spell in casks that held Madeira wine, after the bourbon barrels."
+     },
+     {
+      "term": "46% ABV",
+      "means": "The strength of the bottling, made without chill filtering and with no added colour, by the house's account."
+     }
+    ]
+   },
+   "table": "Penderyn is the Welsh single malt from the village of Penderyn, at the edge of the Brecon Beacons, and Penderyn Madeira Finish is its house style: bourbon barrels, then casks that held Madeira. It gives cream toffee, raisins and tropical fruit.",
+   "story": "Whisky had not been distilled in Wales for more than a century when a small group of friends, talking in a pub in the shadow of the Brecon Beacons, resolved to change that. The Welsh Whisky Company was founded in 1998, and on 14 September 2000 the first spirit ran at Penderyn, a village chosen in part for its spring water by one account, from a single still of new design, the Faraday still. The whisky consultant Jim Swan (died 2017), with the house from the beginning, judged that the spirit should be finished in Madeira casks, and the Madeira finish became the house style. The first single malt, Aur Cymru, Welsh gold, went on sale on St David's Day, 1 March 2004, a Madeira finish bottled without chill filtering. The distillery grew in 2013 and 2014, when pot stills joined the Faraday stills, and the house opened two more distilleries, at Llandudno in 2021 and in Swansea in 2023. In July 2023 Single Malt Welsh Whisky became a protected geographical indication. For a bartender the Madeira Finish is the bottle that says Wales: a light, fruity malt, and the cask the house has kept since its first release.",
+   "others": [
+    {
+     "name": "Penderyn Sherrywood",
+     "note": "Matured in former bourbon barrels and casks that held oloroso sherry, at 46% ABV."
+    },
+    {
+     "name": "Penderyn Peated",
+     "note": "Born, by the house's account, of casks that had held peated Islay whisky; 46% ABV."
+    },
+    {
+     "name": "Penderyn Legend",
+     "note": "A bottling of the house's Dragon range, also finished in Madeira casks."
+    }
+   ],
+   "traps": [
+    "Penderyn is Welsh whisky, not Scotch: Single Malt Welsh Whisky has been a protected name of its own since 2023.",
+    "The Faraday still is no ordinary pot still: it draws spirit at 92 per cent alcohol in one run, where a Scottish pair of pot stills distils twice.",
+    "Madeira is the finish, not the whole maturation: the whisky spends its first years in former bourbon barrels."
+   ],
+   "cards": [
+    {
+     "id": "madeira-finish",
+     "prompt": "How is Penderyn Madeira Finish matured?",
+     "answer": "In former bourbon barrels, then finished in casks that held Madeira wine: the house style since the first release in 2004."
+    },
+    {
+     "id": "st-davids-day",
+     "prompt": "On what day did Penderyn's first single malt go on sale?",
+     "answer": "St David's Day, 1 March 2004; the first spirit had run at Penderyn on 14 September 2000."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "madeira-finish",
+     "q": "A guest asks what casks Penderyn Madeira Finish sees. Which answer is right?",
+     "options": [
+      "Madeira casks from first to last",
+      "New Welsh oak, then sherry butts",
+      "Port pipes, then Madeira casks",
+      "Bourbon barrels, then Madeira casks"
+     ],
+     "a": 3,
+     "explain": "The spirit is matured in former bourbon barrels and finished in casks that held Madeira; Madeira is the finish, not the whole maturation."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "st-davids-day",
+     "q": "In which year did Penderyn's first single malt go on sale, on St David's Day?",
+     "options": [
+      "1998",
+      "2000",
+      "2004",
+      "2013"
+     ],
+     "a": 2,
+     "explain": "It went on sale on 1 March 2004; 2000 is the year the first spirit ran, and 1998 the year the company was founded."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Penderyn: Madeira Finish",
+     "url": "https://www.penderyn.wales/product/penderyn-madeira/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Penderyn: our story",
+     "url": "https://www.penderyn.wales/our-story/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Penderyn: press pack, March 2024",
+     "url": "https://www.penderyn.wales/wp-content/uploads/2025/03/Press-Pack-10th-March-2024-1.pdf",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "GOV.UK: producing Single Malt Welsh Whisky",
+     "url": "https://www.gov.uk/guidance/producing-single-malt-welsh-whisky",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "The Spirits Business: the death of Jim Swan",
+     "url": "https://www.thespiritsbusiness.com/2017/02/whisky-expert-dr-jim-swan-dies/",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note doubts the pick for the group, since the Cask Atlas chapter's four journeys are Taiwan, India, Australia and New Zealand. No swap is proposed: Penderyn is the world malt a British bar is likeliest to pour and the planner's alternative, Cardrona, is newer and less often met; but the chapter does not name Wales, and the integrator may still prefer Cardrona for the chapter's four countries.",
+    "The label name is settled as the note asks: the producer's own product page calls it Penderyn Madeira Finish, in the Gold range at 46% ABV; older materials give 40 or 41%, and 43% for the United States, which the record leaves out.",
+    "Jim Swan is dated by his death alone, 2017, in Wikipedia, The Spirits Business and Drinks International; Penderyn's own two notices disagree on the day (14 or 17 February). His birth year, 1941, stands in Wikipedia only.",
+    "The Faraday still's designer is named in Penderyn's materials; whether he is living was not established, so he is not named and the name is added to people.json (David Faraday). The house's own materials call the still a single pot still in one place and a single column still in another; the record says a single copper still. Which still makes the spirit of the Madeira Finish since 2014 was not confirmed, so the record says only that pot stills joined the Faraday stills.",
+    "The royal guest at the launch in 2004, who is living, is not named. The chief executive named in a Master of Malt interview is added to people.json (Stephen Davies).",
+    "Left out for want of a second source: the Dragon range's strength (40 or 41% in the house's own pages), the age of the Madeira Finish, and the sale history of the company."
+   ],
+   "checked": null
+  }
+ ]
+}
