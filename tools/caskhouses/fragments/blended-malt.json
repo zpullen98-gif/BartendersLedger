@@ -93,7 +93,7 @@
         "class": "Blended malt Scotch whisky",
         "mash": "Peated malted barley only. The house publishes its recipe: Caol Ila from several parcels, about 64 per cent; Williamson, a peated Islay parcel, about 35; and a Highland malt blend, about 1.",
         "still": "Compass Box distils nothing. It buys single malts, each distilled in copper pot stills at its own distillery, Caol Ila on Islay among them, and blends them in London.",
-        "wood": "The house does not give the casks of every parcel; the small Highland malt blend is finished in heavily toasted French oak. No age statement.",
+        "wood": "Refill hogsheads for the Caol Ila and Williamson parcels, by the house's published recipe; the small Highland malt blend lies in custom French oak casks of heavy toast. No age statement.",
         "strength": "46% ABV",
         "taste": "Coastal smoke, lemon, green herbs and iodine on the nose over toasted vanilla and pear, then spicy smoke with sweet fruit, an oily texture and a clove spice from the French oak.",
         "pour": "Neat or with a little water. Its smoke suits a highball with soda, or a float on a Penicillin.",
@@ -103,7 +103,7 @@
         ]
       },
       "table": "Compass Box The Peat Monster is a blended malt from a London house that distils nothing and blends the malts it buys, mostly Caol Ila. Pour it neat: coastal smoke, lemon and iodine over pear and vanilla, bottled at 46 per cent.",
-      "story": "Compass Box was founded in London in 2000 by an American who had worked in marketing for Johnnie Walker, and its early blends were made in his west London home. The house has no distillery of its own: it buys whisky from Scottish distillers, chooses its casks and blends. By its own account The Peat Monster grew out of an earlier blend called Monster and joined the range for good in 2004, at 46 per cent. In 2005 the house released The Spice Tree, a malt given a second maturation with inner staves of French oak, and the Scotch Whisky Association held the method outside the rules because it was not a traditional one. The house remade the whisky in 2009 with French oak cask heads in place of the staves. In 2015 it clashed with the Association again, this time over publishing the full make up of its blends, which the rules on age statements did not allow, and it argued in public for the right to tell a buyer more. When it trimmed its core range in 2024, The Spice Tree went and The Peat Monster stayed. For a bartender it is the lesson in how a blender builds smoke from parcels, and in what an honest recipe on the label can teach.",
+      "story": "Compass Box was founded in London in 2000 by an American who had worked in marketing for Johnnie Walker, and its early blends were made in his west London home. The house has no distillery of its own: it buys whisky from Scottish distillers, chooses its casks and blends. By its own account The Peat Monster grew out of Monster, a blend it made in 2003 for a New York shop, and it is bottled at 46 per cent. In 2005 the house released The Spice Tree, a malt given a second maturation with inner staves of French oak, and the Scotch Whisky Association held the method outside the rules because it was not a traditional one. The house later remade the whisky with French oak cask heads in place of the staves. In 2015 it clashed with the Association again, this time over publishing the full make up of its blends, which the rules on age statements did not allow, and it argued in public for the right to tell a buyer more. When it trimmed its core range in 2024, The Spice Tree went and The Peat Monster stayed. For a bartender it is the lesson in how a blender builds smoke from parcels, and in what an honest recipe on the label can teach.",
       "others": [
         { "name": "Compass Box Orchard House", "note": "The house's other core blended malt, kept in the range beside The Peat Monster in 2024." },
         { "name": "Compass Box The Spice Tree", "note": "The French oak blended malt of 2005, dropped from the core range in 2024; old bottles turn up on back bars." }
@@ -114,7 +114,7 @@
       ],
       "cards": [
         { "id": "recipe", "prompt": "Which Islay single malt makes up most of Compass Box The Peat Monster?", "answer": "Caol Ila, about two thirds, with a peated Islay parcel the house calls Williamson and a little Highland malt blend." },
-        { "id": "spice-tree", "prompt": "Why did the Scotch Whisky Association object to Compass Box The Spice Tree in 2005?", "answer": "It was matured with inner staves of French oak, which the Association held outside the rules; the house remade it in 2009 with French oak heads." }
+        { "id": "spice-tree", "prompt": "Why did the Scotch Whisky Association object to Compass Box The Spice Tree in 2005?", "answer": "It was matured with inner staves of French oak, which the Association held outside the rules; the house later remade it with French oak cask heads." }
       ],
       "quiz": [
         {
@@ -179,7 +179,7 @@
         ]
       },
       "table": "Big Peat Islay Blended Malt Scotch Whisky is a marriage of Islay malts only, among them Ardbeg, Bowmore, Caol Ila and Port Ellen, blended in Glasgow by Douglas Laing & Co. Pour it neat for ash, sweet tar and chimney smoke at 46 per cent.",
-      "story": "Douglas Laing & Co. began in Glasgow in 1948 as a family firm that blended and bottled whisky bought from distillers, and for decades it was known for single casks bottled under its own names. In 2009 it released Big Peat, the first of what became its Remarkable Regional Malts, a set of blended malts each drawn from one whisky region of Scotland. Big Peat takes Islay's malts and nothing else: by the producer's account Caol Ila brings sweetness, Bowmore balance, Ardbeg an earthy, medicinal edge and Port Ellen a degree of elegance. Port Ellen had closed in 1983, so whatever share of it went into a bottle had been distilled before then; the distillery was rebuilt and reopened in March 2024. In 2013 the two brothers who had run the firm for some forty years divided it, and Big Peat stayed with Douglas Laing & Co. Older and finished editions have followed under the same name, but the bottle a guest asks for is the plain one at 46 per cent. For a bartender it is the clear lesson in what a region gives: Islay smoke and salt without one distillery's name on the front.",
+      "story": "Douglas Laing & Co. began in Glasgow in 1948 as a family firm that blended whisky bought from distillers, and in time it came to bottle single casks under its own names as well. In 2009 it released Big Peat, the first of what became its Remarkable Regional Malts, a set of blended malts each drawn from one whisky region of Scotland. Big Peat takes Islay's malts and nothing else: by the producer's account Caol Ila brings sweetness, Bowmore balance, Ardbeg an earthy, medicinal edge and Port Ellen a degree of elegance. Port Ellen had closed in 1983, so whatever share of it went into a bottle had been distilled before then; the distillery was rebuilt and reopened in March 2024. In 2013 the two brothers who had run the firm for some forty years divided it, and Big Peat stayed with Douglas Laing & Co. Older and finished editions have followed under the same name, but the bottle a guest asks for is the plain one at 46 per cent. For a bartender it is the clear lesson in what a region gives: Islay smoke and salt without one distillery's name on the front.",
       "others": [
         { "name": "Big Peat 12 Years Old", "note": "The same Islay marriage with a twelve-year age statement, also at 46 per cent, uncoloured and not chill filtered." }
       ],
@@ -239,7 +239,7 @@
       "bottle": {
         "name": "Naked Malt Blended Malt Scotch Whisky",
         "class": "Blended malt Scotch whisky",
-        "mash": "Malted barley only: single malts, no grain whisky. When it became a blended malt in 2017 its malts were given as The Macallan, Highland Park and The Glenrothes; no later recipe is published.",
+        "mash": "Malted barley only: single malts, no grain whisky. At the rename of 2021 its malts were given as The Macallan, Highland Park and The Glenrothes; no recipe since the sale of 2025 is published.",
         "still": "Each malt is distilled in copper pot stills at its own distillery and then blended; the house names no blending site.",
         "wood": "Finished for at least six months in first-fill Oloroso sherry casks that had held no whisky before. No age statement.",
         "strength": "40% ABV, 43% in some markets",
@@ -315,7 +315,7 @@
         "class": "Blended malt Scotch whisky",
         "mash": "Malted barley only: Highland single malts, with no grain whisky. The house does not name the distilleries or their shares.",
         "still": "Each malt is distilled in copper pot stills at a Highland distillery; Whyte & Mackay blends them and names no distillery.",
-        "wood": "The casks are not disclosed. The label carries no age statement.",
+        "wood": "Married in former bourbon casks of American oak and Spanish sherry casks, by the producer's launch notes. The label carries no age statement.",
         "strength": "40% ABV",
         "taste": "Soft vanilla, honey and orchard fruit, then ginger and liquorice spice, with a whisper of bonfire smoke at the finish.",
         "pour": "Neat, with a little water or over ice. Its honey and spice suit a Rob Roy or a whisky highball.",
@@ -325,9 +325,9 @@
         ]
       },
       "table": "Shackleton Blended Malt Scotch Whisky is a Highland blended malt from Whyte & Mackay, built on the remaking of the whisky taken to Antarctica on the Nimrod expedition of 1907. Expect vanilla, honey and orchard fruit with a whisper of bonfire smoke.",
-      "story": "Ernest Shackleton (1874 to 1922) sailed for Antarctica in 1907 on the Nimrod expedition, and among its stores were cases of Mackinlay's Rare Old Highland Malt, by later accounts distilled at Glen Mhor in Inverness. The party wintered in 1908 in a hut it built at Cape Royds, and when it left, the whisky stayed behind. Conservators of the New Zealand Antarctic Heritage Trust found crates beneath the hut and, in January 2010, lifted five: three marked as Mackinlay's whisky and two as brandy. In 2011 bottles were flown to Scotland, where the master blender of Whyte & Mackay, the firm that by then held the Mackinlay's name, drew a sample through a cork with a syringe, studied it and built a replica from the firm's malts at the original strength of 47.3 per cent. Glen Mhor itself had closed in the 1980s. In 2017 the firm released Shackleton Blended Malt Scotch Whisky, a lasting blended malt of Highland malts at 40 per cent, built on that replica: first in airport shops, then in Britain and France, and that October in the United States. For a bartender it shows how a blender reads an old whisky and rebuilds it from what lies in the warehouse.",
+      "story": "Ernest Shackleton (1874 to 1922) sailed for Antarctica in 1907 on the Nimrod expedition, and among its stores were cases of Mackinlay's Rare Old Highland Malt, by later accounts distilled at Glen Mhor in Inverness. The party wintered in 1908 in a hut it built at Cape Royds, and when it left, the whisky stayed behind. Conservators of the New Zealand Antarctic Heritage Trust found crates beneath the hut and, in January 2010, lifted five: three marked as Mackinlay's whisky and two as brandy. In 2011 bottles were flown to Scotland, where the master blender of Whyte & Mackay, the firm that by then held the Mackinlay's name, drew a sample through a cork with a syringe, studied it and built a replica from the firm's malts at the original strength of 47.3 per cent. Glen Mhor itself had closed in the 1980s. In 2017 the firm released Shackleton Blended Malt Scotch Whisky, a lasting blended malt of Highland malts at 40 per cent, built on that replica: first in airport shops, then in Britain and France, and late that year in the United States. For a bartender it shows how a blender reads an old whisky and rebuilds it from what lies in the warehouse.",
       "others": [
-        { "name": "Mackinlay's Rare Old Highland Malt", "note": "The replica of 2011 at 47.3 per cent, a separate bottling made from the sample out of the hut, with a second edition called The Journey." }
+        { "name": "Mackinlay's Rare Old Highland Malt", "note": "The replica of 2011 at 47.3 per cent, modelled on the sample from the hut and a separate bottling; later editions followed." }
       ],
       "traps": [
         "The replica of 2011 at 47.3 per cent and the blended malt of 2017 at 40 per cent are two different whiskies.",
