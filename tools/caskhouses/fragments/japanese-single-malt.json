@@ -1,0 +1,657 @@
+{
+  "group": "japanese-single-malt",
+  "records": [
+    {
+      "key": "yamazaki",
+      "group": "japanese-single-malt",
+      "producer": "The Yamazaki",
+      "madeBy": "Suntory",
+      "style": "japanese-single-malt",
+      "chapter": "japanese",
+      "shelf": "",
+      "library": "Suntory Yamazaki",
+      "say": "",
+      "place": "Shimamoto, Mishima District, Osaka Prefecture, Japan",
+      "year": "1923",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "The Yamazaki Single Malt Japanese Whisky 12 Years Old",
+        "class": "Single malt Japanese whisky; single malt has no legal definition in Japan and keeps its Scottish sense.",
+        "mash": "Malted barley alone, as single malt means; Suntory publishes neither its malts nor how far any of them is peated.",
+        "still": "Distilled twice in copper pot stills of several shapes at Yamazaki, the first distillation heated by direct fire, by Suntory's own account.",
+        "wood": "A marriage of malts from American oak, sherry casks of Spanish oak and Japanese Mizunara oak, by the producer's account. Nothing in the bottle is younger than twelve years.",
+        "strength": "43% ABV",
+        "taste": "Peach, pineapple, grapefruit and candied orange on the nose, with clove, vanilla and Mizunara oak; then coconut, cranberry and butter, and a long finish of sweet ginger and cinnamon.",
+        "pour": "Neat or with a few drops of water, which opens the fruit and the oak; long, it makes a gentle highball with soda water over ice.",
+        "label": [
+          {
+            "term": "Single Malt Japanese Whisky",
+            "means": "Malted barley alone, from the one distillery at Yamazaki, made and bottled in Japan."
+          },
+          {
+            "term": "12 Years Old",
+            "means": "Every whisky in the bottle spent at least twelve years in oak."
+          }
+        ]
+      },
+      "table": "The Yamazaki 12 Years Old is Suntory's single malt from Yamazaki, Japan's first malt whisky distillery, founded near Kyoto in 1923. Married from American oak, sherry and Mizunara casks, it pours peach, candied orange and vanilla, with a long, spiced finish.",
+      "story": "Shinjiro Torii (1879 to 1962), whose Osaka company grew into Suntory, set out to make a whisky for Japanese drinkers, and in 1923 began building a distillery at Yamazaki, between Osaka and Kyoto, where the Katsura, Uji and Kizu rivers meet and the damp air suits maturing whisky. Masataka Taketsuru (1894 to 1979), back from his studies in Scotland, worked on Yamazaki before he left to found Yoichi in 1934. The distillery's first whisky, Shirofuda, followed in 1929, and for decades its malt went into Suntory's blends. Torii's second son, Keizo Saji (1919 to 1999), became the company's second president in 1961 and its second master blender. In 1984 he brought out Yamazaki as a single malt, when Japanese drinkers mostly chose blends; the bottle was labelled at first as a pure malt, and in 2004 the twelve year old's label took the words single malt. Because Japanese houses seldom trade spirit, Yamazaki makes its own range of characters from pot stills of many shapes and casks of three woods. For a bartender, the 12 is the bottle that shows what Japanese single malt is: fruit, oak and spice held in balance.",
+      "others": [
+        {
+          "name": "Yamazaki Distiller's Reserve",
+          "note": "A Yamazaki single malt with no age statement on its label."
+        },
+        {
+          "name": "Yamazaki 18 Years Old",
+          "note": "Eighteen years in oak, six more than the 12."
+        }
+      ],
+      "traps": [
+        "The 12 is not aged in Mizunara alone: Mizunara is one of three woods in the marriage, beside American oak and sherry casks.",
+        "Japan has no legal definition of single malt; the words keep their Scottish sense of malted barley from one distillery."
+      ],
+      "cards": [
+        {
+          "id": "three-woods",
+          "prompt": "Which three woods are married in The Yamazaki 12 Years Old?",
+          "answer": "American oak, sherry casks of Spanish oak and Japanese Mizunara oak, by Suntory's account."
+        },
+        {
+          "id": "single-malt-launch",
+          "prompt": "In which year did Suntory first bring out The Yamazaki as a single malt?",
+          "answer": "1984, under Keizo Saji, the founder's son and Suntory's second master blender."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "three-woods",
+          "q": "A guest asks which Japanese wood is married into The Yamazaki 12 Years Old. Which is it?",
+          "options": [
+            "Sugi cedar",
+            "Sakura cherry",
+            "Mizunara oak",
+            "Hinoki cypress"
+          ],
+          "a": 2,
+          "explain": "Suntory marries Mizunara oak whisky with American oak and sherry cask malts; cherry wood plays no part in the 12."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "single-malt-launch",
+          "q": "A guest asks how long The Yamazaki has been sold as a single malt. In which year was it first released as one?",
+          "options": [
+            "1984",
+            "1923",
+            "1929",
+            "2004"
+          ],
+          "a": 0,
+          "explain": "Keizo Saji launched it in 1984; 2004 is the year the twelve year old's label changed from pure malt to single malt."
+        }
+      ],
+      "sources": [
+        {
+          "title": "House of Suntory: Yamazaki 12",
+          "url": "https://house.suntory.com/yamazaki-whisky/yamazaki-12-years-old",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "House of Suntory: Our people",
+          "url": "https://house.suntory.com/people",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Suntory news: direct fired distillation at Yamazaki",
+          "url": "https://www.suntory.com/news/article/14584E.html",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Wikipedia: Yamazaki distillery",
+          "url": "https://en.wikipedia.org/wiki/Yamazaki_distillery",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "VinePair: Suntory Pure Malt",
+          "url": "https://vinepair.com/articles/suntory-pure-malt/",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "The plan's note on the label wording is settled only in part: the bottle name follows the producer's pages (The Yamazaki, Single Malt Japanese Whisky, 12 Years Old); some markets print Aged 12 Years, and no photograph of a current label was read. The US proof is left out.",
+        "The founding year: Suntory and the Ledger's styles give 1923, when building began; The Spirits Business and Difford's Guide give 1924 for the opening. The record keeps 1923 and says building began then.",
+        "Keizo Saji is named as the founder's son behind the 1984 release, dated 1919 to 1999 by the House of Suntory's people page, with 1961 for his presidency in The Spirits Business and Suntory's history. Shinjiro Torii is dated 1879 to 1962 by the same page and Wikipedia.",
+        "Pure malt until 2004 rests on VinePair and on a shop's history article (Hedonism); VinePair also says the twelve-year age statement reached the label only in 1986, which sits uneasily with the plan's line that the twelve came out in 1984. The record says only that the single malt came out in 1984 and leaves 1986 out.",
+        "Left out for want of a source: the cask proportions (one trade page says mostly ex-bourbon), the count and sizes of the stills, the yeasts, and any figure of altitude or water hardness.",
+        "The Library's record says Taketsuru was Yamazaki's first distillery manager; the styles say he worked on Yamazaki. The record keeps the styles' wording. The Library's Behind the bar line carries a price word and was not used."
+      ],
+      "checked": null
+    },
+    {
+      "key": "hakushu",
+      "group": "japanese-single-malt",
+      "producer": "The Hakushu",
+      "madeBy": "Suntory",
+      "style": "japanese-single-malt",
+      "chapter": "japanese",
+      "shelf": "",
+      "library": "",
+      "say": "HAK-oo-shoo",
+      "place": "Hokuto, Yamanashi Prefecture, Japan",
+      "year": "1973",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "The Hakushu Single Malt Japanese Whisky 12 Years Old",
+        "class": "Single malt Japanese whisky: malted barley from one distillery, a term with no legal definition in Japan.",
+        "mash": "Malted barley alone. Suntory calls the 12 lightly peated and publishes no peating level for its malts.",
+        "still": "Distilled twice in copper pot stills at Hakushu, in forest on the slopes of Mount Kaikoma; the first distillation is heated by direct fire, by Suntory's account.",
+        "wood": "A marriage of malts all aged at least twelve years in various casks, as Suntory puts it; the house names no single wood. 12 Years Old is on the label.",
+        "strength": "43% ABV",
+        "taste": "Basil, pine needle and green apple on the nose, with pear and mint; then sweet pear, kiwi and mint on the palate, and a finish of green tea under a thin thread of smoke.",
+        "pour": "Neat, or long in a highball with soda water over ice, the serve Suntory calls its Forest Highball.",
+        "label": [
+          {
+            "term": "Single Malt Japanese Whisky",
+            "means": "Malted barley alone, from the one Hakushu distillery, made and bottled in Japan."
+          },
+          {
+            "term": "12 Years Old",
+            "means": "Every malt in the marriage spent at least twelve years in cask."
+          }
+        ]
+      },
+      "table": "The Hakushu 12 Years Old is Suntory's forest single malt, made since 1973 on the slopes of Mount Kaikoma in Yamanashi. Lightly peated, it pours green apple, pear and mint over a thin thread of smoke, and makes a cool highball.",
+      "story": "Suntory made its malt at Yamazaki alone for half a century. Keizo Saji (1919 to 1999), the founder's son and the company's second president from 1961, led the building of a second malt distillery, and Hakushu was founded in 1973, fifty years after Yamazaki. It stands in forest on the slopes of Mount Kaikoma, in the Southern Alps of Yamanashi Prefecture, and the house calls it the forest distillery. Its water is groundwater that, by Suntory's account, has run through the granite of the mountains behind it and comes out soft. A second distillery gave Suntory's blenders a second character, and Hibiki joins Hakushu malt with Yamazaki's. Under the Hakushu name the single malt shows that character alone, green and lightly smoked. In 2018 Suntory paused sales of the 12 in Japan, because too little whisky of that age stood in its warehouses, and brought it back in 2021. For a bartender, the Hakushu 12 is the counterweight to the Yamazaki: herbs, orchard fruit and only a whisper of peat, a malt that suits a highball as well as a glass poured neat.",
+      "others": [
+        {
+          "name": "Hakushu Distiller's Reserve",
+          "note": "A Hakushu single malt with no age statement on its label."
+        },
+        {
+          "name": "Hakushu 18 Years Old",
+          "note": "Eighteen years in oak, six more than the 12."
+        }
+      ],
+      "traps": [
+        "The Hakushu 12 is lightly peated: never sell it to a guest as a heavily smoky malt in the manner of Islay.",
+        "Hakushu and Yamazaki are two distilleries, both made by Suntory: Hakushu stands in Yamanashi, Yamazaki between Osaka and Kyoto."
+      ],
+      "cards": [
+        {
+          "id": "light-peat",
+          "prompt": "How does Suntory describe the peat in The Hakushu 12 Years Old?",
+          "answer": "Lightly peated: green apple, pear and mint, with only a thread of smoke on the finish."
+        },
+        {
+          "id": "forest",
+          "prompt": "Where did Suntory build The Hakushu distillery in 1973?",
+          "answer": "In forest on the slopes of Mount Kaikoma, in the Southern Alps of Yamanashi Prefecture."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "light-peat",
+          "q": "A guest who dislikes heavy smoke eyes The Hakushu 12 Years Old. How does Suntory describe its peat?",
+          "options": [
+            "Heavily peated",
+            "Lightly peated",
+            "Never peated",
+            "Peated in the cask"
+          ],
+          "a": 1,
+          "explain": "Suntory calls the 12 lightly peated, a thread of smoke under green fruit; heavily peated would describe a smoky Islay malt, not this one."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "forest",
+          "q": "A guest asks where The Hakushu is made. In which prefecture did Suntory build it in 1973?",
+          "options": [
+            "Osaka",
+            "Hokkaido",
+            "Miyagi",
+            "Yamanashi"
+          ],
+          "a": 3,
+          "explain": "Hakushu stands in Yamanashi, on the slopes of Mount Kaikoma; Osaka Prefecture holds Yamazaki, Suntory's first malt distillery."
+        }
+      ],
+      "sources": [
+        {
+          "title": "House of Suntory: Hakushu 12",
+          "url": "https://house.suntory.com/hakushu-whisky/hakushu-12-years-old",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Suntory: Hakushu Distillery, dedication to quality",
+          "url": "https://www.suntory.com/factory/hakushu/introduction/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Suntory news: direct fired distillation at Hakushu",
+          "url": "https://www.suntory.com/news/article/14584E.html",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Time Out Tokyo: Hakushu 12 returns",
+          "url": "https://www.timeout.com/tokyo/news/suntory-single-malt-whisky-hakushu-12-year-returns-after-it-was-discontinued-two-years-ago-012021",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "Global News: Suntory halts Hakushu 12 and Hibiki 17",
+          "url": "https://globalnews.ca/news/4212467/suntory-time-japan-whiskey-hibiki-hakushu-discontinued",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "The plan's note on strength: shop listings and the House of Suntory's range agree on 43% ABV for the 12; the 43.5% figure was found only on one old review page and is not used. A US listing gives 86 proof, which is left out for want of a second source.",
+        "The peat is told as the house tells it, lightly peated, and never as a peated whisky, as the note asks. That the smoke varies by batch was not found in any source and is left out.",
+        "Left out for want of a source: the year the 12 was first released (1994 in one consumer review only), the cask make-up (shop listings disagree between first-fill bourbon casks alone and bourbon, sherry and Mizunara), the altitude (700 metres in one listing only) and the count of stills.",
+        "Mount Kaikoma and 1973 are the Ledger's styles' own facts; the Southern Alps are the plan's and the region's name for the range. Hokuto as the town rests on the Suntory distillery pages and Wikipedia's Hakushu page, read only through search summaries.",
+        "The 2018 pause and the 2021 return stand in Time Out Tokyo and Global News; the record avoids their scarcity wording and says only that too little whisky of that age stood in the warehouses."
+      ],
+      "checked": null
+    },
+    {
+      "key": "yoichi",
+      "group": "japanese-single-malt",
+      "producer": "Yoichi",
+      "madeBy": "Nikka",
+      "style": "japanese-single-malt",
+      "chapter": "japanese",
+      "shelf": "",
+      "library": "Nikka Yoichi",
+      "say": "YOY-chee",
+      "place": "Yoichi, Yoichi District, Hokkaido, Japan",
+      "year": "1934",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Nikka Single Malt Yoichi",
+        "class": "Single malt Japanese whisky, malted barley from the one Yoichi distillery on Hokkaido.",
+        "mash": "Malted barley alone, some of it peated; Nikka publishes no peating level, and by its account the smoke comes from the malt, not from the coal.",
+        "still": "Distilled at Yoichi in straight-head copper pot stills whose lyne arms point downward, heated by direct coal fire, a method that asks a skilled hand to judge the fire.",
+        "wood": "A vatting of many Yoichi malts of different characters, by Nikka's account; the house gives no list of casks, and the label carries no age statement.",
+        "strength": "45% ABV",
+        "taste": "Gentle oak and ripe fruit on the nose; then pronounced peat with a light roasted note on the palate, and a finish of sweet oak and fine smoke, the peat and the fruit held in balance.",
+        "pour": "Neat, or with a little water to open the fruit under the smoke; its weight carries a highball with soda water over ice.",
+        "label": [
+          {
+            "term": "Single Malt",
+            "means": "Malted barley alone, from the one distillery at Yoichi."
+          },
+          {
+            "term": "Nikka Whisky",
+            "means": "The company Masataka Taketsuru founded in 1934 as Dai Nippon Kaju."
+          }
+        ]
+      },
+      "table": "Nikka Single Malt Yoichi comes from the distillery Masataka Taketsuru built in 1934 on the Hokkaido coast, where the pot stills are fired by coal. It pours ripe fruit and oak, then firm peat and a roasted edge, with sweet smoke to finish.",
+      "story": "Masataka Taketsuru (1894 to 1979), the third son of a sake-brewing family from Takehara, went to Glasgow in 1918 to learn how Scotch whisky was made, and in January 1920 married Rita Cowan (1896 to 1961) there. Back in Japan he worked on Yamazaki, then left to build a distillery of his own. He chose Yoichi, on the Hokkaido coast, for a cold, damp climate he thought close to Scotland's, and in 1934 founded Dai Nippon Kaju there, a company that made apple juice while its first spirit aged; Nikka is drawn from the words Nippon Kaju. Its first whisky came out in 1940. Yoichi kept the direct coal firing of its pot stills that Taketsuru had learnt in Scotland, a method rare in distilleries because the fire is hard to control. In 2015 Nikka withdrew its age-statement Yoichi malts, and the no-age-statement Single Malt Yoichi took their place. Ten of the distillery's buildings stand on Japan's list of Important Cultural Properties. For a bartender, this is the heavier, smoky Japanese malt: set it beside a Suntory single malt to show how far one country's whisky can range.",
+      "others": [
+        {
+          "name": "Yoichi 10 Years Old",
+          "note": "An age-statement Yoichi, ten years in oak, brought back in 2022 after the withdrawal of 2015."
+        }
+      ],
+      "traps": [
+        "The coal fires heat the stills; they do not smoke the whisky. The peat comes from the malt, by Nikka's own account.",
+        "Nikka Single Malt Yoichi carries no age statement: the ten-year-old is a separate bottling with its own label."
+      ],
+      "cards": [
+        {
+          "id": "coal-fire",
+          "prompt": "How are the pot stills at Yoichi heated?",
+          "answer": "By direct coal fire, tended by hand, the method Masataka Taketsuru learnt in Scotland."
+        },
+        {
+          "id": "founding",
+          "prompt": "In which year did Masataka Taketsuru found the Yoichi distillery on Hokkaido?",
+          "answer": "1934, under the company name Dai Nippon Kaju; its first whisky came out in 1940."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "coal-fire",
+          "q": "A guest asks what heats the stills that make Nikka Single Malt Yoichi. What does the distillery use?",
+          "options": [
+            "Indirect steam",
+            "Natural gas flame",
+            "Electric coils",
+            "Direct coal fire"
+          ],
+          "a": 3,
+          "explain": "Yoichi's pot stills sit over direct coal fire; indirect steam is the method at Miyagikyo, Nikka's second distillery."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "founding",
+          "q": "Masataka Taketsuru studied whisky making in Scotland. In which year did he found the Yoichi distillery?",
+          "options": [
+            "1923",
+            "1934",
+            "1940",
+            "1969"
+          ],
+          "a": 1,
+          "explain": "He founded it in 1934 as Dai Nippon Kaju; 1940 is the year its first whisky came out."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nikka: Yoichi and Miyagikyo, the expressions",
+          "url": "https://www.nikka.com/en/brands/yoichi_miyagikyo/products/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Nikka: Hokkaido Yoichi Distillery",
+          "url": "https://www.nikka.com/en/distilleries/yoichi/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Nikka: the founder",
+          "url": "https://www.nikka.com/en/story/founder/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "University of Glasgow: Japanese whisky's Glasgow roots",
+          "url": "https://www.gla.ac.uk/explore/avenue/ourpast/japanesewhiskeysroots/",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "The Whiskey Wash: Nikka's Yoichi 10 year single malt",
+          "url": "https://thewhiskeywash.com/world/nikka-whisky-debuts-10-year-yoichi-single-malt/",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "The plan's note asks which bottling to teach: the record teaches the no-age-statement Nikka Single Malt Yoichi, the standing bottling at 45%; the Yoichi 10 Years Old of 2022 sits in others. No swap is proposed.",
+        "The Important Cultural Property date is left out: one report dates the recommendation to November 2021, and The Whiskey Wash ties the 10 Years Old to a designation in February 2022. The record says only that ten buildings stand on the list.",
+        "The year the no-age-statement bottling first went on sale is left out: Nikka's product page reads 2016, while trade accounts date the withdrawal of the age statements to 2015. The record says only that it took their place after 2015.",
+        "Rita Cowan is dated 1896 to 1961 by the University of Glasgow and Wikipedia's page on her (not cited, as it is filed under a person); Taketsuru 1894 to 1979 by Nikka and Glasgow. Neither name is living.",
+        "Left out for want of a source: the cask types of the vatting, the peating level, and the count of stills (six in one source only). Nikka's account of the still heads and lyne arms is the producer's and is told as such.",
+        "The Library's record calls Yoichi assertive enough for a stirred drink and its coal firing a source of slight caramelisation; neither was found in a second source and neither is used. Its spelling labor-intensive is the older library's."
+      ],
+      "checked": null
+    },
+    {
+      "key": "miyagikyo",
+      "group": "japanese-single-malt",
+      "producer": "Miyagikyo",
+      "madeBy": "Nikka",
+      "style": "japanese-single-malt",
+      "chapter": "japanese",
+      "shelf": "",
+      "library": "",
+      "say": "mee-YAH-gee-kyoh",
+      "place": "Sendai, Miyagi Prefecture, Japan",
+      "year": "1969",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Nikka Single Malt Miyagikyo",
+        "class": "Single malt Japanese whisky, from the pot stills of the one Miyagikyo distillery near Sendai.",
+        "mash": "Malted barley, some lightly peated and some unpeated, by Nikka's account; the house publishes no proportions.",
+        "still": "Distilled at Miyagikyo in copper pot stills with bulging necks and rising lyne arms, heated gently by indirect steam, by Nikka's account; the Coffey stills on the site make grain whisky, not this malt.",
+        "wood": "A vatting of Miyagikyo malts in which sherry casks show, by Nikka's account; the label carries no age statement.",
+        "strength": "45% ABV",
+        "taste": "Vanilla with apple and pear on the nose; then dried fruit and a gentle malt sweetness on the palate, and a finish of soft oak, floral and fruity rather than smoky.",
+        "pour": "Neat, or with a few drops of water; its soft fruit suits a highball with soda water over ice.",
+        "label": [
+          {
+            "term": "Single Malt",
+            "means": "Malted barley alone, from the pot stills of the one distillery at Miyagikyo."
+          },
+          {
+            "term": "Nikka Whisky",
+            "means": "The company Masataka Taketsuru founded; Miyagikyo is its second distillery."
+          }
+        ]
+      },
+      "table": "Nikka Single Malt Miyagikyo is the soft, fruity malt of Nikka's second distillery, built in 1969 near Sendai where two rivers meet. Its steam-heated stills give apple, pear and vanilla, a gentle foil to the coal-fired smoke of Yoichi.",
+      "story": "By the 1960s Masataka Taketsuru (1894 to 1979) had made malt at Yoichi on Hokkaido for three decades, and by Nikka's account he wanted a second malt of another character, so that blending different malts could give a more complex whisky. He found his site near Sendai, in Miyagi Prefecture, between the Hirose and Nikkawa rivers. The story goes that he tasted the river water, diluted a whisky with it, and settled on the place. The distillery opened in 1969, first called the Sendai distillery. Where Yoichi fires its pot stills with coal, Miyagikyo heats its stills gently with indirect steam, and its spirit comes off softer and fruitier. Nikka's Coffey stills, brought from Scotland in 1963 and first set up at Nishinomiya, were later moved to Miyagikyo, where they make the grain whisky for the house's blends. In 2015 Nikka withdrew the age-statement Miyagikyo malts, and the no-age-statement Single Malt Miyagikyo took their place. For a bartender, it is Yoichi's partner: pour the two side by side, and a guest tastes how the shape and heat of a still change a malt.",
+      "others": [
+        {
+          "name": "Miyagikyo 10 Years Old",
+          "note": "Ten years in oak: an age statement back on a Miyagikyo single malt, after none from 2015."
+        }
+      ],
+      "traps": [
+        "Miyagikyo's Coffey stills make grain whisky; the single malt comes from its pot stills alone.",
+        "Sendai distillery and Miyagikyo are one distillery under two names: Sendai was its first name."
+      ],
+      "cards": [
+        {
+          "id": "steam",
+          "prompt": "How are the malt stills at Miyagikyo heated, unlike those at Yoichi?",
+          "answer": "Gently, by indirect steam, which gives a softer, fruitier malt; Yoichi's are fired with coal."
+        },
+        {
+          "id": "two-rivers",
+          "prompt": "Between which two rivers did Masataka Taketsuru build Miyagikyo in 1969?",
+          "answer": "The Hirose and the Nikkawa, near Sendai in Miyagi Prefecture."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "steam",
+          "q": "A guest tasting Nikka Single Malt Miyagikyo beside Yoichi asks why it is softer. How are its pot stills heated?",
+          "options": [
+            "Indirect steam",
+            "Direct coal fire",
+            "Direct gas flame",
+            "Wood fire"
+          ],
+          "a": 0,
+          "explain": "Miyagikyo heats its pot stills gently with indirect steam; direct coal fire is Yoichi's method, which gives a heavier spirit."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "two-rivers",
+          "q": "Masataka Taketsuru chose the Miyagikyo site for its water. Between which two rivers does it stand?",
+          "options": [
+            "Katsura and Uji",
+            "Kiso and Tenryu",
+            "Hirose and Nikkawa",
+            "Ishikari and Toyohira"
+          ],
+          "a": 2,
+          "explain": "It stands where the Hirose and the Nikkawa meet near Sendai; the Katsura and Uji are two of the three rivers at Yamazaki."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nikka: Sendai Miyagikyo Distillery",
+          "url": "https://www.nikka.com/en/distilleries/miyagikyo/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Nikka: Yoichi and Miyagikyo, the expressions",
+          "url": "https://www.nikka.com/en/brands/yoichi_miyagikyo/products/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Wikipedia: Miyagikyo distillery",
+          "url": "https://en.wikipedia.org/wiki/Miyagikyo_distillery",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "BevNET: Nikka Miyagikyo Single Malt 10 Years Old",
+          "url": "https://bevnet.com/pr/2026/07/13/announcing-nikka-miyagikyo-single-malt-10-years-old",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "The Whiskey Wash: Miyagikyo 10 returns to the UK",
+          "url": "https://thewhiskeywash.com/whiskey-news/nikka-miyagikyo-10-year-old-single-malt-returns-to-the-uk/",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "The plan's note asks which bottling to teach: the record teaches the no-age-statement Nikka Single Malt Miyagikyo at 45%, the standing bottling; the 10 Years Old sits in others. Its return is dated 2025 in one trade account and July 2026 in the US press release, so the record gives no year for it.",
+        "The still type, which the note asks to confirm, rests on Nikka's own pages: pot stills with bulging necks and rising lyne arms, heated by indirect steam. Told as the house's account.",
+        "The river is the Nikkawa in Nikka's pages and Wikipedia; one article names it the Shinkawa, which is not used. The tasting of the river water is told as a story, as Nikka and a trade page tell it.",
+        "The year the Coffey stills reached Miyagikyo is left out: one secondary account gives 1999, with no second. That Nikka brought them over in 1963 rests on Nikka's own page.",
+        "Left out for want of a source: the cask list beyond sherry casks showing, the count of stills, the altitude, and the name Miyagikyo's meaning.",
+        "The Ledger's styles say Miyagikyo makes Nikka's grain in Coffey stills, which agrees with this record; the style's quiz dates it to 1969 near Sendai, which also agrees."
+      ],
+      "checked": null
+    },
+    {
+      "key": "mars",
+      "group": "japanese-single-malt",
+      "producer": "Mars",
+      "madeBy": "Hombo Shuzo",
+      "style": "japanese-single-malt",
+      "chapter": "japanese",
+      "shelf": "",
+      "library": "",
+      "say": "koh-mah-gah-TAH-keh",
+      "place": "Miyada, Nagano Prefecture, Japan",
+      "year": "1985",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Mars Single Malt Komagatake",
+        "class": "Single malt Japanese whisky, from the one Mars Komagatake Distillery in Nagano.",
+        "mash": "Malted barley alone; Hombo Shuzo does not publish the malts of this bottling or how far any is peated.",
+        "still": "Distilled in copper pot stills at the Mars Komagatake Distillery, 798 metres up at the foot of Kiso Komagatake in Nagano.",
+        "wood": "A marriage of malts from ex-bourbon barrels, sherry casks, port casks and wine casks, by the producer's account; no age statement on the label.",
+        "strength": "45% ABV",
+        "taste": "As the producer describes it, apple tea, apricot and ripe persimmon on the nose, then a clean, rich malt on the palate and a finish that lingers.",
+        "pour": "Neat, or with a few drops of water to open the fruit; long, it makes a highball with soda water over ice.",
+        "label": [
+          {
+            "term": "Single Malt KOMAGATAKE",
+            "means": "Malted barley from the one Mars Komagatake Distillery, named for the mountain above it."
+          },
+          {
+            "term": "Mars Whisky",
+            "means": "The whisky name of Hombo Shuzo, whose whisky began in Kagoshima in 1949."
+          }
+        ]
+      },
+      "table": "Mars Single Malt Komagatake is the core single malt of Hombo Shuzo's distillery at the foot of Kiso Komagatake, 798 metres up in Nagano. Married from bourbon, sherry, port and wine casks, it pours apple tea, apricot and ripe persimmon.",
+      "story": "Mars whisky began in 1949, when Hombo Shuzo, a drinks house of Kagoshima in the south of Japan, took up whisky under the guidance of a distiller who had been Masataka Taketsuru's superior at Settsu Shuzo in Osaka and had sent him to Scotland. The story goes that this man drew on the report Taketsuru wrote of his Scottish studies when he planned Hombo's stills. In 1960 Hombo opened a works in Yamanashi, and in 1985 its whisky equipment was moved from there to Miyada in Nagano, where the Mars Shinshu Distillery was founded, 798 metres up at the foot of Kiso Komagatake. Distilling stopped in 1992, and the stills stood silent for nineteen years before malt distilling began again in 2011. In 2024 the distillery took the name Mars Komagatake, and in 2025 Hombo Shuzo made Single Malt Komagatake, until then a yearly release, a core bottling at 45% ABV. For a bartender, it is the Japanese single malt from outside Suntory and Nikka: a mountain malt that shows the style reaches further than the two large firms.",
+      "others": [
+        {
+          "name": "Single Malt KOMAGATAKE IPA Cask Finish",
+          "note": "A yearly release: malt from bourbon barrels finished in casks that had held IPA from the Minami Shinshu Beer brewery at Komagatake."
+        }
+      ],
+      "traps": [
+        "Mars Shinshu and Mars Komagatake are one distillery: it took the Komagatake name in 2024.",
+        "Hombo Shuzo's whisky began not in Nagano but in Kagoshima, in 1949; the Nagano distillery dates from 1985."
+      ],
+      "cards": [
+        {
+          "id": "casks",
+          "prompt": "In which casks is Mars Single Malt Komagatake matured?",
+          "answer": "Ex-bourbon barrels, sherry casks, port casks and wine casks, married together, by the producer's account."
+        },
+        {
+          "id": "silent-years",
+          "prompt": "For how many years were the Mars stills in Nagano silent before 2011?",
+          "answer": "Nineteen: distilling stopped in 1992 and began again in 2011."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "tag": "bottle",
+          "card": "casks",
+          "q": "A guest asks what wood shapes Mars Single Malt Komagatake. Which casks does the producer name?",
+          "options": [
+            "Mizunara and chestnut casks",
+            "New charred oak and rum casks",
+            "Bourbon, sherry, port and wine",
+            "Cognac, calvados and madeira casks"
+          ],
+          "a": 2,
+          "explain": "The producer names ex-bourbon, sherry, port and wine casks in the marriage; Mizunara plays no part in its account of this bottling."
+        },
+        {
+          "id": "q2",
+          "tag": "story",
+          "card": "silent-years",
+          "q": "Mars distilled in Nagano from 1985, then fell silent. In which year did its stills run again?",
+          "options": [
+            "1992",
+            "2011",
+            "2014",
+            "2024"
+          ],
+          "a": 1,
+          "explain": "Distilling stopped in 1992 and resumed in 2011, nineteen years on; 2024 is the year the distillery took the Komagatake name."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hombo Shuzo: Mars Single Malt Komagatake",
+          "url": "https://www.hombo.co.jp/en/product/mars-singlemalt-komagatake/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Hombo Shuzo: new release, Single Malt Komagatake",
+          "url": "https://www.hombo.co.jp/en/2025/new-product/20250729-newproduct-whisky/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Hombo Shuzo: Mars whisky, its making",
+          "url": "https://www.hombo.co.jp/en/quality/whisky/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "Hombo Shuzo: the history of the company",
+          "url": "https://www.hombo.co.jp/en/company/history/",
+          "kind": "primary",
+          "read": "search"
+        },
+        {
+          "title": "VinePair: Mars whisky, what to know",
+          "url": "https://vinepair.com/articles/ntk-mars-whisky/",
+          "kind": "secondary",
+          "read": "search"
+        }
+      ],
+      "report": [
+        "The plan's note on the label: the producer prints the name as Single Malt KOMAGATAKE, launched as a core expression on 29 July 2025 at 45% ABV; the roster's Mars Single Malt Komagatake carries those words, so no swap is proposed.",
+        "The move to Nagano is dated 1985 from the producer's whisky page, as the note asks; Master of Malt gives 1984. The producer's company history also lists a Shinshu works in 1962 and a suspension in 1987, which sit uneasily with its own whisky page (1985, then a hiatus of nineteen years to 2011); the record follows the whisky page and Wikipedia's 1992 to 2011.",
+        "Kiichiro Iwai is described, not named: no source read gave his death year in two places (one implies about 1966). The tale of Taketsuru's report guiding the stills rests on secondary accounts (VinePair and a shop's blog) and is told as a story.",
+        "The producer's tasting note is used for the taste, with its smooth left out; no independent tasting of the 45% core bottling was found (the reviews read were of the yearly editions at 48 or 50%).",
+        "Left out for want of a source: the count and makers of the stills (two pot stills in Wikipedia only), a still replacement in 2014, the peating and the cask proportions. Copper pot stills rest on Wikipedia and the Ledger's styles.",
+        "The Ledger's style page lists the house among its benchmarks as Mars Shinshu; this record uses the name the distillery took in 2024 and says so in its traps."
+      ],
+      "checked": null
+    }
+  ]
+}
