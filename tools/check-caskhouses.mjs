@@ -4,7 +4,7 @@
      node tools/check-caskhouses.mjs              every check below; passes on a partial build and says so last
      node tools/check-caskhouses.mjs --release    the same, and refuses a data file whose meta says partial, whose
                                                   meta.unrefuted is above 0, or whose keys are not frozen
-     node tools/check-caskhouses.mjs --mutations  then breaks the shipped files nineteen ways, one at a time, and
+     node tools/check-caskhouses.mjs --mutations  then breaks the shipped files twenty-one ways, one at a time, and
                                                   expects red each time, from the check written for that rule (a
                                                   mutation that finds nothing to change, or that only another
                                                   check catches, is itself a failure)
@@ -45,7 +45,7 @@ import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import vm from 'node:vm';
 import { loadContext, validateFragment, planProblems, livingIn, cardKey as schemaKey, KEY_PREFIX, CARD_KEY_RE, PICKS, CAPS,
-  SUPERLATIVE_OURS, SELLING_OURS, AMERICAN_OURS } from './caskhouses/schema.mjs';
+  SUPERLATIVE_OURS, SELLING_OURS, AMERICAN_OURS, PRICE_OURS } from './caskhouses/schema.mjs';
 import { DASH, SUPERLATIVE, VERDICT, PRICE, HOUSE_NAME, AMERICAN_MORE } from './backbar/schema.mjs';
 import { SUPERLATIVE_MORE } from './caskstyles/schema.mjs';
 import { AMERICAN } from './brew/schema.mjs';
@@ -288,7 +288,8 @@ await test('D3 the shipped files: pure ASCII, with no dash in any form and nothi
   }
 });
 await test('D3 the voice: the page\u2019s own words are British and plain (no superlative, selling word, price or health talk), and no file of the page writes the house\u2019s name', () => {
-  const lits = [...SHIPPED['js/ui-caskhouses.js'].replace(/\/\*[\s\S]*?\*\//g, '').matchAll(/'((?:[^'\\]|\\.)*)'/g)].map((m) => m[1]);
+  /* every literal the page writes, quoted or a template, for a page string need not be single quoted */
+  const lits = [...SHIPPED['js/ui-caskhouses.js'].replace(/\/\*[\s\S]*?\*\//g, '').matchAll(/'((?:[^'\\]|\\.)*)'|`((?:[^`\\]|\\.)*)`/g)].map((m) => m[1] !== undefined ? m[1] : m[2]);
   const bad = [];
   for (const s of lits) {
     const am = s.match(AMERICAN) || s.match(AMERICAN_MORE) || s.match(AMERICAN_OURS);
@@ -326,7 +327,12 @@ await test('D3 the stylesheet: css/caskhouses.css uses the Ledger\u2019s tokens,
 /* every page the layer draws, with its text */
 const PAGES = [['the root', () => g('caskHouseRootHTML')(), null]]
   .concat(groups.map((x) => ['the group ' + x.key, () => g('caskHouseGroupHTML')(g('caskHouseGroup')(x.key)), null]))
-  .concat(houses.map((h) => ['the house ' + h.key, () => g('caskHousePageHTML')(g('caskHouseRecord')(h.key)), h]));
+  .concat(houses.map((h) => ['the house ' + h.key, () => g('caskHousePageHTML')(g('caskHouseRecord')(h.key)), h]))
+  /* and what the page writes onto other pages: the Atlas home's section, a chapter's and a Library producer's doors, a card's face */
+  .concat([['the Atlas home\u2019s section', () => g('caskHouseHomeHTML')(), null]])
+  .concat(CHAPTERS.map((c) => ['the chapter ' + c.id + '\u2019s doors', () => g('caskHouseChapterDoorsHTML')(c.id), null]))
+  .concat(LIBRARY.map((p) => ['the Library entry ' + p.name + '\u2019s doors', () => g('caskHouseLibraryDoorsHTML')(p.name), null]))
+  .concat(houses.slice(0, 1).map((h) => ['a card face', () => { const c = g('caskHouseCards')()[0]; return g('caskHouseRecallHTML')(c, false, '', '', '', '') + g('caskHouseRecallHTML')(c, true, '', '', '', ''); }, h]));
 await test('D4 every page: nobody living named, no price or currency, no house name, no dash, no mark at or above U+2190, no picture', () => {
   const bad = [];
   for (const [name, draw, h] of PAGES) {
@@ -334,6 +340,9 @@ await test('D4 every page: nobody living named, no price or currency, no house n
     const mine = h ? own(h) : [];
     livingIn(text, ctx, mine).forEach((n) => bad.push(name + ': names ' + n));
     if (/[$\u00a3\u20ac\u00a5]/.test(text)) bad.push(name + ': a currency sign');
+    /* and no price word, in the page's own words or a record's: whatever writes it, it is on the page */
+    const pr = text.match(PRICE) || text.match(PRICE_OURS);
+    if (pr) bad.push(name + ': a price word (' + pr[0] + ')');
     if (HOUSE_NAME.test(text)) bad.push(name + ': names the house');
     if (DASH.test(text)) bad.push(name + ': a dash (' + text.match(DASH)[0] + ')');
     if ([...text].some((c) => c.codePointAt(0) >= 0x2190)) bad.push(name + ': a mark at or above U+2190');
@@ -911,6 +920,8 @@ async function mutations() {
     ['Today\u2019s cask study dealing an unseen house card', 'js/ui-caskhouses.js', "return caskHouseCards().filter(function(c){ return caskHouseCardState(c, now).due; })", "return caskHouseCards().filter(function(c){ return true; })", 'W6 Today'],
     ['a group\u2019s quiz dealing every group', 'js/ui-caskhouses.js', "caskState().houseQuiz = caskHouseGroup(data.group) ? data.group : '';", "caskState().houseQuiz = '';", 'W7 the quiz'],
     ['the dashboard trend counting a producers round', 'js/ui-new.js', " && q.mode !== 'caskhouses');", ');', 'W7 the quiz'],
+    ['a price word in a page string written as a template', 'js/ui-caskhouses.js', "'</ul><p class=\"cask-muted\">Reading the sources needs a connection.</p></details>'", "`</ul><p class=\"cask-muted\">Reading the sources needs a connection, at no cost.</p></details>`", 'D3 the voice'],
+    ['a price word the literals cannot see, on the Atlas home', 'js/ui-caskhouses.js', "'<p>Five houses for each style, each with", "'<p>Five houses for each style, at every pri' + 'ce, each with", 'D4 every page'],
     ['the search index losing the houses', 'js/ui-new.js', "  if(typeof caskHouseSearchEntries === 'function') ix.push(...caskHouseSearchEntries());\n", '', 'W8 the Practise rows'],
   ];
   let held = 0;
