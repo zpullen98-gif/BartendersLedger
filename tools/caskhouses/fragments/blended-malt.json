@@ -1,0 +1,376 @@
+{
+  "group": "blended-malt",
+  "records": [
+    {
+      "key": "monkey-shoulder",
+      "group": "blended-malt",
+      "producer": "Monkey Shoulder",
+      "madeBy": "William Grant & Sons",
+      "style": "blended-malt",
+      "chapter": "scotch",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Speyside, Scotland",
+      "year": "2005",
+      "yearIs": "first released",
+      "bottle": {
+        "name": "Monkey Shoulder Blended Malt Scotch Whisky",
+        "class": "Blended malt Scotch whisky",
+        "mash": "Malted barley only: single malts from Speyside, first those of Glenfiddich, The Balvenie and Kininvie, with no grain whisky. The house does not publish which malts go into each batch.",
+        "still": "Each malt is distilled in copper pot stills, as the law asks of a single malt, at a Speyside distillery of William Grant & Sons, which then blends them.",
+        "wood": "Matured in first-fill former bourbon casks and married in small batches before bottling. The label carries no age statement.",
+        "strength": "40% ABV, 43% in the United States",
+        "taste": "Citrus and vanilla on the nose, then orange, ripe fruit and a gentle spice on the palate, with a soft, malty finish.",
+        "pour": "On the rocks or long in a highball with soda. It was made to mix, so it stands in a Rob Roy, a Whisky Sour or a Penicillin.",
+        "label": [
+          { "term": "Blended Malt Scotch Whisky", "means": "Single malts from more than one distillery and no grain whisky, by the Scotch Whisky Regulations 2009." },
+          { "term": "Batch 27", "means": "No legal meaning: the name of the recipe; accounts differ on whether it counts casks." }
+        ]
+      },
+      "table": "Monkey Shoulder Blended Malt Scotch Whisky is the Speyside blend that William Grant & Sons made to mix: single malts only, no grain, from first-fill bourbon casks. Expect citrus, vanilla and malt, and pour it over ice, long with soda or stirred in a Rob Roy.",
+      "story": "The name comes from the malting floor. Maltmen once turned germinating barley by hand, and the repeated strain could leave a shoulder that hung low, which the trade called a monkey shoulder. William Grant & Sons, the family firm that makes Glenfiddich and The Balvenie, took the name for a blend of single malts with no grain whisky in it. By one account work on the recipe began in 2003; the whisky went on sale in Britain and France in 2005, built from three of the firm's Speyside malts: Glenfiddich, The Balvenie and Kininvie. It was made with bartenders and mixed drinks in mind, and it reached the United States in 2012. In 2017 a peated version, Smokey Monkey, joined it. The firm no longer names the malts in each batch, so tell the three distilleries as the blend's origin, not as its recipe. Behind the bar it is the bottle that puts the words blended malt in front of many guests, and it shows that malt whisky can be a working spirit: over ice, lengthened with soda, stirred into a Rob Roy.",
+      "others": [
+        { "name": "Monkey Shoulder Smokey Monkey", "note": "A peated version of the blended malt, added to the range in 2017." }
+      ],
+      "traps": [
+        "Monkey Shoulder is a blended malt, not a blended Scotch: it holds no grain whisky, though shelves often file it with the blends.",
+        "There is no Monkey Shoulder distillery: William Grant & Sons blends it from its Speyside single malts.",
+        "The strength differs by market, 40% ABV in Britain and 43% ABV in the United States, so read the label before you quote it."
+      ],
+      "cards": [
+        { "id": "casks", "prompt": "In which casks does Monkey Shoulder mature?", "answer": "First-fill former bourbon casks, married in small batches; the label carries no age statement." },
+        { "id": "name", "prompt": "What does the name Monkey Shoulder recall?", "answer": "The strained shoulder maltmen got from turning germinating barley by hand on the malting floor." }
+      ],
+      "quiz": [
+        {
+          "id": "q1", "tag": "bottle", "card": "casks",
+          "q": "A guest asks what Monkey Shoulder is matured in. Which casks does the house name?",
+          "options": ["Refill Oloroso sherry butts", "New charred oak", "First-fill bourbon casks", "Tawny port pipes"],
+          "a": 2,
+          "explain": "The house matures its malts in first-fill former bourbon casks; sherry butts belong to a sherried blended malt such as Naked Malt."
+        },
+        {
+          "id": "q2", "tag": "story", "card": "name",
+          "q": "Where does the name Monkey Shoulder come from?",
+          "options": ["A maltman's strained shoulder", "A distillery's mascot", "A hill above Dufftown", "A nickname for an early blender"],
+          "a": 0,
+          "explain": "Turning barley by hand on the malting floor left maltmen with a strained shoulder, called a monkey shoulder; no mascot or hill gave the name."
+        }
+      ],
+      "sources": [
+        { "title": "Monkey Shoulder: the blended malt", "url": "https://www.monkeyshoulder.com/en", "kind": "primary", "read": "search" },
+        { "title": "The Spirits Business: Monkey Shoulder, a brand history", "url": "https://www.thespiritsbusiness.com/2018/11/monkey-shoulder-a-brand-history/", "kind": "secondary", "read": "search" },
+        { "title": "Difford's Guide: Monkey Shoulder, the story", "url": "https://www.diffordsguide.com/producer/1203/monkey-shoulder/story", "kind": "secondary", "read": "search" },
+        { "title": "The Whiskey Wash: a malt for mixing and sipping", "url": "https://thewhiskeywash.com/scotch-whiskey/monkey-shoulder-is-a-malt-whisky-made-for-both-mixing-and-sipping/", "kind": "secondary", "read": "search" },
+        { "title": "The Whiskey Wash: Monkey Shoulder Batch 27 tasted", "url": "https://thewhiskeywash.com/scotch-whiskey/whisky-review-monkey-shoulder-blended-malt-scotch-whisky-batch-27/", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "Launch year: The Spirits Business timeline and The Whiskey Wash give 2005 for the British and French release; Difford's Guide and Wikipedia give 2003, which a second Difford's summary reads as the year work began. The record gives 2005 as the release and 2003 as the start of work, by one account.",
+        "Batch 27: Difford's Guide says it means batches of 27 casks; another account calls it the recipe's name in the blending room. The record says only that accounts differ.",
+        "Strength: 40% ABV in Britain rests on several British grocers' listings; 43% ABV (86 proof) in the United States on The Whiskey Wash review and several American shop listings that print the importer's line. No producer page giving either figure was read.",
+        "The United States listings print the name as Monkey Shoulder The Original Blended Malt Scotch Whisky, with Batch 27; the record keeps the roster's words, which the label carries.",
+        "Left out for want of a second source: Kininvie's founding year (1990, Wikipedia only), the six months of marrying before bottling (one shop), and the 2026 redesign of the bottle (one trade report, and it would date the record).",
+        "The living malt master who made the blend is not named, nor the brand's ambassador quoted by The Whiskey Wash. For people.json, the integrator should add the living names the searches showed across this group: Fred Laing, Stewart Laing, Cara Laing, Chris Leggat, Maurice Doyle, Anna Mains, Richard Woodard and Simon Difford (this author's task named the fragment alone, so people.json was not edited)."
+      ],
+      "checked": null
+    },
+    {
+      "key": "compass-box",
+      "group": "blended-malt",
+      "producer": "Compass Box",
+      "madeBy": "",
+      "style": "blended-malt",
+      "chapter": "scotch",
+      "shelf": "",
+      "library": "Compass Box",
+      "say": "",
+      "place": "London, England",
+      "year": "2000",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Compass Box The Peat Monster Blended Malt Scotch Whisky",
+        "class": "Blended malt Scotch whisky",
+        "mash": "Peated malted barley only. The house publishes its recipe: Caol Ila from several parcels, about 64 per cent; Williamson, a peated Islay parcel, about 35; and a Highland malt blend, about 1.",
+        "still": "Compass Box distils nothing. It buys single malts, each distilled in copper pot stills at its own distillery, Caol Ila on Islay among them, and blends them in London.",
+        "wood": "The house does not give the casks of every parcel; the small Highland malt blend is finished in heavily toasted French oak. No age statement.",
+        "strength": "46% ABV",
+        "taste": "Coastal smoke, lemon, green herbs and iodine on the nose over toasted vanilla and pear, then spicy smoke with sweet fruit, an oily texture and a clove spice from the French oak.",
+        "pour": "Neat or with a little water. Its smoke suits a highball with soda, or a float on a Penicillin.",
+        "label": [
+          { "term": "Blended Malt Scotch Whisky", "means": "Single malts from more than one distillery and no grain whisky." },
+          { "term": "Natural colour, not chill filtered", "means": "No caramel is added and the whisky is not chilled and filtered before bottling, as the house states." }
+        ]
+      },
+      "table": "Compass Box The Peat Monster is a blended malt from a London house that distils nothing and blends the malts it buys, mostly Caol Ila. Pour it neat: coastal smoke, lemon and iodine over pear and vanilla, bottled at 46 per cent.",
+      "story": "Compass Box was founded in London in 2000 by an American who had worked in marketing for Johnnie Walker, and its early blends were made in his west London home. The house has no distillery of its own: it buys whisky from Scottish distillers, chooses its casks and blends. By its own account The Peat Monster grew out of an earlier blend called Monster and joined the range for good in 2004, at 46 per cent. In 2005 the house released The Spice Tree, a malt given a second maturation with inner staves of French oak, and the Scotch Whisky Association held the method outside the rules because it was not a traditional one. The house remade the whisky in 2009 with French oak cask heads in place of the staves. In 2015 it clashed with the Association again, this time over publishing the full make up of its blends, which the rules on age statements did not allow, and it argued in public for the right to tell a buyer more. When it trimmed its core range in 2024, The Spice Tree went and The Peat Monster stayed. For a bartender it is the lesson in how a blender builds smoke from parcels, and in what an honest recipe on the label can teach.",
+      "others": [
+        { "name": "Compass Box Orchard House", "note": "The house's other core blended malt, kept in the range beside The Peat Monster in 2024." },
+        { "name": "Compass Box The Spice Tree", "note": "The French oak blended malt of 2005, dropped from the core range in 2024; old bottles turn up on back bars." }
+      ],
+      "traps": [
+        "Compass Box is a blender, not a distillery: the malts in The Peat Monster are distilled on Islay and in the Highlands by others.",
+        "The Spice Tree left the core range in 2024, so do not promise a guest a fresh bottle of it."
+      ],
+      "cards": [
+        { "id": "recipe", "prompt": "Which Islay single malt makes up most of Compass Box The Peat Monster?", "answer": "Caol Ila, about two thirds, with a peated Islay parcel the house calls Williamson and a little Highland malt blend." },
+        { "id": "spice-tree", "prompt": "Why did the Scotch Whisky Association object to Compass Box The Spice Tree in 2005?", "answer": "It was matured with inner staves of French oak, which the Association held outside the rules; the house remade it in 2009 with French oak heads." }
+      ],
+      "quiz": [
+        {
+          "id": "q1", "tag": "bottle", "card": "recipe",
+          "q": "A guest asks what goes into Compass Box The Peat Monster. Which single malt makes up most of its published recipe?",
+          "options": ["Ardbeg", "Caol Ila", "Talisker", "Lagavulin"],
+          "a": 1,
+          "explain": "The house gives Caol Ila as about 64 per cent of the recipe; Ardbeg is an Islay malt too, but it is not named in The Peat Monster."
+        },
+        {
+          "id": "q2", "tag": "story", "card": "spice-tree",
+          "q": "What drew the Scotch Whisky Association's objection to Compass Box The Spice Tree?",
+          "options": ["Wine added to the cask", "Caramel colouring", "Grain whisky added to the blend", "Inner staves of French oak"],
+          "a": 3,
+          "explain": "The Spice Tree was matured with inner staves of French oak, a method the Association held was not traditional; it held no grain whisky, being a blended malt."
+        }
+      ],
+      "sources": [
+        { "title": "Compass Box: The Peat Monster", "url": "https://www.compassboxwhisky.com/products/the-peat-monster-1", "kind": "primary", "read": "search" },
+        { "title": "Compass Box: Monster, the blend before The Peat Monster", "url": "https://www.compassboxwhisky.com/products/the-monster", "kind": "primary", "read": "search" },
+        { "title": "Compass Box: The Spice Tree fact sheet", "url": "https://www.compassboxwhisky.com/images/whiskies/factsheets/CBW_FactSheet-2018-THESPICETREE.pdf", "kind": "primary", "read": "search" },
+        { "title": "Wikipedia: Compass Box", "url": "https://en.wikipedia.org/wiki/Compass_Box", "kind": "secondary", "read": "search" },
+        { "title": "Decanter: Compass Box reshapes its core range", "url": "https://www.decanter.com/spirits/exclusive-compass-box-launches-new-core-whisky-range-534745/", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "The plan's note asked whether The Peat Monster is still listed: the house's product page lists it at 46% ABV, and Decanter's report of July 2024 on the trimmed core range says The Peat Monster and Orchard House stay while The Spice Tree and The Story of the Spaniard go.",
+        "Williamson is the house's own name for one parcel. Whisky Advocate's report of a 2019 recipe change and one other account give it as Laphroaig, but only the house's word Williamson is printed; the 2019 rework is left out of the story for want of a second source.",
+        "One house page dates the origin to a bespoke blend of 2003 for a New York shop; the record gives only the house's 2004 date for The Peat Monster joining the range. One product page shows First Released: 2024, which reads as a page update, not a launch.",
+        "The Penicillin's first recipe with Compass Box Asyla, which the note mentions, was not researched within the share of searches and is left out; the pour names the Penicillin only as a drink the whisky suits.",
+        "The founder is living and is described by his role; he stepped back from the business in 2024, which the record leaves out as a fact about a living person. A later stake taken by an investment firm is left out as ownership.",
+        "The founder's Johnnie Walker past rests on Wikipedia and several trade summaries in one search; the 2015 clash rests on Wikipedia and agrees with the Library's record of Compass Box, whose facts were taken and whose wording (labeling, the claim of excellence) was not.",
+        "The two label terms are the producer's specification words; the label itself was not seen."
+      ],
+      "checked": null
+    },
+    {
+      "key": "big-peat",
+      "group": "blended-malt",
+      "producer": "Big Peat",
+      "madeBy": "Douglas Laing & Co.",
+      "style": "blended-malt",
+      "chapter": "scotch",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Glasgow, Scotland, from Islay malts",
+      "year": "2009",
+      "yearIs": "first released",
+      "bottle": {
+        "name": "Big Peat Islay Blended Malt Scotch Whisky",
+        "class": "Blended malt Scotch whisky, of Islay malts only",
+        "mash": "Peated malted barley: single malts from Islay alone. The producer names Ardbeg, Bowmore, Caol Ila and Port Ellen and publishes no shares.",
+        "still": "Douglas Laing distils nothing. Each malt was distilled in copper pot stills at its own Islay distillery, and the firm blends and bottles them.",
+        "wood": "The producer does not name the casks. The label carries no age statement.",
+        "strength": "46% ABV",
+        "taste": "Ash, sweet tar and chimney smoke with a salty, beach-like edge, then sweet peat-dried malt and a long, phenolic finish where the smoke stays.",
+        "pour": "Neat or with a little water. A smoky float on a Penicillin, or long with soda for a guest who wants smoke in a highball.",
+        "label": [
+          { "term": "Islay Blended Malt Scotch Whisky", "means": "Single malts from Islay distilleries only, blended, with no grain whisky." },
+          { "term": "No Colour Added", "means": "No caramel colouring is used, by the producer's specification." },
+          { "term": "No Chill-Filtration", "means": "The whisky is not chilled and filtered before bottling, so its oils stay in." }
+        ]
+      },
+      "table": "Big Peat Islay Blended Malt Scotch Whisky is a marriage of Islay malts only, among them Ardbeg, Bowmore, Caol Ila and Port Ellen, blended in Glasgow by Douglas Laing & Co. Pour it neat for ash, sweet tar and chimney smoke at 46 per cent.",
+      "story": "Douglas Laing & Co. began in Glasgow in 1948 as a family firm that blended and bottled whisky bought from distillers, and for decades it was known for single casks bottled under its own names. In 2009 it released Big Peat, the first of what became its Remarkable Regional Malts, a set of blended malts each drawn from one whisky region of Scotland. Big Peat takes Islay's malts and nothing else: by the producer's account Caol Ila brings sweetness, Bowmore balance, Ardbeg an earthy, medicinal edge and Port Ellen a degree of elegance. Port Ellen had closed in 1983, so whatever share of it went into a bottle had been distilled before then; the distillery was rebuilt and reopened in March 2024. In 2013 the two brothers who had run the firm for some forty years divided it, and Big Peat stayed with Douglas Laing & Co. Older and finished editions have followed under the same name, but the bottle a guest asks for is the plain one at 46 per cent. For a bartender it is the clear lesson in what a region gives: Islay smoke and salt without one distillery's name on the front.",
+      "others": [
+        { "name": "Big Peat 12 Years Old", "note": "The same Islay marriage with a twelve-year age statement, also at 46 per cent, uncoloured and not chill filtered." }
+      ],
+      "traps": [
+        "Big Peat is a blended malt of several Islay distilleries, not a single malt, and there is no Big Peat distillery.",
+        "Any Port Ellen in Big Peat was distilled before the distillery closed in 1983; the rebuilt distillery reopened only in 2024."
+      ],
+      "cards": [
+        { "id": "four-malts", "prompt": "Which four Islay distilleries does the producer name for Big Peat?", "answer": "Ardbeg, Bowmore, Caol Ila and Port Ellen, which was closed from 1983 until it reopened in 2024." },
+        { "id": "first-regional", "prompt": "What place did Big Peat take in the Douglas Laing range on its release?", "answer": "The first of the Remarkable Regional Malts, blended malts each drawn from one whisky region of Scotland, in 2009." }
+      ],
+      "quiz": [
+        {
+          "id": "q1", "tag": "bottle", "card": "four-malts",
+          "q": "A guest has heard that Big Peat holds malt from a distillery long closed. Which one does the producer name?",
+          "options": ["Brora", "Glenury Royal", "Glen Mhor", "Port Ellen"],
+          "a": 3,
+          "explain": "The producer names Port Ellen, closed in 1983, beside Ardbeg, Bowmore and Caol Ila; Brora also reopened after a closure, but it is a Highland distillery."
+        },
+        {
+          "id": "q2", "tag": "story", "card": "first-regional",
+          "q": "In which year did Douglas Laing & Co. release Big Peat?",
+          "options": ["1948", "2009", "2013", "2024"],
+          "a": 1,
+          "explain": "Big Peat came in 2009 to open the Remarkable Regional Malts; 1948 is the firm's founding and 2013 the year the brothers divided it."
+        }
+      ],
+      "sources": [
+        { "title": "Douglas Laing: Big Peat", "url": "https://www.douglaslaing.com/products/big-peat", "kind": "primary", "read": "search" },
+        { "title": "The Spirits Business: Douglas Laing, a brand history", "url": "https://www.thespiritsbusiness.com/2019/05/douglas-laing-co-a-brand-history/", "kind": "secondary", "read": "search" },
+        { "title": "Wikipedia: Douglas Laing and Co", "url": "https://en.wikipedia.org/wiki/Douglas_Laing_%26_Co", "kind": "secondary", "read": "search" },
+        { "title": "Whisky Advocate: Port Ellen reopens after forty years", "url": "https://whiskyadvocate.com/Port-Ellen-Distillery-Reopens-After-40-Years", "kind": "secondary", "read": "search" },
+        { "title": "The Spirits Business: Port Ellen back at work after forty years", "url": "https://www.thespiritsbusiness.com/2024/03/port-ellen-distillery-back-in-business-after-40-years/", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "The plan's note asked for Port Ellen's reopening year: the distillery closed in 1983 and reopened on 19 March 2024 (Whisky Advocate, The Spirits Business, Wikipedia). The producer's page still names Port Ellen among the four malts; what share the batches of any one year hold is not published, so the record says only that any Port Ellen in the bottle was distilled before 1983.",
+        "The founding year is 1948 in most accounts and 1949 in one; the record gives 1948.",
+        "Left out for want of a second source: the fisherman drawn on the label, which the producer's family tells in an interview as dreamt up in 2009; the casks; the bottling site.",
+        "The label terms are the producer's specification words (No Colour Added, No Chill-Filtration); the label itself was not seen.",
+        "The family who run Douglas Laing, the brother who left in 2013 and the son in law who leads the firm are living and are not named; their names are listed for people.json in the Monkey Shoulder record's report."
+      ],
+      "checked": null
+    },
+    {
+      "key": "naked-malt",
+      "group": "blended-malt",
+      "producer": "Naked Malt",
+      "madeBy": "Edrington",
+      "style": "blended-malt",
+      "chapter": "scotch",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Scotland, blended from several distilleries' malts",
+      "year": "2011",
+      "yearIs": "first released",
+      "bottle": {
+        "name": "Naked Malt Blended Malt Scotch Whisky",
+        "class": "Blended malt Scotch whisky",
+        "mash": "Malted barley only: single malts, no grain whisky. When it became a blended malt in 2017 its malts were given as The Macallan, Highland Park and The Glenrothes; no later recipe is published.",
+        "still": "Each malt is distilled in copper pot stills at its own distillery and then blended; the house names no blending site.",
+        "wood": "Finished for at least six months in first-fill Oloroso sherry casks that had held no whisky before. No age statement.",
+        "strength": "40% ABV, 43% in some markets",
+        "taste": "Dried fruit, sultanas and vanilla on the nose with a faint struck match, then toffee and dried fruit over dry oak tannins from the sherry casks, and a hint of charcoal.",
+        "pour": "Neat or over one large cube. Its sherried weight suits a Rob Roy or a Blood and Sand.",
+        "label": [
+          { "term": "Blended Malt Scotch Whisky", "means": "Single malts from more than one distillery and no grain whisky." },
+          { "term": "First fill sherry casks", "means": "Casks that held sherry and had held no whisky before." }
+        ]
+      },
+      "table": "Naked Malt Blended Malt Scotch Whisky is the sherried blended malt once sold as Naked Grouse: single malts only, finished for at least six months in first-fill Oloroso casks. Expect dried fruit, toffee and dry oak, and pour it neat or over one large cube.",
+      "story": "Naked Grouse was first released in 2011 by the makers of The Famous Grouse, as a blended Scotch finished in first-fill sherry casks. In 2017 its recipe dropped grain whisky and it became a blended malt, drawing on single malts that Edrington then made, among them The Macallan, Highland Park and The Glenrothes. In 2021 Edrington renamed it Naked Malt, to make plain that it is a blended malt, and the trade reported the recipe unchanged. In September 2024 Edrington agreed to sell The Famous Grouse and Naked Malt to William Grant & Sons, and the sale was completed on 1 July 2025, so the label passed to the house that makes Monkey Shoulder. Through the change of name the method held: a marriage of malts given a last six months or more in Oloroso casks that had never held whisky. For a bartender it is the counterweight to a bourbon-cask blended malt such as Monkey Shoulder: the same rule of malts only, read through sherry wood, with dried fruit and toffee where the other shows citrus and vanilla.",
+      "others": [
+        { "name": "Naked Grouse Blended Malt", "note": "The same whisky under its name before 2021; older bottles turn up on back bars." }
+      ],
+      "traps": [
+        "Naked Malt and Naked Grouse are one whisky under two names: the name changed in 2021, the recipe did not.",
+        "It is a blended malt, not a blended Scotch: grain whisky left the recipe in 2017, though older bottles of Naked Grouse were blends."
+      ],
+      "cards": [
+        { "id": "sherry-cask", "prompt": "In which casks is Naked Malt finished?", "answer": "First-fill Oloroso sherry casks that held no whisky before, for at least six months." },
+        { "id": "old-name", "prompt": "Under what name was Naked Malt sold until 2021?", "answer": "Naked Grouse, first released in 2011 as a blended Scotch and made a blended malt in 2017." }
+      ],
+      "quiz": [
+        {
+          "id": "q1", "tag": "bottle", "card": "sherry-cask",
+          "q": "A guest asks why Naked Malt tastes of dried fruit and toffee. In which casks is it finished?",
+          "options": ["First-fill Oloroso casks", "Refill American oak barrels", "Virgin French oak", "Tawny port pipes"],
+          "a": 0,
+          "explain": "It is finished for at least six months in first-fill Oloroso sherry casks; refill American oak barrels would give vanilla, not dried fruit."
+        },
+        {
+          "id": "q2", "tag": "story", "card": "old-name",
+          "q": "Under which name was Naked Malt sold before 2021?",
+          "options": ["Black Grouse", "Snow Grouse", "Naked Grouse", "Grouse Malt"],
+          "a": 2,
+          "explain": "It was Naked Grouse from 2011 until the rename of 2021; Snow Grouse is another whisky of The Famous Grouse family."
+        }
+      ],
+      "sources": [
+        { "title": "Naked Malt: the whisky", "url": "https://www.nakedmalt.com/en", "kind": "primary", "read": "search" },
+        { "title": "The Whiskey Wash: Naked Grouse becomes Naked Malt", "url": "https://thewhiskeywash.com/scotch-whiskey/naked-grouse-blended-whisky-rebranded-as-naked-malt/", "kind": "secondary", "read": "search" },
+        { "title": "Edrington: the planned sale of The Famous Grouse and Naked Malt", "url": "https://www.edrington.com/en/news/edrington-announces-plan-to-sell-the-famous-grouse-and-naked-malt", "kind": "primary", "read": "search" },
+        { "title": "The Drinks Business: the Famous Grouse sale completed", "url": "https://www.thedrinksbusiness.com/2025/07/the-famous-grouse-sale-has-been-finalised/", "kind": "secondary", "read": "search" },
+        { "title": "Difford's Guide: Naked Malt", "url": "https://www.diffordsguide.com/beer-wine-spirits/435/naked-malt", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "The plan's note called a later sale by Edrington unconfirmed: it is confirmed. Edrington announced on 23 September 2024 that it would sell The Famous Grouse and Naked Malt to William Grant & Sons, and the sale took effect on 1 July 2025 (Edrington's own news page, The Drinks Business, Whisky Advocate, Whisky Magazine). The story tells it as dated history.",
+        "So the roster's madeBy, Edrington, is out of date: William Grant & Sons has made the label since July 2025. The record copies the roster's madeBy as the brief requires; I propose the integrator change madeBy to William Grant & Sons in plan.json, which also puts Naked Malt and Monkey Shoulder under one maker in this group.",
+        "The malts, The Macallan, Highland Park and The Glenrothes, stand in Difford's Guide and the rename coverage; one 2018 account adds Glenturret, which is left out. All are Edrington's malts of that time, so the record ties them to 2017 and says no later recipe is published: after the 2025 sale the blend may not draw on them.",
+        "Strength: 40% ABV in the rename coverage and British listings; one database gives 43% in some markets, and Whisky Advocate reviewed it at 43%. The record gives 40% with 43% in some markets.",
+        "The 2011 first release as Naked Grouse rests on the rename coverage and The Famous Grouse's encyclopaedia entry; the year field is the first release under the old name.",
+        "The second label term is the producer's own wording, first fill sherry casks, from its pages; the exact words on the label were not seen.",
+        "The place field names no town: no source gave where the blend is married."
+      ],
+      "checked": null
+    },
+    {
+      "key": "shackleton",
+      "group": "blended-malt",
+      "producer": "Shackleton",
+      "madeBy": "Whyte & Mackay",
+      "style": "blended-malt",
+      "chapter": "scotch",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Highlands, Scotland",
+      "year": "2017",
+      "yearIs": "first released",
+      "bottle": {
+        "name": "Shackleton Blended Malt Scotch Whisky",
+        "class": "Blended malt Scotch whisky",
+        "mash": "Malted barley only: Highland single malts, with no grain whisky. The house does not name the distilleries or their shares.",
+        "still": "Each malt is distilled in copper pot stills at a Highland distillery; Whyte & Mackay blends them and names no distillery.",
+        "wood": "The casks are not disclosed. The label carries no age statement.",
+        "strength": "40% ABV",
+        "taste": "Soft vanilla, honey and orchard fruit, then ginger and liquorice spice, with a whisper of bonfire smoke at the finish.",
+        "pour": "Neat, with a little water or over ice. Its honey and spice suit a Rob Roy or a whisky highball.",
+        "label": [
+          { "term": "Blended Malt Scotch Whisky", "means": "Single malts from more than one distillery and no grain whisky." },
+          { "term": "Shackleton", "means": "Named for the explorer whose expedition of 1907 took Mackinlay's whisky to Antarctica." }
+        ]
+      },
+      "table": "Shackleton Blended Malt Scotch Whisky is a Highland blended malt from Whyte & Mackay, built on the remaking of the whisky taken to Antarctica on the Nimrod expedition of 1907. Expect vanilla, honey and orchard fruit with a whisper of bonfire smoke.",
+      "story": "Ernest Shackleton (1874 to 1922) sailed for Antarctica in 1907 on the Nimrod expedition, and among its stores were cases of Mackinlay's Rare Old Highland Malt, by later accounts distilled at Glen Mhor in Inverness. The party wintered in 1908 in a hut it built at Cape Royds, and when it left, the whisky stayed behind. Conservators of the New Zealand Antarctic Heritage Trust found crates beneath the hut and, in January 2010, lifted five: three marked as Mackinlay's whisky and two as brandy. In 2011 bottles were flown to Scotland, where the master blender of Whyte & Mackay, the firm that by then held the Mackinlay's name, drew a sample through a cork with a syringe, studied it and built a replica from the firm's malts at the original strength of 47.3 per cent. Glen Mhor itself had closed in the 1980s. In 2017 the firm released Shackleton Blended Malt Scotch Whisky, a lasting blended malt of Highland malts at 40 per cent, built on that replica: first in airport shops, then in Britain and France, and that October in the United States. For a bartender it shows how a blender reads an old whisky and rebuilds it from what lies in the warehouse.",
+      "others": [
+        { "name": "Mackinlay's Rare Old Highland Malt", "note": "The replica of 2011 at 47.3 per cent, a separate bottling made from the sample out of the hut, with a second edition called The Journey." }
+      ],
+      "traps": [
+        "The replica of 2011 at 47.3 per cent and the blended malt of 2017 at 40 per cent are two different whiskies.",
+        "There is no Shackleton distillery: Whyte & Mackay blends it from Highland single malts."
+      ],
+      "cards": [
+        { "id": "highland-malts", "prompt": "What goes into Shackleton Blended Malt Scotch Whisky?", "answer": "Highland single malts only, with no grain whisky, bottled at 40 per cent with no age statement." },
+        { "id": "hut", "prompt": "Where was the whisky found that Shackleton Blended Malt is built on?", "answer": "In crates beneath the expedition hut at Cape Royds in Antarctica, left in 1908 and lifted in January 2010." }
+      ],
+      "quiz": [
+        {
+          "id": "q1", "tag": "bottle", "card": "highland-malts",
+          "q": "A guest asks what kind of malts go into Shackleton Blended Malt. Which region's malts does the house name?",
+          "options": ["Islay", "Highland", "Lowland", "Campbeltown"],
+          "a": 1,
+          "explain": "It is a blended malt of Highland single malts; Islay malts would bring far more peat smoke than its whisper of bonfire."
+        },
+        {
+          "id": "q2", "tag": "story", "card": "hut",
+          "q": "Where were the crates of Mackinlay's whisky found that Shackleton Blended Malt is built on?",
+          "options": ["South Georgia", "Hobart, Tasmania", "Lerwick, Shetland", "Cape Royds, Antarctica"],
+          "a": 3,
+          "explain": "They lay beneath the Nimrod expedition's hut at Cape Royds; South Georgia is where Shackleton died in 1922, not where the whisky was found."
+        }
+      ],
+      "sources": [
+        { "title": "New Zealand Antarctic Heritage Trust: Shackleton's whisky", "url": "https://nzaht.org/shackletons-whisky/", "kind": "primary", "read": "search" },
+        { "title": "BevNET: Shackleton whisky reaches the United States", "url": "https://www.bevnet.com/news/spirits/2017/shackleton-whisky-launches-us-markets/", "kind": "secondary", "read": "search" },
+        { "title": "The Whiskey Wash: a whisky named for the Antarctic explorer reaches America", "url": "https://thewhiskeywash.com/scotch-whiskey/whisky-named-legendary-antarctic-explorer-debuts-u-s/", "kind": "secondary", "read": "search" },
+        { "title": "Popular Science: how a century old whisky was made again", "url": "https://www.popsci.com/science/article/2012-01/how-scottish-scientists-re-created-hundred-year-old-whisky/", "kind": "secondary", "read": "search" },
+        { "title": "Britannica: Ernest Shackleton", "url": "https://www.britannica.com/biography/Ernest-Henry-Shackleton", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "The plan's note asked for the current label name: the 2017 launch coverage and current listings print Shackleton Blended Malt Scotch Whisky, the roster's words; some shops add the Mackinlay's name.",
+        "The replica of 2011 at 47.3% ABV and the blended malt of 2017 at 40% ABV are kept apart, as the note asks; the replica stands only in others and the story.",
+        "Shackleton's dates, 15 February 1874 to 5 January 1922, agree in Britannica and Wikipedia.",
+        "The find: sources disagree whether the crates were first seen in 2006 or 2007; the Trust gives January 2010 for lifting five crates, which the record uses.",
+        "Glen Mhor as the original's distillery rests on The Whisky Exchange's feature and Master of Malt, both shops, so the record hedges it as by later accounts; its closure is given as the 1980s because accounts give 1983 for the closure and 1983 or 1986 for demolition.",
+        "Strength 40% ABV rests on Master of Malt and two reviews; no producer page was found (the brand's own site returned nothing to a search).",
+        "Left out for want of a source: the malts and casks of the blended malt, the Dalmore in the replica (one shop's feature), the share of each sale given to the Trust (sources differ) and the return of the original bottles to the hut in 2013 (not within the five sources).",
+        "The master blender who made the replica and the blend is living and described by his role; his name already stands in people.json."
+      ],
+      "checked": null
+    }
+  ]
+}
