@@ -2,7 +2,7 @@
  "edition": "2026-11-21",
  "wave": "wave one, whisky and brandy",
  "partial": true,
- "unrefuted": 5,
+ "unrefuted": 0,
  "roster": {
   "groups": 32,
   "houses": 160
@@ -15,9 +15,9 @@
   "sources": 150
  },
  "words": {
-  "total": 15427,
+  "total": 15417,
   "perHouse": {
-   "1792": 511,
+   "1792": 528,
    "jim-beam": 475,
    "buffalo-trace": 469,
    "wild-turkey": 482,
@@ -43,16 +43,16 @@
    "knob-creek": 534,
    "elijah-craig": 505,
    "russells-reserve": 471,
-   "bookers": 527,
-   "george-t-stagg": 557,
+   "bookers": 513,
+   "george-t-stagg": 561,
    "stagg": 530,
-   "barrell": 541
+   "barrell": 524
   }
  },
  "keys": {
   "frozen": false,
   "held": 60,
-  "added": 30
+  "added": 0
  },
  "missing": [
   "tennessee-whiskey",
