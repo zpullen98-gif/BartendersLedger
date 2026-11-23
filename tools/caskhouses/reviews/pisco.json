@@ -1,0 +1,222 @@
+{
+ "group": "pisco",
+ "chunk": "c11",
+ "date": "2026-11-23",
+ "by": "refuter",
+ "searches": 22,
+ "tested": [
+  "the two laws: Chile's Decree 521 of 1999 (minimum strengths of 30, 35, 40 and 43 per cent for Corriente, Especial, Reservado and Gran Pisco, a rest of 60 days, discontinuous alembics, guarda for 180 days in wood) and Peru's denomination of 1990 (Resolución Directoral 072087 of 12 December 1990) with PromPerú's rest of at least three months. 4 searches.",
+  "pisco-porton: the rename to Caravedo, the TTAB cancellation of 2017, the distillery's range and acholado sheet (Quebranta, Torontel, Albilla, 43 per cent, three years on one vintage's sheet), the house's and tasters' notes. 4 searches.",
+  "barsol: the buyers and year of 2002, the closure of 1968 and the 34 idle years, the copper pot stills, 41.3 per cent, the name BarSol, exports by 2005, the Puro Quebranta name on the importer's pages and its 2l release of July 2026, the importer's tasting note against Difford's. 4 searches.",
+  "macchu-pisco: 2006 and the two sisters, Quebranta alone, copper pot stills, the year's rest and bottling at the estate on the house's own pages, the strength (40, 42 or 44 by source), the house's note, La Diablada and Ñusta. 3 searches.",
+  "capel: the founding at Paihuano in February 1938 by 25 growers, the legal standing of 1939, the 1964 name (not found), the Vicuña plant, the Transparente's Pedro Jiménez, double distillation and year in steel, the Reservado de Guarda's six to eight months in American oak, the taste. 5 searches.",
+  "el-gobernador: the launch of 2012 against Torres's 1928, Moscatel of Alexandria and pink Moscatel, a single discontinuous distillation in copper, 40 per cent, the governor Felipe Margutt Donaire and his dates (not found), Torres 10's solera and American oak. 3 searches.",
+  "22 of the 28 searches spent; 6 left unused.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, keys at positions 2, 0, 0, 3, 3, 1, 0, 2, 2, 1 (no position more than three times), each explain naming the nearest wrong option. Macchu Pisco's founding card no longer asks two things at once; BarSol's revival card and stem no longer name the buyers. No card id changed."
+ ],
+ "changed": [
+  {
+   "key": "pisco-porton",
+   "field": "bottle.wood",
+   "was": "The distillery's page gives three years of rest before bottling; no age statement.",
+   "now": "it rests in vessels that give it no flavour before it is bottled. No age statement.",
+   "why": "the three years sit on the distillery's sheet for one vintage (2020), not as a rule of the bottling",
+   "sources": [
+    "https://destilerialacaravedo.com/product/pisco-porton-mosto-verde-acholado/"
+   ]
+  },
+  {
+   "key": "pisco-porton",
+   "field": "bottle.taste, table",
+   "was": "a floral nose of roses and herbs over ripe mandarin, lime and raisin; then a sweet, dense palate and a finish of flowers and lemon verbena",
+   "now": "a floral nose over sweet ripe fruit, a sweet and dense palate, and a floral, herbal finish; tasters often add orange blossom, citrus, cinnamon and a little white pepper",
+   "why": "roses, mandarin, lime and raisin were found in no source; the house's sheet gives the floral nose, ripe fruit, dense palate and herbal finish, and the other notes come from trade and tasters' notes",
+   "sources": [
+    "https://destilerialacaravedo.com/product/pisco-porton-mosto-verde-acholado/",
+    "https://www.bevindustry.com/articles/89651-pisco-port%C3%B3n-acholado"
+   ]
+  },
+  {
+   "key": "pisco-porton",
+   "field": "story",
+   "was": "reached American shelves as Caravedo, while in Peru the bottle kept the Portón name",
+   "now": "came to American shelves as Caravedo, the distillery's own name",
+   "why": "a present state that will not hold: Spirits Hunters reports the rename announced for every market",
+   "sources": [
+    "https://www.spiritshunters.com/news/francois-monti-in-peru-pisco-now-becomes-caravedo/amp",
+    "https://distiller.com/spirits/caravedo-mosto-verde"
+   ]
+  },
+  {
+   "key": "pisco-porton",
+   "field": "story",
+   "was": "comes in seven single grapes ... aromatic grapes, one pass through the still",
+   "now": "was made in seven single grapes ... a blend of grapes, one pass through the still",
+   "why": "a present range is a fact that ages, and the acholado holds Quebranta, a non aromatic grape",
+   "sources": [
+    "https://destilerialacaravedo.com/porton/"
+   ]
+  },
+  {
+   "key": "barsol",
+   "field": "story, cards[1].answer, quiz[1].q",
+   "was": "two Peruvian partners bought it in 2002",
+   "now": "a group of investors based in the United States bought it in 2002 (the card and stem: taken on by new investors)",
+   "why": "Difford's Guide and the Oxford Companion give a group of private entrepreneurs based in the United States",
+   "sources": [
+    "https://www.diffordsguide.com/producers/1143/bodega-san-isidro",
+    "https://spiritsanddistilling.com/dictionary/id/acref-9780199311132-e-94"
+   ]
+  },
+  {
+   "key": "barsol",
+   "field": "story",
+   "was": "It had lain idle for decades",
+   "now": "It had lain idle since 1968",
+   "why": "the importer dates the closure to 1968 and Distiller counts 34 idle years before 2002",
+   "sources": [
+    "https://www.hotalingandco.com/portfolio/barsol/",
+    "https://distiller.com/spirits/barsol-pisco-quebranta"
+   ]
+  },
+  {
+   "key": "barsol",
+   "field": "story",
+   "was": "They called the pisco BarSol, and by 2005",
+   "now": "They called the pisco BarSol, for the sun of Ica and the bars of the world, as the house tells it, and by 2005",
+   "why": "the name's meaning is the house's own account, repeated by Difford's Guide",
+   "sources": [
+    "https://www.diffordsguide.com/producers/1143/bodega-san-isidro"
+   ]
+  },
+  {
+   "key": "barsol",
+   "field": "bottle.taste",
+   "was": "then cream and cocoa on the palate, and a round, long finish",
+   "now": "with dried fruit, pastry, fresh cream and cacao and a touch of citrus; tasters also find hay, green grape and biscuit",
+   "why": "the importer's note puts cream and cacao on the nose and gives no finish; Difford's adds hay, green grape and biscuit",
+   "sources": [
+    "https://shop.hotalingandco.com/products/barsol-puro-quebranta-pisco",
+    "https://www.diffordsguide.com/beer-wine-spirits/527/barsol-quebranta-pisco"
+   ]
+  },
+  {
+   "key": "barsol",
+   "field": "others[1].note",
+   "was": "bottled at 41.8 per cent",
+   "now": "no strength given",
+   "why": "41.8 per cent was found in no source read",
+   "sources": [
+    "https://www.diffordsguide.com/en-au/beer-wine-spirits/5123/barsol-mosto-verde-quebranta-pisco"
+   ]
+  },
+  {
+   "key": "macchu-pisco",
+   "field": "story, quiz[1].explain, sources",
+   "was": "The house filed American trade marks for both names in 2017.",
+   "now": "Peru had made pisco its denomination of origin in 1990, binding it to the grapes, the single distillation and the rest without wood.",
+   "why": "a filing teaches nothing behind a bar; the denomination of 1990 keeps two years in the story and stands in IPONZ's register and El Peruano",
+   "sources": [
+    "https://www.iponz.govt.nz/get-ip/geographical-indications/register/pisco/",
+    "https://www.elperuano.pe/noticia/288628-indecopi-presenta-libro-digital-del-pisco-primera-denominacion-de-origen-del-peru"
+   ]
+  },
+  {
+   "key": "macchu-pisco",
+   "field": "story",
+   "was": "rested a year in vessels that give it nothing, as Peru's rules require ... Two siblings followed the plain bottling",
+   "now": "rested a year, by the house's account, in vessels that give it nothing ... Two other bottlings show",
+   "why": "Peru requires a rest, not a year; the year is the house's; the order of release was not confirmed",
+   "sources": [
+    "https://macchupisco.com/mp/",
+    "https://distiller.com/spirits/macchu-pisco"
+   ]
+  },
+  {
+   "key": "macchu-pisco",
+   "field": "cards[1]",
+   "was": "In which year was Macchu Pisco founded, and by whom?",
+   "now": "In which year was Macchu Pisco founded?",
+   "why": "a card asks one thing; the sisters stay in the answer",
+   "sources": [
+    "https://macchupisco.com/main/"
+   ]
+  },
+  {
+   "key": "capel",
+   "field": "story, cards[1].answer, quiz[1].explain",
+   "was": "In 1964 a reform of its statutes gave it the name Cooperativa Agrícola Pisquera Elqui, whose initials make Capel, and the Pisco Capel brand was launched that year.",
+   "now": "Its name, Capel, is made of the initials of Cooperativa Agrícola Pisquera Elqui.",
+   "why": "the cooperative's history gives its legal standing of 1939 under that name, and no source read gives 1964",
+   "sources": [
+    "https://www.cooperativacapel.cl/nosotros/historia"
+   ]
+  },
+  {
+   "key": "capel",
+   "field": "story",
+   "was": "growers of the Elqui Valley, hit by the Depression and by more grapes than they could sell ... In 1967, with help from the state, it bought a distillery at Vicuña",
+   "now": "twenty-five growers of the Elqui Valley ... By the cooperative's account it later bought a distillery at Vicuña",
+   "why": "the Depression, the glut, the state's help and the year 1967 were found in no source read; the 25 founders are the cooperative's own",
+   "sources": [
+    "https://www.cooperativacapel.cl/nosotros/historia"
+   ]
+  },
+  {
+   "key": "capel",
+   "field": "story, bottle.label[0].means",
+   "was": "with Reservado at 40 per cent and above",
+   "now": "Corriente from 30 per cent, Especial from 35, Reservado from 40 and Gran Pisco from 43",
+   "why": "the decree sets minimums, and a pisco of 43 per cent or more is Gran Pisco, not Reservado",
+   "sources": [
+    "https://www.sag.cl/sites/default/files/decreto_ndeg_521.pdf",
+    "https://www.wipo.int/wipolex/en/legislation/details/10766"
+   ]
+  },
+  {
+   "key": "capel",
+   "field": "bottle.taste",
+   "was": "tasters find fresh grape, white flowers, a little stone fruit and a dry finish",
+   "now": "tasters often find fresh grape, white flowers and a little stone fruit",
+   "why": "no source gives the dry finish; the rest is tasters', hedged",
+   "sources": [
+    "https://www.piscocapel.cl/pisco/capel-40-doble-destilado-reservado-transparente/",
+    "https://distiller.com/spirits/capel-double-distillation-transparente-pisco"
+   ]
+  },
+  {
+   "key": "el-gobernador",
+   "field": "story",
+   "was": "stays Chilean in its muscat perfume and its grade",
+   "now": "stays Chilean in its region and its grade",
+   "why": "Peru makes muscat and Italia piscos too, so the perfume does not mark Chile",
+   "sources": [
+    "https://www.diffordsguide.com/encyclopedia/550/bws/peruvian-pisco"
+   ]
+  }
+ ],
+ "open": [
+  "pisco-porton: the year the Caravedo name reached American shelves is undated (2016 by one design studio, after the 2017 cancellation by the trade mark record); the still type and the brand's first release were not found.",
+  "barsol: the bodega's founding (the 1800s, or 1919 in the archives) stays out; exports by 2005 rest on the house through its importer and Difford's Guide.",
+  "macchu-pisco: no label was read for the strength (40 per cent in the United States by three sources, 44 by Canada's provincial board); the distillery stays unnamed.",
+  "capel: the year of the Vicuña plant and the year the name Capel was first used were not confirmed; the taste has no producer's note.",
+  "el-gobernador: the governor's dates were not found, so he stays described; the launch year of 2012 stays the house's account and out of the year field."
+ ],
+ "living": [
+  "Met in sources and named in no record, not yet in people.json, for the integrator: Johnny Schuler (master distiller of La Caravedo); Carlos Ferreyros, Carlos Ferreyros S., Diego Loret de Mola and Alfredo Mendiola Martinez (BarSol); Melanie Asher and Lizzie Asher (Macchu Pisco, with the shop form da Silva the author lists); Claudio Escobar (Capel's general manager, in a news title); and, as writers of pages met, François Monti, Martha Engel and Sergio Peña Álvarez.",
+  "Already in people.json: Miguel Torres Maczassek and Miguel A. Torres.",
+  "The dead met: Juan Torres Casals (1865 to 1932 on one Torres page, so described as the family) and Felipe Margutt Donaire, governor of Ovalle, whose dates were found nowhere; neither is named in the records."
+ ],
+ "swaps": [
+  "capel, bottling: the author's proposal to change the flagship from Capel Reservado to Capel Doble Destilado Reservado Transparente is agreed. The cooperative's own product page names it Capel 40 Doble Destilado Reservado Transparente, a second Reservado (de Guarda, in oak) stands beside it, so Capel Reservado alone names two bottles, and the record is already written for the Transparente and lints under either flagship. For the read-together agent to apply in plan.json: { \"kind\": \"bottling\", \"key\": \"capel\", \"from\": \"Capel Reservado\", \"to\": \"Capel Doble Destilado Reservado Transparente\", \"why\": \"The cooperative makes two Reservado bottlings at 40 per cent; the clear Transparente, in steel, is the record's and its own page's name.\", \"agreed\": true, \"date\": \"2026-11-23\" }.",
+  "barsol, bottling: the author's proposal of BarSol Puro Quebranta Pisco for BarSol Primero Quebranta is refused for now, though the facts favour it: the house, its importer and a release of July 2026 print Puro Quebranta. The lint holds bottle.name to every word of the roster's flagship, so the record cannot be rewritten for the new name until plan.json changes; shops in several markets still print Primero, and the record teaches Puro Quebranta in others and the story. The read-together agent may apply the swap and the new bottle.name together.",
+  "pisco-porton, bottling: the author's conditional proposal of Caravedo Mosto Verde is refused for now: the owner's market is not known, the distillery's own Peruvian pages print Pisco Portón, and the change would rename the pick's label, not only its bottling. The record teaches Caravedo in a card, a trap and others.",
+  "No other swap proposed or made."
+ ],
+ "tension": [
+  "plan.json, capel why: says the cooperative was formed at Vicuña and that its pisco is made from muscat grapes, and counts its members as now over a thousand; it was formed at Paihuano, the Transparente is Pedro Jiménez, and a count of members ages. Reported, not edited.",
+  "plan.json, pisco-porton why: says the Mosto Verde is an acholado; the house makes seven single grape mosto verdes beside the acholado, which is why the record names the Acholado. Reported, not edited.",
+  "The Library (Caravedo / Pisco Porton): calls Peru's pisco rules the strictest anywhere, a judgement; says the old stone fermentation vats remain in use, found in no source; and spells flavor in the American way. Reported, not edited.",
+  "The liquor shelf, El Gobernador: names Felipe Margutt Donaire with no dates, which the brief's rule for the dead does not allow, and says Reservado means 40% ABV where the decree makes 40 the minimum, below Gran Pisco at 43. Reported, not edited."
+ ]
+}

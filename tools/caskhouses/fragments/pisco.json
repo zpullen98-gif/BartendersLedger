@@ -134,7 +134,20 @@
     "Living people met in searches and named nowhere: Johnny Schuler, the master distiller. My task names only this fragment, so people.json was not touched: the integrator should add the name.",
     "Peru's rules (one distillation, no water, no wood, a rest of at least three months in neutral vessels) are taken from the liquor shelf's El Gobernador record and the Library, both of this repo, and agree with PromPerú and Difford's Guide; the three year rest is the distillery's own figure."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-23",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.wood: the three years of rest cut: the distillery gives it on a product sheet for one vintage, not as the bottling's rule; the rest in vessels that give no flavour stands.",
+     "bottle.taste and table: roses, mandarin, lime, raisin and lemon verbena were found in no source; now the house's own note (a floral nose over sweet ripe fruit, a sweet, dense palate, a floral, herbal finish) and the orange blossom, citrus, cinnamon and white pepper that tasters and a trade note give.",
+     "story: 'while in Peru the bottle kept the Portón name' cut as a present state that Spirits Hunters contradicts (a rename announced for every market); Caravedo now told as the distillery's own name. The range 'comes in' seven single grapes now 'was made in'; the closing 'aromatic grapes' now 'a blend of grapes', since Quebranta is non aromatic."
+    ],
+    "open": [
+     "story: the year Caravedo reached American shelves was not dated (2016 by one design studio, after 2017 by the trade mark record); the record gives no year for it.",
+     "bottle.taste: no producer's tasting sheet was read whole; the floral and herbal finish is the house's, the rest is tasters'."
+    ]
+   }
   },
   {
    "key": "barsol",
@@ -272,7 +285,21 @@
     "Living people met in searches and named nowhere: Carlos Ferreyros and Diego Loret de Mola, who bought the bodega in 2002, and Alfredo Mendiola Martinez, named by the importer as master distiller. people.json was not touched, since my task names only this fragment: the integrator should add them.",
     "Nothing in this repo's pages names BarSol, so there is nothing to disagree with."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-23",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story, cards[1], quiz[1]: 'two Peruvian partners' now 'a group of investors based in the United States', as Difford's Guide and Distiller give the buyers of 2002; the card and the stem now say the bodega was taken on, not who bought it.",
+     "story: 'idle for decades' now 'idle since 1968': the importer dates the closure to 1968 and Distiller counts 34 idle years before 2002. The name's meaning, the sun of Ica and the bars of the world, added as the house tells it.",
+     "bottle.taste: 'cream and cocoa on the palate' and 'a round, long finish' are not in the importer's note, which puts cream and cacao on the nose; now the importer's note with Difford's hay, green grape and biscuit.",
+     "others: BarSol Mosto Verde Quebranta's 41.8 per cent cut, found in no source read."
+    ],
+    "open": [
+     "bottle.name: the house and its importer print Puro Quebranta (a 2l Puro Quebranta was announced in July 2026), and the roster's Primero is the older label; see the swap ruling in the review.",
+     "story: going abroad by 2005 rests on the importer's release and Difford's Guide, both drawn from the house."
+    ]
+   }
   },
   {
    "key": "macchu-pisco",
@@ -406,7 +433,21 @@
     "Left out for want of a source: foot pressing (no source for this house), the pounds of grapes a bottle (10 or 16 by account), La Diablada's grapes and its claim to be a vintage pisco, and the founder's business school story (one source).",
     "The year 2006 rests on the house's own page, with Good Spirits News, a writer's site, and a shop profile agreeing; the refuter may want a second independent account."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-23",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: the American trade marks of 2017 cut as a beat that teaches nothing behind a bar; Peru's denomination of origin of 1990 added (IPONZ's register and El Peruano give Resolución Directoral 072087 of 12 December 1990), so the story keeps two years.",
+     "story: 'as Peru's rules require' after the year's rest cut, since the rules ask a rest, not a year; the year now told as the house's account. 'Two siblings followed' now 'two other bottlings show', since the order of release was not confirmed.",
+     "cards[1]: the prompt asked the year and the founders at once; now the year alone, the sisters in the answer. quiz[1]: the explain no longer leans on the trade marks.",
+     "sources: the Justia trade mark list replaced by IPONZ's register of the Pisco geographical indication."
+    ],
+    "open": [
+     "bottle.strength: 40 per cent (80 proof) by Spirits Review, Distiller and an Australian shop; Canada's provincial board lists 44 and Difford's a distillate of about 42. No label was read.",
+     "bottle.taste: the house's own note gives earthiness and a quick finish; one shop gives marzipan and raisin bread. The house's words stand."
+    ]
+   }
   },
   {
    "key": "capel",
@@ -428,7 +469,7 @@
     "still": "Distilled by the cooperative in a copper alembic run in batches, then distilled a second time, as Doble Destilado on the label says.",
     "wood": "No wood: by the cooperative's page it rests a year in stainless steel vats, and it stays clear, as Transparente says. No age statement.",
     "strength": "40% ABV",
-    "taste": "Light and clean: the cooperative makes it from a neutral grape for mixing with citrus, and tasters find fresh grape, white flowers, a little stone fruit and a dry finish.",
+    "taste": "Light and clean: the cooperative makes it from Pedro Jiménez, a grape it chooses for its neutral character, for mixing with citrus; tasters often find fresh grape, white flowers and a little stone fruit.",
     "pour": "Long with cola over ice as a Piscola, Chile's own highball, or shaken with lemon and sugar in a Pisco Sour.",
     "label": [
      {
@@ -540,7 +581,21 @@
     "The taste is the record's weakest field: the cooperative calls the grape neutral and the pisco made for citrus, and the rest rests on Distiller's tasters and a shop's note. The refuter may cut it to the cooperative's words.",
     "The count of members (over 1,000 on the cooperative's institutional page, over 800 in a 2026 news item) and any export figure are left out as facts that age. Nothing in this repo's pages names Capel; the liquor shelf's El Gobernador record says Reservado means 40 per cent, which agrees."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-23",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story, cards[1], quiz[1]: the 1964 reform that took the name Capel cut: the cooperative's own history gives the legal standing of 1939 under the name Cooperativa Agrícola Pisquera Elqui, and no source read gives 1964; the name is now told as the initials alone, and the explain no longer cites 1964.",
+     "story: the Depression and the glut of grapes cut, found in no source read; the 25 founders added from the cooperative's own history. The purchase at Vicuña kept without its year of 1967 and without the state's help, neither confirmed.",
+     "story and label: Reservado now from 40 per cent and below Gran Pisco at 43, with Corriente at 30 and Especial at 35, as Decree 521 of 1999 sets the minimums; 'two of the three' freedoms replaced by the label's double distillation.",
+     "bottle.taste: the dry finish cut, found in no source; the cooperative's neutral grape for citrus kept, and the tasters' notes hedged with often."
+    ],
+    "open": [
+     "story: the year Capel bought its Vicuña plant (1967 by the author) was not confirmed in the searches made.",
+     "bottle.taste: no producer's tasting note exists on the pages read; the fruit and flowers rest on tasters. One shop sells an export Capel Reservado as Pedro Jiménez, Torontel and Moscatel; it is not this bottling."
+    ]
+   }
   },
   {
    "key": "el-gobernador",
@@ -670,7 +725,17 @@
     "The Torres family member who created the pisco is living and named nowhere; Miguel Torres Maczassek and Miguel A. Torres already stand in people.json. Juan Torres Casals (1865 to 1932 on the house's blog) is described as the family, since his dates stand in one source only.",
     "Torres 10 in others rests on the Torres page for that brandy: Penedès, American oak and the solera method; its age is not stated and is not given."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-23",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: 'stays Chilean in its muscat perfume' now 'in its region': Peru makes muscat and Italia piscos too, so the perfume is no mark of Chile."
+    ],
+    "open": [
+     "story: the governor's own dates were not found (a museum paper of 2026 places him among two former officers of Napoleon serving Ovalle from 1831 to 1848, and a Swedish listing makes him governor in 1843); he stays described, not named."
+    ]
+   }
   }
  ]
 }
