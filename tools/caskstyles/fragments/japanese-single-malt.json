@@ -26,7 +26,7 @@
     { "q": "Why does one Japanese distillery make so many styles?", "a": "Japanese companies seldom trade spirit with one another, so a distillery runs stills of different shapes, more than one fermentation and many cask types to give its own blenders a range." }
   ],
   "compare": "Against a Japanese blended whisky: a single malt is malted barley alone from one distillery's pot stills, while a blend marries malt whiskies with lighter grain whisky from column stills, often from several distilleries of one company. The malt is usually fuller and shows its house; the blend usually reads lighter and rounder.",
-  "benchmarks": ["Yamazaki", "Hakushu", "Yoichi", "Miyagikyo", "Chichibu", "Mars Shinshu"],
+  "benchmarks": ["Yamazaki", "Hakushu", "Yoichi", "Miyagikyo", "Chichibu", "Mars Komagatake"],
   "shelf": [],
   "chapters": ["japanese"],
   "canon": ["whiskey-highball"],

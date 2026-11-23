@@ -26,7 +26,7 @@
     { "q": "Why isn't Islay one of the Islands?", "a": "Because the law names it. Islay is a protected locality of its own, so its whiskies carry Islay; the other islands have no protected name and are Highland in law." }
   ],
   "compare": "Against Islay: Islay is a protected locality whose name means distilled on that island, while the Islands are an informal group, Highland in law. Most Islay houses peat their malt; island malts range from unpeated honey and fruit at Arran and Scapa to peppery smoke at Talisker.",
-  "benchmarks": ["Highland Park", "Talisker", "Scapa", "Isle of Jura", "Arran", "Tobermory"],
+  "benchmarks": ["Highland Park", "Talisker", "Scapa", "Jura", "Arran", "Tobermory"],
   "shelf": [],
   "chapters": ["scotch-regions"],
   "canon": ["whiskey-highball", "hot-toddy", "rusty-nail"],
@@ -54,7 +54,7 @@
     },
     {
       "id": "q3",
-      "q": "In which year did Hugh and Kenneth MacAskill found Talisker on Skye?",
+      "q": "In which year did the MacAskill brothers found Talisker on Skye?",
       "options": ["1830", "1798", "1885", "1995"],
       "a": 0,
       "explain": "1830, by most accounts, at Carbost on Skye; one account gives 1831 for the opening."
