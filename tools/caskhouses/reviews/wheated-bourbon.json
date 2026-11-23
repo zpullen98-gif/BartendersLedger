@@ -219,5 +219,47 @@
    "A designer named in Heaven Hill's Old Fitzgerald backgammon set release title: added to people.json.",
    "Heaven Hill's family chairman and the Van Winkle granddaughter and writer met in search results: already in people.json."
   ]
+ },
+ "settled": {
+  "date": "2026-11-23",
+  "by": "label settler",
+  "searches": 1,
+  "tested": [
+   "larceny: the others entry against the group's own roster, which now holds Old Fitzgerald as a pick with the 7 Year Old Bottled-in-Bond as its flagship; no search needed.",
+   "larceny: the open label question of an age statement, Aged 6 Years in one shop listing against none at Difford's, Breaking Bourbon and a Yahoo Style piece, and Heaven Hill's 2024 packaging release, which speaks only of a six year old taste profile. 1 search; not settled."
+  ],
+  "changed": [
+   {
+    "key": "larceny",
+    "field": "others[1]",
+    "was": "Old Fitzgerald Bottled-in-Bond: Heaven Hill's older wheated label, the one the Larceny story is drawn from.",
+    "now": "Old Fitzgerald 7 Year Old Bottled-in-Bond: Heaven Hill's older wheated label and Larceny's neighbour in this group, the label whose legend gave Larceny its name.",
+    "why": "the two records of one group named the one bottling two ways; the roster's Old Fitzgerald flagship, agreed in the swap of 2026-11-22, is the 7 Year Old Bottled-in-Bond",
+    "sources": []
+   },
+   {
+    "key": "larceny",
+    "field": "checked.open[0]",
+    "was": "a current label should be read before an age is added",
+    "now": "the same question, with the search of 2026-11-23 and its findings added",
+    "why": "the search did not settle it",
+    "sources": [
+     "https://heavenhill.com/news-and-notes/larceny-kentucky-straight-bourbon-whiskey-launches-new-packaging-seize-tonight-campaign/",
+     "https://www.diffordsguide.com/beer-wine-spirits/spirits/whiskey/BWS005448/larceny-small-batch",
+     "https://breakingbourbon.com/review/larceny-bourbon"
+    ]
+   },
+   {
+    "key": "old-fitzgerald",
+    "field": "report",
+    "was": "the integrator may wish to drop or reword that entry",
+    "now": "on 2026-11-23 it was set to Old Fitzgerald 7 Year Old Bottled-in-Bond, this record's flagship",
+    "why": "the entry was reworded",
+    "sources": []
+   }
+  ],
+  "open": [
+   "larceny: whether the Small Batch label prints Aged 6 Years; only a bottle or a producer page that shows the label settles it."
+  ]
  }
 }

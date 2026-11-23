@@ -499,8 +499,8 @@
      "note": "The same wheated recipe bottled uncut in batches, its strength changing with each."
     },
     {
-     "name": "Old Fitzgerald Bottled-in-Bond",
-     "note": "Heaven Hill's older wheated label, the one the Larceny story is drawn from."
+     "name": "Old Fitzgerald 7 Year Old Bottled-in-Bond",
+     "note": "Heaven Hill's older wheated label and Larceny's neighbour in this group, the label whose legend gave Larceny its name."
     }
    ],
    "traps": [
@@ -601,10 +601,11 @@
      "bottle.still: was where the house makes all of its wheated bourbon; Heaven Hill announced in 2022 a return to distilling at Bardstown, so the claim may not hold, and now the line says only Bernheim, by the house's account.",
      "bottle.wood: was open rick warehouses in Nelson County, which no source read gave; now the launch release's barrels of six to twelve years from the upper rickhouse floors, the later six year old taste profile, and no age statement confirmed.",
      "bottle.label[Small Batch]: was 200 barrels or fewer; the launch release gives 100 or fewer and a later one 200 or fewer, and now both are said.",
-     "table: was Heaven Hill's wheated bourbon, a possessive that names the owner; now made by Heaven Hill in Louisville, and the second sentence shortened to stay within fifty words."
+     "table: was Heaven Hill's wheated bourbon, a possessive that names the owner; now made by Heaven Hill in Louisville, and the second sentence shortened to stay within fifty words.",
+     "others[1]: was Old Fitzgerald Bottled-in-Bond; the group's Old Fitzgerald pick is now the 7 Year Old Bottled-in-Bond, so the name agrees with it and the note calls it Larceny's neighbour here (label settler, 2026-11-23, no search)."
     ],
     "open": [
-     "bottle.wood and label: a shop listing reads Larceny Aged 6 Years Small Batch while Distiller and Breaking Bourbon list no age statement; a current label should be read before an age is added.",
+     "bottle.wood and label: a shop listing reads Larceny Aged 6 Years Small Batch while Distiller, Breaking Bourbon and Difford's list no age statement, and Heaven Hill's 2024 packaging release speaks only of a six year old taste profile (searched again on 2026-11-23, unsettled); a current label should be read before an age is added.",
      "sources: the John E. Fitzgerald legend rests on the brand's own pages; it is told as a legend throughout."
     ]
    }
@@ -740,7 +741,7 @@
     "The merchant who first sold the whiskey is Solomon Charles Herbst in Wikipedia and Heaven Hill's timeline, but no two sources give his death, so he is described and not named; the year he registered the name is 1884 or 1901 by Heaven Hill's own pages and is left out, as is the year 1933 for the sale to the Stitzel-Weller partners, which the two sources read attach to different events.",
     "Left out for want of a source: the sum paid for the name after Prohibition (excluded by the voice in any case), the drinks companies between 1972 and 1999 by name (Wikipedia's chain is garbled), the still type at Bernheim, and the warehouse the barrels age in.",
     "Bernheim as the still: Heaven Hill says its wheated bourbon has been made there continually since 1999, and a seven year old of 2025 was distilled about 2018, before the return to Bardstown announced in 2022 that the Larceny refuter met.",
-    "Larceny's record in this group lists Old Fitzgerald Bottled-in-Bond under others, as Heaven Hill's older wheated label; with Old Fitzgerald now its neighbour here, the integrator may wish to drop or reword that entry. Larceny's story also tells the Old Fitzgerald history from Pappy to the 1999 sale, so this story opens on 1870 and tells the later years briefly.",
+    "Larceny's record in this group named Old Fitzgerald Bottled-in-Bond under others; on 2026-11-23 it was set to Old Fitzgerald 7 Year Old Bottled-in-Bond, this record's flagship, and called its neighbour here. Larceny's story also tells the Old Fitzgerald history from Pappy to the 1999 sale, so this story opens on 1870 and tells the later years briefly.",
     "No living person is named. The tasting words are Heaven Hill's own; three reviews read through search agree on honey, cinnamon and oak. The label term Kentucky Straight Bourbon Whiskey rests on retail listings of the bottle and on the class of a bonded bourbon of seven years; Heaven Hill's release names Bottled-in-Bond and Your Key to Hospitality on the label."
    ],
    "checked": {
@@ -748,7 +749,8 @@
     "by": "refuter",
     "verdict": "changed",
     "changed": [
-     "story: was 'As Prohibition ended the name passed to Julian Pappy Van Winkle and his partners'; now during Prohibition, in 1925 by Heaven Hill's account, the name was sold to W. L. Weller and Sons, the firm of Julian Pappy Van Winkle (1874 to 1965) and his partners. Heaven Hill's timeline gives the sale to Weller in 1925 and Wikipedia places it during Prohibition, which ended only in 1933; Pappy now carries his dates where the story first meets him, as the brief asks."
+     "story: was 'As Prohibition ended the name passed to Julian Pappy Van Winkle and his partners'; now during Prohibition, in 1925 by Heaven Hill's account, the name was sold to W. L. Weller and Sons, the firm of Julian Pappy Van Winkle (1874 to 1965) and his partners. Heaven Hill's timeline gives the sale to Weller in 1925 and Wikipedia places it during Prohibition, which ended only in 1933; Pappy now carries his dates where the story first meets him, as the brief asks.",
+     "report: the note asking the integrator to reword Larceny's others entry now says it was set to this record's flagship on 2026-11-23 (label settler, no search)."
     ],
     "open": [
      "bottle.name: Heaven Hill writes 7-Year-Old and retail listings Aged 7 Years; no bottle was read, so the record keeps the producer's words.",
