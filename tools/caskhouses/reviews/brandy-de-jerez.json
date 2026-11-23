@@ -1,0 +1,248 @@
+{
+ "group": "brandy-de-jerez",
+ "chunk": "c11",
+ "date": "2026-11-23",
+ "by": "refuter",
+ "searches": 25,
+ "tested": [
+  "The law: the council's three grades by average age (Solera six months, Solera Reserva one year, Solera Gran Reserva three years, with their volatile minimums), the holandas defined as wine spirit of no more than 70 per cent that may stand alone or beside stronger wine spirits, and 27 CFR 5.145's floor of 80 proof for brandy in the United States. 3 searches.",
+  "fundador: 1874 and Pedro Domecq Loustau, the first Brandy de Jerez as the house's claim, the American name Sherry Cask Solera Reserva and its 40 per cent, the Spanish Fundador Solera, González Byass USA as the American importer and the Las Copas venture, Triple Madera's three casks and grade, the grapes (named by no producer), the house's tasting words. 7 searches.",
+  "cardenal-mendoza: the bodega's sheet (holandas, oloroso and Pedro Ximénez casks, fifteen years on average, 40 per cent, 1887 and the fourth generation), 1781 and the founder, Carta Real's age, the cardinal's death, see and offices in Britannica. 4 searches.",
+  "lepanto: 1951 on the house's page and a Spanish source, Palomino Fino, the two Charentais stills at Los Arcos, nine years in Tío Pepe casks and three in Matusalem, 36 per cent, the 'only' claim, 1835 and the date of the English partnership. 3 searches.",
+  "carlos-i: the 2008 purchase from Pernod Ricard España with Carlos III and Felipe II, the legend of 1889 on Osborne's own page, sixteen scales and twelve years in Osborne's report of 2020, the 1520's three soleras and 41.1 per cent, the Imperial's grade, tasters' notes, Osborne's 1772 against its own history page and Sherry Notes. 7 searches, one of them refused by the search tool for its domains.",
+  "gran-duque-d-alba: 1945 and the agent's friendship with the seventeenth duke, the duke's own proposal of his ancestor, Palomino and Airén, pot stills, oloroso casks, twelve and ten years both on the house's pages, the XO's fifteen, the spellings d'Alba and de Alba, the bottle of 1973 and the redesigns of 2014 and 2021. 2 searches.",
+  "25 of the 28 searches spent, one of them refused; 3 left unused.",
+  "Cards and questions of all five: one right answer each, wrong options of one kind, keys at positions 0, 1, 1, 3, 0, 3, 1, 0, 0, 2 (no position more than four times), each explain naming the nearest wrong option; the lint finds no length clue. No card id changed. Cardenal Mendoza's q2 explain now gives the chancellorship."
+ ],
+ "changed": [
+  {
+   "key": "fundador",
+   "field": "bottle.name, bottle.label",
+   "was": "Fundador Solera Reserva Brandy de Jerez",
+   "now": "Fundador Sherry Cask Solera Reserva Brandy de Jerez, with Sherry Cask a label term of no legal grade",
+   "why": "the importer's American page is titled Fundador Sherry Cask, the American label of 2022 and American shops print Sherry Cask Solera Reserva; the author asked for this",
+   "sources": [
+    "https://www.gonzalezbyass.com/en/wineries-brands/fundador",
+    "https://www.bevindustry.com/articles/94977-fundador-sherry-cask-solera-reserva-brandy-unveils-new-label-bottle",
+    "https://www.publix.com/pd/fundador-solera-reserva-sherry-cask-brandy-de-jerez/RIO-PCI-163176"
+   ]
+  },
+  {
+   "key": "fundador",
+   "field": "bottle.mash",
+   "was": "the trade gives the grapes as Airén and Palomino",
+   "now": "The bodega's pages read name no grape variety.",
+   "why": "the grapes rest on shops only, and the importer's page names none",
+   "sources": [
+    "https://www.gonzalezbyass.com/en/wineries-brands/fundador"
+   ]
+  },
+  {
+   "key": "fundador",
+   "field": "bottle.still",
+   "was": "the younger grades may carry stronger spirit beside it",
+   "now": "Brandy de Jerez is made from holandas, wine spirit distilled to no more than 70 per cent, alone or with stronger wine spirits",
+   "why": "the council's own leaflet lets holandas stand alone or beside other wine spirits and ties no blend to a grade",
+   "sources": [
+    "https://www.brandydejerez.es/wp-content/uploads/2024/10/bj-folla4parawebespp.pdf",
+    "https://www.brandydejerez.es/en/our-philosophy/the-production-process/"
+   ]
+  },
+  {
+   "key": "fundador",
+   "field": "others",
+   "was": "Fundador Doble Madera, aged in casks that held amontillado and oloroso, sold in Europe at 36 per cent",
+   "now": "cut; Triple Madera kept, aged in turn in amontillado, oloroso and Pedro Ximénez casks",
+   "why": "Doble Madera's casks and strength were found in no source read; Triple Madera's casks and grade stand on the importer's sheet and BevNET",
+   "sources": [
+    "https://www.gonzalezbyass.com/sites/www.gonzalezbyass.com/files/2026-07/Fundador%20SC%20Triple%20Madera%20SS.pdf",
+    "https://www.bevnet.com/spirits/2023/introducing-fundador-triple-madera-sherry-cask-solera-gran-reserva"
+   ]
+  },
+  {
+   "key": "fundador",
+   "field": "traps",
+   "was": "Fundador's American pages are González Byass's ... ; Bottles for Spain and Britain read Fundador Solera at 36 per cent",
+   "now": "the importer trap cut; Bottles for Spain read Fundador Solera, the young grade of six months on average; the American bottle is the Solera Reserva, at 40 per cent",
+   "why": "an importer is a present state that will not hold; the Spanish bottle is a different grade, not only a different strength, and its 36 per cent was not confirmed here",
+   "sources": [
+    "https://www.elcorteingles.es/supermercado/B001018725301230-fundador-brandy-solera-do-jerez-sherry-botella-70-cl/",
+    "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-I/section-5.145"
+   ]
+  },
+  {
+   "key": "fundador",
+   "field": "sources",
+   "was": "Inquirer: Emperador completes deal with Fundador; eCFR Part 5 Subpart I",
+   "now": "El Corte Inglés: Fundador Solera, the Spanish bottle (a label term only); eCFR: 27 CFR 5.145, Brandy",
+   "why": "the 2016 sale stands on Emperador's own release, and the trap needs the Spanish label and the section itself",
+   "sources": [
+    "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-I/section-5.145"
+   ]
+  },
+  {
+   "key": "cardenal-mendoza, lepanto, carlos-i, gran-duque-d-alba",
+   "field": "bottle.label (Solera Gran Reserva)",
+   "was": "The senior grade of Brandy de Jerez: holandas alone, and an average age of at least three years.",
+   "now": "The senior grade of Brandy de Jerez: an average age of at least three years in the solera.",
+   "why": "the council sets the grade by average age and volatile content; its leaflet lets holandas be blended with other wine spirits, and one council article's 100 per cent holandas for the grade was not borne out by the specification",
+   "sources": [
+    "https://www.brandydejerez.es/wp-content/uploads/2024/10/bj-folla4parawebespp.pdf",
+    "https://www.brandydejerez.es/en/our-philosophy/the-production-process/"
+   ]
+  },
+  {
+   "key": "cardenal-mendoza",
+   "field": "bottle.still, story",
+   "was": "Made from holandas alone, as the Gran Reserva grade requires; It is made from holandas alone",
+   "now": "Made from holandas ... by the bodega's account; It is made from holandas, by the house's account",
+   "why": "the holandas are the bodega's claim for its own brandy, not a rule of the grade",
+   "sources": [
+    "https://www.romate.com/en/product/cardenal-mendoza-clasico/",
+    "https://www.brandydejerez.es/wp-content/uploads/2024/10/bj-folla4parawebespp.pdf"
+   ]
+  },
+  {
+   "key": "cardenal-mendoza",
+   "field": "story, quiz[1].explain",
+   "was": "presided over the royal council of Isabella and Ferdinand and was called in his day the third king",
+   "now": "chancellor of Castile under Isabella and Ferdinand, who was called in his day the third king of Spain",
+   "why": "Britannica gives the chancellorship of Castile (from Henry IV, confirmed by Isabella in 1474) and the nickname; no source read gives the presidency of the council",
+   "sources": [
+    "https://www.britannica.com/biography/Pedro-Cardinal-Gonzalez-de-Mendoza"
+   ]
+  },
+  {
+   "key": "lepanto",
+   "field": "story",
+   "was": "an English partner, whose name the house carries, joined soon after",
+   "now": "an English agent, whose name the house carries, later became his partner",
+   "why": "sources give 1844, 1855 and 1885 for the partnership; the agent's role is common to all",
+   "sources": [
+    "https://www.gonzalezbyass.com/en-gb/discovergonzalezbyass",
+    "https://en.wikipedia.org/wiki/Gonz%C3%A1lez_Byass"
+   ]
+  },
+  {
+   "key": "lepanto",
+   "field": "bottle.wood",
+   "was": "American oak casks that held Tío Pepe fino and then oloroso; the bodega gives an average of twelve years",
+   "now": "nine years in casks that held Tío Pepe fino, then three in casks that held Matusalem, a sweet oloroso; twelve in all",
+   "why": "González Byass's Spanish site and its Tío Pepe shop give the nine and three",
+   "sources": [
+    "https://www.tiopepe.com/es-es/productos/lepanto-gran-reserva",
+    "https://www.gonzalezbyass.com/es/noticias/lepanto-jerez-en-estado-puro"
+   ]
+  },
+  {
+   "key": "carlos-i",
+   "field": "story",
+   "was": "Osborne dates itself to 1772, when, by its own account, a young English merchant founded the business at El Puerto de Santa María",
+   "now": "Osborne dates itself to 1772, the year of a merchants' partnership in Cádiz that the English merchant who founded the Osborne name later joined; the house came to stand at El Puerto de Santa María",
+   "why": "Osborne's own history page gives 1772 to the partnership of James Duff and Jean Haurie and starts Thomas Osborne's timeline in Spain in 1802; Sherry Notes says the same",
+   "sources": [
+    "https://www.osborne.es/en/historia-de-osborne",
+    "https://www.sherrynotes.com/2014/bodegas/osborne/"
+   ]
+  },
+  {
+   "key": "carlos-i",
+   "field": "story",
+   "was": "has a cellar master find forgotten casks in a corner of his bodega; Older bottlings followed; holandas alone",
+   "now": "a cellar master in Jerez; Beside it stand the Imperial XO and the 1520, which joins three Gran Reserva soleras of the house; twelve where the rules ask three",
+   "why": "Osborne's own Carlos I page sets the legend in Jerez; no source gives the order of release; the 1520's three soleras are on Osborne's shop",
+   "sources": [
+    "https://www.osborne.es/carlos-i",
+    "https://www.osborne.es/en/carlos-i-1520-solera-gran-reserva.html"
+   ]
+  },
+  {
+   "key": "carlos-i",
+   "field": "bottle.mash, bottle.still",
+   "was": "Holandas alone, as the Gran Reserva grade requires; the grade allows only holandas",
+   "now": "Wine spirit, distilled from grape wine; Osborne's pages read do not say where or how the spirit of Carlos I is distilled",
+   "why": "the grade does not require holandas alone; Osborne's report says only that it is made from grapes",
+   "sources": [
+    "https://www.brandydejerez.es/wp-content/uploads/2024/10/bj-folla4parawebespp.pdf",
+    "https://api.osborne.es/medias/sys_master/root/h87/hfe/8907082465310/informe-integrado-de-grupo-osborne-consolidado_incluye-estado-de-informacion-no-financiera-2020/informe-integrado-de-grupo-osborne-consolidado-incluye-estado-de-informacion-no-financiera-2020.pdf?attachment=true"
+   ]
+  },
+  {
+   "key": "carlos-i",
+   "field": "bottle.taste, others",
+   "was": "by the trade sheet for the Spanish market; Imperial XO: An older Solera Gran Reserva; 1520: blended from three old soleras",
+   "now": "by the Spanish trade sheet and tasters' notes; Imperial XO: of a solera of its own; 1520: joining the soleras of Carlos I, Carlos I Imperial and Gran Capitán",
+   "why": "a Distiller taster gives the same vanilla and cocoa; Osborne's 1520 page names the Imperial a Gran Reserva solera and no source calls it older; 41.1 per cent on Osborne's shop bears out a little stronger",
+   "sources": [
+    "https://distiller.com/spirits/osborne-carlos-i-solera-gran-reserva-brandy-de-jerez",
+    "https://www.osborne.es/en/carlos-i-1520-solera-gran-reserva.html"
+   ]
+  },
+  {
+   "key": "carlos-i",
+   "field": "sources",
+   "was": "BeverageDaily: Pernod Ricard divests; Wein.plus glossary: Osborne",
+   "now": "Osborne: the history of the house; Osborne: Carlos I",
+   "why": "the 2008 sale stands on the competition authority's file; the founding and the legend are best told from the house's own pages",
+   "sources": [
+    "https://www.osborne.es/en/historia-de-osborne",
+    "https://www.osborne.es/carlos-i"
+   ]
+  },
+  {
+   "key": "gran-duque-d-alba",
+   "field": "bottle.wood, traps[0]",
+   "was": "the bodega gives an average of twelve years, where some trade listings give ten",
+   "now": "the bodega's pages give an average of twelve years on one and ten on another",
+   "why": "a Williams & Humbert page gives ten for the brandy, fifteen for the XO and twenty for the Oro",
+   "sources": [
+    "https://www.williams-humbert.com/en/product/gran-duque-de-alba/",
+    "https://www.williams-humbert.com/en/brands/gran-duque-de-alba/"
+   ]
+  },
+  {
+   "key": "gran-duque-d-alba",
+   "field": "story, traps[2]",
+   "was": "asked leave to name the new brandy for the family ... the bottle carries his title as Gran Duque d'Alba; The house's own pages often spell the name Gran Duque de Alba, while the bottle reads d'Alba; The label reads d'Alba",
+   "now": "asked leave to use his name; the duke proposed an ancestor instead ... the brandy carries his title; the house's own pages spell the name de Alba where its American importer prints d'Alba; the house and its importers print both spellings",
+   "why": "the house tells it that the duke proposed the ancestor; the label was redesigned in 2014 and 2021 and no label was read, so no spelling is pinned to the bottle",
+   "sources": [
+    "https://global.williams-humbert.com/en/gran-duque-de-alba-brandy-gets-a-new-look/",
+    "https://www.palmbay.com/producers/Gran-Duque-dAlba/about"
+   ]
+  },
+  {
+   "key": "gran-duque-d-alba",
+   "field": "story, sources",
+   "was": "An older XO followed in the range; Williams & Humbert: home and history",
+   "now": "An older XO stands beside it. Its bottle of 1973 was the work of a ceramicist, by the house's account; Williams & Humbert: a new look for Gran Duque de Alba",
+   "why": "the order of release is in no source; the house's page on the new look dates the bottle to 1973",
+   "sources": [
+    "https://global.williams-humbert.com/en/gran-duque-de-alba-brandy-gets-a-new-look/"
+   ]
+  }
+ ],
+ "open": [
+  "fundador: where the Solera Reserva is distilled (Tomelloso, or the Las Copas venture in Jerez shared with González Byass) is tied to it by no source; the Spanish Fundador Solera's 36 per cent was not confirmed and is no longer stated.",
+  "cardenal-mendoza: Carta Real's age differs by source (over 25 or about 30 years) and stays out; the founder of 1781 stays described.",
+  "lepanto: 40 per cent for the United States rests on one retailer and the 80 proof floor of 27 CFR 5.145; the stills of the 1960s from Cognac rest on secondary accounts and stay out; 'made wholly in Jerez' stays the house's claim.",
+  "carlos-i: its descent from the Pedro Domecq house rests on Sherry Notes alone and stays out; the tie of the name to the emperor and the bodega where the solera is kept were not confirmed.",
+  "gran-duque-d-alba: the founding of 1877 by two British partners and Dry Sack were not searched again; the third duke stays described; the spelling on the present label is unread."
+ ],
+ "living": [
+  "Met in sources and named in no record, not yet in people.json, for the integrator: Andrew Tan (of Emperador) and Jorge Domecq (of Emperador's Spanish arm), both met by the author.",
+  "The dead met and not named: Pedro Domecq Loustau (the founder of Fundador's name; dates not found in two sources), Manuel María González Ángel and Robert Blake Byass (González Byass), Thomas Osborne Mann, James Duff and Jean Haurie (Osborne), Juan Sánchez de la Torre (Sánchez Romate), Jacobo Fitz-James Stuart y Falcó, seventeenth Duke of Alba, Fernando Álvarez de Toledo, third Duke of Alba, and the ceramicist Antoni Cumella. All are described by their roles in the records."
+ ],
+ "swaps": [
+  "cardenal-mendoza, bottling: the author's proposal is agreed. The bodega's own product page and shop sell it as Cardenal Mendoza Clásico, a Solera Gran Reserva, and the record is already written for it. For the read-together agent to apply in plan.json: { \"kind\": \"bottling\", \"key\": \"cardenal-mendoza\", \"from\": \"Cardenal Mendoza Solera Gran Reserva\", \"to\": \"Cardenal Mendoza Clásico Solera Gran Reserva\", \"why\": \"The bodega sells this bottling as Cardenal Mendoza Clásico, beside its older Carta Real and Non Plus Ultra.\", \"agreed\": true, \"date\": \"2026-11-23\" }.",
+  "fundador, bottling: agreed, on the author's invitation in report and rewritten by the refuter: the American label prints Sherry Cask Solera Reserva, and bottle.name now carries it. For the read-together agent to apply in plan.json: { \"kind\": \"bottling\", \"key\": \"fundador\", \"from\": \"Fundador Solera Reserva\", \"to\": \"Fundador Sherry Cask Solera Reserva\", \"why\": \"The American label and the importer's page name the bottling Fundador Sherry Cask Solera Reserva since 2022.\", \"agreed\": true, \"date\": \"2026-11-23\" }.",
+  "No other swap proposed or made."
+ ],
+ "tension": [
+  "plan.json, cardenal-mendoza note: gives the council's floor for Solera Gran Reserva as an average of ten years; the council gives three. Reported, not edited.",
+  "plan.json, fundador why: calls Fundador the first Brandy de Jerez and the one that brought the solera to brandy as fact; the record tells the first as the house's claim. Reported, not edited.",
+  "plan.json, lepanto why: 'one of the few Brandies de Jerez distilled as well as aged in the town' rests on no count found; the record gives the house's own words as its claim. Reported, not edited.",
+  "plan.json, gran-duque-d-alba why: 'an American bar can readily stock' is a present state of import. Reported, not edited.",
+  "The Ledger's own pages hold nothing on Brandy de Jerez or these five houses (no shelf bottle, Library record, style or Cask Atlas line), so none is in tension."
+ ]
+}
