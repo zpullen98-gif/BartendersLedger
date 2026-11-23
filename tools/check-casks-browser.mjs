@@ -98,7 +98,7 @@ try{
  await page.goto(base+'?nosw&qa=cold#/casks/practice/scotch/quiz');
  ok('cold drill address safely opens chapter practice without inventing an active run',await page.locator('[data-act="cask-start"][data-mode="quiz"]:not([data-s])').isVisible());
  await page.locator('#view [data-act="back"]').click();ok('cold Back opens the chapter parent',page.url().endsWith('#/casks/scotch'));
- const axe='C:/Users/zpull/WorldTable/node_modules/axe-core/axe.min.js';await page.addScriptTag({path:axe});
+ const axe=process.env.LEDGER_AXE||'C:/Users/zpull/WorldTable/node_modules/axe-core/axe.min.js';await page.addScriptTag({path:axe});
  for(const width of [320,390,1280])for(const theme of ['day','night']){
   await page.setViewportSize({width,height:900});await page.evaluate(t=>OOT.service.set(t),theme);await page.waitForTimeout(400);
   for(const id of ['', 'cognac']){

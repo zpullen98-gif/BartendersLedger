@@ -9,7 +9,8 @@
 
    It holds: the cold addresses (the Cask Atlas home, every style, a bad id),
    the home's new section (its heading, the families in order, every style a
-   row), a style drawn (the heading, the family, the sections in order, the
+   row), a style drawn (the heading, the family, the sections in order with
+   Five producers where Producers and flagships holds the style's group, the
    forty-five, recall and sources closed, no picture), a chapter's Styles to
    present and Back to the chapter, a liquor shelf bottle's Its style at the
    table and Back to the bottle, the Back chain (a style by its row, the home,
@@ -88,7 +89,8 @@ try {
   if (!AXE) notes.push('no axe-core beside the Playwright module (LEDGER_AXE names one): the scoped accessibility pass is skipped');
   await go('#/casks');
   const data = await page.evaluate(() => ({ entries: caskStyleEntries(), families: caskStyleFamilies(), chapters: caskChapters().map((c) => c.id),
-    bottles: backbarEntries().map((b) => b.id) }));
+    bottles: backbarEntries().map((b) => b.id),
+    houseStyles: typeof caskHouseGroups === 'function' ? caskHouseGroups().map((g) => g.style).filter(Boolean) : [] }));
   const first = data.entries[0];
 
   /* the cold home and its new section */
@@ -110,8 +112,9 @@ try {
     ok(await count('#view [data-act="back"]') === 1, e.id + ' one Back');
     ok((await words('.caskstyle-fam')).endsWith(data.families.find((f) => f.id === e.family).title), e.id + ': the family');
     const ids = await page.locator('.caskstyle-panel').evaluateAll((els) => els.map((el) => el.getAttribute('aria-labelledby').replace('caskstyle-p-', '')));
-    const want = ['table', 'pour', 'guest', 'law', 'made', 'taste', 'differs', 'houses', 'shelf', 'chapter', 'canon', 'recall']
-      .filter((s) => (s !== 'shelf' || e.shelf.length) && (s !== 'canon' || e.canon.length) && (s !== 'chapter' || e.chapters.length));
+    const want = ['table', 'pour', 'guest', 'law', 'made', 'taste', 'differs', 'houses', 'producers', 'shelf', 'chapter', 'canon', 'recall']
+      .filter((s) => (s !== 'shelf' || e.shelf.length) && (s !== 'canon' || e.canon.length) && (s !== 'chapter' || e.chapters.length)
+        && (s !== 'producers' || data.houseStyles.includes(e.id)));
     ok(ids.join('|') === want.join('|'), e.id + ': the sections read ' + ids.join(', '));
     ok((await text('.caskstyle-s45')) === e.lines.s45, e.id + ': the forty-five');
     const s45 = await page.locator('.caskstyle-s45').evaluate((el) => parseFloat(getComputedStyle(el).fontSize));
