@@ -142,7 +142,24 @@
         "The taste rests on the house's own words (baked apple, spiced wood) and the importer's; clove and oak in the finish come from a shop's note and are a lead the refuter should try.",
         "Living person met in searches and named nowhere: Lisa Laird Dunn, of the ninth generation. My task names only this fragment, so people.json was not touched: the integrator should add the name."
       ],
-      "checked": null
+      "checked": {
+        "date": "2026-11-23",
+        "by": "refuter",
+        "verdict": "changed",
+        "changed": [
+          "story: 'two brothers of the family reopened it' in 1933 now 'two of the family': the house names the two who reopened it under the medicinal permit and does not call them brothers.",
+          "story: 'the fifth generation rebuilt it' after the fire of 1849 now 'the family rebuilt it': the generation was found in no source read; the fire and Scobeyville stand.",
+          "bottle.still: 'The labels name Scobeyville, New Jersey, as the bottler' now 'The firm itself is based at Scobeyville': the bottling place rested on one shop's label photograph and a directory disagreed; the firm's base at Scobeyville is in two sources.",
+          "bottle.taste: 'the apple reads as cooked fruit rather than fresh, with clove' cut: clove rested on one shop, and tasters on Distiller find tart, fresh apple; now the house's baked apple and spiced wood, with the tart apple, caramel, vanilla, baking spice and oak that tasters give.",
+          "bottle.label: 'Straight Apple Brandy' now told as the house uses the term, since the federal brandy standard read defines no straight apple brandy.",
+          "others: Laird's Applejack now 'sold by the house as Blended AppleJack', the house's own product name; quiz q2 explain no longer calls Scobeyville the bottler."
+        ],
+        "open": [
+          "story: George Washington's request for the recipe and a Laird in the Continental Army stand as the family's story; sources disagree whether a Laird served or supplied the troops.",
+          "story: the year of the federal blended applejack class stays out (1972 by the house, 1968 by a Treasury record in the author's search).",
+          "bottle.still: the still is not described by any source read."
+        ]
+      }
     },
     {
       "key": "e-and-j",
@@ -283,7 +300,21 @@
         "Left out for want of a source: the type of still (no source names column or pot for E&J), the grape varieties, the age and make of the XO, and the address of the distillery today (the labels print E. & J. Distillers, Modesto, while the brand places its trials at Fresno).",
         "Living people met in searches and named nowhere: Joseph Gallo (Joe Gallo), Ernest's son and later the company's chief executive, and Gina Gallo of the family. My task names only this fragment, so people.json was not touched: the integrator should add the names."
       ],
-      "checked": null
+      "checked": {
+        "date": "2026-11-23",
+        "by": "refuter",
+        "verdict": "changed",
+        "changed": [
+          "bottle.wood: 'among them former bourbon barrels' cut: the brand's VSOP and process pages give oak and at least two years, and no source read names bourbon barrels.",
+          "bottle.taste: 'other accounts add caramel and baked pear' cut for want of a source; the brand's own brown spice, vanilla cream, maple and sherry stand.",
+          "bottle.label: Grand Blue no longer said to name a blue livery, which no source gave; it is the bottling's name and carries no legal meaning.",
+          "story: 'aged two years in oak' after the first bottling of March 1975 cut, since no source read gives the first bottling's age; traps[1] now says E&J Brandy came in 1975, because Gallo sold brandy under another name from 1938 by two accounts."
+        ],
+        "open": [
+          "bottle.still: the type of still is published nowhere read; the three months from fermentation to still stand on the brand's process page, which is not among the five sources.",
+          "story: Ernest Gallo's death is 6 March 2007 by Wikipedia and NBC, 7 March by others; only the year is given. Julio Gallo, 21 March 1910 to 2 May 1993, by Wikipedia and Britannica."
+        ]
+      }
     },
     {
       "key": "christian-brothers",
@@ -424,7 +455,23 @@
         "Left out for want of a source: the cellar master of the order's brandy years, a member of the order who died in 2004 by memory only, and any figure for sales.",
         "No living person was met in these searches beyond those already refused."
       ],
-      "checked": null
+      "checked": {
+        "date": "2026-11-23",
+        "by": "refuter",
+        "verdict": "changed",
+        "changed": [
+          "story: 'bought the Mont La Salle property ... and moved their winery there' in 1930 now 'in the years that followed they moved their winery there': an oral history dates the move to 1932.",
+          "story and traps[1]: the first brandy's 1940 now given to the brand's own history page as well as the marker, which agree.",
+          "story: 'from then on the brandy rested in former bourbon barrels and was bottled in Bardstown' now 'under Heaven Hill, by the brand's account, the VS rests in former bourbon barrels and is bottled in Bardstown': no source says the barrels changed in 1999.",
+          "bottle.label: VS no longer said to be borrowed from Cognac's grades: a grocer prints the VS as Very Smooth, so the term is taught as two letters with no legal meaning.",
+          "bottle.still: 'in the sources read' now 'does not publish'; bottle.taste now the tasters' vanilla, maple and char smoke, caramel, light body and short bittersweet finish, since the fruity nose, dried fruit and spice rested on shops.",
+          "sources: Heaven Hill's history page given at the address the search returned; Time replaced by the brand's own history, the 1989 sale to Heublein standing on the marker and two other accounts."
+        ],
+        "open": [
+          "bottle.still: the brand's site speaks of the pot still method of Cognac without saying which bottling or where; retailers say California copper pot stills; neither is told for the VS.",
+          "bottle.wood: retailers add a share of European brandy in the blend; one source kind only, left out. The brand's site also shows a 'Brandy with Natural Flavors' line; whether the VS label carries those words was not settled, and no front label was read."
+        ]
+      }
     },
     {
       "key": "korbel",
@@ -562,7 +609,22 @@
         "The taste rests on Difford's Guide (honeysuckle, cinnamon, apple, pear, cedarwood) and a shop's note (butterscotch, mild vanilla, toasted oak); the house gives only colour and verdicts.",
         "Living person met in searches and named nowhere: Gary Heck, of the family that bought the house in 1954. My task names only this fragment, so people.json was not touched: the integrator should add the name."
       ],
-      "checked": null
+      "checked": {
+        "date": "2026-11-23",
+        "by": "refuter",
+        "verdict": "changed",
+        "changed": [
+          "story: 'In 1889, seven years after the first of its sparkling wines' now 'In 1889, by the house's account, the winery installed its first still and began making a California brandy': the house's own page gives the still of 1889; the first sparkling wine's year was not confirmed. Quiz q2 stem follows.",
+          "story: 'who built its sparkling wine into the name most guests know' cut; now 'brandy making, stopped since Prohibition, began again under them in the 1960s', by Curb (University of Wisconsin), Fodor's and The Alcohol Professor.",
+          "story and traps[1]: the Chicago fair legend now told as one that writers looking for proof could not confirm (Atlas Obscura, The Alcohol Professor).",
+          "bottle.still: 'at the house in Sonoma County' now the solera at Korbel Champagne Cellars in Sonoma County: the house places its solera there and names no distilling site for the bottling.",
+          "sources: the UC Davis fellowship page replaced by Fodor's on Wisconsin's brandy, which carries the 1960s revival and the legend; the 1954 sale stands on Wikipedia and a 2014 trade piece."
+        ],
+        "open": [
+          "bottle.taste: rests on Difford's Guide and a shop; the house gives no tasting note.",
+          "story: Wisconsin's hold on the brandy is put by one researcher in the years of the Second World War rather than 1893; told only as the legend's want of proof."
+        ]
+      }
     },
     {
       "key": "copper-and-kings",
@@ -699,7 +761,22 @@
         "The taste rests on Distiller's reviews and shops' notes, the only sources for this bottling.",
         "Living people met in searches and named nowhere: Joe Heron and Lesley Heron, the founders. My task names only this fragment, so people.json was not touched: the integrator should add the names."
       ],
-      "checked": null
+      "checked": {
+        "date": "2026-11-23",
+        "by": "refuter",
+        "verdict": "changed",
+        "changed": [
+          "bottle.still, cards[0].answer, quiz[0]: 'Distilled in copper pot stills at the house's distillery' now a blend of the house's own copper pot still brandy with pot still brandy bought from other distillers, by Distiller and Drinkhacker; the stem now asks how the brandy in it is distilled.",
+          "bottle.wood: now about nine parts in ten Kentucky bourbon barrels and the rest new medium-char oak, at least two years in a solera, by Distiller and shops.",
+          "table and traps[0]: 'made in Butchertown' now 'blended and aged', and 'rested mostly' in former bourbon barrels, to fit the blend.",
+          "story: 'as the founders told reporters' now the blending of bought pot still brandy stated from Distiller, Drinkhacker and Fox News; the release years of Butchertown Brandy (2015) and Floodwall (2016) cut for want of a source.",
+          "sources: Go To Louisville replaced by Fox News, which gives the founders' choice of Louisville over the West Coast and the bought brandy."
+        ],
+        "open": [
+          "The house's own site no longer lists a 90 proof American Craft Brandy beside its V.S.O.P., single varietals and twelve year; the bottle is told on its old product page and on shops. See the swap ruling in the review.",
+          "bottle.mash: Muscat, Chenin Blanc and French Colombard rest on Distiller and shops; the house says only American wine. Drinkhacker calls it the same spirit as the earlier Craft Distilled Brandy, one source, left out."
+        ]
+      }
     }
   ]
 }
