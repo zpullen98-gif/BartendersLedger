@@ -44,6 +44,7 @@ p.caskhouse-label{display:block;margin:18px 0 6px}
 .cask-atlas a.caskhouse-grow:hover,.cask-atlas a.caskhouse-card:hover,.cask-atlas a.caskhouse-hit:hover{border-color:var(--brass)}
 .caskhouse-grow-name,.caskhouse-card-name,.caskhouse-hit-name{font:500 1.1rem/1.4 var(--house-display,Georgia,serif);color:var(--brass-2);overflow-wrap:anywhere}
 .caskhouse-grow-style,.caskhouse-card-bottle,.caskhouse-hit-line{font-size:16px;line-height:1.5;color:var(--cream-dim)}
+.cask-atlas a.caskhouse-card .caskhouse-card-bottle{color:var(--cream)}
 .caskhouse-grow-labels,.caskhouse-card-table{font-size:17px;line-height:1.55}
 .caskhouse-search label{display:block;font-size:16px;color:var(--cream-dim);margin:0 0 8px}
 .caskhouse-search input{min-height:48px;width:100%;min-width:0;margin:0 0 12px}
