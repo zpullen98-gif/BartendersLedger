@@ -304,10 +304,10 @@
         "name": "Jura 12 Year Old Single Malt Scotch Whisky",
         "class": "Single malt Scotch whisky; an island malt from Jura, Highland in law",
         "mash": "Malted barley only, as the law asks of a single malt; the house publishes no detail of its malt or its peating.",
-        "still": "Distilled at Craighouse in four copper pot stills about 25 feet tall, of the tall design drawn when the distillery was rebuilt in the 1960s.",
+        "still": "Distilled at Craighouse in copper pot stills about 25 feet tall, of the tall design drawn when the distillery was rebuilt in the 1960s.",
         "wood": "American white oak casks that held bourbon, as the producer's own page gives it. The label gives twelve years, so no whisky in the bottle is younger.",
         "strength": "40% ABV",
-        "taste": "Peach first, then bright citrus and lightly toasted walnut, as the producer describes it: the fruity, gently sweet house style, with peach leading on the bottle's own taste scale.",
+        "taste": "Peach first, then bright citrus and lightly toasted walnut, as the producer describes it: fruity and subtly sweet, as the house's taste guide puts it, with peach leading on the bottle's own taste scale.",
         "pour": "A sipping malt, neat or with a little water; or long, over ice with soda in a highball.",
         "label": [
           {
@@ -325,7 +325,7 @@
         ]
       },
       "table": "Jura 12 Year Old comes from the island's whisky distillery at Craighouse, and twelve years in bourbon casks give it peach, bright citrus and toasted walnut, fruit rather than smoke. It took the place of the 10 in 2025, and it suits a glass neat or a highball.",
-      "story": "The laird of the island founded a distillery at Craighouse in 1810, by the house's own account, at first called the Small Isles distillery, and it was licensed in 1831. Later in the century James Ferguson and Sons took it over. It closed in 1901; the roof came off, the buildings fell into ruin, and the island lost the work the distillery had given. In 1960 two landowners of the island set out to rebuild it, so that islanders would have work again, and brought in a designer to draw a new distillery on the old site. It reopened in 1963, with tall copper stills. Whyte and Mackay bought the distillery in the early 1990s, and in 2018 the range was relaunched, with a 10 Year Old finished in Oloroso sherry casks at its start. In August 2025 the house announced that a 12 Year Old would take the place of the 10 at the head of its age-stated range, citing consumer taste tests, and the 12 reached British shelves that October in a new pack before going further afield. Behind a bar it is the gentle island malt, fruit and walnut rather than smoke.",
+      "story": "The laird of the island founded a distillery at Craighouse in 1810, by the house's own account, at first called the Small Isles distillery, and it was licensed in 1831. Later in the century James Ferguson and Sons took it over. It closed in 1901; the roof came off, the buildings fell into ruin, and the island lost the work the distillery had given. In 1960 two landowners of the island set out to rebuild it, so that islanders would have work again, and brought in a designer to draw a new distillery on the old site. It reopened in 1963, with tall copper stills. Whyte and Mackay bought Invergordon Distillers, and the distillery with it, in the early 1990s, and in 2018 the range was relaunched as five bottlings, among them a 10 Year Old finished in Oloroso sherry casks. In August 2025 the house announced that a 12 Year Old would take the place of the 10 at the head of its age-stated range, citing consumer taste tests, and the 12 reached British shelves that October in a new pack before going further afield. Behind a bar it is the gentle island malt, fruit and walnut rather than smoke.",
       "others": [
         {
           "name": "Jura 10 Year Old",
@@ -337,9 +337,9 @@
         }
       ],
       "traps": [
-        "Launch reports of 2025 gave the new 12 an Oloroso sherry finish, as the 10 had; the producer's own page names only bourbon casks, and the house's sherry-finished 12 is the separate Oloroso Edition.",
+        "Launch reports of 2025 gave the new 12 an Oloroso sherry finish, as the 10 and the 2018 range's 12 had; the producer's page names only bourbon casks, and its sherry-finished 12s, the Oloroso Edition among them, are separate releases.",
         "Jura is not an Islay whisky, though only the Sound of Islay lies between the two islands: it is an island malt, which the regulations count as Highland.",
-        "A guest asking for Jura 10 may be offered the 12: it took the 10's place from October 2025, first in Britain and then abroad."
+        "A guest asking for Jura 10 may be offered the 12: it took the 10's place in Britain from October 2025, and the house announced the same change for its other markets."
       ],
       "cards": [
         {
@@ -421,10 +421,27 @@
         "A Jura 12 Year Old with an Oloroso finish was also part of the 2018 relaunch in selected markets (Scotchwhisky.com, 2018), and an American 12 was reported at 43% ABV; the launch press of 2025 may carry that older specification. Left out of the record for want of a second source.",
         "The taste field rests on the producer's own notes (peach, bright citrus, lightly toasted walnut) and the pack's taste scale (peach four, citrus three, walnut three out of six, in The Spirits Business, One More Dram and The Scotsman). The producer's taste guide adds honey, cocoa, dark chocolate and coffee; left out for want of room among the five sources.",
         "Not done here, for the integrator: the group's swaps list in plan.json was left as it stands, since this task changes only the pick's own line; a bottling swap entry from Jura 10 Year Old to Jura 12 Year Old would record it.",
-        "Kept from the refuted record: the rebuilders are named Robin Fletcher and Tony Riley-Smith, and the designer William Delmé-Evans, in the producer's timeline and Wikipedia; no two sources gave their deaths, so the record describes them. The sale to Whyte and Mackay stays the early 1990s (1993 or 1994 by source).",
+        "Kept from the refuted record: the rebuilders and the designer are named in the producer's timeline and Wikipedia; no two sources gave their deaths, so the record describes them. The sale to Whyte and Mackay stays the early 1990s (1993 or 1994 by source).",
         "The plan's note on the label: the producer's pages print Jura, not Isle of Jura. The Ledger's islands style lists the house as Isle of Jura among its benchmarks. Left out for want of a source: George Orwell's stay on the island and the island's population."
       ],
-      "checked": null
+      "checked": {
+        "date": "2026-11-23",
+        "by": "refuter",
+        "verdict": "changed",
+        "changed": [
+          "story: the 2018 relaunch was five bottlings opening with Journey, a no age statement malt, so the 10 was not at its start; now five bottlings, among them a 10 Year Old finished in Oloroso sherry casks (Morning Advertiser, Scottish Field, Whisky Notes).",
+          "story: Whyte and Mackay bought Invergordon Distillers, which held Jura from 1985, and the distillery with it; the early 1990s kept (1993 in Wikipedia and Grace's Guide, 1994 in The Spirits Business).",
+          "bottle.still: the count of four stills cut, a count given as fixed (four since an expansion of 1979 by one archive); the height and the tall design stand.",
+          "bottle.taste: the fruity, gently sweet house style, which no source gave, now fruity and subtly sweet as the producer's taste guide puts it.",
+          "traps[0]: the 2018 range's 12 also carried an Oloroso finish, which is likely where the launch press's description came from; and the house has two sherry-finished 12s, the Oloroso Edition and a 12 Year Old Sherry Cask on its special release pages, so neither is called the only one.",
+          "traps[2]: first in Britain and then abroad asserted a roll-out no source confirmed for every market, and the producer's American pages list the 10 beside the 12; now in Britain from October 2025, with the change announced for other markets.",
+          "report: the rebuilders' and the designer's names taken out, since no two sources give their deaths and nobody who may be living is named anywhere."
+        ],
+        "open": [
+          "bottle.wood and traps[0]: the producer's British and American pages and a shop's listing give American white oak ex-bourbon casks alone; the launch press of August 2025 gave an Oloroso finish. No back label was read, so the wood field keeps its hedge, as the producer's own page gives it.",
+          "plan.json's islands swaps list carries no bottling entry for Jura 10 Year Old to Jura 12 Year Old, though the pick's flagship moved; for the integrator, outside this refuter's files."
+        ]
+      }
     },
     {
       "key": "arran",

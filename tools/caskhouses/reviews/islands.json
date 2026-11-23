@@ -217,5 +217,100 @@
   "plan.json, jura why: calls the 10 lightly smoky (the producer's notes give no smoke) and names the 10 as the flagship the house replaced in 2025. Reported, not edited.",
   "plan.json, arran why: has Lagg make the peated spirit and Lochranza renamed for it; no source shows a renaming, only the Lochranza Distillery name put on the label in 2019. Reported, not edited.",
   "plan.json, highland-park why: names Magnus Eunson with no dates; the record describes him. Reported, not edited."
- ]
+ ],
+ "rerun": {
+  "date": "2026-11-23",
+  "by": "refuter",
+  "key": "jura",
+  "searches": 13,
+  "tested": [
+   "jura: the 12's American white oak ex-bourbon casks, 40% ABV and the producer's notes of peach, citrus and walnut on its British and American pages; the taste guide's honey, subtle cocoa and subtly sweet; the pack's flavour scale of zero to six (peach 4, citrus 3, walnut 3). 4 searches.",
+   "jura: the announcement of August 2025 on consumer taste tests, the new pack in British shops from September and the 12 from October 2025, the global roll-out announced to follow (The Whiskey Wash, The Scotsman, One More Dram, Master of Malt). 1 search.",
+   "jura: the launch press's Oloroso finish for the new 12 against the producer's page and a shop's listing of bourbon casks alone; the 12 Year Old Oloroso Edition, announced in March 2026, at 46% ABV, natural colour and not chill filtered, fully finished in Oloroso hogsheads; a separate 12 Year Old Sherry Cask on the producer's special release pages. 4 searches.",
+   "jura: the founding of 1810 by the laird, the Small Isles name, the licence of 1831 and James Ferguson and Sons (1876 on the producer's timeline, a restoration of 1884 in Wikipedia, so the year stays out); the closure of 1901, the roof, the rebuild of 1960 to 1963 by two landowners and its designer, the opening of 26 April 1963, the stills (two to four in 1979 by one archive). 2 searches.",
+   "jura: the relaunch of 2018 (Journey, 10, 12, Seven Wood and 18; the 10 and the 12 both Oloroso finished at 40%) and the 10's producer notes (vanilla, orange, black pepper and dark chocolate, ex-bourbon barrels and an Oloroso finish). 2 searches.",
+   "jura: Invergordon Distillers' purchase of 1985 and Whyte and Mackay's takeover of Invergordon (1993 in Wikipedia and Grace's Guide, 1994 in The Spirits Business). 1 search.",
+   "jura: both cards and both questions read against the record: one right answer each, wrong options of one kind, keys at 1 and 2, no length clue, each explain naming the nearest wrong option; no card id changed.",
+   "The group's other four records: the author's commit of 2026-11-23 touched only the Jura record and plan.json's jura line; nothing else to read again."
+  ],
+  "changed": [
+   {
+    "key": "jura",
+    "field": "story",
+    "was": "in 2018 the range was relaunched, with a 10 Year Old finished in Oloroso sherry casks at its start",
+    "now": "in 2018 the range was relaunched as five bottlings, among them a 10 Year Old finished in Oloroso sherry casks",
+    "why": "the 2018 range opened with Journey, a no age statement malt, before the 10",
+    "sources": [
+     "https://www.morningadvertiser.co.uk/Article/2018/03/05/Jura-launches-range-of-five-new-whiskies",
+     "https://www.whiskynotes.be/2018/whisky-news/highland-park-belgium-jura-signature/"
+    ]
+   },
+   {
+    "key": "jura",
+    "field": "story",
+    "was": "Whyte and Mackay bought the distillery in the early 1990s",
+    "now": "Whyte and Mackay bought Invergordon Distillers, and the distillery with it, in the early 1990s",
+    "why": "Invergordon had held Jura from 1985 and Whyte and Mackay took over Invergordon, 1993 or 1994 by source",
+    "sources": [
+     "https://en.wikipedia.org/wiki/Jura_distillery",
+     "https://www.gracesguide.co.uk/Invergordon_Distillers"
+    ]
+   },
+   {
+    "key": "jura",
+    "field": "bottle.still",
+    "was": "in four copper pot stills about 25 feet tall",
+    "now": "in copper pot stills about 25 feet tall",
+    "why": "a count of stills given as fixed is refused by the brief; the count of four dates from an expansion of 1979 in one archive",
+    "sources": [
+     "https://archiveshub.ac.uk/glaas/archives/bca76ae3-5365-37d8-98c9-3953c9a84ad1"
+    ]
+   },
+   {
+    "key": "jura",
+    "field": "bottle.taste",
+    "was": "the fruity, gently sweet house style",
+    "now": "fruity and subtly sweet, as the house's taste guide puts it",
+    "why": "no source called it the house style; the producer's taste guide gives subtly sweet for the 12",
+    "sources": [
+     "https://www.jurawhisky.com/en-gb/news/what-does-jura-whisky-taste-like-flavour-profiles-tasting-notes-and-food-pairings/"
+    ]
+   },
+   {
+    "key": "jura",
+    "field": "traps[0]",
+    "was": "as the 10 had; ... the house's sherry-finished 12 is the separate Oloroso Edition",
+    "now": "as the 10 and the 2018 range's 12 had; ... its sherry-finished 12s, the Oloroso Edition among them, are separate releases",
+    "why": "the 2018 range's 12 was Oloroso finished, the likely root of the launch press's line, and the producer lists a 12 Year Old Sherry Cask beside the Oloroso Edition",
+    "sources": [
+     "https://www.morningadvertiser.co.uk/Article/2018/03/05/Jura-launches-range-of-five-new-whiskies",
+     "https://www.jurawhisky.com/en-us/our-whisky/special-limited-releases/12-year-old-sherry-cask/",
+     "https://www.jurawhisky.com/en-gb/our-whisky/special-limited-releases/12-year-old-oloroso-edition/"
+    ]
+   },
+   {
+    "key": "jura",
+    "field": "traps[2]",
+    "was": "it took the 10's place from October 2025, first in Britain and then abroad",
+    "now": "it took the 10's place in Britain from October 2025, and the house announced the same change for its other markets",
+    "why": "the roll-out abroad was announced, not confirmed market by market, and the producer's American pages list the 10 beside the 12",
+    "sources": [
+     "https://thewhiskeywash.com/whiskey-news/jura-launches-12-year-old-unveils-brand-refresh/",
+     "https://www.jurawhisky.com/en-us/our-whisky/core-range/10-year-old/"
+    ]
+   },
+   {
+    "key": "jura",
+    "field": "report",
+    "was": "the rebuilders and the designer named in full",
+    "now": "described, with where their names stand",
+    "why": "no two sources give their deaths, and nobody who may be living is named in any field",
+    "sources": []
+   }
+  ],
+  "open": [
+   "jura: whether the standard 12 carries any sherry finish; the producer's pages and a shop give ex-bourbon casks alone, the launch press of August 2025 an Oloroso finish. A back label would settle it.",
+   "jura: plan.json's islands swaps list holds no bottling entry for the move from Jura 10 Year Old to Jura 12 Year Old; for the integrator."
+  ]
+ }
 }
