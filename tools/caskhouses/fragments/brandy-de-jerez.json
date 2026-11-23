@@ -15,10 +15,10 @@
    "year": "1874",
    "yearIs": "first released",
    "bottle": {
-    "name": "Fundador Solera Reserva Brandy de Jerez",
+    "name": "Fundador Sherry Cask Solera Reserva Brandy de Jerez",
     "class": "Brandy de Jerez Solera Reserva, a geographical indication of Spain",
-    "mash": "Wine spirit. The bodega's pages read name no grape; the trade gives the grapes as Airén and Palomino.",
-    "still": "The bodega's pages read do not say where or how its spirit is distilled. Brandy de Jerez begins as wine run through copper stills to holandas, a spirit of low strength, and the younger grades may carry stronger spirit beside it.",
+    "mash": "Wine spirit. The bodega's pages read name no grape variety.",
+    "still": "The bodega's pages read do not say where or how its spirit is distilled. By the council's rules Brandy de Jerez is made from holandas, wine spirit distilled to no more than 70 per cent, alone or with stronger wine spirits.",
     "wood": "Aged by criaderas and solera in American oak casks that once held sherry. No age statement: Solera Reserva promises an average of at least one year.",
     "strength": "40% ABV (80 proof)",
     "taste": "Oak, vanilla and dried fruit, as the brand's American page gives it, with the nutty, winey note of the sherry casks behind; light and young beside the Gran Reservas of Jerez.",
@@ -31,6 +31,10 @@
      {
       "term": "Solera Reserva",
       "means": "The middle of the three grades: an average age of at least one year in the solera."
+     },
+     {
+      "term": "Sherry Cask",
+      "means": "No legal grade: the house's words for ageing in American oak casks that once held sherry."
      }
     ]
    },
@@ -38,18 +42,13 @@
    "story": "The Domecq house of Jerez de la Frontera made its name with sherry, and by the account the brand gives it was in 1874 that it first sold a brandy under the name Fundador, the founder. The house calls it the first Brandy de Jerez. It was aged as sherry is aged: by criaderas and solera, rows of casks through which younger spirit is moved by stages towards the solera itself, so that every bottling is drawn from a blend of many ages. The three grades of Brandy de Jerez, Solera, Solera Reserva and Solera Gran Reserva, are each set by an average age drawn from such a system. The Domecq business changed hands more than once over the next century, and in 2016 the Philippine brandy maker Emperador completed its purchase of Bodegas Fundador, the Jerez cellars that make the brandy, from Beam Suntory. Behind a bar Fundador is where Spanish brandy begins: young, sherried and easy, and the bottle to reach for when a guest asks plainly for a Spanish brandy.",
    "others": [
     {
-     "name": "Fundador Doble Madera",
-     "note": "Aged in casks that held amontillado and oloroso, sold in Europe at 36 per cent."
-    },
-    {
      "name": "Fundador Triple Madera",
-     "note": "A Solera Gran Reserva aged in casks of amontillado, oloroso and Pedro Ximénez."
+     "note": "A Solera Gran Reserva aged in turn in casks of amontillado, oloroso and Pedro Ximénez."
     }
    ],
    "traps": [
-    "Fundador's American pages are González Byass's, but the brandy is aged at Bodegas Fundador in Jerez, the old Domecq cellars.",
     "Solera Reserva is a grade of average age, at least one year, and not an age statement: spirit of many ages is in every bottle.",
-    "Bottles for Spain and Britain read Fundador Solera at 36 per cent; American law asks at least 80 proof of brandy, so the American bottle is 40 per cent."
+    "Bottles for Spain read Fundador Solera, the young grade of six months on average; the American bottle is the Solera Reserva, at 40 per cent, since American law asks at least 80 proof of brandy."
    ],
    "cards": [
     {
@@ -107,21 +106,21 @@
      "read": "search"
     },
     {
-     "title": "Inquirer: Emperador completes deal with Fundador",
-     "url": "https://business.inquirer.net/207957/emperador-completes-deal-with-fundador",
-     "kind": "secondary",
-     "read": "search"
-    },
-    {
      "title": "Brandy de Jerez regulatory council: the production process",
      "url": "https://www.brandydejerez.es/en/our-philosophy/the-production-process/",
      "kind": "primary",
      "read": "search"
     },
     {
-     "title": "eCFR: 27 CFR Part 5 Subpart I, standards of identity",
-     "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-I",
+     "title": "eCFR: 27 CFR 5.145, Brandy",
+     "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-I/section-5.145",
      "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "El Corte Inglés: Fundador Solera, the Spanish bottle",
+     "url": "https://www.elcorteingles.es/supermercado/B001018725301230-fundador-brandy-solera-do-jerez-sherry-botella-70-cl/",
+     "kind": "secondary",
      "read": "search"
     }
    ],
@@ -133,7 +132,23 @@
     "Living names met in searches and not written anywhere in the record, for people.json (my task names only this fragment, so I did not edit it): Andrew Tan and Jorge Domecq, of Emperador and its Spanish arm.",
     "The lint's notes on 'the first' are left standing on purpose: the record gives the first Brandy de Jerez only as the house's claim, which the importer's page, the Inquirer report and Emperador's release all repeat. The Ledger holds nothing on Fundador or Brandy de Jerez (no shelf bottle, no Library record, no style or Cask Atlas line), so there is nothing to disagree with."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-23",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.name: was Fundador Solera Reserva Brandy de Jerez; now Fundador Sherry Cask Solera Reserva Brandy de Jerez, the American name on the importer's page and on the label of 2022, with Sherry Cask added as a label term; a bottling swap is agreed in the review.",
+     "bottle.mash: the trade's Airén and Palomino cut; they rest on shops only, and neither the bodega nor the importer names a grape.",
+     "bottle.still: was 'the younger grades may carry stronger spirit beside it'; now the council's rule that holandas, distilled to no more than 70 per cent, may be used alone or with stronger wine spirits in any grade.",
+     "others: Fundador Doble Madera cut, its casks and its 36 per cent found in no source; Triple Madera kept, its three casks and its grade on the importer's sheet and BevNET.",
+     "traps: the trap on González Byass's American pages cut, an importer being a present state that will not hold; the Spanish bottle's trap now says it is a different grade, Solera, not only a different strength.",
+     "sources: the Inquirer report gives way to the Spanish bottle's listing (a label term only); the eCFR source now names 5.145 itself."
+    ],
+    "open": [
+     "bottle.strength: the 36 per cent of the Spanish Fundador Solera rests on the author's retailers and was not confirmed here, so the record no longer states it.",
+     "story: where Fundador is distilled (the 2016 sale took in a distillery at Tomelloso; the Las Copas venture in Jerez is shared with González Byass) is not tied to this bottling by any source read."
+    ]
+   }
   },
   {
    "key": "cardenal-mendoza",
@@ -152,7 +167,7 @@
     "name": "Cardenal Mendoza Clásico Solera Gran Reserva Brandy de Jerez",
     "class": "Brandy de Jerez Solera Gran Reserva, a geographical indication of Spain",
     "mash": "Holandas: wine distilled to a spirit of low strength. The bodega names no grape variety.",
-    "still": "Made from holandas alone, as the Gran Reserva grade requires; the bodega's pages read do not say where the holandas are distilled.",
+    "still": "Made from holandas, wine spirit distilled to no more than 70 per cent, by the bodega's account; its pages read do not say where they are distilled.",
     "wood": "Criaderas and solera in American oak casks seasoned with oloroso and Pedro Ximénez sherry. The bodega gives an average of fifteen years in oak.",
     "strength": "40% ABV",
     "taste": "Dark mahogany in the glass. By the bodega's notes a round, clean, winey nose, then a warm, long palate of raisins and plums over old oak, with a slight sweetness and no sharp edge.",
@@ -160,7 +175,7 @@
     "label": [
      {
       "term": "Solera Gran Reserva",
-      "means": "The senior grade of Brandy de Jerez: holandas alone, and an average age of at least three years."
+      "means": "The senior grade of Brandy de Jerez: an average age of at least three years in the solera."
      },
      {
       "term": "Clásico",
@@ -169,7 +184,7 @@
     ]
    },
    "table": "Cardenal Mendoza is the Solera Gran Reserva of Sánchez Romate in Jerez, named for a fifteenth century cardinal and aged through casks seasoned with oloroso and Pedro Ximénez. Raisins, plums and old oak, fifteen years on average by the bodega: pour it neat after dinner.",
-   "story": "Sánchez Romate dates itself to 1781, when a Spanish merchant founded the business in Jerez de la Frontera, and it grew as a sherry house. In 1887, by the house's own account, the fourth generation of the family made a brandy for themselves and a close circle of friends, aged through a solera of sherry casks. They named it for Cardinal Pedro González de Mendoza (died 1495), archbishop of Toledo from 1482, who presided over the royal council of Isabella and Ferdinand and was called in his day the third king. What began as a family bottle became, as the house puts it, its flagship: the Cardenal Mendoza Solera Gran Reserva, labelled Clásico beside the older Carta Real. It is made from holandas alone and aged by criaderas and solera in American oak casks seasoned with oloroso and Pedro Ximénez, and the house gives it an average of fifteen years, five times the three the rules ask of the grade. For a bartender it is the old style of Brandy de Jerez in one bottle: dark, raisined and long, the Spanish brandy to offer after dinner.",
+   "story": "Sánchez Romate dates itself to 1781, when a Spanish merchant founded the business in Jerez de la Frontera, and it grew as a sherry house. In 1887, by the house's own account, the fourth generation of the family made a brandy for themselves and a close circle of friends, aged through a solera of sherry casks. They named it for Cardinal Pedro González de Mendoza (died 1495), archbishop of Toledo from 1482, chancellor of Castile under Isabella and Ferdinand, who was called in his day the third king of Spain. What began as a family bottle became, as the house puts it, its flagship: the Cardenal Mendoza Solera Gran Reserva, labelled Clásico beside the older Carta Real. It is made from holandas, by the house's account, and aged by criaderas and solera in American oak casks seasoned with oloroso and Pedro Ximénez, and the house gives it an average of fifteen years, five times the three the rules ask of the grade. For a bartender it is the old style of Brandy de Jerez in one bottle: dark, raisined and long, the Spanish brandy to offer after dinner.",
    "others": [
     {
      "name": "Cardenal Mendoza Carta Real",
@@ -220,7 +235,7 @@
       "Isabella and Ferdinand"
      ],
      "a": 3,
-     "explain": "Cardinal Mendoza (died 1495) presided over the royal council of Isabella and Ferdinand; Philip II reigned in the century after his death."
+     "explain": "Cardinal Mendoza (died 1495) served Isabella and Ferdinand as chancellor of Castile; Philip II reigned in the century after his death."
     }
    ],
    "sources": [
@@ -263,7 +278,19 @@
     "Left out for want of a source: where the holandas are distilled, the grapes, and the ages of Carta Real (25 years in some listings, 30 in another) and Non Plus Ultra.",
     "The Ledger holds nothing on Cardenal Mendoza or Brandy de Jerez, so there is nothing to disagree with."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-23",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.still, story: was made from holandas alone, as the Gran Reserva grade requires; now made from holandas by the bodega's account: the council's specification lets holandas stand alone or beside stronger wine spirits, and no grade is held to holandas alone.",
+     "bottle.label: Solera Gran Reserva no longer says holandas alone; it says an average of at least three years, the council's floor.",
+     "story, quiz q2 explain: was presided over the royal council; now chancellor of Castile under Isabella and Ferdinand, as Britannica gives it, and the third king of Spain, the nickname Britannica records."
+    ],
+    "open": [
+     "others: the age of Carta Real differs by source (over 25 or about 30 years), so the record says only that it is given longer than the Clásico."
+    ]
+   }
   },
   {
    "key": "lepanto",
@@ -283,14 +310,14 @@
     "class": "Brandy de Jerez Solera Gran Reserva, a geographical indication of Spain",
     "mash": "Wine of Palomino Fino grapes alone, by the bodega's sheet: the grape of the sherry the brandy ages beside.",
     "still": "Distilled twice in two Charentais copper pot stills at González Byass's Los Arcos bodega in Jerez, which the house says makes it a brandy made wholly in Jerez, from the still to the bottle.",
-    "wood": "Criaderas and solera in American oak casks that held Tío Pepe fino and then oloroso; the bodega gives an average of twelve years.",
+    "wood": "Criaderas and solera in American oak: by the bodega, nine years in casks that held Tío Pepe fino, then three in casks that held Matusalem, a sweet oloroso; twelve in all.",
     "strength": "36% ABV, 40% in the United States",
     "taste": "By the bodega's notes oak, nuts and spice with a silky texture and a long, even finish; the fino casks give toasted almond and the oloroso casks raisin.",
     "pour": "Neat in a tulip glass at room temperature, after dinner or beside a coffee; a little water opens the almond of the fino casks.",
     "label": [
      {
       "term": "Solera Gran Reserva",
-      "means": "The senior grade of Brandy de Jerez: holandas alone, and an average age of at least three years."
+      "means": "The senior grade of Brandy de Jerez: an average age of at least three years in the solera."
      },
      {
       "term": "Brandy de Jerez",
@@ -299,7 +326,7 @@
     ]
    },
    "table": "Lepanto is the Solera Gran Reserva of González Byass, the house of Tío Pepe, distilled twice from Palomino in Charentais pot stills in Jerez and aged about twelve years in fino and oloroso casks. Oak, toasted almond and spice: pour it neat.",
-   "story": "González Byass dates itself to 1835, when a young merchant founded a sherry house in Jerez de la Frontera; an English partner, whose name the house carries, joined soon after. Its fino, Tío Pepe, named for the founder's uncle, carried the house abroad. In 1951, by the house's own account, González Byass launched Lepanto as its senior brandy. Lepanto is distilled at the house's Los Arcos bodega in Jerez, twice, in two Charentais copper pot stills of the kind used in Cognac, and from Palomino wine alone, the grape of sherry; the house describes it as made wholly in Jerez, from the still to the bottle. It then ages by criaderas and solera in American oak casks that first held Tío Pepe and then oloroso, for an average of twelve years. The range grew around it: an OV, finished in casks of old oloroso, and a PX, finished in casks of Pedro Ximénez, both given fifteen years. For a bartender Lepanto is the lesson that Brandy de Jerez can be distilled where it ages, from the grape of sherry itself.",
+   "story": "González Byass dates itself to 1835, when a young merchant founded a sherry house in Jerez de la Frontera; an English agent, whose name the house carries, later became his partner. Its fino, Tío Pepe, named for the founder's uncle, carried the house abroad. In 1951, by the house's own account, González Byass launched Lepanto as its senior brandy. Lepanto is distilled at the house's Los Arcos bodega in Jerez, twice, in two Charentais copper pot stills of the kind used in Cognac, and from Palomino wine alone, the grape of sherry; the house describes it as made wholly in Jerez, from the still to the bottle. It then ages by criaderas and solera in American oak casks that first held Tío Pepe and then oloroso, for an average of twelve years. The range grew around it: an OV, finished in casks of old oloroso, and a PX, finished in casks of Pedro Ximénez, both given fifteen years. For a bartender Lepanto is the lesson that Brandy de Jerez can be distilled where it ages, from the grape of sherry itself.",
    "others": [
     {
      "name": "Lepanto OV Solera Gran Reserva",
@@ -397,7 +424,20 @@
     "Distiller gives nine years in a Tío Pepe solera then three in casks of Matusalem oloroso; the bodega's shop says the Matusalem casks give the raisin. The record says fino then oloroso casks, which both accounts carry.",
     "The Ledger holds nothing on Lepanto or Brandy de Jerez, so there is nothing to disagree with."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-23",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: was an English partner joined soon after; now an English agent later became his partner, since sources give 1844, 1855 and 1885 for the partnership and the house says only shortly afterwards.",
+     "bottle.wood: was casks that held Tío Pepe fino and then oloroso; now nine years in Tío Pepe casks and three in casks of Matusalem, a sweet oloroso, as González Byass's own Spanish and English pages give it.",
+     "bottle.label: Solera Gran Reserva no longer says holandas alone, which the council's specification does not require."
+    ],
+    "open": [
+     "bottle.strength: 40 per cent for the United States rests on one American retailer and on 27 CFR 5.145, which forbids brandy below 80 proof there; no American label was read.",
+     "bottle.still: the 'made wholly in Jerez' line stays the house's claim; no independent count of the brandies distilled in Jerez was found."
+    ]
+   }
   },
   {
    "key": "carlos-i",
@@ -415,16 +455,16 @@
    "bottle": {
     "name": "Carlos I Solera Gran Reserva Brandy de Jerez",
     "class": "Brandy de Jerez Solera Gran Reserva, a geographical indication of Spain",
-    "mash": "Holandas alone, as the Gran Reserva grade requires; Osborne's pages read name no grape.",
-    "still": "Osborne's pages read do not say where the holandas are distilled; the grade allows only holandas, wine spirit drawn at low strength from copper stills.",
+    "mash": "Wine spirit, distilled from grape wine; Osborne's pages read name no grape variety.",
+    "still": "Osborne's pages read do not say where or how the spirit of Carlos I is distilled.",
     "wood": "A solera of sixteen scales of American oak casks that held sherry, by Osborne's report of 2020, for an average age of twelve years.",
     "strength": "40% ABV",
-    "taste": "Deep amber with gold lights. Vanilla and cocoa on the nose, by the trade sheet for the Spanish market, then a persistent, balanced palate in which the oak of the old sherry casks leads.",
+    "taste": "Deep amber with gold lights. Vanilla and cocoa on the nose, by the Spanish trade sheet and tasters' notes, then a persistent, balanced palate in which the oak of the old sherry casks leads.",
     "pour": "Neat in a tulip glass or a small balloon after dinner, or over one large cube; long with ginger ale for a guest who wants it lighter.",
     "label": [
      {
       "term": "Solera Gran Reserva",
-      "means": "The senior grade of Brandy de Jerez: holandas alone, and an average age of at least three years."
+      "means": "The senior grade of Brandy de Jerez: an average age of at least three years in the solera."
      },
      {
       "term": "Carlos I",
@@ -433,15 +473,15 @@
     ]
    },
    "table": "Carlos I, said Carlos Primero, is the Solera Gran Reserva that Osborne ages through a solera of sixteen scales of sherry casks, about twelve years on average. Vanilla and cocoa over old oak: pour it neat after dinner, or over one large cube.",
-   "story": "Osborne dates itself to 1772, when, by its own account, a young English merchant founded the business at El Puerto de Santa María, the sherry town across the bay from Cádiz. Carlos I is older than its tie to Osborne. The brand dates its solera to 1889, and a brand story, told as a story, has a cellar master find forgotten casks in a corner of his bodega and name the brandy they held Carlos I. In 2008 Osborne bought the Carlos I label from Pernod Ricard España, with Carlos I Imperial, Carlos III and Felipe II, as the Spanish competition authority's file of that year records. The solera is worked in American oak casks that once held sherry, sixteen scales deep by Osborne's own report, so that the brandy drawn has an average age of about twelve years. Older bottlings followed, the Imperial XO and the 1520, a blend of three old soleras. For a bartender Carlos I is the lesson in what Solera Gran Reserva means: holandas alone, and years of sherried oak counted as an average.",
+   "story": "Osborne dates itself to 1772, the year of a merchants' partnership in Cádiz that the English merchant who founded the Osborne name later joined; the house came to stand at El Puerto de Santa María, the sherry town across the bay. Carlos I is older than its tie to Osborne. The brand dates its solera to 1889, and a brand story, told as a story, has a cellar master in Jerez find forgotten casks in a corner of his bodega and name the brandy they held Carlos I. In 2008 Osborne bought the Carlos I label from Pernod Ricard España, with Carlos I Imperial, Carlos III and Felipe II, as the Spanish competition authority's file of that year records. The solera is worked in American oak casks that once held sherry, sixteen scales deep by Osborne's own report, so that the brandy drawn has an average age of about twelve years. Beside it stand the Imperial XO and the 1520, which joins three Gran Reserva soleras of the house. For a bartender Carlos I is the lesson in what Solera Gran Reserva means: years of sherried oak counted as an average, here twelve where the rules ask three.",
    "others": [
     {
      "name": "Carlos I Imperial XO",
-     "note": "An older Solera Gran Reserva of the house, a separate bottling."
+     "note": "A Solera Gran Reserva drawn from a solera of its own, apart from this one."
     },
     {
      "name": "Carlos I 1520",
-     "note": "A Solera Gran Reserva blended from three old soleras, bottled a little stronger."
+     "note": "A Solera Gran Reserva joining the soleras of Carlos I, Carlos I Imperial and Gran Capitán, bottled a little stronger."
     }
    ],
    "traps": [
@@ -499,26 +539,26 @@
      "read": "search"
     },
     {
+     "title": "Osborne: the history of the house",
+     "url": "https://www.osborne.es/en/historia-de-osborne",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Osborne: Carlos I",
+     "url": "https://www.osborne.es/carlos-i",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
      "title": "CNMC: the purchase of Pernod Ricard España brands by Osborne",
      "url": "https://cnmc.es/sites/default/files/15124_0.pdf",
      "kind": "primary",
      "read": "search"
     },
     {
-     "title": "BeverageDaily: Pernod Ricard divests for key brands",
-     "url": "https://www.beveragedaily.com/Article/2008/02/05/pernod-ricard-divests-for-key-brand-drive/",
-     "kind": "secondary",
-     "read": "search"
-    },
-    {
      "title": "El Corte Inglés: Carlos I Solera Gran Reserva product sheet",
      "url": "https://www.elcorteingles.es/supermercado/B001018725300109-/",
-     "kind": "secondary",
-     "read": "search"
-    },
-    {
-     "title": "Wein.plus glossary: Osborne",
-     "url": "https://glossary.wein.plus/osborne",
      "kind": "secondary",
      "read": "search"
     }
@@ -532,7 +572,24 @@
     "year is left empty: the solera's 1889 rests on the trade sheet and on Osborne's report counting 130 years of the brand in 2020, which fits 1889 or 1890 and is not two sources agreeing on a founding or first release.",
     "The Ledger holds nothing on Carlos I or Brandy de Jerez, so there is nothing to disagree with."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-23",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: was founded in 1772 by a young English merchant, by Osborne's account; now 1772 as the year of the Cádiz partnership (James Duff and Jean Haurie, on Osborne's own history page) that the English merchant later joined, which Sherry Notes also argues.",
+     "story: the legend's cellar master now stands in Jerez, as Osborne's own Carlos I page tells it; the closing line no longer says holandas alone.",
+     "bottle.mash, bottle.still, bottle.label: holandas alone as a rule of the grade cut; the council's specification lets holandas stand alone or beside stronger wine spirits.",
+     "bottle.taste: vanilla and cocoa now hedged as the trade sheet's and tasters' (a Distiller taster gives the same), not the house's.",
+     "others: Imperial XO no longer called older, which no source gives, but a Solera Gran Reserva of its own solera, as Osborne's 1520 page names it; the 1520 now names its three soleras, and 41.1 per cent on Osborne's shop bears out a little stronger.",
+     "sources: BeverageDaily and Wein.plus give way to Osborne's history page and its Carlos I page.",
+     "story: was 'Older bottlings followed'; now the Imperial XO and the 1520 stand beside it, since no source gives the order of release or calls the Imperial older."
+    ],
+    "open": [
+     "story: Carlos I's descent from the Pedro Domecq house rests on one sherry writer and is left out; the name's tie to the emperor is not given by Osborne's pages read.",
+     "place: where the Carlos I solera is kept rests on the operator's address and Osborne's mention of century-old bodegas at El Puerto; no source names the bodega."
+    ]
+   }
   },
   {
    "key": "gran-duque-d-alba",
@@ -552,14 +609,14 @@
     "class": "Brandy de Jerez Solera Gran Reserva, a geographical indication of Spain",
     "mash": "Young white wines of Palomino and Airén grapes, by the bodega's account, fermented and then distilled.",
     "still": "Distilled in pot stills, by the bodega's account; its pages read do not say where.",
-    "wood": "Criaderas and solera in American oak casks that held oloroso sherry; the bodega gives an average of twelve years, where some trade listings give ten.",
+    "wood": "Criaderas and solera in American oak casks that held oloroso sherry; the bodega's pages give an average of twelve years on one and ten on another.",
     "strength": "40% ABV",
     "taste": "By the bodega's notes vanilla, cocoa, toasted wood and raisined fruit; the American importer adds baking spice, dried plum and sherry on the nose, and caramel, chocolate and orange on the palate.",
     "pour": "Neat at room temperature in a tulip glass or a small balloon, after dinner or beside a coffee.",
     "label": [
      {
       "term": "Solera Gran Reserva",
-      "means": "The senior grade of Brandy de Jerez: holandas alone, and an average age of at least three years."
+      "means": "The senior grade of Brandy de Jerez: an average age of at least three years in the solera."
      },
      {
       "term": "Gran Duque d'Alba",
@@ -568,7 +625,7 @@
     ]
    },
    "table": "Gran Duque d'Alba is the Solera Gran Reserva of Williams & Humbert in Jerez, first made in 1945 from Palomino and Airén wine and aged in casks that held oloroso. Vanilla, cocoa and raisined fruit over toasted wood: pour it neat after dinner.",
-   "story": "Williams & Humbert was founded in Jerez de la Frontera in 1877 by two British partners, whose names it carries, and it made its name with sherry, Dry Sack among it. Its brandy came in 1945. The house's agent in Madrid, as the brand tells it, was a friend of the Duke of Alba of the day, and asked leave to name the new brandy for the family. The name honours not that duke but the third Duke of Alba, the Great Duke, a general of the sixteenth century, and the bottle carries his title as Gran Duque d'Alba. The brandy is made from young wines of Palomino and Airén grapes, distilled in pot stills, then aged by criaderas and solera in American oak casks that once held oloroso, for an average of twelve years by the house's account. An older XO followed in the range. The house's own pages often spell the name Gran Duque de Alba, while the bottle reads d'Alba. For a bartender it is the dark, raisined Gran Reserva to set beside Cardenal Mendoza when a guest wants a Spanish brandy after dinner.",
+   "story": "Williams & Humbert was founded in Jerez de la Frontera in 1877 by two British partners, whose names it carries, and it made its name with sherry, Dry Sack among it. Its brandy came in 1945. The house's agent in Madrid, as the brand tells it, was a friend of the Duke of Alba of the day, and asked leave to use his name; the duke proposed an ancestor instead, the third Duke of Alba, the Great Duke, a general of the sixteenth century, and the brandy carries his title. The brandy is made from young wines of Palomino and Airén grapes, distilled in pot stills, then aged by criaderas and solera in American oak casks that once held oloroso, for an average of twelve years by the house's account. An older XO stands beside it. Its bottle of 1973 was the work of a ceramicist, by the house's account, and the house's own pages spell the name de Alba where its American importer prints d'Alba. For a bartender it is the dark, raisined Gran Reserva to set beside Cardenal Mendoza when a guest wants a Spanish brandy after dinner.",
    "others": [
     {
      "name": "Gran Duque d'Alba XO",
@@ -576,9 +633,9 @@
     }
    ],
    "traps": [
-    "Twelve years is the bodega's figure and an average across the solera, not an age statement; some listings give ten.",
+    "Twelve years is an average across the solera, not an age statement, and the house's own pages give ten as well as twelve.",
     "The duke of the name is the third Duke of Alba, of the sixteenth century, not the duke whose friendship led to it in 1945.",
-    "The label reads d'Alba, while Williams & Humbert's own pages often write de Alba: one brandy, two spellings."
+    "Gran Duque d'Alba and Gran Duque de Alba are one brandy: the house and its importers print both spellings."
    ],
    "cards": [
     {
@@ -636,8 +693,8 @@
      "read": "search"
     },
     {
-     "title": "Williams & Humbert: home and history",
-     "url": "https://www.williams-humbert.com/en/",
+     "title": "Williams & Humbert: a new look for Gran Duque de Alba",
+     "url": "https://global.williams-humbert.com/en/gran-duque-de-alba-brandy-gets-a-new-look/",
      "kind": "primary",
      "read": "search"
     },
@@ -663,7 +720,24 @@
     "Left out for want of a source: where the wine is distilled, and the age of the XO.",
     "The Ledger holds nothing on Gran Duque d'Alba or Brandy de Jerez, so there is nothing to disagree with."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-23",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "bottle.wood, traps: was twelve years by the bodega where some trade listings give ten; now the bodega's own pages give twelve on one and ten on another, so the ten is the house's too.",
+     "story: the seventeenth duke, as the house tells it, proposed the ancestor himself; the brandy carries the title, not the bottle a spelling.",
+     "story, traps: was the bottle reads d'Alba; now the house's pages spell de Alba and its American importer d'Alba: the label redesigned in 2014 and 2021 was not read, so no spelling is pinned to the bottle.",
+     "story: the bottle of 1973, by a Catalan ceramicist, added from the house's page on the new look, which keeps a second year in the story.",
+     "bottle.label: Solera Gran Reserva no longer says holandas alone.",
+     "sources: the house's home page gives way to its page on the new look.",
+     "story: was 'An older XO followed in the range'; now an older XO stands beside it, the order of release being in no source read; the house gives the XO fifteen years."
+    ],
+    "open": [
+     "story: the founding of 1877 by two British partners and Dry Sack rest on the house's pages read by the author and were not searched again here.",
+     "bottle.still: where the wine is distilled stays unknown; the third duke stays described, not named, for want of two sources for his dates in this read."
+    ]
+   }
   }
  ]
 }
