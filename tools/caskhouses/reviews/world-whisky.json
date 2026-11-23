@@ -226,5 +226,50 @@
   "plan.json, kavalan why: says matured mainly in American oak and gives the first new make as 11 March 2006; the house gives no cask make-up and the day rests on one account. Reported, not edited.",
   "plan.json, sullivans-cove why: says usually at 47.5% ABV; the house's French Oak Ex-Tawny casks run from 46.0 to 48.1%. Reported, not edited.",
   "plan.json, penderyn why: calls it the world whisky from closest to Scotland, a superlative the voice refuses; it does not ship, but the read-together agent may reword it. Reported, not edited."
- ]
+ ],
+ "settled": {
+  "date": "2026-11-23",
+  "by": "label settler",
+  "searches": 4,
+  "tested": [
+   "kavalan: the Classic's strength on the producer's domain (two searches, no figure given), then by market: the American importer's nutrition facts page and shop (43% ABV, 86 proof), a product sheet and American shops at 750 ml and 43%, British, European and Australian listings at 700 ml and 40%. 3 searches.",
+   "amrut: the standard single malt at 46% ABV on the producer's own product page. 1 search."
+  ],
+  "changed": [
+   {
+    "key": "kavalan",
+    "field": "bottle.strength",
+    "was": "40% ABV",
+    "now": "40% ABV, 43% (86 proof) in the United States",
+    "why": "the American importer states 43% and 86 proof for the bottle it brings in, and listings outside the United States give 40%; a market note says both",
+    "sources": [
+     "https://www.hotalingandco.com/nutrition-facts/",
+     "https://shop.hotalingandco.com/products/kavalan-classic-single-malt-whisky",
+     "https://www.thewhiskyexchange.com/p/18083/kavalan-classic"
+    ]
+   },
+   {
+    "key": "kavalan",
+    "field": "report and checked.open",
+    "was": "the market note is left out until a refuter confirms the American label",
+    "now": "the market note given; the open line says what it rests on",
+    "why": "searched",
+    "sources": []
+   },
+   {
+    "key": "amrut",
+    "field": "checked.open",
+    "was": "others[0].note: the standard bottling at 46% ABV was not re-read on the producer's page.",
+    "now": "removed: the producer's page gives 46%",
+    "why": "settled by search on the producer's domain",
+    "sources": [
+     "https://amrutdistilleries.com/amrut-indian-single-malt-whisky-46-duplicate/"
+    ]
+   }
+  ],
+  "open": [
+   "kavalan: no producer page or label read states either strength; the importer's 43% is the nearest to the producer's word.",
+   "kavalan: the importer's address carries the word portfolio, as the refuter noted; the importer's Classic page holds the cask make-up the wood field rests on, so it stays."
+  ]
+ }
 }

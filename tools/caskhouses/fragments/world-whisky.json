@@ -20,7 +20,7 @@
     "mash": "Malted barley alone, as a single malt must be; the house does not say on the pages read where its barley is grown.",
     "still": "Distilled twice in copper pot stills of Scottish design at the King Car distillery in Yuanshan, Yilan County.",
     "wood": "A marriage of casks, mainly refill and former bourbon barrels with a small share of sherry casks, by its importer's account, matured in Yilan's subtropical heat and humidity. No age statement.",
-    "strength": "40% ABV",
+    "strength": "40% ABV, 43% (86 proof) in the United States",
     "taste": "A clean, floral nose of mango and other tropical fruit with vanilla, then a sweet palate of honey, coconut, red apple and gentle spice.",
     "pour": "Neat, or loosened with a little water; it also makes a light, fruity highball with chilled soda water.",
     "label": [
@@ -128,7 +128,7 @@
    "report": [
     "The plan's note on the founding is settled as it asks: the distillery was completed in 2005 (The Spirits Business timeline, Whisky Magazine, Kavalan's own 'since 2005') and the first spirit ran in March 2006 (Wikipedia, The Spirits Business); the day, 11 March, rests on The Spirits Business alone and is hedged as one account. The year field is the first release, December 2008, in Wikipedia and The Spirits Business.",
     "The plan's why says the Classic is matured mainly in American oak: the importer gives mainly refill and former bourbon barrels with a small share of sherry casks, and the house publishes no proportions; the record gives the importer's account. A shop's note naming wine casks among them was not followed.",
-    "Strength: 40% ABV in Whisky Magazine's tasting and The Whisky Exchange's listing; the United States importer lists 43%. The market note is left out until a refuter confirms the American label.",
+    "Strength, settled on 2026-11-23 by market: the United States importer gives the Classic at 43% ABV and 86 proof on its own nutrition facts page and its shop, as do a product sheet and several American shops (750 ml); British, European and Australian listings give 40% (700 ml), with Whisky Magazine's tasting. The producer's own product page states no strength in any search read, and no label was seen; the record carries both figures as a market note.",
     "Left out for want of a second source: the still maker (Forsyths of Rothes, in one search summary), the German stills said to have been added later, the consultant Jim Swan's part at Kavalan, the source of the barley and the King Car Group's founding year, which sources give as 1956 or 1979.",
     "Living people met in the sources and added to people.json: the founder of the King Car Group (Tien-Tsai Lee), its president (YT Lee) and the former master blender (Ian Chang).",
     "The Cask Atlas chapter on world whisky agrees: it names Kavalan's Yilan distillery as subtropical single malt and warns against turning tropical years into Scottish ones, which the record repeats."
@@ -139,11 +139,12 @@
     "verdict": "changed",
     "changed": [
      "bottle.taste: pear drops, a ripe fruit palate and a citrus finish stood in no source for the Classic; now a floral nose of mango, tropical fruit and vanilla and a palate of honey, coconut, red apple and gentle spice, from the house's floral note and its distributors' notes.",
-     "others[1].note: the Vinho Barrique casks were called stripped and toasted; Whisky Magazine and the importers give shaved, toasted and recharred, the STR treatment, so now shaved, toasted and recharred."
+     "others[1].note: the Vinho Barrique casks were called stripped and toasted; Whisky Magazine and the importers give shaved, toasted and recharred, the STR treatment, so now shaved, toasted and recharred.",
+     "bottle.strength: was 40% ABV; now 40% ABV, 43% (86 proof) in the United States: the American importer's nutrition facts page and shop give 43% and 86 proof, and British and European listings 40%; the producer's own page gives no figure (label settler, 2026-11-23)."
     ],
     "open": [
      "bottle.wood: mainly refill and former bourbon barrels with a small share of sherry casks rests on the importer and shops; the house publishes no cask make-up for the Classic.",
-     "bottle.strength: 40% ABV in most listings, United Kingdom and United States alike; the importer and one shop list 43%, so no market note is given.",
+     "bottle.strength: the market note rests on the American importer for 43% and on British and European listings for 40%; the house's own page gives no figure and no label was read.",
      "story: the day of the first new make, 11 March 2006, rests on The Spirits Business alone and stays hedged as one account.",
      "sources: the importer's address carries the word portfolio, which the voice refuses in prose; the integrator may prefer another page."
     ]
@@ -283,11 +284,11 @@
     "changed": [
      "bottle.mash: the share of peated Scottish barley was widely given as a quarter; WhiskyCast gives a fifth, The Whiskey Wash a quarter, and Amrut gives no figure, so now the house gives no proportion and accounts differ.",
      "bottle.taste: the long, spiced finish of marmalade rested on a shop; now a long finish of chocolate fudge, as the house's own page gives it, and the nose and palate to oak, barley sugar, smoke, coffee and dark chocolate as two reviews give them.",
-     "story: the surplus of aged malt rested on no source found; now the malt went first into the company's blended whiskies for the Indian market, as the 1986 blend and the early batches used in blends are told by two accounts."
+     "story: the surplus of aged malt rested on no source found; now the malt went first into the company's blended whiskies for the Indian market, as the 1986 blend and the early batches used in blends are told by two accounts.",
+     "checked.open: the standard bottling's 46% ABV is settled on the producer's own product page, Amrut Indian Single Malt Whisky 46%; others[0] stands unchanged (label settler, 2026-11-23)."
     ],
     "open": [
-     "story: the founder's son is dated by his death in 2019 on The Spirits Business alone in this reading; the author's second source (Star of Mysore) was not re-read.",
-     "others[0].note: the standard bottling at 46% ABV was not re-read on the producer's page."
+     "story: the founder's son is dated by his death in 2019 on The Spirits Business alone in this reading; the author's second source (Star of Mysore) was not re-read."
     ]
    }
   },
