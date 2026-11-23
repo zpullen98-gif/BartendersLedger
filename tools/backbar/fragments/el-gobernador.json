@@ -13,14 +13,14 @@
     "age": "No age statement; rested in stainless steel before bottling",
     "cask": "Not aged in wood; rested in stainless steel",
     "abv": "40% ABV (80 proof)",
-    "law": "Chilean pisco under its denomination of origin: grape spirit of the Atacama and Coquimbo regions; Reservado means 40% ABV"
+    "law": "Chilean pisco under its denomination of origin, Atacama and Coquimbo grape spirit; Reservado from 40% ABV, below Gran Pisco at 43"
   },
-  "made": "Miguel Torres Chile makes it at its winery in the Limarí Valley, near Ovalle in northern Chile. Moscatel of Alexandria and pink Moscatel grapes, in roughly equal parts, are made into wine and distilled once in copper alembic stills, a slow distillation that keeps the perfume of the grapes. The spirit rests in stainless steel, never wood, and is bottled at 40 per cent: Reservado, the Chilean category for that strength.",
+  "made": "Miguel Torres Chile makes it at its winery in the Limarí Valley, near Ovalle in northern Chile. Moscatel of Alexandria and pink Moscatel grapes, in roughly equal parts, are made into wine and distilled once in copper alembic stills, a slow distillation that keeps the perfume of the grapes. The spirit rests in stainless steel, never wood, and is bottled at 40 per cent: Reservado, the Chilean grade from 40 per cent up to Gran Pisco at 43.",
   "taste": "Rose petals, jasmine and candied citrus peel on the nose, with fresh muscat grape. The palate is round and creamy, floral and gently sweet, with tangerine peel, and the finish is long, clean and perfumed.",
   "lines": {
     "s10": "El Gobernador is a Chilean pisco from the Limarí Valley, distilled once from muscat wine: floral, citrusy and clean, made for the Pisco Sour.",
     "s20": "El Gobernador is pisco from the Limarí Valley in Chile: Moscatel grapes made into wine, distilled once in copper and rested in steel, never wood. It smells of rose, jasmine and candied citrus and drinks round and creamy, at 40 per cent.",
-    "s45": "This is El Gobernador Pisco, a Chilean pisco Reservado from the Limarí Valley, near Ovalle in the north of Chile. Moscatel of Alexandria and pink Moscatel grapes are made into wine, distilled once in copper alembic stills and rested in stainless steel, never wood, then bottled at 40 per cent. It opens on rose petals, jasmine and candied citrus peel, round and creamy on the palate, with a long, clean, perfumed finish. We pour it in a Pisco Sour, long with ginger ale in a Chilcano, or chilled and neat. The man on the label is Felipe Margutt Donaire, a patriot of 1818 and later governor of Ovalle.",
+    "s45": "This is El Gobernador Pisco, a Chilean pisco Reservado from the Limarí Valley, near Ovalle in the north of Chile. Moscatel of Alexandria and pink Moscatel grapes are made into wine, distilled once in copper alembic stills and rested in stainless steel, never wood, then bottled at 40 per cent. It opens on rose petals, jasmine and candied citrus peel, round and creamy on the palate, with a long, clean, perfumed finish. We pour it in a Pisco Sour, long with ginger ale in a Chilcano, or chilled and neat. The man on the label fought for Chilean independence in 1818 and was later governor of Ovalle.",
     "sale": "El Gobernador is a floral Chilean pisco, made from Moscatel grapes and distilled once in copper. Try it in a Pisco Sour, or long with ginger ale as a Chilcano."
   },
   "serve": {
@@ -30,12 +30,12 @@
     "classic": "The Pisco Sour; in Chile also the Piscola, pisco and cola over ice."
   },
   "guest": "El Gobernador is a Chilean pisco, a clear grape spirit distilled once from Moscatel wine in the Limarí Valley: floral and citrusy, round and clean, and lovely in a Pisco Sour.",
-  "story": "Pisco is the grape spirit of both Chile and Peru, and the two countries dispute the name. Chilean pisco comes from the Atacama and Coquimbo regions and may be distilled more than once, brought down with water and aged in wood; Peruvian pisco is distilled once, to bottling strength, with nothing added and no wood. El Gobernador, the Governor, honours Felipe Margutt Donaire, who fought for Chilean independence at the Battle of Maipú in 1818 and was later made governor of Ovalle, the town of the Limarí Valley.",
+  "story": "Pisco is the grape spirit of both Chile and Peru, and the two countries dispute the name. Chilean pisco comes from the Atacama and Coquimbo regions and may be distilled more than once, brought down with water and aged in wood; Peruvian pisco is distilled once, to bottling strength, with nothing added and no wood. El Gobernador, the Governor, honours a man who fought for Chilean independence at the Battle of Maipú in 1818 and was later made governor of Ovalle, the town of the Limarí Valley.",
   "watch": [
     "Chilean, not Peruvian: a guest who asks for a Peruvian pisco by name wants a different bottle; this one is Chilean muscat pisco.",
-    "Reservado on the label is a strength, 40 per cent, not an age: El Gobernador is clear and has never seen wood.",
+    "Reservado on the label is a strength, 40 per cent or more, not an age: El Gobernador is clear and has never seen wood.",
     "Serve it cold when neat: chilled it shows its perfume; warm it shows more heat than flowers.",
-    "Say it el goh-behr-nah-DOR; the man on the label is the governor of the name, Felipe Margutt Donaire."
+    "Say it el goh-behr-nah-DOR; the man on the label is the governor of the name, a governor of Ovalle."
   ],
   "asks": [],
   "house": { "match": ["El Gobernador"], "family": ["El Gobernador"] },
@@ -51,9 +51,9 @@
     {
       "id": "q1",
       "q": "On a Chilean pisco label such as El Gobernador's, what does the word Reservado state?",
-      "options": ["A strength of 40% ABV", "At least a year in oak", "A single vineyard", "Grapes picked by hand"],
+      "options": ["A strength of 40% ABV or more", "At least a year in oak", "A single vineyard", "Grapes picked by hand"],
       "a": 0,
-      "explain": "Chile grades pisco by strength: Especial is 35%, Reservado 40%. El Gobernador is unaged and clear."
+      "explain": "Chile grades pisco by strength: Especial from 35%, Reservado from 40% and Gran Pisco from 43%. El Gobernador is unaged and clear."
     },
     {
       "id": "q2",
@@ -72,6 +72,7 @@
   ],
   "sources": [
     { "title": "Torres: Pisco El Gobernador", "url": "https://www.torres.es/en/wines/pisco-el-gobernador" },
+    { "title": "Agricultural and Livestock Service of Chile: Decree 521, the grades of pisco", "url": "https://www.sag.cl/sites/default/files/decreto_ndeg_521.pdf" },
     { "title": "Torres: A brief history of pisco", "url": "https://www.torres.es/en/blog/brief-history-pisco" },
     { "title": "Travel Distilled: El Gobernador Pisco review", "url": "https://www.traveldistilled.com/el-gobernador-pisco-review/" },
     { "title": "The Rum Howler Blog: Pisco El Gobernador", "url": "https://therumhowlerblog.com/brandy-and-cognac-2/pisco-el-gobernador/" },

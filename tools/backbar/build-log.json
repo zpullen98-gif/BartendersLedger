@@ -4,7 +4,7 @@
   "planned": 29,
   "confirm": 12,
   "words": {
-    "total": 16435,
+    "total": 16467,
     "perEntry": {
       "luxardo-fernet": 547,
       "lazzaroni-maraschino": 581,
@@ -16,7 +16,7 @@
       "grand-marnier": 561,
       "chambord": 532,
       "ambrosia-aperitivo": 525,
-      "martell-xo": 549,
+      "martell-xo": 551,
       "milagro-silver": 555,
       "milagro-anejo": 568,
       "don-julio-blanco": 528,
@@ -26,14 +26,14 @@
       "dobel-special-edition": 536,
       "lunazul": 558,
       "agave-de-cortes": 595,
-      "el-gobernador": 563,
+      "el-gobernador": 571,
       "rabbit-hole-cavehill": 572,
       "rabbit-hole-heigold": 584,
       "weller-special-reserve": 642,
       "weller-12": 581,
       "ofc-2005": 612,
-      "thomas-h-handy": 615,
-      "george-t-stagg": 563,
+      "thomas-h-handy": 638,
+      "george-t-stagg": 562,
       "stagg": 621
     }
   },
@@ -69,7 +69,7 @@
     "Back Bar · stagg/recall"
   ],
   "questions": 87,
-  "sources": 207,
+  "sources": 211,
   "house": {
     "luxardo-fernet": {
       "uses": [],

@@ -10,17 +10,17 @@
   "confidence": "clear",
   "facts": {
     "base": "A rye mash with corn and malted barley, the recipe of Sazerac Rye",
-    "age": "Around six years in most releases; each year's release differs",
+    "age": "Around six years in releases to 2025; at least twelve from 2026",
     "cask": "New charred American oak, bottled straight from the barrel",
     "abv": "varies by release; uncut barrel proof, which the label states",
     "law": "Straight rye whiskey: at least 51 per cent rye, new charred oak, at least two years"
   },
-  "made": "Distilled at Buffalo Trace in Frankfort from the same rye recipe as Sazerac Rye, rye with corn and malted barley in proportions the distillery does not publish, the spirit goes into new charred oak for around six years in most releases. Each year a batch of barrels is chosen for the Antique Collection and bottled uncut and unfiltered, at the strength it came out of the wood. So every release has its own age, proof and character, and its label states the proof.",
+  "made": "Distilled at Buffalo Trace in Frankfort from the same rye recipe as Sazerac Rye, rye with corn and malted barley in proportions the distillery does not publish, the spirit goes into new charred oak, around six years for the releases to 2025 and at least twelve for every barrel from 2026. Each year a batch of barrels is chosen for the Antique Collection and bottled uncut and unfiltered, at the strength it came out of the wood. So every release has its own age and proof, which its label states.",
   "taste": "Big and spicy: cinnamon, spearmint and cedar on the nose, with cherry and brown sugar beneath. At barrel proof the palate is hot and dense, rye spice over molasses, candied orange and dark chocolate, and water brings the fruit forward. The finish is long, with black and white pepper.",
   "lines": {
-    "s10": "Thomas H. Handy is Buffalo Trace's uncut, unfiltered straight rye from the yearly Antique Collection, about six years old, at full barrel proof.",
-    "s20": "Thomas H. Handy Sazerac is the uncut rye of Buffalo Trace's yearly Antique Collection: around six years in new charred oak, then bottled straight from the barrel, so each year's proof differs and the label states it. Spice, mint, cherry and molasses, very strong.",
-    "s45": "This is Thomas H. Handy Sazerac Straight Rye, from Buffalo Trace in Frankfort and its yearly Antique Collection. It shares the recipe of Sazerac Rye, rests around six years in new charred American oak, and is bottled uncut and unfiltered, so each year's proof is its own, and the label states it. Expect cinnamon, spearmint and cedar, then cherry, molasses and candied orange under a hot wave of rye spice, opening with a few drops of water. We pour it neat with water on the side, or stir it into a strong Sazerac. It carries the name of the man who ran the Sazerac Coffee House from 1869.",
+    "s10": "Thomas H. Handy is Buffalo Trace's uncut, unfiltered straight rye from the yearly Antique Collection, at full barrel proof, twelve years and more from 2026.",
+    "s20": "Thomas H. Handy Sazerac is the uncut rye of Buffalo Trace's yearly Antique Collection: once around six years in new charred oak, at least twelve from 2026, then bottled straight from the barrel, so each year's proof differs and the label states it. Spice, mint, cherry and molasses, very strong.",
+    "s45": "This is Thomas H. Handy Sazerac Straight Rye, from Buffalo Trace in Frankfort and its yearly Antique Collection. It shares the recipe of Sazerac Rye, rests in new charred American oak, at least twelve years from 2026, and is bottled uncut and unfiltered, so each year's proof is its own, and the label states it. Expect cinnamon, spearmint and cedar, then cherry, molasses and candied orange under a hot wave of rye spice, opening with water. We pour it neat with water on the side, or stir it into a strong Sazerac. It carries the name of the man who ran the Sazerac Coffee House from 1869.",
     "sale": "Thomas H. Handy is the rye behind the Sazerac story, bottled straight from the barrel at full strength. Taste it neat with a few drops of water, or have it in a Sazerac with real backbone."
   },
   "serve": {
@@ -29,13 +29,13 @@
     "glass": "A Glencairn or a small tulip neat; a rocks glass for the cube or the Sazerac.",
     "classic": "A Sazerac, much stronger than the usual build; also a bold Manhattan or Vieux Carré."
   },
-  "guest": "Thomas H. Handy is a straight rye from Buffalo Trace, about six years old and bottled uncut at barrel proof: cinnamon, mint, cherry and molasses, very strong, and lovely with a few drops of water.",
+  "guest": "Thomas H. Handy is a straight rye from Buffalo Trace, bottled uncut at barrel proof and, from 2026, at least twelve years old: cinnamon, mint, cherry and molasses, very strong, and lovely with a few drops of water.",
   "story": "Thomas H. Handy took over the Sazerac Coffee House in New Orleans in 1869, where its signature cocktail had been made with French cognac. His business also bought and sold spirits under its own names, and the Sazerac Company grew from it. As phylloxera ruined the vineyards of France in the decades that followed and cognac grew scarce, the Sazerac turned to American rye whiskey. The uncut rye that carries his name belongs to Buffalo Trace's Antique Collection, released once a year.",
   "watch": [
     "Its proof changes every year and is always high: pour less, offer water, and read tonight's label rather than quote a figure.",
     "Not Sazerac Rye, the same distillery's everyday rye, cut to bottling strength: Thomas H. Handy is uncut, at barrel proof.",
     "A guest who asks for a Sazerac made with it should hear that the drink will be far stronger than the usual one.",
-    "Asked its age: around six years in most releases; the year's label and notes give the exact figure."
+    "Asked its age: around six years in the releases to 2025, at least twelve from 2026; the year's label and notes give the figure."
   ],
   "asks": ["Which year's release is open, and what proof does its label state?"],
   "house": { "match": ["Thomas H. Handy"], "family": ["Sazerac Company", "Buffalo Trace"] },
@@ -44,7 +44,7 @@
     {
       "id": "recall",
       "prompt": "What is Thomas H. Handy Sazerac, and how is it bottled?",
-      "answer": "A straight rye from Buffalo Trace's yearly Antique Collection, aged around six years in new charred oak and bottled uncut and unfiltered at barrel proof, so each year's proof differs and the label states it. Named for Thomas H. Handy of the Sazerac Coffee House; neat with water, or in a Sazerac."
+      "answer": "A straight rye from Buffalo Trace's yearly Antique Collection, aged in new charred oak, around six years to 2025 and at least twelve from 2026, and bottled uncut and unfiltered at barrel proof, so each year's proof differs and the label states it. Named for Thomas H. Handy of the Sazerac Coffee House; neat with water, or in a Sazerac."
     }
   ],
   "quiz": [
@@ -64,10 +64,10 @@
     },
     {
       "id": "q3",
-      "q": "Roughly how long does Thomas H. Handy rest in oak in most releases?",
+      "q": "From the release of 2026, how long has every barrel of Thomas H. Handy rested in oak at the least?",
       "options": ["Two years", "Four years", "Six years", "Twelve years"],
-      "a": 2,
-      "explain": "Around six years in most releases, younger than the rest of the Antique Collection; each year's release differs."
+      "a": 3,
+      "explain": "Twelve years: from 2026 the distillery set that floor for every barrel. The releases from 2006 to 2025 were mostly around six years old."
     }
   ],
   "sources": [
@@ -79,6 +79,9 @@
     { "title": "Difford's Guide: Sazerac (New Orleans style)", "url": "https://www.diffordsguide.com/cocktails/recipe/3390/sazerac" },
     { "title": "Whisky Advocate: The Mashbills of Buffalo Trace", "url": "https://whiskyadvocate.com/The-Mashbills-of-Buffalo-Trace" },
     { "title": "VinePair: Need to know, the Buffalo Trace Antique Collection", "url": "https://vinepair.com/articles/ntk-buffalo-trace-antique-collection" },
+    { "title": "Buffalo Trace Distillery: Thomas H. Handy Sazerac", "url": "https://www.buffalotracedistillery.com/our-brands/antique-collection/thomas-h-handy.html" },
+    { "title": "Whisky Advocate: the 2026 Antique Collection and an older Handy", "url": "https://whiskyadvocate.com/buffalo-trace-antique-collection-2026-review" },
+    { "title": "The Whiskey Wash: the 2026 Antique Collection, Handy at twelve years", "url": "https://thewhiskeywash.com/whiskey-news/buffalo-trace-unveils-2026-antique-collection-thomas-h-handy-now-aged-12-years/" },
     { "title": "Cask Atlas: American rye", "url": "" }
   ]
 }
