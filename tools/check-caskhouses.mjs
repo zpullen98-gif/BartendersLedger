@@ -4,7 +4,7 @@
      node tools/check-caskhouses.mjs              every check below; passes on a partial build and says so last
      node tools/check-caskhouses.mjs --release    the same, and refuses a data file whose meta says partial, whose
                                                   meta.unrefuted is above 0, or whose keys are not frozen
-     node tools/check-caskhouses.mjs --mutations  then breaks the shipped files twenty-seven ways, one at a time, and
+     node tools/check-caskhouses.mjs --mutations  then breaks the shipped files twenty-eight ways, one at a time, and
                                                   expects red each time, from the check written for that rule (a
                                                   mutation that finds nothing to change, or that only another
                                                   check catches, is itself a failure)
@@ -45,7 +45,7 @@ import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import vm from 'node:vm';
 import { loadContext, validateFragment, planProblems, livingIn, cardKey as schemaKey, KEY_PREFIX, CARD_KEY_RE, PICKS, CAPS,
-  SUPERLATIVE_OURS, SELLING_OURS, AMERICAN_OURS, PRICE_OURS } from './caskhouses/schema.mjs';
+  SUPERLATIVE_OURS, SELLING_OURS, AMERICAN_OURS, PRICE_OURS, DASH_MORE } from './caskhouses/schema.mjs';
 import { DASH, SUPERLATIVE, VERDICT, PRICE, HOUSE_NAME, AMERICAN_MORE } from './backbar/schema.mjs';
 import { SUPERLATIVE_MORE } from './caskstyles/schema.mjs';
 import { AMERICAN } from './brew/schema.mjs';
@@ -345,6 +345,8 @@ await test('D4 every page: nobody living named, no price or currency, no house n
     if (pr) bad.push(name + ': a price word (' + pr[0] + ')');
     if (HOUSE_NAME.test(text)) bad.push(name + ': names the house');
     if (DASH.test(text)) bad.push(name + ': a dash (' + text.match(DASH)[0] + ')');
+    /* and the lint's fuller rule: a hyphen with a space beside it, or a hyphen glyph standing for a dash */
+    else if (DASH_MORE.test(text)) bad.push(name + ': a hyphen standing for a dash (' + JSON.stringify(text.slice(Math.max(0, text.search(DASH_MORE) - 12), text.search(DASH_MORE) + 12)) + ')');
     if ([...text].some((c) => c.codePointAt(0) >= 0x2190)) bad.push(name + ': a mark at or above U+2190');
     if (/<(?:img|iframe|video|picture|source|svg|object|embed)\b|url\(/i.test(draw())) bad.push(name + ': a picture');
   }
@@ -1056,6 +1058,7 @@ async function mutations() {
     ['the flashcard mode calling a producer a house', 'js/ui-study.js', "['caskhouses','Flagship recall','Name the producer,", "['caskhouses','House recall','Name the house,", 'W2 kept apart: out of allDrinks'],
     ['a run door keyed by its house alone', 'js/ui-caskhouses.js', "id=\"caskhouse-run-' + esc(row.house) + '-' + esc(row.id) + '\"", "id=\"caskhouse-run-' + esc(row.house) + '\"", 'W6 Today’s review'],
     ['the search index losing the houses', 'js/ui-new.js', "  if(typeof caskHouseSearchEntries === 'function') ix.push(...caskHouseSearchEntries());\n", '', 'W8 the Practise rows'],
+    ['a hyphen standing for a dash on the Atlas home', 'js/ui-caskhouses.js', "'<p>Five houses for each style, each with", "'<p>Five houses for each style- each with", 'D4 every page'],
     ['a stem that gives its key away by echo', 'js/data-caskhouses.js', 'A guest asks what Full Proof means on a bottle of 1792 Full Proof.', 'A guest asks if 1792 Full Proof is barrel proof.', 'D6 the questions'],
   ];
   let held = 0;

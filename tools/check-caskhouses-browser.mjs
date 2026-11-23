@@ -53,7 +53,9 @@ function ok(value, label) { if (!value) throw Error(label); checks++; }
 async function until(page, fn, arg, label, timeout = 12000) {
   try { await page.waitForFunction(fn, arg, { timeout }); checks++; } catch (e) { throw Error(label + ' (timed out)'); }
 }
-const DASH = /[‒-―]|&[mn]dash;| \x2d\x2d /;
+/* every dash glyph, an entity, two hyphens, and a hyphen with a space beside it save the
+   suspended one before and, or and to ("six- and seven-year-old"): the lint's own rule */
+const DASH = /[\u2010-\u2015\u2043\u2212]|&[mn]dash;|\x2d\x2d|\s\x2d|(?<=[^\s\x2d])\x2d\s+(?!(?:and|or|to)\b)/;
 const context = await browser.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block', timezoneId: 'America/New_York' });
 const page = await context.newPage();
 page.setDefaultTimeout(12000);
