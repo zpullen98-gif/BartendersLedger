@@ -62,7 +62,8 @@ page.on('console', (m) => { if (m.type() === 'error' && !/Failed to load resourc
 let visit = 0;
 async function go(hash) {
   await page.goto(base + '/?nosw&caskhousesqa=' + (++visit) + hash);
-  await page.waitForFunction(() => typeof caskHouseRecords === 'function' && caskHouseRecords().length > 0 && !!document.querySelector('#view h2, #view [data-act="back"]'));
+  try { await page.waitForFunction(() => typeof caskHouseRecords === 'function' && caskHouseRecords().length > 0 && !!document.querySelector('#view h2, #view [data-act="back"]'), null, { timeout: 30000 }); }
+  catch (e) { throw Error('the page at ' + hash + ' did not draw (timed out)'); }
 }
 const text = (sel) => page.locator(sel).first().innerText();
 const count = (sel) => page.locator(sel).count();
