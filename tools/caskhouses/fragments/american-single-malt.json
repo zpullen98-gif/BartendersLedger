@@ -15,18 +15,18 @@
    "year": "",
    "yearIs": "",
    "bottle": {
-    "name": "Westland American Oak American Single Malt Whiskey",
+    "name": "Westland Flagship American Single Malt Whiskey",
     "class": "American single malt whiskey: all malted barley, from one distillery",
-    "mash": "Only malted barley, in five malts: Washington Select pale malt with Munich, extra special, pale chocolate and brown malts, most of it grown in Washington State.",
-    "still": "Fermented with a Belgian saison brewer's yeast for up to 144 hours by the house's account, then distilled in two Vendome copper pot stills at its distillery in Seattle's SoDo district.",
-    "wood": "Predominantly new American oak, by the house's account. The label carries no age statement, and the minimums given in listings do not agree.",
+    "mash": "Only malted barley: five malts, Washington Select pale malt with Munich, extra special, pale chocolate and brown, and a small part of heavily peated malt from Scotland, by the house's account.",
+    "still": "Fermented with a Belgian brewer's yeast, then distilled in copper stills at the house's distillery in Seattle's SoDo district.",
+    "wood": "Married from five kinds of cask: new and used American oak, first-fill former bourbon casks, and first- and second-fill former oloroso hogsheads and butts. No age statement; the house gives a minimum of 40 months.",
     "strength": "46% ABV (92 proof)",
-    "taste": "Toffee, vanilla and bready malt on the nose, then coffee and dark chocolate from the roasted malts, a little banana in some bottles, and a dry, chocolate finish.",
-    "pour": "Neat, with a few drops of water, or long with soda over ice. Its roasted malt makes a dark, dry Old Fashioned with malt in place of bourbon.",
+    "taste": "Custard, marionberry compote, maple brittle and toasted marshmallow on the nose, then almond nougat, crème brûlée, black tea and malted milk, with fresh oak and a light breath of peat beneath.",
+    "pour": "Neat or with a few drops of water, or long with soda over ice. Its malt and oak make an Old Fashioned with malt in place of bourbon.",
     "label": [
      {
-      "term": "American Oak",
-      "means": "The bottling's name, for the new American oak casks that carry most of the marriage."
+      "term": "Flagship",
+      "means": "The bottling's name: the standing whiskey at the head of the house's range, released in 2021 in place of American Oak."
      },
      {
       "term": "American Single Malt Whiskey",
@@ -34,33 +34,33 @@
      }
     ]
    },
-   "table": "Westland is the Seattle distillery that set out to make a single malt of the American Northwest, and Westland American Oak was the bottle that made its name: five malts and new American oak, giving toffee, coffee and dark chocolate.",
-   "story": "Westland grew out of two young partners' wish for a single malt of their own corner of the country rather than a copy of Scotch; they founded it in Seattle in 2010 or 2011, as the accounts differ. The distillery settled in the SoDo district, where two Vendome copper pot stills, a brewer's mash of five malts, a Belgian saison yeast and long fermentations set its style. Its first range was three bottlings: the standard malt, later named American Oak, matured mostly in new American oak, with Sherry Wood and Peated beside it. In December 2016 Rémy Cointreau agreed to buy the distillery, and the purchase was completed in January 2017. The house later ceased making American Oak, Sherry Wood and Peated, and put Westland Flagship at the head of its range in American Oak's place. What American Oak taught was what roasted malts and new oak do to malted barley, and a guest asking for Westland may well use its name.",
+   "table": "Westland Flagship is the standing single malt of Westland in Seattle: five malts with a touch of peated malt, married from new oak, former bourbon and oloroso casks. It brings custard, nougat and toasted marshmallow at 46 per cent, and took American Oak's place in 2021.",
+   "story": "Westland began in Seattle in 2010, by its own timeline, with the aim of a single malt as distinct as the Northwest that made it, not a copy of Scotch; its stills first ran in 2011. In 2013 the distillery opened in the SoDo district, its copper stills in view of visitors, and released its first whiskey. For some years its standing range was three bottlings: American Oak, Sherry Wood and Peated. In December 2016 Rémy Cointreau agreed to buy the distillery, and the purchase was completed in January 2017. In the spring of 2021 the house ceased making the three and drew on its stocks for one bottling in their place: Westland Flagship, five malts with a little peated malt from Scotland, married from new and used American oak, former bourbon and former oloroso casks for at least 40 months and bottled at 46 per cent. It folds the three old bottlings into one, so a guest who remembers American Oak, Sherry Wood or Peated is poured the Flagship, and it is the bottle to reach for when a guest asks what American single malt tastes like.",
    "others": [
     {
-     "name": "Westland Flagship",
-     "note": "The bottling the house put at the head of its range in place of American Oak."
+     "name": "Westland American Oak",
+     "note": "The standing bottling before the Flagship, matured mostly in new American oak; the house ceased making it in 2021."
     },
     {
-     "name": "Westland Sherry Wood",
-     "note": "The sister of the original range, matured in part in sherry casks, also ceased."
+     "name": "Westland Peated",
+     "note": "The peated sister of American Oak in the earlier range, ceased with it in 2021."
     }
    ],
    "traps": [
-    "The house ceased making American Oak and put Westland Flagship in its place, so a new Westland bottle on a shelf is most likely the Flagship.",
-    "American Oak names the casks, not the grain: the whiskey is all malted barley, with no corn in it.",
-    "The label prints no age, so quote a guest no number of years."
+    "Westland Flagship took the place of American Oak, Sherry Wood and Peated in 2021, so a guest asking for American Oak is poured the Flagship.",
+    "Flagship is not American Oak renamed: it adds a little peated malt and some former oloroso casks to the new oak.",
+    "The label prints no age; the house gives a minimum of 40 months, so quote that and no number of years."
    ],
    "cards": [
     {
      "id": "five-malts",
-     "prompt": "What is in the mash of Westland American Oak?",
-     "answer": "Only malted barley, in five malts: Washington pale malt with Munich, extra special, pale chocolate and brown."
+     "prompt": "What is in the mash of Westland Flagship?",
+     "answer": "Only malted barley: five malts led by Washington pale malt, with a small part of heavily peated malt from Scotland."
     },
     {
      "id": "successor",
-     "prompt": "Which bottling did Westland put in the place of American Oak?",
-     "answer": "Westland Flagship, after the house ceased making American Oak, Sherry Wood and Peated."
+     "prompt": "Which three bottlings did Westland Flagship replace in 2021?",
+     "answer": "Westland American Oak, Sherry Wood and Peated, which the house ceased making."
     }
    ],
    "quiz": [
@@ -68,7 +68,7 @@
      "id": "q1",
      "tag": "bottle",
      "card": "five-malts",
-     "q": "A guest asks what grain goes into Westland American Oak. Which is it?",
+     "q": "A guest asks what grain goes into Westland Flagship. Which is it?",
      "options": [
       "Malted barley only",
       "Corn with malted barley",
@@ -76,13 +76,13 @@
       "Wheat with malted barley"
      ],
      "a": 0,
-     "explain": "The mash is all malted barley, in five malts; American Oak names the casks, and corn would make it a bourbon style instead."
+     "explain": "The mash is all malted barley, five malts with a little peated malt; corn beside the barley would take it out of single malt altogether."
     },
     {
      "id": "q2",
      "tag": "story",
      "card": "successor",
-     "q": "A guest asks for Westland American Oak, which the house ceased making. Which bottling did it put in its place?",
+     "q": "A guest asks for Westland American Oak, which the house ceased making in 2021. Which bottling took its place?",
      "options": [
       "Westland Peated",
       "Westland Garryana",
@@ -90,25 +90,31 @@
       "Westland Sherry Wood"
      ],
      "a": 2,
-     "explain": "Westland Flagship took American Oak's place at the head of the range; Peated and Sherry Wood were its sisters, and were ceased with it."
+     "explain": "Westland Flagship took American Oak's place in the spring of 2021; Peated and Sherry Wood were ceased with American Oak, and Garryana is a yearly release."
     }
    ],
    "sources": [
     {
-     "title": "Westland: American Oak American Single Malt",
-     "url": "https://de.westlanddistillery.com/westland-american-single-malt-whiskey",
+     "title": "Westland: Flagship, the product page and its specification",
+     "url": "https://shop.westlanddistillery.com/products/westland-american-single-malt-flagship",
      "kind": "primary",
      "read": "search"
     },
     {
-     "title": "Westland: the American Oak and Peated Heritage range",
-     "url": "https://westlanddistillery.com/products/american-oak-peated-heritage-range-bundle",
+     "title": "Westland: a time capsule of the house's years",
+     "url": "https://westlanddistillery.com/blogs/news/a-westland-time-capsule-a-look-back-over-the-years",
      "kind": "primary",
      "read": "search"
     },
     {
-     "title": "Tales of the Cocktail Foundation: how the whiskey is made at Westland",
-     "url": "https://talesofthecocktail.org/behind-scenes-westland-distillery/",
+     "title": "Shanken News Daily: Westland unveils its new flagship single malt",
+     "url": "https://www.shankennewsdaily.com/2021/06/09/28788/washingtons-westland-distillery-unveils-new-flagship-single-malt/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Whisky Advocate: Westland's new whiskeys reviewed",
+     "url": "https://whiskyadvocate.com/westland-beer-cask-wine-cask-and-flagship-reviewed",
      "kind": "secondary",
      "read": "search"
     },
@@ -117,40 +123,18 @@
      "url": "https://www.thedrinksbusiness.com/2017/01/remy-closes-westland-distillery-acquisition/",
      "kind": "secondary",
      "read": "search"
-    },
-    {
-     "title": "The Whiskey Wash: Westland changes its core range",
-     "url": "https://thewhiskeywash.com/whiskey-styles/american-whiskey/westland-distillery-shaking-up-its-core-range-of-whiskeys/",
-     "kind": "secondary",
-     "read": "search"
     }
    ],
    "report": [
-    "A swap of the bottling is proposed: Westland's own pages say the house has ceased making American Oak, Sherry Wood and Peated, and Westland Flagship (46 per cent, at least 40 months, new and used American oak with former bourbon and oloroso casks, by the house's Flagship page) took American Oak's place. Distiller dates the change to spring 2021; no second source gave the year, so the record gives none. The record stays on American Oak until the refuter rules.",
-    "year is empty: the founding is 2010 in Tales of the Cocktail and most listings and 2011 in Wikipedia and InsideHook. The October 2013 opening of the SoDo distillery to visitors rests on Seattle Met alone and is left out.",
-    "The plan's note on maturation is unsettled: listings give a minimum of 36 months for American Oak and one review page gives two years; the house's page read gives no figure, so wood says only that the minimums disagree. The 40 months belongs to the Flagship.",
-    "The five malts stand on the house's American Oak page and Distiller; Distiller's figure of about 90 per cent Washington barley is given as most of it. The 144 hours is the house's own claim (its product sheets give 96 to 144 hours).",
-    "The taste rests on Distiller's critic's note and community notes (toffee, vanilla, coffee, dark chocolate, banana in a few); the house's own notes for American Oak were not found.",
-    "Ownership is told only as the 2016 agreement and the completion in January 2017 (The Spirits Business, The Drinks Business, The Whiskey Wash). The founders are living and are described, not named; Matt Hofmann is already in people.json and Emerson Lamb is added.",
-    "Left out for want of a source: Garry oak and Washington peat work, the still sizes, entry proof, and whether the Vendome stills ran the earliest American Oak spirit made before the SoDo move."
+    "Rewritten on 23 November 2026 for Westland Flagship, the bottling the house released in the spring of 2021 in place of American Oak, Sherry Wood and Peated (the house's Flagship specification gives spring 2021; Shanken News Daily reported the launch on 9 June 2021 and the end of the three; The Whiskey Wash and Whisky Advocate agree). Key, card ids and question ids kept; the swap waits for the refuter's agreement before it enters the group's swaps.",
+    "The mash: the house's specification names five malts (Washington Select pale, Munich, extra special, pale chocolate, brown); its shop page adds Bairds heavily peated malt and speaks of a touch of peated spirit, and Whisky Advocate gives some peated malt from Scotland; Shanken counts six types of barley. The record gives the five and a small part of peated malt.",
+    "The wood is the house's list of five cask types (new and used American oak, first-fill former bourbon, first- and second-fill former oloroso hogsheads and butts) with The Whiskey Wash's review and Shanken's count of five; the 40 month minimum is the house's and Shanken's.",
+    "The taste is the house's own nose and palate notes (custard, marionberry compote, maple brittle, toasted marshmallow; almond nougat, crème brûlée, black tea, white flower petals, malted milk balls) with Whisky Advocate's fresh oak and light peat; the house gives no finish, so none is written.",
+    "year stays empty: the house's timeline dates the founding to 2010 and its About page says 2011; the story gives 2010 by the timeline and 2011 for the first run of the stills, both on that timeline.",
+    "Left out for want of a source in this run: the Vendome name of the stills (the house's pages say copper pot stills, the timeline copper stills), the saison strain and fermentation hours, the Outpost range date, any figure of Washington barley, and whether the label itself prints Flagship (the house's pages, The Whiskey Wash and retailers name it Westland Flagship; no photographed label was read).",
+    "Ownership is told only as dated history (the 2016 agreement and the January 2017 completion, The Drinks Business). The founders and the blender who made the Flagship are living and unnamed; the blender, named in a trade summary of the launch, is not yet in people.json, which this task did not edit."
    ],
-   "checked": {
-    "date": "2026-11-22",
-    "by": "refuter",
-    "verdict": "changed",
-    "changed": [
-     "story: the founders were called two Washington natives; only one is shown to have grown up in the state, so now two young partners.",
-     "story: the purchase was completed early in 2017; Rémy Cointreau's own release and The Drinks Business date the closing to 6 January 2017, so now in January 2017.",
-     "bottle.wood: the marriage with used American oak and first-fill former bourbon casks rested on no source read; the house's page says predominantly new American oak, and the wood now says that alone.",
-     "sources: The Spirits Business on the December 2016 agreement gives way to The Drinks Business on the January 2017 closing, which also tells the earlier agreement."
-    ],
-    "open": [
-     "year: the founding is 2010 in The Whiskey Wash, Tales of the Cocktail and InsideHook, 2011 in Wikipedia; the refuter leaves it empty with the author.",
-     "The swap to Westland Flagship is refused for now (see the review): American Oak was ceased in 2021, so the plan's flagship needs the read-together agent.",
-     "bottle.taste rests on Distiller's notes; the house's own notes for American Oak were not found.",
-     "Whether Sherry Wood was ceased with American Oak and Peated: The Whiskey Wash says so, the house's page read names American Oak and Peated."
-    ]
-   }
+   "checked": null
   },
   {
    "key": "stranahans",
@@ -459,7 +443,7 @@
    "year": "2004",
    "yearIs": "founded",
    "bottle": {
-    "name": "Westward American Single Malt Whiskey",
+    "name": "Westward Original American Single Malt Whiskey",
     "class": "American single malt whiskey",
     "mash": "Only malted barley, two-row barley of the Pacific Northwest, brewed at the distillery into a beer before it is distilled.",
     "still": "Distilled twice in low-reflux pot stills at the distillery in Portland, after the house has brewed and fermented its own wash.",
@@ -475,10 +459,14 @@
      {
       "term": "45% ABV",
       "means": "Ninety proof, the strength of the standing bottling."
+     },
+     {
+      "term": "Original",
+      "means": "The house's name for its standing single malt at 90 proof, beside its cask finishes and cask strength."
      }
     ]
    },
-   "table": "Westward American Single Malt Whiskey is brewed before it is distilled: Northwest two-row barley made into beer in Portland, Oregon, then aged in new American oak, with orange peel, honey and toffee at 90 proof.",
+   "table": "Westward Original American Single Malt Whiskey is brewed before it is distilled: Northwest two-row barley made into beer in Portland, Oregon, then aged in new American oak, with orange peel, honey and toffee at 90 proof.",
    "story": "Two partners started House Spirits Distillery in Corvallis, Oregon, in 2004, and soon moved it to Portland. Whiskey takes years, and the house first made its name with gin: Aviation American Gin, worked out with a bartender. The malt grew meanwhile under the Westward name and was made the brewer's way: a wash of Northwest two-row barley brewed and fermented on site, distilled twice in pot stills and aged in full-size new American oak barrels, heavily toasted and lightly charred. In time came stout cask, cask strength and other finishes. In April 2025 House Spirits filed for Chapter 11 protection, and in October 2025 a court approved the sale of most of its assets to the private investors who had financed it through the case. Brewed, distilled and aged in one Portland distillery, Westward makes plain that an American single malt begins as beer.",
    "others": [
     {
@@ -497,7 +485,7 @@
    "cards": [
     {
      "id": "two-row",
-     "prompt": "What barley goes into Westward American Single Malt Whiskey?",
+     "prompt": "What barley goes into Westward Original American Single Malt Whiskey?",
      "answer": "Two-row malted barley of the Pacific Northwest, brewed into a beer at the distillery in Portland."
     },
     {
@@ -511,7 +499,7 @@
      "id": "q1",
      "tag": "bottle",
      "card": "two-row",
-     "q": "A guest asks what grain Westward American Single Malt Whiskey is made from. Which is it?",
+     "q": "A guest asks what grain Westward Original is made from. Which is it?",
      "options": [
       "Yellow dent corn",
       "Malted winter rye",
@@ -574,7 +562,8 @@
     "Names added to people.json, all living and named in the sources: the two founders (Christian Krogstad, Lee Medoff), the chief executive (Thomas Mooney) and an investor (Luis Fernando Leal).",
     "Left out for want of a second source: the American pale ale yeast (one trade account), the number 2 char given there beside the house's heavily toasted and lightly charred, the 2005 year of the move to Portland (Wikipedia alone), the sale of Aviation in 2016 and the label redesign of 2020.",
     "The taste is the house's own notes on its product page; its shop gives another set (vanilla, brown sugar, baking spice, tobacco, dark chocolate), and the record keeps the product page's.",
-    "year is the founding of House Spirits in 2004 (Wikipedia and the house's own history); no first release year for Westward was found."
+    "year is the founding of House Spirits in 2004 (Wikipedia and the house's own history); no first release year for Westward was found.",
+    "Name settled on 23 November 2026: the house's product page names the standing bottling Westward Whiskey Original, and retailers list it as Westward Original American Single Malt Whiskey, while older reviews and a 2020 trade release call it Westward American Single Malt; no photographed label was read. Bottle name, the Original label term, table, two-row prompt and q1 stem changed; nothing else."
    ],
    "checked": {
     "date": "2026-11-22",
@@ -606,7 +595,7 @@
    "year": "2011",
    "yearIs": "founded",
    "bottle": {
-    "name": "Courage & Conviction American Single Malt Whisky",
+    "name": "Courage & Conviction Signature Malt American Single Malt Whisky",
     "class": "American single malt whisky, spelt on the label without the e",
     "mash": "Only malted barley, mashed, fermented and distilled at the distillery; the house publishes no further recipe.",
     "still": "Distilled at Lovingston in a pair of copper pot stills made in Scotland.",
@@ -625,7 +614,7 @@
      }
     ]
    },
-   "table": "Virginia Distillery Co. makes its single malt at Lovingston in the Blue Ridge foothills, and Courage & Conviction American Single Malt Whisky is its flagship: all malted barley from bourbon, sherry and red wine casks, bottled at 46 per cent, with raspberry jam, caramel and spice.",
+   "table": "Virginia Distillery Co. makes its single malt at Lovingston in the Blue Ridge foothills, and Courage & Conviction Signature Malt is its flagship: all malted barley from bourbon, sherry and red wine casks, bottled at 46 per cent, with raspberry jam, caramel and spice.",
    "story": "In 2011 a businessman who wanted a malt distillery of his own in the Blue Ridge foothills of Nelson County founded Virginia Distillery Co. A pair of copper pot stills made in Scotland was set at Lovingston. The founder died while the distillery was being built, and his family carried the work on. The distillery opened in 2015, and its own malt was laid down in bourbon, sherry and red wine casks. In 2020 it released Courage & Conviction, named for a saying the founder often repeated: the distillery's own single malt, aged at least three years, a marriage of the three casks at 46 per cent. Single cask bottlings of each wood came after it, and in January 2025 its category gained a federal standard. It carries American single malt well beyond the West: a Virginia malt in the Scottish manner, its red wine casks giving it a colour of its own.",
    "others": [
     {
@@ -644,12 +633,12 @@
    "traps": [
     "The label drops the e from whisky, though this is an American single malt.",
     "The red wine casks shape the flavour, not the class: it is all malted barley, distilled at Lovingston.",
-    "The house's own pages also call this bottling Courage & Conviction Signature Malt: it is the same marriage of three casks at 46 per cent."
+    "The release of 2020 and some listings name it Courage & Conviction American Single Malt Whisky; the house calls the same marriage of three casks at 46 per cent Signature Malt."
    ],
    "cards": [
     {
      "id": "three-casks",
-     "prompt": "Which three casks make up Courage & Conviction American Single Malt Whisky?",
+     "prompt": "Which three casks make up Courage & Conviction Signature Malt?",
      "answer": "Former bourbon casks, about half, with sherry casks and Cuvée red wine casks, about a quarter each."
     },
     {
@@ -727,7 +716,8 @@
     "The plan's note on size is kept out: the house calls itself the largest independent maker of American single malt, a ranking.",
     "The opening in 2015 rests on BevNet's 2015 report of the tasting room and production site and Alcohol Professor's late 2015 start of distilling; the stills' maker (Forsyths or a fabricator in Elgin) and their Turkish history are left out as the accounts disagree.",
     "The cask shares are the house's batch pages (about 50 per cent bourbon, 25 Cuvée, 25 sherry); STR is read as shaved, toasted and recharred, the usual meaning, which the house's pages did not spell out in the summaries read. The whisky consultant who devised the Cuvée profile is dead but not named for want of two sources on his dates.",
-    "Left out for want of a second source: the blends of imported Scotch malt the house sold while its own spirit aged, and its part in seeking the federal standard."
+    "Left out for want of a second source: the blends of imported Scotch malt the house sold while its own spirit aged, and its part in seeking the federal standard.",
+    "Name settled on 23 November 2026: the house's whisky index calls Courage & Conviction Signature Malt its flagship release, and its product pages on vadistillery.com and courageandconviction.com, Master of Malt and The Whiskey Wash's 2026 review use Signature Malt; the Virginia ABC listing and the shop's page title keep American Single Malt Whisky. No photographed label was read. Bottle name, table, third trap and the three-casks prompt changed; nothing else. Open for the refuter: courageandconviction.com now gives Signature Malt a minimum of five years in first-fill casks with oloroso, Pedro Ximénez and fino among the sherry casks, beyond the three or four years in wood."
    ],
    "checked": {
     "date": "2026-11-22",
