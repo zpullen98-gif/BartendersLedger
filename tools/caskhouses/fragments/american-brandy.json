@@ -640,50 +640,46 @@
       "year": "2014",
       "yearIs": "founded",
       "bottle": {
-        "name": "Copper & Kings American Craft Brandy",
+        "name": "Copper & Kings American Brandy V.S.O.P.",
         "class": "Brandy, a grape brandy",
-        "mash": "Wine of Muscat, Chenin Blanc and French Colombard grapes from California, as accounts of the bottling give it.",
-        "still": "A blend of pot still brandy: the house's own, distilled in copper pot stills in Butchertown, Louisville, with pot still brandy bought from other distillers, as accounts of the bottling describe it.",
-        "wood": "Kentucky bourbon barrels for about nine parts in ten and new medium-char American oak for the rest, at least two years in a solera, by accounts of the bottling; no age statement.",
-        "strength": "45% ABV (90 proof)",
-        "taste": "White grape and honeysuckle on a floral nose, with caramel and honey, then oak, char and vanilla from the bourbon barrels on a drier palate, and spice and wood in the finish.",
-        "pour": "Neat or over one large cube, in place of bourbon in an Old Fashioned, or shaken in a Sidecar or a Brandy Crusta.",
+        "mash": "Wine of California grapes, given in the launch press as French Colombard, Chenin Blanc and Muscat; the house's own page says only California grapes.",
+        "still": "Pot still brandy: the house makes its brandy in copper pot stills at its distillery in Butchertown, Louisville, by its own account. It does not say where each part of this six-year blend was distilled.",
+        "wood": "American oak barrels that held Kentucky bourbon, for at least six years by the house's page, which sells it as its six-year brandy.",
+        "strength": "43% ABV (86 proof)",
+        "taste": "Dried fruit, toasted grain, honey and wood on the nose, then maple, honey, toasted oak and gentle spice on the palate, by the house's own notes; golden in the glass.",
+        "pour": "Neat or over one large cube, in place of bourbon in an Old Fashioned, or shaken in a Sidecar or a Brandy Alexander.",
         "label": [
           {
-            "term": "American Craft Brandy",
-            "means": "The name of this bottling; craft has no legal meaning on an American label."
+            "term": "American Brandy",
+            "means": "Brandy alone on an American label is grape brandy, aged at least two years in oak; American names where it was made."
           },
           {
-            "term": "Brandy",
-            "means": "Used alone, the federal word for grape brandy aged at least two years in oak."
+            "term": "V.S.O.P.",
+            "means": "Very Superior Old Pale, a grade borrowed from Cognac; the house pairs it with six years in bourbon barrels."
           }
         ]
       },
-      "table": "Copper & Kings American Craft Brandy is pot still brandy blended and aged in the Butchertown district of Louisville, California grape spirit rested mostly in former bourbon barrels and bottled at 90 proof. White grape, honey and vanilla make it a brandy to offer a bourbon drinker.",
-      "story": "Copper & Kings opened in 2014, founded by a couple who had built and sold drinks companies before and who chose Louisville over the West Coast for an American brandy house. They set up in Butchertown, the city's old quarter of butchers and stockyards, with copper pot stills and one aim: brandy distilled from American wine and rested in Kentucky bourbon barrels, in the heart of bourbon country. While their own spirit aged, they blended it with pot still brandy bought from other producers, and the American Craft Brandy was made that way. The range grew with Butchertown Brandy, at a higher strength, and Floodwall, an apple brandy. In 2018 Constellation Brands bought a minority stake, and in 2020 it bought the rest of the company. In 2025 the Bourdon Spirits Company, a Louisville firm, bought Copper & Kings from Constellation, and distilling went on in Butchertown. Against the big California brands, the house offers another way: pot still brandy, bourbon wood and Kentucky.",
+      "table": "Copper & Kings, a brandy distillery in the Butchertown district of Louisville, makes its American Brandy V.S.O.P. from California grapes: pot still brandy, six years in Kentucky bourbon barrels, bottled at 86 proof. Maple, honey and toasted oak make it a brandy to offer a bourbon drinker.",
+      "story": "Copper & Kings opened in 2014, founded by a couple who had built and sold drinks companies before and who chose Louisville over the West Coast for an American brandy house. They set up in Butchertown, the city's old quarter of butchers and stockyards, with copper pot stills and one aim: brandy distilled from American wine and rested in Kentucky bourbon barrels, in the heart of bourbon country. While their own spirit aged, they blended it with pot still brandy bought from other producers, and their lead bottling, American Craft Brandy at 90 proof with no age statement, was made that way. In 2020 Constellation Brands bought the company. In August 2025 Constellation sold Copper & Kings to the Bourdon Spirits Company, a Kentucky firm, and in November 2025 the house relaunched its core range around three bottles: the six-year American Brandy V.S.O.P., a six-year apple brandy bottled in bond and a straight bourbon finished in brandy barrels. The American Craft Brandy was not among them. For a bartender the V.S.O.P. carries the house's idea in one bottle: grape spirit, six years of bourbon wood and Kentucky.",
       "others": [
         {
-          "name": "Copper & Kings American Brandy V.S.O.P.",
-          "note": "Six years in former bourbon barrels by the house's account, at 86 proof; the blue label."
+          "name": "Copper & Kings American Craft Brandy",
+          "note": "The house's lead brandy before the 2025 relaunch: 90 proof, no age statement, its own pot still brandy blended with bought pot still brandy."
         },
         {
-          "name": "Copper & Kings Butchertown Brandy",
-          "note": "Copper pot distilled brandy at a higher strength, aged in bourbon barrels and new American oak."
-        },
-        {
-          "name": "Copper & Kings Floodwall Apple Brandy",
-          "note": "Pot distilled apple brandy aged in bourbon barrels and Oloroso sherry casks."
+          "name": "Copper & Kings American Apple Brandy",
+          "note": "Six years old and bottled in bond at 100 proof, from Michigan apples, by the launch press."
         }
       ],
       "traps": [
-        "Copper & Kings works in Kentucky from California grapes: Louisville is where the brandy is distilled, blended and aged, not where the grapes grow.",
-        "Craft on the label has no legal meaning; the word brandy alone does, grape brandy aged at least two years in oak."
+        "Copper & Kings works in Kentucky from California grapes: Louisville is where the brandy is distilled and aged, not where the grapes grow.",
+        "The V.S.O.P. is a different bottle from the American Craft Brandy a guest may remember: six years in bourbon barrels at 86 proof, against 90 proof with no age statement."
       ],
       "cards": [
         {
           "id": "pot-still",
-          "prompt": "On what kind of still is Copper & Kings American Craft Brandy made?",
-          "answer": "Copper pot stills: the house's own in Butchertown, Louisville, blended with pot still brandy bought from other distillers."
+          "prompt": "On what kind of still does Copper & Kings make its brandy?",
+          "answer": "Copper pot stills, at its distillery in Butchertown, Louisville, by the house's own account."
         },
         {
           "id": "louisville",
@@ -696,7 +692,7 @@
           "id": "q1",
           "tag": "bottle",
           "card": "pot-still",
-          "q": "A guest takes Copper & Kings American Craft Brandy for a column still brandy. How is the brandy in it distilled?",
+          "q": "A guest takes Copper & Kings American Brandy V.S.O.P. for a column still brandy. How does the house distil its brandy?",
           "options": [
             "On a continuous column",
             "In copper pot stills",
@@ -704,7 +700,7 @@
             "On a triple effect column"
           ],
           "a": 1,
-          "explain": "The blend is pot still brandy, the house's own from copper pot stills in Louisville with some bought in; a column and doubler is the usual rig of bourbon, not of this brandy."
+          "explain": "The house makes its brandy in copper pot stills in Butchertown, by its own account; a column and doubler is the usual rig of bourbon, not of this brandy."
         },
         {
           "id": "q2",
@@ -718,16 +714,10 @@
             "2020"
           ],
           "a": 2,
-          "explain": "The distillery opened in 2014; 2018 and 2020 are the years Constellation Brands took a stake and then the whole company."
+          "explain": "The distillery opened in 2014; 2020 is the year Constellation Brands bought the company, and 2010 is before the house began."
         }
       ],
       "sources": [
-        {
-          "title": "Copper & Kings: American Craft Brandy",
-          "url": "https://copperandkings.com/products/american-craft-brandy",
-          "kind": "primary",
-          "read": "search"
-        },
         {
           "title": "Copper & Kings: American Brandy V.S.O.P.",
           "url": "https://copperandkings.com/product/american-brandy/",
@@ -735,14 +725,20 @@
           "read": "search"
         },
         {
-          "title": "Distillery Trail: Copper & Kings independent again",
-          "url": "https://www.distillerytrail.com/blog/independent-again-copper-kings-american-brandy-ownership-comes-back-home-with-acquisition-from-constellation-brands/",
+          "title": "The Whiskey Wash: the new core range",
+          "url": "https://thewhiskeywash.com/whiskey-news/copper-kings-unveils-bold-brandy-bourbon-portfolio/",
           "kind": "secondary",
           "read": "search"
         },
         {
-          "title": "Distiller: Copper & Kings American Craft Brandy",
-          "url": "https://distiller.com/spirits/copper-kings-american-craft-brandy",
+          "title": "Global Drinks Intel: the range updated",
+          "url": "https://drinks-intel.com/spirits/bourdon-spirits-co-updates-full-flagship-copper-kings-range/",
+          "kind": "secondary",
+          "read": "search"
+        },
+        {
+          "title": "The Spirits Business: the relaunch",
+          "url": "https://www.thespiritsbusiness.com/2025/11/copper-kings-relaunches-portfolio-post-acquisition/",
           "kind": "secondary",
           "read": "search"
         },
@@ -754,29 +750,15 @@
         }
       ],
       "report": [
-        "The plan's question settled: the distillery has not closed. Constellation Brands took a minority stake in 2018 and the rest in 2020 (BevNET, Distillery Trail), and the Bourdon Spirits Company of Louisville bought it in August 2025, with distilling kept at Butchertown (Distillery Trail, FoodBev, The Spirits Business). The story tells each as dated history.",
-        "Proposed bottling swap, for the refuter to agree: the American Craft Brandy appears only on the house's old product address (90 proof) and in shops and reviews of 2015 to 2019; the house's own range in 2025 leads with American Brandy V.S.O.P. (six years in bourbon barrels, blue label, 86 proof on the house's bar menu), beside Revival, a ten year Hazmat and a twelve year. A shop's address calls the bottle American Brandy VSOP, which suggests a renaming. Swap: Copper & Kings American Craft Brandy to Copper & Kings American Brandy V.S.O.P., because the house no longer lists the roster's bottling. The record is written on the roster's bottling until the swap is agreed.",
-        "The grapes rest on shops and Distiller, which agree on Muscat, Chenin Blanc and French Colombard; the house's own pages say only fresh fruit and American wine. The wood is former bourbon barrels by the house, with new medium-char oak for a share by Distiller and a shop; the house's six years and more belongs to its present range, not to this bottling, and is left out of the wood.",
-        "The founding couple are living and are described, not named. That early bottlings held brandy from other producers rests on one interview piece; the refuter should try it or cut it. The Vendome stills rest on one photograph caption and are left out, as is a claim of ageing with music, for which no source was found.",
-        "The taste rests on Distiller's reviews and shops' notes, the only sources for this bottling.",
-        "Living people met in searches and named nowhere: Joe Heron and Lesley Heron, the founders. My task names only this fragment, so people.json was not touched: the integrator should add the names."
+        "Settled by search: the American Craft Brandy is no longer made as the house's lead. The house's own site lists the American Brandy V.S.O.P., Revival, single varietals, a ten year Hazmat and a twelve year, and no Craft Brandy; the core range relaunched in November 2025 after the August 2025 sale is the six-year V.S.O.P., a six-year apple brandy bottled in bond and a straight bourbon (The Spirits Business, The Whiskey Wash, Global Drinks Intel, Craft Spirits Magazine). No source shows the Craft Brandy made since. The record is rewritten for the V.S.O.P., the Craft Brandy told as history in story, others and a trap.",
+        "The V.S.O.P.'s six years in American oak bourbon barrels, its California grapes, its tasting notes and its cocktails are from the house's own pages; 86 proof is on the house's own bar menu and in The Whiskey Wash, 43% in Global Drinks Intel. The grape varieties rest on the launch press only (The Whiskey Wash, Global Drinks Intel); the house's page says California grapes.",
+        "Where the V.S.O.P.'s six-year brandy was distilled is not settled: the house says it makes its brandy in copper pot stills in Butchertown, and one trade account of the Texas launch calls the V.S.O.P. pot distilled, but Distiller describes the house as blending bought pot still brandy in its early years, and six years before the November 2025 launch reaches back to 2019. The record says the house does not state where each part was distilled.",
+        "Whether the front label prints an age statement was not confirmed: the house's page and menu call it the six-year V.S.O.P., so the wood gives six years as the house's page states it and the label carries only American Brandy and V.S.O.P. as terms.",
+        "The bought pot still brandy in the American Craft Brandy rests on Fox News, cited, with Distiller and Drinkhacker (the refuted record's sources) as the second accounts. Constellation's 2018 minority stake (The Spirits Business on the 2025 sale, Distillery Trail) is left out of the story to keep to five sources; the 2020 purchase and the 2025 sale rest on The Spirits Business's relaunch piece and the refuted record's Distillery Trail.",
+        "Left out: a 2026 investment in the house by a Kentucky investment firm and the narrowing of its distribution, both present facts that will age; Revival and the single varietals, distillery bottlings a guest meets less often; the house's no added sugar claim.",
+        "The founders, a married couple, are living and are described, not named; both names already stand in people.json. Nobody else living is named."
       ],
-      "checked": {
-        "date": "2026-11-23",
-        "by": "refuter",
-        "verdict": "changed",
-        "changed": [
-          "bottle.still, cards[0].answer, quiz[0]: 'Distilled in copper pot stills at the house's distillery' now a blend of the house's own copper pot still brandy with pot still brandy bought from other distillers, by Distiller and Drinkhacker; the stem now asks how the brandy in it is distilled.",
-          "bottle.wood: now about nine parts in ten Kentucky bourbon barrels and the rest new medium-char oak, at least two years in a solera, by Distiller and shops.",
-          "table and traps[0]: 'made in Butchertown' now 'blended and aged', and 'rested mostly' in former bourbon barrels, to fit the blend.",
-          "story: 'as the founders told reporters' now the blending of bought pot still brandy stated from Distiller, Drinkhacker and Fox News; the release years of Butchertown Brandy (2015) and Floodwall (2016) cut for want of a source.",
-          "sources: Go To Louisville replaced by Fox News, which gives the founders' choice of Louisville over the West Coast and the bought brandy."
-        ],
-        "open": [
-          "The house's own site no longer lists a 90 proof American Craft Brandy beside its V.S.O.P., single varietals and twelve year; the bottle is told on its old product page and on shops. See the swap ruling in the review.",
-          "bottle.mash: Muscat, Chenin Blanc and French Colombard rest on Distiller and shops; the house says only American wine. Drinkhacker calls it the same spirit as the earlier Craft Distilled Brandy, one source, left out."
-        ]
-      }
+      "checked": null
     }
   ]
 }
