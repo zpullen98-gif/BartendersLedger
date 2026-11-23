@@ -34,8 +34,8 @@
      }
     ]
    },
-   "table": "Château du Tariquet VSOP is a Bas-Armagnac from one family estate near Eauze, distilled once on its own wood-fired stills from Ugni Blanc and Baco. Expect ripe fruit, flowers and a cool minty edge over oak spice, good neat or as the brandy in a Sidecar.",
-   "story": "In the seventeenth century the estate belonged to a Gascon lord who took his title from it, the Sieur du Tariquet, and the house dates armagnac there to 1683 by its own account. In 1912 a bear tamer from Ercé, in the Ariège, and his son pooled their savings to buy it, with about seven hectares of vines, and set about restoring it. The son settled there with his wife in 1922, and their daughter, born on the estate in 1925, married into the Grassa family, which had come from Spain; through that marriage the estate passed to the Grassas. In 1985 the estate set up a still of its own, made at Condom in the Armagnac tradition and fired with wood; a second, from the same maker, followed in 2016. Each grape variety is made into wine and distilled apart, and the casks are only lightly toasted, so the fruit of the grape leads the oak. For a bartender the VSOP is the plain lesson that armagnac is a grower's spirit: one estate's vines, one family's stills, and a blend young enough to pour.",
+   "table": "From one family's vines near Eauze comes Château du Tariquet VSOP, a Bas-Armagnac of Ugni Blanc and Baco distilled once on the estate's own wood-fired stills. Ripe fruit and flowers with a cool edge of mint over oak spice; take it neat at room temperature.",
+   "story": "A Gascon lord who took his title from the estate, the Sieur du Tariquet, held it in the seventeenth century, and the house dates armagnac there to 1683 by its own account. In 1912 a bear tamer from Ercé, in the Ariège, and his son pooled their savings to buy it, with about seven hectares of vines, and set about restoring it. The son settled there with his wife in 1922, and their daughter, born on the estate in 1925, married into the Grassa family, which had come from Spain; through that marriage the estate passed to the Grassas. In 1985 the estate set up a still of its own, made at Condom in the Armagnac tradition and fired with wood; a second, from the same maker, followed in 2016. Each grape variety is made into wine and distilled apart, and the casks are only lightly toasted, so the fruit of the grape leads the oak. One estate's vines, one family's stills and a blend young enough to pour: the VSOP shows behind any bar that armagnac is a grower's spirit.",
    "others": [
     {
      "name": "Domaine Tariquet VS Classique",
@@ -43,7 +43,7 @@
     },
     {
      "name": "Domaine Tariquet XO",
-     "note": "An older blend of the estate; no eau-de-vie in an armagnac XO is younger than ten years."
+     "note": "An older blend of the estate, held by the appellation's rule for XO: ten years at least for every eau-de-vie."
     }
    ],
    "traps": [
@@ -183,8 +183,8 @@
      }
     ]
    },
-   "table": "Janneau VSOP is the house blend from Condom, made of eaux-de-vie distilled both ways the appellation allows, once in the continuous Armagnac still and twice in pot stills. Fig, honey and toasted raisins with a little leather, it is a gentle first armagnac neat or in a Sidecar.",
-   "story": "Janneau dates itself to 1851, when two partners, one of them a Janneau, set up in the armagnac trade at Condom, in the Gers, and by its own account it has aged its armagnac in the cellars built that year ever since. The family ran the business for generations, and in 1974, by the house's account, it was sold to the Cognac house Martell. The house's place in the region's history is its stills. By the house's account double distillation in pot stills had been barred in Armagnac since 1903, and it was allowed back in 1972 at Janneau's request. Since then Janneau has distilled both ways: once through the continuous Armagnac still, whose spirit it says brings intensity and depth, and twice in Charentais pot stills, whose spirit it says brings finesse and precision. Then it blends the two. That is why the Cask Atlas names Janneau when it warns that not every armagnac is distilled once. For a bartender the VSOP is the house's everyday blend at 40 per cent and the bottle that puts both stills in one glass, a fair first pour for a guest who knows Cognac.",
+   "table": "Janneau VSOP is the house blend from Condom, made of eaux-de-vie distilled both ways the appellation allows, once in the continuous Armagnac still and twice in pot stills. Fig, honey and toasted raisins with a little leather: a gentle first armagnac, poured neat.",
+   "story": "Janneau dates itself to 1851, when two partners, one of them a Janneau, set up in the armagnac trade at Condom, in the Gers, and by its own account it has aged its armagnac in the cellars built that year ever since. The family ran the business for generations, and in 1974, by the house's account, it was sold to the Cognac house Martell. The house's place in the region's history is its stills. By the house's account double distillation in pot stills had been barred in Armagnac since 1903, and it was allowed back in 1972 at Janneau's request. Since then Janneau has distilled both ways: once through the continuous Armagnac still, whose spirit it says brings intensity and depth, and twice in Charentais pot stills, whose spirit it says brings finesse and precision. Then it blends the two. That is why the Cask Atlas names Janneau when it warns that not every armagnac is distilled once. Here both stills share one glass: the VSOP is the house's everyday blend at 40 per cent, and a fair first pour for a guest who knows Cognac.",
    "others": [
     {
      "name": "Janneau VS",
@@ -192,7 +192,7 @@
     },
     {
      "name": "Janneau XO",
-     "note": "An older blend: no eau-de-vie in an armagnac XO is younger than ten years."
+     "note": "The house's older blend, which as an armagnac XO holds no eau-de-vie under ten years."
     }
    ],
    "traps": [
@@ -320,7 +320,7 @@
     "wood": "Casks of Gascon oak that the house coopers itself, by Difford's Guide's and its importer's accounts. No age statement: the estate gives six to twelve years for the blend.",
     "strength": "40% ABV",
     "taste": "By the estate's own notes, ripe fruit, plums and sweet pastry on the nose, then vanilla and citrus on a soft palate, and a long finish.",
-    "pour": "Neat in a tulip glass, or over one large cube. The estate also pours its armagnac in cocktails, and the VSOP gives a fruity Sidecar.",
+    "pour": "Neat and unchilled, or on one big cube of ice. The estate also pours its armagnac in cocktails, and the VSOP gives a fruity Sidecar.",
     "label": [
      {
       "term": "Bas-Armagnac",
@@ -332,12 +332,12 @@
      }
     ]
    },
-   "table": "Château de Laubade VSOP is a Bas-Armagnac from one estate at Sorbets, blended from all four grapes it grows and aged in casks the house makes from Gascon oak. Ripe plum, sweet pastry and vanilla: pour it neat, or let it lead a Sidecar.",
-   "story": "The estate at Sorbets, in the heart of the Bas-Armagnac, dates from 1870. In 1974 the Lesgourgues family bought the property, and three generations of the family have run it since. Laubade is a grower's house in the full sense: it distils only the grapes of its own vineyard, and it grows all four of the varieties a bartender meets on armagnac labels, Baco, Ugni Blanc, Folle Blanche and Colombard. Each variety is distilled apart in the continuous Armagnac way, on the estate's own still, before the cellar blends the eaux-de-vie. The house also coopers its own casks from the oak of Gascon forests. Beside its blends it keeps eaux-de-vie of many harvests and releases them as single vintages, each after at least fifteen years in Gascon oak by the estate's account. For a bartender the VSOP shows what one estate's four grapes give in a single blend, and it is the bottle that makes the four grape names worth learning.",
+   "table": "All four of the grapes grown at Sorbets go into Château de Laubade VSOP, a single estate's Bas-Armagnac aged in casks the house coopers from Gascon oak. Neat, it gives ripe plum, sweet pastry and vanilla.",
+   "story": "The estate at Sorbets, in the heart of the Bas-Armagnac, dates from 1870. In 1974 the Lesgourgues family bought the property, and three generations of the family have run it since. Laubade is a grower's house in the full sense: it distils only the grapes of its own vineyard, and it grows all four of the varieties a bartender meets on armagnac labels, Baco, Ugni Blanc, Folle Blanche and Colombard. Each variety is distilled apart in the continuous Armagnac way, on the estate's own still, before the cellar blends the eaux-de-vie. The house also coopers its own casks from the oak of Gascon forests. Beside its blends it keeps eaux-de-vie of many harvests and releases them as single vintages, each after at least fifteen years in Gascon oak by the estate's account. The four grape names are worth learning on this bottle, since the VSOP shows what one estate's four varieties give in a single blend.",
    "others": [
     {
      "name": "Château de Laubade XO",
-     "note": "An older blend of the estate; no eau-de-vie in an armagnac XO is younger than ten years."
+     "note": "The estate's older blend: as an armagnac XO, every eau-de-vie in it has ten years or more."
     },
     {
      "name": "Château de Laubade vintages",
@@ -468,7 +468,7 @@
     "wood": "Oak casks in the family's cellars at Lannepax. Napoléon on the label means no eau-de-vie in the blend is younger than six years, the minimum the importer gives.",
     "strength": "40% ABV",
     "taste": "By the importer's and retailers' notes, dried fruit such as prune and raisin, butterscotch and vanilla, then soft tannin and a little cocoa at the finish.",
-    "pour": "Neat in a tulip glass or over one large cube, and sturdy enough for a Sidecar or a brandy Old Fashioned.",
+    "pour": "Sturdy enough for a Sidecar or a brandy Old Fashioned, and as good neat or over a single large cube.",
     "label": [
      {
       "term": "Napoléon",
@@ -480,8 +480,8 @@
      }
     ]
    },
-   "table": "Marie Duffau Napoléon is a Bas-Armagnac made by the Delord family at Lannepax and sold under the name of a forebear of the family. Napoléon means at least six years in oak: expect dried fruit, vanilla and a touch of cocoa, good neat or in a Sidecar.",
-   "story": "The house tells its story from 1893, when the founder worked as a travelling distiller, carrying his still from farm to farm across Gascony. He married into the Duffau family, whose vines came into the business, and the family has sold its armagnac under two names ever since, Delord and Marie Duffau, each the name of a forebear, as the importer tells it. His sons set up the house as Delord Frères at Lannepax, and the importer dates the company's official founding to 1925. The brothers sold their Bas-Armagnacs beyond Gascony, as far as the United States,. A grandson took over the house in 1963 and was joined by his brother in 1973, and a fourth generation followed. Delord distils both ways the appellation allows: on continuous Armagnac stills, one a Sier dating from 1900, and on double-distillation stills. For a bartender the Napoléon teaches two things at once: that one family can sell under two names, and what Napoléon promises on an armagnac label.",
+   "table": "The Delord family makes Marie Duffau Napoléon at Lannepax and sells it under the name of a forebear: a Bas-Armagnac with no eau-de-vie under six years in oak. Dried fruit, vanilla and a touch of cocoa suit a brandy Old Fashioned as well as a tulip glass.",
+   "story": "Its story, as the house tells it, starts in 1893, when the founder worked as a travelling distiller, carrying his still from farm to farm across Gascony. He married into the Duffau family, whose vines came into the business, and the family has sold its armagnac under two names ever since, Delord and Marie Duffau, each the name of a forebear, as the importer tells it. His sons set up the house as Delord Frères at Lannepax, and the importer dates the company's official founding to 1925. The brothers sold their Bas-Armagnacs beyond Gascony, as far as the United States. A grandson took over the house in 1963 and was joined by his brother in 1973, and a fourth generation followed. Delord distils both ways the appellation allows: on continuous Armagnac stills, one a Sier dating from 1900, and on double-distillation stills. The Napoléon carries two lessons: one family can sell under two names, and Napoléon on an armagnac label is a promise of age.",
    "others": [
     {
      "name": "Marie Duffau Hors d'Âge",
@@ -630,8 +630,8 @@
      }
     ]
    },
-   "table": "Darroze Les Grands Assemblages 20 Ans is a Bas-Armagnac blended at Roquefort from casks the house has chosen and aged from many growers, none under twenty years in oak. Dried fruit, baking spice and a touch of rancio: pour it neat, at room temperature.",
-   "story": "The Darroze family kept a restaurant at Villeneuve-de-Marsan, in the Landes, where armagnac was served straight from the barrel. From the late 1960s the son of the house went out into the Bas-Armagnac to choose casks from growers and bottle what he found, and in 1974 he founded the house, by its own account with three casks of estate armagnac from the restaurant's cellar. His idea was that armagnac could be kept like wine: one estate, one harvest, no blending, each bottle naming its grower. That became the house's range of single-estate vintages. The house built its cellars at Roquefort in 1985, and his son joined him in 1994. Les Grands Assemblages is the other half of the work: blends by age, from eight years to sixty, made from many terroirs and harvests so that each keeps one style from year to year, the age on the label held by every part of the blend. For a bartender the 20 Ans teaches what an armagnac éleveur does: chooses, ages and blends casks from other people's vines.",
+   "table": "Every eau-de-vie in Darroze Les Grands Assemblages 20 Ans has spent at least twenty years in oak, chosen from many growers and blended by the house at Roquefort. Dried fruit, baking spice and a touch of rancio belong to the end of a meal, sipped neat.",
+   "story": "The Darroze family kept a restaurant at Villeneuve-de-Marsan, in the Landes, where armagnac was served straight from the barrel. From the late 1960s the son of the house went out into the Bas-Armagnac to choose casks from growers and bottle what he found, and in 1974 he founded the house, by its own account with three casks of estate armagnac from the restaurant's cellar. His idea was that armagnac could be kept like wine: one estate, one harvest, no blending, each bottle naming its grower. That became the house's range of single-estate vintages. The house built its cellars at Roquefort in 1985, and his son joined him in 1994. Les Grands Assemblages is the other half of the work: blends by age, from eight years to sixty, made from many terroirs and harvests so that each keeps one style from year to year, the age on the label held by every part of the blend. What an armagnac éleveur does is all in the 20 Ans: it chooses, ages and blends casks from other people's vines.",
    "others": [
     {
      "name": "Darroze Les Grands Assemblages 8 Ans",
