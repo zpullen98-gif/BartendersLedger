@@ -340,7 +340,7 @@
     ]
    },
    "table": "Uncle Nearest 1856, a 100 proof Tennessee whiskey from Shelbyville, takes its name from Nathan Green, the enslaved man who taught Jack Daniel to distil. It meets sugar maple charcoal before the barrel, and spiced caramel, maple and dried fruit fill the glass.",
-   "story": "Nathan Green, called Nearest, born about 1820, was an enslaved man hired out to Dan Call, a preacher, grocer and distiller near Lynchburg. Green taught the young Jack Daniel to make whiskey and later worked for him as head distiller, and the Jack Daniel distillery has since named him its first master distiller. Uncle Nearest 1856 went on sale in July 2017, by the brand's own launch notice, and the 1856 of its name is the year the brand dates itself back to, from its own research rather than settled record. Its early bottlings were sourced whiskey, made at other Tennessee distilleries and passed through the Lincoln County Process before ageing. In 2017 Bedford County approved the use of the old Sand Creek Farms at Shelbyville for the brand's home, and the Nearest Green Distillery opened there in stages from 2019. Two trade accounts date the 1856's move to whiskey the brand made itself to 2022. Here is the story a guest at a Tennessee whiskey shelf should hear: whiskey making in Lynchburg was taught by an enslaved man, and his name is on this label.",
+   "story": "Nathan Green, called Nearest, born about 1820, was an enslaved man hired out to Dan Call, a preacher, grocer and distiller near Lynchburg. Green taught the young Jack Daniel to make whiskey and later worked for him as head distiller, and the Jack Daniel distillery has since named him its first master distiller. Uncle Nearest 1856 went on sale in July 2017, by the brand's own launch notice, and the 1856 of its name is the year the brand dates itself back to, from its own research rather than settled record. Its early bottlings were sourced whiskey, made at other Tennessee distilleries and passed through the Lincoln County Process before ageing. In 2017 Bedford County approved the use of the old Sand Creek Farms at Shelbyville for the brand's home, and the Nearest Green Distillery opened there in stages from 2019. Two trade accounts date the 1856's move to whiskey the brand made itself to 2022. In August 2025, on its lender's suit over loans, a federal court placed the company under a receiver, who in 2026 sought a buyer for the brand and its distillery. Here is the story a guest at a Tennessee whiskey shelf should hear: whiskey making in Lynchburg was taught by an enslaved man, and his name is on this label.",
    "others": [
     {
      "name": "Uncle Nearest 1884",
@@ -412,8 +412,8 @@
      "read": "search"
     },
     {
-     "title": "Wikipedia: Nathan Green, called Nearest",
-     "url": "https://en.wikipedia.org/wiki/Nathan_%22Nearest%22_Green",
+     "title": "Whisky Advocate: Uncle Nearest falls into receivership",
+     "url": "https://whiskyadvocate.com/Uncle-Nearest-Distillery-Receivership",
      "kind": "secondary",
      "read": "search"
     },
@@ -436,8 +436,8 @@
     "The meaning of 1856 is left as the brand's claim: its pages say it dates back to 1856 and none read said what happened that year.",
     "The founder is living and is not named; her name stands in people.json. The master blender, a descendant of Green, is left out of the story for want of a source read.",
     "Nathan Green is described by his birth about 1820 (Wikipedia, BlackPast); his death year is unrecorded, so none is given.",
-    "Left out for want of a source: the mash bill, an age (retailers give seven, eight or eight to fourteen years), the names of the sourcing distilleries (one source says George Dickel), and the brand's business news of 2025, which would be a present fact.",
-    "A pick to watch: reports in 2025 of the brand's finances were not researched here; the integrator may wish to confirm the label is still made before the group ships."
+    "Left out for want of a source: the mash bill, an age (retailers give seven, eight or eight to fourteen years) and the names of the sourcing distilleries (one source says George Dickel).",
+    "Settled on 2026-11-23: a federal court put the company under a receiver in August 2025 on its lender's suit (Wikipedia, Whisky Advocate, Whisky Magazine); the receiver kept the business going and in 2026 sought a buyer for the brand and the Nearest Green Distillery, and a bid to bar the sale was refused in October 2026. No source read says the 1856 has stopped, and the story tells all of it as dated history. The receiver and the judge are living and are not named."
    ],
    "checked": {
     "date": "2026-11-22",
@@ -446,11 +446,12 @@
     "changed": [
      "bottle.name: was Uncle Nearest 1856 Tennessee Whiskey; the brand's own page and launch notice name the bottling 1856 Premium Aged Whiskey, the brand asked the TTB to print Tennessee Whiskey on the front label and no source read showed it there, and Premium is refused; now Uncle Nearest 1856.",
      "bottle.still, story and traps[1]: the move to the brand's own whiskey is told as what two trade accounts say (2022); a search summary that gave 2021 from the brand's own site could not be tied to a page, so it is not used; the brand distilling, ageing and bottling the 1856 itself is no longer stated.",
-     "story: the distillery at Shelbyville opened in stages from 2019 (Wikipedia gives its first phase in September 2019, Difford's an establishment of 2018), not opened whole in 2019."
+     "story: the distillery at Shelbyville opened in stages from 2019 (Wikipedia gives its first phase in September 2019, Difford's an establishment of 2018), not opened whole in 2019.",
+     "story: one dated sentence added, the receivership of August 2025 on the lender's suit and the receiver's search in 2026 for a buyer of the brand and its distillery (Wikipedia's Uncle Nearest page, Whisky Advocate, Whisky Magazine, Brewbound); sources: Wikipedia's Nathan Green page gave way to Whisky Advocate on the receivership, Green's birth about 1820 resting as before on Wikipedia and BlackPast; report rewritten to match (label settler, 2026-11-23)."
     ],
     "open": [
      "Where the brand's own whiskey is distilled was not settled; its Shelbyville pages speak of a still house under construction, a present fact the record leaves out.",
-     "The brand's finances in 2025 were not researched; the integrator may confirm the label is still made before the group ships.",
+     "The receiver's sale of the brand and the Nearest Green Distillery had not closed in any report read (the latest of late October 2026); before the group ships, the integrator should check whether the maker of the 1856 has changed, which would call for a dated line in story and perhaps a madeBy.",
      "The brand's request to print Straight Bourbon Whiskey on the back label is left out: the TTB's answer was not found."
     ]
    }

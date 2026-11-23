@@ -249,5 +249,57 @@
   "plan.json, george-dickel why: says the Cascade Hollow distillery opened in 1878; the sources split on 1877 and 1878 for the first Cascade distillery, and the distillery that runs in the hollow was built from 1958. Reported, not edited.",
   "plan.json, uncle-nearest why: calls the 1856 a Shelbyville brand passed through the Lincoln County Process; the brand's pages agree, though where its own whiskey is distilled is not settled.",
   "The style page's at the table line speaks of a touch of banana in Tennessee whiskey, which Jack Daniel's own FAQ supports for Old No. 7; no tension, noted only."
- ]
+ ],
+ "settled": {
+  "date": "2026-11-23",
+  "by": "label settler",
+  "searches": 5,
+  "tested": [
+   "uncle-nearest: whether the 1856 is still made and sold, and who makes it. The receivership ordered on 14 August 2025 on Farm Credit Mid-America's suit over its loans (Whisky Magazine, Brewbound, The Drinks Business, Wikipedia); the receiver's reports that the business could go on or be sold as a going concern; the court keeping its control in May 2026 and the bankruptcy petitions dismissed in March 2026 (DLA Piper); a buyer reported in June 2026 (The Spirits Business, Wikipedia); the founder's bid to bar a sale of substantially all assets refused on 23 October 2026. 4 searches.",
+   "uncle-nearest: Nathan Green's birth about 1820 and death after 1880 on Wikipedia's Green page, the brand's launch of July 2017 and Green's teaching of Jack Daniel on Wikipedia's brand page, so the Green page could give way to a receivership source. 1 search."
+  ],
+  "changed": [
+   {
+    "key": "uncle-nearest",
+    "field": "story",
+    "was": "Two trade accounts date the 1856's move to whiskey the brand made itself to 2022. Here is the story",
+    "now": "Two trade accounts date the 1856's move to whiskey the brand made itself to 2022. In August 2025, on its lender's suit over loans, a federal court placed the company under a receiver, who in 2026 sought a buyer for the brand and its distillery. Here is the story",
+    "why": "the company's receivership is dated history a guest may raise; it is told with its years and nothing is said of how it ends, since the sale had not closed",
+    "sources": [
+     "https://en.wikipedia.org/wiki/Uncle_Nearest_Premium_Whiskey",
+     "https://whiskyadvocate.com/Uncle-Nearest-Distillery-Receivership",
+     "https://whiskymag.com/articles/uncle-nearest-faces-receivership-following-lawsuit/",
+     "https://www.brewbound.com/news/receiver-to-take-over-uncle-nearest-whiskey-weavers-to-remain-involved"
+    ]
+   },
+   {
+    "key": "uncle-nearest",
+    "field": "sources[2]",
+    "was": "Wikipedia: Nathan Green, called Nearest",
+    "now": "Whisky Advocate: Uncle Nearest falls into receivership",
+    "why": "five sources is the cap and the new sentence wants its own; the brand's Wikipedia page carries Green's story and the receivership both",
+    "sources": [
+     "https://whiskyadvocate.com/Uncle-Nearest-Distillery-Receivership"
+    ]
+   },
+   {
+    "key": "uncle-nearest",
+    "field": "report and checked.open",
+    "was": "the brand's finances of 2025 not researched, the integrator to confirm the label is still made",
+    "now": "settled as dated history; the open question is now whether the sale, not closed by late October 2026, changes the maker",
+    "why": "searched",
+    "sources": [
+     "https://www.dlapiper.com/en-be/insights/publications/2026/05/receivership-order-precludes-whiskey-makers-effort-to-obtain-bankruptcy-relief",
+     "https://www.thespiritsbusiness.com/2026/06/uncle-nearest-finds-buyer/"
+    ]
+   }
+  ],
+  "open": [
+   "uncle-nearest: the receiver's sale had not closed in any report read; madeBy stays empty (the label makes its own, at Shelbyville and by bought whiskey before 2022) until a sale is reported closed.",
+   "uncle-nearest: where the brand's own whiskey is distilled stays unsettled; one undated trade piece speaks of five distilleries working with the brand."
+  ],
+  "living": [
+   "Met in searches and named in no record: Uncle Nearest's founder, already in people.json. Not in people.json, left for the integrator, since this task does not edit it: the founder's husband and co-founder (first name Keith), the court's receiver (surname Young) and the federal judge in the case (surname Atchley)."
+  ]
+ }
 }
