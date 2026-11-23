@@ -250,5 +250,63 @@
   "plan.json, korbel why: says used American oak; the house gives charred American oak barrels of 52 gallons and does not say new or used. Reported, not edited.",
   "plan.json, copper-and-kings why: tells the American Craft Brandy as distilled by the house in large copper pot stills; the bottling blends the house's brandy with bought pot still brandy. Reported, not edited.",
   "No page of the Ledger itself (Cask Atlas, styles, liquor shelf, Library) speaks of these five houses beyond two source titles on the Lazzaroni Maraschino shelf record that name Laird & Company as its importer; no tension found there."
- ]
+ ],
+ "rerun": {
+  "date": "2026-11-23",
+  "by": "refuter",
+  "key": "copper-and-kings",
+  "searches": 15,
+  "tested": [
+   "copper-and-kings: the V.S.O.P. on the house's own pages (six years in American oak bourbon barrels, a minimum of six years on the product page, six years and more on the process page, no additives, 86 proof on the house's bar menu, golden, dried fruit, toasted grain, honey and wood, then maple, honey, toasted oak and gentle spice). 3 searches.",
+   "copper-and-kings: the grapes (French Colombard, Chenin Blanc and Muscat on the house's product overview, The Whiskey Wash and Global Drinks Intel); a shop's VSOP listing at 90 proof against 86 proof everywhere else; the front label's age statement (no label read). 3 searches.",
+   "copper-and-kings: the relaunch of November 2025 (the six-year V.S.O.P. at 86 proof, the six-year apple brandy bottled in bond at 100 proof from Michigan apples, the straight bourbon finished in brandy barrels) in The Spirits Business, The Whiskey Wash and Craft Spirits Magazine, and Beverage Industry's piece of January 2026. 2 searches, one of them off target.",
+   "copper-and-kings: the sale of 5 August 2025 to the Bourdon Spirits Company, a Louisville firm, with distilling kept in Louisville, and Constellation's stake of 2018 and purchase of 2020 (Just Drinks, Drinks International, Global Drinks Intel, Yahoo Finance). 1 search.",
+   "copper-and-kings: the founding of 2014 (BevNET's grand opening release of October 2014, Master of Malt, Flaviar), the founders' earlier drinks companies sold before (Nutrisoda and Crispin Hard Cider), their choice of Louisville over the West Coast (Saveur, Fox News), the house's copper pot stills in Butchertown (the house's process page and FAQ). 3 searches, one refused for blocked domains before it ran.",
+   "copper-and-kings: the American Craft Brandy's 90 proof and its bought pot still brandy (Distiller, Flaviar, the house's old product page); the cocktails on the house's site (an Old Fashioned and a Sidecar made with the V.S.O.P., a Brandy Alexander). 2 searches.",
+   "Cards and questions: one right answer each, four options of one kind, keys at 1 and 2, the q2 distractor 2018 being Constellation's minority stake; each explain names the nearest wrong option. No card id changed. 15 of the 20 searches spent."
+  ],
+  "changed": [
+   {
+    "key": "copper-and-kings",
+    "field": "bottle.mash, report[1]",
+    "was": "Wine of California grapes, given in the launch press as French Colombard, Chenin Blanc and Muscat; the house's own page says only California grapes.",
+    "now": "Wine of California grapes: French Colombard, Chenin Blanc and Muscat, by the house's product overview and the launch press.",
+    "why": "the house's own product overview names the three grapes for the six-year V.S.O.P.",
+    "sources": [
+     "https://www.copperandkings.com/pages/product-overview",
+     "https://thewhiskeywash.com/whiskey-news/copper-kings-unveils-bold-brandy-bourbon-portfolio/"
+    ]
+   },
+   {
+    "key": "copper-and-kings",
+    "field": "bottle.label[0].means",
+    "was": "Brandy alone on an American label is grape brandy, aged at least two years in oak; American names where it was made.",
+    "now": "Brandy alone on a United States label means grape brandy, with at least two years in oak unless marked immature.",
+    "why": "the brandy standard lets grape brandy under two years in oak be sold labelled immature, so two years is no floor for brandy as such",
+    "sources": [
+     "https://www.law.cornell.edu/cfr/text/27/5.145"
+    ]
+   },
+   {
+    "key": "copper-and-kings",
+    "field": "sources",
+    "was": "Global Drinks Intel: the range updated",
+    "now": "Copper & Kings: Our process",
+    "why": "the pot-still card and q1 rest on the house's account of its copper pot stills, which no cited page carried; Global Drinks Intel stays here as a second account of the grapes and the 43%",
+    "sources": [
+     "https://copperandkings.com/our-process/",
+     "https://drinks-intel.com/spirits/bourdon-spirits-co-updates-full-flagship-copper-kings-range/"
+    ]
+   }
+  ],
+  "confirmed": [
+   "copper-and-kings: 2014 and Butchertown; the founders' choice of Louisville over the West Coast; copper pot stills by the house's account; the 2020 purchase and the sale of August 2025 to a Louisville firm; the three bottles of the November 2025 relaunch; six years in bourbon barrels, 86 proof (43% ABV), the taste and the cocktails; the apple brandy's six years, bond, 100 proof and Michigan apples; the American Craft Brandy's 90 proof and no age statement."
+  ],
+  "open": [
+   "copper-and-kings: one shop lists a Copper & Kings American Brandy VSOP at 90 proof (45% ABV); every other account gives 86 proof. No front label read, so neither the strength on older stock nor an age statement on the label is settled.",
+   "copper-and-kings: whether the American Craft Brandy held the house's own spirit beside bought brandy (Drinkhacker, the first refuter's source) or bought brandy alone at first (Distiller, Flaviar); the story keeps the blend.",
+   "copper-and-kings: plan.json's american-brandy swaps list holds no bottling entry for the move from American Craft Brandy to American Brandy V.S.O.P.; this refuter agrees the swap; the entry is left for the integrator, as on the islands group.",
+   "copper-and-kings: the founder of the Bourdon Spirits Company, living, is named in the sale's coverage and in no record; not added to people.json in this run, which changes only the fragment and this file, for the integrator. The company's name is a company's and stands."
+  ]
+ }
 }

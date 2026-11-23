@@ -642,7 +642,7 @@
       "bottle": {
         "name": "Copper & Kings American Brandy V.S.O.P.",
         "class": "Brandy, a grape brandy",
-        "mash": "Wine of California grapes, given in the launch press as French Colombard, Chenin Blanc and Muscat; the house's own page says only California grapes.",
+        "mash": "Wine of California grapes: French Colombard, Chenin Blanc and Muscat, by the house's product overview and the launch press.",
         "still": "Pot still brandy: the house makes its brandy in copper pot stills at its distillery in Butchertown, Louisville, by its own account. It does not say where each part of this six-year blend was distilled.",
         "wood": "American oak barrels that held Kentucky bourbon, for at least six years by the house's page, which sells it as its six-year brandy.",
         "strength": "43% ABV (86 proof)",
@@ -651,7 +651,7 @@
         "label": [
           {
             "term": "American Brandy",
-            "means": "Brandy alone on an American label is grape brandy, aged at least two years in oak; American names where it was made."
+            "means": "Brandy alone on a United States label means grape brandy, with at least two years in oak unless marked immature."
           },
           {
             "term": "V.S.O.P.",
@@ -725,14 +725,14 @@
           "read": "search"
         },
         {
-          "title": "The Whiskey Wash: the new core range",
-          "url": "https://thewhiskeywash.com/whiskey-news/copper-kings-unveils-bold-brandy-bourbon-portfolio/",
-          "kind": "secondary",
+          "title": "Copper & Kings: Our process",
+          "url": "https://copperandkings.com/our-process/",
+          "kind": "primary",
           "read": "search"
         },
         {
-          "title": "Global Drinks Intel: the range updated",
-          "url": "https://drinks-intel.com/spirits/bourdon-spirits-co-updates-full-flagship-copper-kings-range/",
+          "title": "The Whiskey Wash: the new core range",
+          "url": "https://thewhiskeywash.com/whiskey-news/copper-kings-unveils-bold-brandy-bourbon-portfolio/",
           "kind": "secondary",
           "read": "search"
         },
@@ -751,14 +751,31 @@
       ],
       "report": [
         "Settled by search: the American Craft Brandy is no longer made as the house's lead. The house's own site lists the American Brandy V.S.O.P., Revival, single varietals, a ten year Hazmat and a twelve year, and no Craft Brandy; the core range relaunched in November 2025 after the August 2025 sale is the six-year V.S.O.P., a six-year apple brandy bottled in bond and a straight bourbon (The Spirits Business, The Whiskey Wash, Global Drinks Intel, Craft Spirits Magazine). No source shows the Craft Brandy made since. The record is rewritten for the V.S.O.P., the Craft Brandy told as history in story, others and a trap.",
-        "The V.S.O.P.'s six years in American oak bourbon barrels, its California grapes, its tasting notes and its cocktails are from the house's own pages; 86 proof is on the house's own bar menu and in The Whiskey Wash, 43% in Global Drinks Intel. The grape varieties rest on the launch press only (The Whiskey Wash, Global Drinks Intel); the house's page says California grapes.",
+        "The V.S.O.P.'s six years in American oak bourbon barrels, its California grapes, its tasting notes and its cocktails are from the house's own pages; 86 proof is on the house's own bar menu and in The Whiskey Wash, 43% in Global Drinks Intel. The grape varieties are on the house's product overview and in the launch press (The Whiskey Wash, Global Drinks Intel).",
         "Where the V.S.O.P.'s six-year brandy was distilled is not settled: the house says it makes its brandy in copper pot stills in Butchertown, and one trade account of the Texas launch calls the V.S.O.P. pot distilled, but Distiller describes the house as blending bought pot still brandy in its early years, and six years before the November 2025 launch reaches back to 2019. The record says the house does not state where each part was distilled.",
         "Whether the front label prints an age statement was not confirmed: the house's page and menu call it the six-year V.S.O.P., so the wood gives six years as the house's page states it and the label carries only American Brandy and V.S.O.P. as terms.",
         "The bought pot still brandy in the American Craft Brandy rests on Fox News, cited, with Distiller and Drinkhacker (the refuted record's sources) as the second accounts. Constellation's 2018 minority stake (The Spirits Business on the 2025 sale, Distillery Trail) is left out of the story to keep to five sources; the 2020 purchase and the 2025 sale rest on The Spirits Business's relaunch piece and the refuted record's Distillery Trail.",
         "Left out: a 2026 investment in the house by a Kentucky investment firm and the narrowing of its distribution, both present facts that will age; Revival and the single varietals, distillery bottlings a guest meets less often; the house's no added sugar claim.",
         "The founders, a married couple, are living and are described, not named; both names already stand in people.json. Nobody else living is named."
       ],
-      "checked": null
+      "checked": {
+        "date": "2026-11-23",
+        "by": "refuter",
+        "verdict": "changed",
+        "changed": [
+          "bottle.mash: the grapes no longer 'given in the launch press' against a house that says only California grapes: the house's own product overview names French Colombard, Chenin Blanc and Muscat for the six-year V.S.O.P., with The Whiskey Wash and Global Drinks Intel beside it.",
+          "bottle.label[0].means: 'grape brandy, aged at least two years in oak' now 'at least two years in oak unless marked immature', since 27 CFR 5.145 lets grape brandy under two years be sold labelled immature; the clause on the word American cut to keep the cap.",
+          "sources: Global Drinks Intel replaced by the house's Our process page, the primary for the copper pot stills, Butchertown and the six years and more in Kentucky bourbon barrels, on which the pot-still card and q1 rest; Global Drinks Intel stays in the review as the second account of the grapes and the strength.",
+          "report: the grape note set to match the house's product overview."
+        ],
+        "open": [
+          "bottle.strength: one shop lists a Copper & Kings American Brandy VSOP at 90 proof (45% ABV), against 86 proof on the house's menu, product overview and the launch press; most likely older stock or an older listing, but no front label was read.",
+          "bottle.wood and label: whether the front label prints six years as an age statement was not confirmed; the house's page says a minimum of six years and its process page six years and more.",
+          "bottle.still and story: whether the American Craft Brandy blended the house's own spirit with bought brandy, or was all bought at first, is told both ways (Distiller and Flaviar: brandies sourced from several distillers; the first refuter's Drinkhacker: the house's own with bought); the story keeps the blend, as the first refuter settled it.",
+          "plan.json: the american-brandy swaps list holds no bottling entry for the move from American Craft Brandy to American Brandy V.S.O.P.; the refuter agrees the swap, and the entry is left for the integrator.",
+          "people.json: the founder of the Bourdon Spirits Company, living, is met in the sale's coverage and named in no record; not yet in people.json, for the integrator."
+        ]
+      }
     }
   ]
 }
