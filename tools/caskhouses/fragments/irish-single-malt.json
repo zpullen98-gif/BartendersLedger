@@ -506,7 +506,7 @@
      "id": "q1",
      "tag": "bottle",
      "card": "casks",
-     "q": "A guest asks what Knappogue Castle 12 Year Old is aged in. Which casks hold it for its twelve years?",
+     "q": "A guest asks what Knappogue Castle 12 Year Old is aged in. What wood holds it for its twelve years?",
      "options": [
       "Oloroso butts",
       "Port pipes",
@@ -648,7 +648,7 @@
      "id": "q1",
      "tag": "bottle",
      "card": "casks",
-     "q": "A guest asks where the raisin note in The Irishman Single Malt comes from. Which casks share its maturation with bourbon casks?",
+     "q": "A guest asks where the raisin note in The Irishman Single Malt comes from. Which wood shares its maturation with the bourbon barrels?",
      "options": [
       "Oloroso sherry casks",
       "Ruby port pipes",

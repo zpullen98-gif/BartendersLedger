@@ -45,7 +45,7 @@
       "quiz": [
         {
           "id": "q1", "tag": "bottle", "card": "casks",
-          "q": "A guest asks what Monkey Shoulder is matured in. Which casks does the house name?",
+          "q": "A guest asks what Monkey Shoulder is matured in. Which wood does the house name?",
           "options": ["Refill Oloroso sherry butts", "New charred oak", "First-fill bourbon casks", "Tawny port pipes"],
           "a": 2,
           "explain": "The house matures its malts in first-fill former bourbon casks; sherry casks belong to a sherried blended malt such as Naked Malt."
@@ -303,7 +303,7 @@
       "quiz": [
         {
           "id": "q1", "tag": "bottle", "card": "sherry-cask",
-          "q": "A guest asks why Naked Malt tastes of dried fruit and toffee. In which casks is it finished?",
+          "q": "A guest asks why Naked Malt tastes of dried fruit and toffee. In what wood is it finished?",
           "options": ["First-fill Oloroso casks", "Refill American oak barrels", "Virgin French oak", "Tawny port pipes"],
           "a": 0,
           "explain": "It is finished for at least six months in first-fill Oloroso sherry casks; refill American oak barrels would give vanilla, not dried fruit."

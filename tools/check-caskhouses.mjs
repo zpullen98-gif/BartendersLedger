@@ -4,7 +4,7 @@
      node tools/check-caskhouses.mjs              every check below; passes on a partial build and says so last
      node tools/check-caskhouses.mjs --release    the same, and refuses a data file whose meta says partial, whose
                                                   meta.unrefuted is above 0, or whose keys are not frozen
-     node tools/check-caskhouses.mjs --mutations  then breaks the shipped files twenty-six ways, one at a time, and
+     node tools/check-caskhouses.mjs --mutations  then breaks the shipped files twenty-seven ways, one at a time, and
                                                   expects red each time, from the check written for that rule (a
                                                   mutation that finds nothing to change, or that only another
                                                   check catches, is itself a failure)
@@ -31,7 +31,7 @@
    D1 the data is the build; every shipped group's fragment sound by schema.mjs
    D2 the roster's order; the counts pinned once whole   D3 the shipped files pure ASCII, the page's own voice, the stylesheet
    D4 nobody living on any page, no price, no house name, no dash   D5 every link resolves, is drawn as its door and lands; sources safe
-   D6 the quiz: the round dealt 2,000 times
+   D6 the quiz: the round dealt 2,000 times; no key told by the stem's own word
    W1 the cards and their keys; keys.v1.json   W2 kept apart from drinks, levels, Due today and the session
    W3 addresses, parents and Back through real taps   W4 rendering: the root, every group, every house
    W5 the doors in: the Atlas home, a chapter, a style, a shelf bottle, the Library
@@ -419,6 +419,25 @@ await test('D6 the quiz: caskHouseQuizRound dealt 2,000 times deals ten (or ever
   }
   const share = pos.map((p) => p / total);
   assert.ok(share.every((s) => s >= 0.2 && s <= 0.3), 'answer positions ' + share.map((s) => (s * 100).toFixed(1) + '%').join(' '));
+});
+
+/* A key the stem gives away by its own word: the right option is the one of the four that
+   repeats a word of the question ("Which casks ..." over "Bourbon casks", "Oloroso butts",
+   "Port pipes", "Rum barrels"), so a guess by echo finds it. A word of the house's own
+   names (its label, maker, flagship and other bottlings) is the house's, not a tell. */
+const ECHO_STOP = new Set('what which where when whom whose with from that this they their there than then into onto over under about after before does house guest asks bottle label'.split(' '));
+const echoWords = (s) => new Set(foldName(s).split(' ').filter((w) => w.length >= 4 && !ECHO_STOP.has(w)).map((w) => w.replace(/(es|s)$/, '')));
+await test('D6 the questions: no key told by its echo, the one option of the four that repeats a word of the stem', () => {
+  const told = [];
+  for (const h of houses) {
+    const mine = echoWords(own(h).join(' '));
+    for (const q of h.quiz) {
+      const stem = echoWords(q.q);
+      const echo = q.options.map((o) => [...echoWords(o)].filter((w) => stem.has(w) && !mine.has(w)));
+      if (echo[q.a].length && echo.every((e, i) => i === q.a || !e.length)) told.push(h.key + ' ' + q.id + ' (' + echo[q.a].join(', ') + ')');
+    }
+  }
+  eq(told, [], 'the stem tells the key');
 });
 
 /* ---- W: the wiring ------------------------------------------------------------------ */
@@ -1037,6 +1056,7 @@ async function mutations() {
     ['the flashcard mode calling a producer a house', 'js/ui-study.js', "['caskhouses','Flagship recall','Name the producer,", "['caskhouses','House recall','Name the house,", 'W2 kept apart: out of allDrinks'],
     ['a run door keyed by its house alone', 'js/ui-caskhouses.js', "id=\"caskhouse-run-' + esc(row.house) + '-' + esc(row.id) + '\"", "id=\"caskhouse-run-' + esc(row.house) + '\"", 'W6 Today’s review'],
     ['the search index losing the houses', 'js/ui-new.js', "  if(typeof caskHouseSearchEntries === 'function') ix.push(...caskHouseSearchEntries());\n", '', 'W8 the Practise rows'],
+    ['a stem that gives its key away by echo', 'js/data-caskhouses.js', 'A guest asks what Full Proof means on a bottle of 1792 Full Proof.', 'A guest asks if 1792 Full Proof is barrel proof.', 'D6 the questions'],
   ];
   let held = 0;
   for (const [name, file, from, to, mine] of MUT) {

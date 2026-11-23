@@ -485,7 +485,7 @@
           "id": "q1",
           "tag": "bottle",
           "card": "casks",
-          "q": "A guest tastes oak and sherry in The Famous Grouse. Which casks does the house lean on?",
+          "q": "A guest tastes dried fruit and oak spice in The Famous Grouse. Which casks does the house lean on?",
           "options": ["New charred oak", "Port pipes", "Former rum casks", "Former sherry casks"],
           "a": 3,
           "explain": "The house uses a high share of former sherry casks beside bourbon casks; port casks belong to the Ruby Cask bottling, not the core blend."
