@@ -25,8 +25,8 @@
     "pour": "Neat or with a few drops of water, or long with soda over ice. Its malt and oak make an Old Fashioned with malt in place of bourbon.",
     "label": [
      {
-      "term": "Flagship",
-      "means": "The bottling's name: the standing whiskey at the head of the house's range, released in 2021 in place of American Oak."
+      "term": "46% ABV",
+      "means": "Ninety-two proof, the strength the house gives for the Flagship."
      },
      {
       "term": "American Single Malt Whiskey",
@@ -35,7 +35,7 @@
     ]
    },
    "table": "Westland Flagship is the standing single malt of Westland in Seattle: five malts with a touch of peated malt, married from new oak, former bourbon and oloroso casks. It brings custard, nougat and toasted marshmallow at 46 per cent, and took American Oak's place in 2021.",
-   "story": "Westland began in Seattle in 2010, by its own timeline, with the aim of a single malt as distinct as the Northwest that made it, not a copy of Scotch; its stills first ran in 2011. In 2013 the distillery opened in the SoDo district, its copper stills in view of visitors, and released its first whiskey. For some years its standing range was three bottlings: American Oak, Sherry Wood and Peated. In December 2016 Rémy Cointreau agreed to buy the distillery, and the purchase was completed in January 2017. In the spring of 2021 the house ceased making the three and drew on its stocks for one bottling in their place: Westland Flagship, five malts with a little peated malt from Scotland, married from new and used American oak, former bourbon and former oloroso casks for at least 40 months and bottled at 46 per cent. It folds the three old bottlings into one, so a guest who remembers American Oak, Sherry Wood or Peated is poured the Flagship, and it is the bottle to reach for when a guest asks what American single malt tastes like.",
+   "story": "Westland began in Seattle in 2010, by its own timeline, with the aim of showing that an American single malt could be distinctive, not a copy of Scotch; its stills first ran in 2011. In 2013 it moved to a permanent home in the SoDo district, opened its doors to visitors and released its first whiskey. For some years its standing range was three bottlings: American Oak, Sherry Wood and Peated. In December 2016 Rémy Cointreau agreed to buy the distillery, and the purchase was completed in January 2017. In the spring of 2021 the house ceased making the three and released one bottling in their place: Westland Flagship, five malts with a little peated malt from Scotland, married from new and used American oak, former bourbon and former oloroso casks for at least 40 months and bottled at 46 per cent. It folds the three old bottlings into one, so a guest who remembers American Oak, Sherry Wood or Peated is poured the Flagship, and it is the bottle to reach for when a guest asks what American single malt tastes like.",
    "others": [
     {
      "name": "Westland American Oak",
@@ -49,7 +49,7 @@
    "traps": [
     "Westland Flagship took the place of American Oak, Sherry Wood and Peated in 2021, so a guest asking for American Oak is poured the Flagship.",
     "Flagship is not American Oak renamed: it adds a little peated malt and some former oloroso casks to the new oak.",
-    "The label prints no age; the house gives a minimum of 40 months, so quote that and no number of years."
+    "Shelves, lists and the launch press often call it simply Westland American Single Malt Whiskey: it is the same bottle the house calls Westland Flagship."
    ],
    "cards": [
     {
@@ -134,7 +134,23 @@
     "Left out for want of a source in this run: the Vendome name of the stills (the house's pages say copper pot stills, the timeline copper stills), the saison strain and fermentation hours, the Outpost range date, any figure of Washington barley, and whether the label itself prints Flagship (the house's pages, The Whiskey Wash and retailers name it Westland Flagship; no photographed label was read).",
     "Ownership is told only as dated history (the 2016 agreement and the January 2017 completion, The Drinks Business). The founders and the blender who made the Flagship are living and unnamed; the blender, named in a trade summary of the launch, is not yet in people.json, which this task did not edit."
    ],
-   "checked": null
+   "checked": {
+    "date": "2026-11-23",
+    "by": "refuter",
+    "verdict": "changed",
+    "changed": [
+     "story: the aim as distinct as the Northwest that made it went beyond the house's timeline, which says the founders set out to show that American single malt could be distinctive; now in the timeline's sense.",
+     "story: the distillery opened in the SoDo district in 2013 read as its first site; the stills ran from 2011 at a production site in South Park, and the timeline says the house found a permanent home in SoDo in 2013 and opened it to visitors, so now moved to a permanent home; the copper stills in view of visitors rested on no source read and are cut.",
+     "story: drew on its stocks for one bottling rested on no source read; now released one bottling in their place.",
+     "bottle.label: the term Flagship was not seen on a label (no photograph or label record found in three searches), and Shanken News Daily, Master of Malt and other listings name the bottle Westland American Single Malt Whiskey; the term gives way to 46% ABV, which the house's pages give.",
+     "traps: the third trap (no age on the label, already told in bottle.wood) gives way to the name a guest meets on shelves and lists, Westland American Single Malt Whiskey, for the bottle the house calls Westland Flagship."
+    ],
+    "open": [
+     "bottle.name: Westland Flagship is the house's own name on its shop and specification pages and the trade's; whether the front label prints the word Flagship was not seen.",
+     "bottle.mash: the house's specification page names five malts and its shop six, with Bairds heavily peated malt; peated malt from Scotland rests on Whisky Advocate and on accounts of the house's earlier Scottish peated malt from Bairds.",
+     "plan.json: the refuter agrees the bottling swap from Westland American Oak to Westland Flagship (see the review); the entry in the group's swaps is left to the integrator, as this task named no change to plan.json."
+    ]
+   }
   },
   {
    "key": "stranahans",

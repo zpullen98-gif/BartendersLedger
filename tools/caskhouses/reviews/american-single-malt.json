@@ -54,5 +54,84 @@
   "plan.json, virginia-distillery why: gives North American malted barley and at least three years; the barley was found in no source, and the house's shop gives four years. Reported, not edited.",
   "plan.json, mccarthys why: first distilled in 1991 rests on Whisky Advocate alone; the record leaves it out. Reported, not edited.",
   "The style page (american-single-malt) names Westland, Stranahan's and Balcones as its houses; its law and its 2016 line agree with the records, and the records' trap on new charred oak not making a bourbon agrees with its line on oak. No tension in the text."
- ]
+ ],
+ "rerun": {
+  "date": "2026-11-23",
+  "by": "refuter",
+  "key": "westland",
+  "searches": 16,
+  "tested": [
+   "westland: the Flagship's specification on the house's shop and info pages (five malts on one, six with Bairds heavily peated malt on the other; new and used Cooper's Reserve American oak, first-fill former bourbon, first- and second-fill former oloroso hogsheads and butts; a minimum of 40 months; 46%; fermentation of 96 to 144 hours with a Belgian brewer's yeast; copper pot stills). 2 searches.",
+   "westland: the change of range in the spring of 2021, the end of American Oak, Sherry Wood and Peated (Shanken News Daily of 9 June 2021, The Whiskey Wash, Whisky Advocate, Distiller), the six barleys and five cask types of Shanken's account, Garryana and Colere as yearly releases of the Outpost range, Sherry Wood and Peated first released in 2015. 3 searches.",
+   "westland: the house's nose and palate notes (custard, marionberry compote, maple brittle, toasted marshmallow; almond nougat, crème brûlée, black tea, white flower petals, malted milk balls) and Whisky Advocate's fresh oak and light peat; peated malt from Scotland through Bairds on Whisky Advocate and in reviews of the house's earlier peated releases. 3 searches.",
+   "westland: the founding of 2010 and the first run of the stills in 2011 on the house's timeline (2011 on its About page); the production site in South Park before the move; the permanent home in SoDo opened to visitors and the first release of 27 October 2013 (the house's timeline, BevNet's release of 2013, Seattle Met). 2 searches.",
+   "westland: Rémy Cointreau's agreement of 1 December 2016 and the completion of 5 to 6 January 2017 (The Spirits Business, Whisky Advocate, the company's filing of 6 January 2017, The Drinks Business). 1 search.",
+   "westland: the label's words; no photograph or label record found that shows the word Flagship, and Shanken News Daily, Master of Malt, Difford's Guide and a supermarket listing name the bottle Westland American Single Malt Whiskey. 3 searches.",
+   "westward and virginia-distillery, the label names the author set right: the house's product page names Westward Whiskey Original at 45% ABV (90 proof); the house's shop titles Courage & Conviction Signature Malt, American Single Malt Whisky, 750ML, at 46% ABV. Both names stand. 2 searches.",
+   "westland: both cards and both questions read against the record: one right answer each, wrong options of one kind (four grains; four Westland bottlings), keys at 0 and 2, no length clue, each explain naming the nearest wrong option; no card id changed."
+  ],
+  "changed": [
+   {
+    "key": "westland",
+    "field": "story",
+    "was": "with the aim of a single malt as distinct as the Northwest that made it",
+    "now": "with the aim of showing that an American single malt could be distinctive",
+    "why": "the house's timeline gives the founding aim as showing that American single malt could be distinctive; the Northwest clause stood in no source read",
+    "sources": [
+     "https://westlanddistillery.com/blogs/news/a-westland-time-capsule-a-look-back-over-the-years"
+    ]
+   },
+   {
+    "key": "westland",
+    "field": "story",
+    "was": "In 2013 the distillery opened in the SoDo district, its copper stills in view of visitors, and released its first whiskey.",
+    "now": "In 2013 it moved to a permanent home in the SoDo district, opened its doors to visitors and released its first whiskey.",
+    "why": "the stills first ran in 2011 at a production site in South Park, so 2013 was a move, not an opening; the timeline gives a permanent home in SoDo opened to visitors; stills in view of visitors stood in no source read",
+    "sources": [
+     "https://westlanddistillery.com/blogs/news/a-westland-time-capsule-a-look-back-over-the-years",
+     "https://www.bevnet.com/news/spirits/2013/westland-distillery-releases-its-flagship-american-single-malt-whiskey/",
+     "https://www.seattlemet.com/slideshows/westland-distillery-is-open-in-sodo-october-2013"
+    ]
+   },
+   {
+    "key": "westland",
+    "field": "story",
+    "was": "drew on its stocks for one bottling in their place",
+    "now": "released one bottling in their place",
+    "why": "no source read says how the stocks were drawn on",
+    "sources": [
+     "https://www.shankennewsdaily.com/2021/06/09/28788/washingtons-westland-distillery-unveils-new-flagship-single-malt/"
+    ]
+   },
+   {
+    "key": "westland",
+    "field": "bottle.label[0]",
+    "was": "Flagship: the bottling's name, the standing whiskey at the head of the house's range",
+    "now": "46% ABV: ninety-two proof, the strength the house gives for the Flagship",
+    "why": "the word Flagship was not seen on a label; the launch press and listings name the bottle Westland American Single Malt Whiskey, while 46% stands on the house's pages",
+    "sources": [
+     "https://shop.westlanddistillery.com/products/westland-american-single-malt-flagship",
+     "https://www.masterofmalt.com/whiskies/westland/westland-american-single-malt-whiskey/"
+    ]
+   },
+   {
+    "key": "westland",
+    "field": "traps[2]",
+    "was": "The label prints no age; the house gives a minimum of 40 months, so quote that and no number of years.",
+    "now": "Shelves, lists and the launch press often call it simply Westland American Single Malt Whiskey: it is the same bottle the house calls Westland Flagship.",
+    "why": "the age is already told in bottle.wood and the story, and the other name is the one a guest is likely to meet on a list",
+    "sources": [
+     "https://www.shankennewsdaily.com/2021/06/09/28788/washingtons-westland-distillery-unveils-new-flagship-single-malt/",
+     "https://www.masterofmalt.com/whiskies/westland/westland-american-single-malt-whiskey/"
+    ]
+   }
+  ],
+  "open": [
+   "westland: whether the front label prints Flagship; the house's shop and specification pages and the trade call it Westland Flagship, the launch press and many listings Westland American Single Malt Whiskey. A label record or photograph would settle it.",
+   "westland: the five malts against six on the house's own pages (the sixth is Bairds heavily peated malt); the record gives five and a small part of peated malt, which agrees with both.",
+   "westland: the swap of the bottling from Westland American Oak to Westland Flagship is agreed by this refuter (the house ceased American Oak, Sherry Wood and Peated in the spring of 2021 and released Flagship in their place, on the house's pages and three trade accounts); plan.json's flagship is already moved, but the group's swaps list holds no entry, which is for the integrator, as this task named no change to plan.json.",
+   "virginia-distillery: the house's own description of Signature Malt names cocoa among its notes, though the earlier refuter cut cocoa as found in no source; for the integrator, not changed here.",
+   "living: met in a search summary and named in no record, not yet in people.json: Whisky Advocate's reviewer of the Flagship in 2024, named on its review page; for the integrator to add from that page."
+  ]
+ }
 }
