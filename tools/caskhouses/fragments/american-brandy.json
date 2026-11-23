@@ -1,0 +1,386 @@
+{
+  "group": "american-brandy",
+  "records": [
+    {
+      "key": "lairds",
+      "group": "american-brandy",
+      "producer": "Laird's",
+      "madeBy": "Laird & Company",
+      "style": "",
+      "chapter": "",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Scobeyville, Monmouth County, New Jersey",
+      "year": "1780",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Laird's Straight Apple Brandy Bottled in Bond",
+        "class": "Straight apple brandy, bottled in bond",
+        "mash": "Apples alone, with no neutral grain spirit: the house calls it 100 per cent apple brandy, distilled from fermented apple juice.",
+        "still": "Distilled at the house's North Garden distillery near Charlottesville, Virginia, where all Laird's distilling has taken place since 1976; the house does not describe its still. The labels name Scobeyville, New Jersey, as the bottler.",
+        "wood": "Charred oak barrels for at least four years, as the bond law requires; no age statement beyond that.",
+        "strength": "50% ABV (100 proof)",
+        "taste": "Baked apple and spiced wood, as the house describes it, with the warmth of a bonded strength behind them; the apple reads as cooked fruit rather than fresh, with clove and oak in the finish.",
+        "pour": "Shaken with lemon and grenadine in a Jack Rose, stirred into an Old Fashioned in place of whiskey, or neat with a little water.",
+        "label": [
+          { "term": "Straight Apple Brandy", "means": "Apple brandy alone, with no neutral spirit blended in; the house calls it 100 per cent apple." },
+          { "term": "Bottled in Bond", "means": "One distiller at one distillery in one distilling season, at least four years in wood, bottled at 100 proof." },
+          { "term": "100 Proof", "means": "Fifty per cent alcohol by volume, the strength the bond law sets." }
+        ]
+      },
+      "table": "Laird's Straight Apple Brandy Bottled in Bond is all apple, distilled in Virginia for the New Jersey house of Laird & Company and kept four years or more in charred oak before bottling at 100 proof. It is the apple brandy for a Jack Rose; neat, it pours baked apple.",
+      "story": "The Laird family traces its line in Monmouth County, New Jersey, to a Scot from Fife who settled there in 1698, and by the house's account the family was making cider spirits, the old name for apple brandy, in colonial days. The story goes that George Washington (1732 to 1799) asked the family for its recipe, and a Laird served under him in the Continental Army. The firm dates itself to 1780, the year of the first commercial sale in its records. In 1849 fire destroyed the distillery at the Colts Neck Inn, and the fifth generation rebuilt it nearby at Scobeyville. Prohibition shut it; in 1933, as the house tells it, two brothers of the family reopened it under a permit to distil apple brandy for medicine. Applejack and apple brandy were long one spirit, until the family petitioned for a federal class of blended applejack, apple brandy cut with neutral grain spirit. From 1976 all distilling took place at North Garden, Virginia. The bonded bottling is the apple side of that history, and the bottle to reach for when an old recipe asks for applejack.",
+      "others": [
+        { "name": "Laird's Applejack", "note": "Apple brandy blended with neutral grain spirit at 80 proof: the blended applejack of the federal rules." },
+        { "name": "Laird's Straight Applejack 86", "note": "Apple brandy alone, aged at least three years and bottled at 86 proof." },
+        { "name": "Laird's 10th Generation Apple Brandy", "note": "Bottled in bond at 100 proof, aged at least five years." }
+      ],
+      "traps": [
+        "Applejack is not one thing: Laird's Applejack is blended with neutral grain spirit, while the bonded bottling is apple brandy alone.",
+        "A bonded spirit spends at least four years in wood by law, so an account giving this bottling three years is wrong.",
+        "Laird's is a New Jersey house, but its apple brandy has been distilled at North Garden, Virginia, since 1976."
+      ],
+      "cards": [
+        { "id": "bond", "prompt": "What does Bottled in Bond promise on Laird's Straight Apple Brandy?", "answer": "At least four years in wood, one distilling season at one distillery, and bottling at 100 proof." },
+        { "id": "virginia", "prompt": "Where has Laird's apple brandy been distilled since 1976?", "answer": "At the house's North Garden distillery near Charlottesville, Virginia; the firm's home is Scobeyville, New Jersey." }
+      ],
+      "quiz": [
+        {
+          "id": "q1", "tag": "bottle", "card": "bond",
+          "q": "A guest asks why Laird's Bottled in Bond reads hotter than Laird's Applejack. At what strength must a bonded spirit be bottled?",
+          "options": ["80 proof", "86 proof", "100 proof", "110 proof"],
+          "a": 2,
+          "explain": "The bond law sets 100 proof, 50 per cent alcohol; 80 proof is the strength of the blended applejack, which is cut with neutral grain spirit."
+        },
+        {
+          "id": "q2", "tag": "story", "card": "virginia",
+          "q": "Laird's is a New Jersey house. Since 1976, where has all of its distilling taken place?",
+          "options": ["North Garden, Virginia", "Scobeyville, New Jersey", "Colts Neck, New Jersey", "Frankfort, Kentucky"],
+          "a": 0,
+          "explain": "The house moved all its distilling to North Garden in 1976; Scobeyville, where the distillery was rebuilt after the fire of 1849, is the firm's home and bottler."
+        }
+      ],
+      "sources": [
+        { "title": "Laird & Company: Straight Apple Brandy Bottled in Bond", "url": "https://www.lairdandcompany.com/products/laird%27s-straight-apple-brandy-bottled-in-bond", "kind": "primary", "read": "search" },
+        { "title": "Laird & Company: Our history", "url": "https://www.lairdandcompany.com/history", "kind": "primary", "read": "search" },
+        { "title": "eCFR: 27 CFR 5.88, Bottled in bond", "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-5/subpart-F/section-5.88", "kind": "primary", "read": "search" },
+        { "title": "Wikipedia: Laird & Company", "url": "https://en.wikipedia.org/wiki/Laird_%26_Company", "kind": "secondary", "read": "search" },
+        { "title": "Monocle: the Laird & Company apple brandy distillery", "url": "https://monocle.com/business/manufacturing/laird-company-apple-brandy-distillery/", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "The plan's four years against Difford's three: the house gives at least four years in charred oak, and 27 CFR 5.88 requires four years in wood for anything bottled in bond, so three is wrong; the record keeps four and teaches it as a trap.",
+        "The year 1780 is the house's own, the first commercial sale in its records, and Wikipedia repeats it; the family's arrival in Monmouth County in 1698 is told as the family's line, not the firm's founding. The claim to be the oldest licensed distillery in America is left out under the voice rule.",
+        "Virginia confirmed: the house's history page says all Laird's distilling has taken place at North Garden since 1976, and Monocle and Saveur describe the distillery there. Bottling at Scobeyville rests on the house's product page for a 13 year old release and on a shop's photograph of a label; a Virginia trade directory says the bottling is done at North Garden too, so the refuter may wish to settle it.",
+        "The applejack lesson: the record teaches the bonded bottling as apple brandy alone, Laird's Applejack as the federal blended applejack class (apple brandy with neutral grain spirit, 80 proof), and Straight Applejack 86 as apple brandy aged at least three years. The petition year for the blended class is 1968 in a Treasury record and 1972 in the house's account, so no year is given.",
+        "Left out for want of a second source: the still (one trade listing gives a combination pot and column still for the Applejack 86), the twenty pounds of apples a bottle (one shop), the Shenandoah Valley apples (Monocle alone), the listing of the Scobeyville site on the National Register of Historic Places in 2024 (Wikipedia alone), and the names of the family's eighteenth and nineteenth century members, whose dates were not found in two sources, so they are described by role.",
+        "The taste rests on the house's own words (baked apple, spiced wood) and the importer's; clove and oak in the finish come from a shop's note and are a lead the refuter should try.",
+        "Living person met in searches and named nowhere: Lisa Laird Dunn, of the ninth generation. My task names only this fragment, so people.json was not touched: the integrator should add the name."
+      ],
+      "checked": null
+    },
+    {
+      "key": "e-and-j",
+      "group": "american-brandy",
+      "producer": "E&J",
+      "madeBy": "E. & J. Gallo",
+      "style": "",
+      "chapter": "",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Modesto, Stanislaus County, California",
+      "year": "1975",
+      "yearIs": "first released",
+      "bottle": {
+        "name": "E&J VSOP Grand Blue",
+        "class": "Brandy, distilled from California grapes",
+        "mash": "California grapes, fermented to a base wine; the brand names no grape varieties.",
+        "still": "Distilled by Gallo within about three months of fermentation, by the brand's account; the process was worked out at the company's Fresno distillery, and the brand does not publish its type of still.",
+        "wood": "At least two years in oak barrels, among them former bourbon barrels, by the brand's account; no age statement on the label.",
+        "strength": "40% ABV (80 proof)",
+        "taste": "Sweet brown spice on the nose, then vanilla cream, maple and a note of sherry, as the brand describes it; other accounts add caramel and baked pear.",
+        "pour": "Neat or over ice, long with ginger ale or cola, or shaken in a Sidecar or a Brandy Alexander.",
+        "label": [
+          { "term": "VSOP", "means": "Letters borrowed from Cognac's grades; here the brand gives at least two years in barrel, not Cognac's four." },
+          { "term": "Grand Blue", "means": "The name of this bottling and its blue livery; the words carry no legal meaning." },
+          { "term": "Brandy", "means": "Used alone, the federal word for grape brandy aged at least two years in oak." }
+        ]
+      },
+      "table": "E&J VSOP Grand Blue is the California brandy of E. & J. Gallo, grape spirit aged at least two years in oak and bottled at 80 proof. It pours vanilla, maple and brown spice, a soft brandy for a Sidecar or a Brandy Alexander.",
+      "story": "Ernest Gallo (1909 to 2007) and his younger brother Julio Gallo (1910 to 1993) founded their winery in Modesto, in the Central Valley of California, in 1933, the year Prohibition ended. Over the next four decades it grew into one of the large wine companies of the United States, and the brothers turned to brandy. As the company tells it, they spent five years testing and tasting at their Fresno distillery before they settled on a process, and the first E&J Brandy was bottled in March 1975, aged two years in oak. The initials are the brothers' own. The range came to hold a VS, a VSOP and an XO, with flavoured brandies such as vanilla beside them. The VSOP borrows its letters from Cognac, where they promise that no eau-de-vie in the blend is younger than four years; E&J gives its own figure of at least two. That is the lesson of the bottle for a bartender: on an American brandy the grade is the house's word, while the class and the strength are the law's.",
+      "others": [
+        { "name": "E&J VS", "note": "The entry bottling of the range, aged at least two years in oak by the brand's account." },
+        { "name": "E&J XO", "note": "The bottling above the VSOP in the brand's range." },
+        { "name": "E&J Vanilla", "note": "A flavoured brandy: vanilla added to the E&J base." }
+      ],
+      "traps": [
+        "VSOP on E&J does not carry Cognac's rule of four years: the brand gives at least two years in barrel.",
+        "E&J stands for Ernest and Julio, the Gallo brothers who founded the Modesto winery in 1933; the brandy came only in 1975."
+      ],
+      "cards": [
+        { "id": "grade", "prompt": "How long does E&J say its VSOP Grand Blue spends in barrel?", "answer": "At least two years in oak, by the brand's account; a Cognac VSOP must hold nothing younger than four years." },
+        { "id": "initials", "prompt": "Whose initials are the E and J of E&J brandy?", "answer": "Ernest and Julio Gallo, the brothers who founded their winery in Modesto in 1933." }
+      ],
+      "quiz": [
+        {
+          "id": "q1", "tag": "bottle", "card": "grade",
+          "q": "A guest assumes E&J VSOP Grand Blue follows the Cognac rule. How long does the brand say the brandy rests in barrel?",
+          "options": ["At least six years", "At least two years", "At least four years", "At least ten years"],
+          "a": 1,
+          "explain": "E&J gives at least two years in oak; four years is the floor for a VSOP in Cognac, a rule that does not bind a California brandy."
+        },
+        {
+          "id": "q2", "tag": "story", "card": "initials",
+          "q": "In which year was the first E&J Brandy bottled, after five years of trials at the Gallo distillery in Fresno?",
+          "options": ["1933", "1968", "1983", "1975"],
+          "a": 3,
+          "explain": "The first bottling came in March 1975; 1933 is the year the brothers founded their winery in Modesto, at the end of Prohibition."
+        }
+      ],
+      "sources": [
+        { "title": "E&J: VSOP Grand Blue", "url": "https://www.ejbrandy.com/collection/vsop/", "kind": "primary", "read": "search" },
+        { "title": "E&J: Legacy", "url": "https://d.ejbrandy.com/legacy/", "kind": "primary", "read": "search" },
+        { "title": "BevNET: Spirit of Gallo marks fifty years of E&J", "url": "https://www.bevnet.com/pr/2025/03/19/spirit-of-gallo-celebrates-50-years-of-innovation-industry-leadership-and-iconic-brands", "kind": "primary", "read": "search" },
+        { "title": "Wikipedia: Gallo winery", "url": "https://en.wikipedia.org/wiki/Gallo_(winery)", "kind": "secondary", "read": "search" },
+        { "title": "Cornell LII: 27 CFR 5.145, Brandy", "url": "https://www.law.cornell.edu/cfr/text/27/5.145", "kind": "primary", "read": "search" }
+      ],
+      "report": [
+        "The flagship is kept as the roster's VSOP, which the brand sells as E&J VSOP Grand Blue (Distiller notes the renaming; the bottle is the same). The note's point stands: many bars pour the VS as the well brandy, and if the owner's bar does, a bottling swap to E&J VS is open; I found no source that settles which of the two the brand leads with, so I propose none.",
+        "The age rests on the brand (at least two years in oak) and on several shops quoting its copy; one shop says the VSOP grade means four years, which is Cognac's rule and not the brand's, and Distiller calls it without an age statement. The record says two years by the brand's account and teaches the gap as a trap.",
+        "The 1975 first bottling stands on Gallo's own timeline and its 2025 press release; a student reference gives 1977 for the national release, which is left out. Gallo's 1983 claim of the American sales lead is left out under the voice rule.",
+        "The brothers' dates rest on Wikipedia's pages for each (Ernest 1909 to 2007, Julio 1910 to 1993); a Britannica entry and a University of Houston hall of honour page on the brothers were found but not read. The refuter should confirm both in a second source, or write Julio as (died 1993) if only his death is found twice.",
+        "Left out for want of a source: the type of still (no source names column or pot for E&J), the grape varieties, the age and make of the XO, and the address of the distillery today (the labels print E. & J. Distillers, Modesto, while the brand places its trials at Fresno).",
+        "Living people met in searches and named nowhere: Joseph Gallo (Joe Gallo), Ernest's son and later the company's chief executive, and Gina Gallo of the family. My task names only this fragment, so people.json was not touched: the integrator should add the names."
+      ],
+      "checked": null
+    },
+    {
+      "key": "christian-brothers",
+      "group": "american-brandy",
+      "producer": "The Christian Brothers",
+      "madeBy": "Heaven Hill",
+      "style": "",
+      "chapter": "",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Bardstown, Nelson County, Kentucky",
+      "year": "1882",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "The Christian Brothers VS Brandy",
+        "class": "Brandy, a grape brandy",
+        "mash": "Grapes: Heaven Hill calls it a grape brandy, and the sources read name neither the varieties nor the vineyards.",
+        "still": "Heaven Hill does not say where or on what still the VS is distilled in the sources read; its bonded sister, Sacred Bond, is distilled in California in copper pot stills. Bottled in Bardstown, Kentucky.",
+        "wood": "Former bourbon barrels for at least two years, by the brand's account, in a blend of brandies two to six years old; no age statement.",
+        "strength": "40% ABV (80 proof)",
+        "taste": "A fruity nose, then vanilla, maple and a little char from the bourbon barrels, with dried fruit, caramel and light spice on a warm finish.",
+        "pour": "Over ice or long with ginger ale, or in a Brandy Old Fashioned or a Brandy Alexander.",
+        "label": [
+          { "term": "VS", "means": "Letters borrowed from Cognac's grades; the brand gives its own figure, at least two years in barrel." },
+          { "term": "Brandy", "means": "Used alone, the federal word for grape brandy aged at least two years in oak." },
+          { "term": "The Christian Brothers", "means": "The name of the Catholic teaching order that first made the brandy in California." }
+        ]
+      },
+      "table": "The Christian Brothers VS is a grape brandy with a California past, made by Heaven Hill and rested at least two years in former bourbon barrels. It pours vanilla, maple and dried fruit, a brandy for the highball and the Brandy Old Fashioned.",
+      "story": "The Christian Brothers are the De La Salle Brothers, a Catholic order of teachers, and the brand dates itself to 1882, when the order was making wine in California at Martinez, east of San Francisco Bay. In 1930 the brothers bought the Mont La Salle property in the hills above Napa and moved their winery there. Their brandy came later than the brand's date suggests: a historical marker at Mont La Salle dates the first Christian Brothers Brandy to 1940. Wine and brandy carried the order's name for half a century, until in 1989 the brothers sold the business to Heublein. In 1999 Heaven Hill bought the brandy together with the Bernheim Distillery in Louisville, after the fire of 1996 at its Bardstown distillery, and from then on the brandy rested in former bourbon barrels and was bottled in Bardstown. That makes the VS a plain lesson behind the bar: much American brandy is grape spirit from the West, rested in bourbon wood in bourbon country.",
+      "others": [
+        { "name": "Christian Brothers Sacred Bond", "note": "A bottled in bond brandy, distilled in California in copper pot stills and aged four years in former Heaven Hill bourbon barrels." },
+        { "name": "The Christian Brothers VSOP", "note": "The next grade of the range, above the VS." },
+        { "name": "Christian Brothers Honey", "note": "A brandy flavoured with honey." }
+      ],
+      "traps": [
+        "Heaven Hill has made The Christian Brothers since 1999; the order of brothers left the brandy business in 1989.",
+        "The brand's 1882 is the year of the order's winemaking in California; a marker at Mont La Salle dates the first brandy to 1940."
+      ],
+      "cards": [
+        { "id": "bourbon-barrels", "prompt": "In what casks does The Christian Brothers VS rest?", "answer": "Former bourbon barrels, for at least two years by the brand's account." },
+        { "id": "order", "prompt": "Who were the Christian Brothers of The Christian Brothers brandy?", "answer": "The De La Salle Brothers, a Catholic teaching order that made wine and then brandy in California, at Napa from 1930." }
+      ],
+      "quiz": [
+        {
+          "id": "q1", "tag": "bottle", "card": "bourbon-barrels",
+          "q": "A guest asks why The Christian Brothers VS smells a little of bourbon. What has the brandy rested in?",
+          "options": ["Former sherry butts", "Seasoned French oak casks", "Stainless steel tanks", "Former bourbon barrels"],
+          "a": 3,
+          "explain": "The brand rests it in former bourbon barrels, whose vanilla and char carry into the brandy; sherry butts belong to Brandy de Jerez."
+        },
+        {
+          "id": "q2", "tag": "story", "card": "order",
+          "q": "In which year did Heaven Hill take on The Christian Brothers brandy, together with the Bernheim Distillery?",
+          "options": ["1989", "1999", "1882", "1940"],
+          "a": 1,
+          "explain": "Heaven Hill took on the brandy and Bernheim in 1999; 1989 is the year Heublein took the business over from the brothers."
+        }
+      ],
+      "sources": [
+        { "title": "Heaven Hill: Brands", "url": "https://heavenhill.com/brands/", "kind": "primary", "read": "search" },
+        { "title": "Heaven Hill: Through the years", "url": "https://heavenhill.com/through-the-years/", "kind": "primary", "read": "search" },
+        { "title": "Christian Brothers Brandy: Our products", "url": "https://christianbrothersbrandy.com/our-products.php", "kind": "primary", "read": "search" },
+        { "title": "HMDB: The Christian Brothers at Mont La Salle", "url": "https://www.hmdb.org/m.asp?m=315860", "kind": "secondary", "read": "search" },
+        { "title": "Time: the Christian Brothers sale to Heublein", "url": "https://content.time.com/time/magazine/article/0,9171,957819,00.html", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "madeBy confirmed: Heaven Hill's own brands page lists the VS as a grape brandy it produces, and its history page dates the purchase to 1999 with the Bernheim Distillery; the brand's site gives the bottler as CB Vineyards, Bardstown, Kentucky.",
+        "The plan's why says distilled in California and aged in Kentucky. For the VS I found neither said outright: California distilling in copper pot stills is stated for the Sacred Bond (Distiller and The Spirits Business), and the ageing in former Heaven Hill bourbon barrels and the bottling at Bardstown are the brand's. The record says what is sourced and no more; the refuter may find where the VS is distilled.",
+        "The order's history: 1882 and the move from Martinez to Napa rest on the Mont La Salle markers (HMDB) and the order's retreat history; the purchase of Mont La Salle in 1930 on two markers; the sale to Heublein in 1989 on a marker and Time. The marker's 1940 for the first brandy is set against the brand's 1882, and both are told. A summary also placed the brandy at Greystone Cellars, leased in 1940 and bought in 1945; one source only, left out.",
+        "The label's form: Heaven Hill and the brand's site write Christian Brothers without The, while the roster and older labels carry The Christian Brothers; I could not see a current front label. A grocer lists the VS as Christian Brothers Very Smooth Brandy, which would make VS on this label stand for Very Smooth rather than Cognac's Very Special; one shop only, so the label term is taught without either reading and the refuter should look at a label.",
+        "Left out for want of a source: the cellar master of the order's brandy years, a member of the order who died in 2004 by memory only, and any figure for sales.",
+        "No living person was met in these searches beyond those already refused."
+      ],
+      "checked": null
+    },
+    {
+      "key": "korbel",
+      "group": "american-brandy",
+      "producer": "Korbel",
+      "madeBy": "",
+      "style": "",
+      "chapter": "",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Guerneville, Sonoma County, California",
+      "year": "1882",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Korbel California Brandy",
+        "class": "California brandy, a grape brandy",
+        "mash": "A non-vintage blend of French Colombard and Chenin Blanc wine, by the house's account.",
+        "still": "Distilled at the house in Sonoma County on a copper-lined continuous column still, by the house's account.",
+        "wood": "Charred American oak barrels of 52 gallons for at least two years, then blended through a solera that is never emptied; no age statement.",
+        "strength": "40% ABV (80 proof)",
+        "taste": "Butterscotch first, then honeysuckle, cinnamon, apple and pear, with a little cedarwood and mild vanilla from the charred oak on a sweet palate.",
+        "pour": "Muddled with fruit and bitters and topped sweet or sour in the Wisconsin Brandy Old Fashioned, or over ice, or in a Brandy Alexander.",
+        "label": [
+          { "term": "California Brandy", "means": "Brandy distilled from California grapes; used alone, brandy is the federal word for grape brandy aged at least two years in oak." },
+          { "term": "Korbel", "means": "The surname of the three Czech brothers who founded the winery at Guerneville in 1882." }
+        ]
+      },
+      "table": "Korbel California Brandy comes from the Russian River sparkling wine house at Guerneville, column distilled from Colombard and Chenin Blanc and aged in charred American oak. Wisconsin has long built its Brandy Old Fashioned on it, butterscotch and cinnamon in the glass.",
+      "story": "Three Czech brothers of the Korbel family came to California from Bohemia and settled on the Russian River at Guerneville in Sonoma County, where the house dates its winery to 1882. In 1889, seven years after the first of its sparkling wines by the house's account, Korbel began shipping a California brandy. The story goes that the brothers poured their wine and brandy at the Chicago fair of 1893, and that visitors from Milwaukee, many of them from central Europe, took a liking to the brandy of their Bohemian neighbours and carried it home to Wisconsin, where it went into the Old Fashioned in place of whiskey. It is a legend, but Wisconsin has long been the brandy's stronghold. Prohibition halted the trade, and in 1954 the Korbel family sold the company to a family of winemakers, who built its sparkling wine into the name most guests know. Behind a bar the brandy is the reason a guest from Wisconsin orders a Brandy Old Fashioned sweet, and the bottle to reach for when one does.",
+      "others": [
+        { "name": "Korbel VSOP Gold Reserve", "note": "An 80 to 20 blend of Colombard and Chenin Blanc, column distilled and aged a few years in small oak barrels." },
+        { "name": "Korbel 12", "note": "Column distilled and aged more than twelve years in oak from the Appalachian forests." },
+        { "name": "Korbel Alambic", "note": "Distilled in a French alambic pot still and aged at least ten years in American and French oak." }
+      ],
+      "traps": [
+        "Korbel California Brandy is column distilled; the house's pot still brandy is the separate Korbel Alambic, and about a third of the Korbel 18 comes from it.",
+        "The Chicago fair of 1893 as the birth of the Wisconsin Brandy Old Fashioned is a legend, not a record."
+      ],
+      "cards": [
+        { "id": "still", "prompt": "On what kind of still is Korbel California Brandy distilled?", "answer": "A copper-lined continuous column still, at the house in Sonoma County; the pot still bottling is Korbel Alambic." },
+        { "id": "wisconsin", "prompt": "Why does a Wisconsin guest ask for Korbel in a Brandy Old Fashioned?", "answer": "Wisconsin has long been the brandy's stronghold; legend sends it home with Milwaukee visitors to the Chicago fair of 1893." }
+      ],
+      "quiz": [
+        {
+          "id": "q1", "tag": "bottle", "card": "still",
+          "q": "A guest asks whether Korbel California Brandy is pot distilled like Cognac. How does the house distil it?",
+          "options": ["Continuous column still", "Charentais alembic still", "Double copper pot still", "Hybrid pot and column"],
+          "a": 0,
+          "explain": "The house distils it on a copper-lined continuous column; its alambic pot still is kept for Korbel Alambic and a share of the 18."
+        },
+        {
+          "id": "q2", "tag": "story", "card": "wisconsin",
+          "q": "In which year, by the house's account, did Korbel begin shipping its California brandy?",
+          "options": ["1882", "1954", "1889", "1893"],
+          "a": 2,
+          "explain": "The house gives 1889, seven years after the winery's start in 1882; 1893 is the year of the Chicago fair in the Wisconsin legend."
+        }
+      ],
+      "sources": [
+        { "title": "Korbel: Brandy", "url": "https://www.korbel.com/brandy/", "kind": "primary", "read": "search" },
+        { "title": "Korbel: California Brandy", "url": "https://store.korbel.com/korbel-california-brandy-750ml-ship-to-ca-only-p43.aspx", "kind": "primary", "read": "search" },
+        { "title": "Wikipedia: Korbel Champagne Cellars", "url": "https://en.wikipedia.org/wiki/Korbel_Champagne_Cellars", "kind": "secondary", "read": "search" },
+        { "title": "Difford's Guide: Korbel Brandy", "url": "https://www.diffordsguide.com/beer-wine-spirits/4029/korbel-brandy", "kind": "secondary", "read": "search" },
+        { "title": "UC Davis: the Heck memorial fellowship", "url": "https://wine.ucdavis.edu/node/2256", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "The still and the age are settled by the house's own product pages: the California Brandy is distilled on a copper-lined continuous column, aged at least two years in charred American oak barrels of 52 gallons and blended through a solera; the pot still is used only for Korbel Alambic and about a third of the Korbel 18. The older bottling of the plan's note is taken to be the Alambic.",
+        "The grapes (French Colombard and Chenin Blanc) and the strength (80 proof, aged at 130 proof) are the house's; the Gold Reserve's 80 to 20 blend is the house's too.",
+        "The Wisconsin Brandy Old Fashioned: Wikipedia, a trade piece for the brandy's 125th year and several accounts agree that Wisconsin is the brandy's stronghold and tell the Chicago fair of 1893 as its origin, and Wikipedia itself calls that a legend; the record tells it so. A share of the brandy's sales going to Wisconsin is left out as a figure.",
+        "The 1954 sale rests on Wikipedia, UC Davis and the family's own page; the buyers are described, not named, because one of the family is living and the brothers' dates were not found in two sources. The founding brothers are not named for the same reason.",
+        "Barrels from Brown-Forman's cooperage (the plan's note) found no source and are left out; Brown-Forman's handling of the brand's sales from 1965 rests on Wikipedia alone and is left out too.",
+        "The taste rests on Difford's Guide (honeysuckle, cinnamon, apple, pear, cedarwood) and a shop's note (butterscotch, mild vanilla, toasted oak); the house gives only colour and verdicts.",
+        "Living person met in searches and named nowhere: Gary Heck, of the family that bought the house in 1954. My task names only this fragment, so people.json was not touched: the integrator should add the name."
+      ],
+      "checked": null
+    },
+    {
+      "key": "copper-and-kings",
+      "group": "american-brandy",
+      "producer": "Copper & Kings",
+      "madeBy": "",
+      "style": "",
+      "chapter": "",
+      "shelf": "",
+      "library": "",
+      "say": "",
+      "place": "Butchertown, Louisville, Jefferson County, Kentucky",
+      "year": "2014",
+      "yearIs": "founded",
+      "bottle": {
+        "name": "Copper & Kings American Craft Brandy",
+        "class": "Brandy, a grape brandy",
+        "mash": "Wine of Muscat, Chenin Blanc and French Colombard grapes from California, as accounts of the bottling give it.",
+        "still": "Distilled in copper pot stills at the house's distillery in the Butchertown district of Louisville, by the house's account.",
+        "wood": "Former Kentucky bourbon barrels, with a share of new medium-char American oak in some accounts; no age statement.",
+        "strength": "45% ABV (90 proof)",
+        "taste": "White grape and honeysuckle on a floral nose, with caramel and honey, then oak, char and vanilla from the bourbon barrels on a drier palate, and spice and wood in the finish.",
+        "pour": "Neat or over one large cube, in place of bourbon in an Old Fashioned, or shaken in a Sidecar or a Brandy Crusta.",
+        "label": [
+          { "term": "American Craft Brandy", "means": "The name of this bottling; craft has no legal meaning on an American label." },
+          { "term": "Brandy", "means": "Used alone, the federal word for grape brandy aged at least two years in oak." }
+        ]
+      },
+      "table": "Copper & Kings American Craft Brandy is pot still brandy made in the Butchertown district of Louisville, from California grape wine rested in former bourbon barrels and bottled at 90 proof. It pours white grape, honey and vanilla, a brandy for the bourbon drinker.",
+      "story": "Copper & Kings opened in 2014, founded by a couple who had built and sold drinks companies before and who chose Louisville over the West Coast for an American brandy house. They set up in Butchertown, the city's old quarter of butchers and stockyards, with copper pot stills and one aim: brandy distilled from American wine and rested in Kentucky bourbon barrels, in the heart of bourbon country. While their own spirit aged, early bottlings were blended with brandy from other producers, as the founders told reporters. The range grew with Butchertown Brandy, launched in 2015, and Floodwall, an apple brandy named for the city's floodwall, in 2016. In 2018 Constellation Brands bought a minority stake, and in 2020 it bought the rest of the company. In 2025 the Bourdon Spirits Company, a Louisville firm, bought Copper & Kings from Constellation, and distilling went on in Butchertown. For a bartender the house is the counterweight to the big California brands: pot still brandy, bourbon wood and Kentucky.",
+      "others": [
+        { "name": "Copper & Kings American Brandy V.S.O.P.", "note": "Six years in former bourbon barrels by the house's account, at 86 proof; the blue label." },
+        { "name": "Copper & Kings Butchertown Brandy", "note": "Copper pot distilled brandy at a higher strength, aged in bourbon barrels and new American oak." },
+        { "name": "Copper & Kings Floodwall Apple Brandy", "note": "Pot distilled apple brandy aged in bourbon barrels and Oloroso sherry casks." }
+      ],
+      "traps": [
+        "Copper & Kings distils in Kentucky from California wine: Louisville is where the brandy is made and aged, not where the grapes grow.",
+        "Craft on the label has no legal meaning; the word brandy alone does, grape brandy aged at least two years in oak."
+      ],
+      "cards": [
+        { "id": "pot-still", "prompt": "On what kind of still is Copper & Kings American Craft Brandy made?", "answer": "Copper pot stills, at the house's distillery in the Butchertown district of Louisville." },
+        { "id": "louisville", "prompt": "In which year did Copper & Kings open its Louisville brandy distillery?", "answer": "In 2014, in Butchertown, chosen by its founders over the West Coast for an American brandy house." }
+      ],
+      "quiz": [
+        {
+          "id": "q1", "tag": "bottle", "card": "pot-still",
+          "q": "A guest takes Copper & Kings American Craft Brandy for a column still brandy. How does the house distil it?",
+          "options": ["On a continuous column", "In copper pot stills", "On a column and doubler", "On a triple effect column"],
+          "a": 1,
+          "explain": "The house distils in copper pot stills in Louisville; a column and doubler is the usual rig of bourbon, not of this brandy."
+        },
+        {
+          "id": "q2", "tag": "story", "card": "louisville",
+          "q": "In which year did Copper & Kings open its brandy distillery in Butchertown, Louisville?",
+          "options": ["2010", "2018", "2014", "2020"],
+          "a": 2,
+          "explain": "The distillery opened in 2014; 2018 and 2020 are the years Constellation Brands took a stake and then the whole company."
+        }
+      ],
+      "sources": [
+        { "title": "Copper & Kings: American Craft Brandy", "url": "https://copperandkings.com/products/american-craft-brandy", "kind": "primary", "read": "search" },
+        { "title": "Copper & Kings: American Brandy V.S.O.P.", "url": "https://copperandkings.com/product/american-brandy/", "kind": "primary", "read": "search" },
+        { "title": "Distillery Trail: Copper & Kings independent again", "url": "https://www.distillerytrail.com/blog/independent-again-copper-kings-american-brandy-ownership-comes-back-home-with-acquisition-from-constellation-brands/", "kind": "secondary", "read": "search" },
+        { "title": "Go To Louisville: Copper & Kings", "url": "https://www.gotolouisville.com/directory/copper-kings", "kind": "secondary", "read": "search" },
+        { "title": "Distiller: Copper & Kings American Craft Brandy", "url": "https://distiller.com/spirits/copper-kings-american-craft-brandy", "kind": "secondary", "read": "search" }
+      ],
+      "report": [
+        "The plan's question settled: the distillery has not closed. Constellation Brands took a minority stake in 2018 and the rest in 2020 (BevNET, Distillery Trail), and the Bourdon Spirits Company of Louisville bought it in August 2025, with distilling kept at Butchertown (Distillery Trail, FoodBev, The Spirits Business). The story tells each as dated history.",
+        "Proposed bottling swap, for the refuter to agree: the American Craft Brandy appears only on the house's old product address (90 proof) and in shops and reviews of 2015 to 2019; the house's own range in 2025 leads with American Brandy V.S.O.P. (six years in bourbon barrels, blue label, 86 proof on the house's bar menu), beside Revival, a ten year Hazmat and a twelve year. A shop's address calls the bottle American Brandy VSOP, which suggests a renaming. Swap: Copper & Kings American Craft Brandy to Copper & Kings American Brandy V.S.O.P., because the house no longer lists the roster's bottling. The record is written on the roster's bottling until the swap is agreed.",
+        "The grapes rest on shops and Distiller, which agree on Muscat, Chenin Blanc and French Colombard; the house's own pages say only fresh fruit and American wine. The wood is former bourbon barrels by the house, with new medium-char oak for a share by Distiller and a shop; the house's six years and more belongs to its present range, not to this bottling, and is left out of the wood.",
+        "The founding couple are living and are described, not named. That early bottlings held brandy from other producers rests on one interview piece; the refuter should try it or cut it. The Vendome stills rest on one photograph caption and are left out, as is a claim of ageing with music, for which no source was found.",
+        "The taste rests on Distiller's reviews and shops' notes, the only sources for this bottling.",
+        "Living people met in searches and named nowhere: Joe Heron and Lesley Heron, the founders. My task names only this fragment, so people.json was not touched: the integrator should add the names."
+      ],
+      "checked": null
+    }
+  ]
+}
