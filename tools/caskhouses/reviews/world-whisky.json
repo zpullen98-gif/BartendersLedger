@@ -230,10 +230,12 @@
  "settled": {
   "date": "2026-11-23",
   "by": "label settler",
-  "searches": 4,
+  "searches": 7,
   "tested": [
    "kavalan: the Classic's strength on the producer's domain (two searches, no figure given), then by market: the American importer's nutrition facts page and shop (43% ABV, 86 proof), a product sheet and American shops at 750 ml and 43%, British, European and Australian listings at 700 ml and 40%. 3 searches.",
-   "amrut: the standard single malt at 46% ABV on the producer's own product page. 1 search."
+   "amrut: the standard single malt at 46% ABV on the producer's own product page. 1 search.",
+   "starward: the renaming of Wine Cask as Nova: the house's own pages (Nova, journal) name no earlier label; a retailer, a blog and an awards listing of a relaunch in 2019 give it. 2 searches; no house page or trade press found, so the open line stands and nothing changed.",
+   "sullivans-cove: whether the label prints French Oak Ex-Tawny: the house titles every release page so (French Oak Ex-Tawny, with its cask number; French Oak Ex-Tawny Refill), at 46.0 to 48.1% ABV; no label photograph was read. 1 search; the label term stands, the open line stands, nothing changed."
   ],
   "changed": [
    {
@@ -269,7 +271,9 @@
   ],
   "open": [
    "kavalan: no producer page or label read states either strength; the importer's 43% is the nearest to the producer's word.",
-   "kavalan: the importer's address carries the word portfolio, as the refuter noted; the importer's Classic page holds the cask make-up the wood field rests on, so it stays."
+   "kavalan: the importer's address carries the word portfolio, as the refuter noted; the importer's Classic page holds the cask make-up the wood field rests on, so it stays.",
+   "starward: the Wine Cask to Nova renaming rests on shops, a blog and an awards listing; a Starward release or dated trade article would settle it.",
+   "sullivans-cove: the house names each release French Oak Ex-Tawny; the roster's flagship, French Oak Single Cask, is the planner's wording, and a bottling swap to the house's name may be worth a refuter's reading."
   ]
  }
 }

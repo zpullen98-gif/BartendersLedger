@@ -256,7 +256,8 @@
   "searches": 5,
   "tested": [
    "uncle-nearest: whether the 1856 is still made and sold, and who makes it. The receivership ordered on 14 August 2025 on Farm Credit Mid-America's suit over its loans (Whisky Magazine, Brewbound, The Drinks Business, Wikipedia); the receiver's reports that the business could go on or be sold as a going concern; the court keeping its control in May 2026 and the bankruptcy petitions dismissed in March 2026 (DLA Piper); a buyer reported in June 2026 (The Spirits Business, Wikipedia); the founder's bid to bar a sale of substantially all assets refused on 23 October 2026. 4 searches.",
-   "uncle-nearest: Nathan Green's birth about 1820 and death after 1880 on Wikipedia's Green page, the brand's launch of July 2017 and Green's teaching of Jack Daniel on Wikipedia's brand page, so the Green page could give way to a receivership source. 1 search."
+   "uncle-nearest: Nathan Green's birth about 1820 and death after 1880 on Wikipedia's Green page, the brand's launch of July 2017 and Green's teaching of Jack Daniel on Wikipedia's brand page, so the Green page could give way to a receivership source. 1 search.",
+   "george-dickel: the open line on bottle.name read against plan.json and the record; the agreed swap stands in both. No search."
   ],
   "changed": [
    {
@@ -292,6 +293,14 @@
      "https://www.dlapiper.com/en-be/insights/publications/2026/05/receivership-order-precludes-whiskey-makers-effort-to-obtain-bankruptcy-relief",
      "https://www.thespiritsbusiness.com/2026/06/uncle-nearest-finds-buyer/"
     ]
+   },
+   {
+    "key": "george-dickel",
+    "field": "checked.open",
+    "was": "bottle.name: carries ', formerly No. 12' only so the lint holds it to the roster's flagship; once plan.json takes the agreed swap it should read George Dickel Signature Recipe Tennessee Whisky.",
+    "now": "removed, with a line in checked.changed",
+    "why": "plan.json took the swap and the name already reads so; the open line was stale",
+    "sources": []
    }
   ],
   "open": [

@@ -294,10 +294,10 @@
      "story: 'founded by others in 1877 though its bottles claimed 1870' is now 'founded in the late 1870s', with 1870 told as the house's own story for which Wikipedia finds no evidence; the sources split on 1877 and 1878, and none read showed a bottle printing 1870.",
      "story: 'the firm in time took a share' is now dated: in 1888 a partner of the firm bought a share of the distillery and the firm became its sole distributor (Wikipedia, Difford's).",
      "story: Schenley bought 'the Cascade trademark and the recipe' in 1937; the sources give the rights to the Cascade name or whisky, and no source read named the recipe; now 'the rights to the Cascade name'. q2's explain follows.",
-     "story and cards[chill]: the winter belief is told as the story goes (VinePair, Difford's), not as fact; the 40 degrees Fahrenheit stands in both."
+     "story and cards[chill]: the winter belief is told as the story goes (VinePair, Difford's), not as fact; the 40 degrees Fahrenheit stands in both.",
+     "checked.open: the bottle.name question is closed: plan.json took the agreed swap to George Dickel Signature Recipe on 2026-11-22, and bottle.name reads George Dickel Signature Recipe Tennessee Whisky with no ', formerly No. 12' (label settler, 2026-11-23, no search)."
     ],
     "open": [
-     "bottle.name: carries ', formerly No. 12' only so the lint holds it to the roster's flagship; once plan.json takes the agreed swap it should read George Dickel Signature Recipe Tennessee Whisky.",
      "The year of the rename from No. 12 to Signature Recipe stays unknown; a forum thread of September 2018 shows a new No. 12 label, and no source dates the new name."
     ]
    }
