@@ -320,7 +320,7 @@
     "mash": "Quebranta alone, by the house's own page: a non aromatic pisco grape of Peru.",
     "still": "Distilled once in copper pot stills in the Ica valley, as the house describes it; the house does not name the distillery on the pages read.",
     "wood": "No wood: by the house's account it rests for a year before it is bottled at the estate. No age statement.",
-    "strength": "40% ABV (80 proof)",
+    "strength": "40% ABV (80 proof), 44% in Ontario",
     "taste": "By the house's own note, vanilla, citrus peel and white pepper on a delicate nose; spice and citrus on the palate, then a peppery bite, a little earthiness and a quick finish.",
     "pour": "In a Pisco Sour, or long in a Chilcano with ginger ale and lime; neat, it shows its white pepper.",
     "label": [
@@ -334,7 +334,7 @@
      }
     ]
    },
-   "table": "Made from Quebranta grapes alone, Macchu Pisco is distilled in copper pot stills in Peru's Ica valley and rested a year before it is bottled at 40 per cent. White pepper, citrus peel and vanilla give its Pisco Sour a peppery bite.",
+   "table": "Made from Quebranta grapes alone, Macchu Pisco is distilled in copper pot stills in Peru's Ica valley and rested a year before it is bottled. White pepper, citrus peel and vanilla give its Pisco Sour a peppery bite.",
    "story": "Macchu Pisco was founded in 2006 by two sisters who came home to Peru to build a label for Peruvian pisco made in the traditional way. Peru had made pisco its denomination of origin in 1990, binding it to the grapes, the single distillation and the rest without wood. The name plays on Machu Picchu, the Inca citadel, spelt with a double c. The house began with Quebranta, the non aromatic grape that gives Peruvian pisco its earthy body, distilled once in copper pot stills in the valley of Ica and rested a year, by the house's account, in vessels that give it nothing, before it is bottled at the estate. Two other bottlings show the other two Peruvian styles: La Diablada, an acholado named for an Andean dance in which angels fight devils, and Ñusta, a mosto verde named for the Quechua word for an Inca princess. Set beside an Italia or a Torontel pisco, the plain bottle shows what Quebranta brings: pepper, citrus and earth where the aromatic grapes give flowers.",
    "others": [
     {
@@ -428,7 +428,7 @@
    "report": [
     "The founders are two living sisters and are named nowhere. Their surname differs between sources (Asher on the house's site and in Good Spirits News, da Silva in one shop profile). people.json was not touched, since my task names only this fragment: the integrator should add Melanie Asher, Lizzie Asher, Melanie da Silva and Lizzie da Silva.",
     "The distillery is not named, as the plan's note asks: one shop says the house works at the Tacama estate, another that the founders bought their own distillery in Ica, and the house's pages read name neither. Ica valley rests on Spirits Review and a shop profile; the house says only Peru.",
-    "Strength: 40 per cent (80 proof) in Spirits Review and Distiller, and Difford's gives a distillate of about 42 per cent that loses two per cent as it rests; one shop lists 42. The refuter should read the label.",
+    "Strength, settled by market on 2026-11-23 as far as listings go: 40% ABV (80 proof) in Spirits Review, Distiller, American shops and The Whisky Exchange; 44% on the listing of Ontario's provincial board (LCBO 25282, Quebranta from copper pot stills); one Italian shop gives 43% for a 70 cl bottle and a Quebec listing 42% with a grape make-up that is not this pisco's, neither carried. The house's pages give no figure and no label was read. The table line no longer states a strength.",
     "Difford's older entry says the pisco rested four months in oak and was a blend of Italia, Moscatel and Quebranta; both contradict the house's own page (Quebranta alone, a year's rest) and Peru's rule against wood, and are not carried.",
     "Left out for want of a source: foot pressing (no source for this house), the pounds of grapes a bottle (10 or 16 by account), La Diablada's grapes and its claim to be a vintage pisco, and the founder's business school story (one source).",
     "The year 2006 rests on the house's own page, with Good Spirits News, a writer's site, and a shop profile agreeing; the refuter may want a second independent account."
@@ -441,10 +441,11 @@
      "story: the American trade marks of 2017 cut as a beat that teaches nothing behind a bar; Peru's denomination of origin of 1990 added (IPONZ's register and El Peruano give Resolución Directoral 072087 of 12 December 1990), so the story keeps two years.",
      "story: 'as Peru's rules require' after the year's rest cut, since the rules ask a rest, not a year; the year now told as the house's account. 'Two siblings followed' now 'two other bottlings show', since the order of release was not confirmed.",
      "cards[1]: the prompt asked the year and the founders at once; now the year alone, the sisters in the answer. quiz[1]: the explain no longer leans on the trade marks.",
-     "sources: the Justia trade mark list replaced by IPONZ's register of the Pisco geographical indication."
+     "sources: the Justia trade mark list replaced by IPONZ's register of the Pisco geographical indication.",
+     "bottle.strength: was 40% ABV (80 proof); now 40% ABV (80 proof), 44% in Ontario, the provincial board's listing of the same Quebranta pisco; table: 'bottled at 40 per cent' now 'bottled', since the figure differs by market (label settler, 2026-11-23)."
     ],
     "open": [
-     "bottle.strength: 40 per cent (80 proof) by Spirits Review, Distiller and an Australian shop; Canada's provincial board lists 44 and Difford's a distillate of about 42. No label was read.",
+     "bottle.strength: the house states no figure and no label was read; 40% (80 proof) rests on American and British listings and two reviews, 44% on the Ontario board's listing. Italian (43%) and Quebec (42%) listings were not carried.",
      "bottle.taste: the house's own note gives earthiness and a quick finish; one shop gives marzipan and raisin bread. The house's words stand."
     ]
    }

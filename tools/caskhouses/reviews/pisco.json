@@ -218,5 +218,38 @@
   "plan.json, pisco-porton why: says the Mosto Verde is an acholado; the house makes seven single grape mosto verdes beside the acholado, which is why the record names the Acholado. Reported, not edited.",
   "The Library (Caravedo / Pisco Porton): calls Peru's pisco rules the strictest anywhere, a judgement; says the old stone fermentation vats remain in use, found in no source; and spells flavor in the American way. Reported, not edited.",
   "The liquor shelf, El Gobernador: names Felipe Margutt Donaire with no dates, which the brief's rule for the dead does not allow, and says Reservado means 40% ABV where the decree makes 40 the minimum, below Gran Pisco at 43. Reported, not edited."
- ]
+ ],
+ "settled": {
+  "date": "2026-11-23",
+  "by": "label settler",
+  "searches": 3,
+  "tested": [
+   "macchu-pisco: the strength on the house's own domain (no figure on any page found); listings by market: 40% ABV (80 proof) in American shops and The Whisky Exchange, 43% for a 70 cl bottle in an Italian shop, 44% on the Ontario provincial board's listing, 42% on a Quebec listing whose grapes are not this pisco's. 3 searches."
+  ],
+  "changed": [
+   {
+    "key": "macchu-pisco",
+    "field": "bottle.strength",
+    "was": "40% ABV (80 proof)",
+    "now": "40% ABV (80 proof), 44% in Ontario",
+    "why": "the strength differs by market; the provincial board's listing names the same Quebranta, copper pot still pisco at 44%",
+    "sources": [
+     "https://www.lcbo.com/en/macchu-pisco-25282",
+     "https://www.thewhiskyexchange.com/p/28585",
+     "https://www.spiritsreview.com/reviews-pisco-macchu-pisco.html"
+    ]
+   },
+   {
+    "key": "macchu-pisco",
+    "field": "table",
+    "was": "Made from Quebranta grapes alone, Macchu Pisco is distilled in copper pot stills in Peru's Ica valley and rested a year before it is bottled at 40 per cent. White pepper, citrus peel and vanilla give its Pisco Sour a peppery bite.",
+    "now": "Made from Quebranta grapes alone, Macchu Pisco is distilled in copper pot stills in Peru's Ica valley and rested a year before it is bottled. White pepper, citrus peel and vanilla give its Pisco Sour a peppery bite.",
+    "why": "the line said 40 per cent as the one strength; it now names none, since the figure differs by market",
+    "sources": []
+   }
+  ],
+  "open": [
+   "macchu-pisco: no label and no producer page read gives a strength; a bottle should be read before a card ever drills it."
+  ]
+ }
 }
