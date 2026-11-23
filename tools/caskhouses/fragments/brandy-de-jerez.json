@@ -126,7 +126,7 @@
    ],
    "report": [
     "Label form, from the plan's note: American retailers list the bottle as Fundador Solera Reserva, some with Sherry Cask added (Fundador Solera Reserva Sherry Cask Brandy de Jerez); European bottles read Fundador Solera or Fundador Sherry Cask Solera at 36 per cent. I kept the roster's words and did not see a label from the bodega itself; no swap proposed, but the refuter may want Sherry Cask in bottle.name if the American label prints it.",
-    "The 40 per cent strength rests on two American retailers (Spec's, Wooden Cork) and on 27 CFR 5.145, which asks brandy to be bottled at no less than 80 proof; whether the American Solera Reserva and the European 36 per cent Solera are the same blend I could not find. The grapes, Airén and Palomino, rest on retailers (Master of Malt, Wooden Cork) only and are told as the trade's.",
+    "The 40 per cent strength rests on American listings (Wooden Cork, Spec's) and on 27 CFR 5.145, which asks brandy to be bottled at no less than 80 proof; searched again on 2026-11-23, the producer's and the American importer's pages give no figure, one export shop lists a 72 proof bottle of American origin, which the federal floor makes unlikely for an American label, and Difford's gives 36 per cent for the European Sherry Cask Solera. Whether the American and European bottles hold the same blend was not found. The grapes, Airén and Palomino, rest on retailers (Master of Malt, Wooden Cork) only and are told as the trade's.",
     "Ownership, from the plan's note: Emperador's own press release of 2 March 2016 and two Philippine papers give the completed purchase of Bodegas Fundador from Beam Suntory; the deal was signed in November 2015. The González Byass pages are the American importer's, which is why the planner met them. madeBy stays Bodegas Fundador.",
     "Left out for want of a second source: Pedro Domecq Loustau's dates (so the house is named and he is not), the 1730 and 1822 dates of the bodega's roots, the legend of a cancelled order of spirit left to age in sherry casks, and where Fundador is distilled (the 2016 sale took in a distillery at Tomelloso, but no source read ties this bottling to it).",
     "Living names met in searches and not written anywhere in the record, for people.json (my task names only this fragment, so I did not edit it): Andrew Tan and Jorge Domecq, of Emperador and its Spanish arm.",
@@ -142,11 +142,13 @@
      "bottle.still: was 'the younger grades may carry stronger spirit beside it'; now the council's rule that holandas, distilled to no more than 70 per cent, may be used alone or with stronger wine spirits in any grade.",
      "others: Fundador Doble Madera cut, its casks and its 36 per cent found in no source; Triple Madera kept, its three casks and its grade on the importer's sheet and BevNET.",
      "traps: the trap on González Byass's American pages cut, an importer being a present state that will not hold; the Spanish bottle's trap now says it is a different grade, Solera, not only a different strength.",
-     "sources: the Inquirer report gives way to the Spanish bottle's listing (a label term only); the eCFR source now names 5.145 itself."
+     "sources: the Inquirer report gives way to the Spanish bottle's listing (a label term only); the eCFR source now names 5.145 itself.",
+     "report and checked.open: the American 80 proof searched again: no producer or importer page gives a figure, the American listings and the federal floor of 80 proof agree, one export shop's 72 proof is set against the floor; bottle.strength stands as written (label settler, 2026-11-23)."
     ],
     "open": [
      "bottle.strength: the 36 per cent of the Spanish Fundador Solera rests on the author's retailers and was not confirmed here, so the record no longer states it.",
-     "story: where Fundador is distilled (the 2016 sale took in a distillery at Tomelloso; the Las Copas venture in Jerez is shared with González Byass) is not tied to this bottling by any source read."
+     "story: where Fundador is distilled (the 2016 sale took in a distillery at Tomelloso; the Las Copas venture in Jerez is shared with González Byass) is not tied to this bottling by any source read.",
+     "bottle.strength: the American 40% ABV (80 proof) rests on American listings and the federal floor of 27 CFR 5.145; no label, producer page or importer page giving the figure was read (searched on 2026-11-23)."
     ]
    }
   },
@@ -418,7 +420,7 @@
    ],
    "report": [
     "The plan's note is settled as the house's claim, not as fact: González Byass's sheets, one dated July 2026, call Lepanto the only Brandy de Jerez produced entirely in Jerez. The record says only that the house describes it as made wholly in Jerez; I found no independent count of the brandies distilled in the town, so neither 'only' nor 'one of the few' is written.",
-    "The plan's twelve years stands on the bodega's sheet; its 36 per cent strength is the bodega's for the European bottle. The 40 per cent for the United States rests on one American retailer (Jensen's) and on 27 CFR 5.145, which asks brandy to be bottled at no less than 80 proof.",
+    "The plan's twelve years stands on the bodega's sheet; its 36 per cent strength is the bodega's for the European bottle. The 40 per cent for the United States, searched again on 2026-11-23, rests on two American listings (Wine.com, whose record names the American importer and gives 80 proof, and Jensen's), a review of the 80 proof bottle that notes 72 proof outside the United States, and 27 CFR 5.145, which asks brandy to be bottled at no less than 80 proof. No American label was read.",
     "The stills from the 1960s, of 25 hectolitres each, rest on one German importer's sheet only and are left out. That the name honours the sea battle of Lepanto rests on one retailer and is left out; one source dates the trade mark to 1909, which also stays out.",
     "The founder of 1835 and his English partner are described and not named: the house's page names them, but I found no dates for either in a second source.",
     "Distiller gives nine years in a Tío Pepe solera then three in casks of Matusalem oloroso; the bodega's shop says the Matusalem casks give the raisin. The record says fino then oloroso casks, which both accounts carry.",
@@ -431,10 +433,11 @@
     "changed": [
      "story: was an English partner joined soon after; now an English agent later became his partner, since sources give 1844, 1855 and 1885 for the partnership and the house says only shortly afterwards.",
      "bottle.wood: was casks that held Tío Pepe fino and then oloroso; now nine years in Tío Pepe casks and three in casks of Matusalem, a sweet oloroso, as González Byass's own Spanish and English pages give it.",
-     "bottle.label: Solera Gran Reserva no longer says holandas alone, which the council's specification does not require."
+     "bottle.label: Solera Gran Reserva no longer says holandas alone, which the council's specification does not require.",
+     "checked.open and report: the American 40 per cent now rests on two listings (Wine.com, with the importer's name and 80 proof, and Jensen's) and a review that sets the 80 proof American bottle against 72 proof elsewhere, beside 27 CFR 5.145; bottle.strength stands as written (label settler, 2026-11-23)."
     ],
     "open": [
-     "bottle.strength: 40 per cent for the United States rests on one American retailer and on 27 CFR 5.145, which forbids brandy below 80 proof there; no American label was read.",
+     "bottle.strength: 36 per cent is the bodega's own sheet; 40 per cent for the United States rests on two American listings, a review and 27 CFR 5.145, and no American label or importer page giving the figure was read.",
      "bottle.still: the 'made wholly in Jerez' line stays the house's claim; no independent count of the brandies distilled in Jerez was found."
     ]
    }

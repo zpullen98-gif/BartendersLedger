@@ -244,5 +244,44 @@
   "plan.json, lepanto why: 'one of the few Brandies de Jerez distilled as well as aged in the town' rests on no count found; the record gives the house's own words as its claim. Reported, not edited.",
   "plan.json, gran-duque-d-alba why: 'an American bar can readily stock' is a present state of import. Reported, not edited.",
   "The Ledger's own pages hold nothing on Brandy de Jerez or these five houses (no shelf bottle, Library record, style or Cask Atlas line), so none is in tension."
- ]
+ ],
+ "settled": {
+  "date": "2026-11-23",
+  "by": "label settler",
+  "searches": 4,
+  "tested": [
+   "lepanto: the American strength: the bodega's sheet at 36 per cent; Wine.com's listing with the American importer's name at 80 proof; a review of the 80 proof bottle that notes 72 proof bottlings outside the United States; a shop's 72 to 80 proof range. 1 search.",
+   "fundador: the American strength: American listings at 80 proof (Wooden Cork), an export shop's 72 proof listing of American origin, Difford's at 36 per cent for the Sherry Cask Solera, the 2022 release of the new 750 ml American bottle with no figure, the producer's and the American importer's pages with no figure. 3 searches."
+  ],
+  "changed": [
+   {
+    "key": "lepanto",
+    "field": "report and checked.open",
+    "was": "40 for the United States rests on one American retailer and on 27 CFR 5.145",
+    "now": "on two American listings, a review and 27 CFR 5.145; bottle.strength unchanged",
+    "why": "a second listing and a review agree with the first; no label read, so the open line stays in a narrower form",
+    "sources": [
+     "https://www.wine.com/product/lepanto-solera-gran-reserva-brandy/532010",
+     "https://bevvy.co/articles/lepanto-gran-reserva-brandy-review",
+     "https://www.gonzalezbyass.com/sites/default/files/2021-11/Lepanto%20Solera%20Gran%20Reserva.pdf"
+    ]
+   },
+   {
+    "key": "fundador",
+    "field": "report and checked.open",
+    "was": "The 40 per cent strength rests on two American retailers (Spec's, Wooden Cork) and on 27 CFR 5.145",
+    "now": "the same, with the second search's findings and an open line for a label",
+    "why": "no producer or importer page gives the figure; the 72 proof export listing is set against the federal floor",
+    "sources": [
+     "https://woodencork.com/products/fundador-brandy-de-jerez-solera-reserva",
+     "https://caskcartel.com/products/fundador-solera-reserva-brandy",
+     "https://www.diffordsguide.com/beer-wine-spirits/8236/fundador-brandy",
+     "https://www.bevindustry.com/articles/94977-fundador-sherry-cask-solera-reserva-brandy-unveils-new-label-bottle"
+    ]
+   }
+  ],
+  "open": [
+   "lepanto and fundador: neither American strength was read on a label or a producer's page; both stand on American listings and the federal floor of 80 proof for brandy."
+  ]
+ }
 }
