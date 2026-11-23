@@ -1,0 +1,676 @@
+{
+ "group": "pisco",
+ "records": [
+  {
+   "key": "pisco-porton",
+   "group": "pisco",
+   "producer": "Pisco Portón",
+   "madeBy": "Hacienda La Caravedo",
+   "style": "",
+   "chapter": "",
+   "shelf": "",
+   "library": "Caravedo / Pisco Porton",
+   "say": "por-TOHN",
+   "place": "Ica, Ica Region, Peru",
+   "year": "1684",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Pisco Portón Mosto Verde Acholado",
+    "class": "Peruvian pisco under its denomination of origin, of the mosto verde acholado kind",
+    "mash": "By the distillery's own page, Quebranta, Torontel and Albilla grapes: Quebranta is one of Peru's non aromatic pisco grapes, Torontel and Albilla two of its aromatic ones.",
+    "still": "Distilled once at Hacienda La Caravedo in the Ica valley, from must whose fermentation has not finished. Under Peru's rules it comes off the still at the strength it is bottled at, with no water added.",
+    "wood": "Never in wood, which Peru's rules forbid: it rests in vessels that give it no flavour. The distillery's page gives three years of rest before bottling; no age statement.",
+    "strength": "43% ABV",
+    "taste": "By the house's own note, a floral nose of roses and herbs over ripe mandarin, lime and raisin; then a sweet, dense palate and a finish of flowers and lemon verbena.",
+    "pour": "Neat and lightly chilled, to show its flowers, or in a Pisco Sour, or long in a Chilcano with ginger ale and lime.",
+    "label": [
+     {
+      "term": "Mosto Verde",
+      "means": "Green must: distilled before its fermentation has finished, as Peru's rules define it."
+     },
+     {
+      "term": "Acholado",
+      "means": "A blend of pisco grapes, here Quebranta, Torontel and Albilla."
+     }
+    ]
+   },
+   "table": "Pisco Portón Mosto Verde Acholado is Peruvian pisco from Hacienda La Caravedo in Ica, distilled once from grape must before its fermentation ends and bottled at 43 per cent with no water added. Roses, mandarin and lime make it a perfumed Pisco Sour.",
+   "story": "Pisco is the grape brandy of Peru's southern coast, and Hacienda La Caravedo in the Ica valley dates its own distilling to 1684, a date the house gives and travel guides repeat. The Portón label was made there in modern times, named for the Spanish word for a gate. It was built on the old Peruvian rules: eight pisco grapes, one distillation, no water to bring the strength down and no wood. Its mosto verde, distilled from must before it finishes fermenting, comes in seven single grapes and in the acholado blend. In the United States the tequila Patrón, whose name sounds close to Portón to an English ear, challenged the brand, and the American registration of the Portón name was cancelled in 2017. The house withdrew the name from that market, and the same distillery's piscos reached American shelves as Caravedo, while in Peru the bottle kept the Portón name. For a bartender it is the plain lesson in a Peruvian mosto verde: aromatic grapes, one pass through the still, and a strength reached at the still.",
+   "others": [
+    {
+     "name": "Caravedo Mosto Verde",
+     "note": "The house's mosto verde as it is labelled in the United States, where the Portón name was withdrawn."
+    },
+    {
+     "name": "Pisco Portón Mosto Verde Quebranta",
+     "note": "A mosto verde of Quebranta alone, one of the single grape bottlings of the range."
+    }
+   ],
+   "traps": [
+    "Portón and Caravedo on an American shelf come from one distillery: the Portón name was withdrawn there after the dispute with Patrón.",
+    "Mosto verde is not young or green pisco: the must was distilled before its fermentation had finished.",
+    "Acholado is a blend of grapes, not an age or a grade."
+   ],
+   "cards": [
+    {
+     "id": "mosto-verde",
+     "prompt": "What does Mosto Verde mean on a Pisco Portón label?",
+     "answer": "Green must: the must is distilled before its fermentation has finished, as Peru's rules define it."
+    },
+    {
+     "id": "caravedo",
+     "prompt": "Under which name do the piscos of the Pisco Portón distillery reach American shelves?",
+     "answer": "Caravedo: the Portón name was withdrawn from the United States after a trade mark dispute with the tequila Patrón."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "mosto-verde",
+     "q": "A guest reads Mosto Verde on a bottle of Pisco Portón and asks what it means. What does it describe?",
+     "options": [
+      "Grapes picked before they ripen",
+      "Pisco rested in green glass",
+      "Must distilled before fermentation ends",
+      "A blend of aromatic grapes"
+     ],
+     "a": 2,
+     "explain": "Mosto verde is must distilled before its fermentation has finished; the grapes themselves are picked ripe, and a blend of grapes is an acholado."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "caravedo",
+     "q": "A guest from the United States knows this Peruvian distillery's pisco by another name. Which name is on the American bottle in place of Portón?",
+     "options": [
+      "Caravedo",
+      "Ocucaje",
+      "Tabernero",
+      "Queirolo"
+     ],
+     "a": 0,
+     "explain": "The house withdrew the Portón name from the United States after the dispute with Patrón and sells its pisco there as Caravedo; the others are separate Peruvian houses."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Destilería La Caravedo: the Pisco Portón range",
+     "url": "https://destilerialacaravedo.com/porton/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Destilería La Caravedo: Pisco Portón Mosto Verde Acholado",
+     "url": "https://destilerialacaravedo.com/product/pisco-porton-mosto-verde-acholado/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Fodor's: Hacienda La Caravedo",
+     "url": "https://fodors.fodors.com/world/south-america/peru/the-southern-coast/things-to-do/sights/reviews/hacienda-la-caravedo-608406",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Gestión: Portón to withdraw its name from the United States",
+     "url": "https://gestion.pe/economia/empresas/pisco-porton-retirara-marca-mercado-estadounidense-recibir-instruccion-juez-126550-noticia/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Justia Trademarks: the Portón registration",
+     "url": "https://trademarks.justia.com/852/16/porton-85216998.html",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note asks which name the owner's market prints: in the United States the same distillery's mosto verde is sold as Caravedo Mosto Verde (Spirits Hunters, Made Good Designs and several shops say formerly Pisco Portón), while the distillery's own Peruvian pages still print Pisco Portón. The record keeps the roster's Portón name and teaches Caravedo in others, a trap and a card; if the owner pours in the United States, a bottling swap to Caravedo Mosto Verde is proposed, with the refuter's agreement.",
+    "The flagship is taken as the Mosto Verde Acholado, the blend the plan names: the distillery's page lists eight Mosto Verde bottlings, seven single grapes and the acholado (Quebranta, Acholado, Torontel, Albilla, Moscatel, Mollar, Italia, Negra Criolla), all at 43 per cent, which confirms the strength. American shops give the Caravedo Mosto Verde as four grapes with Italia, or three without it; the record gives the Portón acholado's three from the distillery.",
+    "The year 1684 is the distillery's founding as the house and Fodor's give it (Country Life and the Oxford Companion repeat it); the claim to be the oldest working distillery in the Americas is left out under the voice rule. The Library's record also dates the hacienda to 1684 and agrees on the rules; its claim that the old stone fermentation vats remain in use was not confirmed and is not carried.",
+    "The 2017 cancellation rests on the Justia record of the Portón registration (cancelled under section 18, status date 28 April 2017) and on Gestión's report of the withdrawal; the Gestión article's own date was not read. Made Good Designs dates the rename to 2016 from the company's timeline, against 2017 here: the refuter should settle it.",
+    "Left out for want of a second source: the still type (shops say copper alembics and falcas), the founder of the Portón brand and its first release year, the second distillery of 2010 (Difford's alone), and the kilograms of grapes a bottle (shops alone).",
+    "Living people met in searches and named nowhere: Johnny Schuler, the master distiller. My task names only this fragment, so people.json was not touched: the integrator should add the name.",
+    "Peru's rules (one distillation, no water, no wood, a rest of at least three months in neutral vessels) are taken from the liquor shelf's El Gobernador record and the Library, both of this repo, and agree with PromPerú and Difford's Guide; the three year rest is the distillery's own figure."
+   ],
+   "checked": null
+  },
+  {
+   "key": "barsol",
+   "group": "pisco",
+   "producer": "BarSol",
+   "madeBy": "Bodega San Isidro",
+   "style": "",
+   "chapter": "",
+   "shelf": "",
+   "library": "",
+   "say": "bar-SOHL",
+   "place": "Ica, Ica Region, Peru",
+   "year": "",
+   "yearIs": "",
+   "bottle": {
+    "name": "BarSol Primero Quebranta Pisco",
+    "class": "Peruvian pisco under its denomination of origin, a puro of one grape",
+    "mash": "Quebranta alone, one of Peru's non aromatic pisco grapes, grown in the Ica valley by the house's account and fermented to a finished wine before it is distilled.",
+    "still": "Distilled once in copper pot stills at Bodega San Isidro in Ica: the wine is brought to a boil and its vapour passes through the helmet and the swan's neck into a condenser, as the house describes it.",
+    "wood": "No wood and no age statement: Peruvian pisco rests in vessels that give it no flavour before it is bottled.",
+    "strength": "41.3% ABV",
+    "taste": "By the house's own note, pear, red apple and fresh cut grass on the nose, with dried fruit and pastry; then cream and cocoa on the palate, and a round, long finish.",
+    "pour": "In a Pisco Sour, or long in a Chilcano with ginger ale and lime; neat and lightly chilled for a guest who wants to taste the grape.",
+    "label": [
+     {
+      "term": "Primero",
+      "means": "The house's name for the bottling, not a grade or an age under Peru's rules."
+     },
+     {
+      "term": "Quebranta",
+      "means": "The one grape in the bottle, a non aromatic pisco grape of Peru."
+     }
+    ]
+   },
+   "table": "BarSol Primero Quebranta is Peruvian pisco from Bodega San Isidro in Ica: Quebranta grapes alone, distilled once in copper pot stills and bottled at 41.3 per cent with no water added. Pear, red apple and fresh grass give it body for a Pisco Sour.",
+   "story": "Bodega San Isidro stands in the Ica valley, on Peru's southern coast, and it is older than the label it makes: the house calls it a century old distillery, and the Oxford Companion to Spirits and Cocktails notes evidence of pisco made there in the nineteenth century. It had lain idle for decades when two Peruvian partners bought it in 2002 and brought it back to work, reconditioning the old buildings and keeping to the pot still method that, as the house tells it, Peru has followed since the sixteenth century. They called the pisco BarSol, and by 2005 it was going abroad, first among its range the pure Quebranta named Primero. The range grew to cover every style Peru's rules allow: puros of single grapes, an acholado that blends them, and mosto verde distilled from must before its fermentation ends. Newer labels print the pure Quebranta as BarSol Puro Quebranta, at the same strength. For a bartender it is the plain lesson in Quebranta, the non aromatic grape that gives Peruvian pisco its body, and a pisco made for the Pisco Sour.",
+   "others": [
+    {
+     "name": "BarSol Puro Quebranta",
+     "note": "The pure Quebranta under the name the house's newer labels print, at the same 41.3 per cent."
+    },
+    {
+     "name": "BarSol Mosto Verde Quebranta",
+     "note": "Quebranta distilled from must before its fermentation ends, bottled at 41.8 per cent."
+    },
+    {
+     "name": "BarSol Acholado",
+     "note": "The house's acholado, a blend of pisco grapes."
+    }
+   ],
+   "traps": [
+    "There is no BarSol distillery: the pisco is made at Bodega San Isidro in Ica.",
+    "Quebranta is a non aromatic grape: a guest who wants a perfumed pisco wants an Italia or a Torontel.",
+    "Primero is the house's name for the bottling, not a grade or an age in Peru's rules."
+   ],
+   "cards": [
+    {
+     "id": "strength",
+     "prompt": "At what strength is BarSol Primero Quebranta bottled?",
+     "answer": "41.3 per cent, the strength it was distilled to: Peru allows no water to bring it down."
+    },
+    {
+     "id": "revival",
+     "prompt": "In which year was Bodega San Isidro, where BarSol is made, brought back to work?",
+     "answer": "2002, when two Peruvian partners bought the idle bodega in Ica and restored it."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "strength",
+     "q": "A guest asks how strong BarSol Primero Quebranta is, and whether water was added. What is so?",
+     "options": [
+      "41.3 per cent, no water added",
+      "40 per cent, brought down with water",
+      "43 per cent, brought down with water",
+      "46 per cent, no water added"
+     ],
+     "a": 0,
+     "explain": "It is bottled at 41.3 per cent, the strength it came off the still at, since Peru allows no water; bringing pisco down with water is allowed in Chile, not in Peru."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "revival",
+     "q": "In which year did two Peruvian partners buy the idle Bodega San Isidro, where BarSol is made, and bring it back to work?",
+     "options": [
+      "1975",
+      "1988",
+      "1996",
+      "2002"
+     ],
+     "a": 3,
+     "explain": "The bodega was bought and restored in 2002, and by 2005 its pisco was going abroad; the earlier years mark nothing in its story."
+    }
+   ],
+   "sources": [
+    {
+     "title": "BarSol: Quebranta",
+     "url": "https://www.barsolpisco.com/product/quebranta/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "BarSol: About us",
+     "url": "https://www.barsolpisco.com/about-us/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Hotaling and Co.: BarSol",
+     "url": "https://www.hotalingandco.com/portfolio/barsol/",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Difford's Guide: BarSol Primero Quebranta Pisco",
+     "url": "https://www.diffordsguide.com/beer-wine-spirits/527/barsol-quebranta-pisco",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Oxford Companion to Spirits and Cocktails: BarSol",
+     "url": "https://spiritsanddistilling.com/dictionary/id/acref-9780199311132-e-94",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "A bottling swap is proposed in name only: the house's own product page now calls the bottling Quebranta in its Puro range, and the importer's page names it BarSol Puro Quebranta Pisco, both at 41.3 per cent, while Difford's Guide, Distiller and Flaviar still print BarSol Primero Quebranta. If the refuter agrees, the flagship becomes BarSol Puro Quebranta Pisco; the record keeps the roster's words for now and teaches the newer name in others and the story.",
+    "The bodega's founding date is left out as the plan's note asks: the house says a century old, the importer's cocktail page ties it to 1919, Difford's says the earliest town archive record is 1919 and the building likely of the 1800s, and the Oxford Companion notes nineteenth century evidence. The record says only that it is older than the label.",
+    "That the bodega lay idle for 34 years before 2002 rests on one account and is told as for decades. Difford's Guide counts the bodega Peru's leading pisco exporter in 2005: the ranking is left out under the voice rule, and by 2005 going abroad is kept, which a second account also gives.",
+    "The house names no proof off the still and no rest time for the Quebranta; the record says neither. The century old copper pot stills of the importer's page rest on that page alone and are told only as copper pot stills, which the house's own page and Difford's also give.",
+    "Living people met in searches and named nowhere: Carlos Ferreyros and Diego Loret de Mola, who bought the bodega in 2002, and Alfredo Mendiola Martinez, named by the importer as master distiller. people.json was not touched, since my task names only this fragment: the integrator should add them.",
+    "Nothing in this repo's pages names BarSol, so there is nothing to disagree with."
+   ],
+   "checked": null
+  },
+  {
+   "key": "macchu-pisco",
+   "group": "pisco",
+   "producer": "Macchu Pisco",
+   "madeBy": "",
+   "style": "",
+   "chapter": "",
+   "shelf": "",
+   "library": "",
+   "say": "MAH-choo PEE-skoh",
+   "place": "Ica valley, Ica Region, Peru",
+   "year": "2006",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Macchu Pisco",
+    "class": "Peruvian pisco under its denomination of origin, of the Quebranta grape alone",
+    "mash": "Quebranta alone, by the house's own page: a non aromatic pisco grape of Peru.",
+    "still": "Distilled once in copper pot stills in the Ica valley, as the house describes it; the house does not name the distillery on the pages read.",
+    "wood": "No wood: by the house's account it rests for a year before it is bottled at the estate. No age statement.",
+    "strength": "40% ABV (80 proof)",
+    "taste": "By the house's own note, vanilla, citrus peel and white pepper on a delicate nose; spice and citrus on the palate, then a peppery bite, a little earthiness and a quick finish.",
+    "pour": "In a Pisco Sour, or long in a Chilcano with ginger ale and lime; neat, it shows its white pepper.",
+    "label": [
+     {
+      "term": "Macchu Pisco",
+      "means": "The house's name, spelt with a double c, a play on Machu Picchu."
+     },
+     {
+      "term": "Pisco",
+      "means": "Under Peru's denomination of origin, grape brandy distilled to its strength with no water."
+     }
+    ]
+   },
+   "table": "Macchu Pisco is a Peruvian pisco of Quebranta grapes alone, distilled in copper pot stills in the Ica valley and rested a year before bottling at 40 per cent. Vanilla, citrus peel and white pepper make it a lively base for a Pisco Sour.",
+   "story": "Macchu Pisco was founded in 2006 by two Peruvian sisters, who built a label for Peruvian pisco made in the traditional way. Its name plays on Machu Picchu, the Inca citadel, spelt with a double c. The house began with Quebranta, the non aromatic grape that gives Peruvian pisco its earthy body, distilled once in copper pot stills in the valley of Ica and rested a year in vessels that give it nothing, as Peru's rules require, before it is bottled at the estate. Two siblings followed the plain bottling and between them show the other two Peruvian styles: La Diablada, an acholado named for an Andean dance in which angels fight devils, and Ñusta, a mosto verde named for the Quechua word for an Inca princess. The house filed American trade marks for both names in 2017. For a bartender the plain bottle is a clear lesson in a Quebranta pisco: pepper, citrus and earth where an Italia or a Torontel pisco would give flowers.",
+   "others": [
+    {
+     "name": "La Diablada",
+     "note": "The house's acholado, a blend of grapes, named for an Andean dance of angels and devils."
+    },
+    {
+     "name": "Ñusta",
+     "note": "The house's mosto verde, named for the Quechua word for an Inca princess."
+    }
+   ],
+   "traps": [
+    "Macchu is spelt with a double c on purpose: a play on Machu Picchu, not a misprint.",
+    "A Quebranta pisco is not perfumed like a muscat pisco: its grape is non aromatic, so expect pepper and citrus, not flowers.",
+    "The house names no distillery on its own pages, so give a guest the Ica valley, not an estate."
+   ],
+   "cards": [
+    {
+     "id": "grape",
+     "prompt": "Which grape makes the plain Macchu Pisco?",
+     "answer": "Quebranta alone, a non aromatic Peruvian pisco grape, by the house's own page."
+    },
+    {
+     "id": "founded",
+     "prompt": "In which year was Macchu Pisco founded, and by whom?",
+     "answer": "2006, by two Peruvian sisters; La Diablada and Ñusta followed the plain bottling."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "grape",
+     "q": "A guest asks which grape stands behind the plain Macchu Pisco. Which is it?",
+     "options": [
+      "Italia",
+      "Torontel",
+      "Moscatel",
+      "Quebranta"
+     ],
+     "a": 3,
+     "explain": "The plain bottling is Quebranta alone, a non aromatic grape; Italia, Torontel and Moscatel are aromatic grapes that give a perfumed pisco."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "founded",
+     "q": "In which year did two Peruvian sisters found Macchu Pisco?",
+     "options": [
+      "2001",
+      "2006",
+      "2010",
+      "2014"
+     ],
+     "a": 1,
+     "explain": "The house was founded in 2006; its American trade marks for La Diablada and Ñusta were filed later, in 2017."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Macchu Pisco: the Quebranta pisco",
+     "url": "https://macchupisco.com/mp/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Macchu Pisco: Macchu Pisco and La Diablada",
+     "url": "https://macchupisco.com/main/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Difford's Guide: Macchu Pisco",
+     "url": "https://www.diffordsguide.com/beer-wine-spirits/230/macchu-pisco",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Spirits Review: Macchu Pisco",
+     "url": "https://www.spiritsreview.com/reviews-pisco-macchu-pisco.html",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Justia Trademarks: Macchu Pisco filings",
+     "url": "https://trademarks.justia.com/owners/macchu-pisco-llc-1847373",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The founders are two living sisters and are named nowhere. Their surname differs between sources (Asher on the house's site and in Good Spirits News, da Silva in one shop profile). people.json was not touched, since my task names only this fragment: the integrator should add Melanie Asher, Lizzie Asher, Melanie da Silva and Lizzie da Silva.",
+    "The distillery is not named, as the plan's note asks: one shop says the house works at the Tacama estate, another that the founders bought their own distillery in Ica, and the house's pages read name neither. Ica valley rests on Spirits Review and a shop profile; the house says only Peru.",
+    "Strength: 40 per cent (80 proof) in Spirits Review and Distiller, and Difford's gives a distillate of about 42 per cent that loses two per cent as it rests; one shop lists 42. The refuter should read the label.",
+    "Difford's older entry says the pisco rested four months in oak and was a blend of Italia, Moscatel and Quebranta; both contradict the house's own page (Quebranta alone, a year's rest) and Peru's rule against wood, and are not carried.",
+    "Left out for want of a source: foot pressing (no source for this house), the pounds of grapes a bottle (10 or 16 by account), La Diablada's grapes and its claim to be a vintage pisco, and the founder's business school story (one source).",
+    "The year 2006 rests on the house's own page, with Good Spirits News, a writer's site, and a shop profile agreeing; the refuter may want a second independent account."
+   ],
+   "checked": null
+  },
+  {
+   "key": "capel",
+   "group": "pisco",
+   "producer": "Capel",
+   "madeBy": "Cooperativa Capel",
+   "style": "",
+   "chapter": "",
+   "shelf": "",
+   "library": "",
+   "say": "kah-PEL",
+   "place": "Vicuña, Elqui Valley, Coquimbo Region, Chile",
+   "year": "1938",
+   "yearIs": "founded",
+   "bottle": {
+    "name": "Capel Doble Destilado Reservado Transparente",
+    "class": "Pisco Reservado under Chile's denomination of origin, the grade of at least 40 per cent",
+    "mash": "Pedro Jiménez grapes, by the cooperative's own page: a grape grown in Chile and chosen for its neutral character, from the members' vineyards in the Atacama and Coquimbo regions.",
+    "still": "Distilled by the cooperative in a copper alembic run in batches, then distilled a second time, as Doble Destilado on the label says.",
+    "wood": "No wood: by the cooperative's page it rests a year in stainless steel vats, and it stays clear, as Transparente says. No age statement.",
+    "strength": "40% ABV",
+    "taste": "Light and clean: the cooperative makes it from a neutral grape for mixing with citrus, and tasters find fresh grape, white flowers, a little stone fruit and a dry finish.",
+    "pour": "Long with cola over ice as a Piscola, Chile's own highball, or shaken with lemon and sugar in a Pisco Sour.",
+    "label": [
+     {
+      "term": "Reservado",
+      "means": "Under Chile's rules, a grade of strength: at least 40 per cent, not an age."
+     },
+     {
+      "term": "Doble Destilado",
+      "means": "Distilled twice, which Chile's rules allow and Peru's do not."
+     },
+     {
+      "term": "Transparente",
+      "means": "Clear: rested in steel, never in wood, unlike the cooperative's Reservado de Guarda."
+     }
+    ]
+   },
+   "table": "Capel Reservado is Chilean pisco from the growers' cooperative of the Elqui Valley, and its clear Transparente bottling is Pedro Jiménez grape, distilled twice and rested a year in steel, at 40 per cent. Light and clean, it is the pisco for a Piscola with cola.",
+   "story": "Chile gave pisco a denomination of origin in 1931, reserving the name for the grape spirit of its northern regions of Atacama and Coquimbo. Seven years later, in February 1938, growers of the Elqui Valley, hit by the Depression and by more grapes than they could sell, joined together at Paihuano in a society that became a cooperative, its legal standing granted in 1939. In 1964 a reform of its statutes gave it the name Cooperativa Agrícola Pisquera Elqui, whose initials make Capel, and the Pisco Capel brand was launched that year. In 1967, with help from the state, it bought a distillery at Vicuña, in the Elqui Valley, which became its plant there. The cooperative went on to take in growers from across both pisco regions. In 1999 a decree set Chile's grades of pisco by strength, with Reservado at 40 per cent and above, and Chilean pisco may be distilled more than once, brought down with water and rested in wood. For a bartender Capel is the name that stands for Chilean pisco, and its Reservado teaches that Chile grades pisco by strength, not by age.",
+   "others": [
+    {
+     "name": "Capel Doble Destilado Reservado de Guarda",
+     "note": "The same grade and strength, rested six to eight months in American oak barrels."
+    }
+   ],
+   "traps": [
+    "Capel Reservado comes in two dresses: the clear Transparente, rested in steel, and the Reservado de Guarda, rested in American oak. Ask which one the guest means.",
+    "Reservado is a strength under Chilean rules, 40 per cent or more, not an age.",
+    "Chilean pisco may be distilled twice, brought down with water and rested in wood: Peru's rules do not apply to Capel."
+   ],
+   "cards": [
+    {
+     "id": "reservado",
+     "prompt": "What does Reservado mean on a bottle of Capel?",
+     "answer": "A grade of strength under Chile's rules: at least 40 per cent, not an age."
+    },
+    {
+     "id": "founded",
+     "prompt": "In which year did Elqui Valley growers found the cooperative behind Capel?",
+     "answer": "1938, at Paihuano; the name Capel and the Pisco Capel brand followed in 1964."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "reservado",
+     "q": "A guest reads Reservado on a bottle of Capel and asks what it promises. What does the word mean in Chile?",
+     "options": [
+      "A strength of at least 40 per cent",
+      "At least two years in oak",
+      "Grapes of a single vineyard",
+      "Grapes from the Elqui Valley alone"
+     ],
+     "a": 0,
+     "explain": "Chile grades pisco by strength, and Reservado means 40 per cent or more; the clear Transparente has never been in oak at all."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "founded",
+     "q": "In which year did Elqui Valley growers come together at Paihuano in the society that became the Capel cooperative?",
+     "options": [
+      "1921",
+      "1931",
+      "1938",
+      "1964"
+     ],
+     "a": 2,
+     "explain": "The growers joined together in February 1938; 1931 is the year of Chile's pisco denomination, and 1964 the year the name Capel was taken."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Cooperativa Capel: Our history",
+     "url": "https://www.cooperativacapel.cl/nosotros/historia",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Cooperativa Capel: Piscos",
+     "url": "https://www.cooperativacapel.cl/nuestros-negocios/piscos",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Pisco Capel: Reservado Transparente",
+     "url": "https://www.piscocapel.cl/pisco/capel-40-doble-destilado-reservado-transparente/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Agricultural and Livestock Service of Chile: Decree 521",
+     "url": "https://www.sag.cl/sites/default/files/decreto_ndeg_521.pdf",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia in Spanish: Chilean pisco",
+     "url": "https://es.wikipedia.org/wiki/Pisco_chileno",
+     "kind": "secondary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The plan's note asks whether Reservado is rested in wood: both are true, because the cooperative makes two Reservado bottlings at 40 per cent, the Doble Destilado Reservado Transparente (Pedro Jiménez, a year in stainless steel) and the Doble Destilado Reservado de Guarda (six to eight months in American oak). The record takes the clear Transparente as the flagship and teaches the other in others and a trap. A bottling swap of the roster's words to Capel Doble Destilado Reservado Transparente is proposed, with the refuter's agreement; for export, shops also sell a Capel Moai Reservado said to be oak aged, which was not confirmed from the cooperative.",
+    "The label's printed 40 with a degree sign is left out of the bottle's name under the voice rule.",
+    "Against the plan's why: the cooperative was formed at Paihuano, not Vicuña, by its own page and by Wikipedia; Vicuña is the plant it bought in 1967. The Transparente is Pedro Jiménez, not muscat, so the why's muscat grapes do not hold for this bottling. The founding is 1938 on the cooperative's own page, Wikipedia and Elqui Global; the precursors of 1935 and 1937 and the count of founders (14, 25 or 30 by account) are left out.",
+    "The 1964 name and brand and the 1931 denomination rest on Wikipedia and Elqui Global beside the cooperative's page for 1931. The grades by strength (30, 35, 40 and 43 per cent) are Decree 521 of 1999 as WIPO's English text and the SAG give it; the decree's later amendments were not read.",
+    "The taste is the record's weakest field: the cooperative calls the grape neutral and the pisco made for citrus, and the rest rests on Distiller's tasters and a shop's note. The refuter may cut it to the cooperative's words.",
+    "The count of members (over 1,000 on the cooperative's institutional page, over 800 in a 2026 news item) and any export figure are left out as facts that age. Nothing in this repo's pages names Capel; the liquor shelf's El Gobernador record says Reservado means 40 per cent, which agrees."
+   ],
+   "checked": null
+  },
+  {
+   "key": "el-gobernador",
+   "group": "pisco",
+   "producer": "El Gobernador",
+   "madeBy": "Miguel Torres Chile",
+   "style": "",
+   "chapter": "",
+   "shelf": "el-gobernador",
+   "library": "",
+   "say": "el goh-behr-nah-DOR",
+   "place": "Limarí Valley, near Ovalle, Coquimbo Region, Chile",
+   "year": "",
+   "yearIs": "",
+   "bottle": {
+    "name": "El Gobernador Pisco",
+    "class": "Chilean pisco under its denomination of origin, of the Reservado grade",
+    "mash": "Moscatel of Alexandria and pink Moscatel grapes from the Limarí Valley, in roughly equal parts, made into wine before it is distilled.",
+    "still": "Distilled once, in batches, in copper alembic stills by Miguel Torres Chile in the Limarí Valley; the house keeps to a single distillation to hold the perfume of the grapes.",
+    "wood": "Not aged in wood: it rests in stainless steel before bottling, and the label carries no age statement.",
+    "strength": "40% ABV (80 proof)",
+    "taste": "Rose petals, jasmine and candied citrus peel on the nose, with fresh muscat grape; round and creamy on the palate, gently sweet, with tangerine peel, and a long, clean finish that keeps its perfume.",
+    "pour": "In a Pisco Sour, long with ginger ale and lime in a Chilcano, or chilled and neat, which shows its flowers.",
+    "label": [
+     {
+      "term": "Reservado",
+      "means": "Chile's grade for pisco of at least 40 per cent: a strength, not an age."
+     },
+     {
+      "term": "El Gobernador",
+      "means": "The Governor: the man on the label, a patriot of 1818 later made governor of Ovalle."
+     }
+    ]
+   },
+   "table": "El Gobernador Pisco is the Chilean muscat pisco of Miguel Torres Chile, from the Limarí Valley near Ovalle: Moscatel grapes distilled once in copper, rested in steel and bottled at 40 per cent. Rose petals, jasmine and candied peel make it a perfumed Pisco Sour.",
+   "story": "The Torres family of Penedès, in Catalonia, began distilling wine into brandy in 1928. In 1979 the family founded Miguel Torres Chile in the Curicó Valley, among the first foreign wine companies to settle in Chile. Its pisco came, by the house's own account, in 2012, eighty-four years after that first still in Penedès: Moscatel grapes from the Limarí Valley, in the Coquimbo region, distilled once in copper to keep their perfume. The name, the Governor, honours a man who fought for Chilean independence at the Battle of Maipú in 1818 and was later made governor of Ovalle, the town of the valley. The bottle entered a spirit that two countries claim. Chile reserves the name pisco to its Atacama and Coquimbo regions and allows more than one distillation, water and wood; Peru allows none of the three. El Gobernador keeps to a single distillation, as Peru does, and stays Chilean in its muscat perfume and its grade, Reservado, a strength of 40 per cent. For a bartender it is the clear lesson in an aromatic Chilean pisco.",
+   "others": [
+    {
+     "name": "Torres 10",
+     "note": "The family's Penedès brandy, aged in American oak by the solera method, from the distilling begun in 1928."
+    }
+   ],
+   "traps": [
+    "El Gobernador is Chilean, not Peruvian: a guest who asks for a Peruvian pisco wants another bottle.",
+    "Reservado on the label is a strength, 40 per cent, not an age: El Gobernador is clear and has never seen wood.",
+    "It is made in Chile, by the Chilean house of Miguel Torres, not in Spain: the grapes and the stills are in the Limarí Valley."
+   ],
+   "cards": [
+    {
+     "id": "grapes",
+     "prompt": "Which grapes make El Gobernador Pisco?",
+     "answer": "Moscatel of Alexandria and pink Moscatel of the Limarí Valley, in roughly equal parts."
+    },
+    {
+     "id": "namesake",
+     "prompt": "Who is the governor of El Gobernador?",
+     "answer": "A patriot who fought at Maipú in 1818 and was later made governor of Ovalle, the town of the Limarí Valley."
+    }
+   ],
+   "quiz": [
+    {
+     "id": "q1",
+     "tag": "bottle",
+     "card": "grapes",
+     "q": "A guest asks why El Gobernador smells of roses and jasmine. Which grapes is it made from?",
+     "options": [
+      "Pedro Jiménez",
+      "Quebranta",
+      "Moscatel",
+      "País"
+     ],
+     "a": 2,
+     "explain": "It is made from Moscatel of Alexandria and pink Moscatel, aromatic grapes that carry the perfume; Pedro Jiménez is the neutral grape of Capel's clear Reservado."
+    },
+    {
+     "id": "q2",
+     "tag": "story",
+     "card": "namesake",
+     "q": "Which town did the man honoured by El Gobernador's name later govern?",
+     "options": [
+      "Vicuña",
+      "Ovalle",
+      "La Serena",
+      "Copiapó"
+     ],
+     "a": 1,
+     "explain": "He fought at Maipú in 1818 and was later made governor of Ovalle, the town of the Limarí Valley; Vicuña lies in the Elqui Valley, where Capel works."
+    }
+   ],
+   "sources": [
+    {
+     "title": "Torres: Pisco El Gobernador",
+     "url": "https://www.torres.es/en/wines/pisco-el-gobernador",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Miguel Torres Chile: Pisco El Gobernador",
+     "url": "https://www.migueltorres.cl/pt/pisco-el-gobernador/",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Torres: Miguel Torres Chile",
+     "url": "https://www.torres.es/en/wines/miguel-torres-chile",
+     "kind": "primary",
+     "read": "search"
+    },
+    {
+     "title": "Wikipedia: Miguel Torres Chile",
+     "url": "https://en.wikipedia.org/wiki/Miguel_Torres_Chile",
+     "kind": "secondary",
+     "read": "search"
+    },
+    {
+     "title": "Torres: Torres 10",
+     "url": "https://www.torres.es/en/wines/juan-torres-master-distillers/torres-10",
+     "kind": "primary",
+     "read": "search"
+    }
+   ],
+   "report": [
+    "The bottle's grapes, still, rest, strength, taste, pour and the governor's story are the liquor shelf's El Gobernador record, a reviewed page of this repo, reworded; the Torres pages read confirm the grapes, the single distillation and the 40 per cent Reservado grade.",
+    "The launch year 2012 is the house's own (eighty-four years after 1928, on the Torres and Miguel Torres Chile pages) and is told as the house's account; the year field stays empty because no independent source dated the launch. A gold medal of 2013 on the house's page shows the bottle existed by then, and is not carried under the voice rule.",
+    "The governor is described, not named: the shelf names him (Felipe Margutt Donaire), but his dates were not found in two sources, so the brief's rule for the dead keeps his name out of this record. The shelf's own line names him without dates; the integrator may want to look at it.",
+    "Miguel Torres Chile's founding in 1979 in the Curicó Valley rests on the Torres page and Wikipedia. Among the first foreign wine companies is the cautious wording; Wikipedia and others say the first foreign winery, which is left out as a claim of a first.",
+    "The Torres family member who created the pisco is living and named nowhere; Miguel Torres Maczassek and Miguel A. Torres already stand in people.json. Juan Torres Casals (1865 to 1932 on the house's blog) is described as the family, since his dates stand in one source only.",
+    "Torres 10 in others rests on the Torres page for that brandy: Penedès, American oak and the solera method; its age is not stated and is not given."
+   ],
+   "checked": null
+  }
+ ]
+}
