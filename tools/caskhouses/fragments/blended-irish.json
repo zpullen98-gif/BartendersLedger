@@ -432,12 +432,12 @@
     "changed": [
      "story: the 1999 company was set up to make a bottled Irish Coffee, The Hot Irishman, and grew into Walsh Whiskey (the house and Amber Beverage Group); now said so, and The Irishman follows it.",
      "story: Amber Beverage Group's purchase of Walsh Whiskey in November 2021 added, with its year, from the Irish Times and Amber's own page, as The Irishman record tells it.",
-     "bottle.wood: flame-charred American oak bourbon casks are the house's words; now said so."
+     "bottle.wood: flame-charred American oak bourbon casks are the house's words; now said so.",
+     "checked.open: the strength question is settled: the house's own Writers' Tears page, already among the sources, gives the Copper Pot at 40% ABV, and its Marsala finish release calls 45% five points above the usual strength; the record's 40% ABV stands unchanged (label settler, 2026-11-23)."
     ],
     "open": [
      "year: 2009 is consistent in the house's pages and the trade, but one account dates The Irishman to 2007 and Writers' Tears three years later; the field stays empty and 2009 is told as the house's account.",
-     "bottle.still: the distillery stays unnamed, as the house names none.",
-     "bottle.strength: 40% rests on house releases of 2015 and 2019; the current label was not read."
+     "bottle.still: the distillery stays unnamed, as the house names none."
     ]
    }
   },
@@ -483,7 +483,7 @@
     }
    ],
    "traps": [
-    "Paddy is made at Midleton, the same distillery as Jameson, though the Sazerac Company bought the brand in 2016.",
+    "Paddy is made at Midleton in County Cork, the distillery behind Jameson: when the Sazerac Company bought the brand in 2016, Irish Distillers agreed to go on making it there.",
     "The name is a salesman's first name: the pubs of Cork named the whiskey for the man who sold it to them."
    ],
    "cards": [
@@ -565,7 +565,7 @@
     "The salesman is described, not named: no source read gave his death year. The plan names him Paddy Flaherty, the house's history Patrick J. O'Flaherty. The record says only that publicans ordered the whiskey by his first name.",
     "The plan's note on strength: 40% ABV in Wikipedia and on Irish retail listings; the house's pages read gave no figure, so the refuter should read a label.",
     "The plan's why says a blend of pot still, malt and grain: Difford's Guide gives grain and pot still, Wikipedia a low share of pot still and a high share of malt, so the record names no shares.",
-    "A pick to watch: The Spirits Business reported in 2022 that the Sazerac Company bought Lough Gill Distillery in County Sligo as the coming home of Paddy. The record keeps Midleton, where Irish Distillers agreed in 2016 to go on making it, and states no plan; the refuter should check whether the making has moved, which would change madeBy.",
+    "Settled on 2026-11-23: Paddy is made at Midleton. The house's own page says triple distilled in County Cork; the 2016 sale provided for the making to go on at Midleton (The Spirits Business, RTE, The Irish Times); Sazerac's own release of April 2025 renaming Lough Gill Distillery in Sligo as Hawk's Rock, its first whiskey there (Garavogue, June 2025) and the trade coverage of both name no Paddy, and no source read says the making has moved. madeBy stays Midleton Distillery. The Midleton pause of April to summer 2025 was routine and dated, and is left out.",
     "The Cork Distilleries Company of 1867 and Midleton's joining in 1868 rest on Wikipedia's Paddy and Cork Distilleries Company pages and on the Echo; the four founding distilleries are not named in the record for want of a second source."
    ],
    "checked": {
@@ -578,10 +578,11 @@
      "story: some four decades is now nearly forty years, until he retired in 1921 (Hot Press, Drinks Industry Ireland).",
      "traps: the slang trap read as denying that Paddy is a slang word; now only that the name is the salesman's first name.",
      "others: Devil's Apple launched in 2013 and is sold in some markets as a liqueur at 35% (BevNET, reviews); the note says so.",
-     "cards midleton: the prompt asked two things; now one, the answer keeps triple distilled."
+     "cards midleton: the prompt asked two things; now one, the answer keeps triple distilled.",
+     "traps[0]: was 'the same distillery as Jameson, though the Sazerac Company bought the brand in 2016'; now Midleton in County Cork, the distillery behind Jameson, where Irish Distillers agreed in 2016 to go on making it, as the house's page (triple distilled in County Cork) and the sale reports say; madeBy confirmed as Midleton Distillery, no source of 2025 or 2026 moving the making to Hawk's Rock in Sligo; report set to match (label settler, 2026-11-23)."
     ],
     "open": [
-     "madeBy and traps: Sazerac bought Lough Gill Distillery in Sligo in June 2022 as a home for Paddy and renamed it Hawk's Rock in 2025; no source read says the making has left Midleton, which Difford's still gives. The integrator should watch it.",
+     "madeBy and traps: settled on 2026-11-23 as Midleton, from the house's page and the 2016 sale reports; Hawk's Rock in Sligo has put out other whiskey since 2025 and no source names Paddy there. Should Sazerac announce a move of the making, madeBy, the trap, the still and the midleton card would all change.",
      "story: the renaming stays 1912 or 1913 by source; the start 1881 or 1882."
     ]
    }
@@ -620,7 +621,7 @@
     ]
    },
    "table": "Virgin oak, seasoned whiskey barrels and oloroso sherry casks are the three woods of Slane Irish Whiskey Triple Casked, the blend from the stables of Slane Castle in County Meath. Caramel, butterscotch and dried fruit lead, with baking spice to close.",
-   "story": "Slane Castle stands above the River Boyne in County Meath, and since 1981 its grounds have held rock concerts, which helped keep the estate going. In 2009 the family began bottling Slane Castle Whiskey, a blend made for them at Cooley Distillery in County Louth, until Beam bought Cooley and, in 2012, stopped making whiskey for other labels. In 2015 Brown-Forman, the Kentucky company behind Jack Daniel's, bought Slane Castle Irish Whiskey and set about building a distillery in the castle's eighteenth-century stables and courtyards. The distillery opened in 2017, with three copper pot stills and six column stills. Slane Triple Casked came out in May of that year, blended at first from whiskey bought from other Irish distilleries, with the aim, as the house told it, of working the castle's own whiskey into the blend as it came of age. Wood does the teaching in this blend: the same whiskeys rested in three kinds of cask, then married.",
+   "story": "Slane Castle stands above the River Boyne in County Meath, and since 1981 its grounds have held rock concerts, which helped keep the estate going. In 2009 the family began bottling Slane Castle Whiskey, a blend made for them at Cooley Distillery in County Louth, until Beam bought Cooley and, in 2012, stopped making whiskey for other labels. In 2015 Brown-Forman, the Kentucky company behind Jack Daniel's, bought Slane Castle Irish Whiskey and set about building a distillery in the castle's eighteenth-century stables and courtyards. The distillery opened in 2017, with three copper pot stills and six column stills. Slane Triple Casked came out in May of that year, blended at first from whiskey bought from other Irish distilleries, with the aim, as the house told it, of working the castle's own whiskey into the blend as it came of age. In 2026 Brown-Forman paused distilling at Slane, calling the pause temporary, while the visitor centre stayed open. Wood does the teaching in this blend: the same whiskeys rested in three kinds of cask, then married.",
    "others": [
     {
      "name": "Slane Extra Sherry Wood",
@@ -703,8 +704,8 @@
      "read": "search"
     },
     {
-     "title": "Fortune: Slane and its rock and roll roots",
-     "url": "https://fortune.com/2019/08/24/slane-castle-irish-whiskey/",
+     "title": "The Spirits Business: production paused at Slane",
+     "url": "https://www.thespiritsbusiness.com/2026/06/production-paused-at-slane-irish-whiskey-distillery/",
      "kind": "secondary",
      "read": "search"
     }
@@ -714,7 +715,8 @@
     "The family is described, not named. people.json gains Alex Conyngham and Henry Mountcharles, the two living forms the sources showed (a Spirits Business interview and a Wikipedia page).",
     "The year field is the distillery's opening, 2017, in The Spirits Business and Fortune; Wikipedia's page on the castle's owner gives 2015, the year of the purchase. Accounts differ on whether distilling began in 2017 or March 2018, so the record gives no start of distilling.",
     "The early Slane Castle Whiskey of 2009 was blended by Cooley's then blender, a living man already in people.json; he is not named. The fire that damaged the castle in 1991 is left out on one source.",
-    "One house page says the seasoned casks held Tennessee whiskey; the record says seasoned whiskey barrels, as the range pages do."
+    "One house page says the seasoned casks held Tennessee whiskey; the record says seasoned whiskey barrels, as the range pages do.",
+    "Added on 2026-11-23: Brown-Forman paused distilling at Slane in late May 2026, calling it a temporary change to its schedules, with the visitor centre kept open (The Spirits Business, Whisky Advocate, Food Dive, Just Drinks). Told as dated history; madeBy stays Slane Distillery, which blends and bottles the brand, and how long the pause lasts was not reported. Fortune gave way among the sources; the 2017 opening rests as before on The Spirits Business and Fortune."
    ],
    "checked": {
     "date": "2026-11-22",
@@ -726,11 +728,12 @@
      "story: Beam bought Cooley in 2011 by one account; now Beam bought Cooley and in 2012 stopped making whiskey for others, as the Spirits Business brand history says.",
      "story: Brown-Forman's first outside the United States cut: a claim of a first, which only Difford's Guide makes among the sources read, and it may be meant of a distillery built rather than one owned.",
      "story: the stills made half the height to fit the protected buildings was in no source read; cut. Triple Casked came out in May 2017 (the Spirits Business).",
-     "others: Extra Sherry Wood is a release of the house's Wood Series, at first sold at airports and the distillery; the note says Wood Series."
+     "others: Extra Sherry Wood is a release of the house's Wood Series, at first sold at airports and the distillery; the note says Wood Series.",
+     "story: one dated sentence added, Brown-Forman's pause of distilling at Slane in 2026, called temporary, with the visitor centre open (The Spirits Business, Whisky Advocate, Food Dive); sources: Fortune gave way to The Spirits Business on the pause; report notes it (label settler, 2026-11-23)."
     ],
     "open": [
      "year: 2017 is the opening (public in August 2017); one trade piece gives 2016 for the purchase, the others 2015, which the record keeps.",
-     "bottle.mash: the distillery's own barley grain whiskey rests on Difford's Guide and the house's barley account; whether the blend now holds the castle's own whiskey is unsettled, and the record says neither."
+     "bottle.mash: the distillery's own barley grain whiskey rests on Difford's Guide and the house's barley account; whether the blend now holds the castle's own whiskey is unsettled, and the record says neither. With distilling paused since 2026, the question now turns on stock already laid down."
     ]
    }
   }

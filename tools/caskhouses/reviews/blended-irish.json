@@ -292,5 +292,79 @@
   "The Library's Tullamore D.E.W. record says the whiskey was made at Midleton for decades and claims the San Francisco bar of the Irish Coffee has poured it since 2006; the latter was not tested. Reported, not edited.",
   "plan.json, paddy why: names the salesman Paddy Flaherty; the house and Sazerac give Patrick J. O'Flaherty. The record names neither. Reported, not edited.",
   "plan.json, jameson why: says the Bow Street distillery was running by 1780 under John Jameson, which one account disputes (the Stein family founding, Jameson as manager). The Library's Midleton record gives 1825, the old Cork distillery, not the new one of 1975. Reported, not edited."
- ]
+ ],
+ "settled": {
+  "date": "2026-11-23",
+  "by": "label settler",
+  "searches": 7,
+  "tested": [
+   "paddy: whether the making has left Midleton. The house's whiskey page (triple distilled in County Cork); the sale of 2016 and its provision that the making go on at Midleton (The Spirits Business, RTE, The Irish Times); Sazerac's Hawk's Rock release of April 2025, its Garavogue release of June 2025 and the trade coverage of both (Whisky Advocate, BevNET, Drinks Industry Ireland, Beverage Industry), none naming Paddy; the Midleton pause of April 2025, routine and over by the summer (The Drinks Business, Farmers Journal). 5 searches.",
+   "slane: met in a Paddy search, then searched: Brown-Forman's pause of distilling at Slane, reported from late May 2026 (The Spirits Business, Whisky Advocate, Food Dive, Just Drinks, WDRB). 1 search.",
+   "writers-tears: the strength on the house's own pages (40% ABV for the Copper Pot; the Marsala finish release gives 45% as five points above it). 1 search."
+  ],
+  "changed": [
+   {
+    "key": "paddy",
+    "field": "traps[0]",
+    "was": "Paddy is made at Midleton, the same distillery as Jameson, though the Sazerac Company bought the brand in 2016.",
+    "now": "Paddy is made at Midleton in County Cork, the distillery behind Jameson: when the Sazerac Company bought the brand in 2016, Irish Distillers agreed to go on making it there.",
+    "why": "the trap now says where the sources put the making and why, with the year of the agreement; madeBy stands as Midleton Distillery",
+    "sources": [
+     "https://www.paddywhiskey.com/whiskey/",
+     "https://www.thespiritsbusiness.com/2016/05/irish-distillers-finalises-paddy-sale-to-sazerac/",
+     "https://www.rte.ie/news/business/2016/0503/785904-sale-of-paddy-irish-whiskey",
+     "https://www.sazerac.com/our-company/news-and-media/hawks-rock-distillery.html"
+    ]
+   },
+   {
+    "key": "paddy",
+    "field": "report and checked.open",
+    "was": "the refuter should check whether the making has moved, which would change madeBy",
+    "now": "settled as Midleton; the open line says what a move would change",
+    "why": "searched",
+    "sources": []
+   },
+   {
+    "key": "slane",
+    "field": "story",
+    "was": "as it came of age. Wood does the teaching",
+    "now": "as it came of age. In 2026 Brown-Forman paused distilling at Slane, calling the pause temporary, while the visitor centre stayed open. Wood does the teaching",
+    "why": "the pause bears on who distils the whiskey in the blend and is told with its year, as history",
+    "sources": [
+     "https://www.thespiritsbusiness.com/2026/06/production-paused-at-slane-irish-whiskey-distillery/",
+     "https://whiskyadvocate.com/whiskey-news-may-29-2026",
+     "https://www.fooddive.com/news/brown-forman-pauses-slane-irish-whiskey-distillery/821710/"
+    ]
+   },
+   {
+    "key": "slane",
+    "field": "sources[4]",
+    "was": "Fortune: Slane and its rock and roll roots",
+    "now": "The Spirits Business: production paused at Slane",
+    "why": "five is the cap and the new sentence wants its source",
+    "sources": [
+     "https://www.thespiritsbusiness.com/2026/06/production-paused-at-slane-irish-whiskey-distillery/"
+    ]
+   },
+   {
+    "key": "writers-tears",
+    "field": "checked.open",
+    "was": "bottle.strength: 40% rests on house releases of 2015 and 2019; the current label was not read.",
+    "now": "removed: the house's product page gives 40% ABV",
+    "why": "settled by search on the producer's own domain",
+    "sources": [
+     "https://www.walshwhiskey.com/our-whiskeys/our-whiskeys-writers-tears/",
+     "https://www.walshwhiskey.com/1349/writers-tears-marsala-cask-finish/"
+    ]
+   }
+  ],
+  "open": [
+   "paddy: madeBy rests on the 2016 agreement and the house's County Cork; should Sazerac announce a move of the making to Hawk's Rock, the record changes in four places.",
+   "slane: how long the pause of 2026 lasts, and whether the blend holds the castle's own whiskey, were not reported.",
+   "tullamore-dew: the house's range page gives 40 to 43% across its range; one search on the producer's domain named no market at 43% for the Original, so the open line stands."
+  ],
+  "living": [
+   "Met in a Hawk's Rock search and named in no record: Sazerac's master blender in Ireland (first name Helen); not in people.json, left for the integrator."
+  ]
+ }
 }
